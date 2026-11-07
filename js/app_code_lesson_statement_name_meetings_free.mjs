@@ -21,7 +21,7 @@ import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_meetings_free() {
   arguments_assert(arguments, 0);
   ("how many hours are free between two meetings, once the first has ended by the time the second starts: let free = s2 - e1; - picked by Claude 2026-10-05 when the human asked for the next lesson, named in Has one meeting ended by the time another starts as the step that needs that check first. In DSA it is the gap between two intervals sorted by start, the free time found between each meeting and the next.");
@@ -258,17 +258,17 @@ export function app_code_lesson_statement_name_meetings_free() {
       suppose_said,
       apart_draw,
       how_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       compare_said,
       apart_worked,
       apart_so,
       only_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       touching_suppose,
       touching_draw,
       touching_worked,
       touching_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       names_said,
       code_said,
     ],

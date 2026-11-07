@@ -2,7 +2,7 @@ import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_ex
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
@@ -109,14 +109,14 @@ export function app_code_lesson_statement_name_digit_split() {
       v7,
       v,
       v2,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["How can we get the last digit?"],
       ["Using ", by_ten, ":"],
       v3,
       v4,
       ["", by_ten, " always returns the last digit"],
       ["", line_digit],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "Why is it ",
         by_ten,

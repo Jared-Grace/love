@@ -28,7 +28,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rows_apart } from "./app_code_lesson_statement_name_rows_apart.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_grid_steps() {
   arguments_assert(arguments, 0);
   ("how many steps between two squares of a grid, moving up, down, left or right: let rows = Math.abs(r2 - r1); let cols = Math.abs(c2 - c1); let steps = rows + cols; - the last of three lessons, after Rows down and Rows apart. In DSA it is the distance between two cells of a grid when moves go along rows and columns, often called the Manhattan distance.");
@@ -290,7 +290,7 @@ export function app_code_lesson_statement_name_grid_steps() {
       squares_draw,
       draw14,
       travel_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw17,
       rows_said,
       rows_worked,
@@ -298,7 +298,7 @@ export function app_code_lesson_statement_name_grid_steps() {
       cols_worked,
       ["Each step moves one row or one column, so we add them together:"],
       total_worked,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw3,
       draw6,
       ["Here is code that finds how many steps between the two squares:"],

@@ -7,7 +7,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_expression_larger } from "./app_code_lesson_expression_larger.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_clamp() {
   arguments_assert(arguments, 0);
   ("keeping a heater's setting between 10 and 30 degrees: let low_ok = Math.max(t, 10); let t2 = Math.min(low_ok, 30); - picked by the human 2026-10-02 from a list of next lessons. In DSA it is clamping, keeping an index or a value between two bounds.");
@@ -97,17 +97,17 @@ export function app_code_lesson_statement_name_clamp() {
         " degrees gets ",
         "10",
       ],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["", max_t, " is never less than ", "10", ":"],
       ["", max_below, " is ", "10"],
       ["", max_inside, " is ", "22"],
       ["So ", max_name, " with ", "10", " guards the low edge"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["", min_t, " is never more than ", "30", ":"],
       ["", min_above, " is ", "30"],
       ["", min_inside, " is ", "22"],
       ["So ", min_name, " with ", "30", " guards the high edge"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["Suppose the temperature asked for is called ", t],
       [
         "Here is code that keeps ",

@@ -4,7 +4,7 @@ import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_ex
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
@@ -150,14 +150,14 @@ export function app_code_lesson_statement_name_digit_rest() {
       ["Suppose we want to remove the last digit, and keep everything else"],
       v2,
       v3,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["How do we get all but the last digit?"],
       ["In code, first we divide by ", "10"],
       v9,
       v4,
       v8,
       v5,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       v6,
       v7,
       [

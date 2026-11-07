@@ -15,7 +15,7 @@ import { app_learn_js_chair_grid } from "./app_learn_js_chair_grid.mjs";
 import { app_learn_js_chair_line_pointed } from "./app_learn_js_chair_line_pointed.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
@@ -105,7 +105,7 @@ export function app_code_lesson_statement_name_grid_row() {
   let first_chair = chairs_pointed(["So the first chair is ", "0"]);
   let second_chair = chairs_pointed(["The second chair is ", "1"]);
   let third_chair = chairs_pointed(["The third chair is ", "2"]);
-  let next = app_code_explain_container_next;
+  let next = app_learn_js_explain_container_next;
   let name = js_code_math_floor_name();
   let slash = js_operator_division_symbol();
   let same = js_operator_triple_equal_symbol();

@@ -11,7 +11,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_expression_round_up } from "./app_code_lesson_expression_round_up.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_egg_boxes() {
   arguments_assert(arguments, 0);
   ("how many boxes of 12 hold some eggs: let exact = eggs / 12; let boxes = Math.ceil(exact); - dividing rounded UP, because a box that is not full is still a box. Chosen by the human 2026-09-30 as the next formula lesson; in DSA it is how many pages or chunks a list of items splits into");
@@ -72,7 +72,7 @@ export function app_code_lesson_statement_name_egg_boxes() {
       ["Eggs come in boxes of ", "12"],
       ["", "24", " eggs fill ", "2", " boxes:"],
       ["", full],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["How many boxes do ", "30", " eggs need?"],
       ["", part],
       ["But there are no half-sized boxes"],
@@ -107,7 +107,7 @@ export function app_code_lesson_statement_name_egg_boxes() {
         "12",
         " eggs, so the third box would not be full",
       ],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["How do we calculate the number of whole boxes we need?"],
       [
         "First we calculate the number of partial boxes by dividing by the size of each box (",

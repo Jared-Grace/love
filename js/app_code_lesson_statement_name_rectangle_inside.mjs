@@ -23,7 +23,7 @@ import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meeting_inside } from "./app_code_lesson_statement_name_meeting_inside.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangle_inside() {
   arguments_assert(arguments, 0);
   ("whether one rectangle is inside another: let across = l1 <= l2 && r2 <= r1; let down = t1 <= t2 && b2 <= b1; let inside = across && down; - picked by the human 2026-10-04 from a list of next lessons. In DSA it is the box containment check, used to tell whether one box on a screen holds another, and it is Is one meeting inside another done once across and once down.");
@@ -367,18 +367,18 @@ export function app_code_lesson_statement_name_rectangle_inside() {
       both_draw,
       seen_said,
       numbers_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       like_said,
       across_said,
       down_said,
       both_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       suppose_said,
       out_draw,
       out_said,
       not_said,
       need_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       names_first,
       names_second,
       code_said,

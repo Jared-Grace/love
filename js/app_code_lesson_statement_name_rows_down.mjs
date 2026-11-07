@@ -11,7 +11,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_subtract } from "./app_code_lesson_statement_name_subtract.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rows_down() {
   arguments_assert(arguments, 0);
   ("how many rows down from one row to a later one: let rows = r2 - r1; - the first of three lessons toward the steps between two squares of a grid, then Math.abs for either direction, then rows and columns added. The split was chosen by the human 2026-10-01, so each lesson asks one new thing. Not picked: a lesson for rows and another for columns, which would teach the same line twice under other names.");
@@ -104,7 +104,7 @@ export function app_code_lesson_statement_name_rows_down() {
         " by subtracting:",
       ],
       ["", worked],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "Suppose your earlier row is called ",
         r,

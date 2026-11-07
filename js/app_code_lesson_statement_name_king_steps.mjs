@@ -28,7 +28,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_square_edged } from "./app_code_square_edged.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_grid_steps } from "./app_code_lesson_statement_name_grid_steps.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_king_steps() {
   arguments_assert(arguments, 0);
   ("how many steps between two squares of a grid when a step may also go diagonally, as a chess king moves: let r = Math.abs(r2 - r1); let c = Math.abs(c2 - c1); let steps = Math.max(r, c); - picked 2026-10-02 as the lesson after Grid steps, the same question with one change, so the one new thing is that the larger count is the answer rather than the two added. In DSA it is the distance between two cells of a grid when diagonal moves are allowed, often called the Chebyshev distance. Math.max was taught on its own in Larger.");
@@ -340,7 +340,7 @@ export function app_code_lesson_statement_name_king_steps() {
       squares_draw,
       draw38,
       travel_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw8,
       rows_said,
       rows_worked,
@@ -351,7 +351,7 @@ export function app_code_lesson_statement_name_king_steps() {
       draw22,
       draw23,
       max_worked,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw26,
       draw29,
       [

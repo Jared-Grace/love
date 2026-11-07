@@ -11,7 +11,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_pages_read } from "./app_code_lesson_statement_name_pages_read.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_last_seat() {
   arguments_assert(arguments, 0);
   ("the number of the last seat in a row numbered from 0: let last = seats - 1; - chosen by the human 2026-10-01 as the next formula lesson, after Pages read. In DSA it is the last index of a list, which is one less than its length because the first index is 0.");
@@ -72,7 +72,7 @@ export function app_code_lesson_statement_name_last_seat() {
       ["", "0", " ", "1", " ", "2", " ", "3", " ", "4"],
       ["What number is the last seat?"],
       ["The last seat is ", "4", ", not ", "5"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["Suppose the seats were numbered starting with ", "1"],
       ["Then the seats would be:"],
       ["", "1", " ", "2", " ", "3", " ", "4", " ", "5"],
@@ -80,7 +80,7 @@ export function app_code_lesson_statement_name_last_seat() {
       ["Starting with ", "0", " makes every seat's number ", "1", " less"],
       ["So we subtract ", "1", ":"],
       ["", worked],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["Suppose the number of seats is called ", seats],
       [
         "Then when we count seats with the first seat as ",

@@ -17,7 +17,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_average_two() {
   arguments_assert(arguments, 0);
   ("the average of two names, in two short lines: let sum = a + b; let average = sum / 2; console.log(average);");
@@ -131,7 +131,7 @@ export function app_code_lesson_statement_name_average_two() {
       ],
       v5,
       v6,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["In code, to find the average:"],
       ["First, we add the two numbers: ", line_sum],
       ["Then we divide the sum by ", "2", ": ", line_average],

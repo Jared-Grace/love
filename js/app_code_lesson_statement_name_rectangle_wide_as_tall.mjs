@@ -23,7 +23,7 @@ import { app_code_explain_word_colored } from "./app_code_explain_word_colored.m
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   arguments_assert(arguments, 0);
   ("whether a rectangle is as wide as it is tall: let width = right - left; let height = bottom - top; let same = width === height; - picked by Claude 2026-10-06, when the human asked for a next rectangle lesson that stays small, after Squares two rectangles cover together, from their edges was put off until functions are taught. In DSA it is the check of whether a box is a square, used to tell a square grid or tile from any other.");
@@ -284,11 +284,11 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
       v9,
       first_draw,
       question_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       v10,
       v11,
       first_answer,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw2,
       v12,
       moved_draw,
@@ -297,7 +297,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
       v14,
       moved_answer,
       compare_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       names_said,
       [
         "Here is code that checks whether a rectangle is as wide as it is tall:",

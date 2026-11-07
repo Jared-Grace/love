@@ -18,7 +18,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_overlap_hours() {
   arguments_assert(arguments, 0);
   ("how many hours two meetings overlap: let gap = end - start; let hours = Math.max(gap, 0); - chosen by Claude 2026-10-03, when the human asked for another lesson without naming one. In DSA it is the length of the overlap of two ranges, used to total shared time and to measure how much two boxes cover each other; the Math.max with 0 is the step that is forgotten, and a negative length is the bug it leaves.");
@@ -195,7 +195,7 @@ export function app_code_lesson_statement_name_overlap_hours() {
       draw,
       draw2,
       draw3,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw4,
       draw5,
       draw6,
@@ -204,7 +204,7 @@ export function app_code_lesson_statement_name_overlap_hours() {
       draw9,
       ["Here's the code for that:"],
       draw10,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw11,
       ["Here is code that finds how many hours the meetings overlap:"],
     ],

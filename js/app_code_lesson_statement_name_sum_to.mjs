@@ -4,7 +4,7 @@ import { html_span } from "./html_span.mjs";
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_code_line_dots_draw } from "./app_code_line_dots_draw.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -120,7 +120,7 @@ export function app_code_lesson_statement_name_sum_to() {
         halve,
         ")",
       ],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "Here's the code to step by step calculate the same answer as that expression:",
       ],

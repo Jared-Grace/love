@@ -21,7 +21,7 @@ import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangles_cover_edges() {
   arguments_assert(arguments, 0);
   ("how many squares two rectangles cover together, from their eight edges - picked by the human 2026-10-06, after asking why How many squares two rectangles cover together starts from three areas and not from the edges. In DSA it is Rectangle Area, LeetCode 223: the area of the union of two rectangles given by their corners.");
@@ -216,7 +216,7 @@ export function app_code_lesson_statement_name_rectangles_cover_edges() {
       first_said,
       second_said,
       rectangles_draw,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["We can put together what we did before:"],
       ["First we find how many squares each rectangle covers"],
       [
@@ -226,7 +226,7 @@ export function app_code_lesson_statement_name_rectangles_cover_edges() {
         "Then we find how many squares the rectangles share, even when they do not overlap",
       ],
       ["Then we find how many squares they cover together"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       first_names_said,
       second_names_said,
       [

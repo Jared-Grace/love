@@ -11,7 +11,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_sum_to } from "./app_code_lesson_statement_name_sum_to.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_handshakes() {
   arguments_assert(arguments, 0);
   ("how many handshakes when each person shakes hands once with each other person: let others = people - 1; let twice = people * others; let shakes = twice / 2; - the number of pairs, n * (n - 1) / 2. Chosen by the human 2026-09-30 as the next formula lesson; in DSA it is how many pairs a list holds, which is how many comparisons checking every pair makes");
@@ -84,7 +84,7 @@ export function app_code_lesson_statement_name_handshakes() {
       ["(", "2", ") A also shakes hands with C"],
       ["And finally (", "3", ") B shakes hands with C"],
       ["So that is ", "3", " handshakes"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "How can we calculate the number of handshakes needed for everyone to shake hands with everyone else?",
       ],
@@ -101,7 +101,7 @@ export function app_code_lesson_statement_name_handshakes() {
       ["That is one handshake, but we counted it once for A and once for B"],
       ["So we halve it (", "/ 2", "):"],
       ["", halve],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["Suppose the number of people at a party is called ", people],
       [
         "Then each person shakes hands with everyone except themselves (",

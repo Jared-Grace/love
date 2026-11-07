@@ -14,7 +14,7 @@ import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_p
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_digit_rest } from "./app_code_lesson_statement_name_digit_rest.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
 export function app_code_lesson_statement_name_digit_append() {
   arguments_assert(arguments, 0);
@@ -107,7 +107,7 @@ export function app_code_lesson_statement_name_digit_append() {
     explain: [
       v,
       v2,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["How do we put a digit back on the end?"],
       v3,
       v4,

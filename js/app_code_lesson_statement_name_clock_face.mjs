@@ -11,7 +11,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_clock_face() {
   arguments_assert(arguments, 0);
   ("the hour after this one on a clock face of 1 to 12: let past_12 = hour % 12; let next = past_12 + 1; - after 12 comes 1, because 12 o'clock is 0 hours past 12");
@@ -72,12 +72,12 @@ export function app_code_lesson_statement_name_clock_face() {
     explain: [
       ["A clock shows the hours 1 to 12"],
       clock_face_live_draw,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["One hour after 5 is 6:"],
       ["", code],
       ["What is one hour after 12?"],
       ["Not 13. After 12 the clock goes back to 1"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["We want to answer this question: How many hours past 12 is it?"],
       ["At 5 o'clock, it is 5 hours past 12"],
       ["This formula shows this:"],
@@ -89,7 +89,7 @@ export function app_code_lesson_statement_name_clock_face() {
         "hour % 12",
         " answers the question: How many hours past 12 is it?",
       ],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "Now we want to answer this question: What is one hour more than the current hour?",
       ],

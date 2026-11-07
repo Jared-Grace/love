@@ -21,7 +21,7 @@ import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangle_above() {
   arguments_assert(arguments, 0);
   ("whether one rectangle is above another: let above = b1 <= t2; - picked by Claude 2026-10-05 when the human asked for the next lesson, named in Has one meeting ended by the time another starts as that check done down, which can follow it. In DSA it is one of the four checks that two boxes cannot overlap, the one Rectangle Overlap tests on each side.");
@@ -308,23 +308,23 @@ export function app_code_lesson_statement_name_rectangle_above() {
       suppose_said,
       apart_draw,
       seen_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       how_said,
       like_said,
       compare_said,
       apart_worked,
       only_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       touching_suppose,
       touching_draw,
       touching_said,
       touching_worked,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       overlap_suppose,
       overlap_draw,
       overlap_said,
       overlap_so,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       names_said,
       code_said,
     ],

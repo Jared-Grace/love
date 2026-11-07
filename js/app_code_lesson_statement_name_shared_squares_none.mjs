@@ -29,7 +29,7 @@ import { app_code_lesson_statement_name_overlap_hours } from "./app_code_lesson_
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_shared_squares_none() {
   arguments_assert(arguments, 0);
   ("how many squares two rectangles share, even when they do not overlap: let w = Math.max(width, 0); let h = Math.max(height, 0); let area = w * h; - chosen by Claude 2026-10-04 as the step How many squares two rectangles share left out on purpose. In DSA it is the area of the intersection of two rectangles done safely, and the bug it stops is the one a negative width times a negative height makes: a positive area for two rectangles that share nothing.");
@@ -354,13 +354,13 @@ export function app_code_lesson_statement_name_shared_squares_none() {
       solved_draw,
       draw7,
       should_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       how_said,
       floor_recalled_draw,
       same_said,
       draw8,
       draw9,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw10,
       draw11,
     ],

@@ -18,7 +18,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_expression_larger } from "./app_code_lesson_expression_larger.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_meetings_overlap() {
   arguments_assert(arguments, 0);
   ("whether two meetings overlap: let start = Math.max(s1, s2); let end = Math.min(e1, e2); let overlap = start < end; - picked by the human 2026-10-03 from a list of next lessons. In DSA it is the interval overlap check, used to merge ranges, to find clashes in a schedule, and to test whether two boxes touch.");
@@ -239,7 +239,7 @@ export function app_code_lesson_statement_name_meetings_overlap() {
       draw3,
       draw4,
       ["So both meetings have overlap"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["The time they share starts at the later start:"],
       draw5,
       ["And it ends at the earlier end:"],
@@ -249,12 +249,12 @@ export function app_code_lesson_statement_name_meetings_overlap() {
       draw9,
       draw10,
       ["So the meetings overlap"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw11,
       draw12,
       draw13,
       draw14,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw15,
       ["Here is code that checks whether the two meetings overlap:"],
     ],

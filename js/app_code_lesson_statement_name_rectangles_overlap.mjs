@@ -28,7 +28,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangles_overlap() {
   arguments_assert(arguments, 0);
   ("whether two rectangles overlap: let across = left < right; let down = top < bottom; let overlap = across && down; - picked by the human 2026-10-04 from a list of next lessons. In DSA it is the rectangle overlap check, used to find whether two boxes on a screen or in a game touch, and it is the interval check of Do two meetings overlap done once across and once down.");
@@ -383,23 +383,23 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
       share_said,
       draw,
       draw2,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       seen_said,
       numbers_said,
       [
         'We can treat the rectangles like two "meetings": a pair of row "meetings" and a pair of column "meetings"',
       ],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ...row_draws,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ...column_draws,
       both_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       stacked_said,
       stacked_draw,
       not_said,
       draw5,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw6,
       code_said,
     ],

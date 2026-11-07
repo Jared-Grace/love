@@ -15,7 +15,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { function_is } from "./function_is.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { null_is } from "./null_is.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_statement_formula_backwards_decoys({
   ("It is the shape of the swapping ladder and of the formulas split into short lines: both are a program the learner already knows with its middle lines changed, so each lesson hands in only its starting names, how a screen's numbers are drawn, the numbers its boxes show, the lines, and the writing around them.");
   ("title_code is the one short piece of code the home title shows - the key line, not all of them, so a title can be skimmed. names are the names the program starts, in order; values_get hands back one list of numbers per question, each as long as names; example_values is the one list the boxes read before the questions use.");
   ("step holds the lines the lesson is about (middle) and the names it writes out (logged). The reminder shows the earlier lesson's program whole, as remember_lines, and explain is the lines of writing that lead to this lesson's program - each a list alternating plain writing and code, or a function drawing a picture into the box, or the marker ",
-    fn_name("app_code_explain_container_next"),
+    fn_name("app_learn_js_explain_container_next"),
     " starting a new box. remember_lines may instead be a function drawing the reminder, for an earlier lesson that is not a program. decoys is the wrong-answer maker, or null to use the other questions' answers. example_pointers is null, or a list of pairs of texts and a colour, as a pointed line takes, colouring those numbers in the last example's code and output the way the writing above colours them; or a function (box, lines, output) that draws that last example itself, for a lesson whose writing colours part of a number, as the last-digit lessons do.");
   ("answer_count is how many buttons a question offers, or null for the usual number. A lesson whose answers are only true or false hands in 2, as the lessons comparing two names do, because two values cannot fill more buttons than that.");
   ("backwards_decoys is the wrong-answer maker for the question that shows what is written out and asks for the program, or null to use the other questions' answers.");
@@ -115,7 +115,7 @@ export function app_code_lesson_statement_formula_backwards_decoys({
     let box_now = app_learn_js_container_light_blue(root);
     for (let parts of explain) {
       ("an entry is either a line of writing, as a list, or a picture, as a function that draws into the box. The drawing is handed the screen's context too, so a sentence in it can hold a button, such as the one to an earlier lesson it leans on; a drawing that has no button ignores it");
-      if (equal(parts, app_code_explain_container_next)) {
+      if (equal(parts, app_learn_js_explain_container_next)) {
         box_now = app_learn_js_container_light_blue(root);
       } else if (function_is(parts)) {
         parts(box_now, context);

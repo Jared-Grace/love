@@ -24,7 +24,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_meeting_inside() {
   arguments_assert(arguments, 0);
   ("whether one meeting is inside another: let after = s1 <= s2; let before = e2 <= e1; let inside = after && before; - picked by the human 2026-10-04 from a list of next lessons. In DSA it is the interval containment check, used to drop a range another range already covers, and it leads to a rectangle inside a rectangle, which is this check across and down.");
@@ -343,22 +343,22 @@ export function app_code_lesson_statement_name_meeting_inside() {
       draw3,
       draw4,
       meetings_draw,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       how_said,
       first_said,
       draw5,
       then_said,
       draw6,
       draw7,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw8,
       draw9,
       draw10,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw11,
       draw12,
       draw13,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw14,
       code_said,
     ],

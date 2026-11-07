@@ -10,7 +10,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rows_down } from "./app_code_lesson_statement_name_rows_down.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_pages_read() {
   arguments_assert(arguments, 0);
   ("how many pages from one page to a later one, counting both: let after = last - first; let pages = after + 1; - chosen by the human 2026-10-01 as the next formula lesson. In DSA it is how many items a range holds when both ends count, and forgetting the + 1 is the off-by-one mistake, often called the fencepost error.");
@@ -87,7 +87,7 @@ export function app_code_lesson_statement_name_pages_read() {
         "7",
       ],
       ["That is ", "5", " pages"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["But subtracting gives:"],
       ["", subtracted],
       [
@@ -105,7 +105,7 @@ export function app_code_lesson_statement_name_pages_read() {
       ["It misses page ", "3", ", the page you started on"],
       ["So we add ", "1", " for page ", "3", ":"],
       ["", added],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "Suppose the first page you read is called ",
         first,

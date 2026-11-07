@@ -22,7 +22,7 @@ import { app_code_explain_word_colored } from "./app_code_explain_word_colored.m
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_overlap } from "./app_code_lesson_statement_name_rectangles_overlap.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_shared_squares() {
   arguments_assert(arguments, 0);
   ("how many squares two overlapping rectangles share: let width = right - left; let height = bottom - top; let area = width * height; - chosen by Claude 2026-10-04, when the human asked for the next lesson after Do two rectangles overlap. In DSA it is the area of the intersection of two rectangles, used to measure how much two boxes cover each other.");
@@ -244,13 +244,13 @@ export function app_code_lesson_statement_name_shared_squares() {
       draw,
       draw2,
       draw3,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["We can also find it with numbers"],
       draw4,
       draw5,
       ["A rectangle has width times height squares:"],
       draw6,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw7,
       draw8,
     ],

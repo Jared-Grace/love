@@ -10,7 +10,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_clock_next() {
   arguments_assert(arguments, 0);
   ("the hour after this one on a clock: let later = hour + 1; let next = later % 24; - after 23 comes 0, not 24, because the remainder of dividing by 24 starts the count again");
@@ -70,7 +70,7 @@ export function app_code_lesson_statement_name_clock_next() {
       ["1 AM - 11 AM is 1 - 11"],
       ["12 PM noon is 12"],
       ["1 PM - 11 PM is 13 - 23"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["One hour after 9 is 10:"],
       ["", code],
       ["What is one hour after 23?"],

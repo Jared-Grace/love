@@ -10,7 +10,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_clock_next } from "./app_code_lesson_statement_name_clock_next.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_clock_back() {
   arguments_assert(arguments, 0);
   ("the hour before this one on a 24-hour clock: let earlier = hour + 23; let back = earlier % 24; - picked by the human 2026-10-02 from a list of next lessons. In DSA it is stepping back round a ring, the place before index i in a list of length n, which is (i + n - 1) % n.");
@@ -75,7 +75,7 @@ export function app_code_lesson_statement_name_clock_back() {
     explain: [
       ["One hour before ", "10", " is ", "9"],
       ["One hour before ", "0", " (12 AM midnight) is ", "23", " (11 PM)"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["A day has ", "24", " hours"],
       [
         "So going back ",
@@ -99,12 +99,12 @@ export function app_code_lesson_statement_name_clock_back() {
         ":",
       ],
       ["", code2],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["Going forward ", "23", " hours from ", "0", ":"],
       ["", code3],
       ["", code4],
       ["So one hour before ", "0", " is ", "23"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "Here's code that finds the previous hour and makes sure it is between ",
         "0",

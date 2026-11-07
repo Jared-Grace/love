@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export function app_code_explain_containers(groups) {
   "One lesson's explain list built a container at a time: a group of lines per light blue container, with the mark that starts a new one put between the groups rather than typed in among the writing.";
@@ -13,7 +13,7 @@ export function app_code_explain_containers(groups) {
   let first = true;
   for (let group of groups) {
     if (not(first)) {
-      list_add(explain, app_code_explain_container_next);
+      list_add(explain, app_learn_js_explain_container_next);
     }
     first = false;
     list_add_multiple(explain, group);

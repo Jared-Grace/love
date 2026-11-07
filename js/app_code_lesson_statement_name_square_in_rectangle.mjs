@@ -23,7 +23,7 @@ import { app_code_explain_word_colored } from "./app_code_explain_word_colored.m
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_statement_name_grid_inside.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_square_in_rectangle() {
   arguments_assert(arguments, 0);
   ("whether a square is inside a rectangle: let in_x = left <= x && x < right; let in_y = top <= y && y < bottom; let inside = in_x && in_y; - picked by the human 2026-10-04 from a list of next lessons. In DSA it is the check of whether a point lies in a box, used to find which box on a screen a tap landed in, and it is Inside the grid with the 0 replaced by the box's left and top edges.");
@@ -366,16 +366,16 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
       v18,
       seen_said,
       numbers_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw4,
       draw5,
       draw6,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw7,
       v19,
       draw8,
       draw9,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw10,
       draw_size,
       draw11,

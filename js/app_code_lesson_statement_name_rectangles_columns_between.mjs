@@ -21,7 +21,7 @@ import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_rows_between } from "./app_code_lesson_statement_name_rectangles_rows_between.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangles_columns_between() {
   arguments_assert(arguments, 0);
   ("how many columns are between two rectangles, once the first is left of the second: let between = l2 - r1; - picked by Claude 2026-10-05 as the across half of How many rows are between two rectangles, the lesson just before it, which left the across gap for later because its picture needs a grid wide enough for both side by side. The human then asked for pictures that scroll sideways, for a student who reads with this app's larger text, which is what makes a wide picture safe to show here.");
@@ -274,17 +274,17 @@ export function app_code_lesson_statement_name_rectangles_columns_between() {
       apart_draw,
       how_said,
       like_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       compare_said,
       apart_worked,
       apart_so,
       only_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       touching_suppose,
       touching_draw,
       touching_worked,
       touching_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       names_said,
       code_said,
     ],

@@ -15,7 +15,7 @@ import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_seat_one() {
   arguments_assert(arguments, 0);
   ("whether a seat is in a row whose seats are numbered from 1: let ok = 1 <= n && n <= max; - asked for by the human 2026-10-01, before the same check for seats numbered from 0, so the in-between check is met first where the first and last seats are the plain numbers 1 and max. In DSA it is the bounds check made before reading a list at an index.");
@@ -86,7 +86,7 @@ export function app_code_lesson_statement_name_seat_one() {
       ["The seats are numbered starting with ", "1"],
       ["", "1", " ", "2", " ", "3", " ", "4", " ", "5"],
       ["Is seat ", "3", " in the row?"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "A seat like ",
         "3",
@@ -107,7 +107,7 @@ export function app_code_lesson_statement_name_seat_one() {
       ["", v, " is ", "true"],
       ["But seat ", "6", " is not in the row:"],
       ["", v2, " is ", "false"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "Suppose the seat is called ",
         n,

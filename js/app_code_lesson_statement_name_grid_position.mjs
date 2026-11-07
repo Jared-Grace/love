@@ -11,7 +11,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_chair_grid } from "./app_learn_js_chair_grid.mjs";
 import { app_learn_js_chair_line_pointed } from "./app_learn_js_chair_line_pointed.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
@@ -78,7 +78,7 @@ export function app_code_lesson_statement_name_grid_position() {
   }
   let pointed = app_learn_js_chair_line_pointed;
   let color_before = app_code_highlight_color();
-  let next = app_code_explain_container_next;
+  let next = app_learn_js_explain_container_next;
   let code = js_code_binary_result_nb("7", minus, "6", "1");
   let column_formula = js_code_binary_spaced_nb(chair, percent, columns);
   let code2 = js_code_binary_result_nb("7", percent, "3", "1");

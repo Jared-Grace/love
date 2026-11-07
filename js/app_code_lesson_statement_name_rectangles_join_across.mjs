@@ -20,7 +20,7 @@ import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_join_down } from "./app_code_lesson_statement_name_rectangles_join_down.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_code_lesson_statement_min_max_mixed_decoys } from "./app_code_lesson_statement_min_max_mixed_decoys.mjs";
 export function app_code_lesson_statement_name_rectangles_join_across() {
   arguments_assert(arguments, 0);
@@ -213,7 +213,7 @@ export function app_code_lesson_statement_name_rectangles_join_across() {
       each_draw,
       together_said,
       together_draw,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["Across, it is like joining two rectangles going down"],
       ["Where does the rectangle further left start?"],
       [
@@ -229,7 +229,7 @@ export function app_code_lesson_statement_name_rectangles_join_across() {
         " on the right edges to find the larger/further right one:",
       ],
       right_worked,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       names_said,
       [
         "Here is code that finds where the two rectangles together start and end going across:",

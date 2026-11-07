@@ -2,7 +2,7 @@ import { property_list_first } from "./property_list_first.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { html_div } from "./html_div.mjs";
@@ -134,7 +134,7 @@ export function app_code_lesson_statement_name_middle() {
     "",
     " number to be a whole number?",
   ]);
-  let next = app_code_explain_container_next;
+  let next = app_learn_js_explain_container_next;
   let draw6 = app_code_number_line_draw(4, 9, 0.5, [4, 9], 6);
   let code_even = js_code_binary_result_nb("8", slash, "2", "4");
   let code_odd = js_code_binary_result_nb("7", slash, "2", "3.5");

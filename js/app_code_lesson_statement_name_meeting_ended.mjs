@@ -23,7 +23,7 @@ import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_meeting_ended() {
   arguments_assert(arguments, 0);
   ("whether one meeting has ended by the time another starts: let ended = e1 <= s2; - picked by Claude 2026-10-04 when the human asked for the next lesson, because every formula the roadmap names for DSA was already a lesson. In DSA it is the check that a person can go to every meeting, Meeting Rooms, made between each meeting and the next once they are sorted by start.");
@@ -314,22 +314,22 @@ export function app_code_lesson_statement_name_meeting_ended() {
       apart_draw,
       ends_said,
       both_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       how_said,
       compare_said,
       apart_worked,
       only_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       touching_suppose,
       touching_draw,
       touching_said,
       at_most_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       overlap_suppose,
       overlap_draw,
       overlap_said,
       overlap_so,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       names_said,
       code_said,
     ],

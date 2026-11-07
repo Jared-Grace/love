@@ -20,7 +20,7 @@ import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_code_lesson_statement_min_max_mixed_decoys } from "./app_code_lesson_statement_min_max_mixed_decoys.mjs";
 export function app_code_lesson_statement_name_meetings_join() {
   arguments_assert(arguments, 0);
@@ -171,7 +171,7 @@ export function app_code_lesson_statement_name_meetings_join() {
       ["Suppose we have two meetings that overlap"],
       draw,
       draw2,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["When does the first meeting start?"],
       [
         "We can use ",
@@ -186,7 +186,7 @@ export function app_code_lesson_statement_name_meetings_join() {
         " on the end times to find the larger/later end time:",
       ],
       draw4,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       overlap_recalled_draw,
       [
         "Here we use the earlier start and the later end, so we use ",
@@ -195,7 +195,7 @@ export function app_code_lesson_statement_name_meetings_join() {
         max_name,
         " for the end",
       ],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       draw5,
       ["Here is code that finds when the two meetings together start and end:"],
     ],

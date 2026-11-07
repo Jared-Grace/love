@@ -22,7 +22,7 @@ import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangle_above } from "./app_code_lesson_statement_name_rectangle_above.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangles_rows_between() {
   arguments_assert(arguments, 0);
   ("how many rows are between two rectangles, once the first is above the second: let between = t2 - b1; - picked by Claude 2026-10-05 when the human asked to continue on the code app, as Is one rectangle above another done the way How many hours are free between two meetings follows Has one meeting ended by the time another starts. In DSA it is the gap between two boxes one above the other, the distance a layout keeps between them.");
@@ -275,17 +275,17 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
       apart_draw,
       how_said,
       like_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       compare_said,
       apart_worked,
       apart_so,
       only_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       touching_suppose,
       touching_draw,
       touching_worked,
       touching_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       names_said,
       code_said,
     ],

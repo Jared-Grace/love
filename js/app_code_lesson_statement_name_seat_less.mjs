@@ -13,7 +13,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_zero } from "./app_code_lesson_statement_name_seat_zero.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_seat_less() {
   arguments_assert(arguments, 0);
   ("whether a seat is in a row numbered from 0, written the shorter way: let ok = 0 <= n && n < max; - picked by the human 2026-10-02, after the same check written with the last seat, n <= max - 1. In DSA it is how a bounds check is usually written, index < length, so a learner reading other code meets this form most.");
@@ -93,7 +93,7 @@ export function app_code_lesson_statement_name_seat_less() {
       ["Suppose a row has ", "5", " seats, numbered starting with ", "0", ":"],
       ["", "0", " ", "1", " ", "2", " ", "3", " ", "4"],
       ["The last seat is ", "4"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["Let's check ", n_at_most, " and ", n_under, " seat by seat"],
       ["The last seat in the row is ", "4", ":"],
       ["", four_at_most, " is ", "true"],
@@ -110,7 +110,7 @@ export function app_code_lesson_statement_name_seat_less() {
       ],
       ["Seats are whole numbers, so no seat comes between ", "4", " and ", "5"],
       ["So ", n_at_most, " and ", n_under, " check the same thing"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "Suppose the seat is called ",
         n,

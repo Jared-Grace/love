@@ -20,7 +20,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_expression_remainder_2 } from "./app_code_lesson_expression_remainder_2.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_even() {
   arguments_assert(arguments, 0);
   ("whether a number is even: let even = n % 2 === 0; - picked by the human 2026-10-02 from a list of next lessons. In DSA it is the parity check, used to take every other item, to split work into two turns, and to tell the middle of an odd-length list from the two middles of an even one.");
@@ -181,13 +181,13 @@ export function app_code_lesson_statement_name_even() {
       eight_worked_said,
       seven_said,
       seven_worked_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       even_said,
       ["For ", "8", ":"],
       eight_check_said,
       ["For ", "7", ":"],
       seven_check_said,
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       ["Suppose the number is called ", n],
       ["Here is code that checks whether ", n, " is even:"],
     ],

@@ -12,7 +12,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_last_seat } from "./app_code_lesson_statement_name_last_seat.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_seat_zero() {
   arguments_assert(arguments, 0);
   ("whether a seat is in a row whose seats are numbered from 0: let last = max - 1; let ok = 0 <= n && n <= last; - asked for by the human 2026-10-01, after the same check for seats numbered from 1. In DSA it is the bounds check made before reading a list at an index, whose last index is its length - 1.");
@@ -100,7 +100,7 @@ export function app_code_lesson_statement_name_seat_zero() {
         max,
         ")",
       ],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "So a seat is in the row when it is between ",
         "0",
@@ -111,7 +111,7 @@ export function app_code_lesson_statement_name_seat_zero() {
       ["", v, " is ", "true"],
       ["But seat ", "5", " is not in the row:"],
       ["", v2, " is ", "false"],
-      app_code_explain_container_next,
+      app_learn_js_explain_container_next,
       [
         "Suppose the seat is called ",
         n,
