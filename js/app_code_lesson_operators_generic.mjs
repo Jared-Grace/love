@@ -1,6 +1,6 @@
 import { app_learn_js_category_operators } from "./app_learn_js_category_operators.mjs";
 import { list_first_property } from "./list_first_property.mjs";
-import { app_code_lesson_code_expression } from "./app_code_lesson_code_expression.mjs";
+import { app_learn_js_lesson_code_expression } from "./app_learn_js_lesson_code_expression.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "./app_code_lesson_operators_generic_batch_get.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -75,6 +75,6 @@ export function app_code_lesson_operators_generic({
   }
   let left = app_learn_js_category_operators();
   let name_id = app_code_lesson_name_id_symbol(left, [math_name], operator_js);
-  let lesson = app_code_lesson_code_expression(batch, name_id, above);
+  let lesson = app_learn_js_lesson_code_expression(batch, name_id, above);
   return lesson;
 }
