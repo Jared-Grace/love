@@ -14,7 +14,7 @@ import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
-import { app_code_lesson_array_first } from "./app_code_lesson_array_first.mjs";
+import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_first.mjs";
 export function app_code_lesson_groups() {
   arguments_assert(arguments, 0);
   ("the groups the home list folds its lessons into, each named and starting at the lesson given, and running until the next one starts - the last runs to the end of the list");
@@ -118,7 +118,7 @@ export function app_code_lesson_groups() {
     },
     {
       parts: ["Arrays"],
-      lesson: app_code_lesson_array_first,
+      lesson: app_learn_js_lesson_array_first,
     },
   ];
   return groups;

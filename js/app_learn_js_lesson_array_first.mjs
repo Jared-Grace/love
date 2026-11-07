@@ -3,7 +3,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_array_index_generic } from "./app_code_lesson_array_index_generic.mjs";
-export function app_code_lesson_array_first() {
+export function app_learn_js_lesson_array_first() {
   arguments_assert(arguments, 0);
   ("the first item of an array: let a = [14, 27, 35]; console.log(a[0]); writes out 14");
   ("The first lesson of arrays, chosen by the human 2026-11-06 as a group of its own after an if inside a for. Two new facts and no more: square brackets hold several values under one name, and a[0] reads the first of them, because counting starts at 0.");
