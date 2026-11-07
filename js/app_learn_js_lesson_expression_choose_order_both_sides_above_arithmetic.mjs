@@ -2,7 +2,7 @@ import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_
 import { app_code_lesson_expression_sides_one_operator_say } from "./app_code_lesson_expression_sides_one_operator_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_above_generic } from "./app_code_lesson_expression_choose_order_both_sides_above_generic.mjs";
-export function app_code_lesson_expression_choose_order_both_sides_above_arithmetic(
+export function app_learn_js_lesson_expression_choose_order_both_sides_above_arithmetic(
   root,
   tree,
   intro,

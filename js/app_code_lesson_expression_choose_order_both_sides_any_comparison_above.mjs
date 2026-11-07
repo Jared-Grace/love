@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_both_sides_above_arithmetic } from "./app_code_lesson_expression_choose_order_both_sides_above_arithmetic.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_above_arithmetic } from "./app_learn_js_lesson_expression_choose_order_both_sides_above_arithmetic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression_same_symbol } from "./app_code_lesson_expression_choose_order_both_sides_expression_same_symbol.mjs";
 import { app_learn_js_comparison_symbols_not_equality } from "./app_learn_js_comparison_symbols_not_equality.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_choose_order_both_sides_any_compariso
       outer_symbol,
     );
   let line =
-    app_code_lesson_expression_choose_order_both_sides_above_arithmetic(
+    app_learn_js_lesson_expression_choose_order_both_sides_above_arithmetic(
       root,
       tree,
       app_code_lesson_expression_choose_order_both_sides_any_comparison_intro,
