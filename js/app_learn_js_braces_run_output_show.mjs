@@ -7,7 +7,7 @@ import { html_div } from "./html_div.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
-import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
+import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { html_height } from "./html_height.mjs";
@@ -33,7 +33,7 @@ export async function app_learn_js_braces_run_output_show(
   html_style_opacity(out, "0");
   let value = app_code_value_logged_output();
   let label = app_code_label_of_code(value);
-  app_code_example_answer_label(out, label);
+  app_learn_js_example_answer_label(out, label);
   if (equal(output, "")) {
     output = "Nothing is logged";
   }

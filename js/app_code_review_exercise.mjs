@@ -3,7 +3,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
-import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
+import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
 import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
 import { html_div } from "./html_div.mjs";
@@ -53,7 +53,7 @@ export function app_code_review_exercise(
     on_question,
   );
   let a_container = property_get(a, "container");
-  let answer_label_div = app_code_example_answer_label(
+  let answer_label_div = app_learn_js_example_answer_label(
     a_container,
     answer_label,
   );
