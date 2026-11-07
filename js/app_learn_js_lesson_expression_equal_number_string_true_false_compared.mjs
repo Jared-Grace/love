@@ -1,7 +1,7 @@
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
-export function app_code_lesson_expression_equal_number_string_true_false_compared(
+export function app_learn_js_lesson_expression_equal_number_string_true_false_compared(
   left_code,
   right_code,
 ) {
