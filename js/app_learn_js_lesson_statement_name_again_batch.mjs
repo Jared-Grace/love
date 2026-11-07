@@ -11,7 +11,7 @@ import { list_get_wrap } from "./list_get_wrap.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-export function app_code_lesson_statement_name_again_batch() {
+export function app_learn_js_lesson_statement_name_again_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each puts one word under a name, puts a second word under the same name, and writes the name out");
   ("The word that was there first is the whole question. A learner who has not noticed that the lines happen in order reads the name, finds the line that made it, and answers with that - so that word has to be on the buttons, waiting. Four words are picked, each program ends up holding one of them and starts out holding the next one along, and every word is the answer of exactly one program; so the word a program throws away is another program's answer, and is therefore a word worth offering. That it is on the buttons every time is settled by the lesson, which asks for the words written in the program by name. The draw alone would have put it there about half the time, because wrong answers are pulled from batches of their own and each is a fresh shuffle of four words out of nine.");
