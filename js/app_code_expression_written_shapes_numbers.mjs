@@ -5,7 +5,7 @@ import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
-import { app_code_expression_integer_division_tree } from "./app_code_expression_integer_division_tree.mjs";
+import { app_learn_js_expression_integer_division_tree } from "./app_learn_js_expression_integer_division_tree.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -26,7 +26,7 @@ export function app_code_expression_written_shapes_numbers() {
   let right_number = 4;
   let third_number = 2;
   let decimal = 3.5;
-  let rounded = app_code_expression_integer_division_tree(
+  let rounded = app_learn_js_expression_integer_division_tree(
     left_number,
     right_number,
   );

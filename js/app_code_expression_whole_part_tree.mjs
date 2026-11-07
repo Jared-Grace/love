@@ -1,4 +1,4 @@
-import { app_code_expression_integer_division_tree } from "./app_code_expression_integer_division_tree.mjs";
+import { app_learn_js_expression_integer_division_tree } from "./app_learn_js_expression_integer_division_tree.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
@@ -10,7 +10,10 @@ export function app_code_expression_whole_part_tree(dividend, divisor) {
   ("The rounded division is asked for from the one place that builds it rather than built again here, the same way the remainder line asks this one for the whole part. A lesson presses integer division on its own screen a screen or two before this line is met, and a second spelling of it here would let the two lines a learner presses disagree about what the inside of the formula is.");
   ("The divisor is used twice on purpose - once inside the division and once outside the times - because that is what the formula is. It is taken once and written twice, so the two can never disagree.");
   let times = js_operator_asterisk_symbol();
-  let rounded = app_code_expression_integer_division_tree(dividend, divisor);
+  let rounded = app_learn_js_expression_integer_division_tree(
+    dividend,
+    divisor,
+  );
   let tree = app_code_expression_node(rounded, times, divisor);
   return tree;
 }

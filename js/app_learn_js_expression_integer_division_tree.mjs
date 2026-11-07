@@ -3,7 +3,10 @@ import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
-export function app_code_expression_integer_division_tree(dividend, divisor) {
+export function app_learn_js_expression_integer_division_tree(
+  dividend,
+  divisor,
+) {
   arguments_assert(arguments, 2);
   ("one number divided by another with the answer rounded down, built as a shape a learner can press one part at a time: 14 and 4 give Math.floor(14 / 4), which comes to 3");
   ("Built as a shape rather than written out as text because a lesson that asks for one press at a time has to hand back what is left after every press, and text cannot be taken apart again without being read. The lesson that asks this line all at once writes it as text, which is all that lesson needs.");
