@@ -2812,7 +2812,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_marks_group_misread_accepted_stale_remove"),
     fn_name("qa_snapshot_timed_solo_told"),
     fn_name("app_code_above_vague_gate_run"),
-    fn_name("app_code_happy_gate_run"),
+    fn_name("app_learn_js_happy_gate_run"),
     fn_name("app_code_lesson_ids_short_missing_gate_run"),
     fn_name("app_code_lesson_titles_capital_gate_run"),
     fn_name("app_code_lessons_above_repeated_gate_run"),

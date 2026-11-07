@@ -50,7 +50,7 @@ export function functions_gate_run_unwired_exempt() {
       ]),
     },
     {
-      name: fn_name("app_code_happy_gate_run"),
+      name: fn_name("app_learn_js_happy_gate_run"),
       why: text_combine_multiple([
         "it walks the whole code course as somebody who gets every question right, and the course is served out of a stage folder that a copy of what a commit tracks does not carry - so it refused itself in seconds rather than walking anything, and a refusal that fast reads like a pass. the walk is run instead by ",
         fn_name("qa_app_e2e_happy_run"),

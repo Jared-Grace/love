@@ -9,7 +9,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_code_happy_gate_run() {
+export async function app_learn_js_happy_gate_run() {
   "QA gate: the code course can be walked from its first screen to the note that says there are no more lessons, by somebody getting every question right";
   "It is the only gate that presses anything. Every other check here reads the code; this one runs it, in a browser, the way the one person the course is for will run it - so the faults it catches are the ones that have no shape to read for: a right answer that cannot be pressed, a Next that never appears, a lesson that throws on its way in, a review that will not let go.";
   "Until it existed, a course that could not be finished was found by trying to ship it, which is the most expensive way there is to be told.";
