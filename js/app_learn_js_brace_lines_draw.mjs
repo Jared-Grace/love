@@ -20,7 +20,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-export function app_code_brace_lines_draw(parent, question, color, chips) {
+export function app_learn_js_brace_lines_draw(parent, question, color, chips) {
   arguments_assert(arguments, 4);
   ("a program with the pointed-at { and the } that closes it drawn in color, every line a pale chip; hands back one record per line, its chip and whether the line stands between the two braces");
   ("A line is between the pair when it starts after the { and ends before the }, so the line holding either brace is not between it.");
