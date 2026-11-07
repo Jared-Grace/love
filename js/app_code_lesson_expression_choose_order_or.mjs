@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_or_title_name_id } from "./app_code_lesson_expression_choose_order_or_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_or_title_name_id } from "./app_learn_js_lesson_expression_choose_order_or_title_name_id.mjs";
 import { app_learn_js_lesson_expression_choose_order_or_questions } from "./app_learn_js_lesson_expression_choose_order_or_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_or_above } from "./app_learn_js_lesson_expression_choose_order_or_above.mjs";
@@ -9,7 +9,7 @@ export function app_code_lesson_expression_choose_order_or() {
   ("The same press-at-a-time step for || that the lesson opening this run gives &&, and it comes after the whole of the && stretch on purpose: a learner who has pressed their way through && lines has nothing new to learn about taking a line apart here, so the whole of their attention is on what || itself comes to.");
   ("Which is where the two lessons stop being the same lesson twice. Both sides true makes an && true and there is one way to have it; || is the other way round, so a true line here may hold a side that came out false. A learner watches themselves press false on one half and true on the whole.");
   ("Every part of this line comes to a true or a false, so the value offered instead is the other of the two and nothing has to be invented.");
-  let name_id = app_code_lesson_expression_choose_order_or_title_name_id();
+  let name_id = app_learn_js_lesson_expression_choose_order_or_title_name_id();
   let bank = app_learn_js_lesson_expression_choose_order_or_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
