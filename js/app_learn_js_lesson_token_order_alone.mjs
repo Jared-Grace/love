@@ -7,7 +7,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_code_lesson_token_order_generic } from "./app_code_lesson_token_order_generic.mjs";
 import { app_code_lesson_token_order_example_choose_next } from "./app_code_lesson_token_order_example_choose_next.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap_next } from "./app_learn_js_lesson_quiz_tokens_tap_next.mjs";
-export function app_code_lesson_token_order_alone() {
+export function app_learn_js_lesson_token_order_alone() {
   arguments_assert(arguments, 0);
   ("the order of the tokens with nothing to follow: the same choosing as The order of the tokens, except no token is shown in blue, so the learner finds the next token by reading alone");
   ("Asked for by the human 2026-10-10: a new lesson straight after The order of the tokens, the same interaction except no blue telling you which token to choose, opening by saying so with a link to the lesson before.");
