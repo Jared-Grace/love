@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_comparison_pair_ordering } from "./app_learn_js_comparison_pair_ordering.mjs";
 import { less_than } from "./less_than.mjs";
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
+import { app_learn_js_lesson_operators_value_max } from "./app_learn_js_lesson_operators_value_max.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_expression_comparison_equal_generic_examples
   arguments_assert(arguments, 2);
   ("all THREE relations stand together on every screen, so the case that tells this operator apart from === - the strict one, which is true here and false there - is never the one left out");
   let ordering = app_learn_js_comparison_pair_ordering(less_than);
-  let max = app_code_lesson_operators_value_max();
+  let max = app_learn_js_lesson_operators_value_max();
   function equal_pair() {
     let n = integer_random(1, max);
     let coordinates = {

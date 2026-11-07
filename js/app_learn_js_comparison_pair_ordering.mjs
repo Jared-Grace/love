@@ -1,11 +1,11 @@
 import { integer_random_below } from "./integer_random_below.mjs";
 import { integer_random } from "./integer_random.mjs";
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
+import { app_learn_js_lesson_operators_value_max } from "./app_learn_js_lesson_operators_value_max.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function app_learn_js_comparison_pair_ordering(compare) {
   "left/right operands for an ORDERING comparison lesson: pick a smaller and a larger number, then order them so the comparison yields want_true";
-  let max = app_code_lesson_operators_value_max();
+  let max = app_learn_js_lesson_operators_value_max();
   function pair(want_true) {
     let small = integer_random_below(max);
     let large = integer_random(small + 1, max);

@@ -6,7 +6,7 @@ import { object_merge } from "./object_merge.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
+import { app_learn_js_lesson_operators_value_max } from "./app_learn_js_lesson_operators_value_max.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_console_log_remainder_generic(
   let divisor_text = text_to(divisor);
   text_combine(" remainder by ", divisor_text);
   function refill() {
-    let max = app_code_lesson_operators_value_max();
+    let max = app_learn_js_lesson_operators_value_max();
     let base = integer_random(0, max);
     function each_offset(offset) {
       let n = add(base, offset);

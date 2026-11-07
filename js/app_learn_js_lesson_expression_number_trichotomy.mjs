@@ -7,7 +7,7 @@ import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
+import { app_learn_js_lesson_operators_value_max } from "./app_learn_js_lesson_operators_value_max.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map } from "./list_map.mjs";
@@ -60,7 +60,7 @@ export function app_learn_js_lesson_expression_number_trichotomy() {
   }
   function refill() {
     "six comparisons over ONE shared pair of numbers: each operator shown once true then once false, grouped two-by-two in the same/smaller/bigger order of the a/b/c list, so the learner sees each of the three go both ways for the fixed pair";
-    let max = app_code_lesson_operators_value_max();
+    let max = app_learn_js_lesson_operators_value_max();
     let low = integer_random_below(max);
     let high = integer_random(low + 1, max);
     function one(combo) {

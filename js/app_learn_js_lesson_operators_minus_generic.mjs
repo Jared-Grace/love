@@ -1,4 +1,4 @@
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
+import { app_learn_js_lesson_operators_value_max } from "./app_learn_js_lesson_operators_value_max.mjs";
 import { each_nested_args_range_1_list_adder } from "./each_nested_args_range_1_list_adder.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_left_right_middle_random_space_nb } from "./text_left_right_middle_random_space_nb.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_operators_minus_generic({
   math_name,
   right_random_get,
 }) {
-  let max = app_code_lesson_operators_value_max();
+  let max = app_learn_js_lesson_operators_value_max();
   function batch_get() {
     let list = each_nested_args_range_1_list_adder(max, lambda$left$right$la);
     function lambda$left$right$la(left, right, la) {
