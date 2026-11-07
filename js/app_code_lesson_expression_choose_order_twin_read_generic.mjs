@@ -6,7 +6,7 @@ import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_l
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-import { app_code_lesson_expression_choose_order_decoys_generic } from "./app_code_lesson_expression_choose_order_decoys_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_decoys_generic } from "./app_learn_js_lesson_expression_choose_order_decoys_generic.mjs";
 export function app_code_lesson_expression_choose_order_twin_read_generic(
   title_words,
   twin_get,
@@ -55,7 +55,7 @@ export function app_code_lesson_expression_choose_order_twin_read_generic(
   }
   let left = app_learn_js_category_expressions();
   let name_id = app_code_lesson_name_id_category_then(left, paint);
-  let lesson = app_code_lesson_expression_choose_order_decoys_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_decoys_generic(
     name_id,
     above,
     bank,
