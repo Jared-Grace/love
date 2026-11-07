@@ -1,4 +1,4 @@
-import { app_code_hash_complete_before_word } from "./app_code_hash_complete_before_word.mjs";
+import { app_learn_js_hash_complete_before_word } from "./app_learn_js_hash_complete_before_word.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_progress_before_complete_mark } from "./app_code_progress_before_complete_mark.mjs";
@@ -14,7 +14,7 @@ export function app_code_hash_complete_restore(context, hash) {
   ("Marking is safe to repeat, so a link left in the address bar and reloaded does nothing new.");
   let key = app_code_hash_complete_key();
   let said = property_get_or_null(hash, key);
-  let before = app_code_hash_complete_before_word();
+  let before = app_learn_js_hash_complete_before_word();
   let from_lesson = equal(said, before);
   if (from_lesson) {
     ("complete=before marks the lessons above the one the link opens on and not the released ones, which may be fewer or more; a link saying before with no lesson marks nothing, since there is nothing to stand before");
