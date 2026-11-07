@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
-import { app_code_lesson_expression_choose_order_and_before_or_recall } from "./app_code_lesson_expression_choose_order_and_before_or_recall.mjs";
+import { app_learn_js_lesson_expression_choose_order_and_before_or_recall } from "./app_learn_js_lesson_expression_choose_order_and_before_or_recall.mjs";
 import { app_code_lesson_expression_choose_order_stop_early_or_intro } from "./app_code_lesson_expression_choose_order_stop_early_or_intro.mjs";
 export function app_code_lesson_expression_choose_order_stop_early_or_above(
   root,
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_choose_order_stop_early_or_above(
   let walks = [];
   app_code_lesson_expression_choose_order_walks_above_generic(
     root,
-    app_code_lesson_expression_choose_order_and_before_or_recall,
+    app_learn_js_lesson_expression_choose_order_and_before_or_recall,
     walks,
     app_code_lesson_expression_choose_order_stop_early_or_intro,
     context,
