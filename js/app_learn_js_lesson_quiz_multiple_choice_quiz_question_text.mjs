@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_quiz_answer } from "./app_learn_js_lesson_quiz_multiple_choice_quiz_answer.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_multiple_choice_tailored } from "./app_code_lesson_quiz_multiple_choice_tailored.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_tailored } from "./app_learn_js_lesson_quiz_multiple_choice_tailored.mjs";
 export function app_learn_js_lesson_quiz_multiple_choice_quiz_question_text(
   info,
   qa,
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_quiz_multiple_choice_quiz_question_text(
   );
   let quiz_answer = property_get(r2, "quiz_answer");
   let quiz_answer_text = property_get(r2, "quiz_answer_text");
-  let r = app_code_lesson_quiz_multiple_choice_tailored(r2, quiz_answer);
+  let r = app_learn_js_lesson_quiz_multiple_choice_tailored(r2, quiz_answer);
   let answer_property = property_get(r, "answer_property");
   let distractors = property_get(r, "distractors");
   let seen = property_get(r, "seen");

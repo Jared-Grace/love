@@ -2,7 +2,10 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_add_decoy } from "./app_learn_js_lesson_quiz_multiple_choice_add_decoy.mjs";
 import { each } from "./each.mjs";
-export function app_code_lesson_quiz_multiple_choice_tailored(r2, quiz_answer) {
+export function app_learn_js_lesson_quiz_multiple_choice_tailored(
+  r2,
+  quiz_answer,
+) {
   arguments_assert(arguments, 2);
   let question_property = property_get(r2, "question_property");
   let quiz_question = property_get(r2, "quiz_question");
