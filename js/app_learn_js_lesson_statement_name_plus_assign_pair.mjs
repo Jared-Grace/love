@@ -11,7 +11,7 @@ import { app_learn_js_lesson_statement_name_itself_sum } from "./app_learn_js_le
 import { app_code_lesson_statement_name_sum_number_pairs } from "./app_code_lesson_statement_name_sum_number_pairs.mjs";
 import { app_learn_js_lesson_statement_name_first_written_batch } from "./app_learn_js_lesson_statement_name_first_written_batch.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
-export function app_code_lesson_statement_name_plus_assign_pair() {
+export function app_learn_js_lesson_statement_name_plus_assign_pair() {
   arguments_assert(arguments, 0);
   ("the pair on the shorter way to add to what a name holds, a += b; for a = a + b;: its programs, its title line, and the words both its lessons are called by");
   ("The programs are the ones the lesson on the long line asks about, with only that line written the short way, so the arithmetic a learner has already done is not what is being asked.");
