@@ -1,5 +1,5 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
+import { app_learn_js_lesson_quiz_qa_property_other } from "./app_learn_js_lesson_quiz_qa_property_other.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
@@ -14,7 +14,7 @@ export function app_code_quiz_exercise_qa_texts(exercise) {
     "answer_property",
   );
   let question_property =
-    app_code_lesson_quiz_qa_property_other(answer_property);
+    app_learn_js_lesson_quiz_qa_property_other(answer_property);
   let qa = {
     question: property_get(exercise, "question"),
     answer: property_get(exercise, "answer"),

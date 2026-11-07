@@ -1,6 +1,6 @@
 import { app_learn_js_exercise_on_answer_is } from "./app_learn_js_exercise_on_answer_is.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice } from "./app_learn_js_lesson_quiz_multiple_choice.mjs";
-import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
+import { app_learn_js_lesson_quiz_qa_property_other } from "./app_learn_js_lesson_quiz_qa_property_other.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -25,7 +25,7 @@ export function app_code_quiz_choice_pool_exercise_unremapped(qa, exercise) {
   }
   let answer_property = property_get(info, "answer_property");
   let question_property =
-    app_code_lesson_quiz_qa_property_other(answer_property);
+    app_learn_js_lesson_quiz_qa_property_other(answer_property);
   let shows_answer = property_text_to(exercise, answer_property);
   let draws_answer = property_text_to(qa, answer_property);
   let shows_question = property_text_to(exercise, question_property);

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
+import { app_learn_js_lesson_quiz_qa_property_other } from "./app_learn_js_lesson_quiz_qa_property_other.mjs";
 import { app_learn_js_answer_count_max } from "./app_learn_js_answer_count_max.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_lesson_quiz_multiple_choice_distractors(
   let quiz_answer = property_get(qa, answer_property);
   let quiz_answer_text = text_to(quiz_answer);
   let question_property =
-    app_code_lesson_quiz_qa_property_other(answer_property);
+    app_learn_js_lesson_quiz_qa_property_other(answer_property);
   let quiz_question = property_get(qa, question_property);
   let quiz_question_text = text_to(quiz_question);
   let answer_count_max = app_learn_js_answer_count_max();
