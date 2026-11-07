@@ -4,7 +4,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
-export function app_code_lesson_expression_choose_order_stop_early_or_expression(
+export function app_learn_js_lesson_expression_choose_order_stop_early_or_expression(
   want_true,
 ) {
   arguments_assert(arguments, 1);
