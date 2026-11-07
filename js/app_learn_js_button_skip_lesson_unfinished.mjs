@@ -1,7 +1,7 @@
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
-import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
+import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id.mjs";
 import { app_learn_js_course_unfinished_next } from "./app_learn_js_course_unfinished_next.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_course_unfinished_go } from "./app_learn_js_course_unfinished_go.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_button_skip_lesson_unfinished(context, parent) {
   ("DRAWN EVEN WHERE THE SKIP BUTTONS REACH THE SAME LESSON. It was hidden there once, and the human asked twice where it had gone (2026-09-25, 2026-09-26): a learner looks for this button by its words, so it must be where they look every time.");
   ("the search starts AT this lesson, which is named as the one being left, so the review standing straight after it is the first thing looked at");
   let number = app_code_lesson_current_number(context);
-  let id = app_code_lesson_current_id(context);
+  let id = app_learn_js_lesson_current_id(context);
   let index = subtract(number, 1);
   let way = app_learn_js_course_unfinished_next(context, index, id);
   let none = null_is(way);

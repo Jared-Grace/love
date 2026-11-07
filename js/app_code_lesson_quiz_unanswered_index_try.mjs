@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
-import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
+import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_quiz_unanswered_index_try(
   "Which quizzes have been answered is read off the record this learner keeps for this lesson on their own disk, so a lesson nobody has answered anything in reads as none answered rather than as missing.";
   arguments_assert(arguments, 3);
   let progress = app_code_progress_read(context);
-  let lesson_id = app_code_lesson_current_id(context);
+  let lesson_id = app_learn_js_lesson_current_id(context);
   let record = property_get_or_null(progress, lesson_id);
   let missing = null_is(record);
   let done = [];

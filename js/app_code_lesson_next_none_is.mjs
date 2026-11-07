@@ -3,7 +3,7 @@ import { app_code_lesson_current_number } from "./app_code_lesson_current_number
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
+import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id.mjs";
 import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_next.mjs";
 import { null_is } from "./null_is.mjs";
 export function app_code_lesson_next_none_is(context) {
@@ -21,7 +21,7 @@ export function app_code_lesson_next_none_is(context) {
   if (more_below) {
     return false;
   }
-  let id = app_code_lesson_current_id(context);
+  let id = app_learn_js_lesson_current_id(context);
   let lesson = app_code_lesson_incomplete_next(context, number, id);
   let none = null_is(lesson);
   return none;

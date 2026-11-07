@@ -6,7 +6,7 @@ import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab_step } from "./app_shared_screen_go_tab_step.mjs";
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
-import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
+import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id.mjs";
 import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_reference_draw(parent, context, lesson_fn) {
   ("THE LESSON JUST BEFORE THIS ONE IS NAMED BY THE RELATION AND NOT BY ITS NUMBER. A number is an address, and an address is what a learner needs for a lesson they finished a week ago - they must be able to find it on the list. For the lesson they were reading a minute ago the address is the one thing they do not need, and reading it as a number makes them subtract to find out that the reference is about the screen they just left. So the near one says the previous lesson and every other one says its number, and the two shapes standing on one screen are themselves the reading: this one is behind you, that one is far back.");
   ("Which of the two it is, is worked out from where the lessons stand rather than written at the call. A reference that said the previous lesson in typed words would go on saying it after a lesson was put in between the two, and would then be plainly false.");
   ("It is asked of the run this reader was handed rather than of every lesson that exists, because previous means the lesson they actually came from. On a page where some lessons are held back, the one before them is the one before them on their list.");
-  let current_id = app_code_lesson_current_id(context);
+  let current_id = app_learn_js_lesson_current_id(context);
   let index_current = app_code_lesson_index_by_id(current_id);
   let index_shown = app_code_lesson_index_by_id(lesson_id);
   ("The first lesson of the run is excluded rather than compared. A lesson the reader was not handed is not on their list at all and answers minus one, which sits one before the first - so on the first screen alone the two would agree and a reference pointing somewhere else would call itself the previous lesson.");
