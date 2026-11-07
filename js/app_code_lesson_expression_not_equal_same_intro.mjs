@@ -14,7 +14,7 @@ import { app_code_not_changes_true_false } from "./app_code_not_changes_true_fal
 export function app_code_lesson_expression_not_equal_same_intro(root, context) {
   "the two cards above the lesson matching a !== against a ! around an ===: first what each of the two comparison symbols asks, and that one therefore gives the opposite answer to the other; then, on a second card, what a ! does spelled out on true and false themselves before it is called an opposite - so the word opposite is earned in both halves before the two spellings are put together.";
   ("It stands in its own file for the same reason as ",
-    fn_name("app_code_lesson_expression_not_comparison_intro"),
+    fn_name("app_learn_js_lesson_expression_not_comparison_intro"),
     ": a card is a different kind of thing from the questions a lesson draws, and the lesson was over the work-size ceiling with the card inside it.");
   ("The first card names SAME and DIFFERENT as opposite ideas before it says one symbol answers the opposite of the other. Without that line the word opposite arrives as a claim about two symbols the learner has only just met; with it, it is a thing they already knew about two ordinary English words, and the symbols merely inherit it.");
   ("Both spellings are shown in both directions. Reading only that a !== matches a ! round an === leaves a learner able to believe the trick runs one way, that a ! undoes the different-symbol and nothing else; the second pairing says the two symbols stand in the same relation whichever of them is written inside.");
