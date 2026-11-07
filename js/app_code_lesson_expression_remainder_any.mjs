@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_dividend } from "./app_code_lesson_expression_dividend.mjs";
+import { app_learn_js_lesson_expression_dividend } from "./app_learn_js_lesson_expression_dividend.mjs";
 import { app_code_uneven_dividend_between } from "./app_code_uneven_dividend_between.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
@@ -66,7 +66,7 @@ export function app_code_lesson_expression_remainder_any() {
     app_code_remember_from_lesson(
       derive,
       context,
-      app_code_lesson_expression_dividend,
+      app_learn_js_lesson_expression_dividend,
       ["for ", "14 / 4", ", ", "14", " is the dividend"],
     );
     app_learn_js_div_cycle_code(derive, [

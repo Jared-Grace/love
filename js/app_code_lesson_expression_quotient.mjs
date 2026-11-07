@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_dividend } from "./app_code_lesson_expression_dividend.mjs";
+import { app_learn_js_lesson_expression_dividend } from "./app_learn_js_lesson_expression_dividend.mjs";
 import { app_code_lesson_expression_divisor } from "./app_code_lesson_expression_divisor.mjs";
 import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
@@ -54,7 +54,7 @@ export function app_code_lesson_expression_quotient() {
     app_code_remember_from_lesson(
       remember,
       context,
-      app_code_lesson_expression_dividend,
+      app_learn_js_lesson_expression_dividend,
       ["the ", "14", " is the dividend"],
     );
     app_code_remember_from_lesson(
