@@ -18,7 +18,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_digit_split } from "./app_code_lesson_statement_name_digit_split.mjs";
+import { app_learn_js_lesson_statement_name_digit_split } from "./app_learn_js_lesson_statement_name_digit_split.mjs";
 export function app_learn_js_lesson_statement_name_digit_rest() {
   arguments_assert(arguments, 0);
   ("the number left in front of a number's last digit: let rest = Math.floor(n / 10); - split from the last-digit lesson at the human's word, 2026-09-27, so each lesson teaches one line");
@@ -142,7 +142,7 @@ export function app_learn_js_lesson_statement_name_digit_rest() {
     values_get,
     example_values: [123],
     step,
-    remember_lesson: app_code_lesson_statement_name_digit_split,
+    remember_lesson: app_learn_js_lesson_statement_name_digit_split,
     remember_parts: ["we can get the last digit:"],
     remember_lines,
     explain: [

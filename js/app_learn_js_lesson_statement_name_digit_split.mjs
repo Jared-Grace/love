@@ -17,7 +17,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-export function app_code_lesson_statement_name_digit_split() {
+export function app_learn_js_lesson_statement_name_digit_split() {
   arguments_assert(arguments, 0);
   ("a number's last digit: let last_digit = n % 10; - the number left in front of it is the next lesson's, split out at the human's word, 2026-09-27, so each lesson teaches one line. The explanation is the human's words and ends on the line itself; the chairs in rows of 10 that it used to explain by were cut with the rest. Not picked: keeping both lines here, which asked a learner to take in % and Math.floor at once.");
   ("Chosen for later use: adding up a number's digits, reversing a number, and checking one reads the same both ways all take one digit off at a time with this line and the next lesson's, once loops are taught.");

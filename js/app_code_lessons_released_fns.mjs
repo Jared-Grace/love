@@ -202,7 +202,7 @@ import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_state
 import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
 import { app_code_lesson_statement_name_grid_index } from "./app_code_lesson_statement_name_grid_index.mjs";
 import { app_code_lesson_statement_name_sum_to } from "./app_code_lesson_statement_name_sum_to.mjs";
-import { app_code_lesson_statement_name_digit_split } from "./app_code_lesson_statement_name_digit_split.mjs";
+import { app_learn_js_lesson_statement_name_digit_split } from "./app_learn_js_lesson_statement_name_digit_split.mjs";
 import { app_learn_js_lesson_statement_name_digit_rest } from "./app_learn_js_lesson_statement_name_digit_rest.mjs";
 import { app_learn_js_lesson_statement_name_digit_append } from "./app_learn_js_lesson_statement_name_digit_append.mjs";
 import { app_learn_js_lesson_statement_name_clock_face } from "./app_learn_js_lesson_statement_name_clock_face.mjs";
@@ -515,7 +515,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_statement_name_grid_position,
     app_code_lesson_statement_name_grid_index,
     app_code_lesson_statement_name_sum_to,
-    app_code_lesson_statement_name_digit_split,
+    app_learn_js_lesson_statement_name_digit_split,
     app_learn_js_lesson_statement_name_digit_rest,
     app_learn_js_lesson_statement_name_digit_append,
     app_learn_js_lesson_statement_name_clock_face,
