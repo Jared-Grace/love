@@ -10,7 +10,7 @@ import { html_clear } from "./html_clear.mjs";
 import { noop } from "./noop.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_choose_order_walkthrough(
+export function app_learn_js_lesson_expression_choose_order_walkthrough(
   parent,
   card,
   tree,

@@ -7,7 +7,7 @@ import { app_learn_js_expression_chosen_pause } from "./app_learn_js_expression_
 import { app_learn_js_lesson_expression_choose_order_questions } from "./app_learn_js_lesson_expression_choose_order_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_above } from "./app_learn_js_lesson_expression_choose_order_above.mjs";
-import { app_code_lesson_expression_choose_order_walkthrough } from "./app_code_lesson_expression_choose_order_walkthrough.mjs";
+import { app_learn_js_lesson_expression_choose_order_walkthrough } from "./app_learn_js_lesson_expression_choose_order_walkthrough.mjs";
 export function app_code_lesson_expression_choose_order() {
   "choosing which operator to work out first, and then the next, with the quiz working each one out as it is chosen: 1 + 2 * 3, choose the times, see 1 + 6, choose the plus";
   "Every lesson before this asks for the answer to a whole line at once, so a learner who knows the rule and slips on the arithmetic, and one who does the arithmetic and does not know the rule, are marked the same. Here the two are separated: the arithmetic is done FOR the learner and the only thing asked is the order.";
@@ -44,7 +44,7 @@ export function app_code_lesson_expression_choose_order() {
     name_id,
     app_learn_js_lesson_expression_choose_order_above,
     answer_draw,
-    app_code_lesson_expression_choose_order_walkthrough,
+    app_learn_js_lesson_expression_choose_order_walkthrough,
     bank,
   );
   return lesson;
