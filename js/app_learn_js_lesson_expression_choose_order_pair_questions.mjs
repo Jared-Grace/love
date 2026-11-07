@@ -6,7 +6,7 @@ import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_ques
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_choose_order_pair_questions() {
+export function app_learn_js_lesson_expression_choose_order_pair_questions() {
   arguments_assert(arguments, 0);
   ("the question bank a two-comparisons-compared lesson draws on: lines built as shapes, handed out one a screen, and worked out again from the writing they were printed as");
   ("True and false take turns as the whole line's answer rather than being drawn by chance, because there are only two of them and chance would run three or four of one together often enough for a learner to settle into answering the same way twice.");

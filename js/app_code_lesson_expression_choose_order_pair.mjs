@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_choose_order_pair_title_name_id } from "./app_code_lesson_expression_choose_order_pair_title_name_id.mjs";
-import { app_code_lesson_expression_choose_order_pair_questions } from "./app_code_lesson_expression_choose_order_pair_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_pair_questions } from "./app_learn_js_lesson_expression_choose_order_pair_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_pair_above } from "./app_learn_js_lesson_expression_choose_order_pair_above.mjs";
 export function app_code_lesson_expression_choose_order_pair() {
@@ -9,7 +9,7 @@ export function app_code_lesson_expression_choose_order_pair() {
   "Both pairs of parentheses are written rather than worked out from strength, because all three operators are the same strength and a line printed without them would show one side gathered and the other not. The two sides of this line are alike, and the writing has to say so.";
   "The wrong value offered is the other of true and false, the same as the lesson before it: every part of this line is a comparison, so the whole of what could be pressed instead is already on the screen.";
   let name_id = app_code_lesson_expression_choose_order_pair_title_name_id();
-  let bank = app_code_lesson_expression_choose_order_pair_questions();
+  let bank = app_learn_js_lesson_expression_choose_order_pair_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_pair_above,
