@@ -22,7 +22,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_learn_js_lesson_statement_min_max_mixed_decoys } from "./app_learn_js_lesson_statement_min_max_mixed_decoys.mjs";
-export function app_code_lesson_statement_name_meetings_join() {
+export function app_learn_js_lesson_statement_name_meetings_join() {
   arguments_assert(arguments, 0);
   ("when two overlapping meetings together start and end: let start = Math.min(s1, s2); let end = Math.max(e1, e2); - chosen by Claude 2026-10-04, when the human asked for another lesson building on the meetings lessons. In DSA it is the step of merging intervals: two ranges that overlap become one range, from the earlier start to the later end.");
   ("It is Do two meetings overlap turned around: the overlap takes the later start and the earlier end, and joining takes the earlier start and the later end. So that lesson is the reminder, and the writing sets the two side by side. Not picked: the length of the joined time, which would put a third line on every program and repeat How long two meetings overlap.");
