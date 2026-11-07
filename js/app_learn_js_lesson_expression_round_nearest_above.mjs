@@ -9,7 +9,7 @@ import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_lesson_expression_round_nearest_round_code } from "./app_learn_js_lesson_expression_round_nearest_round_code.mjs";
-import { app_code_lesson_expression_round_nearest_rule_line } from "./app_code_lesson_expression_round_nearest_rule_line.mjs";
+import { app_learn_js_lesson_expression_round_nearest_rule_line } from "./app_learn_js_lesson_expression_round_nearest_rule_line.mjs";
 import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_expression_round_nearest_above(root) {
   ("second question: what the digit decides. Each case is a rule line, then that rule on an ordinary number, then that rule on the knife-edge number where a learner would most doubt it");
   let rule = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(rule, ["What does ", "Math.round", " do?"]);
-  app_code_lesson_expression_round_nearest_rule_line(
+  app_learn_js_lesson_expression_round_nearest_rule_line(
     rule,
     ["0", "1", "2", "3", "4"],
     "Math.floor",
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_expression_round_nearest_above(root) {
   );
   ("a gap under the first case, so the second reads as the other half of one rule rather than as a fifth line of the first");
   app_shared_spaced_below(down);
-  app_code_lesson_expression_round_nearest_rule_line(
+  app_learn_js_lesson_expression_round_nearest_rule_line(
     rule,
     ["5", "6", "7", "8", "9"],
     "Math.ceil",

@@ -6,7 +6,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_lesson_expression_round_nearest_rule_line(
+export function app_learn_js_lesson_expression_round_nearest_rule_line(
   parent,
   first_digits,
   like_name,
