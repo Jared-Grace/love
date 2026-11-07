@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
-import { app_code_lesson_expression_parentheses_moved_arrange } from "./app_code_lesson_expression_parentheses_moved_arrange.mjs";
+import { app_learn_js_lesson_expression_parentheses_moved_arrange } from "./app_learn_js_lesson_expression_parentheses_moved_arrange.mjs";
 export function app_code_lesson_expression_parentheses_moved_expression(
   group_first,
 ) {
@@ -9,7 +9,7 @@ export function app_code_lesson_expression_parentheses_moved_expression(
   let a = integer_random(2, 5);
   let b = integer_random(2, 5);
   let c = integer_random(2, 5);
-  let code = app_code_lesson_expression_parentheses_moved_arrange(
+  let code = app_learn_js_lesson_expression_parentheses_moved_arrange(
     a,
     b,
     c,

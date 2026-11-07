@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_expression_parentheses_moved_arrange(
+export function app_learn_js_lesson_expression_parentheses_moved_arrange(
   a,
   b,
   c,

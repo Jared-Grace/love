@@ -5,7 +5,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { text_split } from "./text_split.mjs";
-import { app_code_lesson_expression_parentheses_moved_arrange } from "./app_code_lesson_expression_parentheses_moved_arrange.mjs";
+import { app_learn_js_lesson_expression_parentheses_moved_arrange } from "./app_learn_js_lesson_expression_parentheses_moved_arrange.mjs";
 import { js_arithmetic_value } from "./js_arithmetic_value.mjs";
 import { app_code_lesson_expression_parentheses_moved_expression } from "./app_code_lesson_expression_parentheses_moved_expression.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -37,13 +37,13 @@ export function app_code_lesson_expression_parentheses_moved() {
     let a = words[0];
     let b = words[2];
     let c = words[4];
-    let grouped = app_code_lesson_expression_parentheses_moved_arrange(
+    let grouped = app_learn_js_lesson_expression_parentheses_moved_arrange(
       a,
       b,
       c,
       true,
     );
-    let spread = app_code_lesson_expression_parentheses_moved_arrange(
+    let spread = app_learn_js_lesson_expression_parentheses_moved_arrange(
       a,
       b,
       c,
