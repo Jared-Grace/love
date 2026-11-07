@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_arithmetic_parentheses_title_name_id } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_title_name_id } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_choose_order_arithmetic_parentheses()
   ("Nothing has to refuse the wrong press. The times cannot go first because the side the marks are on is not a value yet - it is a part still waiting - so the rule is read off the line rather than enforced against the learner, which is the same reading every pressing lesson in this run has asked for.");
   ("The wrong values offered are the ones the pressing lessons before it offer: what the other operator would have given on the same two numbers, and what the whole line comes to. They are worked out from the line rather than typed, so no line can be printed beside choices that do not belong to it.");
   let name_id =
-    app_code_lesson_expression_choose_order_arithmetic_parentheses_title_name_id();
+    app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_title_name_id();
   ("the quiz and the front page are the ones every pressing lesson uses, handed this lesson's wrong values - the pressing, the layout and the finishing are the same doing, and only what could be pressed instead differs");
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz, with this lesson's wrong values: the value the other operator would have given, and the value of the whole line";
