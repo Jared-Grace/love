@@ -4,7 +4,7 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
-import { app_code_lesson_name_id_function } from "./app_code_lesson_name_id_function.mjs";
+import { app_learn_js_lesson_name_id_function } from "./app_learn_js_lesson_name_id_function.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -33,7 +33,7 @@ export function app_learn_js_lesson_functions_console_log_generic(params) {
     let category = property_get_or(params, "category", "functions");
     let rights = [name];
     list_add_multiple(rights, name_id_rights);
-    name_id = app_code_lesson_name_id_function(category, rights);
+    name_id = app_learn_js_lesson_name_id_function(category, rights);
   }
   let logged_params = object_copy_assign(params, {
     batch_get: b,

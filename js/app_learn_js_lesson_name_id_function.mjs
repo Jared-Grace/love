@@ -6,7 +6,7 @@ import { html_span_text_multiple } from "./html_span_text_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-export function app_code_lesson_name_id_function(left, rights) {
+export function app_learn_js_lesson_name_id_function(left, rights) {
   let paint = function app_code_lesson_name_id_function_paint(parent) {
     let r = list_first_remaining(rights);
     let remaining = property_get(r, "remaining");
