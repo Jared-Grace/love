@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_quiz_multiple_choice_attempts(r2) {
+export function app_learn_js_lesson_quiz_multiple_choice_attempts(r2) {
   arguments_assert(arguments, 1);
   let qa_for = property_get(r2, "qa_for");
   let quiz_question_text = property_get(r2, "quiz_question_text");
