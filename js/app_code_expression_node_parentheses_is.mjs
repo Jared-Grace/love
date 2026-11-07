@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
@@ -22,7 +22,7 @@ export function app_code_expression_node_parentheses_is(item, node) {
   }
   let symbol = property_get(item, "operator");
   let right = property_get(item, "right");
-  let before_is = app_code_expression_node_before_is(item);
+  let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     ("a one-sided operator asks its single side for its own strength, which is what makes !(3 < 5) carry marks and !!true carry none");
     let acted_on_here = equal(right, node);

@@ -7,7 +7,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_span } from "./html_span.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_code_expression_paint_before_side } from "./app_code_expression_paint_before_side.mjs";
 import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
@@ -37,7 +37,7 @@ export function app_code_expression_paint(parent, item, on_operator) {
   let symbol = property_get(item, "operator");
   ("the operator and its two sides are written inside a piece of their own, so a lesson can colour the whole of what one press is about to work out and not the symbol alone");
   let node_span = html_span(parent);
-  let before_is = app_code_expression_node_before_is(item);
+  let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     ("a one-sided operator is written in front of the one thing it acts on, with no space between them and no side to its left, and how that one thing is gathered depends on how the operator is spelled");
     let rank = app_code_operator_rank(symbol);

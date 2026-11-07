@@ -3,7 +3,7 @@ import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { text_to } from "./text_to.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_learn_js_expression_meaning(item) {
   arguments_assert(arguments, 1);
@@ -20,7 +20,7 @@ export function app_learn_js_expression_meaning(item) {
   let symbol = property_get(item, "operator");
   let right = property_get(item, "right");
   let right_meaning = app_learn_js_expression_meaning(right);
-  let before_is = app_code_expression_node_before_is(item);
+  let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     let one_sided = text_combine_multiple([symbol, "(", right_meaning, ")"]);
     return one_sided;

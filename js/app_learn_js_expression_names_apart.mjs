@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_name } from "./app_learn_js_expression_name.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 export function app_learn_js_expression_names_apart(item) {
   arguments_assert(arguments, 1);
@@ -27,7 +27,7 @@ export function app_learn_js_expression_names_apart(item) {
   }
   let right = property_get(item, "right");
   let right_apart = app_learn_js_expression_names_apart(right);
-  let before_is = app_code_expression_node_before_is(item);
+  let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     let before = object_copy_assign(item, {
       right: right_apart,

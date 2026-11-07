@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 export function app_code_expression_symbols(item) {
@@ -17,7 +17,7 @@ export function app_code_expression_symbols(item) {
   let symbol = property_get(item, "operator");
   let right = property_get(item, "right");
   let right_symbols = app_code_expression_symbols(right);
-  let before_is = app_code_expression_node_before_is(item);
+  let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     let one_sided = list_concat([symbol], right_symbols);
     return one_sided;

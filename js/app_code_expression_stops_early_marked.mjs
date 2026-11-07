@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_code_expression_node_logical_is } from "./app_code_expression_node_logical_is.mjs";
 export function app_code_expression_stops_early_marked(item) {
@@ -16,7 +16,7 @@ export function app_code_expression_stops_early_marked(item) {
   }
   let right = property_get(item, "right");
   let right_marked = app_code_expression_stops_early_marked(right);
-  if (app_code_expression_node_before_is(item)) {
+  if (app_learn_js_expression_node_before_is(item)) {
     let before = object_copy_assign(item, {
       right: right_marked,
     });

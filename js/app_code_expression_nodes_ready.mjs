@@ -3,7 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_node_stops_early_is } from "./app_code_expression_node_stops_early_is.mjs";
 import { app_code_expression_node_settled_is } from "./app_code_expression_node_settled_is.mjs";
@@ -29,7 +29,7 @@ export function app_code_expression_nodes_ready(item) {
     let named = [item];
     return named;
   }
-  let before_is = app_code_expression_node_before_is(item);
+  let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     ("a one-sided operator has only the one side to wait on, so it is ready as soon as that side is a value");
     let acted_on = property_get(item, "right");

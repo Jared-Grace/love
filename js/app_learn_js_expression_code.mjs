@@ -4,7 +4,7 @@ import { not } from "./not.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
 import { js_code_called } from "./js_code_called.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_expression_code(item) {
     return name;
   }
   let symbol = property_get(item, "operator");
-  let before_is = app_code_expression_node_before_is(item);
+  let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     ("a one-sided operator asks its single side for its own strength rather than one above it: !!true needs no parentheses because the second ! is worked out first anyway, while !(3 < 5) does");
     let acted_on = property_get(item, "right");

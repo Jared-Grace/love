@@ -3,7 +3,7 @@ import { equal } from "./equal.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { and } from "./and.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { app_code_operator_solve_before } from "./app_code_operator_solve_before.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
@@ -24,7 +24,7 @@ export function app_code_expression_solved(item, node) {
   if (name_is) {
     return item;
   }
-  let node_before_is = app_code_expression_node_before_is(node);
+  let node_before_is = app_learn_js_expression_node_before_is(node);
   if (and(same, node_before_is)) {
     let symbol_before = property_get(node, "operator");
     let acted_on_of_node = property_get(node, "right");
@@ -49,7 +49,7 @@ export function app_code_expression_solved(item, node) {
   if (not(node_is)) {
     return item;
   }
-  let item_before_is = app_code_expression_node_before_is(item);
+  let item_before_is = app_learn_js_expression_node_before_is(item);
   if (item_before_is) {
     let symbol_of_item = property_get(item, "operator");
     let acted_on = property_get(item, "right");
