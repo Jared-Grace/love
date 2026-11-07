@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_copy_kept_title_name_id } from "./app_code_lesson_statement_name_copy_kept_title_name_id.mjs";
+import { app_learn_js_lesson_statement_name_copy_kept_title_name_id } from "./app_learn_js_lesson_statement_name_copy_kept_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_statement_name_copy_kept_batch } from "./app_learn_js_lesson_statement_name_copy_kept_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_statement_name_copy_kept() {
   ("This is the misreading that survives longest if it is never asked about. Nothing before this screen can tell a learner whether a name follows another name or holds a copy of it - every program up to here would write out the same thing either way - so a learner who has quietly decided it follows has been right every time so far.");
   ("Two names and four lines, which is the copying screen's program with one line put in. The line put in is the changing line from the lesson that gives a name a new value, so the program is made only of lines a learner has read, and everything new is in the order they come in.");
   ("Building the code from tokens stays switched off, for the reason the screens before give.");
-  let name_id = app_code_lesson_statement_name_copy_kept_title_name_id();
+  let name_id = app_learn_js_lesson_statement_name_copy_kept_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
     app_learn_js_lesson_statement_name_copy_kept_batch,
     eval_console_log_to_list,

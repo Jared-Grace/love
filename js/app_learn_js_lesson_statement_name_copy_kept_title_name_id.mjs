@@ -6,7 +6,7 @@ import { app_code_string_any_code } from "./app_code_string_any_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_statement_name_copy_kept_title_name_id() {
+export function app_learn_js_lesson_statement_name_copy_kept_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: changing a name after copying it, followed by the two lines it takes to do it");
   ("Two lines rather than one, because neither of them on its own is anything a learner has not seen. The copying line is the fifth lesson's and the changing line is the fourth's; what this lesson is about is only what happens when the second follows the first, so the title has to show both or it shows nothing.");
