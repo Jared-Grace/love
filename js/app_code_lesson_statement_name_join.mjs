@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_code_lesson_statement_names_binary_decoys } from "./app_code_lesson_statement_names_binary_decoys.mjs";
-import { app_code_lesson_statement_name_join_pairs } from "./app_code_lesson_statement_name_join_pairs.mjs";
+import { app_learn_js_lesson_statement_name_join_pairs } from "./app_learn_js_lesson_statement_name_join_pairs.mjs";
 import { app_learn_js_lesson_expression_string_concat } from "./app_learn_js_lesson_expression_string_concat.mjs";
 import { app_learn_js_lesson_statement_name_join_decoys } from "./app_learn_js_lesson_statement_name_join_decoys.mjs";
 export function app_code_lesson_statement_name_join() {
@@ -14,7 +14,7 @@ export function app_code_lesson_statement_name_join() {
   let lesson = app_code_lesson_statement_names_binary_decoys({
     words: "Joining two names",
     symbol: plus,
-    pairs_get: app_code_lesson_statement_name_join_pairs,
+    pairs_get: app_learn_js_lesson_statement_name_join_pairs,
     example_pair: ['"God"', '"love"'],
     remember_lesson: app_learn_js_lesson_expression_string_concat,
     remember_parts: ["we can join (", plus, ") two pieces of text:"],
