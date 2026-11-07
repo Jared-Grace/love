@@ -5,7 +5,7 @@ import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { text_empty } from "./text_empty.mjs";
-export function app_code_lesson_name_copy_lines(name_from, name_to) {
+export function app_learn_js_lesson_name_copy_lines(name_from, name_to) {
   arguments_assert(arguments, 2);
   ("the end of a program that copies one name into another, notes and all: the copying line with the notes saying what it does and what it does not do, then the line writing out the copy");
   ("Written once for every lesson that copies a name, so the notes a learner reads above the copying line are the same words wherever they meet it. The line that fills the cup says in the same breath that nothing leaves the cup it was filled from, because that is the one thing a learner will doubt.");

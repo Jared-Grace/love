@@ -16,7 +16,7 @@ import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_tha
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
-import { app_code_lesson_name_copy_lines } from "./app_code_lesson_name_copy_lines.mjs";
+import { app_learn_js_lesson_name_copy_lines } from "./app_learn_js_lesson_name_copy_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -75,7 +75,7 @@ export function app_code_lesson_statement_name_copy_single_above(
   let first_named = app_code_note_name_mark(name_first);
   let words_made = list_join_empty(["We make cup ", first_named]);
   let note_made = js_code_comment_line(words_made);
-  let copy_lines = app_code_lesson_name_copy_lines(name_first, name_last);
+  let copy_lines = app_learn_js_lesson_name_copy_lines(name_first, name_last);
   let lines = list_concat([note_made, held_first, nothing], copy_lines);
   app_learn_js_code_lines_writes_out(box_copy, lines, word_first);
   ("THE SCREEN OPENS WITH THE CUPS, AND THE REMINDER OF THE LESSON BEFORE COMES AFTER THE PROGRAM THAT TELLS THEM, directly above the sentence comparing the two programs - so the two programs being compared stand one under the other, and nothing the cups never hold is read before the cups, at the human's request");

@@ -10,7 +10,7 @@ import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_that_text.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_name_copy_lines } from "./app_code_lesson_name_copy_lines.mjs";
+import { app_learn_js_lesson_name_copy_lines } from "./app_learn_js_lesson_name_copy_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -54,7 +54,7 @@ export function app_code_lesson_statement_name_copy_code_box(
   let blank = text_empty();
   let text = app_learn_js_js_written_that_text();
   app_learn_js_div_cycle_code(box_code, [text]);
-  let copy_lines = app_code_lesson_name_copy_lines(name_first, name_copy);
+  let copy_lines = app_learn_js_lesson_name_copy_lines(name_first, name_copy);
   let lines = list_concat(
     [note_cups, held_first, held_last, blank],
     copy_lines,
