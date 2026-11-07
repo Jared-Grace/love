@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_chip_color_readings } from "./app_code_lesson_chip_color_readings.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_lesson_chip_color_baseline_path } from "./app_code_lesson_chip_color_baseline_path.mjs";
+import { app_learn_js_lesson_chip_color_baseline_path } from "./app_learn_js_lesson_chip_color_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,7 +15,7 @@ export async function app_code_lesson_chip_color_gate_run() {
   ("HOW MANY READINGS WERE TAKEN GOES OUT WITH THE VERDICT, counted off the readings themselves rather than worked back from the offenders - which on a clean run are none, so a length read off them would say nothing was checked on exactly the runs where the question matters. Green here means four colours were measured at three jobs each and six pairs at four kinds of sight; if that number ever falls, the sweep has been pointed somewhere else and the verdict is green because it looked at nothing.");
   let readings = app_code_lesson_chip_color_readings();
   let taken = list_size(readings);
-  let path = app_code_lesson_chip_color_baseline_path();
+  let path = app_learn_js_lesson_chip_color_baseline_path();
   let told = await baseline_names_gate_generic(
     readings,
     path,
