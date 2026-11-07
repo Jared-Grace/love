@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_names_binary_title_name_id } from "./app_code_lesson_statement_names_binary_title_name_id.mjs";
+import { app_learn_js_lesson_statement_names_binary_title_name_id } from "./app_learn_js_lesson_statement_names_binary_title_name_id.mjs";
 import { app_learn_js_lesson_statement_names_binary_programs } from "./app_learn_js_lesson_statement_names_binary_programs.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_statement_names_binary_decoys({
   arguments_assert(arguments, 1);
   ("a lesson about one symbol between two names, with the tempting wrong answers its forwards questions offer handed in; null leaves the other questions' answers as the only wrong ones");
   ("The twin without wrong answers hands in null, so every lesson built before this one is unchanged. A lesson whose answers can be told apart by a glance - two words run together, where the first word alone finds the right button - hands in wrong answers that share that first word, so the whole line has to be worked out.");
-  let name_id = app_code_lesson_statement_names_binary_title_name_id(
+  let name_id = app_learn_js_lesson_statement_names_binary_title_name_id(
     words,
     symbol,
     answer_name,
