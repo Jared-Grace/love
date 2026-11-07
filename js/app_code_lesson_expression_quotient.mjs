@@ -1,6 +1,6 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_dividend } from "./app_learn_js_lesson_expression_dividend.mjs";
-import { app_code_lesson_expression_divisor } from "./app_code_lesson_expression_divisor.mjs";
+import { app_learn_js_lesson_expression_divisor } from "./app_learn_js_lesson_expression_divisor.mjs";
 import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
@@ -60,7 +60,7 @@ export function app_code_lesson_expression_quotient() {
     app_code_remember_from_lesson(
       remember,
       context,
-      app_code_lesson_expression_divisor,
+      app_learn_js_lesson_expression_divisor,
       ["the ", "4", " is the divisor"],
     );
     app_learn_js_div_cycle_code(remember, ["The ", "3", " is the quotient"]);

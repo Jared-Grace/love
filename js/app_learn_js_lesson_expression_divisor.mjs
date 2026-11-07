@@ -9,7 +9,7 @@ import { text_to } from "./text_to.mjs";
 import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_expression_divisor() {
+export function app_learn_js_lesson_expression_divisor() {
   "identify the DIVISOR (the number you divide by) in a division a / b - the dividend a stands as the decoy; a thin lesson over the shared identify-an-operand generic";
   function make(divisor, quotient) {
     "a division whose divisor is the answer; the dividend (quotient*divisor + a leftover) is the decoy button. When quotient is 0 the dividend is the smaller number (e.g. 2 / 3), so the divisor is still the number you divide BY, even when it is the larger one";
