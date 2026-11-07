@@ -2,7 +2,7 @@ import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.m
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-export function app_code_expression_whole_part_numbers() {
+export function app_learn_js_expression_whole_part_numbers() {
   arguments_assert(arguments, 0);
   ("two numbers to divide on a line that rounds the division down, drawn so the division never comes out even and never runs on past two figures after the point: 17 and 5, or 9 and 4");
   ("The leftover is the whole reason these lines exist, so a division that came out even would leave the rounding down with nothing to do and the learner with nothing to read.");
