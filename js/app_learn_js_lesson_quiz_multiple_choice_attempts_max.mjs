@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { multiply } from "./multiply.mjs";
-export function app_code_lesson_quiz_multiple_choice_attempts_max(r) {
+export function app_learn_js_lesson_quiz_multiple_choice_attempts_max(r) {
   arguments_assert(arguments, 1);
   let seen = property_get(r, "seen");
   let distractors = property_get(r, "distractors");
