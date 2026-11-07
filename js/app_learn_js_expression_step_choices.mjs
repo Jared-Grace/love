@@ -11,7 +11,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { not } from "./not.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_expression_step_choices(value, rank_most) {
+export function app_learn_js_expression_step_choices(value, rank_most) {
   arguments_assert(arguments, 2);
   ("every way one more operator may be written beside a line that has come to this value, without a parenthesis being needed: the symbol, which side the line already there stands on, and the numbers that may join it");
   ("A line is grown by putting an operator beside what is already there, and only some of those growings print back as the line they mean. Put a times beside a plus with the plus on the left and the line reads 2 + 3 * 4, which is a different shape from the one that was built. This says which growings are safe, so a line is never built that cannot be written down.");
