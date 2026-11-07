@@ -4,7 +4,10 @@ import { app_code_lesson_statement_title_code_note_paint_get } from "./app_code_
 import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 import { app_learn_js_lesson_statement_name_last } from "./app_learn_js_lesson_statement_name_last.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-export function app_code_lesson_statement_name_pair_last(lesson_first, pair) {
+export function app_learn_js_lesson_statement_name_pair_last(
+  lesson_first,
+  pair,
+) {
   arguments_assert(arguments, 2);
   ("the second lesson of a pair where a name takes new values: the same programs as the first, with the name written out only at the end");
   ("The first lesson is handed in beside its pair rather than kept in the pair, because the first lesson is built from the pair and a pair naming it back would make each file load the other.");
