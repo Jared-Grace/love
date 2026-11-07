@@ -1,6 +1,6 @@
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
-import { app_code_lesson_expression_choose_order_compare_expression } from "./app_code_lesson_expression_choose_order_compare_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_compare_expression } from "./app_learn_js_lesson_expression_choose_order_compare_expression.mjs";
 import { app_code_lesson_expression_choose_order_compare_tree_of_code } from "./app_code_lesson_expression_choose_order_compare_tree_of_code.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_compare_questions() {
   let want_true = true;
   function tree_new() {
     "the next line: the other answer from last time, and the other shape once the two answers have both been asked of this one";
-    let tree = app_code_lesson_expression_choose_order_compare_expression(
+    let tree = app_learn_js_lesson_expression_choose_order_compare_expression(
       want_true,
       comparison_left,
     );

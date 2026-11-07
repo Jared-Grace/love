@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_compare_expression } from "./app_code_lesson_expression_choose_order_compare_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_compare_expression } from "./app_learn_js_lesson_expression_choose_order_compare_expression.mjs";
 import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { list_first } from "./list_first.mjs";
 import { equal } from "./equal.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_choose_order_compare_line_apart(
   ("Only the telling is held to this. The card below may draw the two the same and is none the worse for it: a learner there presses a chip they can see, so the symbol is not what tells the two apart.");
   ("Drawing again, rather than choosing the inner operator to differ, because the line the learner reads must stay one the generator would really produce - and it ends, since half the inner draws are < or > and neither can ever be the outer one.");
   ("Both shapes ask for this, which is why it is a function rather than a loop written into the telling: the shape with the comparison on the left needs the two symbols apart for exactly the same two lines of the same reason.");
-  let tree = app_code_lesson_expression_choose_order_compare_expression(
+  let tree = app_learn_js_lesson_expression_choose_order_compare_expression(
     want_true,
     comparison_left,
   );
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_choose_order_compare_line_apart(
   while (
     equal(property_get(tree, "operator"), property_get(step, "operator"))
   ) {
-    tree = app_code_lesson_expression_choose_order_compare_expression(
+    tree = app_learn_js_lesson_expression_choose_order_compare_expression(
       want_true,
       comparison_left,
     );
