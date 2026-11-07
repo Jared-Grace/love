@@ -12,7 +12,7 @@ import { subtract } from "./subtract.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-export function app_code_lesson_statement_name_swap_backwards_decoys(
+export function app_learn_js_lesson_statement_name_swap_backwards_decoys(
   question,
   answer,
 ) {

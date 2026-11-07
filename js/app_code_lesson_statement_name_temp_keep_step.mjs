@@ -5,7 +5,7 @@ import { list_second } from "./list_second.mjs";
 import { app_code_lesson_statement_name_temp } from "./app_code_lesson_statement_name_temp.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
-import { app_code_lesson_statement_name_swap_backwards_decoys } from "./app_code_lesson_statement_name_swap_backwards_decoys.mjs";
+import { app_learn_js_lesson_statement_name_swap_backwards_decoys } from "./app_learn_js_lesson_statement_name_swap_backwards_decoys.mjs";
 export function app_code_lesson_statement_name_temp_keep_step() {
   arguments_assert(arguments, 0);
   ("the third step of the swapping ladder: let temp = a; before a = b; - temp keeps what a held, and temp and a are written out");
@@ -21,7 +21,7 @@ export function app_code_lesson_statement_name_temp_keep_step() {
   let step = {
     middle,
     logged,
-    backwards_decoys: app_code_lesson_statement_name_swap_backwards_decoys,
+    backwards_decoys: app_learn_js_lesson_statement_name_swap_backwards_decoys,
   };
   return step;
 }
