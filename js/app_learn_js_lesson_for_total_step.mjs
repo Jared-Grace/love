@@ -4,7 +4,7 @@ import { app_learn_js_lesson_for_same_as_while_above } from "./app_learn_js_less
 import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
 import { app_code_lesson_total_step_generic } from "./app_code_lesson_total_step_generic.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
-export function app_code_lesson_for_total_step() {
+export function app_learn_js_lesson_for_total_step() {
   arguments_assert(arguments, 0);
   ("a running total in a for counting by more than one: let total = 0; for (let n = 1; n < 7; n += 2) { total += n; } console.log(total); writes out 9, the same as Counting by twos and threes");
   ("The one new fact is that the last part of a for can go up by more than 1 while the lines inside add up a total.");
