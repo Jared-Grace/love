@@ -14,7 +14,7 @@ import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { html_div } from "./html_div.mjs";
 import { emoji_home } from "./emoji_home.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_code_lesson_title_strip_arrow } from "./app_code_lesson_title_strip_arrow.mjs";
+import { app_learn_js_lesson_title_strip_arrow } from "./app_learn_js_lesson_title_strip_arrow.mjs";
 import { app_shared_button_arrow_previous_notext } from "./app_shared_button_arrow_previous_notext.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
@@ -75,7 +75,7 @@ export function app_code_title_strip(
   let text = emoji_home();
   let home = app_shared_button(leading, text, go_home);
   ("the two arrows step by one lesson in the list and no further - never to the next UNFINISHED lesson, which is what the skip button at the foot of the lesson already does. These are for reading back over what came before and looking ahead, so they must land where a reader counting lesson numbers expects to land");
-  let previous = app_code_lesson_title_strip_arrow(
+  let previous = app_learn_js_lesson_title_strip_arrow(
     leading,
     context,
     index_previous,
@@ -113,7 +113,7 @@ export function app_code_title_strip(
     "align-items": "center",
     "justify-self": "end",
   });
-  let next = app_code_lesson_title_strip_arrow(
+  let next = app_learn_js_lesson_title_strip_arrow(
     trailing,
     context,
     index_next,
