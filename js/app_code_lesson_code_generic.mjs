@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
+import { app_learn_js_label_of_code } from "./app_learn_js_label_of_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_code_generic(params) {
     params,
     "forwards_answer_count_override",
   );
-  let example_answer_label_default = app_code_label_of_code(value);
+  let example_answer_label_default = app_learn_js_label_of_code(value);
   let quiz_label = text_combine_multiple([
     "What is the ",
     value,
