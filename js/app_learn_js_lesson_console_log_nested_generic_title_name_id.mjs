@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-export function app_code_lesson_console_log_nested_generic_title_name_id(
+export function app_learn_js_lesson_console_log_nested_generic_title_name_id(
   symbol,
 ) {
   arguments_assert(arguments, 1);
