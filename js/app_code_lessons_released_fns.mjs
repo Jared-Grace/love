@@ -89,7 +89,7 @@ import { app_code_lesson_expression_equal_number_string_true_false } from "./app
 import { app_code_lesson_expression_choose_order_compare } from "./app_code_lesson_expression_choose_order_compare.mjs";
 import { app_code_lesson_expression_comparing_a_comparison } from "./app_code_lesson_expression_comparing_a_comparison.mjs";
 import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
-import { app_code_lesson_expression_choose_order_and_before_or } from "./app_code_lesson_expression_choose_order_and_before_or.mjs";
+import { app_learn_js_lesson_expression_choose_order_and_before_or } from "./app_learn_js_lesson_expression_choose_order_and_before_or.mjs";
 import { app_learn_js_lesson_expression_and_before_or } from "./app_learn_js_lesson_expression_and_before_or.mjs";
 import { app_code_lesson_expression_choose_order_parentheses } from "./app_code_lesson_expression_choose_order_parentheses.mjs";
 import { app_code_lesson_expression_parentheses_or } from "./app_code_lesson_expression_parentheses_or.mjs";
@@ -402,7 +402,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_expression_choose_order_compare,
     app_code_lesson_expression_comparing_a_comparison,
     app_code_lesson_expression_parentheses_one_side,
-    app_code_lesson_expression_choose_order_and_before_or,
+    app_learn_js_lesson_expression_choose_order_and_before_or,
     app_learn_js_lesson_expression_and_before_or,
     app_code_lesson_expression_choose_order_parentheses,
     app_code_lesson_expression_parentheses_or,

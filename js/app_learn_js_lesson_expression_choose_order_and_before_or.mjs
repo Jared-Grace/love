@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_and_before_or_title_name_id
 import { app_learn_js_lesson_expression_choose_order_and_before_or_questions } from "./app_learn_js_lesson_expression_choose_order_and_before_or_questions.mjs";
 import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_and_before_or_above } from "./app_learn_js_lesson_expression_choose_order_and_before_or_above.mjs";
-export function app_code_lesson_expression_choose_order_and_before_or() {
+export function app_learn_js_lesson_expression_choose_order_and_before_or() {
   arguments_assert(arguments, 0);
   ("both && and || in the one line, taken a press at a time: false && true || true, choose the && , choose what it comes to, then choose the || and what that comes to");
   ("It stands on the two lessons that first showed the marks, Or and And, where each was worked between a plain true and a plain false. Neither of those says anything about the two of them meeting, and until they meet a learner has no way to know that they are not equals.");
