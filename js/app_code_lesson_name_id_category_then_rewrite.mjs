@@ -9,7 +9,7 @@ import { list_each_size } from "./list_each_size.mjs";
 import { js_list_calls_named_nodes } from "./js_list_calls_named_nodes.mjs";
 import { app_learn_js_lesson_name_id_category_then_maker_or_null } from "./app_learn_js_lesson_name_id_category_then_maker_or_null.mjs";
 import { app_code_lesson_name_id_category_then_painter_or_null } from "./app_code_lesson_name_id_category_then_painter_or_null.mjs";
-import { app_code_lesson_name_id_category_then_opens_category_is } from "./app_code_lesson_name_id_category_then_opens_category_is.mjs";
+import { app_learn_js_lesson_name_id_category_then_opens_category_is } from "./app_learn_js_lesson_name_id_category_then_opens_category_is.mjs";
 import { app_code_lesson_name_id_category_then_paint_name } from "./app_code_lesson_name_id_category_then_paint_name.mjs";
 export function app_code_lesson_name_id_category_then_rewrite(ast) {
   arguments_assert(arguments, 1);
@@ -32,7 +32,8 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
   let unpacked = list_first_remaining(statements);
   let opening = property_get(unpacked, "first");
   let remaining = property_get(unpacked, "remaining");
-  let opens = app_code_lesson_name_id_category_then_opens_category_is(opening);
+  let opens =
+    app_learn_js_lesson_name_id_category_then_opens_category_is(opening);
   if (not(opens)) {
     let other = {
       done: false,
