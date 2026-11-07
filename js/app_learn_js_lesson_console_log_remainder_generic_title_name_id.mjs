@@ -3,7 +3,7 @@ import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_ope
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_code_lesson_console_log_remainder_generic_title_name_id(
+export function app_learn_js_lesson_console_log_remainder_generic_title_name_id(
   percent,
   divisor_text,
 ) {
