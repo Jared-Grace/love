@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_both_sides_above_generic } from "./app_code_lesson_expression_choose_order_both_sides_above_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_above_generic } from "./app_learn_js_lesson_expression_choose_order_both_sides_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_pair_expression } from "./app_code_lesson_expression_choose_order_pair_expression.mjs";
 import { app_code_lesson_expression_choose_order_pair_intro } from "./app_code_lesson_expression_choose_order_pair_intro.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
@@ -14,13 +14,14 @@ export function app_code_lesson_expression_choose_order_pair_above(
   ("The run is done on a TRUE line, for the same reason the lessons beside it are: a true line is the one a learner can check against the two values they have just watched being worked out.");
   let want_true = true;
   let tree = app_code_lesson_expression_choose_order_pair_expression(want_true);
-  let line = app_code_lesson_expression_choose_order_both_sides_above_generic(
-    root,
-    tree,
-    app_code_lesson_expression_comparing_a_comparison_recall,
-    app_code_lesson_expression_sides_parentheses_say,
-    app_code_lesson_expression_choose_order_pair_intro,
-    context,
-  );
+  let line =
+    app_learn_js_lesson_expression_choose_order_both_sides_above_generic(
+      root,
+      tree,
+      app_code_lesson_expression_comparing_a_comparison_recall,
+      app_code_lesson_expression_sides_parentheses_say,
+      app_code_lesson_expression_choose_order_pair_intro,
+      context,
+    );
   return line;
 }
