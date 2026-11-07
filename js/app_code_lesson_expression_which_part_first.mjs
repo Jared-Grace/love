@@ -2,7 +2,7 @@ import { app_learn_js_lesson_expression_which_part_first_above } from "./app_lea
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_lesson_code_generic } from "./app_learn_js_lesson_code_generic.mjs";
-import { app_code_lesson_expression_which_part_first_answer } from "./app_code_lesson_expression_which_part_first_answer.mjs";
+import { app_learn_js_lesson_expression_which_part_first_answer } from "./app_learn_js_lesson_expression_which_part_first_answer.mjs";
 import { app_code_lesson_expression_which_part_first_decoys } from "./app_code_lesson_expression_which_part_first_decoys.mjs";
 import { app_code_lesson_expression_which_part_first_expression } from "./app_code_lesson_expression_which_part_first_expression.mjs";
 import { app_code_lesson_expression_which_part_first_title_name_id } from "./app_code_lesson_expression_which_part_first_title_name_id.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_which_part_first() {
   }
   let batch_get = app_learn_js_batch_question_answer_fns(
     questions_get,
-    app_code_lesson_expression_which_part_first_answer,
+    app_learn_js_lesson_expression_which_part_first_answer,
   );
   let lesson = app_learn_js_lesson_code_generic({
     value: "part",
