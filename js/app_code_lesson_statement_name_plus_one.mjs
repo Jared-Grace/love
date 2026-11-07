@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_plus_one_title_name_id } from "./app_code_lesson_statement_name_plus_one_title_name_id.mjs";
 import { app_learn_js_lesson_statement_name_one_step_generic } from "./app_learn_js_lesson_statement_name_one_step_generic.mjs";
-import { app_code_lesson_statement_name_plus_one_batch } from "./app_code_lesson_statement_name_plus_one_batch.mjs";
+import { app_learn_js_lesson_statement_name_plus_one_batch } from "./app_learn_js_lesson_statement_name_plus_one_batch.mjs";
 import { app_learn_js_lesson_statement_name_plus_one_above } from "./app_learn_js_lesson_statement_name_plus_one_above.mjs";
 export function app_code_lesson_statement_name_plus_one() {
   arguments_assert(arguments, 0);
@@ -11,7 +11,7 @@ export function app_code_lesson_statement_name_plus_one() {
   let name_id = app_code_lesson_statement_name_plus_one_title_name_id();
   let lesson = app_learn_js_lesson_statement_name_one_step_generic(
     name_id,
-    app_code_lesson_statement_name_plus_one_batch,
+    app_learn_js_lesson_statement_name_plus_one_batch,
     app_learn_js_lesson_statement_name_plus_one_above,
     true,
   );
