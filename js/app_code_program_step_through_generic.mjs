@@ -69,7 +69,7 @@ import { list_take } from "./list_take.mjs";
 import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
 import { html_scroll_nearest } from "./html_scroll_nearest.mjs";
 import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
-import { app_code_code_dots_chip_add } from "./app_code_code_dots_chip_add.mjs";
+import { app_learn_js_code_dots_chip_add } from "./app_learn_js_code_dots_chip_add.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
@@ -541,7 +541,7 @@ export function app_code_program_step_through_generic(
           app_shared_button_inline_sentence(line, words, look_here);
           continue;
         }
-        let chip = app_code_code_dots_chip_add(line, words);
+        let chip = app_learn_js_code_dots_chip_add(line, words);
         html_cursor_pointer(chip);
         html_on_click(chip, look_here);
       }
