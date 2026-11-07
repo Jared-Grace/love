@@ -144,7 +144,7 @@ import { app_learn_js_lesson_expression_choose_order_integer_division } from "./
 import { app_code_lesson_expression_choose_order_whole_part } from "./app_code_lesson_expression_choose_order_whole_part.mjs";
 import { app_learn_js_lesson_expression_choose_order_remainder } from "./app_learn_js_lesson_expression_choose_order_remainder.mjs";
 import { app_learn_js_lesson_expression_both_sides_any_comparison } from "./app_learn_js_lesson_expression_both_sides_any_comparison.mjs";
-import { app_code_lesson_expression_choose_order_swapping_add } from "./app_code_lesson_expression_choose_order_swapping_add.mjs";
+import { app_learn_js_lesson_expression_choose_order_swapping_add } from "./app_learn_js_lesson_expression_choose_order_swapping_add.mjs";
 import { app_code_lesson_expression_choose_order_swapping_divide } from "./app_code_lesson_expression_choose_order_swapping_divide.mjs";
 import { app_learn_js_lesson_expression_choose_order_in_between } from "./app_learn_js_lesson_expression_choose_order_in_between.mjs";
 import { app_code_lesson_expression_three_steps_left_to_right } from "./app_code_lesson_expression_three_steps_left_to_right.mjs";
@@ -457,7 +457,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_expression_choose_order_whole_part,
     app_learn_js_lesson_expression_choose_order_remainder,
     app_learn_js_lesson_expression_both_sides_any_comparison,
-    app_code_lesson_expression_choose_order_swapping_add,
+    app_learn_js_lesson_expression_choose_order_swapping_add,
     app_code_lesson_expression_choose_order_swapping_divide,
     app_learn_js_lesson_expression_choose_order_in_between,
     app_code_lesson_expression_three_steps_left_to_right,

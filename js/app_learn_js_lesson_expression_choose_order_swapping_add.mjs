@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_twin_read_generic } from "./app
 import { app_code_lesson_expression_swapping_add } from "./app_code_lesson_expression_swapping_add.mjs";
 import { app_learn_js_expression_flat_tree_of_code } from "./app_learn_js_expression_flat_tree_of_code.mjs";
 import { app_learn_js_expression_value_decoys_mixed } from "./app_learn_js_expression_value_decoys_mixed.mjs";
-export function app_code_lesson_expression_choose_order_swapping_add() {
+export function app_learn_js_lesson_expression_choose_order_swapping_add() {
   arguments_assert(arguments, 0);
   ("a line and its swap on either side of ===, taken a press at a time before the lesson next door asks for the whole line: 2 + 4 === 4 + 2, choose the left plus, choose 6, choose the right plus, choose 6, see 6 === 6, choose true");
   let words = ["Solve swapping ", "+", " and ", "*"];
