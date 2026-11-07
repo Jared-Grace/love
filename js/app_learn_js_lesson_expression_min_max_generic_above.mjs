@@ -5,7 +5,7 @@ import { text_to } from "./text_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_expression_min_max_generic_code } from "./app_code_lesson_expression_min_max_generic_code.mjs";
+import { app_learn_js_lesson_expression_min_max_generic_code } from "./app_learn_js_lesson_expression_min_max_generic_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -38,13 +38,13 @@ export function app_learn_js_lesson_expression_min_max_generic_above({
     compare_middle,
     other_text,
   ]);
-  let v = app_code_lesson_expression_min_max_generic_code(
+  let v = app_learn_js_lesson_expression_min_max_generic_code(
     chosen,
     other,
     called_name,
   );
   app_learn_js_div_cycle_code(example_box, ["So ", v, " is ", chosen_text]);
-  let v2 = app_code_lesson_expression_min_max_generic_code(
+  let v2 = app_learn_js_lesson_expression_min_max_generic_code(
     other,
     chosen,
     called_name,

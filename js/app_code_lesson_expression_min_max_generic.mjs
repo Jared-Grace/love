@@ -1,7 +1,7 @@
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_expression_min_max_generic_two_numbers } from "./app_code_lesson_expression_min_max_generic_two_numbers.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_lesson_expression_min_max_generic_code } from "./app_code_lesson_expression_min_max_generic_code.mjs";
+import { app_learn_js_lesson_expression_min_max_generic_code } from "./app_learn_js_lesson_expression_min_max_generic_code.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -25,7 +25,11 @@ export function app_code_lesson_expression_min_max_generic(params) {
     let two = app_code_lesson_expression_min_max_generic_two_numbers();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
-    let r = app_code_lesson_expression_min_max_generic_code(a, b, called_name);
+    let r = app_learn_js_lesson_expression_min_max_generic_code(
+      a,
+      b,
+      called_name,
+    );
     return r;
   }
   function refill() {
