@@ -9,7 +9,7 @@ import { html_url_without_hash } from "./html_url_without_hash.mjs";
 import { hash_to_url } from "./hash_to_url.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { window_open } from "./window_open.mjs";
-export function app_code_lesson_open_tab(context, lesson_id) {
+export function app_learn_js_lesson_open_tab(context, lesson_id) {
   arguments_assert(arguments, 2);
   ("opens a lesson's examples in a new tab, by the same link the app writes into the address when that lesson is open, so the new tab reads it back the way a shared link is read; this tab stays where it is");
   let hash = {};

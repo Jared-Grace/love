@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_shared_button_numbered_progress } from "./app_shared_button_numbered_progress.mjs";
-import { app_code_lesson_open_tab } from "./app_code_lesson_open_tab.mjs";
+import { app_learn_js_lesson_open_tab } from "./app_learn_js_lesson_open_tab.mjs";
 import { html_on_middle_click } from "./html_on_middle_click.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -46,7 +46,7 @@ export function app_learn_js_home_lesson_button(
   let button = property_get(r, "button");
   ("a middle click opens the lesson in a new tab and leaves this list where it is, at the human's request, 2026-10-11. Rejected: making the row a real link, which would also give copy-link and ctrl-click, but the row is the shared numbered button every app draws");
   function on_middle_click() {
-    app_code_lesson_open_tab(context, id);
+    app_learn_js_lesson_open_tab(context, id);
   }
   html_on_middle_click(button, on_middle_click);
   let gap = app_shared_spaced_gap();
