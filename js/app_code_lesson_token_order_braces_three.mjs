@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_braces_three_batch } from "./app_code_braces_three_batch.mjs";
+import { app_learn_js_braces_three_batch } from "./app_learn_js_braces_three_batch.mjs";
 import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_token_order_braces_three() {
   ("Since 2026-10-11 the lessons on which brace pairs with which, the lines between braces and the order of the braces also stand between this lesson and If after an if inside an if, as the human asked, so three pairs are explained fully before their output is asked.");
   ("The writing is a first draft by Claude 2026-10-11.");
   let batch = app_learn_js_batch_question_answer_fns(
-    app_code_braces_three_batch,
+    app_learn_js_braces_three_batch,
     app_learn_js_braces_sequence,
   );
   function above(root, context) {
