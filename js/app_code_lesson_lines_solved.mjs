@@ -1,4 +1,4 @@
-import { app_code_exercise_solving_is } from "./app_code_exercise_solving_is.mjs";
+import { app_learn_js_exercise_solving_is } from "./app_learn_js_exercise_solving_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each_range } from "./each_range.mjs";
 import { list_add } from "./list_add.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_lines_solved(lesson, rounds) {
     for (let qa of batch) {
       let exercises = property_get(qa, "exercises");
       for (let exercise of exercises) {
-        let solving_is = app_code_exercise_solving_is(exercise);
+        let solving_is = app_learn_js_exercise_solving_is(exercise);
         if (not(solving_is)) {
           continue;
         }

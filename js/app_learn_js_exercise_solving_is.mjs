@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_line_operators_carried_is } from "./app_code_line_operators_carried_is.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
-export function app_code_exercise_solving_is(exercise) {
+export function app_learn_js_exercise_solving_is(exercise) {
   arguments_assert(arguments, 1);
   ("Whether one exercise asks a learner to work a line out, rather than to match one written form of the same thing with another.");
   ("A lesson that teaches what a sign stands for shows both forms and asks which goes with which - 3 ** 5 beside 3 * 3 * 3 * 3 * 3. Neither side is ever valued, so the five threes cost a learner nothing like five threes to add. Pricing that line by the signs on it made two such lessons the two most out-of-place lessons in the whole course, which is not what they are.");
