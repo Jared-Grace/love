@@ -13,7 +13,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_inside_parenthesis_box } from "./app_learn_js_lesson_inside_parenthesis_box.mjs";
-export function app_code_lesson_statement_name_two_above(root, context) {
+export function app_learn_js_lesson_statement_name_two_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: two cups standing side by side with different things in them, being asked about one at a time, and the same thing written as code");
   ("Two cups rather than one, drawn next to each other rather than one under the other, because a picture read downwards says what happened next and this has to say what is standing there at the same time.");
