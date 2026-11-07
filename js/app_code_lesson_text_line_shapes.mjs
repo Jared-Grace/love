@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { app_code_lesson_text_line_parenthesis_shape_or_null } from "./app_code_lesson_text_line_parenthesis_shape_or_null.mjs";
+import { app_learn_js_lesson_text_line_parenthesis_shape_or_null } from "./app_learn_js_lesson_text_line_parenthesis_shape_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_learn_js_lesson_text_line_operator_mix_or_null } from "./app_learn_js_lesson_text_line_operator_mix_or_null.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_text_line_shapes(text) {
   let trimmed = text_trim(text);
   let found = [];
   let parenthesis_shape =
-    app_code_lesson_text_line_parenthesis_shape_or_null(trimmed);
+    app_learn_js_lesson_text_line_parenthesis_shape_or_null(trimmed);
   let some = null_not_is(parenthesis_shape);
   if (some) {
     list_add(found, parenthesis_shape);
