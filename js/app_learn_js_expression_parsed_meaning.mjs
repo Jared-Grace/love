@@ -8,7 +8,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_get } from "./list_get.mjs";
-export function app_code_expression_parsed_meaning(node) {
+export function app_learn_js_expression_parsed_meaning(node) {
   arguments_assert(arguments, 1);
   ("what a line of javascript MEANS, once it has been read by a real javascript reader, written in the very same words a shape writes its own meaning in: a pair of brackets round every operator and no spaces anywhere, so Math.floor(14 / 4) * 4 comes out (Math.floor((14/4))*4)");
   ("The second of the two writers. One says what a shape means; this one says what the line that shape printed means, and the line is read here by javascript itself rather than by anything of ours - so a line javascript would take a different way cannot be written out the way we intended it. That is the whole of the check: the two writings are held against each other as plain text.");
@@ -32,7 +32,7 @@ export function app_code_expression_parsed_meaning(node) {
       let negative_spelled = js_unparse(node);
       return negative_spelled;
     }
-    let inside = app_code_expression_parsed_meaning(acted_on);
+    let inside = app_learn_js_expression_parsed_meaning(acted_on);
     let one_sided = text_combine_multiple([symbol, "(", inside, ")"]);
     return one_sided;
   }
@@ -42,8 +42,8 @@ export function app_code_expression_parsed_meaning(node) {
     let symbol_between = property_get(node, "operator");
     let left = property_get(node, "left");
     let right = property_get(node, "right");
-    let left_meaning = app_code_expression_parsed_meaning(left);
-    let right_meaning = app_code_expression_parsed_meaning(right);
+    let left_meaning = app_learn_js_expression_parsed_meaning(left);
+    let right_meaning = app_learn_js_expression_parsed_meaning(right);
     let both_sides = text_combine_multiple([
       "(",
       left_meaning,
@@ -61,7 +61,7 @@ export function app_code_expression_parsed_meaning(node) {
       let callee = property_get(node, "callee");
       let name = js_unparse(callee);
       let only = list_get(handed, 0);
-      let inside_call = app_code_expression_parsed_meaning(only);
+      let inside_call = app_learn_js_expression_parsed_meaning(only);
       let called = text_combine_multiple([name, "(", inside_call, ")"]);
       return called;
     }
