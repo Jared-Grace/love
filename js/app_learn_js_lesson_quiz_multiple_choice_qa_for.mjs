@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { identity } from "./identity.mjs";
-export function app_code_lesson_quiz_multiple_choice_qa_for(r, info) {
+export function app_learn_js_lesson_quiz_multiple_choice_qa_for(r, info) {
   arguments_assert(arguments, 2);
   let question_property = property_get(r, "question_property");
   let quiz_answer_text = property_get(r, "quiz_answer_text");
