@@ -3,7 +3,7 @@ import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_comment_note_above } from "./app_learn_js_lesson_comment_note_above.mjs";
 import { app_learn_js_lesson_comment_note_batch } from "./app_learn_js_lesson_comment_note_batch.mjs";
-import { app_code_lesson_comment_note_title_name_id } from "./app_code_lesson_comment_note_title_name_id.mjs";
+import { app_learn_js_lesson_comment_note_title_name_id } from "./app_learn_js_lesson_comment_note_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 export function app_code_lesson_comment_note() {
@@ -13,7 +13,7 @@ export function app_code_lesson_comment_note() {
   ("It is taught on the plainest line there is rather than on anything the recent screens have been building, because a note may sit above any line at all and the line it sits above is not what is being learnt.");
   ("Notes are not unscrambled. The tokens a program is taken apart into come from the machine's reading of it, and the machine does not read a note - so a note handed to that quiz arrives as nothing at all, and a learner would be asked to build a line that has gone.");
   ("The code is painted with the note dimmed, in the questions as well as in the worked example. A screen that dimmed the note in one place and not the other would be saying the note is different only sometimes.");
-  let name_id = app_code_lesson_comment_note_title_name_id();
+  let name_id = app_learn_js_lesson_comment_note_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
     app_learn_js_lesson_comment_note_batch,
     eval_console_log_to_list,
