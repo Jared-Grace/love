@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_integer_division_title_name_id } from "./app_code_lesson_expression_choose_order_integer_division_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_integer_division_title_name_id } from "./app_learn_js_lesson_expression_choose_order_integer_division_title_name_id.mjs";
 import { app_learn_js_expression_integer_division_random } from "./app_learn_js_expression_integer_division_random.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_expression_choose_order_integer_division() {
   ("Nothing has to refuse a wrong press. The rounding cannot go first because what stands inside it is not a number yet, so the order is read off the line rather than enforced against the learner - the same reading every pressing lesson in this run asks for.");
   ("The wrong values offered are this line's own, out of the one place that decides them for every line whose division is rounded down: the decimal the rounding is about and the whole numbers either side of it, so the same three values stand under both presses and which of them is right changes.");
   let name_id =
-    app_code_lesson_expression_choose_order_integer_division_title_name_id();
+    app_learn_js_lesson_expression_choose_order_integer_division_title_name_id();
   function expression(turn_unused) {
     "the next line, drawn fresh";
     "The bank turns a true and a false over from question to question for the lessons whose lines come in two kinds. Every line here is the one kind, so a lesson that read the turn would be dividing its questions by something a learner cannot see.";
