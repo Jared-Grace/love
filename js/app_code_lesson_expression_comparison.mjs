@@ -1,6 +1,6 @@
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_binary_next_arg } from "./app_code_binary_next_arg.mjs";
+import { app_learn_js_binary_next_arg } from "./app_learn_js_binary_next_arg.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_comparison(params) {
   let next_arg = property_get_or_null(params, "next_arg");
   let next_arg_missing = null_is(next_arg);
   if (next_arg_missing) {
-    next_arg = app_code_binary_next_arg(symbol, pair);
+    next_arg = app_learn_js_binary_next_arg(symbol, pair);
   }
   let example_count = property_get_or_null(params, "example_count");
   let example_count_missing = null_is(example_count);
