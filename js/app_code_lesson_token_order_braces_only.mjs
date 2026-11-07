@@ -5,7 +5,7 @@ import { list_join_space } from "./list_join_space.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
 import { app_code_lesson_token_order_braces_colored } from "./app_code_lesson_token_order_braces_colored.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_token_order_braces_only() {
     let box = app_learn_js_container_light_blue(root);
     let line = html_div(box);
     html_span_text_content(line, "This is the same as ");
-    app_code_lesson_reference_draw(
+    app_learn_js_lesson_reference_draw(
       line,
       context,
       app_code_lesson_token_order_braces_colored,

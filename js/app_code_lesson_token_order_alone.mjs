@@ -1,7 +1,7 @@
 import { app_learn_js_container_light_blue_div } from "./app_learn_js_container_light_blue_div.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_token_order_generic } from "./app_code_lesson_token_order_generic.mjs";
@@ -18,7 +18,11 @@ export function app_code_lesson_token_order_alone() {
     "the one thing this lesson changes from the lesson before, with a link to it";
     let line = app_learn_js_container_light_blue_div(root);
     html_span_text_content(line, "This is the same as ");
-    app_code_lesson_reference_draw(line, context, app_code_lesson_token_order);
+    app_learn_js_lesson_reference_draw(
+      line,
+      context,
+      app_code_lesson_token_order,
+    );
     html_span_text_content(
       line,
       ", except there is no blue telling you what to choose",

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -19,7 +19,7 @@ export function app_code_remember_from_lesson_names(
   ("Which lesson it was, and the button to it, are written by the same unit every other sentence that leans on an earlier lesson uses, so a reminder and a reference in the middle of an explanation cannot come to name one lesson two ways.");
   let div = html_div(parent);
   html_span_text_content(div, "Remember, from ");
-  app_code_lesson_reference_draw(div, context, lesson_fn);
+  app_learn_js_lesson_reference_draw(div, context, lesson_fn);
   let first = list_first(parts);
   let rest = list_skip(parts, 1);
   let opening = text_combine_multiple([", ", first]);

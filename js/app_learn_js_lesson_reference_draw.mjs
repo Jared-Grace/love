@@ -12,7 +12,7 @@ import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
-export function app_code_lesson_reference_draw(parent, context, lesson_fn) {
+export function app_learn_js_lesson_reference_draw(parent, context, lesson_fn) {
   arguments_assert(arguments, 3);
   ("writes where an earlier lesson is into a line already started: lesson N with the number a button to it, or, for the lesson just before this one, the previous lesson as the button. Any sentence that leans on an earlier lesson can say which and let a learner who does not know it go and look, and step down again from there until they reach one they do know");
   ("The number is asked of the lesson order rather than written into the sentence, so a lesson moved or put in ahead of the one pointed at changes every reference with it, and no reference can go on naming a lesson that is now somewhere else.");

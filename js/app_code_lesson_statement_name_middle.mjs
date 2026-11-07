@@ -6,7 +6,7 @@ import { app_learn_js_explain_container_next } from "./app_learn_js_explain_cont
 import { app_learn_js_lesson_bold_term } from "./app_learn_js_lesson_bold_term.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -158,7 +158,7 @@ export function app_code_lesson_statement_name_middle() {
     "the average, reminded with a button to the lesson that taught it, so a learner who has forgotten can go and look";
     let line = html_div(box);
     html_span_text_content(line, "Remember, from ");
-    app_code_lesson_reference_draw(
+    app_learn_js_lesson_reference_draw(
       line,
       context,
       app_code_lesson_statement_name_average_two,

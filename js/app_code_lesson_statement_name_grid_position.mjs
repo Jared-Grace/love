@@ -16,7 +16,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
@@ -155,7 +155,7 @@ export function app_code_lesson_statement_name_grid_position() {
     "the remainder sentence, ending with which lesson taught the remainder as a button to it, so a learner who does not know it can go and look";
     let line = v14(box);
     html_span_text_content(line, ", from ");
-    app_code_lesson_reference_draw(
+    app_learn_js_lesson_reference_draw(
       line,
       context,
       app_code_lesson_statement_name_remainder,

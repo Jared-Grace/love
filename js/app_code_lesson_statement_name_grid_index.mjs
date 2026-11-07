@@ -6,7 +6,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
@@ -91,7 +91,7 @@ export function app_code_lesson_statement_name_grid_index() {
     );
     let line = html_div(box);
     html_span_text_content(line, "And the lesson before it, ");
-    app_code_lesson_reference_draw(
+    app_learn_js_lesson_reference_draw(
       line,
       context,
       app_code_lesson_statement_name_grid_row,
