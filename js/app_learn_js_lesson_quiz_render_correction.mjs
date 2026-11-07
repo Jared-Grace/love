@@ -3,7 +3,7 @@ import { html_clear } from "./html_clear.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
-export function app_code_lesson_quiz_render_correction(
+export function app_learn_js_lesson_quiz_render_correction(
   container_correction,
   correction_render,
   qa,

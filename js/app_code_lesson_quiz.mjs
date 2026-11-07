@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_quiz_answer_label_set } from "./app_learn_js_lesson_quiz_answer_label_set.mjs";
 import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
+import { app_learn_js_lesson_quiz_render_correction } from "./app_learn_js_lesson_quiz_render_correction.mjs";
 import { app_learn_js_lesson_quiz_correction_code_set } from "./app_learn_js_lesson_quiz_correction_code_set.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { list_size } from "./list_size.mjs";
@@ -58,7 +58,7 @@ export function app_code_lesson_quiz({
     html_clear(answers_div);
     ("the label is put back to what the lesson wrote before every question, because a quiz that changed it while working the last one out would otherwise open the next one still asking the question it finished on");
     answer_label_set(answer_label);
-    app_code_lesson_quiz_render_correction(
+    app_learn_js_lesson_quiz_render_correction(
       container_correction,
       correction_render,
       qa,

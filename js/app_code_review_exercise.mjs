@@ -9,7 +9,7 @@ import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_sho
 import { html_div } from "./html_div.mjs";
 import { app_code_review_exercise_excuse } from "./app_code_review_exercise_excuse.mjs";
 import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
-import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
+import { app_learn_js_lesson_quiz_render_correction } from "./app_learn_js_lesson_quiz_render_correction.mjs";
 import { app_learn_js_lesson_quiz_correction_code_set } from "./app_learn_js_lesson_quiz_correction_code_set.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
@@ -70,7 +70,7 @@ export function app_code_review_exercise(
   let excuse = app_code_review_exercise_excuse(parent, added_count);
   app_code_quiz_reveal_button(parent, on_reveal);
   let container_correction = html_div(parent);
-  app_code_lesson_quiz_render_correction(
+  app_learn_js_lesson_quiz_render_correction(
     container_correction,
     correction_render,
     qa,
