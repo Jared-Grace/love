@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_expression_parentheses_one_side_expression } from "./app_learn_js_lesson_expression_parentheses_one_side_expression.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_recall } from "./app_learn_js_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
-import { app_code_lesson_expression_parentheses_one_side_title_name_id } from "./app_code_lesson_expression_parentheses_one_side_title_name_id.mjs";
+import { app_learn_js_lesson_expression_parentheses_one_side_title_name_id } from "./app_learn_js_lesson_expression_parentheses_one_side_title_name_id.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
@@ -19,7 +19,8 @@ export function app_code_lesson_expression_parentheses_one_side() {
   "Exactly ONE side is wrapped, and it is the left one on half the examples and the right one on the other half. Wrapping BOTH is the three-comparisons lesson, and doing it here would put two new things in one step - parentheses, and a second comparison - when only one of them is this lesson's idea. Moving the single comparison to the right adds no second thing, so it belongs here: the line still holds one parenthesis pair and one plain true or false.";
   "Both of those used to say the next lesson. The lesson that wraps both sides has not been the next lesson for a long time: its own press-at-a-time twin was put in between first, and then the thirteen boolean lessons and the whole both-sides run, so it is now twenty-two screens on. Named by what it does rather than by a place. Corrected 2026-09-10.";
   "The two orders are not the same to read, which is why both are shown. (3 > 8) === false reads straight through - the parenthesis comes first, so working the inside first is what left to right already does. false === (3 > 8) hands the reader false === with nothing yet to compare it to, so they have to go right, work the parenthesis, and come back. That is the case the rule is actually for, and it is the same asymmetry the arithmetic-comparison lesson meets - which is also why that lesson varies the side inside itself rather than spending a second lesson on the mirror.";
-  let name_id = app_code_lesson_expression_parentheses_one_side_title_name_id();
+  let name_id =
+    app_learn_js_lesson_expression_parentheses_one_side_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_learn_js_lesson_expression_generic({
     above,
