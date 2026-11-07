@@ -3,7 +3,7 @@ import { js_operators_comparison_symbols } from "./js_operators_comparison_symbo
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_code_comparison_symbols_not_equality() {
+export function app_learn_js_comparison_symbols_not_equality() {
   arguments_assert(arguments, 0);
   ("the five comparison symbols that are not ===, which is to say <, >, <= , >= and !==");
   ("A lesson that has taught one line with === in the middle has taught the shape of the line, not the comparison in it. The five left over are what is still owed, and asking for them by what they are NOT is what keeps the two halves adding up to six however the six are later listed.");
