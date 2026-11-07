@@ -3,7 +3,7 @@ import { app_code_expression_written_shapes } from "./app_code_expression_writte
 import { app_code_operators_classed } from "./app_code_operators_classed.mjs";
 import { app_learn_js_expression_press_steps } from "./app_learn_js_expression_press_steps.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_expression_symbols } from "./app_code_expression_symbols.mjs";
+import { app_learn_js_expression_symbols } from "./app_learn_js_expression_symbols.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { each } from "./each.mjs";
 import { app_code_expression_written_faults } from "./app_code_expression_written_faults.mjs";
@@ -24,7 +24,7 @@ export function app_code_expression_written_report() {
     "one shape: its steps counted, its operators noted, its faults gathered";
     let steps = app_learn_js_expression_press_steps(shape);
     step_count = step_count + list_size(steps);
-    let symbols = app_code_expression_symbols(shape);
+    let symbols = app_learn_js_expression_symbols(shape);
     function note(symbol) {
       list_add_unique(printed, symbol);
     }
