@@ -18,7 +18,7 @@ import { app_learn_js_batch_item_get } from "./app_learn_js_batch_item_get.mjs";
 import { app_code_examples_on_batch_item } from "./app_code_examples_on_batch_item.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_code_quiz } from "./app_code_quiz.mjs";
-export function app_code_examples_example_another(context, root) {
+export function app_learn_js_examples_example_another(context, root) {
   arguments_assert(arguments, 2);
   let lesson = app_code_lesson_current(context);
   app_code_lesson_title_strip(root, context, lesson);
