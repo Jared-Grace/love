@@ -1,7 +1,7 @@
 import { app_learn_js_expression_replace_button } from "./app_learn_js_expression_replace_button.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
-import { app_code_expression_replace_say } from "./app_code_expression_replace_say.mjs";
+import { app_learn_js_expression_replace_say } from "./app_learn_js_expression_replace_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_expression_replace_ask(
   html_clear(note);
   retire();
   ("the two chosen pieces the sentence made are handed on, because the swap is shown travelling between them once the button is pressed");
-  let chosen_pieces = app_code_expression_replace_say(
+  let chosen_pieces = app_learn_js_expression_replace_say(
     note,
     solved_code,
     value_text,

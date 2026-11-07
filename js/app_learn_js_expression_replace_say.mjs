@@ -6,7 +6,11 @@ import { html_cycle } from "./html_cycle.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { noop } from "./noop.mjs";
-export function app_code_expression_replace_say(note, solved_code, value_text) {
+export function app_learn_js_expression_replace_say(
+  note,
+  solved_code,
+  value_text,
+) {
   arguments_assert(arguments, 3);
   ("say what the operator a learner just chose comes to, and that the piece it stands in is about to be swapped for it: 3 * 7 === 21, so now we replace the 3 * 7 with 21");
   ("Both halves of the sentence are said from the one place each of them lives in, because the lesson that comes after this one tells the learner about this very press afterwards and has to tell them about it in the words they were shown.");
