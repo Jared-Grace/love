@@ -6,7 +6,7 @@ import { text_combine } from "./text_combine.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { and } from "./and.mjs";
 import { list_add } from "./list_add.mjs";
-export async function app_code_lesson_family_roots(names) {
+export async function app_learn_js_lesson_family_roots(names) {
   arguments_assert(arguments, 1);
   ("the lessons whose telling and question bank can be held against each other: a lesson of the code app that builds itself from the lesson maker and takes nothing to do it with.");
   ("Recognised by what a lesson does rather than by what it is called. Every one of them asks the lesson maker to build it and nothing else in the repo does, so the test is the test a reader would apply.");

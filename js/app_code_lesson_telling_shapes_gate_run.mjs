@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
-import { app_code_lesson_family_roots } from "./app_code_lesson_family_roots.mjs";
+import { app_learn_js_lesson_family_roots } from "./app_learn_js_lesson_family_roots.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_lesson_telling_shapes_missing } from "./app_code_lesson_telling_shapes_missing.mjs";
 import { app_code_lesson_telling_reports_apart } from "./app_code_lesson_telling_reports_apart.mjs";
@@ -19,7 +19,7 @@ export async function app_code_lesson_telling_shapes_gate_run() {
   ("A lesson whose telling comes out with no shapes at all is counted apart and named apart by the splitting this shares with the coarser gate. It is not a pass: it is this gate saying it could not find where the lesson does its telling, and the number is printed every run so a let-off can never grow quietly.");
   ("How many lessons were walked travels out with the verdict. Nothing wrong is what a passing run says, and it is also what a run that reached no lesson at all would say, and the walk is the only part of the answer that falls in the second case.");
   let names = await repo_love_functions_names();
-  let roots = await app_code_lesson_family_roots(names);
+  let roots = await app_learn_js_lesson_family_roots(names);
   let walked = list_size(roots);
   let reports = await app_code_lesson_telling_shapes_missing();
   let apart = app_code_lesson_telling_reports_apart(reports);
