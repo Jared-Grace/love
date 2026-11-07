@@ -5,7 +5,7 @@ import { app_code_lesson_expression_choose_order_three_operator_count } from "./
 import { app_learn_js_expression_flat_random_strong_first } from "./app_learn_js_expression_flat_random_strong_first.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_lesson_expression_choose_order_three_above } from "./app_code_lesson_expression_choose_order_three_above.mjs";
-import { app_code_expression_flat_value_left_to_right } from "./app_code_expression_flat_value_left_to_right.mjs";
+import { app_learn_js_expression_flat_value_left_to_right } from "./app_learn_js_expression_flat_value_left_to_right.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_three_steps_strong_first_title_name_id } from "./app_code_lesson_expression_three_steps_strong_first_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -44,7 +44,7 @@ export function app_code_lesson_expression_three_steps_strong_first() {
   }
   function decoys(question, answer) {
     "the tailored wrong answer is the line read from the left with every operator taken in the order it is written, ignoring the one that had to go first";
-    let v = app_code_expression_flat_value_left_to_right(question);
+    let v = app_learn_js_expression_flat_value_left_to_right(question);
     let r = [v];
     return r;
   }

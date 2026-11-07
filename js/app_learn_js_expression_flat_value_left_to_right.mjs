@@ -6,7 +6,7 @@ import { add_1 } from "./add_1.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { list_size } from "./list_size.mjs";
 import { each_range } from "./each_range.mjs";
-export function app_code_expression_flat_value_left_to_right(code) {
+export function app_learn_js_expression_flat_value_left_to_right(code) {
   arguments_assert(arguments, 1);
   ("what a line of arithmetic comes to when every operator on it is worked out in the order it is written, whichever operators they are: 5 - 6 / 3 + 4 read that way gives 3.666..., where the line itself comes to 7");
   ("The value a learner lands on who reads a line the way they read a sentence, and it is the one wrong answer the lessons about which operator goes first exist to take away. Offered beside the right answer it asks the learner the very thing the lesson taught, rather than asking them to count again.");
