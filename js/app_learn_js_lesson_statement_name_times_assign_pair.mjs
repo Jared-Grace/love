@@ -12,7 +12,7 @@ import { app_learn_js_lesson_statement_name_shorter_above } from "./app_learn_js
 import { app_learn_js_lesson_statement_name_itself_sum } from "./app_learn_js_lesson_statement_name_itself_sum.mjs";
 import { app_learn_js_lesson_statement_name_product_number_pairs } from "./app_learn_js_lesson_statement_name_product_number_pairs.mjs";
 import { app_learn_js_lesson_statement_name_first_written_batch } from "./app_learn_js_lesson_statement_name_first_written_batch.mjs";
-import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
+import { app_learn_js_lesson_statement_title_code_paint_get } from "./app_learn_js_lesson_statement_title_code_paint_get.mjs";
 export function app_learn_js_lesson_statement_name_times_assign_pair() {
   arguments_assert(arguments, 0);
   ("the pair on the shorter way to multiply what a name holds, a *= b; for a = a * b;: its programs, its title line, and the words its lesson is called by");
@@ -65,7 +65,7 @@ export function app_learn_js_lesson_statement_name_times_assign_pair() {
   let pair = {
     above,
     batch,
-    fragment: app_code_lesson_statement_title_code_paint_get(short),
+    fragment: app_learn_js_lesson_statement_title_code_paint_get(short),
     words: "A shorter way to multiply a name",
     decoys_last: null,
   };

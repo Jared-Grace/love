@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
+import { app_learn_js_lesson_statement_title_code_paint_get } from "./app_learn_js_lesson_statement_title_code_paint_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_learn_js_lesson_statement_name_one_more_above } from "./app_learn_js_lesson_statement_name_one_more_above.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_one_more_pair() {
   let pair = {
     above: app_learn_js_lesson_statement_name_one_more_above,
     batch: app_learn_js_lesson_statement_name_one_more_batch,
-    fragment: app_code_lesson_statement_title_code_paint_get(code),
+    fragment: app_learn_js_lesson_statement_title_code_paint_get(code),
     words: "Adding one to a name",
     decoys_last: null,
   };

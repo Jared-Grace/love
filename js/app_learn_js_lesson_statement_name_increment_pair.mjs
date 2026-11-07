@@ -8,7 +8,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_learn_js_lesson_statement_name_shorter_above } from "./app_learn_js_lesson_statement_name_shorter_above.mjs";
 import { app_learn_js_lesson_statement_name_one_more } from "./app_learn_js_lesson_statement_name_one_more.mjs";
 import { app_learn_js_lesson_statement_name_one_batch } from "./app_learn_js_lesson_statement_name_one_batch.mjs";
-import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
+import { app_learn_js_lesson_statement_title_code_paint_get } from "./app_learn_js_lesson_statement_title_code_paint_get.mjs";
 import { app_learn_js_lesson_statement_name_step_backwards_decoys } from "./app_learn_js_lesson_statement_name_step_backwards_decoys.mjs";
 export function app_learn_js_lesson_statement_name_increment_pair() {
   arguments_assert(arguments, 0);
@@ -47,7 +47,7 @@ export function app_learn_js_lesson_statement_name_increment_pair() {
   let pair = {
     above,
     batch,
-    fragment: app_code_lesson_statement_title_code_paint_get(short),
+    fragment: app_learn_js_lesson_statement_title_code_paint_get(short),
     words: "A shorter way to add one to a name",
     decoys_last: null,
     backwards_decoys_first:

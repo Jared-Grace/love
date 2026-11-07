@@ -1,6 +1,6 @@
 import { app_code_lesson_statement_title_paint_times_get } from "./app_code_lesson_statement_title_paint_times_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
+import { app_learn_js_lesson_statement_title_code_paint_get } from "./app_learn_js_lesson_statement_title_code_paint_get.mjs";
 export function app_code_lesson_statement_title_code_times_paint_get(
   code,
   times,
@@ -8,7 +8,7 @@ export function app_code_lesson_statement_title_code_times_paint_get(
   arguments_assert(arguments, 2);
   ("what paints one piece of a home title's code said more than once: the code once, then how many times, as (x2)");
   ("Asked for by the human: the counting title once wrote its line out twice, one under the other, which made the title two rows of code. Written once with (x2) after it, the title stays one row and still says the line runs twice.");
-  let tile_paint = app_code_lesson_statement_title_code_paint_get(code);
+  let tile_paint = app_learn_js_lesson_statement_title_code_paint_get(code);
   let painted = app_code_lesson_statement_title_paint_times_get(
     tile_paint,
     times,
