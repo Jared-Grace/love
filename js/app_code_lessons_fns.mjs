@@ -93,7 +93,7 @@ import { app_code_lesson_expression_whole_part_formula } from "./app_code_lesson
 import { app_learn_js_lesson_expression_choose_order_whole_part } from "./app_learn_js_lesson_expression_choose_order_whole_part.mjs";
 import { app_code_lesson_expression_whole_part } from "./app_code_lesson_expression_whole_part.mjs";
 import { app_code_lesson_expression_whole_part_both } from "./app_code_lesson_expression_whole_part_both.mjs";
-import { app_code_lesson_expression_remainder_divide } from "./app_code_lesson_expression_remainder_divide.mjs";
+import { app_learn_js_lesson_expression_remainder_divide } from "./app_learn_js_lesson_expression_remainder_divide.mjs";
 import { app_learn_js_lesson_expression_choose_order_remainder } from "./app_learn_js_lesson_expression_choose_order_remainder.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_solve } from "./app_learn_js_lesson_expression_remainder_divide_solve.mjs";
 import { app_learn_js_lesson_expression_remainder_any } from "./app_learn_js_lesson_expression_remainder_any.mjs";
@@ -454,7 +454,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_expression_choose_order_whole_part,
     app_code_lesson_expression_whole_part,
     app_code_lesson_expression_whole_part_both,
-    app_code_lesson_expression_remainder_divide,
+    app_learn_js_lesson_expression_remainder_divide,
     app_learn_js_lesson_expression_choose_order_remainder,
     app_learn_js_lesson_expression_remainder_divide_solve,
     app_learn_js_lesson_expression_remainder_any,
