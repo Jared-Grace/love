@@ -10,7 +10,10 @@ import { app_code_lesson_statement_name_plus_one_box } from "./app_code_lesson_s
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-export function app_code_lesson_statement_name_one_more_above(root, context) {
+export function app_learn_js_lesson_statement_name_one_more_above(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: one more than a name kept under a new name, the program the lesson on one more than a name taught, then the same program with the new name changed to the name itself");
   ("The reminder is the plus one lesson rather than a sum of two names, because this line is that one with a single change - the name on the left is the name on the right. A sum of two names was the reminder once, and it asked a learner to take out a name and put in a number and fill a name that already existed, three changes to reach one line.");
