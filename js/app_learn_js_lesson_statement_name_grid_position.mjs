@@ -23,7 +23,7 @@ import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_state
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
-export function app_code_lesson_statement_name_grid_position() {
+export function app_learn_js_lesson_statement_name_grid_position() {
   arguments_assert(arguments, 0);
   ("the row and column of a numbered chair in rows of chairs: let row = Math.floor(chair / columns); let column = chair % columns;");
   ("The row is taught by the lesson before this one, ",

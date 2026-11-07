@@ -33,7 +33,7 @@ import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_col
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
+import { app_learn_js_lesson_statement_name_grid_position } from "./app_learn_js_lesson_statement_name_grid_position.mjs";
 export function app_learn_js_lesson_statement_name_grid_index() {
   arguments_assert(arguments, 0);
   ("the number of a chair from its row and column: let start = row * columns; let chair = start + column; - the grid-position lesson turned around");
@@ -191,7 +191,7 @@ export function app_learn_js_lesson_statement_name_grid_index() {
     values_get,
     example_values: [2, 1, 3],
     step,
-    remember_lesson: app_code_lesson_statement_name_grid_position,
+    remember_lesson: app_learn_js_lesson_statement_name_grid_position,
     remember_parts: ["we found the ", column, " of chair 7:"],
     remember_lines,
     explain: [
