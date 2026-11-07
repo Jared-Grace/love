@@ -2,7 +2,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { list_map } from "./list_map.mjs";
 import { integer_positive_random_digits_text } from "./integer_positive_random_digits_text.mjs";
 import { range_1 } from "./range_1.mjs";
-export function app_code_lesson_symbols_batch_digits() {
+export function app_learn_js_lesson_symbols_batch_digits() {
   let digit_counts = range_1(5);
   let batch_digits = list_map(
     digit_counts,

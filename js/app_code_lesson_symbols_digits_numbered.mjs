@@ -1,5 +1,5 @@
 import { app_code_symbols_separated_on_question_numbered } from "./app_code_symbols_separated_on_question_numbered.mjs";
-import { app_code_lesson_symbols_batch_digits } from "./app_code_lesson_symbols_batch_digits.mjs";
+import { app_learn_js_lesson_symbols_batch_digits } from "./app_learn_js_lesson_symbols_batch_digits.mjs";
 import { html_cycle_mono_list_between_comma_space_before_after } from "./html_cycle_mono_list_between_comma_space_before_after.mjs";
 import { html_span_text_bold } from "./html_span_text_bold.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_symbols_digits_numbered() {
   let r = app_code_lesson_symbols_counting(
     name_id,
     above,
-    app_code_lesson_symbols_batch_digits,
+    app_learn_js_lesson_symbols_batch_digits,
     app_code_symbols_separated_on_question_numbered,
   );
   return r;

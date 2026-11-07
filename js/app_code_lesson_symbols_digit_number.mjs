@@ -1,5 +1,5 @@
 import { app_code_symbols_separated_on_question_numbered } from "./app_code_symbols_separated_on_question_numbered.mjs";
-import { app_code_lesson_symbols_batch_digits } from "./app_code_lesson_symbols_batch_digits.mjs";
+import { app_learn_js_lesson_symbols_batch_digits } from "./app_learn_js_lesson_symbols_batch_digits.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { integer_positive_random_digits_text } from "./integer_positive_random_digits_text.mjs";
 import { text_to } from "./text_to.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_symbols_digit_number() {
   let r = app_code_lesson_symbols_counting(
     name_id,
     above,
-    app_code_lesson_symbols_batch_digits,
+    app_learn_js_lesson_symbols_batch_digits,
     app_code_symbols_separated_on_question_numbered,
   );
   return r;
