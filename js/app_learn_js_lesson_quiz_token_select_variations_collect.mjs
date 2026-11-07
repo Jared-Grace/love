@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_token_select_variations_set_sides } from "./app_code_lesson_quiz_token_select_variations_set_sides.mjs";
+import { app_learn_js_lesson_quiz_token_select_variations_set_sides } from "./app_learn_js_lesson_quiz_token_select_variations_set_sides.mjs";
 import { js_visit_type_node } from "./js_visit_type_node.mjs";
 import { each } from "./each.mjs";
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
@@ -27,14 +27,14 @@ export function app_learn_js_lesson_quiz_token_select_variations_collect(
       let left = property_get(node, "left");
       let right = property_get(node, "right");
       function keep() {
-        app_code_lesson_quiz_token_select_variations_set_sides(
+        app_learn_js_lesson_quiz_token_select_variations_set_sides(
           left,
           right,
           node,
         );
       }
       function swap() {
-        app_code_lesson_quiz_token_select_variations_set_sides(
+        app_learn_js_lesson_quiz_token_select_variations_set_sides(
           right,
           left,
           node,
