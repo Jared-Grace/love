@@ -6,7 +6,7 @@ import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-export function app_code_lesson_source_above_text_or_null(source) {
+export function app_learn_js_lesson_source_above_text_or_null(source) {
   arguments_assert(arguments, 1);
   ("the code of the telling a lesson hands over as its above, or nothing when the lesson hands none over.");
   ("A lesson gives its maker one thing under the key above, and that one thing draws everything the learner reads before the first question. Finding it is what lets the rest of the telling be followed: whatever this code names, the learner sees.");
