@@ -3,7 +3,7 @@ import { app_learn_js_expression_written_shapes_numbers } from "./app_learn_js_e
 import { app_learn_js_expression_written_shapes_truths } from "./app_learn_js_expression_written_shapes_truths.mjs";
 import { app_learn_js_expression_written_shapes_unpressed } from "./app_learn_js_expression_written_shapes_unpressed.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-export function app_code_expression_written_shapes() {
+export function app_learn_js_expression_written_shapes() {
   arguments_assert(arguments, 0);
   ("every shape to hold a printed line against: the arithmetic ones, the ones that come out true or false, and the ones built with the two operators no lesson ever puts under a press");
   ("Three parts because each is built from a different class of operator and read by different eyes when one of them fails, not because any is optional. Whatever asks here gets all three, so a part cannot be left out of a sweep by being forgotten at the call.");
