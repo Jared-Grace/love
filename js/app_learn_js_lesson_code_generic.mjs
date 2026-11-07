@@ -12,7 +12,7 @@ import { app_learn_js_forwards_wrong_say } from "./app_learn_js_forwards_wrong_s
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-import { app_code_lesson_example_guided } from "./app_code_lesson_example_guided.mjs";
+import { app_learn_js_lesson_example_guided } from "./app_learn_js_lesson_example_guided.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_learn_js_lesson_code_generic(params) {
   let value = property_get(params, "value");
@@ -145,7 +145,7 @@ export function app_learn_js_lesson_code_generic(params) {
       above,
       1,
       batch_get,
-      app_code_lesson_example_guided,
+      app_learn_js_lesson_example_guided,
       null,
       quizzes_get,
       forwards_question_label,
