@@ -7,7 +7,7 @@ import { list_get } from "./list_get.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
-export function app_code_lesson_expression_choose_order_and_before_or_expression(
+export function app_learn_js_lesson_expression_choose_order_and_before_or_expression(
   want_true,
 ) {
   arguments_assert(arguments, 1);

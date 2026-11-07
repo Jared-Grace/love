@@ -5,7 +5,7 @@ import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_lesson_expression_and_before_or_intro } from "./app_learn_js_lesson_expression_and_before_or_intro.mjs";
 import { app_learn_js_lesson_expression_and_before_or_title_name_id } from "./app_learn_js_lesson_expression_and_before_or_title_name_id.mjs";
-import { app_code_lesson_expression_choose_order_and_before_or_expression } from "./app_code_lesson_expression_choose_order_and_before_or_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_and_before_or_expression } from "./app_learn_js_lesson_expression_choose_order_and_before_or_expression.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_expression_and_before_or() {
   function code_wanted(want_true) {
     "one line of this lesson's family, drawn to come out to want_true, handed over as the text of it";
     let tree =
-      app_code_lesson_expression_choose_order_and_before_or_expression(
+      app_learn_js_lesson_expression_choose_order_and_before_or_expression(
         want_true,
       );
     let code = app_learn_js_expression_code(tree);
