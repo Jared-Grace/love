@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
 import { html_span } from "./html_span.mjs";
-import { app_code_lesson_repeat_grid_style } from "./app_code_lesson_repeat_grid_style.mjs";
+import { app_learn_js_lesson_repeat_grid_style } from "./app_learn_js_lesson_repeat_grid_style.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { app_learn_js_lesson_number_chip_lifted } from "./app_learn_js_lesson_number_chip_lifted.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_expression_repeated_generic_expanded_counted
   let column_count = add(doubled, 1);
   let end_column = column_count;
   let grid = html_span(parent);
-  app_code_lesson_repeat_grid_style(grid, column_count);
+  app_learn_js_lesson_repeat_grid_style(grid, column_count);
   function spacer(column) {
     "a thin empty cell at each end so the black pill has a little padding beyond the outer chips";
     let s = html_span(grid);

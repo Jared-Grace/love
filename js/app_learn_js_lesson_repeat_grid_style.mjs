@@ -10,7 +10,7 @@ import { html_style_background } from "./html_style_background.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
 import { html_style_justify_self } from "./html_style_justify_self.mjs";
-export function app_code_lesson_repeat_grid_style(grid, column_count) {
+export function app_learn_js_lesson_repeat_grid_style(grid, column_count) {
   html_display_set(grid, "inline-grid");
   html_style_set(grid, "grid-template-rows", "auto auto");
   let t = text_to(column_count);
