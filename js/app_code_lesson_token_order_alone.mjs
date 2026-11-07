@@ -1,4 +1,4 @@
-import { app_code_container_light_blue_div } from "./app_code_container_light_blue_div.mjs";
+import { app_learn_js_container_light_blue_div } from "./app_learn_js_container_light_blue_div.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_token_order_alone() {
   ("The writing is a first draft by Claude 2026-10-10.");
   function above(root, context) {
     "the one thing this lesson changes from the lesson before, with a link to it";
-    let line = app_code_container_light_blue_div(root);
+    let line = app_learn_js_container_light_blue_div(root);
     html_span_text_content(line, "This is the same as ");
     app_code_lesson_reference_draw(line, context, app_code_lesson_token_order);
     html_span_text_content(

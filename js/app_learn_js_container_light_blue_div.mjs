@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
-export function app_code_container_light_blue_div(parent) {
+export function app_learn_js_container_light_blue_div(parent) {
   arguments_assert(arguments, 1);
   ("One line standing on its own inside a light blue card.");
   ("A lesson keeps a single remark - a definition, a heading, one worked line -");
