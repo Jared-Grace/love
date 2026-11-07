@@ -13,7 +13,7 @@ import { app_code_else_if_nested_lines } from "./app_code_else_if_nested_lines.m
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_else_if_program_lines } from "./app_code_else_if_program_lines.mjs";
-export function app_code_else_if_explain(root, context) {
+export function app_learn_js_else_if_explain(root, context) {
   arguments_assert(arguments, 2);
   ("an if inside an else remembered, then the same program written with else if, then a true");
   ("Moved here from the lesson straight after at the human's asking 2026-10-11, as for If inside an if and Else: the Does this section run? before each shape introduces it. That lesson keeps a reminder of this.");
