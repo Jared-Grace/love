@@ -8,7 +8,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_for_condition_update_lines } from "./js_code_for_condition_update_lines.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_loop_log_generic } from "./app_code_lesson_loop_log_generic.mjs";
-export function app_code_lesson_for_change() {
+export function app_learn_js_lesson_for_change() {
   arguments_assert(arguments, 0);
   ("the second for: let n = 1; for (; n < 9; n += 3) { console.log(n); } writes out 1, 4 and 7, the same as the first for, with n += 3 moved up");
   ("The one new fact is that the change can stand after the second semicolon, and that it still runs after the lines in the { ... }. The console.log stays inside so one thing moves, at the human's asking 2026-11-04; not picked: an empty { }, which would change two things at once. What may stand before the first semicolon is left to the next lesson.");

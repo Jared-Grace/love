@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_for_change } from "./app_code_lesson_for_change.mjs";
+import { app_learn_js_lesson_for_change } from "./app_learn_js_lesson_for_change.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_for_condition_update_lines } from "./js_code_for_condition_update_lines.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_for_start() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_for_change,
+      app_learn_js_lesson_for_change,
       ["we can write this:"],
     );
     let lines_one = js_code_start_above_lines(
