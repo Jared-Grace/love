@@ -8,7 +8,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
 import { or } from "./or.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_expression_parentheses_worked_card({
+export function app_learn_js_lesson_expression_parentheses_worked_card({
   root,
   heading,
   left,
@@ -39,8 +39,16 @@ export function app_code_lesson_expression_parentheses_worked_card({
     inside_second_word,
   );
   let parenthesised = js_code_wrap_parenthesis(pair);
-  let whole_left = app_code_operator_code(parenthesised, outer_symbol, right_word);
-  let whole_right = app_code_operator_code(left_word, outer_symbol, parenthesised);
+  let whole_left = app_code_operator_code(
+    parenthesised,
+    outer_symbol,
+    right_word,
+  );
+  let whole_right = app_code_operator_code(
+    left_word,
+    outer_symbol,
+    parenthesised,
+  );
   let whole = ternary(parentheses_left, whole_left, whole_right);
   let pair_ored = or(inside_first, inside_second);
   let pair_anded = and(inside_first, inside_second);
