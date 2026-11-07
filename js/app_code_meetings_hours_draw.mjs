@@ -5,7 +5,7 @@ import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pai
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_grid_edge_line_draw } from "./app_code_grid_edge_line_draw.mjs";
+import { app_learn_js_grid_edge_line_draw } from "./app_learn_js_grid_edge_line_draw.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
@@ -140,7 +140,7 @@ export function app_code_meetings_hours_draw(
         layer: "2",
       });
     } else {
-      app_code_grid_edge_line_draw({
+      app_learn_js_grid_edge_line_draw({
         grid,
         color,
         index: column_line,

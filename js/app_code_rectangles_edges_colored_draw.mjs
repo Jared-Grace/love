@@ -6,7 +6,7 @@ import { list_includes } from "./list_includes.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_grid_edge_line_draw } from "./app_code_grid_edge_line_draw.mjs";
+import { app_learn_js_grid_edge_line_draw } from "./app_learn_js_grid_edge_line_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
@@ -237,7 +237,7 @@ export function app_code_rectangles_edges_colored_draw({
       });
       return;
     }
-    app_code_grid_edge_line_draw({
+    app_learn_js_grid_edge_line_draw({
       grid,
       color,
       index,

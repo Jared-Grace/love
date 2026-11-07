@@ -4,7 +4,7 @@ import { text_combine } from "./text_combine.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-export function app_code_grid_edge_line_draw({
+export function app_learn_js_grid_edge_line_draw({
   grid,
   color,
   index,
