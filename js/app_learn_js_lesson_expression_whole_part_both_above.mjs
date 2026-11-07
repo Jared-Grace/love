@@ -4,7 +4,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_arrow } from "./app_learn_js_arrow.mjs";
-export function app_code_lesson_expression_whole_part_both_above(root) {
+export function app_learn_js_lesson_expression_whole_part_both_above(root) {
   arguments_assert(arguments, 1);
   let intro = app_learn_js_container_light_blue(root);
   ("Now we will find rather than Now find, because the screen does the finding here and the learner watches - the steps under this line are worked out for them. An imperative promises them a turn that does not come until the quiz, and a learner told to find something and then handed the answer stops reading for the step they were asked to take.");
