@@ -7,7 +7,7 @@ import { app_learn_js_lesson_text_line_operator_mix_or_null } from "./app_learn_
 import { app_code_lesson_text_line_value_sides } from "./app_code_lesson_text_line_value_sides.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_learn_js_lesson_text_line_operand_kinds } from "./app_learn_js_lesson_text_line_operand_kinds.mjs";
-export function app_code_lesson_text_line_shapes(text) {
+export function app_learn_js_lesson_text_line_shapes(text) {
   arguments_assert(arguments, 1);
   ("every way a piece of text is SHAPED as a line of code, named. Whether it is parenthesised or flat, whether it writes one operator over and over or mixes two, which end a true or a false sits at, and what kinds of thing stand either side of the operators.");
   ("Four readings of the one line rather than one, because they are independent, and each was kept only once a pair of lines was found that the others call identical. false !== (3 === 3) against (3 === 3) !== false for the side. 3 === 5 against divisor === 0 for the kinds. 2 === 2 === 2 against 2 !== 2 === 2 for the mix - both flat, both numbers, no value at either end. A single name covering the grains at once would have to spell every pairing of them and would then match nothing when a new grain was added. Named apart, a fifth grain is one more reading added here and nothing else changed anywhere.");
