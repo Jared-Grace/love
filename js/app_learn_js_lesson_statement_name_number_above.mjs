@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_box } from "./app_code_lesson_statement_name_value_box.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_statement_name_number_above(root, context) {
+export function app_learn_js_lesson_statement_name_number_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: a name holding a word, the program the lesson on giving a value a name was about, then one line saying a name can hold a number too");
   ("The second box is the sentence alone, the same as the lesson on true or false: the examples right below it are the programs it talks about.");
