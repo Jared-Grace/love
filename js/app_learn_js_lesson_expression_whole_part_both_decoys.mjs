@@ -8,7 +8,7 @@ import { divide } from "./divide.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-export function app_code_lesson_expression_whole_part_both_decoys(
+export function app_learn_js_lesson_expression_whole_part_both_decoys(
   question,
   answer,
 ) {
