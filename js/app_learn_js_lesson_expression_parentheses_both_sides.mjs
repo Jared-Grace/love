@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
+import { app_learn_js_lesson_expression_parentheses_one_side } from "./app_learn_js_lesson_expression_parentheses_one_side.mjs";
 import { app_learn_js_lesson_expression_parentheses_both_sides_card_flat_line } from "./app_learn_js_lesson_expression_parentheses_both_sides_card_flat_line.mjs";
 import { app_learn_js_comparison_side_wrapped } from "./app_learn_js_comparison_side_wrapped.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
@@ -73,7 +73,7 @@ export function app_learn_js_lesson_expression_parentheses_both_sides() {
     app_code_remember_from_lesson(
       recall,
       context,
-      app_code_lesson_expression_parentheses_one_side,
+      app_learn_js_lesson_expression_parentheses_one_side,
       ["a comparison inside ", open, " and ", close, " is solved on its own"],
     );
     let both = app_learn_js_container_light_blue(root);
