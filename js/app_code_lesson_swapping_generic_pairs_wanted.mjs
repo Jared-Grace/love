@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_swapping_generic_numbers } from "./app_learn_js_lesson_swapping_generic_numbers.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_lesson_swapping_generic_pair_code } from "./app_code_lesson_swapping_generic_pair_code.mjs";
+import { app_learn_js_lesson_swapping_generic_pair_code } from "./app_learn_js_lesson_swapping_generic_pair_code.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 export function app_code_lesson_swapping_generic_pairs_wanted(
@@ -23,7 +23,7 @@ export function app_code_lesson_swapping_generic_pairs_wanted(
       if (same_number) {
         return;
       }
-      let code = app_code_lesson_swapping_generic_pair_code(op, a, b, wrap);
+      let code = app_learn_js_lesson_swapping_generic_pair_code(op, a, b, wrap);
       let value = evaluate(code);
       let wanted = equal(value, want_true);
       if (wanted) {

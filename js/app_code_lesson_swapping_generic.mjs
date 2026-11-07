@@ -5,7 +5,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lesson_swapping_generic_pairs_wanted } from "./app_code_lesson_swapping_generic_pairs_wanted.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_code_lesson_swapping_generic_pair_code } from "./app_code_lesson_swapping_generic_pair_code.mjs";
+import { app_learn_js_lesson_swapping_generic_pair_code } from "./app_learn_js_lesson_swapping_generic_pair_code.mjs";
 import { list_interleave_pair } from "./list_interleave_pair.mjs";
 import { list_size } from "./list_size.mjs";
 import { math_min } from "./math_min.mjs";
@@ -48,7 +48,7 @@ export function app_code_lesson_swapping_generic(config) {
     let pair = list_random_item(pairs);
     let a = pair[0];
     let b = pair[1];
-    let code = app_code_lesson_swapping_generic_pair_code(op, a, b, wrap);
+    let code = app_learn_js_lesson_swapping_generic_pair_code(op, a, b, wrap);
     return code;
   }
   ("The order is settled once, here, and then walked round and round for the whole lesson. A true operator and a false one are taken in turn, so any run of lines drawn from it holds both answers. Shuffled, so the lesson does not always open on the same operator.");
