@@ -1,3 +1,4 @@
+import { bible_word_articles_same_name_cited } from "./bible_word_articles_same_name_cited.mjs";
 import { bible_word_articles_with_cited } from "./bible_word_articles_with_cited.mjs";
 import { bible_word_article_offers_at } from "./bible_word_article_offers_at.mjs";
 import { bible_word_article_cited_at } from "./bible_word_article_cited_at.mjs";
@@ -42,12 +43,13 @@ export async function bible_word_article_offers_at_with_cited(
     }
     let articles = offers.filter(own).map(article_of);
     let table = await site.table();
-    let merged = bible_word_articles_with_cited(
+    let rows = bible_word_articles_with_cited(
       articles,
       table,
       site.name,
       cited,
     );
+    let merged = bible_word_articles_same_name_cited(rows, cited, site.name);
     for (let article of merged) {
       r.push({
         site,

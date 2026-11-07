@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 export function bible_word_articles_same_name_cited(rows, cited, site_name) {
   "One site's articles for a tapped word, with the articles of one name narrowed to those the tapped verse is cited by, when it is cited by some of them.";
   "$plain rows";
@@ -8,7 +9,7 @@ export function bible_word_articles_same_name_cited(rows, cited, site_name) {
   "A VERSE CITED BY NONE OF THEM KEEPS THEM ALL, because nothing here says which is meant and dropping one could drop the right one.";
   let files = new Set();
   for (let [cited_site, cited_file] of cited) {
-    if (cited_site === site_name) {
+    if (equal(cited_site, site_name)) {
       files.add(cited_file);
     }
   }
@@ -21,7 +22,7 @@ export function bible_word_articles_same_name_cited(rows, cited, site_name) {
   }
   function kept(row) {
     let group = by_name.get(row[1]);
-    if (group.length === 1) {
+    if (equal(group.length, 1)) {
       return true;
     }
     function cited_is(other) {
@@ -29,10 +30,11 @@ export function bible_word_articles_same_name_cited(rows, cited, site_name) {
       return yes;
     }
     let some = group.some(cited_is);
-    if (some === false) {
+    if (equal(some, false)) {
       return true;
     }
-    return files.has(row[2]);
+    let r2 = files.has(row[2]);
+    return r2;
   }
   let r = rows.filter(kept);
   return r;
