@@ -5,7 +5,7 @@ import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
 import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines_writes_out_on.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
@@ -83,7 +83,7 @@ export function app_code_lesson_statement_name_even() {
   let spaced_same = js_code_binary_spaced_nb("", same, "");
   function remainder_worked(number, left_over) {
     "number % 2 === left_over as one code chip, both sides coloured, because both are the remainder: the working of it and its value";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [number, spaced_percent, "2", spaced_same, left_over],
       [
         remainder_color,
@@ -97,7 +97,7 @@ export function app_code_lesson_statement_name_even() {
   }
   function check_worked(left_over) {
     "left_over === 0 as one code chip, the remainder coloured and the 0 it is checked against plain";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [left_over, spaced_same, "0"],
       [remainder_color, plain, plain],
     );

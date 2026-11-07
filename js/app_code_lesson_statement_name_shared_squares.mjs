@@ -15,7 +15,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
@@ -107,14 +107,14 @@ export function app_code_lesson_statement_name_shared_squares() {
   let spaced_minus = js_code_binary_spaced_nb("", minus, "");
   function length_worked(high, low) {
     "high - low as one code chip, the ending edge in the end colour and the starting edge in the start colour";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [high, spaced_minus, low],
       [end_color, plain, start_color],
     );
     return chip;
   }
   let spaced_times = js_code_binary_spaced_nb("", times, "");
-  let product_worked = app_code_explain_code_colored_inline(
+  let product_worked = app_learn_js_explain_code_colored_inline(
     ["1", spaced_times, "2"],
     [overlap_color, plain, overlap_color],
   );

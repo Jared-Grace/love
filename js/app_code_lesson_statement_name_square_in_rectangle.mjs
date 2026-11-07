@@ -17,7 +17,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
@@ -128,7 +128,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let spaced_and = js_code_binary_spaced_nb("", and_op, "");
   function between_worked(low, middle, high) {
     "low <= middle && middle < high as one code chip, each number in the colour of the part it plays";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [low, spaced_at_most, middle, spaced_and, middle, spaced_less, high],
       [start_color, plain, square_color, plain, square_color, plain, end_color],
     );
@@ -136,7 +136,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   }
   function less_worked(low, high) {
     "low < high as one code chip, the square's x in its colour and the edge in the end colour";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [low, spaced_less, high],
       [square_color, plain, end_color],
     );

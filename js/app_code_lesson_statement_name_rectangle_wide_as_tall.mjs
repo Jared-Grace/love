@@ -16,7 +16,7 @@ import { app_code_highlight_color_fourth } from "./app_code_highlight_color_four
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
@@ -123,7 +123,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   let spaced_equal = js_code_binary_spaced_nb("", equal_symbol, "");
   function minus_worked(end, start) {
     "end - start as one code chip, each edge in its colour";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [end, spaced_minus, start],
       [end_color, plain, start_color],
     );
@@ -131,7 +131,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   }
   function equal_worked(first, second) {
     "first === second as one code chip, both lengths in the length colour";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [first, spaced_equal, second],
       [length_color, plain, length_color],
     );

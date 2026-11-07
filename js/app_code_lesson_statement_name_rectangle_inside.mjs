@@ -16,7 +16,7 @@ import { app_code_highlight_color_fourth } from "./app_code_highlight_color_four
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
@@ -140,7 +140,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   let spaced_and = js_code_binary_spaced_nb("", and_op, "");
   function within_worked(low, low2, high2, high) {
     "low <= low2 && high2 <= high as one code chip, the starting edges in the start colour and the ending edges in the end colour";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [low, spaced_at_most, low2, spaced_and, high2, spaced_at_most, high],
       [start_color, plain, start_color, plain, end_color, plain, end_color],
     );

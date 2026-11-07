@@ -14,7 +14,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
@@ -103,13 +103,13 @@ export function app_code_lesson_statement_name_overlap_hours() {
   let spaced_minus = js_code_binary_spaced_nb("", minus, "");
   function gap_worked(high, low) {
     "high - low as one code chip, the end hour in the end colour and the start hour in the start colour";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [high, spaced_minus, low],
       [end_color, plain, start_color],
     );
     return chip;
   }
-  let max_floor = app_code_explain_code_colored_inline(
+  let max_floor = app_learn_js_explain_code_colored_inline(
     ["Math.max(", "-1", ", ", "0", ")"],
     [plain, overlap_color, plain, overlap_color, plain],
   );

@@ -16,7 +16,7 @@ import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
@@ -130,11 +130,11 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
   }
   let spaced_plus = js_code_binary_spaced_nb("", plus, "");
   let spaced_minus = js_code_binary_spaced_nb("", minus, "");
-  let sum_worked = app_code_explain_code_colored_inline(
+  let sum_worked = app_learn_js_explain_code_colored_inline(
     ["4", spaced_plus, "6"],
     [first_color, plain, second_color],
   );
-  let difference_worked = app_code_explain_code_colored_inline(
+  let difference_worked = app_learn_js_explain_code_colored_inline(
     ["10", spaced_minus, "2"],
     [sum_color, plain, overlap_color],
   );

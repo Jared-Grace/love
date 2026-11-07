@@ -12,7 +12,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
@@ -90,7 +90,7 @@ export function app_code_lesson_statement_name_meetings_join() {
   }
   function call_worked(name, first, second, color) {
     "name(first, second) as one code chip, both hours in the colour of the part they play";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [name + "(", first, ", ", second, ")"],
       [plain, color, plain, color, plain],
     );

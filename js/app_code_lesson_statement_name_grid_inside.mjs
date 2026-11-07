@@ -17,7 +17,7 @@ import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { range } from "./range.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
@@ -107,7 +107,7 @@ export function app_code_lesson_statement_name_grid_inside() {
   let spaced_and = js_code_binary_spaced_nb("", and_op, "");
   function between_worked(middle, high, middle_color, high_color) {
     "0 <= middle && middle < high as one code chip, the middle and the high in the colours the picture gives them";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       ["0", spaced_at_most, middle, spaced_and, middle, spaced_less, high],
       [plain, plain, middle_color, plain, middle_color, plain, high_color],
     );
@@ -115,7 +115,7 @@ export function app_code_lesson_statement_name_grid_inside() {
   }
   function both_worked(right) {
     "true && right as one code chip";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       ["true", spaced_and, right],
       [plain, plain, plain],
     );

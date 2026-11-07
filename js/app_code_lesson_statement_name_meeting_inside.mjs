@@ -20,7 +20,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
@@ -128,7 +128,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
   let spaced_at_most = js_code_binary_spaced_nb("", at_most, "");
   function check_worked(low, high, color) {
     "low <= high as one code chip, both hours in the colour of the part they play";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [low, spaced_at_most, high],
       [color, plain, color],
     );

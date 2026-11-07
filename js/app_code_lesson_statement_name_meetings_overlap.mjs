@@ -14,7 +14,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_expression_larger } from "./app_code_lesson_expression_larger.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
@@ -108,7 +108,7 @@ export function app_code_lesson_statement_name_meetings_overlap() {
   }
   function call_worked(name, first, second, color) {
     "name(first, second) as one code chip, both hours in the colour of the part they play";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [name + "(", first, ", ", second, ")"],
       [plain, color, plain, color, plain],
     );
@@ -117,7 +117,7 @@ export function app_code_lesson_statement_name_meetings_overlap() {
   let spaced_before = js_code_binary_spaced_nb("", before, "");
   function check_worked(low, high) {
     "low < high as one code chip, the start hour in the start colour and the end hour in the end colour";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [low, spaced_before, high],
       [start_color, plain, end_color],
     );

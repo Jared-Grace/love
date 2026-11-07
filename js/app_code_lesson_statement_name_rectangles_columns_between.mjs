@@ -14,7 +14,7 @@ import { app_code_highlight_color_fourth } from "./app_code_highlight_color_four
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
+import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
@@ -116,7 +116,7 @@ export function app_code_lesson_statement_name_rectangles_columns_between() {
   let spaced_minus = js_code_binary_spaced_nb("", minus, "");
   function between_worked(left, right) {
     "left2 - right as one code chip, the second rectangle's left edge in the start colour and the first's right edge in the end colour";
-    let chip = app_code_explain_code_colored_inline(
+    let chip = app_learn_js_explain_code_colored_inline(
       [left, spaced_minus, right],
       [start_color, plain, end_color],
     );
