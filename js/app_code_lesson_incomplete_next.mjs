@@ -4,7 +4,7 @@ import { app_code_progress_read } from "./app_code_progress_read.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
+import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_is.mjs";
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_first_try } from "./list_first_try.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_incomplete_next(
     if (left_behind) {
       return false;
     }
-    let complete = app_code_lesson_complete_is(progress, id);
+    let complete = app_learn_js_lesson_complete_is(progress, id);
     let unfinished = not(complete);
     return unfinished;
   }

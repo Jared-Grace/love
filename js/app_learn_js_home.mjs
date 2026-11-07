@@ -13,7 +13,7 @@ import { add_1 } from "./add_1.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_home_group_card } from "./app_learn_js_home_group_card.mjs";
-import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
+import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_home_lesson_button } from "./app_learn_js_home_lesson_button.mjs";
 import { app_learn_js_home_way_marked_next } from "./app_learn_js_home_way_marked_next.mjs";
@@ -67,7 +67,7 @@ export async function app_learn_js_home(context) {
     let body = property_get(group, "body");
     group.last = lesson_number;
     let open = complete_all_previous;
-    let complete = app_code_lesson_complete_is(progress, id);
+    let complete = app_learn_js_lesson_complete_is(progress, id);
     if (not(complete)) {
       group.complete = false;
     }

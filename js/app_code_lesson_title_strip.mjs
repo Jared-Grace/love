@@ -1,7 +1,7 @@
 import { app_code_lesson_title_render } from "./app_code_lesson_title_render.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
-import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
+import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_is.mjs";
 import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
 import { add_1_period } from "./add_1_period.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_title_strip(root, context, lesson) {
   ("An arrow back and an arrow on sit at the two ends of the same bar, stepping one lesson at a time through the course. A reader who wants the lesson before this one had to go home, find it in a list of over a hundred rows and scroll to it, and the one thing they knew - that it is the row above - was the one thing the list would not use.");
   let lesson_id = property_get(lesson, "id");
   let progress = app_code_progress_read(context);
-  let complete = app_code_lesson_complete_is(progress, lesson_id);
+  let complete = app_learn_js_lesson_complete_is(progress, lesson_id);
   ("where the reader is in the course is worked out before anything is drawn, because both arrows and the number in front of the title are all reading the same one answer");
   let lesson_index = app_code_lesson_index_by_id(lesson_id);
   function title_paint(title) {

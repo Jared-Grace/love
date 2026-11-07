@@ -7,7 +7,7 @@ import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
+import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_is.mjs";
 import { not } from "./not.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
@@ -34,7 +34,7 @@ export function app_learn_js_course_unfinished_next(
     let lesson = list_get(lessons, index);
     let id = property_get(lesson, "id");
     let left_behind = equal(id, id_skipped);
-    let complete = app_code_lesson_complete_is(progress, id);
+    let complete = app_learn_js_lesson_complete_is(progress, id);
     if (not(left_behind) && not(complete)) {
       let way_lesson = {
         kind: "lesson",
