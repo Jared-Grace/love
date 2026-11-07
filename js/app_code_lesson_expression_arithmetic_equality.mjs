@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_arithmetic_equality_above } from "./app_code_lesson_expression_arithmetic_equality_above.mjs";
+import { app_learn_js_lesson_expression_arithmetic_equality_above } from "./app_learn_js_lesson_expression_arithmetic_equality_above.mjs";
 import { app_code_lesson_expression_arithmetic_equality_example } from "./app_code_lesson_expression_arithmetic_equality_example.mjs";
 import { app_code_lesson_expression_arithmetic_equality_title_name_id } from "./app_code_lesson_expression_arithmetic_equality_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
@@ -76,7 +76,7 @@ export function app_code_lesson_expression_arithmetic_equality() {
   });
   return lesson;
   function above(root) {
-    let r = app_code_lesson_expression_arithmetic_equality_above(root);
+    let r = app_learn_js_lesson_expression_arithmetic_equality_above(root);
     return r;
   }
 }

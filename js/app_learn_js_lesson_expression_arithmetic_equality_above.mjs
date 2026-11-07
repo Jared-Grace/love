@@ -5,7 +5,7 @@ import { app_learn_js_arithmetic_to_value_symbols } from "./app_learn_js_arithme
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_learn_js_cycle_parts_and_list } from "./app_learn_js_cycle_parts_and_list.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-export function app_code_lesson_expression_arithmetic_equality_above(root) {
+export function app_learn_js_lesson_expression_arithmetic_equality_above(root) {
   arguments_assert(arguments, 1);
   ("first the rule, then it worked once true and once false: each side is done first to its own number, and only then are the two numbers compared");
   let header = app_learn_js_container_light_blue(root);
