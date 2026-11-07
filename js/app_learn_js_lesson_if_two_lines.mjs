@@ -36,7 +36,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_two_lines() {
+export function app_learn_js_lesson_if_two_lines() {
   arguments_assert(arguments, 0);
   ('an if around two lines: if (2 < 3) { console.log("love"); console.log("joy"); } with console.log("peace"); beside it writes out love, joy and peace, and with 3 < 2 writes out peace alone');
   ("The one new fact is that an if may hold more than one line, and that every line between { and } runs or none of them does. The condition is a comparison of two numbers, as in If less than, since that is the easiest condition the learner has worked out inside an if that is not written as true or false.");
