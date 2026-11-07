@@ -4,7 +4,7 @@ import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_braces_three_after_nested() {
+export function app_learn_js_braces_three_after_nested() {
   arguments_assert(arguments, 0);
   ("a program with three pairs of braces, an if inside an if and then an if after them both, so its braces stand { { } } { }; the if after asks the same name as the if inside, as in An if after an if inside an if, so where an if stands is the only difference between the two");
   let says = app_code_braces_three_says();
