@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_lesson_step_programs_generic } from "./app_code_lesson_step_programs_generic.mjs";
+import { app_learn_js_lesson_step_programs_generic } from "./app_learn_js_lesson_step_programs_generic.mjs";
 export function app_learn_js_lesson_step_of_lesson_generic(
   title,
   title_code,
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_step_of_lesson_generic(
     }
     return list;
   }
-  let lesson = app_code_lesson_step_programs_generic(
+  let lesson = app_learn_js_lesson_step_programs_generic(
     title,
     title_code,
     programs,

@@ -11,7 +11,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_learn_js_lesson_example_guided } from "./app_learn_js_lesson_example_guided.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_code_lesson_step_programs_generic(
+export function app_learn_js_lesson_step_programs_generic(
   title,
   title_code,
   programs,
