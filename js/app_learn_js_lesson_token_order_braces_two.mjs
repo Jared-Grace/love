@@ -12,7 +12,7 @@ import { app_code_lesson_token_order_codes_generic } from "./app_code_lesson_tok
 import { app_code_lesson_token_order_example_choose_braces_only } from "./app_code_lesson_token_order_example_choose_braces_only.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap_braces_only } from "./app_learn_js_lesson_quiz_tokens_tap_braces_only.mjs";
 import { app_learn_js_braces_two_batch } from "./app_learn_js_braces_two_batch.mjs";
-export function app_code_lesson_token_order_braces_two() {
+export function app_learn_js_lesson_token_order_braces_two() {
   arguments_assert(arguments, 0);
   ("the order of the tokens with two pairs of braces: the same choosing as The order of the tokens, braces only, except every program has two pairs of braces, each pair in a colour of its own: two ifs one after the other, an if inside an if, and an if and its else");
   ("Asked for by the human 2026-10-10: a lesson like The order of the tokens, braces only, right before the first lesson that teaches two pairs of braces in the code, looking ahead to the kinds of two pairs of braces at once. Put straight after The order of the tokens, braces only, and straight before The same if twice, the first lesson whose programs hold two pairs.");
