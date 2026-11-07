@@ -1,5 +1,5 @@
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
-import { app_code_brace_pair_programs_two } from "./app_code_brace_pair_programs_two.mjs";
+import { app_learn_js_brace_pair_programs_two } from "./app_learn_js_brace_pair_programs_two.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_brace_pair_two() {
   let lesson = app_code_lesson_brace_pair_generic(
     name_id,
     above,
-    app_code_brace_pair_programs_two,
+    app_learn_js_brace_pair_programs_two,
     2,
   );
   return lesson;
