@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_same_strength_title_name_id } from "./app_code_lesson_expression_choose_order_same_strength_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_same_strength_title_name_id } from "./app_learn_js_lesson_expression_choose_order_same_strength_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_choose_order_same_strength() {
   "★ IT CANNOT BE BUILT FROM ONE OPERATOR REPEATED, WHICH IS WHAT IT LOOKS LIKE IT SHOULD BE. Every number on these lines and every value a step comes to is a single digit. Three multiplications need 2 * 2 * 2 * 2, which is sixteen, and three divisions need to start there - so lines of one operator repeated do not exist for the scaling pair at all, and the adding pair has ten of them, every one of them twos. Drawing from a strength rather than from a symbol keeps the third step and gives the lesson nine hundred lines instead of ten.";
   "The wrong values offered are the ones the lessons around it offer: what the other operator would have given, and what the whole line comes to. Both are worth more on a three-step line than on a two-step one, because a learner reaching for the whole line's answer has two steps still to go rather than one.";
   let name_id =
-    app_code_lesson_expression_choose_order_same_strength_title_name_id();
+    app_learn_js_lesson_expression_choose_order_same_strength_title_name_id();
   ("the quiz and the front page are the ones every pressing lesson uses, handed this lesson's wrong values - the pressing, the layout and the finishing are the same doing, and only what could be pressed instead differs");
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz, with this lesson's wrong values: the value the other operator would have given, and the value of the whole line";
