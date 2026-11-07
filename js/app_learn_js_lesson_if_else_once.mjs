@@ -31,7 +31,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_else_once() {
+export function app_learn_js_lesson_if_else_once() {
   arguments_assert(arguments, 0);
   ('else asks once: let a = true; if (a) { console.log("love"); a = false; } if (!a) { console.log("joy"); } writes out love and joy, while the same with } else { in place of } if (!a) { writes out love alone');
   ("The one new fact is that else is not a second question: once the if has run, a change it makes to a cannot make the part after else run too. Two ifs ask twice, so there both run.");
