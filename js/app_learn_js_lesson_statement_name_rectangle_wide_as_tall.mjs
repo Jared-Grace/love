@@ -24,7 +24,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
+export function app_learn_js_lesson_statement_name_rectangle_wide_as_tall() {
   arguments_assert(arguments, 0);
   ("whether a rectangle is as wide as it is tall: let width = right - left; let height = bottom - top; let same = width === height; - picked by Claude 2026-10-06, when the human asked for a next rectangle lesson that stays small, after Squares two rectangles cover together, from their edges was put off until functions are taught. In DSA it is the check of whether a box is a square, used to tell a square grid or tile from any other.");
   ("Offered first: whether a square at x and y is inside a rectangle, which turned out to be Is a square inside a rectangle already. Not picked: a rectangle's centre, (left + right) / 2, which is a half whenever the width is odd; and the squares around a rectangle's edge, 2 * (width + height) - 4, which needs parentheses no rectangle lesson has shown.");

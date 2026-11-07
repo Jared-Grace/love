@@ -240,7 +240,7 @@ import { app_code_lesson_statement_name_rectangles_columns_between } from "./app
 import { app_code_lesson_statement_name_rectangles_join_down } from "./app_code_lesson_statement_name_rectangles_join_down.mjs";
 import { app_code_lesson_statement_name_rectangles_join_across } from "./app_code_lesson_statement_name_rectangles_join_across.mjs";
 import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
-import { app_code_lesson_statement_name_rectangle_wide_as_tall } from "./app_code_lesson_statement_name_rectangle_wide_as_tall.mjs";
+import { app_learn_js_lesson_statement_name_rectangle_wide_as_tall } from "./app_learn_js_lesson_statement_name_rectangle_wide_as_tall.mjs";
 import { app_learn_js_lesson_if_true } from "./app_learn_js_lesson_if_true.mjs";
 import { app_learn_js_lesson_if_false } from "./app_learn_js_lesson_if_false.mjs";
 import { app_learn_js_lesson_if_less_than } from "./app_learn_js_lesson_if_less_than.mjs";
@@ -553,7 +553,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_statement_name_rectangles_join_down,
     app_code_lesson_statement_name_rectangles_join_across,
     app_code_lesson_statement_name_rectangles_cover_together,
-    app_code_lesson_statement_name_rectangle_wide_as_tall,
+    app_learn_js_lesson_statement_name_rectangle_wide_as_tall,
     app_learn_js_lesson_if_true,
     app_learn_js_lesson_if_false,
     app_learn_js_lesson_if_less_than,
