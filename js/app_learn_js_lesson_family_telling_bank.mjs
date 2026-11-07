@@ -3,7 +3,11 @@ import { app_learn_js_lesson_family_telling_bank_asked } from "./app_learn_js_le
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_family_file_names } from "./app_learn_js_lesson_family_file_names.mjs";
 import { repo_love_function_read } from "./repo_love_function_read.mjs";
-export async function app_code_lesson_family_telling_bank(root, roots, names) {
+export async function app_learn_js_lesson_family_telling_bank(
+  root,
+  roots,
+  names,
+) {
   arguments_assert(arguments, 3);
   ("the files of one lesson split into the two halves a learner meets them as: the TELLING, which is everything drawn on the screen before the first question, and the BANK, which is everything the questions are made out of.");
   ("Every check that holds a lesson against itself needs this same split, so it is made once here rather than once per check. What a file shows differs between checks - an operator, the shape of a line - but which side of the lesson the file is on never does.");
