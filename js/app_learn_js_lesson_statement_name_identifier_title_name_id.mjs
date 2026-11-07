@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_statement_let_title_name_id } from "./app_learn_js_lesson_statement_let_title_name_id.mjs";
 import { app_learn_js_lesson_statement_name_identifier_name } from "./app_learn_js_lesson_statement_name_identifier_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_statement_name_identifier_title_name_id() {
+export function app_learn_js_lesson_statement_name_identifier_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: any identifier as a name, followed by the shape of the line it teaches");
   ("The same shape the lesson before shows, with a word where that one has a letter. Read down the home list the two titles differ in exactly the place the lessons differ, which says what this one adds before it is opened.");
