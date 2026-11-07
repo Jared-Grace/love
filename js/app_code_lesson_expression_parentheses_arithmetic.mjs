@@ -4,7 +4,7 @@ import { app_code_lesson_expression_parentheses_arithmetic_title_name_id } from 
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_code_parentheses_flat_decoys } from "./app_code_parentheses_flat_decoys.mjs";
-import { app_code_lesson_expression_parentheses_arithmetic_expression } from "./app_code_lesson_expression_parentheses_arithmetic_expression.mjs";
+import { app_learn_js_lesson_expression_parentheses_arithmetic_expression } from "./app_learn_js_lesson_expression_parentheses_arithmetic_expression.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
@@ -31,12 +31,14 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
   return lesson;
   function refill() {
     "four at a time, alternating the group on the left and on the right. The examples screen draws two, so every screen shows the group once on each side - which is the whole of what there is to show, and why the count is 2 rather than the 4 the true-false lessons use";
-    let v = app_code_lesson_expression_parentheses_arithmetic_expression(true);
+    let v =
+      app_learn_js_lesson_expression_parentheses_arithmetic_expression(true);
     let v2 =
-      app_code_lesson_expression_parentheses_arithmetic_expression(false);
-    let v3 = app_code_lesson_expression_parentheses_arithmetic_expression(true);
+      app_learn_js_lesson_expression_parentheses_arithmetic_expression(false);
+    let v3 =
+      app_learn_js_lesson_expression_parentheses_arithmetic_expression(true);
     let v4 =
-      app_code_lesson_expression_parentheses_arithmetic_expression(false);
+      app_learn_js_lesson_expression_parentheses_arithmetic_expression(false);
     let list = [v, v2, v3, v4];
     return list;
   }

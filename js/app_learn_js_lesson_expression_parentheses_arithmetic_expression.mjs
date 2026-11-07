@@ -4,7 +4,7 @@ import { app_code_lesson_expression_parentheses_arithmetic_group } from "./app_c
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-export function app_code_lesson_expression_parentheses_arithmetic_expression(
+export function app_learn_js_lesson_expression_parentheses_arithmetic_expression(
   group_first,
 ) {
   arguments_assert(arguments, 1);
