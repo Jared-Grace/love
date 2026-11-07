@@ -3,7 +3,7 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_span_text_smaller } from "./html_span_text_smaller.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_code_lesson_symbols_digits_numbered_on_symbol(
+export function app_learn_js_lesson_symbols_digits_numbered_on_symbol(
   parent,
   index_,
 ) {

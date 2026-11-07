@@ -1,4 +1,4 @@
-import { app_code_lesson_symbols_digits_numbered_on_symbol } from "./app_code_lesson_symbols_digits_numbered_on_symbol.mjs";
+import { app_learn_js_lesson_symbols_digits_numbered_on_symbol } from "./app_learn_js_lesson_symbols_digits_numbered_on_symbol.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal_0 } from "./equal_0.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_symbols_digits_numbered_fifth_on_symbol(
     let size = list_size(symbols);
     let ne = equal_not(index_1, size);
     if (ne) {
-      app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
+      app_learn_js_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
     }
   }
 }
