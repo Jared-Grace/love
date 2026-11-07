@@ -39,7 +39,7 @@ import { list_size } from "./list_size.mjs";
 import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_code_braces_run_output_show } from "./app_code_braces_run_output_show.mjs";
+import { app_learn_js_braces_run_output_show } from "./app_learn_js_braces_run_output_show.mjs";
 import { app_learn_js_braces_color_next } from "./app_learn_js_braces_color_next.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
@@ -232,7 +232,7 @@ export function app_learn_js_braces_run_choose(
     if (greater_than_equal(index, b3)) {
       ("the question goes for good once the program is done, so nothing is written into it again after the wait");
       html_clear(ask);
-      await app_code_braces_run_output_show(wrap, code, on_success);
+      await app_learn_js_braces_run_output_show(wrap, code, on_success);
       return;
     }
     html_clear(ask);

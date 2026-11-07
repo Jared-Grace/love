@@ -15,7 +15,7 @@ import { html_height_animate } from "./html_height_animate.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_transition_set } from "./html_transition_set.mjs";
 import { sleep } from "./sleep.mjs";
-export async function app_code_braces_run_output_show(
+export async function app_learn_js_braces_run_output_show(
   parent,
   code,
   on_success,
