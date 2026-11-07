@@ -18,7 +18,7 @@ import { null_is } from "./null_is.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
-export function app_code_comment_wrong_say(question, answer, choice) {
+export function app_learn_js_comment_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong output for code holding a // comment: that the computer skips from // to the end of the line, the comments it skips, then each line left and what it writes out, as parts that take turns between words and code. null when there is no comment, when what is left cannot be followed, or when what it writes out is not the right answer");
   ("A line is cut at its first //, so a // inside a text would be cut wrongly; no lesson writes one, and such a line would most likely fail to be followed and stay silent. Not picked: the working of each sum as the expression reminder gives it, which says again what the comment lessons are not about; what each line writes out is enough to find the slip");
