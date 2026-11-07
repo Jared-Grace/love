@@ -1,6 +1,6 @@
 import { app_learn_js_expression_rank } from "./app_learn_js_expression_rank.mjs";
 import { app_learn_js_expression_step_choices_strong } from "./app_learn_js_expression_step_choices_strong.mjs";
-import { app_code_expression_step_grown } from "./app_code_expression_step_grown.mjs";
+import { app_learn_js_expression_step_grown } from "./app_learn_js_expression_step_grown.mjs";
 import { app_learn_js_expression_step_grown_strong } from "./app_learn_js_expression_step_grown_strong.mjs";
 import { app_code_expression_step_value_least } from "./app_code_expression_step_value_least.mjs";
 import { app_code_expression_step_value_most } from "./app_code_expression_step_value_most.mjs";
@@ -34,7 +34,7 @@ export function app_learn_js_expression_flat_random_strong_first(
   let tree = app_learn_js_expression_step_grown_strong(start);
   function step_add(index_unused) {
     "one more operator on what is there so far";
-    tree = app_code_expression_step_grown(tree);
+    tree = app_learn_js_expression_step_grown(tree);
   }
   let rest = subtract(operator_count, 1);
   each_range(rest, step_add);

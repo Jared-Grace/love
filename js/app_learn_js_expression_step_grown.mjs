@@ -4,7 +4,7 @@ import { app_learn_js_expression_step_choices } from "./app_learn_js_expression_
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-export function app_code_expression_step_grown(item) {
+export function app_learn_js_expression_step_grown(item) {
   arguments_assert(arguments, 1);
   ("the same line with one more operator on it, drawn from the ways that print back as the line they mean: a 6 may come back as 6 / 3, or as 2 + 6, or as 9 - 6");
   ("The line that is already there becomes one side of the new operator, so it is a part that has to be worked out before the new operator can go. That is what makes a line built this way have exactly ONE part ready at every moment however long it grows - the learner is never asked to choose between two right answers while they are still learning what makes an answer right.");
