@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_checkpoints } from "./app_code_checkpoints.mjs";
+import { app_learn_js_checkpoints } from "./app_learn_js_checkpoints.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { not } from "./not.mjs";
@@ -17,7 +17,7 @@ export function app_code_review_milestone_next_or_null(context) {
   let checkpoint = app_code_review_checkpoint(context);
   let key = property_get(checkpoint, "key");
   let number = property_get(checkpoint, "number");
-  let checkpoints = app_code_checkpoints();
+  let checkpoints = app_learn_js_checkpoints();
   let here = list_filter_property(checkpoints, "number", number);
   let keys = list_map_property(here, "key");
   let b = list_includes(keys, key);
