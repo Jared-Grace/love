@@ -6,7 +6,7 @@ import { app_shared_color_progress_complete } from "./app_shared_color_progress_
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_code_column_cap } from "./app_code_column_cap.mjs";
+import { app_learn_js_column_cap } from "./app_learn_js_column_cap.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
@@ -59,7 +59,7 @@ export function app_code_title_strip(
     "column-gap": column_gap,
   });
   ("capped to the same column as everything under it, so the home button starts where the cards start. Without it the strip is as wide as the window and the button sits out in the margin beside the reading column rather than at the head of it");
-  app_code_column_cap(strip);
+  app_learn_js_column_cap(strip);
   let value = app_shared_spaced_gap();
   html_style_margin_y(strip, value);
   async function go_home() {
