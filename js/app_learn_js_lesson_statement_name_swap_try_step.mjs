@@ -6,7 +6,7 @@ import { app_learn_js_lesson_statement_name_fill_from_step } from "./app_learn_j
 import { property_get } from "./property_get.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
-export function app_code_lesson_statement_name_swap_try_step() {
+export function app_learn_js_lesson_statement_name_swap_try_step() {
   arguments_assert(arguments, 0);
   ("the second step of the swapping ladder: the first step's a = b; with b = a; after it - the swap a learner tries first, which leaves both names holding the same number");
   let names = app_code_lesson_statement_name_value_names();

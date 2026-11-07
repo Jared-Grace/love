@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_st
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_learn_js_lesson_statement_name_fill_from_step } from "./app_learn_js_lesson_statement_name_fill_from_step.mjs";
-import { app_code_lesson_statement_name_swap_try_step } from "./app_code_lesson_statement_name_swap_try_step.mjs";
+import { app_learn_js_lesson_statement_name_swap_try_step } from "./app_learn_js_lesson_statement_name_swap_try_step.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_statement_name_swap_try() {
   let name_a = list_first(names);
   let name_b = list_second(names);
   let before = app_learn_js_lesson_statement_name_fill_from_step();
-  let step = app_code_lesson_statement_name_swap_try_step();
+  let step = app_learn_js_lesson_statement_name_swap_try_step();
   let middle_before = property_get(before, "middle");
   let line_before = list_first(middle_before);
   let middle = property_get(step, "middle");
