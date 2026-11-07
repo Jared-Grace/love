@@ -5,7 +5,7 @@ import { app_code_lesson_first_id } from "./app_code_lesson_first_id.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_examples_complete_is } from "./app_code_lesson_examples_complete_is.mjs";
-export function app_code_examples_complete(context, root) {
+export function app_learn_js_examples_complete(context, root) {
   arguments_assert(arguments, 2);
   let r2 = app_code_examples_example_another(context, root);
   let example_another = property_get(r2, "example_another");
