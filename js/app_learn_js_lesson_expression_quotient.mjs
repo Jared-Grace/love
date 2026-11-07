@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_expression_dividend } from "./app_learn_js_lesson_expression_dividend.mjs";
 import { app_learn_js_lesson_expression_divisor } from "./app_learn_js_lesson_expression_divisor.mjs";
 import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
-import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
+import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { text_to } from "./text_to.mjs";
@@ -70,7 +70,7 @@ export function app_learn_js_lesson_expression_quotient() {
     function paint(parent) {
       app_code_lesson_naming_words(parent, "quotient");
     }
-    let name_id2 = app_code_lesson_name_id_operators(paint);
+    let name_id2 = app_learn_js_lesson_name_id_operators(paint);
     return name_id2;
   }
 }

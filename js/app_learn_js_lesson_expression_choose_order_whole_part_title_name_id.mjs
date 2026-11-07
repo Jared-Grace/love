@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
+import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 export function app_learn_js_lesson_expression_choose_order_whole_part_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: solving the whole part of a division one part at a time, an Operators lesson");
@@ -9,6 +9,6 @@ export function app_learn_js_lesson_expression_choose_order_whole_part_title_nam
   function paint(parent) {
     html_span_text(parent, "Solve the whole part step by step");
   }
-  let built = app_code_lesson_name_id_operators(paint);
+  let built = app_learn_js_lesson_name_id_operators(paint);
   return built;
 }

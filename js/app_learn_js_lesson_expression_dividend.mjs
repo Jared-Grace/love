@@ -3,7 +3,7 @@ import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
+import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_to } from "./text_to.mjs";
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_expression_dividend() {
       let words = text_combine(" ", slash);
       html_span_text(host, words);
     }
-    let name_id2 = app_code_lesson_name_id_operators(paint);
+    let name_id2 = app_learn_js_lesson_name_id_operators(paint);
     return name_id2;
   }
 }

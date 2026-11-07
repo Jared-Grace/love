@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_expression_dividend } from "./app_learn_js_lesson_expression_dividend.mjs";
 import { app_learn_js_lesson_expression_divisor } from "./app_learn_js_lesson_expression_divisor.mjs";
 import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
-import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
+import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
@@ -71,7 +71,7 @@ export function app_learn_js_lesson_expression_remainder() {
       app_code_lesson_naming_words(parent, "remainder");
     }
     ("the id-source differs from the plain role word because the operator lesson Remainder % already holds operators_remainder (its rights carry a stray leading space that collapses to the same id); the visible title stays Remainder");
-    let built = app_code_lesson_name_id_operators(paint);
+    let built = app_learn_js_lesson_name_id_operators(paint);
     return built;
   }
 }

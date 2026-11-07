@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_category_operators } from "./app_learn_js_category_operators.mjs";
-export function app_code_lesson_name_id_operators(paint) {
+export function app_learn_js_lesson_name_id_operators(paint) {
   arguments_assert(arguments, 1);
   ("A lesson of the operators category, found by one word and titled by the drawing handed in.");
   ("Every operators lesson ends the same four lines: put the one word into a list on its own, ask which category this is, and hand the list, the category and the drawing over together. Only the drawing differs, so only the drawing is asked for here.");

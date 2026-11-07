@@ -1,5 +1,5 @@
 import { app_code_title_remainder_percent_paint } from "./app_code_title_remainder_percent_paint.mjs";
-import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
+import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -14,6 +14,6 @@ export function app_learn_js_lesson_console_log_remainder_generic_title_name_id(
     let by = text_combine(" by ", divisor_text);
     html_span_text(parent, by);
   }
-  let built = app_code_lesson_name_id_operators(paint);
+  let built = app_learn_js_lesson_name_id_operators(paint);
   return built;
 }

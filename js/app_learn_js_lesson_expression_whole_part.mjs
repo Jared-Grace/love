@@ -1,6 +1,6 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_whole_part_formula } from "./app_learn_js_lesson_expression_whole_part_formula.mjs";
-import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
+import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
@@ -61,7 +61,7 @@ export function app_learn_js_lesson_expression_whole_part() {
     function paint(parent) {
       html_span_text(parent, "Whole part from formula");
     }
-    let built = app_code_lesson_name_id_operators(paint);
+    let built = app_learn_js_lesson_name_id_operators(paint);
     return built;
   }
   function above(root, context) {
