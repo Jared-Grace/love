@@ -5,7 +5,7 @@ import { app_learn_js_lesson_chip_color } from "./app_learn_js_lesson_chip_color
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_expression_repeated_generic_expanded_counted } from "./app_code_lesson_expression_repeated_generic_expanded_counted.mjs";
+import { app_learn_js_lesson_expression_repeated_generic_expanded_counted } from "./app_learn_js_lesson_expression_repeated_generic_expanded_counted.mjs";
 import { app_learn_js_lesson_expression_repeated_generic_chip } from "./app_learn_js_lesson_expression_repeated_generic_chip.mjs";
 import { app_code_lesson_expression_repeated_generic_short_form } from "./app_code_lesson_expression_repeated_generic_short_form.mjs";
 export function app_learn_js_lesson_expression_repeated_generic_above(
@@ -43,7 +43,7 @@ export function app_learn_js_lesson_expression_repeated_generic_above(
   app_learn_js_div_cycle_code(c, [what_if]);
   let like = html_div(c);
   html_span_text(like, "Like ");
-  app_code_lesson_expression_repeated_generic_expanded_counted(
+  app_learn_js_lesson_expression_repeated_generic_expanded_counted(
     like,
     2,
     left_one,
@@ -68,7 +68,7 @@ export function app_learn_js_lesson_expression_repeated_generic_above(
   html_span_text(map, " for short");
   let likewise = html_div(c);
   html_span_text(likewise, "Likewise ");
-  app_code_lesson_expression_repeated_generic_expanded_counted(
+  app_learn_js_lesson_expression_repeated_generic_expanded_counted(
     likewise,
     5,
     left_two,

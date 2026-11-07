@@ -15,7 +15,7 @@ import { html_font_jetbrains_mono } from "./html_font_jetbrains_mono.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_lesson_expression_repeated_generic_expanded_counted(
+export function app_learn_js_lesson_expression_repeated_generic_expanded_counted(
   parent,
   left,
   left_color,
