@@ -7,7 +7,7 @@ import { add } from "./add.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
+import { app_learn_js_lesson_statement_name_sum } from "./app_learn_js_lesson_statement_name_sum.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_statement_name_total_above(root, context) {
   app_code_remember_from_lesson(
     box_remember,
     context,
-    app_code_lesson_statement_name_sum,
+    app_learn_js_lesson_statement_name_sum,
     ["we can give names to numbers:"],
   );
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");

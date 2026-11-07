@@ -154,7 +154,7 @@ import { app_learn_js_lesson_log_twice } from "./app_learn_js_lesson_log_twice.m
 import { app_learn_js_lesson_comment_skip_line } from "./app_learn_js_lesson_comment_skip_line.mjs";
 import { app_learn_js_lesson_comment_after_code } from "./app_learn_js_lesson_comment_after_code.mjs";
 import { app_learn_js_lesson_statement_name_copy_kept } from "./app_learn_js_lesson_statement_name_copy_kept.mjs";
-import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
+import { app_learn_js_lesson_statement_name_sum } from "./app_learn_js_lesson_statement_name_sum.mjs";
 import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
 import { app_learn_js_lesson_statement_name_itself_sum } from "./app_learn_js_lesson_statement_name_itself_sum.mjs";
 import { app_learn_js_lesson_statement_name_one_more } from "./app_learn_js_lesson_statement_name_one_more.mjs";
@@ -467,7 +467,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_comment_skip_line,
     app_learn_js_lesson_comment_after_code,
     app_learn_js_lesson_statement_name_copy_kept,
-    app_code_lesson_statement_name_sum,
+    app_learn_js_lesson_statement_name_sum,
     app_code_lesson_statement_name_total,
     app_learn_js_lesson_statement_name_itself_sum,
     app_learn_js_lesson_statement_name_one_more,

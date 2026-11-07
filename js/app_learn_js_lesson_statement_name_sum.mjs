@@ -3,7 +3,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_code_lesson_statement_names_binary_decoys } from "./app_code_lesson_statement_names_binary_decoys.mjs";
 import { app_learn_js_lesson_statement_name_sum_number_pairs } from "./app_learn_js_lesson_statement_name_sum_number_pairs.mjs";
 import { app_learn_js_lesson_functions_console_log_arithmetic } from "./app_learn_js_lesson_functions_console_log_arithmetic.mjs";
-export function app_code_lesson_statement_name_sum() {
+export function app_learn_js_lesson_statement_name_sum() {
   arguments_assert(arguments, 0);
   ("two names added together: let a = 2; let b = 3; console.log(a + b); writes out 5");
   ("The copying screen read a name on the right of an equals and said what that means: a name may be written wherever a value may be written, and what gets used is whatever the name is holding. Here that same sentence is met in the one place it has not been seen yet - inside an expression, where a number has stood in every arithmetic lesson the learner has done.");
