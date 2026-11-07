@@ -6,7 +6,7 @@ import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
+import { app_learn_js_lesson_statement_name_true_false } from "./app_learn_js_lesson_statement_name_true_false.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_if_name() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_statement_name_true_false,
+      app_learn_js_lesson_statement_name_true_false,
       ["a name can hold ", "true", ":"],
     );
     let logged = js_code_console_log_statement(name);
