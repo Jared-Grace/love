@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
-import { app_code_lesson_expression_equals } from "./app_code_lesson_expression_equals.mjs";
+import { app_learn_js_lesson_expression_equals } from "./app_learn_js_lesson_expression_equals.mjs";
 export function app_code_lesson_statement_name_equal() {
   arguments_assert(arguments, 0);
   ("two names asked whether they hold the same number: let a = 7; let b = 7; let equal = a === b; console.log(equal); writes out true");
@@ -31,7 +31,7 @@ export function app_code_lesson_statement_name_equal() {
     symbol,
     pairs_get,
     example_pair: [6, 6],
-    remember_lesson: app_code_lesson_expression_equals,
+    remember_lesson: app_learn_js_lesson_expression_equals,
     remember_parts: [
       "we can ask whether two numbers are equal (",
       symbol,

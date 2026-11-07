@@ -5,7 +5,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_equals() {
+export function app_learn_js_lesson_expression_equals() {
   let operator = js_operator_triple_equal();
   let symbol = property_get(operator, "operator");
   let pair = app_learn_js_comparison_pair_equality();
