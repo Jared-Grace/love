@@ -29,7 +29,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rows_apart } from "./app_code_lesson_statement_name_rows_apart.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_grid_steps() {
+export function app_learn_js_lesson_statement_name_grid_steps() {
   arguments_assert(arguments, 0);
   ("how many steps between two squares of a grid, moving up, down, left or right: let rows = Math.abs(r2 - r1); let cols = Math.abs(c2 - c1); let steps = rows + cols; - the last of three lessons, after Rows down and Rows apart. In DSA it is the distance between two cells of a grid when moves go along rows and columns, often called the Manhattan distance.");
   ("Columns first appear here, as the same line as the rows with c for r, so the lesson asks one new thing: that the two counts add. Not picked: a lesson of its own for columns, which would teach the rows line again under other names.");
