@@ -4,7 +4,7 @@ import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_less
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
-import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
+import { app_learn_js_lesson_statement_names_added } from "./app_learn_js_lesson_statement_names_added.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_sum } from "./app_learn_js_lesson_statement_name_sum.mjs";
@@ -31,7 +31,7 @@ export function app_learn_js_lesson_statement_name_total_above(root, context) {
   let number_first = 2;
   let number_last = 3;
   let total = add(number_first, number_last);
-  let names_sum = app_code_lesson_statement_names_added();
+  let names_sum = app_learn_js_lesson_statement_names_added();
   let box_remember = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_remember,

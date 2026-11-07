@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
+import { app_learn_js_lesson_statement_names_added } from "./app_learn_js_lesson_statement_names_added.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_name_total_batch() {
   let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let name_total = app_learn_js_lesson_statement_name_third();
-  let summed = app_code_lesson_statement_names_added();
+  let summed = app_learn_js_lesson_statement_names_added();
   let pairs = app_learn_js_lesson_statement_name_sum_number_pairs();
   function program_of(pair) {
     "the four lines that give two numbers two names, give a third name what the two add up to, and write out what the third one holds";

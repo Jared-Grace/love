@@ -3,7 +3,7 @@ import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_le
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-export function app_code_lesson_statement_names_added() {
+export function app_learn_js_lesson_statement_names_added() {
   arguments_assert(arguments, 0);
   ("the Statements course's two names with a plus between them, written as code");
   ("Four lessons in a row are built on this one piece of code - the one that adds what two names hold, the two that keep the total under a name, and the one that shows the same sum in a box read before the questions start. Each of them spelled it out of the same three pieces, so a change to how the sum is spaced or which names it uses had four places to reach and no way of knowing it had missed one.");
