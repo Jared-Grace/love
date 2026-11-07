@@ -10,7 +10,7 @@ import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
-import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
+import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { app_learn_js_lesson_cups_copy_story } from "./app_learn_js_lesson_cups_copy_story.mjs";
 import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_that_text.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -53,7 +53,7 @@ export function app_code_lesson_statement_name_copy_single_above(
     ["Suppose cup ", name_first, has_first, name_last, " is empty"],
     names,
   );
-  app_code_lesson_cups_row_holding(
+  app_learn_js_lesson_cups_row_holding(
     box_cups,
     [cup_first, [nothing, name_last]],
     names,

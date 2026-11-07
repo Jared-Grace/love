@@ -6,7 +6,7 @@ import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_state
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson_names } from "./app_code_remember_from_lesson_names.mjs";
 import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
-import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
+import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
@@ -42,7 +42,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
     ["we gave cup ", name_copy, " whatever was in cup ", name_first],
     names,
   );
-  app_code_lesson_cups_row_holding(
+  app_learn_js_lesson_cups_row_holding(
     box_have,
     [
       [word_first, name_first],
@@ -61,7 +61,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   ]);
   let put = list_join_empty([" and put ", word_last, " in instead"]);
   app_code_note_div_cycle_code(box_change, [took, name_first, put], names);
-  app_code_lesson_cups_row_holding(
+  app_learn_js_lesson_cups_row_holding(
     box_change,
     [
       [word_last, name_first],

@@ -4,7 +4,7 @@ import { list_last } from "./list_last.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
+import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 export function app_learn_js_lesson_cups_copy_story(
   box,
   cups_kept,
@@ -43,7 +43,7 @@ export function app_learn_js_lesson_cups_copy_story(
   app_code_note_div_cycle_code(box, ["Cup ", name_from, found, name_to], names);
   let cup_to = [word_from, name_to];
   let cups = list_concat(cups_kept, [cup_to]);
-  app_code_lesson_cups_row_holding(box, cups, names);
+  app_learn_js_lesson_cups_row_holding(box, cups, names);
   let both = list_join_empty([" both have ", word_from, " in them"]);
   app_code_note_div_cycle_code(
     box,

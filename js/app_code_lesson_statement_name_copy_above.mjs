@@ -7,7 +7,7 @@ import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_state
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
-import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
+import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_learn_js_lesson_cups_copy_story } from "./app_learn_js_lesson_cups_copy_story.mjs";
 import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_statement_name_copy_above(root, context) {
     ],
     names,
   );
-  app_code_lesson_cups_row_holding(
+  app_learn_js_lesson_cups_row_holding(
     box_have,
     [
       [nothing, name_first],
@@ -57,14 +57,14 @@ export function app_code_lesson_statement_name_copy_above(root, context) {
     ["Suppose cup ", name_first, has_first, name_last, has_last],
     names,
   );
-  app_code_lesson_cups_row_holding(box_have, [cup_first, cup_last], names);
+  app_learn_js_lesson_cups_row_holding(box_have, [cup_first, cup_last], names);
   let box_new = app_learn_js_container_light_blue(root);
   app_code_note_div_cycle_code(
     box_new,
     ["Suppose you have a third cup ", name_copy],
     names,
   );
-  app_code_lesson_cups_row_holding(
+  app_learn_js_lesson_cups_row_holding(
     box_new,
     [cup_first, cup_last, [nothing, name_copy]],
     names,

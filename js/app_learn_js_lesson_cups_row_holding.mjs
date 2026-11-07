@@ -6,7 +6,7 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_cups_row_holding(parent, pairs, names) {
+export function app_learn_js_lesson_cups_row_holding(parent, pairs, names) {
   arguments_assert(arguments, 3);
   ("a row of cups standing side by side, each one drawn from what is in it and the name written on it");
   ("A row and the cups in it are one thing on a screen and were two in the code, so a screen wanting three cups wrote four lines and a screen wanting two wrote three. What a screen actually has to say is the list of cups, and the row is what a list of cups is drawn as.");
