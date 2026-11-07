@@ -21,7 +21,7 @@ export async function app_code_above_vague_gate_run() {
     offenders,
     path,
     "these lesson lines point at code with a word and did not before - show the code instead: if (a) { ... }, else { ... }, or the whole statement",
-    fn_name("app_code_above_vague_baseline_write"),
+    fn_name("app_learn_js_above_vague_baseline_write"),
   );
   return r;
 }
