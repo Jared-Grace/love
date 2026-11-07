@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_swapping_generic_side(
+export function app_learn_js_lesson_swapping_generic_side(
   left_number,
   op,
   right_number,
