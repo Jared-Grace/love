@@ -15,7 +15,7 @@ import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
 import { js_code_semicolon } from "./js_code_semicolon.mjs";
-import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
+import { app_learn_js_lesson_functions_console_log_statement } from "./app_learn_js_lesson_functions_console_log_statement.mjs";
 export function app_code_lesson_statement_name_again_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: one cup, what was in it, what is in it now, and the line that changed it");
@@ -87,7 +87,7 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   app_code_remember_from_lesson(
     box_care,
     context,
-    app_code_lesson_functions_console_log_statement,
+    app_learn_js_lesson_functions_console_log_statement,
     ["a statement ends with ", semicolon],
   );
   app_learn_js_div_cycle_code(box_care, [

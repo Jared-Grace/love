@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue_text } from "./app_learn_js_container
 import { js_code_statement } from "./js_code_statement.mjs";
 import { app_learn_js_lesson_functions_console_log_generic } from "./app_learn_js_lesson_functions_console_log_generic.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_console_log_statement() {
+export function app_learn_js_lesson_functions_console_log_statement() {
   var r = app_learn_js_lesson_functions_console_log_generic({
     above,
     lambda$code: js_code_statement,
