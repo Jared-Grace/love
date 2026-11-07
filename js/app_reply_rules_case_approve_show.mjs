@@ -5,6 +5,9 @@ import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outs
 import { app_reply_rules_file_card } from "./app_reply_rules_file_card.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_reply_rules_case_show } from "./app_reply_rules_case_show.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { equal } from "./equal.mjs";
+import { app_reply_rules_case_reworded_show } from "./app_reply_rules_case_reworded_show.mjs";
 import { app_reply_rules_approve_button } from "./app_reply_rules_approve_button.mjs";
 export function app_reply_rules_case_approve_show(root, one, approvals) {
   arguments_assert(arguments, 3);
@@ -26,5 +29,12 @@ export function app_reply_rules_case_approve_show(root, one, approvals) {
   let card = app_reply_rules_file_card(root, "test", name);
   let holder = html_div(card);
   app_reply_rules_case_show(holder, one);
+  ("A test approved before in other words shows those words against these, so a rewording is read as what moved rather than read again whole.");
+  let approved = property_get_or_null(approvals, name);
+  let b = equal(approved, null);
+  let reworded = not(b);
+  if (reworded) {
+    app_reply_rules_case_reworded_show(holder, approved, lines);
+  }
   app_reply_rules_approve_button(card, name, lines, approvals, holder);
 }
