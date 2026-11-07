@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_formula_backwards_decoys } from "./app_code_lesson_statement_formula_backwards_decoys.mjs";
+import { app_learn_js_lesson_statement_formula_backwards_decoys } from "./app_learn_js_lesson_statement_formula_backwards_decoys.mjs";
 export function app_learn_js_lesson_statement_formula_answer_count({
   words,
   title_code,
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_formula_answer_count({
 }) {
   arguments_assert(arguments, 1);
   ("the lesson with the other questions' answers as the wrong answers to its backward question");
-  let lesson = app_code_lesson_statement_formula_backwards_decoys({
+  let lesson = app_learn_js_lesson_statement_formula_backwards_decoys({
     words,
     title_code,
     names,
