@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_choose_order_compare_title_name_id } from "./app_code_lesson_expression_choose_order_compare_title_name_id.mjs";
-import { app_code_lesson_expression_choose_order_compare_questions } from "./app_code_lesson_expression_choose_order_compare_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_compare_questions } from "./app_learn_js_lesson_expression_choose_order_compare_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_compare_above } from "./app_learn_js_lesson_expression_choose_order_compare_above.mjs";
 export function app_code_lesson_expression_choose_order_compare() {
@@ -10,7 +10,7 @@ export function app_code_lesson_expression_choose_order_compare() {
   "Two operators, the count the learner is used to. Two comparisons compared is three operators, and that is the two-comparisons lesson further on, not this one - the new thing here is what an operator IS on this line, and a longer line at the same moment would be two new things at once. Named rather than counted, because a place ahead goes stale the moment a lesson is moved and nothing checks it.";
   "The wrong value offered is the other of true and false, and there is only ever one of it. Nothing has to be invented: a comparison comes to true or false and to nothing else, so the whole of what could be pressed instead is already on the screen.";
   let name_id = app_code_lesson_expression_choose_order_compare_title_name_id();
-  let bank = app_code_lesson_expression_choose_order_compare_questions();
+  let bank = app_learn_js_lesson_expression_choose_order_compare_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_compare_above,
