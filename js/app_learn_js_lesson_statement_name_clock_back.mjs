@@ -11,7 +11,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_clock_next } from "./app_code_lesson_statement_name_clock_next.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_clock_back() {
+export function app_learn_js_lesson_statement_name_clock_back() {
   arguments_assert(arguments, 0);
   ("the hour before this one on a 24-hour clock: let earlier = hour + 23; let back = earlier % 24; - picked by the human 2026-10-02 from a list of next lessons. In DSA it is stepping back round a ring, the place before index i in a list of length n, which is (i + n - 1) % n.");
   ("Going back one hour is written as going forward 23, because in JavaScript the remainder keeps the sign of the number divided: (0 - 1) % 24 is -1, not 23. Adding 23 never makes a negative number, so the remainder lesson already taught is enough. The -1 is not shown in the writing: it is a fact about JavaScript a learner would have to be told, and the lesson works without it.");
