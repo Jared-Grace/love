@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_braces_run_else_if } from "./app_code_lesson_braces_run_else_if.mjs";
+import { app_learn_js_lesson_braces_run_else_if } from "./app_learn_js_lesson_braces_run_else_if.mjs";
 import { app_learn_js_else_if_explain } from "./app_learn_js_else_if_explain.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_else_if() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_braces_run_else_if,
+      app_learn_js_lesson_braces_run_else_if,
       ["", "else if (b) { ... }", " runs when a is false and b is true"],
     );
     ("2026-10-12, at the human's asking: what the code writes out is explained back here, where it is first asked, the lesson before now walking through which sections run");
