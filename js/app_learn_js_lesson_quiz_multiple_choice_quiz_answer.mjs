@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_decoy_fn } from "./app_learn_js_lesson_quiz_multiple_choice_decoy_fn.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_has_decoys } from "./app_learn_js_lesson_quiz_multiple_choice_has_decoys.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_quiz_multiple_choice_quiz_answer(
+export function app_learn_js_lesson_quiz_multiple_choice_quiz_answer(
   info,
   qa,
   batch_get,
