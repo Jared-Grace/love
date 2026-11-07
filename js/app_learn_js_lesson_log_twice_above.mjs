@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_lesson_log_twice_above(root, context) {
+export function app_learn_js_lesson_log_twice_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the one line a learner already knows, that line with a second one under it, and then the same two lines the other way round");
   ("The second box is the first box with a line added and nothing else changed, so there is only one thing between them that could account for the extra answer. The learner reads the first answer again in the second card, which says the line they already knew went on doing exactly what it did.");
