@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
+import { app_learn_js_label_solve_first } from "./app_learn_js_label_solve_first.mjs";
 import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
 import { app_learn_js_label_solve_choice } from "./app_learn_js_label_solve_choice.mjs";
 import { app_learn_js_expression_value_choose_await } from "./app_learn_js_expression_value_choose_await.mjs";
@@ -39,7 +39,7 @@ export function app_learn_js_expression_choose_order_ask({
     let solved = property_get(step, "solved");
     let first_is = null_is(solved);
     if (first_is) {
-      let opening = app_code_label_solve_first();
+      let opening = app_learn_js_label_solve_first();
       say(opening);
       return;
     }

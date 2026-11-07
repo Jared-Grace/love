@@ -1,6 +1,6 @@
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_label_line_to_solve } from "./app_learn_js_label_line_to_solve.mjs";
-import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
+import { app_learn_js_label_solve_first } from "./app_learn_js_label_solve_first.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_expression_choose_order_generic(
     let info = {
       question_label: app_learn_js_label_line_to_solve(),
       on_question: html_text_set_code_dark,
-      answer_label: app_code_label_solve_first(),
+      answer_label: app_learn_js_label_solve_first(),
       on_answer,
       answer_property: "answer",
     };
