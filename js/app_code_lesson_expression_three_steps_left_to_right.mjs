@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_same_strength_operator_count } from "./app_code_lesson_expression_choose_order_same_strength_operator_count.mjs";
 import { app_learn_js_expression_flat_random_same_strength } from "./app_learn_js_expression_flat_random_same_strength.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_lesson_expression_choose_order_same_strength_above } from "./app_code_lesson_expression_choose_order_same_strength_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_same_strength_above } from "./app_learn_js_lesson_expression_choose_order_same_strength_above.mjs";
 import { app_learn_js_expression_flat_value_right_to_left } from "./app_learn_js_expression_flat_value_right_to_left.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_three_steps_left_to_right_title_name_id } from "./app_code_lesson_expression_three_steps_left_to_right_title_name_id.mjs";
@@ -35,7 +35,10 @@ export function app_code_lesson_expression_three_steps_left_to_right() {
       app_code_lesson_expression_choose_order_same_strength,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
-    app_code_lesson_expression_choose_order_same_strength_above(root, context);
+    app_learn_js_lesson_expression_choose_order_same_strength_above(
+      root,
+      context,
+    );
   }
   function refill() {
     "two lines a screen, each drawn on its own so a screen can hold an adding line and a scaling one";

@@ -4,7 +4,7 @@ import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 import { app_code_lesson_expression_choose_order_same_strength_questions } from "./app_code_lesson_expression_choose_order_same_strength_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
-import { app_code_lesson_expression_choose_order_same_strength_above } from "./app_code_lesson_expression_choose_order_same_strength_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_same_strength_above } from "./app_learn_js_lesson_expression_choose_order_same_strength_above.mjs";
 export function app_code_lesson_expression_choose_order_same_strength() {
   "choosing which part of a line to solve and then what that part comes to, three times over on a line whose operators are all one strength: 8 - 2 - 4 + 7, choose the first minus, choose 6, see 6 - 4 + 7, choose the minus, choose 2, see 2 + 7, choose the plus, choose 9";
   "★ THE CHAINED THIRD STEP ARRIVES HERE, ON ITS OWN. The pressing lessons before this one hand out three operators too, but every one of those lines is two sides worked apart from each other and then compared: press one side, press the other, press the sign between them, and nothing already pressed has to be looked at again. Here the three steps are one chain. Every press changes the line, and the step after it can only be read off the line as it now stands. The next press-at-a-time lesson hands out the same chain with a stronger operator forced to the front, so a learner sent straight there would be holding a chain and hunting a queue-jumper in the same sitting. This lesson takes the first of those two and gives it a screen of its own.";
@@ -38,7 +38,7 @@ export function app_code_lesson_expression_choose_order_same_strength() {
   let bank = app_code_lesson_expression_choose_order_same_strength_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
-    app_code_lesson_expression_choose_order_same_strength_above,
+    app_learn_js_lesson_expression_choose_order_same_strength_above,
     answer_draw,
     example_draw,
     bank,
