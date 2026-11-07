@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_name } from "./app_code_expression_name.mjs";
+import { app_learn_js_expression_name } from "./app_learn_js_expression_name.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
@@ -18,7 +18,7 @@ export function app_code_expression_names_apart(item) {
   if (name_is) {
     let name = property_get(item, "name");
     let value = property_get(item, "value");
-    let own = app_code_expression_name(name, value);
+    let own = app_learn_js_expression_name(name, value);
     return own;
   }
   let node_is = app_code_expression_node_is(item);

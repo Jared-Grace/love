@@ -6,7 +6,7 @@ import { property_exists_not } from "./property_exists_not.mjs";
 export function app_learn_js_expression_name_is(item) {
   arguments_assert(arguments, 1);
   ("whether a part of an expression shape is a name still to be read, as ",
-    fn_name("app_code_expression_name"),
+    fn_name("app_learn_js_expression_name"),
     " makes one");
   let o = object_is(item);
   if (o) {
