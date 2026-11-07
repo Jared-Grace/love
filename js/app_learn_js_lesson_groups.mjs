@@ -15,7 +15,7 @@ import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_learn_js_lesson_for } from "./app_learn_js_lesson_for.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_first.mjs";
-export function app_code_lesson_groups() {
+export function app_learn_js_lesson_groups() {
   arguments_assert(arguments, 0);
   ("the groups the home list folds its lessons into, each named and starting at the lesson given, and running until the next one starts - the last runs to the end of the list");
   ("Each group starts at a lesson named by its function, at the human's request 2026-10-11, so a lesson added before a group's first lesson no longer pushes the lessons after it into the wrong group; nine section-run lessons added that day had just moved every number after 263. The numbers a learner sees are worked out from these by the groups' numbered twin. Until then the groups were numbers, because the human gave them as ranges of the numbers a learner sees; the names are the lessons those numbers stood at that day.");

@@ -5,7 +5,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
-import { app_code_lesson_groups } from "./app_code_lesson_groups.mjs";
+import { app_learn_js_lesson_groups } from "./app_learn_js_lesson_groups.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_slice } from "./list_slice.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_lesson_groups_numbered(lessons) {
   }
   let list = app_code_lessons_fns();
   let every = list_map(list, id_of);
-  let groups = app_code_lesson_groups();
+  let groups = app_learn_js_lesson_groups();
   function start_of(group) {
     let lesson_fn = property_get(group, "lesson");
     let item = id_of(lesson_fn);
