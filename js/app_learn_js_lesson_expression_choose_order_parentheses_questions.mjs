@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_expression } from "./app_learn_js_lesson_expression_choose_order_parentheses_expression.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_tree_of_code } from "./app_code_lesson_expression_choose_order_parentheses_tree_of_code.mjs";
-export function app_code_lesson_expression_choose_order_parentheses_questions() {
+export function app_learn_js_lesson_expression_choose_order_parentheses_questions() {
   arguments_assert(arguments, 0);
   ("the question bank of the parentheses lesson: lines whose || stands in parentheses at one end of an && and then at the other, given out one a screen and worked out again from the writing they were printed as");
   ("The asking is the same asking as every other press-at-a-time lesson - one line a screen, true and false taking turns - so it is asked for rather than written out here. What differs is the maker and the reader, and they differ together, because this lesson writes parentheses where the one before it wrote none.");

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_title_name_id } from "./app_code_lesson_expression_choose_order_parentheses_title_name_id.mjs";
-import { app_code_lesson_expression_choose_order_parentheses_questions } from "./app_code_lesson_expression_choose_order_parentheses_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_parentheses_questions } from "./app_learn_js_lesson_expression_choose_order_parentheses_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_above } from "./app_learn_js_lesson_expression_choose_order_parentheses_above.mjs";
 export function app_code_lesson_expression_choose_order_parentheses() {
@@ -13,7 +13,8 @@ export function app_code_lesson_expression_choose_order_parentheses() {
   ("Every part of this line comes to a true or a false, so the value offered instead is the other of the two and nothing has to be invented.");
   let name_id =
     app_code_lesson_expression_choose_order_parentheses_title_name_id();
-  let bank = app_code_lesson_expression_choose_order_parentheses_questions();
+  let bank =
+    app_learn_js_lesson_expression_choose_order_parentheses_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_parentheses_above,
