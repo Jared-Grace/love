@@ -6,7 +6,10 @@ import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_code_text_join_decoys } from "./app_code_text_join_decoys.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
-export function app_code_lesson_statement_name_join_decoys(question, answer) {
+export function app_learn_js_lesson_statement_name_join_decoys(
+  question,
+  answer,
+) {
   arguments_assert(arguments, 2);
   ("the tempting wrong answers for a question that joins the text two names hold: the two joined the other way round, joined with a space between them, and the answer with quotes around it");
   ("Without these the wrong answers are the other questions' answers, which each begin with a different word, so the right one is found by reading the first name's word and never working out the join. The first two here begin with the right word or hold both right words, so the whole join has to be read: which name comes first, and that a plus adds no space.");
