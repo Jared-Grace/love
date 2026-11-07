@@ -8,7 +8,7 @@ import { app_learn_js_hash_write } from "./app_learn_js_hash_write.mjs";
 import { app_learn_js_course_unfinished_go } from "./app_learn_js_course_unfinished_go.mjs";
 import { app_learn_js_button_unfinished_text } from "./app_learn_js_button_unfinished_text.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
-export function app_code_lesson_quiz_button_unfinished(
+export function app_learn_js_lesson_quiz_button_unfinished(
   context,
   parent,
   quizzes,
