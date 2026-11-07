@@ -3,7 +3,7 @@ import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_
 import { app_code_lesson_expression_choose_order_compare_line_apart } from "./app_code_lesson_expression_choose_order_compare_line_apart.mjs";
 import { app_code_lesson_expression_choose_order_run_worked } from "./app_code_lesson_expression_choose_order_run_worked.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_lesson_expression_choose_order_compare_intro } from "./app_code_lesson_expression_choose_order_compare_intro.mjs";
+import { app_learn_js_lesson_expression_choose_order_compare_intro } from "./app_learn_js_lesson_expression_choose_order_compare_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_compare_above(
   root,
   context,
@@ -31,5 +31,5 @@ export function app_learn_js_lesson_expression_choose_order_compare_above(
   );
   app_code_lesson_expression_choose_order_run_worked(root, flat, "Now suppose");
   let change_card = app_learn_js_container_light_blue(root);
-  app_code_lesson_expression_choose_order_compare_intro(change_card);
+  app_learn_js_lesson_expression_choose_order_compare_intro(change_card);
 }
