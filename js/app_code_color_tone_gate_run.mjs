@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_color_hue_groups } from "./app_code_color_hue_groups.mjs";
+import { app_learn_js_color_hue_groups } from "./app_learn_js_color_hue_groups.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_color_tone_faults } from "./app_code_color_tone_faults.mjs";
@@ -13,7 +13,7 @@ export async function app_code_color_tone_gate_run() {
   ("IT IS RATCHETED AND NOT HELD TO THE RULE, because the rule is not met today and the repairs are not this gate's to make. Four hues are drawn at ten colours where eight would do: three hues carry a spare dark and the amber has no light at all. Every one of those is a colour decision waiting on somebody who has worked in colour, and one of them is not this app's to take - the second blue is the blue the whole site leads with. A gate that failed on all four would be a gate that gets silenced.");
   ("A REPAIR TURNS IT RED EXACTLY AS LOUDLY AS A NEW FAULT, and that is the ratchet's other tooth rather than a rough edge. A banked fault that stops happening has to be taken off the list, or the list quietly licenses the same fault coming back later under cover of being already known.");
   ("HOW MANY HUES AND HOW MANY COLOURS WERE LOOKED AT GO OUT WITH THE VERDICT, counted off the grouping rather than off the faults. On a clean run the faults are none, so a number read from them would say nothing was checked on exactly the runs where the question matters. If the colour count ever falls without anybody having removed a colour, the sweep has lost sight of a palette and is green because it looked at less.");
-  let groups = app_code_color_hue_groups();
+  let groups = app_learn_js_color_hue_groups();
   let hues = list_size(groups);
   let walked = 0;
   for (let group of groups) {

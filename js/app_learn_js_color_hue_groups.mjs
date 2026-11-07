@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_colors_placed_by_hue } from "./app_code_colors_placed_by_hue.mjs";
 import { color_places_cut_at_gap } from "./color_places_cut_at_gap.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_color_hue_groups() {
+export function app_learn_js_color_hue_groups() {
   arguments_assert(arguments, 0);
   ("the colours of this app's three palettes, gathered into the hues they have - one group per hue, in order round the wheel, each carrying the dark colours written at that hue and the light ones");
   ("THE GAP IS NOT TUNED AND THE MEASUREMENT IS WHY. Measured 2026-09-20 over the ten colours: the biggest step inside what anybody would call one hue is 7.2 degrees, between the pointing red and the light red; the smallest step between two hues is 31.5, between the red and the amber. So every setting from eight to thirty-one gives the same four groups, and twelve was taken from the middle of that. A threshold chosen where the answer is flat is a threshold that is not doing the deciding - if this number ever has to be nudged to get the answer somebody wanted, the palette has grown two hues too close to tell apart and that is the finding, not the number.");

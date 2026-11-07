@@ -21,7 +21,7 @@ export function app_code_color_tones() {
   ("The missing light is the amber. The red, the green and the blue each have both tones; the amber has a dark and nothing else. So a fourth name colour cannot be an amber today without one being invented, and the amber is also the colour every known contrast fault in the chip palette belongs to. Those two facts are probably one fact.");
   ("THE NUMBERS THE TWO TONES ACTUALLY REACH, measured the same day, so whoever revises them starts from readings rather than from this argument. Each light colour on the near-black ink it carries: 7.20 to one for the red, 9.48 for the blue, 13.91 for the green. Each dark colour under white lettering: 6.65 for the chip red, 6.07 for the chip blue, 5.40 for the chip green, 5.41 for the pointing red, 5.17 for the brand blue, and then 4.51 for the pointing green and 4.48 for the chip amber - the last of those being under the four and a half that lettering asks for, which is one of the amber's known faults.");
   "THE CHECK THIS WAS WRITTEN FOR NOW EXISTS AND ASKS IT. " +
-    fn_name("app_code_color_hue_groups") +
+    fn_name("app_learn_js_color_hue_groups") +
     " stands the colours in order round the wheel and cuts them into hues, " +
     fn_name("app_code_color_tone_faults") +
     " asks each hue for exactly one dark and one light, and " +
