@@ -2,7 +2,7 @@ import { app_code_code_output } from "./app_code_code_output.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
-import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
+import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 export function app_learn_js_braces_paired_with_order_colors(
   parent,
   code,
@@ -18,7 +18,7 @@ export function app_learn_js_braces_paired_with_order_colors(
     let div = html_div(container);
     app_code_code_dark_lines_braces_paired_colors(div, text, colors);
   }
-  let braces = app_code_braces_sequence(code);
+  let braces = app_learn_js_braces_sequence(code);
   app_code_code_output({
     parent,
     code_label: "Code:",

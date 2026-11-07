@@ -4,7 +4,7 @@ import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_braces_two_batch } from "./app_code_braces_two_batch.mjs";
-import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
+import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_token_order_braces() {
   let right = js_code_brace_right();
   let batch = app_learn_js_batch_question_answer_fns(
     app_code_braces_two_batch,
-    app_code_braces_sequence,
+    app_learn_js_braces_sequence,
   );
   function above(root, context) {
     "the order of the tokens remembered, then the braces as the tokens that are { or }, written down in the order they are read";

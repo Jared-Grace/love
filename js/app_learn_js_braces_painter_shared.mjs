@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
+import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { equal } from "./equal.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { not } from "./not.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_braces_painter_shared() {
   ("Every program drawn takes new colours from the one bag the whole app draws from, so two worked examples on one page whose braces stand in the same order still wear different colours, as the human asked 2026-10-11. Rejected: keeping the colours an order was first given, which is what was here before. It gave two different programs with braces in the same order the same colours.");
   let colors_by_order = {};
   function painter(component, code) {
-    let order = app_code_braces_sequence(code);
+    let order = app_learn_js_braces_sequence(code);
     let line = equal(code, order);
     let missing = property_exists_not(colors_by_order, order);
     if (not(line) || missing) {

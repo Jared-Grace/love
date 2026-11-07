@@ -5,7 +5,7 @@ import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-export function app_code_braces_sequence(code) {
+export function app_learn_js_braces_sequence(code) {
   arguments_assert(arguments, 1);
   ("only the braces of code, in the order they stand, with a space between each: if (a) { if (b) { ... } } if (c) { ... } gives { { } } { }");
   let left = js_code_brace_left();

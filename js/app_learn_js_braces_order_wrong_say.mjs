@@ -9,7 +9,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
+import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 export function app_learn_js_braces_order_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("for a quiz between code and only its braces, in either direction: walks the code's braces from the top down, saying which block each { opens and which block each } closes; null when neither side is code with braces");
@@ -82,7 +82,7 @@ export function app_learn_js_braces_order_wrong_say(question, answer, choice) {
     return null;
   }
   text_add(", so its braces, in order, are ");
-  let item = app_code_braces_sequence(code);
+  let item = app_learn_js_braces_sequence(code);
   list_add_multiple(parts, [item, ""]);
   return parts;
 }

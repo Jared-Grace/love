@@ -6,7 +6,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
+import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { app_learn_js_braces_order_wrong_say } from "./app_learn_js_braces_order_wrong_say.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_braces_order_plain } from "./app_code_lesson_quiz_braces_order_plain.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_braces_among_plain_generic(
     );
     let code_div = html_div(box_two);
     html_text_set_code_dark_lines(code_div, example_code);
-    let sequence = app_code_braces_sequence(example_code);
+    let sequence = app_learn_js_braces_sequence(example_code);
     let braces_div = html_div(box_two);
     html_text_set_code_dark_lines(braces_div, sequence);
   }

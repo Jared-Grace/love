@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_braces_three_batch } from "./app_code_braces_three_batch.mjs";
-import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
+import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_token_order_braces_three() {
   ("The writing is a first draft by Claude 2026-10-11.");
   let batch = app_learn_js_batch_question_answer_fns(
     app_code_braces_three_batch,
-    app_code_braces_sequence,
+    app_learn_js_braces_sequence,
   );
   function above(root, context) {
     "the braces among the tokens remembered, then a program with three pairs, coloured, with only its braces under it";
