@@ -7,7 +7,7 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { app_learn_js_lesson_comment_after_code_above } from "./app_learn_js_lesson_comment_after_code_above.mjs";
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { app_code_lesson_decoy_comment_ignored } from "./app_code_lesson_decoy_comment_ignored.mjs";
-import { app_code_lesson_decoy_comment_after_code_swapped } from "./app_code_lesson_decoy_comment_after_code_swapped.mjs";
+import { app_learn_js_lesson_decoy_comment_after_code_swapped } from "./app_learn_js_lesson_decoy_comment_after_code_swapped.mjs";
 export function app_learn_js_lesson_comment_after_code() {
   arguments_assert(arguments, 0);
   ("a comment after code on the same line: console.log(6 + 5); // console.log(3 + 9); writes out 11 and nothing else");
@@ -28,7 +28,7 @@ export function app_learn_js_lesson_comment_after_code() {
     on_question: app_learn_js_code_dark_lines_comments,
     unscramble: false,
     decoys: app_code_lesson_decoy_comment_ignored,
-    backwards_decoys: app_code_lesson_decoy_comment_after_code_swapped,
+    backwards_decoys: app_learn_js_lesson_decoy_comment_after_code_swapped,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });

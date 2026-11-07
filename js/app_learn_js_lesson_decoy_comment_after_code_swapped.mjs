@@ -7,7 +7,7 @@ import { list_second } from "./list_second.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { text_replace } from "./text_replace.mjs";
-export function app_code_lesson_decoy_comment_after_code_swapped(
+export function app_learn_js_lesson_decoy_comment_after_code_swapped(
   question,
   answer,
 ) {
