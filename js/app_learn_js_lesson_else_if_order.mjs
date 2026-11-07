@@ -19,7 +19,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_cases_logged } from "./app_learn_js_lesson_cases_logged.mjs";
-export function app_code_lesson_else_if_order() {
+export function app_learn_js_lesson_else_if_order() {
   arguments_assert(arguments, 0);
   ('else if with comparisons: let n = 5; if (n < 10) { console.log("love"); } else if (n < 100) { console.log("joy"); } else { console.log("peace"); } console.log("patience"); writes out love and patience, though n < 100 is true too');
   ("The one new fact is that the checks are asked in order and the first one that is true wins: with n = 5 both n < 10 and n < 100 are true, and only the lines inside if (n < 10) { ... } run. The program is the one from Else if and else with its names a and b replaced by comparisons of one number n.");

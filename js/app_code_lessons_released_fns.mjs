@@ -297,7 +297,7 @@ import { app_learn_js_lesson_braces_run_else_if_else } from "./app_learn_js_less
 import { app_learn_js_lesson_else_if_else } from "./app_learn_js_lesson_else_if_else.mjs";
 import { app_learn_js_lesson_braces_run_else_if_twice } from "./app_learn_js_lesson_braces_run_else_if_twice.mjs";
 import { app_code_lesson_else_if_twice } from "./app_code_lesson_else_if_twice.mjs";
-import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
+import { app_learn_js_lesson_else_if_order } from "./app_learn_js_lesson_else_if_order.mjs";
 import { app_learn_js_lesson_braces_run_thrice } from "./app_learn_js_lesson_braces_run_thrice.mjs";
 import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
 export function app_code_lessons_released_fns() {
@@ -610,7 +610,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_else_if_else,
     app_learn_js_lesson_braces_run_else_if_twice,
     app_code_lesson_else_if_twice,
-    app_code_lesson_else_if_order,
+    app_learn_js_lesson_else_if_order,
     app_learn_js_lesson_braces_run_thrice,
     app_code_lesson_if_thrice,
   ];

@@ -101,7 +101,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-18: hold Step by step: Two lines in an if, new at the human's asking straight before Two lines in an if, until the human has read its first draft";
   "2026-10-18: Step by step: Two lines in an if released, the human having approved it for latest";
   ("2026-10-22: released by the human, deploy everything except the while lessons: ",
-    fn_name("app_code_lesson_else_if_order"),
+    fn_name("app_learn_js_lesson_else_if_order"),
     ", ",
     fn_name("app_learn_js_lesson_braces_run_thrice"),
     " and ",
