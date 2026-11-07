@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_braces_two_ifs } from "./app_code_braces_two_ifs.mjs";
+import { app_learn_js_braces_two_ifs } from "./app_learn_js_braces_two_ifs.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_braces_run_two_ifs_explain(root, context) {
   let box = app_code_container_light_blue(root);
   app_code_div_cycle_code(box, ["Code can have multiple ", "if", "s"]);
   app_code_div_cycle_code(box, ["Here there are two ", "if", "s:"]);
-  let code = app_code_braces_two_ifs();
+  let code = app_learn_js_braces_two_ifs();
   let code_label = app_code_label_code_question();
   app_code_lesson_above(
     box,
