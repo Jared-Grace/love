@@ -24,7 +24,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_statement_name_meeting_inside } from "./app_learn_js_lesson_statement_name_meeting_inside.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rectangle_inside() {
+export function app_learn_js_lesson_statement_name_rectangle_inside() {
   arguments_assert(arguments, 0);
   ("whether one rectangle is inside another: let across = l1 <= l2 && r2 <= r1; let down = t1 <= t2 && b2 <= b1; let inside = across && down; - picked by the human 2026-10-04 from a list of next lessons. In DSA it is the box containment check, used to tell whether one box on a screen holds another, and it is Is one meeting inside another done once across and once down.");
   ("Is one meeting inside another is the reminder, so the new idea is only that a rectangle needs that check twice, joined by &&, as Do two rectangles overlap needed the overlap check twice. l1, r1, t1 and b1 are the left, right, top and bottom of the first rectangle, and l2, r2, t2 and b2 of the second; the whole words would make each line twice as long. The first two lines are longer than 30 characters; only the title line has to fit, and let inside = across && down; does.");
