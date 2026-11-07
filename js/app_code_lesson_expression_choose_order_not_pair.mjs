@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_pair_above } from "./app_learn_js_lesson_expression_choose_order_not_pair_above.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_pair_questions } from "./app_learn_js_lesson_expression_choose_order_not_pair_questions.mjs";
-import { app_code_lesson_expression_choose_order_not_pair_title_name_id } from "./app_code_lesson_expression_choose_order_not_pair_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_pair_title_name_id } from "./app_learn_js_lesson_expression_choose_order_not_pair_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_choose_order_not_pair() {
   arguments_assert(arguments, 0);
@@ -12,7 +12,7 @@ export function app_code_lesson_expression_choose_order_not_pair() {
   ("Nothing has to refuse the wrong press. The ! cannot go first because what stands after it is not a value yet - it is the joined pair, still waiting - so the rule is read off the line rather than enforced against the learner, which is the same reading every lesson in this run has asked for.");
   ("Every part of this line comes to a true or a false, so the value offered instead is the other of the two and nothing has to be invented.");
   let name_id =
-    app_code_lesson_expression_choose_order_not_pair_title_name_id();
+    app_learn_js_lesson_expression_choose_order_not_pair_title_name_id();
   let bank = app_learn_js_lesson_expression_choose_order_not_pair_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
