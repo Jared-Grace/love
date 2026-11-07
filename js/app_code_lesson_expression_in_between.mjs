@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_in_between_card_unexplained } from "./app_learn_js_lesson_expression_in_between_card_unexplained.mjs";
 import { app_learn_js_lesson_expression_in_between_card_chained } from "./app_learn_js_lesson_expression_in_between_card_chained.mjs";
-import { app_code_lesson_expression_in_between_range_code } from "./app_code_lesson_expression_in_between_range_code.mjs";
+import { app_learn_js_lesson_expression_in_between_range_code } from "./app_learn_js_lesson_expression_in_between_range_code.mjs";
 import { app_code_lesson_expression_in_between_title_name_id } from "./app_code_lesson_expression_in_between_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_in_between() {
     let b = integer_random(min, 6);
     let min2 = add(b, 1);
     let c = integer_random(min2, 9);
-    let code = app_code_lesson_expression_in_between_range_code(a, b, c);
+    let code = app_learn_js_lesson_expression_in_between_range_code(a, b, c);
     return code;
   }
   function range_false() {
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_in_between() {
     let below = subtract(a, 1);
     let above_c = add(c, 1);
     let b = list_random_item([below, above_c]);
-    let code = app_code_lesson_expression_in_between_range_code(a, b, c);
+    let code = app_learn_js_lesson_expression_in_between_range_code(a, b, c);
     return code;
   }
   function refill() {

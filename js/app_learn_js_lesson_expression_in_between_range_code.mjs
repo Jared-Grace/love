@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_in_between_range_code(a, b, c) {
+export function app_learn_js_lesson_expression_in_between_range_code(a, b, c) {
   arguments_assert(arguments, 3);
   ("the fixed idiom: a < b && b < c, the middle number repeated");
   let a_text = text_to(a);
