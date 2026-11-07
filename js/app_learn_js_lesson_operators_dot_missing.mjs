@@ -13,7 +13,7 @@ import { app_learn_js_lesson_operators_asterisk_generic_invalid } from "./app_le
 import { app_learn_js_lesson_operators_asterisk_generic_minus } from "./app_learn_js_lesson_operators_asterisk_generic_minus.mjs";
 import { js_code_binary } from "./js_code_binary.mjs";
 import { js_operator_dot } from "./js_operator_dot.mjs";
-export function app_code_lesson_operators_dot_missing() {
+export function app_learn_js_lesson_operators_dot_missing() {
   let operator = js_operator_dot();
   let name_rights = ["property access", "missing"];
   let batch = app_learn_js_lesson_operators_dot_batch_numbers(operator);
