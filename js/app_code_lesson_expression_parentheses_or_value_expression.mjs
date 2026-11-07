@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_parentheses_expression } from "./app_code_lesson_expression_choose_order_parentheses_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_parentheses_expression } from "./app_learn_js_lesson_expression_choose_order_parentheses_expression.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { boolean_random } from "./boolean_random.mjs";
@@ -19,7 +19,7 @@ export function app_code_lesson_expression_parentheses_or_value_expression(
   ("The true line is asked for from the pressing lesson's maker rather than drawn here, so the two lessons go on being one family of lines met twice, which is the thing that stops them looking merely alike. Only the half that carries the point is taken over.");
   if (want_true) {
     let tree_true =
-      app_code_lesson_expression_choose_order_parentheses_expression(
+      app_learn_js_lesson_expression_choose_order_parentheses_expression(
         want_true,
         parentheses_left,
       );

@@ -1,7 +1,7 @@
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
-import { app_code_lesson_expression_choose_order_parentheses_expression } from "./app_code_lesson_expression_choose_order_parentheses_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_parentheses_expression } from "./app_learn_js_lesson_expression_choose_order_parentheses_expression.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_tree_of_code } from "./app_code_lesson_expression_choose_order_parentheses_tree_of_code.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_questions() {
   arguments_assert(arguments, 0);
@@ -12,10 +12,11 @@ export function app_code_lesson_expression_choose_order_parentheses_questions() 
   let parentheses_left = true;
   function expression_turning(want_true) {
     "the next line: the parentheses at the other end from the line before";
-    let tree = app_code_lesson_expression_choose_order_parentheses_expression(
-      want_true,
-      parentheses_left,
-    );
+    let tree =
+      app_learn_js_lesson_expression_choose_order_parentheses_expression(
+        want_true,
+        parentheses_left,
+      );
     parentheses_left = not(parentheses_left);
     return tree;
   }
