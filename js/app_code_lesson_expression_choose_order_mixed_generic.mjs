@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_decoys_generic } from "./app_code_lesson_expression_choose_order_decoys_generic.mjs";
-import { app_code_expression_value_decoys_mixed } from "./app_code_expression_value_decoys_mixed.mjs";
+import { app_learn_js_expression_value_decoys_mixed } from "./app_learn_js_expression_value_decoys_mixed.mjs";
 export function app_code_lesson_expression_choose_order_mixed_generic(
   name_id,
   above,
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_choose_order_mixed_generic(
     name_id,
     above,
     bank,
-    app_code_expression_value_decoys_mixed,
+    app_learn_js_expression_value_decoys_mixed,
   );
   return lesson;
 }

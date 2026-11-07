@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { number_is } from "./number_is.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_expression_value_decoys_mixed(current, node) {
+export function app_learn_js_expression_value_decoys_mixed(current, node) {
   arguments_assert(arguments, 2);
   ("the wrong values to offer for the part a learner just chose, on a line that holds both kinds of operator at once: the comparison is answered with the other of true and false, and an arithmetic part with the wrong numbers the arithmetic lessons already offer");
   ("One line, two kinds of question. On 3 + 4 === 5 + 2 the first two presses ask for a number and the third asks for a true or false, and a single set of wrong answers cannot serve both: true offered beside 7 is not a mistake anybody makes, and 14 offered beside true is not a reading of the line at all.");
