@@ -25,7 +25,7 @@ import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_even } from "./app_code_lesson_statement_name_even.mjs";
+import { app_learn_js_lesson_statement_name_even } from "./app_learn_js_lesson_statement_name_even.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
@@ -121,7 +121,7 @@ export function app_learn_js_lesson_if_even() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_statement_name_even,
+      app_learn_js_lesson_statement_name_even,
       ["", even_check, " is ", "true", " when ", name, " is even"],
     );
     let box_two = app_learn_js_container_light_blue(root);

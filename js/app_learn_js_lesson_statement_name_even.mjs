@@ -21,7 +21,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesson_expression_remainder_2.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_even() {
+export function app_learn_js_lesson_statement_name_even() {
   arguments_assert(arguments, 0);
   ("whether a number is even: let even = n % 2 === 0; - picked by the human 2026-10-02 from a list of next lessons. In DSA it is the parity check, used to take every other item, to split work into two turns, and to tell the middle of an odd-length list from the two middles of an even one.");
   ("The remainder by 2 lesson already says even numbers leave 0 and odd numbers leave 1, so that lesson is the reminder, and the new idea is only writing that sentence as a check that gives true or false.");
