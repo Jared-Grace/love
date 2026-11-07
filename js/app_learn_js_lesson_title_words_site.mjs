@@ -11,7 +11,7 @@ import { function_read } from "./function_read.mjs";
 import { text_occurrences_count } from "./text_occurrences_count.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
-export async function app_code_lesson_title_words_site(f_name, words) {
+export async function app_learn_js_lesson_title_words_site(f_name, words) {
   arguments_assert(arguments, 2);
   ("where a lesson's home title spells the words it opens with: the function whose file holds them, the quoted run to look for, and the words themselves; null when the words cannot be pinned to exactly one place");
   ("Looked for only in what the lesson can reach through its title-making and lesson-making imports, never across the whole folder. Four sibling lessons spell swapping and three spell solving inside, so a folder-wide search finds every one of them and can say nothing about which drew this title. What a lesson imports is the only place its own words can have come from.");

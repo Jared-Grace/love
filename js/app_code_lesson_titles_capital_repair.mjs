@@ -2,7 +2,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_titles_lower } from "./app_code_lesson_titles_lower.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_title_words_site } from "./app_code_lesson_title_words_site.mjs";
+import { app_learn_js_lesson_title_words_site } from "./app_learn_js_lesson_title_words_site.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -24,7 +24,7 @@ export async function app_code_lesson_titles_capital_repair() {
   for (let one of lower) {
     let f_name = property_get(one, "fn");
     let words = property_get(one, "words");
-    let site = await app_code_lesson_title_words_site(f_name, words);
+    let site = await app_learn_js_lesson_title_words_site(f_name, words);
     if (not(site)) {
       list_add(unplaced, one);
       continue;
