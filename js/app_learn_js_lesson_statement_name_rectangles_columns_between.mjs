@@ -22,7 +22,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_rows_between } from "./app_code_lesson_statement_name_rectangles_rows_between.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rectangles_columns_between() {
+export function app_learn_js_lesson_statement_name_rectangles_columns_between() {
   arguments_assert(arguments, 0);
   ("how many columns are between two rectangles, once the first is left of the second: let between = l2 - r1; - picked by Claude 2026-10-05 as the across half of How many rows are between two rectangles, the lesson just before it, which left the across gap for later because its picture needs a grid wide enough for both side by side. The human then asked for pictures that scroll sideways, for a student who reads with this app's larger text, which is what makes a wide picture safe to show here.");
   ("Not picked: how far apart two rectangles are either way, which needs the larger of two gaps. Every pair asked here has the first rectangle left of the second, so the answer is never negative and the lesson stays one subtraction.");
