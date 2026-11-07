@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_questions_generic } from "./app_learn_js_lesson_expression_choose_order_questions_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_tree_of_code.mjs";
 export function app_learn_js_lesson_expression_choose_order_parentheses_and_or_questions() {
@@ -8,7 +8,7 @@ export function app_learn_js_lesson_expression_choose_order_parentheses_and_or_q
   ("the question bank of the moved parentheses lesson: lines holding an && and then an || with the one pair of parentheses round the first two words on some and round the last two on others, given out one a screen and worked out again from the writing they were printed as");
   ("The asking is the same asking as every other press-at-a-time lesson - one line a screen, true and false taking turns - so it is asked for rather than written out here. What differs is the maker and the reader, and they differ together, because this lesson writes parentheses its neighbour would have worked out and dropped.");
   ("Where the parentheses go is drawn rather than taken in turns, because here the answer is the operator they gather. Turned, the answer would turn with them and a learner would have the two buttons in an order - press one, then the other - which is a rule that solves nothing.");
-  let bank = app_code_lesson_expression_choose_order_questions_generic(
+  let bank = app_learn_js_lesson_expression_choose_order_questions_generic(
     expression_drawn,
     app_learn_js_lesson_expression_choose_order_parentheses_and_or_tree_of_code,
   );

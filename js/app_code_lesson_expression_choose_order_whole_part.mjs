@@ -4,7 +4,7 @@ import { app_learn_js_expression_whole_part_random } from "./app_learn_js_expres
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
-import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_questions_generic } from "./app_learn_js_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_whole_part_tree_of_code } from "./app_code_lesson_expression_choose_order_whole_part_tree_of_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_code_lesson_expression_choose_order_whole_part_above } from "./app_code_lesson_expression_choose_order_whole_part_above.mjs";
@@ -43,7 +43,7 @@ export function app_code_lesson_expression_choose_order_whole_part() {
       app_learn_js_expression_value_decoys_rounding,
     );
   }
-  let bank = app_code_lesson_expression_choose_order_questions_generic(
+  let bank = app_learn_js_lesson_expression_choose_order_questions_generic(
     expression,
     app_code_lesson_expression_choose_order_whole_part_tree_of_code,
   );

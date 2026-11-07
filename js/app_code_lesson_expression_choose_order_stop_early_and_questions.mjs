@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
 import { app_learn_js_expression_stops_early_marked } from "./app_learn_js_expression_stops_early_marked.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_tree_of_code.mjs";
-import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_questions_generic } from "./app_learn_js_lesson_expression_choose_order_questions_generic.mjs";
 export function app_code_lesson_expression_choose_order_stop_early_and_questions() {
   arguments_assert(arguments, 0);
   ("the question bank of the stop-early-on-&& lesson: lines like false && (true || true), each marked to be solved as JavaScript solves it");
@@ -26,7 +26,7 @@ export function app_code_lesson_expression_choose_order_stop_early_and_questions
     let marked = app_learn_js_expression_stops_early_marked(tree);
     return marked;
   }
-  let bank = app_code_lesson_expression_choose_order_questions_generic(
+  let bank = app_learn_js_lesson_expression_choose_order_questions_generic(
     expression,
     tree_of_code,
   );

@@ -1,7 +1,7 @@
 import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_questions_generic } from "./app_learn_js_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_choose_order_twin_read_generic(
     let tree = tree_new();
     return tree;
   }
-  let bank = app_code_lesson_expression_choose_order_questions_generic(
+  let bank = app_learn_js_lesson_expression_choose_order_questions_generic(
     expression,
     tree_of_code,
   );
