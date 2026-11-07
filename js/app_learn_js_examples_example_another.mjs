@@ -9,7 +9,7 @@ import { app_code_lesson_text_example_another } from "./app_code_lesson_text_exa
 import { app_code_lesson_examples_plural_is } from "./app_code_lesson_examples_plural_is.mjs";
 import { app_learn_js_lesson_examples_complete_is } from "./app_learn_js_lesson_examples_complete_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_examples_guided_is } from "./app_code_lesson_examples_guided_is.mjs";
+import { app_learn_js_lesson_examples_guided_is } from "./app_learn_js_lesson_examples_guided_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_batch_on_refill } from "./app_learn_js_batch_on_refill.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_examples_example_another(context, root) {
     }
     is_a = text_combine_multiple([word_one, root_word, ":"]);
   }
-  let guided = app_code_lesson_examples_guided_is(lesson);
+  let guided = app_learn_js_lesson_examples_guided_is(lesson);
   if (guided) {
     ("the human's words 2026-10-14");
     is_a = "is an example that guides you step-by-step:";
