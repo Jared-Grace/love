@@ -11,7 +11,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
+import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_zero } from "./app_code_lesson_statement_name_seat_zero.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_seat_less() {
@@ -75,7 +75,7 @@ export function app_code_lesson_statement_name_seat_less() {
   let n_under = js_code_binary_spaced_nb(n, less, "5");
   let n_at_most_last = js_code_binary_spaced_nb(n, at_most, max_less);
   let n_under_max = js_code_binary_spaced_nb(n, less, max);
-  let lesson = app_code_lesson_statement_formula_answer_count({
+  let lesson = app_learn_js_lesson_statement_formula_answer_count({
     words: "Seat in the row, shorter",
     title_code: line_ok,
     names,

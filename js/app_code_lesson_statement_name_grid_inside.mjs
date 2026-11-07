@@ -23,7 +23,7 @@ import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
-import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
+import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
 import { app_learn_js_explain_containers } from "./app_learn_js_explain_containers.mjs";
 export function app_code_lesson_statement_name_grid_inside() {
@@ -287,7 +287,7 @@ export function app_code_lesson_statement_name_grid_inside() {
   let v3 = grid_draw_face(-1, -1);
   let v4 = grid_draw_face(2, 1);
   let v5 = grid_draw_face(2, 3);
-  let lesson = app_code_lesson_statement_formula_answer_count({
+  let lesson = app_learn_js_lesson_statement_formula_answer_count({
     words: "Square inside the grid",
     title_code: line_ok,
     names,

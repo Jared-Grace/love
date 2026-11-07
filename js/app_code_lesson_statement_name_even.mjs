@@ -18,7 +18,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
+import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesson_expression_remainder_2.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_even() {
@@ -156,7 +156,7 @@ export function app_code_lesson_statement_name_even() {
     let on_output = app_code_output_pointed([]);
     app_learn_js_code_lines_writes_out_on(box, lines, output, paint, on_output);
   }
-  let lesson = app_code_lesson_statement_formula_answer_count({
+  let lesson = app_learn_js_lesson_statement_formula_answer_count({
     words: "Is a number even",
     title_code: line_even,
     names,

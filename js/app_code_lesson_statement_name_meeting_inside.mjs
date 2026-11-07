@@ -22,7 +22,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
-import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
+import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_meeting_inside() {
@@ -327,7 +327,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
     first,
     ":",
   ]);
-  let lesson = app_code_lesson_statement_formula_answer_count({
+  let lesson = app_learn_js_lesson_statement_formula_answer_count({
     words: "Is one meeting inside another",
     title_code: line_inside,
     names,

@@ -13,7 +13,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
+import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_expression_in_between } from "./app_learn_js_lesson_expression_in_between.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_seat_one() {
@@ -71,7 +71,7 @@ export function app_code_lesson_statement_name_seat_one() {
   let seats_said = text_combine(" seats ", emoji);
   let v = between("1", "3", "5");
   let v2 = between("1", "6", "5");
-  let lesson = app_code_lesson_statement_formula_answer_count({
+  let lesson = app_learn_js_lesson_statement_formula_answer_count({
     words: "Seat in the row",
     title_code: line_ok,
     names,
