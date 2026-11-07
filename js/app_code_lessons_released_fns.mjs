@@ -37,7 +37,7 @@ import { app_code_lesson_expression_or } from "./app_code_lesson_expression_or.m
 import { app_learn_js_lesson_expression_and } from "./app_learn_js_lesson_expression_and.mjs";
 import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve } from "./app_learn_js_lesson_expression_choose_order_solve.mjs";
-import { app_code_lesson_expression_nested_add } from "./app_code_lesson_expression_nested_add.mjs";
+import { app_learn_js_lesson_expression_nested_add } from "./app_learn_js_lesson_expression_nested_add.mjs";
 import { app_code_lesson_expression_nested_subtract } from "./app_code_lesson_expression_nested_subtract.mjs";
 import { app_learn_js_lesson_expression_multiply } from "./app_learn_js_lesson_expression_multiply.mjs";
 import { app_code_lesson_expression_nested_multiply } from "./app_code_lesson_expression_nested_multiply.mjs";
@@ -350,7 +350,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_expression_and,
     app_learn_js_lesson_expression_choose_order,
     app_learn_js_lesson_expression_choose_order_solve,
-    app_code_lesson_expression_nested_add,
+    app_learn_js_lesson_expression_nested_add,
     app_code_lesson_expression_nested_subtract,
     app_learn_js_lesson_expression_multiply,
     app_code_lesson_expression_nested_multiply,

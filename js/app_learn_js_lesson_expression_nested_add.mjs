@@ -5,7 +5,7 @@ import { js_operator_plus_verb } from "./js_operator_plus_verb.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
-export function app_code_lesson_expression_nested_add() {
+export function app_learn_js_lesson_expression_nested_add() {
   "a nested expression that adds three numbers: console.log(x + y + z), with small numbers 2..9 so the sum stays easy (6..27)";
   let symbol = js_operator_plus_symbol();
   function first_of(index) {
