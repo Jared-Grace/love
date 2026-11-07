@@ -14,7 +14,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
-export function app_code_lesson_quiz_way_on_unfinished_try(
+export function app_learn_js_lesson_quiz_way_on_unfinished_try(
   context,
   quizzes,
   quiz_index,

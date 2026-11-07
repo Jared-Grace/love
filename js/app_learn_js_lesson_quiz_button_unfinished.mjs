@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_way_on_unfinished_try } from "./app_code_lesson_quiz_way_on_unfinished_try.mjs";
+import { app_learn_js_lesson_quiz_way_on_unfinished_try } from "./app_learn_js_lesson_quiz_way_on_unfinished_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_quiz_button_unfinished(
   "The button at the foot of a quiz offering the work this learner has left unfinished, drawn only where that is somewhere other than where the plain way on already leads, and saying which kind it goes to. Renders nothing (returns null) where there is no such place.";
   "A quiz of this lesson is gone to by moving the quiz position and redrawing the quiz area, the same move the Next button makes; a lesson or a review is gone to the way every button offering unfinished work goes there. Both are borrowed rather than written again here, so a change to how this app walks from one place to another reaches this button too.";
   arguments_assert(arguments, 6);
-  let way = app_code_lesson_quiz_way_on_unfinished_try(
+  let way = app_learn_js_lesson_quiz_way_on_unfinished_try(
     context,
     quizzes,
     quiz_index,
