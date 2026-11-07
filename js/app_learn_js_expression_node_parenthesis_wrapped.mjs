@@ -1,7 +1,7 @@
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { objects_merge } from "./objects_merge.mjs";
-export function app_code_expression_node_parenthesis_wrapped(
+export function app_learn_js_expression_node_parenthesis_wrapped(
   left,
   symbol,
   right,

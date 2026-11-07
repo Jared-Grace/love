@@ -18,7 +18,7 @@ import { each } from "./each.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-import { app_code_expression_node_parenthesis_wrapped } from "./app_code_expression_node_parenthesis_wrapped.mjs";
+import { app_learn_js_expression_node_parenthesis_wrapped } from "./app_learn_js_expression_node_parenthesis_wrapped.mjs";
 export function app_code_expression_written_shapes_truths() {
   arguments_assert(arguments, 0);
   ("shapes that come out true or false to hold every printed line against: each comparison over two numbers and over a piece of arithmetic on either side, then && and || over two comparisons, one nested inside the other both ways round, a denial over a comparison, a denial of a denial, and a pair of parentheses a lesson wrote where nothing required them");
@@ -88,7 +88,7 @@ export function app_code_expression_written_shapes_truths() {
   let right = app_learn_js_expression_node_before(bang, true);
   let denied_twice = app_learn_js_expression_node_before(bang, right);
   list_add(shapes, denied_twice);
-  let left = app_code_expression_node_parenthesis_wrapped(3, not_equals, 5);
+  let left = app_learn_js_expression_node_parenthesis_wrapped(3, not_equals, 5);
   let right3 = app_code_expression_node(2, equals, 2);
   let written_pair = app_code_expression_node(left, not_equals, right3);
   list_add(shapes, written_pair);
