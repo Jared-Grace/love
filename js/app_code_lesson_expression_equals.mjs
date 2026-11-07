@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
-import { app_code_comparison_pair_equality } from "./app_code_comparison_pair_equality.mjs";
+import { app_learn_js_comparison_pair_equality } from "./app_learn_js_comparison_pair_equality.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -8,7 +8,7 @@ import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_equals() {
   let operator = js_operator_triple_equal();
   let symbol = property_get(operator, "operator");
-  let pair = app_code_comparison_pair_equality();
+  let pair = app_learn_js_comparison_pair_equality();
   let sum = js_code_binary_spaced_nb(1, js_operator_plus_symbol(), 2);
   let math_line = js_code_binary_spaced_nb(sum, "=", 3);
   let code_line = js_code_binary_spaced_nb(sum, symbol, 3);

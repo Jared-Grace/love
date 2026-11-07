@@ -3,7 +3,7 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
-import { app_code_comparison_pair_equality } from "./app_code_comparison_pair_equality.mjs";
+import { app_learn_js_comparison_pair_equality } from "./app_learn_js_comparison_pair_equality.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { list_map } from "./list_map.mjs";
@@ -50,7 +50,7 @@ export function app_code_lesson_expression_not_equal_same() {
   }
   function batch_get() {
     "four questions across the two things that vary independently: whether the sides are the same, and which of the two marks the question is written with";
-    let pair = app_code_comparison_pair_equality();
+    let pair = app_learn_js_comparison_pair_equality();
     let wants = [
       {
         want_same: false,
