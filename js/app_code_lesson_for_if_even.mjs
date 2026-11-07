@@ -9,7 +9,7 @@ import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesso
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
-import { app_code_lesson_for_if_even_options } from "./app_code_lesson_for_if_even_options.mjs";
+import { app_learn_js_lesson_for_if_even_options } from "./app_learn_js_lesson_for_if_even_options.mjs";
 import { app_code_lesson_for_if_generic } from "./app_code_lesson_for_if_generic.mjs";
 export function app_code_lesson_for_if_even() {
   arguments_assert(arguments, 0);
@@ -73,7 +73,7 @@ export function app_code_lesson_for_if_even() {
     "Even numbers in a for",
     "if (n % 2 === 0) { ... }",
   );
-  let to = app_code_lesson_for_if_even_options();
+  let to = app_learn_js_lesson_for_if_even_options();
   let options = object_copy_assign(to, {
     name_id,
     above,

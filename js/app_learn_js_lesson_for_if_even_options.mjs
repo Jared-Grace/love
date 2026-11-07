@@ -5,7 +5,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { modulo } from "./modulo.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_lesson_for_if_even_options() {
+export function app_learn_js_lesson_for_if_even_options() {
   arguments_assert(arguments, 0);
   ("what a for lesson whose if asks n % 2 === remainder hands in: the question, its groups of programs, the example, and the wrong remainder read backwards");
   ("The threshold here is the remainder asked for, 0 for even and 1 for odd. The groups, by what is let through: one of three, two of three, one of two, and two of three further up. Every program runs at least twice, so both remainders turn up and asking the other one always writes out something different.");
