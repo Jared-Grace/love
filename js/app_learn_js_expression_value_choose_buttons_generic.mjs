@@ -11,7 +11,7 @@ import { sleep_success_color } from "./sleep_success_color.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { each } from "./each.mjs";
-export function app_code_expression_value_choose_buttons_generic(
+export function app_learn_js_expression_value_choose_buttons_generic(
   parent,
   value,
   decoys,

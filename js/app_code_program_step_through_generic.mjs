@@ -111,7 +111,7 @@ import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_express
 import { promise_wrap } from "./promise_wrap.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
-import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
+import { app_learn_js_expression_value_choose_buttons_generic } from "./app_learn_js_expression_value_choose_buttons_generic.mjs";
 import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
@@ -1057,7 +1057,7 @@ export function app_code_program_step_through_generic(
         } else {
           decoys = name_decoys(name, value);
         }
-        let asked = app_code_expression_value_choose_buttons_generic(
+        let asked = app_learn_js_expression_value_choose_buttons_generic(
           ask,
           value,
           decoys,
