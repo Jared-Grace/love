@@ -1,6 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_solve_intro(parent) {
+export function app_learn_js_lesson_expression_choose_order_solve_intro(
+  parent,
+) {
   arguments_assert(arguments, 1);
   ("the one sentence that says what is different about this lesson, in a card of its own");
   ("Everything it used to be said with - the word operator, and the run of four steps the learner already knows - stands in cards of its own above this one. What is left here is the hinge: the last thing read before the first press, and the only line on the screen that is about this lesson rather than about the one before it.");

@@ -1,5 +1,5 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_lesson_expression_choose_order_solve_intro } from "./app_code_lesson_expression_choose_order_solve_intro.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_intro } from "./app_learn_js_lesson_expression_choose_order_solve_intro.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_equals_text } from "./app_learn_js_expression_equals_text.mjs";
@@ -77,5 +77,5 @@ export function app_learn_js_lesson_expression_choose_order_solve_above(
   ("The one sentence that says what changes stands in a card of its own. It used to stand at the foot of the run with a rule drawn above it, and a rule inside a card is a second boundary doing what the edge of a card already does - so the run ended, then ended again, and the gap the rule needed either side of it left the sentence adrift at the bottom of a box it was not part of. The edge of its own card says the same thing in no space at all.");
   ("It is said here rather than on the card below because it only means anything beside the run it changes. On that card it stood alone, a screen away from the four steps it names, and a learner reading it there had to carry the run back down to it from above.");
   let change_card = app_learn_js_container_light_blue(root);
-  app_code_lesson_expression_choose_order_solve_intro(change_card);
+  app_learn_js_lesson_expression_choose_order_solve_intro(change_card);
 }
