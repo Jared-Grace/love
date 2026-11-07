@@ -275,7 +275,7 @@ import { app_code_lesson_if_else_once } from "./app_code_lesson_if_else_once.mjs
 import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
 import { app_code_lesson_if_else_change } from "./app_code_lesson_if_else_change.mjs";
 import { app_code_lesson_if_halve_or_triple } from "./app_code_lesson_if_halve_or_triple.mjs";
-import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
+import { app_learn_js_lesson_braces_run_nested } from "./app_learn_js_lesson_braces_run_nested.mjs";
 import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_code_lesson_token_order_braces_three } from "./app_code_lesson_token_order_braces_three.mjs";
 import { app_code_lesson_token_order_braces_three_plain } from "./app_code_lesson_token_order_braces_three_plain.mjs";
@@ -588,7 +588,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_if_halve_even,
     app_code_lesson_if_else_change,
     app_code_lesson_if_halve_or_triple,
-    app_code_lesson_braces_run_nested,
+    app_learn_js_lesson_braces_run_nested,
     app_code_lesson_if_nested,
     app_code_lesson_token_order_braces_three,
     app_code_lesson_token_order_braces_three_plain,

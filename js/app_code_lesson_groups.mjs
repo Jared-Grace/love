@@ -10,7 +10,7 @@ import { app_code_lesson_comment_note } from "./app_code_lesson_comment_note.mjs
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
-import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
+import { app_learn_js_lesson_braces_run_nested } from "./app_learn_js_lesson_braces_run_nested.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
@@ -102,7 +102,7 @@ export function app_code_lesson_groups() {
     },
     {
       parts: ["Nested branches"],
-      lesson: app_code_lesson_braces_run_nested,
+      lesson: app_learn_js_lesson_braces_run_nested,
     },
     {
       parts: ["Looping: ", "while"],

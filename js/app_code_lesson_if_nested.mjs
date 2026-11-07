@@ -4,7 +4,7 @@ import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
+import { app_learn_js_lesson_braces_run_nested } from "./app_learn_js_lesson_braces_run_nested.mjs";
 import { app_learn_js_if_nested_explain } from "./app_learn_js_if_nested_explain.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_if_nested() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_braces_run_nested,
+      app_learn_js_lesson_braces_run_nested,
       [
         "An ",
         "if",
