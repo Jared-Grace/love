@@ -1,6 +1,6 @@
 import { text_between } from "./text_between.mjs";
 import { app_code_lesson_expression_round_generic_make } from "./app_code_lesson_expression_round_generic_make.mjs";
-import { app_code_lesson_expression_round_generic_above } from "./app_code_lesson_expression_round_generic_above.mjs";
+import { app_learn_js_lesson_expression_round_generic_above } from "./app_learn_js_lesson_expression_round_generic_above.mjs";
 import { app_code_lesson_expression_round_generic_title_name_id } from "./app_code_lesson_expression_round_generic_title_name_id.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -86,7 +86,7 @@ export function app_code_lesson_expression_round_generic(params) {
   });
   return lesson;
   function above(root) {
-    let r3 = app_code_lesson_expression_round_generic_above({
+    let r3 = app_learn_js_lesson_expression_round_generic_above({
       root,
       ordinary_digits,
       extreme_digits,
