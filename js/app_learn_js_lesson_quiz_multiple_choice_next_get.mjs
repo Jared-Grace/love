@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_multiple_choice_question_property } from "./app_code_lesson_quiz_multiple_choice_question_property.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_question_property } from "./app_learn_js_lesson_quiz_multiple_choice_question_property.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_qa_for } from "./app_learn_js_lesson_quiz_multiple_choice_qa_for.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_attempts } from "./app_learn_js_lesson_quiz_multiple_choice_attempts.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,7 +9,7 @@ export function app_learn_js_lesson_quiz_multiple_choice_next_get(
   batch_get,
 ) {
   arguments_assert(arguments, 3);
-  let r = app_code_lesson_quiz_multiple_choice_question_property(
+  let r = app_learn_js_lesson_quiz_multiple_choice_question_property(
     info,
     qa,
     batch_get,
