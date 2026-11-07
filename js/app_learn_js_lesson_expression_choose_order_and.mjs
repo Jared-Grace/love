@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_and_title_name_id } from ".
 import { app_learn_js_lesson_expression_choose_order_and_questions } from "./app_learn_js_lesson_expression_choose_order_and_questions.mjs";
 import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_and_above } from "./app_learn_js_lesson_expression_choose_order_and_above.mjs";
-export function app_code_lesson_expression_choose_order_and() {
+export function app_learn_js_lesson_expression_choose_order_and() {
   arguments_assert(arguments, 0);
   ("a comparison either side of &&, taken a press at a time: 3 < 5 && 2 < 4, choose either comparison, choose what it comes to, choose the other, choose what it comes to, then choose the && between them");
   ("The step that was missing in front of the lesson that hands a learner 3 < 5 && 2 < 4 whole and asks for the answer in one go. Everywhere else in this track a line is taken apart a press at a time before it is ever asked for in the head, and && was the one operator where it was not.");
