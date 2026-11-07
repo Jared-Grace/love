@@ -78,7 +78,7 @@ import { app_learn_js_lesson_expression_remainder_divide } from "./app_learn_js_
 import { app_learn_js_lesson_expression_remainder_divide_solve } from "./app_learn_js_lesson_expression_remainder_divide_solve.mjs";
 import { app_learn_js_lesson_expression_remainder_any } from "./app_learn_js_lesson_expression_remainder_any.mjs";
 import { app_code_lesson_expression_round_up } from "./app_code_lesson_expression_round_up.mjs";
-import { app_code_lesson_expression_round_nearest } from "./app_code_lesson_expression_round_nearest.mjs";
+import { app_learn_js_lesson_expression_round_nearest } from "./app_learn_js_lesson_expression_round_nearest.mjs";
 import { app_learn_js_lesson_expression_absolute_value } from "./app_learn_js_lesson_expression_absolute_value.mjs";
 import { app_code_lesson_expression_smaller } from "./app_code_lesson_expression_smaller.mjs";
 import { app_learn_js_lesson_expression_larger } from "./app_learn_js_lesson_expression_larger.mjs";
@@ -391,7 +391,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_expression_remainder_divide_solve,
     app_learn_js_lesson_expression_remainder_any,
     app_code_lesson_expression_round_up,
-    app_code_lesson_expression_round_nearest,
+    app_learn_js_lesson_expression_round_nearest,
     app_learn_js_lesson_expression_absolute_value,
     app_code_lesson_expression_smaller,
     app_learn_js_lesson_expression_larger,

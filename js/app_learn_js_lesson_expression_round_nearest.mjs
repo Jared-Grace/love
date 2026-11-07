@@ -10,7 +10,7 @@ import { add } from "./add.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
-export function app_code_lesson_expression_round_nearest() {
+export function app_learn_js_lesson_expression_round_nearest() {
   "practice Math.round, the third rounding sibling after Math.floor and Math.ceil: Math.round rounds a number to the NEAREST whole number - down when the first decimal digit is less than 5 (Math.round(3.2) is 3) and up when it is 5 or more (Math.round(3.8) is 4, Math.round(3.5) is 4); the answer is that nearest whole number; whole part 2..7, one decimal digit so there is always a real decimal to round";
   function make(whole, index) {
     "alternate down the batch: even positions are a decimal that rounds DOWN (a first digit 1..4, e.g. Math.round(6.2) is 6), odd positions are a decimal that rounds UP (a first digit 5..9, e.g. Math.round(6.7) is 7) - so both directions of nearest are drilled";
