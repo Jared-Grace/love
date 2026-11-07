@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_token_select_buildable_kept } from "./app_learn_js_lesson_quiz_token_select_buildable_kept.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_quiz_token_select_chosen(r) {
+export function app_learn_js_lesson_quiz_token_select_chosen(r) {
   arguments_assert(arguments, 1);
   let r2 = app_learn_js_lesson_quiz_token_select_buildable_kept(r);
   let buttons = property_get(r2, "buttons");
