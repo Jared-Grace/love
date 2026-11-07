@@ -12,7 +12,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
-import { app_code_lesson_statement_name_value_above } from "./app_code_lesson_statement_name_value_above.mjs";
+import { app_learn_js_lesson_statement_name_value_above } from "./app_learn_js_lesson_statement_name_value_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_statement_name_value() {
   arguments_assert(arguments, 0);
@@ -46,7 +46,7 @@ export function app_code_lesson_statement_name_value() {
   let lesson = app_learn_js_lesson_code_logged({
     decoys: app_learn_js_lesson_decoy_code_pieces,
     backwards_decoys,
-    above: app_code_lesson_statement_name_value_above,
+    above: app_learn_js_lesson_statement_name_value_above,
     name_id,
     batch_get: batch,
     example_count: 1,
