@@ -15,7 +15,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
@@ -138,12 +138,12 @@ export function app_code_lesson_statement_name_rectangles_cover_edges() {
   let second_color = app_code_highlight_color_fifth();
   function from(text) {
     "a left or top edge, or a name holding one, as a chip in the start colour";
-    let chip = app_code_explain_number_colored(text, start_color);
+    let chip = app_learn_js_explain_number_colored(text, start_color);
     return chip;
   }
   function till(text) {
     "a right or bottom edge, or a name holding one, as a chip in the end colour";
-    let chip = app_code_explain_number_colored(text, end_color);
+    let chip = app_learn_js_explain_number_colored(text, end_color);
     return chip;
   }
   function rectangles_draw(box) {

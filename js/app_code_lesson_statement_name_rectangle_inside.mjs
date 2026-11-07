@@ -15,7 +15,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
@@ -128,12 +128,12 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   let plain = app_shared_color_code_background();
   function from(text) {
     "a starting edge, or a name holding one, as a chip in the start colour";
-    let chip = app_code_explain_number_colored(text, start_color);
+    let chip = app_learn_js_explain_number_colored(text, start_color);
     return chip;
   }
   function till(text) {
     "an ending edge, or a name holding one, as a chip in the end colour";
-    let chip = app_code_explain_number_colored(text, end_color);
+    let chip = app_learn_js_explain_number_colored(text, end_color);
     return chip;
   }
   let spaced_at_most = js_code_binary_spaced_nb("", at_most, "");
@@ -199,9 +199,9 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   }
   let right_arrow = app_learn_js_arrow_inline_draw(0);
   let down_arrow = app_learn_js_arrow_inline_draw(90);
-  let is_true = app_code_explain_number_colored("true", plain);
-  let is_false = app_code_explain_number_colored("false", plain);
-  let and_chip = app_code_explain_number_colored(and_op, plain);
+  let is_true = app_learn_js_explain_number_colored("true", plain);
+  let is_false = app_learn_js_explain_number_colored("false", plain);
+  let and_chip = app_learn_js_explain_number_colored(and_op, plain);
   function goes_said(word, left, right, top, bottom) {
     "where a rectangle goes, across and then down";
     let v = from(left);

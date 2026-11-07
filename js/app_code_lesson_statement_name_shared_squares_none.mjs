@@ -16,7 +16,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
@@ -111,22 +111,22 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   let plain = app_shared_color_code_background();
   function from(text) {
     "a starting edge as a chip in the start colour";
-    let chip = app_code_explain_number_colored(text, start_color);
+    let chip = app_learn_js_explain_number_colored(text, start_color);
     return chip;
   }
   function till(text) {
     "an ending edge as a chip in the end colour";
-    let chip = app_code_explain_number_colored(text, end_color);
+    let chip = app_learn_js_explain_number_colored(text, end_color);
     return chip;
   }
   function size(text) {
     "a size of the shared part, or a name holding one, as a chip in the overlap colour";
-    let chip = app_code_explain_number_colored(text, overlap_color);
+    let chip = app_learn_js_explain_number_colored(text, overlap_color);
     return chip;
   }
   function raw(text) {
     "a length before the floor, or a name holding one, which may be negative, as a chip in the length colour";
-    let chip = app_code_explain_number_colored(text, length_color);
+    let chip = app_learn_js_explain_number_colored(text, length_color);
     return chip;
   }
   let spaced_minus = js_code_binary_spaced_nb("", minus, "");
@@ -242,7 +242,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   }
   let v11 = size("0");
   let draw8 = app_code_explain_said(["", floor_worked, " is ", v11]);
-  let max_chip = app_code_explain_number_colored(max_name, plain);
+  let max_chip = app_learn_js_explain_number_colored(max_name, plain);
   let v12 = product_worked("0", "0", overlap_color);
   let v13 = size("0");
   let v14 = size("0");

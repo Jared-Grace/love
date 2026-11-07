@@ -13,7 +13,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
@@ -87,17 +87,17 @@ export function app_code_lesson_statement_name_overlap_hours() {
   let plain = app_shared_color_code_background();
   function from(text) {
     "a start hour, or the name holding it, as a chip in the start colour";
-    let chip = app_code_explain_number_colored(text, start_color);
+    let chip = app_learn_js_explain_number_colored(text, start_color);
     return chip;
   }
   function till(text) {
     "an end hour, or the name holding it, as a chip in the end colour";
-    let chip = app_code_explain_number_colored(text, end_color);
+    let chip = app_learn_js_explain_number_colored(text, end_color);
     return chip;
   }
   function lasting(text) {
     "how long the overlap is, as a chip in the overlap colour";
-    let chip = app_code_explain_number_colored(text, overlap_color);
+    let chip = app_learn_js_explain_number_colored(text, overlap_color);
     return chip;
   }
   let spaced_minus = js_code_binary_spaced_nb("", minus, "");

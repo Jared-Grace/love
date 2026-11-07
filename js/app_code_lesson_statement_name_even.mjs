@@ -7,7 +7,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
@@ -107,13 +107,13 @@ export function app_code_lesson_statement_name_even() {
     "remainder",
     remainder_color,
   );
-  let zero = app_code_explain_number_colored("0", remainder_color);
-  let one = app_code_explain_number_colored("1", remainder_color);
-  let eight_chip = app_code_explain_number_colored("8", plain);
-  let seven_chip = app_code_explain_number_colored("7", plain);
-  let two_chip = app_code_explain_number_colored("2", plain);
-  let is_true = app_code_explain_number_colored("true", plain);
-  let is_false = app_code_explain_number_colored("false", plain);
+  let zero = app_learn_js_explain_number_colored("0", remainder_color);
+  let one = app_learn_js_explain_number_colored("1", remainder_color);
+  let eight_chip = app_learn_js_explain_number_colored("8", plain);
+  let seven_chip = app_learn_js_explain_number_colored("7", plain);
+  let two_chip = app_learn_js_explain_number_colored("2", plain);
+  let is_true = app_learn_js_explain_number_colored("true", plain);
+  let is_false = app_learn_js_explain_number_colored("false", plain);
   let eight_said = app_code_explain_said([
     "",
     eight_chip,

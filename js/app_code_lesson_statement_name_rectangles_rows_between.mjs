@@ -14,7 +14,7 @@ import { app_code_highlight_color_third } from "./app_code_highlight_color_third
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
@@ -103,17 +103,17 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
   let plain = app_shared_color_code_background();
   function from(text) {
     "a top edge, or a name holding one, as a chip in the start colour";
-    let chip = app_code_explain_number_colored(text, start_color);
+    let chip = app_learn_js_explain_number_colored(text, start_color);
     return chip;
   }
   function till(text) {
     "a bottom edge, or a name holding one, as a chip in the end colour";
-    let chip = app_code_explain_number_colored(text, end_color);
+    let chip = app_learn_js_explain_number_colored(text, end_color);
     return chip;
   }
   function counted(text) {
     "how many rows are between, as a chip in the rows colour";
-    let chip = app_code_explain_number_colored(text, rows_color);
+    let chip = app_learn_js_explain_number_colored(text, rows_color);
     return chip;
   }
   let spaced_minus = js_code_binary_spaced_nb("", minus, "");

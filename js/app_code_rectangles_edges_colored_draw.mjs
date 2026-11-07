@@ -23,7 +23,7 @@ import { null_is } from "./null_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { equal } from "./equal.mjs";
 import { list_second } from "./list_second.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { range } from "./range.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
@@ -146,7 +146,7 @@ export function app_code_rectangles_edges_colored_draw({
       html_style_background(chip_both, halves);
       return;
     }
-    let chip = app_code_explain_number_colored(t3, color);
+    let chip = app_learn_js_explain_number_colored(t3, color);
     chip(cell);
   }
   for (let edge of range(columns + 1)) {

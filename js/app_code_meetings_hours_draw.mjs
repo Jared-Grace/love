@@ -26,7 +26,7 @@ import { list_second } from "./list_second.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { range } from "./range.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -123,7 +123,7 @@ export function app_code_meetings_hours_draw(
       html_span_text(chip_both, t3);
       html_style_background(chip_both, halves);
     } else {
-      let chip = app_code_explain_number_colored(t3, color);
+      let chip = app_learn_js_explain_number_colored(t3, color);
       chip(cell);
     }
     let colored = equal_not(color, plain);

@@ -14,7 +14,7 @@ import { app_code_highlight_color_fourth } from "./app_code_highlight_color_four
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
@@ -100,22 +100,22 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
   let plain = app_shared_color_code_background();
   function first_area(text) {
     "the first rectangle's squares, or a name holding them, as a chip in the colour the picture fills it with";
-    let chip = app_code_explain_number_colored(text, first_color);
+    let chip = app_learn_js_explain_number_colored(text, first_color);
     return chip;
   }
   function second_area(text) {
     "the second rectangle's squares, or a name holding them, as a chip in the colour the picture fills it with";
-    let chip = app_code_explain_number_colored(text, second_color);
+    let chip = app_learn_js_explain_number_colored(text, second_color);
     return chip;
   }
   function shared_area(text) {
     "the squares both rectangles cover, or a name holding them, as a chip in the overlap colour";
-    let chip = app_code_explain_number_colored(text, overlap_color);
+    let chip = app_learn_js_explain_number_colored(text, overlap_color);
     return chip;
   }
   function counted(text) {
     "a total or the squares covered together as a chip in its own colour";
-    let chip = app_code_explain_number_colored(text, sum_color);
+    let chip = app_learn_js_explain_number_colored(text, sum_color);
     return chip;
   }
   function one(text) {

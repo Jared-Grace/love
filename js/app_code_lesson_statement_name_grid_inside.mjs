@@ -16,7 +16,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { range } from "./range.mjs";
 import { less_than } from "./less_than.mjs";
@@ -100,8 +100,8 @@ export function app_code_lesson_statement_name_grid_inside() {
   let blue_word = app_code_explain_word_colored("blue", grid_color);
   let row_word = app_code_explain_word_colored("row", row_color);
   let column_word = app_code_explain_word_colored("column", column_color);
-  let is_true = app_code_explain_number_colored("true", plain);
-  let is_false = app_code_explain_number_colored("false", plain);
+  let is_true = app_learn_js_explain_number_colored("true", plain);
+  let is_false = app_learn_js_explain_number_colored("false", plain);
   let spaced_at_most = js_code_binary_spaced_nb("", at_most, "");
   let spaced_less = js_code_binary_spaced_nb("", less, "");
   let spaced_and = js_code_binary_spaced_nb("", and_op, "");
@@ -148,14 +148,14 @@ export function app_code_lesson_statement_name_grid_inside() {
     column_color,
     columns_count_color,
   );
-  let rows_number = app_code_explain_number_colored("4", rows_count_color);
-  let columns_number = app_code_explain_number_colored(
+  let rows_number = app_learn_js_explain_number_colored("4", rows_count_color);
+  let columns_number = app_learn_js_explain_number_colored(
     "3",
     columns_count_color,
   );
-  let two_row = app_code_explain_number_colored("2", row_color);
-  let one_column = app_code_explain_number_colored("1", column_color);
-  let three_column = app_code_explain_number_colored("3", column_color);
+  let two_row = app_learn_js_explain_number_colored("2", row_color);
+  let one_column = app_learn_js_explain_number_colored("1", column_color);
+  let three_column = app_learn_js_explain_number_colored("3", column_color);
   let grid_said = app_code_explain_said([
     "Suppose a ",
     grid_word,
@@ -165,7 +165,7 @@ export function app_code_lesson_statement_name_grid_inside() {
     columns_number,
     " columns",
   ]);
-  let draw2 = app_code_explain_number_colored("0", plain);
+  let draw2 = app_learn_js_explain_number_colored("0", plain);
   let numbered_said = app_code_explain_said([
     "The ",
     grid_word,
@@ -248,10 +248,13 @@ export function app_code_lesson_statement_name_grid_inside() {
   ]);
   let v2 = both_worked("false");
   let true_false_said = app_code_explain_said(["", v2, " is ", is_false]);
-  let r_chip = app_code_explain_number_colored(r, row_color);
-  let c_chip = app_code_explain_number_colored(c, column_color);
-  let rows_chip = app_code_explain_number_colored(rows, rows_count_color);
-  let cols_chip = app_code_explain_number_colored(cols, columns_count_color);
+  let r_chip = app_learn_js_explain_number_colored(r, row_color);
+  let c_chip = app_learn_js_explain_number_colored(c, column_color);
+  let rows_chip = app_learn_js_explain_number_colored(rows, rows_count_color);
+  let cols_chip = app_learn_js_explain_number_colored(
+    cols,
+    columns_count_color,
+  );
   let names_said = app_code_explain_said([
     "Suppose the ",
     row_word,

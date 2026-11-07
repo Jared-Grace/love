@@ -15,7 +15,7 @@ import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_learn_js_explain_abs_apart_colored } from "./app_learn_js_explain_abs_apart_colored.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_explain_code_colored } from "./app_learn_js_explain_code_colored.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
@@ -112,7 +112,7 @@ export function app_code_lesson_statement_name_king_steps() {
   );
   ("a count such as the 2 diagonal steps is not a position, so it is a code chip with no colour of its own, as the counts are in Grid steps");
   let plain = app_shared_color_code_background();
-  let count_two = app_code_explain_number_colored("2", plain);
+  let count_two = app_learn_js_explain_number_colored("2", plain);
   ("Math.max(3, 2) === 3 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, so it wears the blue of the squares it counts");
   ("the equals sign comes from the one place that says what it looks like rather than being typed into the chip, which is why it was named a few lines up. Typed here it was a second spelling of the same thing, and the name holding the first spelling was read by nothing - a line that looked like the chip was built from it and was not.");
   let equals = text_combine_multiple([") ", same, " "]);
@@ -132,10 +132,10 @@ export function app_code_lesson_statement_name_king_steps() {
   let columns_word = app_code_explain_word_colored("columns", column_color);
   let row_word = app_code_explain_word_colored("row", row_color);
   let column_word = app_code_explain_word_colored("column", column_color);
-  let draw = app_code_explain_number_colored("1", row_color);
-  let draw2 = app_code_explain_number_colored("1", column_color);
-  let draw3 = app_code_explain_number_colored("4", row_color);
-  let draw4 = app_code_explain_number_colored("3", column_color);
+  let draw = app_learn_js_explain_number_colored("1", row_color);
+  let draw2 = app_learn_js_explain_number_colored("1", column_color);
+  let draw3 = app_learn_js_explain_number_colored("4", row_color);
+  let draw4 = app_learn_js_explain_number_colored("3", column_color);
   let draw33 = app_learn_js_explain_emoji_square("🫅", start_color);
   let draw34 = app_learn_js_explain_emoji_square("🏁", end_color);
   let question_said = app_code_explain_said([
@@ -161,8 +161,8 @@ export function app_code_lesson_statement_name_king_steps() {
     draw4,
     "?",
   ]);
-  let draw6 = app_code_explain_number_colored("1", row_color);
-  let draw7 = app_code_explain_number_colored("4", row_color);
+  let draw6 = app_learn_js_explain_number_colored("1", row_color);
+  let draw7 = app_learn_js_explain_number_colored("4", row_color);
   let rows_said = app_code_explain_said([
     "The ",
     rows_word,
@@ -176,8 +176,8 @@ export function app_code_lesson_statement_name_king_steps() {
     draw7,
     " is",
   ]);
-  let draw9 = app_code_explain_number_colored("1", column_color);
-  let draw10 = app_code_explain_number_colored("3", column_color);
+  let draw9 = app_learn_js_explain_number_colored("1", column_color);
+  let draw10 = app_learn_js_explain_number_colored("3", column_color);
   let columns_said = app_code_explain_said([
     "The ",
     columns_word,
@@ -218,7 +218,7 @@ export function app_code_lesson_statement_name_king_steps() {
     let line = html_div(box);
     ("the count wears the blue of the squares it counts, asked by the human 2026-10-02: the steps are the blue squares, so the steps wear blue wherever they appear, in the writing, the worked line and the program");
     html_span_text(line, "And we travel ");
-    let count = app_code_explain_number_colored("3", end_color);
+    let count = app_learn_js_explain_number_colored("3", end_color);
     count(line);
     html_span_text(line, " ");
     let blue = app_code_explain_word_colored("blue squares", end_color);
@@ -265,7 +265,7 @@ export function app_code_lesson_statement_name_king_steps() {
     " ",
     columns_word,
   ]);
-  let draw21 = app_code_explain_number_colored("1", plain);
+  let draw21 = app_learn_js_explain_number_colored("1", plain);
   let draw22 = app_code_explain_said([
     "That finishes the ",
     columns_word,
@@ -281,14 +281,14 @@ export function app_code_lesson_statement_name_king_steps() {
     columns_word,
     ":",
   ]);
-  let draw5 = app_code_explain_number_colored("3", end_color);
+  let draw5 = app_learn_js_explain_number_colored("3", end_color);
   let draw8 = app_code_explain_said([
     "But how can we calculate the ",
     draw5,
     " steps from just the two positions?",
   ]);
-  let draw24 = app_code_explain_number_colored(r1, row_color);
-  let draw25 = app_code_explain_number_colored(c1, column_color);
+  let draw24 = app_learn_js_explain_number_colored(r1, row_color);
+  let draw25 = app_learn_js_explain_number_colored(c1, column_color);
   let draw26 = app_code_explain_said([
     "Suppose the first square is at ",
     row_word,
@@ -299,8 +299,8 @@ export function app_code_lesson_statement_name_king_steps() {
     " ",
     draw25,
   ]);
-  let draw27 = app_code_explain_number_colored(r2, row_color);
-  let draw28 = app_code_explain_number_colored(c2, column_color);
+  let draw27 = app_learn_js_explain_number_colored(r2, row_color);
+  let draw28 = app_learn_js_explain_number_colored(c2, column_color);
   let draw29 = app_code_explain_said([
     "And the second square is at ",
     row_word,
@@ -311,8 +311,8 @@ export function app_code_lesson_statement_name_king_steps() {
     " ",
     draw28,
   ]);
-  let draw35 = app_code_explain_number_colored("2", plain);
-  let draw36 = app_code_explain_number_colored("1", plain);
+  let draw35 = app_learn_js_explain_number_colored("2", plain);
+  let draw36 = app_learn_js_explain_number_colored("1", plain);
   let draw37 = app_learn_js_explain_emoji_square("🏁", end_color);
   let draw38 = app_code_explain_said([
     "If we travel ",

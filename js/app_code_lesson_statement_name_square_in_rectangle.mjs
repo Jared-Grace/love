@@ -16,7 +16,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
@@ -110,17 +110,17 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let plain = app_shared_color_code_background();
   function from(text) {
     "a starting edge, or a name holding one, as a chip in the start colour";
-    let chip = app_code_explain_number_colored(text, start_color);
+    let chip = app_learn_js_explain_number_colored(text, start_color);
     return chip;
   }
   function till(text) {
     "an ending edge, or a name holding one, as a chip in the end colour";
-    let chip = app_code_explain_number_colored(text, end_color);
+    let chip = app_learn_js_explain_number_colored(text, end_color);
     return chip;
   }
   function at(text) {
     "the line the square starts on, across or down, or a name holding one, as a chip in the square's colour";
-    let chip = app_code_explain_number_colored(text, square_color);
+    let chip = app_learn_js_explain_number_colored(text, square_color);
     return chip;
   }
   let spaced_at_most = js_code_binary_spaced_nb("", at_most, "");
@@ -176,9 +176,9 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     "rectangle",
     rectangle_color,
   );
-  let one = app_code_explain_number_colored("1", plain);
-  let is_true = app_code_explain_number_colored("true", plain);
-  let is_false = app_code_explain_number_colored("false", plain);
+  let one = app_learn_js_explain_number_colored("1", plain);
+  let is_true = app_learn_js_explain_number_colored("true", plain);
+  let is_false = app_learn_js_explain_number_colored("false", plain);
   let draw = app_code_explain_said(["Here is a ", rectangle_word, ":"]);
   let same_said = app_code_explain_said([
     "Here is the same ",
@@ -285,8 +285,8 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     rectangle_word,
   ]);
   let v11 = less_worked("4", "4");
-  let less_chip = app_code_explain_number_colored(less, plain);
-  let at_most_chip = app_code_explain_number_colored(at_most, plain);
+  let less_chip = app_learn_js_explain_number_colored(less, plain);
+  let at_most_chip = app_learn_js_explain_number_colored(at_most, plain);
   let draw9 = app_code_explain_said([
     "That is why we check with ",
     less_chip,
