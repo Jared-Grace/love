@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns_shown } from "./app_code_lessons_fns_shown.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lesson_fn_id_set } from "./app_code_lesson_fn_id_set.mjs";
-import { app_code_course_new_is } from "./app_code_course_new_is.mjs";
+import { app_learn_js_course_new_is } from "./app_learn_js_course_new_is.mjs";
 import { app_learn_js_course_new_fns } from "./app_learn_js_course_new_fns.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
@@ -21,7 +21,7 @@ export function app_code_lessons() {
     let r = property_get_or_null_equal(lesson, "examples_guided", true);
     return r;
   }
-  let added = app_code_course_new_is();
+  let added = app_learn_js_course_new_is();
   if (added) {
     ("2026-10-17: a link saying course=new shows the lessons latest does not show, and every lesson that steps through a program as well, at the human's asking the same day, so they can be read through without walking past the rest. Both cuts keep the order of the whole run.");
     let fresh = app_learn_js_course_new_fns();
