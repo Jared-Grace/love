@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-export function app_code_lesson_expression_string_concat_above_right_line(
+export function app_learn_js_lesson_expression_string_concat_above_right_line(
   root,
   context,
 ) {
