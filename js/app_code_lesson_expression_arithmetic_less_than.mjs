@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_arithmetic_less_than_op_multiply } from "./app_code_lesson_expression_arithmetic_less_than_op_multiply.mjs";
-import { app_code_lesson_expression_arithmetic_less_than_op_divide } from "./app_code_lesson_expression_arithmetic_less_than_op_divide.mjs";
+import { app_learn_js_lesson_expression_arithmetic_less_than_op_divide } from "./app_learn_js_lesson_expression_arithmetic_less_than_op_divide.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_op_exponent } from "./app_code_lesson_expression_arithmetic_less_than_op_exponent.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_op_add } from "./app_learn_js_lesson_expression_arithmetic_less_than_op_add.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_above } from "./app_learn_js_lesson_expression_arithmetic_less_than_above.mjs";
@@ -53,7 +53,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     return r4;
   }
   function op_divide() {
-    let r6 = app_code_lesson_expression_arithmetic_less_than_op_divide();
+    let r6 = app_learn_js_lesson_expression_arithmetic_less_than_op_divide();
     return r6;
   }
   function op_exponent() {
