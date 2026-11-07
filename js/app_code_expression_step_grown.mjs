@@ -1,5 +1,5 @@
 import { app_learn_js_expression_rank } from "./app_learn_js_expression_rank.mjs";
-import { app_code_expression_step_choice_grown } from "./app_code_expression_step_choice_grown.mjs";
+import { app_learn_js_expression_step_choice_grown } from "./app_learn_js_expression_step_choice_grown.mjs";
 import { app_code_expression_step_choices } from "./app_code_expression_step_choices.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,6 +13,6 @@ export function app_code_expression_step_grown(item) {
   let rank_most = app_learn_js_expression_rank(item);
   let choices = app_code_expression_step_choices(value, rank_most);
   let choice = list_random_item(choices);
-  let grown = app_code_expression_step_choice_grown(item, choice);
+  let grown = app_learn_js_expression_step_choice_grown(item, choice);
   return grown;
 }
