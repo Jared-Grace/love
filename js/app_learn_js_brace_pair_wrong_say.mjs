@@ -9,7 +9,7 @@ import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
-export function app_code_brace_pair_wrong_say(question, answer, choice) {
+export function app_learn_js_brace_pair_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("for a quiz asking which brace pairs with the one pointed at: walks from the pointed-at brace the way ",
     fn_name("js_code_brace_partner_index"),
