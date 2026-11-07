@@ -22,7 +22,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_statement_name_meeting_ended } from "./app_learn_js_lesson_statement_name_meeting_ended.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rectangle_above() {
+export function app_learn_js_lesson_statement_name_rectangle_above() {
   arguments_assert(arguments, 0);
   ("whether one rectangle is above another: let above = b1 <= t2; - picked by Claude 2026-10-05 when the human asked for the next lesson, named in Has one meeting ended by the time another starts as that check done down, which can follow it. In DSA it is one of the four checks that two boxes cannot overlap, the one Rectangle Overlap tests on each side.");
   ("Above and not left of, asked by the human 2026-10-05 so the picture can be narrower: two rectangles one above the other stack down the screen, where two side by side need a grid wide enough for both, and a phone is narrow. The first draft was left of, let left = r1 <= l2; with a grid seven squares across; this one is five across. Not picked: below, let below = b2 <= t1; which is the same check with the rectangles swapped, and reads backwards beside the meetings lesson, where the first meeting is the one that ends first.");
