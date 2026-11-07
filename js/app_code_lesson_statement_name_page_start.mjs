@@ -9,7 +9,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_last_seat } from "./app_code_lesson_statement_name_last_seat.mjs";
+import { app_learn_js_lesson_statement_name_last_seat } from "./app_learn_js_lesson_statement_name_last_seat.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_page_start() {
   arguments_assert(arguments, 0);
@@ -66,7 +66,7 @@ export function app_code_lesson_statement_name_page_start() {
     values_get,
     example_values: [3, 10],
     step,
-    remember_lesson: app_code_lesson_statement_name_last_seat,
+    remember_lesson: app_learn_js_lesson_statement_name_last_seat,
     remember_parts: [
       "we can find the number of the last seat, when we count starting at ",
       "0",

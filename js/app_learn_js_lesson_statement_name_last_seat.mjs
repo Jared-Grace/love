@@ -12,7 +12,7 @@ import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_pages_read } from "./app_code_lesson_statement_name_pages_read.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_last_seat() {
+export function app_learn_js_lesson_statement_name_last_seat() {
   arguments_assert(arguments, 0);
   ("the number of the last seat in a row numbered from 0: let last = seats - 1; - chosen by the human 2026-10-01 as the next formula lesson, after Pages read. In DSA it is the last index of a list, which is one less than its length because the first index is 0.");
   ("The reminder is Pages read, quoted as that lesson's own program: first 3, last 7, then after and pages. It is the same counting the other way round: there the + 1 counts the page started on, here the - 1 takes back the seat numbered 0.");
