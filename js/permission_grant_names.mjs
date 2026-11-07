@@ -1302,7 +1302,7 @@ export function permission_grant_names() {
     fn_name("functions_search_starts_with"),
     fn_name("function_new_transform"),
     fn_name("app_replace_test_url_hash_default"),
-    fn_name("app_code_html_update_latest_promote_deploy"),
+    fn_name("app_learn_js_html_update_latest_promote_deploy"),
     fn_name("ebible_chapter_code_label"),
     fn_name("app_shared_description_gate_run"),
     fn_name("app_shared_description_baseline_write"),
