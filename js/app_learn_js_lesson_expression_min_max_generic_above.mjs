@@ -10,7 +10,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
-export function app_code_lesson_expression_min_max_generic_above({
+export function app_learn_js_lesson_expression_min_max_generic_above({
   root,
   define_render,
   choose,
