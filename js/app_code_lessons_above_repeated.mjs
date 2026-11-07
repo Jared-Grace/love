@@ -26,7 +26,7 @@ export function app_code_lessons_above_repeated() {
   ("Saying so is carrying above_taught_fn_name, which ",
     fn_name("app_code_lesson_step_before_lesson_generic"),
     " sets. ",
-    fn_name("app_code_lesson_above_shown"),
+    fn_name("app_learn_js_lesson_above_shown"),
     " reads it to show a short line in place of the repeated boxes, once the step lesson is finished. The human's goal, 2026-10-22: a step lesson and its regular lesson do not needlessly repeat their telling.");
   ("Read off the drawn screens, the same way the other telling checks read them. A step lesson repeats the next one when every drawn line of the next one's telling is among its own; a next lesson with no lines repeats nothing. Measured 2026-10-22: the eight step-first pairs each repeated all of their regular lesson, and the regular-first pairs repeated none.");
   ("Also says how many lessons were drawn, because nothing found is the answer on a clean run and on a run that drew nothing.");
