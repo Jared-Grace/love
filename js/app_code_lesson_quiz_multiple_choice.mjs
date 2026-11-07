@@ -1,6 +1,6 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_next_get } from "./app_learn_js_lesson_quiz_multiple_choice_next_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -18,7 +18,11 @@ export function app_code_lesson_quiz_multiple_choice(
   batch_get,
 ) {
   let answer_on_button = property_get(info, "answer_on_button");
-  let r = app_code_lesson_quiz_multiple_choice_next_get(info, qa, batch_get);
+  let r = app_learn_js_lesson_quiz_multiple_choice_next_get(
+    info,
+    qa,
+    batch_get,
+  );
   let next_get = property_get(r, "next_get");
   let distractor_count = property_get(r, "distractor_count");
   ("a lesson may say, for a wrong choice, what that choice gets wrong; wrong_say is handed the question shown, the right answer and the choice pressed, and answers parts taking turns between words and code, or null for a choice it has nothing to say about. Said underneath the choices, so the red stays on the choice and the reason sits where the eye goes next. Absent, a wrong press only turns red, as every quiz did before 2026-10-26");

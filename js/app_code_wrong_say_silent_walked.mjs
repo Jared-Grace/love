@@ -8,7 +8,7 @@ import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_next_get } from "./app_learn_js_lesson_quiz_multiple_choice_next_get.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_answered } from "./app_learn_js_lesson_quiz_multiple_choice_answered.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -45,7 +45,7 @@ export function app_code_wrong_say_silent_walked() {
             continue;
           }
           let batch_get = property_get(ex, "batch_get");
-          let r = app_code_lesson_quiz_multiple_choice_next_get(
+          let r = app_learn_js_lesson_quiz_multiple_choice_next_get(
             info,
             ex,
             batch_get,
