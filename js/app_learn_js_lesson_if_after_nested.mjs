@@ -7,7 +7,7 @@ import { app_learn_js_if_after_nested_explain } from "./app_learn_js_if_after_ne
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_if_ab_logged } from "./app_learn_js_lesson_if_ab_logged.mjs";
 import { app_learn_js_if_after_nested_program_lines } from "./app_learn_js_if_after_nested_program_lines.mjs";
-export function app_code_lesson_if_after_nested() {
+export function app_learn_js_lesson_if_after_nested() {
   arguments_assert(arguments, 0);
   ('an if after an if inside an if: let a = false; let b = true; if (a) { console.log("love"); if (b) { console.log("joy"); } } if (b) { console.log("peace"); } console.log("patience"); writes out peace and patience');
   ("The one new fact is that an if written after the closing brace of another if is not inside it, so it is reached whatever the other if asks. The program is the one from If inside an if with one more if added before its last line, and that if asks the same name as the if inside, so the only difference between the two ifs that ask b is where they sit.");
