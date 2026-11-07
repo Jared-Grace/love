@@ -3,7 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
 import { app_code_expression_paint_parenthesised } from "./app_code_expression_paint_parenthesised.mjs";
 import { app_code_expression_paint_side } from "./app_code_expression_paint_side.mjs";
-export function app_code_expression_paint_before_side(
+export function app_learn_js_expression_paint_before_side(
   parent,
   side,
   symbol,
