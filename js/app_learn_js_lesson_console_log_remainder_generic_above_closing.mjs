@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_lesson_console_log_remainder_generic_above_has_insight } from "./app_learn_js_lesson_console_log_remainder_generic_above_has_insight.mjs";
-import { app_code_lesson_console_log_remainder_generic_above_insight_line } from "./app_code_lesson_console_log_remainder_generic_above_insight_line.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_above_insight_line } from "./app_learn_js_lesson_console_log_remainder_generic_above_insight_line.mjs";
 import { each } from "./each.mjs";
 export function app_learn_js_lesson_console_log_remainder_generic_above_closing({
   root,
@@ -28,11 +28,12 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_closing(
   if (has_insight) {
     let insight_box = app_learn_js_container_light_blue(root);
     function insight_line(line) {
-      let r = app_code_lesson_console_log_remainder_generic_above_insight_line(
-        line,
-        insight_box,
-        divisor,
-      );
+      let r =
+        app_learn_js_lesson_console_log_remainder_generic_above_insight_line(
+          line,
+          insight_box,
+          divisor,
+        );
       return r;
     }
     each(insight, insight_line);
