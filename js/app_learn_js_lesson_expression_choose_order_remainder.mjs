@@ -8,7 +8,7 @@ import { app_learn_js_lesson_expression_choose_order_questions_generic } from ".
 import { app_learn_js_lesson_expression_choose_order_remainder_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_remainder_tree_of_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_remainder_above } from "./app_learn_js_lesson_expression_choose_order_remainder_above.mjs";
-export function app_code_lesson_expression_choose_order_remainder() {
+export function app_learn_js_lesson_expression_choose_order_remainder() {
   arguments_assert(arguments, 0);
   ("the remainder formula taken a press at a time: 17 - Math.floor(17 / 5) * 5, press the division, press 3.4, press the rounding, press 3, see 17 - 3 * 5, press the times, press 15, see 17 - 15, press the take-away, press 2");
   ("It stands in front of the lesson that asks the same line all at once, which is where a pressing lesson stands throughout this course. The formula was shown worked out in words on a card there and then asked for in one go, and this is where the learner does the working out themselves.");
