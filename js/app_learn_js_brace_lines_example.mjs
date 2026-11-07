@@ -1,4 +1,4 @@
-import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
+import { app_learn_js_braces_color_next } from "./app_learn_js_braces_color_next.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_brace_lines_example(parent, code, nth) {
   }
   let index = list_get(indexes, nth);
   let question = app_learn_js_brace_marked(code, index);
-  let color = app_code_braces_color_next();
+  let color = app_learn_js_braces_color_next();
   let right = js_code_brace_right();
   let left_painted = {
     brace: left,

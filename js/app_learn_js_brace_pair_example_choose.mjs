@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_brace_unmarked } from "./app_learn_js_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
-import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
+import { app_learn_js_braces_color_next } from "./app_learn_js_braces_color_next.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_brace_pair_example_choose(
   let code = property_get(unmarked, "code");
   let index = property_get(unmarked, "index");
   let partner = js_code_brace_partner_index(code, index);
-  let color = app_code_braces_color_next();
+  let color = app_learn_js_braces_color_next();
   html_div_text(component, "Tap the matching brace:");
   let div = html_div(component);
   html_style_code_dark(div);

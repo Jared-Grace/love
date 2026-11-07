@@ -40,7 +40,7 @@ import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_code_braces_run_output_show } from "./app_code_braces_run_output_show.mjs";
-import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
+import { app_learn_js_braces_color_next } from "./app_learn_js_braces_color_next.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -235,7 +235,7 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
     let open = property_get(block, "open");
     let close = property_get(block, "close");
     let runs = property_get(block, "runs");
-    let color = app_code_braces_color_next();
+    let color = app_learn_js_braces_color_next();
     for (let i of [open, close]) {
       let span = list_get(spans, i);
       html_style_background_color_set(span, color);

@@ -20,7 +20,7 @@ import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
+import { app_learn_js_braces_color_next } from "./app_learn_js_braces_color_next.mjs";
 import { app_code_if_blocks_lines_kept } from "./app_code_if_blocks_lines_kept.mjs";
 import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
 export function app_code_braces_run_walkthrough(root, code) {
@@ -143,7 +143,7 @@ export function app_code_braces_run_walkthrough(root, code) {
       app_code_div_cycle_code(box, ["For example:"]);
       first = false;
     }
-    let color = app_code_braces_color_next();
+    let color = app_learn_js_braces_color_next();
     let lines = app_code_if_blocks_lines_kept(code, blocks, n);
     program_draw(box, lines, block, color);
     let left = {
