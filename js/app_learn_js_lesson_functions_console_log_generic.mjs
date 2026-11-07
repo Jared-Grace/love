@@ -1,4 +1,4 @@
-import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
+import { app_learn_js_lesson_operators_value_max_range_1_next } from "./app_learn_js_lesson_operators_value_max_range_1_next.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_functions_console_log_generic(params) {
     name_id,
   });
   let lesson = app_learn_js_lesson_code_logged(logged_params);
-  let next_operator = app_code_lesson_operators_value_max_range_1_next();
+  let next_operator = app_learn_js_lesson_operators_value_max_range_1_next();
   let r3 = {
     lesson,
     next_operator,

@@ -1,4 +1,4 @@
-import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
+import { app_learn_js_lesson_operators_value_max_range_1_next } from "./app_learn_js_lesson_operators_value_max_range_1_next.mjs";
 import { js_code_call_symbols } from "./js_code_call_symbols.mjs";
 import { list_power_set_empty_not_is } from "./list_power_set_empty_not_is.mjs";
 import { text_replace_multiple_to_space } from "./text_replace_multiple_to_space.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_functions_invalid() {
   "Whether a question is valid code is worked out from the code itself rather than written down beside it, so a question and its answer cannot come apart.";
   let name_id = app_learn_js_lesson_name_id("functions", ["validity"]);
   let operators = js_operators_arithmetic();
-  let next = app_code_lesson_operators_value_max_range_1_next();
+  let next = app_learn_js_lesson_operators_value_max_range_1_next();
   let symbols_required = js_code_call_symbols();
   let operators_next = list_iterator_refillable_value(operators);
   let filtered = list_power_set_empty_not_is(symbols_required);

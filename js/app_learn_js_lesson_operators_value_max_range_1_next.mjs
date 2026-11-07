@@ -1,6 +1,6 @@
 import { range_1_next } from "./range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
-export function app_code_lesson_operators_value_max_range_1_next() {
+export function app_learn_js_lesson_operators_value_max_range_1_next() {
   let m = app_code_lesson_operators_value_max();
   let number_next = range_1_next(m);
   return number_next;

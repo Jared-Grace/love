@@ -2,7 +2,7 @@ import { app_learn_js_category_operators } from "./app_learn_js_category_operato
 import { js_code_statement } from "./js_code_statement.mjs";
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
 import { each } from "./each.mjs";
-import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
+import { app_learn_js_lesson_operators_value_max_range_1_next } from "./app_learn_js_lesson_operators_value_max_range_1_next.mjs";
 import { app_learn_js_lesson_functions_console_log_generic } from "./app_learn_js_lesson_functions_console_log_generic.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { list_map } from "./list_map.mjs";
@@ -15,7 +15,7 @@ import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_con
 import { property_get } from "./property_get.mjs";
 export function app_learn_js_lesson_functions_console_log_arithmetic() {
   let operators = js_operators_arithmetic();
-  let number_next = app_code_lesson_operators_value_max_range_1_next();
+  let number_next = app_learn_js_lesson_operators_value_max_range_1_next();
   function refill() {
     function mapper(o) {
       let expression = js_operator_to_expression_only(o, number_next);

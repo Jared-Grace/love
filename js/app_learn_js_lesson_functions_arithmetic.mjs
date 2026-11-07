@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
-import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
+import { app_learn_js_lesson_operators_value_max_range_1_next } from "./app_learn_js_lesson_operators_value_max_range_1_next.mjs";
 import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_lesson_functions_arithmetic() {
   let quiz_label = "What is this code rewritten using a function call?";
   let example_question_label = app_learn_js_label_code_question();
   let operators = js_operators_arithmetic();
-  let next = app_code_lesson_operators_value_max_range_1_next();
+  let next = app_learn_js_lesson_operators_value_max_range_1_next();
   function batch_get() {
     let mapper = function lambda2(o) {
       let r = js_operator_to_code_call(o, next);
