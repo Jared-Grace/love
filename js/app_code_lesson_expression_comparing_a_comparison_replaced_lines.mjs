@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison_line } from "./app_learn_js_lesson_expression_comparing_a_comparison_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_comparing_a_comparison_replaced_lines
   let answer = js_true_false_word(value);
   let symbol = property_get(operator, "operator");
   let right_code = js_true_false_word(right_value);
-  let whole = app_code_lesson_expression_comparing_a_comparison_line(
+  let whole = app_learn_js_lesson_expression_comparing_a_comparison_line(
     code,
     operator,
     right_value,

@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_comparing_a_comparison_replacing_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_replacing_worked_example.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison_line } from "./app_learn_js_lesson_expression_comparing_a_comparison_line.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_expression } from "./app_learn_js_lesson_expression_comparing_a_comparison_expression.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_worked_example.mjs";
@@ -53,7 +53,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     app_code_lesson_expression_comparing_a_comparison_recall(root, context);
     let same = js_operator_triple_equal();
     let goal = app_learn_js_container_light_blue(root);
-    let goal_line = app_code_lesson_expression_comparing_a_comparison_line(
+    let goal_line = app_learn_js_lesson_expression_comparing_a_comparison_line(
       "3 === 5",
       same,
       false,

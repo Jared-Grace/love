@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_comparing_a_comparison_replaced_lines } from "./app_code_lesson_expression_comparing_a_comparison_replaced_lines.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison_line } from "./app_learn_js_lesson_expression_comparing_a_comparison_line.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_comparing_a_comparison_worked_example
   ("The last three lines are the same three the card before it ends on, said in the one place, so the two walkthroughs cannot finish in two different ways");
   let card = app_learn_js_container_light_blue(root);
   let answer = js_true_false_word(value);
-  let whole = app_code_lesson_expression_comparing_a_comparison_line(
+  let whole = app_learn_js_lesson_expression_comparing_a_comparison_line(
     code,
     operator,
     right_value,
