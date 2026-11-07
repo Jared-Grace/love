@@ -26,7 +26,7 @@ import { app_code_home_milestone_rows } from "./app_code_home_milestone_rows.mjs
 import { each_index } from "./each_index.mjs";
 import { app_learn_js_home_groups_finish } from "./app_learn_js_home_groups_finish.mjs";
 import { app_learn_js_home_all_complete } from "./app_learn_js_home_all_complete.mjs";
-import { app_code_home_just_left_center } from "./app_code_home_just_left_center.mjs";
+import { app_learn_js_home_just_left_center } from "./app_learn_js_home_just_left_center.mjs";
 export async function app_code_home(context) {
   "on returning home the row just left is scrolled to the vertical center, so the learner lands back where they were - and that row is the review checkpoint where a review is what they came back from, and the lesson (its id is remembered in lesson_id) otherwise";
   let root = html_clear_context(context);
@@ -138,5 +138,5 @@ export async function app_code_home(context) {
   ("the group is opened before scrolling, because a row inside a shut group has no place on the screen to scroll to");
   app_learn_js_home_groups_finish(cards, opened);
   app_learn_js_home_all_complete(g, bar, context);
-  await app_code_home_just_left_center(just_left, context);
+  await app_learn_js_home_just_left_center(just_left, context);
 }
