@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_and_before_or_expression } from "./app_learn_js_lesson_expression_choose_order_and_before_or_expression.mjs";
 import { app_learn_js_expression_stops_early_marked } from "./app_learn_js_expression_stops_early_marked.mjs";
-import { app_code_lesson_expression_choose_order_and_before_or_tree_of_code } from "./app_code_lesson_expression_choose_order_and_before_or_tree_of_code.mjs";
+import { app_learn_js_lesson_expression_choose_order_and_before_or_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_and_before_or_tree_of_code.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 export function app_code_lesson_expression_choose_order_stop_early_both_questions() {
   arguments_assert(arguments, 0);
@@ -19,7 +19,9 @@ export function app_code_lesson_expression_choose_order_stop_early_both_question
   function tree_of_code(code) {
     "the shape behind a printed line, marked the same way, so a press is judged by the order the line was made with";
     let tree =
-      app_code_lesson_expression_choose_order_and_before_or_tree_of_code(code);
+      app_learn_js_lesson_expression_choose_order_and_before_or_tree_of_code(
+        code,
+      );
     let marked = app_learn_js_expression_stops_early_marked(tree);
     return marked;
   }
