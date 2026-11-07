@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_examples_on_more } from "./app_learn_js_examples_on_more.mjs";
 import { app_learn_js_examples_lambda } from "./app_learn_js_examples_lambda.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_code_lesson_previous_set } from "./app_code_lesson_previous_set.mjs";
+import { app_learn_js_lesson_previous_set } from "./app_learn_js_lesson_previous_set.mjs";
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_shared_button_screen_wide } from "./app_shared_button_screen_wide.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_examples(context) {
   });
   if (lesson_first_not) {
     async function previous() {
-      app_code_lesson_previous_set(context);
+      app_learn_js_lesson_previous_set(context);
       await app_shared_screen_set(context, app_learn_js_examples);
     }
     let backs = [];
