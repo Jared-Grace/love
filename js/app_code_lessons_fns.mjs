@@ -329,7 +329,7 @@ import { app_learn_js_lesson_for_change } from "./app_learn_js_lesson_for_change
 import { app_code_lesson_for_start } from "./app_code_lesson_for_start.mjs";
 import { app_learn_js_lesson_for_increment } from "./app_learn_js_lesson_for_increment.mjs";
 import { app_learn_js_lesson_for_decrement } from "./app_learn_js_lesson_for_decrement.mjs";
-import { app_code_lesson_for_repeat_word } from "./app_code_lesson_for_repeat_word.mjs";
+import { app_learn_js_lesson_for_repeat_word } from "./app_learn_js_lesson_for_repeat_word.mjs";
 import { app_code_lesson_for_total } from "./app_code_lesson_for_total.mjs";
 import { app_code_lesson_for_up_to } from "./app_code_lesson_for_up_to.mjs";
 import { app_code_lesson_for_total_step } from "./app_code_lesson_for_total_step.mjs";
@@ -690,7 +690,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_for_start,
     app_learn_js_lesson_for_increment,
     app_learn_js_lesson_for_decrement,
-    app_code_lesson_for_repeat_word,
+    app_learn_js_lesson_for_repeat_word,
     app_code_lesson_for_total,
     app_code_lesson_for_up_to,
     app_code_lesson_for_total_step,
