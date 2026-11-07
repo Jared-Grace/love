@@ -6,7 +6,7 @@ import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_col
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_rewritten_texts } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_texts.mjs";
 import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
-export function app_code_lesson_expression_choose_order_not_twice_rewritten_chip(
+export function app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip(
   line,
 ) {
   "the rewritten line !(!(true)) written into a line already being built, as one code chip carrying the three things the sentences below name: the first !, the second !, and the outer pair of brackets";

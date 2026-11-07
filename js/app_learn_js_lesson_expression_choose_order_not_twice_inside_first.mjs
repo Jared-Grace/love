@@ -12,7 +12,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_rewritten_plain } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_plain.mjs";
-import { app_code_lesson_expression_choose_order_not_twice_rewritten_chip } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_chip.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip } from "./app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_twice_inside_first(
@@ -63,10 +63,14 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_inside_fir
     line_colors,
   );
   html_span_text(line_colors, " with colors like this: ");
-  app_code_lesson_expression_choose_order_not_twice_rewritten_chip(line_colors);
+  app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip(
+    line_colors,
+  );
   let line_show = html_div(parent);
   html_span_text(line_show, "The parentheses in ");
-  app_code_lesson_expression_choose_order_not_twice_rewritten_chip(line_show);
+  app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip(
+    line_show,
+  );
   html_span_text(line_show, " show us the order to solve each ");
   html_span_text_code_dark(line_show, bang);
   let line_first = html_div(parent);
