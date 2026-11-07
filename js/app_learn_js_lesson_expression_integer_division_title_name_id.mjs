@@ -9,7 +9,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
-export function app_code_lesson_expression_integer_division_title_name_id() {
+export function app_learn_js_lesson_expression_integer_division_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title says Integer division and then shows the shape the lesson is about, with a gap for each of the two numbers: Math.floor(... / ...)");
   ("★ INTEGER DIVISION IS TWO WORDS A LEARNER HAS NOT MET AND THE SHAPE IS THE WHOLE OF WHAT THEY MEAN. Every other title in this run shows the code it teaches, and this one named a thing instead - so a learner scanning the home list for the rounding-down division they were shown had nothing to recognise it by, while the lesson two rows down showing Math.floor on its own looked like the nearer match.");
