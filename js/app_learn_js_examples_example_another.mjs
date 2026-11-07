@@ -15,7 +15,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_batch_on_refill } from "./app_learn_js_batch_on_refill.mjs";
 import { noop } from "./noop.mjs";
 import { app_learn_js_batch_item_get } from "./app_learn_js_batch_item_get.mjs";
-import { app_code_examples_on_batch_item } from "./app_code_examples_on_batch_item.mjs";
+import { app_learn_js_examples_on_batch_item } from "./app_learn_js_examples_on_batch_item.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_code_quiz } from "./app_code_quiz.mjs";
 export function app_learn_js_examples_example_another(context, root) {
@@ -62,7 +62,7 @@ export function app_learn_js_examples_example_another(context, root) {
     above_line,
   );
   function on_batch_item(container, bs) {
-    let r2 = app_code_examples_on_batch_item(container, bs);
+    let r2 = app_learn_js_examples_on_batch_item(container, bs);
     return r2;
   }
   async function example_another() {
