@@ -7,7 +7,7 @@ import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_nam
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
-import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
+import { app_learn_js_lesson_operand_generic } from "./app_learn_js_lesson_operand_generic.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 export function app_learn_js_lesson_expression_divisor() {
   "identify the DIVISOR (the number you divide by) in a division a / b - the dividend a stands as the decoy; a thin lesson over the shared identify-an-operand generic";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_expression_divisor() {
     return list;
   }
   let name_id = title_name_id();
-  let lesson = app_code_lesson_operand_generic({
+  let lesson = app_learn_js_lesson_operand_generic({
     role: "divisor",
     define_prose: "When you divide, the number you divide by is called the ",
     batch_get,

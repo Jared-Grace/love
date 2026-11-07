@@ -6,7 +6,7 @@ import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_nam
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
+import { app_learn_js_lesson_operand_generic } from "./app_learn_js_lesson_operand_generic.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_expression_remainder() {
     return list;
   }
   let name_id = title_name_id();
-  let lesson = app_code_lesson_operand_generic({
+  let lesson = app_learn_js_lesson_operand_generic({
     role: "remainder",
     define_prose:
       "What is left over after dividing as many whole times as you can is called the ",
