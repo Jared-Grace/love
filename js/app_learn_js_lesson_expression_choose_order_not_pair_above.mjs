@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_not_pair_expression } from "./a
 import { app_code_lesson_expression_choose_order_steps_above_generic } from "./app_code_lesson_expression_choose_order_steps_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_not_pair_recall } from "./app_code_lesson_expression_choose_order_not_pair_recall.mjs";
 import { app_code_lesson_expression_choose_order_not_pair_intro } from "./app_code_lesson_expression_choose_order_not_pair_intro.mjs";
-export function app_code_lesson_expression_choose_order_not_pair_above(
+export function app_learn_js_lesson_expression_choose_order_not_pair_above(
   root,
   context,
 ) {
