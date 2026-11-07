@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_expression_comparison_and_comparison(want) {
+export function app_learn_js_lesson_expression_comparison_and_comparison(want) {
   arguments_assert(arguments, 1);
   ("a comparison code string that is `want`: low < high is true, low > high is false");
   let low = integer_random(1, 5);

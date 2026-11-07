@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_comparison_and_card_one_side } from "./app_learn_js_lesson_expression_comparison_and_card_one_side.mjs";
 import { app_code_lesson_expression_comparison_and_operands_false } from "./app_code_lesson_expression_comparison_and_operands_false.mjs";
-import { app_code_lesson_expression_comparison_and_comparison } from "./app_code_lesson_expression_comparison_and_comparison.mjs";
+import { app_learn_js_lesson_expression_comparison_and_comparison } from "./app_learn_js_lesson_expression_comparison_and_comparison.mjs";
 import { app_code_lesson_expression_comparison_and_title_name_id } from "./app_code_lesson_expression_comparison_and_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
@@ -24,15 +24,21 @@ export function app_code_lesson_expression_comparison_and() {
   function two_comparisons(want_true) {
     "comparison && comparison";
     let truths = operand_truths(want_true);
-    let left = app_code_lesson_expression_comparison_and_comparison(truths[0]);
-    let right = app_code_lesson_expression_comparison_and_comparison(truths[1]);
+    let left = app_learn_js_lesson_expression_comparison_and_comparison(
+      truths[0],
+    );
+    let right = app_learn_js_lesson_expression_comparison_and_comparison(
+      truths[1],
+    );
     let code = text_combine_multiple([left, " && ", right]);
     return code;
   }
   function comparison_and_literal(want_true) {
     "comparison && a plain true or false";
     let truths = operand_truths(want_true);
-    let left = app_code_lesson_expression_comparison_and_comparison(truths[0]);
+    let left = app_learn_js_lesson_expression_comparison_and_comparison(
+      truths[0],
+    );
     let right = ternary(truths[1], "true", "false");
     let code = text_combine_multiple([left, " && ", right]);
     return code;
