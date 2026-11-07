@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn
 import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
 import { app_learn_js_lesson_expression_choose_order_three_above } from "./app_learn_js_lesson_expression_choose_order_three_above.mjs";
-import { app_code_lesson_expression_choose_order_three_questions } from "./app_code_lesson_expression_choose_order_three_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_three_questions } from "./app_learn_js_lesson_expression_choose_order_three_questions.mjs";
 import { app_code_lesson_expression_choose_order_three_title_name_id } from "./app_code_lesson_expression_choose_order_three_title_name_id.mjs";
 export function app_code_lesson_expression_choose_order_three() {
   "choosing which part of a line to solve and then what that part comes to, three times over on the one line: 5 - 6 / 3 + 4, choose the divide, choose 2, see 5 - 2 + 4, choose the minus, choose 3, see 3 + 4, choose the plus, choose 7";
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_choose_order_three() {
       app_learn_js_expression_value_decoys,
     );
   }
-  let bank = app_code_lesson_expression_choose_order_three_questions();
+  let bank = app_learn_js_lesson_expression_choose_order_three_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_three_above,

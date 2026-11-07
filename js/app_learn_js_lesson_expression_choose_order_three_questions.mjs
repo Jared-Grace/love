@@ -6,7 +6,7 @@ import { app_learn_js_lesson_expression_choose_order_three_operator_count } from
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_choose_order_three_questions() {
+export function app_learn_js_lesson_expression_choose_order_three_questions() {
   arguments_assert(arguments, 0);
   ("the question bank this lesson draws on: lines of three operators built as shapes, handed out one a screen, and worked out again from the writing they were printed as");
   ("Every line carries a times or a divide that has to go first, so no line can be answered by pressing from the left and hoping. Where on the line that operator falls is left to the growing rather than arranged, because at three operators there are more places for it than there are questions in a sitting, and a learner cannot settle into a pattern they never see repeat.");
