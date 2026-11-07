@@ -2,7 +2,7 @@ import { app_code_lesson_expression_arithmetic_less_than_op_multiply } from "./a
 import { app_code_lesson_expression_arithmetic_less_than_op_divide } from "./app_code_lesson_expression_arithmetic_less_than_op_divide.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_op_exponent } from "./app_code_lesson_expression_arithmetic_less_than_op_exponent.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_op_add } from "./app_code_lesson_expression_arithmetic_less_than_op_add.mjs";
-import { app_code_lesson_expression_arithmetic_less_than_above } from "./app_code_lesson_expression_arithmetic_less_than_above.mjs";
+import { app_learn_js_lesson_expression_arithmetic_less_than_above } from "./app_learn_js_lesson_expression_arithmetic_less_than_above.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_one } from "./app_code_lesson_expression_arithmetic_less_than_one.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_title_name_id } from "./app_code_lesson_expression_arithmetic_less_than_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
@@ -121,7 +121,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   }
   let next_arg = list_iterator_refillable(refill);
   function above(root) {
-    let r7 = app_code_lesson_expression_arithmetic_less_than_above(
+    let r7 = app_learn_js_lesson_expression_arithmetic_less_than_above(
       root,
       less_than_fn,
       less_than_symbol,

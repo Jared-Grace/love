@@ -12,7 +12,7 @@ import { app_code_operators_comparison_or_list } from "./app_code_operators_comp
 import { add } from "./add.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_worked_example } from "./app_code_lesson_expression_arithmetic_less_than_worked_example.mjs";
 import { multiply } from "./multiply.mjs";
-export function app_code_lesson_expression_arithmetic_less_than_above(
+export function app_learn_js_lesson_expression_arithmetic_less_than_above(
   root,
   less_than_fn,
   less_than_symbol,
