@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
-import { app_code_lesson_statement_name_sum_number_pairs } from "./app_code_lesson_statement_name_sum_number_pairs.mjs";
+import { app_learn_js_lesson_statement_name_sum_number_pairs } from "./app_learn_js_lesson_statement_name_sum_number_pairs.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -19,7 +19,7 @@ export function app_code_lesson_statement_name_total_batch() {
   let name_last = app_code_lesson_statement_name_two_name();
   let name_total = app_code_lesson_statement_name_third();
   let summed = app_code_lesson_statement_names_added();
-  let pairs = app_code_lesson_statement_name_sum_number_pairs();
+  let pairs = app_learn_js_lesson_statement_name_sum_number_pairs();
   function program_of(pair) {
     "the four lines that give two numbers two names, give a third name what the two add up to, and write out what the third one holds";
     let first = list_first(pair);

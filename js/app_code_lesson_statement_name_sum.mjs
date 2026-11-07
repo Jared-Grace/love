@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_code_lesson_statement_names_binary_decoys } from "./app_code_lesson_statement_names_binary_decoys.mjs";
-import { app_code_lesson_statement_name_sum_number_pairs } from "./app_code_lesson_statement_name_sum_number_pairs.mjs";
+import { app_learn_js_lesson_statement_name_sum_number_pairs } from "./app_learn_js_lesson_statement_name_sum_number_pairs.mjs";
 import { app_learn_js_lesson_functions_console_log_arithmetic } from "./app_learn_js_lesson_functions_console_log_arithmetic.mjs";
 export function app_code_lesson_statement_name_sum() {
   arguments_assert(arguments, 0);
@@ -16,7 +16,7 @@ export function app_code_lesson_statement_name_sum() {
   let lesson = app_code_lesson_statement_names_binary_decoys({
     words: "Adding two names",
     symbol: plus,
-    pairs_get: app_code_lesson_statement_name_sum_number_pairs,
+    pairs_get: app_learn_js_lesson_statement_name_sum_number_pairs,
     example_pair: [2, 3],
     remember_lesson: app_learn_js_lesson_functions_console_log_arithmetic,
     remember_parts: ["we can add (", plus, ") two numbers together:"],

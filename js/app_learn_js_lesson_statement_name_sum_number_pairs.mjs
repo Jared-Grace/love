@@ -4,7 +4,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-export function app_code_lesson_statement_name_sum_number_pairs() {
+export function app_learn_js_lesson_statement_name_sum_number_pairs() {
   arguments_assert(arguments, 0);
   ("the four pairs of numbers the lessons about adding what two names hold give their two names, one pair to a program");
   ("The four totals are picked first and the two numbers worked back out of each, which is what keeps the four answers different from one another. Picked the other way round - two numbers each time and the total left to fall where it may - two programs could land on the same answer, and a question would be offering the right answer twice.");
