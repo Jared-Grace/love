@@ -3,7 +3,9 @@ import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first_try } from "./list_first_try.mjs";
-export function app_code_lesson_name_id_category_then_painter_or_null(maker) {
+export function app_learn_js_lesson_name_id_category_then_painter_or_null(
+  maker,
+) {
   arguments_assert(arguments, 1);
   ("The painter standing inside a lesson title maker: the function it defines and then hands back, which is what actually writes the title onto the page. Null when the maker is not that shape.");
   ("Two spellings reach the same thing here - a plain definition, and a name given a function - because both were written across the lessons and neither is more correct than the other.");

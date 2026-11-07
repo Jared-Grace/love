@@ -5,7 +5,7 @@ import { js_list_function_nodes } from "./js_list_function_nodes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_first_try } from "./list_first_try.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_lesson_name_id_category_then_painter_or_null } from "./app_code_lesson_name_id_category_then_painter_or_null.mjs";
+import { app_learn_js_lesson_name_id_category_then_painter_or_null } from "./app_learn_js_lesson_name_id_category_then_painter_or_null.mjs";
 export function app_learn_js_lesson_name_id_category_then_maker_or_null(ast) {
   arguments_assert(arguments, 1);
   ("The one function in this file that a lesson name and id was handed to be titled by, or null when the file holds no such thing.");
@@ -37,7 +37,8 @@ export function app_learn_js_lesson_name_id_category_then_maker_or_null(ast) {
     if (not_equal(last_type, "ReturnStatement")) {
       return false;
     }
-    let painter = app_code_lesson_name_id_category_then_painter_or_null(node);
+    let painter =
+      app_learn_js_lesson_name_id_category_then_painter_or_null(node);
     let found = not_equal(painter, null);
     return found;
   }

@@ -8,7 +8,7 @@ import { list_first_remaining } from "./list_first_remaining.mjs";
 import { list_each_size } from "./list_each_size.mjs";
 import { js_list_calls_named_nodes } from "./js_list_calls_named_nodes.mjs";
 import { app_learn_js_lesson_name_id_category_then_maker_or_null } from "./app_learn_js_lesson_name_id_category_then_maker_or_null.mjs";
-import { app_code_lesson_name_id_category_then_painter_or_null } from "./app_code_lesson_name_id_category_then_painter_or_null.mjs";
+import { app_learn_js_lesson_name_id_category_then_painter_or_null } from "./app_learn_js_lesson_name_id_category_then_painter_or_null.mjs";
 import { app_learn_js_lesson_name_id_category_then_opens_category_is } from "./app_learn_js_lesson_name_id_category_then_opens_category_is.mjs";
 import { app_learn_js_lesson_name_id_category_then_paint_name } from "./app_learn_js_lesson_name_id_category_then_paint_name.mjs";
 export function app_code_lesson_name_id_category_then_rewrite(ast) {
@@ -26,7 +26,8 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
     };
     return missing;
   }
-  let painter = app_code_lesson_name_id_category_then_painter_or_null(maker);
+  let painter =
+    app_learn_js_lesson_name_id_category_then_painter_or_null(maker);
   let painter_body = property_get(painter, "body");
   let statements = property_get(painter_body, "body");
   let unpacked = list_first_remaining(statements);
