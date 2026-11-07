@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
 import { html_move_animate_settle } from "./html_move_animate_settle.mjs";
-export async function app_code_expression_chips_rise(line, spans) {
+export async function app_learn_js_expression_chips_rise(line, spans) {
   arguments_assert(arguments, 2);
   ("put the chips on a run of operators in two stages: first the room they stand in opens and the rest of the line slides along to make it, and only then do they take their colour");
   ("The mirror of taking them off, and it runs the stages in the mirrored order. Coming off, the colour goes first and the line closes up after it. Going on, the room opens first and the colour lands on operators already standing where they belong.");
