@@ -4,7 +4,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_lesson_expression_choose_order_not_twice_intro } from "./app_code_lesson_expression_choose_order_not_twice_intro.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_inside_first } from "./app_code_lesson_expression_choose_order_not_twice_inside_first.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_worked } from "./app_code_lesson_expression_choose_order_not_twice_worked.mjs";
-export function app_code_lesson_expression_choose_order_not_twice_above(
+export function app_learn_js_lesson_expression_choose_order_not_twice_above(
   root,
   context,
 ) {
