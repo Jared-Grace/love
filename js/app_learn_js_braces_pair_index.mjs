@@ -5,7 +5,7 @@ import { equal } from "./equal.mjs";
 import { text_get } from "./text_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_code_braces_pair_index(code, index) {
+export function app_learn_js_braces_pair_index(code, index) {
   arguments_assert(arguments, 2);
   ("which pair of braces the brace at index belongs to, counted in the order the pairs open, so a { and the } that closes it give the same number; found by the same count a learner is taught, one brace at a time");
   let left = js_code_brace_left();
