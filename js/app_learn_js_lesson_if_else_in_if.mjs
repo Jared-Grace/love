@@ -7,7 +7,7 @@ import { app_learn_js_if_else_in_if_explain } from "./app_learn_js_if_else_in_if
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_if_ab_logged } from "./app_learn_js_lesson_if_ab_logged.mjs";
 import { app_learn_js_if_else_in_if_program_lines } from "./app_learn_js_if_else_in_if_program_lines.mjs";
-export function app_code_lesson_if_else_in_if() {
+export function app_learn_js_lesson_if_else_in_if() {
   arguments_assert(arguments, 0);
   ('an if and else inside an if: let a = true; let b = false; if (a) { console.log("love"); if (b) { console.log("joy"); } else { console.log("peace"); } } console.log("patience"); writes out love, peace and patience');
   ("The one new fact is that an if with an else can sit inside an if, and then the else is inside it too: when the outer if does not run, neither the inner if nor its else is reached. The program is the one from If inside an if with an else added to the if inside, so else is the only new piece.");
