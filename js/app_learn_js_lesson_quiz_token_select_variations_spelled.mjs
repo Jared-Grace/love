@@ -9,7 +9,7 @@ import { implied_by } from "./implied_by.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
 import { each } from "./each.mjs";
-export function app_code_lesson_quiz_token_select_variations_spelled(
+export function app_learn_js_lesson_quiz_token_select_variations_spelled(
   variations,
   code,
   expression_is,

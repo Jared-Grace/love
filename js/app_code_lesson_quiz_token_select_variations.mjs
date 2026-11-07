@@ -18,7 +18,7 @@ import { app_code_quiz_tile_dealings_orderings } from "./app_code_quiz_tile_deal
 import { list_concat } from "./list_concat.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
-import { app_code_lesson_quiz_token_select_variations_spelled } from "./app_code_lesson_quiz_token_select_variations_spelled.mjs";
+import { app_learn_js_lesson_quiz_token_select_variations_spelled } from "./app_learn_js_lesson_quiz_token_select_variations_spelled.mjs";
 import { lists_unique } from "./lists_unique.mjs";
 export function app_code_lesson_quiz_token_select_variations(code) {
   "every accepted token ordering for the unscramble. A commutative operator (+ * === !== || &&) can keep or swap its two sides; a commutative call (Math.min / Math.max) can take its arguments in ANY order - all permutations. The accepted orderings are the cartesian product of every such node's orderings; enumerate them, restoring each node to its original after its own loop so the tree is left unchanged.";
@@ -77,7 +77,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   let dealings = app_code_quiz_tile_dealings_orderings(said, code);
   let offered = list_concat(said, dealings);
   let tokenised = list_map(offered, app_code_quiz_tokens);
-  let variations = app_code_lesson_quiz_token_select_variations_spelled(
+  let variations = app_learn_js_lesson_quiz_token_select_variations_spelled(
     tokenised,
     code,
     expression_is,
