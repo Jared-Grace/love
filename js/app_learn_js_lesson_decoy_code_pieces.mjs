@@ -9,7 +9,7 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { app_learn_js_answer_count_max } from "./app_learn_js_answer_count_max.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_take } from "./list_take.mjs";
-export function app_code_lesson_decoy_code_pieces(question, answer) {
+export function app_learn_js_lesson_decoy_code_pieces(question, answer) {
   arguments_assert(arguments, 2);
   ("the wrong answers for a program that gives names to words, made only of what that program holds: the other words written in it, its names, the word that comes out with its quote marks still on, and that word twice");
   ("Only as many of these are kept as there are places for wrong answers, so they are in the order they are worth: another word in the code is a real reading of the program, a name is the mistake of writing out the name rather than what it holds, and the quote marks and the second copy fill what is left.");

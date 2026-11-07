@@ -19,7 +19,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_code_lesson_statement_name_copy_above } from "./app_code_lesson_statement_name_copy_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-import { app_code_lesson_decoy_code_pieces } from "./app_code_lesson_decoy_code_pieces.mjs";
+import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
 export function app_code_lesson_statement_name_copy() {
   arguments_assert(arguments, 0);
   ('a name given what another name holds: let a = "grapes"; let b = "olives"; let c = a; console.log(c); writes out grapes');
@@ -78,7 +78,7 @@ export function app_code_lesson_statement_name_copy() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    decoys: app_code_lesson_decoy_code_pieces,
+    decoys: app_learn_js_lesson_decoy_code_pieces,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
