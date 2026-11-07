@@ -4,7 +4,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_div_code } from "./app_code_div_code.mjs";
+import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_code_lesson_cup_code_box(root, name, word) {
   arguments_assert(arguments, 3);
@@ -22,7 +22,7 @@ export function app_code_lesson_cup_code_box(root, name, word) {
     quoted,
     " in it like this:",
   ]);
-  app_code_div_code(box_code, held);
+  app_learn_js_div_code(box_code, held);
   app_code_div_cycle_code(box_code, [
     "Then we can write out whatever is inside the cup like this:",
   ]);
