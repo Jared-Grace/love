@@ -20,7 +20,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
+import { app_learn_js_lesson_if_not } from "./app_learn_js_lesson_if_not.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -102,13 +102,12 @@ export function app_learn_js_lesson_if_and_if_not() {
     let love = list_get(fruits, 0);
     let joy = list_get(fruits, 1);
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_if_not, [
-      "",
-      opposite2,
-      " can go in an ",
-      "if",
-      ":",
-    ]);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_if_not,
+      ["", opposite2, " can go in an ", "if", ":"],
+    );
     let setup2 = js_code_let_statement(name2, "false");
     let statement4 = logged(love);
     let say_joy = logged(joy);

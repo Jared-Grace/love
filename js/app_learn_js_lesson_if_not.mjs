@@ -15,7 +15,7 @@ import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.m
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_if_cases_generic } from "./app_learn_js_lesson_if_cases_generic.mjs";
-export function app_code_lesson_if_not() {
+export function app_learn_js_lesson_if_not() {
   arguments_assert(arguments, 0);
   ('an if around the opposite of a name: let a = false; if (!a) { console.log("love"); } console.log("joy"); writes out love and joy, and with let a = true; writes out joy alone');
   ("The one new fact is that ! may stand inside the parentheses; the learner has turned a name into its opposite with ! before. It comes last of the three the human chose 2026-10-07, so that it sits just before an if beside an if (!a), which leads to else.");
