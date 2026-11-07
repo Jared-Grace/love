@@ -4,7 +4,7 @@ import { app_code_lesson_log_double_generic } from "./app_code_lesson_log_double
 import { app_code_lesson_for_same_as_while_above } from "./app_code_lesson_for_same_as_while_above.mjs";
 import { app_code_lesson_while_log_double } from "./app_code_lesson_while_log_double.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
-export function app_code_lesson_for_log_double() {
+export function app_learn_js_lesson_for_log_double() {
   arguments_assert(arguments, 0);
   ("a for that writes out double n: for (let n = 1; n < 3; n++) { console.log(n * 2); } writes out 2 and 4, the same as Writing out double");
   ("The one new fact is that a console.log inside a for can do math on n, and that the math does not change n: only the for's last part does. Walking an array writes out a[i] the same way.");

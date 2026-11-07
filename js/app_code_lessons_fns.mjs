@@ -335,7 +335,7 @@ import { app_code_lesson_for_up_to } from "./app_code_lesson_for_up_to.mjs";
 import { app_code_lesson_for_total_step } from "./app_code_lesson_for_total_step.mjs";
 import { app_learn_js_lesson_for_count } from "./app_learn_js_lesson_for_count.mjs";
 import { app_learn_js_lesson_for_after_change } from "./app_learn_js_lesson_for_after_change.mjs";
-import { app_code_lesson_for_log_double } from "./app_code_lesson_for_log_double.mjs";
+import { app_learn_js_lesson_for_log_double } from "./app_learn_js_lesson_for_log_double.mjs";
 import { app_learn_js_lesson_for_down_to } from "./app_learn_js_lesson_for_down_to.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { app_code_lesson_for_two_names } from "./app_code_lesson_for_two_names.mjs";
@@ -696,7 +696,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_for_total_step,
     app_learn_js_lesson_for_count,
     app_learn_js_lesson_for_after_change,
-    app_code_lesson_for_log_double,
+    app_learn_js_lesson_for_log_double,
     app_learn_js_lesson_for_down_to,
     app_code_lesson_while_two_names,
     app_code_lesson_for_two_names,
