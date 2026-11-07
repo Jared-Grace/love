@@ -7,7 +7,7 @@ import { app_code_lesson_while_halve } from "./app_code_lesson_while_halve.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_count_generic } from "./app_code_lesson_count_generic.mjs";
+import { app_learn_js_lesson_count_generic } from "./app_learn_js_lesson_count_generic.mjs";
 export function app_code_lesson_while_count() {
   arguments_assert(arguments, 0);
   ("a while counting its own runs: let count = 0; let n = 16; while (n > 3) { n /= 2; count += 1; } console.log(count); writes out 3, the number of times the { ... } ran");
@@ -43,7 +43,7 @@ export function app_code_lesson_while_count() {
     "Counting the runs",
     "count += 1;",
   );
-  let lesson = app_code_lesson_count_generic(
+  let lesson = app_learn_js_lesson_count_generic(
     program_write,
     false,
     above_inner,
