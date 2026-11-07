@@ -250,7 +250,7 @@ import { examples_registers_gate_run } from "./examples_registers_gate_run.mjs";
 import { functions_selects_unsafe_gate_run } from "./functions_selects_unsafe_gate_run.mjs";
 import { color_near_miss_gate_run } from "./color_near_miss_gate_run.mjs";
 import { color_palette_outside_gate_run } from "./color_palette_outside_gate_run.mjs";
-import { app_code_lesson_chip_color_gate_run } from "./app_code_lesson_chip_color_gate_run.mjs";
+import { app_learn_js_lesson_chip_color_gate_run } from "./app_learn_js_lesson_chip_color_gate_run.mjs";
 import { functions_shadowing_operator_gate_run } from "./functions_shadowing_operator_gate_run.mjs";
 import { functions_native_callback_gate_run } from "./functions_native_callback_gate_run.mjs";
 import { functions_shadowing_function_gate_run } from "./functions_shadowing_function_gate_run.mjs";
@@ -901,7 +901,7 @@ export function qa_gates() {
     functions_selects_unsafe_gate_run,
     color_near_miss_gate_run,
     color_palette_outside_gate_run,
-    app_code_lesson_chip_color_gate_run,
+    app_learn_js_lesson_chip_color_gate_run,
     functions_shadowing_operator_gate_run,
     functions_native_callback_gate_run,
     functions_shadowing_function_gate_run,

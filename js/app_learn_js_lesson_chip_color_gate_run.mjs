@@ -5,7 +5,7 @@ import { app_learn_js_lesson_chip_color_baseline_path } from "./app_learn_js_les
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_code_lesson_chip_color_gate_run() {
+export async function app_learn_js_lesson_chip_color_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: nothing about the categorical chip palette may change without saying so. Every colour is measured at each of the three jobs it does, and every pair of them at how far apart it looks to ordinary sight and to each of the three ways a cone can be missing; each reading is compared with what the same reading came to before.");
   ("IT HOLDS THE PALETTE STILL RATHER THAN HOLDING IT TO A STANDARD, WHICH IS THE WHOLE POINT AND NOT A WEAKNESS. Five things are known to be wrong with these colours. Every fix for every one of them is a judgment about colour - darken a colour somebody chose by looking, or recolour a screen, or drop a hue the course is built around - and the decision is deliberately waiting on somebody who has worked in colour, in accessibility, in visual design. A gate that failed on the faults would have to be either ignored or silenced, and a gate anybody has learned to ignore protects nothing at all.");
