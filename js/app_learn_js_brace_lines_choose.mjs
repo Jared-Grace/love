@@ -18,7 +18,7 @@ import { equal } from "./equal.mjs";
 import { list_size } from "./list_size.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-export function app_code_brace_lines_choose(
+export function app_learn_js_brace_lines_choose(
   parent,
   question,
   on_wrong,

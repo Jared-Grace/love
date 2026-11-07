@@ -18,7 +18,7 @@ import { equal } from "./equal.mjs";
 import { app_code_brace_marked } from "./app_code_brace_marked.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { app_code_brace_lines_choose } from "./app_code_brace_lines_choose.mjs";
+import { app_learn_js_brace_lines_choose } from "./app_learn_js_brace_lines_choose.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
@@ -78,7 +78,7 @@ export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
     function success() {
       app_shared_success_message(component);
     }
-    app_code_brace_lines_choose(component, text, wrong, success);
+    app_learn_js_brace_lines_choose(component, text, wrong, success);
   }
   function lines_quiz(
     parent,
@@ -93,7 +93,7 @@ export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
     let question = property_get(qa, "question");
     let answer = property_get(qa, "answer");
     correction_code_set(answer);
-    app_code_brace_lines_choose(parent, question, on_wrong, on_success);
+    app_learn_js_brace_lines_choose(parent, question, on_wrong, on_success);
   }
   let forwards = {
     question_label: "",
