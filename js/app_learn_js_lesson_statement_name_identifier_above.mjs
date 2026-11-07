@@ -10,7 +10,10 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { app_learn_js_lesson_cup_code_box } from "./app_learn_js_lesson_cup_code_box.mjs";
-export function app_code_lesson_statement_name_identifier_above(root, context) {
+export function app_learn_js_lesson_statement_name_identifier_above(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the cup as it was left, the same cup called something else, the one new fact, and the same thing written as code");
   ("The cup is drawn again rather than described, because what is being changed is the writing on its side and nothing else. Two pictures of one cup with two different words on it say that in a way no sentence about names says as quickly.");
