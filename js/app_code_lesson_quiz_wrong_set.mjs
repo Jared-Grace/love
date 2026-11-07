@@ -1,6 +1,6 @@
 import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
 import { app_shared_button_verdict_color_paint } from "./app_shared_button_verdict_color_paint.mjs";
-import { app_code_expression_chip_border_width } from "./app_code_expression_chip_border_width.mjs";
+import { app_learn_js_expression_chip_border_width } from "./app_learn_js_expression_chip_border_width.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "./app_code_lesson_quiz_wrong_background_color.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_edge_color_set } from "./html_edge_color_set.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_quiz_wrong_set(component) {
     return coded;
   }
   html_font_color_set_white(component);
-  let width = app_code_expression_chip_border_width();
+  let width = app_learn_js_expression_chip_border_width();
   html_edge_color_set(component, color, width);
   ("said back so a caller can tell whether what it is now looking at is a code block or a button, which decides what else it is allowed to do to it");
   return coded;

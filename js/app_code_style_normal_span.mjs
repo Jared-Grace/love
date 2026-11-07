@@ -1,5 +1,5 @@
 import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
-import { app_code_expression_chip_border_width } from "./app_code_expression_chip_border_width.mjs";
+import { app_learn_js_expression_chip_border_width } from "./app_learn_js_expression_chip_border_width.mjs";
 import { html_border } from "./html_border.mjs";
 import { app_code_style_normal } from "./app_code_style_normal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,7 +15,7 @@ export function app_code_style_normal_span(parent, text) {
   ("Drawn in the pale step of the blue scale rather than the medium one. The medium blue is only a shade off the card it would be drawn on, so an edge in it was there and could not be seen; the pale step is the next one down and is what the light card already draws its own border in, so nothing new is brought in to make it visible.");
   ("Drawn at an operator chip's width rather than a button's, for the reason that width was chosen: a button runs the width of the screen, so an edge measured on one is barely there on something a word wide set in the size of the writing around it.");
   let border_color = app_shared_color_blue_pale();
-  let border_width = app_code_expression_chip_border_width();
+  let border_width = app_learn_js_expression_chip_border_width();
   html_border(span, border_width, border_color);
   return span;
 }

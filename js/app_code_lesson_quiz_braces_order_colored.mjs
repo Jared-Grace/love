@@ -18,7 +18,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
-import { app_code_expression_chip_border_width } from "./app_code_expression_chip_border_width.mjs";
+import { app_learn_js_expression_chip_border_width } from "./app_learn_js_expression_chip_border_width.mjs";
 import { html_edge_color_set } from "./html_edge_color_set.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { not } from "./not.mjs";
@@ -84,7 +84,7 @@ export function app_code_lesson_quiz_braces_order_colored(
     html_style_code_dark(b);
     html_style_background_color_set(b, color);
     html_font_color_set_white(b);
-    let width = app_code_expression_chip_border_width();
+    let width = app_learn_js_expression_chip_border_width();
     html_edge_color_set(b, color, width);
   }
   function piece_draw(piece) {
