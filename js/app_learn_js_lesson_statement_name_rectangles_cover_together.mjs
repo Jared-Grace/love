@@ -22,7 +22,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rectangles_cover_together() {
+export function app_learn_js_lesson_statement_name_rectangles_cover_together() {
   arguments_assert(arguments, 0);
   ("how many squares two rectangles cover together: let total = area1 + area2; let together = total - shared; - picked by Claude 2026-10-06, when the human asked for the next lesson after Where two rectangles together start and end going across. In DSA it is the area of the union of two rectangles, adding both areas and taking away the part counted twice, the idea called inclusion and exclusion.");
   ("Not picked: the size of the box around two rectangles, offered first as let width = right - left; which turned out to be How many squares two rectangles share again on other edges, so it teaches nothing new. Also not picked: one line, let together = area1 + area2 - shared; which is longer than a title line, and hides the step where the shared squares are counted twice.");
