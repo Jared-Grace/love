@@ -263,7 +263,7 @@ import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_orde
 import { app_code_lesson_token_order_braces_plain } from "./app_code_lesson_token_order_braces_plain.mjs";
 import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
 import { app_code_lesson_brace_lines_two } from "./app_code_lesson_brace_lines_two.mjs";
-import { app_code_lesson_brace_lines_two_nested } from "./app_code_lesson_brace_lines_two_nested.mjs";
+import { app_learn_js_lesson_brace_lines_two_nested } from "./app_learn_js_lesson_brace_lines_two_nested.mjs";
 import { app_code_lesson_braces_run } from "./app_code_lesson_braces_run.mjs";
 import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
 import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.mjs";
@@ -624,7 +624,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_token_order_braces_plain,
     app_code_lesson_brace_pair_two,
     app_code_lesson_brace_lines_two,
-    app_code_lesson_brace_lines_two_nested,
+    app_learn_js_lesson_brace_lines_two_nested,
     app_code_lesson_braces_run,
     app_code_lesson_if_twice,
     app_code_lesson_if_two_bounds,

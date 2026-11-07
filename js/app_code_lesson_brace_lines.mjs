@@ -1,5 +1,5 @@
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
-import { app_code_lesson_brace_lines_two_nested } from "./app_code_lesson_brace_lines_two_nested.mjs";
+import { app_learn_js_lesson_brace_lines_two_nested } from "./app_learn_js_lesson_brace_lines_two_nested.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_learn_js_brace_lines_example } from "./app_learn_js_brace_lines_example.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_brace_lines() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_brace_lines_two_nested,
+      app_learn_js_lesson_brace_lines_two_nested,
       [
         "the lines of a section are the lines between its ",
         left,

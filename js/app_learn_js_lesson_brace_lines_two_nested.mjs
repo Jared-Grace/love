@@ -9,7 +9,7 @@ import { app_learn_js_braces_two_nested } from "./app_learn_js_braces_two_nested
 import { app_learn_js_brace_lines_example } from "./app_learn_js_brace_lines_example.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_brace_lines_generic } from "./app_learn_js_lesson_brace_lines_generic.mjs";
-export function app_code_lesson_brace_lines_two_nested() {
+export function app_learn_js_lesson_brace_lines_two_nested() {
   arguments_assert(arguments, 0);
   ("which lines stand between a pair of braces, in programs with an if inside an if: the learner taps every line between a { and the } that closes it, for the outer pair and for the inner pair");
   ("Split 2026-10-11 from The lines between braces, side by side, as the human asked, so the if inside an if is sure to be asked: every program here is one, and the pointed-at { takes turns between the outer and the inner.");
