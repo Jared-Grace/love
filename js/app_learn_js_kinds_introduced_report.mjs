@@ -6,7 +6,7 @@ import { app_code_kinds_introduced } from "./app_code_kinds_introduced.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-export function app_code_kinds_introduced_report() {
+export function app_learn_js_kinds_introduced_report() {
   arguments_assert(arguments, 0);
   ("The lessons that bring in a kind of code without being about it, and how many other lessons bring one in and are about it. Ask this to find a sign the course uses and never teaches.");
   ("Asked with no arguments so it can be run from the command line, which is the only way anyone reaches the reading it wraps.");
