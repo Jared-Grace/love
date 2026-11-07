@@ -17,7 +17,7 @@ import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
-export function app_code_lesson_expression_comparison_or() {
+export function app_learn_js_lesson_expression_comparison_or() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: 3 < 5 || 2 < 4 asked for its value, with nothing to press");
   ("The twin of the lesson that puts a comparison either side of an &&, and the one the run was missing. Everywhere else here a line is taken apart a press at a time and then asked for whole; || had the pressing lesson and nothing to ask it whole afterwards.");
