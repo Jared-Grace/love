@@ -7,7 +7,7 @@ import { subtract } from "./subtract.mjs";
 import { null_is } from "./null_is.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_quiz_pieces_later_parts(
+export function app_learn_js_lesson_quiz_pieces_later_parts(
   variations,
   chosen,
   token,

@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { app_code_quiz_token_run_together_parts } from "./app_code_quiz_token_run_together_parts.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_lesson_quiz_pieces_later_parts } from "./app_code_lesson_quiz_pieces_later_parts.mjs";
+import { app_learn_js_lesson_quiz_pieces_later_parts } from "./app_learn_js_lesson_quiz_pieces_later_parts.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 export function app_code_lesson_quiz_token_select_wrong_show({
@@ -25,7 +25,11 @@ export function app_code_lesson_quiz_token_select_wrong_show({
     tokens_unique,
   );
   if (null_is(parts)) {
-    parts = app_code_lesson_quiz_pieces_later_parts(variations, chosen, token);
+    parts = app_learn_js_lesson_quiz_pieces_later_parts(
+      variations,
+      chosen,
+      token,
+    );
   }
   html_clear(note_div);
   app_learn_js_cycle_code(note_div, parts);
