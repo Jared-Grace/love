@@ -1,5 +1,5 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_lesson_expression_choose_order_pair_expression_parts } from "./app_code_lesson_expression_choose_order_pair_expression_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_pair_expression_parts } from "./app_learn_js_lesson_expression_choose_order_pair_expression_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_expression_choose_order_pair_tree_of_code(
   let second_number = list_get(numbers, 1);
   let third_number = list_get(numbers, 2);
   let fourth_number = list_get(numbers, 3);
-  let tree = app_code_lesson_expression_choose_order_pair_expression_parts({
+  let tree = app_learn_js_lesson_expression_choose_order_pair_expression_parts({
     first_number,
     left_symbol,
     second_number,

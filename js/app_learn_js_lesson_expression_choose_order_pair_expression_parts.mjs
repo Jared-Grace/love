@@ -1,7 +1,7 @@
 import { app_learn_js_expression_node_right_operator_first_parenthesis_wrapped } from "./app_learn_js_expression_node_right_operator_first_parenthesis_wrapped.mjs";
 import { app_learn_js_expression_node_parenthesis_wrapped } from "./app_learn_js_expression_node_parenthesis_wrapped.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_choose_order_pair_expression_parts({
+export function app_learn_js_lesson_expression_choose_order_pair_expression_parts({
   first_number,
   left_symbol,
   second_number,
