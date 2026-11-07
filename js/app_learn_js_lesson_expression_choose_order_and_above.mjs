@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison_recall } from "./app_learn_js_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_sides_comparison_say } from "./app_code_lesson_expression_sides_comparison_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_and_expression } from "./app_learn_js_lesson_expression_choose_order_and_expression.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_expression_choose_order_and_above(
     app_learn_js_lesson_expression_choose_order_both_sides_above_generic(
       root,
       tree,
-      app_code_lesson_expression_comparing_a_comparison_recall,
+      app_learn_js_lesson_expression_comparing_a_comparison_recall,
       app_code_lesson_expression_sides_comparison_say,
       app_learn_js_lesson_expression_choose_order_and_intro,
       context,

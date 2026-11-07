@@ -3,7 +3,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_expression_arithmetic_less_than } from "./app_learn_js_lesson_expression_arithmetic_less_than.mjs";
 import { app_code_operators_comparison_or_list } from "./app_code_operators_comparison_or_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_comparing_a_comparison_recall(
+export function app_learn_js_lesson_expression_comparing_a_comparison_recall(
   root,
   context,
 ) {

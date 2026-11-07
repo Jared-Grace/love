@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_parentheses_one_side_expression } from "./app_code_lesson_expression_parentheses_one_side_expression.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison_recall } from "./app_learn_js_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_lesson_expression_parentheses_one_side_title_name_id } from "./app_code_lesson_expression_parentheses_one_side_title_name_id.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
@@ -58,7 +58,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
   function above(root, context) {
     "the word this lesson rests on, then what ( and ) do, that they change nothing on this shape, then one such line worked out, then that the parentheses may stand on either side";
     "The recall card comes first because the word comparison was defined in the arithmetic-comparison lesson and then went quiet for thirty-two lessons before this one, whose every line is about putting parentheses around one. It is the same card the comparing-a-comparison lesson shows, word for word, which is what a recall should be - recognised and passed over rather than compared against a near-copy.";
-    app_code_lesson_expression_comparing_a_comparison_recall(root, context);
+    app_learn_js_lesson_expression_comparing_a_comparison_recall(root, context);
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let idea = app_learn_js_container_light_blue(root);
