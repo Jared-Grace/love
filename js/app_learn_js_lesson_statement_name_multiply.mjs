@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
-import { app_code_lesson_statement_name_product_number_pairs } from "./app_code_lesson_statement_name_product_number_pairs.mjs";
+import { app_learn_js_lesson_statement_name_product_number_pairs } from "./app_learn_js_lesson_statement_name_product_number_pairs.mjs";
 import { app_learn_js_lesson_operators_asterisk } from "./app_learn_js_lesson_operators_asterisk.mjs";
 export function app_learn_js_lesson_statement_name_multiply() {
   arguments_assert(arguments, 0);
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_statement_name_multiply() {
   let lesson = app_code_lesson_statement_names_binary({
     words: "Multiplying two names",
     symbol: asterisk,
-    pairs_get: app_code_lesson_statement_name_product_number_pairs,
+    pairs_get: app_learn_js_lesson_statement_name_product_number_pairs,
     example_pair: [2, 4],
     remember_lesson: app_learn_js_lesson_operators_asterisk,
     remember_parts: ["we can multiply (", asterisk, ") two numbers:"],
