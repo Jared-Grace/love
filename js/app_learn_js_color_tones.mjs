@@ -3,7 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_code_lesson_chip_colors } from "./app_code_lesson_chip_colors.mjs";
 import { app_code_highlight_colors } from "./app_code_highlight_colors.mjs";
 import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
-export function app_code_color_tones() {
+export function app_learn_js_color_tones() {
   arguments_assert(arguments, 0);
   ("the colours of this app's three palettes, sorted into the two tones they have - the dark ones, which carry white lettering, and the light ones, which carry near-black lettering");
   ("THIS IS NOT EVERY COLOUR THE APP DRAWS, AND IT SAID THAT IT WAS UNTIL 2026-09-20. It reads three palette functions and holds ten colours. Nine other files of this app spell eleven more, and every claim below was written without them. They are listed in the paragraph beginning WHAT THE ELEVEN ARE, with a reading for each, so that nobody else reasons from ten again by accident.");

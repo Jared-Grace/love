@@ -24,7 +24,7 @@ export function app_code_note_name_colors() {
     fn_name("color_parse") +
     " reads both spellings now, and the check that walks these colours goes through it, so the step named there as the thing to do first has already been done. What is left is not a blocked step but an unstarted one.";
   "What stops it today is instead that the hues do not quite agree - 23.7 against 25, 154.0 against 150, 251.7 against 255 - so naming one hue per colour and spelling both tones from it would move what is on the screen. That is a change to a colour rather than to how a colour is written down, and colour decisions here are waiting on somebody who has worked in colour. " +
-    fn_name("app_code_color_tones") +
+    fn_name("app_learn_js_color_tones") +
     " holds the rest of that question: these three are the light tone of a two-tone set, the chip and pointing colours are the dark one, and the four things standing between the app and one hue list at two tones are written out there rather than here.";
   let colors = app_shared_color_name_marks();
   return colors;
