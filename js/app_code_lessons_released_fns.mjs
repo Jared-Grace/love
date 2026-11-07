@@ -55,7 +55,7 @@ import { app_learn_js_lesson_expression_parentheses_arithmetic } from "./app_lea
 import { app_learn_js_lesson_expression_parentheses_minus_divide } from "./app_learn_js_lesson_expression_parentheses_minus_divide.mjs";
 import { app_learn_js_lesson_expression_parentheses_moved } from "./app_learn_js_lesson_expression_parentheses_moved.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than } from "./app_learn_js_lesson_expression_arithmetic_less_than.mjs";
-import { app_code_lesson_functions_arithmetic } from "./app_code_lesson_functions_arithmetic.mjs";
+import { app_learn_js_lesson_functions_arithmetic } from "./app_learn_js_lesson_functions_arithmetic.mjs";
 import { app_code_lesson_functions_invalid } from "./app_code_lesson_functions_invalid.mjs";
 import { app_code_lesson_functions_console_log } from "./app_code_lesson_functions_console_log.mjs";
 import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
@@ -368,7 +368,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_expression_parentheses_minus_divide,
     app_learn_js_lesson_expression_parentheses_moved,
     app_learn_js_lesson_expression_arithmetic_less_than,
-    app_code_lesson_functions_arithmetic,
+    app_learn_js_lesson_functions_arithmetic,
     app_code_lesson_functions_invalid,
     app_code_lesson_functions_console_log,
     app_code_lesson_functions_console_log_statement,
