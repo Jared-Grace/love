@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_course_hash_key } from "./app_learn_js_course_hash_key.mjs";
-import { app_code_course_known_is } from "./app_code_course_known_is.mjs";
+import { app_learn_js_course_known_is } from "./app_learn_js_course_known_is.mjs";
 import { app_code_course_suggestions } from "./app_code_course_suggestions.mjs";
 import { identity } from "./identity.mjs";
 export function app_code_hash_field_course() {
@@ -11,7 +11,7 @@ export function app_code_hash_field_course() {
     name: "course",
     list_is: false,
     number_is: false,
-    valid_is: app_code_course_known_is,
+    valid_is: app_learn_js_course_known_is,
     suggestions: app_code_course_suggestions,
     label: identity,
   };
