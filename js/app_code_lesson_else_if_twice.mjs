@@ -19,7 +19,7 @@ import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_braces_run_else_if_twice } from "./app_learn_js_lesson_braces_run_else_if_twice.mjs";
-import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
+import { app_learn_js_lesson_else_if_else } from "./app_learn_js_lesson_else_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -114,7 +114,7 @@ export function app_code_lesson_else_if_twice() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_else_if_else,
+      app_learn_js_lesson_else_if_else,
       ["an ", else_if_b, " can have an ", "else", " after it"],
     );
     let box_two = app_learn_js_container_light_blue(root);

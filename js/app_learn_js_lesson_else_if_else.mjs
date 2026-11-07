@@ -7,7 +7,7 @@ import { app_learn_js_else_if_else_explain } from "./app_learn_js_else_if_else_e
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
 import { app_learn_js_else_if_else_program_lines } from "./app_learn_js_else_if_else_program_lines.mjs";
-export function app_code_lesson_else_if_else() {
+export function app_learn_js_lesson_else_if_else() {
   arguments_assert(arguments, 0);
   ('else if then else: let a = false; let b = false; if (a) { console.log("love"); } else if (b) { console.log("joy"); } else { console.log("peace"); } console.log("patience"); writes out peace and patience');
   ("The one new fact is that an else if can be followed by an else, whose lines run when neither a nor b is true. The program is the one from Else if with an else added after else if (b) { ... }, so that else is the only new piece.");
