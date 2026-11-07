@@ -8,7 +8,7 @@ import { color_reading_sentence } from "./color_reading_sentence.mjs";
 import { color_contrast_or_null } from "./color_contrast_or_null.mjs";
 import { color_readings_apart } from "./color_readings_apart.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_highlight_color_readings() {
+export function app_learn_js_highlight_color_readings() {
   arguments_assert(arguments, 0);
   ("every measurement that can be made of the pointing colours, each written out as one sentence carrying its own figure - what was measured, what it came to, and whether that clears the floor for the job or falls short of it");
   ("A RECORD OF WHAT IS, AND DELIBERATELY NOT A LIST OF FAULTS, for the same reason the chip palette keeps one: a gate reporting only faults is silent about a passing colour getting worse, and silent about a colour that was never in trouble moving. Every figure is written down, passing ones included, and the ratchet these feed refuses a sentence it has not seen AND a sentence it has seen that has stopped being produced. Nothing here decides anything.");

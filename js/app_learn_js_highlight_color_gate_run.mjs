@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_highlight_color_readings } from "./app_code_highlight_color_readings.mjs";
+import { app_learn_js_highlight_color_readings } from "./app_learn_js_highlight_color_readings.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_learn_js_highlight_color_baseline_path } from "./app_learn_js_highlight_color_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -13,7 +13,7 @@ export async function app_learn_js_highlight_color_gate_run() {
   ("THE FIGURES ARE IN THE NAMES, which is what lets a record of names watch a set of measurements. Each reading is a sentence ending in its own number, cut downwards to a fixed number of places, so a figure that moves past that place makes a sentence the record has never seen and leaves one of its own sentences unproduced.");
   ("A reading that gets BETTER fails exactly as loudly as one that gets worse. An improvement is still somebody having changed a colour, and the one thing being protected is that nobody changes one without the change being visible.");
   ("HOW MANY READINGS WERE TAKEN GOES OUT WITH THE VERDICT, counted off the readings themselves rather than worked back from the offenders - which on a clean run are none, so a length read off them would say nothing was checked on exactly the runs where the question matters. Green here means three colours were measured at three jobs each and six pairs at four kinds of sight; if that number ever falls, the sweep has been pointed somewhere else and the verdict is green because it looked at nothing.");
-  let readings = app_code_highlight_color_readings();
+  let readings = app_learn_js_highlight_color_readings();
   let taken = list_size(readings);
   let path = app_learn_js_highlight_color_baseline_path();
   let told = await baseline_names_gate_generic(
