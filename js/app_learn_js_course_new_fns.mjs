@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_stop_early_or } from "./app_learn_js_lesson_expression_choose_order_stop_early_or.mjs";
 import { app_learn_js_lesson_expression_choose_order_stop_early_and } from "./app_learn_js_lesson_expression_choose_order_stop_early_and.mjs";
 import { app_learn_js_lesson_expression_choose_order_stop_early_both } from "./app_learn_js_lesson_expression_choose_order_stop_early_both.mjs";
-import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
+import { app_learn_js_lesson_step_log_twice } from "./app_learn_js_lesson_step_log_twice.mjs";
 import { app_learn_js_lesson_else_if_order } from "./app_learn_js_lesson_else_if_order.mjs";
 import { app_learn_js_lesson_braces_run_thrice } from "./app_learn_js_lesson_braces_run_thrice.mjs";
 import { app_learn_js_lesson_if_thrice } from "./app_learn_js_lesson_if_thrice.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_course_new_fns() {
     app_learn_js_lesson_expression_choose_order_stop_early_or,
     app_learn_js_lesson_expression_choose_order_stop_early_and,
     app_learn_js_lesson_expression_choose_order_stop_early_both,
-    app_code_lesson_step_log_twice,
+    app_learn_js_lesson_step_log_twice,
     app_learn_js_lesson_else_if_order,
     app_learn_js_lesson_braces_run_thrice,
     app_learn_js_lesson_if_thrice,
