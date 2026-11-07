@@ -2633,7 +2633,7 @@ export function permission_grant_names() {
     fn_name("app_learn_ceb_gloss_words_edged_gate_run"),
     fn_name("app_learn_ceb_gloss_words_explained_apart_gate_run"),
     fn_name("app_learn_ceb_gloss_words_unwritten_gate_run"),
-    fn_name("app_code_color_tone_gate_run"),
+    fn_name("app_learn_js_color_tone_gate_run"),
     fn_name("app_code_highlight_color_gate_run"),
     fn_name("app_code_lesson_chip_color_gate_run"),
     fn_name("app_code_note_name_contrast_gate_run"),

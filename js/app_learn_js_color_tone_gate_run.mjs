@@ -6,7 +6,7 @@ import { app_learn_js_color_tone_faults } from "./app_learn_js_color_tone_faults
 import { app_learn_js_color_tone_baseline_path } from "./app_learn_js_color_tone_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-export async function app_code_color_tone_gate_run() {
+export async function app_learn_js_color_tone_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: no hue this app draws may quietly grow a second colour at a tone it already has, or lose the twin it had. The colours are gathered into hues, each hue is asked for exactly one dark and one light, and what comes back is measured against the list of hues already known to be short or doubled.");
   ("IT WATCHES THE SHAPE OF THE PALETTE, WHICH IS THE THING THE OTHER THREE COLOUR GATES CANNOT SEE. The chip record and the pointing record each hold every reading of their own set, so either of them notices a colour of theirs moving - and neither of them can notice a colour appearing in the OTHER list at a hue they already use, because from inside one palette that is not an event at all. The near-miss check comes closest and asks a different question: it finds two colours that look the same, which catches a duplicate at one tone and says nothing about a hue with a tone missing, or about a third tone arriving well clear of the other two.");

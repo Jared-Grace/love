@@ -591,7 +591,7 @@ import { reply_cases_no_reply_yet_gate_run } from "./reply_cases_no_reply_yet_ga
 import { app_code_note_name_contrast_gate_run } from "./app_code_note_name_contrast_gate_run.mjs";
 import { functions_calls_walk_unwaited_gate_run } from "./functions_calls_walk_unwaited_gate_run.mjs";
 import { app_code_highlight_color_gate_run } from "./app_code_highlight_color_gate_run.mjs";
-import { app_code_color_tone_gate_run } from "./app_code_color_tone_gate_run.mjs";
+import { app_learn_js_color_tone_gate_run } from "./app_learn_js_color_tone_gate_run.mjs";
 import { git_history_purge_case_blind_gate_run } from "./git_history_purge_case_blind_gate_run.mjs";
 import { app_learn_en_gloss_urdu_published_unfinished_gate_run } from "./app_learn_en_gloss_urdu_published_unfinished_gate_run.mjs";
 import { purge_words_live_gate_run } from "./purge_words_live_gate_run.mjs";
@@ -1242,7 +1242,7 @@ export function qa_gates() {
     app_code_note_name_contrast_gate_run,
     functions_calls_walk_unwaited_gate_run,
     app_code_highlight_color_gate_run,
-    app_code_color_tone_gate_run,
+    app_learn_js_color_tone_gate_run,
     git_history_purge_case_blind_gate_run,
     app_learn_en_gloss_urdu_published_unfinished_gate_run,
     purge_words_live_gate_run,
