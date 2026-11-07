@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { app_code_lesson_statement_name_itself_sum_title_code } from "./app_code_lesson_statement_name_itself_sum_title_code.mjs";
+import { app_learn_js_lesson_statement_name_itself_sum_title_code } from "./app_learn_js_lesson_statement_name_itself_sum_title_code.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_statement_name_times_assign_pair() {
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
   let asterisk = js_operator_asterisk_symbol();
-  let added = app_code_lesson_statement_name_itself_sum_title_code();
+  let added = app_learn_js_lesson_statement_name_itself_sum_title_code();
   let multiplied = js_code_binary_spaced_nb(name_first, asterisk, name_last);
   let long = js_code_assign_statement(name_first, multiplied);
   let short = js_code_assign_operator_statement(
