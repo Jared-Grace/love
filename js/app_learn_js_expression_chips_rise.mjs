@@ -1,5 +1,5 @@
 import { app_learn_js_expression_operator_chip_room } from "./app_learn_js_expression_operator_chip_room.mjs";
-import { app_code_expression_operator_pressable } from "./app_code_expression_operator_pressable.mjs";
+import { app_learn_js_expression_operator_pressable } from "./app_learn_js_expression_operator_pressable.mjs";
 import { app_shared_animation_duration_quick } from "./app_shared_animation_duration_quick.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
@@ -20,5 +20,5 @@ export async function app_learn_js_expression_chips_rise(line, spans) {
   ("the short while, not the whole one: nothing is worked out here and no answer changes - this is the line offering the next press after a step the learner has already watched being answered");
   let duration = app_shared_animation_duration_quick();
   await html_move_animate_settle(pieces, change, duration);
-  each(spans, app_code_expression_operator_pressable);
+  each(spans, app_learn_js_expression_operator_pressable);
 }

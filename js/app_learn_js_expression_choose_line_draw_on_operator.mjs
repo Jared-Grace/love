@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
-import { app_code_expression_operator_pressable } from "./app_code_expression_operator_pressable.mjs";
+import { app_learn_js_expression_operator_pressable } from "./app_learn_js_expression_operator_pressable.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_expression_choose_line_draw_on_operator({
   let refused = [];
   function on_operator(node, span, node_span) {
     if (not(rising)) {
-      app_code_expression_operator_pressable(span);
+      app_learn_js_expression_operator_pressable(span);
     }
     list_add(pressable, span);
     ("the operator that may go next is marked as the way on, from the same list that decides whether a press of it is answered or refused - so a walk of the whole course works this line the way a learner does, and there is no second answer key to disagree with the one the presses are judged by");
