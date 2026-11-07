@@ -9,7 +9,7 @@ import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div_cycle } from "./html_div_cycle.mjs";
-export function app_code_lesson_expression_choose_order_not_twice_intro(
+export function app_learn_js_lesson_expression_choose_order_not_twice_intro(
   parent,
 ) {
   "the first card of this lesson: the two words for how many things an operator is handed, binary and unary, each shown on a line the learner has already read";
