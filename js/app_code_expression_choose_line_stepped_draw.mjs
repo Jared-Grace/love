@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_replaced_settle } from "./app_code_expression_replaced_settle.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
-import { app_code_expression_choose_line_draw } from "./app_code_expression_choose_line_draw.mjs";
+import { app_learn_js_expression_choose_line_draw } from "./app_learn_js_expression_choose_line_draw.mjs";
 import { app_learn_js_expression_chips_rise } from "./app_learn_js_expression_chips_rise.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 export async function app_code_expression_choose_line_stepped_draw({
@@ -23,7 +23,7 @@ export async function app_code_expression_choose_line_stepped_draw({
   arguments_assert(arguments, 1);
   await app_code_expression_replaced_settle(line, node_span, node_value);
   let stepped = app_code_expression_solved(current, node);
-  let risen = app_code_expression_choose_line_draw({
+  let risen = app_learn_js_expression_choose_line_draw({
     current: stepped,
     solved: node,
     value: node_value,

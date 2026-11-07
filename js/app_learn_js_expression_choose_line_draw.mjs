@@ -3,7 +3,7 @@ import { app_learn_js_expression_choose_line_draw_step } from "./app_learn_js_ex
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { null_is } from "./null_is.mjs";
-export function app_code_expression_choose_line_draw({
+export function app_learn_js_expression_choose_line_draw({
   current,
   solved,
   value,

@@ -1,4 +1,4 @@
-import { app_code_expression_choose_line_draw } from "./app_code_expression_choose_line_draw.mjs";
+import { app_learn_js_expression_choose_line_draw } from "./app_learn_js_expression_choose_line_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
@@ -17,7 +17,7 @@ export function app_code_expression_choose_line(
   ("Every operator is pressable on both, including the front page. A page that only offers the right one teaches nothing about the wrong one, and a learner who has never been allowed to pick the leftmost has never found out that the leftmost is not the rule.");
   let line = html_div(parent);
   html_style_code_dark(line);
-  app_code_expression_choose_line_draw({
+  app_learn_js_expression_choose_line_draw({
     current: tree,
     solved: null,
     value: null,
