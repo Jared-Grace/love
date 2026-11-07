@@ -8,7 +8,7 @@ import { html_div } from "./html_div.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { app_learn_js_braces_order_wrong_say } from "./app_learn_js_braces_order_wrong_say.mjs";
-import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
+import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_quiz_braces_order_plain } from "./app_learn_js_lesson_quiz_braces_order_plain.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_learn_js_lesson_braces_among_plain_generic(
@@ -59,7 +59,7 @@ export function app_learn_js_lesson_braces_among_plain_generic(
     answer_count_override: null,
     wrong_say: app_learn_js_braces_order_wrong_say,
   };
-  let quizzes_get = app_code_lesson_quizzes_generic({
+  let quizzes_get = app_learn_js_lesson_quizzes_generic({
     lines: false,
     forwards,
     backwards,

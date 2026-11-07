@@ -15,7 +15,7 @@ import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.m
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
+import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap_guided } from "./app_learn_js_lesson_quiz_tokens_tap_guided.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_code_lesson_token_order() {
@@ -68,7 +68,7 @@ export function app_code_lesson_token_order() {
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
   };
-  let quizzes_get = app_code_lesson_quizzes_generic({
+  let quizzes_get = app_learn_js_lesson_quizzes_generic({
     lines: false,
     forwards,
     backwards: forwards,

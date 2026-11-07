@@ -11,7 +11,7 @@ import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_learn_js_braces_run_choose } from "./app_learn_js_braces_run_choose.mjs";
 import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
-import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
+import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_quiz_braces_run } from "./app_learn_js_lesson_quiz_braces_run.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -71,7 +71,7 @@ export function app_learn_js_lesson_braces_run_explain_generic(
     answer_on_button: app_learn_js_brace_marked_div,
     answer_count_override: null,
   };
-  let quizzes_get = app_code_lesson_quizzes_generic({
+  let quizzes_get = app_learn_js_lesson_quizzes_generic({
     lines: false,
     forwards,
     backwards: forwards,

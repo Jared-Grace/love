@@ -13,7 +13,7 @@ import { app_learn_js_lesson_quiz_step_info } from "./app_learn_js_lesson_quiz_s
 import { list_add_first } from "./list_add_first.mjs";
 import { app_learn_js_lesson_quiz } from "./app_learn_js_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_quizzes_generic(params) {
+export function app_learn_js_lesson_quizzes_generic(params) {
   let forwards_record = property_get(params, "forwards");
   let backwards_record = property_get(params, "backwards");
   let backwards_code = property_get(params, "backwards_code");

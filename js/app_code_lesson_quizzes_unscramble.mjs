@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
+import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 export function app_code_lesson_quizzes_unscramble(params) {
   let batch_get = property_get(params, "batch_get");
   let forwards = property_get(params, "forwards");
@@ -10,7 +10,7 @@ export function app_code_lesson_quizzes_unscramble(params) {
   let backwards_include = property_get(params, "backwards_include");
   let lines = property_get(params, "lines");
   let steps = property_get(params, "steps");
-  let quizzes_get = app_code_lesson_quizzes_generic({
+  let quizzes_get = app_learn_js_lesson_quizzes_generic({
     lines,
     steps,
     forwards,
