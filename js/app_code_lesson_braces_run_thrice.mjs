@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lesson_braces_run_explain_generic } from "./app_code_lesson_braces_run_explain_generic.mjs";
 import { app_learn_js_braces_run_three_ifs_explain } from "./app_learn_js_braces_run_three_ifs_explain.mjs";
-import { app_code_braces_three_ifs } from "./app_code_braces_three_ifs.mjs";
+import { app_learn_js_braces_three_ifs } from "./app_learn_js_braces_three_ifs.mjs";
 export function app_code_lesson_braces_run_thrice() {
   arguments_assert(arguments, 0);
   ("whether a section of code runs, in programs of three ifs one after another; asked for by the human 2026-10-11, straight before The same if three times");
@@ -13,7 +13,7 @@ export function app_code_lesson_braces_run_thrice() {
   let lesson = app_code_lesson_braces_run_explain_generic(
     "Does this section run? Three ifs",
     app_learn_js_braces_run_three_ifs_explain,
-    app_code_braces_three_ifs,
+    app_learn_js_braces_three_ifs,
     ["a", "b", "c"],
   );
   return lesson;
