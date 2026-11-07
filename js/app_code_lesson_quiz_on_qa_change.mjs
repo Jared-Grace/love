@@ -5,7 +5,7 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_button_skip_lesson } from "./app_learn_js_button_skip_lesson.mjs";
 import { greater_than_equal_1 } from "./greater_than_equal_1.mjs";
-import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
+import { app_learn_js_lesson_quiz_lambda } from "./app_learn_js_lesson_quiz_lambda.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
@@ -49,7 +49,7 @@ export function app_code_lesson_quiz_on_qa_change({
   );
   if (greater_than_equal_1(quiz_index)) {
     let on_back = function lambda() {
-      let r2 = app_code_lesson_quiz_lambda(context, quizzes, refresh);
+      let r2 = app_learn_js_lesson_quiz_lambda(context, quizzes, refresh);
       return r2;
     };
     let left = app_shared_button_back_text();
