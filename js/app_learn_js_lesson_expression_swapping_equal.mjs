@@ -9,7 +9,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_swapping_equal() {
+export function app_learn_js_lesson_expression_swapping_equal() {
   "the fourth swapping lesson: === and !== DO swap, because asking are-they-the-same (or are-they-different) reads the same either way. Both sides are already comparisons, so each is wrapped in ( ) - (a === b) === (b === a) - since a === b === b === a would otherwise chain left to right. The ordering comparisons < > <= >= are recalled as the ones that flip, so the quiz mixes === !== (true) with < > <= >= (false), all wrapped. Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
   let lesson = app_code_lesson_swapping_generic({
