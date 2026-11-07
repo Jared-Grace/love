@@ -3,7 +3,7 @@ import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-export function app_code_lesson_console_log_remainder_generic_remainder_word(
+export function app_learn_js_lesson_console_log_remainder_generic_remainder_word(
   host,
   remainder,
   divisor,

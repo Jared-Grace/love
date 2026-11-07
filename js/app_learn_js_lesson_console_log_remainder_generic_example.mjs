@@ -1,4 +1,4 @@
-import { app_code_lesson_console_log_remainder_generic_remainder_word } from "./app_code_lesson_console_log_remainder_generic_remainder_word.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_remainder_word } from "./app_learn_js_lesson_console_log_remainder_generic_remainder_word.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
@@ -84,7 +84,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_example(
     definition,
     "When we divide two numbers, the left over is called the ",
   );
-  app_code_lesson_console_log_remainder_generic_remainder_word(
+  app_learn_js_lesson_console_log_remainder_generic_remainder_word(
     definition,
     left,
     divisor,
