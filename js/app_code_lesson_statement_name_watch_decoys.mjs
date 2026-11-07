@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_decoy_lines_each_everywhere } from "./app_learn_js_lesson_decoy_lines_each_everywhere.mjs";
-import { app_code_lesson_decoy_lines_reversed } from "./app_code_lesson_decoy_lines_reversed.mjs";
+import { app_learn_js_lesson_decoy_lines_reversed } from "./app_learn_js_lesson_decoy_lines_reversed.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function app_code_lesson_statement_name_watch_decoys(question, answer) {
   arguments_assert(arguments, 2);
@@ -10,7 +10,7 @@ export function app_code_lesson_statement_name_watch_decoys(question, answer) {
     question,
     answer,
   );
-  let reversed = app_code_lesson_decoy_lines_reversed(question, answer);
+  let reversed = app_learn_js_lesson_decoy_lines_reversed(question, answer);
   let decoys = list_concat(everywhere, reversed);
   return decoys;
 }
