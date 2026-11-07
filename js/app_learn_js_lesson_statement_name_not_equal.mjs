@@ -4,7 +4,7 @@ import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_
 import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_not_equal } from "./app_learn_js_lesson_expression_not_equal.mjs";
-export function app_code_lesson_statement_name_not_equal() {
+export function app_learn_js_lesson_statement_name_not_equal() {
   arguments_assert(arguments, 0);
   ("two names asked whether they hold different numbers: let a = 7; let b = 4; let ",
     fn_name("not_equal"),
