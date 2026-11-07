@@ -1,7 +1,7 @@
 import { app_code_lesson_expression_equal_number_string_true_false_same_plain } from "./app_code_lesson_expression_equal_number_string_true_false_same_plain.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_number_and_true_false } from "./app_code_lesson_expression_equal_number_string_true_false_number_and_true_false.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_same_string } from "./app_code_lesson_expression_equal_number_string_true_false_same_string.mjs";
-import { app_code_lesson_expression_equal_number_string_true_false_look_alike } from "./app_code_lesson_expression_equal_number_string_true_false_look_alike.mjs";
+import { app_learn_js_lesson_expression_equal_number_string_true_false_look_alike } from "./app_learn_js_lesson_expression_equal_number_string_true_false_look_alike.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
@@ -37,7 +37,7 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
   function refill() {
     "four examples a screen, two true and two false, and the two false ones are the two shapes this lesson adds. The true lines are not filler - they are what stops the false ones being answerable by a rule the lesson never taught, so each false shape is shown beside a true line that looks like it";
     let v =
-      app_code_lesson_expression_equal_number_string_true_false_look_alike();
+      app_learn_js_lesson_expression_equal_number_string_true_false_look_alike();
     let v2 =
       app_code_lesson_expression_equal_number_string_true_false_same_string();
     let v3 =
