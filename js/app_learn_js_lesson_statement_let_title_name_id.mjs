@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_string_any_code } from "./app_code_string_any_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
-export function app_code_lesson_statement_let_title_name_id(words, name) {
+export function app_learn_js_lesson_statement_let_title_name_id(words, name) {
   arguments_assert(arguments, 2);
   ("a home title for a Statements lesson whose line is the one that first gives a value a name, shown with the name it teaches and the value left as three dots");
   ("Two lessons show that line and differ only in what the name is - a letter in one, a whole word in the other - so the name is the one thing asked for here and everything else is the same both times.");
