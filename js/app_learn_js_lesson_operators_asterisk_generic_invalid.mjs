@@ -1,5 +1,5 @@
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
-export function app_code_lesson_operators_asterisk_generic_invalid(
+export function app_learn_js_lesson_operators_asterisk_generic_invalid(
   root,
   operator,
   combine,
