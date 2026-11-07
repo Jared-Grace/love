@@ -4,7 +4,7 @@ import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_so
 import { app_learn_js_lesson_expression_comparing_a_comparison_expression } from "./app_learn_js_lesson_expression_comparing_a_comparison_expression.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_worked_example.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_recall } from "./app_learn_js_lesson_expression_comparing_a_comparison_recall.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison_title_name_id } from "./app_learn_js_lesson_expression_comparing_a_comparison_title_name_id.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
   "Without parentheses the unscramble will not accept the true or false first on an === or !== line, and that is right rather than a cost. === does commute, but only around its own two operands: 3 === 5 === false could be written false === (3 === 5), while written flat false === 3 === 5 reads as (false === 3) === 5 - a different line, and false where the original is true. The quiz offers only orderings whose every token has a button, so the commuted form is dropped for wanting parentheses this lesson never shows.";
   "It does accept the true or false first when the left side is < > <= or >=, because those bind tighter than === and !==, so true !== 2 < 5 still reads as true !== (2 < 5). Two lines of the same shape therefore accept different orderings. That is JS precedence showing through rather than a fault, and it is invisible here: swapping === and !== is not taught until several lessons later, so nothing has told the learner to try leading with the true or false.";
   let name_id =
-    app_code_lesson_expression_comparing_a_comparison_title_name_id();
+    app_learn_js_lesson_expression_comparing_a_comparison_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
     above,
