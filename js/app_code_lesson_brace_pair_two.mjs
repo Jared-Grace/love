@@ -3,7 +3,7 @@ import { app_learn_js_brace_pair_programs_two } from "./app_learn_js_brace_pair_
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
+import { app_learn_js_braces_two_nested } from "./app_learn_js_braces_two_nested.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_brace_pair_two() {
       "Here each pair has a colour of its own:",
     ]);
     let paired_div = html_div(box_paired);
-    let nested = app_code_braces_two_nested();
+    let nested = app_learn_js_braces_two_nested();
     app_code_code_dark_lines_braces_paired_random(paired_div, nested);
   }
   let name_id = app_code_lesson_statement_title_name_id(
