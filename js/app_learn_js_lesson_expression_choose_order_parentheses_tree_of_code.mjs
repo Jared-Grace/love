@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
-import { app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side } from "./app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side.mjs";
+import { app_learn_js_lesson_expression_choose_order_tree_of_code_parenthesis_side } from "./app_learn_js_lesson_expression_choose_order_tree_of_code_parenthesis_side.mjs";
 export function app_learn_js_lesson_expression_choose_order_parentheses_tree_of_code(
   code,
 ) {
@@ -10,7 +10,7 @@ export function app_learn_js_lesson_expression_choose_order_parentheses_tree_of_
   ("The hanging handed in is the one the parentheses ask for, because that is what this lesson teaches. Reading the line back, and picking the hanging off the end the parenthesis opens at, are the same work on every lesson whose parentheses move, so they are said once, next door.");
   ("The two builders write no parentheses of their own, and none are needed: the || these lines gather is the weaker of the two operators, so a printer working the need out off the shape writes the pair back wherever it stands. The lesson whose parentheses sometimes change nothing hands in the two that write them.");
   let tree =
-    app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side(
+    app_learn_js_lesson_expression_choose_order_tree_of_code_parenthesis_side(
       code,
       app_learn_js_expression_node_left_operator_first,
       app_learn_js_expression_node_right_operator_first,

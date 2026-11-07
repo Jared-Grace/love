@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_node_left_operator_first_parenthesis_wrapped } from "./app_learn_js_expression_node_left_operator_first_parenthesis_wrapped.mjs";
 import { app_learn_js_expression_node_right_operator_first_parenthesis_wrapped } from "./app_learn_js_expression_node_right_operator_first_parenthesis_wrapped.mjs";
-import { app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side } from "./app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side.mjs";
+import { app_learn_js_lesson_expression_choose_order_tree_of_code_parenthesis_side } from "./app_learn_js_lesson_expression_choose_order_tree_of_code_parenthesis_side.mjs";
 export function app_learn_js_lesson_expression_choose_order_parentheses_and_or_tree_of_code(
   code,
 ) {
@@ -10,7 +10,7 @@ export function app_learn_js_lesson_expression_choose_order_parentheses_and_or_t
   ("The two builders write their parentheses back into the shape rather than leaving them to be worked out. On this lesson one of the two lines carries a pair that changes nothing, and a shape that had forgotten it was written would print that line without it - so a learner would press on one line and be shown another.");
   ("Reading the line back, and picking the hanging off the end the parenthesis opens at, are the same work here as on the lesson next door whose parentheses always change something, so they are said once, there.");
   let tree =
-    app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side(
+    app_learn_js_lesson_expression_choose_order_tree_of_code_parenthesis_side(
       code,
       app_learn_js_expression_node_left_operator_first_parenthesis_wrapped,
       app_learn_js_expression_node_right_operator_first_parenthesis_wrapped,
