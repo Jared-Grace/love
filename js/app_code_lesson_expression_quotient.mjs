@@ -7,7 +7,7 @@ import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_gener
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
+import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_expression_quotient() {
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_quotient() {
   }
   function batch_get() {
     "the shared integer-division-family batch: four different divisors, one a quotient-0 case where the answer to pick is 0";
-    let list = app_code_lesson_divisor_quotient_batch(make);
+    let list = app_learn_js_lesson_divisor_quotient_batch(make);
     return list;
   }
   let name_id = title_name_id();

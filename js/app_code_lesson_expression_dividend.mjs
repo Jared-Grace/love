@@ -7,7 +7,7 @@ import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_ope
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
+import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_dividend() {
@@ -25,7 +25,7 @@ export function app_code_lesson_expression_dividend() {
   }
   function batch_get() {
     "the shared integer-division-family batch: four different divisors, one a quotient-0 case where the dividend is the smaller number";
-    let list = app_code_lesson_divisor_quotient_batch(make);
+    let list = app_learn_js_lesson_divisor_quotient_batch(make);
     return list;
   }
   let name_id = title_name_id();

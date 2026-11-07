@@ -5,7 +5,7 @@ import { app_code_lesson_expression_integer_division_title_name_id } from "./app
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
+import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
 import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
 import { list_add } from "./list_add.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_expression_integer_division() {
   }
   function refill() {
     "the shared integer-division-family batch: four different divisors, one a quotient-0 edge case";
-    let list2 = app_code_lesson_divisor_quotient_batch(make);
+    let list2 = app_learn_js_lesson_divisor_quotient_batch(make);
     return list2;
   }
   function decoys(question, answer) {

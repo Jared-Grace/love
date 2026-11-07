@@ -1,7 +1,7 @@
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
+import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_code_lesson_expression_whole_part_formula_recognize_decoys } from "./app_code_lesson_expression_whole_part_formula_recognize_decoys.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
@@ -29,7 +29,7 @@ export function app_code_lesson_expression_whole_part_formula() {
   }
   function batch_get() {
     "the shared integer-division-family batch: four different divisors, one a quotient-0 division";
-    let list = app_code_lesson_divisor_quotient_batch(make);
+    let list = app_learn_js_lesson_divisor_quotient_batch(make);
     return list;
   }
   let example_answer_label = "Whole part formula: ";
