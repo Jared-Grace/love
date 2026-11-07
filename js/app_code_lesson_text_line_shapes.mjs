@@ -6,7 +6,7 @@ import { list_add } from "./list_add.mjs";
 import { app_code_lesson_text_line_operator_mix_or_null } from "./app_code_lesson_text_line_operator_mix_or_null.mjs";
 import { app_code_lesson_text_line_value_sides } from "./app_code_lesson_text_line_value_sides.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_code_lesson_text_line_operand_kinds } from "./app_code_lesson_text_line_operand_kinds.mjs";
+import { app_learn_js_lesson_text_line_operand_kinds } from "./app_learn_js_lesson_text_line_operand_kinds.mjs";
 export function app_code_lesson_text_line_shapes(text) {
   arguments_assert(arguments, 1);
   ("every way a piece of text is SHAPED as a line of code, named. Whether it is parenthesised or flat, whether it writes one operator over and over or mixes two, which end a true or a false sits at, and what kinds of thing stand either side of the operators.");
@@ -28,7 +28,7 @@ export function app_code_lesson_text_line_shapes(text) {
   }
   let sides = app_code_lesson_text_line_value_sides(trimmed);
   list_add_multiple(found, sides);
-  let kinds = app_code_lesson_text_line_operand_kinds(trimmed);
+  let kinds = app_learn_js_lesson_text_line_operand_kinds(trimmed);
   list_add_multiple(found, kinds);
   return found;
 }

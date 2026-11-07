@@ -15,7 +15,7 @@ import { list_includes } from "./list_includes.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_alphabet_includes } from "./text_alphabet_includes.mjs";
 import { and } from "./and.mjs";
-export function app_code_lesson_text_line_operand_kinds(text) {
+export function app_learn_js_lesson_text_line_operand_kinds(text) {
   arguments_assert(arguments, 1);
   ("the kinds of thing a line of code puts on either side of its operators: a number, a written true or false, or a name. Nothing comes back for a piece that is not showing a line of code.");
   ("A kind is a third thing that can go unshown, apart from the parentheses and apart from which end a value sits at. 2 !== 2 === false compares a number to a number and then that answer to a value; divisor === 0 compares a name to a number. A lesson that only ever showed numbers and then asks about a name has told nobody what a name does there, and neither of the other two marks can see it.");
