@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_string_order_above } from "./app_code_lesson_expression_string_order_above.mjs";
+import { app_learn_js_lesson_expression_string_order_above } from "./app_learn_js_lesson_expression_string_order_above.mjs";
 import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
 import { app_code_lesson_expression_string_order_title_name_id } from "./app_code_lesson_expression_string_order_title_name_id.mjs";
 import { app_code_string_comparison_code } from "./app_code_string_comparison_code.mjs";
@@ -66,7 +66,7 @@ export function app_code_lesson_expression_string_order() {
   });
   return lesson;
   function above(root) {
-    let r = app_code_lesson_expression_string_order_above(root);
+    let r = app_learn_js_lesson_expression_string_order_above(root);
     return r;
   }
 }
