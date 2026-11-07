@@ -5,7 +5,7 @@ import { app_learn_js_category_expressions } from "./app_learn_js_category_expre
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-export function app_code_lesson_expression_which_part_first_title_name_id() {
+export function app_learn_js_lesson_expression_which_part_first_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: * / before + -, an Expressions lesson");
   ("The title names every operator the lesson mixes rather than one pair as an example, read off the same two classes the lesson draws its lines from, so widening a class widens the title with it.");

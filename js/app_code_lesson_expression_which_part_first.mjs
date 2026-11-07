@@ -5,7 +5,7 @@ import { app_learn_js_lesson_code_generic } from "./app_learn_js_lesson_code_gen
 import { app_learn_js_lesson_expression_which_part_first_answer } from "./app_learn_js_lesson_expression_which_part_first_answer.mjs";
 import { app_learn_js_lesson_expression_which_part_first_decoys } from "./app_learn_js_lesson_expression_which_part_first_decoys.mjs";
 import { app_learn_js_lesson_expression_which_part_first_expression } from "./app_learn_js_lesson_expression_which_part_first_expression.mjs";
-import { app_code_lesson_expression_which_part_first_title_name_id } from "./app_code_lesson_expression_which_part_first_title_name_id.mjs";
+import { app_learn_js_lesson_expression_which_part_first_title_name_id } from "./app_learn_js_lesson_expression_which_part_first_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 export function app_code_lesson_expression_which_part_first() {
   "which part of a line is replaced first, and what goes wrong when it is the other one: 1 + 2 * 4. ONE new idea on top of the replacing lessons, which each held a line with only one part that could be replaced - so the choice never arose and replacing landed on the right value whichever way it was read. Here there are two parts and only one of them may go first.";
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_which_part_first() {
   "The counter-example is the whole point and it is shown in full rather than asserted: the wrong replacement is carried through to 12 and set beside the true answer 9. A line that only said we cannot replace the 1 + 2 first would ask the learner to take the harm on trust, and the harm is the reason.";
   "Every number on the intro cards is worked out by add and multiply rather than typed, so the counter-example cannot quietly say something the code would not do - which on a card whose whole job is to be WRONG in a particular way is the one thing that would ruin it.";
   "Backwards is switched off. The answer is a PART of the question, so 2 * 4 belongs to every line that happens to contain it, and asking which code it came from could put two right buttons in front of the learner and mark one of them wrong.";
-  let name_id = app_code_lesson_expression_which_part_first_title_name_id();
+  let name_id = app_learn_js_lesson_expression_which_part_first_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   function questions_get() {
     let arg = next_arg();
