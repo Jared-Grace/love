@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_console_log_remainder_generic_code_of } from "./app_code_lesson_console_log_remainder_generic_code_of.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_code_of } from "./app_learn_js_lesson_console_log_remainder_generic_code_of.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_remainder_color_light } from "./app_code_remainder_color_light.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_row(
   table,
 ) {
   arguments_assert(arguments, 5);
-  let expr = app_code_lesson_console_log_remainder_generic_code_of(
+  let expr = app_learn_js_lesson_console_log_remainder_generic_code_of(
     n,
     percent,
     divisor,

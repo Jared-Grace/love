@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_console_log_remainder_generic_above } from "./app_learn_js_lesson_console_log_remainder_generic_above.mjs";
-import { app_code_lesson_console_log_remainder_generic_code_of } from "./app_code_lesson_console_log_remainder_generic_code_of.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_code_of } from "./app_learn_js_lesson_console_log_remainder_generic_code_of.mjs";
 import { app_code_lesson_console_log_remainder_generic_title_name_id } from "./app_code_lesson_console_log_remainder_generic_title_name_id.mjs";
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_console_log_remainder_generic(
     let base = integer_random(0, max);
     function each_offset(offset) {
       let n = add(base, offset);
-      let r = app_code_lesson_console_log_remainder_generic_code_of(
+      let r = app_learn_js_lesson_console_log_remainder_generic_code_of(
         n,
         percent,
         divisor,
