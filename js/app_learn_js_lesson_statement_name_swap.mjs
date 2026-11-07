@@ -10,7 +10,7 @@ import { list_last } from "./list_last.mjs";
 import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
 import { app_code_lesson_statement_name_temp_keep } from "./app_code_lesson_statement_name_temp_keep.mjs";
-export function app_code_lesson_statement_name_swap() {
+export function app_learn_js_lesson_statement_name_swap() {
   arguments_assert(arguments, 0);
   ("the last lesson of the swapping ladder: let temp = a; a = b; b = temp; swaps a and b - both are written out");
   let names = app_code_lesson_statement_name_value_names();
