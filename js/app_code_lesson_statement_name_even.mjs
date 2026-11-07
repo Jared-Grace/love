@@ -19,7 +19,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
-import { app_code_lesson_expression_remainder_2 } from "./app_code_lesson_expression_remainder_2.mjs";
+import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesson_expression_remainder_2.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_even() {
   arguments_assert(arguments, 0);
@@ -163,7 +163,7 @@ export function app_code_lesson_statement_name_even() {
     values_get,
     example_values: [10],
     step,
-    remember_lesson: app_code_lesson_expression_remainder_2,
+    remember_lesson: app_learn_js_lesson_expression_remainder_2,
     remember_parts: [
       "the ",
       remainder_word,

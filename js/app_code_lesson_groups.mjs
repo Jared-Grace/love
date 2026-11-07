@@ -3,7 +3,7 @@ import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbo
 import { app_code_lesson_operators_addition } from "./app_code_lesson_operators_addition.mjs";
 import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than } from "./app_learn_js_lesson_expression_arithmetic_less_than.mjs";
-import { app_code_lesson_expression_remainder_2 } from "./app_code_lesson_expression_remainder_2.mjs";
+import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesson_expression_remainder_2.mjs";
 import { app_code_lesson_expression_round_up } from "./app_code_lesson_expression_round_up.mjs";
 import { app_learn_js_lesson_expression_choose_order_compare } from "./app_learn_js_lesson_expression_choose_order_compare.mjs";
 import { app_learn_js_lesson_comment_note } from "./app_learn_js_lesson_comment_note.mjs";
@@ -74,7 +74,7 @@ export function app_code_lesson_groups() {
     },
     {
       parts: ["Remainder (", "%", ")"],
-      lesson: app_code_lesson_expression_remainder_2,
+      lesson: app_learn_js_lesson_expression_remainder_2,
     },
     {
       parts: ["Math functions"],

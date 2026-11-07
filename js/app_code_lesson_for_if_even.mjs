@@ -5,7 +5,7 @@ import { app_learn_js_for_if_skipped_parts } from "./app_learn_js_for_if_skipped
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_remainder_2 } from "./app_code_lesson_expression_remainder_2.mjs";
+import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesson_expression_remainder_2.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
@@ -47,7 +47,7 @@ export function app_code_lesson_for_if_even() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_expression_remainder_2,
+      app_learn_js_lesson_expression_remainder_2,
       [
         "a number ",
         "% 2",

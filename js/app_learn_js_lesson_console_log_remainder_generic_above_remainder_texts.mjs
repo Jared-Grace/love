@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_remainder_2 } from "./app_code_lesson_expression_remainder_2.mjs";
+import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesson_expression_remainder_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_remainde
     app_code_remember_from_lesson(
       intro,
       context,
-      app_code_lesson_expression_remainder_2,
+      app_learn_js_lesson_expression_remainder_2,
       [reminded],
     );
   } else {
