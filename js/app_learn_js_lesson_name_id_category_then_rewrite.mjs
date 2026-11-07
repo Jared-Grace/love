@@ -11,7 +11,7 @@ import { app_learn_js_lesson_name_id_category_then_maker_or_null } from "./app_l
 import { app_learn_js_lesson_name_id_category_then_painter_or_null } from "./app_learn_js_lesson_name_id_category_then_painter_or_null.mjs";
 import { app_learn_js_lesson_name_id_category_then_opens_category_is } from "./app_learn_js_lesson_name_id_category_then_opens_category_is.mjs";
 import { app_learn_js_lesson_name_id_category_then_paint_name } from "./app_learn_js_lesson_name_id_category_then_paint_name.mjs";
-export function app_code_lesson_name_id_category_then_rewrite(ast) {
+export function app_learn_js_lesson_name_id_category_then_rewrite(ast) {
   arguments_assert(arguments, 1);
   ("Puts one lesson file onto the shared unit: the three-deep nest that opened its title with the category word becomes a single painter, holding only the lines that were ever its own.");
   ("It changes the file it is handed and says what it did, rather than saying whether it could - a file it has no claim on is left exactly as it was, and the reason is handed back so a run over many files can be read afterwards.");
