@@ -1,7 +1,7 @@
 import { digits_3_random_next } from "./digits_3_random_next.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { identity } from "./identity.mjs";
-import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
+import { app_learn_js_lesson_functions_console_log_generic } from "./app_learn_js_lesson_functions_console_log_generic.mjs";
 import { js_code_call_arg_fn } from "./js_code_call_arg_fn.mjs";
 import { js_operator_first_code_call_only } from "./js_operator_first_code_call_only.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -16,7 +16,7 @@ import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_con
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { app_learn_js_div_cycle_code_multiple } from "./app_learn_js_div_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
-  var r = app_code_lesson_functions_console_log_generic({
+  var r = app_learn_js_lesson_functions_console_log_generic({
     above,
     lambda$code: identity,
     name_id_rights: [],

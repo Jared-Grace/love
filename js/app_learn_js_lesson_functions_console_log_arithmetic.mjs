@@ -3,7 +3,7 @@ import { js_code_statement } from "./js_code_statement.mjs";
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
 import { each } from "./each.mjs";
 import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
-import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
+import { app_learn_js_lesson_functions_console_log_generic } from "./app_learn_js_lesson_functions_console_log_generic.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_operator_to_expression_only } from "./js_operator_to_expression_only.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_functions_console_log_arithmetic() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  var r = app_code_lesson_functions_console_log_generic({
+  var r = app_learn_js_lesson_functions_console_log_generic({
     above,
     lambda$code: js_code_statement,
     name_id_rights: ["arithmetic"],

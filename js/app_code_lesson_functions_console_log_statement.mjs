@@ -5,10 +5,10 @@ import { html_cycle_bold_code } from "./html_cycle_bold_code.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { app_learn_js_container_light_blue_text } from "./app_learn_js_container_light_blue_text.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
-import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
+import { app_learn_js_lesson_functions_console_log_generic } from "./app_learn_js_lesson_functions_console_log_generic.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_statement() {
-  var r = app_code_lesson_functions_console_log_generic({
+  var r = app_learn_js_lesson_functions_console_log_generic({
     above,
     lambda$code: js_code_statement,
     name_id_rights: ["statement"],

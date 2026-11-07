@@ -11,7 +11,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
-export function app_code_lesson_functions_console_log_generic(params) {
+export function app_learn_js_lesson_functions_console_log_generic(params) {
   let lambda$code = property_get(params, "lambda$code");
   let name_id_rights = property_get(params, "name_id_rights");
   let next_arg = property_get(params, "next_arg");

@@ -8,7 +8,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
-import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
+import { app_learn_js_lesson_functions_console_log_generic } from "./app_learn_js_lesson_functions_console_log_generic.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_functions_console_log_string() {
     let found2 = [alone, unquoted, log_only];
     return found2;
   }
-  var r = app_code_lesson_functions_console_log_generic({
+  var r = app_learn_js_lesson_functions_console_log_generic({
     decoys,
     backwards_decoys,
     above,
