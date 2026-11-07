@@ -8,7 +8,7 @@ import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_learn_js_category_statements } from "./app_learn_js_category_statements.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
-export function app_code_lesson_statement_name_true_false_title_name_id() {
+export function app_learn_js_lesson_statement_name_true_false_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: giving true or false a name, followed by the line that does it");
   ("Or rather than a comma, because a name holds one of the two and never both - which of them is the choice the line makes.");
