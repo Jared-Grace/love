@@ -7,7 +7,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_style_normal_span } from "./app_code_style_normal_span.mjs";
-export function app_code_lesson_name_quoted_letter_line(
+export function app_learn_js_lesson_name_quoted_letter_line(
   parent,
   name_source,
   name_copy,

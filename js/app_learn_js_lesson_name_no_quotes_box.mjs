@@ -10,7 +10,7 @@ import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.m
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
-import { app_code_lesson_name_quoted_letter_line } from "./app_code_lesson_name_quoted_letter_line.mjs";
+import { app_learn_js_lesson_name_quoted_letter_line } from "./app_learn_js_lesson_name_quoted_letter_line.mjs";
 export function app_learn_js_lesson_name_no_quotes_box(
   root,
   name_source,
@@ -61,6 +61,11 @@ export function app_learn_js_lesson_name_no_quotes_box(
   html_span_text(line_two, " are inside ");
   app_code_span_code_dark_names(line_two, name_source, names);
   html_span_text(line_two, ")");
-  app_code_lesson_name_quoted_letter_line(box, name_source, name_copy, names);
+  app_learn_js_lesson_name_quoted_letter_line(
+    box,
+    name_source,
+    name_copy,
+    names,
+  );
   return box;
 }
