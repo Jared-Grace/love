@@ -14,7 +14,7 @@ import { list_take } from "./list_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_shared_button_code_unframed } from "./app_shared_button_code_unframed.mjs";
 import { each } from "./each.mjs";
-export function app_code_lesson_quiz_braces_choose_colored_generic(
+export function app_learn_js_lesson_quiz_braces_choose_colored_generic(
   parent,
   qa,
   on_success,

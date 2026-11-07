@@ -1,4 +1,4 @@
-import { app_code_lesson_quiz_braces_choose_colored_generic } from "./app_code_lesson_quiz_braces_choose_colored_generic.mjs";
+import { app_learn_js_lesson_quiz_braces_choose_colored_generic } from "./app_learn_js_lesson_quiz_braces_choose_colored_generic.mjs";
 export function app_learn_js_lesson_quiz_braces_choose_colored_backwards(
   parent,
   info,
@@ -8,7 +8,7 @@ export function app_learn_js_lesson_quiz_braces_choose_colored_backwards(
   batch_get,
 ) {
   "choosing the code of coloured braces, among code in the same two colours";
-  app_code_lesson_quiz_braces_choose_colored_generic(
+  app_learn_js_lesson_quiz_braces_choose_colored_generic(
     parent,
     qa,
     on_success,
