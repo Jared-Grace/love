@@ -4,7 +4,7 @@ import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson
 import { app_learn_js_batch_name_watched } from "./app_learn_js_batch_name_watched.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-import { app_code_lesson_statement_name_watch_decoys } from "./app_code_lesson_statement_name_watch_decoys.mjs";
+import { app_learn_js_lesson_statement_name_watch_decoys } from "./app_learn_js_lesson_statement_name_watch_decoys.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 export function app_code_lesson_statement_name_watched_titled(
   pair,
@@ -26,7 +26,7 @@ export function app_code_lesson_statement_name_watched_titled(
     unscramble: false,
     lines: true,
     steps,
-    decoys: app_code_lesson_statement_name_watch_decoys,
+    decoys: app_learn_js_lesson_statement_name_watch_decoys,
     backwards_decoys: property_get_or_null(pair, "backwards_decoys_first"),
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
