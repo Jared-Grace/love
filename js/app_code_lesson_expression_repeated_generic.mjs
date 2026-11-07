@@ -1,7 +1,7 @@
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_lesson_expression_repeated_generic_expanded_code } from "./app_code_lesson_expression_repeated_generic_expanded_code.mjs";
+import { app_learn_js_lesson_expression_repeated_generic_expanded_code } from "./app_learn_js_lesson_expression_repeated_generic_expanded_code.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -48,7 +48,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
     let left = list_get(chosen, 0);
     let count = list_get(chosen, 1);
     let question = js_code_binary_spaced_nb(left, symbol, count);
-    let answer = app_code_lesson_expression_repeated_generic_expanded_code(
+    let answer = app_learn_js_lesson_expression_repeated_generic_expanded_code(
       left,
       count,
       expand_symbol,

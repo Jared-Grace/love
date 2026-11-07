@@ -3,7 +3,7 @@ import { text_to } from "./text_to.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_join } from "./list_join.mjs";
-export function app_code_lesson_expression_repeated_generic_expanded_code(
+export function app_learn_js_lesson_expression_repeated_generic_expanded_code(
   left,
   count,
   expand_symbol,
