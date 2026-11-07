@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_render_next } from "./app_code_lesson_quiz_render_next.mjs";
 import { not } from "./not.mjs";
-export function app_code_lesson_quiz_has_next_step(r4, r, last_lesson_end) {
+export function app_learn_js_lesson_quiz_has_next_step(r4, r, last_lesson_end) {
   arguments_assert(arguments, 3);
   let on_next = property_get(r4, "on_next");
   let qli = property_get(r4, "qli");
