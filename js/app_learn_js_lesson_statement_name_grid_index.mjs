@@ -34,7 +34,7 @@ import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_co
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
-export function app_code_lesson_statement_name_grid_index() {
+export function app_learn_js_lesson_statement_name_grid_index() {
   arguments_assert(arguments, 0);
   ("the number of a chair from its row and column: let start = row * columns; let chair = start + column; - the grid-position lesson turned around");
   ("The example is the grid-position lesson's example turned back, row 2 column 1 in rows of 3 being chair 7, so the two lessons read as one fact seen from both ends, over the same picture. It shares that lesson's names and colours: the blue chairs blue, chair 7 and the green chair green, a row number the row headings' colour and a column number the column headings', and the 3 chairs in a row the fifth colour, as in that lesson.");
