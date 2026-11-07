@@ -26,7 +26,7 @@ import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_true() {
+export function app_learn_js_lesson_if_true() {
   arguments_assert(arguments, 0);
   ('the first if: if (true) { console.log("joy"); } writes out joy, the same as the line inside it would alone');
   ("The first lesson of the if stage, in the roadmap the human gave on 2026-10-07: expressions, statements, if then else, looping, functions, each as easy as it can be made. The human's plan is three lessons - if (true) writes out, if (false) writes out nothing, then if with a name that may hold either - and this is the first. Between the second and the name, a comparison inside the parentheses, if (2 < 3), was added on the human's word, because it is one line and the learner has already worked 2 < 3 out inside console.log.");

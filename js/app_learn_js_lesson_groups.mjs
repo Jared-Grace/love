@@ -8,7 +8,7 @@ import { app_learn_js_lesson_expression_round_up } from "./app_learn_js_lesson_e
 import { app_learn_js_lesson_expression_choose_order_compare } from "./app_learn_js_lesson_expression_choose_order_compare.mjs";
 import { app_learn_js_lesson_comment_note } from "./app_learn_js_lesson_comment_note.mjs";
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
-import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
+import { app_learn_js_lesson_if_true } from "./app_learn_js_lesson_if_true.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_learn_js_lesson_braces_run_nested } from "./app_learn_js_lesson_braces_run_nested.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
@@ -94,7 +94,7 @@ export function app_learn_js_lesson_groups() {
     },
     {
       parts: ["Branching: ", "if"],
-      lesson: app_code_lesson_if_true,
+      lesson: app_learn_js_lesson_if_true,
     },
     {
       parts: ["Multiple branches: ", "else"],
