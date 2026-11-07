@@ -7,7 +7,7 @@ import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_identifiers_underscores() {
+export function app_learn_js_lesson_identifiers_underscores() {
   "The lesson that a name is joined up with underscores rather than hyphens, and the panel under it showing how the two marks differ to the eye, the hyphen being shorter and near the middle of the line while the underscore is longer and near the bottom.";
   let separator_valid = "_";
   let separator_valid_name = "underscore";
