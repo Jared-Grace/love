@@ -6,7 +6,7 @@ import { add_1 } from "./add_1.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { range_map } from "./range_map.mjs";
-export function app_code_expression_flat_numbers_symbols(code) {
+export function app_learn_js_expression_flat_numbers_symbols(code) {
   arguments_assert(arguments, 1);
   ("a line of arithmetic carrying no parentheses pulled apart into the numbers standing on it and the operators standing between them: 2 + 9 / 3 - 4 gives back 2, 9, 3, 4 and +, /, -");
   ("Both readings of a line come from the one walk of it. A reader that took only the operators out would spell the every-other-word arithmetic a second time, and that arithmetic is the one place a reader of a line can be wrong while the line it read looks perfectly right.");
