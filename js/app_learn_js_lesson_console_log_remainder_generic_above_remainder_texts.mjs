@@ -12,7 +12,7 @@ import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_lesson_console_log_remainder_generic_above_remainder_texts(
+export function app_learn_js_lesson_console_log_remainder_generic_above_remainder_texts(
   divisor,
   intro,
   root,

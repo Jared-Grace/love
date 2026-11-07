@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_console_log_remainder_generic_above_remainder_texts } from "./app_code_lesson_console_log_remainder_generic_above_remainder_texts.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_above_remainder_texts } from "./app_learn_js_lesson_console_log_remainder_generic_above_remainder_texts.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_row_count } from "./app_code_lesson_console_log_remainder_generic_above_row_count.mjs";
 import { property_get } from "./property_get.mjs";
 import { range } from "./range.mjs";
@@ -16,14 +16,15 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_has_insi
   context,
 }) {
   arguments_assert(arguments, 1);
-  let r4 = app_code_lesson_console_log_remainder_generic_above_remainder_texts(
-    divisor,
-    intro,
-    root,
-    divisor_text,
-    percent,
-    context,
-  );
+  let r4 =
+    app_learn_js_lesson_console_log_remainder_generic_above_remainder_texts(
+      divisor,
+      intro,
+      root,
+      divisor_text,
+      percent,
+      context,
+    );
   let r = app_code_lesson_console_log_remainder_generic_above_row_count(
     r4,
     modulo_fn,
