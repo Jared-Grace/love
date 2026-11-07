@@ -4,7 +4,7 @@ import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { add_1 } from "./add_1.mjs";
-import { app_code_lesson_fn_id_set } from "./app_code_lesson_fn_id_set.mjs";
+import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_lines_solved } from "./app_code_lesson_lines_solved.mjs";
 import { app_code_line_shape } from "./app_code_line_shape.mjs";
@@ -24,7 +24,7 @@ export function app_code_lessons_shapes(rounds) {
   let place = 0;
   for (let fn of fns) {
     place = add_1(place);
-    let lesson = app_code_lesson_fn_id_set(fn);
+    let lesson = app_learn_js_lesson_fn_id_set(fn);
     let id = property_get(lesson, "id");
     let lines = app_code_lesson_lines_solved(lesson, rounds);
     let operators = 0;

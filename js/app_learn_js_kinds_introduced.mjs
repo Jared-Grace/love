@@ -8,7 +8,7 @@ import { list_get } from "./list_get.mjs";
 import { add_1 } from "./add_1.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_code_lesson_fn_id_set } from "./app_code_lesson_fn_id_set.mjs";
+import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { app_code_lesson_lines_solved } from "./app_code_lesson_lines_solved.mjs";
 import { app_code_line_shape } from "./app_code_line_shape.mjs";
 import { null_is } from "./null_is.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_kinds_introduced(rounds) {
     if (brings_nothing) {
       continue;
     }
-    let lesson = app_code_lesson_fn_id_set(fn);
+    let lesson = app_learn_js_lesson_fn_id_set(fn);
     let lines = app_code_lesson_lines_solved(lesson, rounds);
     let carrying = 0;
     let counted = 0;

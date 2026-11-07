@@ -1,4 +1,4 @@
-import { app_code_lesson_fn_id_set } from "./app_code_lesson_fn_id_set.mjs";
+import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { app_code_quiz_lesson_lenient_names } from "./app_code_quiz_lesson_lenient_names.mjs";
 import { app_code_quiz_leniency_readings } from "./app_code_quiz_leniency_readings.mjs";
@@ -20,7 +20,7 @@ export function app_code_quiz_lenient_names_walked() {
   let names = [];
   let walked = 0;
   for (let fn of fns) {
-    let lesson = app_code_lesson_fn_id_set(fn);
+    let lesson = app_learn_js_lesson_fn_id_set(fn);
     walked = walked + 1;
     let kept = app_code_quiz_lesson_lenient_names(lesson);
     function held(name) {
