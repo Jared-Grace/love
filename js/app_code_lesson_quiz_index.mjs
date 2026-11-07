@@ -9,7 +9,7 @@ import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_feedback_slot_style } from "./app_code_feedback_slot_style.mjs";
+import { app_learn_js_feedback_slot_style } from "./app_learn_js_feedback_slot_style.mjs";
 import { app_learn_js_feedback_cell } from "./app_learn_js_feedback_cell.mjs";
 import { app_learn_js_content_cap } from "./app_learn_js_content_cap.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
@@ -55,7 +55,7 @@ export function app_code_lesson_quiz_index(
   let parent_container = html_div(parent);
   ("one feedback slot holds the success message and the correction overlapped in a single grid cell, so it is always as tall as the taller of the two and nothing shifts when Show me the answer swaps one for the other");
   let feedback_slot = html_div(parent_container);
-  app_code_feedback_slot_style(feedback_slot);
+  app_learn_js_feedback_slot_style(feedback_slot);
   let container_correction = html_div(feedback_slot);
   let container_success_message = html_div(feedback_slot);
   each(
