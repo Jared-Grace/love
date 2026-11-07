@@ -3,7 +3,7 @@ import { text_integers } from "./text_integers.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_remainder_divide_backwards_decoys(
+export function app_learn_js_lesson_expression_remainder_divide_backwards_decoys(
   shown_formula,
   answer_percent,
 ) {

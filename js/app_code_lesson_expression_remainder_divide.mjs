@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_remainder_divide_quizzes_get } from "./app_code_lesson_expression_remainder_divide_quizzes_get.mjs";
 import { app_code_lesson_expression_remainder_divide_make } from "./app_code_lesson_expression_remainder_divide_make.mjs";
-import { app_code_lesson_expression_remainder_divide_backwards_decoys } from "./app_code_lesson_expression_remainder_divide_backwards_decoys.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_backwards_decoys } from "./app_learn_js_lesson_expression_remainder_divide_backwards_decoys.mjs";
 import { app_code_lesson_expression_remainder_divide_recognize_decoys } from "./app_code_lesson_expression_remainder_divide_recognize_decoys.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_above } from "./app_learn_js_lesson_expression_remainder_divide_above.mjs";
 import { app_code_lesson_expression_remainder_divide_title_name_id } from "./app_code_lesson_expression_remainder_divide_title_name_id.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_expression_remainder_divide() {
     return r5;
   }
   function backwards_decoys(shown_formula, answer_percent) {
-    let r2 = app_code_lesson_expression_remainder_divide_backwards_decoys(
+    let r2 = app_learn_js_lesson_expression_remainder_divide_backwards_decoys(
       shown_formula,
       answer_percent,
     );
