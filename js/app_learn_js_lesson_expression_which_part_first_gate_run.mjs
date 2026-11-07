@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_which_part_first_line_assert } from "./app_code_lesson_expression_which_part_first_line_assert.mjs";
+import { app_learn_js_lesson_expression_which_part_first_line_assert } from "./app_learn_js_lesson_expression_which_part_first_line_assert.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_expression_which_part_first_gate_run() {
   let seen = [];
   let count = 200;
   for (let i = 0; less_than(i, count); i++) {
-    let pairing = app_code_lesson_expression_which_part_first_line_assert(
+    let pairing = app_learn_js_lesson_expression_which_part_first_line_assert(
       strong_symbols,
       weak_symbols,
     );

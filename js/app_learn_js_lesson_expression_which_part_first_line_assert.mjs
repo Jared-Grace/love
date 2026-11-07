@@ -12,7 +12,7 @@ import { false_is_assert_json } from "./false_is_assert_json.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_code_lesson_expression_which_part_first_line_assert(
+export function app_learn_js_lesson_expression_which_part_first_line_assert(
   strong_symbols,
   weak_symbols,
 ) {
