@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_parentheses_or_title_name_id } from "./app_learn_js_lesson_expression_parentheses_or_title_name_id.mjs";
 import { app_code_lesson_expression_parentheses_value_generic } from "./app_code_lesson_expression_parentheses_value_generic.mjs";
 import { app_learn_js_lesson_expression_parentheses_or_intro } from "./app_learn_js_lesson_expression_parentheses_or_intro.mjs";
-import { app_code_lesson_expression_parentheses_or_value_expression } from "./app_code_lesson_expression_parentheses_or_value_expression.mjs";
+import { app_learn_js_lesson_expression_parentheses_or_value_expression } from "./app_learn_js_lesson_expression_parentheses_or_value_expression.mjs";
 export function app_code_lesson_expression_parentheses_or() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: false && (true || true) asked for its value, with nothing to press");
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_parentheses_or() {
   let lesson = app_code_lesson_expression_parentheses_value_generic(
     name_id,
     app_learn_js_lesson_expression_parentheses_or_intro,
-    app_code_lesson_expression_parentheses_or_value_expression,
+    app_learn_js_lesson_expression_parentheses_or_value_expression,
   );
   return lesson;
 }
