@@ -245,7 +245,7 @@ import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 import { app_learn_js_lesson_if_false } from "./app_learn_js_lesson_if_false.mjs";
 import { app_learn_js_lesson_if_less_than } from "./app_learn_js_lesson_if_less_than.mjs";
 import { app_learn_js_lesson_if_name } from "./app_learn_js_lesson_if_name.mjs";
-import { app_code_lesson_if_names_less_than } from "./app_code_lesson_if_names_less_than.mjs";
+import { app_learn_js_lesson_if_names_less_than } from "./app_learn_js_lesson_if_names_less_than.mjs";
 import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
 import { app_code_lesson_if_steps } from "./app_code_lesson_if_steps.mjs";
 import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
@@ -606,7 +606,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_if_false,
     app_learn_js_lesson_if_less_than,
     app_learn_js_lesson_if_name,
-    app_code_lesson_if_names_less_than,
+    app_learn_js_lesson_if_names_less_than,
     app_code_lesson_if_not,
     app_code_lesson_if_steps,
     app_code_lesson_number_text_plus,

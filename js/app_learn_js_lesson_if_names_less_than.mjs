@@ -16,7 +16,7 @@ import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.m
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_if_cases_generic } from "./app_learn_js_lesson_if_cases_generic.mjs";
-export function app_code_lesson_if_names_less_than() {
+export function app_learn_js_lesson_if_names_less_than() {
   arguments_assert(arguments, 0);
   ('names compared inside an if: let a = 2; let b = 3; if (a < b) { console.log("love"); } console.log("joy"); writes out love and joy, and with a and b swapped writes out joy alone');
   ("It puts If less than and If a name together: the numbers compared are held by names, so the learner reads what each name holds and then works the comparison out. Picked by Claude 2026-10-07 among three the human chose all of; it comes before If not, because it asks nothing the learner has not just done twice.");
