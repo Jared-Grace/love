@@ -11,7 +11,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rows_down } from "./app_code_lesson_statement_name_rows_down.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_pages_read() {
+export function app_learn_js_lesson_statement_name_pages_read() {
   arguments_assert(arguments, 0);
   ("how many pages from one page to a later one, counting both: let after = last - first; let pages = after + 1; - chosen by the human 2026-10-01 as the next formula lesson. In DSA it is how many items a range holds when both ends count, and forgetting the + 1 is the off-by-one mistake, often called the fencepost error.");
   ("Two lines rather than let pages = last - first + 1;, which fits in 30 characters but asks the learner to read two operators in one line, a thing no lesson has taught yet. The first line's name says what subtracting counts: the pages after the first one. Not picked: apart, which says how far and not what is counted.");
