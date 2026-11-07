@@ -7,7 +7,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { text_combine } from "./text_combine.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-export function app_code_lesson_comment_after_code_batch() {
+export function app_learn_js_lesson_comment_after_code_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each is one line that writes out what two numbers add up to, and after it on the same line two slashes and another line that would have written out");
   ("What stands after the slashes is code rather than words. Words after the slashes would be skipped whether or not a learner knew why, so they could never show that a learner had read where the slashes are; code after them is a line that would have written something, and the question is whether it does.");
