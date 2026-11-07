@@ -4,7 +4,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
 import { app_code_lesson_expression_whole_part_both_decoys } from "./app_code_lesson_expression_whole_part_both_decoys.mjs";
-import { app_code_lesson_expression_whole_part_both_decoys_backwards } from "./app_code_lesson_expression_whole_part_both_decoys_backwards.mjs";
+import { app_learn_js_lesson_expression_whole_part_both_decoys_backwards } from "./app_learn_js_lesson_expression_whole_part_both_decoys_backwards.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { noop } from "./noop.mjs";
@@ -43,7 +43,7 @@ export function app_code_lesson_expression_whole_part_both() {
     return r4;
   }
   function decoys_backwards(whole_part_text, division) {
-    let r5 = app_code_lesson_expression_whole_part_both_decoys_backwards(
+    let r5 = app_learn_js_lesson_expression_whole_part_both_decoys_backwards(
       whole_part_text,
       division,
     );

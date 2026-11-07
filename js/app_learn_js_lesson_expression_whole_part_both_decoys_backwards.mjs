@@ -4,7 +4,7 @@ import { equal } from "./equal.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { multiply } from "./multiply.mjs";
-export function app_code_lesson_expression_whole_part_both_decoys_backwards(
+export function app_learn_js_lesson_expression_whole_part_both_decoys_backwards(
   whole_part_text,
   division,
 ) {
