@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_names_binary_title_name_id } from "./app_code_lesson_statement_names_binary_title_name_id.mjs";
-import { app_code_lesson_statement_names_binary_programs } from "./app_code_lesson_statement_names_binary_programs.mjs";
+import { app_learn_js_lesson_statement_names_binary_programs } from "./app_learn_js_lesson_statement_names_binary_programs.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_learn_js_lesson_statement_names_binary_above } from "./app_learn_js_lesson_statement_names_binary_above.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_statement_names_binary_decoys({
   function programs_get() {
     "the programs of one screen: a fresh draw of pairs, each written as its lines";
     let pairs = pairs_get();
-    let codes = app_code_lesson_statement_names_binary_programs(
+    let codes = app_learn_js_lesson_statement_names_binary_programs(
       symbol,
       pairs,
       answer_name,
