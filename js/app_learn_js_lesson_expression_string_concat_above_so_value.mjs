@@ -1,7 +1,7 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_string_hello } from "./app_code_lesson_expression_string_hello.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson_expression_string_concat_pair.mjs";
+import { app_learn_js_lesson_expression_string_concat_pair } from "./app_learn_js_lesson_expression_string_concat_pair.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_lesson_expression_string_concat_above_remember_line } from "./app_learn_js_lesson_expression_string_concat_above_remember_line.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_expression_string_concat_above_so_value(
   context,
 ) {
   arguments_assert(arguments, 2);
-  let two = app_code_lesson_expression_string_concat_pair();
+  let two = app_learn_js_lesson_expression_string_concat_pair();
   let a = list_get(two, 0);
   let r = app_learn_js_lesson_expression_string_concat_above_remember_line(
     two,

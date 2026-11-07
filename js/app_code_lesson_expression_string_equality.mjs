@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson_expression_string_concat_pair.mjs";
+import { app_learn_js_lesson_expression_string_concat_pair } from "./app_learn_js_lesson_expression_string_concat_pair.mjs";
 import { app_code_lesson_expression_string_equality_title_name_id } from "./app_code_lesson_expression_string_equality_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
@@ -57,7 +57,7 @@ export function app_code_lesson_expression_string_equality() {
   }
   function refill() {
     "four comparisons over ONE shared pair of words, so only the operator and whether the two sides match change from one example to the next: triple-equals and not-equals, each shown true and false, a balanced two true and two false";
-    let two = app_code_lesson_expression_string_concat_pair();
+    let two = app_learn_js_lesson_expression_string_concat_pair();
     let word_a = list_get(two, 0);
     let word_b = list_get(two, 1);
     function one(combo) {

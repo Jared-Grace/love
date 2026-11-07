@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_expression_string_concat_above } from "./app_learn_js_lesson_expression_string_concat_above.mjs";
-import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson_expression_string_concat_pair.mjs";
+import { app_learn_js_lesson_expression_string_concat_pair } from "./app_learn_js_lesson_expression_string_concat_pair.mjs";
 import { app_code_lesson_expression_string_concat_title_name_id } from "./app_code_lesson_expression_string_concat_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_string_concat() {
   "the third string lesson - concatenation: a plus between two strings combines them into one, and the value is the two texts run together with no quotes and no space. The learner meets the plus doing something different than it does for numbers; the words are drawn from the shared verse so they carry meaning, and the two examples come from distinct words.";
   function pair_code(index) {
     "one question: the two words each in quotes, joined by a plus, as a code string";
-    let two = app_code_lesson_expression_string_concat_pair();
+    let two = app_learn_js_lesson_expression_string_concat_pair();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
     let code_a = app_code_string_code(a);
