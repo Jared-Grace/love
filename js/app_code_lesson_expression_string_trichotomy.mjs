@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_number_trichotomy } from "./app_code_lesson_expression_number_trichotomy.mjs";
+import { app_learn_js_lesson_expression_number_trichotomy } from "./app_learn_js_lesson_expression_number_trichotomy.mjs";
 import { app_code_lesson_expression_string_order } from "./app_code_lesson_expression_string_order.mjs";
 import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
 import { app_code_lesson_expression_string_trichotomy_title_name_id } from "./app_code_lesson_expression_string_trichotomy_title_name_id.mjs";
@@ -94,7 +94,7 @@ export function app_code_lesson_expression_string_trichotomy() {
     app_code_remember_from_lesson(
       transfer,
       context,
-      app_code_lesson_expression_number_trichotomy,
+      app_learn_js_lesson_expression_number_trichotomy,
       [
         "two numbers are always the same (",
         "===",

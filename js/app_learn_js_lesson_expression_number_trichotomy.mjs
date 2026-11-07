@@ -16,7 +16,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_number_trichotomy() {
+export function app_learn_js_lesson_expression_number_trichotomy() {
   "the trichotomy of comparing two numbers: any two numbers are the same, or the first is smaller, or the first is bigger - exactly one of the three, and that is WHY there are three cases (either they are the same, or if different one must be bigger than the other). Taught on numbers first, where same/smaller/bigger is the most familiar intuition, so the structure is met before the next lesson carries the very same structure over to strings. Uses the three operators the learner already knows one at a time - === for same, < for smaller, > for bigger. Placed just after the numeric comparison lessons and before the string ordering lessons.";
   let equals_operator = "===";
   let less_operator = "<";
