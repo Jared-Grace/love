@@ -8,7 +8,7 @@ import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_minus_times() {
+export function app_learn_js_lesson_expression_minus_times() {
   "mixing - and * in one expression: a - b * c and a * b - c; * is stronger than -, so we always do it first, even when it comes later; the hazard here is going below 0, so we use the minus operator's left_transform (add) to build a = result + b * c - then a - b * c is a chosen result that never drops under 0";
   let minus = js_operator_minus();
   let minus_symbol = property_get(minus, "operator");

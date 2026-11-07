@@ -60,7 +60,7 @@ import { app_code_lesson_expression_plus_times } from "./app_code_lesson_express
 import { app_learn_js_lesson_expression_choose_order_plus_divide } from "./app_learn_js_lesson_expression_choose_order_plus_divide.mjs";
 import { app_code_lesson_expression_plus_divide } from "./app_code_lesson_expression_plus_divide.mjs";
 import { app_learn_js_lesson_expression_choose_order_minus_times } from "./app_learn_js_lesson_expression_choose_order_minus_times.mjs";
-import { app_code_lesson_expression_minus_times } from "./app_code_lesson_expression_minus_times.mjs";
+import { app_learn_js_lesson_expression_minus_times } from "./app_learn_js_lesson_expression_minus_times.mjs";
 import { app_learn_js_lesson_expression_choose_order_minus_divide } from "./app_learn_js_lesson_expression_choose_order_minus_divide.mjs";
 import { app_learn_js_lesson_expression_minus_divide } from "./app_learn_js_lesson_expression_minus_divide.mjs";
 import { app_code_lesson_expression_which_part_first } from "./app_code_lesson_expression_which_part_first.mjs";
@@ -421,7 +421,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_expression_choose_order_plus_divide,
     app_code_lesson_expression_plus_divide,
     app_learn_js_lesson_expression_choose_order_minus_times,
-    app_code_lesson_expression_minus_times,
+    app_learn_js_lesson_expression_minus_times,
     app_learn_js_lesson_expression_choose_order_minus_divide,
     app_learn_js_lesson_expression_minus_divide,
     app_code_lesson_expression_which_part_first,
