@@ -14,7 +14,7 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
 import { app_learn_js_lesson_statement_name_value_above } from "./app_learn_js_lesson_statement_name_value_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_statement_name_value() {
+export function app_learn_js_lesson_statement_name_value() {
   arguments_assert(arguments, 0);
   ('giving a value a name, and reading it back: let a = "grape"; on one line and console.log(a); on the next writes out grape');
   ("The one new fact, and the first lesson in the course with a line that runs and writes nothing out. Every line that ran up to here came to a value. Here the first line does not write anything out at all - it puts a value away under a name - and the second line hands that name to console.log and gets the value back.");

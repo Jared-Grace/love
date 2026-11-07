@@ -118,7 +118,7 @@ import { app_learn_js_lesson_expression_choose_order_or } from "./app_learn_js_l
 import { app_learn_js_lesson_expression_comparison_or } from "./app_learn_js_lesson_expression_comparison_or.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength } from "./app_learn_js_lesson_expression_choose_order_same_strength.mjs";
 import { app_learn_js_lesson_expression_choose_order_three } from "./app_learn_js_lesson_expression_choose_order_three.mjs";
-import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
+import { app_learn_js_lesson_statement_name_value } from "./app_learn_js_lesson_statement_name_value.mjs";
 import { app_learn_js_lesson_statement_name_number } from "./app_learn_js_lesson_statement_name_number.mjs";
 import { app_learn_js_lesson_statement_name_true_false } from "./app_learn_js_lesson_statement_name_true_false.mjs";
 import { app_learn_js_lesson_statement_name_identifier } from "./app_learn_js_lesson_statement_name_identifier.mjs";
@@ -431,7 +431,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_expression_comparison_or,
     app_learn_js_lesson_expression_choose_order_same_strength,
     app_learn_js_lesson_expression_choose_order_three,
-    app_code_lesson_statement_name_value,
+    app_learn_js_lesson_statement_name_value,
     app_learn_js_lesson_statement_name_number,
     app_learn_js_lesson_statement_name_true_false,
     app_learn_js_lesson_statement_name_identifier,

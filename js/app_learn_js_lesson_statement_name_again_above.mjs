@@ -6,7 +6,7 @@ import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_less
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
+import { app_learn_js_lesson_statement_name_value } from "./app_learn_js_lesson_statement_name_value.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_statement_name_again_above(root, context) {
   app_code_remember_from_lesson(
     box_before,
     context,
-    app_code_lesson_statement_name_value,
+    app_learn_js_lesson_statement_name_value,
     ["the cup called ", name, has],
   );
   ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");

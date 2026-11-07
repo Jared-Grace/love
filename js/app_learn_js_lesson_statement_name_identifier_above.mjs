@@ -5,7 +5,7 @@ import { app_learn_js_lesson_statement_name_identifier_word } from "./app_learn_
 import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_lesson_statement_name_value_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
+import { app_learn_js_lesson_statement_name_value } from "./app_learn_js_lesson_statement_name_value.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_statement_name_identifier_above(
   app_code_remember_from_lesson(
     box_before,
     context,
-    app_code_lesson_statement_name_value,
+    app_learn_js_lesson_statement_name_value,
     ["a variable has a name, and holds one value"],
   );
   app_learn_js_div_cycle_code(box_before, [

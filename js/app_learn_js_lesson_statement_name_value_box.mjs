@@ -5,7 +5,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
+import { app_learn_js_lesson_statement_name_value } from "./app_learn_js_lesson_statement_name_value.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_learn_js_lesson_statement_name_value_box(root, context) {
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_statement_name_value_box(root, context) {
   app_code_remember_from_lesson(
     box,
     context,
-    app_code_lesson_statement_name_value,
+    app_learn_js_lesson_statement_name_value,
     ["a variable can hold a word:"],
   );
   let held = js_code_let_statement(name, quoted);
