@@ -15,7 +15,7 @@ import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_gener
 import { app_code_lesson_quiz_braces_run } from "./app_code_lesson_quiz_braces_run.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-export function app_code_lesson_braces_run_explain_generic(
+export function app_learn_js_lesson_braces_run_explain_generic(
   title,
   explain,
   code_get,

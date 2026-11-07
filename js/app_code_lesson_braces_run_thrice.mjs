@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_braces_run_explain_generic } from "./app_code_lesson_braces_run_explain_generic.mjs";
+import { app_learn_js_lesson_braces_run_explain_generic } from "./app_learn_js_lesson_braces_run_explain_generic.mjs";
 import { app_learn_js_braces_run_three_ifs_explain } from "./app_learn_js_braces_run_three_ifs_explain.mjs";
 import { app_learn_js_braces_three_ifs } from "./app_learn_js_braces_three_ifs.mjs";
 export function app_code_lesson_braces_run_thrice() {
@@ -10,7 +10,7 @@ export function app_code_lesson_braces_run_thrice() {
   ("2026-10-11, at the human's asking that each Does this section run? introduce its shape: explained by ",
     fn_name("app_learn_js_braces_run_three_ifs_explain"),
     ", which says why The same if three times keeps its own explanation.");
-  let lesson = app_code_lesson_braces_run_explain_generic(
+  let lesson = app_learn_js_lesson_braces_run_explain_generic(
     "Does this section run? Three ifs",
     app_learn_js_braces_run_three_ifs_explain,
     app_learn_js_braces_three_ifs,

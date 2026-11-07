@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_braces_run_explain_generic } from "./app_code_lesson_braces_run_explain_generic.mjs";
+import { app_learn_js_lesson_braces_run_explain_generic } from "./app_learn_js_lesson_braces_run_explain_generic.mjs";
 import { noop } from "./noop.mjs";
 import { app_learn_js_braces_four_else_if_twice } from "./app_learn_js_braces_four_else_if_twice.mjs";
 export function app_learn_js_lesson_braces_run_else_if_twice() {
@@ -7,7 +7,7 @@ export function app_learn_js_lesson_braces_run_else_if_twice() {
   ("whether a section of code runs, in programs of an if, two else ifs and an else; asked for by the human 2026-10-14, straight before Two else ifs, the one shape with four pairs of braces whose rule is new: once one section of the chain runs, the rest are not reached");
   ("First thought the one shape of four pairs of braces that needed it, 2026-10-14; the same day An if and else inside an if and else and An if and else inside an else were given their own too, at the human's asking.");
   ("The writing is a first draft by Claude 2026-10-14.");
-  let lesson = app_code_lesson_braces_run_explain_generic(
+  let lesson = app_learn_js_lesson_braces_run_explain_generic(
     "Does this section run? Two else ifs",
     noop,
     app_learn_js_braces_four_else_if_twice,
