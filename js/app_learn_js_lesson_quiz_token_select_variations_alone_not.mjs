@@ -8,7 +8,7 @@ import { list_find_or_null } from "./list_find_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 import { text_suffix_without } from "./text_suffix_without.mjs";
-import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_quiz_token_select_variations.mjs";
+import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js_lesson_quiz_token_select_variations.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_learn_js_lesson_quiz_token_select_variations_alone_not(
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_quiz_token_select_variations_alone_not(
   let prefix2 = text_combine(keyword, " (");
   let rest = text_prefix_without(trimmed, prefix2);
   let condition = text_suffix_without(rest, suffix);
-  let inner = app_code_lesson_quiz_token_select_variations(condition);
+  let inner = app_learn_js_lesson_quiz_token_select_variations(condition);
   function wrap(variation) {
     let wrapped = list_concat_multiple([[keyword, "("], variation, [")", "{"]]);
     return wrapped;

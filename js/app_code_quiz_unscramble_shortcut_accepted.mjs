@@ -1,7 +1,7 @@
 import { list_size } from "./list_size.mjs";
 import { and } from "./and.mjs";
 import { or } from "./or.mjs";
-import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_quiz_token_select_variations.mjs";
+import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js_lesson_quiz_token_select_variations.mjs";
 import { app_code_lessons_unscramble_codes } from "./app_code_lessons_unscramble_codes.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { app_code_quiz_variation_buildable_is } from "./app_code_quiz_variation_buildable_is.mjs";
@@ -38,7 +38,7 @@ export function app_code_quiz_unscramble_shortcut_accepted(rounds) {
     }
     let offered = list_unique(tokens);
     let groups = js_tokens_parenthesis_group_sizes(tokens);
-    let variations = app_code_lesson_quiz_token_select_variations(code);
+    let variations = app_learn_js_lesson_quiz_token_select_variations(code);
     for (let variation of variations) {
       let buildable = app_code_quiz_variation_buildable_is(variation, offered);
       if (not(buildable)) {

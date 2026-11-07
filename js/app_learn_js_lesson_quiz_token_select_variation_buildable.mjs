@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_quiz_token_select_variations.mjs";
+import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js_lesson_quiz_token_select_variations.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_quiz_variation_buildable_is } from "./app_code_quiz_variation_buildable_is.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_quiz_token_select_variation_buildable(
   ("ensures div is visible from beginning");
   let text = text_space_nb();
   html_text_set(answer_div, text);
-  let variations = app_code_lesson_quiz_token_select_variations(code);
+  let variations = app_learn_js_lesson_quiz_token_select_variations(code);
   let normalized = app_code_quiz_tokens(code);
   let tokens_unique = list_unique(normalized);
   function variation_buildable(variation) {

@@ -1,4 +1,4 @@
-import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_quiz_token_select_variations.mjs";
+import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js_lesson_quiz_token_select_variations.mjs";
 import { app_code_lessons_unscramble_codes } from "./app_code_lessons_unscramble_codes.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { list_add } from "./list_add.mjs";
@@ -22,7 +22,7 @@ export function app_code_quiz_unscramble_own_wording_rejected(rounds) {
     let lesson = property_get(item, "lesson");
     let tokens = app_code_quiz_tokens(code);
     let want = ordering_written(tokens);
-    let variations = app_code_lesson_quiz_token_select_variations(code);
+    let variations = app_learn_js_lesson_quiz_token_select_variations(code);
     let accepted = list_map(variations, ordering_written);
     let holds = list_includes(accepted, want);
     if (not(holds)) {
