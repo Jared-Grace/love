@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_frozen } from "./text_frozen.mjs";
-export function app_code_lesson_ids_short() {
+export function app_learn_js_lesson_ids_short() {
   arguments_assert(arguments, 0);
   ("The id every code lesson is stored and linked under, one per lesson, written down here rather than worked out from anything.");
   ("An id used to be built out of the lesson's category word and the words handed to its title maker, which made it a consequence of two decisions that were never about it. Rewording a title moved it. Recategorising a lesson moved it. Both are edits a person makes for how a page reads, and neither looks like it touches a key a learner's finished work is stored under. Written down, an id moves when somebody moves it and at no other time.");

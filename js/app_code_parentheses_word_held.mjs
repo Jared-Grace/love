@@ -7,7 +7,7 @@ export function app_code_parentheses_word_held() {
   ("The sweep's own three pieces are held back because the word is their subject. One of them holds the nine words to look for written out as values, so a pass over it would rewrite the very list it searches by and leave a function that looks for a word nobody uses. The other two, this one included, say in their own sentences what is being replaced, which only reads as anything while the old word is still printed there.");
   ("Named here rather than inside the walk, because a reader checking that a sweep is safe is checking exactly this list, and it should not have to be dug out of a loop.");
   let held = [
-    fn_name("app_code_lesson_ids_short"),
+    fn_name("app_learn_js_lesson_ids_short"),
     fn_name("app_code_parentheses_word_held"),
     fn_name("app_code_parentheses_word_text"),
     fn_name("app_code_parentheses_word_write"),

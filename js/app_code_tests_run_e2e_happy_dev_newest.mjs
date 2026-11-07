@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
+import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_tests_run_e2e_happy_from } from "./app_code_tests_run_e2e_happy_from.mjs";
 export async function app_code_tests_run_e2e_happy_dev_newest() {
@@ -10,7 +10,7 @@ export async function app_code_tests_run_e2e_happy_dev_newest() {
   arguments_assert(arguments, 0);
   let fns = app_code_lessons_fns();
   let newest = list_last(fns);
-  let ids_short = app_code_lesson_ids_short();
+  let ids_short = app_learn_js_lesson_ids_short();
   let lesson_id = property_get(ids_short, newest.name);
   let walked = await app_code_tests_run_e2e_happy_from("dev", lesson_id);
   return walked;

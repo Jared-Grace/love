@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { add_1 } from "./add_1.mjs";
-import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
+import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab_step } from "./app_shared_screen_go_tab_step.mjs";
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_reference_draw(parent, context, lesson_fn) {
   let fns = app_code_lessons_fns();
   let index = list_index_of(fns, lesson_fn);
   let number_whole = add_1(index);
-  let ids = app_code_lesson_ids_short();
+  let ids = app_learn_js_lesson_ids_short();
   let lesson_id = property_get(ids, lesson_fn.name);
   async function on_click() {
     await app_shared_screen_go_tab_step(

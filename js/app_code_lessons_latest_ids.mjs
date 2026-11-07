@@ -1,4 +1,4 @@
-import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
+import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { app_code_lessons_latest_held_fns } from "./app_code_lessons_latest_held_fns.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
@@ -26,7 +26,7 @@ export async function app_code_lessons_latest_ids() {
   }
   list_empty_not_is_assert(ids);
   ("The id table in the built file names every lesson, the held ones too, so the lessons held back from latest are taken out here; otherwise a working copy would mark finished a lesson latest does not show");
-  let ids_short = app_code_lesson_ids_short();
+  let ids_short = app_learn_js_lesson_ids_short();
   function id_of(fn) {
     let id = property_get(ids_short, fn.name);
     return id;

@@ -1,6 +1,6 @@
 import { list_size } from "./list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
+import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { app_learn_js_lesson_id_length_ceiling } from "./app_learn_js_lesson_id_length_ceiling.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_id_length_gate_run() {
   ("★ THE REMEDY IS FREE BEFORE THE ID SHIPS AND EXPENSIVE AFTER. While a lesson is still behind the release cut, shortening its id costs nothing at all - nobody has one written down. Once learners have met it, the id is a key on their devices, and changing it is the breaking change described where the ids are recorded. So the moment to be strict is now, which is what this gate is for.");
   ("It reads the table rather than the lessons the app hands out, so a lesson that is written and not yet released is checked too. That is the whole point: the cheap moment to shorten an id is before anybody is holding it.");
   ("HOW MANY IDS WERE WALKED TRAVELS OUT BESIDE THE VERDICT - an empty list of offenders is what this gate says on a good day and it is also what it would say if the table it reads had been renamed or rebuilt a new way, and the two are the same word with nothing to tell them apart. The count is of the ids the sweep actually reached rather than of the ones found wanting, because the second of those is nothing on every run that passes and so can never fall");
-  let short = app_code_lesson_ids_short();
+  let short = app_learn_js_lesson_ids_short();
   let ceiling = app_learn_js_lesson_id_length_ceiling();
   let names = object_property_names(short);
   let over = [];

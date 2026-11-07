@@ -9,7 +9,7 @@ import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
+import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
 import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_is.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -32,7 +32,7 @@ export function app_learn_js_lesson_above_shown(context, lesson) {
   if (equal(taught_fn_name, null)) {
     return above;
   }
-  let ids = app_code_lesson_ids_short();
+  let ids = app_learn_js_lesson_ids_short();
   let taught_id = property_get_or_null(ids, taught_fn_name);
   if (not_equal(taught_id, lesson_id)) {
     return above;

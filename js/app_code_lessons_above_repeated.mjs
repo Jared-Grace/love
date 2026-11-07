@@ -2,7 +2,7 @@ import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
-import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
+import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { app_learn_js_lesson_above_fake_draw } from "./app_learn_js_lesson_above_fake_draw.mjs";
 import { html_element_fake_lines } from "./html_element_fake_lines.mjs";
@@ -31,7 +31,7 @@ export function app_code_lessons_above_repeated() {
   ("Read off the drawn screens, the same way the other telling checks read them. A step lesson repeats the next one when every drawn line of the next one's telling is among its own; a next lesson with no lines repeats nothing. Measured 2026-10-22: the eight step-first pairs each repeated all of their regular lesson, and the regular-first pairs repeated none.");
   ("Also says how many lessons were drawn, because nothing found is the answer on a clean run and on a run that drew nothing.");
   let fns = app_code_lessons_fns();
-  let ids = app_code_lesson_ids_short();
+  let ids = app_learn_js_lesson_ids_short();
   let offenders = [];
   let drawn = [];
   function all_read() {

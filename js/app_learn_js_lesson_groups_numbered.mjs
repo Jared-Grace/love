@@ -1,6 +1,6 @@
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
+import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_groups_numbered(lessons) {
   arguments_assert(arguments, 1);
   ("the groups the home list folds its lessons into, each with the number of the lesson it starts at in lessons, the run this reader was given - a group none of whose lessons are in that run is left out, since there is nothing to draw under it");
   ("Numbers are worked out here rather than written down in the groups, so a lesson added before a group's first lesson moves the number and leaves the group starting where it did.");
-  let ids = app_code_lesson_ids_short();
+  let ids = app_learn_js_lesson_ids_short();
   let lesson_ids = list_map_property(lessons, "id");
   ("2026-10-15: a group starts at the first lesson of it this reader was given, which is its own first lesson whenever that one is shown. A run cut down to a few lessons, like the step lessons alone, holds none of the groups' first lessons, and the home list then had no group to put its first row in. Not picked: dropping the groups from a cut run, which would leave its rows under no heading at all");
   function id_of(fn) {
