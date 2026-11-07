@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_value_choose_buttons_generic } from "./app_learn_js_expression_value_choose_buttons_generic.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_expression_value_choose_buttons(
+export function app_learn_js_expression_value_choose_buttons(
   parent,
   value,
   decoys,
