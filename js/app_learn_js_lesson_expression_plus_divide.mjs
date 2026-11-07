@@ -7,7 +7,7 @@ import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_plus_divide() {
+export function app_learn_js_lesson_expression_plus_divide() {
   "mixing + and / in one expression: a + b / c and a / b + c; / is stronger than +, so we always do it first, even when it comes later; / needs whole-number answers, so we use the division operator's left_transform (multiply) to build a divisibility chain a = outer * b, b = inner * c - then b / c and a / b are both whole, keeping BOTH arrangements clean";
   let plus = js_operator_plus();
   let plus_symbol = property_get(plus, "operator");
