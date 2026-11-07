@@ -1,4 +1,4 @@
-import { app_code_arithmetic_to_value_parts_symbol } from "./app_code_arithmetic_to_value_parts_symbol.mjs";
+import { app_learn_js_arithmetic_to_value_parts_symbol } from "./app_learn_js_arithmetic_to_value_parts_symbol.mjs";
 import { app_code_arithmetic_to_value_symbols } from "./app_code_arithmetic_to_value_symbols.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_code_arithmetic_to_value_parts(value) {
@@ -7,6 +7,6 @@ export function app_code_arithmetic_to_value_parts(value) {
   "Which is why the drawing and the writing are two functions rather than one. The lesson whose run counts the operators on its line out loud needs both sides written with the SAME one, and it asks the writer directly with an operator of its own choosing.";
   let symbols = app_code_arithmetic_to_value_symbols();
   let symbol = list_random_item(symbols);
-  let built = app_code_arithmetic_to_value_parts_symbol(value, symbol);
+  let built = app_learn_js_arithmetic_to_value_parts_symbol(value, symbol);
   return built;
 }

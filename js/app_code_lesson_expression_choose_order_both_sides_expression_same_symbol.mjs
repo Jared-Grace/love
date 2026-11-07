@@ -1,4 +1,4 @@
-import { app_code_arithmetic_to_value_parts_symbol } from "./app_code_arithmetic_to_value_parts_symbol.mjs";
+import { app_learn_js_arithmetic_to_value_parts_symbol } from "./app_learn_js_arithmetic_to_value_parts_symbol.mjs";
 import { app_code_arithmetic_to_value_symbols } from "./app_code_arithmetic_to_value_symbols.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression_generic } from "./app_code_lesson_expression_choose_order_both_sides_expression_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_choose_order_both_sides_expression_sa
   let symbol = list_random_item(symbols);
   function parts_get(value) {
     "every side of this line is written with the one operator drawn for the line";
-    let parts = app_code_arithmetic_to_value_parts_symbol(value, symbol);
+    let parts = app_learn_js_arithmetic_to_value_parts_symbol(value, symbol);
     return parts;
   }
   let tree =

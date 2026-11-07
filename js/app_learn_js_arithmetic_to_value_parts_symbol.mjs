@@ -9,7 +9,7 @@ import { multiply } from "./multiply.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_arithmetic_to_value_parts_symbol(value, symbol) {
+export function app_learn_js_arithmetic_to_value_parts_symbol(value, symbol) {
   arguments_assert(arguments, 2);
   ("a small arithmetic line written with the operator asked for that comes to the value asked for, given as its three pieces: 7 asked for with / comes back as 21, / and 3");
   ("Pieces rather than a line of text, because the two things a lesson wants out of this cannot both be got from the text. A line to print wants the writing; a line to press one operator at a time wants a shape, and reading the shape back out of the writing is a parser written to undo a printer standing next to it.");
