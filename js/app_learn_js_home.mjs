@@ -8,7 +8,7 @@ import { app_learn_js_home_rows_start } from "./app_learn_js_home_rows_start.mjs
 import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
 import { app_code_reviews_complete_read } from "./app_code_reviews_complete_read.mjs";
 import { app_code_milestones } from "./app_code_milestones.mjs";
-import { app_code_lesson_groups_numbered } from "./app_code_lesson_groups_numbered.mjs";
+import { app_learn_js_lesson_groups_numbered } from "./app_learn_js_lesson_groups_numbered.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -53,7 +53,7 @@ export async function app_learn_js_home(context) {
   ("the milestones are worked out once for the whole list too, for the same reason");
   let milestones = app_code_milestones();
   ("the lessons are drawn into folding groups, one open at a time, like the front page's groups of apps - asked for by the human. A group starts at the lesson it names, its number worked out from the lessons shown, so the group a row lands in is only known as the rows are drawn.");
-  let groups = app_code_lesson_groups_numbered(lessons);
+  let groups = app_learn_js_lesson_groups_numbered(lessons);
   let cards = [];
   let group = null;
   let opened = null;

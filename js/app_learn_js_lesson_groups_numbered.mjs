@@ -15,7 +15,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_lesson_groups_numbered(lessons) {
+export function app_learn_js_lesson_groups_numbered(lessons) {
   arguments_assert(arguments, 1);
   ("the groups the home list folds its lessons into, each with the number of the lesson it starts at in lessons, the run this reader was given - a group none of whose lessons are in that run is left out, since there is nothing to draw under it");
   ("Numbers are worked out here rather than written down in the groups, so a lesson added before a group's first lesson moves the number and leaves the group starting where it did.");
