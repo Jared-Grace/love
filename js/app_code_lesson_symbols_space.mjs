@@ -2,7 +2,7 @@ import { app_code_verse_words_letters_only } from "./app_code_verse_words_letter
 import { app_code_symbols_separated_on_question_numbered_fifth } from "./app_code_symbols_separated_on_question_numbered_fifth.mjs";
 import { app_learn_js_lesson_symbols_digits_numbered_fifth_on_symbol } from "./app_learn_js_lesson_symbols_digits_numbered_fifth_on_symbol.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
-import { app_code_lesson_symbols_space_style } from "./app_code_lesson_symbols_space_style.mjs";
+import { app_learn_js_lesson_symbols_space_style } from "./app_learn_js_lesson_symbols_space_style.mjs";
 import { noop } from "./noop.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { html_cycle } from "./html_cycle.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_symbols_space() {
       text_combine(nb, "to separate words"),
     ];
     let parts = list_between_space_nb(list);
-    html_cycle(div, [noop, app_code_lesson_symbols_space_style], parts);
+    html_cycle(div, [noop, app_learn_js_lesson_symbols_space_style], parts);
     html_div_text(
       c,
       "For a computer, a space is considered a symbol, just like a letter or a number",

@@ -2,7 +2,7 @@ import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { app_shared_symbol_tile_style_box_shadow_value_width } from "./app_shared_symbol_tile_style_box_shadow_value_width.mjs";
 import { html_style_code_generic_unshadowed } from "./html_style_code_generic_unshadowed.mjs";
 import { app_learn_js_container_light_blue_border_color } from "./app_learn_js_container_light_blue_border_color.mjs";
-export function app_code_lesson_symbols_space_style(component) {
+export function app_learn_js_lesson_symbols_space_style(component) {
   let color_background = "white";
   let color_font = "transparent";
   let color_box_shadow = app_learn_js_container_light_blue_border_color();
