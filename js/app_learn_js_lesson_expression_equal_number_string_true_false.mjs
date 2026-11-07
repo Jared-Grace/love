@@ -13,7 +13,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-export function app_code_lesson_expression_equal_number_string_true_false() {
+export function app_learn_js_lesson_expression_equal_number_string_true_false() {
   "=== across a number, a string, and true or false: it is true only when both sides are the same one of those three. A number can equal a number, a string can equal a string, true and false can equal each other - but a number never equals a string, and neither ever equals true or false.";
   "The three groups are NEVER named with a word of their own - not type, not kind, not sort. Every lesson before this one taught them one at a time under the names the learner already has: number, string, true and false. A collective noun would be a fourth thing to remember on a screen whose whole content is a rule about the three, and the rule states perfectly well without it - a number, a string, and true or false are never the same as each other. The word for it can wait for the lesson that needs it, which is the one that teaches typeof.";
   "The two look-alikes carry the lesson: \"1\" and 1, \"true\" and true. A reader who thinks those pairs are equal is exactly the reader this lesson is for, and no other example can catch them - 1 === \"hello\" they would call false already, for the wrong reason. So the quiz asks a look-alike every screen, and the closing card says what the quotes do: they are what settles which of the two the 1 is.";

@@ -919,7 +919,7 @@ export function permission_grant_names() {
     fn_name("functions_page_serialized_imported_gate_run"),
     fn_name("g_plant_days_minimum_possible"),
     fn_name("g_plant_days_report"),
-    fn_name("app_code_lesson_expression_equal_number_string_true_false"),
+    fn_name("app_learn_js_lesson_expression_equal_number_string_true_false"),
     fn_name(
       "app_learn_js_lesson_expression_equal_number_string_true_false_title_name_id",
     ),
