@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_name_clock_face } from "./app_code_lesson_statement_name_clock_face.mjs";
+import { app_learn_js_lesson_statement_name_clock_face } from "./app_learn_js_lesson_statement_name_clock_face.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_statement_name_clock_next() {
     values_get,
     example_values: [23],
     step,
-    remember_lesson: app_code_lesson_statement_name_clock_face,
+    remember_lesson: app_learn_js_lesson_statement_name_clock_face,
     remember_parts: ["we can find the next hour on a clock of 1 to 12:"],
     remember_lines,
     explain: [
