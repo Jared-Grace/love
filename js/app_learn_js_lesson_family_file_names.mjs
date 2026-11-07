@@ -5,7 +5,7 @@ import { and } from "./and.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { or } from "./or.mjs";
-export function app_code_lesson_family_file_names(root, roots, names) {
+export function app_learn_js_lesson_family_file_names(root, roots, names) {
   arguments_assert(arguments, 3);
   ("the functions that belong to one lesson: every name beginning with the lesson's own, less the ones beginning with a longer lesson's name.");
   ("Without that subtraction a lesson eats its neighbour, and it was measured doing it: the string-order lesson took the string-order-equal lesson's question bank for its own and was then found guilty of never showing the <= that the other lesson exists to teach. A lesson's name is the prefix of its own helpers and of a longer lesson's name alike, and only the list of lessons tells those two apart.");

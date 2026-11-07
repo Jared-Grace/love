@@ -1,7 +1,7 @@
 import { app_code_lesson_family_telling_bank_itself } from "./app_code_lesson_family_telling_bank_itself.mjs";
 import { app_code_lesson_family_telling_bank_asked } from "./app_code_lesson_family_telling_bank_asked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_family_file_names } from "./app_code_lesson_family_file_names.mjs";
+import { app_learn_js_lesson_family_file_names } from "./app_learn_js_lesson_family_file_names.mjs";
 import { repo_love_function_read } from "./repo_love_function_read.mjs";
 export async function app_code_lesson_family_telling_bank(root, roots, names) {
   arguments_assert(arguments, 3);
@@ -11,7 +11,7 @@ export async function app_code_lesson_family_telling_bank(root, roots, names) {
   ("Only the handed-over telling is followed, never the whole lesson file, and that is the difference between this and the walks tried before it. A lesson makes its questions in its own body too, so a walk starting from the whole file reaches the question makers and swallows the bank - measured, it swallowed a line builder in nine lessons of thirty-two.");
   ("A file the telling reaches which the questions ALSO use is counted as telling, and that is right rather than a let-off: if the telling draws it, the learner has seen whatever it can write, whoever else asks for it.");
   ("A title and a gate belong to neither half. A title holds a lesson's words and a gate holds the lines it refuses, and counting either as the bank would have the lesson answering for something it never asks anybody about.");
-  let family = app_code_lesson_family_file_names(root, roots, names);
+  let family = app_learn_js_lesson_family_file_names(root, roots, names);
   let source = await repo_love_function_read(root);
   let counted = [];
   let telling = app_code_lesson_family_telling_bank_itself(
