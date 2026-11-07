@@ -21,7 +21,7 @@ import { app_code_explain_code_colored } from "./app_code_explain_code_colored.m
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_emoji_square } from "./app_code_explain_emoji_square.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
-import { app_code_arrow_turned_draw } from "./app_code_arrow_turned_draw.mjs";
+import { app_learn_js_arrow_turned_draw } from "./app_learn_js_arrow_turned_draw.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -193,14 +193,14 @@ export function app_code_lesson_statement_name_king_steps() {
   ]);
   function moves_draw(box) {
     "you in the middle square and an arrow in each of the eight squares around, the four of Grid steps and the four diagonals";
-    let draw11 = app_code_arrow_turned_draw(270);
-    let draw12 = app_code_arrow_turned_draw(90);
-    let draw13 = app_code_arrow_turned_draw(180);
-    let draw14 = app_code_arrow_turned_draw(0);
-    let draw15 = app_code_arrow_turned_draw(225);
-    let draw16 = app_code_arrow_turned_draw(315);
-    let draw17 = app_code_arrow_turned_draw(135);
-    let draw18 = app_code_arrow_turned_draw(45);
+    let draw11 = app_learn_js_arrow_turned_draw(270);
+    let draw12 = app_learn_js_arrow_turned_draw(90);
+    let draw13 = app_learn_js_arrow_turned_draw(180);
+    let draw14 = app_learn_js_arrow_turned_draw(0);
+    let draw15 = app_learn_js_arrow_turned_draw(225);
+    let draw16 = app_learn_js_arrow_turned_draw(315);
+    let draw17 = app_learn_js_arrow_turned_draw(135);
+    let draw18 = app_learn_js_arrow_turned_draw(45);
     app_code_square_grid(box, 3, 3, false, [
       [1, 1, "🫅", start_color],
       [0, 1, draw11, null],

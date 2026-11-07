@@ -8,7 +8,7 @@ import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
-import { app_code_arrow_turned_draw } from "./app_code_arrow_turned_draw.mjs";
+import { app_learn_js_arrow_turned_draw } from "./app_learn_js_arrow_turned_draw.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { html_div } from "./html_div.mjs";
@@ -171,10 +171,10 @@ export function app_code_lesson_statement_name_grid_steps() {
   ]);
   function moves_draw(box) {
     "you in the middle square, an arrow in each square one step away, asked by the human 2026-10-01; the arrows are the drawn ones the code app uses elsewhere, which centre exactly where a typed arrow sits low";
-    let v = app_code_arrow_turned_draw(270);
-    let v2 = app_code_arrow_turned_draw(90);
-    let v3 = app_code_arrow_turned_draw(180);
-    let v4 = app_code_arrow_turned_draw(0);
+    let v = app_learn_js_arrow_turned_draw(270);
+    let v2 = app_learn_js_arrow_turned_draw(90);
+    let v3 = app_learn_js_arrow_turned_draw(180);
+    let v4 = app_learn_js_arrow_turned_draw(0);
     app_code_square_grid(box, 3, 3, false, [
       [1, 1, "🙂", start_color],
       [0, 1, v, null],
