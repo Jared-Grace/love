@@ -63,7 +63,7 @@ import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_les
 import { app_code_lesson_functions_console_log_string } from "./app_code_lesson_functions_console_log_string.mjs";
 import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesson_expression_remainder_2.mjs";
 import { app_learn_js_lesson_expression_remainder_3 } from "./app_learn_js_lesson_expression_remainder_3.mjs";
-import { app_code_lesson_expression_remainder_4 } from "./app_code_lesson_expression_remainder_4.mjs";
+import { app_learn_js_lesson_expression_remainder_4 } from "./app_learn_js_lesson_expression_remainder_4.mjs";
 import { app_code_lesson_expression_remainder_subtract } from "./app_code_lesson_expression_remainder_subtract.mjs";
 import { app_code_lesson_expression_round_down } from "./app_code_lesson_expression_round_down.mjs";
 import { app_learn_js_lesson_expression_integer_division } from "./app_learn_js_lesson_expression_integer_division.mjs";
@@ -376,7 +376,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_functions_console_log_string,
     app_learn_js_lesson_expression_remainder_2,
     app_learn_js_lesson_expression_remainder_3,
-    app_code_lesson_expression_remainder_4,
+    app_learn_js_lesson_expression_remainder_4,
     app_code_lesson_expression_remainder_subtract,
     app_code_lesson_expression_round_down,
     app_learn_js_lesson_expression_integer_division,
