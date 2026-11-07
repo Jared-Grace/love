@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_dividend } from "./app_learn_js_lesson_e
 import { app_code_uneven_dividend_between } from "./app_code_uneven_dividend_between.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
-import { app_code_lesson_expression_remainder_any_title_name_id } from "./app_code_lesson_expression_remainder_any_title_name_id.mjs";
+import { app_learn_js_lesson_expression_remainder_any_title_name_id } from "./app_learn_js_lesson_expression_remainder_any_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
@@ -49,7 +49,8 @@ export function app_code_lesson_expression_remainder_any() {
     return r;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_expression_remainder_any_title_name_id(percent);
+  let name_id =
+    app_learn_js_lesson_expression_remainder_any_title_name_id(percent);
   let params = {
     above,
     name_id,
