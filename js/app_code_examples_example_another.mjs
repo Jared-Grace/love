@@ -12,7 +12,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_examples_guided_is } from "./app_code_lesson_examples_guided_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_batch_on_refill } from "./app_code_batch_on_refill.mjs";
+import { app_learn_js_batch_on_refill } from "./app_learn_js_batch_on_refill.mjs";
 import { noop } from "./noop.mjs";
 import { app_learn_js_batch_item_get } from "./app_learn_js_batch_item_get.mjs";
 import { app_code_examples_on_batch_item } from "./app_code_examples_on_batch_item.mjs";
@@ -52,7 +52,7 @@ export function app_code_examples_example_another(context, root) {
   }
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
-  let on_batch = app_code_batch_on_refill(noop);
+  let on_batch = app_learn_js_batch_on_refill(noop);
   let refresh = app_learn_js_batch_item_get(
     c,
     lesson,
