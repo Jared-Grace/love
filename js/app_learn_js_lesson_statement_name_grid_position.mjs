@@ -19,7 +19,7 @@ import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
+import { app_learn_js_lesson_statement_name_grid_row } from "./app_learn_js_lesson_statement_name_grid_row.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_statement_name_grid_position() {
   arguments_assert(arguments, 0);
   ("the row and column of a numbered chair in rows of chairs: let row = Math.floor(chair / columns); let column = chair % columns;");
   ("The row is taught by the lesson before this one, ",
-    fn_name("app_code_lesson_statement_name_grid_row"),
+    fn_name("app_learn_js_lesson_statement_name_grid_row"),
     ", split out at the human's word, 2026-09-27; this lesson reminds it and teaches only the column, so its explanation opens on the grid the reader has just seen rather than on chairs from the start.");
   ("No two programs share an answer, and no answer is the number of columns it divides by.");
   ("THE PROGRAM FINDS THE COLUMN ONLY, at the human's question, 2026-09-27: why work out the row here, when the lesson before teaches it? It had written out both so the two lessons ended as one fact; now each lesson's program is its own formula, and the row is only reminded and read off the grid. The shared step still holds both lines, for the lesson after this one, which turns both around.");
@@ -179,7 +179,7 @@ export function app_learn_js_lesson_statement_name_grid_position() {
     values_get,
     example_values: [7, 3],
     step,
-    remember_lesson: app_code_lesson_statement_name_grid_row,
+    remember_lesson: app_learn_js_lesson_statement_name_grid_row,
     remember_parts: ["we found the ", row, " of chair 7:"],
     remember_lines,
     explain: [

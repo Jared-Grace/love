@@ -198,7 +198,7 @@ import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_stat
 import { app_learn_js_lesson_statement_name_average_two } from "./app_learn_js_lesson_statement_name_average_two.mjs";
 import { app_learn_js_lesson_statement_name_average_three } from "./app_learn_js_lesson_statement_name_average_three.mjs";
 import { app_code_lesson_statement_name_middle } from "./app_code_lesson_statement_name_middle.mjs";
-import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
+import { app_learn_js_lesson_statement_name_grid_row } from "./app_learn_js_lesson_statement_name_grid_row.mjs";
 import { app_learn_js_lesson_statement_name_grid_position } from "./app_learn_js_lesson_statement_name_grid_position.mjs";
 import { app_learn_js_lesson_statement_name_grid_index } from "./app_learn_js_lesson_statement_name_grid_index.mjs";
 import { app_code_lesson_statement_name_sum_to } from "./app_code_lesson_statement_name_sum_to.mjs";
@@ -511,7 +511,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_statement_name_average_two,
     app_learn_js_lesson_statement_name_average_three,
     app_code_lesson_statement_name_middle,
-    app_code_lesson_statement_name_grid_row,
+    app_learn_js_lesson_statement_name_grid_row,
     app_learn_js_lesson_statement_name_grid_position,
     app_learn_js_lesson_statement_name_grid_index,
     app_code_lesson_statement_name_sum_to,

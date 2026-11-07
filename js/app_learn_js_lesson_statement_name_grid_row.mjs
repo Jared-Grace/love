@@ -26,7 +26,7 @@ import { app_code_lesson_statement_name_middle } from "./app_code_lesson_stateme
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
-export function app_code_lesson_statement_name_grid_row() {
+export function app_learn_js_lesson_statement_name_grid_row() {
   arguments_assert(arguments, 0);
   ("the row of a numbered chair in rows of chairs: let row = Math.floor(chair / columns); - the first half of the row-and-column lesson, split out so each lesson teaches one line");
   ("Split from the row-and-column lesson at the human's word, 2026-09-27, so a learner meets the row alone and then the column with the row already known. Its line is the row-and-column lesson's first line, asked of that lesson's own lines rather than written again, so the two cannot drift. Not picked: splitting the other way round, column first, which would teach % before the picture of whole rows that makes it make sense.");
