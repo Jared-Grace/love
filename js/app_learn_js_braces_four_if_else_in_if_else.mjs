@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_braces_four_if_else_in_if_else() {
+export function app_learn_js_braces_four_if_else_in_if_else() {
   arguments_assert(arguments, 0);
   ("a program with four pairs of braces, an if and its else inside an if that has an else of its own, so its braces stand { { } { } } { }; the program of If and else inside an if with the outer else added, which writes out patience, the fourth fruit of the Spirit, as in Two else ifs");
   let says = app_code_braces_three_says();
