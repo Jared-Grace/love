@@ -8,7 +8,7 @@ import { app_code_lesson_next } from "./app_code_lesson_next.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
-export function app_code_button_skip_lesson_past_review(context, parent) {
+export function app_learn_js_button_skip_lesson_past_review(context, parent) {
   "a 'Skip to the next lesson' button for a lesson a review comes after: it goes to the lesson straight after this one, leaving the review behind.";
   "At a checkpoint the ordinary way on is the review, so the skip button beside it says review. A learner who wanted neither this lesson nor the review then had nowhere to press - the only door out of the lesson led into the review, and the only way to the lesson after it was to sit the review first. The lesson is now offered on a button of its own beside that one: two buttons saying two things, the same shape the unfinished-work button already takes rather than one button quietly choosing.";
   "Drawn only where a review is actually due and a lesson actually follows this one in the course, so it never stands beside the review button on the last lesson - there it would lead back to the very screen it was pressed on, because going on from the last lesson has nowhere in order to go.";

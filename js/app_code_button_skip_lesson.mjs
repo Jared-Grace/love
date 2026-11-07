@@ -10,7 +10,7 @@ import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
-import { app_code_button_skip_lesson_past_review } from "./app_code_button_skip_lesson_past_review.mjs";
+import { app_learn_js_button_skip_lesson_past_review } from "./app_learn_js_button_skip_lesson_past_review.mjs";
 export function app_code_button_skip_lesson(context, parent) {
   "a 'Skip to the next lesson' button that jumps straight to the next lesson the learner has not finished (or the review, at a checkpoint), the same as finishing this lesson - shared by the examples screen and the quiz screen so either offers the escape. Renders nothing (returns null) on the last lesson when no review follows it";
   let number = app_code_lesson_current_number(context);
@@ -39,6 +39,6 @@ export function app_code_button_skip_lesson(context, parent) {
   let skip_text = text_combine_middle_space_nb(left, right);
   let skip_button = app_shared_button_wide_spaced(parent, skip_text, skip);
   ("where that button says review, the lesson AFTER the review is offered beside it, so the review is something the learner may walk past rather than the only door out of the lesson. It draws nothing anywhere else, so every screen that already asks for the skip button gets the pair without asking for it - the two belong together and are never wanted apart");
-  app_code_button_skip_lesson_past_review(context, parent);
+  app_learn_js_button_skip_lesson_past_review(context, parent);
   return skip_button;
 }
