@@ -3,7 +3,7 @@ import { app_code_lesson_quiz_multiple_choice_attempts_max } from "./app_code_le
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_multiple_choice_choices } from "./app_code_lesson_quiz_multiple_choice_choices.mjs";
 import { list_sort_text_to } from "./list_sort_text_to.mjs";
-export function app_code_lesson_quiz_multiple_choice_answered(
+export function app_learn_js_lesson_quiz_multiple_choice_answered(
   r,
   distractor_count,
   next_get,

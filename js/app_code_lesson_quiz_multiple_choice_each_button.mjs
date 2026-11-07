@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_multiple_choice_answered } from "./app_code_lesson_quiz_multiple_choice_answered.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_answered } from "./app_learn_js_lesson_quiz_multiple_choice_answered.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_quiz_multiple_choice_each_button({
   answer_on_button,
 }) {
   arguments_assert(arguments, 1);
-  let r2 = app_code_lesson_quiz_multiple_choice_answered(
+  let r2 = app_learn_js_lesson_quiz_multiple_choice_answered(
     r,
     distractor_count,
     next_get,

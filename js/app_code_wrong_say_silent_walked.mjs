@@ -9,7 +9,7 @@ import { equal } from "./equal.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
-import { app_code_lesson_quiz_multiple_choice_answered } from "./app_code_lesson_quiz_multiple_choice_answered.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_answered } from "./app_learn_js_lesson_quiz_multiple_choice_answered.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -52,7 +52,7 @@ export function app_code_wrong_say_silent_walked() {
           );
           let distractor_count = property_get(r, "distractor_count");
           let next_get = property_get(r, "next_get");
-          let r2 = app_code_lesson_quiz_multiple_choice_answered(
+          let r2 = app_learn_js_lesson_quiz_multiple_choice_answered(
             r,
             distractor_count,
             next_get,
