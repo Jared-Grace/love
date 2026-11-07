@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_chip_colors } from "./app_code_lesson_chip_colors.mjs";
 import { list_get } from "./list_get.mjs";
-export function app_code_lesson_chip_color(index) {
+export function app_learn_js_lesson_chip_color(index) {
   arguments_assert(arguments, 1);
   ("one of the categorical chip colours by its place in the list, for the screens that want several of them at once and only need each to differ from the last");
   ("Everything about which colours these are, what is known to be wrong with them and what has already been ruled out is said where they are spelled, one name along, because that is what a person revising them has to read. Nothing is said twice here.");

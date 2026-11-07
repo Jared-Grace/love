@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
+import { app_learn_js_lesson_chip_color } from "./app_learn_js_lesson_chip_color.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -18,10 +18,10 @@ export function app_code_lesson_expression_repeated_generic_above(
   let c = app_learn_js_container_light_blue(root);
   let short_separator = text_combine_multiple([" ", symbol, " "]);
   ("two worked examples, each a left number and a count - four colored numbers in all - given four distinct familiar colours (red, green, blue, amber) so every number is easy to tell apart and no number wears a colour here and another colour there");
-  let left_one = app_code_lesson_chip_color(0);
-  let count_one = app_code_lesson_chip_color(1);
-  let left_two = app_code_lesson_chip_color(2);
-  let count_two = app_code_lesson_chip_color(3);
+  let left_one = app_learn_js_lesson_chip_color(0);
+  let count_one = app_learn_js_lesson_chip_color(1);
+  let left_two = app_learn_js_lesson_chip_color(2);
+  let count_two = app_learn_js_lesson_chip_color(3);
   let already = text_combine_multiple([
     "You already know how to ",
     verb,
