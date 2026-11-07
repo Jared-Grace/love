@@ -10,7 +10,7 @@ import { app_learn_js_lesson_expression_remainder_divide_qa_for } from "./app_le
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_remainder_divide_quizzes_get(
+export function app_learn_js_lesson_expression_remainder_divide_quizzes_get(
   question,
   answer,
   recognize_decoys,
