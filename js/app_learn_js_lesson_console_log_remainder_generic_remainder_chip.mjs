@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_console_log_remainder_generic_remainder_color } from "./app_code_lesson_console_log_remainder_generic_remainder_color.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_remainder_color } from "./app_learn_js_lesson_console_log_remainder_generic_remainder_color.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 export function app_learn_js_lesson_console_log_remainder_generic_remainder_chip(
   parent,
@@ -7,7 +7,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_remainder_chip
   divisor,
 ) {
   arguments_assert(arguments, 3);
-  let color = app_code_lesson_console_log_remainder_generic_remainder_color(
+  let color = app_learn_js_lesson_console_log_remainder_generic_remainder_color(
     remainder,
     divisor,
   );

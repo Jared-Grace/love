@@ -3,7 +3,7 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { html_span_code_dark } from "./html_span_code_dark.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_console_log_remainder_generic_remainder_color } from "./app_code_lesson_console_log_remainder_generic_remainder_color.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_remainder_color } from "./app_learn_js_lesson_console_log_remainder_generic_remainder_color.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_equation_with_
   let tile = html_span_code_dark(parent);
   let before = text_combine(prefix_expr, " + ");
   html_span_text(tile, before);
-  let color = app_code_lesson_console_log_remainder_generic_remainder_color(
+  let color = app_learn_js_lesson_console_log_remainder_generic_remainder_color(
     remainder,
     divisor,
   );
