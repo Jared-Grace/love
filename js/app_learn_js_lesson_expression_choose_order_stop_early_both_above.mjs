@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_and_before_or_recall } from "./app_learn_js_lesson_expression_choose_order_and_before_or_recall.mjs";
-import { app_code_lesson_expression_choose_order_stop_early_both_intro } from "./app_code_lesson_expression_choose_order_stop_early_both_intro.mjs";
+import { app_learn_js_lesson_expression_choose_order_stop_early_both_intro } from "./app_learn_js_lesson_expression_choose_order_stop_early_both_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_stop_early_both_above(
   root,
   context,
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_expression_choose_order_stop_early_both_abov
     root,
     app_learn_js_lesson_expression_choose_order_and_before_or_recall,
     walks,
-    app_code_lesson_expression_choose_order_stop_early_both_intro,
+    app_learn_js_lesson_expression_choose_order_stop_early_both_intro,
     context,
   );
 }
