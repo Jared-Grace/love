@@ -105,7 +105,7 @@ export function app_code_lessons_latest_held_fns() {
     ", ",
     fn_name("app_learn_js_lesson_braces_run_thrice"),
     " and ",
-    fn_name("app_code_lesson_if_thrice"),
+    fn_name("app_learn_js_lesson_if_thrice"),
     " shown again");
   ("2026-10-27: the four while lessons released by the human, to try them on the working copy: nothing held");
   ("2026-10-27: hold While halving, new at the human's asking straight after While counting down, until the human has read its first draft");

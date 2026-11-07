@@ -299,7 +299,7 @@ import { app_learn_js_lesson_braces_run_else_if_twice } from "./app_learn_js_les
 import { app_learn_js_lesson_else_if_twice } from "./app_learn_js_lesson_else_if_twice.mjs";
 import { app_learn_js_lesson_else_if_order } from "./app_learn_js_lesson_else_if_order.mjs";
 import { app_learn_js_lesson_braces_run_thrice } from "./app_learn_js_lesson_braces_run_thrice.mjs";
-import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
+import { app_learn_js_lesson_if_thrice } from "./app_learn_js_lesson_if_thrice.mjs";
 export function app_code_lessons_released_fns() {
   "the lessons handed to a learner on either page they are ever sent to - the built site, and latest; every other lesson is still built and still opens on the working copies";
   "A LIST, NOT A CUT. The release used to be every lesson up to one named lesson. That holds only while lessons are added after it, and on 2026-09-17 twenty-six had been put in between released ones - so a rebuild of latest would have handed the learner twenty-six lessons nobody had read through, spread all through a run they were already part way along. A list names each lesson, so a lesson put in anywhere stays out until it is named here.";
@@ -612,7 +612,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_else_if_twice,
     app_learn_js_lesson_else_if_order,
     app_learn_js_lesson_braces_run_thrice,
-    app_code_lesson_if_thrice,
+    app_learn_js_lesson_if_thrice,
   ];
   return fns;
 }

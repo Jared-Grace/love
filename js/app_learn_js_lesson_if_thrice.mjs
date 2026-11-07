@@ -27,7 +27,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_thrice() {
+export function app_learn_js_lesson_if_thrice() {
   arguments_assert(arguments, 0);
   ("the same if written three times: let n = 1; if (n < 9) { n += 3; } three times, then console.log(n); writes out 10, and with n starting at 3 and compared against 8 writes out 9");
   ("The one new fact is that each if asks about n as the if before it left it, so the same if written three times may run three times, twice, once, or not at all. It is The same if twice with one more if, so the learner meets the counting once more before while does it with no limit.");

@@ -7,7 +7,7 @@ import { add } from "./add.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
+import { app_learn_js_lesson_if_thrice } from "./app_learn_js_lesson_if_thrice.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
@@ -64,11 +64,12 @@ export function app_code_lesson_while() {
     "the same if three times remembered, then while doing the same, and a while that never runs";
     let condition = js_code_binary_spaced_nb(name, less, 9);
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_if_thrice, [
-      "the same ",
-      "if",
-      " can be written three times:",
-    ]);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_if_thrice,
+      ["the same ", "if", " can be written three times:"],
+    );
     let code = js_code_let_statement(name, 1);
     let change2 = js_code_assign_operator_statement(name, plus, 3);
     let if_lines = js_code_if_lines(condition, change2);

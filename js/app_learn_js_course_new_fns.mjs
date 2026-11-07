@@ -5,7 +5,7 @@ import { app_learn_js_lesson_expression_choose_order_stop_early_both } from "./a
 import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
 import { app_learn_js_lesson_else_if_order } from "./app_learn_js_lesson_else_if_order.mjs";
 import { app_learn_js_lesson_braces_run_thrice } from "./app_learn_js_lesson_braces_run_thrice.mjs";
-import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
+import { app_learn_js_lesson_if_thrice } from "./app_learn_js_lesson_if_thrice.mjs";
 export function app_learn_js_course_new_fns() {
   "The lessons a link saying course=new shows: the ones a working copy has that latest does not show.";
   "2026-10-17: read off the latest code page built 2026-10-15 13:06. Twenty-one lessons have no id in its bundle, so latest has never had them; seven more were in it but held back from latest when it was built, and are still held. The order here does not matter, because the lessons are shown in the order of the whole run.";
@@ -20,7 +20,7 @@ export function app_learn_js_course_new_fns() {
     app_code_lesson_step_log_twice,
     app_learn_js_lesson_else_if_order,
     app_learn_js_lesson_braces_run_thrice,
-    app_code_lesson_if_thrice,
+    app_learn_js_lesson_if_thrice,
   ];
   return fns;
 }
