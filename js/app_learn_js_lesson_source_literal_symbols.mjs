@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_source_code_pieces } from "./app_learn_js_lesson_source_code_pieces.mjs";
-import { app_code_lesson_text_operator_symbols } from "./app_code_lesson_text_operator_symbols.mjs";
+import { app_learn_js_lesson_text_operator_symbols } from "./app_learn_js_lesson_text_operator_symbols.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function app_learn_js_lesson_source_literal_symbols(source) {
@@ -10,7 +10,7 @@ export function app_learn_js_lesson_source_literal_symbols(source) {
   let pieces = app_learn_js_lesson_source_code_pieces(source);
   let found = [];
   for (let piece of pieces) {
-    let symbols = app_code_lesson_text_operator_symbols(piece);
+    let symbols = app_learn_js_lesson_text_operator_symbols(piece);
     list_add_multiple(found, symbols);
   }
   let unique = list_unique(found);

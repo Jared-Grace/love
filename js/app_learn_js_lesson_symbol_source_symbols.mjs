@@ -7,7 +7,7 @@ import { list_is } from "./list_is.mjs";
 import { ternary } from "./ternary.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { app_code_lesson_text_operator_symbols } from "./app_code_lesson_text_operator_symbols.mjs";
+import { app_learn_js_lesson_text_operator_symbols } from "./app_learn_js_lesson_text_operator_symbols.mjs";
 import { text_is } from "./text_is.mjs";
 import { js_operator_symbol } from "./js_operator_symbol.mjs";
 export async function app_learn_js_lesson_symbol_source_symbols(name) {
@@ -31,7 +31,7 @@ export async function app_learn_js_lesson_symbol_source_symbols(name) {
     let items = ternary(many, value, [value]);
     let words = list_map(items, word_of);
     let joined = list_join_space(words);
-    let found = app_code_lesson_text_operator_symbols(joined);
+    let found = app_learn_js_lesson_text_operator_symbols(joined);
     return found;
   }
   function word_of(item) {
