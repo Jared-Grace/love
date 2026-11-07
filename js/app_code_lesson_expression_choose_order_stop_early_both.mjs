@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_stop_early_both_title_name_id } from "./app_code_lesson_expression_choose_order_stop_early_both_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_stop_early_both_questions } from "./app_code_lesson_expression_choose_order_stop_early_both_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
-import { app_code_lesson_expression_choose_order_stop_early_both_above } from "./app_code_lesson_expression_choose_order_stop_early_both_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_stop_early_both_above } from "./app_learn_js_lesson_expression_choose_order_stop_early_both_above.mjs";
 export function app_code_lesson_expression_choose_order_stop_early_both() {
   arguments_assert(arguments, 0);
   ("&& and || on one line, solved as JavaScript solves them, a press at a time. false && true || true: choose the &&, then choose false, then the ||, then true");
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_choose_order_stop_early_both() {
     app_code_lesson_expression_choose_order_stop_early_both_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
-    app_code_lesson_expression_choose_order_stop_early_both_above,
+    app_learn_js_lesson_expression_choose_order_stop_early_both_above,
     bank,
   );
   return lesson;
