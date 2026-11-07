@@ -5,7 +5,7 @@ import { app_code_expression_colored_slowly } from "./app_code_expression_colore
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { app_learn_js_expression_chip_style } from "./app_learn_js_expression_chip_style.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_expression_chosen_set(node_span, operator_span) {
+export function app_learn_js_expression_chosen_set(node_span, operator_span) {
   arguments_assert(arguments, 2);
   ("the operator a learner has just chosen, together with the two sides it is going to be worked out from, coloured blue as one block - so what is about to be replaced is seen as one thing rather than as a symbol with numbers standing either side of it");
   ("The operator's own pale chip is taken off at the same moment. A chip left standing inside the blue still reads as something to press, and the pressing is already done.");
