@@ -27,7 +27,7 @@ import { json_to } from "./json_to.mjs";
 import { app_learn_js_if_condition_set } from "./app_learn_js_if_condition_set.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
+import { app_learn_js_lesson_if_halve_even } from "./app_learn_js_lesson_if_halve_even.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -108,7 +108,7 @@ export function app_code_lesson_if_halve_or_triple() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_if_halve_even,
+      app_learn_js_lesson_if_halve_even,
       ["An ", "if", " can halve an even number"],
     );
     let box_two = app_learn_js_container_light_blue(root);

@@ -28,7 +28,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_halve_even() {
+export function app_learn_js_lesson_if_halve_even() {
   arguments_assert(arguments, 0);
   ("halving inside the even check: let n = 8; if (n % 2 === 0) { n /= 2; } console.log(n); writes out 4, and with n starting at 7 writes out 7");
   ("The one new fact is that the even check from If even can guard a change, as A change in an if guarded one with <. It is the first half of the step the human asked for 2026-10-08: if a number is even, divide it by two, otherwise multiply it by 3 and add 1.");
