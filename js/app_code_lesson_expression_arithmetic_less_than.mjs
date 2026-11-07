@@ -4,7 +4,7 @@ import { app_learn_js_lesson_expression_arithmetic_less_than_op_exponent } from 
 import { app_learn_js_lesson_expression_arithmetic_less_than_op_add } from "./app_learn_js_lesson_expression_arithmetic_less_than_op_add.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_above } from "./app_learn_js_lesson_expression_arithmetic_less_than_above.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_one } from "./app_learn_js_lesson_expression_arithmetic_less_than_one.mjs";
-import { app_code_lesson_expression_arithmetic_less_than_title_name_id } from "./app_code_lesson_expression_arithmetic_less_than_title_name_id.mjs";
+import { app_learn_js_lesson_expression_arithmetic_less_than_title_name_id } from "./app_learn_js_lesson_expression_arithmetic_less_than_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -128,7 +128,8 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     );
     return r7;
   }
-  let name_id = app_code_lesson_expression_arithmetic_less_than_title_name_id();
+  let name_id =
+    app_learn_js_lesson_expression_arithmetic_less_than_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
