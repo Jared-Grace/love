@@ -3,7 +3,7 @@ import { app_learn_js_lesson_telling_reports_apart } from "./app_learn_js_lesson
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_telling_report_said } from "./app_learn_js_lesson_telling_report_said.mjs";
 import { greater_than } from "./greater_than.mjs";
-export async function app_code_lesson_telling_symbols_gate_run() {
+export async function app_learn_js_lesson_telling_symbols_gate_run() {
   "QA gate: no lesson of the code app asks about an operator its own telling never showed.";
   "Three lessons were caught doing it, one of them by a person reading the screen and saying so, and each one cost somebody a reading of the lesson to find. A learner meeting an unshown symbol has nothing to be wrong about - the lesson simply never said - so this is a teaching fault rather than a bug, which is exactly the kind nothing else here would ever go red on.";
   "Zero is the ratchet and there is no baseline file, because the last of the three was fixed before this was written and the count has been nothing ever since. A baseline would only record a debt that does not exist.";

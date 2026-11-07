@@ -471,7 +471,7 @@ import { ebible_letter_accounted_gate_run } from "./ebible_letter_accounted_gate
 import { bible_verses_reading_units_cases_gate_run } from "./bible_verses_reading_units_cases_gate_run.mjs";
 import { app_shared_dev_stamp_gate_run } from "./app_shared_dev_stamp_gate_run.mjs";
 import { usfm_markers_removed_cases_gate_run } from "./usfm_markers_removed_cases_gate_run.mjs";
-import { app_code_lesson_telling_symbols_gate_run } from "./app_code_lesson_telling_symbols_gate_run.mjs";
+import { app_learn_js_lesson_telling_symbols_gate_run } from "./app_learn_js_lesson_telling_symbols_gate_run.mjs";
 import { bible_usfm_versions_years_gate_run } from "./bible_usfm_versions_years_gate_run.mjs";
 import { functions_files_unparseable_gate_run } from "./functions_files_unparseable_gate_run.mjs";
 import { js_ast_return_key_shapes_disagreeing_cases_gate_run } from "./js_ast_return_key_shapes_disagreeing_cases_gate_run.mjs";
@@ -1122,7 +1122,7 @@ export function qa_gates() {
     bible_verses_reading_units_cases_gate_run,
     app_shared_dev_stamp_gate_run,
     usfm_markers_removed_cases_gate_run,
-    app_code_lesson_telling_symbols_gate_run,
+    app_learn_js_lesson_telling_symbols_gate_run,
     bible_usfm_versions_years_gate_run,
     functions_files_unparseable_gate_run,
     js_ast_return_key_shapes_disagreeing_cases_gate_run,
