@@ -7,7 +7,7 @@ import { app_code_lesson_expression_choose_order_twin_read_generic } from "./app
 import { app_code_lesson_expression_parentheses_minus_divide } from "./app_code_lesson_expression_parentheses_minus_divide.mjs";
 import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
-export function app_code_lesson_expression_choose_order_parentheses_minus_divide() {
+export function app_learn_js_lesson_expression_choose_order_parentheses_minus_divide() {
   arguments_assert(arguments, 0);
   ("( and ) on the right of a - or a /, taken a press at a time before the lesson next door asks for the whole line: 14 - (7 - 2), choose the inner minus, choose 5, see 14 - 5, choose the minus, choose 9");
   ("Every line the lesson next door writes carries one pair of marks round the last two numbers, and the marks are always needed there, so the line printed back from its shape is the line the twin wrote.");
