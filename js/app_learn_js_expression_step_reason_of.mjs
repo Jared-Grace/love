@@ -11,7 +11,7 @@ import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved
 import { app_learn_js_expression_operator_symbols } from "./app_learn_js_expression_operator_symbols.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_expression_step_reason } from "./app_code_expression_step_reason.mjs";
-export function app_code_expression_step_reason_of(item, node) {
+export function app_learn_js_expression_step_reason_of(item, node) {
   arguments_assert(arguments, 2);
   ("the one sentence saying why this part of this line is the one that may be worked out next, as the pieces of a row: the parentheses when the part is written inside a pair, and otherwise what the operators come to");
   ("Asked of the line and the part rather than of two operators, because the line is what decides. Parentheses beat every strength there is, so a telling that only ever compared the operators had to say something false about a parenthesised line: on false && (true || true) the || does not outrank the && and is not the leftmost of the two, and the rule about ranks came out as the two being read left to right.");

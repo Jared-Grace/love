@@ -8,7 +8,7 @@ import { list_first } from "./list_first.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_expression_step_reason_of } from "./app_code_expression_step_reason_of.mjs";
+import { app_learn_js_expression_step_reason_of } from "./app_learn_js_expression_step_reason_of.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_code_lesson_expression_choose_order_run_remains } from "./app_code_lesson_expression_choose_order_run_remains.mjs";
 export function app_code_lesson_expression_choose_order_reason_run(
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_choose_order_reason_run(
     let step_code = app_learn_js_expression_code(node);
     let step_value = app_code_expression_value(node);
     let step_text = text_to(step_value);
-    let reason = app_code_expression_step_reason_of(current, node);
+    let reason = app_learn_js_expression_step_reason_of(current, node);
     let reason_written = list_empty_not_is(reason);
     let lead = "We solve ";
     if (reason_written) {

@@ -9,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
-import { app_code_expression_step_reason_of } from "./app_code_expression_step_reason_of.mjs";
+import { app_learn_js_expression_step_reason_of } from "./app_learn_js_expression_step_reason_of.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_expression_replace_swap_say.mjs";
@@ -44,7 +44,7 @@ export function app_code_lesson_expression_choose_order_run_worked(
   ("the reason is named FIRST and everything after it follows from it - because it is the whole of why this line has an order at all");
   ("It used to open with the outer operator having something on one side, so it could not be solved yet. That is true of the line and it is not the reason: a learner reads it as an order that comes from one part having something beside it, which is not a rule they can carry anywhere, and the real rule was never said at all. Worse, it left the two operators unexplained beside each other, so a learner had no way to tell whether it was the parentheses or the operators that decided.");
   ("The parentheses are drawn round the part as well as named, because the word and the mark have to be pinned to each other - this is the screen where a learner meets parentheses as a REASON rather than as something they have merely seen.");
-  let reason = app_code_expression_step_reason_of(tree, step);
+  let reason = app_learn_js_expression_step_reason_of(tree, step);
   app_learn_js_div_cycle_code(run, reason);
   app_learn_js_div_cycle_code(run, [
     "So we cannot solve the ",
