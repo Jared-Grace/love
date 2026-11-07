@@ -5,7 +5,7 @@ import { app_learn_js_lesson_expression_choose_order_solve_above } from "./app_l
 import { app_learn_js_lesson_expression_choose_order_solve_title_name_id } from "./app_learn_js_lesson_expression_choose_order_solve_title_name_id.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
-export function app_code_lesson_expression_choose_order_solve() {
+export function app_learn_js_lesson_expression_choose_order_solve() {
   "choosing which part of a line to solve, and then working that part out: 1 + 2 * 3, choose the times, choose 6 out of what it could come to, see 1 + 6, choose the plus, choose 7";
   "The lesson before this one chooses the order and is GIVEN each value; the lessons after it ask for the answer to a whole two-operator line in one go. Between those two stands one step, and this is it: the order is still chosen the same way, and the value that was handed over is now asked for.";
   "That step used to be missing, and the jump was the steepest in the block - a learner went from a screen that did the arithmetic for them straight to a screen that asked for the answer to the whole line with no steps shown at all. Doing the order and doing the arithmetic were separated on purpose one lesson earlier, and they have to be put back together somewhere before a line is asked for whole.";
