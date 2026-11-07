@@ -8,7 +8,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_if_in_else_program_lines } from "./app_code_if_in_else_program_lines.mjs";
+import { app_learn_js_if_in_else_program_lines } from "./app_learn_js_if_in_else_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_learn_js_if_in_else_explain(root, context) {
@@ -42,7 +42,7 @@ export function app_learn_js_if_in_else_explain(root, context) {
     "else",
     " too:",
   ]);
-  let all_lines = app_code_if_in_else_program_lines([false, true], words);
+  let all_lines = app_learn_js_if_in_else_program_lines([false, true], words);
   let all_written = list_join_newline([joy, peace, patience]);
   app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
   app_learn_js_div_cycle_code(box_two, [
@@ -73,7 +73,7 @@ export function app_learn_js_if_in_else_explain(root, context) {
     "false",
     ":",
   ]);
-  let skip_lines = app_code_if_in_else_program_lines([false, false], words);
+  let skip_lines = app_learn_js_if_in_else_program_lines([false, false], words);
   let skip_written = list_join_newline([joy, patience]);
   app_learn_js_code_lines_writes_out(box_three, skip_lines, skip_written);
   app_learn_js_div_cycle_code(box_three, [
@@ -95,7 +95,7 @@ export function app_learn_js_if_in_else_explain(root, context) {
     "true",
     ":",
   ]);
-  let love_lines = app_code_if_in_else_program_lines([true, true], words);
+  let love_lines = app_learn_js_if_in_else_program_lines([true, true], words);
   let love_written = list_join_newline([love, patience]);
   app_learn_js_code_lines_writes_out(box_four, love_lines, love_written);
   app_learn_js_div_cycle_code(box_four, [
