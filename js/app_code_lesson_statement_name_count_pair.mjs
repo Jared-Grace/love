@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_itself_step_title_code } from "./app_cod
 import { app_code_lesson_statement_title_code_times_paint_get } from "./app_code_lesson_statement_title_code_times_paint_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_count_above } from "./app_learn_js_lesson_statement_name_count_above.mjs";
-import { app_code_lesson_statement_name_count_batch } from "./app_code_lesson_statement_name_count_batch.mjs";
+import { app_learn_js_lesson_statement_name_count_batch } from "./app_learn_js_lesson_statement_name_count_batch.mjs";
 export function app_code_lesson_statement_name_count_pair() {
   arguments_assert(arguments, 0);
   ("the pair on counting with a name: its programs, its title lines, and the words both its lessons are called by");
@@ -12,7 +12,7 @@ export function app_code_lesson_statement_name_count_pair() {
   let code = app_code_lesson_statement_name_itself_step_title_code(plus);
   let pair = {
     above: app_learn_js_lesson_statement_name_count_above,
-    batch: app_code_lesson_statement_name_count_batch,
+    batch: app_learn_js_lesson_statement_name_count_batch,
     fragment: app_code_lesson_statement_title_code_times_paint_get(code, 2),
     words: "Counting with a name",
     decoys_last: null,

@@ -8,7 +8,7 @@ import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_statement_name_count_batch() {
+export function app_learn_js_lesson_statement_name_count_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives a name a number, gives the name one more than it holds twice over, and writes the name out");
   ("The same line twice and not three times, because two is where the counting can first be seen. A learner who reads the second copy as doing nothing gets the same answer as a learner who reads it as counting only if the line is written once, so two copies is the smallest program that tells those two readings apart.");
