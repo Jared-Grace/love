@@ -17,7 +17,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { js_operator_dot_name } from "./js_operator_dot_name.mjs";
 import { js_operator_dot } from "./js_operator_dot.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_operators_dot_numbers() {
+export function app_learn_js_lesson_operators_dot_numbers() {
   "The lesson on the dot: the same mark is the point inside a decimal number and the way a name reaches into what it holds, and this is where a student meets both of its uses at once.";
   "It comes as a decimal point first, shown with the beginning of pi, then beside the arithmetic symbols as something that stands between two things, and only then between two names. The second use arrives as a small step from the first rather than as a new idea.";
   "Last comes what the dot will not take: a name on one side and a number on the other, shown failing both ways round. That is the one place it stops behaving like the arithmetic symbols it was just stood beside, so it is said rather than left to be discovered.";

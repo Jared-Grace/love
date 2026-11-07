@@ -15,7 +15,7 @@ import { app_learn_js_lesson_operators_division } from "./app_learn_js_lesson_op
 import { app_code_lesson_operators_minus } from "./app_code_lesson_operators_minus.mjs";
 import { app_learn_js_lesson_operators_asterisk } from "./app_learn_js_lesson_operators_asterisk.mjs";
 import { app_code_lesson_operators_slash_forward } from "./app_code_lesson_operators_slash_forward.mjs";
-import { app_code_lesson_operators_dot_numbers } from "./app_code_lesson_operators_dot_numbers.mjs";
+import { app_learn_js_lesson_operators_dot_numbers } from "./app_learn_js_lesson_operators_dot_numbers.mjs";
 import { app_learn_js_lesson_operators_dot_missing } from "./app_learn_js_lesson_operators_dot_missing.mjs";
 import { app_learn_js_lesson_expression_string_hello } from "./app_learn_js_lesson_expression_string_hello.mjs";
 import { app_learn_js_lesson_expression_string_spaces } from "./app_learn_js_lesson_expression_string_spaces.mjs";
@@ -376,7 +376,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_minus,
     app_learn_js_lesson_operators_asterisk,
     app_code_lesson_operators_slash_forward,
-    app_code_lesson_operators_dot_numbers,
+    app_learn_js_lesson_operators_dot_numbers,
     app_learn_js_lesson_operators_dot_missing,
     app_learn_js_lesson_expression_string_hello,
     app_learn_js_lesson_expression_string_spaces,
