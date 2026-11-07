@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
-import { app_code_lesson_id_known_is } from "./app_code_lesson_id_known_is.mjs";
+import { app_learn_js_lesson_id_known_is } from "./app_learn_js_lesson_id_known_is.mjs";
 import { app_code_lesson_id_suggestions } from "./app_code_lesson_id_suggestions.mjs";
 import { app_code_lesson_id_label } from "./app_code_lesson_id_label.mjs";
 export function app_learn_js_hash_field_lesson() {
@@ -10,7 +10,7 @@ export function app_learn_js_hash_field_lesson() {
     name: "lesson",
     list_is: false,
     number_is: false,
-    valid_is: app_code_lesson_id_known_is,
+    valid_is: app_learn_js_lesson_id_known_is,
     suggestions: app_code_lesson_id_suggestions,
     label: app_code_lesson_id_label,
   };
