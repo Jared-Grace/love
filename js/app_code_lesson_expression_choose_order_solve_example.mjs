@@ -7,7 +7,7 @@ import { html_text_set } from "./html_text_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
-import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
+import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_expression_choose_order_ask.mjs";
 import { noop } from "./noop.mjs";
 export function app_code_lesson_expression_choose_order_solve_example(
   parent,
@@ -47,7 +47,7 @@ export function app_code_lesson_expression_choose_order_solve_example(
     await html_height_change_animate(head, asking, finished_say, duration);
   }
   ("the pressing is the quiz next door's pressing, out of the one place both of them read - all this page does differently is write the asking on the card instead of over a row of answers, and count nothing against a wrong press");
-  app_code_expression_choose_order_ask({
+  app_learn_js_expression_choose_order_ask({
     parent,
     tree,
     say: ask,

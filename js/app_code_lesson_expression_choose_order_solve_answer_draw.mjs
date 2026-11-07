@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty } from "./text_empty.mjs";
-import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
+import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_expression_choose_order_ask.mjs";
 import { noop } from "./noop.mjs";
 export function app_code_lesson_expression_choose_order_solve_answer_draw(
   parent,
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_choose_order_solve_answer_draw(
     let nothing = text_empty();
     answer_label_set(nothing);
   }
-  app_code_expression_choose_order_ask({
+  app_learn_js_expression_choose_order_ask({
     parent,
     tree,
     say: answer_label_set,

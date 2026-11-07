@@ -107,7 +107,7 @@ import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_code_expression_replaced_set } from "./app_code_expression_replaced_set.mjs";
 import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
 import { html_move_animate_settle } from "./html_move_animate_settle.mjs";
-import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
+import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_expression_choose_order_ask.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
@@ -1004,7 +1004,7 @@ export function app_code_program_step_through_generic(
           }
         }
         function solver_start(resolve) {
-          app_code_expression_choose_order_ask({
+          app_learn_js_expression_choose_order_ask({
             parent: solver_box,
             tree,
             say,
