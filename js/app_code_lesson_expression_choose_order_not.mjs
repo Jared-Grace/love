@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_above } from "./app_learn_js_lesson_expression_choose_order_not_above.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_questions } from "./app_learn_js_lesson_expression_choose_order_not_questions.mjs";
-import { app_code_lesson_expression_choose_order_not_title_name_id } from "./app_code_lesson_expression_choose_order_not_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_title_name_id } from "./app_learn_js_lesson_expression_choose_order_not_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_choose_order_not() {
   arguments_assert(arguments, 0);
@@ -11,7 +11,7 @@ export function app_code_lesson_expression_choose_order_not() {
   ("It used to call itself the first line whose operator has only one thing beside it. That was true when it was written and stopped being true when the press-at-a-time lesson for !! was put in ahead of it, which says the same thing about itself in as many words. Corrected 2026-09-10.");
   ("Nothing has to refuse the wrong press. The ! cannot go first because what stands after it is not a value yet - it is the comparison, still waiting - so the rule is read off the line rather than enforced against the learner, which is the same reading every lesson in this run has asked for.");
   ("Every part of this line comes to a true or a false, so the value offered instead is the other of the two and nothing has to be invented.");
-  let name_id = app_code_lesson_expression_choose_order_not_title_name_id();
+  let name_id = app_learn_js_lesson_expression_choose_order_not_title_name_id();
   let bank = app_learn_js_lesson_expression_choose_order_not_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
