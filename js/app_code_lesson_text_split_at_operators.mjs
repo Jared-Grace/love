@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_operator_symbols_longest_first } from "./app_code_lesson_operator_symbols_longest_first.mjs";
+import { app_learn_js_lesson_operator_symbols_longest_first } from "./app_learn_js_lesson_operator_symbols_longest_first.mjs";
 import { text_size } from "./text_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_text_split_at_operators(text) {
   ("one walk of a piece of text, handing back both of the things written there: the operators in the order they stand, and the runs of text that stand between them.");
   ("The text is WALKED rather than searched once per operator, because searching would find the == inside every === and the < inside every <=. The walk takes the longest operator that starts where it stands and then steps past the whole of it, so each one is counted as the one thing it is, and every letter it does not step over is kept for whichever operand is being gathered.");
   ("One walk hands back both because they are the same reading of the same text, and a second walk written to gather the other half would have to repeat the longest-first rule to stay right. There is one more operand than there are operators, always, even when the run between two of them is empty - the emptiness is itself something a caller may want to see.");
-  let symbols = app_code_lesson_operator_symbols_longest_first();
+  let symbols = app_learn_js_lesson_operator_symbols_longest_first();
   let operators = [];
   let operands = [];
   let held = "";

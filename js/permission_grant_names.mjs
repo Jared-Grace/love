@@ -2341,7 +2341,7 @@ export function permission_grant_names() {
     fn_name("gloss_chapter_passage_entries"),
     fn_name("function_span_cut_named_skip_decided_or_null_cases_gate_run"),
     fn_name("function_lift_candidates_generic"),
-    fn_name("app_code_lesson_operator_symbols_longest_first"),
+    fn_name("app_learn_js_lesson_operator_symbols_longest_first"),
     fn_name("bible_usfm_versions_years_gate_run"),
     fn_name("app_code_lessons_fns_shown"),
     fn_name("bible_audio_root_folder"),
