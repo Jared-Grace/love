@@ -10,7 +10,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
 import { app_learn_js_arrow } from "./app_learn_js_arrow.mjs";
-export function app_code_lesson_expression_whole_part_formula_above(
+export function app_learn_js_lesson_expression_whole_part_formula_above(
   root,
   context,
 ) {
