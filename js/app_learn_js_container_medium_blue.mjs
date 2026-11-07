@@ -5,7 +5,7 @@ import { app_learn_js_container_generic } from "./app_learn_js_container_generic
 import { text_combine } from "./text_combine.mjs";
 import { app_shared_container_blue_medium_background_color } from "./app_shared_container_blue_medium_background_color.mjs";
 import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
-export function app_code_container_medium_blue(parent) {
+export function app_learn_js_container_medium_blue(parent) {
   "draws from the shared graduated-blue palette (the medium fill plus the blue border as its shadow) so this app's medium-blue container matches every other app's, instead of its own one-off hsl blues";
   let container = app_learn_js_container_generic(parent);
   let fill = app_shared_container_blue_medium_background_color();
