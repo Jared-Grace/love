@@ -14,7 +14,7 @@ import { app_learn_js_expression_chips_settle } from "./app_learn_js_expression_
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
-import { app_code_expression_choose_line_stepped_draw } from "./app_code_expression_choose_line_stepped_draw.mjs";
+import { app_learn_js_expression_choose_line_stepped_draw } from "./app_learn_js_expression_choose_line_stepped_draw.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 export function app_learn_js_expression_choose_line_draw_on_operator({
   rising,
@@ -84,7 +84,7 @@ export function app_learn_js_expression_choose_line_draw_on_operator({
       if (not(waiting_was)) {
         app_shared_glow_clear(waiting);
       }
-      await app_code_expression_choose_line_stepped_draw({
+      await app_learn_js_expression_choose_line_stepped_draw({
         line,
         node_span,
         node_value,

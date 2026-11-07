@@ -4,7 +4,7 @@ import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_learn_js_expression_choose_line_draw } from "./app_learn_js_expression_choose_line_draw.mjs";
 import { app_learn_js_expression_chips_rise } from "./app_learn_js_expression_chips_rise.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-export async function app_code_expression_choose_line_stepped_draw({
+export async function app_learn_js_expression_choose_line_stepped_draw({
   line,
   node_span,
   node_value,
