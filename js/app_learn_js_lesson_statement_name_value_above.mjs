@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
+import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_lesson_statement_name_value_word.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_statement_name_value_above(root, context) {
   ("The picture is drawn three times over, empty, then named, then filled, because the story is a change and one picture cannot be a change.");
   ("The grapes are a real fruit rather than one of the words the string lessons use, because what goes in the cup has to be something that can be inside a cup. What the quizzes hold are those same words as before, which is the point: the value in the cup can be any of them.");
   let name = app_learn_js_lesson_statement_name_value_name();
-  let word = app_code_lesson_statement_name_value_word();
+  let word = app_learn_js_lesson_statement_name_value_word();
   let nothing = text_empty();
   ("a reminder rather than a new fact: the identifier lessons already said identifiers are used as names, and this is the first screen where one actually names something. Saying it again here is what joins the two, and it costs nothing to read because a learner has met every word of it.");
   let box_remember = app_learn_js_container_light_blue(root);

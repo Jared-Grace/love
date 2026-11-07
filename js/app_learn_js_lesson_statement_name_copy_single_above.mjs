@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
-import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
+import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_lesson_statement_name_value_word.mjs";
 import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_statement_name_copy_single_above(
   ("The reminder is the two-names lesson because this line is that one with a single change - the second name is given the first name instead of a word. Both programs are three lines, so nothing is added but the one change.");
   let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
-  let word_first = app_code_lesson_statement_name_value_word();
+  let word_first = app_learn_js_lesson_statement_name_value_word();
   let word_last = app_learn_js_lesson_statement_name_two_word();
   let quoted_first = app_code_string_code(word_first);
   let quoted_last = app_code_string_code(word_last);

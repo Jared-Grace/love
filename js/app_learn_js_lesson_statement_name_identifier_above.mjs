@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_identifier_name } from "./app_learn_js_lesson_statement_name_identifier_name.mjs";
 import { app_learn_js_lesson_statement_name_identifier_word } from "./app_learn_js_lesson_statement_name_identifier_word.mjs";
-import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
+import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_lesson_statement_name_value_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_lesson_statement_name_identifier_above(
   let name_before = app_learn_js_lesson_statement_name_value_name();
   let name = app_learn_js_lesson_statement_name_identifier_name();
   let word = app_learn_js_lesson_statement_name_identifier_word();
-  let grapes = app_code_lesson_statement_name_value_word();
+  let grapes = app_learn_js_lesson_statement_name_value_word();
   let box_before = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_before,

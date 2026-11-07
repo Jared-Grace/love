@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
-import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
+import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_lesson_statement_name_value_word.mjs";
 import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_statement_name_two_above(root, context) {
   ("Both cups are asked about, in turn, and each answer is the other cup's wrong answer. That is the shape of every question that follows, said first in a story where nobody can get it wrong.");
   let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
-  let word_first = app_code_lesson_statement_name_value_word();
+  let word_first = app_learn_js_lesson_statement_name_value_word();
   let word_last = app_learn_js_lesson_statement_name_two_word();
   let box_two = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(box_two, ["You can have more than one cup"]);

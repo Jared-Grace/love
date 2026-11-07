@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
+import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_lesson_statement_name_value_word.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_value_box(root, context) {
   ("a box showing a name holding a word, the program the lesson on giving a value a name taught, with a link to that lesson");
   ("Shared by every lesson that meets a new kind of value against the word a learner has already seen a name hold.");
   let name = app_learn_js_lesson_statement_name_value_name();
-  let word = app_code_lesson_statement_name_value_word();
+  let word = app_learn_js_lesson_statement_name_value_word();
   let quoted = app_code_string_code(word);
   let logged = js_code_console_log_statement(name);
   let box = app_learn_js_container_light_blue(root);
