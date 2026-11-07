@@ -8,7 +8,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { app_learn_js_lesson_quiz_token_select_count_badge_inside_percent } from "./app_learn_js_lesson_quiz_token_select_count_badge_inside_percent.mjs";
 import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_quiz_token_select_count_badge_room_keep(
+export function app_learn_js_lesson_quiz_token_select_count_badge_room_keep(
   badge,
   tile,
 ) {
