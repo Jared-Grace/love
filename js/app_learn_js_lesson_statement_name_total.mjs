@@ -6,7 +6,7 @@ import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_statement_name_total_above } from "./app_learn_js_lesson_statement_name_total_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_statement_name_total() {
+export function app_learn_js_lesson_statement_name_total() {
   arguments_assert(arguments, 0);
   ("a sum given a name: let a = 2; let b = 3; let c = a + b; console.log(c); writes out 5");
   ("The screen before this one put a sum of two names inside console.log. Here the same sum stands on the right of an equals instead, which is the one place a value goes that the learner has not yet seen a sum standing in.");

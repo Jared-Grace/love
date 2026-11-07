@@ -8,7 +8,7 @@ import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
+import { app_learn_js_lesson_statement_name_total } from "./app_learn_js_lesson_statement_name_total.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
@@ -41,7 +41,7 @@ export function app_learn_js_lesson_statement_name_itself_sum_above(
   app_code_remember_from_lesson(
     box_total,
     context,
-    app_code_lesson_statement_name_total,
+    app_learn_js_lesson_statement_name_total,
     [
       "we can give a name (",
       name_third,
@@ -87,7 +87,7 @@ export function app_learn_js_lesson_statement_name_itself_sum_above(
   app_code_remember_from_lesson(
     box_itself,
     context,
-    app_code_lesson_statement_name_total,
+    app_learn_js_lesson_statement_name_total,
     ["we wrote:"],
   );
   app_learn_js_div_code(box_itself, code_total);
