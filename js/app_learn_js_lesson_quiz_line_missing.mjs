@@ -15,7 +15,7 @@ import { list_set } from "./list_set.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_lesson_quiz_token_select_code_show } from "./app_code_lesson_quiz_token_select_code_show.mjs";
 import { app_code_lesson_quiz_pieces_select } from "./app_code_lesson_quiz_pieces_select.mjs";
-export function app_code_lesson_quiz_line_missing(
+export function app_learn_js_lesson_quiz_line_missing(
   parent,
   info,
   qa,
