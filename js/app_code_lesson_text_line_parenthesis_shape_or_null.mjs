@@ -2,7 +2,7 @@ import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_text_operators_written } from "./app_code_lesson_text_operators_written.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_text_line_code_is } from "./app_code_lesson_text_line_code_is.mjs";
+import { app_learn_js_lesson_text_line_code_is } from "./app_learn_js_lesson_text_line_code_is.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { ternary } from "./ternary.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_text_line_parenthesis_shape_or_null(text) {
   if (one_only) {
     return null;
   }
-  let code_is = app_code_lesson_text_line_code_is(text);
+  let code_is = app_learn_js_lesson_text_line_code_is(text);
   let sentence = not(code_is);
   if (sentence) {
     return null;

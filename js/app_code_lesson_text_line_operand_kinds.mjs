@@ -1,6 +1,6 @@
 import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_text_line_code_is } from "./app_code_lesson_text_line_code_is.mjs";
+import { app_learn_js_lesson_text_line_code_is } from "./app_learn_js_lesson_text_line_code_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_text_split_at_operators } from "./app_code_lesson_text_split_at_operators.mjs";
 import { property_get } from "./property_get.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_text_line_operand_kinds(text) {
   ("One operator is enough. A kind is a property of an operand rather than of the order the operators are worked in, so a single comparison already has two of them to be right or wrong about.");
   ("Parentheses are read as spaces before the words are taken, so the call in Math.floor(14 / 4) gives up its name and its number instead of one word that is neither. Every word of an operand is read rather than the whole of it, because that is what a parenthesis leaves behind.");
   ("A name has to start with a letter. Anything else is left unnamed rather than called a name, which keeps a stray piece of punctuation - an operator this does not know about, most of all - from being reported as something the lesson teaches.");
-  let code_is = app_code_lesson_text_line_code_is(text);
+  let code_is = app_learn_js_lesson_text_line_code_is(text);
   let sentence = not(code_is);
   if (sentence) {
     let r = [];

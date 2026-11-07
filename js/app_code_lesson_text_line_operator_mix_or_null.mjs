@@ -3,7 +3,7 @@ import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_text_operators_written } from "./app_code_lesson_text_operators_written.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_text_line_code_is } from "./app_code_lesson_text_line_code_is.mjs";
+import { app_learn_js_lesson_text_line_code_is } from "./app_learn_js_lesson_text_line_code_is.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { ternary } from "./ternary.mjs";
 export function app_code_lesson_text_line_operator_mix_or_null(text) {
@@ -18,7 +18,7 @@ export function app_code_lesson_text_line_operator_mix_or_null(text) {
   if (one_only) {
     return null;
   }
-  let code_is = app_code_lesson_text_line_code_is(text);
+  let code_is = app_learn_js_lesson_text_line_code_is(text);
   let sentence = not(code_is);
   if (sentence) {
     return null;

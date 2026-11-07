@@ -3,7 +3,7 @@ import { digits } from "./digits.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_code_lesson_value_words } from "./app_code_lesson_value_words.mjs";
 import { text_includes_any } from "./text_includes_any.mjs";
-export function app_code_lesson_text_line_code_is(text) {
+export function app_learn_js_lesson_text_line_code_is(text) {
   arguments_assert(arguments, 1);
   ("true when a short piece of a lesson is SHOWING a line of code rather than saying something about one.");
   ("A digit or a true or a false is what tells the two apart. The pieces reaching this have already been cut to card length, so what is left to reject is the short sentence that spells an operator while talking about it - === is not the same as == is a sentence, and every reading that asks what shape a line is written in would answer nonsense about it.");
