@@ -1,4 +1,4 @@
-import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -181,7 +181,7 @@ export function app_code_lesson_statement_name_grid_row() {
     "This continues with the third and fourth rows, and so on",
   ]);
   let v14 = worded(["", row_formula]);
-  let color4 = app_code_highlight_color_fourth();
+  let color4 = app_learn_js_highlight_color_fourth();
   let lesson = app_code_lesson_statement_formula({
     words: "Row of a chair",
     title_code: row_formula,

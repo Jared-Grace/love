@@ -13,7 +13,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
-import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
@@ -134,7 +134,7 @@ export function app_code_lesson_statement_name_rectangles_cover_edges() {
   let start_color = app_code_highlight_color();
   let end_color = app_code_highlight_color_second();
   let overlap_color = app_code_highlight_color_third();
-  let first_color = app_code_highlight_color_fourth();
+  let first_color = app_learn_js_highlight_color_fourth();
   let second_color = app_learn_js_highlight_color_fifth();
   function from(text) {
     "a left or top edge, or a name holding one, as a chip in the start colour";

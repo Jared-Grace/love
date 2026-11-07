@@ -1,6 +1,6 @@
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
-import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { list_max } from "./list_max.mjs";
@@ -171,7 +171,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
   let and_chip = app_learn_js_explain_number_colored(and_op, plain);
   let right_arrow = app_learn_js_arrow_inline_draw(0);
   let down_arrow = app_learn_js_arrow_inline_draw(90);
-  let color2 = app_code_highlight_color_fourth();
+  let color2 = app_learn_js_highlight_color_fourth();
   let purple = app_learn_js_explain_word_colored("purple", color2);
   let color3 = app_learn_js_highlight_color_fifth();
   let orange = app_learn_js_explain_word_colored("orange", color3);

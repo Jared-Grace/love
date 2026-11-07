@@ -22,7 +22,7 @@ import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_f
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
-import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 export function app_code_lesson_statement_name_grid_position() {
   arguments_assert(arguments, 0);
   ("the row and column of a numbered chair in rows of chairs: let row = Math.floor(chair / columns); let column = chair % columns;");
@@ -170,7 +170,7 @@ export function app_code_lesson_statement_name_grid_position() {
   );
   let color = app_code_highlight_color_second();
   let color2 = app_learn_js_highlight_color_fifth();
-  let color4 = app_code_highlight_color_fourth();
+  let color4 = app_learn_js_highlight_color_fourth();
   let v2 = pointed(["", column_formula], [], []);
   let lesson = app_code_lesson_statement_formula({
     words: "Column of a chair",

@@ -1,5 +1,5 @@
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
-import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -171,7 +171,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let right_arrow = app_learn_js_arrow_inline_draw(0);
   let down_arrow = app_learn_js_arrow_inline_draw(90);
   let square_word = app_learn_js_explain_word_colored("square", square_color);
-  let rectangle_color = app_code_highlight_color_fourth();
+  let rectangle_color = app_learn_js_highlight_color_fourth();
   let rectangle_word = app_learn_js_explain_word_colored(
     "rectangle",
     rectangle_color,

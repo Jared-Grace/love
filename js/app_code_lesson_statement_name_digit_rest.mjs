@@ -1,5 +1,5 @@
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
-import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
@@ -66,7 +66,7 @@ export function app_code_lesson_statement_name_digit_rest() {
   let color2 = app_code_highlight_color_second();
   ("the dot in 12.3 wears a third colour and the 3 after it a fourth, asked by the human 2026-09-28, so the dot that division puts in and the digit that rounding down takes away are each seen; the 3 of 123 stays plain, because a pointer on .3 names only the 3 after a dot");
   let color3 = app_code_highlight_color_third();
-  let color4 = app_code_highlight_color_fourth();
+  let color4 = app_learn_js_highlight_color_fourth();
   let pointers = [
     [["12"], color],
     [["456"], color2],

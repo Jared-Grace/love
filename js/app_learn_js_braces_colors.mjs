@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
-import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 export function app_learn_js_braces_colors() {
   arguments_assert(arguments, 0);
@@ -11,7 +11,7 @@ export function app_learn_js_braces_colors() {
   let first = app_code_highlight_color();
   let second = app_code_highlight_color_second();
   let third = app_code_highlight_color_third();
-  let fourth = app_code_highlight_color_fourth();
+  let fourth = app_learn_js_highlight_color_fourth();
   let fifth = app_learn_js_highlight_color_fifth();
   let colors = [first, second, third, fourth, fifth];
   return colors;
