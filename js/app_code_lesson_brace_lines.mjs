@@ -9,7 +9,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_brace_lines_generic } from "./app_code_lesson_brace_lines_generic.mjs";
-import { app_code_brace_pair_programs_three } from "./app_code_brace_pair_programs_three.mjs";
+import { app_learn_js_brace_pair_programs_three } from "./app_learn_js_brace_pair_programs_three.mjs";
 export function app_code_lesson_brace_lines() {
   arguments_assert(arguments, 0);
   ("which lines stand between a pair of braces, in programs with three pairs of braces: the learner taps every line between a { and the } that closes it");
@@ -35,7 +35,7 @@ export function app_code_lesson_brace_lines() {
       ],
     );
     let box_two = app_code_container_light_blue(root);
-    let codes = app_code_brace_pair_programs_three();
+    let codes = app_learn_js_brace_pair_programs_three();
     let code = list_last(codes);
     app_learn_js_brace_lines_example(box_two, code, 0);
   }
@@ -46,7 +46,7 @@ export function app_code_lesson_brace_lines() {
   let lesson = app_code_lesson_brace_lines_generic(
     name_id,
     above,
-    app_code_brace_pair_programs_three,
+    app_learn_js_brace_pair_programs_three,
   );
   return lesson;
 }
