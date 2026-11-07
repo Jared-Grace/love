@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
-import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
+import { app_learn_js_if_blocks_kept } from "./app_learn_js_if_blocks_kept.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
@@ -27,7 +27,7 @@ export async function app_learn_js_braces_run_output_show(
     fn_name("app_learn_js_braces_run_choose"),
     ", because that one reads letters by number and so cannot be proved safe to edit; this way the change there is one call.");
   let duration = app_shared_animation_duration();
-  let kept = app_code_if_blocks_kept(code);
+  let kept = app_learn_js_if_blocks_kept(code);
   let output = eval_console_log_lines(kept);
   let out = html_div(parent);
   html_style_opacity(out, "0");

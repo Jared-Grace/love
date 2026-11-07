@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
+import { app_learn_js_if_blocks_kept } from "./app_learn_js_if_blocks_kept.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
 import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
@@ -35,7 +35,7 @@ export function app_code_lesson_step_programs_generic(
   }
   let batch = app_learn_js_batch_question_answer_fns(
     programs,
-    app_code_if_blocks_kept,
+    app_learn_js_if_blocks_kept,
   );
   let forwards = {
     question_label: "",

@@ -6,7 +6,7 @@ import { app_code_if_blocks_lines_kept } from "./app_code_if_blocks_lines_kept.m
 import { text_get } from "./text_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_if_blocks_kept(code) {
+export function app_learn_js_if_blocks_kept(code) {
   arguments_assert(arguments, 1);
   ("a program as its steps leave it on the page once every section has been answered: what does not run is gone, every if and else around what runs is gone, and what ran stands moved out to where it now belongs; a line left with nothing on it goes too");
   ("2026-10-12: the lines are ",

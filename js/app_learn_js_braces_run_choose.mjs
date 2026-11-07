@@ -58,7 +58,7 @@ export function app_learn_js_braces_run_choose(
   ("What each answer does is ",
     fn_name("app_code_if_blocks"),
     "'s to say, so the program shown at the end is the one ",
-    fn_name("app_code_if_blocks_kept"),
+    fn_name("app_learn_js_if_blocks_kept"),
     " writes out as the answer.");
   ("Every letter is its own piece of the page, so any stretch of the program can fade however it falls across lines; a line goes once everything written on it has faded, which is what makes the braces close up rather than leave a hole.");
   ("The answers are the choices of every other question in this app with choices, so they look and behave the same: a wrong one turns red and is spent, the right one turns green.");
