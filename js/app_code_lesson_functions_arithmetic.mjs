@@ -11,7 +11,7 @@ import { text_replace } from "./text_replace.mjs";
 import { list_without } from "./list_without.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
-import { app_code_function_call_wrong_say } from "./app_code_function_call_wrong_say.mjs";
+import { app_learn_js_function_call_wrong_say } from "./app_learn_js_function_call_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
@@ -85,7 +85,7 @@ export function app_code_lesson_functions_arithmetic() {
     answer_label: quiz_label,
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
-    wrong_say: app_code_function_call_wrong_say,
+    wrong_say: app_learn_js_function_call_wrong_say,
     decoys: decoys_forwards,
   };
   let backwards = {
@@ -94,7 +94,7 @@ export function app_code_lesson_functions_arithmetic() {
     answer_label: quiz_backwards_label_answer,
     answer_on_button: html_style_code_dark,
     answer_count_override: quiz_backwards_answer_count_override,
-    wrong_say: app_code_function_call_wrong_say,
+    wrong_say: app_learn_js_function_call_wrong_say,
     decoys: decoys_backwards,
   };
   let quizzes_get = app_code_lesson_quizzes_unscramble_both({

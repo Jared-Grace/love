@@ -11,7 +11,7 @@ import { equal } from "./equal.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { list_find_or_null } from "./list_find_or_null.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-export function app_code_function_call_wrong_say(question, answer, choice) {
+export function app_learn_js_function_call_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks the wrong rewriting of a sum as a function call, or of a function call as a sum: which function the symbol is written as, and that the left number goes first and the right number second, as parts that take turns between words and code. null when the two sides are not one sum and the one call it is written as");
   ("Not picked: naming what is wrong with the pick; a wrong pick may have the wrong function, the wrong numbers or both, and the rule with the right rewriting beside it answers all three");
