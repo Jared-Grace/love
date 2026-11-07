@@ -109,7 +109,7 @@ import { app_code_lesson_expression_swapping_add } from "./app_code_lesson_expre
 import { app_code_lesson_expression_swapping_divide } from "./app_code_lesson_expression_swapping_divide.mjs";
 import { app_code_lesson_expression_swapping_order } from "./app_code_lesson_expression_swapping_order.mjs";
 import { app_learn_js_lesson_expression_choose_order_pair } from "./app_learn_js_lesson_expression_choose_order_pair.mjs";
-import { app_code_lesson_expression_parentheses_both_sides } from "./app_code_lesson_expression_parentheses_both_sides.mjs";
+import { app_learn_js_lesson_expression_parentheses_both_sides } from "./app_learn_js_lesson_expression_parentheses_both_sides.mjs";
 import { app_code_lesson_expression_swapping_equal } from "./app_code_lesson_expression_swapping_equal.mjs";
 import { app_learn_js_lesson_expression_choose_order_and } from "./app_learn_js_lesson_expression_choose_order_and.mjs";
 import { app_learn_js_lesson_expression_comparison_and } from "./app_learn_js_lesson_expression_comparison_and.mjs";
@@ -422,7 +422,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_expression_swapping_divide,
     app_code_lesson_expression_swapping_order,
     app_learn_js_lesson_expression_choose_order_pair,
-    app_code_lesson_expression_parentheses_both_sides,
+    app_learn_js_lesson_expression_parentheses_both_sides,
     app_code_lesson_expression_swapping_equal,
     app_learn_js_lesson_expression_choose_order_and,
     app_learn_js_lesson_expression_comparison_and,
