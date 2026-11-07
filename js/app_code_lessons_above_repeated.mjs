@@ -24,7 +24,7 @@ export function app_code_lessons_above_repeated() {
   arguments_assert(arguments, 0);
   ("Every step lesson whose telling repeats the whole telling of the lesson after it without saying so, and every step lesson that says so about a lesson that is not the one after it, as lesson name | what is wrong.");
   ("Saying so is carrying above_taught_fn_name, which ",
-    fn_name("app_code_lesson_step_before_lesson_generic"),
+    fn_name("app_learn_js_lesson_step_before_lesson_generic"),
     " sets. ",
     fn_name("app_learn_js_lesson_above_shown"),
     " reads it to show a short line in place of the repeated boxes, once the step lesson is finished. The human's goal, 2026-10-22: a step lesson and its regular lesson do not needlessly repeat their telling.");
@@ -95,7 +95,7 @@ export function app_code_lessons_above_repeated() {
         " | repeats the whole telling of ",
         next.name,
         " - build it with ",
-        fn_name("app_code_lesson_step_before_lesson_generic"),
+        fn_name("app_learn_js_lesson_step_before_lesson_generic"),
       ]);
       list_add(offenders, item2);
     }

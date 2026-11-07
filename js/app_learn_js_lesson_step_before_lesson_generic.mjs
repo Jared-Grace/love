@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_step_of_lesson_generic } from "./app_code_lesson_step_of_lesson_generic.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_code_lesson_step_before_lesson_generic(
+export function app_learn_js_lesson_step_before_lesson_generic(
   title,
   title_code,
   lesson_get,
