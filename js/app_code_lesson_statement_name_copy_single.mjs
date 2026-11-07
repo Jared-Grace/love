@@ -11,7 +11,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_lesson_statement_name_copy_single_title_name_id } from "./app_code_lesson_statement_name_copy_single_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_lesson_statement_name_copy_single_batch } from "./app_code_lesson_statement_name_copy_single_batch.mjs";
+import { app_learn_js_lesson_statement_name_copy_single_batch } from "./app_learn_js_lesson_statement_name_copy_single_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_statement_name_copy_single_above } from "./app_learn_js_lesson_statement_name_copy_single_above.mjs";
@@ -47,7 +47,7 @@ export function app_code_lesson_statement_name_copy_single() {
   }
   let name_id = app_code_lesson_statement_name_copy_single_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
-    app_code_lesson_statement_name_copy_single_batch,
+    app_learn_js_lesson_statement_name_copy_single_batch,
     eval_console_log_to_list,
   );
   let lesson = app_learn_js_lesson_code_logged({

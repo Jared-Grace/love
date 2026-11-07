@@ -8,7 +8,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_statement_name_copy_single_batch() {
+export function app_learn_js_lesson_statement_name_copy_single_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives a word to a name, gives a second name what the first one holds, and writes the second one out");
   ("One word per program, so the only new thing is the name with no quote marks on the right of the equals. Choosing which of two names was copied is the lesson after this one.");
