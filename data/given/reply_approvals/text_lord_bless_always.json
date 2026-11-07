@@ -1,0 +1,1 @@
+{"f_name":"text_lord_bless_always","text":"+import { text_may_the_lord_combine } from \"./text_may_the_lord_combine.mjs\";\n+export function text_lord_bless_always() {\n+  let v = text_may_the_lord_combine(\"always bless \");\n+  return v;\n+}\n+"}

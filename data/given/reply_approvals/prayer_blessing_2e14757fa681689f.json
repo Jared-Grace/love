@@ -1,0 +1,1 @@
+{"f_name":"prayer_blessing_2e14757fa681689f","text":"-  let v2 = text_lord_bless();\n+  let v2 = text_lord_bless_always();"}
