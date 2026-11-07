@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
-import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
+import { app_learn_js_lesson_expression_less_than } from "./app_learn_js_lesson_expression_less_than.mjs";
 export function app_code_lesson_statement_name_compare() {
   arguments_assert(arguments, 0);
   ("two names compared: let a = 3; let b = 5; let smaller = a < b; console.log(smaller); writes out true");
@@ -37,7 +37,7 @@ export function app_code_lesson_statement_name_compare() {
     symbol,
     pairs_get,
     example_pair: [3, 5],
-    remember_lesson: app_code_lesson_expression_less_than,
+    remember_lesson: app_learn_js_lesson_expression_less_than,
     remember_parts: [
       "we can ask whether one number is smaller (",
       symbol,
