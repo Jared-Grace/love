@@ -38,7 +38,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_inside_generic(options) {
+export function app_learn_js_lesson_if_inside_generic(options) {
   arguments_assert(arguments, 1);
   ("an if inside a loop: let n = 1; loop (n < 6) { if (n > 2) { console.log(n); } n += 2; } writes out 3 and 5, one under the other, and not 1; the while and the for differ only in what is handed in here");
   ("program_write is handed let n = ...;, the condition and the lines inside, the last being n += 2;, and returns the whole program. keyword is the loop's own word, said as the walk ends. Above is handed example, which draws the program of 1, 6 and 2 with the writer it is given and what it writes out, and walk, which says what it does run by run.");

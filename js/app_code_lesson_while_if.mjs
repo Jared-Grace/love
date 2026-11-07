@@ -6,7 +6,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_if_inside_generic } from "./app_code_lesson_if_inside_generic.mjs";
+import { app_learn_js_lesson_if_inside_generic } from "./app_learn_js_lesson_if_inside_generic.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
 export function app_code_lesson_while_if() {
   arguments_assert(arguments, 0);
@@ -45,7 +45,7 @@ export function app_code_lesson_while_if() {
     "An if inside a while",
     "while (...) { if (...) {} }",
   );
-  let lesson = app_code_lesson_if_inside_generic({
+  let lesson = app_learn_js_lesson_if_inside_generic({
     name_id,
     above,
     program_write,
