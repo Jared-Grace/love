@@ -1,7 +1,7 @@
 import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_choose_order_operators_expression_parts(
+export function app_learn_js_lesson_expression_choose_order_operators_expression_parts(
   left,
   middle,
   right,

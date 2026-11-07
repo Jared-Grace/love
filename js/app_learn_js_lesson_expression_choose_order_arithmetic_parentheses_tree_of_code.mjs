@@ -7,7 +7,7 @@ import { text_starts_with } from "./text_starts_with.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_expression_choose_order_operators_expression_parts } from "./app_code_lesson_expression_choose_order_operators_expression_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_operators_expression_parts } from "./app_learn_js_lesson_expression_choose_order_operators_expression_parts.mjs";
 export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code(
   code,
 ) {
@@ -29,13 +29,14 @@ export function app_learn_js_lesson_expression_choose_order_arithmetic_parenthes
   let middle = list_get(numbers, 1);
   let right = list_get(numbers, 2);
   let strong_right = not(opens_gathered);
-  let tree = app_code_lesson_expression_choose_order_operators_expression_parts(
-    left,
-    middle,
-    right,
-    weak_symbol,
-    strong_symbol,
-    strong_right,
-  );
+  let tree =
+    app_learn_js_lesson_expression_choose_order_operators_expression_parts(
+      left,
+      middle,
+      right,
+      weak_symbol,
+      strong_symbol,
+      strong_right,
+    );
   return tree;
 }

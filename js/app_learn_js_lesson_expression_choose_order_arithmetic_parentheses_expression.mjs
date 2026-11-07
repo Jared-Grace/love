@@ -7,7 +7,7 @@ import { equal } from "./equal.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { ternary } from "./ternary.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_expression_choose_order_operators_expression_parts } from "./app_code_lesson_expression_choose_order_operators_expression_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_operators_expression_parts } from "./app_learn_js_lesson_expression_choose_order_operators_expression_parts.mjs";
 export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression(
   group_left,
 ) {
@@ -32,13 +32,14 @@ export function app_learn_js_lesson_expression_choose_order_arithmetic_parenthes
   let right = ternary(group_left, outer_number, inner_second);
   ("the gathered part is the one solved first, so it is the one that goes inside the shape, and it goes on the right of the line exactly when the marks are not on the left");
   let strong_right = not(group_left);
-  let tree = app_code_lesson_expression_choose_order_operators_expression_parts(
-    left,
-    middle,
-    right,
-    times,
-    inner_symbol,
-    strong_right,
-  );
+  let tree =
+    app_learn_js_lesson_expression_choose_order_operators_expression_parts(
+      left,
+      middle,
+      right,
+      times,
+      inner_symbol,
+      strong_right,
+    );
   return tree;
 }

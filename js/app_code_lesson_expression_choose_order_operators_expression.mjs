@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_operators_expression_parts } from "./app_code_lesson_expression_choose_order_operators_expression_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_operators_expression_parts } from "./app_learn_js_lesson_expression_choose_order_operators_expression_parts.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -56,13 +56,14 @@ export function app_code_lesson_expression_choose_order_operators_expression(
   let left = ternary(strong_right, weak_number, strong_first);
   let middle = ternary(strong_right, strong_first, pair_second);
   let right = ternary(strong_right, pair_second, weak_number);
-  let tree = app_code_lesson_expression_choose_order_operators_expression_parts(
-    left,
-    middle,
-    right,
-    weak_symbol,
-    strong_symbol,
-    strong_right,
-  );
+  let tree =
+    app_learn_js_lesson_expression_choose_order_operators_expression_parts(
+      left,
+      middle,
+      right,
+      weak_symbol,
+      strong_symbol,
+      strong_right,
+    );
   return tree;
 }

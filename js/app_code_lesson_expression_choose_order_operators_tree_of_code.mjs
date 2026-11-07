@@ -1,5 +1,5 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_lesson_expression_choose_order_operators_expression_parts } from "./app_code_lesson_expression_choose_order_operators_expression_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_operators_expression_parts } from "./app_learn_js_lesson_expression_choose_order_operators_expression_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -34,13 +34,14 @@ export function app_code_lesson_expression_choose_order_operators_tree_of_code(
   let left = list_get(numbers, 0);
   let middle = list_get(numbers, 1);
   let right = list_get(numbers, 2);
-  let tree = app_code_lesson_expression_choose_order_operators_expression_parts(
-    left,
-    middle,
-    right,
-    weak_symbol,
-    strong_symbol,
-    strong_right,
-  );
+  let tree =
+    app_learn_js_lesson_expression_choose_order_operators_expression_parts(
+      left,
+      middle,
+      right,
+      weak_symbol,
+      strong_symbol,
+      strong_right,
+    );
   return tree;
 }
