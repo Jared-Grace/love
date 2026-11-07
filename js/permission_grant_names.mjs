@@ -1232,7 +1232,7 @@ export function permission_grant_names() {
   let spelled1201 = fn_name("app_learn_ceb_gloss_passages");
   let spelled1202 = fn_name("app_learn_ceb_gloss_wolff_coverage");
   let spelled1203 = fn_name("app_learn_ceb_gloss_word_explains");
-  let spelled1204 = fn_name("app_code_answer_count_max");
+  let spelled1204 = fn_name("app_learn_js_answer_count_max");
   let spelled1205 = fn_name("app_code_hash_field_lesson");
   let spelled1206 = fn_name("app_code_quiz_choice_pool_gate_run");
   let spelled1207 = fn_name("app_code_quiz_unscramble_own_wording_gate_run");

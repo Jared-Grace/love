@@ -6,7 +6,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { app_code_answer_count_max } from "./app_code_answer_count_max.mjs";
+import { app_learn_js_answer_count_max } from "./app_learn_js_answer_count_max.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_take } from "./list_take.mjs";
 export function app_code_lesson_decoy_code_pieces(question, answer) {
@@ -23,7 +23,7 @@ export function app_code_lesson_decoy_code_pieces(question, answer) {
   let words_other = list_without(words, word);
   let pieces = list_concat_multiple([words_other, names, [quoted, twice]]);
   ("Cut to the places here, because nothing later does: the quiz keeps every wrong answer it is handed while the lines fit, so a program with two words and three names drew seven buttons.");
-  let left = app_code_answer_count_max();
+  let left = app_learn_js_answer_count_max();
   let places = subtract(left, 1);
   let found = list_take(pieces, places);
   return found;

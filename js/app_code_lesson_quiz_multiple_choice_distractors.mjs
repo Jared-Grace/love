@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
-import { app_code_answer_count_max } from "./app_code_answer_count_max.mjs";
+import { app_learn_js_answer_count_max } from "./app_learn_js_answer_count_max.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { subtract } from "./subtract.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_quiz_multiple_choice_distractors(
     app_code_lesson_quiz_qa_property_other(answer_property);
   let quiz_question = property_get(qa, question_property);
   let quiz_question_text = text_to(quiz_question);
-  let answer_count_max = app_code_answer_count_max();
+  let answer_count_max = app_learn_js_answer_count_max();
   let nn = null_not_is(answer_count_override);
   if (nn) {
     answer_count_max = answer_count_override;
