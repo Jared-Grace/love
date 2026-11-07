@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_expression_choose_order_expression_digits } from "./app_learn_js_lesson_expression_choose_order_expression_digits.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { digit_positive_random } from "./digit_positive_random.mjs";
-export function app_code_lesson_expression_choose_order_expression(
+export function app_learn_js_lesson_expression_choose_order_expression(
   strong_right,
 ) {
   arguments_assert(arguments, 1);

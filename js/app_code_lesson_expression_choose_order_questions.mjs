@@ -1,7 +1,7 @@
 import { app_code_lesson_expression_choose_order_tree_of_code } from "./app_code_lesson_expression_choose_order_tree_of_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { boolean_random } from "./boolean_random.mjs";
-import { app_code_lesson_expression_choose_order_expression } from "./app_code_lesson_expression_choose_order_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_expression } from "./app_learn_js_lesson_expression_choose_order_expression.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,7 +19,8 @@ export function app_code_lesson_expression_choose_order_questions() {
       strong_right = boolean_random();
     }
     first_done = true;
-    let tree = app_code_lesson_expression_choose_order_expression(strong_right);
+    let tree =
+      app_learn_js_lesson_expression_choose_order_expression(strong_right);
     return tree;
   }
   function item_new() {
