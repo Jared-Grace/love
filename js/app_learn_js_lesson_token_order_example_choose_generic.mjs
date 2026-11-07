@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_quiz_tokens_order } from "./app_code_quiz_tokens_order.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap } from "./app_learn_js_lesson_quiz_tokens_tap.mjs";
 import { noop } from "./noop.mjs";
-export function app_code_lesson_token_order_example_choose_generic(
+export function app_learn_js_lesson_token_order_example_choose_generic(
   component,
   code,
   guided,
