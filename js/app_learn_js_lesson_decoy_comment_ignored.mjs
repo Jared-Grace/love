@@ -7,7 +7,7 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_lesson_decoy_comment_ignored(question, answer) {
+export function app_learn_js_lesson_decoy_comment_ignored(question, answer) {
   arguments_assert(arguments, 2);
   ("the two tempting wrong answers for a program with a note in it: what it would write out if the note were not there, and the one line of that which the right answer does not have");
   ("Those are the two ways of getting it wrong, and they are different mistakes. The first is reading the note as code and so answering with both lines; the second is reading the note as a note but looking at the wrong line, and so answering with the line that never ran. Offered together, the only way to the right answer left is to see which line the note is on.");
