@@ -20,7 +20,7 @@ import { app_code_div_cycle_code_instead_could_write } from "./app_code_div_cycl
 import { equal_0 } from "./equal_0.mjs";
 import { each_index } from "./each_index.mjs";
 import { js_operator_first_code_call } from "./js_operator_first_code_call.mjs";
-import { app_code_code_example_name } from "./app_code_code_example_name.mjs";
+import { app_learn_js_code_example_name } from "./app_learn_js_code_example_name.mjs";
 import { html_div_cycle_code_bold } from "./html_div_cycle_code_bold.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name_id = app_code_lesson_name_id("functions", ["arithmetic"]);
@@ -128,7 +128,7 @@ export function app_code_lesson_functions_arithmetic() {
     let o_f = js_operator_first_code_call(next);
     let call = property_get(o_f, "call");
     let verb = property_get(o_f, "verb");
-    app_code_code_example_name(c, verb, "function");
+    app_learn_js_code_example_name(c, verb, "function");
     html_div_cycle_code_bold(c, ["", call, " is called a ", "function call"]);
   }
 }
