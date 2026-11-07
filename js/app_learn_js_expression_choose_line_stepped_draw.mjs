@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_replaced_settle } from "./app_code_expression_replaced_settle.mjs";
+import { app_learn_js_expression_replaced_settle } from "./app_learn_js_expression_replaced_settle.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_learn_js_expression_choose_line_draw } from "./app_learn_js_expression_choose_line_draw.mjs";
 import { app_learn_js_expression_chips_rise } from "./app_learn_js_expression_chips_rise.mjs";
@@ -21,7 +21,7 @@ export async function app_learn_js_expression_choose_line_stepped_draw({
   "Drawn chipped, the shorter line arrives with every operator already wider than the plain one that stood there a frame earlier - so the whole line jumps sideways in the frame it is drawn, and it jumps at the same moment the colour lands. The learner is shown a move they cannot follow and a change they did not ask about, together, at the one moment they are looking for what to press next.";
   "THE FINISHING IS ONLY REACHED WHEN THE SHORTER LINE IS NO LONGER A SUM AT ALL. While anything is still there to work out, the line simply stands and waits for the next press.";
   arguments_assert(arguments, 1);
-  await app_code_expression_replaced_settle(line, node_span, node_value);
+  await app_learn_js_expression_replaced_settle(line, node_span, node_value);
   let stepped = app_code_expression_solved(current, node);
   let risen = app_learn_js_expression_choose_line_draw({
     current: stepped,

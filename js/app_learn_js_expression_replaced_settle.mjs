@@ -8,7 +8,7 @@ import { app_shared_animation_duration } from "./app_shared_animation_duration.m
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
 import { html_move_animate_settle } from "./html_move_animate_settle.mjs";
-export async function app_code_expression_replaced_settle(
+export async function app_learn_js_expression_replaced_settle(
   line,
   node_span,
   value,
