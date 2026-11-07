@@ -17,7 +17,7 @@ export async function app_code_lesson_family_roots(names) {
     if (lesson_named) {
       let source = await repo_love_function_read(name);
       let call = text_combine(
-        fn_name("app_code_lesson_expression_generic"),
+        fn_name("app_learn_js_lesson_expression_generic"),
         "({",
       );
       let builds = text_includes(source, call);

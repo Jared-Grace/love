@@ -7,7 +7,7 @@ import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { invoke_until } from "./invoke_until.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_last } from "./list_last.mjs";
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_not_comparison() {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = app_code_lesson_expression_not_comparison_title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above: app_code_lesson_expression_not_comparison_intro,
     name_id,
     next_arg,

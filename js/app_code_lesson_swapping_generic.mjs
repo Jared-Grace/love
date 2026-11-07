@@ -10,7 +10,7 @@ import { list_interleave_pair } from "./list_interleave_pair.mjs";
 import { list_size } from "./list_size.mjs";
 import { math_min } from "./math_min.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
@@ -73,7 +73,7 @@ export function app_code_lesson_swapping_generic(config) {
     return codes;
   }
   let next_arg = list_iterator_refillable(refill);
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

@@ -6,7 +6,7 @@ import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_b
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { range_map } from "./range_map.mjs";
 import { list_get } from "./list_get.mjs";
@@ -48,7 +48,7 @@ export function app_code_lesson_expression_min_max_of_three() {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = app_code_lesson_expression_min_max_of_three_title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

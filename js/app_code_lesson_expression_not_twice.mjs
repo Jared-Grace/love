@@ -6,7 +6,7 @@ import { js_code_not } from "./js_code_not.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_not_twice() {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = app_code_lesson_expression_not_twice_title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

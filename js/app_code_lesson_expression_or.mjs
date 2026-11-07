@@ -1,5 +1,5 @@
 import { app_learn_js_category_operators } from "./app_learn_js_category_operators.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_binary_next_arg } from "./app_learn_js_binary_next_arg.mjs";
 import { app_learn_js_binary_pair_boolean } from "./app_learn_js_binary_pair_boolean.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_or() {
   let symbol = js_operator_or_symbol();
   let pair = app_learn_js_binary_pair_boolean(or);
   let next_arg = app_learn_js_binary_next_arg(symbol, pair);
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id_rights: ["or"],
     category: app_learn_js_category_operators(),

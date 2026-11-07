@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_parentheses_moved_title_name_id } from "./app_code_lesson_expression_parentheses_moved_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { text_replace } from "./text_replace.mjs";
@@ -19,7 +19,7 @@ export function app_code_lesson_expression_parentheses_moved() {
   "The two wrong answers offered are the values of BOTH placements. One of them is the real answer and the multiple choice drops it as a duplicate, so what is left is always the other placement - the exact mistake of reading the parentheses in the wrong spot.";
   let name_id = app_code_lesson_expression_parentheses_moved_title_name_id();
   let next_arg = list_iterator_refillable(refill);
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

@@ -5,7 +5,7 @@ import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { subtract } from "./subtract.mjs";
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_whole_part() {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

@@ -1,5 +1,5 @@
 import { app_learn_js_category_operators } from "./app_learn_js_category_operators.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_binary_next_arg } from "./app_learn_js_binary_next_arg.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_expression_comparison(params) {
   if (example_count_missing) {
     example_count = 2;
   }
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id_rights,
     category: app_learn_js_category_operators(),

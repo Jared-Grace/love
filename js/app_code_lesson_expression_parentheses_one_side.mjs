@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
   "The two orders are not the same to read, which is why both are shown. (3 > 8) === false reads straight through - the parenthesis comes first, so working the inside first is what left to right already does. false === (3 > 8) hands the reader false === with nothing yet to compare it to, so they have to go right, work the parenthesis, and come back. That is the case the rule is actually for, and it is the same asymmetry the arithmetic-comparison lesson meets - which is also why that lesson varies the side inside itself rather than spending a second lesson on the mirror.";
   let name_id = app_code_lesson_expression_parentheses_one_side_title_name_id();
   let next_arg = list_iterator_refillable(refill);
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

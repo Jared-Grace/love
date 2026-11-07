@@ -8,7 +8,7 @@ import { list_join } from "./list_join.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { js_eval_left_to_right } from "./js_eval_left_to_right.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
@@ -48,7 +48,7 @@ export function app_code_lesson_expression_pair_generic(params) {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

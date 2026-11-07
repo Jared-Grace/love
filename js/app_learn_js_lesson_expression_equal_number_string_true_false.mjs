@@ -8,7 +8,7 @@ import { app_learn_js_label_code_question } from "./app_learn_js_label_code_ques
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_lesson_expression_equal_number_string_true_false_title_name_id } from "./app_learn_js_lesson_expression_equal_number_string_true_false_title_name_id.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_expression_equal_number_string_true_false() 
   let name_id =
     app_learn_js_lesson_expression_equal_number_string_true_false_title_name_id();
   let next_arg = list_iterator_refillable(refill);
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

@@ -5,7 +5,7 @@ import { app_code_lesson_expression_parentheses_minus_divide_outer_divide_line }
 import { app_code_lesson_expression_parentheses_minus_divide_outer_minus_line } from "./app_code_lesson_expression_parentheses_minus_divide_outer_minus_line.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_title_name_id } from "./app_code_lesson_expression_parentheses_minus_divide_title_name_id.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_code_parentheses_flat_decoys } from "./app_code_parentheses_flat_decoys.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_parentheses_minus_divide() {
   let name_id =
     app_code_lesson_expression_parentheses_minus_divide_title_name_id();
   let next_arg = list_iterator_refillable(refill);
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

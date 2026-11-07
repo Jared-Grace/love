@@ -7,7 +7,7 @@ import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -70,7 +70,7 @@ export function app_code_lesson_expression_string_equality() {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = app_code_lesson_expression_string_equality_title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

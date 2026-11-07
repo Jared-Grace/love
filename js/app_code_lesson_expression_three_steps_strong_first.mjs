@@ -8,7 +8,7 @@ import { app_learn_js_lesson_expression_choose_order_three_above } from "./app_l
 import { app_learn_js_expression_flat_value_left_to_right } from "./app_learn_js_expression_flat_value_left_to_right.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_three_steps_strong_first_title_name_id } from "./app_code_lesson_expression_three_steps_strong_first_title_name_id.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 export function app_code_lesson_expression_three_steps_strong_first() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: 5 - 6 / 3 + 4 asked for what it comes to, with nothing to press");
@@ -52,7 +52,7 @@ export function app_code_lesson_expression_three_steps_strong_first() {
   let next_arg = list_iterator_refillable(refill);
   let name_id =
     app_code_lesson_expression_three_steps_strong_first_title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

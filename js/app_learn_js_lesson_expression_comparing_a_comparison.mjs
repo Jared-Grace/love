@@ -10,7 +10,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_expression_comparing_a_comparison() {
   let name_id =
     app_learn_js_lesson_expression_comparing_a_comparison_title_name_id();
   let next_arg = list_iterator_refillable(refill);
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

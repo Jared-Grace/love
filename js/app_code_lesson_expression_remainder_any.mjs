@@ -11,7 +11,7 @@ import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_
 import { object_merge } from "./object_merge.mjs";
 import { multiply } from "./multiply.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
@@ -59,7 +59,7 @@ export function app_code_lesson_expression_remainder_any() {
   };
   let from2 = app_code_remainder_percent_labels();
   object_merge(params, from2);
-  let lesson = app_code_lesson_expression_generic(params);
+  let lesson = app_learn_js_lesson_expression_generic(params);
   return lesson;
   function above(root, context) {
     let derive = app_learn_js_container_light_blue(root);

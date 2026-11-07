@@ -6,7 +6,7 @@ import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys
 import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -77,7 +77,7 @@ export function app_code_lesson_expression_number_trichotomy() {
     less_operator,
     greater_operator,
   );
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

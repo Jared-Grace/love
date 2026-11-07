@@ -7,7 +7,7 @@ import { app_learn_js_lesson_expression_arithmetic_less_than_one } from "./app_l
 import { app_learn_js_lesson_expression_arithmetic_less_than_title_name_id } from "./app_learn_js_lesson_expression_arithmetic_less_than_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
@@ -130,7 +130,7 @@ export function app_learn_js_lesson_expression_arithmetic_less_than() {
   }
   let name_id =
     app_learn_js_lesson_expression_arithmetic_less_than_title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

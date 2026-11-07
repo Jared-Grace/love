@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_true_false() {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,

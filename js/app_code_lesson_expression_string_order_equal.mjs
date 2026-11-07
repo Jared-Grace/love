@@ -8,7 +8,7 @@ import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -55,7 +55,7 @@ export function app_code_lesson_expression_string_order_equal() {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = app_code_lesson_expression_string_order_equal_title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
     next_arg,
