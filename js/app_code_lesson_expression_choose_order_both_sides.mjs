@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_choose_order_both_sides_title_name_id } from "./app_code_lesson_expression_choose_order_both_sides_title_name_id.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_questions } from "./app_code_lesson_expression_choose_order_both_sides_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_questions } from "./app_learn_js_lesson_expression_choose_order_both_sides_questions.mjs";
 import { app_code_lesson_expression_choose_order_mixed_generic } from "./app_code_lesson_expression_choose_order_mixed_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_above } from "./app_learn_js_lesson_expression_choose_order_both_sides_above.mjs";
 export function app_code_lesson_expression_choose_order_both_sides() {
@@ -9,7 +9,7 @@ export function app_code_lesson_expression_choose_order_both_sides() {
   "Both arithmetic parts are ready from the first press, and neither is the right one. That is a real property of the line rather than something arranged - arithmetic binds tighter than a comparison on both sides at once - so the lesson simply says so, and a learner who is used to hunting for the one right press is told why there are two.";
   let name_id =
     app_code_lesson_expression_choose_order_both_sides_title_name_id();
-  let bank = app_code_lesson_expression_choose_order_both_sides_questions();
+  let bank = app_learn_js_lesson_expression_choose_order_both_sides_questions();
   let lesson = app_code_lesson_expression_choose_order_mixed_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_both_sides_above,
