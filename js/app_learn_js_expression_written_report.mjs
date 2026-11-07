@@ -10,7 +10,7 @@ import { app_learn_js_expression_written_faults } from "./app_learn_js_expressio
 import { list_concat } from "./list_concat.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_expression_written_report() {
+export function app_learn_js_expression_written_report() {
   arguments_assert(arguments, 0);
   ("what holding every generated shape against the line it prints came to: how many shapes and how many steps were looked at, every step whose line does not mean its shape, and which operators of known strength were never once printed");
   ("Three numbers travel with the verdict because nothing wrong is also what a run that looked at nothing would say. A sweep narrowed by an edit somewhere above still hands back a list of shapes, still prints every line in it, and still finds no fault - and the shape count, the step count and the unprinted operators are the three things that fall apart in that case and in no other.");

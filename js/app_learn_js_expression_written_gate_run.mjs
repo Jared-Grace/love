@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_written_report } from "./app_code_expression_written_report.mjs";
+import { app_learn_js_expression_written_report } from "./app_learn_js_expression_written_report.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_expression_written_gate_run() {
   ("Zero is the ratchet and there is no baseline file. Measured 2026-09-12 over the generated shapes: none. A baseline would record a debt that does not exist.");
   ("The operators of known strength that never reached a line fail the gate too. A generator quietly narrowed to one operator hands back shapes, prints lines, and finds no fault, and this is the one part of the answer that falls apart in that case.");
   ("Proved to fire before it was believed. Held against the shape for Math.floor(3.5) the line Math.floor3.5 - the reported fault, typed out by hand - comes back as not a line of javascript at all, and 14 % (4 * 2) printed as 14 % 4 * 2 is answered with two different meanings. Both of those lines are now among the shapes this sweeps, along with the shape (2 ** 3) ** 2, which printed as 2 ** 3 ** 2 for the same reason: the remainder sign and the power sign had no strength of their own and took a comparison's by falling through.");
-  let report = app_code_expression_written_report();
+  let report = app_learn_js_expression_written_report();
   let faults = property_get(report, "faults");
   let unprinted = property_get(report, "unprinted");
   function say(fault) {
