@@ -10,7 +10,7 @@ import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_expression_choose_order_pair_expression(
+export function app_learn_js_lesson_expression_choose_order_pair_expression(
   want_true,
 ) {
   function_duplicate_kind_parallel();

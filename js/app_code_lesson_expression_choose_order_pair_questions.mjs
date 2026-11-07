@@ -1,6 +1,6 @@
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
-import { app_code_lesson_expression_choose_order_pair_expression } from "./app_code_lesson_expression_choose_order_pair_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_pair_expression } from "./app_learn_js_lesson_expression_choose_order_pair_expression.mjs";
 import { app_code_lesson_expression_choose_order_pair_tree_of_code } from "./app_code_lesson_expression_choose_order_pair_tree_of_code.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_choose_order_pair_questions() {
   function tree_new() {
     "the next line, landing on the other answer from last time";
     let tree =
-      app_code_lesson_expression_choose_order_pair_expression(want_true);
+      app_learn_js_lesson_expression_choose_order_pair_expression(want_true);
     want_true = not(want_true);
     return tree;
   }

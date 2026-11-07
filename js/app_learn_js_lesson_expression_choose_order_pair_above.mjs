@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_expression_choose_order_both_sides_above_generic } from "./app_learn_js_lesson_expression_choose_order_both_sides_above_generic.mjs";
-import { app_code_lesson_expression_choose_order_pair_expression } from "./app_code_lesson_expression_choose_order_pair_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_pair_expression } from "./app_learn_js_lesson_expression_choose_order_pair_expression.mjs";
 import { app_code_lesson_expression_choose_order_pair_intro } from "./app_code_lesson_expression_choose_order_pair_intro.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_sides_parentheses_say } from "./app_code_lesson_expression_sides_parentheses_say.mjs";
@@ -13,7 +13,8 @@ export function app_learn_js_lesson_expression_choose_order_pair_above(
   ("The run is the one every lesson of this kind shares, told with the two sides pointed at by their parentheses. It used to be a second copy of that run written out here, which is how the two came to say the permission differently: the shared one says we could solve either first and get the same answer for the problem we are solving, and this one said the two sides solve to the same values - a sentence a learner can read as the two sides being equal to each other, which they often are, and which is not the reason.");
   ("The run is done on a TRUE line, for the same reason the lessons beside it are: a true line is the one a learner can check against the two values they have just watched being worked out.");
   let want_true = true;
-  let tree = app_code_lesson_expression_choose_order_pair_expression(want_true);
+  let tree =
+    app_learn_js_lesson_expression_choose_order_pair_expression(want_true);
   let line =
     app_learn_js_lesson_expression_choose_order_both_sides_above_generic(
       root,
