@@ -8,7 +8,7 @@ import { app_code_operator_solve_before } from "./app_code_operator_solve_before
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
+import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 export function app_code_expression_solved(item, node) {
   arguments_assert(arguments, 2);
@@ -54,7 +54,10 @@ export function app_code_expression_solved(item, node) {
     let symbol_of_item = property_get(item, "operator");
     let acted_on = property_get(item, "right");
     let acted_on_new = app_code_expression_solved(acted_on, node);
-    let rebuilt = app_code_expression_node_before(symbol_of_item, acted_on_new);
+    let rebuilt = app_learn_js_expression_node_before(
+      symbol_of_item,
+      acted_on_new,
+    );
     return rebuilt;
   }
   let left = property_get(item, "left");

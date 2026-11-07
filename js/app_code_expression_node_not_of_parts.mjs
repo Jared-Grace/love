@@ -1,5 +1,5 @@
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
-import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
+import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 export function app_code_expression_node_not_of_parts(parts) {
@@ -10,6 +10,6 @@ export function app_code_expression_node_not_of_parts(parts) {
   ("The parentheses are not written here and do not have to be. A ! is worked out before every operator these lessons put under one, so a shape saying the ! holds the whole of what follows can only be printed back as the line it means with a pair around it, and the printer works that out from the strengths.");
   let symbol = js_operator_bang_symbol();
   let inner = app_code_expression_node(parts.left, parts.symbol, parts.right);
-  let tree = app_code_expression_node_before(symbol, inner);
+  let tree = app_learn_js_expression_node_before(symbol, inner);
   return tree;
 }

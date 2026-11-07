@@ -3,7 +3,7 @@ import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 import { js_keyword_truth_of } from "./js_keyword_truth_of.mjs";
-import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
+import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 export function app_code_lesson_expression_choose_order_not_twice_tree_of_code(
   code,
 ) {
@@ -17,7 +17,7 @@ export function app_code_lesson_expression_choose_order_not_twice_tree_of_code(
   let both = text_combine(symbol, symbol);
   let word = text_prefix_without(code, both);
   let truth = js_keyword_truth_of(word);
-  let inner = app_code_expression_node_before(symbol, truth);
-  let tree = app_code_expression_node_before(symbol, inner);
+  let inner = app_learn_js_expression_node_before(symbol, truth);
+  let tree = app_learn_js_expression_node_before(symbol, inner);
   return tree;
 }

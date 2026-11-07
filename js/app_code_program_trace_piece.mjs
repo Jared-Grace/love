@@ -8,7 +8,7 @@ import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_program_trace_piece_name } from "./app_code_program_trace_piece_name.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
-import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
+import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { error } from "./error.mjs";
 import { app_code_program_trace_piece_solved } from "./app_code_program_trace_piece_solved.mjs";
 export function app_code_program_trace_piece(state, piece, side) {
@@ -95,7 +95,7 @@ export function app_code_program_trace_piece(state, piece, side) {
   } else if (unary_is) {
     let piece4 = property_get(piece, "argument");
     let argument = app_code_program_trace_piece(state, piece4, true);
-    expression = app_code_expression_node_before("!", argument);
+    expression = app_learn_js_expression_node_before("!", argument);
   } else {
     error({
       message:

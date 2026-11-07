@@ -4,7 +4,7 @@ import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_value_name_built_in_is } from "./js_value_name_built_in_is.mjs";
 import { js_value_names } from "./js_value_names.mjs";
-import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
+import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { js_unparse } from "./js_unparse.mjs";
@@ -43,7 +43,7 @@ export function app_learn_js_expression_from_js(node, values) {
       let minus_spelled = -acted_on_shape;
       return minus_spelled;
     }
-    let before = app_code_expression_node_before(symbol, acted_on_shape);
+    let before = app_learn_js_expression_node_before(symbol, acted_on_shape);
     return before;
   }
   let two_sided_types = ["BinaryExpression", "LogicalExpression"];
@@ -64,7 +64,7 @@ export function app_learn_js_expression_from_js(node, values) {
     if (called && list_size_equal(handed, 1)) {
       let node4 = list_get(handed, 0);
       let inside = app_learn_js_expression_from_js(node4, values);
-      let call = app_code_expression_node_before(name_called, inside);
+      let call = app_learn_js_expression_node_before(name_called, inside);
       return call;
     }
   }

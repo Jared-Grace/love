@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
-import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
+import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 export function app_code_lesson_expression_choose_order_not_twice_expression(
   want_true,
 ) {
@@ -11,7 +11,7 @@ export function app_code_lesson_expression_choose_order_not_twice_expression(
   "What the line comes to is what stands under both symbols, because two ! symbols give back what they were handed. So the line is asked for as a true one or a false one like every other, and the word written under them is that same word rather than its opposite.";
   arguments_assert(arguments, 1);
   let symbol = js_operator_bang_symbol();
-  let inner = app_code_expression_node_before(symbol, want_true);
-  let tree = app_code_expression_node_before(symbol, inner);
+  let inner = app_learn_js_expression_node_before(symbol, want_true);
+  let tree = app_learn_js_expression_node_before(symbol, inner);
   return tree;
 }

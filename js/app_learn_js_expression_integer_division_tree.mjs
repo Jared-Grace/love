@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
-import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
+import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 export function app_learn_js_expression_integer_division_tree(
   dividend,
   divisor,
@@ -15,6 +15,6 @@ export function app_learn_js_expression_integer_division_tree(
   let divided_by = js_operator_division_symbol();
   let floor_name = js_code_math_floor_name();
   let division = app_code_expression_node(dividend, divided_by, divisor);
-  let tree = app_code_expression_node_before(floor_name, division);
+  let tree = app_learn_js_expression_node_before(floor_name, division);
   return tree;
 }

@@ -15,7 +15,7 @@ import { list_add } from "./list_add.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { each } from "./each.mjs";
-import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
+import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { app_code_expression_node_parenthesis_wrapped } from "./app_code_expression_node_parenthesis_wrapped.mjs";
@@ -70,7 +70,7 @@ export function app_code_expression_written_shapes_truths() {
     "the join over two comparisons, and over a denied comparison";
     let item2 = app_code_expression_node(below_is, symbol, above_is);
     list_add(shapes, item2);
-    let denied_side = app_code_expression_node_before(bang, below_is);
+    let denied_side = app_learn_js_expression_node_before(bang, below_is);
     let item3 = app_code_expression_node(denied_side, symbol, above_is);
     list_add(shapes, item3);
   }
@@ -83,10 +83,10 @@ export function app_code_expression_written_shapes_truths() {
   list_add(shapes, and_inside_or);
   let or_inside_and = app_code_expression_node(below_is, and_symbol, oring);
   list_add(shapes, or_inside_and);
-  let item4 = app_code_expression_node_before(bang, below_is);
+  let item4 = app_learn_js_expression_node_before(bang, below_is);
   list_add(shapes, item4);
-  let right = app_code_expression_node_before(bang, true);
-  let denied_twice = app_code_expression_node_before(bang, right);
+  let right = app_learn_js_expression_node_before(bang, true);
+  let denied_twice = app_learn_js_expression_node_before(bang, right);
   list_add(shapes, denied_twice);
   let left = app_code_expression_node_parenthesis_wrapped(3, not_equals, 5);
   let right3 = app_code_expression_node(2, equals, 2);
