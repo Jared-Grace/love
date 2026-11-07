@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_not_pair_above } from "./ap
 import { app_learn_js_lesson_expression_choose_order_not_pair_questions } from "./app_learn_js_lesson_expression_choose_order_not_pair_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_pair_title_name_id } from "./app_learn_js_lesson_expression_choose_order_not_pair_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_choose_order_not_pair() {
+export function app_learn_js_lesson_expression_choose_order_not_pair() {
   arguments_assert(arguments, 0);
   ("a true and a false joined by an && or an || with a ! in front of the whole of it, taken a press at a time: !(true && false), choose the && , choose what it comes to, then choose the ! and what that comes to");
   ("Both of its parents are already met. A ! in front of a parenthesised thing was the lesson two before it, and parentheses round an && or an || were a pair of lessons earlier in the run. Nothing here is a new mark, and nothing here is a new rule - the one new thing is that the thing under the ! is two things joined rather than one comparison.");
