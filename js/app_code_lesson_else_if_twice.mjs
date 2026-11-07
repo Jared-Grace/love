@@ -18,7 +18,7 @@ import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_braces_run_else_if_twice } from "./app_code_lesson_braces_run_else_if_twice.mjs";
+import { app_learn_js_lesson_braces_run_else_if_twice } from "./app_learn_js_lesson_braces_run_else_if_twice.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -101,7 +101,7 @@ export function app_code_lesson_else_if_twice() {
     app_code_remember_from_lesson(
       box_run,
       context,
-      app_code_lesson_braces_run_else_if_twice,
+      app_learn_js_lesson_braces_run_else_if_twice,
       [
         "Once one ",
         app_learn_js_braces_dots(),

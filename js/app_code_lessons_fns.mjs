@@ -295,7 +295,7 @@ import { app_code_lesson_braces_run_if_else_in_else } from "./app_code_lesson_br
 import { app_code_lesson_if_else_in_else } from "./app_code_lesson_if_else_in_else.mjs";
 import { app_learn_js_lesson_braces_run_else_if_else } from "./app_learn_js_lesson_braces_run_else_if_else.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
-import { app_code_lesson_braces_run_else_if_twice } from "./app_code_lesson_braces_run_else_if_twice.mjs";
+import { app_learn_js_lesson_braces_run_else_if_twice } from "./app_learn_js_lesson_braces_run_else_if_twice.mjs";
 import { app_code_lesson_else_if_twice } from "./app_code_lesson_else_if_twice.mjs";
 import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
 import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
@@ -656,7 +656,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_else_in_else,
     app_learn_js_lesson_braces_run_else_if_else,
     app_code_lesson_else_if_else,
-    app_code_lesson_braces_run_else_if_twice,
+    app_learn_js_lesson_braces_run_else_if_twice,
     app_code_lesson_else_if_twice,
     app_code_lesson_else_if_order,
     app_code_lesson_braces_run_thrice,
