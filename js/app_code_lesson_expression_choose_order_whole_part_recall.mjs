@@ -3,7 +3,7 @@ import { app_code_lesson_expression_whole_part_formula } from "./app_code_lesson
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_division_formula_recall_words } from "./app_learn_js_division_formula_recall_words.mjs";
-import { app_code_expression_whole_part_tree } from "./app_code_expression_whole_part_tree.mjs";
+import { app_learn_js_expression_whole_part_tree } from "./app_learn_js_expression_whole_part_tree.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_whole_part_recall(
   root,
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_whole_part_recall(
   let recall_card = app_learn_js_container_light_blue(root);
   let words = app_learn_js_division_formula_recall_words(
     "whole part",
-    app_code_expression_whole_part_tree,
+    app_learn_js_expression_whole_part_tree,
   );
   app_code_remember_from_lesson(
     recall_card,

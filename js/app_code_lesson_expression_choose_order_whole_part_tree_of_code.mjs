@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_expression_whole_part_tree } from "./app_code_expression_whole_part_tree.mjs";
+import { app_learn_js_expression_whole_part_tree } from "./app_learn_js_expression_whole_part_tree.mjs";
 export function app_code_lesson_expression_choose_order_whole_part_tree_of_code(
   code,
 ) {
@@ -13,6 +13,6 @@ export function app_code_lesson_expression_choose_order_whole_part_tree_of_code(
   let numbers = text_integers(code);
   let dividend = list_get(numbers, 0);
   let divisor = list_get(numbers, 1);
-  let tree = app_code_expression_whole_part_tree(dividend, divisor);
+  let tree = app_learn_js_expression_whole_part_tree(dividend, divisor);
   return tree;
 }

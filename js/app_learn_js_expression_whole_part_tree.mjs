@@ -2,7 +2,7 @@ import { app_learn_js_expression_integer_division_tree } from "./app_learn_js_ex
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
-export function app_code_expression_whole_part_tree(dividend, divisor) {
+export function app_learn_js_expression_whole_part_tree(dividend, divisor) {
   arguments_assert(arguments, 2);
   ("the whole part of one number divided by another, built as a shape a learner can press one part at a time: 14 and 4 give Math.floor(14 / 4) * 4, which comes to 12");
   ("Built as a shape rather than written out as text because a lesson that asks for one press at a time has to hand back what is left after every press, and text cannot be taken apart again without being read. The lesson that asks for this line all at once writes it as text, which is all that lesson needs.");
