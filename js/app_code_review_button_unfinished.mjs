@@ -7,7 +7,7 @@ import { equal } from "./equal.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { app_code_course_unfinished_go } from "./app_code_course_unfinished_go.mjs";
-import { app_code_button_unfinished_text } from "./app_code_button_unfinished_text.mjs";
+import { app_learn_js_button_unfinished_text } from "./app_learn_js_button_unfinished_text.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
 export function app_code_review_button_unfinished(context, parent, number) {
   "$plain number";
@@ -36,7 +36,7 @@ export function app_code_review_button_unfinished(context, parent, number) {
   async function go() {
     await app_code_course_unfinished_go(context, way);
   }
-  let text = app_code_button_unfinished_text(kind);
+  let text = app_learn_js_button_unfinished_text(kind);
   let button = app_shared_button_wide_spaced(parent, text, go);
   return button;
 }

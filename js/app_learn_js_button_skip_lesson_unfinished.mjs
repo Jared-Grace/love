@@ -6,7 +6,7 @@ import { app_code_course_unfinished_next } from "./app_code_course_unfinished_ne
 import { null_is } from "./null_is.mjs";
 import { app_code_course_unfinished_go } from "./app_code_course_unfinished_go.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_button_unfinished_text } from "./app_code_button_unfinished_text.mjs";
+import { app_learn_js_button_unfinished_text } from "./app_learn_js_button_unfinished_text.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
 export function app_learn_js_button_skip_lesson_unfinished(context, parent) {
   arguments_assert(arguments, 2);
@@ -25,7 +25,7 @@ export function app_learn_js_button_skip_lesson_unfinished(context, parent) {
     await app_code_course_unfinished_go(context, way);
   }
   let kind = property_get(way, "kind");
-  let text = app_code_button_unfinished_text(kind);
+  let text = app_learn_js_button_unfinished_text(kind);
   let button = app_shared_button_wide_spaced(parent, text, go);
   return button;
 }
