@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_decoy_fn } from "./app_learn_js_lesson_quiz_multiple_choice_decoy_fn.mjs";
-import { app_code_lesson_quiz_multiple_choice_has_decoys } from "./app_code_lesson_quiz_multiple_choice_has_decoys.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_has_decoys } from "./app_learn_js_lesson_quiz_multiple_choice_has_decoys.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_quiz_multiple_choice_quiz_answer(
   info,
@@ -13,7 +13,7 @@ export function app_code_lesson_quiz_multiple_choice_quiz_answer(
     qa,
     batch_get,
   );
-  let r3 = app_code_lesson_quiz_multiple_choice_has_decoys(r2);
+  let r3 = app_learn_js_lesson_quiz_multiple_choice_has_decoys(r2);
   let has_decoys = property_get(r3, "has_decoys");
   let distractors = property_get(r3, "distractors");
   let seen = property_get(r3, "seen");

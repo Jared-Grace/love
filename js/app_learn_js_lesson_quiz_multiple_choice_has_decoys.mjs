@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-export function app_code_lesson_quiz_multiple_choice_has_decoys(r2) {
+export function app_learn_js_lesson_quiz_multiple_choice_has_decoys(r2) {
   arguments_assert(arguments, 1);
   let decoy_fn = property_get(r2, "decoy_fn");
   let answer_property = property_get(r2, "answer_property");
