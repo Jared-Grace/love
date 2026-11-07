@@ -11,7 +11,10 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-export function app_code_lesson_expression_parentheses_or_intro(root, context) {
+export function app_learn_js_lesson_expression_parentheses_or_intro(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("the three cards above the parentheses around || lesson: the rule in two sentences, then the same line carried all the way to its value with the parentheses at one end and then the other");
   ("The general rule comes first and this lesson's consequence of it second, in that order, because the second is only believable once the first is in front of the reader. Said the other way round - a || beating an && - it reads as a new fact about those two marks, and a learner has no reason to expect it to hold for any other pair.");
