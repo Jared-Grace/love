@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_code_lesson_expression_choose_order_sides_settled_tree } from "./app_code_lesson_expression_choose_order_sides_settled_tree.mjs";
+import { app_learn_js_lesson_expression_choose_order_sides_settled_tree } from "./app_learn_js_lesson_expression_choose_order_sides_settled_tree.mjs";
 import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_either_side } from "./app_learn_js_lesson_expression_choose_order_parentheses_either_side.mjs";
@@ -22,16 +22,18 @@ export function app_learn_js_lesson_expression_choose_order_parentheses_above(
   ("ONLY THE LINES ARE THIS LESSON'S OWN. The recall card, the two walks and the closing card were written out here and again in the two lessons either side of it, three copies differing in nothing but which lines were handed to them, so the laying out is asked for now and what is left here is the pair of lines and the heading over the second one.");
   let both = [true, false];
   let middle_truth = list_random_item(both);
-  let tree_right = app_code_lesson_expression_choose_order_sides_settled_tree(
-    app_learn_js_expression_node_right_operator_first,
-    false,
-    middle_truth,
-  );
-  let tree_left = app_code_lesson_expression_choose_order_sides_settled_tree(
-    app_learn_js_expression_node_left_operator_first,
-    true,
-    middle_truth,
-  );
+  let tree_right =
+    app_learn_js_lesson_expression_choose_order_sides_settled_tree(
+      app_learn_js_expression_node_right_operator_first,
+      false,
+      middle_truth,
+    );
+  let tree_left =
+    app_learn_js_lesson_expression_choose_order_sides_settled_tree(
+      app_learn_js_expression_node_left_operator_first,
+      true,
+      middle_truth,
+    );
   let heading_none = [];
   let heading_either =
     app_learn_js_lesson_expression_choose_order_parentheses_either_side();
