@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
-import { app_code_lesson_operators_addition } from "./app_code_lesson_operators_addition.mjs";
+import { app_learn_js_lesson_operators_addition } from "./app_learn_js_lesson_operators_addition.mjs";
 import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than } from "./app_learn_js_lesson_expression_arithmetic_less_than.mjs";
 import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesson_expression_remainder_2.mjs";
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_groups() {
         "&&",
         ")",
       ],
-      lesson: app_code_lesson_operators_addition,
+      lesson: app_learn_js_lesson_operators_addition,
     },
     {
       parts: ["Nested Expressions"],
