@@ -4,7 +4,7 @@ import { equal } from "./equal.mjs";
 import { app_learn_js_lesson_swapping_generic_pair_code } from "./app_learn_js_lesson_swapping_generic_pair_code.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-export function app_code_lesson_swapping_generic_pairs_wanted(
+export function app_learn_js_lesson_swapping_generic_pairs_wanted(
   op,
   want_true,
   wrap,

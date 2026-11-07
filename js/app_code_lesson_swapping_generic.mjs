@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_lesson_swapping_generic_pairs_wanted } from "./app_code_lesson_swapping_generic_pairs_wanted.mjs";
+import { app_learn_js_lesson_swapping_generic_pairs_wanted } from "./app_learn_js_lesson_swapping_generic_pairs_wanted.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_lesson_swapping_generic_pair_code } from "./app_learn_js_lesson_swapping_generic_pair_code.mjs";
 import { list_interleave_pair } from "./list_interleave_pair.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_swapping_generic(config) {
   }
   function expression(op, want_true) {
     "a op b === b op a, the same two different numbers swapped around the operator, picked from the pairs that really land on want_true";
-    let pairs = app_code_lesson_swapping_generic_pairs_wanted(
+    let pairs = app_learn_js_lesson_swapping_generic_pairs_wanted(
       op,
       want_true,
       wrap,
