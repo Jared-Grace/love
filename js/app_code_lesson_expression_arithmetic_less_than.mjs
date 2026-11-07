@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_arithmetic_less_than_op_multiply } from "./app_code_lesson_expression_arithmetic_less_than_op_multiply.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_op_divide } from "./app_learn_js_lesson_expression_arithmetic_less_than_op_divide.mjs";
-import { app_code_lesson_expression_arithmetic_less_than_op_exponent } from "./app_code_lesson_expression_arithmetic_less_than_op_exponent.mjs";
+import { app_learn_js_lesson_expression_arithmetic_less_than_op_exponent } from "./app_learn_js_lesson_expression_arithmetic_less_than_op_exponent.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_op_add } from "./app_learn_js_lesson_expression_arithmetic_less_than_op_add.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_above } from "./app_learn_js_lesson_expression_arithmetic_less_than_above.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_one } from "./app_learn_js_lesson_expression_arithmetic_less_than_one.mjs";
@@ -57,7 +57,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     return r6;
   }
   function op_exponent() {
-    let r8 = app_code_lesson_expression_arithmetic_less_than_op_exponent();
+    let r8 = app_learn_js_lesson_expression_arithmetic_less_than_op_exponent();
     return r8;
   }
   let combos = [
