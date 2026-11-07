@@ -8,7 +8,7 @@ import { integer_random } from "./integer_random.mjs";
 import { ternary } from "./ternary.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_expression_choose_order_operators_expression_parts } from "./app_code_lesson_expression_choose_order_operators_expression_parts.mjs";
-export function app_code_lesson_expression_choose_order_arithmetic_parentheses_expression(
+export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression(
   group_left,
 ) {
   arguments_assert(arguments, 1);

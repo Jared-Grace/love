@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_arithmetic_parentheses_expression } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_parentheses_either_side_words } from "./app_code_parentheses_either_side_words.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
@@ -18,11 +18,11 @@ export function app_learn_js_lesson_expression_choose_order_arithmetic_parenthes
   let group_right_first = false;
   let group_left_second = true;
   let tree_right =
-    app_code_lesson_expression_choose_order_arithmetic_parentheses_expression(
+    app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression(
       group_right_first,
     );
   let tree_left =
-    app_code_lesson_expression_choose_order_arithmetic_parentheses_expression(
+    app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression(
       group_left_second,
     );
   let times = js_operator_asterisk_symbol();
