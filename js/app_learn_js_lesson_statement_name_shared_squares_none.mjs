@@ -30,7 +30,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_shared_squares_none() {
+export function app_learn_js_lesson_statement_name_shared_squares_none() {
   arguments_assert(arguments, 0);
   ("how many squares two rectangles share, even when they do not overlap: let w = Math.max(width, 0); let h = Math.max(height, 0); let area = w * h; - chosen by Claude 2026-10-04 as the step How many squares two rectangles share left out on purpose. In DSA it is the area of the intersection of two rectangles done safely, and the bug it stops is the one a negative width times a negative height makes: a positive area for two rectangles that share nothing.");
   ("It starts from the width and the height of the shared part, which How many squares two rectangles share finds, so that lesson is the reminder and the new idea is only the floor at 0, done twice, which How long two meetings overlap taught once; the writing points back to that lesson. Not picked: starting again from the four edges, which would put five lines in every program.");
