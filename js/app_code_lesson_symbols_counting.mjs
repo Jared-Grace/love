@@ -1,7 +1,7 @@
 import { text_size_text_to } from "./text_size_text_to.mjs";
 import { app_learn_js_label_symbols } from "./app_learn_js_label_symbols.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "./app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
+import { app_learn_js_lesson_symbols_counting_quiz_backwards_on_button } from "./app_learn_js_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { noop } from "./noop.mjs";
 import { app_code_symbols_count_wrong_say } from "./app_code_symbols_count_wrong_say.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_symbols_counting(
   let example_count = 1;
   let quiz_backwards_label_answer = "What symbols produce this count? ";
   let on_quiz_answer_button_backwards =
-    app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
+    app_learn_js_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   let quiz_backwards_answer_count_override = null;
   let forwards = {
     question_label: example_question_label,
