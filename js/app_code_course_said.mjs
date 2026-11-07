@@ -3,7 +3,7 @@ import { browser_is } from "./browser_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_page_stage_prod_is } from "./app_shared_page_stage_prod_is.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { app_code_course_hash_key } from "./app_code_course_hash_key.mjs";
+import { app_learn_js_course_hash_key } from "./app_learn_js_course_hash_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { app_code_course_known_is } from "./app_code_course_known_is.mjs";
 export function app_code_course_said() {
@@ -21,7 +21,7 @@ export function app_code_course_said() {
     return null;
   }
   let hash = html_hash_object_get();
-  let key = app_code_course_hash_key();
+  let key = app_learn_js_course_hash_key();
   let said = property_get_or_null(hash, key);
   let known = app_code_course_known_is(said);
   if (not(known)) {
