@@ -15,7 +15,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_identifiers_symbol_first_generic } from "./app_code_lesson_identifiers_symbol_first_generic.mjs";
+import { app_learn_js_lesson_identifiers_symbol_first_generic } from "./app_learn_js_lesson_identifiers_symbol_first_generic.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 export function app_code_lesson_identifiers_symbol_first_unseparated() {
   let name_id = app_code_lesson_name_id("identifiers", [
@@ -23,7 +23,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     "first",
     "unseparated",
   ]);
-  let r = app_code_lesson_identifiers_symbol_first_generic(
+  let r = app_learn_js_lesson_identifiers_symbol_first_generic(
     name_id,
     above,
     html_text_set_code_dark,

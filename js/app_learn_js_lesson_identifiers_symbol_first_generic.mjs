@@ -17,7 +17,7 @@ import { list_size } from "./list_size.mjs";
 import { list_slices_size_cycler } from "./list_slices_size_cycler.mjs";
 import { list_items_double } from "./list_items_double.mjs";
 import { range_from } from "./range_from.mjs";
-export function app_code_lesson_identifiers_symbol_first_generic(
+export function app_learn_js_lesson_identifiers_symbol_first_generic(
   name_id,
   above,
   on_question,

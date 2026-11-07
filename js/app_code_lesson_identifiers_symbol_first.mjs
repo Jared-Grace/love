@@ -22,13 +22,13 @@ import { each } from "./each.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
 import { word_plural } from "./word_plural.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_identifiers_symbol_first_generic } from "./app_code_lesson_identifiers_symbol_first_generic.mjs";
+import { app_learn_js_lesson_identifiers_symbol_first_generic } from "./app_learn_js_lesson_identifiers_symbol_first_generic.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   let name_id = app_code_lesson_name_id("identifiers", ["symbol", "first"]);
-  let r = app_code_lesson_identifiers_symbol_first_generic(
+  let r = app_learn_js_lesson_identifiers_symbol_first_generic(
     name_id,
     above,
     app_code_symbols_separated_on_question,
