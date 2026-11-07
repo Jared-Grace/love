@@ -7,7 +7,7 @@ import { color_reading_sentence } from "./color_reading_sentence.mjs";
 import { color_contrast_or_null } from "./color_contrast_or_null.mjs";
 import { color_readings_apart } from "./color_readings_apart.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_lesson_chip_color_readings() {
+export function app_learn_js_lesson_chip_color_readings() {
   arguments_assert(arguments, 0);
   ("every measurement that can be made of the categorical chip palette, each written out as one sentence carrying its own figure - what was measured, what it came to, and whether that clears the floor for the job or falls short of it");
   ("A RECORD OF WHAT IS, AND DELIBERATELY NOT A LIST OF FAULTS. Four things are known to be wrong with these colours and every fix for them is a judgment about colour that is waiting on somebody who has worked in colour. A gate that reported only the faults would be silent about a change that made a passing colour worse without pushing it under a floor, and silent about a change that moved a colour that was never in trouble - which is exactly the kind of quiet the waiting cannot afford.");
