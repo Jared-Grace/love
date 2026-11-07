@@ -6,7 +6,7 @@ import { html_border } from "./html_border.mjs";
 import { app_shared_border_radius_large } from "./app_shared_border_radius_large.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
 import { app_shared_column_content_max_width } from "./app_shared_column_content_max_width.mjs";
-import { app_code_container_light_blue_border_color } from "./app_code_container_light_blue_border_color.mjs";
+import { app_learn_js_container_light_blue_border_color } from "./app_learn_js_container_light_blue_border_color.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -41,7 +41,7 @@ export function app_code_container_light_blue(parent) {
   });
   let background = app_shared_container_blue_background_color();
   html_style_background_color_set(c, background);
-  let border_color = app_code_container_light_blue_border_color();
+  let border_color = app_learn_js_container_light_blue_border_color();
   html_border(c, app_shared_spaced_neighbor_gap(), border_color);
   let border_radius = app_shared_border_radius_large();
   html_border_radius(c, border_radius);
