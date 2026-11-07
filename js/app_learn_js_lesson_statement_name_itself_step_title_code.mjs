@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
-export function app_code_lesson_statement_name_itself_step_title_code(
+export function app_learn_js_lesson_statement_name_itself_step_title_code(
   operator,
 ) {
   arguments_assert(arguments, 1);
