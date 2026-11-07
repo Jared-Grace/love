@@ -9,7 +9,7 @@ import { js_code_assign_operator_statement } from "./js_code_assign_operator_sta
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_lesson_statement_name_shorter_above } from "./app_code_lesson_statement_name_shorter_above.mjs";
-import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
+import { app_learn_js_lesson_statement_name_itself_sum } from "./app_learn_js_lesson_statement_name_itself_sum.mjs";
 import { app_learn_js_lesson_statement_name_difference_number_pairs } from "./app_learn_js_lesson_statement_name_difference_number_pairs.mjs";
 import { app_learn_js_lesson_statement_name_first_written_batch } from "./app_learn_js_lesson_statement_name_first_written_batch.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_statement_name_minus_assign_pair() {
     app_code_lesson_statement_name_shorter_above({
       root,
       context,
-      lesson_from: app_code_lesson_statement_name_itself_sum,
+      lesson_from: app_learn_js_lesson_statement_name_itself_sum,
       remembered: [
         "we can add to what a name (",
         name_first,
