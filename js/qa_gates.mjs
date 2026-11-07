@@ -554,7 +554,7 @@ import { app_learn_ceb_gloss_roots_claimed_stopped_short_gate_run } from "./app_
 import { lyric_video_picture_scene_style_conflict_gate_run } from "./lyric_video_picture_scene_style_conflict_gate_run.mjs";
 import { ebible_chapter_code_padded_cases_gate_run } from "./ebible_chapter_code_padded_cases_gate_run.mjs";
 import { lyric_video_picture_scene_alternative_gate_run } from "./lyric_video_picture_scene_alternative_gate_run.mjs";
-import { app_code_lesson_titles_capital_gate_run } from "./app_code_lesson_titles_capital_gate_run.mjs";
+import { app_learn_js_lesson_titles_capital_gate_run } from "./app_learn_js_lesson_titles_capital_gate_run.mjs";
 import { app_learn_ceb_gloss_passages_respell_refused_gate_run } from "./app_learn_ceb_gloss_passages_respell_refused_gate_run.mjs";
 import { app_learn_ceb_gloss_verse_claims_wrong_gate_run } from "./app_learn_ceb_gloss_verse_claims_wrong_gate_run.mjs";
 import { app_learn_ceb_gloss_chapters_absent_gate_run } from "./app_learn_ceb_gloss_chapters_absent_gate_run.mjs";
@@ -1205,7 +1205,7 @@ export function qa_gates() {
     lyric_video_picture_scene_style_conflict_gate_run,
     ebible_chapter_code_padded_cases_gate_run,
     lyric_video_picture_scene_alternative_gate_run,
-    app_code_lesson_titles_capital_gate_run,
+    app_learn_js_lesson_titles_capital_gate_run,
     app_learn_ceb_gloss_passages_respell_refused_gate_run,
     app_learn_ceb_gloss_verse_claims_wrong_gate_run,
     app_learn_ceb_gloss_chapters_absent_gate_run,

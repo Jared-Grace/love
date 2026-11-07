@@ -5,7 +5,7 @@ import { app_code_lesson_titles_lower } from "./app_code_lesson_titles_lower.mjs
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_walked_generic } from "./list_empty_is_assert_walked_generic.mjs";
-export function app_code_lesson_titles_capital_gate_run() {
+export function app_learn_js_lesson_titles_capital_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate for the lessons list: every lesson title opens with a capital after its category word. Functions: Smaller of two Math.min, never Functions: smaller of two Math.min.");
   ("The list of lessons is the first thing a learner reads, and a list where some names open with a capital and some do not reads as two lists that got shuffled together. Nobody decided that split - it is what happens when each title is written on its own day and nothing says which way.");

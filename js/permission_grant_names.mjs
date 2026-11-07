@@ -2816,7 +2816,7 @@ export function permission_grant_names() {
     fn_name("app_code_above_vague_gate_run"),
     fn_name("app_learn_js_happy_gate_run"),
     fn_name("app_learn_js_lesson_ids_short_missing_gate_run"),
-    fn_name("app_code_lesson_titles_capital_gate_run"),
+    fn_name("app_learn_js_lesson_titles_capital_gate_run"),
     fn_name("app_code_lessons_above_repeated_gate_run"),
     fn_name("app_code_lessons_released_gate_run"),
     fn_name("app_code_program_step_presses_gate_run"),
