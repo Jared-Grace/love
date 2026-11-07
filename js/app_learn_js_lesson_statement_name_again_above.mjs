@@ -16,7 +16,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
 import { js_code_semicolon } from "./js_code_semicolon.mjs";
 import { app_learn_js_lesson_functions_console_log_statement } from "./app_learn_js_lesson_functions_console_log_statement.mjs";
-export function app_code_lesson_statement_name_again_above(root, context) {
+export function app_learn_js_lesson_statement_name_again_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: one cup, what was in it, what is in it now, and the line that changed it");
   ("The same cup twice over rather than two cups side by side. The lesson before put two cups next to each other and asked which one was meant; this one has to say the opposite - there is only ever one cup here, and it is the SAME cup in both pictures. Drawn side by side they would read as two, which is the answer to the wrong lesson.");
