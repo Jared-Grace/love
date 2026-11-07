@@ -4,7 +4,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { app_code_lesson_statement_name_true_false_batch } from "./app_code_lesson_statement_name_true_false_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
-import { app_code_lesson_statement_name_true_false_above } from "./app_code_lesson_statement_name_true_false_above.mjs";
+import { app_learn_js_lesson_statement_name_true_false_above } from "./app_learn_js_lesson_statement_name_true_false_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_code_lesson_statement_name_true_false() {
@@ -20,7 +20,7 @@ export function app_code_lesson_statement_name_true_false() {
     eval_console_log_to_list,
   );
   let lesson = app_learn_js_lesson_code_logged({
-    above: app_code_lesson_statement_name_true_false_above,
+    above: app_learn_js_lesson_statement_name_true_false_above,
     name_id,
     batch_get: batch,
     example_count: 2,
