@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_which_part_first_above } from "./app_code_lesson_expression_which_part_first_above.mjs";
+import { app_learn_js_lesson_expression_which_part_first_above } from "./app_learn_js_lesson_expression_which_part_first_above.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_lesson_code_generic } from "./app_learn_js_lesson_code_generic.mjs";
@@ -49,7 +49,10 @@ export function app_code_lesson_expression_which_part_first() {
     return list;
   }
   function above(root, context) {
-    let r2 = app_code_lesson_expression_which_part_first_above(root, context);
+    let r2 = app_learn_js_lesson_expression_which_part_first_above(
+      root,
+      context,
+    );
     return r2;
   }
 }

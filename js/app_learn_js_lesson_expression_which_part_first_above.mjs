@@ -11,7 +11,7 @@ import { add } from "./add.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_which_part_first_above(
+export function app_learn_js_lesson_expression_which_part_first_above(
   root,
   context,
 ) {
