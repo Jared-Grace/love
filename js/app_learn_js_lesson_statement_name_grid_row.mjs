@@ -22,7 +22,7 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_middle } from "./app_code_lesson_statement_name_middle.mjs";
+import { app_learn_js_lesson_statement_name_middle } from "./app_learn_js_lesson_statement_name_middle.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
@@ -189,7 +189,7 @@ export function app_learn_js_lesson_statement_name_grid_row() {
     values_get,
     example_values: [7, 3],
     step,
-    remember_lesson: app_code_lesson_statement_name_middle,
+    remember_lesson: app_learn_js_lesson_statement_name_middle,
     remember_parts: ["we can divide and round down:"],
     remember_lines,
     explain: [

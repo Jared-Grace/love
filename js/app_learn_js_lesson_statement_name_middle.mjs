@@ -24,7 +24,7 @@ import { app_learn_js_lesson_expression_integer_division } from "./app_learn_js_
 import { app_code_line_ends_middle_draw } from "./app_code_line_ends_middle_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_number_line_draw } from "./app_code_number_line_draw.mjs";
-export function app_code_lesson_statement_name_middle() {
+export function app_learn_js_lesson_statement_name_middle() {
   arguments_assert(arguments, 0);
   ("the whole number in the middle of two names, rounded down: let sum = low + high; let middle = Math.floor(sum / 2); console.log(middle);");
   ("The average of two with the halving rounded down, so the answer is always a whole number. It is taught because a search through a sorted list looks here on every step; the writing says so without naming lists, which are not taught yet.");
