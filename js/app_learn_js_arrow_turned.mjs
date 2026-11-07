@@ -7,7 +7,7 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
 import { html_style_line_height } from "./html_style_line_height.mjs";
-export function app_code_arrow_turned(parent, degrees) {
+export function app_learn_js_arrow_turned(parent, degrees) {
   ("a prominent arrow - a big triangular head on a short line - turned degrees clockwise from rightwards, as ",
     fn_name("app_shared_arrow_svg"),
     " turns it. Drawn rather than typed, so it centres exactly (a text arrow's ink sits low in its line box) and occupies only its own width (no glyph side bearings to cancel out). One place to change the arrow look the code app draws");
