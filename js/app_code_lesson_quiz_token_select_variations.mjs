@@ -7,7 +7,7 @@ import { js_expression_is } from "./js_expression_is.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { app_code_lesson_quiz_token_select_variations_collect } from "./app_code_lesson_quiz_token_select_variations_collect.mjs";
 import { list_adder } from "./list_adder.mjs";
-import { app_code_lesson_quiz_token_select_meaning_variations } from "./app_code_lesson_quiz_token_select_meaning_variations.mjs";
+import { app_learn_js_lesson_quiz_token_select_meaning_variations } from "./app_learn_js_lesson_quiz_token_select_meaning_variations.mjs";
 import { app_code_lesson_quiz_token_select_shape_variations } from "./app_code_lesson_quiz_token_select_shape_variations.mjs";
 import { app_code_lesson_quiz_token_select_variations_generate_all } from "./app_code_lesson_quiz_token_select_variations_generate_all.mjs";
 import { each } from "./each.mjs";
@@ -37,7 +37,8 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     return r;
   }
   let orderable_nodes = list_adder(collect);
-  let value_codes = app_code_lesson_quiz_token_select_meaning_variations(code);
+  let value_codes =
+    app_learn_js_lesson_quiz_token_select_meaning_variations(code);
   let shape_codes = app_code_lesson_quiz_token_select_shape_variations(code);
   function generate_all_with_values(la) {
     "the question's own wording, then the commutative-swap orderings, plus every same-tiles same-value rearrangement and every dealing of the tiles back into the question's own shape, into one deduplicated pool";
