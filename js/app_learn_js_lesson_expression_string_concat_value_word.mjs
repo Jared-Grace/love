@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-export function app_code_lesson_expression_string_concat_value_word(
+export function app_learn_js_lesson_expression_string_concat_value_word(
   host,
   on_light,
 ) {

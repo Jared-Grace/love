@@ -6,7 +6,7 @@ import { list_get } from "./list_get.mjs";
 import { app_learn_js_lesson_expression_string_concat_above_remember_line } from "./app_learn_js_lesson_expression_string_concat_above_remember_line.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_expression_string_concat_value_word } from "./app_code_lesson_expression_string_concat_value_word.mjs";
+import { app_learn_js_lesson_expression_string_concat_value_word } from "./app_learn_js_lesson_expression_string_concat_value_word.mjs";
 import { app_code_string_value_of_is_say } from "./app_code_string_value_of_is_say.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -36,11 +36,11 @@ export function app_learn_js_lesson_expression_string_concat_above_so_value(
     app_code_lesson_expression_string_hello,
     ["the "],
   );
-  app_code_lesson_expression_string_concat_value_word(reminded, on_light);
+  app_learn_js_lesson_expression_string_concat_value_word(reminded, on_light);
   app_code_string_value_of_is_say(reminded, joined_value);
   let so_line = html_div(derive);
   html_span_text(so_line, "So the ");
-  app_code_lesson_expression_string_concat_value_word(so_line, on_light);
+  app_learn_js_lesson_expression_string_concat_value_word(so_line, on_light);
   html_span_text(so_line, " of ");
   html_span_text_code_dark(so_line, join_code);
   html_span_text(so_line, " is ");
