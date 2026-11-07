@@ -20,7 +20,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
-import { app_code_lesson_expression_integer_division } from "./app_code_lesson_expression_integer_division.mjs";
+import { app_learn_js_lesson_expression_integer_division } from "./app_learn_js_lesson_expression_integer_division.mjs";
 import { app_code_line_ends_middle_draw } from "./app_code_line_ends_middle_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_number_line_draw } from "./app_code_number_line_draw.mjs";
@@ -179,7 +179,7 @@ export function app_code_lesson_statement_name_middle() {
     values_get,
     example_values: [4, 9],
     step,
-    remember_lesson: app_code_lesson_expression_integer_division,
+    remember_lesson: app_learn_js_lesson_expression_integer_division,
     remember_parts: ["we divide, and then round down to get a whole number:"],
     remember_lines,
     explain: [
