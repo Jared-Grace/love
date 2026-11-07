@@ -482,7 +482,7 @@ import { app_learn_js_expression_written_gate_run } from "./app_learn_js_express
 import { bible_usfm_versions_apart_gate_run } from "./bible_usfm_versions_apart_gate_run.mjs";
 import { js_ast_return_key_shapes_agree_cases_gate_run } from "./js_ast_return_key_shapes_agree_cases_gate_run.mjs";
 import { bible_versions_sung_gate_run } from "./bible_versions_sung_gate_run.mjs";
-import { app_code_lesson_id_length_gate_run } from "./app_code_lesson_id_length_gate_run.mjs";
+import { app_learn_js_lesson_id_length_gate_run } from "./app_learn_js_lesson_id_length_gate_run.mjs";
 import { app_code_lesson_ids_short_missing_gate_run } from "./app_code_lesson_ids_short_missing_gate_run.mjs";
 import { functions_parameters_gate_run } from "./functions_parameters_gate_run.mjs";
 import { baseline_growth_guarded_is_cases_gate_run } from "./baseline_growth_guarded_is_cases_gate_run.mjs";
@@ -1133,7 +1133,7 @@ export function qa_gates() {
     bible_usfm_versions_apart_gate_run,
     js_ast_return_key_shapes_agree_cases_gate_run,
     bible_versions_sung_gate_run,
-    app_code_lesson_id_length_gate_run,
+    app_learn_js_lesson_id_length_gate_run,
     app_code_lesson_ids_short_missing_gate_run,
     functions_parameters_gate_run,
     baseline_growth_guarded_is_cases_gate_run,

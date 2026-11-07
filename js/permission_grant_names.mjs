@@ -2199,7 +2199,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_survey_glyph_collisions"),
     fn_name("path_inside_folder_assert"),
     fn_name("song_image_review_notes_done"),
-    fn_name("app_code_lesson_id_length_gate_run"),
+    fn_name("app_learn_js_lesson_id_length_gate_run"),
     fn_name("app_code_lesson_telling_symbols_gate_run"),
     fn_name("song_god_our_savior_wordings_echoed"),
     fn_name("functions_return_key_shapes_baseline_write"),

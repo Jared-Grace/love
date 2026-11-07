@@ -8,7 +8,7 @@ import { text_size } from "./text_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-export function app_code_lesson_id_length_gate_run() {
+export function app_learn_js_lesson_id_length_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: no code lesson is stored and linked under an id longer than the ceiling. Read-only.");
   ("The longest rather than the average, because the question is whether any single id is too large and an average cannot answer it. One id of fifty characters is felt in full by the person holding that one, however short the other hundred and thirty two are, and it would move the average by a third of a character.");
