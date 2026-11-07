@@ -7,7 +7,7 @@ import { app_code_hash_quiz_add } from "./app_code_hash_quiz_add.mjs";
 import { app_code_hash_review_add } from "./app_code_hash_review_add.mjs";
 import { app_code_hash_milestone_add } from "./app_code_hash_milestone_add.mjs";
 import { app_code_hash_questions_add } from "./app_code_hash_questions_add.mjs";
-import { app_code_hash_course_add } from "./app_code_hash_course_add.mjs";
+import { app_learn_js_hash_course_add } from "./app_learn_js_hash_course_add.mjs";
 import { html_hash_set_object } from "./html_hash_set_object.mjs";
 export function app_code_hash_write(context) {
   "reflect the current lesson, screen, and quiz position in the URL hash, so the link is shareable and reopens exactly where you are; runs after every refresh";
@@ -28,6 +28,6 @@ export function app_code_hash_write(context) {
   app_code_hash_review_add(context, hash);
   app_code_hash_milestone_add(context, hash);
   app_code_hash_questions_add(context, hash);
-  app_code_hash_course_add(hash);
+  app_learn_js_hash_course_add(hash);
   html_hash_set_object(hash);
 }
