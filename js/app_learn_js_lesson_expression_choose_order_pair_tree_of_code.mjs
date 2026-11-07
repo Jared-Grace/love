@@ -5,7 +5,7 @@ import { list_get } from "./list_get.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { text_split_space } from "./text_split_space.mjs";
-export function app_code_lesson_expression_choose_order_pair_tree_of_code(
+export function app_learn_js_lesson_expression_choose_order_pair_tree_of_code(
   code,
 ) {
   function_duplicate_kind_parallel();
