@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { app_code_lesson_quiz_token_select_count_badge_inside_percent } from "./app_code_lesson_quiz_token_select_count_badge_inside_percent.mjs";
+import { app_learn_js_lesson_quiz_token_select_count_badge_inside_percent } from "./app_learn_js_lesson_quiz_token_select_count_badge_inside_percent.mjs";
 import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_quiz_token_select_count_badge_room_keep(
@@ -24,7 +24,8 @@ export function app_code_lesson_quiz_token_select_count_badge_room_keep(
     html_style_set(tile, "margin-right", "1.6em");
     return;
   }
-  let inside = app_code_lesson_quiz_token_select_count_badge_inside_percent();
+  let inside =
+    app_learn_js_lesson_quiz_token_select_count_badge_inside_percent();
   let outside = subtract(100, inside);
   let out = multiply_divide(width, outside, 100);
   let room = out + 3;

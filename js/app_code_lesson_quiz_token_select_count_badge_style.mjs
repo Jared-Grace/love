@@ -3,7 +3,7 @@ import { html_bold } from "./html_bold.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { app_code_lesson_quiz_token_select_count_badge_inside_percent } from "./app_code_lesson_quiz_token_select_count_badge_inside_percent.mjs";
+import { app_learn_js_lesson_quiz_token_select_count_badge_inside_percent } from "./app_learn_js_lesson_quiz_token_select_count_badge_inside_percent.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -34,7 +34,8 @@ export function app_code_lesson_quiz_token_select_count_badge_style(
   html_style_set(badge, "position", "absolute");
   html_style_set(badge, "left", "100%");
   html_style_set(badge, "top", "0");
-  let inside = app_code_lesson_quiz_token_select_count_badge_inside_percent();
+  let inside =
+    app_learn_js_lesson_quiz_token_select_count_badge_inside_percent();
   let back = subtract(0, inside);
   let spelled = text_from_number(back);
   let shift = text_combine_multiple(["translate(", spelled, "%, 0)"]);
