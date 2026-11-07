@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_multiple_choice_distractors } from "./app_code_lesson_quiz_multiple_choice_distractors.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_distractors } from "./app_learn_js_lesson_quiz_multiple_choice_distractors.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 export function app_learn_js_lesson_quiz_multiple_choice_decoy_fn(
@@ -8,7 +8,7 @@ export function app_learn_js_lesson_quiz_multiple_choice_decoy_fn(
   batch_get,
 ) {
   arguments_assert(arguments, 3);
-  let r2 = app_code_lesson_quiz_multiple_choice_distractors(
+  let r2 = app_learn_js_lesson_quiz_multiple_choice_distractors(
     info,
     qa,
     batch_get,

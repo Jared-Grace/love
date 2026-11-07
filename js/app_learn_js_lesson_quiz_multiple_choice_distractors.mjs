@@ -6,7 +6,7 @@ import { app_learn_js_answer_count_max } from "./app_learn_js_answer_count_max.m
 import { null_not_is } from "./null_not_is.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_lesson_quiz_multiple_choice_distractors(
+export function app_learn_js_lesson_quiz_multiple_choice_distractors(
   info,
   qa,
   batch_get,
