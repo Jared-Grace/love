@@ -31,7 +31,7 @@ import { list_last } from "./list_last.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
-import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_loop_log_generic(params) {
   arguments_assert(arguments, 1);
@@ -196,7 +196,7 @@ export function app_code_lesson_loop_log_generic(params) {
   function above(root, context) {
     above_inner(root, context, example, walk);
   }
-  let lesson = app_code_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({
     above,
     name_id,
     batch_get: batch,

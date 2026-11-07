@@ -1,6 +1,6 @@
 import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_functions_console_log_generic(params) {
     batch_get: b,
     name_id,
   });
-  let lesson = app_code_lesson_code_logged(logged_params);
+  let lesson = app_learn_js_lesson_code_logged(logged_params);
   let next_operator = app_code_lesson_operators_value_max_range_1_next();
   let r3 = {
     lesson,

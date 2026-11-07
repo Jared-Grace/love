@@ -25,7 +25,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_if_thrice() {
   arguments_assert(arguments, 0);
@@ -208,7 +208,7 @@ export function app_code_lesson_if_thrice() {
     "The same if three times",
     "if ... if ... if ...",
   );
-  let lesson = app_code_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({
     above,
     name_id,
     batch_get: batch,

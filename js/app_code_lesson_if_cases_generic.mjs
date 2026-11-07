@@ -23,7 +23,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
-import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_if_cases_generic(
   words,
@@ -162,7 +162,7 @@ export function app_code_lesson_if_cases_generic(
     return found;
   }
   let name_id = app_code_lesson_statement_title_name_id_dots(words, title_code);
-  let lesson = app_code_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({
     above,
     name_id,
     batch_get: batch,

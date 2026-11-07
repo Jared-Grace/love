@@ -17,7 +17,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_if_either_decoys } from "./app_learn_js_if_either_decoys.mjs";
 import { app_learn_js_if_boolean_flipped } from "./app_learn_js_if_boolean_flipped.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_if_else() {
   arguments_assert(arguments, 0);
@@ -95,7 +95,7 @@ export function app_code_lesson_if_else() {
     "Else",
     "if (a) { ... } else { ... }",
   );
-  let lesson = app_code_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({
     above,
     name_id,
     batch_get: batch,

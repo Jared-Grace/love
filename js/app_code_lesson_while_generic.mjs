@@ -24,7 +24,7 @@ import { add } from "./add.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_while_generic(params) {
   "A lesson about one while: let n = start; while (n comparison bound) { n change= amount; } console.log(n); asked forwards and backwards, its screens drawn from groups of programs, one group for each number of runs.";
@@ -145,7 +145,7 @@ export function app_code_lesson_while_generic(params) {
   function above(root, context) {
     above_inner(root, context, program_lines, said);
   }
-  let lesson = app_code_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({
     above,
     name_id,
     batch_get: batch,

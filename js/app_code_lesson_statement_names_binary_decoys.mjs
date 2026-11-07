@@ -4,7 +4,7 @@ import { app_code_lesson_statement_names_binary_programs } from "./app_code_less
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_code_lesson_statement_names_binary_above } from "./app_code_lesson_statement_names_binary_above.mjs";
-import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_statement_names_binary_decoys({
   words,
@@ -52,7 +52,7 @@ export function app_code_lesson_statement_names_binary_decoys({
       answer_name,
     });
   }
-  let lesson = app_code_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({
     above,
     name_id,
     batch_get: batch,

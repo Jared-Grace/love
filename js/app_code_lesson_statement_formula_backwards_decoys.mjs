@@ -22,7 +22,7 @@ import { null_is } from "./null_is.mjs";
 import { app_learn_js_code_dark_lines_pointed } from "./app_learn_js_code_dark_lines_pointed.mjs";
 import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
 import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines_writes_out_on.mjs";
-import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_statement_formula_backwards_decoys({
   words,
@@ -144,7 +144,7 @@ export function app_code_lesson_statement_formula_backwards_decoys({
     ("the program just worked is handed back, so the example underneath is drawn with other numbers rather than showing the same program a second time, asked by the human 2026-09-30");
     return example;
   }
-  let lesson = app_code_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({
     above,
     name_id,
     batch_get: batch,

@@ -13,7 +13,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_code_lesson_statement_name_copy_kept_above } from "./app_code_lesson_statement_name_copy_kept_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_lesson_decoy_code_pieces } from "./app_code_lesson_decoy_code_pieces.mjs";
@@ -60,7 +60,7 @@ export function app_code_lesson_statement_name_copy_kept() {
     let found = [joined, joined2, joined3];
     return found;
   }
-  let lesson = app_code_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({
     backwards_decoys,
     above: app_code_lesson_statement_name_copy_kept_above,
     name_id,
