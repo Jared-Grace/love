@@ -19,7 +19,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_digit_split } from "./app_code_lesson_statement_name_digit_split.mjs";
-export function app_code_lesson_statement_name_digit_rest() {
+export function app_learn_js_lesson_statement_name_digit_rest() {
   arguments_assert(arguments, 0);
   ("the number left in front of a number's last digit: let rest = Math.floor(n / 10); - split from the last-digit lesson at the human's word, 2026-09-27, so each lesson teaches one line");
   ("The writing is the human's, 2026-09-28, in three boxes: what is wanted, shown on both numbers; how the code gets it, on 123; and the same on 4567, then the line. Numbers in the writing are code, as the last-digit lesson writes them.");

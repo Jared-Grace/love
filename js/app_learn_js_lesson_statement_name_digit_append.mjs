@@ -13,7 +13,7 @@ import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_co
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_digit_rest } from "./app_code_lesson_statement_name_digit_rest.mjs";
+import { app_learn_js_lesson_statement_name_digit_rest } from "./app_learn_js_lesson_statement_name_digit_rest.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
 export function app_learn_js_lesson_statement_name_digit_append() {
@@ -101,7 +101,7 @@ export function app_learn_js_lesson_statement_name_digit_append() {
     values_get,
     example_values: [12, 3],
     step,
-    remember_lesson: app_code_lesson_statement_name_digit_rest,
+    remember_lesson: app_learn_js_lesson_statement_name_digit_rest,
     remember_parts: ["we can get all but the last digit:"],
     remember_lines,
     explain: [
