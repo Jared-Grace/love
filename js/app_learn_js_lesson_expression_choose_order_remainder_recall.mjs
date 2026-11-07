@@ -5,7 +5,7 @@ import { app_code_lesson_expression_choose_order_strong_card } from "./app_code_
 import { app_learn_js_division_formula_recall_words } from "./app_learn_js_division_formula_recall_words.mjs";
 import { app_learn_js_expression_remainder_tree } from "./app_learn_js_expression_remainder_tree.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_remainder_recall(
+export function app_learn_js_lesson_expression_choose_order_remainder_recall(
   root,
   context,
 ) {
