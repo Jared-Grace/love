@@ -6,7 +6,7 @@ import { multiply_add } from "./multiply_add.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_learn_js_lesson_expression_remainder_subtract_code } from "./app_learn_js_lesson_expression_remainder_subtract_code.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_lesson_expression_remainder_subtract_title_name_id } from "./app_code_lesson_expression_remainder_subtract_title_name_id.mjs";
+import { app_learn_js_lesson_expression_remainder_subtract_title_name_id } from "./app_learn_js_lesson_expression_remainder_subtract_title_name_id.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_first } from "./list_first.mjs";
@@ -47,7 +47,7 @@ export function app_code_lesson_expression_remainder_subtract() {
     return pairs;
   }
   let name_id =
-    app_code_lesson_expression_remainder_subtract_title_name_id(percent);
+    app_learn_js_lesson_expression_remainder_subtract_title_name_id(percent);
   let example_question_label = app_learn_js_label_code_question();
   ("The wrong answers hold only the numbers on the screen. Filled from the other questions they held other numbers, so the one button with the numbers on the screen was the answer every time and could be picked without knowing what % does.");
   ("Forwards they take the number away too few times or too many, which is the stopping rule this lesson teaches: stop when what is left is smaller. The right count is always 2 or 3, so counts 1 to 4 less the right one always leave exactly three.");

@@ -2,7 +2,7 @@ import { app_code_title_remainder_percent_paint } from "./app_code_title_remaind
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_expression_remainder_subtract_title_name_id(
+export function app_learn_js_lesson_expression_remainder_subtract_title_name_id(
   percent,
 ) {
   arguments_assert(arguments, 1);
