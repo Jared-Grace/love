@@ -1,7 +1,7 @@
 import { app_code_expression_colored_quickly } from "./app_code_expression_colored_quickly.mjs";
 import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
 import { app_shared_animation_duration_quick } from "./app_shared_animation_duration_quick.mjs";
-import { app_code_expression_chosen_room_clear } from "./app_code_expression_chosen_room_clear.mjs";
+import { app_learn_js_expression_chosen_room_clear } from "./app_learn_js_expression_chosen_room_clear.mjs";
 import { app_code_expression_chosen_uncolored } from "./app_code_expression_chosen_uncolored.mjs";
 import { app_code_expression_replaced_set } from "./app_code_expression_replaced_set.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
@@ -21,7 +21,7 @@ export async function app_code_expression_replaced_settle(
     app_code_expression_replaced_set(node_span, value);
   }
   function room_clear() {
-    app_code_expression_chosen_room_clear(node_span);
+    app_learn_js_expression_chosen_room_clear(node_span);
   }
   let duration = app_shared_animation_duration();
   let pieces = html_descendants_innermost(line);
