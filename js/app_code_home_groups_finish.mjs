@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_home_group_title_render } from "./app_code_home_group_title_render.mjs";
+import { app_learn_js_home_group_title_render } from "./app_learn_js_home_group_title_render.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_color_green_tint } from "./app_shared_color_green_tint.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -19,7 +19,7 @@ export function app_code_home_groups_finish(cards, opened) {
   ("once every lesson is drawn: a group whose lessons are all finished turns green, and one group is left open - the one handed in, or else the first group not yet finished, or else the last");
   ("The open one is chosen after drawing because only then is it known which group the learner just left and which are finished. Opening it shuts every other, so this one call leaves exactly one open.");
   function green(entry) {
-    app_code_home_group_title_render(entry);
+    app_learn_js_home_group_title_render(entry);
     let complete = property_get(entry, "complete");
     if (complete) {
       let card = property_get(entry, "card");

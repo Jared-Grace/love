@@ -10,7 +10,7 @@ import { text_combine } from "./text_combine.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-export function app_code_home_group_title_render(entry) {
+export function app_learn_js_home_group_title_render(entry) {
   arguments_assert(arguments, 1);
   ("a group's title on the home list, written into the title its folding card made: the check a finished lesson's row wears when every lesson in the group is finished, the group's name with any code in it written as code, and the run of lesson numbers it holds in parentheses - at the human's request");
   ("Written once every lesson is drawn, because only then is it known where the group ends and whether it is finished.");
