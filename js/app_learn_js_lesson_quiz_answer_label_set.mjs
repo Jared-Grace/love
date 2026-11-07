@@ -3,7 +3,7 @@ import { app_learn_js_lesson_quiz_container_question } from "./app_learn_js_less
 import { app_code_lesson_quiz_parent_container } from "./app_code_lesson_quiz_parent_container.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_value } from "./app_code_lesson_quiz_value.mjs";
-import { app_code_lesson_quiz_on_qa_change } from "./app_code_lesson_quiz_on_qa_change.mjs";
+import { app_learn_js_lesson_quiz_on_qa_change } from "./app_learn_js_lesson_quiz_on_qa_change.mjs";
 export function app_learn_js_lesson_quiz_answer_label_set({
   info,
   qa,
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_quiz_answer_label_set({
   let quiz_index = property_get(r3, "quiz_index");
   let answer_label = property_get(r3, "answer_label");
   let qli = property_get(r3, "qli");
-  let r2 = app_code_lesson_quiz_on_qa_change({
+  let r2 = app_learn_js_lesson_quiz_on_qa_change({
     r3,
     value,
     qli,

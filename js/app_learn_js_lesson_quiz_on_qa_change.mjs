@@ -11,7 +11,7 @@ import { text_combine } from "./text_combine.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-export function app_code_lesson_quiz_on_qa_change({
+export function app_learn_js_lesson_quiz_on_qa_change({
   r3,
   value,
   qli,
