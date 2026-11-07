@@ -12,7 +12,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-export function app_code_lesson_expression_choose_order_not_twice_worked(
+export function app_learn_js_lesson_expression_choose_order_not_twice_worked(
   parent,
 ) {
   "the last card of this lesson: the rewritten line taken down to its value a step at a time, in the same words every walk in this run uses - the step, the replacement, what is left, and the answer";

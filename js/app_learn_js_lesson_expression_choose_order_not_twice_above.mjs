@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_not_twice_recall } from "./
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice_intro } from "./app_learn_js_lesson_expression_choose_order_not_twice_intro.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice_inside_first } from "./app_learn_js_lesson_expression_choose_order_not_twice_inside_first.mjs";
-import { app_code_lesson_expression_choose_order_not_twice_worked } from "./app_code_lesson_expression_choose_order_not_twice_worked.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_twice_worked } from "./app_learn_js_lesson_expression_choose_order_not_twice_worked.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_twice_above(
   root,
   context,
@@ -20,5 +20,5 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_above(
     order_card,
   );
   let worked_card = app_learn_js_container_light_blue(root);
-  app_code_lesson_expression_choose_order_not_twice_worked(worked_card);
+  app_learn_js_lesson_expression_choose_order_not_twice_worked(worked_card);
 }
