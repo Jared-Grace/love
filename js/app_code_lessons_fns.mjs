@@ -179,7 +179,7 @@ import { app_code_lesson_statement_name_plus_assign } from "./app_code_lesson_st
 import { app_code_lesson_statement_name_minus_assign } from "./app_code_lesson_statement_name_minus_assign.mjs";
 import { app_code_lesson_statement_name_times_assign } from "./app_code_lesson_statement_name_times_assign.mjs";
 import { app_learn_js_lesson_statement_name_divide_assign } from "./app_learn_js_lesson_statement_name_divide_assign.mjs";
-import { app_code_lesson_statement_name_increment } from "./app_code_lesson_statement_name_increment.mjs";
+import { app_learn_js_lesson_statement_name_increment } from "./app_learn_js_lesson_statement_name_increment.mjs";
 import { app_learn_js_lesson_statement_name_decrement } from "./app_learn_js_lesson_statement_name_decrement.mjs";
 import { app_learn_js_lesson_statement_name_fill_from } from "./app_learn_js_lesson_statement_name_fill_from.mjs";
 import { app_code_lesson_statement_name_swap_try } from "./app_code_lesson_statement_name_swap_try.mjs";
@@ -540,7 +540,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_minus_assign,
     app_code_lesson_statement_name_times_assign,
     app_learn_js_lesson_statement_name_divide_assign,
-    app_code_lesson_statement_name_increment,
+    app_learn_js_lesson_statement_name_increment,
     app_learn_js_lesson_statement_name_decrement,
     app_learn_js_lesson_statement_name_fill_from,
     app_code_lesson_statement_name_swap_try,
