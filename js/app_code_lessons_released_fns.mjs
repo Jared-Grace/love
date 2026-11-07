@@ -159,7 +159,7 @@ import { app_code_lesson_statement_name_total } from "./app_code_lesson_statemen
 import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { app_code_lesson_statement_name_count } from "./app_code_lesson_statement_name_count.mjs";
-import { app_code_lesson_statement_name_compare } from "./app_code_lesson_statement_name_compare.mjs";
+import { app_learn_js_lesson_statement_name_compare } from "./app_learn_js_lesson_statement_name_compare.mjs";
 import { app_learn_js_lesson_expression_choose_order_stop_early_or } from "./app_learn_js_lesson_expression_choose_order_stop_early_or.mjs";
 import { app_learn_js_lesson_expression_choose_order_stop_early_and } from "./app_learn_js_lesson_expression_choose_order_stop_early_and.mjs";
 import { app_learn_js_lesson_expression_choose_order_stop_early_both } from "./app_learn_js_lesson_expression_choose_order_stop_early_both.mjs";
@@ -472,7 +472,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_statement_name_itself_sum,
     app_code_lesson_statement_name_one_more,
     app_code_lesson_statement_name_count,
-    app_code_lesson_statement_name_compare,
+    app_learn_js_lesson_statement_name_compare,
     app_learn_js_lesson_expression_choose_order_stop_early_or,
     app_learn_js_lesson_expression_choose_order_stop_early_and,
     app_learn_js_lesson_expression_choose_order_stop_early_both,

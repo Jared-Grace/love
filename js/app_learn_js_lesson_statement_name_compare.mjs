@@ -3,7 +3,7 @@ import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs
 import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_less_than } from "./app_learn_js_lesson_expression_less_than.mjs";
-export function app_code_lesson_statement_name_compare() {
+export function app_learn_js_lesson_statement_name_compare() {
   arguments_assert(arguments, 0);
   ("two names compared: let a = 3; let b = 5; let smaller = a < b; console.log(smaller); writes out true");
   ("The lesson that adds two names put them in the two places a sum takes its numbers from. This one leaves the names exactly where they were and changes the symbol between them, so the only thing a learner is asked to accept is that the rule they were given there was about the places rather than about the plus.");
