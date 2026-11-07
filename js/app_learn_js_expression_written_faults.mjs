@@ -7,7 +7,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-export function app_code_expression_written_faults(item) {
+export function app_learn_js_expression_written_faults(item) {
   arguments_assert(arguments, 1);
   ("every step of an expression whose printed line does not mean the shape it was printed from, each fault carrying the line, what the shape meant and what the line says");
   ("This is the one thing a learner cannot check and must not have to. A line stands above the buttons and the buttons press the shape apart, and if the two ever come apart the learner is told to work out a line nobody wrote. It has happened twice: Math.floor3.8 * 5 and 23 - Math.floor2.3 * 10 both reached a screen, and both were found by a person reading them rather than by anything here.");

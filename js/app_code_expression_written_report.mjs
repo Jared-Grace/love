@@ -6,7 +6,7 @@ import { list_size } from "./list_size.mjs";
 import { app_learn_js_expression_symbols } from "./app_learn_js_expression_symbols.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { each } from "./each.mjs";
-import { app_code_expression_written_faults } from "./app_code_expression_written_faults.mjs";
+import { app_learn_js_expression_written_faults } from "./app_learn_js_expression_written_faults.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -29,7 +29,7 @@ export function app_code_expression_written_report() {
       list_add_unique(printed, symbol);
     }
     each(symbols, note);
-    let shape_faults = app_code_expression_written_faults(shape);
+    let shape_faults = app_learn_js_expression_written_faults(shape);
     faults = list_concat(faults, shape_faults);
   }
   each(shapes, one);
