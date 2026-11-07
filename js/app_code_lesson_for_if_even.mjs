@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
-import { app_code_for_if_skipped_parts } from "./app_code_for_if_skipped_parts.mjs";
+import { app_learn_js_for_if_skipped_parts } from "./app_learn_js_for_if_skipped_parts.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_for_if_even() {
   }
   function effect(value, passed, state) {
     "n is written out when the if lets it through";
-    let parts = app_code_for_if_skipped_parts();
+    let parts = app_learn_js_for_if_skipped_parts();
     if (passed) {
       let json = json_to(value);
       parts = [", so ", json, " is written out, then "];

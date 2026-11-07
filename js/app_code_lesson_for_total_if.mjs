@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
-import { app_code_for_if_skipped_parts } from "./app_code_for_if_skipped_parts.mjs";
+import { app_learn_js_for_if_skipped_parts } from "./app_learn_js_for_if_skipped_parts.mjs";
 import { add } from "./add.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_for_total_if() {
   }
   function effect(value, passed, state) {
     "total goes up by n when the if lets n through";
-    let parts = app_code_for_if_skipped_parts();
+    let parts = app_learn_js_for_if_skipped_parts();
     let state_after = state;
     if (passed) {
       state_after = add(state, value);
