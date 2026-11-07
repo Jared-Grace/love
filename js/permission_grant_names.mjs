@@ -1082,7 +1082,7 @@ export function permission_grant_names() {
     fn_name("app_learn_ceb_gloss_words_distinct"),
     fn_name("app_learn_ceb_gloss_words_gather"),
     fn_name("app_learn_ceb_gloss_roots_disagreeing"),
-    fn_name("app_code_lesson_expression_which_part_first_gate_run"),
+    fn_name("app_learn_js_lesson_expression_which_part_first_gate_run"),
     fn_name("ebible_version_download_zip_delete"),
     fn_name("ebible_version_download"),
     fn_name("app_learn_ceb_gloss_word_explains_apply"),

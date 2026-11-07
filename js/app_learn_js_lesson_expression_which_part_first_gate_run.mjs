@@ -7,7 +7,7 @@ import { list_includes } from "./list_includes.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
-export function app_code_lesson_expression_which_part_first_gate_run() {
+export function app_learn_js_lesson_expression_which_part_first_gate_run() {
   arguments_assert(arguments, 0);
   ("the two buttons this lesson puts in front of a learner are the two real parts of the line, the right one holding the stronger operator and the wrong one holding the weaker. Both are read out of the same generated line by counting tokens, and getting a count wrong does not throw - it hands back a run of characters that is still a piece of the line, so it reads as code and only a person looking at the screen can tell it is not a part");
   ("that is what happened: the wrong button came back as * 8 - for the line 3 * 8 - 5. It is even a substring of the line, so asking whether the buttons are made of the line's own characters would have called it correct. What tells them apart is the operator each one is built around, which is exactly what this checks");
