@@ -14,7 +14,7 @@ import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_un
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_code_lesson_example_guided } from "./app_code_lesson_example_guided.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_code_lesson_code_generic(params) {
+export function app_learn_js_lesson_code_generic(params) {
   let value = property_get(params, "value");
   let batch_get = property_get(params, "batch_get");
   let name_id = property_get(params, "name_id");
