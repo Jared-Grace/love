@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_code_operators_by_rank } from "./app_code_operators_by_rank.mjs";
 import { list_size } from "./list_size.mjs";
-export function app_code_expression_rank(item) {
+export function app_learn_js_expression_rank(item) {
   arguments_assert(arguments, 1);
   ("how tightly a whole expression holds together, on the same scale its operators are ranked by: the shape for 2 * 3 comes out at the rank of a times, and a bare 7 comes out above every operator there is");
   ("What decides whether a shape needs parentheses when something is put beside it. The question is always about the outermost operator of the shape, and a caller working that out for itself would be reaching into the shape to read a property that means nothing when the shape is only a number.");

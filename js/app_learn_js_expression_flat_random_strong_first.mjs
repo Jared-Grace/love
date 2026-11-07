@@ -1,4 +1,4 @@
-import { app_code_expression_rank } from "./app_code_expression_rank.mjs";
+import { app_learn_js_expression_rank } from "./app_learn_js_expression_rank.mjs";
 import { app_code_expression_step_choices_strong } from "./app_code_expression_step_choices_strong.mjs";
 import { app_code_expression_step_grown } from "./app_code_expression_step_grown.mjs";
 import { app_code_expression_step_grown_strong } from "./app_code_expression_step_grown_strong.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_expression_flat_random_strong_first(
   let most = app_code_expression_step_value_most();
   function strong_ready_is(value) {
     "a number a stronger operator may be written beside";
-    let rank_most = app_code_expression_rank(value);
+    let rank_most = app_learn_js_expression_rank(value);
     let choices = app_code_expression_step_choices_strong(value, rank_most);
     let any = list_empty_not_is(choices);
     return any;
