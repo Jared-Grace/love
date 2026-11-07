@@ -3,7 +3,7 @@ import { app_learn_js_div_code_multiple } from "./app_learn_js_div_code_multiple
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_code_lesson_operators_minus_generic_container_both_sides(
+export function app_learn_js_lesson_operators_minus_generic_container_both_sides(
   root,
   operator,
   text_before,

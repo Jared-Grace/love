@@ -6,7 +6,7 @@ import { app_learn_js_div_code_multiple } from "./app_learn_js_div_code_multiple
 import { number_pi_truncated_text } from "./number_pi_truncated_text.mjs";
 import { digit_random } from "./digit_random.mjs";
 import { js_code_binary } from "./js_code_binary.mjs";
-import { app_code_lesson_operators_minus_generic_container_both_sides } from "./app_code_lesson_operators_minus_generic_container_both_sides.mjs";
+import { app_learn_js_lesson_operators_minus_generic_container_both_sides } from "./app_learn_js_lesson_operators_minus_generic_container_both_sides.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_operators_arithmetic } from "./app_code_operators_arithmetic.mjs";
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_operators_dot_numbers() {
       app_learn_js_lesson_operators_dot_numbers_example(operator);
     let text_before =
       app_learn_js_lesson_operators_dot_numbers_both_sides_text();
-    app_code_lesson_operators_minus_generic_container_both_sides(
+    app_learn_js_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
       text_before,
