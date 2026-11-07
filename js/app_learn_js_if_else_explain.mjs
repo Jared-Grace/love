@@ -8,7 +8,7 @@ import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_and_if_not } from "./app_code_lesson_if_and_if_not.mjs";
+import { app_learn_js_lesson_if_and_if_not } from "./app_learn_js_lesson_if_and_if_not.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
@@ -35,7 +35,7 @@ export function app_learn_js_if_else_explain(root, context) {
   app_code_remember_from_lesson(
     box_one,
     context,
-    app_code_lesson_if_and_if_not,
+    app_learn_js_lesson_if_and_if_not,
     ["", "if (a)", " beside ", "if (!a)", " runs one of the two:"],
   );
   let setup = js_code_let_json_statement(name, true);

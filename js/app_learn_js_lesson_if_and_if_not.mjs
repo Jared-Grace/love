@@ -26,7 +26,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_and_if_not() {
+export function app_learn_js_lesson_if_and_if_not() {
   arguments_assert(arguments, 0);
   ('an if beside an if (!a): let a = true; if (a) { console.log("love"); } if (!a) { console.log("joy"); } writes out love, and with let a = false; writes out joy');
   ("The one new fact is that of the four ways two ifs can go, an if (a) beside an if (!a) only ever goes two: exactly one of them runs, every time, and never both or neither. That is what else will say in fewer words, so this comes just before it.");
