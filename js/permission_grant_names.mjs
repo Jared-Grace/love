@@ -888,7 +888,7 @@ export function permission_grant_names() {
     fn_name("browser_secure_context_baseline_write"),
     fn_name("browser_secure_context_gate_run"),
     fn_name("app_learn_js_lesson_name_id_category_then_file"),
-    fn_name("app_code_lesson_name_id_category_then_migrate"),
+    fn_name("app_learn_js_lesson_name_id_category_then_migrate"),
     fn_name("functions_app_import_advice_report"),
     fn_name("app_g_day_guide_window_check"),
     fn_name("functions_app_specific_imports_baseline_path"),

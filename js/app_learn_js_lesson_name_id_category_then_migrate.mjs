@@ -9,7 +9,7 @@ import { list_without } from "./list_without.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_name_id_category_then_file } from "./app_learn_js_lesson_name_id_category_then_file.mjs";
-export async function app_code_lesson_name_id_category_then_migrate() {
+export async function app_learn_js_lesson_name_id_category_then_migrate() {
   arguments_assert(arguments, 0);
   ("Puts every lesson still writing the title nest by hand onto the shared unit.");
   ("The set is asked for rather than typed out. Every one of these lessons is a caller of the plain unit and nothing else is, so the list of callers is the list of work, and a lesson written tomorrow joins it without anybody remembering to add it.");
