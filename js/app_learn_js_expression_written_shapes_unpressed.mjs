@@ -8,7 +8,7 @@ import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_expression_written_shapes_unpressed() {
+export function app_learn_js_expression_written_shapes_unpressed() {
   arguments_assert(arguments, 0);
   ("shapes built with the two operators no lesson ever puts under a press - the remainder sign and the power sign - to hold every printed line against: each one alone, each one against a times and against a plus on both sides, each one against the other, each one beside a rounding down, and a power holding a power both ways round");
   ("Written out rather than crossed with every other operator, and for one reason: the numbers. A remainder can come to nought and a power can run away, and a line that came to nought over nought or to a number javascript writes with an exponent in it would be a fault in the check rather than a fault in the printer. Every line here lands on a whole number no larger than 512.");
