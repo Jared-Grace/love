@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
 import { app_code_lesson_statement_name_product_number_pairs } from "./app_code_lesson_statement_name_product_number_pairs.mjs";
-import { app_code_lesson_operators_asterisk } from "./app_code_lesson_operators_asterisk.mjs";
+import { app_learn_js_lesson_operators_asterisk } from "./app_learn_js_lesson_operators_asterisk.mjs";
 export function app_code_lesson_statement_name_multiply() {
   arguments_assert(arguments, 0);
   ("two names multiplied: let a = 3; let b = 4; let product = a * b; console.log(product); writes out 12");
@@ -13,7 +13,7 @@ export function app_code_lesson_statement_name_multiply() {
     symbol: asterisk,
     pairs_get: app_code_lesson_statement_name_product_number_pairs,
     example_pair: [2, 4],
-    remember_lesson: app_code_lesson_operators_asterisk,
+    remember_lesson: app_learn_js_lesson_operators_asterisk,
     remember_parts: ["we can multiply (", asterisk, ") two numbers:"],
     answer_name: "product",
     answer_count: null,
