@@ -18,7 +18,7 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 import { app_learn_js_expression_from_js } from "./app_learn_js_expression_from_js.mjs";
 import { app_learn_js_expression_names_apart } from "./app_learn_js_expression_names_apart.mjs";
 import { catch_null } from "./catch_null.mjs";
-import { app_code_expression_values_number_boolean_is } from "./app_code_expression_values_number_boolean_is.mjs";
+import { app_learn_js_expression_values_number_boolean_is } from "./app_learn_js_expression_values_number_boolean_is.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
@@ -105,7 +105,7 @@ export function app_code_program_step_actions_solve_whole(code, actions) {
     if (null_is(tree)) {
       return false;
     }
-    let plain = app_code_expression_values_number_boolean_is(tree);
+    let plain = app_learn_js_expression_values_number_boolean_is(tree);
     if (not(plain)) {
       return false;
     }

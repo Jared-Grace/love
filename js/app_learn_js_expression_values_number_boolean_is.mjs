@@ -7,7 +7,7 @@ import { boolean_is } from "./boolean_is.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
-export function app_code_expression_values_number_boolean_is(item) {
+export function app_learn_js_expression_values_number_boolean_is(item) {
   arguments_assert(arguments, 1);
   ("whether every value standing in an expression shape is a number or a true or false: 0 <= 2 && 2 < 4 is, and a string anywhere in it is not");
   ("The line a learner presses is written by ",
@@ -25,13 +25,13 @@ export function app_code_expression_values_number_boolean_is(item) {
     return named_plain;
   }
   let right = property_get(item, "right");
-  let right_plain = app_code_expression_values_number_boolean_is(right);
+  let right_plain = app_learn_js_expression_values_number_boolean_is(right);
   let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     return right_plain;
   }
   let left = property_get(item, "left");
-  let left_plain = app_code_expression_values_number_boolean_is(left);
+  let left_plain = app_learn_js_expression_values_number_boolean_is(left);
   let both = left_plain && right_plain;
   return both;
 }
