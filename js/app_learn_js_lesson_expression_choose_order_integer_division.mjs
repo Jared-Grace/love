@@ -8,7 +8,7 @@ import { app_code_lesson_expression_choose_order_questions_generic } from "./app
 import { app_learn_js_lesson_expression_choose_order_integer_division_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_integer_division_tree_of_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_integer_division_above } from "./app_learn_js_lesson_expression_choose_order_integer_division_above.mjs";
-export function app_code_lesson_expression_choose_order_integer_division() {
+export function app_learn_js_lesson_expression_choose_order_integer_division() {
   arguments_assert(arguments, 0);
   ("an integer division taken a press at a time: Math.floor(17 / 5), press the division, press 3.4, see Math.floor(3.4), press the rounding, press 3");
   ("★ THE LESSON THAT TEACHES THIS LINE ASKED FOR ITS VALUE IN ONE GO AND NEVER ONCE TOOK IT APART. Every other line in this course is pressed apart on a screen of its own before a learner is asked what it comes to, and this was the line where two things happen at once - a division that gives a decimal and a rounding that throws the decimal away. A learner who answers it whole and gets it wrong has no way of knowing which of the two they got wrong.");
