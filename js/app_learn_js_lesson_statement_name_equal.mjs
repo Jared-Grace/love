@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_learn_js_lesson_statement_names_binary_pairs_balanced } from "./app_learn_js_lesson_statement_names_binary_pairs_balanced.mjs";
-import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
+import { app_learn_js_lesson_statement_names_binary } from "./app_learn_js_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_equals } from "./app_learn_js_lesson_expression_equals.mjs";
 export function app_learn_js_lesson_statement_name_equal() {
   arguments_assert(arguments, 0);
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_statement_name_equal() {
     );
     return pairs;
   }
-  let lesson = app_code_lesson_statement_names_binary({
+  let lesson = app_learn_js_lesson_statement_names_binary({
     words: "Are two names equal",
     symbol,
     pairs_get,

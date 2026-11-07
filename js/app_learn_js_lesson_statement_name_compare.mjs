@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { app_learn_js_lesson_statement_names_binary_pairs_balanced } from "./app_learn_js_lesson_statement_names_binary_pairs_balanced.mjs";
-import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
+import { app_learn_js_lesson_statement_names_binary } from "./app_learn_js_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_less_than } from "./app_learn_js_lesson_expression_less_than.mjs";
 export function app_learn_js_lesson_statement_name_compare() {
   arguments_assert(arguments, 0);
@@ -32,7 +32,7 @@ export function app_learn_js_lesson_statement_name_compare() {
     );
     return pairs;
   }
-  let lesson = app_code_lesson_statement_names_binary({
+  let lesson = app_learn_js_lesson_statement_names_binary({
     words: "Comparing two names",
     symbol,
     pairs_get,

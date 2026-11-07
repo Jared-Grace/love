@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_names_binary_decoys } from "./app_learn_js_lesson_statement_names_binary_decoys.mjs";
-export function app_code_lesson_statement_names_binary({
+export function app_learn_js_lesson_statement_names_binary({
   words,
   symbol,
   answer_name,

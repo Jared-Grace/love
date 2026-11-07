@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
+import { app_learn_js_lesson_statement_names_binary } from "./app_learn_js_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_and } from "./app_learn_js_lesson_expression_and.mjs";
 export function app_learn_js_lesson_statement_name_and() {
   arguments_assert(arguments, 0);
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_statement_name_and() {
     let pairs = list_shuffle_take(candidates, 4);
     return pairs;
   }
-  let lesson = app_code_lesson_statement_names_binary({
+  let lesson = app_learn_js_lesson_statement_names_binary({
     words: "Two names joined with and",
     symbol,
     pairs_get,
