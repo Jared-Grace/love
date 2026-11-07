@@ -7,7 +7,7 @@ import { identity } from "./identity.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
-import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
+import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_feedback_slot_style } from "./app_learn_js_feedback_slot_style.mjs";
 import { app_learn_js_feedback_cell } from "./app_learn_js_feedback_cell.mjs";
@@ -49,7 +49,7 @@ export function app_code_lesson_quiz_index(
   );
   function answer_label_set(said) {
     "let a quiz say something new over its answers, for the quizzes whose question is worked out in steps and whose asking changes as the steps go";
-    app_code_label_text_set(answer_label_div, said);
+    app_learn_js_label_text_set(answer_label_div, said);
   }
   let answers_div = html_div(a_container);
   let parent_container = html_div(parent);

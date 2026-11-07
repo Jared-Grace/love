@@ -4,7 +4,7 @@ import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
-import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
+import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
 import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_review_exercise_excuse } from "./app_code_review_exercise_excuse.mjs";
@@ -60,7 +60,7 @@ export function app_code_review_exercise(
   function answer_label_set(said) {
     "let a quiz say something new over its answers, for the quizzes whose question is worked out in steps and whose asking changes as the steps go";
     "offered here as well as on the lesson's own quiz, and not because a review looks any different: a quiz that is handed this on one screen and not on the other is a quiz that works on one screen and throws on the other, and the review is the screen nobody tries first";
-    app_code_label_text_set(answer_label_div, said);
+    app_learn_js_label_text_set(answer_label_div, said);
   }
   async function on_reveal() {
     await app_code_lesson_quiz_show_correction(container_correction);
