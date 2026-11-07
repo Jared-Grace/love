@@ -6,7 +6,7 @@ import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
-export function app_code_lesson_expression_choose_order_questions() {
+export function app_learn_js_lesson_expression_choose_order_questions() {
   arguments_assert(arguments, 0);
   ("the question bank a press-the-operators lesson draws on: lines built as shapes, handed out one a screen, and worked out again from the writing they were printed as");
   ("The quiz hands its question over as text, so the working out needs the shape back. Every line here used to be kept beside the writing it produced and looked up there, which held only for as long as this one run of the lesson - a review saves the line to ask it again, and comes back to it after the page has been loaded afresh, at which point the map had never heard of it and the lesson threw. The shape is worked out from the line instead, which no reload can take away.");

@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
-import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_questions } from "./app_learn_js_lesson_expression_choose_order_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_code_lesson_expression_choose_order_solve_above } from "./app_code_lesson_expression_choose_order_solve_above.mjs";
 import { app_code_lesson_expression_choose_order_solve_title_name_id } from "./app_code_lesson_expression_choose_order_solve_title_name_id.mjs";
@@ -35,7 +35,7 @@ export function app_code_lesson_expression_choose_order_solve() {
   }
   ("everything else this lesson is made of - the one quiz kind, the labels, the front page finding its own line - is what it has in common with the lesson before it, and is written once for the two of them");
   ("what the learner already knows stands above the card, worked through on a line of its own, because it is the telling and the card is the doing");
-  let bank = app_code_lesson_expression_choose_order_questions();
+  let bank = app_learn_js_lesson_expression_choose_order_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
     app_code_lesson_expression_choose_order_solve_above,
