@@ -1,6 +1,6 @@
 import { app_code_review_preview_shortlist_show } from "./app_code_review_preview_shortlist_show.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_buttons_cap_style } from "./app_code_buttons_cap_style.mjs";
+import { app_learn_js_buttons_cap_style } from "./app_learn_js_buttons_cap_style.mjs";
 export function app_code_review_preview() {
   arguments_assert(arguments, 0);
   ("One review question, on the sandbox app at hash code_review: pick a lesson, pick one of its question kinds, and that question is drawn - the real one, out of the review's own parts.");
@@ -8,7 +8,7 @@ export function app_code_review_preview() {
   ("Nothing here draws a question. The lesson list, the batch a lesson holds, the seed made from it, the exercise made from the seed and the drawing of that exercise are every one of them the review's own functions, called in the review's own order, inside the review's own frame. That is the whole point: a screen that redrew any of it would answer for a screen nobody uses. What is left out is only what the queue needs - the progress bar's numbers, the persisting, the requeueing of a question got wrong - and none of those touch the question itself.");
   ("The success message is shown and hidden exactly as the review shows and hides it, because when it arrives and what it does to the answer already on the screen is one of the things this page is here to be looked at for.");
   ("The kind buttons stay on the screen under the question rather than being cleared away with the picker. Asking the same kind again is then the same tap that asked it the first time, and a fresh line comes up each time because the batch is generated again on every ask.");
-  app_code_buttons_cap_style();
+  app_learn_js_buttons_cap_style();
   let shortlist_show = app_code_review_preview_shortlist_show();
   shortlist_show();
 }
