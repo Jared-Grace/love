@@ -5,7 +5,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-export function app_code_else_if_nested_lines(values, words) {
+export function app_learn_js_else_if_nested_lines(values, words) {
   arguments_assert(arguments, 2);
   ("the same program written with an if inside an else: if (a) { ... } else { if (b) { ... } }");
   let setups = app_code_else_if_setups_of(values);

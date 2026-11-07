@@ -9,7 +9,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_in_else } from "./app_code_lesson_if_in_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_else_if_nested_lines } from "./app_code_else_if_nested_lines.mjs";
+import { app_learn_js_else_if_nested_lines } from "./app_learn_js_else_if_nested_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_else_if_program_lines } from "./app_code_else_if_program_lines.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_else_if_explain(root, context) {
     "else",
     ":",
   ]);
-  let nested = app_code_else_if_nested_lines([false, true], words);
+  let nested = app_learn_js_else_if_nested_lines([false, true], words);
   let written = list_join_newline([joy, peace]);
   app_learn_js_code_lines_writes_out(box_two, nested, written);
   let box_three = app_learn_js_container_light_blue(root);
