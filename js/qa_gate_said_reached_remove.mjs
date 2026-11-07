@@ -7,7 +7,7 @@ export function qa_gate_said_reached_remove(said) {
   ("Gates here write an offence as a pair with an arrow between them, and the arrow points the same way in every one of them: the function at fault stands on the left, and what it reached, hides or holds stands on the right. ",
     fn_name("hash_fields_all"),
     " -> ",
-    fn_name("app_code_hash_fields"),
+    fn_name("app_learn_js_hash_fields"),
     " is a complaint about ",
     fn_name("hash_fields_all"),
     ". The right-hand name is evidence, and it is not accused of anything.");

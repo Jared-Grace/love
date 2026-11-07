@@ -1,5 +1,5 @@
 import { app_shared_bible_hash_field_reference } from "./app_shared_bible_hash_field_reference.mjs";
-import { app_code_hash_fields } from "./app_code_hash_fields.mjs";
+import { app_learn_js_hash_fields } from "./app_learn_js_hash_fields.mjs";
 import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field_verse.mjs";
 import { app_supper_hash_fields } from "./app_supper_hash_fields.mjs";
 import { lists_combine } from "./lists_combine.mjs";
@@ -11,7 +11,7 @@ export function hash_fields_all() {
   "The verse field is built here with no verses in hand and the reference field with no books, and that is honest rather than a shortcut: what is wanted from either here is the word it answers for, and the verses of some particular chapter would say nothing about that. It is the pages that build it for real, each around the chapter it just fetched. Nothing checks a link against what is gathered here - the pages check against their own sets - so a description standing here for its name alone cannot reach a reader.";
   let bible = app_shared_bible_hash_fields();
   let supper = app_supper_hash_fields();
-  let code = app_code_hash_fields();
+  let code = app_learn_js_hash_fields();
   let verse = app_shared_bible_hash_field_verse([]);
   let reference = app_shared_bible_hash_field_reference([]);
   let sets = [bible, supper, code, [verse, reference]];

@@ -6,7 +6,7 @@ import { app_learn_js_hash_field_complete } from "./app_learn_js_hash_field_comp
 import { app_learn_js_hash_field_course } from "./app_learn_js_hash_field_course.mjs";
 import { app_learn_js_hash_field_milestone } from "./app_learn_js_hash_field_milestone.mjs";
 import { app_learn_js_hash_field_questions } from "./app_learn_js_hash_field_questions.mjs";
-export function app_code_hash_fields() {
+export function app_learn_js_hash_fields() {
   "Every part of a code app link that is checked before the app builds anything.";
   "Every word the app writes into a link is here, so the link it hands out is a link it can read back whole.";
   let lesson = app_learn_js_hash_field_lesson();
