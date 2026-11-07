@@ -1,4 +1,4 @@
-import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
+import { app_learn_js_expression_operator_chip } from "./app_learn_js_expression_operator_chip.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_brace_unmarked } from "./app_learn_js_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
@@ -66,7 +66,7 @@ export function app_learn_js_brace_pair_example_choose(
     cursor = add(i, 1);
     let brace = code[i];
     let span = html_span_text(div, brace);
-    app_code_expression_operator_chip(span);
+    app_learn_js_expression_operator_chip(span);
     if (equal(i, index)) {
       colored(span);
       return;
@@ -86,7 +86,7 @@ export function app_learn_js_brace_pair_example_choose(
         return;
       }
       property_set(state, "done", true);
-      each(refused, app_code_expression_operator_chip);
+      each(refused, app_learn_js_expression_operator_chip);
       html_data_set_test_happy_remove(span);
       colored(span);
       app_shared_success_message(component);

@@ -9,7 +9,7 @@ import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { each } from "./each.mjs";
-import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
+import { app_learn_js_expression_operator_chip } from "./app_learn_js_expression_operator_chip.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
@@ -59,7 +59,7 @@ export function app_learn_js_brace_lines_choose(
         on_wrong();
         return;
       }
-      each(refused, app_code_expression_operator_chip);
+      each(refused, app_learn_js_expression_operator_chip);
       list_clear(refused);
       property_set(entry, "done", true);
       html_data_set_test_happy_remove(chip);

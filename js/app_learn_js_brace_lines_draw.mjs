@@ -13,7 +13,7 @@ import { less_than } from "./less_than.mjs";
 import { text_indent_size } from "./text_indent_size.mjs";
 import { text_take } from "./text_take.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
+import { app_learn_js_expression_operator_chip } from "./app_learn_js_expression_operator_chip.mjs";
 import { equal } from "./equal.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -49,7 +49,7 @@ export function app_learn_js_brace_lines_draw(parent, question, color, chips) {
     html_span_text(line_div, spaces);
     let chip = html_span_text(line_div, "");
     if (chips) {
-      app_code_expression_operator_chip(chip);
+      app_learn_js_expression_operator_chip(chip);
     }
     let cursor = add(start, indent);
     for (let i = cursor; less_than(i, end); i++) {

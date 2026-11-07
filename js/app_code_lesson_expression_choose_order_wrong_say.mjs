@@ -1,7 +1,7 @@
 import { list_first_property } from "./list_first_property.mjs";
 import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
 import { noop } from "./noop.mjs";
-import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
+import { app_learn_js_expression_operator_chip } from "./app_learn_js_expression_operator_chip.mjs";
 import { html_div_cycle } from "./html_div_cycle.mjs";
 import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_choose_order_wrong_say(
   ("The rule underneath keeps its operators as plain code. There they are being talked about rather than pointed at, and a lesson where every operator is drawn as a thing to press would have nothing left to say which one is.");
   let symbol = property_get(node, "operator");
   let symbol_ready = list_first_property(ready, "operator");
-  let cycles = [noop, app_code_expression_operator_chip];
+  let cycles = [noop, app_learn_js_expression_operator_chip];
   let parts_refused = [
     "Not yet - the ",
     symbol,
