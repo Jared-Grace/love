@@ -1,6 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_braces_run_choose } from "./app_learn_js_braces_run_choose.mjs";
-export function app_code_lesson_quiz_braces_run(
+export function app_learn_js_lesson_quiz_braces_run(
   parent,
   info,
   qa,
