@@ -5,7 +5,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
-export function app_code_lesson_statement_name_middle_step() {
+export function app_learn_js_lesson_statement_name_middle_step() {
   arguments_assert(arguments, 0);
   ("the lines of the middle lesson: let sum = low + high; let middle = Math.floor(sum / 2); - and middle is written out");
   ("This is the middle a search through a sorted list looks at on every step, which is why it is taught: the formulas split into short lines are chosen by whether a later algorithm uses them, at the human's request, 2026-09-27.");

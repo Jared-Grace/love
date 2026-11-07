@@ -8,7 +8,7 @@ import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_learn_js_lesson_statement_name_grid_position_step } from "./app_learn_js_lesson_statement_name_grid_position_step.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_statement_name_middle_step } from "./app_code_lesson_statement_name_middle_step.mjs";
+import { app_learn_js_lesson_statement_name_middle_step } from "./app_learn_js_lesson_statement_name_middle_step.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_chair_grid } from "./app_learn_js_chair_grid.mjs";
@@ -46,7 +46,7 @@ export function app_learn_js_lesson_statement_name_grid_row() {
     middle: [line_row],
     logged: [row],
   };
-  let middle_step = app_code_lesson_statement_name_middle_step();
+  let middle_step = app_learn_js_lesson_statement_name_middle_step();
   let middle_lines = property_get(middle_step, "middle");
   let middle_logged = property_get(middle_step, "logged");
   let remember_lines = app_code_lesson_statement_name_swap_program(
