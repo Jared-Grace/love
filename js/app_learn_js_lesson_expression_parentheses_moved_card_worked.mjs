@@ -1,6 +1,8 @@
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_parentheses_moved_card_worked(root) {
+export function app_learn_js_lesson_expression_parentheses_moved_card_worked(
+  root,
+) {
   arguments_assert(arguments, 1);
   ("the two placements worked out a step at a time on the same three numbers, one card each, so the two answers stand side by side");
   app_learn_js_container_light_blue_cycle_code_multiple(root, [
