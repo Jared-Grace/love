@@ -3,7 +3,7 @@ import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_larger() {
+export function app_learn_js_lesson_expression_larger() {
   "practice Math.max, the partner of Math.min and the other two-number function: Math.max(a, b) gives the larger of the two, written with the numbers separated by a comma (Math.max(3, 8) is 8); the answer is the larger number. Self-contained - the two-number idea is already introduced by Math.min - so its opening line names Math.max directly.";
   function define_render(root) {
     "self-contained opening line naming Math.max directly (the two-number idea was introduced by the Math.min lesson), the comma shown as code";
