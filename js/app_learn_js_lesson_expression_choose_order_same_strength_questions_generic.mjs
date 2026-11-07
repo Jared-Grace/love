@@ -5,7 +5,7 @@ import { app_learn_js_expression_value } from "./app_learn_js_expression_value.m
 import { app_learn_js_expression_flat_tree_of_code } from "./app_learn_js_expression_flat_tree_of_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
-export function app_code_lesson_expression_choose_order_same_strength_questions_generic(
+export function app_learn_js_lesson_expression_choose_order_same_strength_questions_generic(
   operator_count,
 ) {
   arguments_assert(arguments, 1);

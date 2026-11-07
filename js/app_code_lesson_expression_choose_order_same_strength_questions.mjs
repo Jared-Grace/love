@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength_operator_count } from "./app_learn_js_lesson_expression_choose_order_same_strength_operator_count.mjs";
-import { app_code_lesson_expression_choose_order_same_strength_questions_generic } from "./app_code_lesson_expression_choose_order_same_strength_questions_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_same_strength_questions_generic } from "./app_learn_js_lesson_expression_choose_order_same_strength_questions_generic.mjs";
 export function app_code_lesson_expression_choose_order_same_strength_questions() {
   arguments_assert(arguments, 0);
   ("the question bank this lesson draws on: lines of three operators all of one strength, handed out one a screen, and worked out again from the writing they were printed as");
@@ -8,7 +8,7 @@ export function app_code_lesson_expression_choose_order_same_strength_questions(
   let count =
     app_learn_js_lesson_expression_choose_order_same_strength_operator_count();
   let bank =
-    app_code_lesson_expression_choose_order_same_strength_questions_generic(
+    app_learn_js_lesson_expression_choose_order_same_strength_questions_generic(
       count,
     );
   return bank;
