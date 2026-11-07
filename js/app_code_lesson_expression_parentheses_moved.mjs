@@ -7,7 +7,7 @@ import { text_replace } from "./text_replace.mjs";
 import { text_split } from "./text_split.mjs";
 import { app_learn_js_lesson_expression_parentheses_moved_arrange } from "./app_learn_js_lesson_expression_parentheses_moved_arrange.mjs";
 import { js_arithmetic_value } from "./js_arithmetic_value.mjs";
-import { app_code_lesson_expression_parentheses_moved_expression } from "./app_code_lesson_expression_parentheses_moved_expression.mjs";
+import { app_learn_js_lesson_expression_parentheses_moved_expression } from "./app_learn_js_lesson_expression_parentheses_moved_expression.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_learn_js_lesson_expression_parentheses_moved_card_two_places } from "./app_learn_js_lesson_expression_parentheses_moved_card_two_places.mjs";
@@ -56,10 +56,10 @@ export function app_code_lesson_expression_parentheses_moved() {
   }
   function refill() {
     "four at a time, alternating the group round the + and round the *. The examples screen draws two, so every screen shows both placements side by side - which is the whole point of this lesson";
-    let v = app_code_lesson_expression_parentheses_moved_expression(true);
-    let v2 = app_code_lesson_expression_parentheses_moved_expression(false);
-    let v3 = app_code_lesson_expression_parentheses_moved_expression(true);
-    let v4 = app_code_lesson_expression_parentheses_moved_expression(false);
+    let v = app_learn_js_lesson_expression_parentheses_moved_expression(true);
+    let v2 = app_learn_js_lesson_expression_parentheses_moved_expression(false);
+    let v3 = app_learn_js_lesson_expression_parentheses_moved_expression(true);
+    let v4 = app_learn_js_lesson_expression_parentheses_moved_expression(false);
     let list = [v, v2, v3, v4];
     return list;
   }

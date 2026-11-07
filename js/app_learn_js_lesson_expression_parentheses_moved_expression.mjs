@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { app_learn_js_lesson_expression_parentheses_moved_arrange } from "./app_learn_js_lesson_expression_parentheses_moved_arrange.mjs";
-export function app_code_lesson_expression_parentheses_moved_expression(
+export function app_learn_js_lesson_expression_parentheses_moved_expression(
   group_first,
 ) {
   arguments_assert(arguments, 1);
