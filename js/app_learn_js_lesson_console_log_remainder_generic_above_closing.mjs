@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_lesson_console_log_remainder_generic_above_has_insight } from "./app_code_lesson_console_log_remainder_generic_above_has_insight.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_above_has_insight } from "./app_learn_js_lesson_console_log_remainder_generic_above_has_insight.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_insight_line } from "./app_code_lesson_console_log_remainder_generic_above_insight_line.mjs";
 import { each } from "./each.mjs";
 export function app_learn_js_lesson_console_log_remainder_generic_above_closing({
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_closing(
   arguments_assert(arguments, 1);
   let intro = app_learn_js_container_light_blue(root);
   let has_insight =
-    app_code_lesson_console_log_remainder_generic_above_has_insight({
+    app_learn_js_lesson_console_log_remainder_generic_above_has_insight({
       divisor,
       intro,
       root,

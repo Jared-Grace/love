@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-export function app_code_lesson_console_log_remainder_generic_above_has_insight({
+export function app_learn_js_lesson_console_log_remainder_generic_above_has_insight({
   divisor,
   intro,
   root,
