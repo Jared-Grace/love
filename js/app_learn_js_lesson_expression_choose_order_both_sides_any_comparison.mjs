@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_title_name_id } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_title_name_id.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_questions } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_questions.mjs";
-import { app_code_lesson_expression_choose_order_mixed_generic } from "./app_code_lesson_expression_choose_order_mixed_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_mixed_generic } from "./app_learn_js_lesson_expression_choose_order_mixed_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above.mjs";
 export function app_learn_js_lesson_expression_choose_order_both_sides_any_comparison() {
   "choosing which part of a line to solve and then what that part comes to, on a line with arithmetic on each side of a comparison that is not ===: 9 - 2 < 4 + 1, choose the 9 - 2, choose 7, then the 4 + 1, choose 5, then the <, choose false";
@@ -10,7 +10,7 @@ export function app_learn_js_lesson_expression_choose_order_both_sides_any_compa
     app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_title_name_id();
   let bank =
     app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_questions();
-  let lesson = app_code_lesson_expression_choose_order_mixed_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_mixed_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above,
     bank,

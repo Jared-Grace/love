@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_choose_order_both_sides_title_name_id } from "./app_learn_js_lesson_expression_choose_order_both_sides_title_name_id.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_questions } from "./app_learn_js_lesson_expression_choose_order_both_sides_questions.mjs";
-import { app_code_lesson_expression_choose_order_mixed_generic } from "./app_code_lesson_expression_choose_order_mixed_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_mixed_generic } from "./app_learn_js_lesson_expression_choose_order_mixed_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_above } from "./app_learn_js_lesson_expression_choose_order_both_sides_above.mjs";
 export function app_learn_js_lesson_expression_choose_order_both_sides() {
   "choosing which part of a line to solve and then what that part comes to, on a line with arithmetic on each side of a comparison: 3 + 4 === 5 + 2, choose the 3 + 4, choose 7, then the 5 + 2, choose 7, then the ===, choose true";
@@ -10,7 +10,7 @@ export function app_learn_js_lesson_expression_choose_order_both_sides() {
   let name_id =
     app_learn_js_lesson_expression_choose_order_both_sides_title_name_id();
   let bank = app_learn_js_lesson_expression_choose_order_both_sides_questions();
-  let lesson = app_code_lesson_expression_choose_order_mixed_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_mixed_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_both_sides_above,
     bank,
