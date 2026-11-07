@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
+import { app_learn_js_lesson_current_last_is } from "./app_learn_js_lesson_current_last_is.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
 import { app_code_lesson_next } from "./app_code_lesson_next.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_button_skip_lesson_past_review(context, parent) {
   if (not(has_review)) {
     return null;
   }
-  let last = app_code_lesson_current_last_is(context);
+  let last = app_learn_js_lesson_current_last_is(context);
   if (last) {
     return null;
   }

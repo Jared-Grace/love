@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
-import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
+import { app_learn_js_lesson_current_last_is } from "./app_learn_js_lesson_current_last_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id.mjs";
 import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_next.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_next_none_is(context) {
   if (has_review) {
     return false;
   }
-  let last = app_code_lesson_current_last_is(context);
+  let last = app_learn_js_lesson_current_last_is(context);
   let more_below = not(last);
   if (more_below) {
     return false;

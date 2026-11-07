@@ -1,4 +1,4 @@
-import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
+import { app_learn_js_lesson_current_last_is } from "./app_learn_js_lesson_current_last_is.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_button_skip_lesson(context, parent) {
   let has_review = app_code_review_due_is(number);
   ("HIDDEN ON THE LAST LESSON UNLESS A REVIEW COMES AFTER IT. There is no lesson further on, and the way on never goes round the top of the list, so a button saying next would have nowhere to go. It used to carry a learner back to lesson 1 from here, back when the way on wrapped round.");
   ("It still never stands beside the note saying the course is done: that note is shown only where there is no review and no lesson after this one, and both of those hide this button too.");
-  let last = app_code_lesson_current_last_is(context);
+  let last = app_learn_js_lesson_current_last_is(context);
   let left2 = not(has_review);
   let no_next = and(left2, last);
   if (no_next) {
