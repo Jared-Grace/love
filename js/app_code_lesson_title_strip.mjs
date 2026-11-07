@@ -1,4 +1,4 @@
-import { app_code_lesson_title_render } from "./app_code_lesson_title_render.mjs";
+import { app_learn_js_lesson_title_render } from "./app_learn_js_lesson_title_render.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
 import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_is.mjs";
@@ -13,7 +13,7 @@ import { add_1 } from "./add_1.mjs";
 import { app_code_title_strip } from "./app_code_title_strip.mjs";
 export function app_code_lesson_title_strip(root, context, lesson) {
   ("a quiet top bar on every lesson screen - a small home button (just the house) sitting right beside the lesson title, the pair centered together, so home is one tap away without scrolling to the bottom and reads as part of the header rather than floating alone in a corner; the title reuses the lesson's own home title (",
-    app_code_lesson_title_render.name,
+    app_learn_js_lesson_title_render.name,
     ") and is muted so it anchors 'where am I' without competing with the teaching or the quiz below, while the home button stays full-strength so it is clearly tappable");
   ("An arrow back and an arrow on sit at the two ends of the same bar, stepping one lesson at a time through the course. A reader who wants the lesson before this one had to go home, find it in a list of over a hundred rows and scroll to it, and the one thing they knew - that it is the row above - was the one thing the list would not use.");
   let lesson_id = property_get(lesson, "id");
@@ -34,7 +34,7 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     }
     ("the group the lesson sits under on the home list leads its title, where a category word used to, at the human's request 2026-10-18");
     app_learn_js_lesson_group_category_paint(title, lesson_index);
-    app_code_lesson_title_render(title, lesson);
+    app_learn_js_lesson_title_render(title, lesson);
   }
   let index_previous = subtract_1(lesson_index);
   let index_next = add_1(lesson_index);

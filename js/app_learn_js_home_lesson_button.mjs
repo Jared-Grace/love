@@ -9,7 +9,7 @@ import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
-import { app_code_lesson_title_render } from "./app_code_lesson_title_render.mjs";
+import { app_learn_js_lesson_title_render } from "./app_learn_js_lesson_title_render.mjs";
 export function app_learn_js_home_lesson_button(
   g,
   context,
@@ -57,7 +57,7 @@ export function app_learn_js_home_lesson_button(
     fn_name("app_shared_button_numbered"),
     ")");
   html_style_overflow_wrap(title, "anywhere");
-  app_code_lesson_title_render(title, item);
+  app_learn_js_lesson_title_render(title, item);
   let complete_all_previous_next = property_get(
     r,
     "completed_all_previous_next",
