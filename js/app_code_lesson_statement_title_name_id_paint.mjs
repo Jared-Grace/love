@@ -1,7 +1,7 @@
 import { app_code_title_words_keywords_paint } from "./app_code_title_words_keywords_paint.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_category_statements } from "./app_code_category_statements.mjs";
+import { app_learn_js_category_statements } from "./app_learn_js_category_statements.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_statement_title_name_id_paint(
   words,
@@ -16,7 +16,7 @@ export function app_code_lesson_statement_title_name_id_paint(
     app_code_title_words_keywords_paint(parent, spaced);
     paint_code(parent);
   }
-  let left = app_code_category_statements();
+  let left = app_learn_js_category_statements();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

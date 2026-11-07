@@ -6,7 +6,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { app_code_category_statements } from "./app_code_category_statements.mjs";
+import { app_learn_js_category_statements } from "./app_learn_js_category_statements.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_statement_name_true_false_title_name_id() {
   arguments_assert(arguments, 0);
@@ -22,7 +22,7 @@ export function app_code_lesson_statement_name_true_false_title_name_id() {
     let tile = html_span_code_dark_nowrap(parent);
     html_span_text_content(tile, code);
   }
-  let left = app_code_category_statements();
+  let left = app_learn_js_category_statements();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }
