@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
-export function app_code_highlight_colors() {
+export function app_learn_js_highlight_colors() {
   arguments_assert(arguments, 0);
   ("the pointing colours as one list - the colours a screen wears to say which word is about which piece of code, first to fourth");
   ("THE LIST IS ANSWERED SO THAT WHATEVER MEASURES THEM CANNOT DISAGREE WITH WHATEVER USES THEM. A check told there are three would go on checking three the day a fourth pointing colour arrived, and would pass while saying nothing at all about the colour that was actually added. Asked for the list, it checks whatever is here.");

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_highlight_colors } from "./app_code_highlight_colors.mjs";
+import { app_learn_js_highlight_colors } from "./app_learn_js_highlight_colors.mjs";
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { color_contrast_floor_text } from "./color_contrast_floor_text.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_highlight_color_readings() {
   ("THE CHIP PALETTE'S SECOND JOB IS ABSENT HERE AND ITS ABSENCE IS THE FINDING. A chip colour has to letter the pale card, which is what pins it under 0.1536 in luminance and squeezes the whole set into a band 0.054 tall. These never letter anything, so they are free of that ceiling - which is exactly why they sit lighter, and exactly why a proposal to give each hue a dark tone and a light tone would make this set the light half. If that day comes, these readings are what says what moved.");
   ("THE WHITE IS SPELLED HERE RATHER THAN ASKED FOR, the same copy the chip record makes and safe for the same reason: what these tiles letter in is the bare word white, the top of the scale rather than a shade anybody picked, so it cannot drift out from under a second spelling. What WOULD break it is somebody lettering a pointing tile in something other than white, at which point this goes on measuring white and says nothing.");
   ("BOTH GROUNDS ARE ASKED FOR BY NAME AND NEITHER IS SPELLED, because both of them ARE shades somebody picked and either could be revised tomorrow. That is the drift the shared spelling guards against, and it is the difference between these two and the white above.");
-  let colors = app_code_highlight_colors();
+  let colors = app_learn_js_highlight_colors();
   let card = app_shared_container_blue_background_color();
   let code = app_shared_color_code_background();
   let white = "white";

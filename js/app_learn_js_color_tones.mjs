@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lesson_chip_colors } from "./app_code_lesson_chip_colors.mjs";
-import { app_code_highlight_colors } from "./app_code_highlight_colors.mjs";
+import { app_learn_js_highlight_colors } from "./app_learn_js_highlight_colors.mjs";
 import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
 export function app_learn_js_color_tones() {
   arguments_assert(arguments, 0);
@@ -32,7 +32,7 @@ export function app_learn_js_color_tones() {
   ("STOOD ROUND THE WHEEL WITH THE OTHER TEN AT THE TWELVE DEGREE GAP THE GROUPING USES, the twenty-one fall into five runs and not four: a red of five colours from 15.1 to 28.5, the amber alone at 56.6, a run of four at a nominal 89.9 which is the grey and the three whites and is not a hue at all, a green of three from 149.9 to 154.0, and a blue of eight from 248.0 to 271.1. The blue run is eight because the gap rule has nothing to cut on - the nearest neighbours in it are 0.1 apart and the widest step is 7.7.");
   ("TWO QUESTIONS ARE LEFT OPEN HERE ON PURPOSE, BECAUSE THEY ARE CHOICES AND NOT READINGS. Whether a colour with no chroma belongs in a census of hues, given that four of the eleven have none and a fifth has 0.011 - their hue is what the arithmetic returns when there is almost nothing to take a direction from, not a decision anybody made. And whether a fill that never carries lettering answers a tone question at all, which the paragraph on the fifth job above already doubts. Both answers change which of the twenty-one should be read here, so neither was taken while only correcting what was false.");
   let chip = app_code_lesson_chip_colors();
-  let pointing = app_code_highlight_colors();
+  let pointing = app_learn_js_highlight_colors();
   let dark = chip.concat(pointing);
   let light = app_code_note_name_colors();
   let tones = {
