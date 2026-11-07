@@ -3,7 +3,7 @@ import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { app_code_lesson_expression_choose_order_twin_generic } from "./app_code_lesson_expression_choose_order_twin_generic.mjs";
 import { app_code_lesson_expression_minus_divide } from "./app_code_lesson_expression_minus_divide.mjs";
-export function app_code_lesson_expression_choose_order_minus_divide() {
+export function app_learn_js_lesson_expression_choose_order_minus_divide() {
   arguments_assert(arguments, 0);
   ("- and / on one line, taken a press at a time before the lesson next door asks for the whole line: 9 - 8 / 4, choose the divide, choose 2, see 9 - 2, choose the minus, choose 7");
   let minus = js_operator_minus_symbol();
