@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { less_than } from "./less_than.mjs";
 import { and } from "./and.mjs";
-export function app_code_lesson_quiz_multiple_choice_need_more(
+export function app_learn_js_lesson_quiz_multiple_choice_need_more(
   distractors,
   distractor_count,
   attempts,

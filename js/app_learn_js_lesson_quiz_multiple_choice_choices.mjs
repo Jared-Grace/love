@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_need_more } from "./app_learn_js_lesson_quiz_multiple_choice_need_more.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -31,7 +31,7 @@ export function app_learn_js_lesson_quiz_multiple_choice_choices(
   let seen = property_get(r2, "seen");
   let word_missing = null;
   while (
-    app_code_lesson_quiz_multiple_choice_need_more(
+    app_learn_js_lesson_quiz_multiple_choice_need_more(
       distractors,
       distractor_count,
       attempts,
