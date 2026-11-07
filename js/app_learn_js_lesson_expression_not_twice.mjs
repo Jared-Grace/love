@@ -16,7 +16,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain } from "./app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain.mjs";
-export function app_code_lesson_expression_not_twice() {
+export function app_learn_js_lesson_expression_not_twice() {
   "the step from ! on a plain true or false to ! on another !: the one new idea is that the thing a ! takes can itself be a !, so the operator nests inside itself. Same operator both times, so there is no question of which one goes first - the inner ! is simply the nearer one. Nothing is parenthesised, because nothing needs to be.";
   "It comes before the lesson putting a comparison under a !, and it is what makes that lesson a single step. On its own, ! around a comparison carries two new things at once - that the thing under a ! can be something which works out to true or false, and that it has to be parenthesised. This lesson takes the first of those, on the smallest possible instance, leaving the parenthesis lesson with only the parenthesis.";
   "Chosen over the alternatives by size: four nodes for ! around a comparison against three here, and this is the only one of the two the learner meets with a single symbol in play.";
