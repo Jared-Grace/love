@@ -12,7 +12,7 @@ import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
 import { app_code_next } from "./app_code_next.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
-import { app_code_button_skip_lesson } from "./app_code_button_skip_lesson.mjs";
+import { app_learn_js_button_skip_lesson } from "./app_learn_js_button_skip_lesson.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -64,7 +64,7 @@ export function app_code_examples(context) {
     app_code_go_back(root, backs);
   }
   let g = app_code_container_padded_x(root);
-  app_code_button_skip_lesson(context, g);
+  app_learn_js_button_skip_lesson(context, g);
   app_learn_js_button_skip_lesson_unfinished(context, g);
   let text = app_shared_button_home_text();
   let b = app_shared_button_screen_wide(context, app_code_home, g, text);

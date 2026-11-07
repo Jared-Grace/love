@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { not } from "./not.mjs";
-import { app_code_button_skip_lesson } from "./app_code_button_skip_lesson.mjs";
+import { app_learn_js_button_skip_lesson } from "./app_learn_js_button_skip_lesson.mjs";
 import { greater_than_equal_1 } from "./greater_than_equal_1.mjs";
 import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_quiz_on_qa_change({
   let reveal_button = property_get(r3, "reveal_button");
   html_style_margin_top(reveal_button, value);
   if (not(qli)) {
-    app_code_button_skip_lesson(context, parent_container);
+    app_learn_js_button_skip_lesson(context, parent_container);
   }
   ("the work this learner left unfinished, on a button of its own, and only where it is somewhere other than where Next already leads. It is what lets Next go where its own word promises: the way on and the way back to what was skipped are two buttons saying two things, rather than one button quietly choosing between them.");
   app_code_lesson_quiz_button_unfinished(
