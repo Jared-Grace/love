@@ -15,7 +15,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { app_learn_js_div_cycle_code_multiple } from "./app_learn_js_div_cycle_code_multiple.mjs";
-export function app_code_lesson_functions_console_log() {
+export function app_learn_js_lesson_functions_console_log() {
   var r = app_learn_js_lesson_functions_console_log_generic({
     above,
     lambda$code: identity,

@@ -74,7 +74,7 @@ import { app_learn_js_lesson_expression_choose_order_arithmetic_less_than } from
 import { app_learn_js_lesson_expression_arithmetic_less_than } from "./app_learn_js_lesson_expression_arithmetic_less_than.mjs";
 import { app_learn_js_lesson_functions_arithmetic } from "./app_learn_js_lesson_functions_arithmetic.mjs";
 import { app_code_lesson_functions_invalid } from "./app_code_lesson_functions_invalid.mjs";
-import { app_code_lesson_functions_console_log } from "./app_code_lesson_functions_console_log.mjs";
+import { app_learn_js_lesson_functions_console_log } from "./app_learn_js_lesson_functions_console_log.mjs";
 import { app_learn_js_lesson_functions_console_log_statement } from "./app_learn_js_lesson_functions_console_log_statement.mjs";
 import { app_learn_js_lesson_functions_console_log_arithmetic } from "./app_learn_js_lesson_functions_console_log_arithmetic.mjs";
 import { app_learn_js_lesson_functions_console_log_string } from "./app_learn_js_lesson_functions_console_log_string.mjs";
@@ -435,7 +435,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_expression_arithmetic_less_than,
     app_learn_js_lesson_functions_arithmetic,
     app_code_lesson_functions_invalid,
-    app_code_lesson_functions_console_log,
+    app_learn_js_lesson_functions_console_log,
     app_learn_js_lesson_functions_console_log_statement,
     app_learn_js_lesson_functions_console_log_arithmetic,
     app_learn_js_lesson_functions_console_log_string,
