@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_worked_card_not } from "./app_code_lesson_expression_worked_card_not.mjs";
+import { app_learn_js_lesson_expression_worked_card_not } from "./app_learn_js_lesson_expression_worked_card_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_expression_not_comparison_intro(
     ["Then we put the ", symbol, " in front of the ", parenthesised],
     ["And then we have: ", whole],
   ]);
-  app_code_lesson_expression_worked_card_not(
+  app_learn_js_lesson_expression_worked_card_not(
     root,
     whole,
     comparison,

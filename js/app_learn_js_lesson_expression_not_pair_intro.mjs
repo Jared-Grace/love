@@ -16,7 +16,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 import { app_code_not_parenthesis_shape } from "./app_code_not_parenthesis_shape.mjs";
-import { app_code_lesson_expression_worked_card_not } from "./app_code_lesson_expression_worked_card_not.mjs";
+import { app_learn_js_lesson_expression_worked_card_not } from "./app_learn_js_lesson_expression_worked_card_not.mjs";
 export function app_learn_js_lesson_expression_not_pair_intro(root, context) {
   arguments_assert(arguments, 2);
   ("the two cards above the ! around a joined pair lesson: what is new said as three shapes, then one line carried all the way to its value");
@@ -69,7 +69,7 @@ export function app_learn_js_lesson_expression_not_pair_intro(root, context) {
   shape_row("", and_symbol, v);
   let v2 = fill_pair_get(or_symbol);
   shape_row("Or ", or_symbol, v2);
-  app_code_lesson_expression_worked_card_not(
+  app_learn_js_lesson_expression_worked_card_not(
     root,
     whole,
     pair,

@@ -1,7 +1,7 @@
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_worked_card_not(
+export function app_learn_js_lesson_expression_worked_card_not(
   root,
   whole,
   inner,
