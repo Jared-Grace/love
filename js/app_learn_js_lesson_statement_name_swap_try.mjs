@@ -9,7 +9,7 @@ import { list_last } from "./list_last.mjs";
 import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
 import { app_learn_js_lesson_statement_name_fill_from } from "./app_learn_js_lesson_statement_name_fill_from.mjs";
-export function app_code_lesson_statement_name_swap_try() {
+export function app_learn_js_lesson_statement_name_swap_try() {
   arguments_assert(arguments, 0);
   ("the second lesson of the swapping ladder: the swap a learner tries first - a = b; b = a; - which leaves both names holding the same number");
   ("It is taught as a trap on purpose. The reason swapping needs a third name is that this program loses a number, and a learner who has predicted 8 and 8 here knows why the next lesson saves one first.");

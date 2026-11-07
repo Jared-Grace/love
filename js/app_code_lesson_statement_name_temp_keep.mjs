@@ -8,7 +8,7 @@ import { app_code_lesson_statement_name_temp_keep_step } from "./app_code_lesson
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
-import { app_code_lesson_statement_name_swap_try } from "./app_code_lesson_statement_name_swap_try.mjs";
+import { app_learn_js_lesson_statement_name_swap_try } from "./app_learn_js_lesson_statement_name_swap_try.mjs";
 export function app_code_lesson_statement_name_temp_keep() {
   arguments_assert(arguments, 0);
   ("the third lesson of the swapping ladder: let temp = a; before a = b; keeps what a held - temp and a are written out");
@@ -34,7 +34,7 @@ export function app_code_lesson_statement_name_temp_keep() {
   let lesson = app_learn_js_lesson_statement_name_swap_ladder({
     words: "Keeping a value before it is lost",
     step,
-    remember_lesson: app_code_lesson_statement_name_swap_try,
+    remember_lesson: app_learn_js_lesson_statement_name_swap_try,
     remember_parts: [
       "trying to swap ",
       name_a,
