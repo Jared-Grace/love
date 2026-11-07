@@ -11,7 +11,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { app_code_lesson_name_quoted_letter_line } from "./app_code_lesson_name_quoted_letter_line.mjs";
-export function app_code_lesson_name_no_quotes_box(
+export function app_learn_js_lesson_name_no_quotes_box(
   root,
   name_source,
   name_copy,

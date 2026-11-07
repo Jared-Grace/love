@@ -24,7 +24,7 @@ import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_
 import { html_div } from "./html_div.mjs";
 import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
 import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
-import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
+import { app_learn_js_lesson_name_no_quotes_box } from "./app_learn_js_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_single_above(
   root,
   context,
@@ -130,7 +130,7 @@ export function app_code_lesson_statement_name_copy_single_above(
     uncolored,
   );
   app_code_span_code_dark_names(changed, copied, names);
-  app_code_lesson_name_no_quotes_box(
+  app_learn_js_lesson_name_no_quotes_box(
     root,
     name_first,
     name_last,

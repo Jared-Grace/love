@@ -15,7 +15,7 @@ import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_note_names_marked } from "./app_code_note_names_marked.mjs";
-import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
+import { app_learn_js_lesson_name_no_quotes_box } from "./app_learn_js_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_code_box(
   root,
   cup_first,
@@ -62,7 +62,7 @@ export function app_code_lesson_statement_name_copy_code_box(
   app_learn_js_code_lines_writes_out(box_code, lines, word_first);
   let code = list_join_newline(lines);
   let names = app_code_note_names_marked(code);
-  app_code_lesson_name_no_quotes_box(
+  app_learn_js_lesson_name_no_quotes_box(
     root,
     name_first,
     name_copy,
