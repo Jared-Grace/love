@@ -7,7 +7,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_quiz_choose_operand(
+export function app_learn_js_lesson_quiz_choose_operand(
   parent,
   info,
   qa,
