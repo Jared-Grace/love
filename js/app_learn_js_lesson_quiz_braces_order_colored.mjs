@@ -31,7 +31,7 @@ import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-export function app_code_lesson_quiz_braces_order_colored(
+export function app_learn_js_lesson_quiz_braces_order_colored(
   parent,
   info,
   qa,

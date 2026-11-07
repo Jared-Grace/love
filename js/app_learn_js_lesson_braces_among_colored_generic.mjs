@@ -4,7 +4,7 @@ import { app_learn_js_code_dark_lines_braces_paired_random } from "./app_learn_j
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_quiz_braces_choose_colored_forwards } from "./app_learn_js_lesson_quiz_braces_choose_colored_forwards.mjs";
 import { app_learn_js_lesson_quiz_braces_choose_colored_backwards } from "./app_learn_js_lesson_quiz_braces_choose_colored_backwards.mjs";
-import { app_code_lesson_quiz_braces_order_colored } from "./app_code_lesson_quiz_braces_order_colored.mjs";
+import { app_learn_js_lesson_quiz_braces_order_colored } from "./app_learn_js_lesson_quiz_braces_order_colored.mjs";
 import { app_learn_js_braces_painter_shared } from "./app_learn_js_braces_painter_shared.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_braces_among_colored_generic(
         question_label: "",
         on_question: app_code_lesson_quiz_question_none,
         answer_label: "Please write the braces of this code in order:",
-        on_answer: app_code_lesson_quiz_braces_order_colored,
+        on_answer: app_learn_js_lesson_quiz_braces_order_colored,
       },
     ],
   });
