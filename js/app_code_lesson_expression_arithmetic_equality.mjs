@@ -7,7 +7,7 @@ import { less_than } from "./less_than.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_learn_js_arithmetic_to_value } from "./app_learn_js_arithmetic_to_value.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
@@ -68,7 +68,7 @@ export function app_code_lesson_expression_arithmetic_equality() {
     next_arg,
     example_count: 2,
     decoys: app_learn_js_comparison_decoys,
-    forwards_question_label: app_code_label_code_question(),
+    forwards_question_label: app_learn_js_label_code_question(),
     forwards_answer_label: app_code_label_value(),
     backwards_question_label: app_code_label_value(),
     backwards_answer_label: app_code_label_value_backwards(),

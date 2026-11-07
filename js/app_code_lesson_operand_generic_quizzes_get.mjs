@@ -1,6 +1,6 @@
 import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_choose_operand } from "./app_code_lesson_quiz_choose_operand.mjs";
 import { app_code_quiz_correction_operand } from "./app_code_quiz_correction_operand.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_operand_generic_quizzes_get({
 }) {
   arguments_assert(arguments, 1);
   let forwards = {
-    question_label: app_code_label_code_question(),
+    question_label: app_learn_js_label_code_question(),
     on_question: html_text_set_code_dark,
     answer_label,
     answer_on_button: null,

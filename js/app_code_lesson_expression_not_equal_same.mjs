@@ -7,7 +7,7 @@ import { app_learn_js_comparison_pair_equality } from "./app_learn_js_comparison
 import { property_get } from "./property_get.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { equal } from "./equal.mjs";
 import { text_split } from "./text_split.mjs";
@@ -93,7 +93,7 @@ export function app_code_lesson_expression_not_equal_same() {
     let pairs = list_map(wants, to_pair);
     return pairs;
   }
-  let example_question_label = app_code_label_code_question();
+  let example_question_label = app_learn_js_label_code_question();
   let written_with = text_combine_multiple([
     "Written with ",
     bang_symbol,

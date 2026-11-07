@@ -9,7 +9,7 @@ import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 export function app_code_lesson_expression_remainder_divide() {
   "BUILD the remainder-by-dividing formula from a division a / b: the remainder is a - Math.floor(a / b) * b (the dividend minus its whole part). First RECOGNISE the formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens (unscramble) - recognise before produce, easy before hard. The next lesson EVALUATES this formula. Uses the shared divisor/quotient batch so a quotient-0 division can appear; divisor 3..6";
   let percent = js_operator_percent_sign();
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_remainder_divide() {
     return list;
   }
   let example_answer_label = "Remainder formula: ";
-  let example_question_label = app_code_label_code_question();
+  let example_question_label = app_learn_js_label_code_question();
   function recognize_decoys(question, answer) {
     let r5 = app_code_lesson_expression_remainder_divide_recognize_decoys(
       question,

@@ -3,7 +3,7 @@ import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson
 import { app_code_lesson_expression_string_concat_title_name_id } from "./app_code_lesson_expression_string_concat_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_expression_string_concat() {
     next_arg,
     example_count: 2,
     decoys,
-    forwards_question_label: app_code_label_code_question(),
+    forwards_question_label: app_learn_js_label_code_question(),
     forwards_answer_label: app_code_label_value(),
     backwards_question_label: app_code_label_value(),
     backwards_answer_label: app_code_label_value_backwards(),

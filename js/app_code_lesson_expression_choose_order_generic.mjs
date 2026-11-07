@@ -1,4 +1,4 @@
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
 import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -59,7 +59,7 @@ export function app_code_lesson_expression_choose_order_generic(
     );
     return quizzes_exercises;
   }
-  let example_question_label = app_code_label_code_question();
+  let example_question_label = app_learn_js_label_code_question();
   let lesson = app_code_lesson_base(
     name_id,
     above,

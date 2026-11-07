@@ -7,7 +7,7 @@ import { list_first } from "./list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 export function app_code_lesson_operand_generic(params) {
@@ -18,7 +18,7 @@ export function app_code_lesson_operand_generic(params) {
   let name_id = property_get(params, "name_id");
   let unscramble = property_get_or(params, "unscramble", false);
   let above_more = property_get_or(params, "above_more", null);
-  let example_question_label = app_code_label_code_question();
+  let example_question_label = app_learn_js_label_code_question();
   let answer_label = text_combine_multiple(["Choose the ", role, ": "]);
   let example_answer_label = text_combine_multiple(["The ", role, " is: "]);
   function above(root, context) {

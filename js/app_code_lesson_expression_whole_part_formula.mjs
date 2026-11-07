@@ -2,7 +2,7 @@ import { app_code_uneven_division_code } from "./app_code_uneven_division_code.m
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_code_lesson_expression_whole_part_formula_recognize_decoys } from "./app_code_lesson_expression_whole_part_formula_recognize_decoys.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_whole_part_formula() {
     return list;
   }
   let example_answer_label = "Whole part formula: ";
-  let example_question_label = app_code_label_code_question();
+  let example_question_label = app_learn_js_label_code_question();
   function recognize_decoys(question, answer) {
     let r4 = app_code_lesson_expression_whole_part_formula_recognize_decoys(
       question,
@@ -44,7 +44,7 @@ export function app_code_lesson_expression_whole_part_formula() {
   function quizzes_get(question, answer) {
     "two quiz kinds: first RECOGNISE the whole-part formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens - recognise before produce";
     let recognize = {
-      question_label: app_code_label_code_question(),
+      question_label: app_learn_js_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label: "Which is the whole part formula? ",
       answer_on_button: html_text_set_code_dark,
@@ -55,7 +55,7 @@ export function app_code_lesson_expression_whole_part_formula() {
       decoys: recognize_decoys,
     };
     let build = {
-      question_label: app_code_label_code_question(),
+      question_label: app_learn_js_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label: "Build the whole part formula: ",
       answer_on_button: null,

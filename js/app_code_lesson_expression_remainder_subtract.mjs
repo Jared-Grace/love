@@ -7,7 +7,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_remainder_subtract_code } from "./app_code_lesson_expression_remainder_subtract_code.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lesson_expression_remainder_subtract_title_name_id } from "./app_code_lesson_expression_remainder_subtract_title_name_id.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_get } from "./list_get.mjs";
@@ -48,7 +48,7 @@ export function app_code_lesson_expression_remainder_subtract() {
   }
   let name_id =
     app_code_lesson_expression_remainder_subtract_title_name_id(percent);
-  let example_question_label = app_code_label_code_question();
+  let example_question_label = app_learn_js_label_code_question();
   ("The wrong answers hold only the numbers on the screen. Filled from the other questions they held other numbers, so the one button with the numbers on the screen was the answer every time and could be picked without knowing what % does.");
   ("Forwards they take the number away too few times or too many, which is the stopping rule this lesson teaches: stop when what is left is smaller. The right count is always 2 or 3, so counts 1 to 4 less the right one always leave exactly three.");
   ("Backwards they put the two numbers the wrong way round or use one of them twice, which asks which number is taken from and which is taken away. None comes to the same value, because the right value is at least 1 and under the number taken away, and these come to 0 or to the number taken away. Not picked: how many times it was taken away as the second number, 16 % 3, because it can come to the same value as the right answer; and / or - in place of %, because the question asks for the code using %, so those go without any thought.");

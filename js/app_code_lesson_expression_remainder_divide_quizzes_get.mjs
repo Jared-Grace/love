@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_remainder_divide_percent_expression } from "./app_code_lesson_expression_remainder_divide_percent_expression.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
   let percent_expression =
     app_code_lesson_expression_remainder_divide_percent_expression(question);
   let recognize = {
-    question_label: app_code_label_code_question(),
+    question_label: app_learn_js_label_code_question(),
     on_question: html_text_set_code_dark,
     answer_label: "Which is the remainder formula? ",
     answer_on_button: html_text_set_code_dark,
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
     decoys: recognize_decoys,
   };
   let build = {
-    question_label: app_code_label_code_question(),
+    question_label: app_learn_js_label_code_question(),
     on_question: html_text_set_code_dark,
     answer_label: "Build the remainder formula: ",
     answer_on_button: null,

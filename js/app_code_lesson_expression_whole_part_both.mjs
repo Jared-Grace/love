@@ -5,7 +5,7 @@ import { text_to } from "./text_to.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { app_code_lesson_expression_whole_part_both_decoys } from "./app_code_lesson_expression_whole_part_both_decoys.mjs";
 import { app_code_lesson_expression_whole_part_both_decoys_backwards } from "./app_code_lesson_expression_whole_part_both_decoys_backwards.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { noop } from "./noop.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
@@ -50,11 +50,11 @@ export function app_code_lesson_expression_whole_part_both() {
     return r5;
   }
   let example_answer_label = "Whole part: ";
-  let example_question_label = app_code_label_code_question();
+  let example_question_label = app_learn_js_label_code_question();
   function quizzes_get(question, answer) {
     "two quiz kinds: forwards (given the division, choose its whole part value) then backwards (given a whole part value, choose which division has it - the other batch divisions are the distractors, so no tailored decoys are needed)";
     let forwards = {
-      question_label: app_code_label_code_question(),
+      question_label: app_learn_js_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label: "What is the whole part? ",
       answer_on_button: noop,

@@ -1,5 +1,5 @@
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
 import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_functions_arithmetic() {
   let name_id = app_code_lesson_name_id("functions", ["arithmetic"]);
   let example_answer_label = "Function: ";
   let quiz_label = "What is this code rewritten using a function call?";
-  let example_question_label = app_code_label_code_question();
+  let example_question_label = app_learn_js_label_code_question();
   let operators = js_operators_arithmetic();
   let next = app_code_lesson_operators_value_max_range_1_next();
   function batch_get() {
