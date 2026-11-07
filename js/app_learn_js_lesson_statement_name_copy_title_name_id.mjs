@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-export function app_code_lesson_statement_name_copy_title_name_id() {
+export function app_learn_js_lesson_statement_name_copy_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: copying what a name holds, followed by the line that does it");
   ("The line shown is the whole lesson, and what makes it that line is what is missing from it - there are no quote marks round the value. The titles before this one all show a value with them, so the difference is visible from the home list without a word of explanation.");

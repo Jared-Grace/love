@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_copy_title_name_id } from "./app_code_lesson_statement_name_copy_title_name_id.mjs";
+import { app_learn_js_lesson_statement_name_copy_title_name_id } from "./app_learn_js_lesson_statement_name_copy_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_statement_name_copy_batch } from "./app_learn_js_lesson_statement_name_copy_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -29,7 +29,7 @@ export function app_code_lesson_statement_name_copy() {
   ("The third name is a new one rather than one of the two, so nothing on the screen is given a value twice. That was the lesson before and it is settled; here the only thing that changes between the two pictures is that a cup was added.");
   ("Both words are on the screen of every question and only one of them was copied, so the word that was not copied is a wrong answer waiting to be reached for. That is what makes the third line worth reading rather than skipping.");
   ("Building the code from tokens stays switched off, for the reason the lessons before give; there are four lines now.");
-  let name_id = app_code_lesson_statement_name_copy_title_name_id();
+  let name_id = app_learn_js_lesson_statement_name_copy_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
     app_learn_js_lesson_statement_name_copy_batch,
     eval_console_log_to_list,
