@@ -7,7 +7,7 @@ import { html_move_animate } from "./html_move_animate.mjs";
 import { html_translation_transition_clear } from "./html_translation_transition_clear.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { list_get } from "./list_get.mjs";
-export async function app_code_expression_replace_fly(
+export async function app_learn_js_expression_replace_fly(
   node_span,
   chosen_pieces,
   duration,

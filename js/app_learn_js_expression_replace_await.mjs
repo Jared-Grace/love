@@ -1,5 +1,5 @@
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
-import { app_code_expression_replace_fly } from "./app_code_expression_replace_fly.mjs";
+import { app_learn_js_expression_replace_fly } from "./app_learn_js_expression_replace_fly.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_replace_ask } from "./app_learn_js_expression_replace_ask.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -43,5 +43,5 @@ export async function app_learn_js_expression_replace_await({
   await pressed;
   ("and only then does anything on the line move: the words said what is about to happen, the press said when, and this is the happening");
   let duration = app_shared_animation_duration();
-  await app_code_expression_replace_fly(node_span, chosen_pieces, duration);
+  await app_learn_js_expression_replace_fly(node_span, chosen_pieces, duration);
 }
