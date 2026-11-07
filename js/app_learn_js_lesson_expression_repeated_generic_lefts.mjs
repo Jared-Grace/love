@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_repeated_generic_lefts() {
+export function app_learn_js_lesson_expression_repeated_generic_lefts() {
   arguments_assert(arguments, 0);
   ("the left-hand numbers a repeated-operator lesson may ask about: 2, 3, 4 and 5");
   ("Four of them and four questions a sitting, which is what makes the four questions carry four different left numbers and so four written-out forms that cannot collide. A fifth number here would leave one of them unasked; a fourth question with a repeated left number would print the same expansion twice.");

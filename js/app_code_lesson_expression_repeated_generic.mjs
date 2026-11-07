@@ -7,7 +7,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
-import { app_code_lesson_expression_repeated_generic_lefts } from "./app_code_lesson_expression_repeated_generic_lefts.mjs";
+import { app_learn_js_lesson_expression_repeated_generic_lefts } from "./app_learn_js_lesson_expression_repeated_generic_lefts.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -85,7 +85,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
       let left_untaken = list_includes_not(chosen_lefts, left);
       return left_untaken;
     }
-    let lefts = app_code_lesson_expression_repeated_generic_lefts();
+    let lefts = app_learn_js_lesson_expression_repeated_generic_lefts();
     let free = list_filter(lefts, left_free_is);
     let free_count = list_size(free);
     let shown = list_map(examples, pair_of);
