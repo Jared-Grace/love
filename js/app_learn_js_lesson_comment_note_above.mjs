@@ -10,7 +10,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { js_comment_start } from "./js_comment_start.mjs";
-export function app_code_lesson_comment_note_above(root, context) {
+export function app_learn_js_lesson_comment_note_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: a line a learner already knows, that same line with a comment written above it, and then what the two slashes are");
   ("The same line twice, and the same answer twice. That is the whole lesson - a comment changes nothing about what the program does - and it is shown by leaving everything else untouched, so there is only one thing between the two boxes that could account for anything.");
