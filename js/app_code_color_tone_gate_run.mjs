@@ -27,7 +27,7 @@ export async function app_code_color_tone_gate_run() {
     faults,
     path,
     "the hues this app draws are not held at one dark colour and one light one the way they were - read what arrived against what went away, and bank it only once the change is the one that was wanted",
-    fn_name("app_code_color_tone_baseline_write"),
+    fn_name("app_learn_js_color_tone_baseline_write"),
   );
   let added = property_get(told, "added");
   let stale = property_get(told, "stale");
