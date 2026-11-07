@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_pair_expression } from "./app_learn_js_lesson_expression_choose_order_not_pair_expression.mjs";
-import { app_code_lesson_expression_choose_order_steps_above_generic } from "./app_code_lesson_expression_choose_order_steps_above_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_steps_above_generic } from "./app_learn_js_lesson_expression_choose_order_steps_above_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_pair_recall } from "./app_learn_js_lesson_expression_choose_order_not_pair_recall.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_pair_intro } from "./app_learn_js_lesson_expression_choose_order_not_pair_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_pair_above(
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_expression_choose_order_not_pair_above(
   let want_true = true;
   let tree =
     app_learn_js_lesson_expression_choose_order_not_pair_expression(want_true);
-  app_code_lesson_expression_choose_order_steps_above_generic(
+  app_learn_js_lesson_expression_choose_order_steps_above_generic(
     root,
     app_learn_js_lesson_expression_choose_order_not_pair_recall,
     tree,
