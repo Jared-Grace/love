@@ -17,7 +17,7 @@ import { app_code_lesson_operators_asterisk } from "./app_code_lesson_operators_
 import { app_code_lesson_operators_slash_forward } from "./app_code_lesson_operators_slash_forward.mjs";
 import { app_code_lesson_operators_dot_numbers } from "./app_code_lesson_operators_dot_numbers.mjs";
 import { app_code_lesson_operators_dot_missing } from "./app_code_lesson_operators_dot_missing.mjs";
-import { app_code_lesson_expression_string_hello } from "./app_code_lesson_expression_string_hello.mjs";
+import { app_learn_js_lesson_expression_string_hello } from "./app_learn_js_lesson_expression_string_hello.mjs";
 import { app_code_lesson_expression_string_spaces } from "./app_code_lesson_expression_string_spaces.mjs";
 import { app_learn_js_lesson_expression_string_concat } from "./app_learn_js_lesson_expression_string_concat.mjs";
 import { app_learn_js_lesson_expression_less_than } from "./app_learn_js_lesson_expression_less_than.mjs";
@@ -330,7 +330,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_operators_slash_forward,
     app_code_lesson_operators_dot_numbers,
     app_code_lesson_operators_dot_missing,
-    app_code_lesson_expression_string_hello,
+    app_learn_js_lesson_expression_string_hello,
     app_code_lesson_expression_string_spaces,
     app_learn_js_lesson_expression_string_concat,
     app_learn_js_lesson_expression_less_than,

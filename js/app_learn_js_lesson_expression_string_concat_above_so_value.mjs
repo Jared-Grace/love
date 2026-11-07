@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_string_hello } from "./app_code_lesson_expression_string_hello.mjs";
+import { app_learn_js_lesson_expression_string_hello } from "./app_learn_js_lesson_expression_string_hello.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_string_concat_pair } from "./app_learn_js_lesson_expression_string_concat_pair.mjs";
 import { list_get } from "./list_get.mjs";
@@ -33,7 +33,7 @@ export function app_learn_js_lesson_expression_string_concat_above_so_value(
   let reminded = app_code_remember_from_lesson(
     remember_line,
     context,
-    app_code_lesson_expression_string_hello,
+    app_learn_js_lesson_expression_string_hello,
     ["the "],
   );
   app_learn_js_lesson_expression_string_concat_value_word(reminded, on_light);

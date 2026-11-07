@@ -5,7 +5,7 @@ import { app_learn_js_lesson_expression_string_hello_title_name_id } from "./app
 import { app_learn_js_lesson_expression_string_generic } from "./app_learn_js_lesson_expression_string_generic.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_learn_js_lesson_expression_string_hello_above } from "./app_learn_js_lesson_expression_string_hello_above.mjs";
-export function app_code_lesson_expression_string_hello() {
+export function app_learn_js_lesson_expression_string_hello() {
   "practice a string - text written inside quotes, the first value that is not a number. A quoted word evaluates to the text WITHOUT the quotes: the quotes are how you write it, not part of the value; the answer is the text with no quotes. The word source is the fruits of the Spirit.";
   let quote = js_string_quote();
   function decoys(question, answer) {
