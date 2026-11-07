@@ -11,7 +11,7 @@ import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_brace_lines_generic } from "./app_learn_js_lesson_brace_lines_generic.mjs";
-export function app_code_lesson_brace_lines_two() {
+export function app_learn_js_lesson_brace_lines_two() {
   arguments_assert(arguments, 0);
   ("which lines stand between a pair of braces, in programs with two pairs of braces: the learner taps every line between a { and the } that closes it");
   ("Asked for by the human 2026-10-11, after Which brace pairs with which, with a version for two pairs and another for three. Placed straight after Which brace pairs with which, so both lessons on which brace pairs with which come first, and the two on lines follow in the same order, two pairs then three. Rejected: each lines lesson straight after the pairing lesson with its number of pairs, which would put two pairs, lines, three pairs, lines - the human said then, after brace matching.");
