@@ -1,6 +1,6 @@
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_total_title_name_id() {
   ("Real names rather than a stand-in for a value, because the thing being given away is what two names add up to, and a stand-in would hide the two names the line is about.");
   ("Only what is painted changes; the id is built from the words below.");
   let words = "Naming what two names add up to";
-  let name_first = app_code_lesson_statement_name_value_name();
+  let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let name_total = app_learn_js_lesson_statement_name_third();
   let plus = js_operator_plus_symbol();

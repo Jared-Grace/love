@@ -1,7 +1,7 @@
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { js_code_not } from "./js_code_not.mjs";
 import { app_code_lesson_statement_names_binary_answer_lines } from "./app_code_lesson_statement_names_binary_answer_lines.mjs";
 import { list_first } from "./list_first.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_statement_name_not() {
   ("A name holding true or false can hold only two values, so a screen asks both programs in a fresh order, and a question offers two buttons.");
   ("Its answer is given a name and the name written out, the way the two-name lessons end, through the same helper - so the one lesson that could not share their screen still shares their last lines.");
   let symbol = js_operator_bang_symbol();
-  let name = app_code_lesson_statement_name_value_name();
+  let name = app_learn_js_lesson_statement_name_value_name();
   let asked = js_code_not(name);
   let answer_lines = app_code_lesson_statement_names_binary_answer_lines(
     asked,

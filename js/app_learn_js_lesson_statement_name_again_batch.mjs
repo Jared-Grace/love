@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { add } from "./add.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_lesson_statement_name_again_batch() {
   ("The word that was there first is the whole question. A learner who has not noticed that the lines happen in order reads the name, finds the line that made it, and answers with that - so that word has to be on the buttons, waiting. Four words are picked, each program ends up holding one of them and starts out holding the next one along, and every word is the answer of exactly one program; so the word a program throws away is another program's answer, and is therefore a word worth offering. That it is on the buttons every time is settled by the lesson, which asks for the words written in the program by name. The draw alone would have put it there about half the time, because wrong answers are pulled from batches of their own and each is a fresh shuffle of four words out of nine.");
   ("One name throughout, and always the same one letter. Nothing here is about what a name may be called - the lesson before last settled that - and a second name would put a second reason on the screen for a word not to come out.");
   ("The words are the fruits of the Spirit as the string lessons have them; no word here is used as a name.");
-  let name = app_code_lesson_statement_name_value_name();
+  let name = app_learn_js_lesson_statement_name_value_name();
   let words = fruits_of_the_spirit();
   let picked = list_shuffle_take(words, 4);
   function program_of(word, index) {

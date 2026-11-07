@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_true_false_title_name_id() {
   ("the home title: giving true or false a name, followed by the line that does it");
   ("Or rather than a comma, because a name holds one of the two and never both - which of them is the choice the line makes.");
   ("true and false are painted as code, because they are what the line writes - the same way a title about a symbol paints the symbol. Asked for by the human. The id is written down under this lesson's function name, so repainting the words moves nobody's place.");
-  let name = app_code_lesson_statement_name_value_name();
+  let name = app_learn_js_lesson_statement_name_value_name();
   let t = js_keyword_true();
   let f = js_keyword_false();
   let code = js_code_let_statement(name, t);

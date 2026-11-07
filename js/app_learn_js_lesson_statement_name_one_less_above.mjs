@@ -1,6 +1,6 @@
 import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_name_one_less_above(
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: a name given one more than it holds, the program the lesson on one more taught, then the same program with a minus where the plus was");
   ("Neither box's numbers is a starting number or an answer of the programs asked about below: those start at 3, 5, 7, 9 or 11 and end one lower, and these start at 13 and 17.");
-  let name = app_code_lesson_statement_name_value_name();
+  let name = app_learn_js_lesson_statement_name_value_name();
   let plus = js_operator_plus_symbol();
   let minus = js_operator_minus_symbol();
   let more = js_code_binary_spaced_nb(name, plus, 1);

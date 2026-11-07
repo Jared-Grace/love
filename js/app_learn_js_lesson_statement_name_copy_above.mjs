@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_statement_name_copy_above(root, context) {
   ("The filling is done by a person who is asked to go and look. A cup cannot be poured into another cup without emptying, which is exactly the reading the lesson has to prevent, so the story never pours: someone looks inside one cup, sees what is there, and fetches more of the same. That is what the code does, said in a way a learner can watch.");
   ("It is said twice that the first cup lost nothing - once in what the person did, and once flatly afterwards. This is the one thing every learner gets wrong here, and it is worth the second line.");
   ("The third cup is a new cup rather than one of the two, so the screen never has to say that a name was given something twice. That was the lesson before, it is settled, and putting it here would give a learner two reasons for a word to have moved.");
-  let name_first = app_code_lesson_statement_name_value_name();
+  let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let name_copy = app_learn_js_lesson_statement_name_third();
   let word_first = app_code_lesson_statement_name_value_word();

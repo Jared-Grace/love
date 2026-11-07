@@ -3,7 +3,7 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_statement_name_step_backwards_decoys(
   let step = list_get(lines, 2);
   let written = text_split_newline(question);
   let second = list_second(written);
-  let name = app_code_lesson_statement_name_value_name();
+  let name = app_learn_js_lesson_statement_name_value_name();
   let started = js_code_let_statement(name, second);
   let programs = [
     [started, logged, step, logged],

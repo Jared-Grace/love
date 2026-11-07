@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_statement_names_binary_answer_lines } from "./app_code_lesson_statement_names_binary_answer_lines.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_statement_names_binary_programs(
   arguments_assert(arguments, 3);
   ("the programs a screen of a lesson about one symbol between two names asks about: each gives the two values of one pair the two names, then writes out what the symbol makes of the two names - directly, or through a name for the answer when one is handed in");
   ("The symbol and the answer's name are the only things handed in besides the values. Every lesson built on this shows the same lines with the same two names in the same places, so a learner moving from one of these lessons to the next is looking at the changed symbol - the thing each lesson is about - and the name that says what it makes.");
-  let name_first = app_code_lesson_statement_name_value_name();
+  let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let asked = js_code_binary_spaced_nb(name_first, symbol, name_last);
   let answer_lines = app_code_lesson_statement_names_binary_answer_lines(

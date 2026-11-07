@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_statement_name_count_batch() {
   ("The numbers a name starts with are all even here, so every answer is even too, and none of the four answers is a number written anywhere in any of the four programs. A question shows one program's answer and offers four programs, so a number that is an answer in one place and a written value in another can be found by looking rather than by adding, and looking is the reading this screen is trying to replace.");
   ("They are also the numbers the lesson before this one did not use, which used odd ones. A learner who worked out an answer on that screen and meets the same starting number here would have a remembered answer to reach for, and the point of this screen is that the same starting number now comes out one higher.");
   ("Four different starting numbers, so the four answers are four different numbers and no question offers its own answer twice.");
-  let name = app_code_lesson_statement_name_value_name();
+  let name = app_learn_js_lesson_statement_name_value_name();
   let plus = js_operator_plus_symbol();
   let starts = list_shuffle_take([4, 6, 8, 10, 12], 4);
   function program_of(start) {

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_statement_name_last(
   ("a lesson that asks again about the programs of the lesson just before it, now writing the name out only at the end, so only its last value is written out");
   ("The human's order, 2026-09-27: a lesson where a name takes a new value first writes the name out after every change, and this one follows it. Seen first, every value is on the screen; here a learner carries the changes in their head and answers with where they end, with the lesson before as the help.");
   ("The programs are the lesson before's own without the writing-outs it adds, so the two lessons cannot drift apart. The wrong answers are what that lesson's programs were asked with before the order changed: the other programs' answers, or the words handed in.");
-  let name = app_code_lesson_statement_name_value_name();
+  let name = app_learn_js_lesson_statement_name_value_name();
   function above(root, context) {
     "one of the lesson before's programs writing the name out after every change, then the same program writing it out only at the end";
     let list = batch_original();

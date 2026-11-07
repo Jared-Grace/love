@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_plus_one_box } from "./app_learn_js_lesson_statement_name_plus_one_box.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_name_minus_one_above(
   app_learn_js_lesson_statement_name_plus_one_box(root, context);
   let box = app_learn_js_container_light_blue(root);
   ("The sentence names the two lines it is comparing, the new one first, both in plain code with no colours on the names, the same as the sentence in the lesson on one more - asked for by the human 2026-10-16. Not picked: the new line in the colours the names wear in the program below, which the human had asked for earlier.");
-  let name_first = app_code_lesson_statement_name_value_name();
+  let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let plus = js_operator_plus_symbol();
   let minus = js_operator_minus_symbol();

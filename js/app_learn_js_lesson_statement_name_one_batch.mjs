@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_one_batch(line) {
   ("The numbers a name starts with are all odd, so every answer is even, whichever way the step goes. No answer is a number written anywhere in any program, which matters because a question shows one program's answer and offers four programs: a number that is an answer somewhere and a written value somewhere else can be found by looking rather than by working it out, and looking is the reading this screen is trying to replace.");
   ("Four different starting numbers, so the four answers are four different numbers and no question offers its own answer twice.");
   ("The starting numbers stay small and near each other, because the sum is not the difficulty here - a learner who has to carry a ten while working out what the line does is being asked two things at once. The smallest is 3 rather than 1, so a step down never reaches nothing.");
-  let name = app_code_lesson_statement_name_value_name();
+  let name = app_learn_js_lesson_statement_name_value_name();
   let starts = list_shuffle_take([3, 5, 7, 9, 11], 4);
   function program_of(start) {
     "the three lines that give a name a number, run the line on it, and write out what it holds now";

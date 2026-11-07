@@ -1,6 +1,6 @@
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_code_string_any_code } from "./app_code_string_any_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_title_name_id() {
   ("A stand-in for the new value rather than a word, because which word is put in second makes no difference to anything here - and a picked one would be read as part of what the lesson is about.");
   ("Only what is painted changes; the id is built from the words below.");
   let words = "Changing a name after copying it";
-  let name_first = app_code_lesson_statement_name_value_name();
+  let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_copy = app_learn_js_lesson_statement_name_third();
   let any = app_code_string_any_code();
   let copied = js_code_let_statement(name_copy, name_first);

@@ -4,7 +4,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { app_learn_js_lesson_statement_name_value_batch } from "./app_learn_js_lesson_statement_name_value_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_statement_name_value() {
   function backwards_decoys(question, answer) {
     "the first line alone, the name in quote marks, and the name written out twice";
     let word = eval_console_log_lines(answer);
-    let name = app_code_lesson_statement_name_value_name();
+    let name = app_learn_js_lesson_statement_name_value_name();
     let quoted = app_code_string_code(word);
     let held = js_code_let_statement(name, quoted);
     let logged = js_code_console_log_statement(name);

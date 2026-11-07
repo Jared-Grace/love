@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_learn_js_lesson_statement_name_itself_step_title_code } from "./app_learn_js_lesson_statement_name_itself_step_title_code.mjs";
 import { js_code_update_statement } from "./js_code_update_statement.mjs";
@@ -13,7 +13,7 @@ import { app_learn_js_lesson_statement_name_step_backwards_decoys } from "./app_
 export function app_learn_js_lesson_statement_name_increment_pair() {
   arguments_assert(arguments, 0);
   ("the pair on the shorter way to add one to a name, a++; for a = a + 1;: its programs, its title line, and the words both its lessons are called by");
-  let name = app_code_lesson_statement_name_value_name();
+  let name = app_learn_js_lesson_statement_name_value_name();
   let plus = js_operator_plus_symbol();
   let long = app_learn_js_lesson_statement_name_itself_step_title_code(plus);
   let short = js_code_update_statement(name, plus);

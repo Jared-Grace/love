@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_batch() {
   ("Whether it is offered is not settled here, but it is settled. A question's wrong answers are drawn from batches of their own, so left to the draw the word this program put in second was among them about half the time; the lesson asks for the words written in the program by name instead, which puts it on the buttons every time. What is settled here is only that it is never the right one.");
   ("Two names and not three. The screen before the one that taught the copying had two cups on it for a reason of its own; here a third cup would be a cup nothing reads, and every word on the screen has to be one a learner might answer with.");
   ("The words are the fruits of the Spirit as the string lessons have them; no word here is used as a name.");
-  let name_first = app_code_lesson_statement_name_value_name();
+  let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_copy = app_learn_js_lesson_statement_name_third();
   equal_not_assert_json(name_copy, name_first, {
     hint: "the name filled from the other cup is spelled the same as the cup it is filled from, so the changing line would be changing the answer as well",

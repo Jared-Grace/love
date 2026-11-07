@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_map } from "./list_map.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_statement_name_number() {
     let lines = text_split_newline(answer);
     let held = list_first(lines);
     let logged = list_second(lines);
-    let name = app_code_lesson_statement_name_value_name();
+    let name = app_learn_js_lesson_statement_name_value_name();
     let word = app_code_string_code(name);
     let logged_word = js_code_console_log_statement(word);
     let programs = [[held, logged_word], [held], [logged, held]];

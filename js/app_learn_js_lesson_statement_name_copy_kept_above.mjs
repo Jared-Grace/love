@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
   ("Only the first cup changes, and the second is drawn again unchanged beside it. The whole lesson is that the second cup did not follow the first, and a cup that vanished from the row while the sentence was being read would leave that to be taken on trust.");
   ("The taking out is said as a person doing it. The copying lesson was careful that nobody ever poured one cup into another; this screen is the one where something really is removed, and saying who removed it and from which cup keeps the two apart.");
   ("It is said flatly afterwards that nobody touched the second cup. That is the whole fact, and a learner who has just watched one cup change will look at the other one expecting it to have changed too.");
-  let name_first = app_code_lesson_statement_name_value_name();
+  let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_copy = app_learn_js_lesson_statement_name_third();
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_learn_js_lesson_statement_name_two_word();

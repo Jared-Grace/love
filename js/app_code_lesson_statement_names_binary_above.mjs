@@ -1,6 +1,6 @@
 import { text_is } from "./text_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_statement_names_binary_above({
   ("Both boxes use the same two numbers, so both write out the same answer. The answer the learner already knows sits one box above the answer they are being shown, which is what lets them check the new form against the old one rather than be told it works.");
   ("The answer is worked out by running the line rather than written in, so it cannot disagree with the program drawn above it whatever symbol and numbers a lesson hands in.");
   ("The second box ends the way the questions do - with the answer given the lesson's name for it and the name written out, when the lesson hands one in - so the program a learner reads first is the shape they are then asked about.");
-  let name_first = app_code_lesson_statement_name_value_name();
+  let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let number_first = list_first(pair);
   let number_last = list_last(pair);

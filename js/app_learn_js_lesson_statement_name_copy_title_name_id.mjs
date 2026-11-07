@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -10,7 +10,7 @@ export function app_learn_js_lesson_statement_name_copy_title_name_id() {
   ("Real names rather than a stand-in, because the value here has to be a name and the shape that stands in for any value would say the opposite of what the line teaches.");
   ("Only what is painted changes; the id is built from the words below.");
   let words = "Copying what a name holds";
-  let name_source = app_code_lesson_statement_name_value_name();
+  let name_source = app_learn_js_lesson_statement_name_value_name();
   let name_copy = app_learn_js_lesson_statement_name_third();
   let code = js_code_let_statement(name_copy, name_source);
   let built = app_code_lesson_statement_title_name_id(words, code);
