@@ -15,7 +15,7 @@ import { app_code_lesson_expression_choose_order_not_twice_rewritten_plain } fro
 import { app_code_lesson_expression_choose_order_not_twice_rewritten_chip } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_chip.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
-export function app_code_lesson_expression_choose_order_not_twice_inside_first(
+export function app_learn_js_lesson_expression_choose_order_not_twice_inside_first(
   parent,
 ) {
   "the middle card of this lesson: the rule that the unary operator on the inside goes first, shown by writing the same line out a second way with parentheses around each part";
