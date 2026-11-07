@@ -5,7 +5,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_batch_avoid_repeat(items, last_question) {
+export function app_learn_js_batch_avoid_repeat(items, last_question) {
   "if the first item repeats last_question (the previous batch's last question) and there is more than one item, move it to the end so examples never repeat back-to-back; returns the question to remember for next time (the new last item's question)";
   let empty = list_empty_is(items);
   if (empty) {
