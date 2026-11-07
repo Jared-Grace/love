@@ -7,7 +7,7 @@ import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
-export function app_code_expression_names_apart(item) {
+export function app_learn_js_expression_names_apart(item) {
   arguments_assert(arguments, 1);
   ("the same expression shape with every name in it standing as a piece of its own: x * x holds two names, and reading the first must leave the second still to be read");
   ("Needed because ",
@@ -26,7 +26,7 @@ export function app_code_expression_names_apart(item) {
     return item;
   }
   let right = property_get(item, "right");
-  let right_apart = app_code_expression_names_apart(right);
+  let right_apart = app_learn_js_expression_names_apart(right);
   let before_is = app_code_expression_node_before_is(item);
   if (before_is) {
     let before = object_copy_assign(item, {
@@ -35,7 +35,7 @@ export function app_code_expression_names_apart(item) {
     return before;
   }
   let left = property_get(item, "left");
-  let left_apart = app_code_expression_names_apart(left);
+  let left_apart = app_learn_js_expression_names_apart(left);
   let both = object_copy_assign(item, {
     left: left_apart,
     right: right_apart,

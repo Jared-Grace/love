@@ -16,7 +16,7 @@ import { property_set } from "./property_set.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { app_learn_js_expression_from_js } from "./app_learn_js_expression_from_js.mjs";
-import { app_code_expression_names_apart } from "./app_code_expression_names_apart.mjs";
+import { app_learn_js_expression_names_apart } from "./app_learn_js_expression_names_apart.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { app_code_expression_values_number_boolean_is } from "./app_code_expression_values_number_boolean_is.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
@@ -98,7 +98,7 @@ export function app_code_program_step_actions_solve_whole(code, actions) {
     function parse() {
       let expression = js_parse_expression(slice);
       let shape = app_learn_js_expression_from_js(expression, values);
-      let apart = app_code_expression_names_apart(shape);
+      let apart = app_learn_js_expression_names_apart(shape);
       return apart;
     }
     let tree = catch_null(parse);
