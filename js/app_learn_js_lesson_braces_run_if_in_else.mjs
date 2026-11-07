@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_braces_run_explain_generic } from "./app_learn_js_lesson_braces_run_explain_generic.mjs";
 import { noop } from "./noop.mjs";
 import { app_learn_js_braces_three_if_in_else } from "./app_learn_js_braces_three_if_in_else.mjs";
-export function app_code_lesson_braces_run_if_in_else() {
+export function app_learn_js_lesson_braces_run_if_in_else() {
   arguments_assert(arguments, 0);
   ("whether a section of code runs, in programs of an if inside an else; asked for by the human 2026-10-11, straight before the lesson on that shape");
   ("The writing is a first draft by Claude 2026-10-11.");
