@@ -10,7 +10,7 @@ import { each_range } from "./each_range.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
-export function app_code_dot_rectangle(parent, rows, columns, rotated) {
+export function app_learn_js_dot_rectangle(parent, rows, columns, rotated) {
   ("a rectangle of dots picturing rows * columns as a grid of things counted. Each dot has its OWN colour: its BASE row picks the hue (the red/green/blue/amber palette a number wears elsewhere, ",
     fn_name("app_code_lesson_chip_color"),
     ") and its BASE column picks how solid it is (a step more opaque across the row), so all rows * columns dots are distinct and the eye can follow any single one. Pass rotated=true to draw the SAME dots turned a quarter: the grid becomes columns tall and rows wide, and every dot keeps its exact colour - a coloured row turns into a coloured column - so the eye sees it is the very same dots, which is why rows * columns === columns * rows");

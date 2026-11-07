@@ -1,7 +1,7 @@
 import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-import { app_code_dot_rectangle } from "./app_code_dot_rectangle.mjs";
+import { app_learn_js_dot_rectangle } from "./app_learn_js_dot_rectangle.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -63,7 +63,7 @@ export function app_code_lesson_expression_swapping_add() {
       "3 * 4",
       " as 3 rows of 4 dots:",
     ]);
-    app_code_dot_rectangle(times, 3, 4, false);
+    app_learn_js_dot_rectangle(times, 3, 4, false);
     app_learn_js_div_cycle_code(times, [
       "If we swap ",
       "3 * 4",
@@ -73,7 +73,7 @@ export function app_code_lesson_expression_swapping_add() {
     app_learn_js_div_cycle_code(times, [
       "That's 4 rows of 3 dots, as you can see below:",
     ]);
-    app_code_dot_rectangle(times, 3, 4, true);
+    app_learn_js_dot_rectangle(times, 3, 4, true);
     app_learn_js_div_cycle_code(times, [
       "Turning the rectangle of dots does not change the number of dots",
     ]);
