@@ -1,4 +1,4 @@
-import { app_code_integer_division_uneven_cards } from "./app_code_integer_division_uneven_cards.mjs";
+import { app_learn_js_integer_division_uneven_cards } from "./app_learn_js_integer_division_uneven_cards.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
 import { app_code_lesson_expression_integer_division_title_name_id } from "./app_code_lesson_expression_integer_division_title_name_id.mjs";
@@ -60,7 +60,7 @@ export function app_code_lesson_expression_integer_division() {
   return lesson;
   function above(root) {
     "the two cards this screen opens with are the two the pressing screen in front of it opens with, out of the one place both read: a learner arriving here has just pressed this line apart, and the opening that set it up there is the opening that puts it back here";
-    app_code_integer_division_uneven_cards(root);
+    app_learn_js_integer_division_uneven_cards(root);
     let solution = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(solution, [
       "Now we will divide, and then round down to get a whole number:",

@@ -9,7 +9,7 @@ import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_integer_division_uneven_cards(root) {
+export function app_learn_js_integer_division_uneven_cards(root) {
   arguments_assert(arguments, 1);
   ("the two cards that set integer division up before either lesson on it asks anything: that rounding down is already known, and that dividing does not always come out even");
   ("Two lessons open with these, and they are the same two cards on both. The screen where a learner presses the line apart comes first and the screen where they answer it whole comes second, and a learner arriving at the second one has read the first - so the second opens by putting back what the first opened by teaching, in the words it was taught in.");
