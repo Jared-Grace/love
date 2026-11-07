@@ -17,7 +17,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_expression_string_trichotomy() {
+export function app_learn_js_lesson_expression_string_trichotomy() {
   "the trichotomy of comparing two strings - the very same three-case structure the learner just met on numbers, now carried over to strings: two strings are the same, or the first comes before the other in the dictionary, or the first comes after - exactly one of the three. The transfer is the point: === for same (as on numbers), < for before (where numbers had smaller), > for after (where numbers had bigger). Only the all-lowercase verse words are used, because JavaScript orders strings by character code, where every capital letter sorts before every small one, so mixing cases would break the alphabetical order being taught, and lowercasing a reverent word to dodge that is worse. Placed just after the string dictionary-order lesson and before the string <= / >= lesson.";
   let equals_operator = "===";
   let less_operator = "<";

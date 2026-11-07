@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_string_trichotomy } from "./app_code_lesson_expression_string_trichotomy.mjs";
+import { app_learn_js_lesson_expression_string_trichotomy } from "./app_learn_js_lesson_expression_string_trichotomy.mjs";
 import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
 import { app_learn_js_lesson_expression_string_order_equal_title_name_id } from "./app_learn_js_lesson_expression_string_order_equal_title_name_id.mjs";
 import { app_code_string_comparison_code } from "./app_code_string_comparison_code.mjs";
@@ -82,7 +82,7 @@ export function app_learn_js_lesson_expression_string_order_equal() {
     app_code_remember_from_lesson(
       recall,
       context,
-      app_code_lesson_expression_string_trichotomy,
+      app_learn_js_lesson_expression_string_trichotomy,
       [
         "when two strings are equal, ",
         "<",
