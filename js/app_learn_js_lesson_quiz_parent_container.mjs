@@ -3,7 +3,7 @@ import { app_code_lesson_quiz_question } from "./app_code_lesson_quiz_question.m
 import { app_code_lesson_quiz_qa_for } from "./app_code_lesson_quiz_qa_for.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_quiz_answer_property } from "./app_learn_js_lesson_quiz_answer_property.mjs";
-export function app_code_lesson_quiz_parent_container(r) {
+export function app_learn_js_lesson_quiz_parent_container(r) {
   arguments_assert(arguments, 1);
   let r4 = app_code_lesson_quiz_question(r);
   let r5 = app_code_lesson_quiz_qa_for(r4);
