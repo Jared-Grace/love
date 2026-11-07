@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_min_max_generic_two_numbers } from "./app_code_lesson_expression_min_max_generic_two_numbers.mjs";
+import { app_learn_js_lesson_expression_min_max_generic_two_numbers } from "./app_learn_js_lesson_expression_min_max_generic_two_numbers.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_expression_min_max_generic_above({
   arguments_assert(arguments, 1);
   ("the lesson-specific opening line (define_render), then the worked example in BOTH orders - the chosen number on the left and on the right - then the equal-numbers case");
   define_render(root);
-  let two = app_code_lesson_expression_min_max_generic_two_numbers();
+  let two = app_learn_js_lesson_expression_min_max_generic_two_numbers();
   let a = list_get(two, 0);
   let b = list_get(two, 1);
   let chosen = choose(a, b);

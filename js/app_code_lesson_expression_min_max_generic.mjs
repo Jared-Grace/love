@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_expression_min_max_generic_two_numbers } from "./app_code_lesson_expression_min_max_generic_two_numbers.mjs";
+import { app_learn_js_lesson_expression_min_max_generic_two_numbers } from "./app_learn_js_lesson_expression_min_max_generic_two_numbers.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_lesson_expression_min_max_generic_code } from "./app_learn_js_lesson_expression_min_max_generic_code.mjs";
 import { range_map } from "./range_map.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_min_max_generic(params) {
   let short_name = property_get(params, "short_name");
   function make(index) {
     "one question with a different pair of numbers";
-    let two = app_code_lesson_expression_min_max_generic_two_numbers();
+    let two = app_learn_js_lesson_expression_min_max_generic_two_numbers();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
     let r = app_learn_js_lesson_expression_min_max_generic_code(
