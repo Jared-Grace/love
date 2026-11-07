@@ -14,7 +14,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_lesson_if_cases_generic } from "./app_learn_js_lesson_if_cases_generic.mjs";
-export function app_code_lesson_if_name() {
+export function app_learn_js_lesson_if_name() {
   arguments_assert(arguments, 0);
   ('an if given a name: let a = true; if (a) { console.log("love"); } console.log("joy"); writes out love and joy, and with let a = false; writes out joy alone');
   ("The one new fact is that the true or false inside the parentheses can be held by a name, as the learner has already seen a name hold true or false. It comes after If less than by the human's word, 2026-10-07: whichever is easier goes first, and carrying a value from one line to the next is the harder of the two.");

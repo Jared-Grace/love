@@ -21,7 +21,7 @@ import { equal } from "./equal.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
+import { app_learn_js_lesson_if_name } from "./app_learn_js_lesson_if_name.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -140,11 +140,12 @@ export function app_code_lesson_if_two_ifs() {
     let joy = list_get(fruits, 1);
     let peace = list_get(fruits, 2);
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_if_name, [
-      "an ",
-      "if",
-      " can ask about a name:",
-    ]);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_if_name,
+      ["an ", "if", " can ask about a name:"],
+    );
     let let_a = js_code_let_statement("a", 2);
     let b = if_about(0, love);
     let one_if = list_concat([let_a], b);
