@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_title_name_id } from "./app_code_lesson_statement_name_value_title_name_id.mjs";
+import { app_learn_js_lesson_statement_name_value_title_name_id } from "./app_learn_js_lesson_statement_name_value_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_statement_name_value_batch } from "./app_learn_js_lesson_statement_name_value_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_statement_name_value() {
   ("The value is a word rather than a number, because an earlier lesson has already given console.log a word, so the name is the only thing here that is new.");
   ("Nothing is said here about which line happens first. Both lines have to happen, and in this order, but a learner who has not thought about that still gets every question right - the order is used and not yet named. It is named later, when a value is given a name twice and only the second one survives.");
   ("Building the code from tokens is left switched off. The order the words of two lines go in is a second thing to learn, and this lesson is about the name.");
-  let name_id = app_code_lesson_statement_name_value_title_name_id();
+  let name_id = app_learn_js_lesson_statement_name_value_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
     app_learn_js_lesson_statement_name_value_batch,
     eval_console_log_to_list,
