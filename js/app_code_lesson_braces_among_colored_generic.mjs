@@ -5,7 +5,7 @@ import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_gener
 import { app_code_lesson_quiz_braces_choose_colored_forwards } from "./app_code_lesson_quiz_braces_choose_colored_forwards.mjs";
 import { app_code_lesson_quiz_braces_choose_colored_backwards } from "./app_code_lesson_quiz_braces_choose_colored_backwards.mjs";
 import { app_code_lesson_quiz_braces_order_colored } from "./app_code_lesson_quiz_braces_order_colored.mjs";
-import { app_code_braces_painter_shared } from "./app_code_braces_painter_shared.mjs";
+import { app_learn_js_braces_painter_shared } from "./app_learn_js_braces_painter_shared.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 export function app_code_lesson_braces_among_colored_generic(
@@ -54,7 +54,7 @@ export function app_code_lesson_braces_among_colored_generic(
       },
     ],
   });
-  let painter = app_code_braces_painter_shared();
+  let painter = app_learn_js_braces_painter_shared();
   function braces_div(container, text) {
     "the braces of a worked example, in the colours its code wears";
     let div = html_div(container);
