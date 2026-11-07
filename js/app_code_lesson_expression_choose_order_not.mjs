@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
-import { app_code_lesson_expression_choose_order_not_above } from "./app_code_lesson_expression_choose_order_not_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_above } from "./app_learn_js_lesson_expression_choose_order_not_above.mjs";
 import { app_code_lesson_expression_choose_order_not_questions } from "./app_code_lesson_expression_choose_order_not_questions.mjs";
 import { app_code_lesson_expression_choose_order_not_title_name_id } from "./app_code_lesson_expression_choose_order_not_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_choose_order_not() {
   let bank = app_code_lesson_expression_choose_order_not_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
-    app_code_lesson_expression_choose_order_not_above,
+    app_learn_js_lesson_expression_choose_order_not_above,
     bank,
   );
   return lesson;
