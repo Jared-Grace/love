@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison_title_name_id } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison_title_name_id.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_any_comparison_questions } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_questions } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_questions.mjs";
 import { app_code_lesson_expression_choose_order_mixed_generic } from "./app_code_lesson_expression_choose_order_mixed_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above.mjs";
 export function app_code_lesson_expression_choose_order_both_sides_any_comparison() {
@@ -9,7 +9,7 @@ export function app_code_lesson_expression_choose_order_both_sides_any_compariso
   let name_id =
     app_code_lesson_expression_choose_order_both_sides_any_comparison_title_name_id();
   let bank =
-    app_code_lesson_expression_choose_order_both_sides_any_comparison_questions();
+    app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_questions();
   let lesson = app_code_lesson_expression_choose_order_mixed_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above,
