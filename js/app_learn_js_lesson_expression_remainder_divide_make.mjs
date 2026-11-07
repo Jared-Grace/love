@@ -3,7 +3,7 @@ import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.m
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_remainder_divide_make(
+export function app_learn_js_lesson_expression_remainder_divide_make(
   divisor,
   quotient,
 ) {

@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_remainder_divide_quizzes_get } from "./app_code_lesson_expression_remainder_divide_quizzes_get.mjs";
-import { app_code_lesson_expression_remainder_divide_make } from "./app_code_lesson_expression_remainder_divide_make.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_make } from "./app_learn_js_lesson_expression_remainder_divide_make.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_backwards_decoys } from "./app_learn_js_lesson_expression_remainder_divide_backwards_decoys.mjs";
 import { app_code_lesson_expression_remainder_divide_recognize_decoys } from "./app_code_lesson_expression_remainder_divide_recognize_decoys.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_above } from "./app_learn_js_lesson_expression_remainder_divide_above.mjs";
@@ -14,7 +14,10 @@ export function app_code_lesson_expression_remainder_divide() {
   "BUILD the remainder-by-dividing formula from a division a / b: the remainder is a - Math.floor(a / b) * b (the dividend minus its whole part). First RECOGNISE the formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens (unscramble) - recognise before produce, easy before hard. The next lesson EVALUATES this formula. Uses the shared divisor/quotient batch so a quotient-0 division can appear; divisor 3..6";
   let percent = js_operator_percent_sign();
   function make(divisor, quotient) {
-    let r = app_code_lesson_expression_remainder_divide_make(divisor, quotient);
+    let r = app_learn_js_lesson_expression_remainder_divide_make(
+      divisor,
+      quotient,
+    );
     return r;
   }
   function batch_get() {
