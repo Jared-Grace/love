@@ -1,4 +1,4 @@
-import { app_code_expression_colored_quickly } from "./app_code_expression_colored_quickly.mjs";
+import { app_learn_js_expression_colored_quickly } from "./app_learn_js_expression_colored_quickly.mjs";
 import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
 import { app_shared_animation_duration_quick } from "./app_shared_animation_duration_quick.mjs";
 import { app_learn_js_expression_chosen_room_clear } from "./app_learn_js_expression_chosen_room_clear.mjs";
@@ -32,7 +32,7 @@ export async function app_code_expression_replaced_settle(
   ("Three things want to happen at this moment and the learner can follow one at a time: the value arriving in the room its working was holding, the blue leaving, and the line closing up. So they are given one after another rather than together. Read together, the block is watched narrowing while it is still half blue, and a colour that goes as its block shrinks reads as having been squeezed out - where the same colour, gone before anything moves, reads as having finished.");
   ("the fading is asked for here rather than being carried over from when the blue was given, because both the travelling and the settling wiped it: a piece is told once what may be slowed about it, and being told to move slowly throws the earlier telling away");
   ("and it is asked for over the SHORT while, not the whole one. The blue coming up was news and was watched; the blue going says only that the news has been read, and the learner is by then looking at the next thing to press. Fading it over the whole while made the two ends of one step feel like two steps.");
-  app_code_expression_colored_quickly(node_span);
+  app_learn_js_expression_colored_quickly(node_span);
   app_learn_js_expression_chosen_uncolored(node_span);
   await app_shared_animation_sleep_quick();
   ("and the line is measured afresh before it closes up, because every piece of it has just slid and where they were read the first time is where none of them is standing now");
