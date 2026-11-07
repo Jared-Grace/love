@@ -1,4 +1,4 @@
-import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
+import { app_learn_js_lesson_token_order_braces } from "./app_learn_js_lesson_token_order_braces.mjs";
 import { app_learn_js_brace_pair_programs_two } from "./app_learn_js_brace_pair_programs_two.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_brace_pair_two() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_token_order_braces,
+      app_learn_js_lesson_token_order_braces,
       ["the braces of code are its ", left, " and ", right, " tokens."],
     );
     let box_paired = app_learn_js_container_light_blue(root);

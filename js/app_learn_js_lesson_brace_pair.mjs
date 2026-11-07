@@ -4,7 +4,7 @@ import { app_learn_js_lesson_brace_pair_two } from "./app_learn_js_lesson_brace_
 import { app_learn_js_lesson_brace_pair_generic } from "./app_learn_js_lesson_brace_pair_generic.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
-import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
+import { app_learn_js_lesson_token_order_braces } from "./app_learn_js_lesson_token_order_braces.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { app_learn_js_code_dark_lines_braces_paired_colors } from "./app_learn_js_code_dark_lines_braces_paired_colors.mjs";
@@ -97,7 +97,7 @@ export function app_learn_js_lesson_brace_pair() {
     app_learn_js_lesson_reference_draw(
       braces_line,
       context,
-      app_code_lesson_token_order_braces,
+      app_learn_js_lesson_token_order_braces,
     );
     let outer = list_get(colors, 0);
     let inner = list_get(colors, 1);

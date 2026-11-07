@@ -12,7 +12,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_two_nested } from "./app_learn_js_braces_two_nested.mjs";
 import { app_learn_js_braces_paired_with_order } from "./app_learn_js_braces_paired_with_order.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-export function app_code_lesson_token_order_braces() {
+export function app_learn_js_lesson_token_order_braces() {
   arguments_assert(arguments, 0);
   ("the braces among the tokens: the learner taps every token of a program in the order it is read, and each brace tapped is written down, so the braces gather into their order, { { } } or { } { }, one tap at a time");
   ("Asked for by the human 2026-10-10, as a step between The order of the tokens and The order of two pairs of braces: here the braces are gathered by tapping, and in the lesson after they are gathered by reading alone.");

@@ -6,7 +6,7 @@ import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
+import { app_learn_js_lesson_token_order_braces } from "./app_learn_js_lesson_token_order_braces.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_three_programs } from "./app_learn_js_braces_three_programs.mjs";
 import { list_get } from "./list_get.mjs";
@@ -33,7 +33,7 @@ export function app_learn_js_lesson_token_order_braces_three() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_token_order_braces,
+      app_learn_js_lesson_token_order_braces,
       [
         "the braces of code are its ",
         left,
