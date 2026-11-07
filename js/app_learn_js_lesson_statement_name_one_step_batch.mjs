@@ -7,7 +7,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_statement_name_one_step_batch(operator) {
+export function app_learn_js_lesson_statement_name_one_step_batch(operator) {
   arguments_assert(arguments, 1);
   ("the four programs a screen of a one-step lesson asks about: each gives a name a number, gives a second name that name with one added or taken away, and writes the second one out");
   ("A second name rather than the same one, because a new name is the smaller step: the first name keeps its number and the learner never has to read a name losing what it held. Writing the answer back into the same name is a lesson of its own, after this one.");
