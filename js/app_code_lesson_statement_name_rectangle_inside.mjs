@@ -19,7 +19,7 @@ import { app_code_explain_number_colored } from "./app_code_explain_number_color
 import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
-import { app_code_arrow_inline_draw } from "./app_code_arrow_inline_draw.mjs";
+import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meeting_inside } from "./app_code_lesson_statement_name_meeting_inside.mjs";
@@ -197,8 +197,8 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     }
     return draw;
   }
-  let right_arrow = app_code_arrow_inline_draw(0);
-  let down_arrow = app_code_arrow_inline_draw(90);
+  let right_arrow = app_learn_js_arrow_inline_draw(0);
+  let down_arrow = app_learn_js_arrow_inline_draw(90);
   let is_true = app_code_explain_number_colored("true", plain);
   let is_false = app_code_explain_number_colored("false", plain);
   let and_chip = app_code_explain_number_colored(and_op, plain);

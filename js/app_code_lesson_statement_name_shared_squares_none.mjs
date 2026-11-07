@@ -19,7 +19,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
-import { app_code_arrow_inline_draw } from "./app_code_arrow_inline_draw.mjs";
+import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { html_div } from "./html_div.mjs";
@@ -159,8 +159,8 @@ export function app_code_lesson_statement_name_shared_squares_none() {
       down: null,
     });
   }
-  let right_arrow = app_code_arrow_inline_draw(0);
-  let down_arrow = app_code_arrow_inline_draw(90);
+  let right_arrow = app_learn_js_arrow_inline_draw(0);
+  let down_arrow = app_learn_js_arrow_inline_draw(90);
   let shared_word = app_code_explain_word_colored("shared", overlap_color);
   let share_word = app_code_explain_word_colored("share", overlap_color);
   let overlap_word = app_code_explain_word_colored("overlap", overlap_color);
