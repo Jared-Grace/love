@@ -3,7 +3,7 @@ import { app_code_lesson_ids } from "./app_code_lesson_ids.mjs";
 import { app_learn_js_lesson_ids_baseline_path } from "./app_learn_js_lesson_ids_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-export async function app_code_lesson_ids_gate_run() {
+export async function app_learn_js_lesson_ids_gate_run() {
   arguments_assert(arguments, 0);
   ("Fail if the set of lesson ids the code app teaches is not the set it last recorded. Read-only.");
   ("The half that matters is the one for an id that has gone. What a learner has finished is written down on their own device under the lesson's id and nothing else - the record is an object keyed by it - so an id is a value that has already left here and cannot be moved from here. When one changes, every learner who finished that lesson is holding a key that now names nothing, the lesson reads as never started, and their place in it is asked for again. Nothing tells them why, and nothing here goes red.");
