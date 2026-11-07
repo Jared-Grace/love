@@ -20,7 +20,7 @@ import { app_learn_js_lesson_name_copy_lines } from "./app_learn_js_lesson_name_
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
+import { app_learn_js_lesson_statement_name_two } from "./app_learn_js_lesson_statement_name_two.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
 import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
@@ -84,7 +84,7 @@ export function app_learn_js_lesson_statement_name_copy_single_above(
   app_code_remember_from_lesson(
     box_two,
     context,
-    app_code_lesson_statement_name_two,
+    app_learn_js_lesson_statement_name_two,
     [
       "two names (",
       name_first,

@@ -153,7 +153,7 @@ import { app_code_lesson_statement_name_value } from "./app_code_lesson_statemen
 import { app_learn_js_lesson_statement_name_number } from "./app_learn_js_lesson_statement_name_number.mjs";
 import { app_learn_js_lesson_statement_name_true_false } from "./app_learn_js_lesson_statement_name_true_false.mjs";
 import { app_learn_js_lesson_statement_name_identifier } from "./app_learn_js_lesson_statement_name_identifier.mjs";
-import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
+import { app_learn_js_lesson_statement_name_two } from "./app_learn_js_lesson_statement_name_two.mjs";
 import { app_learn_js_lesson_statement_name_copy_single } from "./app_learn_js_lesson_statement_name_copy_single.mjs";
 import { app_learn_js_lesson_statement_name_again } from "./app_learn_js_lesson_statement_name_again.mjs";
 import { app_learn_js_lesson_statement_name_again_last } from "./app_learn_js_lesson_statement_name_again_last.mjs";
@@ -514,7 +514,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_statement_name_number,
     app_learn_js_lesson_statement_name_true_false,
     app_learn_js_lesson_statement_name_identifier,
-    app_code_lesson_statement_name_two,
+    app_learn_js_lesson_statement_name_two,
     app_learn_js_lesson_statement_name_copy_single,
     app_learn_js_lesson_statement_name_again,
     app_learn_js_lesson_statement_name_again_last,

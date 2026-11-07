@@ -20,7 +20,7 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { app_learn_js_lesson_statement_name_two_above } from "./app_learn_js_lesson_statement_name_two_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
-export function app_code_lesson_statement_name_two() {
+export function app_learn_js_lesson_statement_name_two() {
   arguments_assert(arguments, 0);
   ('two values given two names, and only one of them written out: let a = "grapes"; let b = "olives"; console.log(b); writes out olives');
   ("The first screen in the course that cannot be answered without reading a name. Every question puts two words in front of a learner and offers both of them, so the word that is not the answer is not a wrong answer somebody invented - it is on the screen, it was put there on purpose, and reaching for it is the mistake the whole lesson is about.");
