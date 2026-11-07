@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_three_operator_count } from "./app_code_lesson_expression_choose_order_three_operator_count.mjs";
 import { app_learn_js_expression_flat_random_strong_first } from "./app_learn_js_expression_flat_random_strong_first.mjs";
 import { app_code_lesson_expression_choose_order_three_recall } from "./app_code_lesson_expression_choose_order_three_recall.mjs";
-import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
+import { app_learn_js_lesson_expression_choose_order_reason_run } from "./app_learn_js_lesson_expression_choose_order_reason_run.mjs";
 export function app_code_lesson_expression_choose_order_three_above(
   root,
   context,
@@ -17,5 +17,9 @@ export function app_code_lesson_expression_choose_order_three_above(
   let tree = app_learn_js_expression_flat_random_strong_first(count);
   let heading_none = [];
   app_code_lesson_expression_choose_order_three_recall(root, context);
-  app_code_lesson_expression_choose_order_reason_run(root, heading_none, tree);
+  app_learn_js_lesson_expression_choose_order_reason_run(
+    root,
+    heading_none,
+    tree,
+  );
 }

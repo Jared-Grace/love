@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_flat_random_same_strength } from "./app_learn_js_expression_flat_random_same_strength.mjs";
-import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
+import { app_learn_js_lesson_expression_choose_order_reason_run } from "./app_learn_js_lesson_expression_choose_order_reason_run.mjs";
 export function app_code_lesson_expression_choose_order_same_strength_above_generic(
   root,
   operator_count,
@@ -13,5 +13,9 @@ export function app_code_lesson_expression_choose_order_same_strength_above_gene
   ("How many operators the walked line carries is handed in, and it is the lesson's own count rather than a number written here, so the line a learner reads is the length of the line they are about to be given.");
   let tree = app_learn_js_expression_flat_random_same_strength(operator_count);
   let heading_none = [];
-  app_code_lesson_expression_choose_order_reason_run(root, heading_none, tree);
+  app_learn_js_lesson_expression_choose_order_reason_run(
+    root,
+    heading_none,
+    tree,
+  );
 }
