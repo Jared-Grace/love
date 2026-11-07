@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_comment_wrong_say } from "./app_learn_js_comment_wrong_say.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_console_log_wrong_say } from "./app_learn_js_console_log_wrong_say.mjs";
-import { app_code_expression_wrong_say } from "./app_code_expression_wrong_say.mjs";
+import { app_learn_js_expression_wrong_say } from "./app_learn_js_expression_wrong_say.mjs";
 import { app_code_math_call_wrong_say } from "./app_code_math_call_wrong_say.mjs";
 import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_say.mjs";
 import { app_code_lines_wrong_say } from "./app_code_lines_wrong_say.mjs";
@@ -24,7 +24,7 @@ export function app_code_forwards_wrong_say(question, answer, choice) {
   if (null_not_is(logged)) {
     return logged;
   }
-  let expression = app_code_expression_wrong_say(question, answer, choice);
+  let expression = app_learn_js_expression_wrong_say(question, answer, choice);
   if (null_not_is(expression)) {
     return expression;
   }

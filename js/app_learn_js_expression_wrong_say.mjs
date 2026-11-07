@@ -12,7 +12,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_expression_wrong_say(question, answer, choice) {
+export function app_learn_js_expression_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong value for a line of code: the line worked out one operator at a time, down to the value it comes to, as parts that take turns between words and code. null when the question is not a line that can be worked out, or when the working does not land on the right answer, so a quiz asking something else about the line is told nothing rather than something beside the point");
   ("2026-10-26, at the human's asking: the whole working rather than its first step. Not picked: the first step only, which keeps the learner working but says the answer itself on a line with one operator, and most of these lines have one; a sentence per operator, which would have to be written for each one. The choice pressed is not read: every wrong value is answered by the same working, because the working is what was missed");
