@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_statement_title_code_note_paint_get } from "./app_learn_js_lesson_statement_title_code_note_paint_get.mjs";
-import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
+import { app_learn_js_lesson_statement_title_name_id_paint } from "./app_learn_js_lesson_statement_title_name_id_paint.mjs";
 import { app_learn_js_lesson_statement_name_last } from "./app_learn_js_lesson_statement_name_last.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 export function app_learn_js_lesson_statement_name_pair_last(
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_name_pair_last(
     fragment,
     "last logged",
   );
-  let name_id = app_code_lesson_statement_title_name_id_paint(words, noted);
+  let name_id = app_learn_js_lesson_statement_title_name_id_paint(words, noted);
   let batch_original = property_get(pair, "batch");
   let decoys = property_get(pair, "decoys_last");
   let backwards_decoys = property_get_or_null(pair, "backwards_decoys_last");

@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_category_statements } from "./app_learn_js_category_statements.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
-export function app_code_lesson_statement_title_name_id_paint(
+export function app_learn_js_lesson_statement_title_name_id_paint(
   words,
   paint_code,
 ) {

@@ -7,7 +7,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
-import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
+import { app_learn_js_lesson_statement_title_name_id_paint } from "./app_learn_js_lesson_statement_title_name_id_paint.mjs";
 export function app_learn_js_lesson_log_twice_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: writing out twice, followed by the one line that does it and how many times this lesson writes it");
@@ -33,6 +33,9 @@ export function app_learn_js_lesson_log_twice_title_name_id() {
     tile_paint,
     2,
   );
-  let built = app_code_lesson_statement_title_name_id_paint(words, paint_code);
+  let built = app_learn_js_lesson_statement_title_name_id_paint(
+    words,
+    paint_code,
+  );
   return built;
 }
