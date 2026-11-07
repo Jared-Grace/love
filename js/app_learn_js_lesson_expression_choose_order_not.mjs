@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_not_above } from "./app_lea
 import { app_learn_js_lesson_expression_choose_order_not_questions } from "./app_learn_js_lesson_expression_choose_order_not_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_title_name_id } from "./app_learn_js_lesson_expression_choose_order_not_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_choose_order_not() {
+export function app_learn_js_lesson_expression_choose_order_not() {
   arguments_assert(arguments, 0);
   ("a comparison inside parentheses with a ! in front of it, taken a press at a time: !(3 < 5), choose the comparison, choose what it comes to, then choose the ! and what that comes to");
   ("The lesson that asks for a ! around a comparison whole comes straight after this one. This one takes the same line first, in the order it is actually worked out, which is the one thing a learner solving a line in their head has to have: the ! is last, because until the comparison is done there is nothing for it to turn over.");
