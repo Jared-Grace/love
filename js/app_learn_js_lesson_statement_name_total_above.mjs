@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_statement_name_total_above(root, context) {
   ("A third name rather than writing the total back into one of the two. Writing it into the first name would empty a cup the sum was just read from, and a learner would be left working out which value the line used - a question this screen is not asking.");
   ("The last box sets the two lines side by side - the one written earlier, and the one that could have been written instead - which is the whole inference done where a learner can watch it. A learner told only that a sum may be swapped for its value has to take it on trust; shown both lines with the reason underneath, they can check that the two say the same thing.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   let name_total = app_learn_js_lesson_statement_name_third();
   let plus = js_operator_plus_symbol();
   let number_first = 2;

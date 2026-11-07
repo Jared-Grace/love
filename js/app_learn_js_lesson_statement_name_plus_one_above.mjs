@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_statement_name_copy_single } from "./app_learn_js_lesson_statement_name_copy_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_statement_name_plus_one_above(
   ("The copy is shown holding a number rather than the fruit words the copying lesson drew it with, because the line it grows into adds to it; a learner has given names numbers since the lesson on naming a number.");
   ("Neither box's number is a starting number or an answer of the programs asked about below: those start at 4, 6, 8, 10 or 12 and end one higher, and this one holds 14.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   let plus = js_operator_plus_symbol();
   let held = js_code_let_statement(name_first, 14);
   let copied = js_code_let_statement(name_last, name_first);

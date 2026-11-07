@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_statement_name_copy_single_batch() {
   ("One word per program, so the only new thing is the name with no quote marks on the right of the equals. Choosing which of two names was copied is the lesson after this one.");
   ("Four different words, so the four answers are four different words.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   let words = fruits_of_the_spirit();
   let picked = list_shuffle_take(words, 4);
   function program_of(word) {

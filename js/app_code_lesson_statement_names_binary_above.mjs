@@ -1,7 +1,7 @@
 import { text_is } from "./text_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { boolean_is } from "./boolean_is.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_statement_names_binary_above({
   ("The answer is worked out by running the line rather than written in, so it cannot disagree with the program drawn above it whatever symbol and numbers a lesson hands in.");
   ("The second box ends the way the questions do - with the answer given the lesson's name for it and the name written out, when the lesson hands one in - so the program a learner reads first is the shape they are then asked about.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   let number_first = list_first(pair);
   let number_last = list_last(pair);
   ("The values are called what they are: numbers, or true or false values once a lesson hands in a pair of those. Read off the pair rather than handed in, so no lesson can name its values one thing and draw another.");

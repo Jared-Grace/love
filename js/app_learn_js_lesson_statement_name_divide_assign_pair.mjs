@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { app_learn_js_lesson_statement_name_itself_sum_title_code } from "./app_learn_js_lesson_statement_name_itself_sum_title_code.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_name_divide_assign_pair() {
   ("the pair on the shorter way to divide what a name holds, a /= b; for a = a / b;: its programs, its title line, and the words its lesson is called by");
   ("No lesson teaches a = a / b; on its own. The reminder is the lesson that adds to what a name holds, with the one change a learner has already met in the lesson that divides two names - the slash in place of the plus.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   let slash = js_operator_division_symbol();
   let added = app_learn_js_lesson_statement_name_itself_sum_title_code();
   let divided = js_code_binary_spaced_nb(name_first, slash, name_last);

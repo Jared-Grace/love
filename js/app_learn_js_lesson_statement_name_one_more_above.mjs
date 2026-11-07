@@ -1,7 +1,7 @@
 import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_statement_name_one_more_above(
   ("The reminder is the plus one lesson rather than a sum of two names, because this line is that one with a single change - the name on the left is the name on the right. A sum of two names was the reminder once, and it asked a learner to take out a name and put in a number and fill a name that already existed, three changes to reach one line.");
   ("Both boxes start at 13 and write out 14, so the same output under both is the claim that the name on the left may be the name being read. The programs asked about below start at 3, 5, 7, 9 or 11, so neither number is one of their starting numbers or answers.");
   let name = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   let plus = js_operator_plus_symbol();
   let more = js_code_binary_spaced_nb(name, plus, 1);
   let kept = js_code_let_statement(name_last, more);

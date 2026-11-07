@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { app_learn_js_lesson_statement_name_itself_sum_title_code } from "./app_learn_js_lesson_statement_name_itself_sum_title_code.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_name_minus_assign_pair() {
   ("the pair on the shorter way to take from what a name holds, a -= b; for a = a - b;: its programs, its title line, and the words both its lessons are called by");
   ("No lesson teaches a = a - b; on its own. The reminder is the lesson that adds to what a name holds, with the one change a learner has already met in the lesson that subtracts two names - the minus in place of the plus.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   let minus = js_operator_minus_symbol();
   let added = app_learn_js_lesson_statement_name_itself_sum_title_code();
   let taken = js_code_binary_spaced_nb(name_first, minus, name_last);

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_lesson_statement_name_first_written_batch(
   ("The first name is the one written back into, not the second. Whichever of the two it is, the line reads a name and fills the same name; the first is the one every screen of this course reaches for when it wants one name, and the second is what the screen with two cups on it added.");
   ("The number thrown away is the one the first name was given, and the line that throws it away is the one the question turns on. A learner who reads the last line, finds the first line that filled that name, and answers with the number written there gets a number that is not the answer - which is what makes the wrong reading show up as a wrong answer rather than as a right one.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   function program_of(pair) {
     "the four lines that give two numbers two names, run the line, and write out what the first one holds now";
     let first = list_first(pair);

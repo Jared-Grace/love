@@ -1,5 +1,5 @@
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { add } from "./add.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_statement_name_two_batch() {
   ("The names are the two the lesson before last uses, in that order, so the first name is one a learner has been reading since the cup and the second is the only new thing here.");
   ("The words are the fruits of the Spirit as the string lessons have them, not the shorter list a name has to be spelled from - nothing here is named after a word.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   equal_not_assert_json(name_first, name_last, {
     hint: "this screen gives two values two names and both names would be the same word, so the second line would rename the first value rather than add a second",
   });

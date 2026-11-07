@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_statement_name_plus_one_box(root, context) {
   ("a box showing one more than a name kept under a new name, the program the lesson on one more than a name taught, with a link to that lesson");
   ("It starts from an odd number, so its answer is even, and none of its numbers is a starting number or an answer of the programs asked about below it.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   let plus = js_operator_plus_symbol();
   let box = app_learn_js_container_light_blue(root);
   ("the box shows a program an earlier lesson taught, so it opens with the reminder every such box opens with, whose lesson number is a button back to it");

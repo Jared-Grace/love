@@ -1,7 +1,7 @@
 import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { add } from "./add.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_statement_name_itself_sum_above(
   ("The one thing a learner can get wrong here is thinking the line means the name equals the sum forever - that filling the cup and reading it are the same act. So the third box does not say what the line means; it shows the sum already worked out and the line rewritten with the answer standing where the sum stood, and lets a learner check that the two say the same thing.");
   ("Each box is its own small program, and the two names are given the same two numbers in every one of them. A reminder shown with a different pair would put arithmetic a learner has to do afresh in front of the one line the screen is actually about.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
+  let name_last = app_learn_js_lesson_statement_name_two_name();
   let number_first = 2;
   let number_last = 3;
   let number_new = 9;
