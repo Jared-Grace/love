@@ -11,7 +11,9 @@ import { range_from } from "./range_from.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_code_expression_step_grown_symbols } from "./app_code_expression_step_grown_symbols.mjs";
 import { each_range } from "./each_range.mjs";
-export function app_code_expression_flat_random_same_strength(operator_count) {
+export function app_learn_js_expression_flat_random_same_strength(
+  operator_count,
+) {
   arguments_assert(arguments, 1);
   ("a line of arithmetic with as many operators on it as asked for, every one of them the same strength as the others, needing no parentheses and answerable a step at a time all the way down: asked for three it gives lines like 2 + 2 + 2 - 3 and 2 * 2 / 2 * 3");
   ("Every operator on the line comes from one class, so no operator on it ever jumps over another and the line is worked out from the left and nothing else. That is what this is for: it is the line to hand a learner who is meeting a third step for the first time, with the question of which operator goes first held back until the lesson after.");

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_flat_random_same_strength } from "./app_code_expression_flat_random_same_strength.mjs";
+import { app_learn_js_expression_flat_random_same_strength } from "./app_learn_js_expression_flat_random_same_strength.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_expression_flat_tree_of_code } from "./app_code_expression_flat_tree_of_code.mjs";
@@ -15,7 +15,8 @@ export function app_code_lesson_expression_choose_order_same_strength_questions_
   ("HOW MANY OPERATORS IS HANDED IN, because that is the only thing the two lessons on this bank differ by. One asks for two steps and one for three, and everything else about them is the same doing: the same growing, the same reading back, one line a screen. Written out twice, the day somebody improved the reading back only one lesson would have got it.");
   function item_new() {
     "a question is the line as written and its answer is what the line comes to";
-    let tree = app_code_expression_flat_random_same_strength(operator_count);
+    let tree =
+      app_learn_js_expression_flat_random_same_strength(operator_count);
     let question = app_learn_js_expression_code(tree);
     let answer = app_code_expression_value(tree);
     let item = {
