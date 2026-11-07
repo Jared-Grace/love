@@ -1,5 +1,5 @@
 import { app_code_lesson_operand_generic_quizzes_get } from "./app_code_lesson_operand_generic_quizzes_get.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -59,7 +59,7 @@ export function app_code_lesson_operand_generic(params) {
     });
     return r;
   }
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     2,

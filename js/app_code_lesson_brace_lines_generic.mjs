@@ -22,7 +22,7 @@ import { app_learn_js_brace_lines_choose } from "./app_learn_js_brace_lines_choo
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
   arguments_assert(arguments, 3);
   ("a lesson on which lines stand between a pair of braces, over four of the programs codes_get hands back: one pair is drawn in a colour and the learner taps every line between its two braces, in the worked examples and in the quiz alike; asked for by the human 2026-10-11");
@@ -120,7 +120,7 @@ export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
       },
     ],
   });
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     1,

@@ -19,7 +19,7 @@ import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_remainder_subtract_wrong_say } from "./app_code_remainder_subtract_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
 import { app_code_lesson_expression_remainder_subtract_above } from "./app_code_lesson_expression_remainder_subtract_above.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
 export function app_code_lesson_expression_remainder_subtract() {
   "practice a % b (remainder) by writing it out as repeated subtraction (17 % 5 becomes 17 - 5 - 5 - 5): the quiz matches the % form with its subtraction chain, because this lesson teaches what % MEANS - take the divisor away again and again until what is left is smaller than it, and that leftover is the remainder - not the closed-form value; divisor 3..6, 2 or 3 subtractions, leftover 1..divisor-1";
@@ -115,7 +115,7 @@ export function app_code_lesson_expression_remainder_subtract() {
     backwards,
   });
   let above = app_code_lesson_expression_remainder_subtract_above;
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     2,

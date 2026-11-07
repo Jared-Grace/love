@@ -3,7 +3,7 @@ import { app_code_quiz_backwards_label_answer_validity } from "./app_code_quiz_b
 import { noop } from "./noop.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quizzes } from "./app_code_lesson_quizzes.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_code_lesson_validity_base({
   batch_get,
   name_id,
@@ -39,7 +39,7 @@ export function app_code_lesson_validity_base({
     forwards,
     backwards,
   });
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     example_count,

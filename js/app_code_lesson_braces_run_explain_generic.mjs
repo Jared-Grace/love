@@ -14,7 +14,7 @@ import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.m
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_braces_run } from "./app_code_lesson_quiz_braces_run.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_code_lesson_braces_run_explain_generic(
   title,
   explain,
@@ -93,7 +93,7 @@ export function app_code_lesson_braces_run_explain_generic(
     title,
     app_learn_js_braces_dots(),
   );
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     1,

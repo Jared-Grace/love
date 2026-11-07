@@ -5,7 +5,7 @@ import { app_code_lesson_expression_remainder_divide_recognize_decoys } from "./
 import { app_code_lesson_expression_remainder_divide_above } from "./app_code_lesson_expression_remainder_divide_above.mjs";
 import { app_code_lesson_expression_remainder_divide_title_name_id } from "./app_code_lesson_expression_remainder_divide_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_div } from "./html_div.mjs";
@@ -52,14 +52,14 @@ export function app_code_lesson_expression_remainder_divide() {
     ("render the formula as a code chip on its OWN fresh div - passing ",
       html_text_set_code_dark.name,
       " straight to ",
-      app_code_lesson_base.name,
+      app_learn_js_lesson_base.name,
       " would clear the shared example container (wiping the Code label and the division already rendered there) and leave only the formula");
     let div = html_div(parent);
     html_text_set_code_dark(div, text);
   }
   let name_id =
     app_code_lesson_expression_remainder_divide_title_name_id(percent);
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     2,

@@ -6,7 +6,7 @@ import { noop } from "./noop.mjs";
 import { app_code_symbols_count_wrong_say } from "./app_code_symbols_count_wrong_say.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quizzes } from "./app_code_lesson_quizzes.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_code_lesson_symbols_counting(
   name_id,
   above,
@@ -46,7 +46,7 @@ export function app_code_lesson_symbols_counting(
     forwards,
     backwards,
   });
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     example_count,

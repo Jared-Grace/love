@@ -14,7 +14,7 @@ import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lesson_expression_whole_part_both_title_name_id } from "./app_code_lesson_expression_whole_part_both_title_name_id.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_code_lesson_expression_whole_part_both_above } from "./app_code_lesson_expression_whole_part_both_above.mjs";
 export function app_code_lesson_expression_whole_part_both() {
   "the THIRD whole-part lesson: DO BOTH steps at once. Given a division a / b, the learner gives its whole part value directly (rewrite with the formula Math.floor(a / b) * b, then evaluate). The answer is the whole part quotient*divisor - NOT what a / b evaluates to - so this is an explicit-answer multiple choice, not an eval lesson. Tailored decoys are the tempting partial answers: the quotient (rounded down but not multiplied back), the remainder, and the raw decimal division";
@@ -113,7 +113,7 @@ export function app_code_lesson_expression_whole_part_both() {
     return quizzes_exercises;
   }
   let name_id = app_code_lesson_expression_whole_part_both_title_name_id();
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     2,

@@ -8,7 +8,7 @@ import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.m
 import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_code_lesson_example_guided } from "./app_code_lesson_example_guided.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_code_lesson_step_programs_generic(
@@ -57,7 +57,7 @@ export function app_code_lesson_step_programs_generic(
     builds_more: [info],
   });
   let name_id = app_code_lesson_statement_title_name_id(title, title_code);
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     1,

@@ -10,7 +10,7 @@ import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs
 import { app_learn_js_braces_order_wrong_say } from "./app_learn_js_braces_order_wrong_say.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_braces_order_plain } from "./app_code_lesson_quiz_braces_order_plain.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_code_lesson_braces_among_plain_generic(
   name_id,
   lesson_colored,
@@ -76,7 +76,7 @@ export function app_code_lesson_braces_among_plain_generic(
     let div = html_div(container);
     html_text_set_code_dark_lines(div, text);
   }
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     2,

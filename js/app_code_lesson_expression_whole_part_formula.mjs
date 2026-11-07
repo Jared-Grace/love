@@ -10,7 +10,7 @@ import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.m
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_lesson_expression_whole_part_formula_title_name_id } from "./app_code_lesson_expression_whole_part_formula_title_name_id.mjs";
 import { app_code_lesson_expression_whole_part_formula_above } from "./app_code_lesson_expression_whole_part_formula_above.mjs";
@@ -104,13 +104,13 @@ export function app_code_lesson_expression_whole_part_formula() {
     ("render the formula as a code chip on its OWN fresh div - passing ",
       html_text_set_code_dark.name,
       " straight to ",
-      app_code_lesson_base.name,
+      app_learn_js_lesson_base.name,
       " would clear the shared example container (wiping the Code label and the division question already rendered there) and leave only the formula");
     let div = html_div(parent);
     html_text_set_code_dark(div, text);
   }
   let name_id = app_code_lesson_expression_whole_part_formula_title_name_id();
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     2,

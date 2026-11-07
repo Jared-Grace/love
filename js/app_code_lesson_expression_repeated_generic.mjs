@@ -18,7 +18,7 @@ import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_repeated_wrong_say } from "./app_code_repeated_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
 import { app_code_lesson_expression_repeated_generic_above } from "./app_code_lesson_expression_repeated_generic_above.mjs";
 export function app_code_lesson_expression_repeated_generic(words) {
@@ -130,7 +130,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
     forwards,
     backwards,
   });
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     2,

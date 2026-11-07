@@ -13,7 +13,7 @@ import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_learn_js_function_call_wrong_say } from "./app_learn_js_function_call_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code_instead_could_write } from "./app_learn_js_div_cycle_code_instead_could_write.mjs";
@@ -102,7 +102,7 @@ export function app_code_lesson_functions_arithmetic() {
     forwards,
     backwards,
   });
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     example_count,

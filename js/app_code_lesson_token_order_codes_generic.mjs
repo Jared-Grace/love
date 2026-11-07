@@ -5,7 +5,7 @@ import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_quest
 import { app_code_tokens_choose_label } from "./app_code_tokens_choose_label.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
 export function app_code_lesson_token_order_codes_generic(
   name_id,
@@ -40,7 +40,7 @@ export function app_code_lesson_token_order_codes_generic(
     unscramble_on_answer: quiz_choose,
     builds_more: [],
   });
-  let lesson = app_code_lesson_base(
+  let lesson = app_learn_js_lesson_base(
     name_id,
     above,
     1,
