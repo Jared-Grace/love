@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
-import { app_code_lesson_expression_equal_number_string_true_false_title_name_id } from "./app_code_lesson_expression_equal_number_string_true_false_title_name_id.mjs";
+import { app_learn_js_lesson_expression_equal_number_string_true_false_title_name_id } from "./app_learn_js_lesson_expression_equal_number_string_true_false_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
@@ -19,7 +19,7 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
   "The two look-alikes carry the lesson: \"1\" and 1, \"true\" and true. A reader who thinks those pairs are equal is exactly the reader this lesson is for, and no other example can catch them - 1 === \"hello\" they would call false already, for the wrong reason. So the quiz asks a look-alike every screen, and the closing card says what the quotes do: they are what settles which of the two the 1 is.";
   "This is the prerequisite the chained-=== lessons lean on. true === 5 === 5 is worked out left to right, so its second step compares a true or false to a number, and there is no honest way to say what that answers without this rule.";
   let name_id =
-    app_code_lesson_expression_equal_number_string_true_false_title_name_id();
+    app_learn_js_lesson_expression_equal_number_string_true_false_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
     above,
