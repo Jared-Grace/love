@@ -13,7 +13,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_statement_name_last_seat } from "./app_learn_js_lesson_statement_name_last_seat.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_seat_zero() {
+export function app_learn_js_lesson_statement_name_seat_zero() {
   arguments_assert(arguments, 0);
   ("whether a seat is in a row whose seats are numbered from 0: let last = max - 1; let ok = 0 <= n && n <= last; - asked for by the human 2026-10-01, after the same check for seats numbered from 1. In DSA it is the bounds check made before reading a list at an index, whose last index is its length - 1.");
   ("The upper check is n <= max - 1 rather than n < max: the human judged it easier to read, 2026-10-01, because it says up to the last seat, which is what Last seat taught. n < max is the same check and could be its own later lesson. Not picked: n < max - 1, which leaves the last seat out.");
