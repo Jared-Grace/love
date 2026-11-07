@@ -9,7 +9,7 @@ import { app_learn_js_expression_flat_value_right_to_left } from "./app_learn_js
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_expression_three_steps_left_to_right_title_name_id } from "./app_learn_js_lesson_expression_three_steps_left_to_right_title_name_id.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
-export function app_code_lesson_expression_three_steps_left_to_right() {
+export function app_learn_js_lesson_expression_three_steps_left_to_right() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: 8 - 2 - 4 + 7 asked for what it comes to, with nothing to press");
   ("The twin of the lesson that walks the same line a press at a time, and the one the run was missing. A learner who can press three operators in the right order has still never been asked to hold three steps at once, which is what reading real code asks of them, and the pressing lesson before this one says in as many words that the lessons after it ask for a line like this in one go.");
@@ -31,7 +31,7 @@ export function app_code_lesson_expression_three_steps_left_to_right() {
     app_code_lesson_same_draw(
       root,
       context,
-      app_code_lesson_expression_three_steps_left_to_right,
+      app_learn_js_lesson_expression_three_steps_left_to_right,
       app_learn_js_lesson_expression_choose_order_same_strength,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
