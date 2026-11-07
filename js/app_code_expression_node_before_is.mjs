@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 export function app_code_expression_node_before_is(item) {
   arguments_assert(arguments, 1);
@@ -12,7 +12,7 @@ export function app_code_expression_node_before_is(item) {
     return false;
   }
   ("a name has no left side either, and is no operator at all");
-  if (app_code_expression_name_is(item)) {
+  if (app_learn_js_expression_name_is(item)) {
     return false;
   }
   let before = property_exists_not(item, "left");

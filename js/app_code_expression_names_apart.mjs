@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_name } from "./app_code_expression_name.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
@@ -14,7 +14,7 @@ export function app_code_expression_names_apart(item) {
     fn_name("app_code_expression_solved"),
     " finds the piece a learner picked by being that very piece, and a shape built from a table of names hands the same piece to every place a name is written. Everything else in the shape is copied as it stands, the parentheses a lesson wrote among it.");
   ("Not picked: finding the picked name by where it is written instead, which every walker would then have to carry.");
-  let name_is = app_code_expression_name_is(item);
+  let name_is = app_learn_js_expression_name_is(item);
   if (name_is) {
     let name = property_get(item, "name");
     let value = property_get(item, "value");

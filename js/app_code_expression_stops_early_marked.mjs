@@ -1,7 +1,7 @@
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
@@ -11,7 +11,7 @@ export function app_code_expression_stops_early_marked(item) {
   ("a copy of the line item with every && and || in it marked to stop early, as JavaScript does: once the left side decides the answer, the right side is never read");
   ("Every other mark on the line is copied as it stands, the parentheses a lesson wrote among it. A name is kept as the very piece it is, since a learner's press is matched by being that piece");
   let node_is = app_code_expression_node_is(item);
-  if (not(node_is) || app_code_expression_name_is(item)) {
+  if (not(node_is) || app_learn_js_expression_name_is(item)) {
     return item;
   }
   let right = property_get(item, "right");

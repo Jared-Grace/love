@@ -3,7 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { object_is } from "./object_is.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
-export function app_code_expression_name_is(item) {
+export function app_learn_js_expression_name_is(item) {
   arguments_assert(arguments, 1);
   ("whether a part of an expression shape is a name still to be read, as ",
     fn_name("app_code_expression_name"),

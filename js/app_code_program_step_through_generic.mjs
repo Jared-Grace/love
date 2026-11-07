@@ -99,7 +99,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
 import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { js_value_code } from "./js_value_code.mjs";
-import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_code_program_step_solve_decoys } from "./app_code_program_step_solve_decoys.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { html_text_get } from "./html_text_get.mjs";
@@ -944,7 +944,7 @@ export function app_code_program_step_through_generic(
         let tree = property_get(action, "tree");
         ("2026-10-17: a name pressed on the line is offered the same wrong values a name asked for alone is, so reading it in the line and reading it on its own cannot catch different mistakes");
         function solve_decoys(current, node) {
-          if (app_code_expression_name_is(node)) {
+          if (app_learn_js_expression_name_is(node)) {
             let value8 = property_get(node, "name");
             let value9 = property_get(node, "value");
             let decoys_named = name_decoys(value8, value9);
@@ -970,7 +970,7 @@ export function app_code_program_step_through_generic(
         }
         async function value_arrive(node, node_span) {
           "2026-10-23, at the human's asking: a name pressed on the line under the program has its value sent down from its note onto the name, as a name asked for alone does, before the line writes the value in";
-          let b17 = app_code_expression_name_is(node);
+          let b17 = app_learn_js_expression_name_is(node);
           if (not(b17)) {
             return;
           }

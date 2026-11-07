@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
@@ -18,7 +18,7 @@ export function app_code_expression_side_parenthesis_is(side, rank_least) {
     return value_side;
   }
   ("a name is one word, so it never parentheses either");
-  if (app_code_expression_name_is(side)) {
+  if (app_learn_js_expression_name_is(side)) {
     return false;
   }
   let written = property_get_or(side, "parenthesised", false);

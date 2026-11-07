@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -14,7 +14,7 @@ export function app_code_expression_node_logical_is(item) {
   if (not(node_is)) {
     return false;
   }
-  if (app_code_expression_name_is(item)) {
+  if (app_learn_js_expression_name_is(item)) {
     return false;
   }
   if (app_code_expression_node_before_is(item)) {

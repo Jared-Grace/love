@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { and } from "./and.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
@@ -16,7 +16,7 @@ export function app_code_expression_solved(item, node) {
   ("One step, not the answer. A learner who is shown the whole line collapse at once has watched something happen; a learner who picks and is answered, and then picks again, has done every step of it, and the step they get wrong is the one thing they did not know.");
   let same = equal(item, node);
   ("2026-10-17: a name is worked out by reading it, so it stands there as the value it holds; a name other than the one picked stays a name, and is not looked inside, since it has no sides");
-  let name_is = app_code_expression_name_is(item);
+  let name_is = app_learn_js_expression_name_is(item);
   if (and(same, name_is)) {
     let read = property_get(item, "value");
     return read;

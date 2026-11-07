@@ -4,7 +4,7 @@ import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { number_is } from "./number_is.mjs";
 import { boolean_is } from "./boolean_is.mjs";
-import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 export function app_code_expression_values_number_boolean_is(item) {
@@ -19,7 +19,7 @@ export function app_code_expression_values_number_boolean_is(item) {
     return plain;
   }
   ("2026-10-17: a name is written as its name, so what is asked of it is the value it will be read as");
-  if (app_code_expression_name_is(item)) {
+  if (app_learn_js_expression_name_is(item)) {
     let value = property_get(item, "value");
     let named_plain = number_is(value) || boolean_is(value);
     return named_plain;
