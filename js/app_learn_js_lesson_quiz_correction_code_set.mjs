@@ -1,4 +1,4 @@
-import { app_code_lesson_quiz_correction_redraw } from "./app_code_lesson_quiz_correction_redraw.mjs";
+import { app_learn_js_lesson_quiz_correction_redraw } from "./app_learn_js_lesson_quiz_correction_redraw.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
 export function app_learn_js_lesson_quiz_correction_code_set(
   container_correction,
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_quiz_correction_code_set(
   "The correction is drawn again rather than drawn later, because the slot it sits in has to be as tall as the taller of the correction and the success message from the moment the question opens, or the screen jumps under the learner's finger when they ask. Drawn again, it keeps whatever visibility it already had - still hidden if the learner has not asked, and still up in front of them if they have.";
   function correction_code_set(code) {
     let qa2 = object_copy_property_set(qa, answer_property, code);
-    app_code_lesson_quiz_correction_redraw(
+    app_learn_js_lesson_quiz_correction_redraw(
       container_correction,
       correction_render,
       qa2,

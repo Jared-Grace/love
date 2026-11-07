@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
-export function app_code_lesson_quiz_correction_redraw(
+export function app_learn_js_lesson_quiz_correction_redraw(
   container_correction,
   correction_render,
   qa,
