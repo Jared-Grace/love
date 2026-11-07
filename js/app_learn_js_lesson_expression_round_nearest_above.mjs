@@ -1,5 +1,5 @@
 import { app_learn_js_first_decimal_digit_words } from "./app_learn_js_first_decimal_digit_words.mjs";
-import { app_code_lesson_expression_round_nearest_digit_card } from "./app_code_lesson_expression_round_nearest_digit_card.mjs";
+import { app_learn_js_lesson_expression_round_nearest_digit_card } from "./app_learn_js_lesson_expression_round_nearest_digit_card.mjs";
 import { text_decimal_combine } from "./text_decimal_combine.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -36,7 +36,7 @@ export function app_learn_js_lesson_expression_round_nearest_above(root) {
   let input = add(whole, 1);
   let whole_up = text_to(input);
   ("first question: which digit is it. Two numbers, two different first digits in two colours, and nothing about rounding yet - the digit is found before it is put to work");
-  app_code_lesson_expression_round_nearest_digit_card(
+  app_learn_js_lesson_expression_round_nearest_digit_card(
     root,
     whole_text,
     color_low,

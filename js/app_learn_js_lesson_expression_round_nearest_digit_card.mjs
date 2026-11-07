@@ -4,7 +4,7 @@ import { app_learn_js_first_decimal_digit_line } from "./app_learn_js_first_deci
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_expression_round_nearest_digit_card(
+export function app_learn_js_lesson_expression_round_nearest_digit_card(
   root,
   whole_text,
   color_low,
