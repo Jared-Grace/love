@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
-import { app_code_lesson_statement_name_temp } from "./app_code_lesson_statement_name_temp.mjs";
+import { app_learn_js_lesson_statement_name_temp } from "./app_learn_js_lesson_statement_name_temp.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { app_learn_js_lesson_statement_name_swap_backwards_decoys } from "./app_learn_js_lesson_statement_name_swap_backwards_decoys.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_temp_keep_step() {
   let names = app_code_lesson_statement_name_value_names();
   let name_a = list_first(names);
   let name_b = list_second(names);
-  let temp = app_code_lesson_statement_name_temp();
+  let temp = app_learn_js_lesson_statement_name_temp();
   let code = js_code_let_statement(temp, name_a);
   let code2 = js_code_assign_statement(name_a, name_b);
   let middle = [code, code2];

@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
-import { app_code_lesson_statement_name_temp } from "./app_code_lesson_statement_name_temp.mjs";
+import { app_learn_js_lesson_statement_name_temp } from "./app_learn_js_lesson_statement_name_temp.mjs";
 import { app_learn_js_lesson_statement_name_temp_keep_step } from "./app_learn_js_lesson_statement_name_temp_keep_step.mjs";
 import { app_learn_js_lesson_statement_name_swap_step } from "./app_learn_js_lesson_statement_name_swap_step.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_statement_name_swap() {
   let names = app_code_lesson_statement_name_value_names();
   let name_a = list_first(names);
   let name_b = list_second(names);
-  let temp = app_code_lesson_statement_name_temp();
+  let temp = app_learn_js_lesson_statement_name_temp();
   let before = app_learn_js_lesson_statement_name_temp_keep_step();
   let step = app_learn_js_lesson_statement_name_swap_step();
   let middle = property_get(step, "middle");
