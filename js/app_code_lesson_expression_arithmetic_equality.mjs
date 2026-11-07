@@ -5,7 +5,7 @@ import { app_code_label_value_backwards } from "./app_code_label_value_backwards
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_arithmetic_to_value } from "./app_code_arithmetic_to_value.mjs";
+import { app_learn_js_arithmetic_to_value } from "./app_learn_js_arithmetic_to_value.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -18,10 +18,10 @@ export function app_code_lesson_expression_arithmetic_equality() {
   function true_case() {
     "two different-looking arithmetic expressions of the SAME value, so === is true; a second try if the two happen to come out identical";
     let value = integer_random(2, 9);
-    let left = app_code_arithmetic_to_value(value);
-    let right = app_code_arithmetic_to_value(value);
+    let left = app_learn_js_arithmetic_to_value(value);
+    let right = app_learn_js_arithmetic_to_value(value);
     let same = equal(left.code, right.code);
-    let right_retry = app_code_arithmetic_to_value(value);
+    let right_retry = app_learn_js_arithmetic_to_value(value);
     let right_final = ternary(same, right_retry, right);
     let example = app_code_lesson_expression_arithmetic_equality_example(
       left,
@@ -34,8 +34,8 @@ export function app_code_lesson_expression_arithmetic_equality() {
     let value = integer_random(2, 8);
     let bump = integer_random(1, 3);
     let value_other = add(value, bump);
-    let left = app_code_arithmetic_to_value(value);
-    let right = app_code_arithmetic_to_value(value_other);
+    let left = app_learn_js_arithmetic_to_value(value);
+    let right = app_learn_js_arithmetic_to_value(value_other);
     let example = app_code_lesson_expression_arithmetic_equality_example(
       left,
       right,
