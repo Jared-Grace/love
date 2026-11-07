@@ -5,7 +5,7 @@ import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz
 import { app_learn_js_lesson_above } from "./app_learn_js_lesson_above.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
-import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
+import { app_learn_js_lesson_quiz_show_correction } from "./app_learn_js_lesson_quiz_show_correction.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_review_exercise_excuse } from "./app_code_review_exercise_excuse.mjs";
 import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
@@ -63,7 +63,7 @@ export function app_code_review_exercise(
     app_learn_js_label_text_set(answer_label_div, said);
   }
   async function on_reveal() {
-    await app_code_lesson_quiz_show_correction(container_correction);
+    await app_learn_js_lesson_quiz_show_correction(container_correction);
   }
   let answers_div = html_div(a_container);
   ("a miss adds added_count more of this quiz to the review, and the learner may say it was a slip and keep them out; added_count is 0 where nothing is added, and then nothing is offered");

@@ -4,7 +4,7 @@ import { app_shared_animation_duration } from "./app_shared_animation_duration.m
 import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
-export async function app_code_lesson_quiz_show_correction(
+export async function app_learn_js_lesson_quiz_show_correction(
   container_correction,
 ) {
   arguments_assert(arguments, 1);

@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_advance_or_no_more } from "./app_learn_js_advance_or_no_more.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
+import { app_learn_js_lesson_quiz_show_correction } from "./app_learn_js_lesson_quiz_show_correction.mjs";
 export function app_learn_js_lesson_quiz_on_reveal(r4) {
   arguments_assert(arguments, 1);
   let answer_property = property_get(r4, "answer_property");
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_quiz_on_reveal(r4) {
   async function on_reveal() {
     "for a learner who is stuck: reveal the correction (the code and its output) so they can see the answer, then continue with Next; wrong attempts alone no longer reveal it";
     html_visibility_hidden(container_success_message);
-    await app_code_lesson_quiz_show_correction(container_correction);
+    await app_learn_js_lesson_quiz_show_correction(container_correction);
   }
   let r = {
     answer_property,
