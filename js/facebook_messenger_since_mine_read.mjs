@@ -1,8 +1,9 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { facebook_page_open } from "./facebook_page_open.mjs";
 import { sleep_human_pace } from "./sleep_human_pace.mjs";
+import { facebook_messenger_row_open } from "./facebook_messenger_row_open.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { facebook_messenger_messages } from "./facebook_messenger_messages.mjs";
 import { messenger_since_mine } from "./messenger_since_mine.mjs";
 export async function facebook_messenger_since_mine_read(url) {
@@ -11,25 +12,40 @@ export async function facebook_messenger_since_mine_read(url) {
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   "★ AN OPEN DIALOG STOPS IT: on 2026-11-07 a 'restore your chats' PIN box covered a conversation. Nothing behind a dialog is read, and it answers dialog: true.";
   "★ THE TOP IS WHERE SCROLLING STOPS ADDING MESSAGES, three times running - the page has no other sign that it has nothing older.";
-  let o = await facebook_page_open(url);
+  let id = url.match(/\/t\/(\d+)/)[1];
+  let o = await facebook_page_open("https://www.facebook.com/messages/");
   let page = o.page;
   try {
     await sleep_human_pace();
+    let clicked = await facebook_messenger_row_open(page, id);
+    if (!clicked) {
+      let r5 = {
+        url,
+        dialog: false,
+        loaded: false,
+        mine_seen: false,
+        top: false,
+        messages: [],
+      };
+      return r5;
+    }
+    await sleep_human_pace();
+    ("★ THE NOTIFICATIONS PANEL IS ALWAYS A DIALOG on this page, open or not - it never covers the chat, so it is not counted.");
     let dialogs = await page.evaluate(
-      "Array.from(document.querySelectorAll('[role=dialog]')).map(function(d){var h=d.querySelector('h1,h2,h3,[role=heading]');return (d.getAttribute('aria-label')||'')+' | '+(h?h.textContent:'')})",
+      "Array.from(document.querySelectorAll('[role=dialog]')).filter(function(d){return d.getAttribute('aria-label')!=='Notifications'}).map(function(d){var h=d.querySelector('h1,h2,h3,[role=heading]');return (d.getAttribute('aria-label')||'')+' | '+(h?h.textContent:'')})",
     );
     if (dialogs.length > 0) {
+      let name = text_combine_multiple([
+        fn_name("facebook_messenger_since_mine_read"),
+        ".png",
+      ]);
       await page.screenshot({
-        path: folder_gitignore_join(
-          text_combine_multiple([
-            fn_name("facebook_messenger_since_mine_read"),
-            ".png",
-          ]),
-        ),
+        path: folder_gitignore_join(name),
       });
       let r2 = {
         url,
         dialog: dialogs,
+        loaded: false,
         mine_seen: false,
         top: false,
         messages: [],
@@ -74,6 +90,7 @@ export async function facebook_messenger_since_mine_read(url) {
     let r = {
       url,
       dialog: false,
+      loaded: messages.length > 0,
       mine_seen,
       top,
       messages: messenger_since_mine(messages),

@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { facebook_messenger_since_mine_read } from "./facebook_messenger_since_mine_read.mjs";
 import { folder_private_path } from "./folder_private_path.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function facebook_messenger_since_mine_save(url) {
   "$plain url";
@@ -20,6 +20,7 @@ export async function facebook_messenger_since_mine_save(url) {
     url,
     read_at: new Date().toISOString(),
     dialog: r.dialog,
+    loaded: r.loaded,
     mine_seen: r.mine_seen,
     top: r.top,
     messages: r.messages,
@@ -29,6 +30,7 @@ export async function facebook_messenger_since_mine_save(url) {
     url,
     file,
     dialog: r.dialog,
+    loaded: r.loaded,
     mine_seen: r.mine_seen,
     top: r.top,
     count: r.messages.length,
