@@ -2,7 +2,7 @@ import { app_learn_js_expression_choose_line_draw } from "./app_learn_js_express
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
-export function app_code_expression_choose_line(
+export function app_learn_js_expression_choose_line(
   parent,
   tree,
   on_change,

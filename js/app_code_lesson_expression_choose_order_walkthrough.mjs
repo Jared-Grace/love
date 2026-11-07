@@ -3,7 +3,7 @@ import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_co
 import { app_code_expression_step_say } from "./app_code_expression_step_say.mjs";
 import { app_code_expression_choose_say } from "./app_code_expression_choose_say.mjs";
 import { app_code_lesson_expression_choose_order_wrong_say } from "./app_code_lesson_expression_choose_order_wrong_say.mjs";
-import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
+import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -67,7 +67,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     }
     head_said(change);
   }
-  app_code_expression_choose_line(
+  app_learn_js_expression_choose_line(
     line_holder,
     tree,
     on_change,

@@ -8,7 +8,7 @@ import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
 import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
 import { app_code_label_solve_choice } from "./app_code_label_solve_choice.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
-import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
+import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
 export function app_code_expression_choose_order_ask({
   parent,
   tree,
@@ -62,7 +62,7 @@ export function app_code_expression_choose_order_ask({
     ("2026-10-23, at the human's asking: once the right value is pressed, whoever asked may show where it came from before the line writes it in, as a program stepped through sends a name's value down from its note; a page with nothing to show hands in a function that does nothing");
     await value_arrive(node, node_span);
   }
-  app_code_expression_choose_line(
+  app_learn_js_expression_choose_line(
     line_holder,
     tree,
     on_change,
