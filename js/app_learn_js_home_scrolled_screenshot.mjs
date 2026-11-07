@@ -2,7 +2,7 @@ import { app_code_lesson_first_id } from "./app_code_lesson_first_id.mjs";
 import { app_code_progress_storage_key } from "./app_code_progress_storage_key.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
-export async function app_code_home_scrolled_screenshot(
+export async function app_learn_js_home_scrolled_screenshot(
   f_path,
   width,
   height,
