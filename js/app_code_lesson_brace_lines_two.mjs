@@ -1,7 +1,7 @@
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_braces_two_ifs } from "./app_code_braces_two_ifs.mjs";
 import { app_learn_js_brace_lines_example } from "./app_learn_js_brace_lines_example.mjs";
-import { app_code_braces_two_if_else } from "./app_code_braces_two_if_else.mjs";
+import { app_learn_js_braces_two_if_else } from "./app_learn_js_braces_two_if_else.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -42,8 +42,8 @@ export function app_code_lesson_brace_lines_two() {
     "two ifs one after the other, and an if and its else, each twice";
     let code2 = app_code_braces_two_ifs();
     let code3 = app_code_braces_two_ifs();
-    let code4 = app_code_braces_two_if_else();
-    let code5 = app_code_braces_two_if_else();
+    let code4 = app_learn_js_braces_two_if_else();
+    let code5 = app_learn_js_braces_two_if_else();
     let codes = [code2, code3, code4, code5];
     return codes;
   }
