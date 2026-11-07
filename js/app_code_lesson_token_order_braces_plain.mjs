@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_braces_two_batch } from "./app_code_braces_two_batch.mjs";
+import { app_learn_js_braces_two_batch } from "./app_learn_js_braces_two_batch.mjs";
 import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_token_order_braces_plain() {
   ("Rejected 2026-10-11: a lesson between the two with the code coloured and the braces written plain. The order of the braces comes from reading alone, and which brace pairs with which does not change it, so colours on the code could only have shown where the braces stand, which in a program with two pairs is the end of a line.");
   ("The writing is a first draft by Claude 2026-10-11.");
   let batch = app_learn_js_batch_question_answer_fns(
-    app_code_braces_two_batch,
+    app_learn_js_braces_two_batch,
     app_learn_js_braces_sequence,
   );
   let name_id = app_code_lesson_statement_title_name_id(
