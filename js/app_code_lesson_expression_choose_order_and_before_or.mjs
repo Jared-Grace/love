@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_title_name_id } from "./app_code_lesson_expression_choose_order_and_before_or_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_questions } from "./app_code_lesson_expression_choose_order_and_before_or_questions.mjs";
 import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
-import { app_code_lesson_expression_choose_order_and_before_or_above } from "./app_code_lesson_expression_choose_order_and_before_or_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_and_before_or_above } from "./app_learn_js_lesson_expression_choose_order_and_before_or_above.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or() {
   arguments_assert(arguments, 0);
   ("both && and || in the one line, taken a press at a time: false && true || true, choose the && , choose what it comes to, then choose the || and what that comes to");
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_and_before_or() {
   let bank = app_code_lesson_expression_choose_order_and_before_or_questions();
   let lesson = app_code_lesson_expression_choose_order_boolean_generic(
     name_id,
-    app_code_lesson_expression_choose_order_and_before_or_above,
+    app_learn_js_lesson_expression_choose_order_and_before_or_above,
     bank,
   );
   return lesson;

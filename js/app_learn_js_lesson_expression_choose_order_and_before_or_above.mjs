@@ -7,7 +7,7 @@ import { app_code_lesson_expression_choose_order_and_before_or_either_side } fro
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_recall } from "./app_code_lesson_expression_choose_order_and_before_or_recall.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_intro } from "./app_code_lesson_expression_choose_order_and_before_or_intro.mjs";
-export function app_code_lesson_expression_choose_order_and_before_or_above(
+export function app_learn_js_lesson_expression_choose_order_and_before_or_above(
   root,
   context,
 ) {
