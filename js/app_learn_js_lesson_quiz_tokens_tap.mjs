@@ -43,7 +43,7 @@ import { app_learn_js_expression_chosen_style_assign } from "./app_learn_js_expr
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { each_index } from "./each_index.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
-export function app_code_lesson_quiz_tokens_tap({
+export function app_learn_js_lesson_quiz_tokens_tap({
   parent,
   qa,
   on_success,

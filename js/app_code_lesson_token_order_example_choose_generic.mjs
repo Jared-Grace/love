@@ -1,7 +1,7 @@
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_quiz_tokens_order } from "./app_code_quiz_tokens_order.mjs";
-import { app_code_lesson_quiz_tokens_tap } from "./app_code_lesson_quiz_tokens_tap.mjs";
+import { app_learn_js_lesson_quiz_tokens_tap } from "./app_learn_js_lesson_quiz_tokens_tap.mjs";
 import { noop } from "./noop.mjs";
 export function app_code_lesson_token_order_example_choose_generic(
   component,
@@ -23,7 +23,7 @@ export function app_code_lesson_token_order_example_choose_generic(
     "the same praise a worked example in lesson 41 ends with, as the human asked 2026-10-10";
     app_shared_success_message(component);
   }
-  app_code_lesson_quiz_tokens_tap({
+  app_learn_js_lesson_quiz_tokens_tap({
     parent: component,
     qa,
     on_success: finished,
