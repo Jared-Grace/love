@@ -4,7 +4,7 @@ import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_learn_js_flex_gap } from "./app_learn_js_flex_gap.mjs";
 import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_base(
+export function app_learn_js_lesson_base(
   name_id,
   above,
   example_count,

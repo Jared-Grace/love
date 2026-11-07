@@ -1,8 +1,8 @@
+import { text_lord_bless_always } from "./text_lord_bless_always.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_lord_bless } from "./text_lord_bless.mjs";
 import { prayer_wrap } from "./prayer_wrap.mjs";
 export function prayer_blessing(blessed) {
-  let v2 = text_lord_bless();
+  let v2 = text_lord_bless_always();
   let prayer = text_combine_multiple([
     v2,
     blessed,
