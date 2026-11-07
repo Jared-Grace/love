@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_parentheses_plus_minus_inside_words } from "./app_code_parentheses_plus_minus_inside_words.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: solving a line with a + or a - inside ( and ) a part at a time, an Expressions lesson");
@@ -12,6 +12,6 @@ export function app_learn_js_lesson_expression_choose_order_arithmetic_parenthes
     app_learn_js_cycle_code(parent, words);
   }
   let left = app_learn_js_category_expressions();
-  let built = app_code_lesson_name_id_category_then(left, paint);
+  let built = app_learn_js_lesson_name_id_category_then(left, paint);
   return built;
 }

@@ -1,7 +1,7 @@
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { html_span_text_multiple } from "./html_span_text_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
@@ -22,6 +22,6 @@ export function app_code_lesson_name_id_function(left, rights) {
     html_span_text(parent, space);
     html_span_text_multiple(parent, remaining);
   };
-  let name_id = app_code_lesson_name_id_category_then(left, paint);
+  let name_id = app_learn_js_lesson_name_id_category_then(left, paint);
   return name_id;
 }

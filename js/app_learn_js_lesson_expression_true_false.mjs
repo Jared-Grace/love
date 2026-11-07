@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_expression_true_false() {
       let text2 = js_keyword_false();
       html_span_text_code_dark(parent, text2);
     }
-    let built = app_code_lesson_name_id_category_then("values", paint);
+    let built = app_learn_js_lesson_name_id_category_then("values", paint);
     return built;
   }
   function above(root) {

@@ -1,4 +1,4 @@
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -27,6 +27,6 @@ export function app_learn_js_lesson_expression_parentheses_minus_divide_title_na
   }
   ("the words here become the lesson's id, which is both what its link says after #lesson= and the word a learner's finished-quizzes are filed under. It used to say same strength, from back when the lesson was taught as - and / being the same strength as + and *; the lesson has called itself ( and ) after - or / for a while now, and an id saying something the lesson no longer says is a name that lies to whoever reads a link.");
   let left = app_learn_js_category_expressions();
-  let built = app_code_lesson_name_id_category_then(left, paint);
+  let built = app_learn_js_lesson_name_id_category_then(left, paint);
   return built;
 }

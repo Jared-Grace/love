@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_in_between_range_code } from "./app_learn_js_lesson_expression_in_between_range_code.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 export function app_learn_js_lesson_expression_in_between_title_name_id() {
@@ -14,6 +14,6 @@ export function app_learn_js_lesson_expression_in_between_title_name_id() {
     app_learn_js_cycle_code(parent, ["In between ", code]);
   }
   let left = app_learn_js_category_expressions();
-  let built = app_code_lesson_name_id_category_then(left, paint);
+  let built = app_learn_js_lesson_name_id_category_then(left, paint);
   return built;
 }

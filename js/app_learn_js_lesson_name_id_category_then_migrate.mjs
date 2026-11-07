@@ -22,7 +22,7 @@ export async function app_learn_js_lesson_name_id_category_then_migrate() {
   let names = object_property_names(callers);
   let work = list_without(
     names,
-    fn_name("app_code_lesson_name_id_category_then"),
+    fn_name("app_learn_js_lesson_name_id_category_then"),
   );
   let migrated = [];
   let passed_over = [];

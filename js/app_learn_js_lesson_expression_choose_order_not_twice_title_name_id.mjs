@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_twice_title_name_id() {
   "the home title: solve ! around another ! , an Expressions lesson";
   "The mark is painted twice, with the words around it saying which is which, the same way the lesson that reads it does. The three ! lessons of this run are one frame with the thing inside changed - ! around another !, ! around a comparison, ! around && or || - and they sit near each other on the home list, which is exactly where that difference has to read.";
@@ -18,6 +18,6 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_title_name
     ]);
   }
   let left = app_learn_js_category_expressions();
-  let built = app_code_lesson_name_id_category_then(left, paint);
+  let built = app_learn_js_lesson_name_id_category_then(left, paint);
   return built;
 }

@@ -1,4 +1,4 @@
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 export function app_learn_js_lesson_expression_equal_number_string_true_false_title_name_id() {
@@ -7,6 +7,6 @@ export function app_learn_js_lesson_expression_equal_number_string_true_false_ti
     app_learn_js_cycle_code(parent, ["", '"1" === 1']);
   }
   let left = app_learn_js_category_expressions();
-  let built = app_code_lesson_name_id_category_then(left, paint);
+  let built = app_learn_js_lesson_name_id_category_then(left, paint);
   return built;
 }

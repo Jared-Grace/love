@@ -2,7 +2,7 @@ import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 export function app_learn_js_lesson_expression_which_part_first_title_name_id() {
@@ -17,6 +17,6 @@ export function app_learn_js_lesson_expression_which_part_first_title_name_id() 
     app_learn_js_cycle_code(parent, ["", strong_said, " before ", weak_said]);
   }
   let left = app_learn_js_category_expressions();
-  let built = app_code_lesson_name_id_category_then(left, paint);
+  let built = app_learn_js_lesson_name_id_category_then(left, paint);
   return built;
 }

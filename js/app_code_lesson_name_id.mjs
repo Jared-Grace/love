@@ -1,4 +1,4 @@
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { app_code_lesson_name_id_remaining } from "./app_code_lesson_name_id_remaining.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,6 +13,6 @@ export function app_code_lesson_name_id(left, rights) {
     html_span_text(parent, first_upper);
     app_code_lesson_name_id_remaining(parent, remaining);
   };
-  let name_id = app_code_lesson_name_id_category_then(left, paint);
+  let name_id = app_learn_js_lesson_name_id_category_then(left, paint);
   return name_id;
 }

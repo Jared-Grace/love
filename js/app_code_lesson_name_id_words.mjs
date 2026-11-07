@@ -1,4 +1,4 @@
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_multiple } from "./html_span_text_multiple.mjs";
 import { list_map } from "./list_map.mjs";
@@ -17,6 +17,6 @@ export function app_code_lesson_name_id_words(left, rights) {
     html_span_text(parent, first_upper);
     html_span_text_multiple(parent, remaining);
   }
-  let name_id = app_code_lesson_name_id_category_then(left, paint);
+  let name_id = app_learn_js_lesson_name_id_category_then(left, paint);
   return name_id;
 }

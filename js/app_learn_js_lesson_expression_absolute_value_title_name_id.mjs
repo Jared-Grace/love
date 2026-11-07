@@ -1,4 +1,4 @@
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -9,6 +9,6 @@ export function app_learn_js_lesson_expression_absolute_value_title_name_id() {
     html_span_text(parent, "Absolute value ");
     html_span_text_code_dark(parent, "Math.abs");
   }
-  let built = app_code_lesson_name_id_category_then("functions", paint);
+  let built = app_learn_js_lesson_name_id_category_then("functions", paint);
   return built;
 }

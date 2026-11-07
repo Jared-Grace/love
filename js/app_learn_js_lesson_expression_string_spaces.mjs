@@ -8,7 +8,7 @@ import { app_code_verse_word_pairs } from "./app_code_verse_word_pairs.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_string_shape } from "./app_code_string_shape.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -54,7 +54,7 @@ export function app_learn_js_lesson_expression_string_spaces() {
       app_code_string_shape(parent, 2);
     }
     let left = app_learn_js_category_expressions();
-    let built = app_code_lesson_name_id_category_then(left, paint);
+    let built = app_learn_js_lesson_name_id_category_then(left, paint);
     return built;
   }
   function above(root) {

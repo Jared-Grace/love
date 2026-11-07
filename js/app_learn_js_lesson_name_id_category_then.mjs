@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-export function app_code_lesson_name_id_category_then(left, paint) {
+export function app_learn_js_lesson_name_id_category_then(left, paint) {
   arguments_assert(arguments, 2);
   ("A lesson name whose home title is whatever paint draws; the category word is taken and no longer drawn, see below.");
   ("Fifty lessons were each writing the same three-deep nest to say that: a title maker returning a painter, whose first line writes the category. Only the lines after that first one ever differed, so only those are asked for here, as paint.");

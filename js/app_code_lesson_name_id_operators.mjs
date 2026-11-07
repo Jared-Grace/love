@@ -1,4 +1,4 @@
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_category_operators } from "./app_learn_js_category_operators.mjs";
 export function app_code_lesson_name_id_operators(paint) {
@@ -8,6 +8,6 @@ export function app_code_lesson_name_id_operators(paint) {
   ("The word is received on its own rather than as a list, because every caller has exactly one and each was writing the parentheses itself.");
   ("What the drawing is has moved down a level: it was once a maker handing back a painter, and it is now the painter itself, with the category word written for it before it is asked for anything.");
   let left = app_learn_js_category_operators();
-  let built = app_code_lesson_name_id_category_then(left, paint);
+  let built = app_learn_js_lesson_name_id_category_then(left, paint);
   return built;
 }

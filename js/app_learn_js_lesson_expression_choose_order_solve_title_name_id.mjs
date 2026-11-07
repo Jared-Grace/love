@@ -3,7 +3,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 export function app_learn_js_lesson_expression_choose_order_solve_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: Solve * before +, an Expressions lesson where the order is chosen and each value is worked out by the learner");
@@ -14,6 +14,6 @@ export function app_learn_js_lesson_expression_choose_order_solve_title_name_id(
     app_learn_js_cycle_code(parent, ["Solve ", times, " before ", plus]);
   }
   let left = app_learn_js_category_expressions();
-  let built = app_code_lesson_name_id_category_then(left, paint);
+  let built = app_learn_js_lesson_name_id_category_then(left, paint);
   return built;
 }
