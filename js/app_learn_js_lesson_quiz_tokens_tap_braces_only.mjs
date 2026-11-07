@@ -1,6 +1,6 @@
 import { app_code_tokens_rows_braces } from "./app_code_tokens_rows_braces.mjs";
 import { app_code_lesson_quiz_tokens_tap } from "./app_code_lesson_quiz_tokens_tap.mjs";
-export function app_code_lesson_quiz_tokens_tap_braces_only(
+export function app_learn_js_lesson_quiz_tokens_tap_braces_only(
   answers_div,
   info,
   qa,
