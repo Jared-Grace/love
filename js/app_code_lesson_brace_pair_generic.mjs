@@ -17,7 +17,7 @@ import { integer_is_assert } from "./integer_is_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_code_dark_lines_brace_marked } from "./app_code_code_dark_lines_brace_marked.mjs";
+import { app_learn_js_code_dark_lines_brace_marked } from "./app_learn_js_code_dark_lines_brace_marked.mjs";
 import { app_learn_js_brace_pair_wrong_say } from "./app_learn_js_brace_pair_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -95,7 +95,7 @@ export function app_code_lesson_brace_pair_generic(
     let once = list_unique(found);
     return once;
   }
-  let painter = app_code_code_dark_lines_brace_marked;
+  let painter = app_learn_js_code_dark_lines_brace_marked;
   let question_label = "Code:";
   let answer_label = "Which brace pairs with the one pointed at?";
   let forwards = {

@@ -10,7 +10,7 @@ import { equal } from "./equal.mjs";
 import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_span_text_code_highlight } from "./app_code_span_text_code_highlight.mjs";
-export function app_code_code_dark_lines_brace_marked(component, text) {
+export function app_learn_js_code_dark_lines_brace_marked(component, text) {
   "code standing on more than one line, written into a code chip with the one brace the text points at drawn on the highlight colour";
   "The count of arguments is deliberately not asserted, because this stands in the slot a lesson paints its code with, and that slot is called with three arguments by the worked example and with two by the quiz - the same reason the plain multi-line writer has never asserted either.";
   "The brace is drawn on the colour a pointed-at piece of code always wears, so it reads as the one to look at; the signs that mark it in the text are not drawn at all.";
