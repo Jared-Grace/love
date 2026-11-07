@@ -16,7 +16,7 @@ import { list_to_text_or_list } from "./list_to_text_or_list.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-export function app_code_lesson_identifiers_letters_spaces() {
+export function app_learn_js_lesson_identifiers_letters_spaces() {
   function lambda(root) {
     let c = app_learn_js_container_light_blue(root);
     let lp = languages_popular();

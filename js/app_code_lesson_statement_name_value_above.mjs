@@ -4,7 +4,7 @@ import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_sta
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
+import { app_learn_js_lesson_identifiers_letters_spaces } from "./app_learn_js_lesson_identifiers_letters_spaces.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_statement_name_value_above(root, context) {
   app_code_remember_from_lesson(
     box_remember,
     context,
-    app_code_lesson_identifiers_letters_spaces,
+    app_learn_js_lesson_identifiers_letters_spaces,
     ["in JS, identifiers are used as names"],
   );
   let box_cup = app_learn_js_container_light_blue(root);
