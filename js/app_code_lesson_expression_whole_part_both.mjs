@@ -13,7 +13,7 @@ import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.m
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_lesson_expression_whole_part_both_title_name_id } from "./app_code_lesson_expression_whole_part_both_title_name_id.mjs";
+import { app_learn_js_lesson_expression_whole_part_both_title_name_id } from "./app_learn_js_lesson_expression_whole_part_both_title_name_id.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_learn_js_lesson_expression_whole_part_both_above } from "./app_learn_js_lesson_expression_whole_part_both_above.mjs";
 export function app_code_lesson_expression_whole_part_both() {
@@ -112,7 +112,7 @@ export function app_code_lesson_expression_whole_part_both() {
     };
     return quizzes_exercises;
   }
-  let name_id = app_code_lesson_expression_whole_part_both_title_name_id();
+  let name_id = app_learn_js_lesson_expression_whole_part_both_title_name_id();
   let lesson = app_learn_js_lesson_base(
     name_id,
     above,
