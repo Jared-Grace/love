@@ -5,7 +5,7 @@ import { html_div } from "./html_div.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
-import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
+import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { app_code_label_text } from "./app_code_label_text.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -66,7 +66,7 @@ export function app_code_lesson_quiz_tokens_tap({
   html_style_code_dark(div);
   html_style_white_space(div, "pre-wrap");
   html_text_align_left(div);
-  let colors = app_code_braces_colors_next(code);
+  let colors = app_learn_js_braces_colors_next(code);
   let lines = [];
   function line_add(row) {
     "a labelled line under the code, empty until a token it keeps is chosen";

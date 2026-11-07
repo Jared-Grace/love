@@ -2,7 +2,7 @@ import { app_code_label_text } from "./app_code_label_text.mjs";
 import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
+import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -47,7 +47,7 @@ export function app_code_lesson_quiz_braces_order_colored(
   let code = property_get(qa, "question");
   let sequence = property_get(qa, "answer");
   correction_code_set(sequence);
-  let colors = app_code_braces_colors_next(code);
+  let colors = app_learn_js_braces_colors_next(code);
   let code_div = html_div(parent);
   app_code_code_dark_lines_braces_paired_colors(code_div, code, colors);
   app_code_label_text(parent, "Its braces:");

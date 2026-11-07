@@ -3,7 +3,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
+import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_quiz_braces_order_generic({
   let variations = [tokens];
   let chosen = [];
   ("the colours are put in a random order once for the question, so a brace keeps the colour it was given while more are tapped after it; and the answer to show is said once, because there is only one");
-  let colors = app_code_braces_colors_next(sequence);
+  let colors = app_learn_js_braces_colors_next(sequence);
   correction_code_set(sequence);
   let buttons = [];
   let pieces = {

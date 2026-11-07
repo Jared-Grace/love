@@ -6,7 +6,7 @@ import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
+import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
 import { app_code_braces_pair_color } from "./app_code_braces_pair_color.mjs";
 import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
@@ -65,7 +65,7 @@ export function app_code_lesson_brace_pair() {
     let list = list_concat(nested, if_c);
     let paired_code = list_join_newline(list);
     let paired_div = html_div(box_paired);
-    let colors = app_code_braces_colors_next(paired_code);
+    let colors = app_learn_js_braces_colors_next(paired_code);
     app_code_code_dark_lines_braces_paired_colors(
       paired_div,
       paired_code,

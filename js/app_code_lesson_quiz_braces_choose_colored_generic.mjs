@@ -1,7 +1,7 @@
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { list_permutations } from "./list_permutations.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
+import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_quiz_braces_choose_colored_generic(
   "Forwards (backwards false) shows the code and offers braces; backwards shows the braces and offers code. Backwards, a choice whose braces and colours are exactly the question's is a second right answer, as an if and its else is beside two ifs, so it is never drawn.";
   let code = property_get(qa, "question");
   let sequence = property_get(qa, "answer");
-  let colors = app_code_braces_colors_next(code);
+  let colors = app_learn_js_braces_colors_next(code);
   ("every way of giving out the same colours to the pairs: with two pairs the colours as drawn and swapped, with three pairs six ways");
   let colorings = list_permutations(colors);
   let question_div = html_div(parent);

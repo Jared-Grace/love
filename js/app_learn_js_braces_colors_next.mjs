@@ -12,7 +12,7 @@ import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_remove_first } from "./list_remove_first.mjs";
-export function app_code_braces_colors_next(code) {
+export function app_learn_js_braces_colors_next(code) {
   arguments_assert(arguments, 1);
   ("the colours for the pairs of braces in code, one for each pair in the order the pairs open, taken from the one bag the whole app draws from: every colour is used once, in a random order, before any is used again, as the human asked 2026-10-11, so one program after another does not keep opening on the same colour");
   ("The bag is shuffled again each time it runs out. A colour this drawing already took is moved to the end of the new round, so two pairs of one program never wear the same colour, and the round still holds every colour once.");

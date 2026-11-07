@@ -3,7 +3,7 @@ import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
 import { equal } from "./equal.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { not } from "./not.mjs";
-import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
+import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
@@ -17,7 +17,7 @@ export function app_code_braces_painter_shared() {
     let line = equal(code, order);
     let missing = property_exists_not(colors_by_order, order);
     if (not(line) || missing) {
-      let drawn = app_code_braces_colors_next(code);
+      let drawn = app_learn_js_braces_colors_next(code);
       property_set(colors_by_order, order, drawn);
     }
     let colors = property_get(colors_by_order, order);
