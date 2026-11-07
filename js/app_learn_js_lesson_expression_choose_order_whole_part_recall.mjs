@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_whole_part_formula } from "./app_code_lesson_expression_whole_part_formula.mjs";
+import { app_learn_js_lesson_expression_whole_part_formula } from "./app_learn_js_lesson_expression_whole_part_formula.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_division_formula_recall_words } from "./app_learn_js_division_formula_recall_words.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_expression_choose_order_whole_part_recall(
   app_code_remember_from_lesson(
     recall_card,
     context,
-    app_code_lesson_expression_whole_part_formula,
+    app_learn_js_lesson_expression_whole_part_formula,
     words,
   );
 }

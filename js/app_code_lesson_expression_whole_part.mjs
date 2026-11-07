@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_whole_part_formula } from "./app_code_lesson_expression_whole_part_formula.mjs";
+import { app_learn_js_lesson_expression_whole_part_formula } from "./app_learn_js_lesson_expression_whole_part_formula.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_expression_whole_part() {
     app_code_remember_from_lesson(
       recall,
       context,
-      app_code_lesson_expression_whole_part_formula,
+      app_learn_js_lesson_expression_whole_part_formula,
       ["the whole part of ", "14 / 4", " is ", "Math.floor(14 / 4) * 4"],
     );
     let evaluating = app_learn_js_container_light_blue(root);

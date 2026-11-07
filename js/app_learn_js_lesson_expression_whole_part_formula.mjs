@@ -14,7 +14,7 @@ import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_lesson_expression_whole_part_formula_title_name_id } from "./app_learn_js_lesson_expression_whole_part_formula_title_name_id.mjs";
 import { app_learn_js_lesson_expression_whole_part_formula_above } from "./app_learn_js_lesson_expression_whole_part_formula_above.mjs";
-export function app_code_lesson_expression_whole_part_formula() {
+export function app_learn_js_lesson_expression_whole_part_formula() {
   "the FIRST of the three whole-part lessons: LEARN THE EQUATION a / b => Math.floor(a / b) * b (rewrite a division into its whole-part formula). The learner builds the formula from tokens given the division, so they produce the rewrite themselves rather than just recognising it. The next lesson evaluates the formula, and the one after does both. Uses the shared divisor/quotient batch so a quotient-0 division can appear";
   function make(divisor, quotient) {
     "given a / b, the answer to BUILD is the whole-part formula Math.floor(a / b) * b; the dividend is quotient*divisor + a leftover so the division is uneven";
