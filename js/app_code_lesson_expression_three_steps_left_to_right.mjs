@@ -1,5 +1,5 @@
 import { app_code_lesson_same_draw } from "./app_code_lesson_same_draw.mjs";
-import { app_code_lesson_expression_choose_order_same_strength } from "./app_code_lesson_expression_choose_order_same_strength.mjs";
+import { app_learn_js_lesson_expression_choose_order_same_strength } from "./app_learn_js_lesson_expression_choose_order_same_strength.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength_operator_count } from "./app_learn_js_lesson_expression_choose_order_same_strength_operator_count.mjs";
 import { app_learn_js_expression_flat_random_same_strength } from "./app_learn_js_expression_flat_random_same_strength.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_expression_three_steps_left_to_right() {
       root,
       context,
       app_code_lesson_expression_three_steps_left_to_right,
-      app_code_lesson_expression_choose_order_same_strength,
+      app_learn_js_lesson_expression_choose_order_same_strength,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
     app_learn_js_lesson_expression_choose_order_same_strength_above(
