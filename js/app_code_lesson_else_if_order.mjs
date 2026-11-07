@@ -18,7 +18,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_cases_logged } from "./app_code_lesson_cases_logged.mjs";
+import { app_learn_js_lesson_cases_logged } from "./app_learn_js_lesson_cases_logged.mjs";
 export function app_code_lesson_else_if_order() {
   arguments_assert(arguments, 0);
   ('else if with comparisons: let n = 5; if (n < 10) { console.log("love"); } else if (n < 100) { console.log("joy"); } else { console.log("peace"); } console.log("patience"); writes out love and patience, though n < 100 is true too');
@@ -188,7 +188,7 @@ export function app_code_lesson_else_if_order() {
     "Else if in order",
     "else if (n < 100)",
   );
-  let lesson = app_code_lesson_cases_logged({
+  let lesson = app_learn_js_lesson_cases_logged({
     fruits,
     cases_get,
     program_lines,

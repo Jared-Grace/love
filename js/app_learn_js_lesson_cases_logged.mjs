@@ -15,7 +15,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_cases_logged({
+export function app_learn_js_lesson_cases_logged({
   fruits,
   cases_get,
   program_lines,
