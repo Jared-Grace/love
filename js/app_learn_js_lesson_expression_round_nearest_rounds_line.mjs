@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_expression_round_nearest_rounds_line(
+export function app_learn_js_lesson_expression_round_nearest_rounds_line(
   fraction_text,
   middle_text,
   result_text,

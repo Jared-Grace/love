@@ -16,7 +16,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
-import { app_code_lesson_expression_round_nearest_rounds_line } from "./app_code_lesson_expression_round_nearest_rounds_line.mjs";
+import { app_learn_js_lesson_expression_round_nearest_rounds_line } from "./app_learn_js_lesson_expression_round_nearest_rounds_line.mjs";
 export function app_learn_js_lesson_expression_round_nearest_above(root) {
   arguments_assert(arguments, 1);
   ("TWO QUESTIONS, ASKED IN ORDER, each with its answer under it. First: what is the first digit after the decimal point? Second: what does Math.round do with it? The whole screen is those two and nothing else, and a learner can say where they are on it at any point by which question they are under.");
@@ -52,7 +52,7 @@ export function app_learn_js_lesson_expression_round_nearest_above(root) {
   );
   let v = app_learn_js_lesson_expression_round_nearest_round_code(low_decimal);
   app_learn_js_div_cycle_code(rule, ["For example, ", v, " is ", whole_text]);
-  let down = app_code_lesson_expression_round_nearest_rounds_line(
+  let down = app_learn_js_lesson_expression_round_nearest_rounds_line(
     "4999",
     ' rounds "down" to ',
     whole_text,
@@ -70,7 +70,7 @@ export function app_learn_js_lesson_expression_round_nearest_above(root) {
   let v2 =
     app_learn_js_lesson_expression_round_nearest_round_code(high_decimal);
   app_learn_js_div_cycle_code(rule, ["For example, ", v2, " is ", whole_up]);
-  let up = app_code_lesson_expression_round_nearest_rounds_line(
+  let up = app_learn_js_lesson_expression_round_nearest_rounds_line(
     "5",
     ' rounds "up" to ',
     whole_up,
