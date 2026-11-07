@@ -32,7 +32,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_for_if_generic(options) {
+export function app_learn_js_lesson_for_if_generic(options) {
   arguments_assert(arguments, 1);
   ("an if inside a for counting n up by one: the lines before, for (let n = start; n < bound; n++) { the if, asking about n and threshold }, the lines after. What differs between lessons is all handed in here.");
   ("before and after are the lines above and below the for. asked_write is handed the left side and the threshold and returns what the if asks; passes says whether that is true of a number. inside_write is handed what the if asks and returns the lines inside the for, above n++. effect is handed a number, whether the if let it through, and the walk's state so far, and returns the words said about that run and the state after it; its words begin and end in plain writing, the last ending in then. walk_end is handed the state at the end and returns one last line, or an empty list for none. threshold_other is handed the threshold and the start and returns the threshold of the wrong program read backwards.");

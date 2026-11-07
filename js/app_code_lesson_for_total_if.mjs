@@ -14,7 +14,7 @@ import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_code_lesson_for_if_greater_options } from "./app_code_lesson_for_if_greater_options.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_lesson_for_if_generic } from "./app_code_lesson_for_if_generic.mjs";
+import { app_learn_js_lesson_for_if_generic } from "./app_learn_js_lesson_for_if_generic.mjs";
 export function app_code_lesson_for_total_if() {
   arguments_assert(arguments, 0);
   ("a total of only some: let total = 0; for (let n = 2; n < 5; n++) { if (n > 2) { total += n; } } console.log(total); writes out 7, which is 3 + 4");
@@ -103,6 +103,6 @@ export function app_code_lesson_for_total_if() {
     state_start: 0,
     walk_end,
   });
-  let lesson = app_code_lesson_for_if_generic(options);
+  let lesson = app_learn_js_lesson_for_if_generic(options);
   return lesson;
 }

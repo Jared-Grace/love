@@ -10,7 +10,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_learn_js_lesson_for_if_even_options } from "./app_learn_js_lesson_for_if_even_options.mjs";
-import { app_code_lesson_for_if_generic } from "./app_code_lesson_for_if_generic.mjs";
+import { app_learn_js_lesson_for_if_generic } from "./app_learn_js_lesson_for_if_generic.mjs";
 export function app_learn_js_lesson_for_if_even() {
   arguments_assert(arguments, 0);
   ("even numbers in a for: for (let n = 2; n < 5; n++) { if (n % 2 === 0) { console.log(n); } } writes out 2 and 4, one under the other");
@@ -84,6 +84,6 @@ export function app_learn_js_lesson_for_if_even() {
     state_start: 0,
     walk_end,
   });
-  let lesson = app_code_lesson_for_if_generic(options);
+  let lesson = app_learn_js_lesson_for_if_generic(options);
   return lesson;
 }
