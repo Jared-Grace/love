@@ -26,7 +26,7 @@ export async function lock_turn_mine_is(ticket_path) {
   await path_touch(ticket_path);
   let names = await folder_read_files(waiting);
   let now = date_now_milliseconds();
-  let live = [];
+  let live = [ticket];
   for (let name of names) {
     let path = path_join([waiting, name]);
     let touched = await path_modified_ms(path);
