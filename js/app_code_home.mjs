@@ -12,7 +12,7 @@ import { app_code_lesson_groups_numbered } from "./app_code_lesson_groups_number
 import { add_1 } from "./add_1.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_home_group_card } from "./app_code_home_group_card.mjs";
+import { app_learn_js_home_group_card } from "./app_learn_js_home_group_card.mjs";
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_home_lesson_button } from "./app_code_home_lesson_button.mjs";
@@ -62,7 +62,7 @@ export async function app_code_home(context) {
     let lesson_number = add_1(index);
     let starting = list_find_property_or_null(groups, "first", lesson_number);
     if (null_not_is(starting)) {
-      group = app_code_home_group_card(cards, g, starting);
+      group = app_learn_js_home_group_card(cards, g, starting);
     }
     let body = property_get(group, "body");
     group.last = lesson_number;

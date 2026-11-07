@@ -11,7 +11,7 @@ import { equal } from "./equal.mjs";
 import { each } from "./each.mjs";
 import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_home_group_card(cards, parent, group) {
+export function app_learn_js_home_group_card(cards, parent, group) {
   arguments_assert(arguments, 3);
   ("one folding group of lessons on the home list, added to the cards already drawn; opening it shuts every other one, so only one group is ever open at a time - asked for by the human");
   ("It hands back the entry it added, which carries the card, the place to draw the lessons into, the way to fold it, whether every lesson in it is finished so far, and the last lesson number in it so far - the caller clears the one and moves the other on as it draws each lesson.");
