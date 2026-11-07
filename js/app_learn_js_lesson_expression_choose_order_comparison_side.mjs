@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operators_comparison_symbols } from "./js_operators_comparison_symbols.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_comparison_operands_wanted } from "./app_learn_js_comparison_operands_wanted.mjs";
-export function app_code_lesson_expression_choose_order_comparison_side(
+export function app_learn_js_lesson_expression_choose_order_comparison_side(
   want_true,
 ) {
   arguments_assert(arguments, 1);

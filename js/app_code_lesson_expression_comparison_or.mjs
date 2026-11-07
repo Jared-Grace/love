@@ -3,7 +3,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { ternary } from "./ternary.mjs";
-import { app_code_lesson_expression_choose_order_comparison_side } from "./app_code_lesson_expression_choose_order_comparison_side.mjs";
+import { app_learn_js_lesson_expression_choose_order_comparison_side } from "./app_learn_js_lesson_expression_choose_order_comparison_side.mjs";
 import { app_learn_js_expression_parts_node } from "./app_learn_js_expression_parts_node.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_code_lesson_expression_choose_order_or_expression } from "./app_code_lesson_expression_choose_order_or_expression.mjs";
@@ -35,7 +35,9 @@ export function app_code_lesson_expression_comparison_or() {
     let comparison_truth = ternary(comparison_left, truths[0], truths[1]);
     let plain = ternary(comparison_left, truths[1], truths[0]);
     let parts =
-      app_code_lesson_expression_choose_order_comparison_side(comparison_truth);
+      app_learn_js_lesson_expression_choose_order_comparison_side(
+        comparison_truth,
+      );
     let side = app_learn_js_expression_parts_node(parts);
     let left = ternary(comparison_left, side, plain);
     let right = ternary(comparison_left, plain, side);
