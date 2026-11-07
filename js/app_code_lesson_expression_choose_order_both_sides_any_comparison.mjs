@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_both_sides_any_comparison_title_name_id } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_title_name_id } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_title_name_id.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_questions } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_questions.mjs";
 import { app_code_lesson_expression_choose_order_mixed_generic } from "./app_code_lesson_expression_choose_order_mixed_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above.mjs";
@@ -7,7 +7,7 @@ export function app_code_lesson_expression_choose_order_both_sides_any_compariso
   "The lesson before this one is the same doing with === in the middle every single time. A learner who has only ever seen that line can carry away that a line is solved from the sides in when the middle is ===, which is a rule about one symbol rather than the rule there is.";
   "So the middle here is drawn fresh for every line from the other five comparisons. Nothing else moves: the two sides are still solved first, and the press that comes last is still answered with a true or a false. What is left over once the middle keeps changing and the doing does not is the thing the lesson is for.";
   let name_id =
-    app_code_lesson_expression_choose_order_both_sides_any_comparison_title_name_id();
+    app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_title_name_id();
   let bank =
     app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_questions();
   let lesson = app_code_lesson_expression_choose_order_mixed_generic(

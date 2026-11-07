@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-export function app_code_lesson_expression_choose_order_both_sides_any_comparison_title_name_id() {
+export function app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: solving both sides of a line one step at a time whatever comparison stands between them, an Expressions lesson");
   function paint(parent) {
