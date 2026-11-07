@@ -2260,7 +2260,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_chapters_verse_marks_underdrawn_walked"),
     fn_name("qa_commit_named_said_expire"),
     fn_name("bundles_dev_stale_build"),
-    fn_name("app_code_lesson_telling_shapes_missing"),
+    fn_name("app_learn_js_lesson_telling_shapes_missing"),
     fn_name("bible_glyph_apps_aggregate_reaching_gate_run"),
     fn_name("qa_gates_said_plain_baseline_path"),
     fn_name("sword_versions_english_choices"),

@@ -5,7 +5,7 @@ import { app_learn_js_lesson_family_neighbours } from "./app_learn_js_lesson_fam
 import { app_learn_js_lesson_telling_shapes_missing_one } from "./app_learn_js_lesson_telling_shapes_missing_one.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
-export async function app_code_lesson_telling_shapes_missing() {
+export async function app_learn_js_lesson_telling_shapes_missing() {
   arguments_assert(arguments, 0);
   ("every lesson of the code app whose question bank writes a line in a shape its own telling never shows.");
   ("Shape is several marks, not one, and a lesson misses the check if any of them goes unshown. Whether the line is parenthesised or flat. Whether it writes one operator over and over or mixes two of them. Which end a true or a false sits at, because a value on the left reads as a different question from the same value on the right. What kinds of thing stand either side of the operators - a number, a value, a name.");
