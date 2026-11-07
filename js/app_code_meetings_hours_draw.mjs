@@ -1,7 +1,7 @@
 import { equal_not } from "./equal_not.mjs";
 import { html_style_background } from "./html_style_background.mjs";
 import { html_scroll_across_faded } from "./html_scroll_across_faded.mjs";
-import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pair_draw.mjs";
+import { app_learn_js_grid_edge_line_pair_draw } from "./app_learn_js_grid_edge_line_pair_draw.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -129,7 +129,7 @@ export function app_code_meetings_hours_draw(
     let colored = equal_not(color, plain);
     let layer = colored ? "2" : "1";
     if (both) {
-      app_code_grid_edge_line_pair_draw({
+      app_learn_js_grid_edge_line_pair_draw({
         grid,
         before_color: end_color,
         after_color: start_color,

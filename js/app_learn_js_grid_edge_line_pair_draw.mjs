@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_grid_edge_line_draw } from "./app_learn_js_grid_edge_line_draw.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-export function app_code_grid_edge_line_pair_draw({
+export function app_learn_js_grid_edge_line_pair_draw({
   grid,
   before_color,
   after_color,

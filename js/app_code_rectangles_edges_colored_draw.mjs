@@ -1,6 +1,6 @@
 import { html_style_background } from "./html_style_background.mjs";
 import { html_scroll_across_faded } from "./html_scroll_across_faded.mjs";
-import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pair_draw.mjs";
+import { app_learn_js_grid_edge_line_pair_draw } from "./app_learn_js_grid_edge_line_pair_draw.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { html_span } from "./html_span.mjs";
@@ -225,7 +225,7 @@ export function app_code_rectangles_edges_colored_draw({
     let layer = on_corner ? "2" : "1";
     let both = edge_both(edge, shared, corner_edge);
     if (both) {
-      app_code_grid_edge_line_pair_draw({
+      app_learn_js_grid_edge_line_pair_draw({
         grid,
         before_color: end_color,
         after_color: start_color,
