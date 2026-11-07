@@ -11,7 +11,7 @@ import { html_div } from "./html_div.mjs";
 import { app_learn_js_code_dark_lines_braces_paired_random } from "./app_learn_js_code_dark_lines_braces_paired_random.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_brace_pair_generic } from "./app_learn_js_lesson_brace_pair_generic.mjs";
-export function app_code_lesson_brace_pair_two() {
+export function app_learn_js_lesson_brace_pair_two() {
   arguments_assert(arguments, 0);
   ("which brace pairs with which, in programs with two pairs of braces: in if (a) { if (b) { ... } }, the first { is closed by the last }, not by the } nearest to it");
   ("Asked for by the human 2026-10-11, as a version of Which brace pairs with which with two pairs instead of three, placed straight before it. Its opening says that braces come in pairs, which the lesson with three pairs said first and now remembers from here.");

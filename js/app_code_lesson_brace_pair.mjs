@@ -1,6 +1,6 @@
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_brace_pair_programs_three } from "./app_learn_js_brace_pair_programs_three.mjs";
-import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
+import { app_learn_js_lesson_brace_pair_two } from "./app_learn_js_lesson_brace_pair_two.mjs";
 import { app_learn_js_lesson_brace_pair_generic } from "./app_learn_js_lesson_brace_pair_generic.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
@@ -51,7 +51,7 @@ export function app_code_lesson_brace_pair() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_brace_pair_two,
+      app_learn_js_lesson_brace_pair_two,
       ["braces come in pairs."],
     );
     let box_paired = app_learn_js_container_light_blue(root);

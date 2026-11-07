@@ -7,7 +7,7 @@ import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
+import { app_learn_js_lesson_brace_pair_two } from "./app_learn_js_lesson_brace_pair_two.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_brace_lines_generic } from "./app_learn_js_lesson_brace_lines_generic.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_brace_lines_two() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_brace_pair_two,
+      app_learn_js_lesson_brace_pair_two,
       ["a ", left, " begins a section of code, and its ", right, " ends it."],
     );
     let box_two = app_learn_js_container_light_blue(root);
