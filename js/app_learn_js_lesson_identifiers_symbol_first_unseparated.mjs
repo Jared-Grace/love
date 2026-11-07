@@ -1,5 +1,5 @@
 import { app_code_lesson_same_draw } from "./app_code_lesson_same_draw.mjs";
-import { app_code_lesson_identifiers_symbol_first } from "./app_code_lesson_identifiers_symbol_first.mjs";
+import { app_learn_js_lesson_identifiers_symbol_first } from "./app_learn_js_lesson_identifiers_symbol_first.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
@@ -33,7 +33,7 @@ export function app_learn_js_lesson_identifiers_symbol_first_unseparated() {
       root,
       context,
       app_learn_js_lesson_identifiers_symbol_first_unseparated,
-      app_code_lesson_identifiers_symbol_first,
+      app_learn_js_lesson_identifiers_symbol_first,
       "the symbols are not separated",
     );
     let c = app_learn_js_container_light_blue(root);
