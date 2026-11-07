@@ -14,7 +14,7 @@ import { app_code_progress_read } from "./app_code_progress_read.mjs";
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_above_shown(context, lesson) {
+export function app_learn_js_lesson_above_shown(context, lesson) {
   arguments_assert(arguments, 2);
   ("the telling drawn above a lesson's examples: its own boxes, or, when the lesson before it stepped through these same programs with these same boxes and the learner has finished that lesson, a short line saying so in their place");
   ("Asked for by the human 2026-10-22: a step lesson that comes first opens with the boxes of the lesson after it, so a learner going on read the same boxes twice in a row. The two lessons stay apart, because each teaches its own kind of quiz with its own example.");
