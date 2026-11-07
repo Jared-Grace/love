@@ -5,7 +5,7 @@ import { app_code_page_complete_paint } from "./app_code_page_complete_paint.mjs
 import { property_set } from "./property_set.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_learn_js_lesson_current } from "./app_learn_js_lesson_current.mjs";
-import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
+import { app_learn_js_lesson_title_strip } from "./app_learn_js_lesson_title_strip.mjs";
 import { app_learn_js_batch_on_refill } from "./app_learn_js_batch_on_refill.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_item_get } from "./app_learn_js_batch_item_get.mjs";
@@ -39,7 +39,7 @@ export function app_code_quiz(context) {
   function render() {
     "the bar reads whether the lesson is finished every time it is drawn and dresses itself to match, so whatever changes that answer only has to draw it again - the shape the human gave, 2026-10-03. The first version compared finished before and after each answer and drew only on a change, which was a second place deciding what the bar already decides";
     html_clear(holder);
-    app_code_lesson_title_strip(holder, context, lesson);
+    app_learn_js_lesson_title_strip(holder, context, lesson);
   }
   render();
   function render_again() {
