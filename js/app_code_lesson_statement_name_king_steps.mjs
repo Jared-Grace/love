@@ -19,7 +19,7 @@ import { app_code_explain_number_colored } from "./app_code_explain_number_color
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_explain_code_colored } from "./app_learn_js_explain_code_colored.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_emoji_square } from "./app_code_explain_emoji_square.mjs";
+import { app_learn_js_explain_emoji_square } from "./app_learn_js_explain_emoji_square.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_learn_js_arrow_turned_draw } from "./app_learn_js_arrow_turned_draw.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
@@ -136,8 +136,8 @@ export function app_code_lesson_statement_name_king_steps() {
   let draw2 = app_code_explain_number_colored("1", column_color);
   let draw3 = app_code_explain_number_colored("4", row_color);
   let draw4 = app_code_explain_number_colored("3", column_color);
-  let draw33 = app_code_explain_emoji_square("🫅", start_color);
-  let draw34 = app_code_explain_emoji_square("🏁", end_color);
+  let draw33 = app_learn_js_explain_emoji_square("🫅", start_color);
+  let draw34 = app_learn_js_explain_emoji_square("🏁", end_color);
   let question_said = app_code_explain_said([
     "How many steps are there from ",
     draw33,
@@ -313,7 +313,7 @@ export function app_code_lesson_statement_name_king_steps() {
   ]);
   let draw35 = app_code_explain_number_colored("2", plain);
   let draw36 = app_code_explain_number_colored("1", plain);
-  let draw37 = app_code_explain_emoji_square("🏁", end_color);
+  let draw37 = app_learn_js_explain_emoji_square("🏁", end_color);
   let draw38 = app_code_explain_said([
     "If we travel ",
     draw35,
