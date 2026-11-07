@@ -5,7 +5,7 @@ import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
+import { app_learn_js_lesson_index_by_id } from "./app_learn_js_lesson_index_by_id.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_above_shown(context, lesson) {
   ("The boxes are only left out for a learner who FINISHED the step lesson, because the human settled on 2026-09-11 that the telling is always on the screen for a learner who has not seen it. Not picked: a button showing the boxes again, which is the very hiding that was settled against.");
   let above = property_get(lesson, "above");
   let lesson_id = property_get(lesson, "id");
-  let index = app_code_lesson_index_by_id(lesson_id);
+  let index = app_learn_js_lesson_index_by_id(lesson_id);
   if (less_than(index, 1)) {
     return above;
   }

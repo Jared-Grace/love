@@ -2,7 +2,7 @@ import { app_code_lesson_title_render } from "./app_code_lesson_title_render.mjs
 import { property_get } from "./property_get.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
 import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_is.mjs";
-import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
+import { app_learn_js_lesson_index_by_id } from "./app_learn_js_lesson_index_by_id.mjs";
 import { add_1_period } from "./add_1_period.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_title_strip(root, context, lesson) {
   let progress = app_code_progress_read(context);
   let complete = app_learn_js_lesson_complete_is(progress, lesson_id);
   ("where the reader is in the course is worked out before anything is drawn, because both arrows and the number in front of the title are all reading the same one answer");
-  let lesson_index = app_code_lesson_index_by_id(lesson_id);
+  let lesson_index = app_learn_js_lesson_index_by_id(lesson_id);
   function title_paint(title) {
     "the lesson's own number leads the title, the same 1-based number and same trailing period the home list shows in its gutter, so a learner reading a lesson can say which one they are on without going back - and so can anyone they are asking about it. It sits INSIDE the muted title rather than beside the home button, because it is part of naming where you are rather than a second control";
     let number_text = add_1_period(lesson_index);
