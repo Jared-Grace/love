@@ -7,7 +7,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_code_lesson_comment_skip_line_batch() {
+export function app_learn_js_lesson_comment_skip_line_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each is the two lines that write out the learner already knows, with the two slashes put in front of one of them");
   ("Both lines are lines the learner has read for many screens, and the second of them was read one screen ago. The only thing here that has not been read before is the slashes in front of one, so that is the only thing an answer can turn on.");

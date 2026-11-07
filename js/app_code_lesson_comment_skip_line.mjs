@@ -2,7 +2,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_comment_skip_line_above } from "./app_learn_js_lesson_comment_skip_line_above.mjs";
-import { app_code_lesson_comment_skip_line_batch } from "./app_code_lesson_comment_skip_line_batch.mjs";
+import { app_learn_js_lesson_comment_skip_line_batch } from "./app_learn_js_lesson_comment_skip_line_batch.mjs";
 import { app_code_lesson_comment_skip_line_title_name_id } from "./app_code_lesson_comment_skip_line_title_name_id.mjs";
 import { app_code_lesson_decoy_comment_ignored } from "./app_code_lesson_decoy_comment_ignored.mjs";
 import { app_code_lesson_decoy_comment_moved } from "./app_code_lesson_decoy_comment_moved.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_comment_skip_line() {
   ("Both quizzes are given tailored wrong answers, and they are different in the two directions because the two directions ask different things. Given the code, the ways to be wrong are to read the note as code and to read the wrong line; given what came out, the way to be wrong is to pick the program with its note on the other line. Without them either direction could be settled by finding a number, and the screen would accept an answer from a learner who never saw the slashes.");
   let name_id = app_code_lesson_comment_skip_line_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
-    app_code_lesson_comment_skip_line_batch,
+    app_learn_js_lesson_comment_skip_line_batch,
     eval_console_log_lines,
   );
   let lesson = app_learn_js_lesson_code_logged({
