@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_r } from "./app_code_lesson_quiz_r.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_quiz_has_next_step } from "./app_learn_js_lesson_quiz_has_next_step.mjs";
-export function app_code_lesson_quiz_on_answer({
+export function app_learn_js_lesson_quiz_on_answer({
   info,
   qa,
   container_blue_light,
