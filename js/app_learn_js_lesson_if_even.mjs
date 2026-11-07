@@ -31,7 +31,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_even() {
+export function app_learn_js_lesson_if_even() {
   arguments_assert(arguments, 0);
   ('an if whose condition is the even check: let n = 4; console.log(n + " is a number"); if (n % 2 === 0) { console.log(n + " is even"); } writes out 4 is a number and 4 is even, and with 5 writes out 5 is a number alone');
   ('Asked for by the human 2026-10-07: log(n + " is a number") then if (...) { log(n + " is even") }. The check is the one the even lesson put in a name, n % 2 === 0, here put inside the parentheses instead.');
