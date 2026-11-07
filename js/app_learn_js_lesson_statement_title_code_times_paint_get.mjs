@@ -1,7 +1,7 @@
 import { app_code_lesson_statement_title_paint_times_get } from "./app_code_lesson_statement_title_paint_times_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_title_code_paint_get } from "./app_learn_js_lesson_statement_title_code_paint_get.mjs";
-export function app_code_lesson_statement_title_code_times_paint_get(
+export function app_learn_js_lesson_statement_title_code_times_paint_get(
   code,
   times,
 ) {
