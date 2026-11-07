@@ -17,7 +17,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_identifiers_symbol_first_generic } from "./app_learn_js_lesson_identifiers_symbol_first_generic.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
-export function app_code_lesson_identifiers_symbol_first_unseparated() {
+export function app_learn_js_lesson_identifiers_symbol_first_unseparated() {
   let name_id = app_code_lesson_name_id("identifiers", [
     "symbol",
     "first",
@@ -32,7 +32,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     app_code_lesson_same_draw(
       root,
       context,
-      app_code_lesson_identifiers_symbol_first_unseparated,
+      app_learn_js_lesson_identifiers_symbol_first_unseparated,
       app_code_lesson_identifiers_symbol_first,
       "the symbols are not separated",
     );
