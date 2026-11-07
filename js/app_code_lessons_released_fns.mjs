@@ -21,7 +21,7 @@ import { app_code_lesson_expression_string_hello } from "./app_code_lesson_expre
 import { app_code_lesson_expression_string_spaces } from "./app_code_lesson_expression_string_spaces.mjs";
 import { app_code_lesson_expression_string_concat } from "./app_code_lesson_expression_string_concat.mjs";
 import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
-import { app_code_lesson_expression_greater_than } from "./app_code_lesson_expression_greater_than.mjs";
+import { app_learn_js_lesson_expression_greater_than } from "./app_learn_js_lesson_expression_greater_than.mjs";
 import { app_code_lesson_expression_less_than_equal } from "./app_code_lesson_expression_less_than_equal.mjs";
 import { app_learn_js_lesson_expression_greater_than_equal } from "./app_learn_js_lesson_expression_greater_than_equal.mjs";
 import { app_learn_js_lesson_expression_equals } from "./app_learn_js_lesson_expression_equals.mjs";
@@ -334,7 +334,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_expression_string_spaces,
     app_code_lesson_expression_string_concat,
     app_code_lesson_expression_less_than,
-    app_code_lesson_expression_greater_than,
+    app_learn_js_lesson_expression_greater_than,
     app_code_lesson_expression_less_than_equal,
     app_learn_js_lesson_expression_greater_than_equal,
     app_learn_js_lesson_expression_equals,

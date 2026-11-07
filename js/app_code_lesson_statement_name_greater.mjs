@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
 import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
-import { app_code_lesson_expression_greater_than } from "./app_code_lesson_expression_greater_than.mjs";
+import { app_learn_js_lesson_expression_greater_than } from "./app_learn_js_lesson_expression_greater_than.mjs";
 export function app_code_lesson_statement_name_greater() {
   arguments_assert(arguments, 0);
   ("two names compared the other way: let a = 9; let b = 2; let bigger = a > b; console.log(bigger); writes out true");
@@ -31,7 +31,7 @@ export function app_code_lesson_statement_name_greater() {
     symbol,
     pairs_get,
     example_pair: [5, 3],
-    remember_lesson: app_code_lesson_expression_greater_than,
+    remember_lesson: app_learn_js_lesson_expression_greater_than,
     remember_parts: [
       "we can ask whether one number is larger (",
       symbol,
