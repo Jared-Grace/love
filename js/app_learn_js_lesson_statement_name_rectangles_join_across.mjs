@@ -22,7 +22,7 @@ import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_sta
 import { app_code_lesson_statement_name_rectangles_join_down } from "./app_code_lesson_statement_name_rectangles_join_down.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_learn_js_lesson_statement_min_max_mixed_decoys } from "./app_learn_js_lesson_statement_min_max_mixed_decoys.mjs";
-export function app_code_lesson_statement_name_rectangles_join_across() {
+export function app_learn_js_lesson_statement_name_rectangles_join_across() {
   arguments_assert(arguments, 0);
   ("where two rectangles together start and end going across: let left = Math.min(l1, l2); let right = Math.max(r1, r2); - picked by Claude 2026-10-06 as the across half of Where two rectangles together start and end going down, the lesson just before it, which left across for later so that no lesson starts eight names at once. Together the two are the box around two boxes, the smallest rectangle holding both.");
   ("Not picked: the whole box in one program, which now needs no new idea but would put four lines and eight names on every screen; and the box's size, which is a third line on an idea just shown.");
