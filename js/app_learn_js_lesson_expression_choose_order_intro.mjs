@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_l
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_intro(
+export function app_learn_js_lesson_expression_choose_order_intro(
   parent,
   whole_line,
 ) {
