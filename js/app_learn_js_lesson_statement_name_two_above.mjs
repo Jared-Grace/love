@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
+import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_lesson_statement_name_two_above(root, context) {
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let word_first = app_code_lesson_statement_name_value_word();
-  let word_last = app_code_lesson_statement_name_two_word();
+  let word_last = app_learn_js_lesson_statement_name_two_word();
   let box_two = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(box_two, ["You can have more than one cup"]);
   ("TWO CUPS, and a colon before the two names. Two on its own leaves the noun to be carried down from the line above it, and the two names that follow then arrive as a list of something the sentence never said; the colon is what marks them as that list rather than as more of the same sentence.");

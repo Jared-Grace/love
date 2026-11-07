@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
+import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_statement_name_copy_above(root, context) {
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let name_copy = app_learn_js_lesson_statement_name_third();
   let word_first = app_code_lesson_statement_name_value_word();
-  let word_last = app_code_lesson_statement_name_two_word();
+  let word_last = app_learn_js_lesson_statement_name_two_word();
   ("THE ORDER OF THIS LIST IS WHAT DECIDES WHICH NAME IS WHICH COLOUR, on the cups, in the sentences, and in the program at the bottom of the screen. It is the order the screen introduces them in, which is also the order the program's notes first mark them in - and it has to stay that way, because the code box works its own order out from the notes rather than being told this one.");
   ("Written out here rather than fetched from the code box, because the story starts long before the program does: a reader meets the first cup several boxes above anything that could be parsed, and a colour that arrived late would be the joining work put back on them.");
   let names = [name_first, name_last, name_copy];

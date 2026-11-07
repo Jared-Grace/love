@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
+import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -35,7 +35,7 @@ export function app_learn_js_lesson_statement_name_copy_single_above(
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let word_first = app_code_lesson_statement_name_value_word();
-  let word_last = app_code_lesson_statement_name_two_word();
+  let word_last = app_learn_js_lesson_statement_name_two_word();
   let quoted_first = app_code_string_code(word_first);
   let quoted_last = app_code_string_code(word_last);
   let held_first = js_code_let_statement(name_first, quoted_first);

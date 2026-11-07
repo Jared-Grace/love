@@ -2,7 +2,7 @@ import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
+import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_statement_name_again_above(root, context) {
   ("What was in the cup is said to be gone, in as many words. A cup can hold more than one thing in life, and nothing on the screen rules that out; the code does, and it is the one thing a picture of a cup cannot say by itself.");
   let name = app_code_lesson_statement_name_value_name();
   let word_before = app_code_lesson_statement_name_value_word();
-  let word_after = app_code_lesson_statement_name_two_word();
+  let word_after = app_learn_js_lesson_statement_name_two_word();
   let box_before = app_learn_js_container_light_blue(root);
   let has = list_join_empty([" has ", word_before, " in it"]);
   app_code_remember_from_lesson(

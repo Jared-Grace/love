@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
+import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson_names } from "./app_code_remember_from_lesson_names.mjs";
 import { app_learn_js_lesson_statement_name_copy } from "./app_learn_js_lesson_statement_name_copy.mjs";
@@ -32,7 +32,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
   let name_first = app_code_lesson_statement_name_value_name();
   let name_copy = app_learn_js_lesson_statement_name_third();
   let word_first = app_code_lesson_statement_name_value_word();
-  let word_last = app_code_lesson_statement_name_two_word();
+  let word_last = app_learn_js_lesson_statement_name_two_word();
   ("THE TWO NAMES ARE LENT COLOURS HERE, IN THE ORDER THE SCREEN INTRODUCES THEM. The cup that changes is met first and the cup that keeps its word second, which is also the order the program's notes at the bottom mark them in - and it has to stay that way, because the code box works its own order out from those notes rather than being handed this list.");
   ("Written out here rather than taken from the program, because the story starts several boxes above anything that could be read as code, and a colour arriving only at the program would be the joining work handed back to the reader.");
   ("The list is made before the first box rather than beside the cups, because the reminder above them says both names and says them first. A colour that started at the cups would leave the sentence carrying the story in from the previous lesson as the one plain mention on the screen - which is the joining work this list exists to take away, left in the place a reader meets first.");
