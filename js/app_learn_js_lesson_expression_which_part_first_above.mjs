@@ -9,7 +9,7 @@ import { app_code_operator_code_subject_first } from "./app_code_operator_code_s
 import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { app_learn_js_lesson_suppose_solve_line } from "./app_learn_js_lesson_suppose_solve_line.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_expression_which_part_first_above(
   root,
@@ -71,7 +71,7 @@ export function app_learn_js_lesson_expression_which_part_first_above(
   let wrong_value = multiply(wrong_inner, far);
   let wrong_value_text = text_to(wrong_value);
   let right_card = app_learn_js_container_light_blue(root);
-  app_code_lesson_suppose_solve_line(right_card, "Suppose", whole);
+  app_learn_js_lesson_suppose_solve_line(right_card, "Suppose", whole);
   app_code_remember_from_lesson(
     right_card,
     context,

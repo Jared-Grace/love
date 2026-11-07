@@ -1,6 +1,6 @@
 import { app_shared_hr_spaced } from "./app_shared_hr_spaced.mjs";
 import { app_learn_js_lesson_expression_choose_order_rule_parts } from "./app_learn_js_lesson_expression_choose_order_rule_parts.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { app_learn_js_lesson_suppose_solve_line } from "./app_learn_js_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_expression_choose_order_intro(
@@ -9,7 +9,7 @@ export function app_learn_js_lesson_expression_choose_order_intro(
 ) {
   arguments_assert(arguments, 2);
   ("what the lesson is for, said of the very line the learner is about to press: that we mean to solve it, that solving it all at once comes later, that for now it is solved a step at a time, and which operator the line itself says goes first");
-  app_code_lesson_suppose_solve_line(parent, "Suppose", whole_line);
+  app_learn_js_lesson_suppose_solve_line(parent, "Suppose", whole_line);
   app_learn_js_div_cycle_code(parent, [
     "Eventually we will teach you to solve this all at once",
   ]);

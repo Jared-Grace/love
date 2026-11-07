@@ -8,7 +8,7 @@ import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_expression } from "./app_learn_js_lesson_expression_choose_order_operators_expression.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_intro } from "./app_learn_js_lesson_expression_choose_order_operators_intro.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { app_learn_js_lesson_suppose_solve_line } from "./app_learn_js_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -46,7 +46,7 @@ export function app_learn_js_lesson_expression_choose_order_operators_above(
   let final_text = text_to(final_value);
   ("The line stands in a card of its own, and so does the sentence at the end. Between them is the run: the line is not a step of it - it is what the run is done to - and the sentence is not a step either, it is what the next screen asks for.");
   let line_card = app_learn_js_container_light_blue(root);
-  app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
+  app_learn_js_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
   let run = app_learn_js_container_light_blue(root);
   ("the rule is said FIRST, naming both operators, and what it rules out follows from it - because which of the two is stronger is the whole of why this line has an order at all");
   ("It used to open with the weaker operator having something on one side, so it could not be solved yet. That is true of the line and it is not the reason: read as written, the order comes from one part having something beside it, which is not a rule a learner can carry to the next line - and the rule they CAN carry, that this operator goes before that one, was left to be inferred from the word stronger a line further down.");

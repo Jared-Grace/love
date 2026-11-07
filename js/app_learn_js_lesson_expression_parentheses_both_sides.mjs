@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_expression_parentheses_one_side } from "./app_learn_js_lesson_expression_parentheses_one_side.mjs";
 import { app_learn_js_lesson_expression_parentheses_both_sides_card_flat_line } from "./app_learn_js_lesson_expression_parentheses_both_sides_card_flat_line.mjs";
 import { app_learn_js_comparison_side_wrapped } from "./app_learn_js_comparison_side_wrapped.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { app_learn_js_lesson_suppose_solve_line } from "./app_learn_js_lesson_suppose_solve_line.mjs";
 import { app_learn_js_lesson_expression_parentheses_both_sides_title_name_id } from "./app_learn_js_lesson_expression_parentheses_both_sides_title_name_id.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -81,7 +81,7 @@ export function app_learn_js_lesson_expression_parentheses_both_sides() {
     ("The card used to spend its first four rows arguing that the line was allowed to exist: each side named as a comparison, then both sides of === can be comparisons, then so we can put one on either side of another ===. That is construction, and this lesson never asks for it - the quiz hands over a finished line every time and asks what it comes to. The two rows that did solving were the last two, and they jumped from the assembled line straight to its value, hiding the one step that is actually new here: two false values compared against each other. Solving it row by row spends the card on the direction the learner is graded in, and costs two rows fewer than arguing the line into existence first.");
     ("The last row is word for word the shape the choose-order-pair run ends on - replace them to get the middle line, which is the answer. That run is the lesson immediately before this one and the learner has just pressed their way through it, so the same sentence closes the loop rather than opening a new one.");
     let whole = "(3 === 5) === (5 === 3)";
-    app_code_lesson_suppose_solve_line(both, "Suppose", whole);
+    app_learn_js_lesson_suppose_solve_line(both, "Suppose", whole);
     app_learn_js_div_cycle_code(both, ["", "3 === 5", " is ", "false"]);
     app_learn_js_div_cycle_code(both, ["", "5 === 3", " is ", "false"]);
     app_learn_js_div_cycle_code(both, [

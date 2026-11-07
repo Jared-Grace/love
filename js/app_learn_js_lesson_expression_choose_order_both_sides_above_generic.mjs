@@ -7,7 +7,7 @@ import { app_learn_js_expression_value } from "./app_learn_js_expression_value.m
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { app_learn_js_lesson_suppose_solve_line } from "./app_learn_js_lesson_suppose_solve_line.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_expression_equals_text } from "./app_learn_js_expression_equals_text.mjs";
 export function app_learn_js_lesson_expression_choose_order_both_sides_above_generic(
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_expression_choose_order_both_sides_above_gen
   let final_value = app_learn_js_expression_value(tree);
   let final_text = text_to(final_value);
   let line_card = app_learn_js_container_light_blue(root);
-  app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
+  app_learn_js_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
   let run = app_learn_js_container_light_blue(root);
   ("why the two sides go first is said before which of them goes first, because the two are different questions and the first one is the harder: an operator waits on the parts underneath it, and both of these parts are underneath the one in the middle");
   say_why(run, sides);

@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_comparing_a_comparison_replacing_worked_example } from "./app_learn_js_lesson_expression_comparing_a_comparison_replacing_worked_example.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_line } from "./app_learn_js_lesson_expression_comparing_a_comparison_line.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { app_learn_js_lesson_suppose_solve_line } from "./app_learn_js_lesson_suppose_solve_line.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_expression } from "./app_learn_js_lesson_expression_comparing_a_comparison_expression.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_worked_example } from "./app_learn_js_lesson_expression_comparing_a_comparison_worked_example.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_recall } from "./app_learn_js_lesson_expression_comparing_a_comparison_recall.mjs";
@@ -58,7 +58,7 @@ export function app_learn_js_lesson_expression_comparing_a_comparison() {
       same,
       false,
     );
-    app_code_lesson_suppose_solve_line(goal, "Suppose", goal_line);
+    app_learn_js_lesson_suppose_solve_line(goal, "Suppose", goal_line);
     let different = js_operator_bang_double_equal();
     app_learn_js_lesson_expression_comparing_a_comparison_replacing_worked_example(
       root,

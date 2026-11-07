@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_comparing_a_comparison_replaced_lines } from "./app_learn_js_lesson_expression_comparing_a_comparison_replaced_lines.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_line } from "./app_learn_js_lesson_expression_comparing_a_comparison_line.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { app_learn_js_lesson_suppose_solve_line } from "./app_learn_js_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_expression_comparing_a_comparison_worked_exa
     operator,
     right_value,
   );
-  app_code_lesson_suppose_solve_line(card, lead, whole);
+  app_learn_js_lesson_suppose_solve_line(card, lead, whole);
   app_learn_js_div_cycle_code(card, [
     "We replace the ",
     code,

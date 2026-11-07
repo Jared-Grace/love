@@ -7,7 +7,7 @@ import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_n
 import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_expression_replace_swap_say.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_learn_js_lesson_expression_choose_order_expression } from "./app_learn_js_lesson_expression_choose_order_expression.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { app_learn_js_lesson_suppose_solve_line } from "./app_learn_js_lesson_suppose_solve_line.mjs";
 import { app_code_operators_say } from "./app_code_operators_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_expression_choose_order_solve_above(
   let final_text = text_to(final_value);
   ("The line itself gets a card to itself, and so does the one sentence at the end saying what changes. Between them stands the run: four steps, each one a thing that happened, and the card around them is what says they are one run rather than four remarks. The line is not a step of the run - it is what the run was done to - and the sentence at the end is not a step either, it is what the next screen does instead.");
   let line_card = app_learn_js_container_light_blue(root);
-  app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
+  app_learn_js_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
   let recap = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(recap, [
     "Before, you chose each operator in order (",
