@@ -1,7 +1,7 @@
 import { app_code_explain_emoji_square } from "./app_code_explain_emoji_square.mjs";
 import { app_code_square_ringed } from "./app_code_square_ringed.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
+import { app_learn_js_explain_code_colored } from "./app_learn_js_explain_code_colored.mjs";
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_learn_js_explain_abs_apart_colored } from "./app_learn_js_explain_abs_apart_colored.mjs";
@@ -102,7 +102,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   );
   let plain = app_shared_color_code_background();
   ("3 + 2 === 5 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, so it wears the blue of the squares it counts, as in King steps");
-  let total_worked = app_code_explain_code_colored(
+  let total_worked = app_learn_js_explain_code_colored(
     ["3", " " + plus + " ", "2", " " + same + " ", "5"],
     [rows_count_color, plain, columns_count_color, plain, end_color],
   );
