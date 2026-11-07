@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_comparison_equal_generic_examples } from "./app_code_lesson_expression_comparison_equal_generic_examples.mjs";
+import { app_learn_js_lesson_expression_comparison_equal_generic_examples } from "./app_learn_js_lesson_expression_comparison_equal_generic_examples.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
@@ -50,10 +50,11 @@ export function app_code_lesson_expression_comparison_equal_generic(words) {
     ];
     return parts;
   }
-  let next_arg = app_code_lesson_expression_comparison_equal_generic_examples(
-    symbol,
-    true_ordering,
-  );
+  let next_arg =
+    app_learn_js_lesson_expression_comparison_equal_generic_examples(
+      symbol,
+      true_ordering,
+    );
   let rights = [middle_words];
   let lesson = app_code_lesson_expression_comparison({
     operator,

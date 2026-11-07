@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { not } from "./not.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-export function app_code_lesson_expression_comparison_equal_generic_examples(
+export function app_learn_js_lesson_expression_comparison_equal_generic_examples(
   symbol,
   true_ordering,
 ) {
