@@ -4,7 +4,7 @@ import { app_learn_js_between_two_wholes } from "./app_learn_js_between_two_whol
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
-export function app_code_lesson_expression_round_generic_above_v(
+export function app_learn_js_lesson_expression_round_generic_above_v(
   r,
   superlative,
   called_name,
