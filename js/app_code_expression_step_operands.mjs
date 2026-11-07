@@ -1,5 +1,5 @@
 import { app_code_expression_step_operands_times_is } from "./app_code_expression_step_operands_times_is.mjs";
-import { app_code_expression_step_operands_minus_is } from "./app_code_expression_step_operands_minus_is.mjs";
+import { app_learn_js_expression_step_operands_minus_is } from "./app_learn_js_expression_step_operands_minus_is.mjs";
 import { app_learn_js_expression_step_operands_dividends } from "./app_learn_js_expression_step_operands_dividends.mjs";
 import { app_code_expression_step_value_least } from "./app_code_expression_step_value_least.mjs";
 import { app_code_expression_step_value_most } from "./app_code_expression_step_value_most.mjs";
@@ -39,7 +39,7 @@ export function app_code_expression_step_operands(value, symbol, value_left) {
     let sums = range_from(least, sum_most);
     return sums;
   }
-  let minus_is = app_code_expression_step_operands_minus_is(symbol);
+  let minus_is = app_learn_js_expression_step_operands_minus_is(symbol);
   if (minus_is) {
     if (value_left) {
       let taken_most = subtract(value, least);
