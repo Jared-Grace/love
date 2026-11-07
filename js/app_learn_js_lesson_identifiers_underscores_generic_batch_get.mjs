@@ -11,7 +11,7 @@ import { boolean_random } from "./boolean_random.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-export function app_code_lesson_identifiers_underscores_generic_batch_get(
+export function app_learn_js_lesson_identifiers_underscores_generic_batch_get(
   separator_invalid,
   separator_valid,
 ) {
