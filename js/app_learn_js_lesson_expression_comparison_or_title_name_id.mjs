@@ -3,7 +3,7 @@ import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-export function app_code_lesson_expression_comparison_or_title_name_id() {
+export function app_learn_js_lesson_expression_comparison_or_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: both sides of ||, an Expressions lesson. It wears the words of the pressing lesson above it minus the word Solve, which is how this course tells a pressing lesson from the twin that asks for the whole line");
   ("The title paints the symbol and spells the word, the same way every other || lesson does: the lesson is about the symbol, and the word is only what the address is written with, where a symbol cannot go.");

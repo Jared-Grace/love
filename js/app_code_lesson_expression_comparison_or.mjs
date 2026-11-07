@@ -10,7 +10,7 @@ import { app_learn_js_lesson_expression_choose_order_or_expression } from "./app
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_expression_comparison_or_title_name_id } from "./app_code_lesson_expression_comparison_or_title_name_id.mjs";
+import { app_learn_js_lesson_expression_comparison_or_title_name_id } from "./app_learn_js_lesson_expression_comparison_or_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_learn_js_lesson_expression_comparison_or_intro } from "./app_learn_js_lesson_expression_comparison_or_intro.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
@@ -57,7 +57,7 @@ export function app_code_lesson_expression_comparison_or() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_expression_comparison_or_title_name_id();
+  let name_id = app_learn_js_lesson_expression_comparison_or_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above: app_learn_js_lesson_expression_comparison_or_intro,
     name_id,
