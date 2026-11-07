@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_answer_label } from "./app_learn_js_lesson_quiz_answer_label.mjs";
-import { app_code_lesson_quiz_on_question } from "./app_code_lesson_quiz_on_question.mjs";
+import { app_learn_js_lesson_quiz_on_question } from "./app_learn_js_lesson_quiz_on_question.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_on_reveal } from "./app_code_lesson_quiz_on_reveal.mjs";
 export function app_learn_js_lesson_quiz_container_question({
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_quiz_container_question({
     quizzes,
     refresh,
   });
-  let r4 = app_code_lesson_quiz_on_question(r);
+  let r4 = app_learn_js_lesson_quiz_on_question(r);
   let on_question = property_get(r4, "on_question");
   let on_answer = property_get(r4, "on_answer");
   let correction_render = property_get(r4, "correction_render");
