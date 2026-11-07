@@ -3,7 +3,7 @@ import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { app_learn_js_lesson_family_roots } from "./app_learn_js_lesson_family_roots.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_lesson_telling_shapes_missing } from "./app_code_lesson_telling_shapes_missing.mjs";
-import { app_code_lesson_telling_reports_apart } from "./app_code_lesson_telling_reports_apart.mjs";
+import { app_learn_js_lesson_telling_reports_apart } from "./app_learn_js_lesson_telling_reports_apart.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_telling_report_said } from "./app_learn_js_lesson_telling_report_said.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -22,7 +22,7 @@ export async function app_code_lesson_telling_shapes_gate_run() {
   let roots = await app_learn_js_lesson_family_roots(names);
   let walked = list_size(roots);
   let reports = await app_code_lesson_telling_shapes_missing();
-  let apart = app_code_lesson_telling_reports_apart(reports);
+  let apart = app_learn_js_lesson_telling_reports_apart(reports);
   let offenders = property_get(apart, "offenders");
   let unjudged = property_get(apart, "unjudged");
   for (let report of offenders) {

@@ -3,7 +3,7 @@ import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { ternary } from "./ternary.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_telling_reports_apart(reports) {
+export function app_learn_js_lesson_telling_reports_apart(reports) {
   arguments_assert(arguments, 1);
   ("the reports over a lesson's telling, split into the ones naming a fault and the ones nothing could be judged about, with every unjudged lesson said out loud as it is set aside.");
   ("A report whose telling came out empty is not a lesson that passed. It is the check saying it never found where the lesson does its telling, and a lesson quietly counted as clean because nothing was found to look at is the one failure that would make the whole check worthless.");
