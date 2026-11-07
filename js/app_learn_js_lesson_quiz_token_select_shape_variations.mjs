@@ -4,7 +4,7 @@ import { app_code_quiz_tile_dealings_or_null } from "./app_code_quiz_tile_dealin
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-export function app_code_lesson_quiz_token_select_shape_variations(code) {
+export function app_learn_js_lesson_quiz_token_select_shape_variations(code) {
   "$plain code";
   arguments_assert(arguments, 1);
   ("Every way the question's own tiles can be dealt back into the question's own shape, written out as lines - the parentheses, commas and names stay exactly where the question put them, and the values and the signs are handed round among the places of their own kind.");
