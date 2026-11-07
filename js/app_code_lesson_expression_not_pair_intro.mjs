@@ -14,7 +14,7 @@ import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_code_tile } from "./app_code_code_tile.mjs";
+import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 import { app_code_not_parenthesis_shape } from "./app_code_not_parenthesis_shape.mjs";
 import { app_code_lesson_expression_worked_card_not } from "./app_code_lesson_expression_worked_card_not.mjs";
 export function app_code_lesson_expression_not_pair_intro(root, context) {
@@ -59,7 +59,7 @@ export function app_code_lesson_expression_not_pair_intro(root, context) {
     html_span_text(row, said);
     html_span_text_code_dark(row, joined_symbol);
     html_span_text(row, " could be inside those parenthesis: ");
-    app_code_code_tile(row, fill);
+    app_learn_js_code_tile(row, fill);
   }
   let row_not = html_div(card);
   html_span_text_code_dark(row_not, symbol);

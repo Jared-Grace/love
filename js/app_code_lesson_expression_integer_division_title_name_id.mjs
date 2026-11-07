@@ -7,7 +7,7 @@ import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { app_code_code_tile } from "./app_code_code_tile.mjs";
+import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 export function app_code_lesson_expression_integer_division_title_name_id() {
   arguments_assert(arguments, 0);
@@ -31,7 +31,7 @@ export function app_code_lesson_expression_integer_division_title_name_id() {
   }
   function paint(parent) {
     html_span_text(parent, "Integer division ");
-    app_code_code_tile(parent, fill);
+    app_learn_js_code_tile(parent, fill);
   }
   let built = app_code_lesson_name_id_operators(paint);
   return built;

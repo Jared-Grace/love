@@ -1,5 +1,5 @@
 import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
-import { app_code_code_tile } from "./app_code_code_tile.mjs";
+import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_expression_divisor() {
     "the home title says Naming the divisor and then shows where in a division the divisor stands: the part after the slash";
     function paint(parent) {
       app_code_lesson_naming_words(parent, "divisor");
-      app_code_code_tile(parent, fill);
+      app_learn_js_code_tile(parent, fill);
     }
     function fill(host) {
       "the slash and then a gap, so the shape says the divisor is whatever the dividing is by";
