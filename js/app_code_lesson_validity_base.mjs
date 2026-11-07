@@ -2,7 +2,7 @@ import { app_learn_js_label_code_question } from "./app_learn_js_label_code_ques
 import { app_code_quiz_backwards_label_answer_validity } from "./app_code_quiz_backwards_label_answer_validity.mjs";
 import { noop } from "./noop.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
-import { app_code_lesson_quizzes } from "./app_code_lesson_quizzes.mjs";
+import { app_learn_js_lesson_quizzes } from "./app_learn_js_lesson_quizzes.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_code_lesson_validity_base({
   batch_get,
@@ -34,7 +34,7 @@ export function app_code_lesson_validity_base({
     answer_on_button: backwards_answer_on_button,
     answer_count_override: 2,
   };
-  let quizzes_get = app_code_lesson_quizzes({
+  let quizzes_get = app_learn_js_lesson_quizzes({
     batch_get,
     forwards,
     backwards,

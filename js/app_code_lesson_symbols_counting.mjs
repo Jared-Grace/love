@@ -5,7 +5,7 @@ import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "./app
 import { noop } from "./noop.mjs";
 import { app_code_symbols_count_wrong_say } from "./app_code_symbols_count_wrong_say.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
-import { app_code_lesson_quizzes } from "./app_code_lesson_quizzes.mjs";
+import { app_learn_js_lesson_quizzes } from "./app_learn_js_lesson_quizzes.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_code_lesson_symbols_counting(
   name_id,
@@ -41,7 +41,7 @@ export function app_code_lesson_symbols_counting(
     answer_on_button: on_quiz_answer_button_backwards,
     answer_count_override: quiz_backwards_answer_count_override,
   };
-  let quizzes_get = app_code_lesson_quizzes({
+  let quizzes_get = app_learn_js_lesson_quizzes({
     batch_get,
     forwards,
     backwards,
