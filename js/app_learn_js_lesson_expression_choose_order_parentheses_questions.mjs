@@ -2,7 +2,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_expression } from "./app_learn_js_lesson_expression_choose_order_parentheses_expression.mjs";
-import { app_code_lesson_expression_choose_order_parentheses_tree_of_code } from "./app_code_lesson_expression_choose_order_parentheses_tree_of_code.mjs";
+import { app_learn_js_lesson_expression_choose_order_parentheses_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_parentheses_tree_of_code.mjs";
 export function app_learn_js_lesson_expression_choose_order_parentheses_questions() {
   arguments_assert(arguments, 0);
   ("the question bank of the parentheses lesson: lines whose || stands in parentheses at one end of an && and then at the other, given out one a screen and worked out again from the writing they were printed as");
@@ -22,7 +22,7 @@ export function app_learn_js_lesson_expression_choose_order_parentheses_question
   }
   let bank = app_code_lesson_expression_choose_order_questions_generic(
     expression_turning,
-    app_code_lesson_expression_choose_order_parentheses_tree_of_code,
+    app_learn_js_lesson_expression_choose_order_parentheses_tree_of_code,
   );
   return bank;
 }
