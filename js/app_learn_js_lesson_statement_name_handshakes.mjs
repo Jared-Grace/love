@@ -12,7 +12,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_sum_to } from "./app_code_lesson_statement_name_sum_to.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_handshakes() {
+export function app_learn_js_lesson_statement_name_handshakes() {
   arguments_assert(arguments, 0);
   ("how many handshakes when each person shakes hands once with each other person: let others = people - 1; let twice = people * others; let shakes = twice / 2; - the number of pairs, n * (n - 1) / 2. Chosen by the human 2026-09-30 as the next formula lesson; in DSA it is how many pairs a list holds, which is how many comparisons checking every pair makes");
   ("Three short lines rather than one: let shakes = people * (people - 1) / 2; is past the 30 characters a code line may be. The reminder is Adding 1 up to n, the same shape of formula - multiply by a neighbouring number, then halve. Not picked: counting the handshakes as 1 + 2 + ... + (people - 1), which is right but leans on that lesson's formula instead of a reason the learner can see at a party.");

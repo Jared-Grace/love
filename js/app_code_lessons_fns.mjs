@@ -208,7 +208,7 @@ import { app_learn_js_lesson_statement_name_digit_append } from "./app_learn_js_
 import { app_learn_js_lesson_statement_name_clock_face } from "./app_learn_js_lesson_statement_name_clock_face.mjs";
 import { app_learn_js_lesson_statement_name_clock_next } from "./app_learn_js_lesson_statement_name_clock_next.mjs";
 import { app_learn_js_lesson_statement_name_egg_boxes } from "./app_learn_js_lesson_statement_name_egg_boxes.mjs";
-import { app_code_lesson_statement_name_handshakes } from "./app_code_lesson_statement_name_handshakes.mjs";
+import { app_learn_js_lesson_statement_name_handshakes } from "./app_learn_js_lesson_statement_name_handshakes.mjs";
 import { app_code_lesson_statement_name_rows_down } from "./app_code_lesson_statement_name_rows_down.mjs";
 import { app_code_lesson_statement_name_rows_apart } from "./app_code_lesson_statement_name_rows_apart.mjs";
 import { app_learn_js_lesson_statement_name_grid_steps } from "./app_learn_js_lesson_statement_name_grid_steps.mjs";
@@ -569,7 +569,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_statement_name_clock_face,
     app_learn_js_lesson_statement_name_clock_next,
     app_learn_js_lesson_statement_name_egg_boxes,
-    app_code_lesson_statement_name_handshakes,
+    app_learn_js_lesson_statement_name_handshakes,
     app_code_lesson_statement_name_rows_down,
     app_code_lesson_statement_name_rows_apart,
     app_learn_js_lesson_statement_name_grid_steps,
