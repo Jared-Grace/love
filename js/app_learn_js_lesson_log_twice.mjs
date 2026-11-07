@@ -8,7 +8,7 @@ import { app_learn_js_lesson_log_twice_title_name_id } from "./app_learn_js_less
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_log_twice() {
+export function app_learn_js_lesson_log_twice() {
   arguments_assert(arguments, 0);
   ("two lines that write out: console.log(4 + 6); console.log(5 + 7); writes out 10 and then 12, one under the other");
   ("The one new fact is that a program may write out more than once. Every program a learner has read until now had a single line that wrote something, so an answer has always been one thing; here an answer is a list of things in the order they happened.");

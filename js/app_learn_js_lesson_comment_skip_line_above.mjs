@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_log_twice } from "./app_code_lesson_log_twice.mjs";
+import { app_learn_js_lesson_log_twice } from "./app_learn_js_lesson_log_twice.mjs";
 import { app_code_lesson_sum_lines } from "./app_code_lesson_sum_lines.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -25,9 +25,12 @@ export function app_learn_js_lesson_comment_skip_line_above(root, context) {
   let last_line = property_get(lines, "last_line");
   let last_noted = text_combine(prefix, last_line);
   let box_both = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(box_both, context, app_code_lesson_log_twice, [
-    "two lines that write out give two answers:",
-  ]);
+  app_code_remember_from_lesson(
+    box_both,
+    context,
+    app_learn_js_lesson_log_twice,
+    ["two lines that write out give two answers:"],
+  );
   let first_total = property_get(lines, "first_total");
   let last_total = property_get(lines, "last_total");
   let both = list_join_newline([first_total, last_total]);
