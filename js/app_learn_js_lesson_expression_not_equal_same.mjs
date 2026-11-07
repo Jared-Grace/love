@@ -26,7 +26,7 @@ import { app_learn_js_lesson_expression_not_equal_same_title_name_id } from "./a
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_learn_js_lesson_expression_not_equal_same_intro } from "./app_learn_js_lesson_expression_not_equal_same_intro.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
-export function app_code_lesson_expression_not_equal_same() {
+export function app_learn_js_lesson_expression_not_equal_same() {
   "the derivation the curriculum promised out loud and had not kept: a !== b is the same line as !(a === b). When !== was first taught it was deliberately framed as asking whether two sides are DIFFERENT - an everyday primitive standing beside SAME - and not as the negation of ===, because that reading needs a ! around a whole comparison and there was no lesson for one. There is now, immediately before this, so the promise can be paid.";
   "The quiz matches the two forms against each other rather than asking for a value, because what is being taught is that the two spellings mean one thing. A value question would be answered correctly by a learner who never noticed they were the same line.";
   "Both truths appear across a screen: sides that are the same and sides that are different. Neither changes what the answer is - the answer is the other spelling either way - but a learner who only ever saw one would have no reason to believe the match holds generally.";

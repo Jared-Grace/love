@@ -119,7 +119,7 @@ import { app_learn_js_lesson_expression_choose_order_not_twice } from "./app_lea
 import { app_code_lesson_expression_not_twice } from "./app_code_lesson_expression_not_twice.mjs";
 import { app_learn_js_lesson_expression_choose_order_not } from "./app_learn_js_lesson_expression_choose_order_not.mjs";
 import { app_learn_js_lesson_expression_not_comparison } from "./app_learn_js_lesson_expression_not_comparison.mjs";
-import { app_code_lesson_expression_not_equal_same } from "./app_code_lesson_expression_not_equal_same.mjs";
+import { app_learn_js_lesson_expression_not_equal_same } from "./app_learn_js_lesson_expression_not_equal_same.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_pair } from "./app_learn_js_lesson_expression_choose_order_not_pair.mjs";
 import { app_code_lesson_expression_not_pair } from "./app_code_lesson_expression_not_pair.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides } from "./app_learn_js_lesson_expression_choose_order_both_sides.mjs";
@@ -480,7 +480,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_not_twice,
     app_learn_js_lesson_expression_choose_order_not,
     app_learn_js_lesson_expression_not_comparison,
-    app_code_lesson_expression_not_equal_same,
+    app_learn_js_lesson_expression_not_equal_same,
     app_learn_js_lesson_expression_choose_order_not_pair,
     app_code_lesson_expression_not_pair,
     app_learn_js_lesson_expression_choose_order_both_sides,
