@@ -14,7 +14,7 @@ import { text_combine } from "./text_combine.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_delete } from "./property_delete.mjs";
 import { each } from "./each.mjs";
-export function app_code_lesson_prose_colon_ast_add(ast) {
+export function app_learn_js_lesson_prose_colon_ast_add(ast) {
   arguments_assert(arguments, 1);
   ("Put a colon on the end of every line of lesson writing that has a block of code drawn underneath it, and hand back how many were changed.");
   ("A colon is what tells a reader the line above is pointing at the code below rather than saying something on its own. The screens were written one at a time and most of them have it; the ones that do not read as a sentence stopping and a block of code appearing for no stated reason.");
