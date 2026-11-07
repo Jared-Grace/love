@@ -22,7 +22,7 @@ import { app_learn_js_home_just_left_next } from "./app_learn_js_home_just_left_
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
 import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
 import { app_code_home_review_row } from "./app_code_home_review_row.mjs";
-import { app_code_home_milestone_rows } from "./app_code_home_milestone_rows.mjs";
+import { app_learn_js_home_milestone_rows } from "./app_learn_js_home_milestone_rows.mjs";
 import { each_index } from "./each_index.mjs";
 import { app_learn_js_home_groups_finish } from "./app_learn_js_home_groups_finish.mjs";
 import { app_learn_js_home_all_complete } from "./app_learn_js_home_all_complete.mjs";
@@ -120,7 +120,7 @@ export async function app_code_home(context) {
         opened = group;
       }
     }
-    let milestone_row_left = app_code_home_milestone_rows(
+    let milestone_row_left = app_learn_js_home_milestone_rows(
       body,
       context,
       milestones,

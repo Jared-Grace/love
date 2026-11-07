@@ -5,7 +5,7 @@ import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
 import { app_learn_js_home_milestone_row } from "./app_learn_js_home_milestone_row.mjs";
 import { equal } from "./equal.mjs";
 import { each } from "./each.mjs";
-export function app_code_home_milestone_rows(
+export function app_learn_js_home_milestone_rows(
   body,
   context,
   milestones,
