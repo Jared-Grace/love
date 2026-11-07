@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_expression_true_false_compare_generic_line } from "./app_learn_js_lesson_expression_true_false_compare_generic_line.mjs";
-import { app_code_lesson_expression_true_false_compare_generic_title_name_id } from "./app_code_lesson_expression_true_false_compare_generic_title_name_id.mjs";
+import { app_learn_js_lesson_expression_true_false_compare_generic_title_name_id } from "./app_learn_js_lesson_expression_true_false_compare_generic_title_name_id.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -29,7 +29,9 @@ export function app_code_lesson_expression_true_false_compare_generic(
   let symbol = property_get(operator, "operator");
   let fn = property_get(operator, "fn");
   let name_id =
-    app_code_lesson_expression_true_false_compare_generic_title_name_id(symbol);
+    app_learn_js_lesson_expression_true_false_compare_generic_title_name_id(
+      symbol,
+    );
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_learn_js_lesson_expression_generic({
     above,
