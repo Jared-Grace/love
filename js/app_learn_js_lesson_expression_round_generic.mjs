@@ -10,7 +10,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_round_generic(params) {
+export function app_learn_js_lesson_expression_round_generic(params) {
   "the shared body of the two whole-number rounding lessons - Math.floor (round down) and Math.ceil (round up). They practise the same thing on a decimal by itself: the four questions (each a fresh whole part 2..7, alternating a decimal to round with an already-whole number that does not change), the labels, the worked example between two wholes shown for an ordinary AND an extreme decimal (to show it rounds its fixed way, not to the nearest), and the already-whole case. Nearly everything follows from the one direction (up or down): the words (up/down, bigger/smaller, above/below), which of the two wholes is chosen, and the decoy (the other whole). Each lesson passes the function name, its two digit ranges, and whether it is the one that first introduces the term whole number.";
   let called_name = property_get(params, "fn_name");
   let rounds_up = property_get(params, "rounds_up");
