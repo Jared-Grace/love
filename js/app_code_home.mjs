@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
-import { app_code_home_rows_start } from "./app_code_home_rows_start.mjs";
+import { app_learn_js_home_rows_start } from "./app_learn_js_home_rows_start.mjs";
 import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
 import { app_code_reviews_complete_read } from "./app_code_reviews_complete_read.mjs";
 import { app_code_milestones } from "./app_code_milestones.mjs";
@@ -38,7 +38,7 @@ export async function app_code_home(context) {
   html_style_margin_y(div, value);
   let lessons = app_code_lessons();
   let current_id = storage_session_get_context(context, "lesson_id");
-  let r2 = app_code_home_rows_start(context);
+  let r2 = app_learn_js_home_rows_start(context);
   let way_marked = property_get(r2, "way_marked");
   let complete_all_previous = property_get(r2, "complete_all_previous");
   let progress = property_get(r2, "progress");
