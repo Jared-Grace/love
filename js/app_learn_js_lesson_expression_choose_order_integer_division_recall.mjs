@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_integer_division_uneven_cards } from "./app_learn_js_integer_division_uneven_cards.mjs";
-export function app_code_lesson_expression_choose_order_integer_division_recall(
+export function app_learn_js_lesson_expression_choose_order_integer_division_recall(
   root,
   context,
 ) {
