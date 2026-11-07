@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
-import { app_code_code_dark_lines_braces_paired_random } from "./app_code_code_dark_lines_braces_paired_random.mjs";
+import { app_learn_js_code_dark_lines_braces_paired_random } from "./app_learn_js_code_dark_lines_braces_paired_random.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_braces_choose_colored_forwards } from "./app_code_lesson_quiz_braces_choose_colored_forwards.mjs";
 import { app_code_lesson_quiz_braces_choose_colored_backwards } from "./app_code_lesson_quiz_braces_choose_colored_backwards.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_braces_among_colored_generic(
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
     answer_label: "Which are its braces, in order?",
-    answer_on_button: app_code_code_dark_lines_braces_paired_random,
+    answer_on_button: app_learn_js_code_dark_lines_braces_paired_random,
     answer_count_override: null,
   };
   let quizzes_get = app_code_lesson_quizzes_generic({
