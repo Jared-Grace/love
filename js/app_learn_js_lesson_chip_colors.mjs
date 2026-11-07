@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_color_chips } from "./app_shared_color_chips.mjs";
-export function app_code_lesson_chip_colors() {
+export function app_learn_js_lesson_chip_colors() {
   arguments_assert(arguments, 0);
   ("the categorical chip colours - a red, a green, a blue and an amber, hand-picked to be as distinct and familiar as possible, NOT an even-hue formula, so a learner tells one number from another at a glance");
   ("THE WHOLE LIST IS ANSWERED RATHER THAN ONE OF THEM, SO THAT WHATEVER COUNTS THEM CANNOT DISAGREE WITH WHATEVER USES THEM. A gate checking this palette has to know how many there are; told four, it would go on checking four the day a fifth arrived, and would pass while saying nothing at all about the colour that was actually added. Asked for the list, it checks whatever is here.");

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_chip_colors } from "./app_code_lesson_chip_colors.mjs";
+import { app_learn_js_lesson_chip_colors } from "./app_learn_js_lesson_chip_colors.mjs";
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
 import { color_contrast_floor_text } from "./color_contrast_floor_text.mjs";
 import { color_contrast_floor_shape } from "./color_contrast_floor_shape.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_chip_color_readings() {
   ("THE WHITE IS SPELLED HERE RATHER THAN ASKED FOR, WHICH IS A COPY, AND THE COPY IS SAFE FOR A REASON THAT DOES NOT GENERALISE. What a number chip letters in is the bare word white, set inside the shared code-chip drawing; it is the top of the scale rather than a shade anybody picked, so the drift a single spelling guards against - one person revising a chosen shade a little and the other spelling staying put - cannot happen to it. What WOULD break this is somebody changing chip lettering to a colour that is not white, at which point this goes on measuring white and says nothing. If that day comes, the repair is to give the chip's lettering its own name and ask for it here.");
   ("THE PALE RING THAT LIFTS A CHIP OFF A BLACK CODE TILE IS MEASURED NOWHERE, AND THAT IS A KNOWN HOLE RATHER THAN AN OVERSIGHT. Measured 2026-09-20 it stands at 2.98 against the amber where a shape needs 3, so on that one member it very nearly disappears. It is left out because the ring is spelled inside the drawing that draws it, and reading it from here would mean either a second spelling that can drift or moving the colour into the shared palette - and moving it lands a new blue a short step from an existing one, which is a colour decision, in a gate whose whole premise is that the colour decisions are waiting for somebody else.");
   ("THE DOTS' FADING IS ALSO LEFT OUT, AND FOR THE OPPOSITE REASON - IT IS FINE. Each dot in a row is drawn a step more see-through than the last, so the faintest sits at under half strength and clears no shape floor at all. Every member fails that identically, which is the tell: what would be measured there is the fading and not the palette. The fading is the design - it is what makes every dot in a row distinct - so a check of it would report the drawing working as intended as four faults.");
-  let colors = app_code_lesson_chip_colors();
+  let colors = app_learn_js_lesson_chip_colors();
   let card = app_shared_container_blue_background_color();
   let white = "white";
   let text_floor = color_contrast_floor_text();
