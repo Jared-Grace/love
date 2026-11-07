@@ -1,6 +1,6 @@
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_parentheses_moved_card_different_answer(
+export function app_learn_js_lesson_expression_parentheses_moved_card_different_answer(
   root,
   plus,
   times,

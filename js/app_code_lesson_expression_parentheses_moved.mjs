@@ -12,7 +12,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_two_places } from "./app_code_lesson_expression_parentheses_moved_card_two_places.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_worked } from "./app_code_lesson_expression_parentheses_moved_card_worked.mjs";
-import { app_code_lesson_expression_parentheses_moved_card_different_answer } from "./app_code_lesson_expression_parentheses_moved_card_different_answer.mjs";
+import { app_learn_js_lesson_expression_parentheses_moved_card_different_answer } from "./app_learn_js_lesson_expression_parentheses_moved_card_different_answer.mjs";
 import { app_learn_js_lesson_expression_parentheses_moved_card_changes_nothing } from "./app_learn_js_lesson_expression_parentheses_moved_card_changes_nothing.mjs";
 export function app_code_lesson_expression_parentheses_moved() {
   "the same three numbers and the same two operators, with the ( and ) in one of two places: (2 + 3) * 4 is 20 and 2 + (3 * 4) is 14. The first parentheses lesson showed the parentheses against no parentheses. This one shows them against THEMSELVES - nothing on the line differs except where the pair sits, so the answer can only come from reading their position. That is also the first place a learner sees parentheses that change nothing: 2 + (3 * 4) is what 2 + 3 * 4 already did, because the parentheses there agree with the * being stronger.";
@@ -76,7 +76,7 @@ export function app_code_lesson_expression_parentheses_moved() {
       context,
     );
     app_code_lesson_expression_parentheses_moved_card_worked(root);
-    app_code_lesson_expression_parentheses_moved_card_different_answer(
+    app_learn_js_lesson_expression_parentheses_moved_card_different_answer(
       root,
       plus,
       times,
