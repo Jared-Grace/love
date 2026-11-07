@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
-export function app_code_lesson_expression_repeated_generic_final_count(
+export function app_learn_js_lesson_expression_repeated_generic_final_count(
   grid,
   number,
   color,
