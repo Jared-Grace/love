@@ -1,7 +1,7 @@
 import { app_code_expression_replace_word_say } from "./app_code_expression_replace_word_say.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_expression_replace_button(parent, press) {
+export function app_learn_js_expression_replace_button(parent, press) {
   arguments_assert(arguments, 2);
   ("the button that makes the swap happen, with the one word saying what it does written in the very colour the swap is wearing");
   ("Everything about to move on the line is blue - the block chosen, the words naming it, and the value on its way down into its room. So the word for the thing that starts all that is blue too, and a learner who has been watching the blue reads what the button does before reading the sentence on it.");

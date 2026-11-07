@@ -1,4 +1,4 @@
-import { app_code_expression_replace_button } from "./app_code_expression_replace_button.mjs";
+import { app_learn_js_expression_replace_button } from "./app_learn_js_expression_replace_button.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { app_code_expression_replace_say } from "./app_code_expression_replace_say.mjs";
@@ -31,7 +31,7 @@ export function app_learn_js_expression_replace_ask(
   ("Underneath, the width is already doing the separating: the button fills its own line and the label under it starts at the left edge, so nothing has to be added to tell the two of them apart. Above, they are one after the other in the same reading, and only a gap says that the reading has finished and something to press has begun.");
   let gap = app_shared_spaced_gap();
   html_style_margin_top(holder, gap);
-  let button = app_code_expression_replace_button(holder, press);
+  let button = app_learn_js_expression_replace_button(holder, press);
   ("the button is what the line points at while it is waiting, because from here on the only press that moves anything is this one");
   ("A learner who has just chosen an operator goes on pressing operators - the line is where they have been looking and it still looks like the thing to press. It answers nothing until the swap has been made, and without something saying so the press reads as a screen that has stopped working rather than as a screen waiting on them.");
   waiting_on(button);
