@@ -18,7 +18,7 @@ import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_remainder_any() {
+export function app_learn_js_lesson_expression_remainder_any() {
   "practice the remainder % with a mix of divisors; the intro DEFINES the remainder via the formula (dividend - Math.floor(n / d) * d, learned in the remainder-by-dividing lessons) rather than pointing back to the 2/3/4 lessons; both the number and the divisor vary each question";
   let percent = js_operator_percent_sign();
   function make(divisor) {

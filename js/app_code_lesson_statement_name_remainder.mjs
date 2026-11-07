@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
-import { app_code_lesson_expression_remainder_any } from "./app_code_lesson_expression_remainder_any.mjs";
+import { app_learn_js_lesson_expression_remainder_any } from "./app_learn_js_lesson_expression_remainder_any.mjs";
 export function app_code_lesson_statement_name_remainder() {
   arguments_assert(arguments, 0);
   ("the remainder of one name divided by another: let a = 20; let b = 9; let remainder = a % b; console.log(remainder); writes out 2");
@@ -27,7 +27,7 @@ export function app_code_lesson_statement_name_remainder() {
     symbol: percent,
     pairs_get,
     example_pair: [14, 4],
-    remember_lesson: app_code_lesson_expression_remainder_any,
+    remember_lesson: app_learn_js_lesson_expression_remainder_any,
     remember_parts: [
       "we can find the remainder (",
       percent,
