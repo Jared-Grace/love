@@ -16,7 +16,7 @@ import { html_div } from "./html_div.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_lesson_console_log_remainder_generic_equation_with_remainder } from "./app_learn_js_lesson_console_log_remainder_generic_equation_with_remainder.mjs";
-export function app_code_lesson_console_log_remainder_generic_example(
+export function app_learn_js_lesson_console_log_remainder_generic_example(
   parent,
   divisor,
   divisor_text,

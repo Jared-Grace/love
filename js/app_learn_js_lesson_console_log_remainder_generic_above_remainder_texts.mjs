@@ -5,7 +5,7 @@ import { greater_than } from "./greater_than.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_lesson_console_log_remainder_generic_example } from "./app_code_lesson_console_log_remainder_generic_example.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_example } from "./app_learn_js_lesson_console_log_remainder_generic_example.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
@@ -39,7 +39,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_remainde
     "Other times the numbers do not divide evenly",
   ]);
   let example_box = app_learn_js_container_light_blue(root);
-  app_code_lesson_console_log_remainder_generic_example(
+  app_learn_js_lesson_console_log_remainder_generic_example(
     example_box,
     divisor,
     divisor_text,
