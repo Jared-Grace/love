@@ -10,7 +10,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_sum_to } from "./app_code_lesson_statement_name_sum_to.mjs";
+import { app_learn_js_lesson_statement_name_sum_to } from "./app_learn_js_lesson_statement_name_sum_to.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_learn_js_lesson_statement_name_handshakes() {
   arguments_assert(arguments, 0);
@@ -68,7 +68,7 @@ export function app_learn_js_lesson_statement_name_handshakes() {
     values_get,
     example_values: [4],
     step,
-    remember_lesson: app_code_lesson_statement_name_sum_to,
+    remember_lesson: app_learn_js_lesson_statement_name_sum_to,
     remember_parts: [
       "we can multiply a number by the number after it and then halve it:",
     ],

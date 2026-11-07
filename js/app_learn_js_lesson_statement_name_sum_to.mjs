@@ -18,7 +18,7 @@ import { list_between_space_nb } from "./list_between_space_nb.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_statement_name_multiply } from "./app_learn_js_lesson_statement_name_multiply.mjs";
-export function app_code_lesson_statement_name_sum_to() {
+export function app_learn_js_lesson_statement_name_sum_to() {
   arguments_assert(arguments, 0);
   ("the sum 1 + 2 + ... + n in three short lines: let next = n + 1; let product = n * next; let sum = product / 2;");
   ("Chosen for later use: finding the one number missing from 1 to n compares a list's sum with this one, and it is the first formula whose line count stays the same however big n is.");
