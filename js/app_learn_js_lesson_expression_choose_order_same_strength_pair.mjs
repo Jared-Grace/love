@@ -6,7 +6,7 @@ import { app_code_lesson_expression_choose_order_solve_example } from "./app_cod
 import { app_learn_js_lesson_expression_choose_order_same_strength_pair_questions } from "./app_learn_js_lesson_expression_choose_order_same_strength_pair_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength_pair_above } from "./app_learn_js_lesson_expression_choose_order_same_strength_pair_above.mjs";
-export function app_code_lesson_expression_choose_order_same_strength_pair() {
+export function app_learn_js_lesson_expression_choose_order_same_strength_pair() {
   arguments_assert(arguments, 0);
   ("two operators of one strength on a line, pressed a part at a time: 8 - 2 + 4, choose the minus, choose 6, see 6 + 4, choose the plus, choose 10");
   ("★ IT IS THE STEP THE THREE-OPERATOR SAME-STRENGTH LESSON SAYS A LEARNER HAS ALREADY TAKEN, and until now nothing had given it to them. That lesson's own words are that position deciding each step is the rule a learner has already met on two-operator lines and is now asked to keep hold of for one step longer - so the two-operator screen was owed, and this is it.");
