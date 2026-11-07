@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve } from "./app_learn_js_lesson_expression_choose_order_solve.mjs";
 import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
-import { app_code_lesson_expression_remainder_divide_solve } from "./app_code_lesson_expression_remainder_divide_solve.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_solve } from "./app_learn_js_lesson_expression_remainder_divide_solve.mjs";
 import { app_code_lesson_functions_arithmetic } from "./app_code_lesson_functions_arithmetic.mjs";
 export function app_code_review_preview_lessons_under_test() {
   arguments_assert(arguments, 0);
@@ -12,7 +12,7 @@ export function app_code_review_preview_lessons_under_test() {
   let fns = [
     app_learn_js_lesson_expression_choose_order_solve,
     app_learn_js_lesson_expression_choose_order,
-    app_code_lesson_expression_remainder_divide_solve,
+    app_learn_js_lesson_expression_remainder_divide_solve,
     app_code_lesson_functions_arithmetic,
   ];
   return fns;

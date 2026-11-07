@@ -15,7 +15,7 @@ import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_remainder_divide_solve() {
+export function app_learn_js_lesson_expression_remainder_divide_solve() {
   "SOLVE the remainder-by-dividing formula: given a - Math.floor(a / b) * b, work out its value - the remainder. The learner has already solved each sub-part (Math.floor(a / b) in integer division, then * b for the whole part), so this is the one added step: subtract the whole part from the dividend. The answer is the leftover (the remainder); quotient 2..3, divisor 3..6";
   function make(divisor) {
     "the full remainder formula dividend - Math.floor(dividend / divisor) * divisor for the given divisor; the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division is uneven and the formula works out to that leftover - the remainder";
