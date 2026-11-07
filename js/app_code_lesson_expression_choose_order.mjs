@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_title_name_id } from "./app_code_lesson_expression_choose_order_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_title_name_id } from "./app_learn_js_lesson_expression_choose_order_title_name_id.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_label_solve_next } from "./app_learn_js_label_solve_next.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_choose_order() {
   "One quiz kind, not three. Backwards asks what code produces this value, and here the value is not what is being asked for; unscramble asks the learner to build the line, and the line is given. Both would be questions about something the lesson is not teaching.";
   "Two operators a line - the smallest number that is still a choice. A wrong press refuses that operator and leaves the other pressable, so a wrong first press is followed by a forced right one; that is why the review now requeues twice rather than once. Three operators is the next step, and it belongs after this shape has been met, not inside it.";
   "The front page and the quiz press the same line, built by the one unit both of them call. What the front page adds is words: which operator to press, and what the press just did. Two copies of the pressing, one of them narrated, would drift the moment either was touched.";
-  let name_id = app_code_lesson_expression_choose_order_title_name_id();
+  let name_id = app_learn_js_lesson_expression_choose_order_title_name_id();
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz: the same line to press as the front page, with nothing said about which operator to press - that is the whole of what is being asked";
     "Drawn wholly inside the answers area rather than partly in the question area above it, because the line CHANGES as it is worked out and the question area is redrawn only when the whole question changes.";

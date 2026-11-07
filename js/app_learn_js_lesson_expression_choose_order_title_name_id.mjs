@@ -4,7 +4,7 @@ import { app_learn_js_category_expressions } from "./app_learn_js_category_expre
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_title_name_id() {
+export function app_learn_js_lesson_expression_choose_order_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: Choose * before +, an Expressions lesson where the order is chosen and each value is worked out for the learner");
   ("The title names the two operators every line here is built from rather than describing choosing in general, so the list says what is learned. Choose rather than Solve is the one word that sets it apart from the lesson after it, which asks for the values too.");
