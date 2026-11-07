@@ -11,7 +11,7 @@ import { html_clear } from "./html_clear.mjs";
 import { app_learn_js_code_dark_lines_braces_paired_colors } from "./app_learn_js_code_dark_lines_braces_paired_colors.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_lesson_quiz_pieces_select } from "./app_code_lesson_quiz_pieces_select.mjs";
-export function app_code_lesson_quiz_braces_order_generic({
+export function app_learn_js_lesson_quiz_braces_order_generic({
   parent,
   info,
   qa,
