@@ -5,7 +5,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
-import { app_code_lesson_token_order_braces_only } from "./app_code_lesson_token_order_braces_only.mjs";
+import { app_learn_js_lesson_token_order_braces_only } from "./app_learn_js_lesson_token_order_braces_only.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_token_order_codes_generic } from "./app_code_lesson_token_order_codes_generic.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_token_order_braces_two() {
     app_learn_js_lesson_reference_draw(
       line,
       context,
-      app_code_lesson_token_order_braces_only,
+      app_learn_js_lesson_token_order_braces_only,
     );
     app_learn_js_div_cycle_code(box, [
       "Except each program has two pairs of braces ",

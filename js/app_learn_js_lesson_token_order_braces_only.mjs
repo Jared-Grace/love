@@ -12,7 +12,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_code_lesson_token_order_generic } from "./app_code_lesson_token_order_generic.mjs";
 import { app_code_lesson_token_order_example_choose_braces_only } from "./app_code_lesson_token_order_example_choose_braces_only.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap_braces_only } from "./app_learn_js_lesson_quiz_tokens_tap_braces_only.mjs";
-export function app_code_lesson_token_order_braces_only() {
+export function app_learn_js_lesson_token_order_braces_only() {
   arguments_assert(arguments, 0);
   ("the order of the tokens with only the braces written out: the same choosing as The order of the tokens, braces colored, except under the code only the braces chosen are shown, in their colours, and not every token chosen");
   ("Asked for by the human 2026-10-10: another lesson that shows only the braces below and not all the tokens. Put straight after The order of the tokens, braces colored, so the learner has first seen the braces line beside the line of every token, and is then left with the braces line alone.");

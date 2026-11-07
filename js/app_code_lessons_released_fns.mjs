@@ -257,7 +257,7 @@ import { app_learn_js_lesson_if_two_changes } from "./app_learn_js_lesson_if_two
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_learn_js_lesson_token_order_alone } from "./app_learn_js_lesson_token_order_alone.mjs";
 import { app_learn_js_lesson_token_order_braces_colored } from "./app_learn_js_lesson_token_order_braces_colored.mjs";
-import { app_code_lesson_token_order_braces_only } from "./app_code_lesson_token_order_braces_only.mjs";
+import { app_learn_js_lesson_token_order_braces_only } from "./app_learn_js_lesson_token_order_braces_only.mjs";
 import { app_code_lesson_token_order_braces_two } from "./app_code_lesson_token_order_braces_two.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
 import { app_code_lesson_token_order_braces_plain } from "./app_code_lesson_token_order_braces_plain.mjs";
@@ -570,7 +570,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_token_order,
     app_learn_js_lesson_token_order_alone,
     app_learn_js_lesson_token_order_braces_colored,
-    app_code_lesson_token_order_braces_only,
+    app_learn_js_lesson_token_order_braces_only,
     app_code_lesson_token_order_braces_two,
     app_code_lesson_token_order_braces,
     app_code_lesson_token_order_braces_plain,
