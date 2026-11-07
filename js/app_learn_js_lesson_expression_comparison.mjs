@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { each } from "./each.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
+import { app_learn_js_lesson_symbol_set } from "./app_learn_js_lesson_symbol_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_expression_comparison(params) {
     example_count,
     forwards_answer_count_override: 2,
   });
-  let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol);
+  let lesson_symbol = app_learn_js_lesson_symbol_set(lesson, symbol);
   return lesson_symbol;
   function above(root) {
     function render_section(lines) {

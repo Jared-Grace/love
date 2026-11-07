@@ -9,7 +9,7 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
+import { app_learn_js_lesson_symbol_set } from "./app_learn_js_lesson_symbol_set.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
@@ -51,7 +51,7 @@ export function app_learn_js_lesson_expression_not_twice() {
   });
   property_set(lesson, "examples_complete", true);
   let symbol_twice = text_combine(symbol, symbol);
-  let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol_twice);
+  let lesson_symbol = app_learn_js_lesson_symbol_set(lesson, symbol_twice);
   return lesson_symbol;
   function above(root, context) {
     "the rule, then the nearer ! worked out first, then the outer one, then what the pair adds up to. Worked from true, because that is the keyword the earlier ! lesson opened on.";
