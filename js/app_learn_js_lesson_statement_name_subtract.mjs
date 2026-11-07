@@ -3,7 +3,7 @@ import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_statement_name_difference_number_pairs } from "./app_learn_js_lesson_statement_name_difference_number_pairs.mjs";
 import { app_learn_js_lesson_operators_subtraction } from "./app_learn_js_lesson_operators_subtraction.mjs";
-export function app_code_lesson_statement_name_subtract() {
+export function app_learn_js_lesson_statement_name_subtract() {
   arguments_assert(arguments, 0);
   ("one name taken from another: let a = 17; let b = 11; let difference = a - b; console.log(difference); writes out 6");
   ("The lesson that adds two names showed that a name may stand wherever a number stood in a sum. This one changes only the symbol, so the one thing a learner is asked to accept is that the rule was about the places and not about the plus.");

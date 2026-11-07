@@ -9,7 +9,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_subtract } from "./app_code_lesson_statement_name_subtract.mjs";
+import { app_learn_js_lesson_statement_name_subtract } from "./app_learn_js_lesson_statement_name_subtract.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_learn_js_lesson_statement_name_rows_down() {
@@ -64,7 +64,7 @@ export function app_learn_js_lesson_statement_name_rows_down() {
     values_get,
     example_values: [2, 5],
     step,
-    remember_lesson: app_code_lesson_statement_name_subtract,
+    remember_lesson: app_learn_js_lesson_statement_name_subtract,
     remember_parts: ["we can subtract one name from another:"],
     remember_lines,
     explain: [
