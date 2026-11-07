@@ -7,7 +7,7 @@ import { js_code_binary } from "./js_code_binary.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first_second_only } from "./list_first_second_only.mjs";
 import { list_alphabet_cases_both_shuffled_pairs } from "./list_alphabet_cases_both_shuffled_pairs.mjs";
-export function app_code_lesson_operators_dot_batch(operator, next) {
+export function app_learn_js_lesson_operators_dot_batch(operator, next) {
   function batch_get() {
     let pairs = list_alphabet_cases_both_shuffled_pairs();
     function lambda(la, pair) {
