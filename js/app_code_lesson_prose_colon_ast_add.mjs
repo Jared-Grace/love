@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_prose_code_drawers } from "./app_code_lesson_prose_code_drawers.mjs";
+import { app_learn_js_lesson_prose_code_drawers } from "./app_learn_js_lesson_prose_code_drawers.mjs";
 import { js_blocks_all } from "./js_blocks_all.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_prose_colon_ast_add(ast) {
   ("Only a line that is already sitting above a code block is touched, so what gets a colon is decided by what the screen does rather than by how the sentence is worded. That is what makes this safe to run over everything: a line with nothing under it is left exactly as it was, and running it twice changes nothing the second time.");
   ("A line whose written text ends in a space is left alone, because a colon put after that space would sit away from the word it belongs to. A space at the *start* is not a reason to leave the line alone: a line that names something in code carries on afterwards with a space in front of the rest of the sentence, so almost every line of that shape starts with one, and treating that as a reason to skip was leaving five lines of writing without the mark they were owed.");
   ("The characters somebody typed are dropped along with the value being set, because a written-out piece of text is kept twice over and the characters are what gets printed back. Setting the value alone leaves the file identical.");
-  let drawers = app_code_lesson_prose_code_drawers();
+  let drawers = app_learn_js_lesson_prose_code_drawers();
   let colon = ":";
   let added = 0;
   let blocks = js_blocks_all(ast);
