@@ -7,7 +7,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-export function app_code_lesson_statement_name_average_three_step() {
+export function app_learn_js_lesson_statement_name_average_three_step() {
   arguments_assert(arguments, 0);
   ("the lines of the average-of-three lesson: let sum = a + b + c; let average = sum / 3; - and average is written out");
   let names = app_code_lesson_statement_name_value_names();

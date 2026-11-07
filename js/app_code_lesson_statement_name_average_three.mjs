@@ -5,7 +5,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_code_lesson_statement_name_average_two_step } from "./app_code_lesson_statement_name_average_two_step.mjs";
-import { app_code_lesson_statement_name_average_three_step } from "./app_code_lesson_statement_name_average_three_step.mjs";
+import { app_learn_js_lesson_statement_name_average_three_step } from "./app_learn_js_lesson_statement_name_average_three_step.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_statement_name_average_three() {
   let name_a = list_first(names);
   let name_b = list_second(names);
   let before = app_code_lesson_statement_name_average_two_step();
-  let step = app_code_lesson_statement_name_average_three_step();
+  let step = app_learn_js_lesson_statement_name_average_three_step();
   let middle = property_get(step, "middle");
   let line_sum = list_first(middle);
   let line_average = list_second(middle);
