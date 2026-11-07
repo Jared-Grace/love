@@ -3,7 +3,7 @@ import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_code_lesson_expression_whole_part_formula_recognize_decoys } from "./app_code_lesson_expression_whole_part_formula_recognize_decoys.mjs";
+import { app_learn_js_lesson_expression_whole_part_formula_recognize_decoys } from "./app_learn_js_lesson_expression_whole_part_formula_recognize_decoys.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
@@ -35,7 +35,7 @@ export function app_code_lesson_expression_whole_part_formula() {
   let example_answer_label = "Whole part formula: ";
   let example_question_label = app_learn_js_label_code_question();
   function recognize_decoys(question, answer) {
-    let r4 = app_code_lesson_expression_whole_part_formula_recognize_decoys(
+    let r4 = app_learn_js_lesson_expression_whole_part_formula_recognize_decoys(
       question,
       answer,
     );

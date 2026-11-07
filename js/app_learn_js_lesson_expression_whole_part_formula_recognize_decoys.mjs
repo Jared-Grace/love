@@ -3,7 +3,7 @@ import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.m
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_lesson_expression_whole_part_formula_recognize_decoys(
+export function app_learn_js_lesson_expression_whole_part_formula_recognize_decoys(
   question,
   answer,
 ) {
