@@ -4,7 +4,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_stop_early_or_intro(
+export function app_learn_js_lesson_expression_choose_order_stop_early_or_intro(
   parent,
 ) {
   arguments_assert(arguments, 1);
