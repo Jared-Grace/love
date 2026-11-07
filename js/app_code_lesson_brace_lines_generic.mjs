@@ -15,7 +15,7 @@ import { list_add } from "./list_add.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_brace_marked } from "./app_code_brace_marked.mjs";
+import { app_learn_js_brace_marked } from "./app_learn_js_brace_marked.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_learn_js_brace_lines_choose } from "./app_learn_js_brace_lines_choose.mjs";
@@ -65,7 +65,7 @@ export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
       let right2 = list_size(indexes);
       let index2 = modulo(n, right2);
       let index = list_get(indexes, index2);
-      let question = app_code_brace_marked(code, index);
+      let question = app_learn_js_brace_marked(code, index);
       list_add(questions, question);
     }
     list_shuffle(questions);

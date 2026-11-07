@@ -8,7 +8,7 @@ import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { list_get } from "./list_get.mjs";
 import { modulo } from "./modulo.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_code_brace_marked } from "./app_code_brace_marked.mjs";
+import { app_learn_js_brace_marked } from "./app_learn_js_brace_marked.mjs";
 import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_brace_pair_generic(
       }
       let indexes2 = braces_of(code, brace);
       let index = list_random_item(indexes2);
-      let question = app_code_brace_marked(code, index);
+      let question = app_learn_js_brace_marked(code, index);
       list_add(questions, question);
     }
     return questions;
@@ -73,7 +73,7 @@ export function app_code_lesson_brace_pair_generic(
     let code3 = property_get(unmarked, "code");
     let index3 = property_get(unmarked, "index");
     let partner = js_code_brace_partner_index(code3, index3);
-    let answer = app_code_brace_marked(code3, partner);
+    let answer = app_learn_js_brace_marked(code3, partner);
     return answer;
   }
   let batch = app_learn_js_batch_question_answer_fns(batch_get, partner_marked);
@@ -87,7 +87,7 @@ export function app_code_lesson_brace_pair_generic(
     let kind = code4[partner2];
     let indexes3 = braces_of(code4, kind);
     function marked_at(i) {
-      let m = app_code_brace_marked(code4, i);
+      let m = app_learn_js_brace_marked(code4, i);
       return m;
     }
     let texts = list_map(indexes3, marked_at);

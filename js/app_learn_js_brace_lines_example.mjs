@@ -7,7 +7,7 @@ import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_brace_marked } from "./app_code_brace_marked.mjs";
+import { app_learn_js_brace_marked } from "./app_learn_js_brace_marked.mjs";
 import { app_learn_js_brace_lines_shown } from "./app_learn_js_brace_lines_shown.mjs";
 export function app_learn_js_brace_lines_example(parent, code, nth) {
   arguments_assert(arguments, 3);
@@ -21,7 +21,7 @@ export function app_learn_js_brace_lines_example(parent, code, nth) {
     }
   }
   let index = list_get(indexes, nth);
-  let question = app_code_brace_marked(code, index);
+  let question = app_learn_js_brace_marked(code, index);
   let color = app_code_braces_color_next();
   let right = js_code_brace_right();
   let left_painted = {
