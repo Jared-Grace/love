@@ -10,7 +10,7 @@ import { app_code_lesson_operators_dot_numbers_both_sides_text_common } from "./
 import { app_code_lesson_operators_dot_numbers_example } from "./app_code_lesson_operators_dot_numbers_example.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_learn_js_lesson_operators_asterisk_generic_invalid } from "./app_learn_js_lesson_operators_asterisk_generic_invalid.mjs";
-import { app_code_lesson_operators_asterisk_generic_minus } from "./app_code_lesson_operators_asterisk_generic_minus.mjs";
+import { app_learn_js_lesson_operators_asterisk_generic_minus } from "./app_learn_js_lesson_operators_asterisk_generic_minus.mjs";
 import { js_code_binary } from "./js_code_binary.mjs";
 import { js_operator_dot } from "./js_operator_dot.mjs";
 export function app_code_lesson_operators_dot_missing() {
@@ -40,7 +40,11 @@ export function app_code_lesson_operators_dot_missing() {
     let example = example_get();
     let pattern = js_code_binary("left", operator, "right");
     app_learn_js_div_code_multiple(card, [example, pattern]);
-    app_code_lesson_operators_asterisk_generic_minus(root, operator, context);
+    app_learn_js_lesson_operators_asterisk_generic_minus(
+      root,
+      operator,
+      context,
+    );
     app_learn_js_lesson_operators_asterisk_generic_invalid(
       root,
       operator,

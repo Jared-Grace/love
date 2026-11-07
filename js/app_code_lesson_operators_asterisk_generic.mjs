@@ -4,7 +4,7 @@ import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_op
 import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
 import { app_learn_js_lesson_operators_asterisk_generic_invalid } from "./app_learn_js_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "./app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
-import { app_code_lesson_operators_asterisk_generic_minus } from "./app_code_lesson_operators_asterisk_generic_minus.mjs";
+import { app_learn_js_lesson_operators_asterisk_generic_minus } from "./app_learn_js_lesson_operators_asterisk_generic_minus.mjs";
 import { app_code_lesson_operators_generic_batch_get_binary } from "./app_code_lesson_operators_generic_batch_get_binary.mjs";
 export function app_code_lesson_operators_asterisk_generic(
   operator,
@@ -23,7 +23,11 @@ export function app_code_lesson_operators_asterisk_generic(
       left_transform,
       verb,
     );
-    app_code_lesson_operators_asterisk_generic_minus(root, operator, context);
+    app_learn_js_lesson_operators_asterisk_generic_minus(
+      root,
+      operator,
+      context,
+    );
     app_learn_js_lesson_operators_asterisk_generic_invalid(
       root,
       operator,
