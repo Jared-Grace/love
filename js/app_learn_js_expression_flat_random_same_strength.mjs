@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_code_expression_step_value_least } from "./app_code_expression_step_value_least.mjs";
+import { app_learn_js_expression_step_value_least } from "./app_learn_js_expression_step_value_least.mjs";
 import { app_code_expression_step_value_most } from "./app_code_expression_step_value_most.mjs";
 import { app_learn_js_expression_rank } from "./app_learn_js_expression_rank.mjs";
 import { app_learn_js_expression_step_choices_symbols } from "./app_learn_js_expression_step_choices_symbols.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_expression_flat_random_same_strength(
   let weak = app_code_operators_weak();
   let classes = [strong, weak];
   let symbols = list_random_item(classes);
-  let least = app_code_expression_step_value_least();
+  let least = app_learn_js_expression_step_value_least();
   let most = app_code_expression_step_value_most();
   function ready_is(value) {
     "a number one of this line's operators may be written beside";
