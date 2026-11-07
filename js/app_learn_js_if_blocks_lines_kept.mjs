@@ -17,7 +17,7 @@ import { text_trim } from "./text_trim.mjs";
 export function app_learn_js_if_blocks_lines_kept(code, blocks, count) {
   arguments_assert(arguments, 3);
   ("a program as its steps leave it once the first count sections of blocks, ",
-    fn_name("app_code_if_blocks"),
+    fn_name("app_learn_js_if_blocks"),
     "'s of code, have been answered: each line still standing, as the places in code of the letters it keeps. What does not run is gone, every if and else around what runs is gone, what ran stands moved out to where it now belongs, and a line left with nothing on it goes too");
   ("Places rather than letters, so a caller drawing the program can still find a pair's braces by where they stood in code; a section not reached is skipped, as the steps skip it.");
   let removed = [];

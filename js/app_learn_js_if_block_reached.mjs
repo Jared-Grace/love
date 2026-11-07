@@ -8,7 +8,7 @@ import { property_get } from "./property_get.mjs";
 export function app_learn_js_if_block_reached(blocks, index) {
   arguments_assert(arguments, 2);
   ("whether the section at index of the sections ",
-    fn_name("app_code_if_blocks"),
+    fn_name("app_learn_js_if_blocks"),
     " finds is ever reached: it is not when it stands inside a section that does not run, because it went with that section");
   let open = list_get_property(blocks, index, "open");
   for (let j = 0; less_than(j, index); j++) {

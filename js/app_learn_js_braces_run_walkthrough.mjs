@@ -1,7 +1,7 @@
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_if_blocks } from "./app_code_if_blocks.mjs";
+import { app_learn_js_if_blocks } from "./app_learn_js_if_blocks.mjs";
 import { list_size } from "./list_size.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -28,9 +28,9 @@ export function app_learn_js_braces_run_walkthrough(root, code) {
   ("the worked example's answering written out, one box per section reached: the program as it stands, that section's braces drawn in a colour, Does this { ... } run?, why, and the answer; then the program once every section is answered. Asked for by the human 2026-10-12, so the writing above a Does this section run? lesson explains the exercise it asks, rather than what the code writes out, which is the lesson after's.");
   ("The reason is said before the answer, the proof before what it proves. A section asking a name runs as that name is true or false; one after a section of the same if that ran does not run, whatever it asks; an else runs when no section before it ran. A section inside one that did not run is never reached, so it is never asked, as in the exercise.");
   ("What the answers do to the program is ",
-    fn_name("app_code_if_blocks"),
+    fn_name("app_learn_js_if_blocks"),
     "'s steps, the ones the exercise animates, so each box shows the program the exercise would be showing at that question. Not picked: the exercise itself answering on its own, which shows the steps but cannot stop to say why.");
-  let blocks = app_code_if_blocks(code);
+  let blocks = app_learn_js_if_blocks(code);
   let count = list_size(blocks);
   let brace_left = js_code_brace_left();
   let brace_right = js_code_brace_right();

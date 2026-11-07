@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_if_blocks } from "./app_code_if_blocks.mjs";
+import { app_learn_js_if_blocks } from "./app_learn_js_if_blocks.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_learn_js_if_blocks_lines_kept } from "./app_learn_js_if_blocks_lines_kept.mjs";
 import { text_get } from "./text_get.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_if_blocks_kept(code) {
   ("2026-10-12: the lines are ",
     fn_name("app_learn_js_if_blocks_lines_kept"),
     "'s, with every section answered, so a walkthrough stopping partway leaves the program as this does at the end.");
-  let blocks = app_code_if_blocks(code);
+  let blocks = app_learn_js_if_blocks(code);
   let count = list_size(blocks);
   let lines = app_learn_js_if_blocks_lines_kept(code, blocks, count);
   let kept = [];

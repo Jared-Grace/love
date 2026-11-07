@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_if_blocks } from "./app_code_if_blocks.mjs";
+import { app_learn_js_if_blocks } from "./app_learn_js_if_blocks.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_learn_js_flex_gap } from "./app_learn_js_flex_gap.mjs";
@@ -56,13 +56,13 @@ export function app_learn_js_braces_run_choose(
   arguments_assert(arguments, 4);
   ("a program whose sections are asked about one at a time, its braces drawn in a colour: does this { ... } run? Once the right answer is pressed, the program is taken a step towards what runs of it. A section that does not run is swallowed: what is inside its braces fades out, and the braces close up over the room it took. A section that runs loses the if, or the if () { } else {, around it and its last }, and its lines move diagonally out and up to where they now stand. Asked for by the human 2026-10-11");
   ("What each answer does is ",
-    fn_name("app_code_if_blocks"),
+    fn_name("app_learn_js_if_blocks"),
     "'s to say, so the program shown at the end is the one ",
     fn_name("app_learn_js_if_blocks_kept"),
     " writes out as the answer.");
   ("Every letter is its own piece of the page, so any stretch of the program can fade however it falls across lines; a line goes once everything written on it has faded, which is what makes the braces close up rather than leave a hole.");
   ("The answers are the choices of every other question in this app with choices, so they look and behave the same: a wrong one turns red and is spent, the right one turns green.");
-  let blocks = app_code_if_blocks(code);
+  let blocks = app_learn_js_if_blocks(code);
   let wrap = html_div(parent);
   html_flex_column_stretch(wrap);
   app_learn_js_flex_gap(wrap);

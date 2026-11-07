@@ -26,7 +26,7 @@ import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-export function app_code_if_blocks(code) {
+export function app_learn_js_if_blocks(code) {
   arguments_assert(arguments, 1);
   ("every { ... } of every if, else if and else in a program, in the order they open, each with where its braces stand, whether it runs, and the steps that take the program to what runs of it once the learner has said so. A step fades some stretches of the program and may then move the lines between a pair of braces out by one indent, as the braces around them go");
   ("Whether a section runs is read off the values the program's lets give, so the program's ifs may ask only a name a let gave true or false, or true or false itself; anything else is not a program this answers for, and stops rather than guessing.");
