@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
+import { app_learn_js_lesson_expression_not } from "./app_learn_js_lesson_expression_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_expression_choose_order_not_recall(
   app_code_remember_from_lesson(
     recall_card,
     context,
-    app_code_lesson_expression_not,
+    app_learn_js_lesson_expression_not,
     changes,
   );
   let word_true = js_keyword_true();

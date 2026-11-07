@@ -8,7 +8,7 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
-export function app_code_lesson_expression_not() {
+export function app_learn_js_lesson_expression_not() {
   let symbol = js_operator_bang_symbol();
   function refill() {
     let code = js_keyword_true();

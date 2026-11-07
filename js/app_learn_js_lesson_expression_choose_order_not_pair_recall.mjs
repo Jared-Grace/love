@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
+import { app_learn_js_lesson_expression_not } from "./app_learn_js_lesson_expression_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_expression_choose_order_not_pair_recall(
   app_code_remember_from_lesson(
     recall_card,
     context,
-    app_code_lesson_expression_not,
+    app_learn_js_lesson_expression_not,
     changes,
   );
   let inside_first = app_code_parentheses_inside_before_outside("");

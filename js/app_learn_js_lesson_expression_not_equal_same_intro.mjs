@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
+import { app_learn_js_lesson_expression_not } from "./app_learn_js_lesson_expression_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
@@ -66,7 +66,7 @@ export function app_learn_js_lesson_expression_not_equal_same_intro(
   app_code_remember_from_lesson(
     joins,
     context,
-    app_code_lesson_expression_not,
+    app_learn_js_lesson_expression_not,
     changes,
   );
   app_learn_js_div_cycle_code(joins, [
