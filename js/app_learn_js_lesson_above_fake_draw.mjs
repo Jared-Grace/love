@@ -5,7 +5,7 @@ import { html_element_fake } from "./html_element_fake.mjs";
 import { html_component_wrap } from "./html_component_wrap.mjs";
 import { app_code } from "./app_code.mjs";
 import { app_learn_js_above_draw } from "./app_learn_js_above_draw.mjs";
-export function app_code_lesson_above_fake_draw(fn) {
+export function app_learn_js_lesson_above_fake_draw(fn) {
   arguments_assert(arguments, 1);
   ("Draws one lesson's telling - the part above the examples - into a stand-in element, through the same step the app draws it through, and hands back the element. Run it inside ",
     fn_name("app_code_lessons_fake_page_lambda"),

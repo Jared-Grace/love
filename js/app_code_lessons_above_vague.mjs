@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_above_vague_pattern } from "./app_learn_js_above_vague_pattern.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
-import { app_code_lesson_above_fake_draw } from "./app_code_lesson_above_fake_draw.mjs";
+import { app_learn_js_lesson_above_fake_draw } from "./app_learn_js_lesson_above_fake_draw.mjs";
 import { html_element_fake_lines } from "./html_element_fake_lines.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
@@ -16,7 +16,7 @@ export function app_code_lessons_above_vague() {
   let offenders = [];
   function all_read() {
     function one_read(fn) {
-      let element = app_code_lesson_above_fake_draw(fn);
+      let element = app_learn_js_lesson_above_fake_draw(fn);
       let texts = html_element_fake_lines(element);
       function one_test(t) {
         let vague = pattern.test(t);

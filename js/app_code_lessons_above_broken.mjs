@@ -1,4 +1,4 @@
-import { app_code_lesson_above_fake_draw } from "./app_code_lesson_above_fake_draw.mjs";
+import { app_learn_js_lesson_above_fake_draw } from "./app_learn_js_lesson_above_fake_draw.mjs";
 import { app_code_lessons_fake_page_lambda } from "./app_code_lessons_fake_page_lambda.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
@@ -23,7 +23,7 @@ export function app_code_lessons_above_broken() {
       let fn = list_get(fns, i);
       let number = i + 1;
       function one_draw() {
-        app_code_lesson_above_fake_draw(fn);
+        app_learn_js_lesson_above_fake_draw(fn);
       }
       let went_wrong = catch_error_text_or_null(one_draw);
       if (went_wrong) {

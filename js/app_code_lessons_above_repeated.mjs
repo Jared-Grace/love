@@ -4,7 +4,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { app_code_lesson_fn_id_set } from "./app_code_lesson_fn_id_set.mjs";
-import { app_code_lesson_above_fake_draw } from "./app_code_lesson_above_fake_draw.mjs";
+import { app_learn_js_lesson_above_fake_draw } from "./app_learn_js_lesson_above_fake_draw.mjs";
 import { html_element_fake_lines } from "./html_element_fake_lines.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lessons_fake_page_lambda } from "./app_code_lessons_fake_page_lambda.mjs";
@@ -37,7 +37,7 @@ export function app_code_lessons_above_repeated() {
   function all_read() {
     function one_read(fn) {
       let lesson = app_code_lesson_fn_id_set(fn);
-      let element = app_code_lesson_above_fake_draw(fn);
+      let element = app_learn_js_lesson_above_fake_draw(fn);
       let lines = html_element_fake_lines(element);
       let r2 = {
         name: fn.name,
