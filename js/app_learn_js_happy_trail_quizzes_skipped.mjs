@@ -13,7 +13,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_happy_trail_quizzes_skipped(trail) {
+export function app_learn_js_happy_trail_quizzes_skipped(trail) {
   "the quiz screens a walk went past without answering them, read back out of the trail it left";
   "A quiz costs at least two presses that land: the answer, and then the way on. Fewer than two means the walk found the way on already standing there before the question had been answered, pressed it, and never answered anything - so the quiz was on the screen and was not taken.";
   "PRESSES THAT LANDED, not steps taken. A control found and gone again by the time it was pressed is an ordinary thing on a screen that moves, and it is already accounted for where it happens; counted here it would let a quiz whose one real answer missed read as a quiz answered twice.";

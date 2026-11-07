@@ -5,7 +5,7 @@ import { phone_test_height } from "./phone_test_height.mjs";
 import { playwright_happy_walk } from "./playwright_happy_walk.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_happy_trail_quizzes_skipped } from "./app_code_happy_trail_quizzes_skipped.mjs";
+import { app_learn_js_happy_trail_quizzes_skipped } from "./app_learn_js_happy_trail_quizzes_skipped.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { playwright_happy_trail_wide } from "./playwright_happy_trail_wide.mjs";
 export async function app_code_happy_url_walked_generic(url, page_prepare) {
@@ -34,7 +34,7 @@ export async function app_code_happy_url_walked_generic(url, page_prepare) {
   ("REACHING THE END IS NOT THE WHOLE OF PASSING. The walk presses whatever the screen marks as the way on, and a quiz marks both its answer and its Next - so it only answers the question first because the answer stands earlier in the page, which nothing anywhere enforces. Drawn the other way round, the walk would press straight on past every question, reach the end just the same, report the same thousands of steps, and have stopped asking anything at all.");
   ("So the trail is read back for questions that were passed in fewer than two presses, and there must be none. Measured over the whole course before this was written, there were none - so this is a rule that holds today being kept, rather than a hope.");
   let trail = property_get(walked, "trail");
-  let skipped = app_code_happy_trail_quizzes_skipped(trail);
+  let skipped = app_learn_js_happy_trail_quizzes_skipped(trail);
   list_empty_is_assert_json(skipped, {
     hint: "the walk reached the end of the course without answering these questions - it pressed the way on while the question was still standing, so whatever these screens mark as the way on is being found before the answer they also mark. the walk is no longer testing them",
   });
