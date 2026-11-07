@@ -1,7 +1,7 @@
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_itself_sum_above } from "./app_learn_js_lesson_statement_name_itself_sum_above.mjs";
-import { app_code_lesson_statement_name_itself_sum_batch } from "./app_code_lesson_statement_name_itself_sum_batch.mjs";
+import { app_learn_js_lesson_statement_name_itself_sum_batch } from "./app_learn_js_lesson_statement_name_itself_sum_batch.mjs";
 import { app_code_lesson_statement_name_itself_sum_title_code } from "./app_code_lesson_statement_name_itself_sum_title_code.mjs";
 export function app_code_lesson_statement_name_itself_sum_pair() {
   arguments_assert(arguments, 0);
@@ -11,7 +11,7 @@ export function app_code_lesson_statement_name_itself_sum_pair() {
   let code = app_code_lesson_statement_name_itself_sum_title_code();
   let pair = {
     above: app_learn_js_lesson_statement_name_itself_sum_above,
-    batch: app_code_lesson_statement_name_itself_sum_batch,
+    batch: app_learn_js_lesson_statement_name_itself_sum_batch,
     fragment: app_code_lesson_statement_title_code_paint_get(code),
     words: "Adding to what a name holds",
     decoys_last: null,
