@@ -5,7 +5,7 @@ import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
-import { app_code_home_next_lesson_text } from "./app_code_home_next_lesson_text.mjs";
+import { app_learn_js_home_next_lesson_text } from "./app_learn_js_home_next_lesson_text.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 export function app_learn_js_home_next_lesson_button(parent, context) {
   "the one button on the lesson list's bar that opens the next lesson this learner has not finished - a blue row rather than a green one - wherever in the list it happens to sit.";
@@ -32,7 +32,7 @@ export function app_learn_js_home_next_lesson_button(parent, context) {
   }
   ("the same way in as the row itself uses, so the lesson opens remembering which lesson this tab picked");
   let started = app_code_lessons_any_complete(context);
-  let text = app_code_home_next_lesson_text(started);
+  let text = app_learn_js_home_next_lesson_text(started);
   let button = app_shared_button(parent, text, on_click);
   return button;
 }

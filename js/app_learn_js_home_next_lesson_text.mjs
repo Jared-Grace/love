@@ -3,7 +3,7 @@ import { not } from "./not.mjs";
 import { emoji_rocket } from "./emoji_rocket.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_shared_button_next_text } from "./app_shared_button_next_text.mjs";
-export function app_code_home_next_lesson_text(started) {
+export function app_learn_js_home_next_lesson_text(started) {
   arguments_assert(arguments, 1);
   ("A learner who has finished nothing yet is starting, so the button says Start! with a rocket; once any lesson is finished it says it goes to the next unfinished one - it may skip rows they have finished further down. Both at the human's request.");
   if (not(started)) {
