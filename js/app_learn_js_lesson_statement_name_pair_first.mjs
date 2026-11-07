@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_title_code_note_paint_get } from "./app_code_lesson_statement_title_code_note_paint_get.mjs";
-import { app_code_lesson_statement_name_watched_titled } from "./app_code_lesson_statement_name_watched_titled.mjs";
+import { app_learn_js_lesson_statement_name_watched_titled } from "./app_learn_js_lesson_statement_name_watched_titled.mjs";
 export function app_learn_js_lesson_statement_name_pair_first(pair, steps) {
   arguments_assert(arguments, 2);
   ("the first lesson of a pair where a name takes new values: the programs of the pair, each with the name written out after every change");
@@ -12,7 +12,7 @@ export function app_learn_js_lesson_statement_name_pair_first(pair, steps) {
     fragment,
     "each logged",
   );
-  let lesson = app_code_lesson_statement_name_watched_titled(
+  let lesson = app_learn_js_lesson_statement_name_watched_titled(
     pair,
     noted,
     steps,

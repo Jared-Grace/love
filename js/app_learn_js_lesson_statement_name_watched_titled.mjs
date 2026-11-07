@@ -6,7 +6,7 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_lesson_statement_name_watch_decoys } from "./app_learn_js_lesson_statement_name_watch_decoys.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-export function app_code_lesson_statement_name_watched_titled(
+export function app_learn_js_lesson_statement_name_watched_titled(
   pair,
   paint,
   steps,
