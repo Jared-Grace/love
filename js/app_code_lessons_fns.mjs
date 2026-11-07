@@ -137,7 +137,7 @@ import { app_code_lesson_expression_swapping_equal } from "./app_code_lesson_exp
 import { app_learn_js_lesson_expression_choose_order_and } from "./app_learn_js_lesson_expression_choose_order_and.mjs";
 import { app_learn_js_lesson_expression_comparison_and } from "./app_learn_js_lesson_expression_comparison_and.mjs";
 import { app_learn_js_lesson_expression_choose_order_in_between } from "./app_learn_js_lesson_expression_choose_order_in_between.mjs";
-import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
+import { app_learn_js_lesson_expression_in_between } from "./app_learn_js_lesson_expression_in_between.mjs";
 import { app_learn_js_lesson_expression_choose_order_or } from "./app_learn_js_lesson_expression_choose_order_or.mjs";
 import { app_learn_js_lesson_expression_comparison_or } from "./app_learn_js_lesson_expression_comparison_or.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength } from "./app_learn_js_lesson_expression_choose_order_same_strength.mjs";
@@ -498,7 +498,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_expression_choose_order_and,
     app_learn_js_lesson_expression_comparison_and,
     app_learn_js_lesson_expression_choose_order_in_between,
-    app_code_lesson_expression_in_between,
+    app_learn_js_lesson_expression_in_between,
     app_learn_js_lesson_expression_choose_order_or,
     app_learn_js_lesson_expression_comparison_or,
     app_learn_js_lesson_expression_choose_order_same_strength,

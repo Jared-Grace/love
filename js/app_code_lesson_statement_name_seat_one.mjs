@@ -14,7 +14,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
-import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
+import { app_learn_js_lesson_expression_in_between } from "./app_learn_js_lesson_expression_in_between.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_seat_one() {
   arguments_assert(arguments, 0);
@@ -78,7 +78,7 @@ export function app_code_lesson_statement_name_seat_one() {
     values_get,
     example_values: [3, 5],
     step,
-    remember_lesson: app_code_lesson_expression_in_between,
+    remember_lesson: app_learn_js_lesson_expression_in_between,
     remember_parts: ["we can check whether a number is between two others:"],
     remember_lines,
     explain: [

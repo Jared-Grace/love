@@ -14,7 +14,7 @@ import { list_random_item } from "./list_random_item.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_lesson_expression_in_between() {
+export function app_learn_js_lesson_expression_in_between() {
   "the capstone of the comparison track: to check a number is between two others you must NOT chain the comparisons - 2 < 5 < 8 is the maths notation and is not how JS is written. The fix, taught here, is to break it into two pieces and join them with && (2 < 5 && 5 < 8), which is exactly the shape the previous lesson drilled. What JS does with the chained line is deliberately not explained, in an aside placed last so it can be skipped whole; the reasoning is in that card. The quiz drills the correct idiom a < b && b < c, so the learner practises the right thing rather than predicting the broken one. Answer is the code's own true/false value, correct by construction.";
   function range_true() {
     "a < b && b < c where a < b < c really holds, so it is true";
