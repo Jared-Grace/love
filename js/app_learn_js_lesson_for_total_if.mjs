@@ -15,7 +15,7 @@ import { app_learn_js_lesson_for_if_greater_options } from "./app_learn_js_lesso
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_lesson_for_if_generic } from "./app_learn_js_lesson_for_if_generic.mjs";
-export function app_code_lesson_for_total_if() {
+export function app_learn_js_lesson_for_total_if() {
   arguments_assert(arguments, 0);
   ("a total of only some: let total = 0; for (let n = 2; n < 5; n++) { if (n > 2) { total += n; } } console.log(total); writes out 7, which is 3 + 4");
   ("The one new fact is that a total inside the if adds only the numbers the if lets through. Adding up the items of an array that match is this shape.");
