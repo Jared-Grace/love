@@ -1,7 +1,7 @@
 import { app_learn_js_arithmetic_to_value_parts } from "./app_learn_js_arithmetic_to_value_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_expression_generic } from "./app_code_lesson_expression_choose_order_both_sides_expression_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_expression_generic } from "./app_learn_js_lesson_expression_choose_order_both_sides_expression_generic.mjs";
 export function app_code_lesson_expression_choose_order_both_sides_expression(
   want_true,
 ) {
@@ -10,7 +10,7 @@ export function app_code_lesson_expression_choose_order_both_sides_expression(
   ("=== alone, because what the line asks is whether the two sides land on the same number, which is the most intuitive both-sides case and the one the lesson after this asks for whole. The other five comparisons on a both-sides line are the lesson after this one, so that a learner meeting the shape for the first time has only the shape to meet.");
   let outer_symbol = js_operator_triple_equal_symbol();
   let tree =
-    app_code_lesson_expression_choose_order_both_sides_expression_generic(
+    app_learn_js_lesson_expression_choose_order_both_sides_expression_generic(
       want_true,
       outer_symbol,
       app_learn_js_arithmetic_to_value_parts,

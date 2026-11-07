@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_comparison_operands_wanted } from "./app_learn_js_comparison_operands_wanted.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression_parts } from "./app_code_lesson_expression_choose_order_both_sides_expression_parts.mjs";
 import { equal } from "./equal.mjs";
-export function app_code_lesson_expression_choose_order_both_sides_expression_generic(
+export function app_learn_js_lesson_expression_choose_order_both_sides_expression_generic(
   want_true,
   outer_symbol,
   parts_get,

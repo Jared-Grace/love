@@ -1,6 +1,6 @@
 import { app_learn_js_arithmetic_to_value_parts_symbol } from "./app_learn_js_arithmetic_to_value_parts_symbol.mjs";
 import { app_learn_js_arithmetic_to_value_symbols } from "./app_learn_js_arithmetic_to_value_symbols.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_expression_generic } from "./app_code_lesson_expression_choose_order_both_sides_expression_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_expression_generic } from "./app_learn_js_lesson_expression_choose_order_both_sides_expression_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_code_lesson_expression_choose_order_both_sides_expression_same_symbol(
@@ -19,7 +19,7 @@ export function app_code_lesson_expression_choose_order_both_sides_expression_sa
     return parts;
   }
   let tree =
-    app_code_lesson_expression_choose_order_both_sides_expression_generic(
+    app_learn_js_lesson_expression_choose_order_both_sides_expression_generic(
       want_true,
       outer_symbol,
       parts_get,
