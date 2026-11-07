@@ -3,13 +3,13 @@ import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_learn_js_dot_rectangle } from "./app_learn_js_dot_rectangle.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
+import { app_learn_js_lesson_swapping_generic } from "./app_learn_js_lesson_swapping_generic.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_expression_swapping_add() {
   "the first swapping lesson: put the SAME two numbers on each side of ===, swapped around the operator - a op b === b op a. Leads with + (the earliest arithmetic anyone learns), then *, both of which keep their value when swapped, each with an everyday reason so the rule is understood, not memorised; then - as the contrast that changes when swapped. Each case shows both sides worked out so the swap is visible, not left implied. The quiz mixes + * (true) with - (false). Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
-  let lesson = app_code_lesson_swapping_generic({
+  let lesson = app_learn_js_lesson_swapping_generic({
     name_id,
     above,
     true_ops: ["+", "*"],
