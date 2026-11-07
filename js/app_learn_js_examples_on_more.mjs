@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_examples_complete } from "./app_learn_js_examples_complete.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_examples_on_more(context, root) {
+export function app_learn_js_examples_on_more(context, root) {
   arguments_assert(arguments, 2);
   let r2 = app_learn_js_examples_complete(context, root);
   let complete = property_get(r2, "complete");
