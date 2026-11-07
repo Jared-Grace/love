@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_node_left_operator_first_parenthesis_wrapped } from "./app_learn_js_expression_node_left_operator_first_parenthesis_wrapped.mjs";
-import { app_code_expression_node_right_operator_first_parenthesis_wrapped } from "./app_code_expression_node_right_operator_first_parenthesis_wrapped.mjs";
+import { app_learn_js_expression_node_right_operator_first_parenthesis_wrapped } from "./app_learn_js_expression_node_right_operator_first_parenthesis_wrapped.mjs";
 import { app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side } from "./app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code(
   code,
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_tree_
     app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side(
       code,
       app_learn_js_expression_node_left_operator_first_parenthesis_wrapped,
-      app_code_expression_node_right_operator_first_parenthesis_wrapped,
+      app_learn_js_expression_node_right_operator_first_parenthesis_wrapped,
     );
   return tree;
 }
