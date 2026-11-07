@@ -4,7 +4,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { list_get } from "./list_get.mjs";
 import { js_code_if_else_lines } from "./js_code_if_else_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_if_else_program_lines(name, value, words) {
+export function app_learn_js_if_else_program_lines(name, value, words) {
   arguments_assert(arguments, 3);
   ("let name = value; if (name) { console.log(first word); } else { console.log(second word); }");
   let setup = js_code_let_json_statement(name, value);

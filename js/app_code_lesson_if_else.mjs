@@ -6,7 +6,7 @@ import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_braces_run_if_else } from "./app_code_lesson_braces_run_if_else.mjs";
 import { app_learn_js_if_else_explain } from "./app_learn_js_if_else_explain.mjs";
-import { app_code_if_else_program_lines } from "./app_code_if_else_program_lines.mjs";
+import { app_learn_js_if_else_program_lines } from "./app_learn_js_if_else_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
@@ -53,7 +53,7 @@ export function app_code_lesson_if_else() {
     app_learn_js_if_else_explain(root, context);
   }
   function program_get(name, value, words) {
-    let lines2 = app_code_if_else_program_lines(name, value, words);
+    let lines2 = app_learn_js_if_else_program_lines(name, value, words);
     let joined = list_join_newline(lines2);
     return joined;
   }

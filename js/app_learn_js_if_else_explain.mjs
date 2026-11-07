@@ -14,7 +14,7 @@ import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_if_else_program_lines } from "./app_code_if_else_program_lines.mjs";
+import { app_learn_js_if_else_program_lines } from "./app_learn_js_if_else_program_lines.mjs";
 export function app_learn_js_if_else_explain(root, context) {
   arguments_assert(arguments, 2);
   ("if (a) beside if (!a) remembered, then the same program written with else, with a true and then false");
@@ -53,7 +53,7 @@ export function app_learn_js_if_else_explain(root, context) {
     name,
     " in between:",
   ]);
-  let true_lines = app_code_if_else_program_lines(name, true, words);
+  let true_lines = app_learn_js_if_else_program_lines(name, true, words);
   app_learn_js_code_lines_writes_out(box_two, true_lines, love);
   app_learn_js_div_cycle_code(box_two, [
     "",
@@ -74,7 +74,7 @@ export function app_learn_js_if_else_explain(root, context) {
     "false",
     ":",
   ]);
-  let false_lines = app_code_if_else_program_lines(name, false, words);
+  let false_lines = app_learn_js_if_else_program_lines(name, false, words);
   app_learn_js_code_lines_writes_out(box_three, false_lines, joy);
   app_learn_js_div_cycle_code(box_three, [
     "",
