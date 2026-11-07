@@ -13,7 +13,7 @@ import { app_code_lesson_quiz_token_select_pieces } from "./app_code_lesson_quiz
 import { list_copy } from "./list_copy.mjs";
 import { list_set } from "./list_set.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_lesson_quiz_token_select_code_show } from "./app_code_lesson_quiz_token_select_code_show.mjs";
+import { app_learn_js_lesson_quiz_token_select_code_show } from "./app_learn_js_lesson_quiz_token_select_code_show.mjs";
 import { app_learn_js_lesson_quiz_pieces_select } from "./app_learn_js_lesson_quiz_pieces_select.mjs";
 export function app_learn_js_lesson_quiz_line_missing(
   parent,
@@ -59,7 +59,7 @@ export function app_learn_js_lesson_quiz_line_missing(
     correction_code_set(joined);
   }
   function show(variations, chosen) {
-    app_code_lesson_quiz_token_select_code_show(
+    app_learn_js_lesson_quiz_token_select_code_show(
       variations,
       chosen,
       answer_div,

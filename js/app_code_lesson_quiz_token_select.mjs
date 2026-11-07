@@ -1,7 +1,7 @@
 import { html_div_code_dark } from "./html_div_code_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_lesson_quiz_token_select_pieces } from "./app_code_lesson_quiz_token_select_pieces.mjs";
-import { app_code_lesson_quiz_token_select_code_show } from "./app_code_lesson_quiz_token_select_code_show.mjs";
+import { app_learn_js_lesson_quiz_token_select_code_show } from "./app_learn_js_lesson_quiz_token_select_code_show.mjs";
 import { app_learn_js_lesson_quiz_pieces_select } from "./app_learn_js_lesson_quiz_pieces_select.mjs";
 export function app_code_lesson_quiz_token_select(
   parent,
@@ -20,7 +20,7 @@ export function app_code_lesson_quiz_token_select(
   let note_div = html_div_text(parent, "");
   let pieces = app_code_lesson_quiz_token_select_pieces(info, qa, answer_div);
   function show(variations, chosen) {
-    app_code_lesson_quiz_token_select_code_show(
+    app_learn_js_lesson_quiz_token_select_code_show(
       variations,
       chosen,
       answer_div,

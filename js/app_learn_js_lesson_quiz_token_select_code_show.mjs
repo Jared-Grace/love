@@ -7,7 +7,7 @@ import { list_reduce } from "./list_reduce.mjs";
 import { text_take } from "./text_take.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_quiz_token_select_code_show(
+export function app_learn_js_lesson_quiz_token_select_code_show(
   variations,
   chosen,
   answer_div,
