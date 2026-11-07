@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression_same_symbol } from "./app_code_lesson_expression_choose_order_both_sides_expression_same_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { noop } from "./noop.mjs";
-export function app_code_lesson_expression_choose_order_both_sides_above(
+export function app_learn_js_lesson_expression_choose_order_both_sides_above(
   root,
   context,
 ) {
