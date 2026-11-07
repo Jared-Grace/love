@@ -2,7 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
-import { app_code_code_output } from "./app_code_code_output.mjs";
+import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_base(
   name_id,
@@ -32,7 +32,7 @@ export function app_code_lesson_base(
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
           ("the card is the one this app draws code beside its output in everywhere, so the worked example wears exactly what a box read before the questions wears. What the example adds is the button beside it, which is why the button is not part of the card.");
-          let container = app_code_code_output({
+          let container = app_learn_js_code_output({
             parent,
             code_label: example_question_label,
             code: question,

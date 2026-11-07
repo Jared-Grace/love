@@ -3,7 +3,7 @@ import { app_code_token_order_batch } from "./app_code_token_order_batch.mjs";
 import { app_code_token_order_longer } from "./app_code_token_order_longer.mjs";
 import { app_code_tokens_choose_say } from "./app_code_tokens_choose_say.mjs";
 import { app_code_tokens_choose_label_guided } from "./app_code_tokens_choose_label_guided.mjs";
-import { app_code_code_output } from "./app_code_code_output.mjs";
+import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
 import { app_code_tokens_chips } from "./app_code_tokens_chips.mjs";
 import { app_code_lesson_token_order_example_choose } from "./app_code_lesson_token_order_example_choose.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
@@ -45,7 +45,7 @@ export function app_code_lesson_token_order() {
       "Here is a longer program, and its tokens in the order we read them:",
     ]);
     let longer = app_code_token_order_longer();
-    app_code_code_output({
+    app_learn_js_code_output({
       parent: box_two,
       code_label: "Code:",
       code: longer,

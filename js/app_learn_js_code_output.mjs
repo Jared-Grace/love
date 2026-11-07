@@ -3,7 +3,7 @@ import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_code_output({
+export function app_learn_js_code_output({
   parent,
   code_label,
   code,

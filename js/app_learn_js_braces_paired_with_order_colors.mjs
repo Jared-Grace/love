@@ -1,4 +1,4 @@
-import { app_code_code_output } from "./app_code_code_output.mjs";
+import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_code_dark_lines_braces_paired_colors } from "./app_learn_js_code_dark_lines_braces_paired_colors.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_braces_paired_with_order_colors(
     app_learn_js_code_dark_lines_braces_paired_colors(div, text, colors);
   }
   let braces = app_learn_js_braces_sequence(code);
-  app_code_code_output({
+  app_learn_js_code_output({
     parent,
     code_label: "Code:",
     code,
