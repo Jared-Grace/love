@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_statement_name_count_pair } from "./app_learn_js_lesson_statement_name_count_pair.mjs";
 import { app_code_lesson_statement_name_pair_first } from "./app_code_lesson_statement_name_pair_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_statement_name_count() {
+export function app_learn_js_lesson_statement_name_count() {
   arguments_assert(arguments, 0);
   ("a name given one more than it holds twice over: let a = 7; console.log(a); a = a + 1; console.log(a); a = a + 1; console.log(a); writes out 7, 8 and 9");
   ("The screen before this one taught the line. This one says the line twice and nothing else, so the one thing a learner has to work out is what the second copy does.");
