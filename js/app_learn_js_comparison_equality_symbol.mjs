@@ -4,7 +4,7 @@ import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_comparison_equality_symbol(
+export function app_learn_js_comparison_equality_symbol(
   comparison,
   plain_value,
   want_true,

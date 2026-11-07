@@ -1,4 +1,4 @@
-import { app_code_comparison_equality_symbol } from "./app_code_comparison_equality_symbol.mjs";
+import { app_learn_js_comparison_equality_symbol } from "./app_learn_js_comparison_equality_symbol.mjs";
 import { app_code_operator_code_subject_first } from "./app_code_operator_code_subject_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_comparison_side } from "./app_code_comparison_side.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_parentheses_one_side_expression(
   ("a comparison wrapped in ( and ) and a plain true or false, in whichever order comparison_first asks for, joined by === or !== picked so the whole line lands on want_true. Swapping the two sides cannot change the answer - === and !== read the same either way - so the same operator choice serves both orders");
   let comparison = app_code_comparison_side();
   let plain_value = list_random_item([true, false]);
-  let symbol = app_code_comparison_equality_symbol(
+  let symbol = app_learn_js_comparison_equality_symbol(
     comparison,
     plain_value,
     want_true,
