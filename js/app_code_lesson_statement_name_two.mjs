@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_two_title_name_id } from "./app_code_lesson_statement_name_two_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_lesson_statement_name_two_batch } from "./app_code_lesson_statement_name_two_batch.mjs";
+import { app_learn_js_lesson_statement_name_two_batch } from "./app_learn_js_lesson_statement_name_two_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_strings } from "./js_strings.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_statement_name_two() {
   ("Building the code from tokens is left switched off, for the reason the lessons before give: the order the lines go in is a second thing to learn, and there are three of them now.");
   let name_id = app_code_lesson_statement_name_two_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
-    app_code_lesson_statement_name_two_batch,
+    app_learn_js_lesson_statement_name_two_batch,
     eval_console_log_to_list,
   );
   ("Every wrong answer uses only this program's own words and names, in both directions, so nothing on the buttons can be thrown out for holding a word the code does not. Reading backwards the same two words are on every button, so the one thing left to read is which name each holds and which name is written out.");

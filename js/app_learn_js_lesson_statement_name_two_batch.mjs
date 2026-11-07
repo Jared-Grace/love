@@ -13,7 +13,7 @@ import { list_map_index } from "./list_map_index.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_statement_name_two_batch() {
+export function app_learn_js_lesson_statement_name_two_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives two words two names, and writes out one of them");
   ("The word that is NOT written out is the whole question. It is put there to be reached for, so it has to be offered as a wrong answer, and it is - four words are picked, each program holds one of them and the next one along, and every word is written out by exactly one program. So the word a program leaves behind is another program's answer, and is therefore a word worth offering. Whether it is offered is settled by the lesson, which asks for the words written in the program by name. The draw alone would have offered it about half the time, because wrong answers are pulled from batches of their own and each is a fresh shuffle of four words out of nine - and the other half a question could be got right by taking the one word the code and the buttons had in common.");
