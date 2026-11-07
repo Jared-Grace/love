@@ -7,7 +7,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_two_names_for_lines } from "./js_code_two_names_for_lines.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_two_names_generic } from "./app_code_lesson_two_names_generic.mjs";
-export function app_code_lesson_for_two_names() {
+export function app_learn_js_lesson_for_two_names() {
   arguments_assert(arguments, 0);
   ("a for changing a name it never asks about: let b = 9; for (let a = 1; a < 4; a++) { b--; } console.log(b); writes out 6, the same as Two names in a while");
   ("The one new fact is that a for owns only the name it counts with; a second name is made above it, changed inside, and still there after it, so it can be written out. Walking an array adds up a total this way.");
