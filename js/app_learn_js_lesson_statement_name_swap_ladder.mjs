@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { app_learn_js_lesson_statement_formula_backwards_decoys } from "./app_learn_js_lesson_statement_formula_backwards_decoys.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { app_code_lesson_statement_name_swap_number_pairs } from "./app_code_lesson_statement_name_swap_number_pairs.mjs";
+import { app_learn_js_lesson_statement_name_swap_number_pairs } from "./app_learn_js_lesson_statement_name_swap_number_pairs.mjs";
 import { app_learn_js_lesson_decoy_lines_starting_values } from "./app_learn_js_lesson_decoy_lines_starting_values.mjs";
 export function app_learn_js_lesson_statement_name_swap_ladder({
   words,
@@ -28,7 +28,7 @@ export function app_learn_js_lesson_statement_name_swap_ladder({
     words,
     title_code: list_join_space(list),
     names,
-    values_get: app_code_lesson_statement_name_swap_number_pairs,
+    values_get: app_learn_js_lesson_statement_name_swap_number_pairs,
     example_values: [3, 8],
     step,
     remember_lesson,

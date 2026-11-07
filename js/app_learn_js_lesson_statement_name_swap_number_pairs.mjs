@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-export function app_code_lesson_statement_name_swap_number_pairs() {
+export function app_learn_js_lesson_statement_name_swap_number_pairs() {
   arguments_assert(arguments, 0);
   ("the numbers the two names start with on one screen of the swapping lessons: four pairs of the five, each pair two different numbers");
   ("THE TWO NUMBERS OF A PAIR DIFFER, because every question here asks which name ends up holding which, and with the same number under both names every answer would be right.");
