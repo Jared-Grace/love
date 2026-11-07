@@ -232,7 +232,7 @@ import { app_code_lesson_statement_name_shared_squares_none } from "./app_code_l
 import { app_code_lesson_statement_name_square_in_rectangle } from "./app_code_lesson_statement_name_square_in_rectangle.mjs";
 import { app_code_lesson_statement_name_meeting_inside } from "./app_code_lesson_statement_name_meeting_inside.mjs";
 import { app_code_lesson_statement_name_rectangle_inside } from "./app_code_lesson_statement_name_rectangle_inside.mjs";
-import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
+import { app_learn_js_lesson_statement_name_meeting_ended } from "./app_learn_js_lesson_statement_name_meeting_ended.mjs";
 import { app_code_lesson_statement_name_meetings_free } from "./app_code_lesson_statement_name_meetings_free.mjs";
 import { app_code_lesson_statement_name_rectangle_above } from "./app_code_lesson_statement_name_rectangle_above.mjs";
 import { app_code_lesson_statement_name_rectangles_rows_between } from "./app_code_lesson_statement_name_rectangles_rows_between.mjs";
@@ -593,7 +593,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_square_in_rectangle,
     app_code_lesson_statement_name_meeting_inside,
     app_code_lesson_statement_name_rectangle_inside,
-    app_code_lesson_statement_name_meeting_ended,
+    app_learn_js_lesson_statement_name_meeting_ended,
     app_code_lesson_statement_name_meetings_free,
     app_code_lesson_statement_name_rectangle_above,
     app_code_lesson_statement_name_rectangles_rows_between,

@@ -20,7 +20,7 @@ import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_ed
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
-import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
+import { app_learn_js_lesson_statement_name_meeting_ended } from "./app_learn_js_lesson_statement_name_meeting_ended.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangle_above() {
   arguments_assert(arguments, 0);
@@ -299,7 +299,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
     values_get,
     example_values: [1, 3, 4, 6],
     step,
-    remember_lesson: app_code_lesson_statement_name_meeting_ended,
+    remember_lesson: app_learn_js_lesson_statement_name_meeting_ended,
     remember_parts: [
       "we can check whether one meeting has ended by the time another starts:",
     ],
