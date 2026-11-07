@@ -3,7 +3,7 @@ import { app_learn_js_expression_step_choices_strong } from "./app_learn_js_expr
 import { app_learn_js_expression_step_grown } from "./app_learn_js_expression_step_grown.mjs";
 import { app_learn_js_expression_step_grown_strong } from "./app_learn_js_expression_step_grown_strong.mjs";
 import { app_learn_js_expression_step_value_least } from "./app_learn_js_expression_step_value_least.mjs";
-import { app_code_expression_step_value_most } from "./app_code_expression_step_value_most.mjs";
+import { app_learn_js_expression_step_value_most } from "./app_learn_js_expression_step_value_most.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each_range } from "./each_range.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_expression_flat_random_strong_first(
   ("Every number written on it and every number any step of it comes to is a whole number between the least and the most, and at every moment exactly ONE part of it may be worked out. Those are promises of the growing rather than of the length, so a lesson may ask for two operators or five and lean on the same ones.");
   ("The starting number is drawn from the ones a stronger operator can be written beside rather than from all of them: nothing may be done to a 5 or a 7 with a times or a divide that stays whole and stays small, so beginning there would leave the first step with nothing to choose.");
   let least = app_learn_js_expression_step_value_least();
-  let most = app_code_expression_step_value_most();
+  let most = app_learn_js_expression_step_value_most();
   function strong_ready_is(value) {
     "a number a stronger operator may be written beside";
     let rank_most = app_learn_js_expression_rank(value);

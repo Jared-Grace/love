@@ -2,7 +2,7 @@ import { app_learn_js_expression_step_operands_times_is } from "./app_learn_js_e
 import { app_learn_js_expression_step_operands_minus_is } from "./app_learn_js_expression_step_operands_minus_is.mjs";
 import { app_learn_js_expression_step_operands_dividends } from "./app_learn_js_expression_step_operands_dividends.mjs";
 import { app_learn_js_expression_step_value_least } from "./app_learn_js_expression_step_value_least.mjs";
-import { app_code_expression_step_value_most } from "./app_code_expression_step_value_most.mjs";
+import { app_learn_js_expression_step_value_most } from "./app_learn_js_expression_step_value_most.mjs";
 import { add } from "./add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide_floor } from "./divide_floor.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_expression_step_operands(
   ("An empty answer is a real answer and not a fault: 8 has nothing that may be added to it, because every number allowed would carry the step past 9. The caller reads emptiness as this operator not being available here and reaches for another one.");
   ("The side matters for the two operators that read differently each way round. 9 with a minus on the left may have 2 through 7 taken FROM it; the same 9 on the right needs something bigger than itself in front of it, which no allowed number is.");
   let least = app_learn_js_expression_step_value_least();
-  let most = app_code_expression_step_value_most();
+  let most = app_learn_js_expression_step_value_most();
   function exact_is(candidate) {
     "a divisor that leaves nothing over";
     let left_over = modulo(value, candidate);
