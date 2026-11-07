@@ -1,7 +1,7 @@
 import { less_than_equal } from "./less_than_equal.mjs";
 import { equal } from "./equal.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-export function app_code_lesson_quiz_multiple_choice_distractors_fit(
+export function app_learn_js_lesson_quiz_multiple_choice_distractors_fit(
   distractors,
   quiz_answer_text,
 ) {

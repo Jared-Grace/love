@@ -12,7 +12,7 @@ import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_lesson_quiz_multiple_choice_distractors_fit } from "./app_code_lesson_quiz_multiple_choice_distractors_fit.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_distractors_fit } from "./app_learn_js_lesson_quiz_multiple_choice_distractors_fit.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function app_learn_js_lesson_quiz_multiple_choice_choices(
   r2,
@@ -64,7 +64,7 @@ export function app_learn_js_lesson_quiz_multiple_choice_choices(
     list_add(distractors, word_missing);
   }
   ("only as many wrong answers as are short enough to read together, never fewer than one");
-  let fitting = app_code_lesson_quiz_multiple_choice_distractors_fit(
+  let fitting = app_learn_js_lesson_quiz_multiple_choice_distractors_fit(
     distractors,
     quiz_answer_text,
   );
