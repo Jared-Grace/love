@@ -5,7 +5,7 @@ import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
-export function app_code_lesson_for_same_as_while_above(lesson_while) {
+export function app_learn_js_lesson_for_same_as_while_above(lesson_while) {
   arguments_assert(arguments, 1);
   ("What sits above a for lesson that says the same as a while lesson: the while lesson remembered with its program, then the program written as a for, then one line saying they do the same, then every run walked through. In the shape the human asked for on the second for.");
   function above(root, context, example, walk) {

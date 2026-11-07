@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_log_double_generic } from "./app_code_lesson_log_double_generic.mjs";
-import { app_code_lesson_for_same_as_while_above } from "./app_code_lesson_for_same_as_while_above.mjs";
+import { app_learn_js_lesson_for_same_as_while_above } from "./app_learn_js_lesson_for_same_as_while_above.mjs";
 import { app_code_lesson_while_log_double } from "./app_code_lesson_while_log_double.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 export function app_learn_js_lesson_for_log_double() {
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_for_log_double() {
   );
   let lesson = app_code_lesson_log_double_generic({
     name_id,
-    above: app_code_lesson_for_same_as_while_above(
+    above: app_learn_js_lesson_for_same_as_while_above(
       app_code_lesson_while_log_double,
     ),
     program_write: js_code_for_start_condition_update_lines,
