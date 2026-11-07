@@ -9,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
 import { app_learn_js_lesson_statement_name_swap_try } from "./app_learn_js_lesson_statement_name_swap_try.mjs";
-export function app_code_lesson_statement_name_temp_keep() {
+export function app_learn_js_lesson_statement_name_temp_keep() {
   arguments_assert(arguments, 0);
   ("the third lesson of the swapping ladder: let temp = a; before a = b; keeps what a held - temp and a are written out");
   let names = app_code_lesson_statement_name_value_names();

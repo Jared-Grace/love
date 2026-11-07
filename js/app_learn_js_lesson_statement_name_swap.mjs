@@ -9,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
-import { app_code_lesson_statement_name_temp_keep } from "./app_code_lesson_statement_name_temp_keep.mjs";
+import { app_learn_js_lesson_statement_name_temp_keep } from "./app_learn_js_lesson_statement_name_temp_keep.mjs";
 export function app_learn_js_lesson_statement_name_swap() {
   arguments_assert(arguments, 0);
   ("the last lesson of the swapping ladder: let temp = a; a = b; b = temp; swaps a and b - both are written out");
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_statement_name_swap() {
   let lesson = app_learn_js_lesson_statement_name_swap_ladder({
     words: "Swapping two names",
     step,
-    remember_lesson: app_code_lesson_statement_name_temp_keep,
+    remember_lesson: app_learn_js_lesson_statement_name_temp_keep,
     remember_parts: ["", temp, " kept what ", name_a, " held:"],
     remember_lines,
     explain: [
