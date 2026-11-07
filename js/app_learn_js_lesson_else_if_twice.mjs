@@ -25,7 +25,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_cases_logged } from "./app_learn_js_lesson_cases_logged.mjs";
-export function app_code_lesson_else_if_twice() {
+export function app_learn_js_lesson_else_if_twice() {
   arguments_assert(arguments, 0);
   ('two else ifs: let a = false; let b = false; let c = true; if (a) { console.log("love"); } else if (b) { console.log("joy"); } else if (c) { console.log("peace"); } else { console.log("patience"); } console.log("kindness"); writes out peace and kindness');
   ("The one new fact is that an else if can follow another else if, and that once one of them runs, the rest are not reached, even when what they ask is true. The program is the one from Else if and else with else if (c) { ... } added after else if (b) { ... }.");
