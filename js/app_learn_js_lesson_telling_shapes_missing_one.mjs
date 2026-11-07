@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_source_line_shapes } from "./app_learn_js_lesson_source_line_shapes.mjs";
 import { app_learn_js_lesson_telling_missing_generic } from "./app_learn_js_lesson_telling_missing_generic.mjs";
-export async function app_code_lesson_telling_shapes_missing_one(
+export async function app_learn_js_lesson_telling_shapes_missing_one(
   root,
   roots,
   names,

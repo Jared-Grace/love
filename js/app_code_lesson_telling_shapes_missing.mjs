@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { app_learn_js_lesson_family_roots } from "./app_learn_js_lesson_family_roots.mjs";
 import { app_learn_js_lesson_family_neighbours } from "./app_learn_js_lesson_family_neighbours.mjs";
-import { app_code_lesson_telling_shapes_missing_one } from "./app_code_lesson_telling_shapes_missing_one.mjs";
+import { app_learn_js_lesson_telling_shapes_missing_one } from "./app_learn_js_lesson_telling_shapes_missing_one.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 export async function app_code_lesson_telling_shapes_missing() {
@@ -16,7 +16,7 @@ export async function app_code_lesson_telling_shapes_missing() {
   let neighbours = app_learn_js_lesson_family_neighbours(roots);
   let found = [];
   for (let root of roots) {
-    let report = await app_code_lesson_telling_shapes_missing_one(
+    let report = await app_learn_js_lesson_telling_shapes_missing_one(
       root,
       neighbours,
       names,
