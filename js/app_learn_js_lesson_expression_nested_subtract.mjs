@@ -5,7 +5,7 @@ import { js_operator_minus_verb } from "./js_operator_minus_verb.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
-export function app_code_lesson_expression_nested_subtract() {
+export function app_learn_js_lesson_expression_nested_subtract() {
   "a nested expression that subtracts three numbers: console.log(x - y - z); the first number is 10..17 and the two taken away are 2..5 each, so x is always at least y + z and the answer never goes below 0";
   let symbol = js_operator_minus_symbol();
   function first_of(index) {
