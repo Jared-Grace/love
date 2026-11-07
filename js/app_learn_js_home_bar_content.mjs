@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bar_content_root_sticky } from "./app_shared_bar_content_root_sticky.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { app_code_home_next_lesson_button } from "./app_code_home_next_lesson_button.mjs";
+import { app_learn_js_home_next_lesson_button } from "./app_learn_js_home_next_lesson_button.mjs";
 import { app_code_home_settings_gear } from "./app_code_home_settings_gear.mjs";
 export function app_learn_js_home_bar_content(root, context) {
   "the frame the lesson list is drawn in: a bar stuck to the top of the window carrying the way on and the gear, and the list scrolling underneath it.";
@@ -13,7 +13,7 @@ export function app_learn_js_home_bar_content(root, context) {
   let bar = property_get(frame, "bar");
   html_centered(bar);
   ("the way on comes before the gear, so the bar reads left to right as the thing to do next and then the thing to change");
-  let next = app_code_home_next_lesson_button(bar, context);
+  let next = app_learn_js_home_next_lesson_button(bar, context);
   ("before anything is finished the way in is also drawn big above the list, so the copy up here is handed back for the caller to show only once the big one has scrolled away. Two buttons saying the same thing both in view was what kept it off the bar before; shown only when the big one is out of sight, there is never more than one, at the human's request, 2026-09-28");
   app_code_home_settings_gear(bar, context);
   let content = property_get(frame, "content");

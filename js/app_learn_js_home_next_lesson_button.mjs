@@ -7,7 +7,7 @@ import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_code_home_next_lesson_text } from "./app_code_home_next_lesson_text.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-export function app_code_home_next_lesson_button(parent, context) {
+export function app_learn_js_home_next_lesson_button(parent, context) {
   "the one button on the lesson list's bar that opens the next lesson this learner has not finished - a blue row rather than a green one - wherever in the list it happens to sit.";
   "IT RIDES THE BAR RATHER THAN SITTING IN THE LIST. The list is ninety-odd rows long and this screen comes back scrolled to the lesson the learner just left, measured five and a half thousand pixels down. The list does point a hand at the row to do next, but a hand five thousand pixels away is a hand nobody is looking at, so the way on has to be somewhere that is in view at every scroll position.";
   "NOTHING AT ALL IS DRAWN where every lesson is finished. A button offering somewhere to go when there is nowhere left to go says something untrue, and the row that would have been pointed at does not exist either.";
