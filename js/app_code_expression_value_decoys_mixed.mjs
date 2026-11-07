@@ -1,5 +1,5 @@
 import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
-import { app_code_expression_value_decoys_boolean } from "./app_code_expression_value_decoys_boolean.mjs";
+import { app_learn_js_expression_value_decoys_boolean } from "./app_learn_js_expression_value_decoys_boolean.mjs";
 import { app_code_operator_comparison_is } from "./app_code_operator_comparison_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -14,7 +14,7 @@ export function app_code_expression_value_decoys_mixed(current, node) {
   let symbol = property_get(node, "operator");
   let comparison_is = app_code_operator_comparison_is(symbol);
   if (comparison_is) {
-    let boolean_decoys = app_code_expression_value_decoys_boolean(
+    let boolean_decoys = app_learn_js_expression_value_decoys_boolean(
       current,
       node,
     );

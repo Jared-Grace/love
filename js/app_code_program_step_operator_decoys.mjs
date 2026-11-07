@@ -8,7 +8,7 @@ export function app_code_program_step_operator_decoys(action) {
   arguments_assert(arguments, 1);
   ("the wrong values offered beside the right one when a learner stepping through a program is asked what an operator in a line comes to; action is an evaluate from the program's trace that has an expression");
   ("2026-10-15, at the human's asking, when !, && and || came to be stepped through: an operator that comes to true or false is offered the other of the two and nothing else, the reason ",
-    fn_name("app_code_expression_value_decoys_boolean"),
+    fn_name("app_learn_js_expression_value_decoys_boolean"),
     " gives for a comparison - the whole line's value is a true or false as well, so it would be the right answer half the time, and another operator's value is a true or false already on offer, or a number no reading of the line could give. Any other operator is offered what the operator lessons offer: the other operator's value on the same two values, and what the whole expression comes to, the mix-up of solving the line instead of the step");
   let value = property_get(action, "value");
   if (boolean_is(value)) {

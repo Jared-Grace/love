@@ -1,7 +1,10 @@
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
-export function app_code_expression_value_decoys_boolean(current_unused, node) {
+export function app_learn_js_expression_value_decoys_boolean(
+  current_unused,
+  node,
+) {
   arguments_assert(arguments, 2);
   ("the wrong value to offer beside the right one when the part a learner just chose is a comparison: the other of true and false");
   ("There is only ever one, and nothing has to be invented to find it. A comparison comes to true or false and to nothing else, so the whole of what could be pressed instead is the other word - two buttons, both of them a real reading of the line, and no third value that could only be there to fill a row.");
