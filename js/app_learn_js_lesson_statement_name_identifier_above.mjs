@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_identifier_name } from "./app_learn_js_lesson_statement_name_identifier_name.mjs";
-import { app_code_lesson_statement_name_identifier_word } from "./app_code_lesson_statement_name_identifier_word.mjs";
+import { app_learn_js_lesson_statement_name_identifier_word } from "./app_learn_js_lesson_statement_name_identifier_word.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_statement_name_identifier_above(
   ("The last box says what comes out is what is in the cup and not the word on it, because that is the mistake the questions are built to catch - every screen offers the program's own name as one of the wrong answers - and a question set to catch a mistake ought to have warned about it first.");
   let name_before = app_code_lesson_statement_name_value_name();
   let name = app_learn_js_lesson_statement_name_identifier_name();
-  let word = app_code_lesson_statement_name_identifier_word();
+  let word = app_learn_js_lesson_statement_name_identifier_word();
   let grapes = app_code_lesson_statement_name_value_word();
   let box_before = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
