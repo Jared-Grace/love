@@ -5,7 +5,7 @@ import { app_learn_js_category_expressions } from "./app_learn_js_category_expre
 import { js_operator_bang } from "./js_operator_bang.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_not_equal_same_title_name_id() {
+export function app_learn_js_lesson_expression_not_equal_same_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: !== written with !, an Expressions lesson. Both symbols are painted as code, because the lesson is the sentence that joins them - the words are only what the URL name is spelled with, where a symbol cannot go");
   let different = js_operator_bang_double_equal();
