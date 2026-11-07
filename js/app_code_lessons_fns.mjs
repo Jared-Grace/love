@@ -348,7 +348,7 @@ import { app_code_lesson_for_total_if } from "./app_code_lesson_for_total_if.mjs
 import { app_code_lesson_for_if_even } from "./app_code_lesson_for_if_even.mjs";
 import { app_code_lesson_for_if_else } from "./app_code_lesson_for_if_else.mjs";
 import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_first.mjs";
-import { app_code_lesson_array_second } from "./app_code_lesson_array_second.mjs";
+import { app_learn_js_lesson_array_second } from "./app_learn_js_lesson_array_second.mjs";
 import { app_learn_js_lesson_array_any } from "./app_learn_js_lesson_array_any.mjs";
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
@@ -709,7 +709,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_for_if_even,
     app_code_lesson_for_if_else,
     app_learn_js_lesson_array_first,
-    app_code_lesson_array_second,
+    app_learn_js_lesson_array_second,
     app_learn_js_lesson_array_any,
   ];
   return fns;

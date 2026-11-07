@@ -5,7 +5,7 @@ import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_fir
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_array_index_generic } from "./app_learn_js_lesson_array_index_generic.mjs";
-export function app_code_lesson_array_second() {
+export function app_learn_js_lesson_array_second() {
   arguments_assert(arguments, 0);
   ("the second item of an array: let a = [14, 27, 35]; console.log(a[1]); writes out 27");
   ("The one new fact is that counting from 0 makes a[1] the second item, not the first. Reading a[1] as the first item, or as the number 1, are both wrong answers on every screen.");
