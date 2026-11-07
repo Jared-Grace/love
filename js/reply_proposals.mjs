@@ -27,6 +27,8 @@ import { reply_choices_age } from "./reply_choices_age.mjs";
 import { prayer_according_to_desire } from "./prayer_according_to_desire.mjs";
 import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
 import { text_lord_bless_always } from "./text_lord_bless_always.mjs";
+import { prayer_end } from "./prayer_end.mjs";
+import { reply_choices_praise } from "./reply_choices_praise.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -2714,6 +2716,43 @@ export function reply_proposals() {
       "measured on the saved tests: one saved message changes, the full message from Accra, and only in this one word. The two short ones here show the change on its own.",
     ],
   };
+  let name_alone_then = text_combine_multiple([
+    "   let name_alone = ",
+    fn_name("app_shared_message_reply_iam_titled_name"),
+    "();",
+  ]);
+  let meeting_add = text_combine_multiple([
+    "+  let meeting = ",
+    fn_name("reply_meeting_blessed"),
+    "();",
+  ]);
+  let meeting_amen = prayer_end();
+  let meeting_praise = reply_choices_praise();
+  let meeting_glory = reply_choices_glory();
+  let meeting_blessing = prayer_blessing("you and everyone at the meeting");
+  let meeting_blessed_said = {
+    title: "answer somebody saying today's meeting was blessed",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_meeting_blessed")],
+    diff: [name_alone_then, meeting_add, "     name_alone,", "+    meeting,"],
+    cases: [
+      {
+        from: "",
+        message: "Today meeting is very blessed",
+        answered: true,
+        outputs: [
+          meeting_amen,
+          meeting_praise,
+          meeting_glory,
+          meeting_blessing,
+        ],
+      },
+    ],
+    decide: [
+      "these are the words of a message waiting for a reply, and only those words are matched. The rejected reading was also taking was, or leaving out very, because nobody has said those yet.",
+      "the reply is Amen, praise to the LORD, glory to God, then the blessing on them and everyone at the meeting, in the order you asked for.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2748,6 +2787,7 @@ export function reply_proposals() {
     myself_said,
     name_alone_said,
     blessing_always_said,
+    meeting_blessed_said,
   ];
   return proposals;
 }
