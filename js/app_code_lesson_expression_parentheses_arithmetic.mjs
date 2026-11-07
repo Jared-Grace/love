@@ -1,6 +1,6 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
-import { app_code_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_code_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
+import { app_learn_js_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_learn_js_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_code_parentheses_flat_decoys } from "./app_code_parentheses_flat_decoys.mjs";
@@ -19,7 +19,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
   "The tailored wrong answer is the value of the very same line with the parentheses taken away, which is the whole mistake this lesson exists to prevent: a learner who does not yet believe the parentheses matter will read (1 + 2) * 3 as 1 + 2 * 3 and answer 7. Offering that number is what makes choosing 9 an act of reading the parentheses rather than of arithmetic.";
   "It comes before the comparison-parentheses lessons on purpose. Those wrap a comparison in parentheses that change no answer at all - safe only once parentheses are already believed in, and meaningless as a first meeting.";
   let name_id =
-    app_code_lesson_expression_parentheses_arithmetic_title_name_id();
+    app_learn_js_lesson_expression_parentheses_arithmetic_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_learn_js_lesson_expression_generic({
     above,
