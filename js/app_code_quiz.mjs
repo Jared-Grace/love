@@ -4,7 +4,7 @@ import { html_clear } from "./html_clear.mjs";
 import { app_code_page_complete_paint } from "./app_code_page_complete_paint.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
-import { app_code_lesson_current } from "./app_code_lesson_current.mjs";
+import { app_learn_js_lesson_current } from "./app_learn_js_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
 import { app_learn_js_batch_on_refill } from "./app_learn_js_batch_on_refill.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -33,7 +33,7 @@ import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 export function app_code_quiz(context) {
   let root = html_clear_context(context);
-  let lesson = app_code_lesson_current(context);
+  let lesson = app_learn_js_lesson_current(context);
   ("the bar is drawn inside a holder of its own, so it can be drawn again in the same place without redrawing the question under it");
   let holder = html_div(root);
   function render() {
