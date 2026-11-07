@@ -7,7 +7,7 @@ import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_minus_divide() {
+export function app_learn_js_lesson_expression_minus_divide() {
   "mixing - and / in one expression: a - b / c and a / b - c; / is stronger than -, so we always do it first, even when it comes later; this pair has BOTH hazards - / must divide evenly and - must not drop below 0; the division operator's left_transform (multiply) builds the divisibility chain a = outer * b, b = inner * c, and choosing outer = c + gap keeps a / b - c at gap (>= 1), while a - b / c stays large and positive";
   let divided = js_operator_division();
   let divide_symbol = property_get(divided, "operator");
