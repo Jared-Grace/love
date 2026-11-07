@@ -6,7 +6,7 @@ import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
+import { app_learn_js_lesson_if_nested } from "./app_learn_js_lesson_if_nested.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_if_in_else_program_lines } from "./app_learn_js_if_in_else_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -28,12 +28,12 @@ export function app_learn_js_if_in_else_explain(root, context) {
   let if_b = js_code_if_dots("b");
   let else_dots = js_code_else_dots();
   let box_one = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(box_one, context, app_code_lesson_if_nested, [
-    "An ",
-    "if",
-    " can go inside an ",
-    "if",
-  ]);
+  app_code_remember_from_lesson(
+    box_one,
+    context,
+    app_learn_js_lesson_if_nested,
+    ["An ", "if", " can go inside an ", "if"],
+  );
   let box_two = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(box_two, [
     "An ",
