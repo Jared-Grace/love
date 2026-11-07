@@ -5,7 +5,7 @@ import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { app_code_lesson_expression_choose_order_twin_read_generic } from "./app_code_lesson_expression_choose_order_twin_read_generic.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide } from "./app_code_lesson_expression_parentheses_minus_divide.mjs";
-import { app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code.mjs";
+import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_minus_divide() {
   arguments_assert(arguments, 0);
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_choose_order_parentheses_minus_divide
   let lesson = app_code_lesson_expression_choose_order_twin_read_generic(
     words,
     app_code_lesson_expression_parentheses_minus_divide,
-    app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code,
+    app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code,
     app_learn_js_expression_value_decoys,
   );
   return lesson;

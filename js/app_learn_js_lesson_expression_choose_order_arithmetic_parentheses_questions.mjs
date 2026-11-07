@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
-import { app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code.mjs";
+import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code.mjs";
 export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_questions() {
   arguments_assert(arguments, 0);
   ("the question bank this lesson draws on: lines whose + or - stands in ( and ) at one end of a times and then at the other, given out one a screen and worked out again from the writing they were printed as");
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_expression_choose_order_arithmetic_parenthes
   }
   let bank = app_code_lesson_expression_choose_order_questions_generic(
     expression_turning,
-    app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code,
+    app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code,
   );
   return bank;
 }

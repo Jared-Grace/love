@@ -8,7 +8,7 @@ import { ternary } from "./ternary.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_expression_choose_order_operators_expression_parts } from "./app_code_lesson_expression_choose_order_operators_expression_parts.mjs";
-export function app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code(
+export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code(
   code,
 ) {
   arguments_assert(arguments, 1);
