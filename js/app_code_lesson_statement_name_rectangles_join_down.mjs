@@ -21,7 +21,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_meetings_join } from "./app_code_lesson_statement_name_meetings_join.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-import { app_code_lesson_statement_min_max_mixed_decoys } from "./app_code_lesson_statement_min_max_mixed_decoys.mjs";
+import { app_learn_js_lesson_statement_min_max_mixed_decoys } from "./app_learn_js_lesson_statement_min_max_mixed_decoys.mjs";
 export function app_code_lesson_statement_name_rectangles_join_down() {
   arguments_assert(arguments, 0);
   ("where two rectangles together start and end going down: let top = Math.min(t1, t2); let bottom = Math.max(b1, b2); - picked by Claude 2026-10-05 when the human asked for the next lesson, as Join two overlapping meetings done down a picture, the way How many rows are between two rectangles did How many hours are free between two meetings. In DSA it is half of the box around two boxes, the smallest rectangle holding both, which a screen uses to redraw only the part that changed and a game to test two shapes together.");
@@ -229,7 +229,7 @@ export function app_code_lesson_statement_name_rectangles_join_down() {
         "Here is code that finds where the two rectangles together start and end going down:",
       ],
     ],
-    decoys: app_code_lesson_statement_min_max_mixed_decoys,
+    decoys: app_learn_js_lesson_statement_min_max_mixed_decoys,
     example_pointers: [
       [[t, t2, top, "1", "2"], start_color],
       [[b, b2, bottom, "3", "4"], end_color],

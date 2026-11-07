@@ -7,7 +7,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-export function app_code_lesson_statement_min_max_mixed_decoys(
+export function app_learn_js_lesson_statement_min_max_mixed_decoys(
   question,
   answer,
 ) {

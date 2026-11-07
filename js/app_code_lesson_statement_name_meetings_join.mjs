@@ -21,7 +21,7 @@ import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_less
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-import { app_code_lesson_statement_min_max_mixed_decoys } from "./app_code_lesson_statement_min_max_mixed_decoys.mjs";
+import { app_learn_js_lesson_statement_min_max_mixed_decoys } from "./app_learn_js_lesson_statement_min_max_mixed_decoys.mjs";
 export function app_code_lesson_statement_name_meetings_join() {
   arguments_assert(arguments, 0);
   ("when two overlapping meetings together start and end: let start = Math.min(s1, s2); let end = Math.max(e1, e2); - chosen by Claude 2026-10-04, when the human asked for another lesson building on the meetings lessons. In DSA it is the step of merging intervals: two ranges that overlap become one range, from the earlier start to the later end.");
@@ -199,7 +199,7 @@ export function app_code_lesson_statement_name_meetings_join() {
       draw5,
       ["Here is code that finds when the two meetings together start and end:"],
     ],
-    decoys: app_code_lesson_statement_min_max_mixed_decoys,
+    decoys: app_learn_js_lesson_statement_min_max_mixed_decoys,
     example_pointers: [
       [[s, s2, start, "9", "10"], start_color],
       [[e, e2, end, "11", "12"], end_color],
