@@ -3,7 +3,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_and } from "./app_learn_js_lesson_expression_and.mjs";
-export function app_code_lesson_statement_name_and() {
+export function app_learn_js_lesson_statement_name_and() {
   arguments_assert(arguments, 0);
   ("two names joined with and: let a = true; let b = false; let a_and_b = a && b; console.log(a_and_b); writes out false");
   ("The answer is named a_and_b to match a_or_b in the lesson on or, which a learner meets just before this one: two names made by the same rule read as a pair, and each reads back as the line it came from.");
