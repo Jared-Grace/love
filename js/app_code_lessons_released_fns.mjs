@@ -139,7 +139,7 @@ import { app_code_lesson_expression_choose_order_minus_times } from "./app_code_
 import { app_code_lesson_expression_choose_order_minus_divide } from "./app_code_lesson_expression_choose_order_minus_divide.mjs";
 import { app_code_lesson_expression_choose_order_arithmetic_parentheses } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_minus_divide } from "./app_code_lesson_expression_choose_order_parentheses_minus_divide.mjs";
-import { app_code_lesson_expression_choose_order_arithmetic_less_than } from "./app_code_lesson_expression_choose_order_arithmetic_less_than.mjs";
+import { app_learn_js_lesson_expression_choose_order_arithmetic_less_than } from "./app_learn_js_lesson_expression_choose_order_arithmetic_less_than.mjs";
 import { app_code_lesson_expression_choose_order_integer_division } from "./app_code_lesson_expression_choose_order_integer_division.mjs";
 import { app_code_lesson_expression_choose_order_whole_part } from "./app_code_lesson_expression_choose_order_whole_part.mjs";
 import { app_code_lesson_expression_choose_order_remainder } from "./app_code_lesson_expression_choose_order_remainder.mjs";
@@ -452,7 +452,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_expression_choose_order_minus_divide,
     app_code_lesson_expression_choose_order_arithmetic_parentheses,
     app_code_lesson_expression_choose_order_parentheses_minus_divide,
-    app_code_lesson_expression_choose_order_arithmetic_less_than,
+    app_learn_js_lesson_expression_choose_order_arithmetic_less_than,
     app_code_lesson_expression_choose_order_integer_division,
     app_code_lesson_expression_choose_order_whole_part,
     app_code_lesson_expression_choose_order_remainder,
