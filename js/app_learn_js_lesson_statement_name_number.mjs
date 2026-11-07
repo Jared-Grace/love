@@ -15,7 +15,7 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { app_learn_js_lesson_statement_name_number_above } from "./app_learn_js_lesson_statement_name_number_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_lesson_decoy_code_names } from "./app_learn_js_lesson_decoy_code_names.mjs";
-export function app_code_lesson_statement_name_number() {
+export function app_learn_js_lesson_statement_name_number() {
   arguments_assert(arguments, 0);
   ("a name holding a number: let a = 1; console.log(a); writes out 1");
   ("The smallest step from the lesson that first gave a value a name: the same two lines, with a number where the word was. It comes before any lesson that works a number out under a name, because there the value comes out of working something out, and here it is written in plainly.");
