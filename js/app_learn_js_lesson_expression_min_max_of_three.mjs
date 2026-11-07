@@ -14,7 +14,7 @@ import { list_filter } from "./list_filter.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_integers } from "./text_integers.mjs";
-export function app_code_lesson_expression_min_max_of_three() {
+export function app_learn_js_lesson_expression_min_max_of_three() {
   "Math.min and Math.max are not limited to two numbers - give either one three numbers and it still returns the smallest / largest (Math.min(3, 8, 5) is 3, Math.max(3, 8, 5) is 8). One combined lesson - a min example and a max example - because going from two numbers to three is a small step once Math.min and Math.max are known. Half the questions are Math.min and half Math.max; three different numbers 2..12, the other two stand as decoys.";
   function make(index) {
     "one question over three different numbers, alternating Math.min and Math.max down the batch so both are drilled";
