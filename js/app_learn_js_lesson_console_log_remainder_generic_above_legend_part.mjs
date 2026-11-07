@@ -4,7 +4,7 @@ import { equal_0 } from "./equal_0.mjs";
 import { divide } from "./divide.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_console_log_remainder_generic_above_legend_part(
+export function app_learn_js_lesson_console_log_remainder_generic_above_legend_part(
   part,
   index,
   modulo_fn,

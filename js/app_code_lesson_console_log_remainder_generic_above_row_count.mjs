@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_to_or_list_generic } from "./list_to_or_list_generic.mjs";
-import { app_code_lesson_console_log_remainder_generic_above_legend_part } from "./app_code_lesson_console_log_remainder_generic_above_legend_part.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_above_legend_part } from "./app_learn_js_lesson_console_log_remainder_generic_above_legend_part.mjs";
 import { each_index } from "./each_index.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
@@ -21,13 +21,14 @@ export function app_code_lesson_console_log_remainder_generic_above_row_count(
   let legend = property_get(r4, "legend");
   let or_parts = list_to_or_list_generic(remainder_texts, "or");
   function legend_part(part, index) {
-    let r2 = app_code_lesson_console_log_remainder_generic_above_legend_part(
-      part,
-      index,
-      modulo_fn,
-      legend,
-      divisor,
-    );
+    let r2 =
+      app_learn_js_lesson_console_log_remainder_generic_above_legend_part(
+        part,
+        index,
+        modulo_fn,
+        legend,
+        divisor,
+      );
     return r2;
   }
   each_index(or_parts, legend_part);
