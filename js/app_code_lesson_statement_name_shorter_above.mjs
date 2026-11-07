@@ -2,7 +2,7 @@ import { change_if_equal } from "./change_if_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
+import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_statement_name_shorter_above({
@@ -24,7 +24,7 @@ export function app_code_lesson_statement_name_shorter_above({
   ("Two lines then say it outright: the two do exactly the same thing, and the short one is shorter and easier to type - the reason anyone would write it - at the human's request, 2026-09-27.");
   let box_long = app_code_container_light_blue(root);
   app_code_remember_from_lesson(box_long, context, lesson_from, remembered);
-  app_code_code_lines_writes_out_watched(box_long, lines_long);
+  app_learn_js_code_lines_writes_out_watched(box_long, lines_long);
   let box_short = app_code_container_light_blue(root);
   app_code_div_cycle_code(box_short, [
     "A shorter way to write ",
@@ -50,5 +50,5 @@ export function app_code_lesson_statement_name_shorter_above({
     return shortened;
   }
   let lines_short = list_map(lines_long, line_shortened);
-  app_code_code_lines_writes_out_watched(box_short, lines_short);
+  app_learn_js_code_lines_writes_out_watched(box_short, lines_short);
 }

@@ -1,4 +1,4 @@
-import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
+import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
@@ -36,5 +36,5 @@ export function app_code_lesson_statement_name_one_more_above(root, context) {
   ]);
   let held = js_code_let_statement(name, 13);
   let logged = js_code_console_log_statement(name);
-  app_code_code_lines_writes_out_watched(box, [held, code, logged]);
+  app_learn_js_code_lines_writes_out_watched(box, [held, code, logged]);
 }

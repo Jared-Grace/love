@@ -1,4 +1,4 @@
-import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
+import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_statement_name_one_less_above(root, context) {
     ["a name can be given one more than it holds (", code_more, "):"],
   );
   let held_more = js_code_let_statement(name, 13);
-  app_code_code_lines_writes_out_watched(box_more, [
+  app_learn_js_code_lines_writes_out_watched(box_more, [
     held_more,
     code_more,
     logged,
@@ -45,7 +45,7 @@ export function app_code_lesson_statement_name_one_less_above(root, context) {
     "):",
   ]);
   let held_less = js_code_let_statement(name, 17);
-  app_code_code_lines_writes_out_watched(box_less, [
+  app_learn_js_code_lines_writes_out_watched(box_less, [
     held_less,
     code_less,
     logged,

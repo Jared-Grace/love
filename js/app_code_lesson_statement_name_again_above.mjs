@@ -1,4 +1,4 @@
-import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
+import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
@@ -78,7 +78,7 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   ]);
   ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The line that makes the cup and the line that fills it again stand above as the two lines being taught, and stand here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on two lines a learner had to carry down the box - and on this screen the whole question is which of two words comes out, which only both lines together answer.");
   let lines = [held, again, logged];
-  app_code_code_lines_writes_out_watched(box_code, lines);
+  app_learn_js_code_lines_writes_out_watched(box_code, lines);
   ("The last box says the order rule in the words the course already owns. A statement, and the ; that ends one, were taught long before this lesson - so the rule is stated about statements rather than about LINES, which is a word about how the program is laid out on the screen and not about the language. Two statements on one line would still happen in the order they were written, and a learner told the rule in terms of lines has been given something that is nearly true.");
   ("The recall comes first, because the sentence under it leans on it. A learner who has to remember what a statement is while reading a rule about statements is doing two things at once, and the first of them is free to give them.");
   ("Then the rule is spent on the very cup in front of them rather than left general. WHAT COMES OUT IS WHATEVER WENT IN LAST is true and says nothing about this screen; naming the cup, and saying out loud that its value was set twice here, is the same rule with the working shown - and this screen is the one place a learner can check it against a picture.");

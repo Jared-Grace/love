@@ -1,4 +1,4 @@
-import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
+import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
@@ -109,7 +109,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   ]);
   let logged_total = js_code_console_log_statement(name_first);
   ("EACH BOX HOLDS A WHOLE PROGRAM AND WHAT IT WRITES OUT, rather than the one line the box's point turns on. Shown as a part, the log line rested on three lines a learner had to carry down from the boxes above, and what it wrote out could not be checked against anything on the screen. Shown whole, the box stands on its own and the number under it is the claim, drawn.");
-  app_code_code_lines_writes_out_watched(box_itself, [
+  app_learn_js_code_lines_writes_out_watched(box_itself, [
     held_first,
     held_last,
     given_sum,
@@ -133,7 +133,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
     given_total,
     ":",
   ]);
-  app_code_code_lines_writes_out_watched(box_value, [
+  app_learn_js_code_lines_writes_out_watched(box_value, [
     held_first,
     held_last,
     given_total,

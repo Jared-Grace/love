@@ -9,7 +9,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
-import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
+import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_statement_name_count_above(root, context) {
   arguments_assert(arguments, 2);
@@ -36,7 +36,7 @@ export function app_code_lesson_statement_name_count_above(root, context) {
     ["we can give a name (", name, ") one more than it holds (", grown, "):"],
   );
   ("the lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
-  app_code_code_lines_writes_out_watched(box_once, [held, grown, logged]);
+  app_learn_js_code_lines_writes_out_watched(box_once, [held, grown, logged]);
   let box_twice = app_code_container_light_blue(root);
   ("how far the name moves is said as a number rather than as the word twice, and the number one copy of the line would have moved it is said beside it. Twice named the count of lines and left the reader to carry it over to the value, which is the step being shown; the two numbers side by side are that step, written.");
   app_code_div_cycle_code(box_twice, [
@@ -48,7 +48,7 @@ export function app_code_lesson_statement_name_count_above(root, context) {
     number_more,
     ":",
   ]);
-  app_code_code_lines_writes_out_watched(box_twice, [
+  app_learn_js_code_lines_writes_out_watched(box_twice, [
     held,
     grown,
     grown,
