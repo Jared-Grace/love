@@ -1,4 +1,4 @@
-import { app_code_expression_node_truths_wanted } from "./app_code_expression_node_truths_wanted.mjs";
+import { app_learn_js_expression_node_truths_wanted } from "./app_learn_js_expression_node_truths_wanted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_expre
   ("Nothing here branches on where the parentheses fall, because on this lesson's line nothing else moves with them: the && is read first and the || second at both ends, and the side is the only thing handed on. Round the first two the parentheses gather the && , which the line would have done on its own; round the last two they gather the || , which the line would otherwise have left until last.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
-  let tree = app_code_expression_node_truths_wanted(
+  let tree = app_learn_js_expression_node_truths_wanted(
     and_symbol,
     or_symbol,
     want_true,

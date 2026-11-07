@@ -1,5 +1,5 @@
 import { ternary } from "./ternary.mjs";
-import { app_code_expression_node_truths_wanted } from "./app_code_expression_node_truths_wanted.mjs";
+import { app_learn_js_expression_node_truths_wanted } from "./app_learn_js_expression_node_truths_wanted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_choose_order_parentheses_expression(
   let or_symbol = js_operator_or_symbol();
   let first_symbol = ternary(parentheses_left, or_symbol, and_symbol);
   let second_symbol = ternary(parentheses_left, and_symbol, or_symbol);
-  let tree = app_code_expression_node_truths_wanted(
+  let tree = app_learn_js_expression_node_truths_wanted(
     first_symbol,
     second_symbol,
     want_true,

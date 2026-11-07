@@ -6,7 +6,7 @@ import { app_learn_js_expression_node_right_operator_first_parenthesis_wrapped }
 import { app_code_operator_truths_wanted_nested } from "./app_code_operator_truths_wanted_nested.mjs";
 import { list_get } from "./list_get.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_expression_node_truths_wanted(
+export function app_learn_js_expression_node_truths_wanted(
   first_symbol,
   second_symbol,
   want_true,
