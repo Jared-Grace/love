@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_same_draw } from "./app_learn_js_lesson_same_draw.mjs";
-import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
+import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_lesson_symbols_digits_numbered.mjs";
 import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
 import { app_learn_js_lesson_symbols_batch_digits } from "./app_learn_js_lesson_symbols_batch_digits.mjs";
 import { app_learn_js_lesson_symbols_counting } from "./app_learn_js_lesson_symbols_counting.mjs";
@@ -11,7 +11,7 @@ export function app_code_lesson_symbols_digits() {
       root,
       context,
       app_code_lesson_symbols_digits,
-      app_code_lesson_symbols_digits_numbered,
+      app_learn_js_lesson_symbols_digits_numbered,
       "there are not numbers underneath",
     );
   }

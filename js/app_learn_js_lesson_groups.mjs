@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
+import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_lesson_symbols_digits_numbered.mjs";
 import { app_learn_js_lesson_operators_addition } from "./app_learn_js_lesson_operators_addition.mjs";
 import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than } from "./app_learn_js_lesson_expression_arithmetic_less_than.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_groups() {
   let groups = [
     {
       parts: ["Identifiers"],
-      lesson: app_code_lesson_symbols_digits_numbered,
+      lesson: app_learn_js_lesson_symbols_digits_numbered,
     },
     {
       parts: [

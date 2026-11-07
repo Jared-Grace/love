@@ -8,7 +8,7 @@ import { html_div } from "./html_div.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_lesson_symbols_counting } from "./app_learn_js_lesson_symbols_counting.mjs";
 import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
-export function app_code_lesson_symbols_digits_numbered() {
+export function app_learn_js_lesson_symbols_digits_numbered() {
   let name_id = app_learn_js_lesson_name_id("symbols", ["digits", "numbered"]);
   let r = app_learn_js_lesson_symbols_counting(
     name_id,

@@ -1,4 +1,4 @@
-import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
+import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_lesson_symbols_digits_numbered.mjs";
 import { app_learn_js_lesson_symbols_digit_number } from "./app_learn_js_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
 import { app_code_lesson_symbols_letters } from "./app_code_lesson_symbols_letters.mjs";
@@ -311,7 +311,7 @@ export function app_code_lessons_released_fns() {
   "2026-11-01, asked next: thirteen step lessons of the naming stage taken out the same way. Three - step_name_value, step_name_two and step_name_copy_single - were in the built site's bundle, so a learner there may have finished one; it leaves their list, and the lesson it stood after now ends in the same stepping.";
   "2026-11-01, asked next: the six step lessons that came before their lesson taken out too, that lesson now opening with the same stepping as its first quiz.";
   let fns = [
-    app_code_lesson_symbols_digits_numbered,
+    app_learn_js_lesson_symbols_digits_numbered,
     app_learn_js_lesson_symbols_digit_number,
     app_code_lesson_symbols_digits,
     app_code_lesson_symbols_letters,
