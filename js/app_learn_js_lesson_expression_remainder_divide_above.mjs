@@ -4,7 +4,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_arrow } from "./app_learn_js_arrow.mjs";
-export function app_code_lesson_expression_remainder_divide_above(root) {
+export function app_learn_js_lesson_expression_remainder_divide_above(root) {
   arguments_assert(arguments, 1);
   let setup = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(setup, ["For ", "14 / 4", " :"]);

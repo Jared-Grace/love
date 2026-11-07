@@ -2,7 +2,7 @@ import { app_code_lesson_expression_remainder_divide_quizzes_get } from "./app_c
 import { app_code_lesson_expression_remainder_divide_make } from "./app_code_lesson_expression_remainder_divide_make.mjs";
 import { app_code_lesson_expression_remainder_divide_backwards_decoys } from "./app_code_lesson_expression_remainder_divide_backwards_decoys.mjs";
 import { app_code_lesson_expression_remainder_divide_recognize_decoys } from "./app_code_lesson_expression_remainder_divide_recognize_decoys.mjs";
-import { app_code_lesson_expression_remainder_divide_above } from "./app_code_lesson_expression_remainder_divide_above.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_above } from "./app_learn_js_lesson_expression_remainder_divide_above.mjs";
 import { app_code_lesson_expression_remainder_divide_title_name_id } from "./app_code_lesson_expression_remainder_divide_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -72,7 +72,7 @@ export function app_code_lesson_expression_remainder_divide() {
   );
   return lesson;
   function above(root) {
-    let r4 = app_code_lesson_expression_remainder_divide_above(root);
+    let r4 = app_learn_js_lesson_expression_remainder_divide_above(root);
     return r4;
   }
 }
