@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_min_max_of_three_code(
+export function app_learn_js_lesson_expression_min_max_of_three_code(
   f_name,
   a,
   b,

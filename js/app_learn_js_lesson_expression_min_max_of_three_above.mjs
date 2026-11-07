@@ -5,7 +5,7 @@ import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_expression_min_max_of_three_code } from "./app_code_lesson_expression_min_max_of_three_code.mjs";
+import { app_learn_js_lesson_expression_min_max_of_three_code } from "./app_learn_js_lesson_expression_min_max_of_three_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
@@ -29,13 +29,13 @@ export function app_learn_js_lesson_expression_min_max_of_three_above(root) {
   let tb = text_to(b);
   let tc = text_to(c);
   let nums_text = text_combine_multiple([ta, ", ", tb, ", ", tc]);
-  let v_min = app_code_lesson_expression_min_max_of_three_code(
+  let v_min = app_learn_js_lesson_expression_min_max_of_three_code(
     "Math.min",
     a,
     b,
     c,
   );
-  let v_max = app_code_lesson_expression_min_max_of_three_code(
+  let v_max = app_learn_js_lesson_expression_min_max_of_three_code(
     "Math.max",
     a,
     b,
