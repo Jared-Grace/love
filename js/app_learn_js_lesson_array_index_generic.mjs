@@ -28,7 +28,7 @@ import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_array_index_generic(options) {
+export function app_learn_js_lesson_array_index_generic(options) {
   arguments_assert(arguments, 1);
   ("an array of numbers given a name, then one of its items written out by its index: let a = [14, 27, 35]; console.log(a[0]); writes out 14. What differs between lessons is handed in here.");
   ("item_count is how many items each array holds, indexes the indexes a question may ask for, example the items and index of the example program, and above is handed the root, the context, the example drawer and the walk drawer.");

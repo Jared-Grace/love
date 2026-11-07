@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_array_index_generic } from "./app_code_lesson_array_index_generic.mjs";
+import { app_learn_js_lesson_array_index_generic } from "./app_learn_js_lesson_array_index_generic.mjs";
 export function app_learn_js_lesson_array_first() {
   arguments_assert(arguments, 0);
   ("the first item of an array: let a = [14, 27, 35]; console.log(a[0]); writes out 14");
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_array_first() {
     "The first item of an array",
     "a[0]",
   );
-  let lesson = app_code_lesson_array_index_generic({
+  let lesson = app_learn_js_lesson_array_index_generic({
     name_id,
     above,
     item_count: 3,

@@ -4,7 +4,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_first.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_array_index_generic } from "./app_code_lesson_array_index_generic.mjs";
+import { app_learn_js_lesson_array_index_generic } from "./app_learn_js_lesson_array_index_generic.mjs";
 export function app_code_lesson_array_second() {
   arguments_assert(arguments, 0);
   ("the second item of an array: let a = [14, 27, 35]; console.log(a[1]); writes out 27");
@@ -34,7 +34,7 @@ export function app_code_lesson_array_second() {
     "The second item of an array",
     "a[1]",
   );
-  let lesson = app_code_lesson_array_index_generic({
+  let lesson = app_learn_js_lesson_array_index_generic({
     name_id,
     above,
     item_count: 3,
