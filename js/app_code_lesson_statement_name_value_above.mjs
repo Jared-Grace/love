@@ -6,7 +6,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_cup } from "./app_code_cup.mjs";
+import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
@@ -33,9 +33,9 @@ export function app_code_lesson_statement_name_value_above(root, context) {
   app_code_div_cycle_code(box_cup, ["Suppose you had a cup"]);
   ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
   let uncolored = [];
-  app_code_cup(box_cup, nothing, nothing, uncolored);
+  app_learn_js_cup(box_cup, nothing, nothing, uncolored);
   app_code_div_cycle_code(box_cup, ["Suppose you called the cup ", name]);
-  app_code_cup(box_cup, nothing, name, uncolored);
+  app_learn_js_cup(box_cup, nothing, name, uncolored);
   app_code_div_cycle_code(box_cup, [
     "Then suppose you put some ",
     word,

@@ -12,7 +12,7 @@ import { not } from "./not.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
-export function app_code_cup(parent, inside, name, names) {
+export function app_learn_js_cup(parent, inside, name, names) {
   arguments_assert(arguments, 4);
   ("a cup drawn on the page, with whatever has been put in it and whatever it has been called written on it - the picture the lesson on giving a value a name tells its story with");
   ("Drawn rather than shown as a picture of a cup, because the story needs the same cup three times over with something different about it each time: empty, then called something, then with grapes in it. A picture can only be one of those, and three pictures of three cups would be three cups.");

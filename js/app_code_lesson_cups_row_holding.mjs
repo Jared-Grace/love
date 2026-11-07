@@ -4,7 +4,7 @@ import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
-import { app_code_cup } from "./app_code_cup.mjs";
+import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_cups_row_holding(parent, pairs, names) {
   arguments_assert(arguments, 3);
@@ -26,7 +26,7 @@ export function app_code_lesson_cups_row_holding(parent, pairs, names) {
       let filled = app_code_lesson_cup_fruit(row, word, name, names);
       return filled;
     }
-    let empty = app_code_cup(row, word, name, names);
+    let empty = app_learn_js_cup(row, word, name, names);
     return empty;
   }
   let cups = list_map(pairs, cup_of);
