@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
+import { app_learn_js_container_padded_x } from "./app_learn_js_container_padded_x.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_button_face } from "./app_shared_button_face.mjs";
 import { app_shared_color_progress_complete } from "./app_shared_color_progress_complete.mjs";
@@ -39,7 +39,7 @@ export function app_code_title_strip(
   ("$plain index_next");
   ("the quiet top bar of a screen in the course: a small home button and an arrow back at one end, the arrow on at the other, and the title in the middle, painted by title_paint(title) - the lesson screens and the review screens draw the same bar, so a reader moving between them finds home and the arrows in the same places");
   ("the arrows go to the lessons sitting at index_previous and index_next in the course, and are drawn switched off where there is none. complete dresses the whole bar in the finished colour.");
-  let strip = app_code_container_padded_x(root);
+  let strip = app_learn_js_container_padded_x(root);
   ("noted for the page as a whole, which is painted after every screen draws - a finished lesson stands on the same pale green as a finished group on the home list, at the human's request");
   property_set(context, "page_complete_shown", complete);
   if (complete) {
