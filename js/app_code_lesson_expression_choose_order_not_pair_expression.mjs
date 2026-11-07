@@ -1,4 +1,4 @@
-import { app_code_expression_node_not_of_parts } from "./app_code_expression_node_not_of_parts.mjs";
+import { app_learn_js_expression_node_not_of_parts } from "./app_learn_js_expression_node_not_of_parts.mjs";
 import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
@@ -26,6 +26,6 @@ export function app_code_lesson_expression_choose_order_not_pair_expression(
     symbol,
     right: list_get(truths, 1),
   };
-  let tree = app_code_expression_node_not_of_parts(parts);
+  let tree = app_learn_js_expression_node_not_of_parts(parts);
   return tree;
 }
