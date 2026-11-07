@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
+import { app_learn_js_lesson_expression_round_generic_code } from "./app_learn_js_lesson_expression_round_generic_code.mjs";
 export function app_code_lesson_expression_round_generic_make(
   whole,
   index,
@@ -19,6 +19,6 @@ export function app_code_lesson_expression_round_generic_make(
   } else {
     inner = text_to(whole);
   }
-  let r = app_code_lesson_expression_round_generic_code(inner, called_name);
+  let r = app_learn_js_lesson_expression_round_generic_code(inner, called_name);
   return r;
 }

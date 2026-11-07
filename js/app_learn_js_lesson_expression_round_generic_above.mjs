@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_round_generic_above_rounds } from "./app
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
+import { app_learn_js_lesson_expression_round_generic_code } from "./app_learn_js_lesson_expression_round_generic_code.mjs";
 export function app_learn_js_lesson_expression_round_generic_above({
   root,
   ordinary_digits,
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_expression_round_generic_above({
     called_name,
     " does not change a number that is already whole",
   ]);
-  let v = app_code_lesson_expression_round_generic_code(
+  let v = app_learn_js_lesson_expression_round_generic_code(
     whole_stays,
     called_name,
   );
