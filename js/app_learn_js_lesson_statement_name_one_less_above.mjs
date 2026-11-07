@@ -11,7 +11,10 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_statement_name_one_less_above(root, context) {
+export function app_learn_js_lesson_statement_name_one_less_above(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: a name given one more than it holds, the program the lesson on one more taught, then the same program with a minus where the plus was");
   ("Neither box's numbers is a starting number or an answer of the programs asked about below: those start at 3, 5, 7, 9 or 11 and end one lower, and these start at 13 and 17.");
