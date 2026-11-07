@@ -6,7 +6,7 @@ import { not } from "./not.mjs";
 import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id.mjs";
 import { app_learn_js_lesson_incomplete_next } from "./app_learn_js_lesson_incomplete_next.mjs";
 import { null_is } from "./null_is.mjs";
-export function app_code_lesson_next_none_is(context) {
+export function app_learn_js_lesson_next_none_is(context) {
   "Whether there is nowhere at all to go on to from the lesson the learner is reading: no review after it, no lesson after it, and no unfinished lesson anywhere else in the course.";
   "TWO SCREENS ASK IT - the skip button at the foot of a lesson, and the end of the last quiz in one - and they must agree, because one of them draws the way forward and the other draws the note saying there is none. Answered twice, the two could drift into showing a dead button beside that note, or the note beside a course the learner has not finished.";
   "ONLY AN UNFINISHED LESSON FURTHER ON COUNTS AS SOMEWHERE TO GO, because the way on never goes round the top of the list. A learner who skipped ahead and sits on the last lesson is told there are no more lessons here; early lessons left open are still reached from the home screen. It used to count blue rows above as somewhere to go, back when the way on wrapped round to them.";

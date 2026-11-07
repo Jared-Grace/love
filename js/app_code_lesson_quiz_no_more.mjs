@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_lcli } from "./app_code_lesson_quiz_lcli.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_next_none_is } from "./app_code_lesson_next_none_is.mjs";
+import { app_learn_js_lesson_next_none_is } from "./app_learn_js_lesson_next_none_is.mjs";
 export function app_code_lesson_quiz_no_more({
   info,
   qa,
@@ -37,7 +37,7 @@ export function app_code_lesson_quiz_no_more({
   let container_success_message = property_get(r4, "container_success_message");
   let quiz_index = property_get(r4, "quiz_index");
   ("being on the last lesson with no review after it is no longer the whole of having nowhere to go: a learner who skipped ahead still has unfinished lessons above this one, and the shared question carries round the top of the list to find them. It is the same question the skip button at the foot of a lesson asks, asked in the one place, so the note saying the course is done and the button offering the way on can never both appear");
-  let no_more = app_code_lesson_next_none_is(context);
+  let no_more = app_learn_js_lesson_next_none_is(context);
   let r = {
     qli,
     on_question,
