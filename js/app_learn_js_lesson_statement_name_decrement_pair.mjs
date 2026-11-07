@@ -6,7 +6,7 @@ import { js_code_update_statement } from "./js_code_update_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_lesson_statement_name_shorter_above } from "./app_code_lesson_statement_name_shorter_above.mjs";
-import { app_code_lesson_statement_name_one_less } from "./app_code_lesson_statement_name_one_less.mjs";
+import { app_learn_js_lesson_statement_name_one_less } from "./app_learn_js_lesson_statement_name_one_less.mjs";
 import { app_learn_js_lesson_statement_name_one_batch } from "./app_learn_js_lesson_statement_name_one_batch.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
 import { app_code_lesson_statement_name_step_backwards_decoys } from "./app_code_lesson_statement_name_step_backwards_decoys.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_statement_name_decrement_pair() {
     app_code_lesson_statement_name_shorter_above({
       root,
       context,
-      lesson_from: app_code_lesson_statement_name_one_less,
+      lesson_from: app_learn_js_lesson_statement_name_one_less,
       remembered: [
         "we can take one from what a name (",
         name,
