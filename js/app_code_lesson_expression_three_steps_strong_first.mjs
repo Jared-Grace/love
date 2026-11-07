@@ -1,7 +1,7 @@
 import { app_code_lesson_same_draw } from "./app_code_lesson_same_draw.mjs";
 import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson_expression_choose_order_three.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_three_operator_count } from "./app_code_lesson_expression_choose_order_three_operator_count.mjs";
+import { app_learn_js_lesson_expression_choose_order_three_operator_count } from "./app_learn_js_lesson_expression_choose_order_three_operator_count.mjs";
 import { app_learn_js_expression_flat_random_strong_first } from "./app_learn_js_expression_flat_random_strong_first.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_three_above } from "./app_learn_js_lesson_expression_choose_order_three_above.mjs";
@@ -19,7 +19,8 @@ export function app_code_lesson_expression_three_steps_strong_first() {
   ("The wrong answer offered is the line read from the left, taking each operator in the order it is written. That is the one mistake the whole family of lessons about which operator goes first exists to take away, and a learner who has stopped looking for the stronger operator lands on it exactly.");
   function code_new() {
     "one line of this lesson's family, handed over as the text of it";
-    let count = app_code_lesson_expression_choose_order_three_operator_count();
+    let count =
+      app_learn_js_lesson_expression_choose_order_three_operator_count();
     let tree = app_learn_js_expression_flat_random_strong_first(count);
     let code = app_learn_js_expression_code(tree);
     return code;
