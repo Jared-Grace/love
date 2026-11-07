@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_above_vague_pattern } from "./app_code_above_vague_pattern.mjs";
+import { app_learn_js_above_vague_pattern } from "./app_learn_js_above_vague_pattern.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { app_code_lesson_above_fake_draw } from "./app_code_lesson_above_fake_draw.mjs";
 import { html_element_fake_lines } from "./html_element_fake_lines.mjs";
@@ -11,7 +11,7 @@ export function app_code_lessons_above_vague() {
   arguments_assert(arguments, 0);
   ("Every piece of a lesson's telling that points at code with a word instead of showing the code, as lesson name | the piece. Read off the drawn screen, not the files, so prose a function says about itself is never counted and a piece handed to a shared painter is.");
   ("Also says how many lessons were drawn, because nothing found is the answer on a clean run and on a run that drew nothing.");
-  let pattern = app_code_above_vague_pattern();
+  let pattern = app_learn_js_above_vague_pattern();
   let fns = app_code_lessons_fns();
   let offenders = [];
   function all_read() {
