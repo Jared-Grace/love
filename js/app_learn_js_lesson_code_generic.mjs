@@ -10,7 +10,7 @@ import { value_or_if_null } from "./value_or_if_null.mjs";
 import { app_learn_js_button_value_lines } from "./app_learn_js_button_value_lines.mjs";
 import { app_learn_js_forwards_wrong_say } from "./app_learn_js_forwards_wrong_say.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
-import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
+import { app_learn_js_lesson_quizzes_unscramble } from "./app_learn_js_lesson_quizzes_unscramble.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_learn_js_lesson_example_guided } from "./app_learn_js_lesson_example_guided.mjs";
 import { property_set } from "./property_set.mjs";
@@ -128,7 +128,7 @@ export function app_learn_js_lesson_code_generic(params) {
   let lines = property_get_or(params, "lines", false);
   ("2026-10-31, at the human's asking: a lesson may ask for the step-by-step quiz too, so stepping through its programs is one of its own quizzes rather than a lesson of its own");
   let steps = property_get_or(params, "steps", false);
-  let quizzes_get = app_code_lesson_quizzes_unscramble({
+  let quizzes_get = app_learn_js_lesson_quizzes_unscramble({
     batch_get,
     forwards,
     backwards,

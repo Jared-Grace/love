@@ -19,7 +19,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_code_dark_lines_brace_marked } from "./app_learn_js_code_dark_lines_brace_marked.mjs";
 import { app_learn_js_brace_pair_wrong_say } from "./app_learn_js_brace_pair_wrong_say.mjs";
-import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
+import { app_learn_js_lesson_quizzes_unscramble } from "./app_learn_js_lesson_quizzes_unscramble.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_learn_js_brace_pair_example_choose } from "./app_learn_js_brace_pair_example_choose.mjs";
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
@@ -107,7 +107,7 @@ export function app_learn_js_lesson_brace_pair_generic(
     decoys,
     wrong_say: app_learn_js_brace_pair_wrong_say,
   };
-  let quizzes_get = app_code_lesson_quizzes_unscramble({
+  let quizzes_get = app_learn_js_lesson_quizzes_unscramble({
     batch_get: batch,
     forwards,
     backwards: forwards,
