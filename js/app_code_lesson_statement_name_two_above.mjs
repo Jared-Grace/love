@@ -12,7 +12,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_lesson_inside_parenthesis_box } from "./app_code_lesson_inside_parenthesis_box.mjs";
+import { app_learn_js_lesson_inside_parenthesis_box } from "./app_learn_js_lesson_inside_parenthesis_box.mjs";
 export function app_code_lesson_statement_name_two_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: two cups standing side by side with different things in them, being asked about one at a time, and the same thing written as code");
@@ -73,5 +73,5 @@ export function app_code_lesson_statement_name_two_above(root, context) {
   let lines = [held_first, held_last, logged];
   app_learn_js_code_lines_writes_out(box_code, lines, word_last);
   ("the last box says which of the two names comes out, and says it by colour rather than by words - the name written out and the word inside wear the same coloured tile a line apart");
-  app_code_lesson_inside_parenthesis_box(root, name_last, name_first);
+  app_learn_js_lesson_inside_parenthesis_box(root, name_last, name_first);
 }

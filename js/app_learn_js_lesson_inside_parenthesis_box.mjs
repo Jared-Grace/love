@@ -16,7 +16,7 @@ import { html_style_width_fit_content } from "./html_style_width_fit_content.mjs
 import { app_learn_js_code_dark_parts_fill } from "./app_learn_js_code_dark_parts_fill.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span } from "./html_span.mjs";
-export function app_code_lesson_inside_parenthesis_box(
+export function app_learn_js_lesson_inside_parenthesis_box(
   root,
   name_written,
   name_other,
