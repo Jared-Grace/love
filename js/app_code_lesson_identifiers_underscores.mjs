@@ -1,4 +1,4 @@
-import { app_code_lesson_identifiers_underscores_generic } from "./app_code_lesson_identifiers_underscores_generic.mjs";
+import { app_learn_js_lesson_identifiers_underscores_generic } from "./app_learn_js_lesson_identifiers_underscores_generic.mjs";
 import { html_span_text_code_dark_centered } from "./html_span_text_code_dark_centered.mjs";
 import { app_learn_js_flex_gap } from "./app_learn_js_flex_gap.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_identifiers_underscores() {
   let separator_valid_name = "underscore";
   let separator_invalid = "-";
   let separator_invalid_name = "hyphen";
-  let r = app_code_lesson_identifiers_underscores_generic({
+  let r = app_learn_js_lesson_identifiers_underscores_generic({
     separator_invalid_name,
     separator_invalid,
     separator_valid_name,
