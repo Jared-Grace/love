@@ -1,5 +1,5 @@
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
-import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
@@ -183,7 +183,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     );
     return chip;
   }
-  let overlap_color = app_code_highlight_color_third();
+  let overlap_color = app_learn_js_highlight_color_third();
   function red(text) {
     "a word for the overlap, in the colour of the part the rectangles share, asked by the human 2026-10-04";
     let word = app_learn_js_explain_word_colored(text, overlap_color);

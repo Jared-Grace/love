@@ -4,7 +4,7 @@ import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_co
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
-import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 export function app_code_highlight_colors() {
   arguments_assert(arguments, 0);
   ("the pointing colours as one list - the colours a screen wears to say which word is about which piece of code, first to fourth");
@@ -13,7 +13,7 @@ export function app_code_highlight_colors() {
   ("THEY ARE NOT A SECOND SPELLING OF ANYTHING. The first is the brand blue the whole site leads with, so its numbers were never a palette decision; the second is a green of its own, lifted out of the chip palette when it needed to differ; the third was chosen to be plainly warm and well clear of that green. Measured 2026-09-20 the second sits 0.043 from the chip green, which is a near miss by this app's own rule and is left standing while the palettes wait on somebody who has worked in colour.");
   let first = app_code_highlight_color();
   let second = app_learn_js_highlight_color_second();
-  let third = app_code_highlight_color_third();
+  let third = app_learn_js_highlight_color_third();
   let fourth = app_learn_js_highlight_color_fourth();
   let fifth = app_learn_js_highlight_color_fifth();
   let sixth = app_learn_js_highlight_color_sixth();

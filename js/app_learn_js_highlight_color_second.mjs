@@ -7,7 +7,7 @@ export function app_learn_js_highlight_color_second() {
     fn_name("app_code_highlight_color"),
     " and this colour is never reached. It arrives only as the other half of a pair, and what it tells a learner is not green but not the blue one - so a screen reaching for it must have both colours on it at once, or the second colour is decoration wearing a pointer's clothes.");
   ("A GREEN, AND IT WAS AN AMBER UNTIL THE THIRD POINTER EXISTED. Two colours could sit anywhere as long as they were not each other, and the amber was fine. Adding ",
-    fn_name("app_code_highlight_color_third"),
+    fn_name("app_learn_js_highlight_color_third"),
     " at 15 degrees left the amber 41 degrees from it and 152 from the blue - two warm colours crowded together with a wide gap opposite. Three pointers are three places to look and no two of them may be near neighbours, so the middle one moved to where the room actually was.");
   "WHERE THE HUE AND THE LIGHTNESS COME FROM IS WRITTEN WITH THE VALUE, IN " +
     fn_name("app_shared_color_green_pointer") +

@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_red_pointer } from "./app_shared_color_red_pointer.mjs";
-export function app_code_highlight_color_third() {
+export function app_learn_js_highlight_color_third() {
   "the third pointing colour, for a screen where three different words are each pointing at a different piece of the same line of code";
   ("CHOSEN HERE, AND SO IS ",
     fn_name("app_learn_js_highlight_color_second"),

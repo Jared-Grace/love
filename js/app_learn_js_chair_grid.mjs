@@ -14,7 +14,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -54,7 +54,7 @@ export function app_learn_js_chair_grid(parent, count, width, marked) {
     });
   }
   heading_draw("");
-  let row_color = app_code_highlight_color_third();
+  let row_color = app_learn_js_highlight_color_third();
   let column_color = app_learn_js_highlight_color_fourth();
   function heading_chip_draw(text, color) {
     let cell = html_div(grid);

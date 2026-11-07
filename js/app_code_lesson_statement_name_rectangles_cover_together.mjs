@@ -9,7 +9,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_highlight_color_sixth } from "./app_learn_js_highlight_color_sixth.mjs";
@@ -93,7 +93,7 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
     list_shuffle(all);
     return all;
   }
-  let overlap_color = app_code_highlight_color_third();
+  let overlap_color = app_learn_js_highlight_color_third();
   let first_color = app_learn_js_highlight_color_fourth();
   let second_color = app_learn_js_highlight_color_fifth();
   let sum_color = app_learn_js_highlight_color_sixth();

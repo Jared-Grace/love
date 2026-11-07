@@ -25,7 +25,7 @@ import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_f
 import { app_code_lesson_statement_name_middle } from "./app_code_lesson_statement_name_middle.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
-import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 export function app_code_lesson_statement_name_grid_row() {
   arguments_assert(arguments, 0);
   ("the row of a numbered chair in rows of chairs: let row = Math.floor(chair / columns); - the first half of the row-and-column lesson, split out so each lesson teaches one line");
@@ -171,7 +171,7 @@ export function app_code_lesson_statement_name_grid_row() {
   );
   let color = app_learn_js_highlight_color_second();
   let color2 = app_learn_js_highlight_color_fifth();
-  let color3 = app_code_highlight_color_third();
+  let color3 = app_learn_js_highlight_color_third();
   let v10 = worded(["The chairs are in rows and columns"]);
   let v11 = worded(["The chairs in the first row are numbered, first"]);
   let v12 = worded([

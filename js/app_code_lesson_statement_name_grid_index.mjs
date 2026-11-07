@@ -29,7 +29,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_chair_grid } from "./app_learn_js_chair_grid.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
-import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
@@ -126,7 +126,7 @@ export function app_code_lesson_statement_name_grid_index() {
   let blue = "blue chairs";
   let green = "green chair";
   let color_chair = app_learn_js_highlight_color_second();
-  let color_row = app_code_highlight_color_third();
+  let color_row = app_learn_js_highlight_color_third();
   let color_column = app_learn_js_highlight_color_fourth();
   let color_count = app_learn_js_highlight_color_fifth();
   function pointed(parts) {

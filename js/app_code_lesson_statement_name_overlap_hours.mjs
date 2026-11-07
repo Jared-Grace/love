@@ -11,7 +11,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
-import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
@@ -83,7 +83,7 @@ export function app_code_lesson_statement_name_overlap_hours() {
   }
   let start_color = app_code_highlight_color();
   let end_color = app_learn_js_highlight_color_second();
-  let overlap_color = app_code_highlight_color_third();
+  let overlap_color = app_learn_js_highlight_color_third();
   let plain = app_shared_color_code_background();
   function from(text) {
     "a start hour, or the name holding it, as a chip in the start colour";
