@@ -4,7 +4,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_log_twice_above } from "./app_learn_js_lesson_log_twice_above.mjs";
 import { app_learn_js_lesson_log_twice_batch } from "./app_learn_js_lesson_log_twice_batch.mjs";
-import { app_code_lesson_log_twice_title_name_id } from "./app_code_lesson_log_twice_title_name_id.mjs";
+import { app_learn_js_lesson_log_twice_title_name_id } from "./app_learn_js_lesson_log_twice_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_log_twice() {
   ("Both quizzes are given a tailored wrong answer: the right answer with its two lines the other way round. Without it the four programs differ on their first line and so do the four answers, so either direction could be settled by reading one line - and the screen would accept an answer from a learner who had not read that the order is the order the lines are written, which is half of what it exists to say.");
   ("Reading forwards that is not enough on its own, and each of the two lines alone is offered as well. Reversed is the only other option there, and its first line is the right answer's second, so a learner could work out the first sum, look for the option beginning with it, and never work out the second. The single lines share a first line with the right answer, so the second one has to be worked out too - and each is the natural mistake of stopping after one line on the screen that has just said two lines write out two things. Three wrong answers, and all three are tailored: nothing is left for the draw to fill.");
   ("Reading backwards the reversed one still stands alone, because the answers there are code rather than what came out, and the two mistakes the single lines catch are mistakes about working a program out.");
-  let name_id = app_code_lesson_log_twice_title_name_id();
+  let name_id = app_learn_js_lesson_log_twice_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
     app_learn_js_lesson_log_twice_batch,
     eval_console_log_lines,

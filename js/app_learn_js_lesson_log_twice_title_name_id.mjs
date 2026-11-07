@@ -8,7 +8,7 @@ import { text_combine } from "./text_combine.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
-export function app_code_lesson_log_twice_title_name_id() {
+export function app_learn_js_lesson_log_twice_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: writing out twice, followed by the one line that does it and how many times this lesson writes it");
   ("The line is shown once and counted, rather than shown twice. What makes this lesson different from every title above it is still visible before the title is read - there are two of them - but it is said by the count instead of by a second copy.");
