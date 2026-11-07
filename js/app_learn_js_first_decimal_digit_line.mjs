@@ -1,4 +1,4 @@
-import { app_code_first_decimal_digit_phrase } from "./app_code_first_decimal_digit_phrase.mjs";
+import { app_learn_js_first_decimal_digit_phrase } from "./app_learn_js_first_decimal_digit_phrase.mjs";
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_first_decimal_digit_line(
   html_style_margin_x(chip, value);
   html_span_text(tile, decimal_after);
   html_span_text(div, " the ");
-  app_code_first_decimal_digit_phrase(div, color);
+  app_learn_js_first_decimal_digit_phrase(div, color);
   html_span_text(div, " is ");
   app_code_lesson_number_chip(div, digit, color);
   return div;
