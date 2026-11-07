@@ -3,7 +3,7 @@ import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_con
 import { html_div } from "./html_div.mjs";
 import { html_cycle_bold_code } from "./html_cycle_bold_code.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
-import { app_code_container_light_blue_text } from "./app_code_container_light_blue_text.mjs";
+import { app_learn_js_container_light_blue_text } from "./app_learn_js_container_light_blue_text.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { property_get } from "./property_get.mjs";
@@ -21,12 +21,12 @@ export function app_code_lesson_functions_console_log_statement() {
   let lesson = property_get(r, "lesson");
   return lesson;
   function above(root) {
-    let c2 = app_code_container_light_blue_text(
+    let c2 = app_learn_js_container_light_blue_text(
       root,
       "In English we use sentences",
     );
     html_div_cycle_bold(c2, ['In JS, "sentences" are called ', "statements"]);
-    let c = app_code_container_light_blue_text(
+    let c = app_learn_js_container_light_blue_text(
       root,
       "In English, we can use a period (.) to mean the end of a sentence.",
     );
