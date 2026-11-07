@@ -6,7 +6,7 @@ import { app_learn_js_lesson_for_comparison_other_above } from "./app_learn_js_l
 import { app_learn_js_lesson_for_decrement } from "./app_learn_js_lesson_for_decrement.mjs";
 import { app_code_lesson_update_log_generic } from "./app_code_lesson_update_log_generic.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
-export function app_code_lesson_for_down_to() {
+export function app_learn_js_lesson_for_down_to() {
   arguments_assert(arguments, 0);
   (">= in a for: for (let n = 3; n >= 1; n--) { console.log(n); } writes out 3, 2 and 1, the same as for (let n = 3; n > 0; n--) { console.log(n); } from For taking away one");
   ("The one new fact is that > leaves out the number it is compared with and >= includes it, seen in a for counting down. Arrays are walked from the last item down to 0 this way.");
