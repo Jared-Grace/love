@@ -8,7 +8,7 @@ import { app_code_braces_three_ifs } from "./app_code_braces_three_ifs.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
-export function app_code_braces_run_three_ifs_explain(root, context) {
+export function app_learn_js_braces_run_three_ifs_explain(root, context) {
   arguments_assert(arguments, 2);
   ("two ifs remembered, then three ifs, one after the other, shown, then the ways they may run");
   ("Written by Claude 2026-10-11 after the human's two ifs explanation (",
