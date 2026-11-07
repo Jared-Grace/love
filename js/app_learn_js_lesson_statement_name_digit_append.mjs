@@ -16,7 +16,7 @@ import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_sta
 import { app_code_lesson_statement_name_digit_rest } from "./app_code_lesson_statement_name_digit_rest.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
-export function app_code_lesson_statement_name_digit_append() {
+export function app_learn_js_lesson_statement_name_digit_append() {
   arguments_assert(arguments, 0);
   ("a last digit put back on the end of a number: let with_0 = rest * 10; let n = with_0 + last_digit; - the two digit lessons before it take 123 apart into 12 and 3, and this one puts them back together, so the three together are one idea seen both ways");
   ("Chosen for later use: reversing a number, and turning text such as 123 into the number 123, both build a number one digit at a time with these two lines, once loops are taught. Picked by the human from a list of formulas, 2026-09-28.");
