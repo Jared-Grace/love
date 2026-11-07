@@ -104,7 +104,7 @@ import { app_code_program_step_solve_decoys } from "./app_code_program_step_solv
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { html_text_get } from "./html_text_get.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
-import { app_code_expression_replaced_set } from "./app_code_expression_replaced_set.mjs";
+import { app_learn_js_expression_replaced_set } from "./app_learn_js_expression_replaced_set.mjs";
 import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
 import { html_move_animate_settle } from "./html_move_animate_settle.mjs";
 import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_expression_choose_order_ask.mjs";
@@ -989,7 +989,7 @@ export function app_code_program_step_through_generic(
           let node_value = app_code_expression_solved(node, node);
           let written_inner = null;
           function value_room() {
-            app_code_expression_replaced_set(node_span, node_value);
+            app_learn_js_expression_replaced_set(node_span, node_value);
             written_inner = html_descendants_innermost(node_span);
             for (let piece of written_inner) {
               html_style_opacity(piece, "0");

@@ -3,7 +3,7 @@ import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_q
 import { app_shared_animation_duration_quick } from "./app_shared_animation_duration_quick.mjs";
 import { app_learn_js_expression_chosen_room_clear } from "./app_learn_js_expression_chosen_room_clear.mjs";
 import { app_learn_js_expression_chosen_uncolored } from "./app_learn_js_expression_chosen_uncolored.mjs";
-import { app_code_expression_replaced_set } from "./app_code_expression_replaced_set.mjs";
+import { app_learn_js_expression_replaced_set } from "./app_learn_js_expression_replaced_set.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
@@ -18,7 +18,7 @@ export async function app_code_expression_replaced_settle(
   ("A value is nearly always shorter than the working it replaces, so everything standing to the right of it has to close up by the difference. Closed up at once, the learner looks back at a line whose pieces are all somewhere else and has to find their place in it again; slid, they watch the same pieces arrive.");
   ("Every innermost piece of the line is offered, not only the ones expected to move - the ones that stay put are measured to the same place twice and simply do not move, so nothing here has to work out which side of the swap anything is on.");
   function change() {
-    app_code_expression_replaced_set(node_span, value);
+    app_learn_js_expression_replaced_set(node_span, value);
   }
   function room_clear() {
     app_learn_js_expression_chosen_room_clear(node_span);
