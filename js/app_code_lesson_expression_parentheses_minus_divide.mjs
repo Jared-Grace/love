@@ -1,7 +1,7 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_choose_order_plus_minus } from "./app_learn_js_lesson_expression_choose_order_plus_minus.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
-import { app_code_lesson_expression_parentheses_minus_divide_outer_divide_line } from "./app_code_lesson_expression_parentheses_minus_divide_outer_divide_line.mjs";
+import { app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line } from "./app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_outer_minus_line } from "./app_code_lesson_expression_parentheses_minus_divide_outer_minus_line.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_title_name_id } from "./app_code_lesson_expression_parentheses_minus_divide_title_name_id.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -34,11 +34,11 @@ export function app_code_lesson_expression_parentheses_minus_divide() {
     let v =
       app_code_lesson_expression_parentheses_minus_divide_outer_minus_line();
     let v2 =
-      app_code_lesson_expression_parentheses_minus_divide_outer_divide_line();
+      app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line();
     let v3 =
       app_code_lesson_expression_parentheses_minus_divide_outer_minus_line();
     let v4 =
-      app_code_lesson_expression_parentheses_minus_divide_outer_divide_line();
+      app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line();
     let list = [v, v2, v3, v4];
     return list;
   }
