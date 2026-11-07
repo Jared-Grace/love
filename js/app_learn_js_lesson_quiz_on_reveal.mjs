@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_advance_or_no_more } from "./app_learn_js_advance_or_no_more.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
-export function app_code_lesson_quiz_on_reveal(r4) {
+export function app_learn_js_lesson_quiz_on_reveal(r4) {
   arguments_assert(arguments, 1);
   let answer_property = property_get(r4, "answer_property");
   let qa_for = property_get(r4, "qa_for");

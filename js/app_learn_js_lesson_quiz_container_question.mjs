@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_answer_label } from "./app_learn_js_lesson_quiz_answer_label.mjs";
 import { app_learn_js_lesson_quiz_on_question } from "./app_learn_js_lesson_quiz_on_question.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_on_reveal } from "./app_code_lesson_quiz_on_reveal.mjs";
+import { app_learn_js_lesson_quiz_on_reveal } from "./app_learn_js_lesson_quiz_on_reveal.mjs";
 export function app_learn_js_lesson_quiz_container_question({
   info,
   qa,
@@ -28,7 +28,7 @@ export function app_learn_js_lesson_quiz_container_question({
   let on_question = property_get(r4, "on_question");
   let on_answer = property_get(r4, "on_answer");
   let correction_render = property_get(r4, "correction_render");
-  let r3 = app_code_lesson_quiz_on_reveal(r4);
+  let r3 = app_learn_js_lesson_quiz_on_reveal(r4);
   let on_reveal = property_get(r3, "on_reveal");
   let qli = property_get(r3, "qli");
   let answer_label = property_get(r3, "answer_label");
