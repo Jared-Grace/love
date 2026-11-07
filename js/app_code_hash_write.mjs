@@ -3,7 +3,7 @@ import { property_set } from "./property_set.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { app_shared_hash_screen_add } from "./app_shared_hash_screen_add.mjs";
-import { app_code_hash_quiz_add } from "./app_code_hash_quiz_add.mjs";
+import { app_learn_js_hash_quiz_add } from "./app_learn_js_hash_quiz_add.mjs";
 import { app_code_hash_review_add } from "./app_code_hash_review_add.mjs";
 import { app_learn_js_hash_milestone_add } from "./app_learn_js_hash_milestone_add.mjs";
 import { app_learn_js_hash_questions_add } from "./app_learn_js_hash_questions_add.mjs";
@@ -24,7 +24,7 @@ export function app_code_hash_write(context) {
   let v = app_code_lesson_hash_key();
   add_part(v, value2);
   app_shared_hash_screen_add(context, hash);
-  app_code_hash_quiz_add(context, hash);
+  app_learn_js_hash_quiz_add(context, hash);
   app_code_hash_review_add(context, hash);
   app_learn_js_hash_milestone_add(context, hash);
   app_learn_js_hash_questions_add(context, hash);
