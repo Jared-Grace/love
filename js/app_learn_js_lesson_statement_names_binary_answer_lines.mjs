@@ -2,7 +2,7 @@ import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-export function app_code_lesson_statement_names_binary_answer_lines(
+export function app_learn_js_lesson_statement_names_binary_answer_lines(
   asked,
   answer_name,
 ) {

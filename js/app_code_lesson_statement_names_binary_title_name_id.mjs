@@ -2,7 +2,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
-import { app_code_lesson_statement_names_binary_answer_lines } from "./app_code_lesson_statement_names_binary_answer_lines.mjs";
+import { app_learn_js_lesson_statement_names_binary_answer_lines } from "./app_learn_js_lesson_statement_names_binary_answer_lines.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 export function app_code_lesson_statement_names_binary_title_name_id(
@@ -20,7 +20,7 @@ export function app_code_lesson_statement_names_binary_title_name_id(
   let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_last = app_learn_js_lesson_statement_name_two_name();
   let asked = js_code_binary_spaced_nb(name_first, symbol, name_last);
-  let answer_lines = app_code_lesson_statement_names_binary_answer_lines(
+  let answer_lines = app_learn_js_lesson_statement_names_binary_answer_lines(
     asked,
     answer_name,
   );

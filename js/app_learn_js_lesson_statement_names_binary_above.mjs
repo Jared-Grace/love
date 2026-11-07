@@ -16,7 +16,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
-import { app_code_lesson_statement_names_binary_answer_lines } from "./app_code_lesson_statement_names_binary_answer_lines.mjs";
+import { app_learn_js_lesson_statement_names_binary_answer_lines } from "./app_learn_js_lesson_statement_names_binary_answer_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function app_learn_js_lesson_statement_names_binary_above({
   root,
@@ -99,7 +99,7 @@ export function app_learn_js_lesson_statement_names_binary_above({
     names_asked,
     "):",
   ]);
-  let answer_lines = app_code_lesson_statement_names_binary_answer_lines(
+  let answer_lines = app_learn_js_lesson_statement_names_binary_answer_lines(
     names_asked,
     answer_name,
   );
