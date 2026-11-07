@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_min_max_generic } from "./app_code_lesson_expression_min_max_generic.mjs";
+import { app_learn_js_lesson_expression_min_max_generic } from "./app_learn_js_lesson_expression_min_max_generic.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_expression_larger() {
       ",",
     ]);
   }
-  let lesson = app_code_lesson_expression_min_max_generic({
+  let lesson = app_learn_js_lesson_expression_min_max_generic({
     fn_name: "Math.max",
     choose: math_max,
     decoy_choose: math_min,

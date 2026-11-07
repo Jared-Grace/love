@@ -10,7 +10,7 @@ import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_lesson_expression_min_max_generic_above } from "./app_learn_js_lesson_expression_min_max_generic_above.mjs";
-export function app_code_lesson_expression_min_max_generic(params) {
+export function app_learn_js_lesson_expression_min_max_generic(params) {
   "the shared body of the two two-number function lessons - Math.min (smaller of two) and Math.max (larger of two). They differ only in the function, which of the pair it picks, and the words (smaller/larger, smaller than/bigger than), all passed in params; everything else lives here once: the four questions over pairs 2..12, the forwards/backwards/unscramble labels, the worked example shown in BOTH orders (so the VALUE is clearly what is chosen, not a position), the equal-numbers case, and the home title. Only the intro's opening line differs in shape between the two, so each lesson passes it as define_render.";
   let called_name = property_get(params, "fn_name");
   let choose = property_get(params, "choose");
