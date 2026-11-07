@@ -8,7 +8,7 @@ import { object_property_names } from "./object_property_names.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_name_id_category_then_file } from "./app_code_lesson_name_id_category_then_file.mjs";
+import { app_learn_js_lesson_name_id_category_then_file } from "./app_learn_js_lesson_name_id_category_then_file.mjs";
 export async function app_code_lesson_name_id_category_then_migrate() {
   arguments_assert(arguments, 0);
   ("Puts every lesson still writing the title nest by hand onto the shared unit.");
@@ -29,7 +29,7 @@ export async function app_code_lesson_name_id_category_then_migrate() {
   for (let name of work) {
     let args = [name];
     let report = await function_call_commit(
-      app_code_lesson_name_id_category_then_file,
+      app_learn_js_lesson_name_id_category_then_file,
       args,
     );
     let done = property_get(report, "done");
