@@ -9,7 +9,7 @@ import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.m
 import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { app_learn_js_braces_order_wrong_say } from "./app_learn_js_braces_order_wrong_say.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
-import { app_code_lesson_quiz_braces_order_plain } from "./app_code_lesson_quiz_braces_order_plain.mjs";
+import { app_learn_js_lesson_quiz_braces_order_plain } from "./app_learn_js_lesson_quiz_braces_order_plain.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_learn_js_lesson_braces_among_plain_generic(
   name_id,
@@ -69,7 +69,7 @@ export function app_learn_js_lesson_braces_among_plain_generic(
     batch_get: batch,
     forwards_code: true,
     unscramble_label: "Please write the braces of this code in order:",
-    unscramble_on_answer: app_code_lesson_quiz_braces_order_plain,
+    unscramble_on_answer: app_learn_js_lesson_quiz_braces_order_plain,
   });
   function braces_div_draw(container, text) {
     "the braces of a worked example, with no colours";

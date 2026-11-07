@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_quiz_braces_order_generic } from "./app_learn_js_lesson_quiz_braces_order_generic.mjs";
-export function app_code_lesson_quiz_braces_order_plain(
+export function app_learn_js_lesson_quiz_braces_order_plain(
   parent,
   info,
   qa,
