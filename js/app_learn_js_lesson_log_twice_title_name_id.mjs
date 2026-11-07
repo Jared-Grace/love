@@ -1,5 +1,5 @@
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_statement_title_code_dots_paint_get } from "./app_code_lesson_statement_title_code_dots_paint_get.mjs";
+import { app_learn_js_lesson_statement_title_code_dots_paint_get } from "./app_learn_js_lesson_statement_title_code_dots_paint_get.mjs";
 import { app_code_lesson_statement_title_paint_times_get } from "./app_code_lesson_statement_title_paint_times_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
@@ -27,7 +27,8 @@ export function app_learn_js_lesson_log_twice_title_name_id() {
   ("the line with its gap, the grey dots inside the parentheses, in the title tile, then the count outside it. The count is not code, so it stands outside the tile in plain text: drawn inside the tile, it read as five more characters the line has");
   ("The tile is the one every other title piece is drawn in, which breaks between tokens, rather than the code tile of the lessons themselves, which never breaks: held to one row with the count glued after it, the line ran fifteen pixels past a phone screen with the text size turned up, and the whole page slid, 2026-09-28");
   let line = text_combine_multiple([opening, "...", closing]);
-  let tile_paint = app_code_lesson_statement_title_code_dots_paint_get(line);
+  let tile_paint =
+    app_learn_js_lesson_statement_title_code_dots_paint_get(line);
   let paint_code = app_code_lesson_statement_title_paint_times_get(
     tile_paint,
     2,

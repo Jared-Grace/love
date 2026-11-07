@@ -6,7 +6,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { app_code_lesson_statement_title_code_dots_paint_get } from "./app_code_lesson_statement_title_code_dots_paint_get.mjs";
+import { app_learn_js_lesson_statement_title_code_dots_paint_get } from "./app_learn_js_lesson_statement_title_code_dots_paint_get.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { each_index } from "./each_index.mjs";
 export function app_code_line_dots_draw(parts) {
@@ -25,7 +25,8 @@ export function app_code_line_dots_draw(parts) {
         return;
       }
       if (text_includes(part, "...")) {
-        let paint = app_code_lesson_statement_title_code_dots_paint_get(part);
+        let paint =
+          app_learn_js_lesson_statement_title_code_dots_paint_get(part);
         paint(line);
         return;
       }

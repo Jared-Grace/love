@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_again_title_code } from "./app_learn_js_lesson_statement_name_again_title_code.mjs";
 import { app_learn_js_lesson_statement_name_again_above } from "./app_learn_js_lesson_statement_name_again_above.mjs";
 import { app_learn_js_lesson_statement_name_again_batch } from "./app_learn_js_lesson_statement_name_again_batch.mjs";
-import { app_code_lesson_statement_title_code_dots_paint_get } from "./app_code_lesson_statement_title_code_dots_paint_get.mjs";
+import { app_learn_js_lesson_statement_title_code_dots_paint_get } from "./app_learn_js_lesson_statement_title_code_dots_paint_get.mjs";
 import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
 import { app_learn_js_lesson_statement_name_again_backwards_decoys } from "./app_learn_js_lesson_statement_name_again_backwards_decoys.mjs";
 import { app_learn_js_lesson_statement_name_again_last_backwards_decoys } from "./app_learn_js_lesson_statement_name_again_last_backwards_decoys.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_statement_name_again_pair() {
   let pair = {
     above: app_learn_js_lesson_statement_name_again_above,
     batch: app_learn_js_lesson_statement_name_again_batch,
-    fragment: app_code_lesson_statement_title_code_dots_paint_get(code),
+    fragment: app_learn_js_lesson_statement_title_code_dots_paint_get(code),
     words: "Giving a name a new value",
     decoys_last: app_learn_js_lesson_decoy_code_pieces,
     backwards_decoys_first:

@@ -1,5 +1,5 @@
 import { text_includes } from "./text_includes.mjs";
-import { app_code_lesson_statement_title_code_dots_paint_get } from "./app_code_lesson_statement_title_code_dots_paint_get.mjs";
+import { app_learn_js_lesson_statement_title_code_dots_paint_get } from "./app_learn_js_lesson_statement_title_code_dots_paint_get.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_statement_title_name_id(words, code) {
   let paint_code = app_code_lesson_statement_title_code_paint_get(code);
   if (text_includes(code, "...")) {
     ("dots in a title are the gap they are everywhere else in the course, so they come out grey here too: if (a) { if (b) ... else ... } - asked for by the human 2026-10-09");
-    paint_code = app_code_lesson_statement_title_code_dots_paint_get(code);
+    paint_code = app_learn_js_lesson_statement_title_code_dots_paint_get(code);
   }
   let built = app_code_lesson_statement_title_name_id_paint(words, paint_code);
   return built;
