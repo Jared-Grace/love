@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_in_between_card_chained(root) {
+export function app_learn_js_lesson_expression_in_between_card_chained(root) {
   arguments_assert(arguments, 1);
   ("the chained line a learner reaches for, named as the maths one and said not to be the JS one");
   ("The chained line is named as the maths one before anything is said against it. A learner who writes 2 < 5 < 8 is not making a mistake, they are writing what they were taught in maths, so the card says that first: the notation is right, the language is what differs.");

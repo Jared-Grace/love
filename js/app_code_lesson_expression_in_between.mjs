@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_in_between_card_unexplained } from "./app_code_lesson_expression_in_between_card_unexplained.mjs";
-import { app_code_lesson_expression_in_between_card_chained } from "./app_code_lesson_expression_in_between_card_chained.mjs";
+import { app_learn_js_lesson_expression_in_between_card_chained } from "./app_learn_js_lesson_expression_in_between_card_chained.mjs";
 import { app_code_lesson_expression_in_between_range_code } from "./app_code_lesson_expression_in_between_range_code.mjs";
 import { app_code_lesson_expression_in_between_title_name_id } from "./app_code_lesson_expression_in_between_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
@@ -71,7 +71,7 @@ export function app_code_lesson_expression_in_between() {
       "8",
       " ?",
     ]);
-    app_code_lesson_expression_in_between_card_chained(root);
+    app_learn_js_lesson_expression_in_between_card_chained(root);
     let fix = app_learn_js_container_light_blue(root);
     ("The fix is given as a break into pieces rather than as repeat the middle number, because repeating a number is what the writing looks like, not what it means. Two pieces that must both hold is the meaning, and it is also what && was taught to do, so the && arrives as the thing the reader already has rather than as a trick. The last line then hands back the shorthand, once it stands for something.");
     app_learn_js_div_cycle_code(fix, [
