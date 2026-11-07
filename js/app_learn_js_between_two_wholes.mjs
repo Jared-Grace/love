@@ -1,6 +1,6 @@
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_between_two_wholes(
+export function app_learn_js_between_two_wholes(
   container,
   decimal_text,
   lower_text,
