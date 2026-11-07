@@ -12,7 +12,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_expression_string_order() {
+export function app_learn_js_lesson_expression_string_order() {
   "comparing two strings for order with < and > - the same less-than and greater-than the learner already knows on numbers, now on strings, where the ordering is alphabetical (dictionary order). Only the all-lowercase verse words are used, because JavaScript orders strings by character code, where every capital letter sorts before every small one, so mixing cases would make God sort before and - true to the machine but the opposite of the alphabetical order being taught, and lowercasing a reverent word to dodge that is worse. Four questions cover both operators in both directions, strictly before/after with two different words - the equal case is deferred to the string trichotomy lesson. Placed just after the string-equality lesson (and after the numeric less-than / greater-than lessons).";
   let less_operator = "<";
   let greater_operator = ">";
