@@ -11,7 +11,7 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_expression_pair_generic(params) {
   "a reusable bare-expression lesson mixing TWO operators (a op1 b op2 c); the arrangement flips by index parity so the two worked examples always show opposite orders (a op1 b op2 c and a op2 b op1 c) - proving precedence is about the operator, not its position; caller passes the two symbols, an above intro, and triples_get returning distinct [a,b,c] triples";
@@ -63,7 +63,7 @@ export function app_code_lesson_expression_pair_generic(params) {
       html_span_text(parent, " ");
       html_span_text_code_dark(parent, symbol2);
     }
-    let left = app_code_category_expressions();
+    let left = app_learn_js_category_expressions();
     let built = app_code_lesson_name_id_category_then(left, paint);
     return built;
   }

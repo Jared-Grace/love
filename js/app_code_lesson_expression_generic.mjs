@@ -2,7 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_words } from "./app_code_lesson_name_id_words.mjs";
 import { app_learn_js_batch_code_eval } from "./app_learn_js_batch_code_eval.mjs";
 import { app_code_lesson_code_generic } from "./app_code_lesson_code_generic.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_generic(params) {
   let name_id = property_get_or_null(params, "name_id");
   let name_id_missing = null_is(name_id);
   if (name_id_missing) {
-    let value_not = app_code_category_expressions();
+    let value_not = app_learn_js_category_expressions();
     let category = property_get_or(params, "category", value_not);
     let name_id_rights = property_get(params, "name_id_rights");
     name_id = app_code_lesson_name_id_words(category, name_id_rights);

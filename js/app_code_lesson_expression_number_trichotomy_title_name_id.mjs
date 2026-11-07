@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_operators_shape_list } from "./app_code_operators_shape_list.mjs";
 import { app_code_placeholder_tile_number } from "./app_code_placeholder_tile_number.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 export function app_code_lesson_expression_number_trichotomy_title_name_id(
   equals_operator,
   less_operator,
@@ -19,7 +19,7 @@ export function app_code_lesson_expression_number_trichotomy_title_name_id(
       greater_operator,
     ]);
   }
-  let left = app_code_category_expressions();
+  let left = app_learn_js_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

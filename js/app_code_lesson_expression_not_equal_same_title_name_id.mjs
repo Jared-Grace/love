@@ -1,7 +1,7 @@
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { js_operator_bang } from "./js_operator_bang.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { property_get } from "./property_get.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_not_equal_same_title_name_id() {
       bang_symbol,
     ]);
   }
-  let left = app_code_category_expressions();
+  let left = app_learn_js_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

@@ -1,6 +1,6 @@
 import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_dot_rectangle } from "./app_code_dot_rectangle.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_swapping_add() {
     function paint(parent) {
       app_code_cycle_code(parent, ["Swapping ", "+", " and ", "*"]);
     }
-    let left = app_code_category_expressions();
+    let left = app_learn_js_category_expressions();
     let built = app_code_lesson_name_id_category_then(left, paint);
     return built;
   }

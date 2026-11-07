@@ -1,7 +1,7 @@
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_operators_title_name_id(
     let weak_said = list_join_space(weak);
     app_code_cycle_code(parent, ["Solve ", strong_said, " before ", weak_said]);
   }
-  let left = app_code_category_expressions();
+  let left = app_learn_js_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

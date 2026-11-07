@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 export function app_code_lesson_expression_true_false_compare_generic_title_name_id(
   symbol,
 ) {
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_true_false_compare_generic_title_name
       symbol,
     ]);
   }
-  let left = app_code_category_expressions();
+  let left = app_learn_js_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

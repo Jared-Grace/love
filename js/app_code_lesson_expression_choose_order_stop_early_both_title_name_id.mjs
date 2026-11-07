@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_expression_choose_order_stop_early_both_title_name_id() {
   arguments_assert(arguments, 0);
@@ -9,7 +9,7 @@ export function app_code_lesson_expression_choose_order_stop_early_both_title_na
   function paint(parent) {
     app_code_cycle_code(parent, ["Stop early on ", "&&", " and ", "||"]);
   }
-  let left = app_code_category_expressions();
+  let left = app_learn_js_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

@@ -5,7 +5,7 @@ import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 export function app_code_lesson_expression_parentheses_arithmetic_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: + / - inside ( and ), an Expressions lesson");
@@ -25,7 +25,7 @@ export function app_code_lesson_expression_parentheses_arithmetic_title_name_id(
       close,
     ]);
   }
-  let left = app_code_category_expressions();
+  let left = app_learn_js_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

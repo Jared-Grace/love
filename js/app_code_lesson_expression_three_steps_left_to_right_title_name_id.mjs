@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_expression_three_steps_left_to_right_title_name_id() {
   arguments_assert(arguments, 0);
@@ -10,7 +10,7 @@ export function app_code_lesson_expression_three_steps_left_to_right_title_name_
   function paint(parent) {
     app_code_cycle_code(parent, ["Three steps left to right"]);
   }
-  let left = app_code_category_expressions();
+  let left = app_learn_js_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

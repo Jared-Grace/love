@@ -5,7 +5,7 @@ import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 export function app_code_lesson_expression_parentheses_minus_divide_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: ( and ) after a - or a /, an Expressions lesson. The outer operator is what the title names, because it is the outer operator that decides whether the parentheses change the answer");
@@ -26,7 +26,7 @@ export function app_code_lesson_expression_parentheses_minus_divide_title_name_i
     ]);
   }
   ("the words here become the lesson's id, which is both what its link says after #lesson= and the word a learner's finished-quizzes are filed under. It used to say same strength, from back when the lesson was taught as - and / being the same strength as + and *; the lesson has called itself ( and ) after - or / for a while now, and an id saying something the lesson no longer says is a name that lies to whoever reads a link.");
-  let left = app_code_category_expressions();
+  let left = app_learn_js_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }
