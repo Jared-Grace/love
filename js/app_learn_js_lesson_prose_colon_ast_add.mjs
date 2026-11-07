@@ -5,7 +5,7 @@ import { js_blocks_all } from "./js_blocks_all.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_prose_tail_text_node_or_null } from "./app_code_lesson_prose_tail_text_node_or_null.mjs";
+import { app_learn_js_lesson_prose_tail_text_node_or_null } from "./app_learn_js_lesson_prose_tail_text_node_or_null.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_learn_js_lesson_prose_drawer_name_after } from "./app_learn_js_lesson_prose_drawer_name_after.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_prose_colon_ast_add(ast) {
       if (not(saying)) {
         continue;
       }
-      let tail = app_code_lesson_prose_tail_text_node_or_null(node);
+      let tail = app_learn_js_lesson_prose_tail_text_node_or_null(node);
       if (not(tail)) {
         continue;
       }
