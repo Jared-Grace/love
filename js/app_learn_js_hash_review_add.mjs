@@ -3,7 +3,7 @@ import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
 import { app_code_review_hash_key } from "./app_code_review_hash_key.mjs";
 import { app_shared_hash_add_on_screen } from "./app_shared_hash_add_on_screen.mjs";
 import { fn_name } from "./fn_name.mjs";
-export function app_code_hash_review_add(context, hash) {
+export function app_learn_js_hash_review_add(context, hash) {
   "Put the review this tab is on into the address the code app is about to show, so a refresh and a pasted link both come back to the same checkpoint.";
   "Nothing is written while no review has been chosen, the same way an unstarted quiz leaves its word off - a link naming a review nobody opened would send the reader to one they had not asked for.";
   "AND NOTHING IS WRITTEN ONCE THE READER HAS LEFT THE REVIEW, because the number is only ever read by the review screen. A review is drawn and redrawn inside that one screen from first exercise to last, so on any other screen the number says nothing about what is on the page.";
