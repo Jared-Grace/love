@@ -11,7 +11,7 @@ import { html_styles_inline_restore_later } from "./html_styles_inline_restore_l
 import { list_add } from "./list_add.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
+import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
 export function app_code_quiz_choice_button_answer_generic({
   parent,
   text,
@@ -68,7 +68,7 @@ export function app_code_quiz_choice_button_answer_generic({
       html_style_opacity(b, "0.5");
       return;
     }
-    let coded = app_code_lesson_quiz_wrong_set(b);
+    let coded = app_learn_js_lesson_quiz_wrong_set(b);
     if (not(coded)) {
       html_style_opacity(b, "0.5");
     }

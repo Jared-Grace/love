@@ -18,7 +18,7 @@ import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
+import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
@@ -81,7 +81,7 @@ export function app_learn_js_brace_pair_example_choose(
         return;
       }
       if (not(right)) {
-        app_code_lesson_quiz_wrong_set(span);
+        app_learn_js_lesson_quiz_wrong_set(span);
         list_add(refused, span);
         return;
       }

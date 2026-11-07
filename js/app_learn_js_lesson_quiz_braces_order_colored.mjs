@@ -23,7 +23,7 @@ import { html_edge_color_set } from "./html_edge_color_set.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
+import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
@@ -105,7 +105,7 @@ export function app_learn_js_lesson_quiz_braces_order_colored(
       let next = property_get(state, "next");
       let b2 = equal(order, next);
       if (not(b2)) {
-        app_code_lesson_quiz_wrong_set(b);
+        app_learn_js_lesson_quiz_wrong_set(b);
         list_add(refused, entry);
         on_wrong();
         return;

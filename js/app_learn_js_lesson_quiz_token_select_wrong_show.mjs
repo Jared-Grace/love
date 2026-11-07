@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
+import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
 import { app_code_quiz_token_run_together_parts } from "./app_code_quiz_token_run_together_parts.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_lesson_quiz_pieces_later_parts } from "./app_learn_js_lesson_quiz_pieces_later_parts.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_quiz_token_select_wrong_show({
   "The words and the red are one act rather than two, because either alone is a half answer. The red says which tap, and nothing else; the note says why, and points at no button.";
   "2026-10-26, at the human's asking that each wrong choice have a helpful reminder: a tap that spelled no third piece is told it is needed but later, where before it was answered by red alone. Two pieces run together is said in its place when that is what happened, because it names the misreading rather than only the timing";
   arguments_assert(arguments, 1);
-  app_code_lesson_quiz_wrong_set(b);
+  app_learn_js_lesson_quiz_wrong_set(b);
   let parts = app_code_quiz_token_run_together_parts(
     chosen,
     token,

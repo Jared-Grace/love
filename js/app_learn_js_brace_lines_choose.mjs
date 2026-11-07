@@ -7,7 +7,7 @@ import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
+import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
 import { each } from "./each.mjs";
 import { app_learn_js_expression_operator_chip } from "./app_learn_js_expression_operator_chip.mjs";
 import { list_clear } from "./list_clear.mjs";
@@ -54,7 +54,7 @@ export function app_learn_js_brace_lines_choose(
         return;
       }
       if (not(between)) {
-        app_code_lesson_quiz_wrong_set(chip);
+        app_learn_js_lesson_quiz_wrong_set(chip);
         list_add(refused, chip);
         on_wrong();
         return;

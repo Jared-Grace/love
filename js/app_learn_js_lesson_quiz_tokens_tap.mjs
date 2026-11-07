@@ -29,7 +29,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
+import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { app_learn_js_expression_operator_chip_uncolored } from "./app_learn_js_expression_operator_chip_uncolored.mjs";
@@ -158,7 +158,7 @@ export function app_learn_js_lesson_quiz_tokens_tap({
       let right = equal(index, next);
       if (not(right)) {
         html_visibility_visible(note_div);
-        app_code_lesson_quiz_wrong_set(span);
+        app_learn_js_lesson_quiz_wrong_set(span);
         list_add(refused, index);
         on_wrong();
         return;
