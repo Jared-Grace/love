@@ -6,7 +6,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_comment_note_batch() {
+export function app_learn_js_lesson_comment_note_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each is a note, and under it one line writing out what two numbers add up to");
   ("The line under the note is the plainest line a learner knows by now, so the only thing on the screen they have not read before is the note. A program doing anything newer would be asking two questions at once, and only one of them would be this lesson's.");
