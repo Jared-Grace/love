@@ -6,7 +6,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { not } from "./not.mjs";
-export function app_code_lesson_expression_choose_order_not_pair_expression(
+export function app_learn_js_lesson_expression_choose_order_not_pair_expression(
   want_true,
 ) {
   arguments_assert(arguments, 1);

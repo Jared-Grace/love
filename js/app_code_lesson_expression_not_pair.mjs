@@ -3,7 +3,7 @@ import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
-import { app_code_lesson_expression_choose_order_not_pair_expression } from "./app_code_lesson_expression_choose_order_not_pair_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_pair_expression } from "./app_learn_js_lesson_expression_choose_order_not_pair_expression.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_expression_not_pair_intro } from "./app_code_lesson_expression_not_pair_intro.mjs";
 import { app_code_lesson_expression_not_pair_title_name_id } from "./app_code_lesson_expression_not_pair_title_name_id.mjs";
@@ -19,7 +19,9 @@ export function app_code_lesson_expression_not_pair() {
   function code_wanted(want_true) {
     "one line of this lesson's family, drawn to come out to want_true, handed over as the text of it";
     let tree =
-      app_code_lesson_expression_choose_order_not_pair_expression(want_true);
+      app_learn_js_lesson_expression_choose_order_not_pair_expression(
+        want_true,
+      );
     let code = app_learn_js_expression_code(tree);
     return code;
   }

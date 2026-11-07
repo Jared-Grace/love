@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_not_pair_expression } from "./app_code_lesson_expression_choose_order_not_pair_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_pair_expression } from "./app_learn_js_lesson_expression_choose_order_not_pair_expression.mjs";
 import { app_code_lesson_expression_choose_order_steps_above_generic } from "./app_code_lesson_expression_choose_order_steps_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_not_pair_recall } from "./app_code_lesson_expression_choose_order_not_pair_recall.mjs";
 import { app_code_lesson_expression_choose_order_not_pair_intro } from "./app_code_lesson_expression_choose_order_not_pair_intro.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_expression_choose_order_not_pair_above(
   ("The steps used to be worded the way the ! lesson before it worded them - a part goes when nothing is left inside it - because this line takes both kinds of step, the joined pair with a value on each side and then the ! with a value after it, and only that wording was true of both. The walk names the reason now instead of what the part had beside it, so the parentheses answer for the first step and the ! being all that is left answers for the second, and neither sentence has to be true of the other.");
   let want_true = true;
   let tree =
-    app_code_lesson_expression_choose_order_not_pair_expression(want_true);
+    app_learn_js_lesson_expression_choose_order_not_pair_expression(want_true);
   app_code_lesson_expression_choose_order_steps_above_generic(
     root,
     app_code_lesson_expression_choose_order_not_pair_recall,
