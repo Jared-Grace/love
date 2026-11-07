@@ -9,7 +9,7 @@ import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_row } from "./app_code_lesson_console_log_remainder_generic_above_row.mjs";
 import { multiply_add } from "./multiply_add.mjs";
-export function app_code_lesson_console_log_remainder_generic_above_row_count(
+export function app_learn_js_lesson_console_log_remainder_generic_above_row_count(
   r4,
   modulo_fn,
   divisor,
