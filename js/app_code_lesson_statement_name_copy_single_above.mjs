@@ -11,7 +11,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
-import { app_code_lesson_cups_copy_story } from "./app_code_lesson_cups_copy_story.mjs";
+import { app_learn_js_lesson_cups_copy_story } from "./app_learn_js_lesson_cups_copy_story.mjs";
 import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_that_text.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
@@ -60,7 +60,7 @@ export function app_code_lesson_statement_name_copy_single_above(
   );
   ("the rest of the story is the one the lesson that copies into a third cup tells, told by the same function, at the human's request that the two lessons be as DRY as they can be");
   let cups_kept = [cup_first];
-  app_code_lesson_cups_copy_story(
+  app_learn_js_lesson_cups_copy_story(
     box_cups,
     cups_kept,
     cup_first,

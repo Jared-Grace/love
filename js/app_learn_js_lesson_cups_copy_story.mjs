@@ -5,7 +5,7 @@ import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs
 import { list_join_empty } from "./list_join_empty.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
-export function app_code_lesson_cups_copy_story(
+export function app_learn_js_lesson_cups_copy_story(
   box,
   cups_kept,
   cup_from,
