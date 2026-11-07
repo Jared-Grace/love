@@ -6,7 +6,7 @@ import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_token_order_generic } from "./app_code_lesson_token_order_generic.mjs";
 import { app_code_lesson_token_order_example_choose_next } from "./app_code_lesson_token_order_example_choose_next.mjs";
-import { app_code_lesson_quiz_tokens_tap_next } from "./app_code_lesson_quiz_tokens_tap_next.mjs";
+import { app_learn_js_lesson_quiz_tokens_tap_next } from "./app_learn_js_lesson_quiz_tokens_tap_next.mjs";
 export function app_code_lesson_token_order_alone() {
   arguments_assert(arguments, 0);
   ("the order of the tokens with nothing to follow: the same choosing as The order of the tokens, except no token is shown in blue, so the learner finds the next token by reading alone");
@@ -32,7 +32,7 @@ export function app_code_lesson_token_order_alone() {
     name_id,
     above,
     app_code_lesson_token_order_example_choose_next,
-    app_code_lesson_quiz_tokens_tap_next,
+    app_learn_js_lesson_quiz_tokens_tap_next,
   );
   return lesson;
 }
