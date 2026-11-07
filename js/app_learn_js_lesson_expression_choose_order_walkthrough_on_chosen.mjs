@@ -9,7 +9,7 @@ import { html_remove_if_not_null } from "./html_remove_if_not_null.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { app_learn_js_head_flush_above_code } from "./app_learn_js_head_flush_above_code.mjs";
 import { app_learn_js_expression_replace_await } from "./app_learn_js_expression_replace_await.mjs";
-export function app_code_lesson_expression_choose_order_walkthrough_on_chosen(
+export function app_learn_js_lesson_expression_choose_order_walkthrough_on_chosen(
   parent,
   card,
   tree,

@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_walkthrough_on_chosen } from "./app_code_lesson_expression_choose_order_walkthrough_on_chosen.mjs";
+import { app_learn_js_lesson_expression_choose_order_walkthrough_on_chosen } from "./app_learn_js_lesson_expression_choose_order_walkthrough_on_chosen.mjs";
 import { app_learn_js_head_spaced_above_code } from "./app_learn_js_head_spaced_above_code.mjs";
 import { app_learn_js_expression_step_say } from "./app_learn_js_expression_step_say.mjs";
 import { app_learn_js_expression_choose_say } from "./app_learn_js_expression_choose_say.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   ("Every operator is pressable here too, so a learner may take the leftmost and be told why it cannot go yet. Being told the answer and being stopped from getting it wrong are not the same lesson, and only the first one is this page's job.");
   ("Pressing changes nothing that is kept, so leaving the page and coming back starts the line over, and a learner who wants the walkthrough again just takes it again.");
   ("The walkthrough stands at the TOP of the card, above the Code label, because it is an instruction and an instruction is read before the thing it is about; underneath the line it was a caption on something already pressed.");
-  let r = app_code_lesson_expression_choose_order_walkthrough_on_chosen(
+  let r = app_learn_js_lesson_expression_choose_order_walkthrough_on_chosen(
     parent,
     card,
     tree,
