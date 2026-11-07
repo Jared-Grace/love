@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { app_learn_js_lesson_family_roots } from "./app_learn_js_lesson_family_roots.mjs";
 import { app_learn_js_lesson_family_neighbours } from "./app_learn_js_lesson_family_neighbours.mjs";
-import { app_code_lesson_symbol_source_names } from "./app_code_lesson_symbol_source_names.mjs";
+import { app_learn_js_lesson_symbol_source_names } from "./app_learn_js_lesson_symbol_source_names.mjs";
 import { app_code_lesson_telling_symbols_missing_one } from "./app_code_lesson_telling_symbols_missing_one.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -14,7 +14,7 @@ export async function app_code_lesson_telling_symbols_missing() {
   let names = await repo_love_functions_names();
   let roots = await app_learn_js_lesson_family_roots(names);
   let neighbours = app_learn_js_lesson_family_neighbours(roots);
-  let source_names = app_code_lesson_symbol_source_names(names);
+  let source_names = app_learn_js_lesson_symbol_source_names(names);
   let found = [];
   for (let root of roots) {
     let report = await app_code_lesson_telling_symbols_missing_one(

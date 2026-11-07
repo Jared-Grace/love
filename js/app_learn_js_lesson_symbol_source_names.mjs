@@ -3,7 +3,7 @@ import { text_starts_with } from "./text_starts_with.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { or } from "./or.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_lesson_symbol_source_names(names) {
+export function app_learn_js_lesson_symbol_source_names(names) {
   arguments_assert(arguments, 1);
   ("the functions that stand for an operator symbol, or for a list of them. A lesson that asks one of these instead of spelling its symbols is showing the very same thing on the screen, so whatever reads what a lesson shows has to follow them.");
   ("Found by the shape of the name rather than from a list written out here, because a list would go stale the day somebody adds the seventeenth operator and would go stale silently - the reading would simply stop seeing that operator, and a symbol nobody sees is a symbol nobody can miss.");
