@@ -1,7 +1,7 @@
 import { app_code_lesson_expression_arithmetic_less_than_op_multiply } from "./app_code_lesson_expression_arithmetic_less_than_op_multiply.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_op_divide } from "./app_code_lesson_expression_arithmetic_less_than_op_divide.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_op_exponent } from "./app_code_lesson_expression_arithmetic_less_than_op_exponent.mjs";
-import { app_code_lesson_expression_arithmetic_less_than_op_add } from "./app_code_lesson_expression_arithmetic_less_than_op_add.mjs";
+import { app_learn_js_lesson_expression_arithmetic_less_than_op_add } from "./app_learn_js_lesson_expression_arithmetic_less_than_op_add.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_above } from "./app_learn_js_lesson_expression_arithmetic_less_than_above.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_one } from "./app_learn_js_lesson_expression_arithmetic_less_than_one.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_title_name_id } from "./app_code_lesson_expression_arithmetic_less_than_title_name_id.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   let triple_equal_operator = js_operator_triple_equal();
   let bang_double_equal_operator = js_operator_bang_double_equal();
   function op_add() {
-    let r = app_code_lesson_expression_arithmetic_less_than_op_add();
+    let r = app_learn_js_lesson_expression_arithmetic_less_than_op_add();
     return r;
   }
   function op_subtract() {
