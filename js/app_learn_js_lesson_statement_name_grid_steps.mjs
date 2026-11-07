@@ -27,7 +27,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_rows_apart } from "./app_code_lesson_statement_name_rows_apart.mjs";
+import { app_learn_js_lesson_statement_name_rows_apart } from "./app_learn_js_lesson_statement_name_rows_apart.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_learn_js_lesson_statement_name_grid_steps() {
   arguments_assert(arguments, 0);
@@ -278,7 +278,7 @@ export function app_learn_js_lesson_statement_name_grid_steps() {
     values_get,
     example_values: [3, 1, 0, 5],
     step,
-    remember_lesson: app_code_lesson_statement_name_rows_apart,
+    remember_lesson: app_learn_js_lesson_statement_name_rows_apart,
     remember_parts: ["we can find how many rows apart two rows are:"],
     remember_lines,
     explain: [

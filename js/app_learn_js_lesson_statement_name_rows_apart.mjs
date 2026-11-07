@@ -12,7 +12,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_expression_absolute_value } from "./app_learn_js_lesson_expression_absolute_value.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rows_apart() {
+export function app_learn_js_lesson_statement_name_rows_apart() {
   arguments_assert(arguments, 0);
   ("how many rows apart two rows are, whichever is first: let rows = Math.abs(r2 - r1); - the second of three lessons toward the steps between two squares of a grid, after Rows down and before the rows and columns added.");
   ("Every screen has both directions: two of the five pairs go down and three go up, so four of five always holds one of each. The answers 4, 3, 7, 5 and 6 all differ. The writing works rows 5 and 2, the same rows as Rows down the other way round, so the -3 is met beside the 3 it should be; the example below is the same pair, which no question repeats.");
