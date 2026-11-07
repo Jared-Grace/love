@@ -4,7 +4,7 @@ import { list_skip } from "./list_skip.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
-export function app_code_lesson_quiz_token_select_needed_not_is(
+export function app_learn_js_lesson_quiz_token_select_needed_not_is(
   variations,
   chosen,
   token,

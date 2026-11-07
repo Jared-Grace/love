@@ -18,7 +18,7 @@ import { app_learn_js_lesson_quiz_token_select_done_is } from "./app_learn_js_le
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { log } from "./log.mjs";
-import { app_code_lesson_quiz_token_select_needed_not_is } from "./app_code_lesson_quiz_token_select_needed_not_is.mjs";
+import { app_learn_js_lesson_quiz_token_select_needed_not_is } from "./app_learn_js_lesson_quiz_token_select_needed_not_is.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_learn_js_lesson_quiz_pieces_select(
   parent,
@@ -95,7 +95,7 @@ export function app_learn_js_lesson_quiz_pieces_select(
         return;
       }
       html_style_code_dark(b);
-      let n = app_code_lesson_quiz_token_select_needed_not_is(
+      let n = app_learn_js_lesson_quiz_token_select_needed_not_is(
         variations,
         chosen,
         token,
