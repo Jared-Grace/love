@@ -5,7 +5,7 @@ import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_expression_choose_line_press_elsewhere } from "./app_code_expression_choose_line_press_elsewhere.mjs";
-import { app_code_expression_choose_line_operator_refuse } from "./app_code_expression_choose_line_operator_refuse.mjs";
+import { app_learn_js_expression_choose_line_operator_refuse } from "./app_learn_js_expression_choose_line_operator_refuse.mjs";
 import { each } from "./each.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { app_code_expression_refusals_clear } from "./app_code_expression_refusals_clear.mjs";
@@ -57,7 +57,7 @@ export function app_learn_js_expression_choose_line_draw_on_operator({
       }
       let ready_is = list_includes(ready, node);
       if (not(ready_is)) {
-        app_code_expression_choose_line_operator_refuse(
+        app_learn_js_expression_choose_line_operator_refuse(
           span,
           refused,
           node,

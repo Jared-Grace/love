@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_expression_choose_line_operator_refuse(
+export function app_learn_js_expression_choose_line_operator_refuse(
   span,
   refused,
   node,
