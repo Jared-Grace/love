@@ -10,7 +10,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
-export function app_code_chair_emoji_grid(parent, rows, columns) {
+export function app_learn_js_chair_emoji_grid(parent, rows, columns) {
   arguments_assert(arguments, 3);
   ("a picture of chairs standing in rows and columns, each a chair emoji and nothing else - the chairs before they are numbered, so a reader sees what rows and columns are before any number is put on them. Asked for by the human, 2026-09-27");
   let grid = html_div(parent);

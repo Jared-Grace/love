@@ -2,7 +2,7 @@ import { app_code_highlight_color_fourth } from "./app_code_highlight_color_four
 import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_chair_emoji_grid } from "./app_code_chair_emoji_grid.mjs";
+import { app_learn_js_chair_emoji_grid } from "./app_learn_js_chair_emoji_grid.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -71,7 +71,7 @@ export function app_code_lesson_statement_name_grid_row() {
   }
   function chairs_draw(box) {
     "the chairs alone, 3 rows of 3, before any is numbered";
-    app_code_chair_emoji_grid(box, 3, 3);
+    app_learn_js_chair_emoji_grid(box, 3, 3);
   }
   function grid_draw(box) {
     "chair 7 among 9 chairs in rows of 3";
