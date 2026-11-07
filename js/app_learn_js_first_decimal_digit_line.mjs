@@ -2,7 +2,7 @@ import { app_learn_js_first_decimal_digit_phrase } from "./app_learn_js_first_de
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { app_learn_js_lesson_number_chip_lifted } from "./app_learn_js_lesson_number_chip_lifted.mjs";
 import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
-import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
+import { app_learn_js_lesson_number_chip } from "./app_learn_js_lesson_number_chip.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_margin_x } from "./html_style_margin_x.mjs";
@@ -27,6 +27,6 @@ export function app_learn_js_first_decimal_digit_line(
   html_span_text(div, " the ");
   app_learn_js_first_decimal_digit_phrase(div, color);
   html_span_text(div, " is ");
-  app_code_lesson_number_chip(div, digit, color);
+  app_learn_js_lesson_number_chip(div, digit, color);
   return div;
 }

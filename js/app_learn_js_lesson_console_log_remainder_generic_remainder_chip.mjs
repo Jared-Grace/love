@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_console_log_remainder_generic_remainder_color } from "./app_learn_js_lesson_console_log_remainder_generic_remainder_color.mjs";
-import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
+import { app_learn_js_lesson_number_chip } from "./app_learn_js_lesson_number_chip.mjs";
 export function app_learn_js_lesson_console_log_remainder_generic_remainder_chip(
   parent,
   remainder,
@@ -11,6 +11,6 @@ export function app_learn_js_lesson_console_log_remainder_generic_remainder_chip
     remainder,
     divisor,
   );
-  let chip = app_code_lesson_number_chip(parent, remainder, color);
+  let chip = app_learn_js_lesson_number_chip(parent, remainder, color);
   return chip;
 }
