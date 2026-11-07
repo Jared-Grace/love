@@ -25,7 +25,7 @@ import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
-import { app_code_explain_containers } from "./app_code_explain_containers.mjs";
+import { app_learn_js_explain_containers } from "./app_learn_js_explain_containers.mjs";
 export function app_code_lesson_statement_name_grid_inside() {
   arguments_assert(arguments, 0);
   ("whether a square is inside a grid whose rows and columns are numbered from 0: let in_r = 0 <= r && r < rows; let in_c = 0 <= c && c < cols; let ok = in_r && in_c; - picked by the human 2026-10-02 from a list of next lessons. In DSA it is the check made before stepping to a neighbouring square of a grid, so a search never reads past an edge.");
@@ -298,7 +298,7 @@ export function app_code_lesson_statement_name_grid_inside() {
       ":",
     ],
     remember_lines,
-    explain: app_code_explain_containers([
+    explain: app_learn_js_explain_containers([
       [grid_said, numbered_said, v3, blue_said, not_blue_said, both_said],
       [inside_said, v4, row_two_said, column_one_said, true_true_said],
       [
