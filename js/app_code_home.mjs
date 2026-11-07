@@ -16,7 +16,7 @@ import { app_learn_js_home_group_card } from "./app_learn_js_home_group_card.mjs
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_home_lesson_button } from "./app_learn_js_home_lesson_button.mjs";
-import { app_code_home_way_marked_next } from "./app_code_home_way_marked_next.mjs";
+import { app_learn_js_home_way_marked_next } from "./app_learn_js_home_way_marked_next.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_home_just_left_next } from "./app_learn_js_home_just_left_next.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
@@ -82,7 +82,7 @@ export async function app_code_home(context) {
     let button = property_get(r3, "button");
     ("what carries on to the lesson below is read back off the row rather than worked out again here: the row has already decided it, to choose its own colour and its own pointing hand");
     complete_all_previous = property_get(r3, "complete_all_previous_next");
-    way_marked = app_code_home_way_marked_next(
+    way_marked = app_learn_js_home_way_marked_next(
       button,
       way_marked,
       open,
