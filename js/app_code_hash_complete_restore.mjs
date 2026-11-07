@@ -3,7 +3,7 @@ import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_progress_before_complete_mark } from "./app_code_progress_before_complete_mark.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_hash_complete_known_is } from "./app_code_hash_complete_known_is.mjs";
+import { app_learn_js_hash_complete_known_is } from "./app_learn_js_hash_complete_known_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_hash_complete_key } from "./app_learn_js_hash_complete_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -26,7 +26,7 @@ export function app_code_hash_complete_restore(context, hash) {
     }
     return;
   }
-  let asked = app_code_hash_complete_known_is(said);
+  let asked = app_learn_js_hash_complete_known_is(said);
   if (asked) {
     app_code_progress_released_complete_mark(context);
   }
