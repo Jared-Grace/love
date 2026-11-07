@@ -7,7 +7,7 @@ import { list_random_item } from "./list_random_item.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_expression_parentheses_arithmetic_group() {
+export function app_learn_js_lesson_expression_parentheses_arithmetic_group() {
   arguments_assert(arguments, 0);
   ("a small + or - inside ( and ); for - the first number is the larger one, so the group is never negative");
   let plus = js_operator_plus_symbol();
