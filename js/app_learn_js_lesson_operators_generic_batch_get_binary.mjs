@@ -4,7 +4,7 @@ import { each } from "./each.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { each_nested_args_range_1_list_adder } from "./each_nested_args_range_1_list_adder.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-export function app_code_lesson_operators_generic_batch_get_binary(
+export function app_learn_js_lesson_operators_generic_batch_get_binary(
   operator_js,
   left_transform,
 ) {
