@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operator_validity_wrong_say } from "./app_code_operator_validity_wrong_say.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_dot_validity_wrong_say } from "./app_code_dot_validity_wrong_say.mjs";
+import { app_learn_js_dot_validity_wrong_say } from "./app_learn_js_dot_validity_wrong_say.mjs";
 import { app_learn_js_call_validity_wrong_say } from "./app_learn_js_call_validity_wrong_say.mjs";
 export function app_code_validity_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
@@ -11,7 +11,7 @@ export function app_code_validity_wrong_say(question, answer, choice) {
   if (null_not_is(operator)) {
     return operator;
   }
-  let dot = app_code_dot_validity_wrong_say(question, answer, choice);
+  let dot = app_learn_js_dot_validity_wrong_say(question, answer, choice);
   if (null_not_is(dot)) {
     return dot;
   }

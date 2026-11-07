@@ -9,7 +9,7 @@ import { text_trim } from "./text_trim.mjs";
 import { list_get } from "./list_get.mjs";
 import { boolean_to_text_validity } from "./boolean_to_text_validity.mjs";
 import { text_digits_is } from "./text_digits_is.mjs";
-export function app_code_dot_validity_wrong_say(question, answer, choice) {
+export function app_learn_js_dot_validity_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner calls a line with one dot between two sides valid or invalid wrongly: the dot needs an identifier on each side, so a number or nothing on either side makes it invalid, as parts that take turns between words and code. null for a line without exactly one dot, and for a line whose answer the reason given here would not explain");
   ("Each reason is said only beside the answer it explains, so a line the lessons have not taught, such as a number on both sides, stays silent rather than being told something untrue. Not picked: saying the dot is a decimal point in 1.b, which is how the parser reads it but is not what the lesson teaches about it");
