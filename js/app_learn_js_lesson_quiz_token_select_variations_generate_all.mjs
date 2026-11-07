@@ -4,7 +4,7 @@ import { js_unparse } from "./js_unparse.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
-export function app_code_lesson_quiz_token_select_variations_generate_all(
+export function app_learn_js_lesson_quiz_token_select_variations_generate_all(
   la,
   tree,
   orderable_nodes,

@@ -9,7 +9,7 @@ import { app_learn_js_lesson_quiz_token_select_variations_collect } from "./app_
 import { list_adder } from "./list_adder.mjs";
 import { app_learn_js_lesson_quiz_token_select_meaning_variations } from "./app_learn_js_lesson_quiz_token_select_meaning_variations.mjs";
 import { app_learn_js_lesson_quiz_token_select_shape_variations } from "./app_learn_js_lesson_quiz_token_select_shape_variations.mjs";
-import { app_code_lesson_quiz_token_select_variations_generate_all } from "./app_code_lesson_quiz_token_select_variations_generate_all.mjs";
+import { app_learn_js_lesson_quiz_token_select_variations_generate_all } from "./app_learn_js_lesson_quiz_token_select_variations_generate_all.mjs";
 import { each } from "./each.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { js_code_same_meaning_is } from "./js_code_same_meaning_is.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     "The wording the question was asked in goes in first and by hand, because neither of the two halves below is guaranteed to produce it. The swap half re-prints the line from its tree, and printing drops a parenthesis the line does not need - so (3 === 5) === (5 === 3) came back as 3 === 5 === (5 === 3), and the learner who copied the line the lesson had just taught them pressed an opening parenthesis and was told they were wrong. The same-tiles half was no help either: it declines above a small tile count, and that line has eleven.";
     "Nothing can be lost by putting it there. It is the answer the question was written to have, so it is right by construction, and everything else in the pool is only ever another way of saying it.";
     la(code);
-    app_code_lesson_quiz_token_select_variations_generate_all(
+    app_learn_js_lesson_quiz_token_select_variations_generate_all(
       la,
       tree,
       orderable_nodes,
