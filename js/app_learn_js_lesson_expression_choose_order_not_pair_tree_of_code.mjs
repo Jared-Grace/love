@@ -2,7 +2,7 @@ import { app_code_lesson_expression_choose_order_not_tree_of_code_generic } from
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_keyword_truth_of } from "./js_keyword_truth_of.mjs";
 import { list_get } from "./list_get.mjs";
-export function app_code_lesson_expression_choose_order_not_pair_tree_of_code(
+export function app_learn_js_lesson_expression_choose_order_not_pair_tree_of_code(
   code,
 ) {
   arguments_assert(arguments, 1);
