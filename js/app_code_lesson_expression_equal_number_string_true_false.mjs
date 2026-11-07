@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_equal_number_string_true_false_same_plain } from "./app_code_lesson_expression_equal_number_string_true_false_same_plain.mjs";
+import { app_learn_js_lesson_expression_equal_number_string_true_false_same_plain } from "./app_learn_js_lesson_expression_equal_number_string_true_false_same_plain.mjs";
 import { app_learn_js_lesson_expression_equal_number_string_true_false_number_and_true_false } from "./app_learn_js_lesson_expression_equal_number_string_true_false_number_and_true_false.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_same_string } from "./app_code_lesson_expression_equal_number_string_true_false_same_string.mjs";
 import { app_learn_js_lesson_expression_equal_number_string_true_false_look_alike } from "./app_learn_js_lesson_expression_equal_number_string_true_false_look_alike.mjs";
@@ -43,7 +43,7 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     let v3 =
       app_learn_js_lesson_expression_equal_number_string_true_false_number_and_true_false();
     let v4 =
-      app_code_lesson_expression_equal_number_string_true_false_same_plain();
+      app_learn_js_lesson_expression_equal_number_string_true_false_same_plain();
     let list = [v, v2, v3, v4];
     return list;
   }
