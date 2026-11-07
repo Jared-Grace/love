@@ -6,7 +6,7 @@ import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
 import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
-import { app_code_label_solve_choice } from "./app_code_label_solve_choice.mjs";
+import { app_learn_js_label_solve_choice } from "./app_learn_js_label_solve_choice.mjs";
 import { app_learn_js_expression_value_choose_await } from "./app_learn_js_expression_value_choose_await.mjs";
 import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
 export function app_learn_js_expression_choose_order_ask({
@@ -49,7 +49,7 @@ export function app_learn_js_expression_choose_order_ask({
   async function on_chosen(node, value, node_span, waiting_on) {
     "the press is answered by asking what the chosen part comes to, and nothing on the line moves until the right value is pressed";
     "the values are named as the thing being waited on, so a learner who goes on pressing the line is shown where the asking moved to rather than being answered with nothing";
-    let said = app_code_label_solve_choice();
+    let said = app_learn_js_label_solve_choice();
     say(said);
     waiting_on(choices_holder);
     let decoys = decoys_get(current, node);
