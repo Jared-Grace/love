@@ -7,7 +7,7 @@ import { text_includes } from "./text_includes.mjs";
 import { and } from "./and.mjs";
 import { list_add } from "./list_add.mjs";
 import { repo_love_function_read } from "./repo_love_function_read.mjs";
-export async function app_code_lesson_family_telling_bank_asked(
+export async function app_learn_js_lesson_family_telling_bank_asked(
   source,
   counted,
   telling,
