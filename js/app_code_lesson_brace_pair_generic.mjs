@@ -21,7 +21,7 @@ import { app_code_code_dark_lines_brace_marked } from "./app_code_code_dark_line
 import { app_code_brace_pair_wrong_say } from "./app_code_brace_pair_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_brace_pair_example_choose } from "./app_code_brace_pair_example_choose.mjs";
+import { app_learn_js_brace_pair_example_choose } from "./app_learn_js_brace_pair_example_choose.mjs";
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
 export function app_code_lesson_brace_pair_generic(
   name_id,
@@ -122,7 +122,7 @@ export function app_code_lesson_brace_pair_generic(
     above,
     1,
     batch,
-    app_code_brace_pair_example_choose,
+    app_learn_js_brace_pair_example_choose,
     null,
     quizzes_get,
     question_label,

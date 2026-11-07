@@ -28,7 +28,11 @@ import { html_on_click } from "./html_on_click.mjs";
 import { less_than } from "./less_than.mjs";
 import { js_code_brace_is } from "./js_code_brace_is.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
-export function app_code_brace_pair_example_choose(component, text, container) {
+export function app_learn_js_brace_pair_example_choose(
+  component,
+  text,
+  container,
+) {
   "$plain text";
   "$plain container";
   arguments_assert(arguments, 3);
