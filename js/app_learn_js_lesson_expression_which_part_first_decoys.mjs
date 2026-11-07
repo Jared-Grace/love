@@ -5,7 +5,7 @@ import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
-export function app_code_lesson_expression_which_part_first_decoys(
+export function app_learn_js_lesson_expression_which_part_first_decoys(
   question,
   answer,
 ) {

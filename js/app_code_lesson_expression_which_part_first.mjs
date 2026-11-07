@@ -3,7 +3,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_lesson_code_generic } from "./app_learn_js_lesson_code_generic.mjs";
 import { app_learn_js_lesson_expression_which_part_first_answer } from "./app_learn_js_lesson_expression_which_part_first_answer.mjs";
-import { app_code_lesson_expression_which_part_first_decoys } from "./app_code_lesson_expression_which_part_first_decoys.mjs";
+import { app_learn_js_lesson_expression_which_part_first_decoys } from "./app_learn_js_lesson_expression_which_part_first_decoys.mjs";
 import { app_code_lesson_expression_which_part_first_expression } from "./app_code_lesson_expression_which_part_first_expression.mjs";
 import { app_code_lesson_expression_which_part_first_title_name_id } from "./app_code_lesson_expression_which_part_first_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_which_part_first() {
     example_count: 4,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: 2,
-    decoys: app_code_lesson_expression_which_part_first_decoys,
+    decoys: app_learn_js_lesson_expression_which_part_first_decoys,
     forwards_question_label: app_learn_js_label_code_question(),
     forwards_answer_label: "Solved first: ",
     backwards_include: false,
