@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_name_copy_single } from "./app_code_lesson_statement_name_copy_single.mjs";
+import { app_learn_js_lesson_statement_name_copy_single } from "./app_learn_js_lesson_statement_name_copy_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_statement_name_plus_one_above(root, context) {
   app_code_remember_from_lesson(
     box_copy,
     context,
-    app_code_lesson_statement_name_copy_single,
+    app_learn_js_lesson_statement_name_copy_single,
     ["a new name can hold what another name holds (", copied, "):"],
   );
   app_learn_js_code_lines_writes_out(box_copy, [held, copied, logged], "14");
