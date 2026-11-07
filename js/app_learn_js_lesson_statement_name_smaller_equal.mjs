@@ -3,7 +3,7 @@ import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equa
 import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_less_than_equal } from "./app_learn_js_lesson_expression_less_than_equal.mjs";
-export function app_code_lesson_statement_name_smaller_equal() {
+export function app_learn_js_lesson_statement_name_smaller_equal() {
   arguments_assert(arguments, 0);
   ("two names compared with smaller or equal: let a = 5; let b = 5; let smaller_or_equal = a <= b; console.log(smaller_or_equal); writes out true");
   ("The same screen as the lesson that compares two names, with the symbol changed. Two of the candidate pairs hold the same number twice, because equal numbers are the whole difference between this symbol and the less than symbol.");
