@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_whole_part_title_name_id } from "./app_code_lesson_expression_choose_order_whole_part_title_name_id.mjs";
-import { app_code_expression_whole_part_random } from "./app_code_expression_whole_part_random.mjs";
+import { app_learn_js_expression_whole_part_random } from "./app_learn_js_expression_whole_part_random.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_choose_order_whole_part() {
   function expression(turn_unused) {
     "the next line, drawn fresh";
     "The bank turns a true and a false over from question to question for the lessons whose lines come in two kinds - the brackets at one end of the line or the other, a true comparison or a false one. Every line here is the one kind, so a lesson that read the turn would be dividing its questions by something a learner cannot see.";
-    let tree = app_code_expression_whole_part_random();
+    let tree = app_learn_js_expression_whole_part_random();
     return tree;
   }
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
