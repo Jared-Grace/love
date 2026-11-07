@@ -12,7 +12,7 @@ import { list_get_wrap } from "./list_get_wrap.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-export function app_code_lesson_statement_name_copy_kept_batch() {
+export function app_learn_js_lesson_statement_name_copy_kept_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives a name a word, gives a second name what the first one holds, puts a different word under the first name, and writes the second one out");
   ("The word put in second is the whole question. It is the last word written above the line that asks, so a learner who reads the program as a list of words rather than as things happening in order reaches for it - and it is wrong, because the second name was filled before that line was reached.");
