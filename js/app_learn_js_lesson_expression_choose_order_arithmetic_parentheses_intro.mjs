@@ -3,7 +3,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_arithmetic_parentheses_intro(
+export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_intro(
   parent,
 ) {
   arguments_assert(arguments, 1);
