@@ -1,4 +1,4 @@
-import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
+import { app_learn_js_lesson_quizzes_exercises } from "./app_learn_js_lesson_quizzes_exercises.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_lesson_operand_generic_quizzes_get({
     list_add(infos, build);
   }
   ("the wiring from here on is the same for every lesson - one quiz and one exercise for each kind, all of them reading the one question, the one answer and the one batch - and it is written in the one place the other lessons already go through");
-  let quizzes_exercises = app_code_lesson_quizzes_exercises(
+  let quizzes_exercises = app_learn_js_lesson_quizzes_exercises(
     infos,
     batch_get,
     question,
