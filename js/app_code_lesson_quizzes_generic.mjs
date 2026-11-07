@@ -1,7 +1,7 @@
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
-import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
+import { app_learn_js_lesson_quiz_token_select } from "./app_learn_js_lesson_quiz_token_select.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice } from "./app_learn_js_lesson_quiz_multiple_choice.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { list_add } from "./list_add.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_quizzes_generic(params) {
   let unscramble_on_answer = property_get_or(
     params,
     "unscramble_on_answer",
-    app_code_lesson_quiz_token_select,
+    app_learn_js_lesson_quiz_token_select,
   );
   let mc = app_learn_js_lesson_quiz_multiple_choice;
   let backwards = object_copy_assign(backwards_record, {

@@ -3,7 +3,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_lesson_quiz_token_select_pieces } from "./app_learn_js_lesson_quiz_token_select_pieces.mjs";
 import { app_learn_js_lesson_quiz_token_select_code_show } from "./app_learn_js_lesson_quiz_token_select_code_show.mjs";
 import { app_learn_js_lesson_quiz_pieces_select } from "./app_learn_js_lesson_quiz_pieces_select.mjs";
-export function app_code_lesson_quiz_token_select(
+export function app_learn_js_lesson_quiz_token_select(
   parent,
   info,
   qa,

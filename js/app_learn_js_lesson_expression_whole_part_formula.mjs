@@ -7,7 +7,7 @@ import { app_learn_js_lesson_expression_whole_part_formula_recognize_decoys } fr
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice } from "./app_learn_js_lesson_quiz_multiple_choice.mjs";
 import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
-import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
+import { app_learn_js_lesson_quiz_token_select } from "./app_learn_js_lesson_quiz_token_select.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -61,7 +61,7 @@ export function app_learn_js_lesson_expression_whole_part_formula() {
       answer_on_button: null,
       answer_count_override: null,
       answer_property: "answer",
-      on_answer: app_code_lesson_quiz_token_select,
+      on_answer: app_learn_js_lesson_quiz_token_select,
     };
     let infos = [recognize, build];
     function each_info(info) {
