@@ -4,7 +4,7 @@ import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
 import { app_code_lesson_above_shown } from "./app_code_lesson_above_shown.mjs";
 import { app_learn_js_above_draw } from "./app_learn_js_above_draw.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_example_answer_gap } from "./app_code_example_answer_gap.mjs";
+import { app_learn_js_example_answer_gap } from "./app_learn_js_example_answer_gap.mjs";
 import { app_code_lesson_text_example_another } from "./app_code_lesson_text_example_another.mjs";
 import { app_code_lesson_examples_plural_is } from "./app_code_lesson_examples_plural_is.mjs";
 import { app_code_lesson_examples_complete_is } from "./app_code_lesson_examples_complete_is.mjs";
@@ -25,7 +25,7 @@ export function app_code_examples_example_another(context, root) {
   let above = app_code_lesson_above_shown(context, lesson);
   let above_line = app_learn_js_above_draw(root, above, context);
   let c = app_learn_js_container_light_blue(root);
-  app_code_example_answer_gap(c);
+  app_learn_js_example_answer_gap(c);
   let another = app_code_lesson_text_example_another(lesson);
   let plural = app_code_lesson_examples_plural_is(lesson);
   let complete = app_code_lesson_examples_complete_is(lesson);
