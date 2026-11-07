@@ -16,7 +16,7 @@ import { null_is } from "./null_is.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 import { app_code_expression_choose_line_stepped_draw } from "./app_code_expression_choose_line_stepped_draw.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-export function app_code_expression_choose_line_draw_on_operator({
+export function app_learn_js_expression_choose_line_draw_on_operator({
   rising,
   ready,
   on_wrong,
