@@ -11,7 +11,7 @@ import { text_replace_once } from "./text_replace_once.mjs";
 import { repo_love_function_path } from "./repo_love_function_path.mjs";
 import { file_text_replace_once } from "./file_text_replace_once.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_code_lesson_titles_capital_repair() {
+export async function app_learn_js_lesson_titles_capital_repair() {
   arguments_assert(arguments, 0);
   ("gives every lesson title that opens with a small letter its capital, by finding the place its own words are written and changing them there: how many places were changed, and the lessons whose words could not be pinned to one place");
   ("It finds its own set rather than being handed one. The lessons wanting a capital are asked for, not listed, so this cannot drift from what is actually wrong, and running it when nothing is wrong changes nothing and says so.");
