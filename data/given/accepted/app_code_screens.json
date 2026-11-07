@@ -3813,7 +3813,7 @@
       "111.Statements: adding what two names hold console.log(a+b);",
       "112.Statements: giving a name what two names add up to let c = a+b;"
     ],
-    "id": "app_code_home",
+    "id": "app_learn_js_home",
     "screen": "screen",
     "kind": 0
   },
