@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_remainder_title_name_id } from "./app_code_lesson_expression_choose_order_remainder_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_remainder_title_name_id } from "./app_learn_js_lesson_expression_choose_order_remainder_title_name_id.mjs";
 import { app_learn_js_expression_remainder_random } from "./app_learn_js_expression_remainder_random.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_remainder() {
   ("Nothing has to refuse a wrong press. The take-away cannot go first because what stands to the right of it is not a number yet, so the order is read off the line rather than enforced against the learner - the same reading every pressing lesson in this run asks for.");
   ("The wrong values offered are the line's own: the whole number a learner reaches for before the rounding has been pressed, rounding the other way, and on the plain steps what plain numbers are answered with. The value of the whole line is offered throughout, because answering the line instead of the step is the habit this run exists to break.");
   let name_id =
-    app_code_lesson_expression_choose_order_remainder_title_name_id();
+    app_learn_js_lesson_expression_choose_order_remainder_title_name_id();
   function expression(turn_unused) {
     "the next line, drawn fresh";
     "The bank turns a true and a false over from question to question for the lessons whose lines come in two kinds - the brackets at one end of the line or the other, a true comparison or a false one. Every line here is the one kind, so a lesson that read the turn would be dividing its questions by something a learner cannot see.";
