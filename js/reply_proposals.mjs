@@ -26,6 +26,7 @@ import { reply_response_whatsapp } from "./reply_response_whatsapp.mjs";
 import { reply_choices_age } from "./reply_choices_age.mjs";
 import { prayer_according_to_desire } from "./prayer_according_to_desire.mjs";
 import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
+import { text_lord_bless_always } from "./text_lord_bless_always.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -2644,6 +2645,75 @@ export function reply_proposals() {
       "I am Grace on its own now gets the name line. An earlier card said it would not, and said a bare name would be a separate rule; this is that rule. The rejected reading was answering my name is and myself but not I am, which would give one way of saying a name no reply and the others one.",
     ],
   };
+  function blessing_always(blessed) {
+    let v10 = text_lord_bless_always();
+    let prayer = text_combine_multiple([
+      v10,
+      blessed,
+      " exceedingly abundantly more than anyone can ask or think",
+    ]);
+    let v = prayer_wrap(prayer);
+    return v;
+  }
+  let combined71 = text_combine_multiple([
+    "-  let v2 = ",
+    fn_name("text_lord_bless"),
+    "();",
+  ]);
+  let combined72 = text_combine_multiple([
+    "+  let v2 = ",
+    fn_name("text_lord_bless_always"),
+    "();",
+  ]);
+  let response = reply_response_greetings_friend();
+  let t3 = reply_choices_location();
+  let v11 = blessing_always("your ministry and teaching");
+  let v12 = blessing_always("your ministry");
+  let line4 = prayer_according_to_desire();
+  let v13 = blessing_always("you, your family, your church and your country");
+  let blessing_always_said = {
+    title: "May the LORD always bless",
+    fn: fn_name("prayer_blessing"),
+    whole: [fn_name("text_lord_bless_always")],
+    diff: [
+      combined71,
+      combined72,
+      blessing_kept_combine,
+      "     v2,",
+      "     blessed,",
+      '     " exceedingly abundantly more than anyone can ask or think",',
+      "   ]);",
+      blessing_kept_wrap,
+      "   return v;",
+    ],
+    cases: [
+      {
+        from: "3d27ef64ea033e69",
+        message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
+        answered: true,
+        outputs: [response, t3, v11],
+      },
+      {
+        from: "",
+        message: "I am a pastor",
+        answered: true,
+        outputs: [v12],
+      },
+      {
+        from: "",
+        message: "I ask you to pray for me",
+        answered: true,
+        outputs: [line4, v13],
+      },
+    ],
+    decide: [
+      "this changes only the words: every blessing prayer now says May the LORD always bless. Nothing new is matched, so no message gets a reply that got none before.",
+      "the blessing for a reader who chose Jewish keeps May the LORD bless you and keep you, because it is Numbers 6:24-26 word for word, and Scripture is not reworded.",
+      "the longer blessing in the reply app changes the same way. The short blessing on your ministry in the reply app's buttons is left as it is for now; it can follow in its own change.",
+      "the rejected reading was May the LORD bless you now. Always says the blessing does not end, and now would date it to the day it was sent.",
+      "measured on the saved tests: one saved message changes, the full message from Accra, and only in this one word. The two short ones here show the change on its own.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2677,6 +2747,7 @@ export function reply_proposals() {
     pray_for_me_said,
     myself_said,
     name_alone_said,
+    blessing_always_said,
   ];
   return proposals;
 }
