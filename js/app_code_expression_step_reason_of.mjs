@@ -1,7 +1,7 @@
 import { property_text_to } from "./property_text_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_stops_early_is } from "./app_code_expression_node_stops_early_is.mjs";
-import { app_code_expression_node_settled_is } from "./app_code_expression_node_settled_is.mjs";
+import { app_learn_js_expression_node_settled_is } from "./app_learn_js_expression_node_settled_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { app_learn_js_expression_node_parentheses_is } from "./app_learn_js_expression_node_parentheses_is.mjs";
@@ -20,7 +20,7 @@ export function app_code_expression_step_reason_of(item, node) {
   ("What is left on the line is read back off the line after the step rather than handed in, so it says what is true at that moment: an operator that outranked two others on the first row may be an equal by the third.");
   ("2026-10-17, at the human's asking: an && or an || marked to stop early whose left side already decides it is ready for that reason and no other - the strength of the operators did not choose it, and its right side, still holding operators of its own, is never worked out. It is told only when that right side holds something: a plain true or false on the right is a side with nothing to work out either way, and the rule that chose the step is the ordinary one. Not picked: telling it on every step that stops early, which would say a value was skipped that needed nothing doing to it");
   let stopped = app_code_expression_node_stops_early_is(node);
-  if (stopped && app_code_expression_node_settled_is(node)) {
+  if (stopped && app_learn_js_expression_node_settled_is(node)) {
     let right_side = property_get(node, "right");
     if (app_learn_js_expression_node_is(right_side)) {
       let symbol_stopped = property_get(node, "operator");

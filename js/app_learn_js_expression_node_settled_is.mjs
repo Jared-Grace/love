@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { equal } from "./equal.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
-export function app_code_expression_node_settled_is(item) {
+export function app_learn_js_expression_node_settled_is(item) {
   arguments_assert(arguments, 1);
   ("whether an && or an || already has its answer from its left side alone: false && x < 9 is false and true || x < 9 is true, whatever the right side would come to");
   ("2026-10-17, at the human's asking: JavaScript never reads the right side of one of these, so neither does a learner. Asked by ",
