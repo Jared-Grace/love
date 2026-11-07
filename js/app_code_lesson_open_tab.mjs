@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
+import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_shared_screen_name_short } from "./app_shared_screen_name_short.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_open_tab(context, lesson_id) {
   arguments_assert(arguments, 2);
   ("opens a lesson's examples in a new tab, by the same link the app writes into the address when that lesson is open, so the new tab reads it back the way a shared link is read; this tab stays where it is");
   let hash = {};
-  let lesson_key = app_code_lesson_hash_key();
+  let lesson_key = app_learn_js_lesson_hash_key();
   property_set(hash, lesson_key, lesson_id);
   let app_name = property_path_get_2(context, "app_fn", "name");
   let screen_short = app_shared_screen_name_short(

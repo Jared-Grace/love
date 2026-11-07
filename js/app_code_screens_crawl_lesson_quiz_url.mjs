@@ -3,7 +3,7 @@ import { app_code_screen_capture_record } from "./app_code_screen_capture_record
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
+import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
 export async function app_code_screens_crawl_lesson_quiz_url(
@@ -17,7 +17,7 @@ export async function app_code_screens_crawl_lesson_quiz_url(
   let f_name = app_code_screen_name_short(fn_name("app_learn_js_examples"));
   ("the pairs are joined with a comma, which is the shape the app itself now writes. A crawl that seeded a different shape would still open - both are read - but the mark it later looks for in the address would be spelled one way and the address the other, so the walk would stop after the first click and quietly capture one kind per lesson");
   let combined = text_combine_multiple([",", v, "=", f_name]);
-  let v2 = app_code_lesson_hash_key();
+  let v2 = app_learn_js_lesson_hash_key();
   let examples_url = text_combine_multiple([
     url_prefix,
     "?s=",
@@ -40,7 +40,7 @@ export async function app_code_screens_crawl_lesson_quiz_url(
   let f_name2 = app_code_screen_name_short(fn_name("app_code_quiz"));
   let v4 = app_code_quiz_hash_key();
   let combined2 = text_combine_multiple([",", v3, "=", f_name2, ",", v4, "=0"]);
-  let v5 = app_code_lesson_hash_key();
+  let v5 = app_learn_js_lesson_hash_key();
   let quiz_url = text_combine_multiple([
     url_prefix,
     "?s=",

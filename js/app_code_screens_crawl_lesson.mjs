@@ -3,7 +3,7 @@ import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_code_screen_capture_record } from "./app_code_screen_capture_record.mjs";
 import { app_code_screens_crawl_lesson_quiz_url } from "./app_code_screens_crawl_lesson_quiz_url.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
-import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
+import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { less_than } from "./less_than.mjs";
@@ -33,7 +33,7 @@ export async function app_code_screens_crawl_lesson(
   let v6 = app_shared_screen_hash_key();
   let f_name = app_code_screen_name_short(fn_name("app_code_quiz"));
   let combined = text_combine_multiple([",", v6, "=", f_name]);
-  let v7 = app_code_lesson_hash_key();
+  let v7 = app_learn_js_lesson_hash_key();
   let quiz_marker = text_combine_multiple([v7, "=", id, combined]);
   let script = app_code_screen_next_click_script();
   let kind = 1;

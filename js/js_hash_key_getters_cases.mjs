@@ -8,7 +8,7 @@ export function js_hash_key_getters_cases() {
   "Each case says the answer twice, once for each of the two readings, because the same eight files are what both are judged on and writing them out a second time would be a corpus that could drift from this one silently. Wide counts every address a file touches and feeds the freezing question; own counts only the address the page reads back itself and feeds the question of whether a page answers for its own link. Exactly one case parts them, and it is the one that matters: a link built for another tab is a word published here and read nowhere here.";
   let f_name = fn_name("app_shared_bible_chapter_hash_key");
   let f_name2 = fn_name("app_shared_bible_verse_hash_key");
-  let f_name4 = fn_name("app_code_lesson_hash_key");
+  let f_name4 = fn_name("app_learn_js_lesson_hash_key");
   let cases = [
     {
       code: text_frozen(

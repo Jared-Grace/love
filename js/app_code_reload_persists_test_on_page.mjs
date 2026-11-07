@@ -5,7 +5,7 @@ import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
+import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_screen_text_normalize } from "./app_code_screen_text_normalize.mjs";
@@ -28,7 +28,7 @@ export async function app_code_reload_persists_test_on_page(
     let f_name = app_code_screen_name_short(fn_name("app_code_quiz"));
     let v2 = app_code_quiz_hash_key();
     let combined = text_combine_multiple([",", v, "=", f_name, ",", v2, "=0"]);
-    let v3 = app_code_lesson_hash_key();
+    let v3 = app_learn_js_lesson_hash_key();
     let url = text_combine_multiple([
       url_prefix,
       "?s=",

@@ -1,5 +1,5 @@
 import { mkdirSync } from "node:fs";
-import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
+import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -17,7 +17,7 @@ export async function app_code_lesson_screens_screenshot(id) {
     recursive: true,
   });
   let prefix = "http://localhost:8080/dev/code.html";
-  let lesson = app_code_lesson_hash_key() + "=" + id;
+  let lesson = app_learn_js_lesson_hash_key() + "=" + id;
   let screen = app_shared_screen_hash_key() + "=";
   let examples = app_code_screen_name_short(fn_name("app_learn_js_examples"));
   let quiz = app_code_screen_name_short(fn_name("app_code_quiz"));

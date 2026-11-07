@@ -1,7 +1,7 @@
 import { null_not_is } from "./null_not_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
-import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
+import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_shared_hash_screen_add } from "./app_shared_hash_screen_add.mjs";
 import { app_learn_js_hash_quiz_add } from "./app_learn_js_hash_quiz_add.mjs";
 import { app_learn_js_hash_review_add } from "./app_learn_js_hash_review_add.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_hash_write(context) {
     }
   }
   let value2 = storage_session_get_context(context, "lesson_id");
-  let v = app_code_lesson_hash_key();
+  let v = app_learn_js_lesson_hash_key();
   add_part(v, value2);
   app_shared_hash_screen_add(context, hash);
   app_learn_js_hash_quiz_add(context, hash);

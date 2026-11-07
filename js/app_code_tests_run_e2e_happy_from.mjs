@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_hash_complete_key } from "./app_learn_js_hash_complete_key.mjs";
 import { app_learn_js_hash_complete_before_word } from "./app_learn_js_hash_complete_before_word.mjs";
-import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
+import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_shared_url_suffix_stage_hash } from "./app_shared_url_suffix_stage_hash.mjs";
 import { app_code } from "./app_code.mjs";
 import { server_url } from "./server_url.mjs";
@@ -15,7 +15,7 @@ export async function app_code_tests_run_e2e_happy_from(stage_name, lesson_id) {
   arguments_assert(arguments, 2);
   let complete = app_learn_js_hash_complete_key();
   let before = app_learn_js_hash_complete_before_word();
-  let lesson = app_code_lesson_hash_key();
+  let lesson = app_learn_js_lesson_hash_key();
   let hash = {
     [complete]: before,
     [lesson]: lesson_id,

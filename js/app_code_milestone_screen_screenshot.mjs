@@ -1,7 +1,7 @@
-import {mkdirSync} from "node:fs";
+import { mkdirSync } from "node:fs";
 import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
+import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_code_milestone_hash_key } from "./app_code_milestone_hash_key.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
@@ -18,7 +18,7 @@ export async function app_code_milestone_screen_screenshot(id) {
   let screen = app_code_screen_name_short(fn_name("app_code_review"));
   let url =
     "http://localhost:8080/dev/code.html#" +
-    app_code_lesson_hash_key() +
+    app_learn_js_lesson_hash_key() +
     "=while_decrement," +
     app_shared_screen_hash_key() +
     "=" +
