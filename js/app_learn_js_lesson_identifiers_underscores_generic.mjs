@@ -9,7 +9,7 @@ import { invoke_multiple } from "./invoke_multiple.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_to_text_and_list } from "./list_to_text_and_list.mjs";
 import { app_learn_js_lesson_identifiers_valid } from "./app_learn_js_lesson_identifiers_valid.mjs";
-import { app_code_lesson_name_id_symbol } from "./app_code_lesson_name_id_symbol.mjs";
+import { app_learn_js_lesson_name_id_symbol } from "./app_learn_js_lesson_name_id_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -83,7 +83,7 @@ export function app_learn_js_lesson_identifiers_underscores_generic({
   }
   let combined3 = text_combine(separator_valid_name, "s allowed");
   let combined4 = text_combine(separator_invalid_name, "s not");
-  let name_id = app_code_lesson_name_id_symbol(
+  let name_id = app_learn_js_lesson_name_id_symbol(
     "identifiers",
     [combined3, combined4],
     separator_valid,

@@ -6,7 +6,7 @@ import { html_span_space } from "./html_span_space.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_name_id_symbol(left, rights, symbol) {
+export function app_learn_js_lesson_name_id_symbol(left, rights, symbol) {
   let paint = function app_code_lesson_name_id_symbol_paint(parent) {
     let r = list_first_remaining(rights);
     let first = property_get(r, "first");

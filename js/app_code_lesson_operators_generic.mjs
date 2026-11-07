@@ -6,7 +6,7 @@ import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { equal_not } from "./equal_not.mjs";
-import { app_code_lesson_name_id_symbol } from "./app_code_lesson_name_id_symbol.mjs";
+import { app_learn_js_lesson_name_id_symbol } from "./app_learn_js_lesson_name_id_symbol.mjs";
 import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -74,7 +74,11 @@ export function app_code_lesson_operators_generic({
     app_learn_js_div_cycle_code(c, [combined4, operator_js, combined5]);
   }
   let left = app_learn_js_category_operators();
-  let name_id = app_code_lesson_name_id_symbol(left, [math_name], operator_js);
+  let name_id = app_learn_js_lesson_name_id_symbol(
+    left,
+    [math_name],
+    operator_js,
+  );
   let lesson = app_learn_js_lesson_code_expression(batch, name_id, above);
   return lesson;
 }
