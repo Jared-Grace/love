@@ -13,7 +13,7 @@ import { app_code_highlight_color_third } from "./app_code_highlight_color_third
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_arrow_inline } from "./app_code_arrow_inline.mjs";
+import { app_learn_js_arrow_inline } from "./app_learn_js_arrow_inline.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
@@ -187,13 +187,13 @@ export function app_code_lesson_statement_name_grid_steps() {
     "the sentence naming the four moves, each direction word with its arrow next to it, asked by the human 2026-10-01; the same drawn arrows as the picture below it, so the words and the picture match";
     let line = html_div(box);
     html_span_text(line, "You can move one square at a time: up ");
-    app_code_arrow_inline(line, 270);
+    app_learn_js_arrow_inline(line, 270);
     html_span_text(line, ", down ");
-    app_code_arrow_inline(line, 90);
+    app_learn_js_arrow_inline(line, 90);
     html_span_text(line, ", left ");
-    app_code_arrow_inline(line, 180);
+    app_learn_js_arrow_inline(line, 180);
     html_span_text(line, " or right ");
-    app_code_arrow_inline(line, 0);
+    app_learn_js_arrow_inline(line, 0);
   }
   function travel_said(box) {
     "the count of the filled squares, with the words blue squares coloured as the squares are filled, asked by the human 2026-10-01, so the sentence points at the picture above it; bold, because coloured thin letters read faintly";
