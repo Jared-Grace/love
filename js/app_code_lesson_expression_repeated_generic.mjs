@@ -20,7 +20,7 @@ import { app_code_repeated_wrong_say } from "./app_code_repeated_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
-import { app_code_lesson_expression_repeated_generic_above } from "./app_code_lesson_expression_repeated_generic_above.mjs";
+import { app_learn_js_lesson_expression_repeated_generic_above } from "./app_learn_js_lesson_expression_repeated_generic_above.mjs";
 export function app_code_lesson_expression_repeated_generic(words) {
   "a lesson teaching one operator as a shorthand for doing a smaller operator over and over: a ** b is a multiplied by itself b times, a * b is a added to itself b times. The quiz matches the short form against its written-out form, because what is being taught is what the short form MEANS, not the arithmetic value; left number 2..5, count 2..3";
   "Two lessons were this, written out twice, and the copy ran to two hundred and";
@@ -143,7 +143,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
   );
   return lesson;
   function above(root) {
-    let r = app_code_lesson_expression_repeated_generic_above(
+    let r = app_learn_js_lesson_expression_repeated_generic_above(
       root,
       symbol,
       verb,

@@ -8,7 +8,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_counted } from "./app_code_lesson_expression_repeated_generic_expanded_counted.mjs";
 import { app_code_lesson_expression_repeated_generic_chip } from "./app_code_lesson_expression_repeated_generic_chip.mjs";
 import { app_code_lesson_expression_repeated_generic_short_form } from "./app_code_lesson_expression_repeated_generic_short_form.mjs";
-export function app_code_lesson_expression_repeated_generic_above(
+export function app_learn_js_lesson_expression_repeated_generic_above(
   root,
   symbol,
   verb,
