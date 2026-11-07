@@ -4,7 +4,7 @@ import { text_combine } from "./text_combine.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 import { js_keyword_truth_of } from "./js_keyword_truth_of.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
-export function app_code_lesson_expression_choose_order_not_twice_tree_of_code(
+export function app_learn_js_lesson_expression_choose_order_not_twice_tree_of_code(
   code,
 ) {
   "$plain code";
