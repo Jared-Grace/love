@@ -1,4 +1,4 @@
-import { app_code_lesson_operand_generic_quizzes_get } from "./app_code_lesson_operand_generic_quizzes_get.mjs";
+import { app_learn_js_lesson_operand_generic_quizzes_get } from "./app_learn_js_lesson_operand_generic_quizzes_get.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_learn_js_lesson_bold_term } from "./app_learn_js_lesson_bold_term.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -48,7 +48,7 @@ export function app_code_lesson_operand_generic(params) {
     app_learn_js_div_cycle_code(ask, [combined]);
   }
   function quizzes_get(question, answer) {
-    let r = app_code_lesson_operand_generic_quizzes_get({
+    let r = app_learn_js_lesson_operand_generic_quizzes_get({
       question,
       answer,
       answer_label,
