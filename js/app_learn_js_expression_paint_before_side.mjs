@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
 import { app_learn_js_expression_paint_parenthesised } from "./app_learn_js_expression_paint_parenthesised.mjs";
-import { app_code_expression_paint_side } from "./app_code_expression_paint_side.mjs";
+import { app_learn_js_expression_paint_side } from "./app_learn_js_expression_paint_side.mjs";
 export function app_learn_js_expression_paint_before_side(
   parent,
   side,
@@ -21,5 +21,5 @@ export function app_learn_js_expression_paint_before_side(
     app_learn_js_expression_paint_parenthesised(parent, side, on_operator);
     return;
   }
-  app_code_expression_paint_side(parent, side, rank, on_operator);
+  app_learn_js_expression_paint_side(parent, side, rank, on_operator);
 }

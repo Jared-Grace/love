@@ -11,7 +11,7 @@ import { app_learn_js_expression_node_before_is } from "./app_learn_js_expressio
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_learn_js_expression_paint_before_side } from "./app_learn_js_expression_paint_before_side.mjs";
 import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
-import { app_code_expression_paint_side } from "./app_code_expression_paint_side.mjs";
+import { app_learn_js_expression_paint_side } from "./app_learn_js_expression_paint_side.mjs";
 import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
 export function app_code_expression_paint(parent, item, on_operator) {
   arguments_assert(arguments, 3);
@@ -56,13 +56,13 @@ export function app_code_expression_paint(parent, item, on_operator) {
   ("each side asks for the strength it has to reach, out of the same two places the written line asks, so the pressable line cannot grow or lose a parenthesis the written one did not");
   let rank_left = app_code_operator_rank_least_left(symbol);
   let left = property_get(item, "left");
-  app_code_expression_paint_side(node_span, left, rank_left, on_operator);
+  app_learn_js_expression_paint_side(node_span, left, rank_left, on_operator);
   html_span_text(node_span, " ");
   let operator_span = html_span_text(node_span, symbol);
   html_span_text(node_span, " ");
   let rank_right = app_code_operator_rank_least_right(symbol);
   let right = property_get(item, "right");
-  app_code_expression_paint_side(node_span, right, rank_right, on_operator);
+  app_learn_js_expression_paint_side(node_span, right, rank_right, on_operator);
   ("handed over once the whole piece is written, so the caller receives an operator that already has its sides standing beside it");
   on_operator(item, operator_span, node_span);
 }
