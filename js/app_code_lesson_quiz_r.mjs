@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_container_success_message } from "./app_code_lesson_quiz_container_success_message.mjs";
+import { app_learn_js_lesson_quiz_container_success_message } from "./app_learn_js_lesson_quiz_container_success_message.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_quiz_r({
   info,
@@ -12,7 +12,7 @@ export function app_code_lesson_quiz_r({
   refresh,
 }) {
   arguments_assert(arguments, 1);
-  let r4 = app_code_lesson_quiz_container_success_message({
+  let r4 = app_learn_js_lesson_quiz_container_success_message({
     info,
     qa,
     container_blue_light,
