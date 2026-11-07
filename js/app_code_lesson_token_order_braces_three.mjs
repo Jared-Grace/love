@@ -12,7 +12,7 @@ import { app_learn_js_braces_three_programs } from "./app_learn_js_braces_three_
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_braces_paired_with_order } from "./app_learn_js_braces_paired_with_order.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_braces_among_colored_generic } from "./app_learn_js_lesson_braces_among_colored_generic.mjs";
 export function app_code_lesson_token_order_braces_three() {
   arguments_assert(arguments, 0);
@@ -56,7 +56,7 @@ export function app_code_lesson_token_order_braces_three() {
       "Some of this code is taught in later lessons. For now, only find its braces in order",
     );
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "The braces among the tokens, three pairs",
     "{ { } } { }",
   );

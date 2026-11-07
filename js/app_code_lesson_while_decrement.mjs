@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
 import { app_learn_js_lesson_decrement_log_options } from "./app_learn_js_lesson_decrement_log_options.mjs";
 import { app_learn_js_lesson_statement_name_decrement } from "./app_learn_js_lesson_statement_name_decrement.mjs";
@@ -8,7 +8,7 @@ export function app_code_lesson_while_decrement() {
   ("n-- in a while: let n = 3; while (n > 0) { console.log(n); n--; } writes out 3, 2 and 1");
   ("The one new fact is that the n-- already taught works inside a while, moving n one at a time, the way While adding one did with n++.");
   ("The writing is a first draft by Claude 2026-11-02.");
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "While taking away one",
     "while (n > 0) { n--; }",
   );

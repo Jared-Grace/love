@@ -9,7 +9,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_brace_pair_two } from "./app_learn_js_lesson_brace_pair_two.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_brace_lines_generic } from "./app_learn_js_lesson_brace_lines_generic.mjs";
 export function app_learn_js_lesson_brace_lines_two() {
   arguments_assert(arguments, 0);
@@ -47,7 +47,7 @@ export function app_learn_js_lesson_brace_lines_two() {
     let codes = [code2, code3, code4, code5];
     return codes;
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "The lines between braces, side by side",
     app_learn_js_braces_dots(),
   );

@@ -6,7 +6,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_total_up_generic } from "./app_code_lesson_total_up_generic.mjs";
 export function app_code_lesson_while_total() {
   arguments_assert(arguments, 0);
@@ -44,7 +44,7 @@ export function app_code_lesson_while_total() {
     example(box_two, program_write);
     walk(box_two);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "A running total",
     "total += n;",
   );

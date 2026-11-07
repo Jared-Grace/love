@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_array_index_generic } from "./app_learn_js_lesson_array_index_generic.mjs";
 export function app_learn_js_lesson_array_first() {
   arguments_assert(arguments, 0);
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_array_first() {
     example(box_two);
     walk(box_two);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "The first item of an array",
     "a[0]",
   );

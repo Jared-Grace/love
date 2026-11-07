@@ -3,7 +3,7 @@ import { app_learn_js_lesson_statement_title_code_dots_paint_get } from "./app_l
 import { app_learn_js_lesson_statement_title_code_paint_get } from "./app_learn_js_lesson_statement_title_code_paint_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_title_name_id_paint } from "./app_learn_js_lesson_statement_title_name_id_paint.mjs";
-export function app_code_lesson_statement_title_name_id(words, code) {
+export function app_learn_js_lesson_statement_title_name_id(words, code) {
   arguments_assert(arguments, 2);
   ("a home title for a Statements lesson: what the lesson is about in words, and then the shape of the line it teaches");
   ("Every lesson in this category teaches one line, so every one of them wants its title to show that line - and the four that exist were each spelling out the same six steps to do it. What differs between them is only the words and the line; everything else was the same run of work four times over.");

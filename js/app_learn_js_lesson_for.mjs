@@ -8,7 +8,7 @@ import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_for_condition_lines } from "./js_code_for_condition_lines.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_loop_log_generic } from "./app_learn_js_lesson_loop_log_generic.mjs";
 export function app_learn_js_lesson_for() {
   arguments_assert(arguments, 0);
@@ -47,7 +47,7 @@ export function app_learn_js_lesson_for() {
     example(box_two, lines_two);
     walk(box_two);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "For",
     "for (; n < 9;) { ... }",
   );

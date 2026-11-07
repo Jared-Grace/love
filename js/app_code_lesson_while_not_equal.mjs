@@ -8,7 +8,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_while_greater_equal } from "./app_code_lesson_while_greater_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
 import { subtract } from "./subtract.mjs";
 import { js_code_while_lines } from "./js_code_while_lines.mjs";
@@ -98,7 +98,7 @@ export function app_code_lesson_while_not_equal() {
       " would never stop. Every program here lands on it.",
     ]);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "While asking !==",
     "while (n !== 7) { ... }",
   );

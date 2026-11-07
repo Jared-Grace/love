@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_comment_prefix } from "./js_code_comment_prefix.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -12,6 +12,6 @@ export function app_learn_js_lesson_comment_skip_line_title_name_id() {
   let logged = js_code_console_log_statement(7);
   let prefix = js_code_comment_prefix();
   let code = text_combine(prefix, logged);
-  let built = app_code_lesson_statement_title_name_id(words, code);
+  let built = app_learn_js_lesson_statement_title_name_id(words, code);
   return built;
 }

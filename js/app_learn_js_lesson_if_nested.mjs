@@ -7,7 +7,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_braces_run_nested } from "./app_learn_js_lesson_braces_run_nested.mjs";
 import { app_learn_js_if_nested_explain } from "./app_learn_js_if_nested_explain.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_if_ab_logged } from "./app_learn_js_lesson_if_ab_logged.mjs";
 import { app_learn_js_if_nested_program_lines } from "./app_learn_js_if_nested_program_lines.mjs";
 export function app_learn_js_lesson_if_nested() {
@@ -51,7 +51,7 @@ export function app_learn_js_lesson_if_nested() {
       "true",
     ]);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "If inside an if",
     "if (a) { if (b) { ... } }",
   );

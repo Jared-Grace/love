@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
 import { app_code_lesson_up_to_log_options } from "./app_code_lesson_up_to_log_options.mjs";
 import { app_code_lesson_while_less_equal } from "./app_code_lesson_while_less_equal.mjs";
@@ -10,7 +10,7 @@ export function app_code_lesson_while_up_to() {
   ("Recommended by Claude 2026-11-02 and chosen by the human, to sit straight after While adding one, whose program is this one with < in place of <=.");
   ("The wrong answer of one run fewer is exactly what < would write out, so it is the mistake this lesson is here to catch.");
   ("The writing is a first draft by Claude 2026-11-02.");
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "Up to and including",
     "while (n <= 3) { n++; }",
   );

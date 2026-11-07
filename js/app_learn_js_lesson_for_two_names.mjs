@@ -5,7 +5,7 @@ import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_nam
 import { js_code_two_names_while_b_first_lines } from "./js_code_two_names_while_b_first_lines.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_two_names_for_lines } from "./js_code_two_names_for_lines.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_two_names_generic } from "./app_code_lesson_two_names_generic.mjs";
 export function app_learn_js_lesson_for_two_names() {
   arguments_assert(arguments, 0);
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_for_two_names() {
     app_learn_js_div_cycle_code(box_two, ["These two loops do the same thing"]);
     walk(box_two);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "Two names in a for",
     "for (...) { b--; }",
   );

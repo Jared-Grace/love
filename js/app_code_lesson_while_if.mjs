@@ -5,7 +5,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_if_inside_generic } from "./app_learn_js_lesson_if_inside_generic.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
 export function app_code_lesson_while_if() {
@@ -41,7 +41,7 @@ export function app_code_lesson_while_if() {
     example(box_two, program_write);
     walk(box_two);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "An if inside a while",
     "while (...) { if (...) {} }",
   );

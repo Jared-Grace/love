@@ -35,7 +35,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_while_and() {
@@ -286,7 +286,7 @@ export function app_code_lesson_while_and() {
     let combined2 = js_code_binary_spaced_nb(0, greater, bound_b);
     said_false(box_three, 3, 0, combined2);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "While asking &&",
     "while (a < 5 && b > 0) { ... }",
   );

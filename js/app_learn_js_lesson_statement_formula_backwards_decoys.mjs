@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
@@ -52,7 +52,7 @@ export function app_learn_js_lesson_statement_formula_backwards_decoys({
   ("backwards_decoys is the wrong-answer maker for the question that shows what is written out and asks for the program, or null to use the other questions' answers.");
   let middle = property_get(step, "middle");
   let logged = property_get(step, "logged");
-  let name_id = app_code_lesson_statement_title_name_id(words, title_code);
+  let name_id = app_learn_js_lesson_statement_title_name_id(words, title_code);
   function program_of(values) {
     "one question's program, from the numbers its names start with";
     function let_pair(name, index) {

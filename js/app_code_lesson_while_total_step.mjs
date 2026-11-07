@@ -5,7 +5,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_total_step_generic } from "./app_code_lesson_total_step_generic.mjs";
 export function app_code_lesson_while_total_step() {
   arguments_assert(arguments, 0);
@@ -61,7 +61,7 @@ export function app_code_lesson_while_total_step() {
       " starts and how much it goes up by.",
     ]);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "Counting by twos and threes",
     "n += 2;",
   );

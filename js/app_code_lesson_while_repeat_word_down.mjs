@@ -18,7 +18,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_while_repeat_word } from "./app_code_lesson_while_repeat_word.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_while_word_three_runs } from "./app_code_while_word_three_runs.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_repeat_word_generic } from "./app_learn_js_lesson_repeat_word_generic.mjs";
 export function app_code_lesson_while_repeat_word_down() {
   arguments_assert(arguments, 0);
@@ -73,7 +73,7 @@ export function app_code_lesson_while_repeat_word_down() {
     let lines2 = program_lines(0, 3, joy);
     app_code_while_word_three_runs(box_two, lines2, joy, greater, 3, -1);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "The same word, counting down",
     "while (n > 0) { ... n--; }",
   );

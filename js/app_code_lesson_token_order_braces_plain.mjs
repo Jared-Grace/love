@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_braces_two_batch } from "./app_learn_js_braces_two_batch.mjs";
 import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_braces_two_nested } from "./app_learn_js_braces_two_nested.mjs";
 import { app_learn_js_lesson_braces_among_plain_generic } from "./app_learn_js_lesson_braces_among_plain_generic.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_token_order_braces_plain() {
     app_learn_js_braces_two_batch,
     app_learn_js_braces_sequence,
   );
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "The braces among the tokens, with no colors",
     "{ { } }",
   );

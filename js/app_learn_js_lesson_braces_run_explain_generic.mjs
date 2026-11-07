@@ -13,7 +13,7 @@ import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_qu
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
 import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_quiz_braces_run } from "./app_learn_js_lesson_quiz_braces_run.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_learn_js_lesson_braces_run_explain_generic(
   title,
@@ -89,7 +89,7 @@ export function app_learn_js_lesson_braces_run_explain_generic(
       },
     ],
   });
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     title,
     app_learn_js_braces_dots(),
   );

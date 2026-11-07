@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 export function app_learn_js_lesson_statement_name_two_title_name_id() {
@@ -10,6 +10,6 @@ export function app_learn_js_lesson_statement_name_two_title_name_id() {
   let words = "Two names at once";
   let name = app_learn_js_lesson_statement_name_two_name();
   let code = js_code_console_log_statement(name);
-  let built = app_code_lesson_statement_title_name_id(words, code);
+  let built = app_learn_js_lesson_statement_title_name_id(words, code);
   return built;
 }

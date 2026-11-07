@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_if_inside_generic } from "./app_learn_js_lesson_if_inside_generic.mjs";
 import { app_learn_js_lesson_for_same_as_while_above } from "./app_learn_js_lesson_for_same_as_while_above.mjs";
 import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_for_if() {
   ("The one new fact is that an if inside a for is asked again every run, so its { ... } can run on some runs and be skipped on others. Counting the items of an array that match is this shape.");
   ("Chosen by the human 2026-11-06, to come after the three for lessons arrays need.");
   ("The writing is a first draft by Claude 2026-11-06.");
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "An if inside a for",
     "for (...) { if (...) {} }",
   );

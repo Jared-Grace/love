@@ -16,7 +16,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
 import { add } from "./add.mjs";
 export function app_code_lesson_while_down() {
@@ -98,7 +98,7 @@ export function app_code_lesson_while_down() {
     said(box_two, 4, 2, 1, true);
     said(box_two, 1, 2, 1, false);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "While counting down",
     "while (n > 2) { ... }",
   );

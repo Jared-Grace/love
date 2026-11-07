@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_down_to_log_options } from "./app_learn_js_lesson_down_to_log_options.mjs";
 import { app_learn_js_lesson_decrement_log_options } from "./app_learn_js_lesson_decrement_log_options.mjs";
 import { app_learn_js_lesson_for_comparison_other_above } from "./app_learn_js_lesson_for_comparison_other_above.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_lesson_for_down_to() {
   ("The one new fact is that > leaves out the number it is compared with and >= includes it, seen in a for counting down. Arrays are walked from the last item down to 0 this way.");
   ("Chosen by the human 2026-11-06, as one of three for lessons arrays need, paralleling While asking >=. That while writes out n after the loop, which a for cannot, since n made in a for is gone by then; so this lesson writes out n inside, and starts from For taking away one, the way For up to and including starts from For adding one.");
   ("The writing is a first draft by Claude 2026-11-06.");
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "For down to and including",
     "for (...; n >= 1; n--) { ... }",
   );

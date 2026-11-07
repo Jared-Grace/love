@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_update_log_generic } from "./app_code_lesson_update_log_generic.mjs";
 import { app_learn_js_lesson_increment_log_options } from "./app_learn_js_lesson_increment_log_options.mjs";
 import { app_learn_js_lesson_for_same_as_while_above } from "./app_learn_js_lesson_for_same_as_while_above.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_for_increment() {
   ("The one new fact is that a for can change n by n++, the way a while already did. It comes straight after For with a start, since it asks nothing the while lesson did not, at the human's asking 2026-11-04: combinations of for with what is already known come right after the for itself.");
   ("The code before and after, then one line saying they do the same, in the shape the human asked for on the second for.");
   ("The writing is a first draft by Claude 2026-11-05.");
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "For adding one",
     "for (...; n++) { ... }",
   );

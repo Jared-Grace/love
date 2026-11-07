@@ -7,7 +7,7 @@ import { app_learn_js_lesson_functions_console_log_arithmetic } from "./app_lear
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_log_double_generic } from "./app_learn_js_lesson_log_double_generic.mjs";
 export function app_code_lesson_while_log_double() {
   arguments_assert(arguments, 0);
@@ -43,7 +43,7 @@ export function app_code_lesson_while_log_double() {
     example(box_two, program_write);
     walk(box_two);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "Writing out double",
     "console.log(n * 2);",
   );

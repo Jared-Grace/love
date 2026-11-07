@@ -15,7 +15,7 @@ import { app_learn_js_lesson_if_else_in_if } from "./app_learn_js_lesson_if_else
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_if_ab_logged } from "./app_learn_js_lesson_if_ab_logged.mjs";
 export function app_learn_js_lesson_if_else_in_if_else() {
   arguments_assert(arguments, 0);
@@ -196,7 +196,7 @@ export function app_learn_js_lesson_if_else_in_if_else() {
       " always runs",
     ]);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "An if and else inside an if and else",
     "{ if ... else ... } else ...",
   );

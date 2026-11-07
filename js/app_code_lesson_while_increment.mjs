@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
 import { app_learn_js_lesson_increment_log_options } from "./app_learn_js_lesson_increment_log_options.mjs";
 import { app_learn_js_lesson_statement_name_increment } from "./app_learn_js_lesson_statement_name_increment.mjs";
@@ -9,7 +9,7 @@ export function app_code_lesson_while_increment() {
   ("The one new fact is that the n++ already taught works inside a while, moving n one at a time.");
   ("n always ends on the number it is compared against, since it moves by one, which is why every run is written out here.");
   ("The writing is a first draft by Claude 2026-11-02.");
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "While adding one",
     "while (n < 4) { n++; }",
   );

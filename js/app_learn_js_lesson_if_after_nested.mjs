@@ -4,7 +4,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_braces_run_after_nested } from "./app_learn_js_lesson_braces_run_after_nested.mjs";
 import { app_learn_js_if_after_nested_explain } from "./app_learn_js_if_after_nested_explain.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_if_ab_logged } from "./app_learn_js_lesson_if_ab_logged.mjs";
 import { app_learn_js_if_after_nested_program_lines } from "./app_learn_js_if_after_nested_program_lines.mjs";
 export function app_learn_js_lesson_if_after_nested() {
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_if_after_nested() {
     ("2026-10-12, at the human's asking: what the code writes out is explained back here, where it is first asked, the lesson before now walking through which sections run");
     app_learn_js_if_after_nested_explain(root, context);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "An if after an if inside an if",
     "{ if (b) ... } if (b) ...",
   );

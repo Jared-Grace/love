@@ -5,7 +5,7 @@ import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_less
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 export function app_learn_js_lesson_statement_name_total_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: naming what two names add up to, followed by the line that does it");
@@ -19,6 +19,6 @@ export function app_learn_js_lesson_statement_name_total_title_name_id() {
   let plus = js_operator_plus_symbol();
   let sum = js_code_binary_spaced_nb(name_first, plus, name_last);
   let code = js_code_let_statement(name_total, sum);
-  let built = app_code_lesson_statement_title_name_id(words, code);
+  let built = app_learn_js_lesson_statement_title_name_id(words, code);
   return built;
 }

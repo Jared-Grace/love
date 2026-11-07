@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 export function app_learn_js_lesson_statement_name_copy_title_name_id() {
@@ -13,6 +13,6 @@ export function app_learn_js_lesson_statement_name_copy_title_name_id() {
   let name_source = app_learn_js_lesson_statement_name_value_name();
   let name_copy = app_learn_js_lesson_statement_name_third();
   let code = js_code_let_statement(name_copy, name_source);
-  let built = app_code_lesson_statement_title_name_id(words, code);
+  let built = app_learn_js_lesson_statement_title_name_id(words, code);
   return built;
 }

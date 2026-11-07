@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 export function app_learn_js_lesson_comment_note_title_name_id() {
@@ -9,6 +9,6 @@ export function app_learn_js_lesson_comment_note_title_name_id() {
   ("Only what is painted changes; the id is built from the words below.");
   let words = "Writing a comment";
   let code = js_code_comment_line("a comment");
-  let built = app_code_lesson_statement_title_name_id(words, code);
+  let built = app_learn_js_lesson_statement_title_name_id(words, code);
   return built;
 }

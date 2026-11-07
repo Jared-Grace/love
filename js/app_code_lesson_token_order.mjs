@@ -14,7 +14,7 @@ import { app_code_quiz_tokens_order } from "./app_code_quiz_tokens_order.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap_guided } from "./app_learn_js_lesson_quiz_tokens_tap_guided.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -57,7 +57,7 @@ export function app_code_lesson_token_order() {
     let box_three = app_learn_js_container_light_blue(root);
     app_code_tokens_choose_say(box_three, "Now you will ", "choose", true);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "The order of the tokens",
     "if ( a ) {",
   );

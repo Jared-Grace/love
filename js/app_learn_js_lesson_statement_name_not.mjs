@@ -5,7 +5,7 @@ import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_le
 import { js_code_not } from "./js_code_not.mjs";
 import { app_learn_js_lesson_statement_names_binary_answer_lines } from "./app_learn_js_lesson_statement_names_binary_answer_lines.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -36,7 +36,7 @@ export function app_learn_js_lesson_statement_name_not() {
     "opposite",
   );
   let title_line = list_first(answer_lines);
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "The opposite of a name",
     title_line,
   );

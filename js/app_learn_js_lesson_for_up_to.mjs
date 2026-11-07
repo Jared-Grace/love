@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_up_to_log_options } from "./app_code_lesson_up_to_log_options.mjs";
 import { app_learn_js_lesson_for_comparison_other_above } from "./app_learn_js_lesson_for_comparison_other_above.mjs";
 import { app_learn_js_lesson_for_increment } from "./app_learn_js_lesson_for_increment.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_for_up_to() {
   ("Chosen by the human 2026-11-05, as one of four for lessons after For with a running total. While lessons writing out n after the loop were left out, since n made in a for is gone by then.");
   ("Starts from For adding one and not from the while in Up to and including, picked by the human 2026-11-05: the two for programs differ only in the comparison, so that lesson is the nearer one. The rejected readings were removing this lesson, and leaving it pointing back at the while.");
   ("The writing is a first draft by Claude 2026-11-05.");
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "For up to and including",
     "for (...; n <= 3; n++) { ... }",
   );

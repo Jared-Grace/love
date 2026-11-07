@@ -17,7 +17,7 @@ import { app_learn_js_lesson_else_if_else } from "./app_learn_js_lesson_else_if_
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_cases_logged } from "./app_learn_js_lesson_cases_logged.mjs";
 export function app_learn_js_lesson_else_if_order() {
   arguments_assert(arguments, 0);
@@ -184,7 +184,7 @@ export function app_learn_js_lesson_else_if_order() {
       " runs",
     ]);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "Else if in order",
     "else if (n < 100)",
   );

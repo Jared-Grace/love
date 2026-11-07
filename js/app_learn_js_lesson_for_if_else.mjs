@@ -6,7 +6,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_else } from "./app_learn_js_lesson_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_learn_js_lesson_for_if_greater_options } from "./app_learn_js_lesson_for_if_greater_options.mjs";
 import { app_learn_js_lesson_for_if_generic } from "./app_learn_js_lesson_for_if_generic.mjs";
@@ -73,7 +73,7 @@ export function app_learn_js_lesson_for_if_else() {
     example(box_two);
     walk(box_two);
   }
-  let name_id = app_code_lesson_statement_title_name_id(
+  let name_id = app_learn_js_lesson_statement_title_name_id(
     "An else inside a for",
     "if (...) {...} else {...}",
   );
