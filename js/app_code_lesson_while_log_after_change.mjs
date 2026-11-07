@@ -15,7 +15,7 @@ import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
-import { app_code_lesson_log_after_change_groups } from "./app_code_lesson_log_after_change_groups.mjs";
+import { app_learn_js_lesson_log_after_change_groups } from "./app_learn_js_lesson_log_after_change_groups.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
@@ -92,7 +92,7 @@ export function app_code_lesson_while_log_after_change() {
   }
   function batch_get() {
     "three programs, running one, two and three times";
-    let groups = app_code_lesson_log_after_change_groups();
+    let groups = app_learn_js_lesson_log_after_change_groups();
     let triples = list_shuffle_take_map(groups, 3, list_random_item);
     let codes = list_map(triples, program_get);
     return codes;

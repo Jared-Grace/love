@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_log_after_change_groups() {
+export function app_learn_js_lesson_log_after_change_groups() {
   arguments_assert(arguments, 0);
   ("the numbers of a lesson comparing a line written out with n changing around it, as [start, bound, added]: one group each for one, two and three runs");
   let groups = [
