@@ -12,7 +12,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_else_if_nested_lines } from "./app_learn_js_else_if_nested_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_else_if_program_lines } from "./app_code_else_if_program_lines.mjs";
+import { app_learn_js_else_if_program_lines } from "./app_learn_js_else_if_program_lines.mjs";
 export function app_learn_js_else_if_explain(root, context) {
   arguments_assert(arguments, 2);
   ("an if inside an else remembered, then the same program written with else if, then a true");
@@ -53,7 +53,7 @@ export function app_learn_js_else_if_explain(root, context) {
     else_if_b,
     ":",
   ]);
-  let chain_lines = app_code_else_if_program_lines([false, true], words);
+  let chain_lines = app_learn_js_else_if_program_lines([false, true], words);
   app_learn_js_code_lines_writes_out(box_three, chain_lines, written);
   app_learn_js_div_cycle_code(box_three, [
     "",
@@ -76,7 +76,7 @@ export function app_learn_js_else_if_explain(root, context) {
     "true",
     ":",
   ]);
-  let love_lines = app_code_else_if_program_lines([true, true], words);
+  let love_lines = app_learn_js_else_if_program_lines([true, true], words);
   let love_written = list_join_newline([love, peace]);
   app_learn_js_code_lines_writes_out(box_four, love_lines, love_written);
   app_learn_js_div_cycle_code(box_four, [

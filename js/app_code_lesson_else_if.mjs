@@ -6,7 +6,7 @@ import { app_code_lesson_braces_run_else_if } from "./app_code_lesson_braces_run
 import { app_learn_js_else_if_explain } from "./app_learn_js_else_if_explain.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
-import { app_code_else_if_program_lines } from "./app_code_else_if_program_lines.mjs";
+import { app_learn_js_else_if_program_lines } from "./app_learn_js_else_if_program_lines.mjs";
 export function app_code_lesson_else_if() {
   arguments_assert(arguments, 0);
   ('else if: let a = false; let b = true; if (a) { console.log("love"); } else if (b) { console.log("joy"); } console.log("peace"); writes out joy and peace');
@@ -36,7 +36,7 @@ export function app_code_lesson_else_if() {
   );
   let lesson = app_code_lesson_if_ab_logged(
     fruits,
-    app_code_else_if_program_lines,
+    app_learn_js_else_if_program_lines,
     3,
     false,
     above,
