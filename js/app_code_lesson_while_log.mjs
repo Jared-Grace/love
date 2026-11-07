@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_while_log() {
   function above(root, context, example, walk) {
     "While remembered, then the same while with a console.log inside, writing out each run";
     let box_one = app_code_container_light_blue(root);
-    let r = app_code_braces_dots();
+    let r = app_learn_js_braces_dots();
     app_code_remember_from_lesson(box_one, context, app_code_lesson_while, [
       "a ",
       "while",
@@ -41,7 +41,7 @@ export function app_code_lesson_while_log() {
     let lines = js_code_start_above_lines(js_code_while_lines_multiple);
     example(box_two, lines);
     walk(box_two);
-    let r2 = app_code_braces_dots();
+    let r2 = app_learn_js_braces_dots();
     app_code_div_cycle_code(box_two, [
       "Three lines were written out, so the ",
       r2,

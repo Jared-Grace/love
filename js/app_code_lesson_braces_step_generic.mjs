@@ -1,4 +1,4 @@
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_braces_run_programs_shape } from "./app_code_braces_run_programs_shape.mjs";
 import { app_code_lesson_step_programs_generic } from "./app_code_lesson_step_programs_generic.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_braces_step_generic(title, code_get, names) {
   }
   let lesson = app_code_lesson_step_programs_generic(
     title,
-    app_code_braces_dots(),
+    app_learn_js_braces_dots(),
     programs,
   );
   return lesson;

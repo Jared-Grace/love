@@ -33,7 +33,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -191,7 +191,7 @@ export function app_code_lesson_if_inside_generic(options) {
     let middle = [", so ", shown, " is written out, then "];
     let truth = "true";
     if (equal(through2, false)) {
-      let r = app_code_braces_dots();
+      let r = app_learn_js_braces_dots();
       middle = [", so the ", "if", "'s ", r, " is skipped, then "];
       truth = "false";
     }

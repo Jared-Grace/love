@@ -30,7 +30,7 @@ import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { multiply } from "./multiply.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_count_generic(
@@ -186,7 +186,7 @@ export function app_code_lesson_count_generic(
     said(root, 8, 3, 2);
     said(root, 4, 3, 3);
     let last = js_code_binary_spaced_nb(2, greater, 3);
-    let r = app_code_braces_dots();
+    let r = app_learn_js_braces_dots();
     app_code_div_cycle_code(root, [
       "",
       last,
@@ -196,7 +196,7 @@ export function app_code_lesson_count_generic(
       r,
       " is skipped, and the code continues after it",
     ]);
-    let r2 = app_code_braces_dots();
+    let r2 = app_learn_js_braces_dots();
     app_code_div_cycle_code(root, [
       "So ",
       count_name,

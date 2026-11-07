@@ -4,7 +4,7 @@ import { add } from "./add.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 export function app_code_word_three_runs_walk(
   box,
   word,
@@ -42,7 +42,7 @@ export function app_code_word_three_runs_walk(
   let sum2 = add(start, right2);
   said(sum2);
   let check = js_code_binary_spaced_nb(bound, comparison_symbol, bound);
-  let r = app_code_braces_dots();
+  let r = app_learn_js_braces_dots();
   app_code_div_cycle_code(box, [
     "",
     check,
@@ -52,7 +52,7 @@ export function app_code_word_three_runs_walk(
     r,
     " is skipped, and the code continues after it",
   ]);
-  let r2 = app_code_braces_dots();
+  let r2 = app_learn_js_braces_dots();
   app_code_div_cycle_code(box, [
     "The word was written out three times, so the ",
     r2,

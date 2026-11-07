@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_two_names_while_lines } from "./js_code_two_names_while_lines.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_while_two_names() {
   function above(root, context, example, walk) {
     "While remembered, then a while changing a second name it never asks about";
     let box_one = app_code_container_light_blue(root);
-    let r = app_code_braces_dots();
+    let r = app_learn_js_braces_dots();
     app_code_remember_from_lesson(box_one, context, app_code_lesson_while, [
       "a ",
       "while",

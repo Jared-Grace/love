@@ -34,7 +34,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -183,7 +183,7 @@ export function app_code_lesson_while_log_after_change() {
     said(box_two, 2, 5, 4);
     said(box_two, 4, 5, 6);
     let check = js_code_binary_spaced_nb(6, less, 5);
-    let r = app_code_braces_dots();
+    let r = app_learn_js_braces_dots();
     app_code_div_cycle_code(box_two, [
       "",
       check,
@@ -202,7 +202,7 @@ export function app_code_lesson_while_log_after_change() {
       " is ",
       "false",
     ]);
-    let r2 = app_code_braces_dots();
+    let r2 = app_learn_js_braces_dots();
     app_code_div_cycle_code(box_three, [
       "The ",
       "while",
@@ -210,8 +210,8 @@ export function app_code_lesson_while_log_after_change() {
       r2,
       " runs",
     ]);
-    let r3 = app_code_braces_dots();
-    let r4 = app_code_braces_dots();
+    let r3 = app_learn_js_braces_dots();
+    let r4 = app_learn_js_braces_dots();
     app_code_div_cycle_code(box_three, [
       "Once the ",
       r3,

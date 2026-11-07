@@ -29,7 +29,7 @@ import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_two_names_generic(options) {
@@ -196,7 +196,7 @@ export function app_code_lesson_two_names_generic(options) {
     said(root, 2, 8);
     said(root, 3, 7);
     let condition3 = js_code_binary_spaced_nb(4, less, 4);
-    let r = app_code_braces_dots();
+    let r = app_learn_js_braces_dots();
     app_code_div_cycle_code(root, [
       "",
       condition3,
@@ -206,7 +206,7 @@ export function app_code_lesson_two_names_generic(options) {
       r,
       " is skipped, and the code continues after it",
     ]);
-    let r2 = app_code_braces_dots();
+    let r2 = app_learn_js_braces_dots();
     app_code_div_cycle_code(root, [
       "The ",
       r2,

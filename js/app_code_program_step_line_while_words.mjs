@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
@@ -21,7 +21,7 @@ export function app_code_program_step_line_while_words(
   if (equal(index, 0)) {
     return null;
   }
-  let braces = app_code_braces_dots();
+  let braces = app_learn_js_braces_dots();
   let entry = list_get(trace, index);
   let due = property_get(entry, "line");
   let index2 = subtract(index, 1);

@@ -1,4 +1,4 @@
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_greater_than_equal_symbol } from "./js_operator_greater_than_equal_symbol.mjs";
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
@@ -83,7 +83,7 @@ export function app_code_lesson_while_greater_equal() {
       " is still ",
       "true",
       ", so the ",
-      app_code_braces_dots(),
+      app_learn_js_braces_dots(),
       " runs once more:",
     ]);
     let lines = program_lines(9, 3, 3);

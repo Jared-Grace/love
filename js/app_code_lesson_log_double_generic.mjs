@@ -30,7 +30,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { each } from "./each.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_log_double_generic(options) {
@@ -214,7 +214,7 @@ export function app_code_lesson_log_double_generic(options) {
     let last = list_last(values6);
     let ended = add(last, 1);
     let check = js_code_binary_spaced_nb(ended, less, bound);
-    let r = app_code_braces_dots();
+    let r = app_learn_js_braces_dots();
     app_code_div_cycle_code(root, [
       "",
       check,

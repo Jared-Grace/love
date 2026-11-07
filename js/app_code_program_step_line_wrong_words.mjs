@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -32,7 +32,7 @@ export function app_code_program_step_line_wrong_words(
   let index2 = subtract(index, 1);
   let previous = list_get(trace, index2).line;
   let previous_text = list_get(lines, previous).trim();
-  let braces = app_code_braces_dots();
+  let braces = app_learn_js_braces_dots();
   let opens = previous_text.endsWith("{");
   if (opens && previous_text.includes("if (")) {
     ("where the if's own { ... } closes, and where the whole if closes, else and all: a } followed by else carries on into the else. The count starts inside the { the if line ends with, since a line like } else if (b) { also starts with a }");

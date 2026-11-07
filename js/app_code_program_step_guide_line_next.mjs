@@ -12,7 +12,7 @@ import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { add } from "./add.mjs";
@@ -59,7 +59,7 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
     let value = property_get(before, "condition");
     let said = text_to(value);
     let alternate = property_get(before, "alternate");
-    let braces = app_code_braces_dots();
+    let braces = app_learn_js_braces_dots();
     ("2026-10-28: a while line is not an if and has no else, so its two outcomes are said in its own words: true runs the { ... } for the while, false ends the loop. Found reading the first while step lesson, which said the else was not run.");
     if (equal(alternate, "loop")) {
       let line_loop = property_get(before, "line");
@@ -182,7 +182,7 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
     }
     let b = property_exists(entry_due, "condition");
     if (not(b)) {
-      let r17 = app_code_braces_dots();
+      let r17 = app_learn_js_braces_dots();
       let r15 = [
         [
           "Nothing more runs inside this ",
@@ -204,7 +204,7 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
     let r5 = [["The line under it runs next"], choose];
     return r5;
   }
-  let r10 = app_code_braces_dots();
+  let r10 = app_learn_js_braces_dots();
   ("2026-10-28: a line above the one before it is reached only by a loop going round again, so it is said as going back up, not on below.");
   if (less_than(line, line_before)) {
     let keyword2 = app_code_program_step_loop_keyword(lines, line);

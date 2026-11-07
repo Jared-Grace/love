@@ -1,4 +1,4 @@
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -138,7 +138,7 @@ export function app_code_lesson_while_generic(params) {
       " is ",
       "false",
       ", so the ",
-      app_code_braces_dots(),
+      app_learn_js_braces_dots(),
       " is skipped, and the code continues after it",
     ]);
   }

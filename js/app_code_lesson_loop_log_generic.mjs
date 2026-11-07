@@ -30,7 +30,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_loop_log_generic(params) {
@@ -182,7 +182,7 @@ export function app_code_lesson_loop_log_generic(params) {
     said(root, 4, 9, 7);
     said(root, 7, 9, 10);
     let last = js_code_binary_spaced_nb(10, less, 9);
-    let r = app_code_braces_dots();
+    let r = app_learn_js_braces_dots();
     app_code_div_cycle_code(root, [
       "",
       last,

@@ -1,4 +1,4 @@
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -112,7 +112,7 @@ export function app_code_lesson_while() {
       " is ",
       "false",
       ", so the ",
-      app_code_braces_dots(),
+      app_learn_js_braces_dots(),
       " never runs at all, and the code continues after it",
     ]);
   }

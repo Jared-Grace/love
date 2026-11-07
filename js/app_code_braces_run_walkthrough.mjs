@@ -1,4 +1,4 @@
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_if_blocks } from "./app_code_if_blocks.mjs";
@@ -65,7 +65,7 @@ export function app_code_braces_run_walkthrough(root, code) {
     if (before_ran) {
       let parts = [
         "A ",
-        app_code_braces_dots(),
+        app_learn_js_braces_dots(),
         " before it in the same ",
         "if",
         " ran",
@@ -75,7 +75,7 @@ export function app_code_braces_run_walkthrough(root, code) {
     if (equal(asked, null)) {
       let parts2 = [
         "No ",
-        app_code_braces_dots(),
+        app_learn_js_braces_dots(),
         " before it in the same ",
         "if",
         " ran",
@@ -110,7 +110,7 @@ export function app_code_braces_run_walkthrough(root, code) {
     if (ran_any) {
       let line3 = [
         "Only the lines of the ",
-        app_code_braces_dots(),
+        app_learn_js_braces_dots(),
         " that ran stay. The rest of this ",
         "if",
         " is removed",
@@ -120,7 +120,7 @@ export function app_code_braces_run_walkthrough(root, code) {
     }
     let line4 = [
       "No ",
-      app_code_braces_dots(),
+      app_learn_js_braces_dots(),
       " of this ",
       "if",
       " ran, so all of this ",
