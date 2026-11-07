@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
 import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
-import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
+import { app_learn_js_expression_chosen_pause } from "./app_learn_js_expression_chosen_pause.mjs";
 import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
 import { app_code_lesson_expression_choose_order_above } from "./app_code_lesson_expression_choose_order_above.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_choose_order() {
       tree,
       on_change,
       on_wrong,
-      app_code_expression_chosen_pause,
+      app_learn_js_expression_chosen_pause,
       on_success,
     );
   }
