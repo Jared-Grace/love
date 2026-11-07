@@ -22,7 +22,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_learn_js_braces_color_next } from "./app_learn_js_braces_color_next.mjs";
 import { app_code_if_blocks_lines_kept } from "./app_code_if_blocks_lines_kept.mjs";
-import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
+import { app_learn_js_div_braces_painted } from "./app_learn_js_div_braces_painted.mjs";
 export function app_learn_js_braces_run_walkthrough(root, code) {
   arguments_assert(arguments, 2);
   ("the worked example's answering written out, one box per section reached: the program as it stands, that section's braces drawn in a colour, Does this { ... } run?, why, and the answer; then the program once every section is answered. Asked for by the human 2026-10-12, so the writing above a Does this section run? lesson explains the exercise it asks, rather than what the code writes out, which is the lesson after's.");
@@ -154,7 +154,7 @@ export function app_learn_js_braces_run_walkthrough(root, code) {
       brace: brace_right,
       color,
     };
-    app_code_div_braces_painted(box, [
+    app_learn_js_div_braces_painted(box, [
       ["Does this "],
       left,
       [" ... "],
@@ -166,7 +166,7 @@ export function app_learn_js_braces_run_walkthrough(root, code) {
     let words = runs ? [["Yes, "], [" runs"]] : [["No, "], [" does not run"]];
     let item = list_get(words, 0);
     let item2 = list_get(words, 1);
-    app_code_div_braces_painted(box, [item, left, [" ... "], right, item2]);
+    app_learn_js_div_braces_painted(box, [item, left, [" ... "], right, item2]);
     for (let removed of removed_lines(block)) {
       app_code_div_cycle_code(box, removed);
     }

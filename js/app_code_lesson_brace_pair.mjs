@@ -9,7 +9,7 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { app_learn_js_code_dark_lines_braces_paired_colors } from "./app_learn_js_code_dark_lines_braces_paired_colors.mjs";
 import { app_learn_js_braces_pair_color } from "./app_learn_js_braces_pair_color.mjs";
-import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
+import { app_learn_js_div_braces_painted } from "./app_learn_js_div_braces_painted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
@@ -89,7 +89,10 @@ export function app_code_lesson_brace_pair() {
         ]);
       }
     }
-    let braces_line = app_code_div_braces_painted(box_paired, braces_painted);
+    let braces_line = app_learn_js_div_braces_painted(
+      box_paired,
+      braces_painted,
+    );
     html_span_text_content(braces_line, "as taught in ");
     app_code_lesson_reference_draw(
       braces_line,
@@ -114,15 +117,15 @@ export function app_code_lesson_brace_pair() {
       brace: right,
       color: inner,
     };
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       outer_left,
       [" is the first opening brace"],
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       inner_right,
       [" is the first closing brace"],
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       ["Even though "],
       inner_right,
       [
@@ -130,14 +133,14 @@ export function app_code_lesson_brace_pair() {
       ],
       outer_left,
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       inner_right,
       [" closes the most recent ", left, ", which is "],
       inner_left,
       [" not "],
       outer_left,
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       ["The first 3 braces are "],
       outer_left,
       [" "],
@@ -145,20 +148,20 @@ export function app_code_lesson_brace_pair() {
       [" "],
       inner_right,
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       inner_left,
       [" is closer to "],
       inner_right,
       [" than "],
       outer_left,
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       ["and "],
       inner_left,
       [" is closest to "],
       inner_right,
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       ["so "],
       inner_right,
       [" closes "],
@@ -166,16 +169,16 @@ export function app_code_lesson_brace_pair() {
       [" not "],
       outer_left,
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       outer_left,
       [" opens, then "],
       inner_left,
       [" opens"],
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       ["They close in reverse order of color:"],
     ]);
-    app_code_div_braces_painted(box_paired, [
+    app_learn_js_div_braces_painted(box_paired, [
       ["So "],
       inner_right,
       [" closes and then "],

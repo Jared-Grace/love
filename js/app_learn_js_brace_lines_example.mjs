@@ -1,6 +1,6 @@
 import { app_learn_js_braces_color_next } from "./app_learn_js_braces_color_next.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
+import { app_learn_js_div_braces_painted } from "./app_learn_js_div_braces_painted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { less_than } from "./less_than.mjs";
@@ -32,13 +32,13 @@ export function app_learn_js_brace_lines_example(parent, code, nth) {
     brace: right,
     color,
   };
-  app_code_div_braces_painted(parent, [
+  app_learn_js_div_braces_painted(parent, [
     ["Below is a "],
     left_painted,
     [" "],
     right_painted,
   ]);
-  app_code_div_braces_painted(parent, [
+  app_learn_js_div_braces_painted(parent, [
     ["The lines in between the "],
     left_painted,
     [" and "],

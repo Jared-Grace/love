@@ -5,7 +5,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { each } from "./each.mjs";
-export function app_code_div_braces_painted(parent, pieces) {
+export function app_learn_js_div_braces_painted(parent, pieces) {
   arguments_assert(arguments, 2);
   ("one line of writing in which a brace may be drawn in the colour it wears in the code above it, so the line can say which brace it means by showing it. Each piece is either a list of parts, plain writing and code taking turns as on every other line of a lesson screen, or a brace with its colour, as { brace, color }");
   let div = html_div(parent);

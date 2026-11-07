@@ -45,7 +45,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
+import { app_learn_js_div_braces_painted } from "./app_learn_js_div_braces_painted.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 export function app_learn_js_braces_run_choose(
   parent,
@@ -254,7 +254,7 @@ export function app_learn_js_braces_run_choose(
       brace: js_code_brace_right(),
       color,
     };
-    app_code_div_braces_painted(ask, [
+    app_learn_js_div_braces_painted(ask, [
       ["Does this "],
       left,
       [" ... "],
@@ -287,7 +287,7 @@ export function app_learn_js_braces_run_choose(
         on_right,
         on_wrong,
       );
-      app_code_div_braces_painted(b, [
+      app_learn_js_div_braces_painted(b, [
         words[0],
         left,
         [" ... "],
