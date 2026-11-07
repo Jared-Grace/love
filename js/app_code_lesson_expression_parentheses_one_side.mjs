@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_parentheses_one_side_expression } from "./app_code_lesson_expression_parentheses_one_side_expression.mjs";
+import { app_learn_js_lesson_expression_parentheses_one_side_expression } from "./app_learn_js_lesson_expression_parentheses_one_side_expression.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_recall } from "./app_learn_js_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_lesson_expression_parentheses_one_side_title_name_id } from "./app_code_lesson_expression_parentheses_one_side_title_name_id.mjs";
@@ -36,19 +36,19 @@ export function app_code_lesson_expression_parentheses_one_side() {
   return lesson;
   function refill() {
     "four examples a screen, crossing the two things that vary so every screen shows all four: true and false alternating, and the comparison on the left then the right";
-    let v = app_code_lesson_expression_parentheses_one_side_expression(
+    let v = app_learn_js_lesson_expression_parentheses_one_side_expression(
       true,
       true,
     );
-    let v2 = app_code_lesson_expression_parentheses_one_side_expression(
+    let v2 = app_learn_js_lesson_expression_parentheses_one_side_expression(
       false,
       false,
     );
-    let v3 = app_code_lesson_expression_parentheses_one_side_expression(
+    let v3 = app_learn_js_lesson_expression_parentheses_one_side_expression(
       true,
       false,
     );
-    let v4 = app_code_lesson_expression_parentheses_one_side_expression(
+    let v4 = app_learn_js_lesson_expression_parentheses_one_side_expression(
       false,
       true,
     );

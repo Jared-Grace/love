@@ -8,7 +8,7 @@ import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
-export function app_code_lesson_expression_parentheses_one_side_expression(
+export function app_learn_js_lesson_expression_parentheses_one_side_expression(
   want_true,
   comparison_first,
 ) {
