@@ -1,7 +1,7 @@
 import { app_learn_js_button_skip_lesson_unfinished } from "./app_learn_js_button_skip_lesson_unfinished.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_examples_on_more } from "./app_code_examples_on_more.mjs";
-import { app_code_examples_lambda } from "./app_code_examples_lambda.mjs";
+import { app_learn_js_examples_lambda } from "./app_learn_js_examples_lambda.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_code_lesson_previous_set } from "./app_code_lesson_previous_set.mjs";
 import { app_code_home } from "./app_code_home.mjs";
@@ -56,7 +56,7 @@ export function app_code_examples(context) {
         emoji: emoji_arrow_left(),
         text: "Previous lesson's last quiz",
         on_click: async function lambda() {
-          let r = await app_code_examples_lambda(context);
+          let r = await app_learn_js_examples_lambda(context);
           return r;
         },
       },

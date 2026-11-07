@@ -7,7 +7,7 @@ import { list_index_last } from "./list_index_last.mjs";
 import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_code_quiz } from "./app_code_quiz.mjs";
-export async function app_code_examples_lambda(context) {
+export async function app_learn_js_examples_lambda(context) {
   arguments_assert(arguments, 1);
   app_code_lesson_previous_set(context);
   let lesson_previous = app_code_lesson_current(context);
