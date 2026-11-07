@@ -7,7 +7,7 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
+import { app_learn_js_highlight_color_sixth } from "./app_learn_js_highlight_color_sixth.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
@@ -90,7 +90,7 @@ export function app_code_lesson_statement_name_king_steps() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  let start_color = app_code_highlight_color_sixth();
+  let start_color = app_learn_js_highlight_color_sixth();
   let row_color = app_code_highlight_color_third();
   let column_color = app_learn_js_highlight_color_fourth();
   let rows_count_color = app_learn_js_highlight_color_second();

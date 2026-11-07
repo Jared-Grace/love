@@ -1,5 +1,5 @@
 import { app_code_rectangles_edges_marked_draw } from "./app_code_rectangles_edges_marked_draw.mjs";
-import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
+import { app_learn_js_highlight_color_sixth } from "./app_learn_js_highlight_color_sixth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -107,7 +107,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   let start_color = app_code_highlight_color();
   let end_color = app_learn_js_highlight_color_second();
   let overlap_color = app_code_highlight_color_third();
-  let length_color = app_code_highlight_color_sixth();
+  let length_color = app_learn_js_highlight_color_sixth();
   let plain = app_shared_color_code_background();
   function from(text) {
     "a starting edge as a chip in the start colour";

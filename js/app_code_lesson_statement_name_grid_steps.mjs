@@ -2,7 +2,7 @@ import { app_learn_js_explain_emoji_square } from "./app_learn_js_explain_emoji_
 import { app_code_square_ringed } from "./app_code_square_ringed.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_code_colored } from "./app_learn_js_explain_code_colored.mjs";
-import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
+import { app_learn_js_highlight_color_sixth } from "./app_learn_js_highlight_color_sixth.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_explain_abs_apart_colored } from "./app_learn_js_explain_abs_apart_colored.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
@@ -80,7 +80,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  let start_color = app_code_highlight_color_sixth();
+  let start_color = app_learn_js_highlight_color_sixth();
   let row_color = app_code_highlight_color_third();
   let column_color = app_learn_js_highlight_color_fourth();
   let rows_count_color = app_learn_js_highlight_color_second();
