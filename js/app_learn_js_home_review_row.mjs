@@ -4,7 +4,7 @@ import { app_code_review_go } from "./app_code_review_go.mjs";
 import { app_code_review_button } from "./app_code_review_button.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-export function app_code_home_review_row(
+export function app_learn_js_home_review_row(
   g,
   context,
   lesson_number,

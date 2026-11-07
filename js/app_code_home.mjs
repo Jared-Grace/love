@@ -21,7 +21,7 @@ import { equal } from "./equal.mjs";
 import { app_learn_js_home_just_left_next } from "./app_learn_js_home_just_left_next.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
 import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
-import { app_code_home_review_row } from "./app_code_home_review_row.mjs";
+import { app_learn_js_home_review_row } from "./app_learn_js_home_review_row.mjs";
 import { app_learn_js_home_milestone_rows } from "./app_learn_js_home_milestone_rows.mjs";
 import { each_index } from "./each_index.mjs";
 import { app_learn_js_home_groups_finish } from "./app_learn_js_home_groups_finish.mjs";
@@ -103,7 +103,7 @@ export async function app_code_home(context) {
       if (not(review_complete)) {
         group.complete = false;
       }
-      let review = app_code_home_review_row(
+      let review = app_learn_js_home_review_row(
         body,
         context,
         lesson_number,
