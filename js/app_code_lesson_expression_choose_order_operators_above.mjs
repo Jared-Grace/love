@@ -4,7 +4,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_expression_replace_swap_say.mjs";
-import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
+import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_operators_expression } from "./app_code_lesson_expression_choose_order_operators_expression.mjs";
 import { app_code_lesson_expression_choose_order_operators_intro } from "./app_code_lesson_expression_choose_order_operators_intro.mjs";
@@ -38,7 +38,7 @@ export function app_code_lesson_expression_choose_order_operators_above(
   let step_text = text_to(step_value);
   let weak_symbol = property_get(tree, "operator");
   let strong_symbol = property_get(step, "operator");
-  let stepped = app_code_expression_solved(tree, step);
+  let stepped = app_learn_js_expression_solved(tree, step);
   let stepped_code = app_learn_js_expression_code(stepped);
   let final_value = app_code_expression_value(tree);
   let final_text = text_to(final_value);

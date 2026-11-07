@@ -11,7 +11,7 @@ export function app_learn_js_expression_names_apart(item) {
   arguments_assert(arguments, 1);
   ("the same expression shape with every name in it standing as a piece of its own: x * x holds two names, and reading the first must leave the second still to be read");
   ("Needed because ",
-    fn_name("app_code_expression_solved"),
+    fn_name("app_learn_js_expression_solved"),
     " finds the piece a learner picked by being that very piece, and a shape built from a table of names hands the same piece to every place a name is written. Everything else in the shape is copied as it stands, the parentheses a lesson wrote among it.");
   ("Not picked: finding the picked name by where it is written instead, which every walker would then have to carry.");
   let name_is = app_learn_js_expression_name_is(item);

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_replaced_settle } from "./app_learn_js_expression_replaced_settle.mjs";
-import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
+import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_expression_choose_line_draw } from "./app_learn_js_expression_choose_line_draw.mjs";
 import { app_learn_js_expression_chips_rise } from "./app_learn_js_expression_chips_rise.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
@@ -22,7 +22,7 @@ export async function app_learn_js_expression_choose_line_stepped_draw({
   "THE FINISHING IS ONLY REACHED WHEN THE SHORTER LINE IS NO LONGER A SUM AT ALL. While anything is still there to work out, the line simply stands and waits for the next press.";
   arguments_assert(arguments, 1);
   await app_learn_js_expression_replaced_settle(line, node_span, node_value);
-  let stepped = app_code_expression_solved(current, node);
+  let stepped = app_learn_js_expression_solved(current, node);
   let risen = app_learn_js_expression_choose_line_draw({
     current: stepped,
     solved: node,

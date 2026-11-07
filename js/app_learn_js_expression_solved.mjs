@@ -10,7 +10,7 @@ import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_
 import { not } from "./not.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
-export function app_code_expression_solved(item, node) {
+export function app_learn_js_expression_solved(item, node) {
   arguments_assert(arguments, 2);
   ("the same expression with one of its operators worked out and standing there as its value - the step a learner sees after picking that operator: picking the * in 1 + 2 * 3 gives back 1 + 6");
   ("One step, not the answer. A learner who is shown the whole line collapse at once has watched something happen; a learner who picks and is answered, and then picks again, has done every step of it, and the step they get wrong is the one thing they did not know.");
@@ -53,7 +53,7 @@ export function app_code_expression_solved(item, node) {
   if (item_before_is) {
     let symbol_of_item = property_get(item, "operator");
     let acted_on = property_get(item, "right");
-    let acted_on_new = app_code_expression_solved(acted_on, node);
+    let acted_on_new = app_learn_js_expression_solved(acted_on, node);
     let rebuilt = app_learn_js_expression_node_before(
       symbol_of_item,
       acted_on_new,
@@ -61,9 +61,9 @@ export function app_code_expression_solved(item, node) {
     return rebuilt;
   }
   let left = property_get(item, "left");
-  let left_new = app_code_expression_solved(left, node);
+  let left_new = app_learn_js_expression_solved(left, node);
   let right = property_get(item, "right");
-  let right_new = app_code_expression_solved(right, node);
+  let right_new = app_learn_js_expression_solved(right, node);
   ("every mark the lesson put on an operator survives every step - the parentheses it wrote, so a line the learner is working through does not quietly lose the pair it was showing them, and any other - because the node is copied with only its two sides replaced. Not picked, 2026-10-17: building it afresh and carrying each mark across by name, which a new mark would be silently dropped by");
   let sides = {
     left: left_new,

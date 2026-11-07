@@ -11,7 +11,7 @@ import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remo
 import { app_learn_js_expression_refusals_clear } from "./app_learn_js_expression_refusals_clear.mjs";
 import { app_learn_js_expression_chosen_set } from "./app_learn_js_expression_chosen_set.mjs";
 import { app_learn_js_expression_chips_settle } from "./app_learn_js_expression_chips_settle.mjs";
-import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
+import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 import { app_learn_js_expression_choose_line_stepped_draw } from "./app_learn_js_expression_choose_line_stepped_draw.mjs";
@@ -76,7 +76,7 @@ export function app_learn_js_expression_choose_line_draw_on_operator({
       ("This is the whole of the fix for a learner pressing a second operator and being met with nothing. The press was already refused - it was the LOOK of the thing that lied, and a screen that looks pressable and is not reads as broken rather than as finished with.");
       ("They go in two stages rather than one: plain where they stand, a pause, and then the room they were holding closes up and the rest of the line slides along into it. Together it is two changes in one frame and the operators are read as having been moved rather than as having stopped answering.");
       await app_learn_js_expression_chips_settle(line, pressable);
-      let node_value = app_code_expression_solved(node, node);
+      let node_value = app_learn_js_expression_solved(node, node);
       ("the blue block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
       await on_chosen(node, node_value, node_span, waiting_on);
       ("the pointing is over the moment the question it pointed at is answered, and it is put out here rather than by whoever lit it, because it is lit from here and only ever while this one await is open");

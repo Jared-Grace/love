@@ -6,7 +6,7 @@ import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { text_to } from "./text_to.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
+import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_expression_step_reason_of } from "./app_code_expression_step_reason_of.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_choose_order_run_worked(
   let step_text = text_to(step_value);
   let outer_symbol = property_get(tree, "operator");
   let step_symbol = property_get(step, "operator");
-  let stepped = app_code_expression_solved(tree, step);
+  let stepped = app_learn_js_expression_solved(tree, step);
   let stepped_code = app_learn_js_expression_code(stepped);
   let final_value = app_code_expression_value(tree);
   let final_text = text_to(final_value);

@@ -7,7 +7,7 @@ import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_
 import { app_learn_js_expression_node_parentheses_is } from "./app_learn_js_expression_node_parentheses_is.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
-import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
+import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_expression_operator_symbols } from "./app_learn_js_expression_operator_symbols.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_expression_step_reason } from "./app_code_expression_step_reason.mjs";
@@ -47,7 +47,7 @@ export function app_code_expression_step_reason_of(item, node) {
     return marks;
   }
   let symbol = property_get(node, "operator");
-  let solved = app_code_expression_solved(item, node);
+  let solved = app_learn_js_expression_solved(item, node);
   let remaining = app_learn_js_expression_operator_symbols(solved);
   let others = list_unique(remaining);
   let reason = app_code_expression_step_reason(symbol, others);
