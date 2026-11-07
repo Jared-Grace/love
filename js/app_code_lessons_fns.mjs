@@ -9,7 +9,7 @@ import { app_learn_js_lesson_identifiers_dollar_signs } from "./app_learn_js_les
 import { app_learn_js_lesson_identifiers_symbol_first } from "./app_learn_js_lesson_identifiers_symbol_first.mjs";
 import { app_learn_js_lesson_identifiers_symbol_first_unseparated } from "./app_learn_js_lesson_identifiers_symbol_first_unseparated.mjs";
 import { app_learn_js_lesson_operators_addition } from "./app_learn_js_lesson_operators_addition.mjs";
-import { app_code_lesson_operators_subtraction } from "./app_code_lesson_operators_subtraction.mjs";
+import { app_learn_js_lesson_operators_subtraction } from "./app_learn_js_lesson_operators_subtraction.mjs";
 import { app_learn_js_lesson_operators_multiplication } from "./app_learn_js_lesson_operators_multiplication.mjs";
 import { app_learn_js_lesson_operators_division } from "./app_learn_js_lesson_operators_division.mjs";
 import { app_learn_js_lesson_operators_minus } from "./app_learn_js_lesson_operators_minus.mjs";
@@ -370,7 +370,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_identifiers_symbol_first,
     app_learn_js_lesson_identifiers_symbol_first_unseparated,
     app_learn_js_lesson_operators_addition,
-    app_code_lesson_operators_subtraction,
+    app_learn_js_lesson_operators_subtraction,
     app_learn_js_lesson_operators_multiplication,
     app_learn_js_lesson_operators_division,
     app_learn_js_lesson_operators_minus,
