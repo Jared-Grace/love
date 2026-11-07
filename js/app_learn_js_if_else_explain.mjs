@@ -15,7 +15,7 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_if_else_program_lines } from "./app_code_if_else_program_lines.mjs";
-export function app_code_if_else_explain(root, context) {
+export function app_learn_js_if_else_explain(root, context) {
   arguments_assert(arguments, 2);
   ("if (a) beside if (!a) remembered, then the same program written with else, with a true and then false");
   ("The explanation of the Does this section run? before Else, at the human's asking 2026-10-11, since that lesson is now where else is first met. Else itself only remembers it, at the human's later asking the same day that each section-run lesson introduce its shape.");
