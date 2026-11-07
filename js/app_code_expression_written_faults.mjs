@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_press_steps } from "./app_code_expression_press_steps.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_meaning } from "./app_code_expression_meaning.mjs";
-import { app_code_expression_code_meaning } from "./app_code_expression_code_meaning.mjs";
+import { app_learn_js_expression_code_meaning } from "./app_learn_js_expression_code_meaning.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,7 +18,7 @@ export function app_code_expression_written_faults(item) {
     "one step: what the shape means, against what the line it printed means";
     let code = app_code_expression_code(step);
     let meant = app_code_expression_meaning(step);
-    let says = app_code_expression_code_meaning(code);
+    let says = app_learn_js_expression_code_meaning(code);
     let agree = equal(meant, says);
     if (not(agree)) {
       let fault = {
