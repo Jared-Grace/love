@@ -23,7 +23,11 @@ import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_quest
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
+export function app_learn_js_lesson_brace_lines_generic(
+  name_id,
+  above,
+  codes_get,
+) {
   arguments_assert(arguments, 3);
   ("a lesson on which lines stand between a pair of braces, over four of the programs codes_get hands back: one pair is drawn in a colour and the learner taps every line between its two braces, in the worked examples and in the quiz alike; asked for by the human 2026-10-11");
   ("The pair pointed at takes each { of the programs in turn rather than one at random, so a screen of an if inside an if asks for the pair around, holding the inner pair's lines too, as often as the pair inside, holding one line; a random choice could leave the pair around out of a screen, and it is the one that teaches. Changed 2026-10-11, when the human asked for the nested programs to be sure of being asked.");

@@ -10,7 +10,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_brace_lines_generic } from "./app_code_lesson_brace_lines_generic.mjs";
+import { app_learn_js_lesson_brace_lines_generic } from "./app_learn_js_lesson_brace_lines_generic.mjs";
 export function app_code_lesson_brace_lines_two() {
   arguments_assert(arguments, 0);
   ("which lines stand between a pair of braces, in programs with two pairs of braces: the learner taps every line between a { and the } that closes it");
@@ -51,6 +51,10 @@ export function app_code_lesson_brace_lines_two() {
     "The lines between braces, side by side",
     app_learn_js_braces_dots(),
   );
-  let lesson = app_code_lesson_brace_lines_generic(name_id, above, codes_get);
+  let lesson = app_learn_js_lesson_brace_lines_generic(
+    name_id,
+    above,
+    codes_get,
+  );
   return lesson;
 }

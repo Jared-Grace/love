@@ -8,7 +8,7 @@ import { app_code_lesson_brace_lines_two } from "./app_code_lesson_brace_lines_t
 import { app_learn_js_braces_two_nested } from "./app_learn_js_braces_two_nested.mjs";
 import { app_learn_js_brace_lines_example } from "./app_learn_js_brace_lines_example.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_brace_lines_generic } from "./app_code_lesson_brace_lines_generic.mjs";
+import { app_learn_js_lesson_brace_lines_generic } from "./app_learn_js_lesson_brace_lines_generic.mjs";
 export function app_code_lesson_brace_lines_two_nested() {
   arguments_assert(arguments, 0);
   ("which lines stand between a pair of braces, in programs with an if inside an if: the learner taps every line between a { and the } that closes it, for the outer pair and for the inner pair");
@@ -48,6 +48,10 @@ export function app_code_lesson_brace_lines_two_nested() {
     "The lines between braces, one inside the other",
     app_learn_js_braces_dots(),
   );
-  let lesson = app_code_lesson_brace_lines_generic(name_id, above, codes_get);
+  let lesson = app_learn_js_lesson_brace_lines_generic(
+    name_id,
+    above,
+    codes_get,
+  );
   return lesson;
 }

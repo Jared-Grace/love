@@ -8,7 +8,7 @@ import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_brace_lines_generic } from "./app_code_lesson_brace_lines_generic.mjs";
+import { app_learn_js_lesson_brace_lines_generic } from "./app_learn_js_lesson_brace_lines_generic.mjs";
 import { app_learn_js_brace_pair_programs_three } from "./app_learn_js_brace_pair_programs_three.mjs";
 export function app_code_lesson_brace_lines() {
   arguments_assert(arguments, 0);
@@ -43,7 +43,7 @@ export function app_code_lesson_brace_lines() {
     "The lines between braces",
     app_learn_js_braces_dots(),
   );
-  let lesson = app_code_lesson_brace_lines_generic(
+  let lesson = app_learn_js_lesson_brace_lines_generic(
     name_id,
     above,
     app_learn_js_brace_pair_programs_three,
