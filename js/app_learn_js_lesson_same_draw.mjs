@@ -7,7 +7,7 @@ import { app_code_lesson_same_which } from "./app_code_lesson_same_which.mjs";
 import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { app_learn_js_lesson_go } from "./app_learn_js_lesson_go.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_code_lesson_same_draw(
+export function app_learn_js_lesson_same_draw(
   parent,
   context,
   fn_reading,

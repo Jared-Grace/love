@@ -1,4 +1,4 @@
-import { app_code_lesson_same_draw } from "./app_code_lesson_same_draw.mjs";
+import { app_learn_js_lesson_same_draw } from "./app_learn_js_lesson_same_draw.mjs";
 import { app_learn_js_lesson_identifiers_symbol_first } from "./app_learn_js_lesson_identifiers_symbol_first.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_identifiers_symbol_first_unseparated() {
     html_text_set_code_dark,
   );
   function above(root, context) {
-    app_code_lesson_same_draw(
+    app_learn_js_lesson_same_draw(
       root,
       context,
       app_learn_js_lesson_identifiers_symbol_first_unseparated,

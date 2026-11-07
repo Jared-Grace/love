@@ -1,4 +1,4 @@
-import { app_code_lesson_same_draw } from "./app_code_lesson_same_draw.mjs";
+import { app_learn_js_lesson_same_draw } from "./app_learn_js_lesson_same_draw.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_expression } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_expression.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_expression_both_sides_any_comparison() {
   }
   function above(root, context) {
     "the card saying this telling is one already read, naming the lesson it came from, and then that lesson's telling itself";
-    app_code_lesson_same_draw(
+    app_learn_js_lesson_same_draw(
       root,
       context,
       app_learn_js_lesson_expression_both_sides_any_comparison,

@@ -1,4 +1,4 @@
-import { app_code_lesson_same_draw } from "./app_code_lesson_same_draw.mjs";
+import { app_learn_js_lesson_same_draw } from "./app_learn_js_lesson_same_draw.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength } from "./app_learn_js_lesson_expression_choose_order_same_strength.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength_operator_count } from "./app_learn_js_lesson_expression_choose_order_same_strength_operator_count.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_lesson_expression_three_steps_left_to_right() {
   }
   function above(root, context) {
     "the card saying this telling is the one already read, and then the pressing lesson's telling itself";
-    app_code_lesson_same_draw(
+    app_learn_js_lesson_same_draw(
       root,
       context,
       app_learn_js_lesson_expression_three_steps_left_to_right,
