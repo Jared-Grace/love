@@ -5,7 +5,7 @@ import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 import { app_code_lesson_expression_choose_order_same_strength_pair_questions } from "./app_code_lesson_expression_choose_order_same_strength_pair_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
-import { app_code_lesson_expression_choose_order_same_strength_pair_above } from "./app_code_lesson_expression_choose_order_same_strength_pair_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_same_strength_pair_above } from "./app_learn_js_lesson_expression_choose_order_same_strength_pair_above.mjs";
 export function app_code_lesson_expression_choose_order_same_strength_pair() {
   arguments_assert(arguments, 0);
   ("two operators of one strength on a line, pressed a part at a time: 8 - 2 + 4, choose the minus, choose 6, see 6 + 4, choose the plus, choose 10");
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_choose_order_same_strength_pair() {
     app_code_lesson_expression_choose_order_same_strength_pair_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
-    app_code_lesson_expression_choose_order_same_strength_pair_above,
+    app_learn_js_lesson_expression_choose_order_same_strength_pair_above,
     answer_draw,
     example_draw,
     bank,
