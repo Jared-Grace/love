@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
+import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
 import { app_code_symbols_separated_on_question_numbered_fifth } from "./app_code_symbols_separated_on_question_numbered_fifth.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "./app_code_lesson_symbols_letters_batch_get.mjs";
@@ -43,7 +43,7 @@ export function app_code_lesson_symbols_letters() {
     app_code_remember_from_lesson(
       container2,
       context,
-      app_code_lesson_symbols_digits,
+      app_learn_js_lesson_symbols_digits,
       ["numbers are examples of symbols"],
     );
     html_div_text(

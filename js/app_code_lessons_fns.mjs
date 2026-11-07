@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_lesson_symbols_digits_numbered.mjs";
 import { app_learn_js_lesson_symbols_digit_number } from "./app_learn_js_lesson_symbols_digit_number.mjs";
-import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
+import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
 import { app_code_lesson_symbols_letters } from "./app_code_lesson_symbols_letters.mjs";
 import { app_code_lesson_symbols_space } from "./app_code_lesson_symbols_space.mjs";
 import { app_learn_js_lesson_identifiers_letters_spaces } from "./app_learn_js_lesson_identifiers_letters_spaces.mjs";
@@ -361,7 +361,7 @@ export function app_code_lessons_fns() {
   let fns = [
     app_learn_js_lesson_symbols_digits_numbered,
     app_learn_js_lesson_symbols_digit_number,
-    app_code_lesson_symbols_digits,
+    app_learn_js_lesson_symbols_digits,
     app_code_lesson_symbols_letters,
     app_code_lesson_symbols_space,
     app_learn_js_lesson_identifiers_letters_spaces,
