@@ -4,7 +4,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_operators_dot_numbers } from "./app_code_lesson_operators_dot_numbers.mjs";
 import { app_learn_js_div_code_multiple } from "./app_learn_js_div_code_multiple.mjs";
 import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_operator.mjs";
-import { app_code_lesson_operators_dot_batch_numbers } from "./app_code_lesson_operators_dot_batch_numbers.mjs";
+import { app_learn_js_lesson_operators_dot_batch_numbers } from "./app_learn_js_lesson_operators_dot_batch_numbers.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text_common } from "./app_code_lesson_operators_dot_numbers_both_sides_text_common.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "./app_code_lesson_operators_dot_numbers_example.mjs";
@@ -16,7 +16,7 @@ import { js_operator_dot } from "./js_operator_dot.mjs";
 export function app_code_lesson_operators_dot_missing() {
   let operator = js_operator_dot();
   let name_rights = ["property access", "missing"];
-  let batch = app_code_lesson_operators_dot_batch_numbers(operator);
+  let batch = app_learn_js_lesson_operators_dot_batch_numbers(operator);
   function above(root, context) {
     app_learn_js_container_light_blue_cycle_code(root, [
       "For this lesson, ",
