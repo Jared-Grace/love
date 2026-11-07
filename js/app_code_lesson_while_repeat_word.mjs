@@ -6,7 +6,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_while_increment } from "./app_code_lesson_while_increment.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_repeat_word_up_generic } from "./app_code_lesson_repeat_word_up_generic.mjs";
+import { app_learn_js_lesson_repeat_word_up_generic } from "./app_learn_js_lesson_repeat_word_up_generic.mjs";
 export function app_code_lesson_while_repeat_word() {
   arguments_assert(arguments, 0);
   ('a while that writes out the same word each run: let n = 0; while (n < 3) { console.log("joy"); n++; } writes out joy three times');
@@ -40,7 +40,7 @@ export function app_code_lesson_while_repeat_word() {
     "The same word each run",
     '{ console.log("joy"); n++; }',
   );
-  let lesson = app_code_lesson_repeat_word_up_generic(
+  let lesson = app_learn_js_lesson_repeat_word_up_generic(
     program_write,
     above,
     name_id,
