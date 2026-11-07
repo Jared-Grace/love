@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
+import { app_learn_js_lesson_expression_comparison } from "./app_learn_js_lesson_expression_comparison.mjs";
 import { app_learn_js_comparison_pair_inequality } from "./app_learn_js_comparison_pair_inequality.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_not_equal() {
     ];
     return parts;
   }
-  let lesson = app_code_lesson_expression_comparison({
+  let lesson = app_learn_js_lesson_expression_comparison({
     operator,
     question_middle: "different from",
     pair,

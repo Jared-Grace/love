@@ -4,7 +4,7 @@ import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
+import { app_learn_js_lesson_expression_comparison } from "./app_learn_js_lesson_expression_comparison.mjs";
 export function app_learn_js_lesson_expression_comparison_equal_generic(words) {
   "the shared body of the two lessons teaching a comparison that also accepts equal (>= and <=): one strict relation makes it true, equal makes it true, the opposite relation makes it false";
   "The two differ in three things and nothing else: which strict relation counts as";
@@ -56,7 +56,7 @@ export function app_learn_js_lesson_expression_comparison_equal_generic(words) {
       true_ordering,
     );
   let rights = [middle_words];
-  let lesson = app_code_lesson_expression_comparison({
+  let lesson = app_learn_js_lesson_expression_comparison({
     operator,
     question_middle: middle_words,
     name_id_rights: rights,
