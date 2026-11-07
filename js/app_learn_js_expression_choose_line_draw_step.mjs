@@ -4,7 +4,7 @@ import { app_code_expression_nodes_ready_first } from "./app_code_expression_nod
 import { app_learn_js_expression_choose_line_draw_on_operator } from "./app_learn_js_expression_choose_line_draw_on_operator.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_paint } from "./app_code_expression_paint.mjs";
-export function app_code_expression_choose_line_draw_step({
+export function app_learn_js_expression_choose_line_draw_step({
   stepped_from,
   current,
   on_wrong,
