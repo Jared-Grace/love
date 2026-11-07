@@ -28,7 +28,7 @@ import { property_exists } from "./property_exists.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
 import { app_learn_js_decoys_near_add } from "./app_learn_js_decoys_near_add.mjs";
 import { app_learn_js_expression_chosen_background_color } from "./app_learn_js_expression_chosen_background_color.mjs";
-import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
+import { app_learn_js_lesson_quiz_wrong_code_background_color } from "./app_learn_js_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 import { property_set } from "./property_set.mjs";
@@ -284,7 +284,7 @@ export function app_code_program_step_through_generic(
     return near_added;
   }
   let highlight = app_learn_js_expression_chosen_background_color();
-  let wrong_color = app_code_lesson_quiz_wrong_code_background_color();
+  let wrong_color = app_learn_js_lesson_quiz_wrong_code_background_color();
   function rows_plain() {
     for (let row of rows) {
       html_style_background_color_set(row, "transparent");

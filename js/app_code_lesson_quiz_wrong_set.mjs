@@ -1,4 +1,4 @@
-import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
+import { app_learn_js_lesson_quiz_wrong_code_background_color } from "./app_learn_js_lesson_quiz_wrong_code_background_color.mjs";
 import { app_shared_button_verdict_color_paint } from "./app_shared_button_verdict_color_paint.mjs";
 import { app_learn_js_expression_chip_border_width } from "./app_learn_js_expression_chip_border_width.mjs";
 import { app_learn_js_lesson_quiz_wrong_background_color } from "./app_learn_js_lesson_quiz_wrong_background_color.mjs";
@@ -10,7 +10,7 @@ export function app_code_lesson_quiz_wrong_set(component) {
   ("mark the thing a learner has just pressed as the one that cannot go: filled red, lettered white, and edged in that same red");
   ("The edge is coloured with the fill rather than left as it was. A red fill still ringed in the grey it wore a moment ago reads as the old thing with a red light shone on it; coloured through, it is one thing, and one thing is what the answer is about.");
   let color = app_learn_js_lesson_quiz_wrong_background_color();
-  let color_code = app_code_lesson_quiz_wrong_code_background_color();
+  let color_code = app_learn_js_lesson_quiz_wrong_code_background_color();
   let coded = app_shared_button_verdict_color_paint(
     component,
     color,
