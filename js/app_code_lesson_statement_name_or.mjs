@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
-import { app_code_lesson_expression_or } from "./app_code_lesson_expression_or.mjs";
+import { app_learn_js_lesson_expression_or } from "./app_learn_js_lesson_expression_or.mjs";
 export function app_code_lesson_statement_name_or() {
   arguments_assert(arguments, 0);
   ("two names joined with or: let a = true; let b = false; let a_or_b = a || b; console.log(a_or_b); writes out true");
@@ -25,7 +25,7 @@ export function app_code_lesson_statement_name_or() {
     symbol,
     pairs_get,
     example_pair: [false, true],
-    remember_lesson: app_code_lesson_expression_or,
+    remember_lesson: app_learn_js_lesson_expression_or,
     remember_parts: [
       "we can ask whether at least one side is true (",
       symbol,

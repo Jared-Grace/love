@@ -9,7 +9,7 @@ import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
-export function app_code_lesson_expression_or() {
+export function app_learn_js_lesson_expression_or() {
   let symbol = js_operator_or_symbol();
   let pair = app_learn_js_binary_pair_boolean(or);
   let next_arg = app_learn_js_binary_next_arg(symbol, pair);
