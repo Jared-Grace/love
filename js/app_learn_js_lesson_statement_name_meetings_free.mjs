@@ -22,7 +22,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_statement_name_meeting_ended } from "./app_learn_js_lesson_statement_name_meeting_ended.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_meetings_free() {
+export function app_learn_js_lesson_statement_name_meetings_free() {
   arguments_assert(arguments, 0);
   ("how many hours are free between two meetings, once the first has ended by the time the second starts: let free = s2 - e1; - picked by Claude 2026-10-05 when the human asked for the next lesson, named in Has one meeting ended by the time another starts as the step that needs that check first. In DSA it is the gap between two intervals sorted by start, the free time found between each meeting and the next.");
   ("Not picked: a rectangle left of another, which is the ended check across and can follow this; the number of meetings going on at once, which needs a loop; and holding a negative gap at 0 with Math.max, which How long two meetings overlap already teaches. Every pair asked here has the first meeting ended by the time the second starts, so the answer is never negative and the lesson stays one subtraction.");
