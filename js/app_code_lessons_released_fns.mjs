@@ -83,7 +83,7 @@ import { app_learn_js_lesson_expression_absolute_value } from "./app_learn_js_le
 import { app_code_lesson_expression_smaller } from "./app_code_lesson_expression_smaller.mjs";
 import { app_code_lesson_expression_larger } from "./app_code_lesson_expression_larger.mjs";
 import { app_code_lesson_expression_min_max_of_three } from "./app_code_lesson_expression_min_max_of_three.mjs";
-import { app_code_lesson_expression_equal_true_false } from "./app_code_lesson_expression_equal_true_false.mjs";
+import { app_learn_js_lesson_expression_equal_true_false } from "./app_learn_js_lesson_expression_equal_true_false.mjs";
 import { app_code_lesson_expression_not_equal_true_false } from "./app_code_lesson_expression_not_equal_true_false.mjs";
 import { app_learn_js_lesson_expression_equal_number_string_true_false } from "./app_learn_js_lesson_expression_equal_number_string_true_false.mjs";
 import { app_learn_js_lesson_expression_choose_order_compare } from "./app_learn_js_lesson_expression_choose_order_compare.mjs";
@@ -396,7 +396,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_expression_smaller,
     app_code_lesson_expression_larger,
     app_code_lesson_expression_min_max_of_three,
-    app_code_lesson_expression_equal_true_false,
+    app_learn_js_lesson_expression_equal_true_false,
     app_code_lesson_expression_not_equal_true_false,
     app_learn_js_lesson_expression_equal_number_string_true_false,
     app_learn_js_lesson_expression_choose_order_compare,
