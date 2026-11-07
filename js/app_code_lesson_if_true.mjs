@@ -15,7 +15,7 @@ import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_functions_console_log_string } from "./app_code_lesson_functions_console_log_string.mjs";
+import { app_learn_js_lesson_functions_console_log_string } from "./app_learn_js_lesson_functions_console_log_string.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_keyword_if } from "./js_keyword_if.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -101,7 +101,7 @@ export function app_code_lesson_if_true() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_functions_console_log_string,
+      app_learn_js_lesson_functions_console_log_string,
       ["a line can write out a string:"],
     );
     app_learn_js_code_lines_writes_out(box_one, [statement], shown);
