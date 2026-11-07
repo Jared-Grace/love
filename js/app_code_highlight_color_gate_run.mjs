@@ -20,7 +20,7 @@ export async function app_code_highlight_color_gate_run() {
     readings,
     path,
     "the pointing colours measure differently than they did - read these against the ones that went away, decide whether the change is wanted, and bank it if it is",
-    fn_name("app_code_highlight_color_baseline_write"),
+    fn_name("app_learn_js_highlight_color_baseline_write"),
   );
   let added = property_get(told, "added");
   let stale = property_get(told, "stale");

@@ -37,7 +37,7 @@ export function baseline_writers_growth_exempt() {
       why: "its record is of readings and not of offences, so growth there is not a fault being written away. A fifth chip colour honestly produces more readings - three for itself and four more for every pair it makes - and refusing those would refuse the very case the gate was built to notice. The teeth are not in the writer but in who runs it and when: running it makes the gate green whatever the palette now says, and what that buys is only that the change cannot happen quietly, since the readings land in a commit as a plain diff of before and after",
     },
     {
-      f_name: fn_name("app_code_highlight_color_baseline_write"),
+      f_name: fn_name("app_learn_js_highlight_color_baseline_write"),
       why: "the same reason as its twin over the chip palette, and for the same record shape: readings rather than offences, where a fourth pointing colour honestly makes more of them. The one in this family that does hold faults refuses growth instead, so the three of them together are the argument rather than an inconsistency - what a record holds decides which way its ratchet turns",
     },
     {
