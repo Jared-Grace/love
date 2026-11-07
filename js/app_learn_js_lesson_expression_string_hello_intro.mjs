@@ -5,7 +5,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_string_shape } from "./app_code_string_shape.mjs";
-export function app_code_lesson_expression_string_hello_intro(
+export function app_learn_js_lesson_expression_string_hello_intro(
   root,
   quote,
   code,

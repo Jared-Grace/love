@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_expression_string_hello_define } from "./app_learn_js_lesson_expression_string_hello_define.mjs";
-import { app_code_lesson_expression_string_hello_intro } from "./app_code_lesson_expression_string_hello_intro.mjs";
+import { app_learn_js_lesson_expression_string_hello_intro } from "./app_learn_js_lesson_expression_string_hello_intro.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -10,6 +10,6 @@ export function app_learn_js_lesson_expression_string_hello_above(root, quote) {
   let list = fruits_of_the_spirit();
   let word = list_random_item(list);
   let code = app_code_string_code(word);
-  app_code_lesson_expression_string_hello_intro(root, quote, code);
+  app_learn_js_lesson_expression_string_hello_intro(root, quote, code);
   app_learn_js_lesson_expression_string_hello_define(root, word);
 }
