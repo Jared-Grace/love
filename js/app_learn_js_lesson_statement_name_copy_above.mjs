@@ -10,7 +10,7 @@ import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_learn_js_lesson_cups_copy_story } from "./app_learn_js_lesson_cups_copy_story.mjs";
-import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
+import { app_learn_js_lesson_statement_name_copy_code_box } from "./app_learn_js_lesson_statement_name_copy_code_box.mjs";
 export function app_learn_js_lesson_statement_name_copy_above(root, context) {
   arguments_assert(arguments, 2);
   ("the cup boxes read before the first question: two cups got and then filled, a third cup got and then filled from one of them, and nothing taken out of anything");
@@ -77,7 +77,7 @@ export function app_learn_js_lesson_statement_name_copy_above(root, context) {
     name_copy,
     names,
   );
-  app_code_lesson_statement_name_copy_code_box(
+  app_learn_js_lesson_statement_name_copy_code_box(
     root,
     cup_first,
     cup_last,

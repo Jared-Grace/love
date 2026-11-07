@@ -16,7 +16,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_note_names_marked } from "./app_code_note_names_marked.mjs";
 import { app_learn_js_lesson_name_no_quotes_box } from "./app_learn_js_lesson_name_no_quotes_box.mjs";
-export function app_code_lesson_statement_name_copy_code_box(
+export function app_learn_js_lesson_statement_name_copy_code_box(
   root,
   cup_first,
   cup_last,
