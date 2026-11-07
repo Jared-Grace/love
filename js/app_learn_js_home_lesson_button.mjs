@@ -10,7 +10,7 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
 import { app_code_lesson_title_render } from "./app_code_lesson_title_render.mjs";
-export function app_code_home_lesson_button(
+export function app_learn_js_home_lesson_button(
   g,
   context,
   item,

@@ -15,7 +15,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_home_group_card } from "./app_learn_js_home_group_card.mjs";
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_home_lesson_button } from "./app_code_home_lesson_button.mjs";
+import { app_learn_js_home_lesson_button } from "./app_learn_js_home_lesson_button.mjs";
 import { app_code_home_way_marked_next } from "./app_code_home_way_marked_next.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_home_just_left_next } from "./app_learn_js_home_just_left_next.mjs";
@@ -71,7 +71,7 @@ export async function app_code_home(context) {
     if (not(complete)) {
       group.complete = false;
     }
-    let r3 = app_code_home_lesson_button(
+    let r3 = app_learn_js_home_lesson_button(
       body,
       context,
       item,
