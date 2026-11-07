@@ -7,7 +7,7 @@ import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_express
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_expression } from "./app_learn_js_lesson_expression_choose_order_operators_expression.mjs";
-import { app_code_lesson_expression_choose_order_operators_intro } from "./app_code_lesson_expression_choose_order_operators_intro.mjs";
+import { app_learn_js_lesson_expression_choose_order_operators_intro } from "./app_learn_js_lesson_expression_choose_order_operators_intro.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
@@ -85,5 +85,5 @@ export function app_learn_js_lesson_expression_choose_order_operators_above(
     final_text,
   ]);
   let change_card = app_learn_js_container_light_blue(root);
-  app_code_lesson_expression_choose_order_operators_intro(change_card);
+  app_learn_js_lesson_expression_choose_order_operators_intro(change_card);
 }
