@@ -11,7 +11,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_token_order_generic } from "./app_code_lesson_token_order_generic.mjs";
 import { app_code_lesson_token_order_example_choose_braces } from "./app_code_lesson_token_order_example_choose_braces.mjs";
-import { app_code_lesson_quiz_tokens_tap_braces_colored } from "./app_code_lesson_quiz_tokens_tap_braces_colored.mjs";
+import { app_learn_js_lesson_quiz_tokens_tap_braces_colored } from "./app_learn_js_lesson_quiz_tokens_tap_braces_colored.mjs";
 export function app_code_lesson_token_order_braces_colored() {
   arguments_assert(arguments, 0);
   ("the order of the tokens with the braces coloured: the same choosing as The order of the tokens, with no blue, except the braces of the code wear a colour, and under every token chosen the braces chosen are written out on a line of their own, in the colour they wear");
@@ -57,7 +57,7 @@ export function app_code_lesson_token_order_braces_colored() {
     name_id,
     above,
     app_code_lesson_token_order_example_choose_braces,
-    app_code_lesson_quiz_tokens_tap_braces_colored,
+    app_learn_js_lesson_quiz_tokens_tap_braces_colored,
   );
   return lesson;
 }
