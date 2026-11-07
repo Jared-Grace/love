@@ -24,7 +24,7 @@ import { modulo } from "./modulo.mjs";
 import { equal } from "./equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_code_chair_grid(parent, count, width, marked) {
+export function app_learn_js_chair_grid(parent, count, width, marked) {
   arguments_assert(arguments, 4);
   ("$plain marked");
   ("a picture of chairs numbered from 0 in rows of width: row numbers down the left in the third pointing colour, column numbers across the top in the fourth, each a code chip as numbers in the writing are, every chair in a whole row before the marked chair's row filled blue and the marked chair filled green, so a reader can count the chairs that come before it");

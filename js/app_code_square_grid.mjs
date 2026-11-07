@@ -21,7 +21,7 @@ import { html_div_text } from "./html_div_text.mjs";
 export function app_code_square_grid(parent, rows, columns, headings, marks) {
   arguments_assert(arguments, 5);
   ("a picture of empty squares in rows and columns, as the chair pictures draw chairs: when headings is true the row numbers go down the left in the third pointing colour and the column numbers across the top in the fourth, each a code chip, as ",
-    fn_name("app_code_chair_grid"),
+    fn_name("app_learn_js_chair_grid"),
     " draws them. marks is a list of [row, column, text, color]: that square shows the text - or, when text is a function, the function draws into the square, as an arrow is drawn - and is filled with the color unless the color is null");
   let extra = headings ? 1 : 0;
   let grid = html_div(parent);

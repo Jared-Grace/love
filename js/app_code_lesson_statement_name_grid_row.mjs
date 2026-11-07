@@ -11,7 +11,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_middle_step } from "./app_code_lesson_statement_name_middle_step.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_chair_grid } from "./app_code_chair_grid.mjs";
+import { app_learn_js_chair_grid } from "./app_learn_js_chair_grid.mjs";
 import { app_code_chair_line_pointed } from "./app_code_chair_line_pointed.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
@@ -75,7 +75,7 @@ export function app_code_lesson_statement_name_grid_row() {
   }
   function grid_draw(box) {
     "chair 7 among 9 chairs in rows of 3";
-    app_code_chair_grid(box, 9, 3, 7);
+    app_learn_js_chair_grid(box, 9, 3, 7);
   }
   let pointed = app_code_chair_line_pointed;
   let color_before = app_code_highlight_color();
