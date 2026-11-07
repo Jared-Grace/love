@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_total_title_name_id } from "./app_code_lesson_statement_name_total_title_name_id.mjs";
+import { app_learn_js_lesson_statement_name_total_title_name_id } from "./app_learn_js_lesson_statement_name_total_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_statement_name_total_batch } from "./app_learn_js_lesson_statement_name_total_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_statement_name_total() {
   ("So the new fact is not a new rule. It is the rule that a name may be given a value, meeting a value that has to be worked out first - and the whole screen exists because a learner who has only ever been given a value already written out has no reason yet to believe the sum will be done before the name is filled.");
   ("A third name rather than one of the two. Given back to the first name, the line would be reading a cup and filling the same cup, and a learner would have two things to work out at once when this screen is asking about one.");
   ("Numbers rather than the words the earlier screens use, for the same reason as the screen before: a plus between two pieces of text does something a learner has never been told about, and it would be the second new thing on a screen that has one.");
-  let name_id = app_code_lesson_statement_name_total_title_name_id();
+  let name_id = app_learn_js_lesson_statement_name_total_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
     app_learn_js_lesson_statement_name_total_batch,
     eval_console_log_to_list,

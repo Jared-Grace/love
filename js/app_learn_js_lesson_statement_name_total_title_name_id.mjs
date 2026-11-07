@@ -6,7 +6,7 @@ import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-export function app_code_lesson_statement_name_total_title_name_id() {
+export function app_learn_js_lesson_statement_name_total_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: naming what two names add up to, followed by the line that does it");
   ("The line shown is the whole lesson, and what makes it that line is what is standing on the right of the equals - a sum, where every title before it has a value or a single name. The lesson before this one put a sum inside console.log; this one puts the same sum where a value goes.");
