@@ -6,7 +6,7 @@ import { app_learn_js_lesson_for_increment } from "./app_learn_js_lesson_for_inc
 import { app_code_lesson_increment_log_options } from "./app_code_lesson_increment_log_options.mjs";
 import { app_code_lesson_update_log_generic } from "./app_code_lesson_update_log_generic.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
-export function app_code_lesson_for_up_to() {
+export function app_learn_js_lesson_for_up_to() {
   arguments_assert(arguments, 0);
   ("<= in a for: for (let n = 1; n <= 3; n++) { console.log(n); } writes out 1, 2 and 3, the same as for (let n = 1; n < 4; n++) { console.log(n); } from For adding one");
   ("The one new fact is that < leaves out the number it is compared with and <= includes it, seen in a for.");
