@@ -12,7 +12,7 @@ import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_digit_rest } from "./app_code_lesson_statement_name_digit_rest.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
@@ -94,7 +94,7 @@ export function app_code_lesson_statement_name_digit_append() {
   let v5 = pointed(["Then adding the digit fills in that ", "0", ":"]);
   let code2 = js_code_binary_result_nb("120", plus, "3", "123");
   let v6 = pointed(["", code2]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Last digit put back",
     title_code: line_n,
     names,

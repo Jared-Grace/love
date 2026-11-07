@@ -32,7 +32,7 @@ import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_co
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
 export function app_code_lesson_statement_name_grid_index() {
   arguments_assert(arguments, 0);
@@ -184,7 +184,7 @@ export function app_code_lesson_statement_name_grid_index() {
   let v9 = pointed([
     "Now we go the other way: from a row and column to the chair number",
   ]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Chair number from row and column",
     title_code: line_start,
     names,

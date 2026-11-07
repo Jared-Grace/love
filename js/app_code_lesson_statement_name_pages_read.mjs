@@ -8,7 +8,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rows_down } from "./app_code_lesson_statement_name_rows_down.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_pages_read() {
@@ -60,7 +60,7 @@ export function app_code_lesson_statement_name_pages_read() {
   }
   let subtracted = js_code_binary_result_nb("7", minus, "3", "4");
   let added = js_code_binary_result_nb("4", plus, "1", "5");
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Pages read",
     title_code: line_pages,
     names,

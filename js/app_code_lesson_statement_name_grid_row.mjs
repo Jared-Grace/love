@@ -21,7 +21,7 @@ import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_middle } from "./app_code_lesson_statement_name_middle.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
@@ -182,7 +182,7 @@ export function app_code_lesson_statement_name_grid_row() {
   ]);
   let v14 = worded(["", row_formula]);
   let color4 = app_learn_js_highlight_color_fourth();
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Row of a chair",
     title_code: row_formula,
     names,

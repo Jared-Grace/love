@@ -9,7 +9,7 @@ import { app_code_lesson_statement_name_average_three_step } from "./app_code_le
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
 export function app_code_lesson_statement_name_average_three() {
   arguments_assert(arguments, 0);
@@ -48,7 +48,7 @@ export function app_code_lesson_statement_name_average_three() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Average of three names",
     title_code: line_average,
     names,

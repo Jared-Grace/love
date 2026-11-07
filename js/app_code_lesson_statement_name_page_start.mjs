@@ -8,7 +8,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_last_seat } from "./app_code_lesson_statement_name_last_seat.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_page_start() {
@@ -59,7 +59,7 @@ export function app_code_lesson_statement_name_page_start() {
   }
   let pages_before = js_code_binary_result_nb("3", minus, "1", "2");
   let photos_before = js_code_binary_result_nb("2", times, "10", "20");
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "First photo on a page",
     title_code: line_first,
     names,

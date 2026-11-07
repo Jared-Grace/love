@@ -19,7 +19,7 @@ import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_col
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_meetings_free() {
@@ -242,7 +242,7 @@ export function app_code_lesson_statement_name_meetings_free() {
   let code_said = app_learn_js_explain_said([
     "Here is code that finds how many hours are free between the meetings:",
   ]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "How many hours are free between two meetings",
     title_code: line_free,
     names,

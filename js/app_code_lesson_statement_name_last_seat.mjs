@@ -9,7 +9,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_pages_read } from "./app_code_lesson_statement_name_pages_read.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_last_seat() {
@@ -53,7 +53,7 @@ export function app_code_lesson_statement_name_last_seat() {
   let emoji = app_learn_js_chair_emoji();
   let worked = js_code_binary_result_nb("5", minus, "1", "4");
   let combined = text_combine(" seats ", emoji);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Last seat",
     title_code: line_last,
     names,

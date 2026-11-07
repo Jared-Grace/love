@@ -17,7 +17,7 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_digit_split } from "./app_code_lesson_statement_name_digit_split.mjs";
 export function app_code_lesson_statement_name_digit_rest() {
   arguments_assert(arguments, 0);
@@ -135,7 +135,7 @@ export function app_code_lesson_statement_name_digit_rest() {
     ".",
     ":",
   ]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "All but the last digit",
     title_code: line_rest,
     names,

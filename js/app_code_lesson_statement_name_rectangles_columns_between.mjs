@@ -19,7 +19,7 @@ import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_c
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_rows_between } from "./app_code_lesson_statement_name_rectangles_rows_between.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangles_columns_between() {
@@ -263,7 +263,7 @@ export function app_code_lesson_statement_name_rectangles_columns_between() {
   let code_said = app_learn_js_explain_said([
     "Here is code that finds how many columns are between the rectangles:",
   ]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "How many columns are between two rectangles",
     title_code: line_between,
     names,

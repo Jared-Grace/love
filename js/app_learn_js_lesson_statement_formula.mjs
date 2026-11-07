@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
-export function app_code_lesson_statement_formula({
+export function app_learn_js_lesson_statement_formula({
   words,
   title_code,
   names,

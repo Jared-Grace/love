@@ -19,7 +19,7 @@ import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_c
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangles_cover_together() {
@@ -221,7 +221,7 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
     ", and they share ",
     v9,
   ]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "How many squares two rectangles cover together",
     title_code: line_together,
     names,

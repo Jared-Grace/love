@@ -8,7 +8,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_clock_next } from "./app_code_lesson_statement_name_clock_next.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_clock_back() {
@@ -56,7 +56,7 @@ export function app_code_lesson_statement_name_clock_back() {
   let code2 = js_code_binary_result_nb("33", percent, day, "9");
   let code3 = js_code_binary_result_nb("0", plus, "23", "23");
   let code4 = js_code_binary_result_nb("23", percent, day, "23");
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Previous hour on a 24-hour clock",
     title_code: line_back,
     names,

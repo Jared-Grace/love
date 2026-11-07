@@ -8,7 +8,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_subtract } from "./app_code_lesson_statement_name_subtract.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -57,7 +57,7 @@ export function app_code_lesson_statement_name_rows_down() {
   let emoji = app_learn_js_chair_emoji();
   let worked = js_code_binary_result_nb("5", minus, "2", "3");
   let combined = text_combine("Suppose there are rows of chairs ", emoji);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Rows down",
     title_code: line_rows,
     names,

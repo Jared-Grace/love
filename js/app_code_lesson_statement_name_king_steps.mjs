@@ -26,7 +26,7 @@ import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_square_edged } from "./app_code_square_edged.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_grid_steps } from "./app_code_lesson_statement_name_grid_steps.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_king_steps() {
@@ -322,7 +322,7 @@ export function app_code_lesson_statement_name_king_steps() {
     " square down, then we will travel to the second position ",
     draw37,
   ]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "King steps on a grid",
     title_code: line_steps,
     names,

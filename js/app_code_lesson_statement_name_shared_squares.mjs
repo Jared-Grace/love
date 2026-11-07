@@ -20,7 +20,7 @@ import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_overlap } from "./app_code_lesson_statement_name_rectangles_overlap.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_shared_squares() {
@@ -228,7 +228,7 @@ export function app_code_lesson_statement_name_shared_squares() {
     share_word,
     ":",
   ]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "How many squares two rectangles share",
     title_code: line_area,
     names,

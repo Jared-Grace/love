@@ -19,7 +19,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_expression_integer_division } from "./app_learn_js_lesson_expression_integer_division.mjs";
 import { app_code_line_ends_middle_draw } from "./app_code_line_ends_middle_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
@@ -172,7 +172,7 @@ export function app_code_lesson_statement_name_middle() {
   }
   let color = app_learn_js_highlight_color();
   let color2 = app_learn_js_highlight_color_second();
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Middle of two names",
     title_code: js_code_call_args(floor_name, [combined]),
     names,

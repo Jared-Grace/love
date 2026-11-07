@@ -16,7 +16,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_multiply } from "./app_code_lesson_statement_name_multiply.mjs";
 export function app_code_lesson_statement_name_sum_to() {
   arguments_assert(arguments, 0);
@@ -94,7 +94,7 @@ export function app_code_lesson_statement_name_sum_to() {
     up_to,
     " together",
   ]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Adding 1 up to n",
     title_code: line_sum,
     names,

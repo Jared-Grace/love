@@ -19,7 +19,7 @@ import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_code_lesson_statement_min_max_mixed_decoys } from "./app_code_lesson_statement_min_max_mixed_decoys.mjs";
 export function app_code_lesson_statement_name_meetings_join() {
@@ -155,7 +155,7 @@ export function app_code_lesson_statement_name_meetings_join() {
       " for the end",
     ]);
   }
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Join two overlapping meetings",
     title_code: line_end,
     names,

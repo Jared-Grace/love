@@ -9,7 +9,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_expression_round_up } from "./app_learn_js_lesson_expression_round_up.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_egg_boxes() {
@@ -54,7 +54,7 @@ export function app_code_lesson_statement_name_egg_boxes() {
   let up = js_code_binary_spaced_nb(left, same, "3");
   let left2 = js_code_call_args(ceil_name, ["2"]);
   let kept = js_code_binary_spaced_nb(left2, same, "2");
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Boxes for eggs",
     title_code: line_boxes,
     names,

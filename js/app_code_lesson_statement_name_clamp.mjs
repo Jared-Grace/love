@@ -5,7 +5,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_expression_larger } from "./app_learn_js_lesson_expression_larger.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_clamp() {
@@ -55,7 +55,7 @@ export function app_code_lesson_statement_name_clamp() {
   let min_inside = js_code_call_args(min_name, ["22", "30"]);
   let max_t = js_code_call_args(max_name, [t, "10"]);
   let min_t = js_code_call_args(min_name, [t, "30"]);
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Keep a heater's setting in range",
     title_code: line_t,
     names,

@@ -9,7 +9,7 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_expression_absolute_value } from "./app_learn_js_lesson_expression_absolute_value.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rows_apart() {
@@ -57,7 +57,7 @@ export function app_code_lesson_statement_name_rows_apart() {
   let removed = js_code_binary_spaced_nb(left, same, "3");
   let left2 = js_code_call_args(math_abs, ["3"]);
   let kept = js_code_binary_spaced_nb(left2, same, "3");
-  let lesson = app_code_lesson_statement_formula({
+  let lesson = app_learn_js_lesson_statement_formula({
     words: "Rows apart",
     title_code: line_rows,
     names,
