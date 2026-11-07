@@ -23,7 +23,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_statement_name_rectangles_overlap } from "./app_learn_js_lesson_statement_name_rectangles_overlap.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_shared_squares() {
+export function app_learn_js_lesson_statement_name_shared_squares() {
   arguments_assert(arguments, 0);
   ("how many squares two overlapping rectangles share: let width = right - left; let height = bottom - top; let area = width * height; - chosen by Claude 2026-10-04, when the human asked for the next lesson after Do two rectangles overlap. In DSA it is the area of the intersection of two rectangles, used to measure how much two boxes cover each other.");
   ("It starts from the shared part's four edges, as Do two rectangles overlap does, so that lesson is the reminder and the new idea is only that a width times a height counts the squares. Every pair asked overlaps, so width and height are never negative; the Math.max floor of How long two meetings overlap, which a pair that does not overlap needs, is left for a later lesson, so this one teaches one step. Not picked: let area = Math.max(right - left, 0) * Math.max(bottom - top, 0);, which is far past 30 characters and asks two new ideas at once.");

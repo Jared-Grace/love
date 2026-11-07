@@ -28,7 +28,7 @@ import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_refere
 import { app_learn_js_lesson_statement_name_overlap_hours } from "./app_learn_js_lesson_statement_name_overlap_hours.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
+import { app_learn_js_lesson_statement_name_shared_squares } from "./app_learn_js_lesson_statement_name_shared_squares.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_learn_js_lesson_statement_name_shared_squares_none() {
   arguments_assert(arguments, 0);
@@ -340,7 +340,7 @@ export function app_learn_js_lesson_statement_name_shared_squares_none() {
     values_get,
     example_values: [-1, -1],
     step,
-    remember_lesson: app_code_lesson_statement_name_shared_squares,
+    remember_lesson: app_learn_js_lesson_statement_name_shared_squares,
     remember_parts: ["we can find how many squares two rectangles share:"],
     remember_lines,
     explain: [
