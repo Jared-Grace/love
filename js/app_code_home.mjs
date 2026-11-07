@@ -1,5 +1,5 @@
 import { html_clear_context } from "./html_clear_context.mjs";
-import { app_code_home_value } from "./app_code_home_value.mjs";
+import { app_learn_js_home_value } from "./app_learn_js_home_value.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
@@ -30,7 +30,7 @@ import { app_learn_js_home_just_left_center } from "./app_learn_js_home_just_lef
 export async function app_code_home(context) {
   "on returning home the row just left is scrolled to the vertical center, so the learner lands back where they were - and that row is the review checkpoint where a review is what they came back from, and the lesson (its id is remembered in lesson_id) otherwise";
   let root = html_clear_context(context);
-  let r = app_code_home_value(root, context);
+  let r = app_learn_js_home_value(root, context);
   let value = property_get(r, "value");
   let div = property_get(r, "div");
   let g = property_get(r, "g");

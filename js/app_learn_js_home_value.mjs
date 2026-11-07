@@ -7,7 +7,7 @@ import { not } from "./not.mjs";
 import { app_learn_js_home_start_button } from "./app_learn_js_home_start_button.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
-export function app_code_home_value(root, context) {
+export function app_learn_js_home_value(root, context) {
   arguments_assert(arguments, 2);
   let frame = app_learn_js_home_bar_content(root, context);
   let bar = property_get(frame, "bar");
