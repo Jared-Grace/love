@@ -6,7 +6,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
+import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
@@ -50,7 +50,7 @@ export function app_code_lesson_statement_name_last_seat() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  let emoji = app_code_chair_emoji();
+  let emoji = app_learn_js_chair_emoji();
   let worked = js_code_binary_result_nb("5", minus, "1", "4");
   let combined = text_combine(" seats ", emoji);
   let lesson = app_code_lesson_statement_formula({

@@ -2,7 +2,7 @@ import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { app_learn_js_chair_circle } from "./app_learn_js_chair_circle.mjs";
-import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
+import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -87,7 +87,7 @@ export function app_code_chair_grid(parent, count, width, marked) {
     }
     let text2 = text_to(index);
     let chair = html_div(grid);
-    let text3 = app_code_chair_emoji();
+    let text3 = app_learn_js_chair_emoji();
     let picture = html_div_text(chair, text3);
     html_style_assign(picture, {
       "font-size": "0.8em",

@@ -7,7 +7,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { multiply } from "./multiply.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
+import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
 export function app_learn_js_chair_emoji_grid(parent, rows, columns) {
@@ -25,7 +25,7 @@ export function app_learn_js_chair_emoji_grid(parent, rows, columns) {
   });
   let count = multiply(rows, columns);
   function chair_draw() {
-    let text = app_code_chair_emoji();
+    let text = app_learn_js_chair_emoji();
     let chair = html_div(grid);
     ("each chair stands in a white circle, as the chairs of the numbered picture do, asked by the human 2026-09-27");
     let circle = html_div_text(chair, text);

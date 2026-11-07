@@ -11,7 +11,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
+import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
@@ -67,7 +67,7 @@ export function app_code_lesson_statement_name_seat_one() {
     list_shuffle(taken);
     return taken;
   }
-  let emoji = app_code_chair_emoji();
+  let emoji = app_learn_js_chair_emoji();
   let seats_said = text_combine(" seats ", emoji);
   let v = between("1", "3", "5");
   let v2 = between("1", "6", "5");

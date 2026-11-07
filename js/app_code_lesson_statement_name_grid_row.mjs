@@ -1,5 +1,5 @@
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
-import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
+import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_chair_emoji_grid } from "./app_learn_js_chair_emoji_grid.mjs";
@@ -86,7 +86,7 @@ export function app_code_lesson_statement_name_grid_row() {
     ]);
     return draw;
   }
-  let emoji = app_code_chair_emoji();
+  let emoji = app_learn_js_chair_emoji();
   let suppose = text_combine("Suppose there are chairs ", emoji);
   let numbered_words = text_combine_multiple([
     "The chairs ",
