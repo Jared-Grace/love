@@ -20,7 +20,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_learn_js_brace_lines_choose } from "./app_learn_js_brace_lines_choose.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
-import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
+import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
@@ -99,7 +99,7 @@ export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
     answer_label: "",
-    answer_on_button: app_code_brace_marked_div,
+    answer_on_button: app_learn_js_brace_marked_div,
     answer_count_override: null,
   };
   let quizzes_get = app_code_lesson_quizzes_generic({
@@ -129,7 +129,7 @@ export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
     null,
     quizzes_get,
     "Code:",
-    app_code_brace_marked_div,
+    app_learn_js_brace_marked_div,
   );
   return lesson;
 }

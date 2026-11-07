@@ -4,7 +4,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
-import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
+import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
 import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_step_programs_generic(
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
     answer_label: "",
-    answer_on_button: app_code_brace_marked_div,
+    answer_on_button: app_learn_js_brace_marked_div,
     answer_count_override: null,
   };
   let info = app_code_lesson_quiz_step_info();
@@ -66,7 +66,7 @@ export function app_code_lesson_step_programs_generic(
     null,
     quizzes_get,
     "Code:",
-    app_code_brace_marked_div,
+    app_learn_js_brace_marked_div,
   );
   ("the example guides step by step and the quiz does not, at the human's asking 2026-10-14");
   property_set(lesson, "examples_guided", true);
