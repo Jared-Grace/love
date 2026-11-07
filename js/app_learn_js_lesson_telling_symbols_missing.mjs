@@ -6,7 +6,7 @@ import { app_learn_js_lesson_symbol_source_names } from "./app_learn_js_lesson_s
 import { app_learn_js_lesson_telling_symbols_missing_one } from "./app_learn_js_lesson_telling_symbols_missing_one.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
-export async function app_code_lesson_telling_symbols_missing() {
+export async function app_learn_js_lesson_telling_symbols_missing() {
   arguments_assert(arguments, 0);
   ("every lesson of the code app whose question bank writes an operator symbol its own telling never shows.");
   ("Empty is the answer today and the answer this is meant to keep. Three lessons were found teaching one shape of line and asking about another, one of them by a person reading it, and each cost a reading of the lesson to find. The check costs a run.");
