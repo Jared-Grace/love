@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
-export function app_code_lesson_expression_choose_order_not_twice_expression(
+export function app_learn_js_lesson_expression_choose_order_not_twice_expression(
   want_true,
 ) {
   "$plain want_true";
