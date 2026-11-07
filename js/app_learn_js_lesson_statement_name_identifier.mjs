@@ -16,7 +16,7 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { app_learn_js_lesson_statement_name_identifier_above } from "./app_learn_js_lesson_statement_name_identifier_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
-export function app_code_lesson_statement_name_identifier() {
+export function app_learn_js_lesson_statement_name_identifier() {
   arguments_assert(arguments, 0);
   ('the name a value is given can be any identifier, not only the one letter used so far: let joy = "peace"; on one line and console.log(joy); on the next writes out peace');
   ("The one new fact, and it is a small one - the lesson before this said identifiers are used as names, and the five identifier lessons before that said what an identifier is. Nothing here is new except that the two are finally put together on the same screen.");
