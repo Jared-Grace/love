@@ -4,7 +4,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_binary_pair_boolean(fn) {
+export function app_learn_js_binary_pair_boolean(fn) {
   "left/right operands (the keywords true and false) for a binary BOOLEAN operator lesson; picks a random one of the four true/false combinations whose result equals want_true, classifying them with the operator's own fn";
   let combinations = [
     {
