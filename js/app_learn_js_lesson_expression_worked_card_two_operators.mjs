@@ -2,7 +2,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_worked_card_two_operators({
+export function app_learn_js_lesson_expression_worked_card_two_operators({
   root,
   heading,
   whole,

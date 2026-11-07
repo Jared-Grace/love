@@ -1,5 +1,5 @@
 import { and } from "./and.mjs";
-import { app_code_lesson_expression_worked_card_two_operators } from "./app_code_lesson_expression_worked_card_two_operators.mjs";
+import { app_learn_js_lesson_expression_worked_card_two_operators } from "./app_learn_js_lesson_expression_worked_card_two_operators.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
@@ -61,7 +61,7 @@ export function app_learn_js_lesson_expression_parentheses_worked_card({
   let rest_anded = and(pair_value, outside);
   let rest_value = ternary(inner_or, rest_anded, rest_ored);
   let rest_word = js_true_false_word(rest_value);
-  app_code_lesson_expression_worked_card_two_operators({
+  app_learn_js_lesson_expression_worked_card_two_operators({
     root,
     heading,
     whole,

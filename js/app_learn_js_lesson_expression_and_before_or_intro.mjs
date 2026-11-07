@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_worked_card_two_operators } from "./app_code_lesson_expression_worked_card_two_operators.mjs";
+import { app_learn_js_lesson_expression_worked_card_two_operators } from "./app_learn_js_lesson_expression_worked_card_two_operators.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_expression_and_before_or_intro(
     or_symbol,
   ]);
   let heading_none = [];
-  app_code_lesson_expression_worked_card_two_operators({
+  app_learn_js_lesson_expression_worked_card_two_operators({
     root,
     heading: heading_none,
     whole,
