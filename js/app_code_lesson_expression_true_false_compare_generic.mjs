@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_true_false_compare_generic_line } from "./app_code_lesson_expression_true_false_compare_generic_line.mjs";
+import { app_learn_js_lesson_expression_true_false_compare_generic_line } from "./app_learn_js_lesson_expression_true_false_compare_generic_line.mjs";
 import { app_code_lesson_expression_true_false_compare_generic_title_name_id } from "./app_code_lesson_expression_true_false_compare_generic_title_name_id.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -90,7 +90,7 @@ export function app_code_lesson_expression_true_false_compare_generic(
   function refill() {
     "every one of the four possibilities, every screen, always in the same order. A refill therefore shows the same table again, which is the honest answer to asking for more examples when four is all there are";
     function mapper(combination) {
-      let code = app_code_lesson_expression_true_false_compare_generic_line(
+      let code = app_learn_js_lesson_expression_true_false_compare_generic_line(
         combination,
         symbol,
       );

@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_true_false_compare_generic_line(
+export function app_learn_js_lesson_expression_true_false_compare_generic_line(
   combination,
   symbol,
 ) {
