@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_or_title_name_id } from "./
 import { app_learn_js_lesson_expression_choose_order_or_questions } from "./app_learn_js_lesson_expression_choose_order_or_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_or_above } from "./app_learn_js_lesson_expression_choose_order_or_above.mjs";
-export function app_code_lesson_expression_choose_order_or() {
+export function app_learn_js_lesson_expression_choose_order_or() {
   arguments_assert(arguments, 0);
   ("a comparison either side of ||, taken a press at a time: 3 < 5 || 2 < 4, choose either comparison, choose what it comes to, choose the other, choose what it comes to, then choose the || between them");
   ("The same press-at-a-time step for || that the lesson opening this run gives &&, and it comes after the whole of the && stretch on purpose: a learner who has pressed their way through && lines has nothing new to learn about taking a line apart here, so the whole of their attention is on what || itself comes to.");
