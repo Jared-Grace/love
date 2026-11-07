@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_stop_early_or } from "./app_code_lesson_expression_choose_order_stop_early_or.mjs";
+import { app_learn_js_lesson_expression_choose_order_stop_early_or } from "./app_learn_js_lesson_expression_choose_order_stop_early_or.mjs";
 import { app_learn_js_lesson_expression_choose_order_stop_early_and } from "./app_learn_js_lesson_expression_choose_order_stop_early_and.mjs";
 import { app_learn_js_lesson_expression_choose_order_stop_early_both } from "./app_learn_js_lesson_expression_choose_order_stop_early_both.mjs";
 import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_course_new_fns() {
   "This list goes stale when latest is built again. Not picked: working it out on the page, which cannot see what latest was built from.";
   arguments_assert(arguments, 0);
   let fns = [
-    app_code_lesson_expression_choose_order_stop_early_or,
+    app_learn_js_lesson_expression_choose_order_stop_early_or,
     app_learn_js_lesson_expression_choose_order_stop_early_and,
     app_learn_js_lesson_expression_choose_order_stop_early_both,
     app_code_lesson_step_log_twice,
