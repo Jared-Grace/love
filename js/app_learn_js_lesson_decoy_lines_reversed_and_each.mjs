@@ -2,7 +2,7 @@ import { app_learn_js_lesson_decoy_lines_each } from "./app_learn_js_lesson_deco
 import { app_code_lesson_decoy_lines_reversed } from "./app_code_lesson_decoy_lines_reversed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_lesson_decoy_lines_reversed_and_each(
+export function app_learn_js_lesson_decoy_lines_reversed_and_each(
   question,
   answer,
 ) {

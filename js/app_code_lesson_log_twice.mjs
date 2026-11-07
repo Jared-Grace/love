@@ -1,4 +1,4 @@
-import { app_code_lesson_decoy_lines_reversed_and_each } from "./app_code_lesson_decoy_lines_reversed_and_each.mjs";
+import { app_learn_js_lesson_decoy_lines_reversed_and_each } from "./app_learn_js_lesson_decoy_lines_reversed_and_each.mjs";
 import { app_code_lesson_decoy_lines_reversed } from "./app_code_lesson_decoy_lines_reversed.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_log_twice() {
     example_count: 1,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
-    decoys: app_code_lesson_decoy_lines_reversed_and_each,
+    decoys: app_learn_js_lesson_decoy_lines_reversed_and_each,
     backwards_decoys: app_code_lesson_decoy_lines_reversed,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
