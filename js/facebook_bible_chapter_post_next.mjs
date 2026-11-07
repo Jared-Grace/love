@@ -1,15 +1,13 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { facebook_bible_chapter_posted_path } from "./facebook_bible_chapter_posted_path.mjs";
 import { file_read_json_exists_ensure } from "./file_read_json_exists_ensure.mjs";
 import { facebook_bible_chapter_after } from "./facebook_bible_chapter_after.mjs";
 import { facebook_bible_chapter_post_text } from "./facebook_bible_chapter_post_text.mjs";
 import { facebook_bible_chapter_tried_up_is } from "./facebook_bible_chapter_tried_up_is.mjs";
+import { not } from "./not.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { facebook_text_post } from "./facebook_text_post.mjs";
-import { facebook_post_url_wait } from "./facebook_post_url_wait.mjs";
-import { facebook_bible_chapter_url } from "./facebook_bible_chapter_url.mjs";
-import { facebook_reel_comment } from "./facebook_reel_comment.mjs";
+import { facebook_bible_chapter_comment_add } from "./facebook_bible_chapter_comment_add.mjs";
 export async function facebook_bible_chapter_post_next() {
   arguments_assert(arguments, 0);
   ("Posts to facebook the next chapter of the Berean Standard Bible after the last one recorded, records it, then comments a link to read it on the site - so one scheduled run is one chapter.");
@@ -43,9 +41,7 @@ export async function facebook_bible_chapter_post_next() {
   });
   r.posted = chapter_code;
   try {
-    let post_url = await facebook_post_url_wait(heading);
-    let link = facebook_bible_chapter_url(chapter_code);
-    r.comment = await facebook_reel_comment(post_url, link);
+    r.comment = await facebook_bible_chapter_comment_add(chapter_code);
   } catch (e) {
     r.comment_error = e.message;
   }
