@@ -7,7 +7,7 @@ import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.m
 import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
-export function app_code_lesson_token_order_codes_generic(
+export function app_learn_js_lesson_token_order_codes_generic(
   name_id,
   above,
   example_choose,
