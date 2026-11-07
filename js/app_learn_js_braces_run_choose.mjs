@@ -3,7 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_code_if_blocks } from "./app_code_if_blocks.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
-import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
+import { app_learn_js_flex_gap } from "./app_learn_js_flex_gap.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
@@ -65,7 +65,7 @@ export function app_learn_js_braces_run_choose(
   let blocks = app_code_if_blocks(code);
   let wrap = html_div(parent);
   html_flex_column_stretch(wrap);
-  app_code_flex_gap(wrap);
+  app_learn_js_flex_gap(wrap);
   let div = html_div(wrap);
   html_style_code_dark(div);
   html_style_white_space(div, "pre-wrap");
@@ -214,7 +214,7 @@ export function app_learn_js_braces_run_choose(
   }
   let ask = html_div(wrap);
   html_flex_column_stretch(ask);
-  app_code_flex_gap(ask);
+  app_learn_js_flex_gap(ask);
   let state = {
     index: 0,
   };

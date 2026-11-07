@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
-import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
+import { app_learn_js_flex_gap } from "./app_learn_js_flex_gap.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
@@ -166,7 +166,7 @@ export function app_code_program_step_through_generic(
   }
   let wrap = html_div(parent);
   html_flex_column_stretch(wrap);
-  app_code_flex_gap(wrap);
+  app_learn_js_flex_gap(wrap);
   ("2026-10-14, at the human's asking: every question is asked under the program, which line runs next as well as what a line does. Not picked: asking which line runs next above the program, tried 2026-10-13 and taken back the next day.");
   let program = html_div(wrap);
   html_style_code_dark(program);
@@ -234,7 +234,7 @@ export function app_code_program_step_through_generic(
   let logged = html_div(wrap);
   let ask = html_div(wrap);
   html_flex_column_stretch(ask);
-  app_code_flex_gap(ask);
+  app_learn_js_flex_gap(ask);
   ("asked: what the line is asked to do next while that is asked, so a line pressed then can be judged; null while nothing is asked of a line, as while it is doing what was chosen");
   let state = {
     index: 0,

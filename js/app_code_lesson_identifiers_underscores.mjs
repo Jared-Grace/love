@@ -1,6 +1,6 @@
 import { app_code_lesson_identifiers_underscores_generic } from "./app_code_lesson_identifiers_underscores_generic.mjs";
 import { html_span_text_code_dark_centered } from "./html_span_text_code_dark_centered.mjs";
-import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
+import { app_learn_js_flex_gap } from "./app_learn_js_flex_gap.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_identifiers_underscores() {
       display: "grid",
       "grid-template-columns": "auto 1fr",
     });
-    app_code_flex_gap(div);
+    app_learn_js_flex_gap(div);
     html_span_text_code_dark_centered(div, separator_invalid);
     let padded = text_articled_pad_space(separator_invalid_name);
     let text = text_combine_multiple([
