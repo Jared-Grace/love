@@ -11,7 +11,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_statement_name_last_seat } from "./app_learn_js_lesson_statement_name_last_seat.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_page_start() {
+export function app_learn_js_lesson_statement_name_page_start() {
   arguments_assert(arguments, 0);
   ("the first photo on a page, when photos are numbered from 0 and pages from 1: let before = page - 1; let first = before * size; - picked by the human 2026-10-02 from a list of next lessons. In DSA it is the offset of a page of results, and the start of a block of equal size in a list.");
   ("Photos from 0 and pages from 1, because that is how each is met: a position in code counts from 0, and a page a person turns to counts from 1. Taking one off the page turns the one count into the other, so the line is Last seat's own line with its names changed, and that lesson is the reminder.");
