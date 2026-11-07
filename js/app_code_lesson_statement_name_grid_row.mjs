@@ -6,7 +6,7 @@ import { app_learn_js_chair_emoji_grid } from "./app_learn_js_chair_emoji_grid.m
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
-import { app_code_lesson_statement_name_grid_position_step } from "./app_code_lesson_statement_name_grid_position_step.mjs";
+import { app_learn_js_lesson_statement_name_grid_position_step } from "./app_learn_js_lesson_statement_name_grid_position_step.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_middle_step } from "./app_code_lesson_statement_name_middle_step.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
@@ -37,7 +37,7 @@ export function app_code_lesson_statement_name_grid_row() {
   let names = ["chair", "columns"];
   let chair = list_first(names);
   let columns = list_second(names);
-  let both = app_code_lesson_statement_name_grid_position_step();
+  let both = app_learn_js_lesson_statement_name_grid_position_step();
   let middle_both = property_get(both, "middle");
   let logged_both = property_get(both, "logged");
   let line_row = list_first(middle_both);

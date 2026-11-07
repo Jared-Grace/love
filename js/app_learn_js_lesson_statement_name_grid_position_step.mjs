@@ -5,7 +5,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-export function app_code_lesson_statement_name_grid_position_step() {
+export function app_learn_js_lesson_statement_name_grid_position_step() {
   arguments_assert(arguments, 0);
   ("the lines of the grid-position lesson: let row = Math.floor(chair / columns); let column = chair % columns; - and row and column are written out");
   ("A grid kept as one long numbered line is found this way in many algorithms, so it is one of the formulas chosen by later use, at the human's request, 2026-09-27.");

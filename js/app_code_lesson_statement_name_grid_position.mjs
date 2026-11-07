@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_statement_name_grid_position_step } from "./app_code_lesson_statement_name_grid_position_step.mjs";
+import { app_learn_js_lesson_statement_name_grid_position_step } from "./app_learn_js_lesson_statement_name_grid_position_step.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -34,10 +34,10 @@ export function app_code_lesson_statement_name_grid_position() {
   ("The writing follows the human's outline, 2026-09-27, one light blue container per group of its lines: the grid again, the column by taking away the rows before, and the column by the remainder, so % arrives as a shortcut for a subtraction the reader has just done.");
   ("Every pointed thing wears the grid's colour for it, as the row lesson's does, drawn by the one line both use. A number that only counts, such as the 2 in 2 whole rows, stays plain writing, so a colour always means a place on the grid. The one exception is the 3 chairs in a row, which wears the fifth colour everywhere it is said or divided by, so the 3 in 7 / 3 and 7 % 3 is seen to be the row's width, asked by the human 2026-09-27. The 6 chairs in the rows before are listed out, 0 to 5, each in the blue the grid fills them with, so the 6 is seen to be those chairs rather than said.");
   ("The names are chair and columns, the human's choice, 2026-09-27, so the formula reads as the sentence it is; the reasons and the names not picked are with the lines, in ",
-    fn_name("app_code_lesson_statement_name_grid_position_step"),
+    fn_name("app_learn_js_lesson_statement_name_grid_position_step"),
     ".");
   let names = ["chair", "columns"];
-  let both = app_code_lesson_statement_name_grid_position_step();
+  let both = app_learn_js_lesson_statement_name_grid_position_step();
   let middle = property_get(both, "middle");
   let logged = property_get(both, "logged");
   let line_row = list_first(middle);

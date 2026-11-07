@@ -23,7 +23,7 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_grid_position_step } from "./app_code_lesson_statement_name_grid_position_step.mjs";
+import { app_learn_js_lesson_statement_name_grid_position_step } from "./app_learn_js_lesson_statement_name_grid_position_step.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -57,7 +57,7 @@ export function app_learn_js_lesson_statement_name_grid_index() {
     middle: [line_start, line_chair],
     logged: [chair],
   };
-  let before = app_code_lesson_statement_name_grid_position_step();
+  let before = app_learn_js_lesson_statement_name_grid_position_step();
   let middle2 = property_get(before, "middle");
   let logged2 = property_get(before, "logged");
   let line_row = list_first(middle2);
