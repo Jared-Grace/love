@@ -7,7 +7,7 @@ import { subtract } from "./subtract.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { list_size } from "./list_size.mjs";
 import { each_range } from "./each_range.mjs";
-export function app_code_expression_flat_value_right_to_left(code) {
+export function app_learn_js_expression_flat_value_right_to_left(code) {
   arguments_assert(arguments, 1);
   ("what a line of arithmetic comes to when its operators are worked out from the right hand end back towards the left: 8 - 2 - 4 + 7 read that way gives 17, where the line itself comes to 9");
   ("The other order there is. On a line whose operators are all of one kind, reading from the left and reading from the right are the only two ways to take it, and the lesson about such a line is the lesson that they differ. So this is the wrong answer that lesson is about, and a learner who answers it has read the line backwards rather than miscounted.");

@@ -5,7 +5,7 @@ import { app_code_lesson_expression_choose_order_same_strength_operator_count } 
 import { app_learn_js_expression_flat_random_same_strength } from "./app_learn_js_expression_flat_random_same_strength.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_lesson_expression_choose_order_same_strength_above } from "./app_code_lesson_expression_choose_order_same_strength_above.mjs";
-import { app_code_expression_flat_value_right_to_left } from "./app_code_expression_flat_value_right_to_left.mjs";
+import { app_learn_js_expression_flat_value_right_to_left } from "./app_learn_js_expression_flat_value_right_to_left.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_three_steps_left_to_right_title_name_id } from "./app_code_lesson_expression_three_steps_left_to_right_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_expression_three_steps_left_to_right() {
   }
   function decoys(question, answer) {
     "the tailored wrong answer is the line read from the right hand end back towards the left, which is the only other order there is on a line like this; where it lands on the right answer the multiple choice drops it as a duplicate";
-    let v = app_code_expression_flat_value_right_to_left(question);
+    let v = app_learn_js_expression_flat_value_right_to_left(question);
     let r = [v];
     return r;
   }
