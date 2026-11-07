@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_up_to_log_options } from "./app_code_lesson_up_to_log_options.mjs";
-import { app_code_lesson_for_comparison_other_above } from "./app_code_lesson_for_comparison_other_above.mjs";
+import { app_learn_js_lesson_for_comparison_other_above } from "./app_learn_js_lesson_for_comparison_other_above.mjs";
 import { app_code_lesson_for_increment } from "./app_code_lesson_for_increment.mjs";
 import { app_code_lesson_increment_log_options } from "./app_code_lesson_increment_log_options.mjs";
 import { app_code_lesson_update_log_generic } from "./app_code_lesson_update_log_generic.mjs";
@@ -19,7 +19,7 @@ export function app_code_lesson_for_up_to() {
   );
   let options = app_code_lesson_up_to_log_options();
   let earlier = app_code_lesson_increment_log_options();
-  let above = app_code_lesson_for_comparison_other_above(
+  let above = app_learn_js_lesson_for_comparison_other_above(
     app_code_lesson_for_increment,
     earlier,
     options,
