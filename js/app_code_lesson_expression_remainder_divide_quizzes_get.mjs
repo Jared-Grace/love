@@ -5,7 +5,7 @@ import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
-import { app_code_lesson_expression_remainder_divide_item_qa_for } from "./app_code_lesson_expression_remainder_divide_item_qa_for.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_item_qa_for } from "./app_learn_js_lesson_expression_remainder_divide_item_qa_for.mjs";
 import { app_code_lesson_expression_remainder_divide_qa_for } from "./app_code_lesson_expression_remainder_divide_qa_for.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
     wrong_say: app_code_whole_part_wrong_say,
     decoys: backwards_decoys,
     backwards: true,
-    qa_for: app_code_lesson_expression_remainder_divide_item_qa_for,
+    qa_for: app_learn_js_lesson_expression_remainder_divide_item_qa_for,
   };
   let infos = [recognize, build, backwards];
   function each_info(info) {
