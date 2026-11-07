@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
+import { app_learn_js_advance_or_no_more } from "./app_learn_js_advance_or_no_more.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
 export function app_code_lesson_quiz_on_reveal(r4) {
@@ -20,7 +20,7 @@ export function app_code_lesson_quiz_on_reveal(r4) {
   let r3 = property_get(r4, "r3");
   let answer_label = property_get(r4, "answer_label");
   let qli = property_get(r3, "qli");
-  app_code_advance_or_no_more(parent_container, has_next_step, render_next);
+  app_learn_js_advance_or_no_more(parent_container, has_next_step, render_next);
   async function on_reveal() {
     "for a learner who is stuck: reveal the correction (the code and its output) so they can see the answer, then continue with Next; wrong attempts alone no longer reveal it";
     html_visibility_hidden(container_success_message);
