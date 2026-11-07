@@ -277,7 +277,7 @@ import { app_learn_js_lesson_if_else_change } from "./app_learn_js_lesson_if_els
 import { app_learn_js_lesson_if_halve_or_triple } from "./app_learn_js_lesson_if_halve_or_triple.mjs";
 import { app_learn_js_lesson_braces_run_nested } from "./app_learn_js_lesson_braces_run_nested.mjs";
 import { app_learn_js_lesson_if_nested } from "./app_learn_js_lesson_if_nested.mjs";
-import { app_code_lesson_token_order_braces_three } from "./app_code_lesson_token_order_braces_three.mjs";
+import { app_learn_js_lesson_token_order_braces_three } from "./app_learn_js_lesson_token_order_braces_three.mjs";
 import { app_learn_js_lesson_token_order_braces_three_plain } from "./app_learn_js_lesson_token_order_braces_three_plain.mjs";
 import { app_learn_js_lesson_brace_pair } from "./app_learn_js_lesson_brace_pair.mjs";
 import { app_learn_js_lesson_brace_lines } from "./app_learn_js_lesson_brace_lines.mjs";
@@ -638,7 +638,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_if_halve_or_triple,
     app_learn_js_lesson_braces_run_nested,
     app_learn_js_lesson_if_nested,
-    app_code_lesson_token_order_braces_three,
+    app_learn_js_lesson_token_order_braces_three,
     app_learn_js_lesson_token_order_braces_three_plain,
     app_learn_js_lesson_brace_pair,
     app_learn_js_lesson_brace_lines,

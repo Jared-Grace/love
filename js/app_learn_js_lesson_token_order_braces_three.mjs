@@ -14,7 +14,7 @@ import { app_learn_js_braces_paired_with_order } from "./app_learn_js_braces_pai
 import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_braces_among_colored_generic } from "./app_learn_js_lesson_braces_among_colored_generic.mjs";
-export function app_code_lesson_token_order_braces_three() {
+export function app_learn_js_lesson_token_order_braces_three() {
   arguments_assert(arguments, 0);
   ("the braces among the tokens, three pairs: as The braces among the tokens, but every program has three pairs of braces, each pair in a colour of its own");
   ("Asked for by the human 2026-10-11, as the lesson like The braces among the tokens but for three pairs, put straight before the first lesson whose code has three pairs, If after an if inside an if.");
