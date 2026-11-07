@@ -7,7 +7,7 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { property_get_or } from "./property_get_or.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
-import { app_code_button_value_lines } from "./app_code_button_value_lines.mjs";
+import { app_learn_js_button_value_lines } from "./app_learn_js_button_value_lines.mjs";
 import { app_code_forwards_wrong_say } from "./app_code_forwards_wrong_say.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
@@ -79,7 +79,7 @@ export function app_code_lesson_code_generic(params) {
     question_label: forwards_question_label,
     on_question,
     answer_label: forwards_answer_label,
-    answer_on_button: app_code_button_value_lines,
+    answer_on_button: app_learn_js_button_value_lines,
     answer_count_override: forwards_answer_count_override,
     decoys,
     wrong_say: app_code_forwards_wrong_say,
