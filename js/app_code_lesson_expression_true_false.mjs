@@ -7,7 +7,7 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
+import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_true_false() {
   function refill() {
@@ -53,7 +53,7 @@ export function app_code_lesson_expression_true_false() {
     ]);
     let t3 = js_keyword_true();
     let f3 = js_keyword_false();
-    app_code_container_light_blue_cycle_code(root, [
+    app_learn_js_container_light_blue_cycle_code(root, [
       "Now you can write ",
       t3,
       " or ",

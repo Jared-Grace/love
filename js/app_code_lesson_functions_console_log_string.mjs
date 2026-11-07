@@ -10,7 +10,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
+import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -68,7 +68,7 @@ export function app_code_lesson_functions_console_log_string() {
   return lesson;
   function above(root) {
     "so far a number, now a string - and the value written out drops the quote marks, which is the string lesson's own rule met a second time";
-    app_code_container_light_blue_cycle_code(root, [
+    app_learn_js_container_light_blue_cycle_code(root, [
       "So far, ",
       f_name,
       " has been given numbers",

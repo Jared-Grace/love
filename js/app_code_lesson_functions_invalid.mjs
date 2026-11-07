@@ -14,7 +14,7 @@ import { list_between_space_before } from "./list_between_space_before.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
+import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "./app_code_lesson_validity_code.mjs";
@@ -74,6 +74,6 @@ export function app_code_lesson_functions_invalid() {
       symbols_required,
       [" are missing from the function call, then the code is invalid "],
     );
-    app_code_container_light_blue_cycle_code(root, combined2);
+    app_learn_js_container_light_blue_cycle_code(root, combined2);
   }
 }

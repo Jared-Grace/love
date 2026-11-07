@@ -12,7 +12,7 @@ import { js_code_comma } from "./js_code_comma.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_first_code_call } from "./js_operator_first_code_call.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
+import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { app_code_div_cycle_code_multiple } from "./app_code_div_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
@@ -68,7 +68,7 @@ export function app_code_lesson_functions_console_log() {
       ],
       ["", v],
     ]);
-    app_code_container_light_blue_cycle_code(root, [
+    app_learn_js_container_light_blue_cycle_code(root, [
       "Whatever is inside the ",
       ...parts,
       " of ",

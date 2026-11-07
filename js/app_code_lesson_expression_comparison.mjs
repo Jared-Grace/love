@@ -4,7 +4,7 @@ import { app_learn_js_binary_next_arg } from "./app_learn_js_binary_next_arg.mjs
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
+import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { each } from "./each.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
@@ -61,6 +61,6 @@ export function app_code_lesson_expression_comparison(params) {
     app_code_div_cycle_code(question_container, ["The symbol ", symbol, tail]);
     render_section(explanation);
     let parts = closing();
-    app_code_container_light_blue_cycle_code(root, parts);
+    app_learn_js_container_light_blue_cycle_code(root, parts);
   }
 }

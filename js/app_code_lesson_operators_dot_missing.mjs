@@ -8,7 +8,7 @@ import { app_code_lesson_operators_dot_batch_numbers } from "./app_code_lesson_o
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text_common } from "./app_code_lesson_operators_dot_numbers_both_sides_text_common.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "./app_code_lesson_operators_dot_numbers_example.mjs";
-import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
+import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "./app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "./app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { js_code_binary } from "./js_code_binary.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_operators_dot_missing() {
   let name_rights = ["property access", "missing"];
   let batch = app_code_lesson_operators_dot_batch_numbers(operator);
   function above(root, context) {
-    app_code_container_light_blue_cycle_code(root, [
+    app_learn_js_container_light_blue_cycle_code(root, [
       "For this lesson, ",
       operator,
       " will be used with identifiers, and not as a decimal point in a number",
