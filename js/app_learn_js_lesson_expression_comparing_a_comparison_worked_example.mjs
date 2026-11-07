@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_comparing_a_comparison_worked_example(
+export function app_learn_js_lesson_expression_comparing_a_comparison_worked_example(
   root,
   lead,
   code,

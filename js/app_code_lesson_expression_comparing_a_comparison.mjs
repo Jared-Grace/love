@@ -2,7 +2,7 @@ import { app_learn_js_lesson_expression_comparing_a_comparison_replacing_worked_
 import { app_learn_js_lesson_expression_comparing_a_comparison_line } from "./app_learn_js_lesson_expression_comparing_a_comparison_line.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_expression } from "./app_learn_js_lesson_expression_comparing_a_comparison_expression.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_worked_example.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison_worked_example } from "./app_learn_js_lesson_expression_comparing_a_comparison_worked_example.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_recall } from "./app_learn_js_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_title_name_id } from "./app_learn_js_lesson_expression_comparing_a_comparison_title_name_id.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
@@ -67,7 +67,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       same,
       false,
     );
-    app_code_lesson_expression_comparing_a_comparison_worked_example(
+    app_learn_js_lesson_expression_comparing_a_comparison_worked_example(
       root,
       "Now suppose",
       "2 < 5",
