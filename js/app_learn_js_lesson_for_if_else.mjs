@@ -8,7 +8,7 @@ import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
-import { app_code_lesson_for_if_greater_options } from "./app_code_lesson_for_if_greater_options.mjs";
+import { app_learn_js_lesson_for_if_greater_options } from "./app_learn_js_lesson_for_if_greater_options.mjs";
 import { app_learn_js_lesson_for_if_generic } from "./app_learn_js_lesson_for_if_generic.mjs";
 export function app_learn_js_lesson_for_if_else() {
   arguments_assert(arguments, 0);
@@ -80,7 +80,7 @@ export function app_learn_js_lesson_for_if_else() {
     "An else inside a for",
     "if (...) {...} else {...}",
   );
-  let to = app_code_lesson_for_if_greater_options();
+  let to = app_learn_js_lesson_for_if_greater_options();
   let options = object_copy_assign(to, {
     name_id,
     above,

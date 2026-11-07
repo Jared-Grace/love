@@ -11,7 +11,7 @@ import { app_code_lesson_for_total } from "./app_code_lesson_for_total.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
-import { app_code_lesson_for_if_greater_options } from "./app_code_lesson_for_if_greater_options.mjs";
+import { app_learn_js_lesson_for_if_greater_options } from "./app_learn_js_lesson_for_if_greater_options.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_lesson_for_if_generic } from "./app_learn_js_lesson_for_if_generic.mjs";
@@ -90,7 +90,7 @@ export function app_code_lesson_for_total_if() {
     "A total of only some",
     "if (...) { total += n; }",
   );
-  let to = app_code_lesson_for_if_greater_options();
+  let to = app_learn_js_lesson_for_if_greater_options();
   let code = js_code_let_statement(total_name, 0);
   let statement = js_code_console_log_statement(total_name);
   let options = object_copy_assign(to, {

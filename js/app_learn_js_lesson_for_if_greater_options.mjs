@@ -4,7 +4,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
-export function app_code_lesson_for_if_greater_options() {
+export function app_learn_js_lesson_for_if_greater_options() {
   arguments_assert(arguments, 0);
   ("what a for lesson whose if asks n > threshold hands in, whatever runs inside the if: the question, its groups of programs, the example, and the wrong threshold read backwards");
   ("The groups, by how many runs the if lets through: one of three, two of three, all three, and one of two. None lets nothing through, so a lesson writing out inside the if always writes something.");
