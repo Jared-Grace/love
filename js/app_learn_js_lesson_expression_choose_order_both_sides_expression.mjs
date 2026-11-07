@@ -2,7 +2,7 @@ import { app_learn_js_arithmetic_to_value_parts } from "./app_learn_js_arithmeti
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_expression_generic } from "./app_learn_js_lesson_expression_choose_order_both_sides_expression_generic.mjs";
-export function app_code_lesson_expression_choose_order_both_sides_expression(
+export function app_learn_js_lesson_expression_choose_order_both_sides_expression(
   want_true,
 ) {
   arguments_assert(arguments, 1);
