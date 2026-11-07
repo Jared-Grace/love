@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_expression_choose_order_plus_minus } from "./app_learn_js_lesson_expression_choose_order_plus_minus.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line } from "./app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line.mjs";
-import { app_code_lesson_expression_parentheses_minus_divide_outer_minus_line } from "./app_code_lesson_expression_parentheses_minus_divide_outer_minus_line.mjs";
+import { app_learn_js_lesson_expression_parentheses_minus_divide_outer_minus_line } from "./app_learn_js_lesson_expression_parentheses_minus_divide_outer_minus_line.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_title_name_id } from "./app_code_lesson_expression_parentheses_minus_divide_title_name_id.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
@@ -32,11 +32,11 @@ export function app_code_lesson_expression_parentheses_minus_divide() {
   function refill() {
     "four at a time, alternating a - line and a / line. The examples screen draws two, so every screen shows one of each - the two outer operators this lesson is about";
     let v =
-      app_code_lesson_expression_parentheses_minus_divide_outer_minus_line();
+      app_learn_js_lesson_expression_parentheses_minus_divide_outer_minus_line();
     let v2 =
       app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line();
     let v3 =
-      app_code_lesson_expression_parentheses_minus_divide_outer_minus_line();
+      app_learn_js_lesson_expression_parentheses_minus_divide_outer_minus_line();
     let v4 =
       app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line();
     let list = [v, v2, v3, v4];
