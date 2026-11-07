@@ -18,7 +18,7 @@ import { not } from "./not.mjs";
 import { app_code_home_lesson_button } from "./app_code_home_lesson_button.mjs";
 import { app_code_home_way_marked_next } from "./app_code_home_way_marked_next.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_home_just_left_next } from "./app_code_home_just_left_next.mjs";
+import { app_learn_js_home_just_left_next } from "./app_learn_js_home_just_left_next.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
 import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
 import { app_code_home_review_row } from "./app_code_home_review_row.mjs";
@@ -89,7 +89,7 @@ export async function app_code_home(context) {
       complete,
     );
     let lesson_is = lesson_left && equal(id, current_id);
-    just_left = app_code_home_just_left_next(just_left, button, lesson_is);
+    just_left = app_learn_js_home_just_left_next(just_left, button, lesson_is);
     if (lesson_is) {
       opened = group;
     }
@@ -111,7 +111,11 @@ export async function app_code_home(context) {
         review_complete,
       );
       let review_is = review_left && equal(lesson_number, review_number);
-      just_left = app_code_home_just_left_next(just_left, review, review_is);
+      just_left = app_learn_js_home_just_left_next(
+        just_left,
+        review,
+        review_is,
+      );
       if (review_is) {
         opened = group;
       }
@@ -125,7 +129,7 @@ export async function app_code_home(context) {
       milestone_id_left,
     );
     let milestone_is = null_not_is(milestone_row_left);
-    just_left = app_code_home_just_left_next(
+    just_left = app_learn_js_home_just_left_next(
       just_left,
       milestone_row_left,
       milestone_is,
