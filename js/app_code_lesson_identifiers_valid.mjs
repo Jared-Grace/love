@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_batch_question_answer_fns_validity_identifier } from "./app_code_batch_question_answer_fns_validity_identifier.mjs";
+import { app_learn_js_batch_question_answer_fns_validity_identifier } from "./app_learn_js_batch_question_answer_fns_validity_identifier.mjs";
 import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "./app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { app_code_lesson_validity_base } from "./app_code_lesson_validity_base.mjs";
 import { app_code_identifier_validity_wrong_say } from "./app_code_identifier_validity_wrong_say.mjs";
@@ -11,7 +11,7 @@ export function app_code_lesson_identifiers_valid(
 ) {
   arguments_assert(arguments, 4);
   let batch_get2 =
-    app_code_batch_question_answer_fns_validity_identifier(batch_get);
+    app_learn_js_batch_question_answer_fns_validity_identifier(batch_get);
   let backwards_question_label = "Identifier validity: ";
   let example_answer_label = "Is this a valid identifier? ";
   let backwards_answer_on_button =

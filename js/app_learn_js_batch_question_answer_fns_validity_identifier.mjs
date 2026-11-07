@@ -1,6 +1,6 @@
 import { app_code_symbols_eval_valid_identifier } from "./app_code_symbols_eval_valid_identifier.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
-export function app_code_batch_question_answer_fns_validity_identifier(
+export function app_learn_js_batch_question_answer_fns_validity_identifier(
   batch_get,
 ) {
   let b = app_code_batch_question_answer_fns(
