@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-export function app_code_lesson_expression_choose_order_same_strength_pair_title_name_id() {
+export function app_learn_js_lesson_expression_choose_order_same_strength_pair_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: solving a two-step line where the order is settled by position alone, an Expressions lesson");
   ("It is the three-step lesson's title with the count changed, and that is deliberate: the two rows say the same rule at two lengths, so a learner scanning the home list can see that the later one is not a new rule. The three-step title asked for a second row of its shape if the shape was worth keeping, and this is it.");

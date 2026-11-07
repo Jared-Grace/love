@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_same_strength_pair_title_name_id } from "./app_code_lesson_expression_choose_order_same_strength_pair_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_same_strength_pair_title_name_id } from "./app_learn_js_lesson_expression_choose_order_same_strength_pair_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_same_strength_pair() {
   ("Both kinds of same-strength line come up, and which kind is left to the drawing: a line repeating one operator, and a line carrying two different operators of one strength. They are one rule and the walk says so in the learner's own hearing, naming the repeated operators on the first and naming both on the second - so a learner who only ever saw one kind could have read the rule as being about sameness rather than about strength.");
   ("The wrong values offered are the ones every pressing lesson offers: what the other operator would have given on the same two numbers, and what the whole line comes to. They are worked out from the line rather than typed, so no line can be printed beside choices that do not belong to it.");
   let name_id =
-    app_code_lesson_expression_choose_order_same_strength_pair_title_name_id();
+    app_learn_js_lesson_expression_choose_order_same_strength_pair_title_name_id();
   ("the quiz and the front page are the ones every pressing lesson uses, handed this lesson's wrong values - the pressing, the layout and the finishing are the same doing, and only what could be pressed instead differs");
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz, with this lesson's wrong values: the value the other operator would have given, and the value of the whole line";
