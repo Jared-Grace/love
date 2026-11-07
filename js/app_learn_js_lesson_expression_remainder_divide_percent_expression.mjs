@@ -2,7 +2,7 @@ import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-export function app_code_lesson_expression_remainder_divide_percent_expression(
+export function app_learn_js_lesson_expression_remainder_divide_percent_expression(
   division,
 ) {
   arguments_assert(arguments, 1);

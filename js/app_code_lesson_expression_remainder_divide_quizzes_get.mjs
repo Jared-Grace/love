@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_remainder_divide_percent_expression } from "./app_code_lesson_expression_remainder_divide_percent_expression.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_percent_expression } from "./app_learn_js_lesson_expression_remainder_divide_percent_expression.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
@@ -20,7 +20,9 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
   arguments_assert(arguments, 5);
   ("three quiz kinds: RECOGNISE the remainder formula among wrong rewrites (multiple choice), BUILD it from tokens (unscramble), then BACKWARDS - given the formula, pick the % it equals (14 - Math.floor(14 / 4) * 4 is 14 % 4). Forwards recognise then produce, then connect the long formula to the % shorthand");
   let percent_expression =
-    app_code_lesson_expression_remainder_divide_percent_expression(question);
+    app_learn_js_lesson_expression_remainder_divide_percent_expression(
+      question,
+    );
   let recognize = {
     question_label: app_learn_js_label_code_question(),
     on_question: html_text_set_code_dark,

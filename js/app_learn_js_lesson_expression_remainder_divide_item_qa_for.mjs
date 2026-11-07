@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_remainder_divide_percent_expression } from "./app_code_lesson_expression_remainder_divide_percent_expression.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_percent_expression } from "./app_learn_js_lesson_expression_remainder_divide_percent_expression.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_learn_js_lesson_expression_remainder_divide_item_qa_for(
   item,
@@ -9,7 +9,9 @@ export function app_learn_js_lesson_expression_remainder_divide_item_qa_for(
   let question = property_get(item, "question");
   let answer = property_get(item, "answer");
   let percent_expression =
-    app_code_lesson_expression_remainder_divide_percent_expression(question);
+    app_learn_js_lesson_expression_remainder_divide_percent_expression(
+      question,
+    );
   let r = {
     question: answer,
     answer: percent_expression,
