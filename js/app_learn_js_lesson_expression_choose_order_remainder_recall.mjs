@@ -1,7 +1,7 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_remainder_divide } from "./app_code_lesson_expression_remainder_divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_strong_card } from "./app_code_lesson_expression_choose_order_strong_card.mjs";
+import { app_learn_js_lesson_expression_choose_order_strong_card } from "./app_learn_js_lesson_expression_choose_order_strong_card.mjs";
 import { app_learn_js_division_formula_recall_words } from "./app_learn_js_division_formula_recall_words.mjs";
 import { app_learn_js_expression_remainder_tree } from "./app_learn_js_expression_remainder_tree.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_expression_choose_order_remainder_recall(
   ("Both are needed on this line and neither is new. The line carries a minus outside and a times inside it, so which of the two goes first is a question the learner can already answer - and the card answering it is the one every pressing lesson that needs it puts up, in the same words.");
   ("The formula sentence is the sentence the lesson that asks this line all at once opens with, word for word, out of the one place both of them read. A learner recognises a sentence they have already read in the second it takes, and stops to compare a near-copy against it.");
   ("The two stand in one card rather than two, because they are both what the run is about to be read with rather than two separate things to learn.");
-  let recall_card = app_code_lesson_expression_choose_order_strong_card(
+  let recall_card = app_learn_js_lesson_expression_choose_order_strong_card(
     root,
     context,
   );
