@@ -1,7 +1,7 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_dividend } from "./app_learn_js_lesson_expression_dividend.mjs";
 import { app_learn_js_lesson_expression_divisor } from "./app_learn_js_lesson_expression_divisor.mjs";
-import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
+import { app_learn_js_lesson_naming_words } from "./app_learn_js_lesson_naming_words.mjs";
 import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
@@ -68,7 +68,7 @@ export function app_learn_js_lesson_expression_quotient() {
   function title_name_id() {
     "the home title says Naming the quotient, the same opening as the three lessons around it";
     function paint(parent) {
-      app_code_lesson_naming_words(parent, "quotient");
+      app_learn_js_lesson_naming_words(parent, "quotient");
     }
     let name_id2 = app_learn_js_lesson_name_id_operators(paint);
     return name_id2;

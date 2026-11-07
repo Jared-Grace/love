@@ -1,4 +1,4 @@
-import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
+import { app_learn_js_lesson_naming_words } from "./app_learn_js_lesson_naming_words.mjs";
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_expression_dividend() {
   function title_name_id() {
     "the home title says Naming the dividend and then shows where in a division the dividend stands: the part in front of the slash";
     function paint(parent) {
-      app_code_lesson_naming_words(parent, "dividend");
+      app_learn_js_lesson_naming_words(parent, "dividend");
       app_learn_js_code_tile(parent, fill);
     }
     function fill(host) {
