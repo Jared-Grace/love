@@ -9,7 +9,7 @@ import { app_code_lesson_statement_name_value } from "./app_code_lesson_statemen
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
-import { app_code_lesson_cup_code_box } from "./app_code_lesson_cup_code_box.mjs";
+import { app_learn_js_lesson_cup_code_box } from "./app_learn_js_lesson_cup_code_box.mjs";
 export function app_code_lesson_statement_name_identifier_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the cup as it was left, the same cup called something else, the one new fact, and the same thing written as code");
@@ -52,7 +52,7 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
     " is an identifier, so it can be a name",
   ]);
   ("the code box gives a cup a word for a name and a word for a value, so the two are the same kind of thing on the page and only where they stand tells them apart - which is exactly the reading the questions ask for");
-  app_code_lesson_cup_code_box(root, name, word);
+  app_learn_js_lesson_cup_code_box(root, name, word);
   let box_care = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(box_care, [
     "What comes out is what is inside the cup, not the name on it",

@@ -6,7 +6,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-export function app_code_lesson_cup_code_box(root, name, word) {
+export function app_learn_js_lesson_cup_code_box(root, name, word) {
   arguments_assert(arguments, 3);
   ("the box that says in code what a one-cup screen has just said in a story: the cup is made and filled, then it is asked what is inside it, then the answer comes out");
   ("The story above it differs from screen to screen and this does not, because a learner arriving here has already been told the whole of it in words and the only thing to read is that the code says the same. Two screens wrote it out line for line, which meant a wording fixed on one of them stayed wrong on the other.");
