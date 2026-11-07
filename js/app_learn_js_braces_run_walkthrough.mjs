@@ -21,7 +21,7 @@ import { list_get } from "./list_get.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_color_next } from "./app_learn_js_braces_color_next.mjs";
-import { app_code_if_blocks_lines_kept } from "./app_code_if_blocks_lines_kept.mjs";
+import { app_learn_js_if_blocks_lines_kept } from "./app_learn_js_if_blocks_lines_kept.mjs";
 import { app_learn_js_div_braces_painted } from "./app_learn_js_div_braces_painted.mjs";
 export function app_learn_js_braces_run_walkthrough(root, code) {
   arguments_assert(arguments, 2);
@@ -144,7 +144,7 @@ export function app_learn_js_braces_run_walkthrough(root, code) {
       first = false;
     }
     let color = app_learn_js_braces_color_next();
-    let lines = app_code_if_blocks_lines_kept(code, blocks, n);
+    let lines = app_learn_js_if_blocks_lines_kept(code, blocks, n);
     program_draw(box, lines, block, color);
     let left = {
       brace: brace_left,
@@ -173,7 +173,7 @@ export function app_learn_js_braces_run_walkthrough(root, code) {
     app_learn_js_div_cycle_code(box, ["Now we have:"]);
   }
   let box_end = app_learn_js_container_light_blue(root);
-  let lines_end = app_code_if_blocks_lines_kept(code, blocks, count);
+  let lines_end = app_learn_js_if_blocks_lines_kept(code, blocks, count);
   program_draw(box_end, lines_end, null, null);
   app_learn_js_div_cycle_code(box_end, [
     "So the code is as if it were only this",

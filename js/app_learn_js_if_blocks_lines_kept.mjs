@@ -14,7 +14,7 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { text_size } from "./text_size.mjs";
 import { text_get } from "./text_get.mjs";
 import { text_trim } from "./text_trim.mjs";
-export function app_code_if_blocks_lines_kept(code, blocks, count) {
+export function app_learn_js_if_blocks_lines_kept(code, blocks, count) {
   arguments_assert(arguments, 3);
   ("a program as its steps leave it once the first count sections of blocks, ",
     fn_name("app_code_if_blocks"),
