@@ -921,7 +921,7 @@ export function permission_grant_names() {
     fn_name("g_plant_days_report"),
     fn_name("app_code_lesson_expression_equal_number_string_true_false"),
     fn_name(
-      "app_code_lesson_expression_equal_number_string_true_false_title_name_id",
+      "app_learn_js_lesson_expression_equal_number_string_true_false_title_name_id",
     ),
     fn_name("qa_gates_tree_git_reaching"),
     fn_name("functions_imports_dangling_gate_run"),
