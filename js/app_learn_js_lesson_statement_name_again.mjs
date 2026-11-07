@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_again_pair } from "./app_learn_js_lesson_statement_name_again_pair.mjs";
 import { app_code_lesson_statement_name_pair_first } from "./app_code_lesson_statement_name_pair_first.mjs";
-export function app_code_lesson_statement_name_again() {
+export function app_learn_js_lesson_statement_name_again() {
   arguments_assert(arguments, 0);
   ('one name given a value and then given another one: let a = "grapes"; console.log(a); a = "olives"; console.log(a); writes out grapes and then olives');
   ("The first screen where the order of the lines has to be noticed rather than merely followed. Every question before this one could be answered by finding the line that made the name and reading what it was handed; here that line is on the screen, it is the first thing a learner reaches for, and it is wrong.");

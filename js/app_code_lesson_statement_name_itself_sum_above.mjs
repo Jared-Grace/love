@@ -12,7 +12,7 @@ import { app_code_lesson_statement_name_total } from "./app_code_lesson_statemen
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
-import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
+import { app_learn_js_lesson_statement_name_again } from "./app_learn_js_lesson_statement_name_again.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
 export function app_code_lesson_statement_name_itself_sum_above(root, context) {
@@ -63,7 +63,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   app_code_remember_from_lesson(
     box_again,
     context,
-    app_code_lesson_statement_name_again,
+    app_learn_js_lesson_statement_name_again,
     ["we can give a name (", name_first, ") a new value (", given_again, "):"],
   );
   let held_again = js_code_let_statement(name_first, number_first);
