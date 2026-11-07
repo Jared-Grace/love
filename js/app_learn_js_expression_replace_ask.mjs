@@ -5,7 +5,7 @@ import { app_code_expression_replace_say } from "./app_code_expression_replace_s
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
-export function app_code_expression_replace_ask(
+export function app_learn_js_expression_replace_ask(
   note,
   solved_code,
   value_text,

@@ -1,7 +1,7 @@
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { app_code_expression_replace_fly } from "./app_code_expression_replace_fly.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_expression_replace_ask } from "./app_code_expression_replace_ask.mjs";
+import { app_learn_js_expression_replace_ask } from "./app_learn_js_expression_replace_ask.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { noop } from "./noop.mjs";
 import { promise_wrap_unawait } from "./promise_wrap_unawait.mjs";
@@ -30,7 +30,7 @@ export async function app_code_expression_replace_await({
   ("the two chosen pieces the words are said with are caught as they are made, because the swap is shown travelling between them and the block on the line once the button is pressed");
   let chosen_pieces = [];
   function change() {
-    chosen_pieces = app_code_expression_replace_ask(
+    chosen_pieces = app_learn_js_expression_replace_ask(
       note,
       solved_code,
       value_text,
