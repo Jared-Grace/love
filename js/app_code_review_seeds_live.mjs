@@ -16,7 +16,7 @@ export function app_code_review_seeds_live(seeds, kind_is) {
   "the seeds of a saved review queue that this page can still rebuild - the ones naming a lesson it hands out, and a quiz kind that lesson still has";
   "★ A SAVED QUEUE OUTLIVES THE LIST IT WAS GATHERED FROM. Its seeds are plain words written to a learner's own device, and what a page hands out is a decision made in this repo that moves without anyone looking at what is already saved on a device. So a seed can name something the page reading it back no longer has - and rebuilding one asks for exactly one lesson and throws on none, which kills the boot rather than the item. That is not a screen a learner can get off: every load reads the same saved queue and dies the same way, and no deploy reaches it, because the fault is in what is on their device rather than in what is served.";
   ("Measured 2026-09-04: a learner had been stuck on the did-not-finish-loading screen for days, on the built site and on latest alike, and the page reported the throw itself - an empty list asked for its one item, under ",
-    fn_name("app_code_lesson_find_by_id"),
+    fn_name("app_learn_js_lesson_find_by_id"),
     ".");
   ("Dropped rather than repaired, because there is nothing to repair a seed into: what it names is not being handed out, so the question it holds is one this reader is not meant to be asked yet.");
   ("★ BOTH HALVES OF A SEED CAN GO STALE, AND CHECKING ONLY THE LESSON LEAVES THE SAME DEAD SCREEN. A seed also names which of that lesson's quiz kinds it is, by position, and a lesson that has since lost a kind hands back a list too short to answer - which throws exactly as hard, at exactly the same moment, and looks identical to the learner.");
