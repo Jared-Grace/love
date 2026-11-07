@@ -1,4 +1,4 @@
-import { app_code_lesson_swapping_generic_numbers } from "./app_code_lesson_swapping_generic_numbers.mjs";
+import { app_learn_js_lesson_swapping_generic_numbers } from "./app_learn_js_lesson_swapping_generic_numbers.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_lesson_swapping_generic_pair_code } from "./app_code_lesson_swapping_generic_pair_code.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_swapping_generic_pairs_wanted(
   ("An operator that flips for almost every pair can still land on the same value for one of them: 2 ** 4 and 4 ** 2 are both 16. Written down as a false example that line reads true, and it contradicts the very rule the lesson is teaching, so the learner is shown a counterexample as if it were support. Two of the 448 pairs the divide lesson could build did this, before a power was held to three and five");
   ("The check is derived from the line itself, so an operator added to true_ops or false_ops later cannot bring the same fault back in quietly - it is caught for whatever operator has it, not for the one that happened to have it first");
   ("What works a line out is handed in rather than named here, and it has to be. The one that does it answers to a word this file cannot bind - a name reserved by the language, which a parameter may not wear - so the caller passes it and this end calls it by an ordinary word.");
-  let numbers = app_code_lesson_swapping_generic_numbers(op);
+  let numbers = app_learn_js_lesson_swapping_generic_numbers(op);
   let pairs = [];
   function left_lambda(a) {
     function right_lambda(b) {
