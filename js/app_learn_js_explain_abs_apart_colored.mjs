@@ -1,6 +1,6 @@
 import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-export function app_code_explain_abs_apart_colored(
+export function app_learn_js_explain_abs_apart_colored(
   b,
   a,
   answer,

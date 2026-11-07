@@ -4,7 +4,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
-import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart_colored.mjs";
+import { app_learn_js_explain_abs_apart_colored } from "./app_learn_js_explain_abs_apart_colored.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
@@ -86,14 +86,14 @@ export function app_code_lesson_statement_name_grid_steps() {
   let rows_count_color = app_code_highlight_color_second();
   let columns_count_color = app_code_highlight_color_fifth();
   let end_color = app_code_highlight_color();
-  let rows_worked = app_code_explain_abs_apart_colored(
+  let rows_worked = app_learn_js_explain_abs_apart_colored(
     "4",
     "1",
     "3",
     row_color,
     rows_count_color,
   );
-  let cols_worked = app_code_explain_abs_apart_colored(
+  let cols_worked = app_learn_js_explain_abs_apart_colored(
     "3",
     "1",
     "2",
