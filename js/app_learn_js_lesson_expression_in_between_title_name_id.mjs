@@ -3,7 +3,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-export function app_code_lesson_expression_in_between_title_name_id() {
+export function app_learn_js_lesson_expression_in_between_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: in between, an Expressions lesson, shown with the one shape it drills");
   ("The words alone named what the lesson is for and showed nothing of what a line looks like. Every line this lesson hands out is the same shape - two < signs with the middle number written twice - and the home list is read to find a lesson again rather than to meet it, so the shape is worth showing.");
