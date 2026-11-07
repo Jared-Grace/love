@@ -6,7 +6,7 @@ import { list_any } from "./list_any.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_lesson_quiz_token_select_marks_set(
+export function app_learn_js_lesson_quiz_token_select_marks_set(
   tokens_unique,
   chosen,
   variations,
