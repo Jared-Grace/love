@@ -447,7 +447,7 @@ export function permission_grant_names() {
     fn_name("storage_browser_direct_baseline_path"),
     fn_name("storage_browser_direct_baseline_write"),
     fn_name("storage_browser_direct_gate_run"),
-    fn_name("app_code_lesson_name_id_words"),
+    fn_name("app_learn_js_lesson_name_id_words"),
     fn_name("bible_interlinear_json_path"),
     fn_name("bible_interlinear_verse"),
     fn_name("colors_near_miss_pairs"),
