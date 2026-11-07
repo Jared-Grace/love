@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
-import { app_code_lesson_statement_name_average_two_step } from "./app_code_lesson_statement_name_average_two_step.mjs";
+import { app_learn_js_lesson_statement_name_average_two_step } from "./app_learn_js_lesson_statement_name_average_two_step.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_statement_name_average_two() {
   let names = app_code_lesson_statement_name_value_names();
   let name_a = list_first(names);
   let name_b = list_second(names);
-  let step = app_code_lesson_statement_name_average_two_step();
+  let step = app_learn_js_lesson_statement_name_average_two_step();
   let middle = property_get(step, "middle");
   let line_sum = list_first(middle);
   let line_average = list_second(middle);
