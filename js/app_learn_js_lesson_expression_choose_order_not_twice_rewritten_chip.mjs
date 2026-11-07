@@ -4,7 +4,7 @@ import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_lesson_expression_choose_order_not_twice_rewritten_texts } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_texts.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_twice_rewritten_texts } from "./app_learn_js_lesson_expression_choose_order_not_twice_rewritten_texts.mjs";
 import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip(
   line,
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_rewritten_
   "Left ! blue, right ! green, brackets red, and left is first. The sentences are read in that order and the two ! are met in that order, so the pairing is the order they are already being read in.";
   ("The characters come from ",
     fn_name(
-      "app_code_lesson_expression_choose_order_not_twice_rewritten_texts",
+      "app_learn_js_lesson_expression_choose_order_not_twice_rewritten_texts",
     ),
     ", the same place the plain showing of this line takes them from, so the coloured line and the uncoloured one cannot drift into being two different lines.");
   ("Written into a line handed in rather than onto a line of its own, because every sentence that uses it has words on at least one side of it.");
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_rewritten_
   let color_third = app_learn_js_highlight_color_third();
   let plain = app_shared_color_code_background();
   let texts =
-    app_code_lesson_expression_choose_order_not_twice_rewritten_texts();
+    app_learn_js_lesson_expression_choose_order_not_twice_rewritten_texts();
   let colors = [
     color_first,
     color_third,
