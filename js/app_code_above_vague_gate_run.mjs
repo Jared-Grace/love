@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_above_vague } from "./app_code_lessons_above_vague.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_above_vague_baseline_path } from "./app_code_above_vague_baseline_path.mjs";
+import { app_learn_js_above_vague_baseline_path } from "./app_learn_js_above_vague_baseline_path.mjs";
 import { baseline_names_gate_walked_generic } from "./baseline_names_gate_walked_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_code_above_vague_gate_run() {
@@ -15,7 +15,7 @@ export async function app_code_above_vague_gate_run() {
   let told = app_code_lessons_above_vague();
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "offenders");
-  let path = app_code_above_vague_baseline_path();
+  let path = app_learn_js_above_vague_baseline_path();
   let r = await baseline_names_gate_walked_generic(
     walked,
     offenders,
