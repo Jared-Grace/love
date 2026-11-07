@@ -1,4 +1,4 @@
-import { app_code_label_text } from "./app_code_label_text.mjs";
+import { app_learn_js_label_text } from "./app_learn_js_label_text.mjs";
 import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { property_get } from "./property_get.mjs";
@@ -50,7 +50,7 @@ export function app_code_lesson_quiz_braces_order_colored(
   let colors = app_learn_js_braces_colors_next(code);
   let code_div = html_div(parent);
   app_learn_js_code_dark_lines_braces_paired_colors(code_div, code, colors);
-  app_code_label_text(parent, "Its braces:");
+  app_learn_js_label_text(parent, "Its braces:");
   let answer_div = html_div(parent);
   let chosen = [];
   function show() {

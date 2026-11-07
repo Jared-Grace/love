@@ -6,7 +6,7 @@ import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
-import { app_code_label_text } from "./app_code_label_text.mjs";
+import { app_learn_js_label_text } from "./app_learn_js_label_text.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { list_add } from "./list_add.mjs";
@@ -72,7 +72,7 @@ export function app_code_lesson_quiz_tokens_tap({
     "a labelled line under the code, empty until a token it keeps is chosen";
     let label = property_get(row, "label");
     let kept = property_get(row, "kept");
-    app_code_label_text(parent, label);
+    app_learn_js_label_text(parent, label);
     let line_div = html_div(parent);
     html_style_code_dark(line_div);
     html_style_white_space(line_div, "pre-wrap");
