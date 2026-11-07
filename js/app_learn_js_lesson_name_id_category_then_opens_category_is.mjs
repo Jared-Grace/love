@@ -26,7 +26,7 @@ export function app_learn_js_lesson_name_id_category_then_opens_category_is(
   let opens = property_equals(
     callee,
     "name",
-    fn_name("app_code_lesson_name_id_category"),
+    fn_name("app_learn_js_lesson_name_id_category"),
   );
   return opens;
 }
