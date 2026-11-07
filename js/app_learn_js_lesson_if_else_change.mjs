@@ -30,7 +30,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_else_change() {
+export function app_learn_js_lesson_if_else_change() {
   arguments_assert(arguments, 0);
   ("a change on each side of an else: let n = 4; if (n < 5) { n += 3; } else { n *= 2; } console.log(n); writes out 7, and with n starting at 6 writes out 12");
   ("The one new fact is that each side of an else may change a name, as the line in A change in an if did, so what is written out after it depends on which side ran. It comes before the step the human asked for 2026-10-08 - halve an even number, otherwise times 3 plus 1 - which is this shape with the even check.");
