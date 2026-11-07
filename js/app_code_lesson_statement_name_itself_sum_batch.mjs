@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_name_first_written_batch } from "./app_code_lesson_statement_name_first_written_batch.mjs";
+import { app_learn_js_lesson_statement_name_first_written_batch } from "./app_learn_js_lesson_statement_name_first_written_batch.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_sum_number_pairs } from "./app_code_lesson_statement_name_sum_number_pairs.mjs";
 import { app_code_lesson_statement_name_itself_sum_title_code } from "./app_code_lesson_statement_name_itself_sum_title_code.mjs";
@@ -9,6 +9,9 @@ export function app_code_lesson_statement_name_itself_sum_batch() {
   ("So the three wrong answers a question offers are the other three questions' answers. Nothing has to be invented to fill the buttons, and every wrong answer is a total that some sum on this lesson really does come to.");
   let pairs = app_code_lesson_statement_name_sum_number_pairs();
   let line = app_code_lesson_statement_name_itself_sum_title_code();
-  let codes = app_code_lesson_statement_name_first_written_batch(pairs, line);
+  let codes = app_learn_js_lesson_statement_name_first_written_batch(
+    pairs,
+    line,
+  );
   return codes;
 }

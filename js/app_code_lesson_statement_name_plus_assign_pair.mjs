@@ -9,7 +9,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_code_lesson_statement_name_shorter_above } from "./app_code_lesson_statement_name_shorter_above.mjs";
 import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
 import { app_code_lesson_statement_name_sum_number_pairs } from "./app_code_lesson_statement_name_sum_number_pairs.mjs";
-import { app_code_lesson_statement_name_first_written_batch } from "./app_code_lesson_statement_name_first_written_batch.mjs";
+import { app_learn_js_lesson_statement_name_first_written_batch } from "./app_learn_js_lesson_statement_name_first_written_batch.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
 export function app_code_lesson_statement_name_plus_assign_pair() {
   arguments_assert(arguments, 0);
@@ -46,7 +46,7 @@ export function app_code_lesson_statement_name_plus_assign_pair() {
   function batch() {
     "the long lesson's pairs of numbers, with the short line";
     let pairs = app_code_lesson_statement_name_sum_number_pairs();
-    let codes = app_code_lesson_statement_name_first_written_batch(
+    let codes = app_learn_js_lesson_statement_name_first_written_batch(
       pairs,
       short,
     );
