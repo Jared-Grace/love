@@ -3,7 +3,7 @@ import { app_code_lesson_expression_parentheses_one_side } from "./app_code_less
 import { app_learn_js_lesson_expression_parentheses_both_sides_card_flat_line } from "./app_learn_js_lesson_expression_parentheses_both_sides_card_flat_line.mjs";
 import { app_learn_js_comparison_side_wrapped } from "./app_learn_js_comparison_side_wrapped.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
-import { app_code_lesson_expression_parentheses_both_sides_title_name_id } from "./app_code_lesson_expression_parentheses_both_sides_title_name_id.mjs";
+import { app_learn_js_lesson_expression_parentheses_both_sides_title_name_id } from "./app_learn_js_lesson_expression_parentheses_both_sides_title_name_id.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_expression_parentheses_both_sides() {
   "It used to call that the previous lesson. It is twenty-two screens back now, and the screen actually before this one is the pressing twin of this very lesson. Named by what it does rather than by a place. Corrected 2026-09-10.";
   "This is the shape the swapping lesson needs, and it is taught here on its own so that swapping teaches only swapping.";
   let name_id =
-    app_code_lesson_expression_parentheses_both_sides_title_name_id();
+    app_learn_js_lesson_expression_parentheses_both_sides_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_learn_js_lesson_expression_generic({
     above,

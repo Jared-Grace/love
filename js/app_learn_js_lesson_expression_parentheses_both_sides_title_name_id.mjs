@@ -2,7 +2,7 @@ import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-export function app_code_lesson_expression_parentheses_both_sides_title_name_id() {
+export function app_learn_js_lesson_expression_parentheses_both_sides_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: three comparisons, an Expressions lesson");
   ("The words its pressing twin wears, minus Solve, which is how every pair in this course is told apart. The twin walks one of these lines a press at a time; this one hands the whole line over and asks what it comes to.");

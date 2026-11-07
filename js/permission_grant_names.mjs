@@ -1150,7 +1150,9 @@ export function permission_grant_names() {
     fn_name("storage_function_path_json"),
     fn_name("gloss_back_references_baseline_write"),
     fn_name("gloss_back_references_gate_run"),
-    fn_name("app_code_lesson_expression_parentheses_both_sides_title_name_id"),
+    fn_name(
+      "app_learn_js_lesson_expression_parentheses_both_sides_title_name_id",
+    ),
     fn_name("functions_search"),
     fn_name("instructions_commands_gate_run"),
     fn_name("instructions_commands"),
