@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_expression_whole_part_formula } from "./app_code_lesson_expression_whole_part_formula.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
-import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
+import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_whole_part() {
   function decoys(question, answer) {
     "tailored wrong answers: the QUOTIENT alone (answer / divisor - forgot to multiply back by the divisor) and the REMAINDER (dividend - answer - the leftover, confused with the whole part). Both fall out of the question's numbers Math.floor(dividend / divisor) * divisor";
     let dividend = app_learn_js_division_dividend(question);
-    let divisor = app_code_division_divisor(question);
+    let divisor = app_learn_js_division_divisor(question);
     let quotient = divide(answer, divisor);
     let remainder = subtract(dividend, answer);
     let r = [quotient, remainder];

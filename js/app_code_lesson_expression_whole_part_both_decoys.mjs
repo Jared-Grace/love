@@ -1,5 +1,5 @@
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
-import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
+import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { list_add } from "./list_add.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_whole_part_both_decoys(
   arguments_assert(arguments, 2);
   ("tempting partial answers: the QUOTIENT (Math.floor(a / b) - rounded down but forgot to multiply by the divisor), the REMAINDER (a - whole part), and the raw decimal a / b when it is short and clean (skipped when it repeats, like 2 / 3)");
   let dividend = app_learn_js_division_dividend(question);
-  let divisor = app_code_division_divisor(question);
+  let divisor = app_learn_js_division_divisor(question);
   let list = [];
   let item = divide_floor(dividend, divisor);
   list_add(list, item);

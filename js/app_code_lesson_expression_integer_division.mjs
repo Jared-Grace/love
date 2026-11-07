@@ -1,6 +1,6 @@
 import { app_code_integer_division_uneven_cards } from "./app_code_integer_division_uneven_cards.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
-import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
+import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
 import { app_code_lesson_expression_integer_division_title_name_id } from "./app_code_lesson_expression_integer_division_title_name_id.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_integer_division() {
     let item = add(answer, 1);
     list_add(list, item);
     let dividend = app_learn_js_division_dividend(question);
-    let divisor = app_code_division_divisor(question);
+    let divisor = app_learn_js_division_divisor(question);
     let unfloored = divide(dividend, divisor);
     let unfloored_text = text_to(unfloored);
     let clean = text_regex_match(unfloored_text, /^[0-9]+(\.[0-9]{1,3})?$/);
