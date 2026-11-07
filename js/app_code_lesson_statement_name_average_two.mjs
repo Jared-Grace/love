@@ -14,7 +14,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_line_ends_middle_draw } from "./app_code_line_ends_middle_draw.mjs";
 import { app_code_number_line_draw } from "./app_code_number_line_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_definition_term } from "./app_code_definition_term.mjs";
+import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
@@ -101,7 +101,7 @@ export function app_code_lesson_statement_name_average_two() {
       " is called the ",
     ]);
     let line = draw_term(box);
-    app_code_definition_term(line, "average");
+    app_learn_js_definition_term(line, "average");
   }
   let v7 = pointed(["Which number is in the ", "", "middle", "", "?"]);
   let lesson = app_code_lesson_statement_formula({

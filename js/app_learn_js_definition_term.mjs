@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text_bold } from "./html_span_text_bold.mjs";
-export function app_code_definition_term(parent, term) {
+export function app_learn_js_definition_term(parent, term) {
   arguments_assert(arguments, 2);
   ("the word a line is defining, written the one way this app writes a word it is defining: bold");
   ("Every lesson that hands a learner a new word does the same thing to it, and this is the one place that says what the thing is. A line that reached for the bold itself would be choosing the styling again, and two lines that chose differently would tell a learner that one of the two words was a different kind of word.");

@@ -1,4 +1,4 @@
-import { app_code_definition_term } from "./app_code_definition_term.mjs";
+import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_bold_term(parent, prose, term) {
@@ -6,6 +6,6 @@ export function app_code_lesson_bold_term(parent, prose, term) {
   "The term is styled from the one place that says how a defined word is styled, so this line and the lines that write their term into the middle of a sentence cannot come out looking like two different kinds of word.";
   let line = html_div(parent);
   html_span_text(line, prose);
-  app_code_definition_term(line, term);
+  app_learn_js_definition_term(line, term);
   return line;
 }

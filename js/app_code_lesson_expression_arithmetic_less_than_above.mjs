@@ -1,4 +1,4 @@
-import { app_code_definition_term } from "./app_code_definition_term.mjs";
+import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue_div } from "./app_learn_js_container_light_blue_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_arithmetic_less_than_above(
     js_operator_symbol,
   );
   html_span_text(line, " before any ");
-  app_code_definition_term(line, "comparison");
+  app_learn_js_definition_term(line, "comparison");
   html_span_text(line, ": ");
   app_code_operators_comparison_or_list(line);
   let sum = add(2, 3);

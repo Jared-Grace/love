@@ -1,4 +1,4 @@
-import { app_code_definition_term } from "./app_code_definition_term.mjs";
+import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -13,6 +13,6 @@ export function app_code_operators_say(parent) {
   html_span_text(line, "Symbols like ");
   app_code_operators_arithmetic(line);
   html_span_text(line, " are ");
-  app_code_definition_term(line, "operators");
+  app_learn_js_definition_term(line, "operators");
   return line;
 }
