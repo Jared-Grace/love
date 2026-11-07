@@ -10,7 +10,7 @@ import { list_swap_at } from "./list_swap_at.mjs";
 import { modulo } from "./modulo.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_braces_run_programs_shape(code_get, names) {
+export function app_learn_js_braces_run_programs_shape(code_get, names) {
   arguments_assert(arguments, 2);
   ("four programs of one shape, code_get's, each opened by a let giving every one of names true or false, in a random order: the values differ between the four wherever the names give that many ways, so the learner meets the shape going different ways");
   ("Every way is allowed, every section running included: a section that runs has its own steps now, the if around it going and its lines moving out, so a program with nothing to swallow still has something to show.");
