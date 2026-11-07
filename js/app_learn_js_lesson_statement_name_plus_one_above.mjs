@@ -10,7 +10,10 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_statement_name_plus_one_above(root, context) {
+export function app_learn_js_lesson_statement_name_plus_one_above(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: a new name holding what another name holds, the program the lesson on copying a name was about, then the same program with one added to the name being copied");
   ("THE REMINDER IS THE SMALLEST PROGRAM THIS ONE GROWS FROM. It used to be the program of the lesson on keeping a total - three names and a sum of two of them - which was more to read than the lesson it stood above. Copying a name is the same program less the plus one, so the one new thing is said as the one difference between two lines.");
