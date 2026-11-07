@@ -4,7 +4,7 @@ import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_else_if_with_else_lines_multiple } from "./js_code_if_else_if_with_else_lines_multiple.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-export function app_code_else_if_else_program_lines(values, words) {
+export function app_learn_js_else_if_else_program_lines(values, words) {
   arguments_assert(arguments, 2);
   ("let a = first value; let b = second value; if (a) { console.log(first word); } else if (b) { console.log(second word); } else { console.log(third word); } console.log(fourth word);");
   let value_a = list_get(values, 0);

@@ -10,7 +10,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_else_if } from "./app_code_lesson_else_if.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_else_if_else_program_lines } from "./app_code_else_if_else_program_lines.mjs";
+import { app_learn_js_else_if_else_program_lines } from "./app_learn_js_else_if_else_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_learn_js_else_if_else_explain(root, context) {
@@ -46,7 +46,10 @@ export function app_learn_js_else_if_else_explain(root, context) {
     "else",
     " after it:",
   ]);
-  let peace_lines = app_code_else_if_else_program_lines([false, false], words);
+  let peace_lines = app_learn_js_else_if_else_program_lines(
+    [false, false],
+    words,
+  );
   let peace_written = list_join_newline([peace, patience]);
   app_learn_js_code_lines_writes_out(box_two, peace_lines, peace_written);
   app_learn_js_div_cycle_code(box_two, [
@@ -70,7 +73,7 @@ export function app_learn_js_else_if_else_explain(root, context) {
     "true",
     ":",
   ]);
-  let joy_lines = app_code_else_if_else_program_lines([false, true], words);
+  let joy_lines = app_learn_js_else_if_else_program_lines([false, true], words);
   let joy_written = list_join_newline([joy, patience]);
   app_learn_js_code_lines_writes_out(box_three, joy_lines, joy_written);
   app_learn_js_div_cycle_code(box_three, [
@@ -94,7 +97,7 @@ export function app_learn_js_else_if_else_explain(root, context) {
     "true",
     ":",
   ]);
-  let love_lines = app_code_else_if_else_program_lines([true, true], words);
+  let love_lines = app_learn_js_else_if_else_program_lines([true, true], words);
   let love_written = list_join_newline([love, patience]);
   app_learn_js_code_lines_writes_out(box_four, love_lines, love_written);
   app_learn_js_div_cycle_code(box_four, [
