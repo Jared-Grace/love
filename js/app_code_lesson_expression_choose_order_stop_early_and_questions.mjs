@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_code_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
-import { app_code_expression_stops_early_marked } from "./app_code_expression_stops_early_marked.mjs";
+import { app_learn_js_expression_stops_early_marked } from "./app_learn_js_expression_stops_early_marked.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code } from "./app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 export function app_code_lesson_expression_choose_order_stop_early_and_questions() {
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_choose_order_stop_early_and_questions
         want_true,
         false,
       );
-    let marked = app_code_expression_stops_early_marked(tree);
+    let marked = app_learn_js_expression_stops_early_marked(tree);
     return marked;
   }
   function tree_of_code(code) {
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_choose_order_stop_early_and_questions
       app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code(
         code,
       );
-    let marked = app_code_expression_stops_early_marked(tree);
+    let marked = app_learn_js_expression_stops_early_marked(tree);
     return marked;
   }
   let bank = app_code_lesson_expression_choose_order_questions_generic(
