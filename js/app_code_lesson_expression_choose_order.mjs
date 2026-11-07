@@ -6,7 +6,7 @@ import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_c
 import { app_learn_js_expression_chosen_pause } from "./app_learn_js_expression_chosen_pause.mjs";
 import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
-import { app_code_lesson_expression_choose_order_above } from "./app_code_lesson_expression_choose_order_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_above } from "./app_learn_js_lesson_expression_choose_order_above.mjs";
 import { app_code_lesson_expression_choose_order_walkthrough } from "./app_code_lesson_expression_choose_order_walkthrough.mjs";
 export function app_code_lesson_expression_choose_order() {
   "choosing which operator to work out first, and then the next, with the quiz working each one out as it is chosen: 1 + 2 * 3, choose the times, see 1 + 6, choose the plus";
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_choose_order() {
   let bank = app_code_lesson_expression_choose_order_questions();
   let lesson = app_code_lesson_expression_choose_order_generic(
     name_id,
-    app_code_lesson_expression_choose_order_above,
+    app_learn_js_lesson_expression_choose_order_above,
     answer_draw,
     app_code_lesson_expression_choose_order_walkthrough,
     bank,
