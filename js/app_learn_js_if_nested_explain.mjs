@@ -5,7 +5,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_if_nested_program_lines } from "./app_code_if_nested_program_lines.mjs";
+import { app_learn_js_if_nested_program_lines } from "./app_learn_js_if_nested_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
@@ -34,7 +34,7 @@ export function app_learn_js_if_nested_explain(root, context) {
     "if",
     ":",
   ]);
-  let all_lines = app_code_if_nested_program_lines([true, true], words);
+  let all_lines = app_learn_js_if_nested_program_lines([true, true], words);
   let all_written = list_join_newline(words);
   app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
   let say_love = app_code_word_console_log_statement(love);
@@ -79,7 +79,7 @@ export function app_learn_js_if_nested_explain(root, context) {
     "false",
     ":",
   ]);
-  let outer_lines = app_code_if_nested_program_lines([true, false], words);
+  let outer_lines = app_learn_js_if_nested_program_lines([true, false], words);
   let outer_written = list_join_newline([love, peace]);
   app_learn_js_code_lines_writes_out(box_three, outer_lines, outer_written);
   app_learn_js_div_cycle_code(box_three, [
@@ -108,7 +108,7 @@ export function app_learn_js_if_nested_explain(root, context) {
     "false",
     ":",
   ]);
-  let none_lines = app_code_if_nested_program_lines([false, true], words);
+  let none_lines = app_learn_js_if_nested_program_lines([false, true], words);
   app_learn_js_code_lines_writes_out(box_four, none_lines, peace);
   app_learn_js_div_cycle_code(box_four, [
     "",

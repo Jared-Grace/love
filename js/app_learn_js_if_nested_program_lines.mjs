@@ -5,7 +5,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-export function app_code_if_nested_program_lines(values, words) {
+export function app_learn_js_if_nested_program_lines(values, words) {
   arguments_assert(arguments, 2);
   ("let a = first value; let b = second value; if (a) { console.log(first word); if (b) { console.log(second word); } } console.log(third word);");
   let value = list_get(values, 0);
