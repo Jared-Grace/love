@@ -5,7 +5,7 @@ import { app_learn_js_lesson_statement_name_again_batch } from "./app_learn_js_l
 import { app_code_lesson_statement_title_code_dots_paint_get } from "./app_code_lesson_statement_title_code_dots_paint_get.mjs";
 import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
 import { app_learn_js_lesson_statement_name_again_backwards_decoys } from "./app_learn_js_lesson_statement_name_again_backwards_decoys.mjs";
-import { app_code_lesson_statement_name_again_last_backwards_decoys } from "./app_code_lesson_statement_name_again_last_backwards_decoys.mjs";
+import { app_learn_js_lesson_statement_name_again_last_backwards_decoys } from "./app_learn_js_lesson_statement_name_again_last_backwards_decoys.mjs";
 export function app_code_lesson_statement_name_again_pair() {
   arguments_assert(arguments, 0);
   ("the pair on giving a name a new value: its programs, its title line, and the words both its lessons are called by");
@@ -21,7 +21,7 @@ export function app_code_lesson_statement_name_again_pair() {
     backwards_decoys_first:
       app_learn_js_lesson_statement_name_again_backwards_decoys,
     backwards_decoys_last:
-      app_code_lesson_statement_name_again_last_backwards_decoys,
+      app_learn_js_lesson_statement_name_again_last_backwards_decoys,
   };
   return pair;
 }
