@@ -13,7 +13,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
@@ -102,7 +102,7 @@ export function app_code_lesson_statement_name_meetings_join() {
   let v2 = till("11");
   let v3 = from("10");
   let v4 = till("12");
-  let draw = app_code_explain_said([
+  let draw = app_learn_js_explain_said([
     "For example, suppose one meeting is from ",
     v,
     " to ",
@@ -114,21 +114,21 @@ export function app_code_lesson_statement_name_meetings_join() {
   ]);
   let v5 = from("9");
   let v6 = till("12");
-  let draw2 = app_code_explain_said([
+  let draw2 = app_learn_js_explain_said([
     "Together, the two meetings take the time from ",
     v5,
     " to ",
     v6,
   ]);
   let v7 = from("9");
-  let draw3 = app_code_explain_said(["", min_joined, " is ", v7]);
+  let draw3 = app_learn_js_explain_said(["", min_joined, " is ", v7]);
   let v8 = till("12");
-  let draw4 = app_code_explain_said(["", max_joined, " is ", v8]);
+  let draw4 = app_learn_js_explain_said(["", max_joined, " is ", v8]);
   let v9 = from(s);
   let v10 = till(e);
   let v11 = from(s2);
   let v12 = till(e2);
-  let draw5 = app_code_explain_said([
+  let draw5 = app_learn_js_explain_said([
     "Suppose the first meeting is from ",
     v9,
     " to ",

@@ -20,7 +20,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meeting_inside } from "./app_code_lesson_statement_name_meeting_inside.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -208,7 +208,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     let v2 = till(right);
     let v3 = from(top);
     let v4 = till(bottom);
-    let said = app_code_explain_said([
+    let said = app_learn_js_explain_said([
       "The ",
       word,
       " goes across ",
@@ -226,10 +226,14 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     ]);
     return said;
   }
-  let here_said = app_code_explain_said(["Here is the ", first_rectangle, ":"]);
+  let here_said = app_learn_js_explain_said([
+    "Here is the ",
+    first_rectangle,
+    ":",
+  ]);
   let first_goes = goes_said(first_rectangle, "1", "4", "1", "6");
   let first_alone = rectangles_draw([0, 0, 0, 0]);
-  let second_here = app_code_explain_said([
+  let second_here = app_learn_js_explain_said([
     "Here is the same ",
     first_rectangle,
     ", and a ",
@@ -238,13 +242,13 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   ]);
   let second_goes = goes_said(second_rectangle, "2", "3", "2", "4");
   let both_draw = rectangles_draw([2, 3, 2, 4]);
-  let seen_said = app_code_explain_said([
+  let seen_said = app_learn_js_explain_said([
     "We can see that the ",
     second_rectangle,
     " is inside the ",
     first,
   ]);
-  let numbers_said = app_code_explain_said([
+  let numbers_said = app_learn_js_explain_said([
     "How can we tell that the ",
     second_rectangle,
     " is inside the ",
@@ -253,7 +257,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   ]);
   let like_said = ['Across and down, it is like one "meeting" inside another'];
   let v5 = within_worked("1", "2", "3", "4");
-  let across_said = app_code_explain_said([
+  let across_said = app_learn_js_explain_said([
     "Across ",
     right_arrow,
     ", ",
@@ -262,7 +266,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     is_true,
   ]);
   let v6 = within_worked("1", "2", "4", "6");
-  let down_said = app_code_explain_said([
+  let down_said = app_learn_js_explain_said([
     "Down ",
     down_arrow,
     ", ",
@@ -270,7 +274,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     " is ",
     is_true,
   ]);
-  let both_said = app_code_explain_said([
+  let both_said = app_learn_js_explain_said([
     "Both are ",
     is_true,
     ", so the ",
@@ -280,7 +284,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   ]);
   let v7 = from("2");
   let v8 = till("5");
-  let suppose_said = app_code_explain_said([
+  let suppose_said = app_learn_js_explain_said([
     "But suppose the ",
     second_rectangle,
     " goes across from ",
@@ -291,17 +295,17 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   ]);
   let out_draw = rectangles_draw([2, 5, 2, 4]);
   let v9 = within_worked("1", "2", "5", "4");
-  let out_said = app_code_explain_said([
+  let out_said = app_learn_js_explain_said([
     "Visually, it sticks out on the right, so across is: ",
     v9,
     " which is ",
     is_false,
   ]);
-  let not_said = app_code_explain_said([
+  let not_said = app_learn_js_explain_said([
     "Down has the same numbers as before, so it is still ",
     is_true,
   ]);
-  let need_said = app_code_explain_said([
+  let need_said = app_learn_js_explain_said([
     "So we need both: across ",
     right_arrow,
     " ",
@@ -313,7 +317,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   let v11 = till(r);
   let v12 = from(t);
   let v13 = till(b);
-  let names_first = app_code_explain_said([
+  let names_first = app_learn_js_explain_said([
     "Suppose the ",
     first_rectangle,
     " goes across from ",
@@ -329,7 +333,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   let v15 = till(r2);
   let v16 = from(t2);
   let v17 = till(b2);
-  let names_second = app_code_explain_said([
+  let names_second = app_learn_js_explain_said([
     "And the ",
     second_rectangle,
     " goes across from ",
@@ -341,7 +345,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     " to ",
     v17,
   ]);
-  let code_said = app_code_explain_said([
+  let code_said = app_learn_js_explain_said([
     "Here is code that checks whether the ",
     second_rectangle,
     " is inside the ",

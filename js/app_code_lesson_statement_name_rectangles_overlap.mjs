@@ -25,7 +25,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -204,7 +204,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     let t_earlier = text_to(earlier_inner);
     let v = from(t_first_from);
     let v2 = till(t_first_to);
-    let draw3 = app_code_explain_said([
+    let draw3 = app_learn_js_explain_said([
       "The ",
       purple,
       " rectangle goes from " + word + "s ",
@@ -214,7 +214,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     ]);
     let v3 = from(t_second_from);
     let v4 = till(t_second_to);
-    let draw4 = app_code_explain_said([
+    let draw4 = app_learn_js_explain_said([
       "The ",
       orange,
       " rectangle goes from " + word + "s ",
@@ -224,23 +224,23 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     ]);
     let v5 = call_worked("Math.max", t_first_from, t_second_from, start_color);
     let v6 = from(t_later);
-    let draw7 = app_code_explain_said(["", v5, " is ", v6]);
+    let draw7 = app_learn_js_explain_said(["", v5, " is ", v6]);
     let v11 = call_worked("Math.min", t_first_to, t_second_to, end_color);
     let v12 = till(t_earlier);
-    let draw8 = app_code_explain_said(["", v11, " is ", v12]);
+    let draw8 = app_learn_js_explain_said(["", v11, " is ", v12]);
     let v13 = check_worked(t_later, t_earlier);
-    let draw9 = app_code_explain_said([
+    let draw9 = app_learn_js_explain_said([
       "",
       v13,
       ", so the " + word + ' "meetings" ',
       overlap_word,
     ]);
-    let draw10 = app_code_explain_said([
+    let draw10 = app_learn_js_explain_said([
       "The ",
       overlap_word,
       " starts at the later start:",
     ]);
-    let draw11 = app_code_explain_said([
+    let draw11 = app_learn_js_explain_said([
       "And the ",
       overlap_word,
       " ends at the earlier end:",
@@ -257,33 +257,33 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     ];
     return draws;
   }
-  let first_said = app_code_explain_said([
+  let first_said = app_learn_js_explain_said([
     "Two rectangles can ",
     overlap_word,
     " too:",
   ]);
-  let across_said = app_code_explain_said([
+  let across_said = app_learn_js_explain_said([
     "Across ",
     right_arrow,
     ", they ",
     overlap_word,
     ' like two "meetings"',
   ]);
-  let down_said = app_code_explain_said([
+  let down_said = app_learn_js_explain_said([
     "Down ",
     down_arrow,
     ", they also ",
     overlap_word,
     ' like two "meetings"',
   ]);
-  let share_said = app_code_explain_said([
+  let share_said = app_learn_js_explain_said([
     "The part they ",
     share_word,
     " is a rectangle too",
   ]);
   let v14 = from("2");
   let v15 = till("3");
-  let draw = app_code_explain_said([
+  let draw = app_learn_js_explain_said([
     "Suppose the ",
     shared_word,
     " part goes across ",
@@ -295,7 +295,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
   ]);
   let v16 = from("1");
   let v17 = till("3");
-  let draw2 = app_code_explain_said([
+  let draw2 = app_learn_js_explain_said([
     "And the ",
     shared_word,
     " part goes down ",
@@ -305,24 +305,24 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     " to ",
     v17,
   ]);
-  let seen_said = app_code_explain_said([
+  let seen_said = app_learn_js_explain_said([
     "We can see from looking at the image that the rectangles ",
     overlap_word,
   ]);
-  let numbers_said = app_code_explain_said([
+  let numbers_said = app_learn_js_explain_said([
     "But how could we solve whether or not the rectangles ",
     overlap_word,
     " through numbers?",
   ]);
   let row_draws = meeting_draws("row", 0, 3, 1, 4);
   let column_draws = meeting_draws("column", 0, 3, 2, 4);
-  let both_said = app_code_explain_said([
+  let both_said = app_learn_js_explain_said([
     'Both "meetings" ',
     overlap_word,
     ", so the rectangles ",
     overlap_word,
   ]);
-  let stacked_said = app_code_explain_said([
+  let stacked_said = app_learn_js_explain_said([
     "But these rectangles ",
     overlap_word,
     " across ",
@@ -331,8 +331,8 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     down_arrow,
     ":",
   ]);
-  let not_said = app_code_explain_said(["So they do not ", overlap_word]);
-  let draw5 = app_code_explain_said([
+  let not_said = app_learn_js_explain_said(["So they do not ", overlap_word]);
+  let draw5 = app_learn_js_explain_said([
     "So we need both: across ",
     right_arrow,
     " ",
@@ -344,7 +344,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
   let v8 = till(right);
   let v9 = from(top);
   let v10 = till(bottom);
-  let draw6 = app_code_explain_said([
+  let draw6 = app_learn_js_explain_said([
     "Suppose the ",
     shared_word,
     " part goes across ",
@@ -360,7 +360,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     " to ",
     v10,
   ]);
-  let code_said = app_code_explain_said([
+  let code_said = app_learn_js_explain_said([
     "Here is code that checks whether the two rectangles ",
     overlap_word,
     ":",

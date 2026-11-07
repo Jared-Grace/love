@@ -17,7 +17,7 @@ import { app_code_highlight_color_fourth } from "./app_code_highlight_color_four
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
@@ -173,7 +173,7 @@ export function app_code_lesson_statement_name_rectangles_cover_edges() {
     let v2 = till(right);
     let v3 = from(top);
     let v4 = till(bottom);
-    let said = app_code_explain_said([
+    let said = app_learn_js_explain_said([
       "The ",
       rectangle,
       " goes across from ",

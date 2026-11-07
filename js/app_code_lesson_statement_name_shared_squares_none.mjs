@@ -21,7 +21,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
@@ -164,14 +164,14 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   let shared_word = app_code_explain_word_colored("shared", overlap_color);
   let share_word = app_code_explain_word_colored("share", overlap_color);
   let overlap_word = app_code_explain_word_colored("overlap", overlap_color);
-  let draw = app_code_explain_said([
+  let draw = app_learn_js_explain_said([
     "These two rectangles do not ",
     overlap_word,
     ":",
   ]);
   let v = from("3");
   let v2 = till("2");
-  let draw2 = app_code_explain_said([
+  let draw2 = app_learn_js_explain_said([
     "Across ",
     right_arrow,
     ", the later start is ",
@@ -181,7 +181,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   ]);
   let v3 = from("3");
   let v4 = till("2");
-  let draw3 = app_code_explain_said([
+  let draw3 = app_learn_js_explain_said([
     "Down ",
     down_arrow,
     ", the later start is ",
@@ -192,7 +192,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   let v5 = raw("-1");
   let width_word = app_code_explain_word_colored(width, length_color);
   let height_word = app_code_explain_word_colored(height, length_color);
-  let draw4 = app_code_explain_said([
+  let draw4 = app_learn_js_explain_said([
     "So the ",
     width_word,
     " is ",
@@ -201,7 +201,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     v5,
   ]);
   let v6 = raw("-1");
-  let draw5 = app_code_explain_said([
+  let draw5 = app_learn_js_explain_said([
     "And the ",
     height_word,
     " is ",
@@ -211,10 +211,10 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   ]);
   let v7 = product_worked("-1", "-1", length_color);
   let v8 = size("1");
-  let draw6 = app_code_explain_said(["", v7, " is ", v8]);
+  let draw6 = app_learn_js_explain_said(["", v7, " is ", v8]);
   let v9 = size("0");
   let v10 = size("1");
-  let draw7 = app_code_explain_said([
+  let draw7 = app_learn_js_explain_said([
     "However the two rectangles ",
     share_word,
     " ",
@@ -241,12 +241,12 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     ]);
   }
   let v11 = size("0");
-  let draw8 = app_code_explain_said(["", floor_worked, " is ", v11]);
+  let draw8 = app_learn_js_explain_said(["", floor_worked, " is ", v11]);
   let max_chip = app_learn_js_explain_number_colored(max_name, plain);
   let v12 = product_worked("0", "0", overlap_color);
   let v13 = size("0");
   let v14 = size("0");
-  let draw9 = app_code_explain_said([
+  let draw9 = app_learn_js_explain_said([
     "",
     v12,
     " is ",
@@ -261,7 +261,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   ]);
   let v15 = raw(width);
   let v16 = raw(height);
-  let draw10 = app_code_explain_said([
+  let draw10 = app_learn_js_explain_said([
     "Suppose the ",
     shared_word,
     " part is ",
@@ -270,14 +270,14 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     v16,
     " tall",
   ]);
-  let draw11 = app_code_explain_said([
+  let draw11 = app_learn_js_explain_said([
     "Here is code that finds how many squares two rectangles ",
     share_word,
     ", even when they do not ",
     overlap_word,
     ":",
   ]);
-  let same_said = app_code_explain_said([
+  let same_said = app_learn_js_explain_said([
     "We can do the same for the ",
     width_word,
     " and for the ",
@@ -297,13 +297,13 @@ export function app_code_lesson_statement_name_shared_squares_none() {
       marked: [2, 3, 2, 3],
     });
   }
-  let try_said = app_code_explain_said([
+  let try_said = app_learn_js_explain_said([
     "But what happens if we try to solve the ",
     overlap_word,
     "?",
   ]);
   let v17 = size("1");
-  let solved_said = app_code_explain_said([
+  let solved_said = app_learn_js_explain_said([
     "So when we try to solve the ",
     overlap_word,
     ", we get ",
@@ -311,7 +311,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   ]);
   let v18 = size("0");
   let v19 = size("1");
-  let should_said = app_code_explain_said([
+  let should_said = app_learn_js_explain_said([
     "So the solved ",
     overlap_word,
     " should be ",
@@ -321,7 +321,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   ]);
   let v20 = size("0");
   let v21 = size("1");
-  let how_said = app_code_explain_said([
+  let how_said = app_learn_js_explain_said([
     "How can we make the solved ",
     overlap_word,
     " be ",

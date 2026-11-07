@@ -17,7 +17,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_join_down } from "./app_code_lesson_statement_name_rectangles_join_down.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -143,7 +143,7 @@ export function app_code_lesson_statement_name_rectangles_join_across() {
   let v2 = till("3");
   let v3 = from("2");
   let v4 = till("4");
-  let suppose_said = app_code_explain_said([
+  let suppose_said = app_learn_js_explain_said([
     "Suppose the ",
     first_rectangle,
     " goes across ",
@@ -165,7 +165,7 @@ export function app_code_lesson_statement_name_rectangles_join_across() {
   ]);
   let v5 = from("1");
   let v6 = till("4");
-  let together_said = app_code_explain_said([
+  let together_said = app_learn_js_explain_said([
     "Together, the two rectangles go across from ",
     v5,
     " to ",
@@ -175,14 +175,14 @@ export function app_code_lesson_statement_name_rectangles_join_across() {
   let min_joined = call_worked(min_name, "1", "2", start_color);
   let max_joined = call_worked(max_name, "3", "4", end_color);
   let v7 = from("1");
-  let left_worked = app_code_explain_said(["", min_joined, " is ", v7]);
+  let left_worked = app_learn_js_explain_said(["", min_joined, " is ", v7]);
   let v8 = till("4");
-  let right_worked = app_code_explain_said(["", max_joined, " is ", v8]);
+  let right_worked = app_learn_js_explain_said(["", max_joined, " is ", v8]);
   let v9 = from(l);
   let v10 = till(r);
   let v11 = from(l2);
   let v12 = till(r2);
-  let names_said = app_code_explain_said([
+  let names_said = app_learn_js_explain_said([
     "Suppose the ",
     first_rectangle,
     " goes across from ",

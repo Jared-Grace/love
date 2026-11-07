@@ -8,7 +8,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
@@ -114,7 +114,7 @@ export function app_code_lesson_statement_name_even() {
   let two_chip = app_learn_js_explain_number_colored("2", plain);
   let is_true = app_learn_js_explain_number_colored("true", plain);
   let is_false = app_learn_js_explain_number_colored("false", plain);
-  let eight_said = app_code_explain_said([
+  let eight_said = app_learn_js_explain_said([
     "",
     eight_chip,
     " is even, so dividing it by ",
@@ -123,7 +123,7 @@ export function app_code_lesson_statement_name_even() {
     zero,
     ":",
   ]);
-  let seven_said = app_code_explain_said([
+  let seven_said = app_learn_js_explain_said([
     "",
     seven_chip,
     " is odd, so dividing it by ",
@@ -133,19 +133,19 @@ export function app_code_lesson_statement_name_even() {
     ":",
   ]);
   let v = remainder_worked("8", "0");
-  let eight_worked_said = app_code_explain_said(["", v]);
+  let eight_worked_said = app_learn_js_explain_said(["", v]);
   let v2 = remainder_worked("7", "1");
-  let seven_worked_said = app_code_explain_said(["", v2]);
-  let even_said = app_code_explain_said([
+  let seven_worked_said = app_learn_js_explain_said(["", v2]);
+  let even_said = app_learn_js_explain_said([
     "So a number is even when its ",
     remainder_word,
     " is ",
     zero,
   ]);
   let v3 = check_worked("0");
-  let eight_check_said = app_code_explain_said(["", v3, " is ", is_true]);
+  let eight_check_said = app_learn_js_explain_said(["", v3, " is ", is_true]);
   let v4 = check_worked("1");
-  let seven_check_said = app_code_explain_said(["", v4, " is ", is_false]);
+  let seven_check_said = app_learn_js_explain_said(["", v4, " is ", is_false]);
   function example_draw(box, lines, output) {
     "the last example's program with its remainder, n % 2, in the remainder's colour, as in the writing above it; what it writes out is true or false, not a remainder, so it stays plain";
     let paint = app_learn_js_code_dark_lines_part_pointed(

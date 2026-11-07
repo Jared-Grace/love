@@ -18,7 +18,7 @@ import { app_code_highlight_color_fourth } from "./app_code_highlight_color_four
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -153,7 +153,7 @@ export function app_code_lesson_statement_name_meetings_free() {
   let v4 = two("another");
   let v5 = from("11");
   let v6 = till("12");
-  let suppose_said = app_code_explain_said([
+  let suppose_said = app_learn_js_explain_said([
     "Suppose ",
     v,
     " is from ",
@@ -168,14 +168,14 @@ export function app_code_lesson_statement_name_meetings_free() {
     v6,
   ]);
   let apart_draw = meetings_draw(11, 12);
-  let how_said = app_code_explain_said([
+  let how_said = app_learn_js_explain_said([
     "How many hours are free between the ",
     first_meeting,
     " and the ",
     second,
     "?",
   ]);
-  let compare_said = app_code_explain_said([
+  let compare_said = app_learn_js_explain_said([
     "We subtract the end of the ",
     first_meeting,
     " from the start of the ",
@@ -184,11 +184,11 @@ export function app_code_lesson_statement_name_meetings_free() {
   ]);
   let v7 = free_worked("11", "10");
   let v8 = lasting("1");
-  let apart_worked = app_code_explain_said(["", v7, " is ", v8]);
+  let apart_worked = app_learn_js_explain_said(["", v7, " is ", v8]);
   let v9 = lasting("1");
-  let apart_so = app_code_explain_said(["So ", v9, " hour is free"]);
+  let apart_so = app_learn_js_explain_said(["So ", v9, " hour is free"]);
   let first = one("first");
-  let only_said = app_code_explain_said([
+  let only_said = app_learn_js_explain_said([
     "The start of the ",
     first,
     " and the end of the ",
@@ -197,7 +197,7 @@ export function app_code_lesson_statement_name_meetings_free() {
   ]);
   let v10 = from("10");
   let v11 = till("12");
-  let touching_suppose = app_code_explain_said([
+  let touching_suppose = app_learn_js_explain_said([
     "But suppose the ",
     second_meeting,
     " is from ",
@@ -208,10 +208,10 @@ export function app_code_lesson_statement_name_meetings_free() {
   let touching_draw = meetings_draw(10, 12);
   let v12 = free_worked("10", "10");
   let v13 = lasting("0");
-  let touching_worked = app_code_explain_said(["", v12, " is ", v13]);
+  let touching_worked = app_learn_js_explain_said(["", v12, " is ", v13]);
   let v14 = lasting("0");
   let v15 = till("10");
-  let touching_said = app_code_explain_said([
+  let touching_said = app_learn_js_explain_said([
     "So ",
     v14,
     " hours are free: the ",
@@ -225,7 +225,7 @@ export function app_code_lesson_statement_name_meetings_free() {
   let v17 = till(e);
   let v18 = from(s2);
   let v19 = till(e2);
-  let names_said = app_code_explain_said([
+  let names_said = app_learn_js_explain_said([
     "Suppose the ",
     first_meeting,
     " is from ",
@@ -239,7 +239,7 @@ export function app_code_lesson_statement_name_meetings_free() {
     " to ",
     v19,
   ]);
-  let code_said = app_code_explain_said([
+  let code_said = app_learn_js_explain_said([
     "Here is code that finds how many hours are free between the meetings:",
   ]);
   let lesson = app_code_lesson_statement_formula({

@@ -18,7 +18,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -171,7 +171,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
   let v2 = till("3");
   let v3 = from("4");
   let v4 = till("6");
-  let suppose_said = app_code_explain_said([
+  let suppose_said = app_learn_js_explain_said([
     "Suppose the ",
     first_rectangle,
     " goes down ",
@@ -188,13 +188,13 @@ export function app_code_lesson_statement_name_rectangle_above() {
     v4,
   ]);
   let apart_draw = rectangles_draw(4, 6);
-  let seen_said = app_code_explain_said([
+  let seen_said = app_learn_js_explain_said([
     "We can see that the ",
     first_rectangle,
     " is above the ",
     second,
   ]);
-  let how_said = app_code_explain_said([
+  let how_said = app_learn_js_explain_said([
     "How can we tell the ",
     first_rectangle,
     " is above the ",
@@ -204,7 +204,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
   let like_said = [
     'Down, it is like one "meeting" that has ended by the time another starts',
   ];
-  let compare_said = app_code_explain_said([
+  let compare_said = app_learn_js_explain_said([
     "We compare the bottom of the ",
     first_rectangle,
     " to the top of the ",
@@ -212,8 +212,8 @@ export function app_code_lesson_statement_name_rectangle_above() {
     ":",
   ]);
   let v5 = check_worked("3", "4");
-  let apart_worked = app_code_explain_said(["", v5, " which is ", is_true]);
-  let only_said = app_code_explain_said([
+  let apart_worked = app_learn_js_explain_said(["", v5, " which is ", is_true]);
+  let only_said = app_learn_js_explain_said([
     "The top of the ",
     first,
     ", the bottom of the ",
@@ -222,7 +222,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
   ]);
   let v6 = from("3");
   let v7 = till("5");
-  let touching_suppose = app_code_explain_said([
+  let touching_suppose = app_learn_js_explain_said([
     "But suppose the ",
     second_rectangle,
     " goes down from ",
@@ -232,7 +232,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
   ]);
   let touching_draw = rectangles_draw(3, 5);
   let v8 = till("3");
-  let touching_said = app_code_explain_said([
+  let touching_said = app_learn_js_explain_said([
     "It starts just where the ",
     first_one,
     " ends, at ",
@@ -240,10 +240,10 @@ export function app_code_lesson_statement_name_rectangle_above() {
     ", so they share no squares",
   ]);
   let v9 = check_worked("3", "3");
-  let touching_worked = app_code_explain_said(["", v9, " is ", is_true]);
+  let touching_worked = app_learn_js_explain_said(["", v9, " is ", is_true]);
   let v10 = from("2");
   let v11 = till("5");
-  let overlap_suppose = app_code_explain_said([
+  let overlap_suppose = app_learn_js_explain_said([
     "And suppose the ",
     second_rectangle,
     " goes down from ",
@@ -253,7 +253,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
   ]);
   let overlap_draw = rectangles_draw(2, 5);
   let v12 = check_worked("3", "2");
-  let overlap_said = app_code_explain_said([
+  let overlap_said = app_learn_js_explain_said([
     "It starts before the ",
     first_one,
     " ends: ",
@@ -261,7 +261,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
     " is ",
     is_false,
   ]);
-  let overlap_so = app_code_explain_said([
+  let overlap_so = app_learn_js_explain_said([
     "So the ",
     first_rectangle,
     " is not above the ",
@@ -271,7 +271,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
   let v14 = till(b);
   let v15 = from(t2);
   let v16 = till(b2);
-  let names_said = app_code_explain_said([
+  let names_said = app_learn_js_explain_said([
     "Suppose the ",
     first_rectangle,
     " goes down from ",
@@ -285,7 +285,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
     " to ",
     v16,
   ]);
-  let code_said = app_code_explain_said([
+  let code_said = app_learn_js_explain_said([
     "Here is code that checks whether the ",
     first_rectangle,
     " is above the ",

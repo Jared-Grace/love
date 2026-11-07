@@ -17,7 +17,7 @@ import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_numb
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_expression_larger } from "./app_code_lesson_expression_larger.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_meetings_overlap() {
   arguments_assert(arguments, 0);
@@ -132,7 +132,7 @@ export function app_code_lesson_statement_name_meetings_overlap() {
   let v2 = till("11");
   let v3 = from("10");
   let v4 = till("12");
-  let draw = app_code_explain_said([
+  let draw = app_learn_js_explain_said([
     "Suppose one meeting is from ",
     v,
     " to ",
@@ -144,7 +144,7 @@ export function app_code_lesson_statement_name_meetings_overlap() {
   ]);
   let v5 = from("10");
   let v6 = till("11");
-  let draw2 = app_code_explain_said([
+  let draw2 = app_learn_js_explain_said([
     "From ",
     v5,
     " to ",
@@ -153,7 +153,7 @@ export function app_code_lesson_statement_name_meetings_overlap() {
   ]);
   let v7 = from("10");
   let v8 = till("11");
-  let draw3 = app_code_explain_said([
+  let draw3 = app_learn_js_explain_said([
     "From ",
     v7,
     " to ",
@@ -162,7 +162,7 @@ export function app_code_lesson_statement_name_meetings_overlap() {
   ]);
   let v9 = from("10");
   let v10 = till("11");
-  let draw4 = app_code_explain_said([
+  let draw4 = app_learn_js_explain_said([
     "So from ",
     v9,
     " to ",
@@ -170,18 +170,18 @@ export function app_code_lesson_statement_name_meetings_overlap() {
     " both meetings happen",
   ]);
   let v11 = from("10");
-  let draw5 = app_code_explain_said(["", max_shared, " is ", v11]);
+  let draw5 = app_learn_js_explain_said(["", max_shared, " is ", v11]);
   let v12 = till("11");
-  let draw6 = app_code_explain_said(["", min_shared, " is ", v12]);
+  let draw6 = app_learn_js_explain_said(["", min_shared, " is ", v12]);
   let v13 = from("10");
-  let draw7 = app_code_explain_said(["The overlap starts at ", v13]);
+  let draw7 = app_learn_js_explain_said(["The overlap starts at ", v13]);
   let v14 = till("11");
-  let draw8 = app_code_explain_said(["The overlap ends at ", v14]);
+  let draw8 = app_learn_js_explain_said(["The overlap ends at ", v14]);
   let v15 = check_worked("10", "11");
-  let draw9 = app_code_explain_said(["", v15]);
+  let draw9 = app_learn_js_explain_said(["", v15]);
   let v16 = from("10");
   let v17 = till("11");
-  let draw10 = app_code_explain_said([
+  let draw10 = app_learn_js_explain_said([
     "So the overlap starts (",
     v16,
     ") before it ends (",
@@ -192,7 +192,7 @@ export function app_code_lesson_statement_name_meetings_overlap() {
   let v19 = till("10");
   let v20 = from("10");
   let v21 = till("11");
-  let draw11 = app_code_explain_said([
+  let draw11 = app_learn_js_explain_said([
     "But a meeting from ",
     v18,
     " to ",
@@ -204,16 +204,16 @@ export function app_code_lesson_statement_name_meetings_overlap() {
     " only touch; they don't have any actual overlap:",
   ]);
   let v22 = from("10");
-  let draw12 = app_code_explain_said(["", max_touch, " is ", v22]);
+  let draw12 = app_learn_js_explain_said(["", max_touch, " is ", v22]);
   let v23 = till("10");
-  let draw13 = app_code_explain_said(["", min_touch, " is ", v23]);
+  let draw13 = app_learn_js_explain_said(["", min_touch, " is ", v23]);
   let v24 = check_worked("10", "10");
-  let draw14 = app_code_explain_said(["", v24, " is ", is_false]);
+  let draw14 = app_learn_js_explain_said(["", v24, " is ", is_false]);
   let v25 = from(s);
   let v26 = till(e);
   let v27 = from(s2);
   let v28 = till(e2);
-  let draw15 = app_code_explain_said([
+  let draw15 = app_learn_js_explain_said([
     "Suppose the first meeting is from ",
     v25,
     " to ",

@@ -21,7 +21,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -161,7 +161,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
   let v4 = till("11");
   let v18 = one("one meeting");
   let v19 = two("another");
-  let draw = app_code_explain_said([
+  let draw = app_learn_js_explain_said([
     "Suppose ",
     v18,
     " is from ",
@@ -177,7 +177,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
   ]);
   let v_s = from("9");
   let v_s1 = from("8");
-  let draw2 = app_code_explain_said([
+  let draw2 = app_learn_js_explain_said([
     "The ",
     second_meeting,
     " starts (",
@@ -190,7 +190,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
   ]);
   let v_e = till("11");
   let v_e1 = till("12");
-  let draw3 = app_code_explain_said([
+  let draw3 = app_learn_js_explain_said([
     "And the ",
     second_meeting,
     " ends before (",
@@ -208,38 +208,38 @@ export function app_code_lesson_statement_name_meeting_inside() {
       [9, 11],
     ]);
   }
-  let how_said = app_code_explain_said([
+  let how_said = app_learn_js_explain_said([
     "How can we tell the ",
     second_meeting,
     " is inside the ",
     first_meeting,
     " using numbers?",
   ]);
-  let first_said = app_code_explain_said([
+  let first_said = app_learn_js_explain_said([
     "First we check that the ",
     first_meeting,
     " has begun by the time the ",
     second_meeting,
     " starts:",
   ]);
-  let then_said = app_code_explain_said([
+  let then_said = app_learn_js_explain_said([
     "Then we check that the ",
     second_meeting,
     " has ended by the time the ",
     first_meeting,
     " ends:",
   ]);
-  let draw4 = app_code_explain_said([
+  let draw4 = app_learn_js_explain_said([
     "So the ",
     second_meeting,
     " is inside the ",
     first,
   ]);
   let v5 = check_worked("8", "9", start_color);
-  let draw5 = app_code_explain_said(["", v5, " is ", is_true]);
+  let draw5 = app_learn_js_explain_said(["", v5, " is ", is_true]);
   let v6 = check_worked("11", "12", end_color);
-  let draw6 = app_code_explain_said(["", v6, " is ", is_true]);
-  let draw7 = app_code_explain_said([
+  let draw6 = app_learn_js_explain_said(["", v6, " is ", is_true]);
+  let draw7 = app_learn_js_explain_said([
     "Both are ",
     is_true,
     ", so the ",
@@ -249,7 +249,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
   ]);
   let v7 = from("8");
   let v8 = till("10");
-  let draw8 = app_code_explain_said([
+  let draw8 = app_learn_js_explain_said([
     "But suppose the ",
     second_meeting,
     " is from ",
@@ -258,7 +258,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
     v8,
   ]);
   let v9 = from("8");
-  let draw9 = app_code_explain_said([
+  let draw9 = app_learn_js_explain_said([
     "It starts when the ",
     first_one,
     " starts, at ",
@@ -267,7 +267,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
     first,
   ]);
   let v10 = check_worked("8", "8", start_color);
-  let draw10 = app_code_explain_said([
+  let draw10 = app_learn_js_explain_said([
     "That is why we check with ",
     at_most_chip,
     " and not ",
@@ -279,7 +279,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
   ]);
   let v11 = from("11");
   let v12 = till("13");
-  let draw11 = app_code_explain_said([
+  let draw11 = app_learn_js_explain_said([
     "And suppose the ",
     second_meeting,
     " is from ",
@@ -288,7 +288,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
     v12,
   ]);
   let v13 = check_worked("13", "12", end_color);
-  let draw12 = app_code_explain_said([
+  let draw12 = app_learn_js_explain_said([
     "It ends after the ",
     first_one,
     " ends: ",
@@ -296,7 +296,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
     " is ",
     is_false,
   ]);
-  let draw13 = app_code_explain_said([
+  let draw13 = app_learn_js_explain_said([
     "So the ",
     second_meeting,
     " is not inside the ",
@@ -306,7 +306,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
   let v15 = till(e);
   let v16 = from(s2);
   let v17 = till(e2);
-  let draw14 = app_code_explain_said([
+  let draw14 = app_learn_js_explain_said([
     "Suppose the ",
     first_meeting,
     " is from ",
@@ -320,7 +320,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
     " to ",
     v17,
   ]);
-  let code_said = app_code_explain_said([
+  let code_said = app_learn_js_explain_said([
     "Here is code that checks whether the ",
     second_meeting,
     " is inside the ",

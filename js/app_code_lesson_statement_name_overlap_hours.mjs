@@ -17,7 +17,7 @@ import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_numb
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_overlap_hours() {
   arguments_assert(arguments, 0);
@@ -115,7 +115,7 @@ export function app_code_lesson_statement_name_overlap_hours() {
   );
   let v = from("10");
   let v2 = till("12");
-  let draw = app_code_explain_said([
+  let draw = app_learn_js_explain_said([
     "Suppose two meetings overlap from ",
     v,
     " to ",
@@ -123,14 +123,18 @@ export function app_code_lesson_statement_name_overlap_hours() {
   ]);
   let v3 = gap_worked("12", "10");
   let v4 = lasting("2");
-  let draw2 = app_code_explain_said(["", v3, " is ", v4]);
+  let draw2 = app_learn_js_explain_said(["", v3, " is ", v4]);
   let v5 = lasting("2");
-  let draw3 = app_code_explain_said(["So the overlap is ", v5, " hours long"]);
+  let draw3 = app_learn_js_explain_said([
+    "So the overlap is ",
+    v5,
+    " hours long",
+  ]);
   let v6 = from("9");
   let v7 = till("10");
   let v8 = from("11");
   let v9 = till("12");
-  let draw4 = app_code_explain_said([
+  let draw4 = app_learn_js_explain_said([
     "But suppose one meeting is from ",
     v6,
     " to ",
@@ -142,7 +146,7 @@ export function app_code_lesson_statement_name_overlap_hours() {
   ]);
   let v10 = from("11");
   let v11 = till("10");
-  let draw5 = app_code_explain_said([
+  let draw5 = app_learn_js_explain_said([
     "The later start is ",
     v10,
     ", and the earlier end is ",
@@ -150,30 +154,30 @@ export function app_code_lesson_statement_name_overlap_hours() {
   ]);
   let v12 = gap_worked("10", "11");
   let v13 = lasting("-1");
-  let draw6 = app_code_explain_said(["", v12, " is ", v13]);
+  let draw6 = app_learn_js_explain_said(["", v12, " is ", v13]);
   let v14 = lasting("-1");
-  let draw7 = app_code_explain_said([
+  let draw7 = app_learn_js_explain_said([
     "But meetings cannot overlap for ",
     v14,
     " hours",
   ]);
   let v15 = lasting("0");
-  let draw8 = app_code_explain_said([
+  let draw8 = app_learn_js_explain_said([
     "We want the overlap to be ",
     v15,
     " hours",
   ]);
   let v16 = lasting("0");
-  let draw9 = app_code_explain_said([
+  let draw9 = app_learn_js_explain_said([
     "So we want: if the overlap is negative, then make the overlap ",
     v16,
     " instead of negative",
   ]);
   let v17 = lasting("0");
-  let draw10 = app_code_explain_said(["", max_floor, ", which is ", v17]);
+  let draw10 = app_learn_js_explain_said(["", max_floor, ", which is ", v17]);
   let v18 = from(start);
   let v19 = till(end);
-  let draw11 = app_code_explain_said([
+  let draw11 = app_learn_js_explain_said([
     "Suppose the overlap starts at ",
     v18,
     " and ends at ",

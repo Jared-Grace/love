@@ -7,7 +7,7 @@ import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth
 import { app_learn_js_explain_abs_apart_colored } from "./app_learn_js_explain_abs_apart_colored.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_arrow_turned_draw } from "./app_learn_js_arrow_turned_draw.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
@@ -114,7 +114,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   let v8 = app_learn_js_explain_number_colored("3", column_color);
   let draw18 = app_learn_js_explain_emoji_square("🙂", start_color);
   let draw19 = app_learn_js_explain_emoji_square("🏁", end_color);
-  let question_said = app_code_explain_said([
+  let question_said = app_learn_js_explain_said([
     "How many steps are there from ",
     draw18,
     " ",
@@ -140,7 +140,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   let v9 = app_code_explain_word_colored("rows", row_color);
   let v10 = app_learn_js_explain_number_colored("1", row_color);
   let v11 = app_learn_js_explain_number_colored("4", row_color);
-  let rows_said = app_code_explain_said([
+  let rows_said = app_learn_js_explain_said([
     "First the ",
     v9,
     ": from ",
@@ -156,7 +156,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   let v12 = app_code_explain_word_colored("columns", column_color);
   let v13 = app_learn_js_explain_number_colored("1", column_color);
   let v14 = app_learn_js_explain_number_colored("3", column_color);
-  let columns_said = app_code_explain_said([
+  let columns_said = app_learn_js_explain_said([
     "Then the ",
     v12,
     ": from ",
@@ -226,7 +226,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   }
   let draw = app_learn_js_explain_number_colored(r, row_color);
   let draw2 = app_learn_js_explain_number_colored(c, column_color);
-  let draw3 = app_code_explain_said([
+  let draw3 = app_learn_js_explain_said([
     "Suppose the first square is at ",
     row_word,
     " ",
@@ -238,7 +238,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   ]);
   let draw4 = app_learn_js_explain_number_colored(r2, row_color);
   let draw5 = app_learn_js_explain_number_colored(c2, column_color);
-  let draw6 = app_code_explain_said([
+  let draw6 = app_learn_js_explain_said([
     "And the second square is at ",
     row_word,
     " ",
@@ -251,7 +251,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   let draw12 = app_learn_js_explain_number_colored("3", rows_count_color);
   let draw13 = app_learn_js_explain_number_colored("2", columns_count_color);
   let draw20 = app_learn_js_explain_emoji_square("🏁", end_color);
-  let draw14 = app_code_explain_said([
+  let draw14 = app_learn_js_explain_said([
     "If we travel ",
     draw12,
     " squares down and ",
@@ -261,7 +261,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   ]);
   let draw15 = app_learn_js_explain_number_colored("3", rows_count_color);
   let draw16 = app_learn_js_explain_number_colored("2", columns_count_color);
-  let draw17 = app_code_explain_said([
+  let draw17 = app_learn_js_explain_said([
     "But how can we calculate the ",
     draw15,
     " squares down and ",

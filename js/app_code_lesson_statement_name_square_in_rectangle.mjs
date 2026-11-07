@@ -20,7 +20,7 @@ import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_numb
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_statement_name_grid_inside.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -179,8 +179,8 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let one = app_learn_js_explain_number_colored("1", plain);
   let is_true = app_learn_js_explain_number_colored("true", plain);
   let is_false = app_learn_js_explain_number_colored("false", plain);
-  let draw = app_code_explain_said(["Here is a ", rectangle_word, ":"]);
-  let same_said = app_code_explain_said([
+  let draw = app_learn_js_explain_said(["Here is a ", rectangle_word, ":"]);
+  let same_said = app_learn_js_explain_said([
     "Here is the same ",
     rectangle_word,
     ", but also a ",
@@ -194,7 +194,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let v2 = till("4");
   let v3 = from("1");
   let v4 = till("3");
-  let draw2 = app_code_explain_said([
+  let draw2 = app_learn_js_explain_said([
     "The ",
     rectangle_word,
     " goes across ",
@@ -212,27 +212,27 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   ]);
   let v5 = at("2");
   let v6 = at("2");
-  let draw3 = app_code_explain_said([
+  let draw3 = app_learn_js_explain_said([
     "The left of the ",
     square_word,
     " is ",
     v5,
     " across",
   ]);
-  let top_said = app_code_explain_said([
+  let top_said = app_learn_js_explain_said([
     "The top of the ",
     square_word,
     " is ",
     v6,
     " down",
   ]);
-  let seen_said = app_code_explain_said([
+  let seen_said = app_learn_js_explain_said([
     "We can see that the ",
     square_word,
     " is inside the ",
     rectangle_word,
   ]);
-  let numbers_said = app_code_explain_said([
+  let numbers_said = app_learn_js_explain_said([
     "How can we tell that the ",
     square_word,
     " is inside the ",
@@ -240,7 +240,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     " using numbers?",
   ]);
   let v7 = between_worked("1", "2", "4");
-  let draw4 = app_code_explain_said([
+  let draw4 = app_learn_js_explain_said([
     "Across ",
     right_arrow,
     ", ",
@@ -249,7 +249,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     is_true,
   ]);
   let v8 = between_worked("1", "2", "3");
-  let draw5 = app_code_explain_said([
+  let draw5 = app_learn_js_explain_said([
     "Down ",
     down_arrow,
     ", ",
@@ -257,7 +257,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     " is ",
     is_true,
   ]);
-  let draw6 = app_code_explain_said([
+  let draw6 = app_learn_js_explain_said([
     "Both are ",
     is_true,
     ", so the ",
@@ -266,7 +266,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     rectangle_word,
   ]);
   let v9 = at("4");
-  let draw7 = app_code_explain_said([
+  let draw7 = app_learn_js_explain_said([
     "But suppose the ",
     square_word,
     " starts at line ",
@@ -274,7 +274,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     " across:",
   ]);
   let v10 = till("4");
-  let draw8 = app_code_explain_said([
+  let draw8 = app_learn_js_explain_said([
     "The ",
     square_word,
     " starts on the right edge of the ",
@@ -287,7 +287,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let v11 = less_worked("4", "4");
   let less_chip = app_learn_js_explain_number_colored(less, plain);
   let at_most_chip = app_learn_js_explain_number_colored(at_most, plain);
-  let draw9 = app_code_explain_said([
+  let draw9 = app_learn_js_explain_said([
     "That is why we check with ",
     less_chip,
     " and not ",
@@ -303,7 +303,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let v15 = till(bottom);
   let v16 = at(x);
   let v17 = at(y);
-  let draw10 = app_code_explain_said([
+  let draw10 = app_learn_js_explain_said([
     "Suppose the ",
     rectangle_word,
     " goes across from ",
@@ -322,14 +322,14 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     v17,
     " down",
   ]);
-  let draw11 = app_code_explain_said([
+  let draw11 = app_learn_js_explain_said([
     "Here is code that checks whether the ",
     square_word,
     " is inside the ",
     rectangle_word,
     ":",
   ]);
-  let draw_size = app_code_explain_said([
+  let draw_size = app_learn_js_explain_said([
     "Because the ",
     square_word,
     " is ",

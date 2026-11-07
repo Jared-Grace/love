@@ -20,7 +20,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -170,7 +170,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
     let v2_inner = till(end_across);
     let v3_inner = from(start_down);
     let v4_inner = till(end_down);
-    let said = app_code_explain_said([
+    let said = app_learn_js_explain_said([
       "The ",
       rectangle_word,
       " goes across ",
@@ -192,7 +192,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
     "The width or height is end - start, which is result";
     let v_size = minus_worked(end, start);
     let v2_size = length(result);
-    let said = app_code_explain_said([
+    let said = app_learn_js_explain_said([
       "The ",
       word,
       " is ",
@@ -203,13 +203,13 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
     return said;
   }
   let first_draw = rectangle_draw([1, 3, 1, 3], [1, 3], [1, 3]);
-  let question_said = app_code_explain_said([
+  let question_said = app_learn_js_explain_said([
     "Is the ",
     rectangle_word,
     " as wide as it is tall?",
   ]);
   let v = equal_worked("2", "2");
-  let first_answer = app_code_explain_said([
+  let first_answer = app_learn_js_explain_said([
     "",
     v,
     " is ",
@@ -221,7 +221,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   let moved_draw = rectangle_draw([0, 2, 1, 3], [0, 2], [1, 3]);
   let v2 = till("2");
   let v3 = till("3");
-  let edges_said = app_code_explain_said([
+  let edges_said = app_learn_js_explain_said([
     "Its right edge ",
     v2,
     " and its bottom edge ",
@@ -229,14 +229,14 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
     " are not equal",
   ]);
   let v4 = equal_worked("2", "2");
-  let moved_answer = app_code_explain_said([
+  let moved_answer = app_learn_js_explain_said([
     "But ",
     v4,
     " is ",
     is_true,
     ", so it is still as wide as it is tall",
   ]);
-  let compare_said = app_code_explain_said([
+  let compare_said = app_learn_js_explain_said([
     "So we compare the ",
     width_word,
     " and the ",
@@ -247,7 +247,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   let v6 = till(right);
   let v7 = from(top);
   let v8 = till(bottom);
-  let names_said = app_code_explain_said([
+  let names_said = app_learn_js_explain_said([
     "Suppose the ",
     rectangle_word,
     " goes across from ",
@@ -262,7 +262,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   let v9 = goes_said("1", "3", "1", "3");
   let v10 = size_said(width_word, "3", "1", "2");
   let v11 = size_said(height_word, "3", "1", "2");
-  let draw2 = app_code_explain_said([
+  let draw2 = app_learn_js_explain_said([
     "But suppose the ",
     rectangle_word,
     " moves left by one square:",

@@ -19,7 +19,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangle_above } from "./app_code_lesson_statement_name_rectangle_above.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -168,7 +168,7 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
   let v2 = till("3");
   let v3 = from("4");
   let v4 = till("6");
-  let suppose_said = app_code_explain_said([
+  let suppose_said = app_learn_js_explain_said([
     "Suppose the ",
     first_rectangle,
     " goes down ",
@@ -185,7 +185,7 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
     v4,
   ]);
   let apart_draw = rectangles_draw(4, 6);
-  let how_said = app_code_explain_said([
+  let how_said = app_learn_js_explain_said([
     "How many rows are between the ",
     first_rectangle,
     " and the ",
@@ -193,7 +193,7 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
     "?",
   ]);
   let like_said = ['Down, it is like the hours free between two "meetings"'];
-  let compare_said = app_code_explain_said([
+  let compare_said = app_learn_js_explain_said([
     "We subtract the bottom of the ",
     first_rectangle,
     " from the top of the ",
@@ -202,11 +202,11 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
   ]);
   let v5 = between_worked("4", "3");
   let v6 = counted("1");
-  let apart_worked = app_code_explain_said(["", v5, " is ", v6]);
+  let apart_worked = app_learn_js_explain_said(["", v5, " is ", v6]);
   let v7 = counted("1");
-  let apart_so = app_code_explain_said(["So ", v7, " row is between them"]);
+  let apart_so = app_learn_js_explain_said(["So ", v7, " row is between them"]);
   let first = one("first");
-  let only_said = app_code_explain_said([
+  let only_said = app_learn_js_explain_said([
     "The top of the ",
     first,
     ", the bottom of the ",
@@ -215,7 +215,7 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
   ]);
   let v8 = from("3");
   let v9 = till("5");
-  let touching_suppose = app_code_explain_said([
+  let touching_suppose = app_learn_js_explain_said([
     "But suppose the ",
     second_rectangle,
     " goes down from ",
@@ -226,10 +226,10 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
   let touching_draw = rectangles_draw(3, 5);
   let v10 = between_worked("3", "3");
   let v11 = counted("0");
-  let touching_worked = app_code_explain_said(["", v10, " is ", v11]);
+  let touching_worked = app_learn_js_explain_said(["", v10, " is ", v11]);
   let v12 = counted("0");
   let v13 = till("3");
-  let touching_said = app_code_explain_said([
+  let touching_said = app_learn_js_explain_said([
     "So ",
     v12,
     " rows are between them: the ",
@@ -243,7 +243,7 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
   let v15 = till(b);
   let v16 = from(t2);
   let v17 = till(b2);
-  let names_said = app_code_explain_said([
+  let names_said = app_learn_js_explain_said([
     "Suppose the ",
     first_rectangle,
     " goes down from ",
@@ -257,7 +257,7 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
     " to ",
     v17,
   ]);
-  let code_said = app_code_explain_said([
+  let code_said = app_learn_js_explain_said([
     "Here is code that finds how many rows are between the rectangles:",
   ]);
   let lesson = app_code_lesson_statement_formula({

@@ -22,7 +22,7 @@ import { range } from "./range.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
 import { app_learn_js_explain_containers } from "./app_learn_js_explain_containers.mjs";
@@ -156,7 +156,7 @@ export function app_code_lesson_statement_name_grid_inside() {
   let two_row = app_learn_js_explain_number_colored("2", row_color);
   let one_column = app_learn_js_explain_number_colored("1", column_color);
   let three_column = app_learn_js_explain_number_colored("3", column_color);
-  let grid_said = app_code_explain_said([
+  let grid_said = app_learn_js_explain_said([
     "Suppose a ",
     grid_word,
     " has ",
@@ -166,25 +166,25 @@ export function app_code_lesson_statement_name_grid_inside() {
     " columns",
   ]);
   let draw2 = app_learn_js_explain_number_colored("0", plain);
-  let numbered_said = app_code_explain_said([
+  let numbered_said = app_learn_js_explain_said([
     "The ",
     grid_word,
     "'s rows and columns are both numbered starting with ",
     draw2,
   ]);
-  let blue_said = app_code_explain_said([
+  let blue_said = app_learn_js_explain_said([
     "The squares that are ",
     blue_word,
     " are part of the ",
     grid_word,
   ]);
-  let not_blue_said = app_code_explain_said([
+  let not_blue_said = app_learn_js_explain_said([
     "The squares that are not ",
     blue_word,
     " are not part of the ",
     grid_word,
   ]);
-  let both_said = app_code_explain_said([
+  let both_said = app_learn_js_explain_said([
     "A square is inside the ",
     grid_word,
     " when its ",
@@ -196,7 +196,7 @@ export function app_code_lesson_statement_name_grid_inside() {
     " is inside the ",
     grid_word,
   ]);
-  let inside_said = app_code_explain_said([
+  let inside_said = app_learn_js_explain_said([
     "🙂 ",
     row_word,
     " ",
@@ -209,16 +209,16 @@ export function app_code_lesson_statement_name_grid_inside() {
     grid_word,
     ":",
   ]);
-  let row_two_said = app_code_explain_said(["", row_two, " is ", is_true]);
-  let column_one_said = app_code_explain_said([
+  let row_two_said = app_learn_js_explain_said(["", row_two, " is ", is_true]);
+  let column_one_said = app_learn_js_explain_said([
     "",
     column_one,
     " is ",
     is_true,
   ]);
   let v = both_worked("true");
-  let true_true_said = app_code_explain_said(["", v, " is ", is_true]);
-  let outside_said = app_code_explain_said([
+  let true_true_said = app_learn_js_explain_said(["", v, " is ", is_true]);
+  let outside_said = app_learn_js_explain_said([
     "🙂 ",
     row_word,
     " ",
@@ -231,7 +231,7 @@ export function app_code_lesson_statement_name_grid_inside() {
     grid_word,
     ":",
   ]);
-  let no_column_said = app_code_explain_said([
+  let no_column_said = app_learn_js_explain_said([
     "But the ",
     grid_word,
     " has no ",
@@ -240,14 +240,14 @@ export function app_code_lesson_statement_name_grid_inside() {
     three_column,
     ":",
   ]);
-  let column_three_said = app_code_explain_said([
+  let column_three_said = app_learn_js_explain_said([
     "",
     column_three,
     " is ",
     is_false,
   ]);
   let v2 = both_worked("false");
-  let true_false_said = app_code_explain_said(["", v2, " is ", is_false]);
+  let true_false_said = app_learn_js_explain_said(["", v2, " is ", is_false]);
   let r_chip = app_learn_js_explain_number_colored(r, row_color);
   let c_chip = app_learn_js_explain_number_colored(c, column_color);
   let rows_chip = app_learn_js_explain_number_colored(rows, rows_count_color);
@@ -255,7 +255,7 @@ export function app_code_lesson_statement_name_grid_inside() {
     cols,
     columns_count_color,
   );
-  let names_said = app_code_explain_said([
+  let names_said = app_learn_js_explain_said([
     "Suppose the ",
     row_word,
     " is called ",
@@ -265,13 +265,13 @@ export function app_code_lesson_statement_name_grid_inside() {
     " is called ",
     c_chip,
   ]);
-  let counts_said = app_code_explain_said([
+  let counts_said = app_learn_js_explain_said([
     "And suppose the number of rows is called ",
     rows_chip,
     " and the number of columns is called ",
     cols_chip,
   ]);
-  let code_said = app_code_explain_said([
+  let code_said = app_learn_js_explain_said([
     "Here is code that checks whether the square at ",
     row_word,
     " ",

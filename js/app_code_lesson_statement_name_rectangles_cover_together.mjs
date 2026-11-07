@@ -18,7 +18,7 @@ import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_numb
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -159,7 +159,7 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
   let shared_word = app_code_explain_word_colored("shared", overlap_color);
   let v = first_area("4");
   let v2 = second_area("6");
-  let suppose_said = app_code_explain_said([
+  let suppose_said = app_learn_js_explain_said([
     "Suppose the ",
     first_rectangle,
     " covers ",
@@ -171,15 +171,20 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
     " squares",
   ]);
   let v3 = shared_area("2");
-  let share_said = app_code_explain_said([
+  let share_said = app_learn_js_explain_said([
     "The two rectangles share ",
     v3,
     " squares",
   ]);
   let how_said = ["How many squares do the two rectangles cover together?"];
   let v4 = counted("10");
-  let add_said = app_code_explain_said(["If we add, ", sum_worked, " is ", v4]);
-  let twice_said = app_code_explain_said([
+  let add_said = app_learn_js_explain_said([
+    "If we add, ",
+    sum_worked,
+    " is ",
+    v4,
+  ]);
+  let twice_said = app_learn_js_explain_said([
     "But the ",
     shared_word,
     " squares are counted twice: once in the ",
@@ -189,14 +194,14 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
   ]);
   let subtract_said = ["So we subtract the shared squares once:"];
   let v5 = counted("8");
-  let subtract_worked = app_code_explain_said([
+  let subtract_worked = app_learn_js_explain_said([
     "",
     difference_worked,
     " is ",
     v5,
   ]);
   let v6 = counted("8");
-  let together_said = app_code_explain_said([
+  let together_said = app_learn_js_explain_said([
     "So together, the two rectangles cover ",
     v6,
     " squares",
@@ -204,7 +209,7 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
   let v7 = first_area(area1);
   let v8 = second_area(area2);
   let v9 = shared_area(shared);
-  let names_said = app_code_explain_said([
+  let names_said = app_learn_js_explain_said([
     "Suppose the ",
     first_rectangle,
     " covers ",

@@ -19,7 +19,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_overlap } from "./app_code_lesson_statement_name_rectangles_overlap.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -138,7 +138,7 @@ export function app_code_lesson_statement_name_shared_squares() {
   let v2 = till("3");
   let v3 = from("1");
   let v4 = till("3");
-  let draw = app_code_explain_said([
+  let draw = app_learn_js_explain_said([
     "The ",
     shared_word,
     " part goes across ",
@@ -154,16 +154,16 @@ export function app_code_lesson_statement_name_shared_squares() {
     " to ",
     v4,
   ]);
-  let draw2 = app_code_explain_said([
+  let draw2 = app_learn_js_explain_said([
     "How many squares do they ",
     share_word,
     "?",
   ]);
   let v5 = size("2");
-  let draw3 = app_code_explain_said(["We can count them: ", v5]);
+  let draw3 = app_learn_js_explain_said(["We can count them: ", v5]);
   let v6 = length_worked("3", "2");
   let v7 = size("1");
-  let draw4 = app_code_explain_said([
+  let draw4 = app_learn_js_explain_said([
     "Across ",
     right_arrow,
     ", ",
@@ -178,7 +178,7 @@ export function app_code_lesson_statement_name_shared_squares() {
   ]);
   let v8 = length_worked("3", "1");
   let v9 = size("2");
-  let draw5 = app_code_explain_said([
+  let draw5 = app_learn_js_explain_said([
     "Down ",
     down_arrow,
     ", ",
@@ -192,7 +192,7 @@ export function app_code_lesson_statement_name_shared_squares() {
     " squares tall",
   ]);
   let v10 = size("2");
-  let draw6 = app_code_explain_said([
+  let draw6 = app_learn_js_explain_said([
     "",
     product_worked,
     " is ",
@@ -207,7 +207,7 @@ export function app_code_lesson_statement_name_shared_squares() {
   let v12 = till(right);
   let v13 = from(top);
   let v14 = till(bottom);
-  let draw7 = app_code_explain_said([
+  let draw7 = app_learn_js_explain_said([
     "Suppose the ",
     shared_word,
     " part goes across ",
@@ -223,7 +223,7 @@ export function app_code_lesson_statement_name_shared_squares() {
     " to ",
     v14,
   ]);
-  let draw8 = app_code_explain_said([
+  let draw8 = app_learn_js_explain_said([
     "Here is code that finds how many squares the two rectangles ",
     share_word,
     ":",

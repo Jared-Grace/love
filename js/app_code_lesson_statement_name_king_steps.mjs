@@ -20,7 +20,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_explain_code_colored } from "./app_learn_js_explain_code_colored.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_learn_js_explain_emoji_square } from "./app_learn_js_explain_emoji_square.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_arrow_turned_draw } from "./app_learn_js_arrow_turned_draw.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { html_div } from "./html_div.mjs";
@@ -138,7 +138,7 @@ export function app_code_lesson_statement_name_king_steps() {
   let draw4 = app_learn_js_explain_number_colored("3", column_color);
   let draw33 = app_learn_js_explain_emoji_square("🫅", start_color);
   let draw34 = app_learn_js_explain_emoji_square("🏁", end_color);
-  let question_said = app_code_explain_said([
+  let question_said = app_learn_js_explain_said([
     "How many steps are there from ",
     draw33,
     " ",
@@ -163,7 +163,7 @@ export function app_code_lesson_statement_name_king_steps() {
   ]);
   let draw6 = app_learn_js_explain_number_colored("1", row_color);
   let draw7 = app_learn_js_explain_number_colored("4", row_color);
-  let rows_said = app_code_explain_said([
+  let rows_said = app_learn_js_explain_said([
     "The ",
     rows_word,
     ": from ",
@@ -178,7 +178,7 @@ export function app_code_lesson_statement_name_king_steps() {
   ]);
   let draw9 = app_learn_js_explain_number_colored("1", column_color);
   let draw10 = app_learn_js_explain_number_colored("3", column_color);
-  let columns_said = app_code_explain_said([
+  let columns_said = app_learn_js_explain_said([
     "The ",
     columns_word,
     ": from ",
@@ -246,14 +246,14 @@ export function app_code_lesson_statement_name_king_steps() {
       [4, 3, draw32, end_color],
     ]);
   }
-  let draw19 = app_code_explain_said([
+  let draw19 = app_learn_js_explain_said([
     "A diagonal step moves one ",
     row_word,
     " and one ",
     column_word,
     " at the same time",
   ]);
-  let draw20 = app_code_explain_said([
+  let draw20 = app_learn_js_explain_said([
     "So ",
     count_two,
     " diagonal steps move ",
@@ -266,7 +266,7 @@ export function app_code_lesson_statement_name_king_steps() {
     columns_word,
   ]);
   let draw21 = app_learn_js_explain_number_colored("1", plain);
-  let draw22 = app_code_explain_said([
+  let draw22 = app_learn_js_explain_said([
     "That finishes the ",
     columns_word,
     ", and ",
@@ -274,7 +274,7 @@ export function app_code_lesson_statement_name_king_steps() {
     " more step finishes the ",
     rows_word,
   ]);
-  let draw23 = app_code_explain_said([
+  let draw23 = app_learn_js_explain_said([
     "So the steps are the larger of the ",
     rows_word,
     " and the ",
@@ -282,14 +282,14 @@ export function app_code_lesson_statement_name_king_steps() {
     ":",
   ]);
   let draw5 = app_learn_js_explain_number_colored("3", end_color);
-  let draw8 = app_code_explain_said([
+  let draw8 = app_learn_js_explain_said([
     "But how can we calculate the ",
     draw5,
     " steps from just the two positions?",
   ]);
   let draw24 = app_learn_js_explain_number_colored(r1, row_color);
   let draw25 = app_learn_js_explain_number_colored(c1, column_color);
-  let draw26 = app_code_explain_said([
+  let draw26 = app_learn_js_explain_said([
     "Suppose the first square is at ",
     row_word,
     " ",
@@ -301,7 +301,7 @@ export function app_code_lesson_statement_name_king_steps() {
   ]);
   let draw27 = app_learn_js_explain_number_colored(r2, row_color);
   let draw28 = app_learn_js_explain_number_colored(c2, column_color);
-  let draw29 = app_code_explain_said([
+  let draw29 = app_learn_js_explain_said([
     "And the second square is at ",
     row_word,
     " ",
@@ -314,7 +314,7 @@ export function app_code_lesson_statement_name_king_steps() {
   let draw35 = app_learn_js_explain_number_colored("2", plain);
   let draw36 = app_learn_js_explain_number_colored("1", plain);
   let draw37 = app_learn_js_explain_emoji_square("🏁", end_color);
-  let draw38 = app_code_explain_said([
+  let draw38 = app_learn_js_explain_said([
     "If we travel ",
     draw35,
     " squares diagonally and then ",

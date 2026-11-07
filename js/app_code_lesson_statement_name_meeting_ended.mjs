@@ -20,7 +20,7 @@ import { app_code_highlight_color_fourth } from "./app_code_highlight_color_four
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -163,7 +163,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
   let v4 = two("another");
   let v5 = from("11");
   let v6 = till("12");
-  let suppose_said = app_code_explain_said([
+  let suppose_said = app_learn_js_explain_said([
     "Suppose ",
     v,
     " is from ",
@@ -180,7 +180,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
   let apart_draw = meetings_draw(11, 12);
   let v7 = till("10");
   let v8 = from("11");
-  let ends_said = app_code_explain_said([
+  let ends_said = app_learn_js_explain_said([
     "The ",
     first_meeting,
     " ends (",
@@ -191,13 +191,13 @@ export function app_code_lesson_statement_name_meeting_ended() {
     v8,
     ")",
   ]);
-  let both_said = app_code_explain_said([
+  let both_said = app_learn_js_explain_said([
     "So someone can go to the ",
     first,
     ", and then to the ",
     second,
   ]);
-  let how_said = app_code_explain_said([
+  let how_said = app_learn_js_explain_said([
     "How can we tell the ",
     first_meeting,
     " has ended by the time the ",
@@ -205,7 +205,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
     " starts using numbers?",
   ]);
   ('A line "We check that the first meeting has ended by the time the second meeting starts" stood between the question and the comparison until the human asked 2026-10-05 whether it should go: it only said the question again, and the one comparison after it already says what is checked.');
-  let compare_said = app_code_explain_said([
+  let compare_said = app_learn_js_explain_said([
     "We compare the end of the ",
     first_meeting,
     " to the beginning of the ",
@@ -213,8 +213,8 @@ export function app_code_lesson_statement_name_meeting_ended() {
     ":",
   ]);
   let v9 = check_worked("10", "11");
-  let apart_worked = app_code_explain_said(["", v9, " which is ", is_true]);
-  let only_said = app_code_explain_said([
+  let apart_worked = app_learn_js_explain_said(["", v9, " which is ", is_true]);
+  let only_said = app_learn_js_explain_said([
     "The start of the ",
     first,
     " and the end of the ",
@@ -223,7 +223,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
   ]);
   let v10 = from("10");
   let v11 = till("12");
-  let touching_suppose = app_code_explain_said([
+  let touching_suppose = app_learn_js_explain_said([
     "But suppose the ",
     second_meeting,
     " is from ",
@@ -233,7 +233,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
   ]);
   let touching_draw = meetings_draw(10, 12);
   let v12 = till("10");
-  let touching_said = app_code_explain_said([
+  let touching_said = app_learn_js_explain_said([
     "It starts just when the ",
     first_one,
     " ends, at ",
@@ -241,7 +241,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
     ", so someone can still go to both",
   ]);
   let v13 = check_worked("10", "10");
-  let at_most_said = app_code_explain_said([
+  let at_most_said = app_learn_js_explain_said([
     "That is why we check with ",
     at_most_chip,
     " and not ",
@@ -253,7 +253,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
   ]);
   let v14 = from("9");
   let v15 = till("12");
-  let overlap_suppose = app_code_explain_said([
+  let overlap_suppose = app_learn_js_explain_said([
     "And suppose the ",
     second_meeting,
     " is from ",
@@ -263,7 +263,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
   ]);
   let overlap_draw = meetings_draw(9, 12);
   let v16 = check_worked("10", "9");
-  let overlap_said = app_code_explain_said([
+  let overlap_said = app_learn_js_explain_said([
     "It starts before the ",
     first_one,
     " ends: ",
@@ -271,14 +271,14 @@ export function app_code_lesson_statement_name_meeting_ended() {
     " is ",
     is_false,
   ]);
-  let overlap_so = app_code_explain_said([
+  let overlap_so = app_learn_js_explain_said([
     "So the meetings overlap, and someone cannot go to both",
   ]);
   let v17 = from(s);
   let v18 = till(e);
   let v19 = from(s2);
   let v20 = till(e2);
-  let names_said = app_code_explain_said([
+  let names_said = app_learn_js_explain_said([
     "Suppose the ",
     first_meeting,
     " is from ",
@@ -292,7 +292,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
     " to ",
     v20,
   ]);
-  let code_said = app_code_explain_said([
+  let code_said = app_learn_js_explain_said([
     "Here is code that checks whether the ",
     first_meeting,
     " has ended by the time the ",
