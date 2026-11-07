@@ -3,7 +3,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_or } from "./app_learn_js_lesson_expression_or.mjs";
-export function app_code_lesson_statement_name_or() {
+export function app_learn_js_lesson_statement_name_or() {
   arguments_assert(arguments, 0);
   ("two names joined with or: let a = true; let b = false; let a_or_b = a || b; console.log(a_or_b); writes out true");
   ("The answer is named a_or_b and not at_least_1_true. A learner asked what at_least_1_true meant and needed it explained, and a name that needs explaining is a second thing to learn on a screen about the symbol; a_or_b reads back as the line it came from.");
