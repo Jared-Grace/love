@@ -17,7 +17,7 @@ import { app_learn_js_lesson_symbols_counting } from "./app_learn_js_lesson_symb
 import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
-export function app_code_lesson_symbols_letters() {
+export function app_learn_js_lesson_symbols_letters() {
   function lambda(root, context) {
     let c = app_learn_js_container_light_blue(root);
     let div = html_div(c);
