@@ -26,8 +26,6 @@ import { reply_response_whatsapp } from "./reply_response_whatsapp.mjs";
 import { reply_choices_age } from "./reply_choices_age.mjs";
 import { prayer_according_to_desire } from "./prayer_according_to_desire.mjs";
 import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
-import { text_lord_bless_always } from "./text_lord_bless_always.mjs";
-import { prayer_end } from "./prayer_end.mjs";
 import { reply_choices_praise } from "./reply_choices_praise.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
@@ -2647,16 +2645,6 @@ export function reply_proposals() {
       "I am Grace on its own now gets the name line. An earlier card said it would not, and said a bare name would be a separate rule; this is that rule. The rejected reading was answering my name is and myself but not I am, which would give one way of saying a name no reply and the others one.",
     ],
   };
-  function blessing_always(blessed) {
-    let v10 = text_lord_bless_always();
-    let prayer = text_combine_multiple([
-      v10,
-      blessed,
-      " exceedingly abundantly more than anyone can ask or think",
-    ]);
-    let v = prayer_wrap(prayer);
-    return v;
-  }
   let combined71 = text_combine_multiple([
     "-  let v2 = ",
     fn_name("text_lord_bless"),
@@ -2669,10 +2657,10 @@ export function reply_proposals() {
   ]);
   let response = reply_response_greetings_friend();
   let t3 = reply_choices_location();
-  let v11 = blessing_always("your ministry and teaching");
-  let v12 = blessing_always("your ministry");
+  let v11 = prayer_blessing("your ministry and teaching");
+  let v12 = prayer_blessing("your ministry");
   let line4 = prayer_according_to_desire();
-  let v13 = blessing_always("you, your family, your church and your country");
+  let v13 = prayer_blessing("you, your family, your church and your country");
   let blessing_always_said = {
     title: "May the LORD always bless",
     fn: fn_name("prayer_blessing"),
@@ -2726,7 +2714,6 @@ export function reply_proposals() {
     fn_name("reply_meeting_blessed"),
     "();",
   ]);
-  let meeting_amen = prayer_end();
   let meeting_praise = reply_choices_praise();
   let meeting_glory = reply_choices_glory();
   let meeting_blessing = prayer_blessing("you and everyone at the meeting");
@@ -2740,17 +2727,13 @@ export function reply_proposals() {
         from: "",
         message: "Today meeting is very blessed",
         answered: true,
-        outputs: [
-          meeting_amen,
-          meeting_praise,
-          meeting_glory,
-          meeting_blessing,
-        ],
+        outputs: [meeting_praise, meeting_glory, meeting_blessing],
       },
     ],
     decide: [
       "these are the words of a message waiting for a reply, and only those words are matched. The rejected reading was also taking was, or leaving out very, because nobody has said those yet.",
-      "the reply is Amen, praise to the LORD, glory to God, then the blessing on them and everyone at the meeting, in the order you asked for.",
+      "the reply is praise to the LORD, glory to God, then the blessing on them and everyone at the meeting.",
+      "leaving out the Amen is caution, not a rejection: the reply still praises God and pronounces a blessing on the meeting. No Amen is said to the message itself because Amen agrees that what was said is so, and nobody here saw the meeting. Amen stays where its object is on the page - a verse quoted back, a praise of God, the end of the reply's own prayer. The rejected reading was keeping the Amen because the rule matches only these exact words; that proves a person read the words, not that the meeting was blessed.",
     ],
   };
   let proposals = [
