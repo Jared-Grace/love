@@ -1,5 +1,5 @@
 import { app_learn_js_container_padded_x } from "./app_learn_js_container_padded_x.mjs";
-import { app_code_content_cap } from "./app_code_content_cap.mjs";
+import { app_learn_js_content_cap } from "./app_learn_js_content_cap.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 export function app_code_screen_capped(context) {
@@ -7,6 +7,6 @@ export function app_code_screen_capped(context) {
   arguments_assert(arguments, 1);
   let root = html_clear_context(context);
   let g = app_learn_js_container_padded_x(root);
-  app_code_content_cap(g);
+  app_learn_js_content_cap(g);
   return g;
 }

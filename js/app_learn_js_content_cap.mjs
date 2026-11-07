@@ -1,7 +1,7 @@
 import { app_learn_js_content_cap_width } from "./app_learn_js_content_cap_width.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_margin_x } from "./html_style_margin_x.mjs";
-export function app_code_content_cap(element) {
+export function app_learn_js_content_cap(element) {
   "cap an element to the light-blue content-card width and centre it, so a non-card element (the success message) matches the cards' width and lines up with them";
   let width = app_learn_js_content_cap_width();
   html_style_set(element, "width", width);
