@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
-export function app_code_lesson_expression_repeated_generic_chip(
+export function app_learn_js_lesson_expression_repeated_generic_chip(
   parent,
   number,
   color,

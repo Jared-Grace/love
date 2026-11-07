@@ -6,7 +6,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_counted } from "./app_code_lesson_expression_repeated_generic_expanded_counted.mjs";
-import { app_code_lesson_expression_repeated_generic_chip } from "./app_code_lesson_expression_repeated_generic_chip.mjs";
+import { app_learn_js_lesson_expression_repeated_generic_chip } from "./app_learn_js_lesson_expression_repeated_generic_chip.mjs";
 import { app_code_lesson_expression_repeated_generic_short_form } from "./app_code_lesson_expression_repeated_generic_short_form.mjs";
 export function app_learn_js_lesson_expression_repeated_generic_above(
   root,
@@ -53,9 +53,9 @@ export function app_learn_js_lesson_expression_repeated_generic_above(
   );
   let map = html_div(c);
   html_span_text(map, "The ");
-  app_code_lesson_expression_repeated_generic_chip(map, 2, left_one);
+  app_learn_js_lesson_expression_repeated_generic_chip(map, 2, left_one);
   html_span_text(map, " appears ");
-  app_code_lesson_expression_repeated_generic_chip(map, 3, count_one);
+  app_learn_js_lesson_expression_repeated_generic_chip(map, 3, count_one);
   html_span_text(map, " times, so we can write ");
   app_code_lesson_expression_repeated_generic_short_form(
     map,
