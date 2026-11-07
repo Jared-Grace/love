@@ -6,7 +6,7 @@ import { ternary } from "./ternary.mjs";
 import { app_learn_js_lesson_expression_choose_order_comparison_side } from "./app_learn_js_lesson_expression_choose_order_comparison_side.mjs";
 import { app_learn_js_expression_parts_node } from "./app_learn_js_expression_parts_node.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
-import { app_code_lesson_expression_choose_order_or_expression } from "./app_code_lesson_expression_choose_order_or_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_or_expression } from "./app_learn_js_lesson_expression_choose_order_or_expression.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -46,9 +46,10 @@ export function app_code_lesson_expression_comparison_or() {
   }
   function refill() {
     "four lines a screen: both kinds, each shown coming to true and coming to false";
-    let both_true = app_code_lesson_expression_choose_order_or_expression(true);
+    let both_true =
+      app_learn_js_lesson_expression_choose_order_or_expression(true);
     let both_false =
-      app_code_lesson_expression_choose_order_or_expression(false);
+      app_learn_js_lesson_expression_choose_order_or_expression(false);
     let mixed_true = mixed_tree(true);
     let mixed_false = mixed_tree(false);
     let trees = [both_true, both_false, mixed_true, mixed_false];

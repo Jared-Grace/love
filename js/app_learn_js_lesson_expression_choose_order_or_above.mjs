@@ -1,7 +1,7 @@
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_sides_comparison_say } from "./app_code_lesson_expression_sides_comparison_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_or_expression } from "./app_code_lesson_expression_choose_order_or_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_or_expression } from "./app_learn_js_lesson_expression_choose_order_or_expression.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_above_generic } from "./app_learn_js_lesson_expression_choose_order_both_sides_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_or_intro } from "./app_code_lesson_expression_choose_order_or_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_or_above(
@@ -14,7 +14,8 @@ export function app_learn_js_lesson_expression_choose_order_or_above(
   ("The same run as the press-at-a-time && screen, word for word but for the operator it names. That is the point being made: nothing about taking a line apart changes when the operator in the middle does, and a screen laid out a new way would hide the sameness that is the lesson.");
   ("It used to say the lesson before it. Two lessons now stand between the two pressing screens - the all-at-once && twin, and the in-between lesson that uses && to join two comparisons - so the screen immediately behind this one is not the one being matched. Named by what it does rather than by a place. Corrected 2026-09-10.");
   let want_true = true;
-  let tree = app_code_lesson_expression_choose_order_or_expression(want_true);
+  let tree =
+    app_learn_js_lesson_expression_choose_order_or_expression(want_true);
   let line =
     app_learn_js_lesson_expression_choose_order_both_sides_above_generic(
       root,
