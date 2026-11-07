@@ -14,7 +14,7 @@ export function app_code_expression_nodes_ready(item) {
   ("every operator in an expression that may be worked out next - the ones with a value already standing on each side of them");
   ("This is the whole rule a learner is being asked for, and it needs neither a table of strengths nor a reading of the parentheses. An operator whose sides are both values has nothing left underneath it, and an operator that still holds another one cannot go first because the value it would need does not exist yet. Order of work and parentheses both fall out of the shape rather than being checked against it.");
   ("A list rather than one answer, because more than one operator often has values on both sides of it at once - 1 + 2 * 3 - 4 * 5 has two. What the list holds is what COULD be worked out and not what is: the entries are in the order the line is written, left to right, so the one JavaScript actually takes is the first of them and ",
-    fn_name("app_code_expression_nodes_ready_first"),
+    fn_name("app_learn_js_expression_nodes_ready_first"),
     " is where that reading lives.");
   ("The two questions are kept apart because a value can be worked out in any of these orders and come to the same number - that is what lets ",
     fn_name("app_code_expression_value"),
