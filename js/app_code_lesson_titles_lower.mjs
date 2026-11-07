@@ -2,7 +2,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_titles } from "./app_code_lesson_titles.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_title_run_first } from "./app_code_lesson_title_run_first.mjs";
+import { app_learn_js_lesson_title_run_first } from "./app_learn_js_lesson_title_run_first.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_titles_lower() {
   let lower = [];
   function judge(read) {
     let runs = property_get(read, "runs");
-    let first = app_code_lesson_title_run_first(runs);
+    let first = app_learn_js_lesson_title_run_first(runs);
     if (not(first)) {
       return;
     }
