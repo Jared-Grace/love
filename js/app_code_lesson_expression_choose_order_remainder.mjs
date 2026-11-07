@@ -7,7 +7,7 @@ import { app_code_lesson_expression_choose_order_solve_example } from "./app_cod
 import { app_learn_js_lesson_expression_choose_order_questions_generic } from "./app_learn_js_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_remainder_tree_of_code } from "./app_code_lesson_expression_choose_order_remainder_tree_of_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
-import { app_code_lesson_expression_choose_order_remainder_above } from "./app_code_lesson_expression_choose_order_remainder_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_remainder_above } from "./app_learn_js_lesson_expression_choose_order_remainder_above.mjs";
 export function app_code_lesson_expression_choose_order_remainder() {
   arguments_assert(arguments, 0);
   ("the remainder formula taken a press at a time: 17 - Math.floor(17 / 5) * 5, press the division, press 3.4, press the rounding, press 3, see 17 - 3 * 5, press the times, press 15, see 17 - 15, press the take-away, press 2");
@@ -49,7 +49,7 @@ export function app_code_lesson_expression_choose_order_remainder() {
   );
   let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
-    app_code_lesson_expression_choose_order_remainder_above,
+    app_learn_js_lesson_expression_choose_order_remainder_above,
     answer_draw,
     example_draw,
     bank,
