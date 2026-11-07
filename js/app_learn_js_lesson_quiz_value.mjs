@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
-export function app_code_lesson_quiz_value(r4, parent_container) {
+export function app_learn_js_lesson_quiz_value(r4, parent_container) {
   arguments_assert(arguments, 2);
   let quiz_index = property_get(r4, "quiz_index");
   let answer_label = property_get(r4, "answer_label");

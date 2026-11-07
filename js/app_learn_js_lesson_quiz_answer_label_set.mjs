@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_container_question } from "./app_learn_js_lesson_quiz_container_question.mjs";
 import { app_learn_js_lesson_quiz_parent_container } from "./app_learn_js_lesson_quiz_parent_container.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_value } from "./app_code_lesson_quiz_value.mjs";
+import { app_learn_js_lesson_quiz_value } from "./app_learn_js_lesson_quiz_value.mjs";
 import { app_learn_js_lesson_quiz_on_qa_change } from "./app_learn_js_lesson_quiz_on_qa_change.mjs";
 export function app_learn_js_lesson_quiz_answer_label_set({
   info,
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_quiz_answer_label_set({
   let parent_container = property_get(r4, "parent_container");
   let container_correction = property_get(r4, "container_correction");
   let container_success_message = property_get(r4, "container_success_message");
-  let r3 = app_code_lesson_quiz_value(r4, parent_container);
+  let r3 = app_learn_js_lesson_quiz_value(r4, parent_container);
   let value = property_get(r3, "value");
   let quiz_index = property_get(r3, "quiz_index");
   let answer_label = property_get(r3, "answer_label");
