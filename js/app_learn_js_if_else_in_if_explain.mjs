@@ -8,7 +8,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_if_else_in_if_program_lines } from "./app_code_if_else_in_if_program_lines.mjs";
+import { app_learn_js_if_else_in_if_program_lines } from "./app_learn_js_if_else_in_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_learn_js_if_else_in_if_explain(root, context) {
@@ -44,7 +44,7 @@ export function app_learn_js_if_else_in_if_explain(root, context) {
     "if",
     ":",
   ]);
-  let all_lines = app_code_if_else_in_if_program_lines([true, true], words);
+  let all_lines = app_learn_js_if_else_in_if_program_lines([true, true], words);
   let all_written = list_join_newline([love, joy, patience]);
   app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
   app_learn_js_div_cycle_code(box_two, [
@@ -75,7 +75,10 @@ export function app_learn_js_if_else_in_if_explain(root, context) {
     "false",
     ":",
   ]);
-  let else_lines = app_code_if_else_in_if_program_lines([true, false], words);
+  let else_lines = app_learn_js_if_else_in_if_program_lines(
+    [true, false],
+    words,
+  );
   let else_written = list_join_newline([love, peace, patience]);
   app_learn_js_code_lines_writes_out(box_three, else_lines, else_written);
   app_learn_js_div_cycle_code(box_three, [
@@ -97,7 +100,10 @@ export function app_learn_js_if_else_in_if_explain(root, context) {
     "false",
     ":",
   ]);
-  let none_lines = app_code_if_else_in_if_program_lines([false, true], words);
+  let none_lines = app_learn_js_if_else_in_if_program_lines(
+    [false, true],
+    words,
+  );
   app_learn_js_code_lines_writes_out(box_four, none_lines, patience);
   app_learn_js_div_cycle_code(box_four, [
     "",

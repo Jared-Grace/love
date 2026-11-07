@@ -6,7 +6,7 @@ import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple
 import { list_concat } from "./list_concat.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-export function app_code_if_else_in_if_program_lines(values, words) {
+export function app_learn_js_if_else_in_if_program_lines(values, words) {
   arguments_assert(arguments, 2);
   ("let a = first value; let b = second value; if (a) { console.log(first word); if (b) { console.log(second word); } else { console.log(third word); } } console.log(fourth word);");
   let value_a = list_get(values, 0);
