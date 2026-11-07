@@ -4,7 +4,7 @@ import { app_learn_js_braces_two_batch } from "./app_learn_js_braces_two_batch.m
 import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_braces_two_nested } from "./app_learn_js_braces_two_nested.mjs";
-import { app_code_lesson_braces_among_plain_generic } from "./app_code_lesson_braces_among_plain_generic.mjs";
+import { app_learn_js_lesson_braces_among_plain_generic } from "./app_learn_js_lesson_braces_among_plain_generic.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
 export function app_code_lesson_token_order_braces_plain() {
   arguments_assert(arguments, 0);
@@ -21,7 +21,7 @@ export function app_code_lesson_token_order_braces_plain() {
     "{ { } }",
   );
   let nested = app_learn_js_braces_two_nested();
-  let lesson = app_code_lesson_braces_among_plain_generic(
+  let lesson = app_learn_js_lesson_braces_among_plain_generic(
     name_id,
     app_code_lesson_token_order_braces,
     nested,

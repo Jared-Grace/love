@@ -11,7 +11,7 @@ import { app_learn_js_braces_order_wrong_say } from "./app_learn_js_braces_order
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_braces_order_plain } from "./app_code_lesson_quiz_braces_order_plain.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-export function app_code_lesson_braces_among_plain_generic(
+export function app_learn_js_lesson_braces_among_plain_generic(
   name_id,
   lesson_colored,
   example_code,
