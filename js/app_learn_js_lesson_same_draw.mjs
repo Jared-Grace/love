@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_same_which } from "./app_code_lesson_same_which.mjs";
+import { app_learn_js_lesson_same_which } from "./app_learn_js_lesson_same_which.mjs";
 import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { app_learn_js_lesson_go } from "./app_learn_js_lesson_go.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_same_draw(
   let c = app_learn_js_container_light_blue(parent);
   let div = html_div(c);
   html_span_text(div, "This lesson is the same as ");
-  let which = app_code_lesson_same_which(fn_reading, fn_repeated);
+  let which = app_learn_js_lesson_same_which(fn_reading, fn_repeated);
   async function go() {
     let lesson = app_learn_js_lesson_fn_id_set(fn_repeated);
     await app_learn_js_lesson_go(lesson, context);

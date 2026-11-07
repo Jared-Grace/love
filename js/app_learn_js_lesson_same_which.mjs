@@ -7,7 +7,7 @@ import { equal } from "./equal.mjs";
 import { add_1 } from "./add_1.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_lesson_same_which(fn_reading, fn_repeated) {
+export function app_learn_js_lesson_same_which(fn_reading, fn_repeated) {
   arguments_assert(arguments, 2);
   ("names the lesson a screen is repeating, worked out from where the two lessons actually sit rather than typed: the previous lesson when it truly is one place back, and the lesson's own number when anything has been put between them");
   ("It exists because the typed wording went stale and nothing said so. Eight docstrings and one sentence a learner reads were pointing at the lesson before, after a lesson had been slid in between - the all-at-once twin of a pressing lesson, most of the time. A phrase typed by hand records where two lessons sat on the day it was written, and the list it describes is edited by adding to the middle of it.");
