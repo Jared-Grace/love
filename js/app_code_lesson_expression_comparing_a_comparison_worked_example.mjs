@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_comparing_a_comparison_replaced_lines } from "./app_code_lesson_expression_comparing_a_comparison_replaced_lines.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison_replaced_lines } from "./app_learn_js_lesson_expression_comparing_a_comparison_replaced_lines.mjs";
 import { app_learn_js_lesson_expression_comparing_a_comparison_line } from "./app_learn_js_lesson_expression_comparing_a_comparison_line.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_comparing_a_comparison_worked_example
     " with ",
     answer,
   ]);
-  app_code_lesson_expression_comparing_a_comparison_replaced_lines(
+  app_learn_js_lesson_expression_comparing_a_comparison_replaced_lines(
     card,
     code,
     value,

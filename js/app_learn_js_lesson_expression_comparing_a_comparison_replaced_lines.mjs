@@ -5,7 +5,7 @@ import { js_true_false_word } from "./js_true_false_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_comparing_a_comparison_replaced_lines(
+export function app_learn_js_lesson_expression_comparing_a_comparison_replaced_lines(
   card,
   code,
   value,
