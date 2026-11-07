@@ -5,7 +5,7 @@ import { app_learn_js_color_tones } from "./app_learn_js_color_tones.mjs";
 import { property_get } from "./property_get.mjs";
 import { color_hue_or_null } from "./color_hue_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-export function app_code_colors_placed_by_hue() {
+export function app_learn_js_colors_placed_by_hue() {
   arguments_assert(arguments, 0);
   ("the colours of this app's three palettes, put on the colour wheel and stood in order round it - each one carrying the way it is written, whether it is a dark colour or a light one, and its hue in degrees");
   "IT IS THE THREE PALETTES AND NOT THE APP, and the line above said otherwise until 2026-09-20. Whatever " +
