@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_expression_min_max_of_three_above } from "./app_learn_js_lesson_expression_min_max_of_three_above.mjs";
 import { app_learn_js_lesson_expression_min_max_of_three_numbers } from "./app_learn_js_lesson_expression_min_max_of_three_numbers.mjs";
 import { app_learn_js_lesson_expression_min_max_of_three_code } from "./app_learn_js_lesson_expression_min_max_of_three_code.mjs";
-import { app_code_lesson_expression_min_max_of_three_title_name_id } from "./app_code_lesson_expression_min_max_of_three_title_name_id.mjs";
+import { app_learn_js_lesson_expression_min_max_of_three_title_name_id } from "./app_learn_js_lesson_expression_min_max_of_three_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_expression_min_max_of_three() {
     return others;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_expression_min_max_of_three_title_name_id();
+  let name_id = app_learn_js_lesson_expression_min_max_of_three_title_name_id();
   let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
