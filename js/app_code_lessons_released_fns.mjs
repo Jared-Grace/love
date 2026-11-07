@@ -298,7 +298,7 @@ import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs
 import { app_learn_js_lesson_braces_run_else_if_twice } from "./app_learn_js_lesson_braces_run_else_if_twice.mjs";
 import { app_code_lesson_else_if_twice } from "./app_code_lesson_else_if_twice.mjs";
 import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
-import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
+import { app_learn_js_lesson_braces_run_thrice } from "./app_learn_js_lesson_braces_run_thrice.mjs";
 import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
 export function app_code_lessons_released_fns() {
   "the lessons handed to a learner on either page they are ever sent to - the built site, and latest; every other lesson is still built and still opens on the working copies";
@@ -611,7 +611,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_braces_run_else_if_twice,
     app_code_lesson_else_if_twice,
     app_code_lesson_else_if_order,
-    app_code_lesson_braces_run_thrice,
+    app_learn_js_lesson_braces_run_thrice,
     app_code_lesson_if_thrice,
   ];
   return fns;

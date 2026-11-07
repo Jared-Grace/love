@@ -103,7 +103,7 @@ export function app_code_lessons_latest_held_fns() {
   ("2026-10-22: released by the human, deploy everything except the while lessons: ",
     fn_name("app_code_lesson_else_if_order"),
     ", ",
-    fn_name("app_code_lesson_braces_run_thrice"),
+    fn_name("app_learn_js_lesson_braces_run_thrice"),
     " and ",
     fn_name("app_code_lesson_if_thrice"),
     " shown again");

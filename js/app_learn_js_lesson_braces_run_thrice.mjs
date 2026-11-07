@@ -3,7 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_lesson_braces_run_explain_generic } from "./app_learn_js_lesson_braces_run_explain_generic.mjs";
 import { app_learn_js_braces_run_three_ifs_explain } from "./app_learn_js_braces_run_three_ifs_explain.mjs";
 import { app_learn_js_braces_three_ifs } from "./app_learn_js_braces_three_ifs.mjs";
-export function app_code_lesson_braces_run_thrice() {
+export function app_learn_js_lesson_braces_run_thrice() {
   arguments_assert(arguments, 0);
   ("whether a section of code runs, in programs of three ifs one after another; asked for by the human 2026-10-11, straight before The same if three times");
   ("The writing is a first draft by Claude 2026-10-11.");
