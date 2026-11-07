@@ -15,7 +15,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_console_log_remainder_generic_equation_with_remainder } from "./app_code_lesson_console_log_remainder_generic_equation_with_remainder.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_equation_with_remainder } from "./app_learn_js_lesson_console_log_remainder_generic_equation_with_remainder.mjs";
 export function app_code_lesson_console_log_remainder_generic_example(
   parent,
   divisor,
@@ -72,7 +72,7 @@ export function app_code_lesson_console_log_remainder_generic_example(
     divisor,
   );
   html_span_text(leftover_line, leftover_middle);
-  app_code_lesson_console_log_remainder_generic_equation_with_remainder(
+  app_learn_js_lesson_console_log_remainder_generic_equation_with_remainder(
     leftover_line,
     sum_expr,
     left,

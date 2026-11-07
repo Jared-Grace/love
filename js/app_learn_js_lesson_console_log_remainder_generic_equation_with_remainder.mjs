@@ -7,7 +7,7 @@ import { app_code_lesson_console_log_remainder_generic_remainder_color } from ".
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_console_log_remainder_generic_equation_with_remainder(
+export function app_learn_js_lesson_console_log_remainder_generic_equation_with_remainder(
   parent,
   prefix_expr,
   remainder,
