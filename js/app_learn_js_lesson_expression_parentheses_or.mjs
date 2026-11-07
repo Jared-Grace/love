@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_parentheses_or_title_name_id } from "./app_learn_js_lesson_expression_parentheses_or_title_name_id.mjs";
-import { app_code_lesson_expression_parentheses_value_generic } from "./app_code_lesson_expression_parentheses_value_generic.mjs";
+import { app_learn_js_lesson_expression_parentheses_value_generic } from "./app_learn_js_lesson_expression_parentheses_value_generic.mjs";
 import { app_learn_js_lesson_expression_parentheses_or_intro } from "./app_learn_js_lesson_expression_parentheses_or_intro.mjs";
 import { app_learn_js_lesson_expression_parentheses_or_value_expression } from "./app_learn_js_lesson_expression_parentheses_or_value_expression.mjs";
 export function app_learn_js_lesson_expression_parentheses_or() {
@@ -12,7 +12,7 @@ export function app_learn_js_lesson_expression_parentheses_or() {
   ("That used to say the lesson before it. The press-at-a-time twin was put in between, so the screen immediately behind this one is that twin rather than the lesson being duplicated. Named by what it teaches rather than by a place. Corrected 2026-09-10.");
   ("The false line carries the point because it is the only one that can: parentheses round a || under an && can only ever make a line harder to reach true, so wherever they change anything they change it to false.");
   let name_id = app_learn_js_lesson_expression_parentheses_or_title_name_id();
-  let lesson = app_code_lesson_expression_parentheses_value_generic(
+  let lesson = app_learn_js_lesson_expression_parentheses_value_generic(
     name_id,
     app_learn_js_lesson_expression_parentheses_or_intro,
     app_learn_js_lesson_expression_parentheses_or_value_expression,

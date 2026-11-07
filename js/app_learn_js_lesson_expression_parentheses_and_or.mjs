@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_parentheses_and_or_intro } from "./app_learn_js_lesson_expression_parentheses_and_or_intro.mjs";
 import { app_learn_js_lesson_expression_parentheses_and_or_title_name_id } from "./app_learn_js_lesson_expression_parentheses_and_or_title_name_id.mjs";
-import { app_code_lesson_expression_parentheses_value_generic } from "./app_code_lesson_expression_parentheses_value_generic.mjs";
+import { app_learn_js_lesson_expression_parentheses_value_generic } from "./app_learn_js_lesson_expression_parentheses_value_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_learn_js_lesson_expression_parentheses_and_or() {
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_expression_parentheses_and_or() {
   ("Half of this family's lines are ones the marks change nothing about, and they are left in rather than filtered out. A lesson that only ever asked about lines the parentheses overturn would teach that a pair of marks is a warning, and the learner would go on to read every parenthesised line as a line whose ordinary order has been undone.");
   let name_id =
     app_learn_js_lesson_expression_parentheses_and_or_title_name_id();
-  let lesson = app_code_lesson_expression_parentheses_value_generic(
+  let lesson = app_learn_js_lesson_expression_parentheses_value_generic(
     name_id,
     app_learn_js_lesson_expression_parentheses_and_or_intro,
     app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression,

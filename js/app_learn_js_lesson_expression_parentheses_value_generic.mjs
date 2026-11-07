@@ -8,7 +8,7 @@ import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_b
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-export function app_code_lesson_expression_parentheses_value_generic(
+export function app_learn_js_lesson_expression_parentheses_value_generic(
   name_id,
   above,
   expression_of,
