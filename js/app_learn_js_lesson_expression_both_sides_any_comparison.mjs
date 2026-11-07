@@ -11,7 +11,7 @@ import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
-export function app_code_lesson_expression_both_sides_any_comparison() {
+export function app_learn_js_lesson_expression_both_sides_any_comparison() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: 9 - 2 < 4 + 1 asked for its value, with nothing to press");
   ("The twin of the lesson that walks the same line a press at a time, and the one the run was missing. The both sides lesson whose middle is always === already has its twin - the learner is asked for 3 + 4 === 5 + 2 in one go - and the lesson that changes the middle to any of the other five had none, so the only line a learner ever held whole was an === one. That is a rule about one symbol rather than the rule there is.");
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_both_sides_any_comparison() {
     app_code_lesson_same_draw(
       root,
       context,
-      app_code_lesson_expression_both_sides_any_comparison,
+      app_learn_js_lesson_expression_both_sides_any_comparison,
       app_code_lesson_expression_choose_order_both_sides_any_comparison,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
