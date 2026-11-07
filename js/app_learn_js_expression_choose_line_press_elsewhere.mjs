@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
-export function app_code_expression_choose_line_press_elsewhere(waiting) {
+export function app_learn_js_expression_choose_line_press_elsewhere(waiting) {
   "$plain waiting";
   "What a press of the line comes to once the line has already been answered and the asking has moved somewhere else.";
   "THE PRESS IS SPENT SAYING WHERE THE ASKING WENT: the question that is open glows rather than the press being swallowed.";
