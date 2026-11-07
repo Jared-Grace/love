@@ -8,7 +8,7 @@ import { app_code_course_unfinished_go } from "./app_code_course_unfinished_go.m
 import { property_get } from "./property_get.mjs";
 import { app_code_button_unfinished_text } from "./app_code_button_unfinished_text.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
-export function app_code_button_skip_lesson_unfinished(context, parent) {
+export function app_learn_js_button_skip_lesson_unfinished(context, parent) {
   arguments_assert(arguments, 2);
   ("A 'Skip to the next unfinished' button on a lesson's examples screen: it goes to the first thing further on that this learner has not finished, a lesson or a review, whichever comes first, and says which. Renders nothing (returns null) where there is no such thing.");
   ("DRAWN EVEN WHERE THE SKIP BUTTONS REACH THE SAME LESSON. It was hidden there once, and the human asked twice where it had gone (2026-09-25, 2026-09-26): a learner looks for this button by its words, so it must be where they look every time.");
