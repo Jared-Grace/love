@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
+import { app_learn_js_lesson_statement_title_name_id_dots } from "./app_learn_js_lesson_statement_title_name_id_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
@@ -19,6 +19,6 @@ export function app_learn_js_lesson_statement_name_copy_kept_title_name_id() {
   let copied = js_code_let_statement(name_copy, name_first);
   let changed = js_code_assign_statement(name_first, any);
   let code = text_combine_multiple([copied, " ", changed]);
-  let built = app_code_lesson_statement_title_name_id_dots(words, code);
+  let built = app_learn_js_lesson_statement_title_name_id_dots(words, code);
   return built;
 }

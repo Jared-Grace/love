@@ -23,7 +23,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
+import { app_learn_js_lesson_statement_title_name_id_dots } from "./app_learn_js_lesson_statement_title_name_id_dots.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_if_true() {
@@ -134,7 +134,7 @@ export function app_learn_js_lesson_if_true() {
       " run",
     ]);
   }
-  let name_id = app_code_lesson_statement_title_name_id_dots(
+  let name_id = app_learn_js_lesson_statement_title_name_id_dots(
     "If true",
     "if (true) { ... }",
   );
