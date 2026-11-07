@@ -22,7 +22,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_statement_name_not() {
+export function app_learn_js_lesson_statement_name_not() {
   arguments_assert(arguments, 0);
   ("the opposite of a name: let a = true; let opposite = !a; console.log(opposite); writes out false");
   ("The one symbol of the Operators lessons that stands before one value rather than between two, so it could not be handed to the screen the two-name lessons share. It is the same screen with one name instead of two: a reminder of the symbol written with a value, then the value given a name and the symbol written with the name instead.");
