@@ -1,6 +1,6 @@
 import { text_includes } from "./text_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_code_lesson_expression_which_part_first_expression } from "./app_code_lesson_expression_which_part_first_expression.mjs";
+import { app_learn_js_lesson_expression_which_part_first_expression } from "./app_learn_js_lesson_expression_which_part_first_expression.mjs";
 import { app_learn_js_lesson_expression_which_part_first_answer } from "./app_learn_js_lesson_expression_which_part_first_answer.mjs";
 import { app_learn_js_lesson_expression_which_part_first_decoys } from "./app_learn_js_lesson_expression_which_part_first_decoys.mjs";
 import { list_first } from "./list_first.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_which_part_first_line_assert(
     let found = list_filter(symbols, used);
     return found;
   }
-  let code = app_code_lesson_expression_which_part_first_expression();
+  let code = app_learn_js_lesson_expression_which_part_first_expression();
   let answer = app_learn_js_lesson_expression_which_part_first_answer(code);
   let decoys = app_learn_js_lesson_expression_which_part_first_decoys(
     code,

@@ -4,7 +4,7 @@ import { app_learn_js_label_code_question } from "./app_learn_js_label_code_ques
 import { app_learn_js_lesson_code_generic } from "./app_learn_js_lesson_code_generic.mjs";
 import { app_learn_js_lesson_expression_which_part_first_answer } from "./app_learn_js_lesson_expression_which_part_first_answer.mjs";
 import { app_learn_js_lesson_expression_which_part_first_decoys } from "./app_learn_js_lesson_expression_which_part_first_decoys.mjs";
-import { app_code_lesson_expression_which_part_first_expression } from "./app_code_lesson_expression_which_part_first_expression.mjs";
+import { app_learn_js_lesson_expression_which_part_first_expression } from "./app_learn_js_lesson_expression_which_part_first_expression.mjs";
 import { app_code_lesson_expression_which_part_first_title_name_id } from "./app_code_lesson_expression_which_part_first_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 export function app_code_lesson_expression_which_part_first() {
@@ -41,10 +41,10 @@ export function app_code_lesson_expression_which_part_first() {
   return lesson;
   function refill() {
     "four examples a screen";
-    let v = app_code_lesson_expression_which_part_first_expression();
-    let v2 = app_code_lesson_expression_which_part_first_expression();
-    let v3 = app_code_lesson_expression_which_part_first_expression();
-    let v4 = app_code_lesson_expression_which_part_first_expression();
+    let v = app_learn_js_lesson_expression_which_part_first_expression();
+    let v2 = app_learn_js_lesson_expression_which_part_first_expression();
+    let v3 = app_learn_js_lesson_expression_which_part_first_expression();
+    let v4 = app_learn_js_lesson_expression_which_part_first_expression();
     let list = [v, v2, v3, v4];
     return list;
   }

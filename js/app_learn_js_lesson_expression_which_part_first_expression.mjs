@@ -7,7 +7,7 @@ import { boolean_random } from "./boolean_random.mjs";
 import { digit_positive_random } from "./digit_positive_random.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_lesson_expression_which_part_first_expression() {
+export function app_learn_js_lesson_expression_which_part_first_expression() {
   arguments_assert(arguments, 0);
   ("three digits and two operators, one from each class, so exactly one part of the line has to be solved before the other: 1 + 2 * 4, or 8 / 2 - 1");
   ("the stronger operator lands on either side, half the time each. A lesson that always put it last would teach the shape of the line rather than the rule about it - the learner would answer every question by tapping the right-hand part without ever asking which operator is there");
