@@ -2,7 +2,7 @@ import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_lea
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
-export function app_code_lesson_expression_parentheses_both_sides_card_flat_line(
+export function app_learn_js_lesson_expression_parentheses_both_sides_card_flat_line(
   root,
   open,
   close,
