@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_minus_one_title_name_id } from "./app_learn_js_lesson_statement_name_minus_one_title_name_id.mjs";
-import { app_code_lesson_statement_name_one_step_generic } from "./app_code_lesson_statement_name_one_step_generic.mjs";
+import { app_learn_js_lesson_statement_name_one_step_generic } from "./app_learn_js_lesson_statement_name_one_step_generic.mjs";
 import { app_learn_js_lesson_statement_name_minus_one_batch } from "./app_learn_js_lesson_statement_name_minus_one_batch.mjs";
 import { app_learn_js_lesson_statement_name_minus_one_above } from "./app_learn_js_lesson_statement_name_minus_one_above.mjs";
 export function app_learn_js_lesson_statement_name_minus_one() {
@@ -9,7 +9,7 @@ export function app_learn_js_lesson_statement_name_minus_one() {
   ("The twin of the lesson on one more than a name, with a minus where the plus is, so it comes right after it, and before the lesson that writes the answer back into the same name.");
   ("A new name was chosen over writing back into the same name at the human's suggestion, because a learner reading a new name never has to see a name lose what it held.");
   let name_id = app_learn_js_lesson_statement_name_minus_one_title_name_id();
-  let lesson = app_code_lesson_statement_name_one_step_generic(
+  let lesson = app_learn_js_lesson_statement_name_one_step_generic(
     name_id,
     app_learn_js_lesson_statement_name_minus_one_batch,
     app_learn_js_lesson_statement_name_minus_one_above,
