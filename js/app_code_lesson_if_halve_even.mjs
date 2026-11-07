@@ -12,7 +12,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
+import { app_learn_js_if_codes_halves } from "./app_learn_js_if_codes_halves.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
@@ -58,7 +58,7 @@ export function app_code_lesson_if_halve_even() {
     let odds = list_shuffle_take([3, 5, 7, 9, 11, 13, 15, 17], 2);
     let starts = list_concat(evens, odds);
     let codes = list_map(starts, program_get);
-    let ordered = app_code_if_codes_halves(codes);
+    let ordered = app_learn_js_if_codes_halves(codes);
     return ordered;
   }
   let batch = app_learn_js_batch_question_answer_fns(

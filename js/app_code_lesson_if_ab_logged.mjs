@@ -7,7 +7,7 @@ import { list_skip } from "./list_skip.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
+import { app_learn_js_if_codes_halves } from "./app_learn_js_if_codes_halves.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { list_without } from "./list_without.mjs";
@@ -68,7 +68,7 @@ export function app_code_lesson_if_ab_logged(
       return code3;
     }
     let codes = list_map(cases, program_of);
-    let ordered = app_code_if_codes_halves(codes);
+    let ordered = app_learn_js_if_codes_halves(codes);
     return ordered;
   }
   let batch = app_learn_js_batch_question_answer_fns(

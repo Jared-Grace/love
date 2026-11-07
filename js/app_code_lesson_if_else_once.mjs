@@ -15,7 +15,7 @@ import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
+import { app_learn_js_if_codes_halves } from "./app_learn_js_if_codes_halves.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -89,7 +89,7 @@ export function app_code_lesson_if_else_once() {
       return code2;
     }
     let codes = list_map(cases, program_of);
-    let ordered = app_code_if_codes_halves(codes);
+    let ordered = app_learn_js_if_codes_halves(codes);
     return ordered;
   }
   let batch = app_learn_js_batch_question_answer_fns(

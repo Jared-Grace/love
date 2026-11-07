@@ -4,7 +4,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_if_codes_halves(codes) {
+export function app_learn_js_if_codes_halves(codes) {
   "four if programs, handed over as [runs with the if first, runs with the if last, does not run with the if first, does not run with the if last], put in an order whose first two and last two each hold one that runs and one that does not, one with the if first and one with it last, so the two examples drawn together show both ways, as the human asked of If less than 2026-10-07";
   let item = list_get(codes, 0);
   let item2 = list_get(codes, 3);

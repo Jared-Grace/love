@@ -1,5 +1,5 @@
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
-import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
+import { app_learn_js_if_codes_halves } from "./app_learn_js_if_codes_halves.mjs";
 import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -102,7 +102,7 @@ export function app_code_lesson_if_less_than() {
       return code;
     }
     let codes = list_map_index(pairs, program_of);
-    let ordered = app_code_if_codes_halves(codes);
+    let ordered = app_learn_js_if_codes_halves(codes);
     return ordered;
   }
   let batch = app_learn_js_batch_question_answer_fns(
