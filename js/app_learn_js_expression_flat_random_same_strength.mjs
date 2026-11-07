@@ -9,7 +9,7 @@ import { app_learn_js_expression_step_choices_symbols } from "./app_learn_js_exp
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { range_from } from "./range_from.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_code_expression_step_grown_symbols } from "./app_code_expression_step_grown_symbols.mjs";
+import { app_learn_js_expression_step_grown_symbols } from "./app_learn_js_expression_step_grown_symbols.mjs";
 import { each_range } from "./each_range.mjs";
 export function app_learn_js_expression_flat_random_same_strength(
   operator_count,
@@ -43,7 +43,7 @@ export function app_learn_js_expression_flat_random_same_strength(
   let tree = start;
   function step_add(index_unused) {
     "one more operator on what is there so far, drawn from the same class as the ones already on it";
-    tree = app_code_expression_step_grown_symbols(tree, symbols);
+    tree = app_learn_js_expression_step_grown_symbols(tree, symbols);
   }
   each_range(operator_count, step_add);
   return tree;
