@@ -15,7 +15,7 @@ import { app_code_lesson_for_if_greater_options } from "./app_code_lesson_for_if
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_lesson_for_if_generic } from "./app_code_lesson_for_if_generic.mjs";
-export function app_code_lesson_for_count_if() {
+export function app_learn_js_lesson_for_count_if() {
   arguments_assert(arguments, 0);
   ("counting only some runs: let count = 0; for (let n = 2; n < 5; n++) { if (n > 2) { count += 1; } } console.log(count); writes out 2");
   ("The one new fact is that a line inside the if runs only on the runs the if lets through, so a count inside it counts only those. Counting the items of an array that match is this shape.");
