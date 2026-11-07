@@ -7,7 +7,7 @@ import { add } from "./add.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_for_total } from "./app_code_lesson_for_total.mjs";
+import { app_learn_js_lesson_for_total } from "./app_learn_js_lesson_for_total.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
@@ -62,17 +62,22 @@ export function app_learn_js_lesson_for_total_if() {
   function above(root, context, example, walk) {
     "For with a running total remembered, then the total inside an if";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_for_total, [
-      "",
-      added,
-      " inside a ",
-      "for",
-      " adds every ",
-      name,
-      " to ",
-      total_name,
-      ".",
-    ]);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_for_total,
+      [
+        "",
+        added,
+        " inside a ",
+        "for",
+        " adds every ",
+        name,
+        " to ",
+        total_name,
+        ".",
+      ],
+    );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "Put it inside an ",
