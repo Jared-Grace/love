@@ -3,7 +3,7 @@ import { app_code_lesson_expression_comparison_and_operands_false } from "./app_
 import { app_code_lesson_expression_comparison_and_comparison } from "./app_code_lesson_expression_comparison_and_comparison.mjs";
 import { app_code_lesson_expression_comparison_and_title_name_id } from "./app_code_lesson_expression_comparison_and_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
-import { app_code_label_value } from "./app_code_label_value.mjs";
+import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
@@ -55,8 +55,8 @@ export function app_code_lesson_expression_comparison_and() {
     example_count: 4,
     decoys: app_learn_js_comparison_decoys,
     forwards_question_label: app_learn_js_label_code_question(),
-    forwards_answer_label: app_code_label_value(),
-    backwards_question_label: app_code_label_value(),
+    forwards_answer_label: app_learn_js_label_value(),
+    backwards_question_label: app_learn_js_label_value(),
     backwards_answer_label: app_learn_js_label_value_backwards(),
     forwards_answer_count_override: 2,
   });
