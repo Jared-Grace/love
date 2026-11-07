@@ -5,7 +5,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-export function app_code_lesson_expression_not_pair_title_name_id() {
+export function app_learn_js_lesson_expression_not_pair_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: ! around && or ||, an Expressions lesson");
   ("The title paints the symbols rather than the words, because the lesson is about the symbols - the words are only what the address is spelled with, where a symbol cannot go.");
