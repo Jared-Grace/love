@@ -3,7 +3,7 @@ import { app_learn_js_lesson_quiz_on_move_on } from "./app_learn_js_lesson_quiz_
 import { app_code_quiz_index_transform } from "./app_code_quiz_index_transform.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_learn_js_hash_write } from "./app_learn_js_hash_write.mjs";
-export async function app_code_lesson_quiz_on_next(
+export async function app_learn_js_lesson_quiz_on_next(
   qli,
   context,
   quizzes,

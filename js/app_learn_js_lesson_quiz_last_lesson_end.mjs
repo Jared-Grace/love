@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_on_next } from "./app_code_lesson_quiz_on_next.mjs";
+import { app_learn_js_lesson_quiz_on_next } from "./app_learn_js_lesson_quiz_on_next.mjs";
 export function app_learn_js_lesson_quiz_last_lesson_end(
   r4,
   context,
@@ -25,7 +25,12 @@ export function app_learn_js_lesson_quiz_last_lesson_end(
   let on_question = property_get(r4, "on_question");
   let qli = property_get(r4, "qli");
   async function on_next() {
-    let r = await app_code_lesson_quiz_on_next(qli, context, quizzes, refresh);
+    let r = await app_learn_js_lesson_quiz_on_next(
+      qli,
+      context,
+      quizzes,
+      refresh,
+    );
     return r;
   }
   let last_lesson_end = qli && no_more;
