@@ -31,7 +31,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_two_changes() {
+export function app_learn_js_lesson_if_two_changes() {
   arguments_assert(arguments, 0);
   ("two changes to a name inside an if: let n = 4; if (n < 5) { n *= 3; n += 1; } console.log(n); writes out 13, and with the two lines the other way round writes out 15");
   ("The one new fact is that the lines inside an if run in the order they are written, so two changes to the same name give a different number the other way round. A change in an if showed one change; Two lines in an if showed that every line inside runs; this puts the two together.");
