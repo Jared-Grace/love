@@ -6,7 +6,7 @@ import { app_code_lesson_expression_arithmetic_less_than } from "./app_code_less
 import { app_code_lesson_expression_remainder_2 } from "./app_code_lesson_expression_remainder_2.mjs";
 import { app_code_lesson_expression_round_up } from "./app_code_lesson_expression_round_up.mjs";
 import { app_code_lesson_expression_choose_order_compare } from "./app_code_lesson_expression_choose_order_compare.mjs";
-import { app_code_lesson_comment_note } from "./app_code_lesson_comment_note.mjs";
+import { app_learn_js_lesson_comment_note } from "./app_learn_js_lesson_comment_note.mjs";
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
@@ -86,7 +86,7 @@ export function app_code_lesson_groups() {
     },
     {
       parts: ["Statements"],
-      lesson: app_code_lesson_comment_note,
+      lesson: app_learn_js_lesson_comment_note,
     },
     {
       parts: ["Formulas"],

@@ -6,7 +6,7 @@ import { app_learn_js_lesson_comment_note_batch } from "./app_learn_js_lesson_co
 import { app_learn_js_lesson_comment_note_title_name_id } from "./app_learn_js_lesson_comment_note_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
-export function app_code_lesson_comment_note() {
+export function app_learn_js_lesson_comment_note() {
   arguments_assert(arguments, 0);
   ("a note written in the code: // add the two numbers above console.log(3 + 4); still writes out 7");
   ("The one new fact is that a line may be there for a person and not for the machine. Every line a learner has read until now was read by both, so this is the first time the two readers of a program come apart.");

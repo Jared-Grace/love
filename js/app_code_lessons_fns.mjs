@@ -144,7 +144,7 @@ import { app_code_lesson_expression_choose_order_same_strength } from "./app_cod
 import { app_code_lesson_expression_three_steps_left_to_right } from "./app_code_lesson_expression_three_steps_left_to_right.mjs";
 import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson_expression_choose_order_three.mjs";
 import { app_code_lesson_expression_three_steps_strong_first } from "./app_code_lesson_expression_three_steps_strong_first.mjs";
-import { app_code_lesson_comment_note } from "./app_code_lesson_comment_note.mjs";
+import { app_learn_js_lesson_comment_note } from "./app_learn_js_lesson_comment_note.mjs";
 import { app_code_lesson_log_twice } from "./app_code_lesson_log_twice.mjs";
 import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
 import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
@@ -505,7 +505,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_three_steps_left_to_right,
     app_code_lesson_expression_choose_order_three,
     app_code_lesson_expression_three_steps_strong_first,
-    app_code_lesson_comment_note,
+    app_learn_js_lesson_comment_note,
     app_code_lesson_log_twice,
     app_code_lesson_step_log_twice,
     app_code_lesson_comment_skip_line,
