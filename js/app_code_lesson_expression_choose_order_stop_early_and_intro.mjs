@@ -3,7 +3,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_stop_early_and_intro(
   parent,
 ) {
@@ -21,9 +21,9 @@ export function app_code_lesson_expression_choose_order_stop_early_and_intro(
   let whole = [false_word, " ", and_symbol, " ", skipped].join("");
   let with_true = [false_word, " ", and_symbol, " ", true_word].join("");
   let with_false = [false_word, " ", and_symbol, " ", false_word].join("");
-  app_code_div_cycle_code(parent, ["So ", with_true, " is ", false_word]);
-  app_code_div_cycle_code(parent, ["And ", with_false, " is ", false_word]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, ["So ", with_true, " is ", false_word]);
+  app_learn_js_div_cycle_code(parent, ["And ", with_false, " is ", false_word]);
+  app_learn_js_div_cycle_code(parent, [
     "For ",
     stops,
     " , it doesn't matter what the ",
@@ -33,26 +33,26 @@ export function app_code_lesson_expression_choose_order_stop_early_and_intro(
     " is always ",
     false_word,
   ]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, [
     "So that's how JavaScript solves ",
     stops,
     " :",
   ]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, [
     "When the left side of ",
     and_symbol,
     " is ",
     false_word,
     ", JavaScript never solves its right side",
   ]);
-  app_code_div_cycle_code(parent, ["So when JavaScript solves ", whole]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, ["So when JavaScript solves ", whole]);
+  app_learn_js_div_cycle_code(parent, [
     "JavaScript treats the ",
     skipped,
     " as ",
     dots,
   ]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, [
     "And JavaScript sees ",
     stops,
     " and completely skips the ",
@@ -60,11 +60,11 @@ export function app_code_lesson_expression_choose_order_stop_early_and_intro(
     " ",
     skipped,
   ]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, [
     "JavaScript solves the answer as ",
     false_word,
   ]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, [
     "And JavaScript never solves the ",
     skipped_bare,
   ]);

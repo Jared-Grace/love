@@ -11,7 +11,7 @@ import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -105,12 +105,12 @@ export function app_code_lesson_expression_true_false_compare_generic(
     let plain = app_learn_js_container_light_blue(root);
     let t = js_keyword_true();
     let f = js_keyword_false();
-    app_code_div_cycle_code(plain, [
+    app_learn_js_div_cycle_code(plain, [
       "",
       symbol,
       " already compares numbers and strings",
     ]);
-    app_code_div_cycle_code(plain, [
+    app_learn_js_div_cycle_code(plain, [
       "",
       symbol,
       " also works on ",

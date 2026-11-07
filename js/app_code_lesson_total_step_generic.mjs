@@ -27,7 +27,7 @@ import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -166,7 +166,7 @@ export function app_code_lesson_total_step_generic(
     let after = json_to(total_after);
     let object = add(value, step);
     let n_after = json_to(object);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -193,7 +193,7 @@ export function app_code_lesson_total_step_generic(
     said(root, 5, 7, 2, 9);
     let last = js_code_binary_spaced_nb(7, less, 7);
     let r2 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       last,
       " is ",
@@ -202,7 +202,7 @@ export function app_code_lesson_total_step_generic(
       r2,
       " is skipped, and the code continues after it",
     ]);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "So ",
       total_name,
       " is 1 + 3 + 5, which is 9",

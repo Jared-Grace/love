@@ -6,7 +6,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_for_condition_lines } from "./js_code_for_condition_lines.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_loop_log_generic } from "./app_code_lesson_loop_log_generic.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_for() {
     let lines_one = js_code_start_above_lines(js_code_while_lines_multiple);
     example(box_one, lines_one);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "A ",
       "for",
       " written this way - with ",

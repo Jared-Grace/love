@@ -22,7 +22,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -118,7 +118,7 @@ export function app_code_lesson_if_and_if_not() {
     let one = list_concat([setup2], if_not_lines);
     app_learn_js_code_lines_writes_out(box_one, one, love);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "We can put ",
       "if (a)",
       " beside ",
@@ -127,7 +127,7 @@ export function app_code_lesson_if_and_if_not() {
     ]);
     let true_lines = program_lines(name2, true, [love, joy]);
     app_learn_js_code_lines_writes_out(box_two, true_lines, love);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       name2,
       " is ",
@@ -136,7 +136,7 @@ export function app_code_lesson_if_and_if_not() {
       statement4,
       " runs",
     ]);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       opposite2,
       " is ",
@@ -146,7 +146,7 @@ export function app_code_lesson_if_and_if_not() {
       " does not run",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "But suppose ",
       name2,
       " is ",
@@ -155,7 +155,7 @@ export function app_code_lesson_if_and_if_not() {
     ]);
     let false_lines = program_lines(name2, false, [love, joy]);
     app_learn_js_code_lines_writes_out(box_three, false_lines, joy);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "",
       name2,
       " is ",
@@ -164,7 +164,7 @@ export function app_code_lesson_if_and_if_not() {
       statement4,
       " does not run",
     ]);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "",
       opposite2,
       " is ",
@@ -174,7 +174,7 @@ export function app_code_lesson_if_and_if_not() {
       " runs",
     ]);
     let box_four = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_four, [
+    app_learn_js_div_cycle_code(box_four, [
       "So exactly one of ",
       if_dots,
       " and ",

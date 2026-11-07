@@ -34,7 +34,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -200,7 +200,7 @@ export function app_code_lesson_if_inside_generic(options) {
       middle,
       [name, " becomes ", after],
     ]);
-    app_code_div_cycle_code(root, parts);
+    app_learn_js_div_cycle_code(root, parts);
   }
   function example(root, write) {
     "the program of 1, 6 and 2, written with write, and what it writes out";
@@ -214,7 +214,7 @@ export function app_code_lesson_if_inside_generic(options) {
     said(root, 3, 2);
     said(root, 5, 2);
     let last = js_code_binary_spaced_nb(7, less, 6);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       last,
       " is ",
@@ -223,7 +223,7 @@ export function app_code_lesson_if_inside_generic(options) {
       keyword,
       " stops",
     ]);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "The ",
       keyword,
       " ran three times, but only two lines were written out",

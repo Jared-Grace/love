@@ -21,7 +21,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_string_concat } from "./app_code_lesson_expression_string_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -117,7 +117,7 @@ export function app_code_lesson_number_text_plus() {
     let statement = js_code_console_log_statement(two_strings);
     app_learn_js_code_lines_writes_out(box_one, [statement], "lovejoy");
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "A ",
       plus,
       " can join a number and a string too:",
@@ -128,7 +128,7 @@ export function app_code_lesson_number_text_plus() {
     app_learn_js_code_lines_writes_out(box_two, [v], value);
     let combined = app_code_string_code(ending);
     let combined2 = app_code_string_code(" ...");
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "The string ",
       combined,
       " starts with a space ",

@@ -32,7 +32,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -196,7 +196,7 @@ export function app_code_lesson_if_two_lines() {
     let one_line = js_code_if_lines(small_first, statement2);
     app_learn_js_code_lines_writes_out(box_one, one_line, first_shown);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "An ",
       "if",
       " can hold more than one line:",
@@ -205,8 +205,8 @@ export function app_code_lesson_if_two_lines() {
     let true_lines = program_lines(small_first, words_shown, true);
     let every = list_join_newline(words_shown);
     app_learn_js_code_lines_writes_out(box_two, true_lines, every);
-    app_code_div_cycle_code(box_two, ["", small_first, " is ", "true"]);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, ["", small_first, " is ", "true"]);
+    app_learn_js_div_cycle_code(box_two, [
       "So both lines inside ",
       brace_left,
       " and ",
@@ -214,11 +214,13 @@ export function app_code_lesson_if_two_lines() {
       " run",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, ["But suppose we swap the numbers:"]);
+    app_learn_js_div_cycle_code(box_three, [
+      "But suppose we swap the numbers:",
+    ]);
     let false_lines = program_lines(big_first, words_shown, true);
     app_learn_js_code_lines_writes_out(box_three, false_lines, after_shown);
-    app_code_div_cycle_code(box_three, ["", big_first, " is ", "false"]);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, ["", big_first, " is ", "false"]);
+    app_learn_js_div_cycle_code(box_three, [
       "So neither line inside ",
       brace_left,
       " and ",

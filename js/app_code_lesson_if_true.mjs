@@ -18,7 +18,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_functions_console_log_string } from "./app_code_lesson_functions_console_log_string.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_keyword_if } from "./js_keyword_if.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -107,7 +107,7 @@ export function app_code_lesson_if_true() {
     app_learn_js_code_lines_writes_out(box_one, [statement], shown);
     let box_two = app_learn_js_container_light_blue(root);
     let keyword = js_keyword_if();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "We can put ",
       statement,
       " inside an ",
@@ -120,7 +120,7 @@ export function app_code_lesson_if_true() {
     let right = js_code_parenthesis_right();
     let brace_left = js_code_brace_left();
     let brace_right = js_code_brace_right();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "If the value inside ",
       left,
       " and ",

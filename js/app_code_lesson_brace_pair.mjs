@@ -24,7 +24,7 @@ import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 export function app_code_lesson_brace_pair() {
   arguments_assert(arguments, 0);
@@ -55,7 +55,7 @@ export function app_code_lesson_brace_pair() {
       ["braces come in pairs."],
     );
     let box_paired = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_paired, [
+    app_learn_js_div_cycle_code(box_paired, [
       "Here each pair has a colour of its own:",
     ]);
     let if_b = js_code_if_lines_multiple("b", [say_joy]);

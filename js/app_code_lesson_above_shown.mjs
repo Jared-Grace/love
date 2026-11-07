@@ -13,7 +13,7 @@ import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_above_shown(context, lesson) {
   arguments_assert(arguments, 2);
   ("the telling drawn above a lesson's examples: its own boxes, or, when the lesson before it stepped through these same programs with these same boxes and the learner has finished that lesson, a short line saying so in their place");
@@ -45,10 +45,10 @@ export function app_code_lesson_above_shown(context, lesson) {
   }
   function above_short(root, context_above) {
     let box = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box, [
+    app_learn_js_div_cycle_code(box, [
       "The last lesson ran these programs one line at a time, and its boxes explain each line",
     ]);
-    app_code_div_cycle_code(box, [
+    app_learn_js_div_cycle_code(box, [
       "Now work out each whole program at once, without stepping",
     ]);
     return null;

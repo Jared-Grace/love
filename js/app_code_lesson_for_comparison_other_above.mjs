@@ -10,7 +10,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_for_comparison_other_above(
   lesson_earlier,
   earlier,
@@ -43,15 +43,15 @@ export function app_code_lesson_for_comparison_other_above(
     ]);
     app_learn_js_code_lines_writes_out(box_one, earlier_lines, earlier_written);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "We can write it with ",
       options.comparison,
       ":",
     ]);
     example(box_two, js_code_for_start_condition_update_lines);
-    app_code_div_cycle_code(box_two, ["These two loops do the same thing"]);
+    app_learn_js_div_cycle_code(box_two, ["These two loops do the same thing"]);
     walk(box_two);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       earlier.comparison,
       " leaves out the number it is compared with, and ",

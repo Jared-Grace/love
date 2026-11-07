@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_round_generic_above_gives_suffix(
@@ -15,12 +15,12 @@ export function app_code_lesson_expression_round_generic_above_gives_suffix(
   let whole_stays = property_get(r2, "whole_stays");
   let extreme_decimal = property_get(r2, "extreme_decimal");
   let rounds = property_get(r2, "rounds");
-  app_code_div_cycle_code(rounds, ["", v, " is ", chosen_whole]);
+  app_learn_js_div_cycle_code(rounds, ["", v, " is ", chosen_whole]);
   let v2 = app_code_lesson_expression_round_generic_code(
     extreme_decimal,
     called_name,
   );
-  app_code_div_cycle_code(rounds, [
+  app_learn_js_div_cycle_code(rounds, [
     "",
     v2,
     " is also ",

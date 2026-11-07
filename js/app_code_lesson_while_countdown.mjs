@@ -28,7 +28,7 @@ import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_decrement } from "./app_code_lesson_while_decrement.mjs";
@@ -152,7 +152,7 @@ export function app_code_lesson_while_countdown() {
     let json = json_to(value);
     let object = subtract(value, 1);
     let json2 = json_to(object);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -184,7 +184,7 @@ export function app_code_lesson_while_countdown() {
     );
     let box_two = app_learn_js_container_light_blue(root);
     let r3 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "A line after the ",
       r3,
       " waits for the ",
@@ -201,7 +201,7 @@ export function app_code_lesson_while_countdown() {
     said(box_two, 1);
     let check = js_code_binary_spaced_nb(0, greater, 0);
     let r4 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       check,
       " is ",
@@ -210,7 +210,7 @@ export function app_code_lesson_while_countdown() {
       r4,
       " is skipped, and the code continues after it",
     ]);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "The next line writes out ",
       after_word,
       ", once",

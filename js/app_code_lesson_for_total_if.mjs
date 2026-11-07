@@ -8,7 +8,7 @@ import { json_to } from "./json_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_for_total } from "./app_code_lesson_for_total.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_code_lesson_for_if_greater_options } from "./app_code_lesson_for_if_greater_options.mjs";
@@ -74,7 +74,7 @@ export function app_code_lesson_for_total_if() {
       ".",
     ]);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "Put it inside an ",
       "if",
       ", and it adds only the numbers where the ",

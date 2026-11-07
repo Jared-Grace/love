@@ -24,7 +24,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -150,7 +150,7 @@ export function app_code_lesson_if_two_ifs() {
     let one_if = list_concat([let_a], b);
     app_learn_js_code_lines_writes_out(box_one, one_if, love);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "Two ",
       "if",
       "s each ask their own question:",
@@ -160,7 +160,7 @@ export function app_code_lesson_if_two_ifs() {
     app_learn_js_code_lines_writes_out(box_two, two, written);
     let a_less = js_code_binary_spaced_nb(2, less, 5);
     let b_less = js_code_binary_spaced_nb(7, less, 5);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       a_less,
       " is ",
@@ -169,7 +169,7 @@ export function app_code_lesson_if_two_ifs() {
       love,
       " is written out",
     ]);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       b_less,
       " is ",
@@ -179,7 +179,7 @@ export function app_code_lesson_if_two_ifs() {
       " is not",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "So two ",
       "if",
       "s can go four ways:",
@@ -188,10 +188,16 @@ export function app_code_lesson_if_two_ifs() {
     let if_a = js_code_if_dots(a_condition);
     let b_condition = js_code_binary_spaced_nb("b", less, 5);
     let if_b = js_code_if_dots(b_condition);
-    app_code_div_cycle_code(box_three, ["", if_a, " and ", if_b, " both run"]);
-    app_code_div_cycle_code(box_three, ["only ", if_a, " runs"]);
-    app_code_div_cycle_code(box_three, ["only ", if_b, " runs"]);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
+      "",
+      if_a,
+      " and ",
+      if_b,
+      " both run",
+    ]);
+    app_learn_js_div_cycle_code(box_three, ["only ", if_a, " runs"]);
+    app_learn_js_div_cycle_code(box_three, ["only ", if_b, " runs"]);
+    app_learn_js_div_cycle_code(box_three, [
       "neither ",
       if_a,
       " nor ",

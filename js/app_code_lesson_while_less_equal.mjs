@@ -7,7 +7,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -68,7 +68,7 @@ export function app_code_lesson_while_less_equal() {
       ".",
     ]);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "A ",
       "while",
       " can ask ",
@@ -91,7 +91,7 @@ export function app_code_lesson_while_less_equal() {
     said(box_two, 10, 7, 10, false);
     let box_three = app_learn_js_container_light_blue(root);
     let landed = js_code_binary_spaced_nb(7, less, 7);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "With ",
       less,
       " instead, ",

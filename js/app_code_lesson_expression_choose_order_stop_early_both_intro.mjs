@@ -3,7 +3,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_stop_early_both_intro(
   parent,
 ) {
@@ -19,21 +19,25 @@ export function app_code_lesson_expression_choose_order_stop_early_both_intro(
   let and_part = [false_word, " ", and_symbol, " ", true_word].join("");
   let whole = [and_part, " ", or_symbol, " ", true_word].join("");
   let left_over = [false_word, " ", or_symbol, " ", true_word].join("");
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, [
     "The ",
     and_symbol,
     " is still solved before the ",
     or_symbol,
   ]);
-  app_code_div_cycle_code(parent, ["So when JavaScript solves ", whole]);
-  app_code_div_cycle_code(parent, ["JavaScript solves ", and_part, " first"]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, ["So when JavaScript solves ", whole]);
+  app_learn_js_div_cycle_code(parent, [
+    "JavaScript solves ",
+    and_part,
+    " first",
+  ]);
+  app_learn_js_div_cycle_code(parent, [
     "JavaScript treats the ",
     true_word,
     " as ",
     dots,
   ]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, [
     "And JavaScript sees ",
     and_stops,
     " and completely skips the ",
@@ -42,21 +46,21 @@ export function app_code_lesson_expression_choose_order_stop_early_both_intro(
     true_word,
     ")",
   ]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, [
     "JavaScript solves ",
     and_part,
     " as ",
     false_word,
   ]);
-  app_code_div_cycle_code(parent, ["That leaves ", left_over]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, ["That leaves ", left_over]);
+  app_learn_js_div_cycle_code(parent, [
     "When the left side of ",
     or_symbol,
     " is ",
     false_word,
     ", JavaScript solves its right side",
   ]);
-  app_code_div_cycle_code(parent, [
+  app_learn_js_div_cycle_code(parent, [
     "JavaScript solves the answer as ",
     true_word,
   ]);

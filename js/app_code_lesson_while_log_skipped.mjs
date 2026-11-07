@@ -34,7 +34,7 @@ import { list_last } from "./list_last.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -187,7 +187,7 @@ export function app_code_lesson_while_log_skipped() {
       " writes out every time the lines inside run.",
     ]);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "When what the ",
       "while",
       " asks is ",
@@ -198,7 +198,7 @@ export function app_code_lesson_while_log_skipped() {
     app_learn_js_code_lines_writes_out(box_two, lines3, "9");
     let first = js_code_binary_spaced_nb(9, less, 5);
     let r = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       first,
       " is ",
@@ -209,7 +209,7 @@ export function app_code_lesson_while_log_skipped() {
       "console.log",
       " inside it writes out nothing",
     ]);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "The code continues after it, and the ",
       "console.log",
       " there writes out ",

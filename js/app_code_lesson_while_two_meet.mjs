@@ -29,7 +29,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
@@ -186,7 +186,7 @@ export function app_code_lesson_while_two_meet() {
     let json_a = json_to(object);
     let object2 = subtract(b4, 1);
     let json_b = json_to(object2);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -203,7 +203,7 @@ export function app_code_lesson_while_two_meet() {
   }
   function said_false(root, a5, b5) {
     let condition3 = js_code_binary_spaced_nb(a5, less, b5);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition3,
       " is ",
@@ -226,7 +226,7 @@ export function app_code_lesson_while_two_meet() {
       ".",
     ]);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "A ",
       "while",
       " can change two names each time. Here ",
@@ -243,7 +243,7 @@ export function app_code_lesson_while_two_meet() {
     said(box_two, 3, 5);
     said_false(box_two, 4, 4);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "They do not always land together. Started one apart, they pass each other:",
     ]);
     let lines4 = program_lines(3, 4);

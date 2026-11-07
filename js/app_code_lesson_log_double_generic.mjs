@@ -26,7 +26,7 @@ import { list_size } from "./list_size.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { each } from "./each.mjs";
 import { list_last } from "./list_last.mjs";
@@ -180,7 +180,7 @@ export function app_code_lesson_log_double_generic(options) {
     let doubled3 = json_to(product3);
     let object = add(value, 1);
     let after = json_to(object);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -215,7 +215,7 @@ export function app_code_lesson_log_double_generic(options) {
     let ended = add(last, 1);
     let check = js_code_binary_spaced_nb(ended, less, bound);
     let r = app_learn_js_braces_dots();
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       check,
       " is ",

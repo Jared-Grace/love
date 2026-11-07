@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_strong_card } from "./app_code_
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_arithmetic_parentheses_recall(
   root,
   context,
@@ -19,7 +19,7 @@ export function app_code_lesson_expression_choose_order_arithmetic_parentheses_r
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
   let inside_first = app_code_parentheses_inside_before_outside("");
-  app_code_div_cycle_code(recall_card, [
+  app_learn_js_div_cycle_code(recall_card, [
     "And whatever is inside ",
     left_parenthesis,
     " and ",

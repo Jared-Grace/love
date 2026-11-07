@@ -6,7 +6,7 @@ import { add } from "./add.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_greater_equal } from "./app_code_lesson_while_greater_equal.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
@@ -70,7 +70,7 @@ export function app_code_lesson_while_not_equal() {
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "With ",
       not_equal_symbol,
       ", a ",
@@ -86,7 +86,7 @@ export function app_code_lesson_while_not_equal() {
     said(box_two, 5, 7, 7, true);
     said(box_two, 7, 7, 7, false);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "If ",
       name,
       " stepped past the number without landing on it, ",

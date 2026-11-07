@@ -27,7 +27,7 @@ import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -170,7 +170,7 @@ export function app_code_lesson_two_names_generic(options) {
     let json_a = json_to(object);
     let object2 = subtract(b, 1);
     let json_b = json_to(object2);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -197,7 +197,7 @@ export function app_code_lesson_two_names_generic(options) {
     said(root, 3, 7);
     let condition3 = js_code_binary_spaced_nb(4, less, 4);
     let r = app_learn_js_braces_dots();
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition3,
       " is ",
@@ -207,7 +207,7 @@ export function app_code_lesson_two_names_generic(options) {
       " is skipped, and the code continues after it",
     ]);
     let r2 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "The ",
       r2,
       " ran three times, so one was taken away from ",

@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_counted } from "./app_code_lesson_expression_repeated_generic_expanded_counted.mjs";
@@ -34,13 +34,13 @@ export function app_code_lesson_expression_repeated_generic_above(
     expand_symbol,
     " 4",
   ]);
-  app_code_div_cycle_code(c, [already, three_numbers]);
+  app_learn_js_div_cycle_code(c, [already, three_numbers]);
   let what_if = text_combine_multiple([
     "What if the numbers you ",
     verb,
     " together are all the same number?",
   ]);
-  app_code_div_cycle_code(c, [what_if]);
+  app_learn_js_div_cycle_code(c, [what_if]);
   let like = html_div(c);
   html_span_text(like, "Like ");
   app_code_lesson_expression_repeated_generic_expanded_counted(
@@ -90,5 +90,5 @@ export function app_code_lesson_expression_repeated_generic_above(
     verb,
     " together",
   ]);
-  app_code_div_cycle_code(c, [how_many]);
+  app_learn_js_div_cycle_code(c, [how_many]);
 }

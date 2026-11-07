@@ -12,7 +12,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_braces_run_if_else_in_if_else } from "./app_code_lesson_braces_run_if_else_in_if_else.mjs";
 import { app_code_lesson_if_else_in_if } from "./app_code_lesson_if_else_in_if.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -94,7 +94,7 @@ export function app_code_lesson_if_else_in_if_else() {
       ["An ", "if", " and ", "else", " can go inside an ", "if"],
     );
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       if_a,
       " can have an ",
@@ -104,7 +104,7 @@ export function app_code_lesson_if_else_in_if_else() {
     let all_lines = program_lines([true, true], words4);
     let all_written = list_join_newline([love, joy, patience]);
     app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       "a",
       " is ",
@@ -115,7 +115,7 @@ export function app_code_lesson_if_else_in_if_else() {
       else_kindness,
       " does not",
     ]);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       "b",
       " is ",
@@ -127,7 +127,7 @@ export function app_code_lesson_if_else_in_if_else() {
       " runs",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "But suppose ",
       "b",
       " is ",
@@ -137,7 +137,7 @@ export function app_code_lesson_if_else_in_if_else() {
     let peace_lines = program_lines([true, false], words4);
     let peace_written = list_join_newline([love, peace, patience]);
     app_learn_js_code_lines_writes_out(box_three, peace_lines, peace_written);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "",
       "b",
       " is ",
@@ -147,7 +147,7 @@ export function app_code_lesson_if_else_in_if_else() {
       " runs",
     ]);
     let box_four = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_four, [
+    app_learn_js_div_cycle_code(box_four, [
       "And suppose ",
       "a",
       " is ",
@@ -161,7 +161,7 @@ export function app_code_lesson_if_else_in_if_else() {
       kindness_lines,
       kindness_written,
     );
-    app_code_div_cycle_code(box_four, [
+    app_learn_js_div_cycle_code(box_four, [
       "",
       "a",
       " is ",
@@ -171,7 +171,7 @@ export function app_code_lesson_if_else_in_if_else() {
       " runs instead of ",
       if_a,
     ]);
-    app_code_div_cycle_code(box_four, [
+    app_learn_js_div_cycle_code(box_four, [
       "",
       if_b,
       " and ",
@@ -184,7 +184,7 @@ export function app_code_lesson_if_else_in_if_else() {
       else_peace,
       " is reached",
     ]);
-    app_code_div_cycle_code(box_four, [
+    app_learn_js_div_cycle_code(box_four, [
       "",
       say_patience,
       " is outside ",

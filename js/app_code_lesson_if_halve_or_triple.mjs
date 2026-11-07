@@ -28,7 +28,7 @@ import { app_code_if_condition_set } from "./app_code_if_condition_set.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -112,7 +112,7 @@ export function app_code_lesson_if_halve_or_triple() {
       ["An ", "if", " can halve an even number"],
     );
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "An ",
       "else",
       " can give odd numbers their own change:",
@@ -121,7 +121,7 @@ export function app_code_lesson_if_halve_or_triple() {
     app_learn_js_code_lines_writes_out(box_two, odd_lines, "22");
     let seven_check = js_code_remainder_two_is(7, "0");
     let else_dots = js_code_else_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       seven_check,
       " is ",
@@ -132,7 +132,7 @@ export function app_code_lesson_if_halve_or_triple() {
     ]);
     let seven_times = js_code_binary_spaced_nb(7, times, 3);
     let plus_one = js_code_binary_spaced_nb(21, plus, 1);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       seven_times,
       " is ",
@@ -143,7 +143,7 @@ export function app_code_lesson_if_halve_or_triple() {
       "22",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "But suppose ",
       name,
       " starts at ",
@@ -153,7 +153,7 @@ export function app_code_lesson_if_halve_or_triple() {
     let even_lines = program_lines(8);
     app_learn_js_code_lines_writes_out(box_three, even_lines, "4");
     let eight_check = js_code_remainder_two_is(8, "0");
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "",
       eight_check,
       " is ",
@@ -167,13 +167,13 @@ export function app_code_lesson_if_halve_or_triple() {
     let box_four = app_learn_js_container_light_blue(root);
     let if_dots = js_code_if_dots(even_check);
     let if_else = if_dots + " " + else_dots;
-    app_code_div_cycle_code(box_four, [
+    app_learn_js_div_cycle_code(box_four, [
       "At the time of writing, apply ",
       if_else,
       " again and again, and every number 1, 2, 3, ... anyone has ever tried so far reaches ",
       "1",
     ]);
-    app_code_div_cycle_code(box_four, [
+    app_learn_js_div_cycle_code(box_four, [
       "But we do not know if all numbers 1, 2, 3, ... always reach ",
       "1",
       " or not",

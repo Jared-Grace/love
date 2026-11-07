@@ -14,7 +14,7 @@ import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_if_cases_generic } from "./app_code_lesson_if_cases_generic.mjs";
 export function app_code_lesson_if_names_less_than() {
   arguments_assert(arguments, 0);
@@ -80,7 +80,9 @@ export function app_code_lesson_if_names_less_than() {
     );
     app_learn_js_code_lines_writes_out(box_one, remember_lines, both);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, ["Names can hold the numbers instead:"]);
+    app_learn_js_div_cycle_code(box_two, [
+      "Names can hold the numbers instead:",
+    ]);
     let setup2 = setup_get(2, 3);
     let true_lines = app_code_if_program_lines(
       setup2,
@@ -90,9 +92,9 @@ export function app_code_lesson_if_names_less_than() {
       true,
     );
     app_learn_js_code_lines_writes_out(box_two, true_lines, both);
-    app_code_div_cycle_code(box_two, ["", condition, " is ", small_first]);
-    app_code_div_cycle_code(box_two, ["", small_first, " is ", "true"]);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, ["", condition, " is ", small_first]);
+    app_learn_js_div_cycle_code(box_two, ["", small_first, " is ", "true"]);
+    app_learn_js_div_cycle_code(box_two, [
       "So the lines inside ",
       brace_left,
       " and ",
@@ -100,7 +102,7 @@ export function app_code_lesson_if_names_less_than() {
       " run",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "But suppose ",
       "a",
       " holds ",
@@ -120,9 +122,9 @@ export function app_code_lesson_if_names_less_than() {
       true,
     );
     app_learn_js_code_lines_writes_out(box_three, false_lines, after_shown);
-    app_code_div_cycle_code(box_three, ["", condition, " is ", big_first]);
-    app_code_div_cycle_code(box_three, ["", big_first, " is ", "false"]);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, ["", condition, " is ", big_first]);
+    app_learn_js_div_cycle_code(box_three, ["", big_first, " is ", "false"]);
+    app_learn_js_div_cycle_code(box_three, [
       "So the lines inside ",
       brace_left,
       " and ",

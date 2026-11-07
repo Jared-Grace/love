@@ -18,7 +18,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -75,7 +75,7 @@ export function app_code_lesson_statement_name_not() {
       value_false,
     );
     let box_name = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_name, [
+    app_learn_js_div_cycle_code(box_name, [
       "Suppose we give a name (",
       name,
       ") to a true or false value (",
@@ -84,14 +84,14 @@ export function app_code_lesson_statement_name_not() {
     ]);
     let held = js_code_let_statement(name, true);
     html_div_code_lines(box_name, [held]);
-    app_code_div_cycle_code(box_name, [
+    app_learn_js_div_cycle_code(box_name, [
       "We can use ",
       symbol,
       " before a true or false value (like ",
       value_asked,
       ")",
     ]);
-    app_code_div_cycle_code(box_name, [
+    app_learn_js_div_cycle_code(box_name, [
       "We can also use ",
       symbol,
       " before a name (like ",

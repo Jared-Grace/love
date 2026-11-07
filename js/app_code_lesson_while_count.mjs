@@ -4,7 +4,7 @@ import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_halve } from "./app_code_lesson_while_halve.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_count_generic } from "./app_code_lesson_count_generic.mjs";
@@ -29,7 +29,7 @@ export function app_code_lesson_while_count() {
     );
     let box_two = app_learn_js_container_light_blue(root);
     let r = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "Inside, it can change two names. Here ",
       count_name,
       " goes up by 1 each time, so it counts how many times the ",

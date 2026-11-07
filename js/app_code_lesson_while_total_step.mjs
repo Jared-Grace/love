@@ -4,7 +4,7 @@ import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_total_step_generic } from "./app_code_lesson_total_step_generic.mjs";
 export function app_code_lesson_while_total_step() {
@@ -37,7 +37,7 @@ export function app_code_lesson_while_total_step() {
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       name,
       " can count by more than 1. Here ",
@@ -51,7 +51,7 @@ export function app_code_lesson_while_total_step() {
     example(box_two, program_write);
     walk(box_two);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "Start ",
       name,
       " at 2 instead, and it counts 2, 4, 6: the even numbers. And ",

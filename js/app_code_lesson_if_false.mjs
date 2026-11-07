@@ -28,7 +28,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -146,7 +146,7 @@ export function app_code_lesson_if_false() {
     let both = list_join_newline([inside_shown, after_shown]);
     app_learn_js_code_lines_writes_out(box_one, true_lines, both);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "If the value inside ",
       left,
       " and ",
@@ -162,7 +162,7 @@ export function app_code_lesson_if_false() {
     let false_lines = program_lines("false", inside_shown, after_shown, true);
     let after_line = app_code_word_console_log_statement(after_shown);
     app_learn_js_code_lines_writes_out(box_two, false_lines, after_shown);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       after_line,
       " is after ",

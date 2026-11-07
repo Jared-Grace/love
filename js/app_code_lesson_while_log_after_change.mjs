@@ -29,7 +29,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
@@ -148,7 +148,7 @@ export function app_code_lesson_while_log_after_change() {
     "value < bound is true, so n becomes value_after, and it writes out value_after";
     let condition2 = js_code_binary_spaced_nb(value, less, bound);
     let json = json_to(value_after);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -172,7 +172,7 @@ export function app_code_lesson_while_log_after_change() {
       " writes out one line every time the lines run.",
     ]);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "Put the change first, and it writes out ",
       name,
       " after it has changed:",
@@ -184,7 +184,7 @@ export function app_code_lesson_while_log_after_change() {
     said(box_two, 4, 5, 6);
     let check = js_code_binary_spaced_nb(6, less, 5);
     let r = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       check,
       " is ",
@@ -194,7 +194,7 @@ export function app_code_lesson_while_log_after_change() {
       " is skipped, and the code continues after it",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "",
       "6",
       " was written out, even though ",
@@ -203,7 +203,7 @@ export function app_code_lesson_while_log_after_change() {
       "false",
     ]);
     let r2 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "The ",
       "while",
       " asks only before the ",
@@ -212,7 +212,7 @@ export function app_code_lesson_while_log_after_change() {
     ]);
     let r3 = app_learn_js_braces_dots();
     let r4 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "Once the ",
       r3,
       " starts, every line inside the ",

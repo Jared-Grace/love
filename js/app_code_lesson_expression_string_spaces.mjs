@@ -11,7 +11,7 @@ import { app_learn_js_category_expressions } from "./app_learn_js_category_expre
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_string_colored } from "./app_code_string_colored.mjs";
@@ -63,8 +63,10 @@ export function app_code_lesson_expression_string_spaces() {
     let phrase = list_random_item(list);
     let code = app_code_string_code(phrase);
     let intro = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(intro, ["A string is text in quotes"]);
-    app_code_div_cycle_code(intro, ["A string can hold more than one word"]);
+    app_learn_js_div_cycle_code(intro, ["A string is text in quotes"]);
+    app_learn_js_div_cycle_code(intro, [
+      "A string can hold more than one word",
+    ]);
     let example_line = html_div(intro);
     html_span_text(example_line, "Here is a string with a space: ");
     html_span_text_code_dark(example_line, code);
@@ -76,6 +78,6 @@ export function app_code_lesson_expression_string_spaces() {
     let value_out = html_span_text_code_dark(ex, phrase);
     let color = app_code_string_value_color();
     html_font_color_set(value_out, color);
-    app_code_div_cycle_code(define, ["The space is part of the value"]);
+    app_learn_js_div_cycle_code(define, ["The space is part of the value"]);
   }
 }

@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { js_comment_start } from "./js_comment_start.mjs";
 export function app_code_lesson_comment_note_above(root, context) {
@@ -32,29 +32,31 @@ export function app_code_lesson_comment_note_above(root, context) {
   );
   app_learn_js_code_lines_writes_out(box_plain, [logged], total);
   let box_note = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box_note, ["We can write a comment above the line:"]);
+  app_learn_js_div_cycle_code(box_note, [
+    "We can write a comment above the line:",
+  ]);
   ("the comment says what the line below it does, because that is what a comment is for. A comment reading anything else would be teaching the shape and leaving the use of it to be guessed at.");
   let note = js_code_comment_line("add ten and twenty");
   app_learn_js_code_lines_writes_out(box_note, [note, logged], total);
-  app_code_div_cycle_code(box_note, ["The answer did not change"]);
+  app_learn_js_div_cycle_code(box_note, ["The answer did not change"]);
   let slashes = js_comment_start();
   let box_slashes = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box_slashes, [
+  app_learn_js_div_cycle_code(box_slashes, [
     "A comment starts with two slashes (",
     slashes,
     ")",
   ]);
-  app_code_div_cycle_code(box_slashes, [
+  app_learn_js_div_cycle_code(box_slashes, [
     "When a computer sees ",
     slashes,
     ", then the computer skips the rest of that line",
   ]);
   ("the last box says what a comment is FOR, in the plainest word there is for it. The word comment says nothing on its own to somebody meeting it here for the first time - note does, and the two put together give a learner the thing and its real name in one line.");
-  app_code_div_cycle_code(box_slashes, [
+  app_learn_js_div_cycle_code(box_slashes, [
     "A comment is a note for people reading the code",
   ]);
-  app_code_div_cycle_code(box_slashes, [
+  app_learn_js_div_cycle_code(box_slashes, [
     "Code is read by computers (And people)",
   ]);
-  app_code_div_cycle_code(box_slashes, ["Comments are read by people"]);
+  app_learn_js_div_cycle_code(box_slashes, ["Comments are read by people"]);
 }

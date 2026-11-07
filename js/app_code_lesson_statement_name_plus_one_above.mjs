@@ -9,7 +9,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_statement_name_plus_one_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: a new name holding what another name holds, the program the lesson on copying a name was about, then the same program with one added to the name being copied");
@@ -34,7 +34,7 @@ export function app_code_lesson_statement_name_plus_one_above(root, context) {
   let held_more = js_code_let_statement(name_last, more);
   let box = app_learn_js_container_light_blue(root);
   ("the sentence alone, because the example right below it is the program it talks about");
-  app_code_div_cycle_code(box, [
+  app_learn_js_div_cycle_code(box, [
     "A new name can also hold a name with one added (",
     held_more,
     " instead of ",

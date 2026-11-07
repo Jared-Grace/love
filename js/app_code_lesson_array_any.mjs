@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_array_second } from "./app_code_lesson_array_second.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_array_index_generic } from "./app_code_lesson_array_index_generic.mjs";
 export function app_code_lesson_array_any() {
@@ -20,7 +20,7 @@ export function app_code_lesson_array_any() {
       ["", "a[1]", " is the second item, since counting starts at ", "0", "."],
     );
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "The same counting reaches every item, so in an array of four the last is ",
       "a[3]",
       ":",

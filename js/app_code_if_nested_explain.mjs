@@ -4,7 +4,7 @@ import { list_get } from "./list_get.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_if_nested_program_lines } from "./app_code_if_nested_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -27,7 +27,7 @@ export function app_code_if_nested_explain(root, context) {
     ["Two ", "if", "s ask two questions, one after the other"],
   );
   let box_two = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box_two, [
+  app_learn_js_div_cycle_code(box_two, [
     "An ",
     "if",
     " can go inside an ",
@@ -42,7 +42,7 @@ export function app_code_if_nested_explain(root, context) {
   let say_peace = app_code_word_console_log_statement(peace);
   let if_a = js_code_if_dots("a");
   let if_b = js_code_if_dots("b");
-  app_code_div_cycle_code(box_two, [
+  app_learn_js_div_cycle_code(box_two, [
     "",
     "a",
     " is ",
@@ -51,7 +51,7 @@ export function app_code_if_nested_explain(root, context) {
     if_a,
     " run",
   ]);
-  app_code_div_cycle_code(box_two, [
+  app_learn_js_div_cycle_code(box_two, [
     "",
     "b",
     " is ",
@@ -62,7 +62,7 @@ export function app_code_if_nested_explain(root, context) {
     if_b,
     " runs too",
   ]);
-  app_code_div_cycle_code(box_two, [
+  app_learn_js_div_cycle_code(box_two, [
     "",
     say_peace,
     " is outside ",
@@ -72,7 +72,7 @@ export function app_code_if_nested_explain(root, context) {
     " always runs",
   ]);
   let box_three = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box_three, [
+  app_learn_js_div_cycle_code(box_three, [
     "But suppose ",
     "b",
     " is ",
@@ -82,7 +82,7 @@ export function app_code_if_nested_explain(root, context) {
   let outer_lines = app_code_if_nested_program_lines([true, false], words);
   let outer_written = list_join_newline([love, peace]);
   app_learn_js_code_lines_writes_out(box_three, outer_lines, outer_written);
-  app_code_div_cycle_code(box_three, [
+  app_learn_js_div_cycle_code(box_three, [
     "",
     "a",
     " is ",
@@ -91,7 +91,7 @@ export function app_code_if_nested_explain(root, context) {
     say_love,
     " runs",
   ]);
-  app_code_div_cycle_code(box_three, [
+  app_learn_js_div_cycle_code(box_three, [
     "",
     "b",
     " is ",
@@ -101,7 +101,7 @@ export function app_code_if_nested_explain(root, context) {
     " does not run",
   ]);
   let box_four = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box_four, [
+  app_learn_js_div_cycle_code(box_four, [
     "And suppose ",
     "a",
     " is ",
@@ -110,7 +110,7 @@ export function app_code_if_nested_explain(root, context) {
   ]);
   let none_lines = app_code_if_nested_program_lines([false, true], words);
   app_learn_js_code_lines_writes_out(box_four, none_lines, peace);
-  app_code_div_cycle_code(box_four, [
+  app_learn_js_div_cycle_code(box_four, [
     "",
     "a",
     " is ",
@@ -119,7 +119,7 @@ export function app_code_if_nested_explain(root, context) {
     if_a,
     " runs",
   ]);
-  app_code_div_cycle_code(box_four, [
+  app_learn_js_div_cycle_code(box_four, [
     "",
     if_b,
     " is inside ",

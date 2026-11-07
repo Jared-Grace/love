@@ -28,7 +28,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
@@ -203,7 +203,7 @@ export function app_code_lesson_while_or() {
     let json_a = json_to(object);
     let object2 = add(b4, 1);
     let json_b = json_to(object2);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition3,
       " is ",
@@ -221,7 +221,7 @@ export function app_code_lesson_while_or() {
   function said_false(root, a5, b5) {
     "a < 5 || b < 5 is false, because both sides are false, so the { ... } is skipped";
     let condition4 = asked(a5, b5);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition4,
       " is ",
@@ -246,7 +246,7 @@ export function app_code_lesson_while_or() {
       ".",
     ]);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "With ",
       or_symbol,
       ", a ",
@@ -270,7 +270,7 @@ export function app_code_lesson_while_or() {
     said_false(box_two, 5, 7);
     let box_three = app_learn_js_container_light_blue(root);
     let combined = js_code_binary_spaced_nb(5, less, bound);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "With ",
       and_symbol,
       " instead, it would stop at ",

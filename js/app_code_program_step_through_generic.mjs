@@ -64,7 +64,7 @@ import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_last } from "./list_last.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_take } from "./list_take.mjs";
 import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
 import { html_scroll_nearest } from "./html_scroll_nearest.mjs";
@@ -516,7 +516,7 @@ export function app_code_program_step_through_generic(
           not(null_is(words)) &&
           (tail_code ? equal(tail, words) : text_ends_with(tail, words));
         if (not(inline)) {
-          app_code_div_cycle_code(guide, sentence);
+          app_learn_js_div_cycle_code(guide, sentence);
           continue;
         }
         let count2 = subtract(count, 1);
@@ -528,7 +528,7 @@ export function app_code_program_step_through_generic(
         if (not(tail_code)) {
           list_add(parts, before);
         }
-        let line = app_code_div_cycle_code(guide, parts);
+        let line = app_learn_js_div_cycle_code(guide, parts);
         async function look_here() {
           let target_get = property_get(choose, "target_get");
           let target = target_get();
@@ -809,7 +809,7 @@ export function app_code_program_step_through_generic(
     let next_question = equal(noun, "code")
       ? "What is the next code to run?"
       : "What is the next line of code to run?";
-    app_code_div_cycle_code(ask, [next_question]);
+    app_learn_js_div_cycle_code(ask, [next_question]);
     property_set(state, "pressing", true);
     ("the line that runs next is marked as the way on, where being right is already decided, so a walk of the whole course can answer this question as it answers every other");
     if (not(done)) {
@@ -963,7 +963,7 @@ export function app_code_program_step_through_generic(
         let solver_box = html_div(ask);
         function say(text_said) {
           html_clear(said_box);
-          app_code_div_cycle_code(said_box, [text_said]);
+          app_learn_js_div_cycle_code(said_box, [text_said]);
         }
         function finished() {
           html_clear(said_box);
@@ -1048,7 +1048,7 @@ export function app_code_program_step_through_generic(
           button: true,
           target_get: value_get,
         });
-        app_code_div_cycle_code(ask, ["What is ", name, "?"]);
+        app_learn_js_div_cycle_code(ask, ["What is ", name, "?"]);
         let decoys = [];
         ("an operator solved is offered the wrong values the lessons on operators offer, the value the other operator would give on the same two values, so the same mistake is caught here as there");
         if (operator_is) {
@@ -1296,7 +1296,7 @@ export function app_code_program_step_through_generic(
     let question = equal(k, 0)
       ? "What does this " + noun + " do?"
       : "What else does this " + noun + " do?";
-    app_code_div_cycle_code(ask, [question]);
+    app_learn_js_div_cycle_code(ask, [question]);
     let choices = html_div(ask);
     let answered = {
       answered: false,

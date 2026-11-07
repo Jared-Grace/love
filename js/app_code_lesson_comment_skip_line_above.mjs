@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_comment_prefix } from "./js_code_comment_prefix.mjs";
 import { js_comment_start } from "./js_comment_start.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_comment_skip_line_above(root, context) {
   app_learn_js_code_lines_writes_out(box_both, [first_line, last_line], both);
   let slashes = js_comment_start();
   let box_last_off = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box_last_off, [
+  app_learn_js_div_cycle_code(box_last_off, [
     "We can put two slashes (",
     slashes,
     ") in front of the second line:",
@@ -45,12 +45,12 @@ export function app_code_lesson_comment_skip_line_above(root, context) {
     [first_line, last_noted],
     value,
   );
-  app_code_div_cycle_code(box_last_off, [
+  app_learn_js_div_cycle_code(box_last_off, [
     "That line is a comment now, so it is skipped",
   ]);
-  app_code_div_cycle_code(box_last_off, ["Its answer is gone"]);
+  app_learn_js_div_cycle_code(box_last_off, ["Its answer is gone"]);
   let box_first_off = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box_first_off, [
+  app_learn_js_div_cycle_code(box_first_off, [
     "If we put the slashes in front of the first line instead:",
   ]);
   let value2 = text_to(last_total);
@@ -59,7 +59,7 @@ export function app_code_lesson_comment_skip_line_above(root, context) {
     [first_noted, last_line],
     value2,
   );
-  app_code_div_cycle_code(box_first_off, [
+  app_learn_js_div_cycle_code(box_first_off, [
     "Only the line without the slashes writes anything out",
   ]);
 }

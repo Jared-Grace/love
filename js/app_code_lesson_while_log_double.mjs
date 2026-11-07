@@ -6,7 +6,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_log_double_generic } from "./app_code_lesson_log_double_generic.mjs";
 export function app_code_lesson_while_log_double() {
@@ -29,7 +29,7 @@ export function app_code_lesson_while_log_double() {
     let box_two = app_learn_js_container_light_blue(root);
     let times = js_operator_asterisk_symbol();
     let doubled = js_code_binary_spaced_nb(name, times, 2);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       doubled,
       " is double ",

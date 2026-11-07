@@ -5,7 +5,7 @@ import { app_code_dot_rectangle } from "./app_code_dot_rectangle.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_expression_swapping_add() {
   "the first swapping lesson: put the SAME two numbers on each side of ===, swapped around the operator - a op b === b op a. Leads with + (the earliest arithmetic anyone learns), then *, both of which keep their value when swapped, each with an everyday reason so the rule is understood, not memorised; then - as the contrast that changes when swapped. Each case shows both sides worked out so the swap is visible, not left implied. The quiz mixes + * (true) with - (false). Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
@@ -29,27 +29,27 @@ export function app_code_lesson_expression_swapping_add() {
   function above(root) {
     "define swap once, then show it for +, * and -: + and * keep the value when swapped (each with an everyday reason), - changes it. Every case shows both sides worked out so the swap is seen, not implied";
     let setup = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(setup, ["Suppose we have ", "3 + 4"]);
-    app_code_div_cycle_code(setup, [
+    app_learn_js_div_cycle_code(setup, ["Suppose we have ", "3 + 4"]);
+    app_learn_js_div_cycle_code(setup, [
       "Then we can swap the ",
       "3",
       " and the ",
       "4",
     ]);
-    app_code_div_cycle_code(setup, ["Now we have ", "4 + 3"]);
+    app_learn_js_div_cycle_code(setup, ["Now we have ", "4 + 3"]);
     let plus = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(plus, [
+    app_learn_js_div_cycle_code(plus, [
       "Adding (",
       "+",
       ") puts two amounts together, so swapping does not change the value",
     ]);
-    app_code_div_cycle_code(plus, [
+    app_learn_js_div_cycle_code(plus, [
       "For example: ",
       "3 + 4 === 7",
       " and swapped: ",
       "4 + 3 === 7",
     ]);
-    app_code_div_cycle_code(plus, [
+    app_learn_js_div_cycle_code(plus, [
       "",
       "7",
       " and ",
@@ -58,53 +58,53 @@ export function app_code_lesson_expression_swapping_add() {
       "+",
     ]);
     let times = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(times, [
+    app_learn_js_div_cycle_code(times, [
       "We can represent ",
       "3 * 4",
       " as 3 rows of 4 dots:",
     ]);
     app_code_dot_rectangle(times, 3, 4, false);
-    app_code_div_cycle_code(times, [
+    app_learn_js_div_cycle_code(times, [
       "If we swap ",
       "3 * 4",
       " then we have ",
       "4 * 3",
     ]);
-    app_code_div_cycle_code(times, [
+    app_learn_js_div_cycle_code(times, [
       "That's 4 rows of 3 dots, as you can see below:",
     ]);
     app_code_dot_rectangle(times, 3, 4, true);
-    app_code_div_cycle_code(times, [
+    app_learn_js_div_cycle_code(times, [
       "Turning the rectangle of dots does not change the number of dots",
     ]);
-    app_code_div_cycle_code(times, [
+    app_learn_js_div_cycle_code(times, [
       "So ",
       "3 * 4 === 12",
       " and ",
       "4 * 3 === 12",
       " are the same",
     ]);
-    app_code_div_cycle_code(times, [
+    app_learn_js_div_cycle_code(times, [
       "And this works for every rectangle of dots, not just ",
       "3 * 4",
     ]);
-    app_code_div_cycle_code(times, [
+    app_learn_js_div_cycle_code(times, [
       "So we can always swap the numbers around ",
       "*",
     ]);
     let minus = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(minus, [
+    app_learn_js_div_cycle_code(minus, [
       "Subtracting (",
       "-",
       ") takes the second number away from the first number",
     ]);
-    app_code_div_cycle_code(minus, [
+    app_learn_js_div_cycle_code(minus, [
       "",
       "5 - 4 === 1",
       " but swapped: ",
       "4 - 5 === -1",
     ]);
-    app_code_div_cycle_code(minus, [
+    app_learn_js_div_cycle_code(minus, [
       "",
       "1",
       " and ",

@@ -25,7 +25,7 @@ import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { each } from "./each.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
@@ -163,7 +163,7 @@ export function app_code_lesson_update_log_generic(options) {
     let json = json_to(value);
     let after2 = moved(value);
     let json2 = json_to(after2);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -194,7 +194,7 @@ export function app_code_lesson_update_log_generic(options) {
     let ended2 = moved(last2);
     let condition3 = js_code_binary_spaced_nb(ended2, comparison, bound);
     let r = app_learn_js_braces_dots();
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition3,
       " is ",

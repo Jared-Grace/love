@@ -4,7 +4,7 @@ import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_update_log_generic } from "./app_code_lesson_update_log_generic.mjs";
 export function app_code_lesson_while_update_log_generic(options) {
   arguments_assert(arguments, 1);
@@ -23,7 +23,7 @@ export function app_code_lesson_while_update_log_generic(options) {
       remembered_parts,
     );
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, intro_parts);
+    app_learn_js_div_cycle_code(box_two, intro_parts);
     example(box_two, program_write);
     walk(box_two);
   }

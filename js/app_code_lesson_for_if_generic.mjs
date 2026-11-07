@@ -28,7 +28,7 @@ import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { less_than } from "./less_than.mjs";
 import { json_to } from "./json_to.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -179,11 +179,11 @@ export function app_code_lesson_for_if_generic(options) {
         said,
         [name, " becomes ", json2],
       ]);
-      app_code_div_cycle_code(root, parts);
+      app_learn_js_div_cycle_code(root, parts);
       value = next;
     }
     let last = js_code_binary_spaced_nb(bound6, less, bound6);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       last,
       " is ",
@@ -194,7 +194,7 @@ export function app_code_lesson_for_if_generic(options) {
     ]);
     let end = walk_end(state);
     if (list_empty_not_is(end)) {
-      app_code_div_cycle_code(root, end);
+      app_learn_js_div_cycle_code(root, end);
     }
   }
   function above(root, context) {

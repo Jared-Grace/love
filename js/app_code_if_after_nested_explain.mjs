@@ -7,7 +7,7 @@ import { js_code_if_one_line } from "./js_code_if_one_line.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_if_after_nested_program_lines } from "./app_code_if_after_nested_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -35,7 +35,7 @@ export function app_code_if_after_nested_explain(root, context) {
     "if",
   ]);
   let box_two = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box_two, [
+  app_learn_js_div_cycle_code(box_two, [
     "An ",
     "if",
     " can also go after an ",
@@ -45,8 +45,8 @@ export function app_code_if_after_nested_explain(root, context) {
   let all_lines = app_code_if_after_nested_program_lines([true, true], words);
   let all_written = list_join_newline(words);
   app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
-  app_code_div_cycle_code(box_two, ["", if_joy, " is inside ", if_a]);
-  app_code_div_cycle_code(box_two, [
+  app_learn_js_div_cycle_code(box_two, ["", if_joy, " is inside ", if_a]);
+  app_learn_js_div_cycle_code(box_two, [
     "",
     if_peace,
     " is after ",
@@ -57,7 +57,7 @@ export function app_code_if_after_nested_explain(root, context) {
     if_a,
   ]);
   let box_three = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box_three, [
+  app_learn_js_div_cycle_code(box_three, [
     "But suppose ",
     "a",
     " is ",
@@ -67,7 +67,7 @@ export function app_code_if_after_nested_explain(root, context) {
   let none_lines = app_code_if_after_nested_program_lines([false, true], words);
   let none_written = list_join_newline([peace, patience]);
   app_learn_js_code_lines_writes_out(box_three, none_lines, none_written);
-  app_code_div_cycle_code(box_three, [
+  app_learn_js_div_cycle_code(box_three, [
     "",
     "a",
     " is ",
@@ -76,8 +76,8 @@ export function app_code_if_after_nested_explain(root, context) {
     if_a,
     " runs",
   ]);
-  app_code_div_cycle_code(box_three, ["So ", if_joy, " is never reached"]);
-  app_code_div_cycle_code(box_three, [
+  app_learn_js_div_cycle_code(box_three, ["So ", if_joy, " is never reached"]);
+  app_learn_js_div_cycle_code(box_three, [
     "",
     "b",
     " is ",
@@ -88,7 +88,7 @@ export function app_code_if_after_nested_explain(root, context) {
     if_peace,
     " still runs",
   ]);
-  app_code_div_cycle_code(box_three, [
+  app_learn_js_div_cycle_code(box_three, [
     "",
     say_patience,
     " is outside every ",

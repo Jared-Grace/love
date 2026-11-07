@@ -20,7 +20,7 @@ import { json_to } from "./json_to.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
@@ -139,7 +139,7 @@ export function app_code_lesson_if_twice() {
     let v = json_to(value);
     if (runs) {
       let after = json_to(value_after);
-      app_code_div_cycle_code(root, [
+      app_learn_js_div_cycle_code(root, [
         "",
         condition2,
         " is ",
@@ -151,7 +151,7 @@ export function app_code_lesson_if_twice() {
       ]);
       return;
     }
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -178,7 +178,7 @@ export function app_code_lesson_if_twice() {
     let one_if = list_concat_multiple([[code5], if_lines2, [statement2]]);
     app_learn_js_code_lines_writes_out(box_one, one_if, "4");
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "We can write the same ",
       "if",
       " twice:",
@@ -188,7 +188,7 @@ export function app_code_lesson_if_twice() {
     said(box_two, 1, 4, true);
     said(box_two, 4, 7, true);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "But suppose ",
       name,
       " starts at ",

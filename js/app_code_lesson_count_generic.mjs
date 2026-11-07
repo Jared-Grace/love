@@ -28,7 +28,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { multiply } from "./multiply.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -173,7 +173,7 @@ export function app_code_lesson_count_generic(
       [", and "],
       second,
     ]);
-    app_code_div_cycle_code(root, parts);
+    app_learn_js_div_cycle_code(root, parts);
   }
   function example(root, write) {
     "the program of 16 and 3, written with write, and what it writes out";
@@ -187,7 +187,7 @@ export function app_code_lesson_count_generic(
     said(root, 4, 3, 3);
     let last = js_code_binary_spaced_nb(2, greater, 3);
     let r = app_learn_js_braces_dots();
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       last,
       " is ",
@@ -197,7 +197,7 @@ export function app_code_lesson_count_generic(
       " is skipped, and the code continues after it",
     ]);
     let r2 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "So ",
       count_name,
       " is 3: the ",

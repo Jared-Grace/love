@@ -32,7 +32,7 @@ import { subtract } from "./subtract.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_log_after_change } from "./app_code_lesson_while_log_after_change.mjs";
@@ -184,7 +184,7 @@ export function app_code_lesson_for_after_change() {
     let condition2 = js_code_binary_spaced_nb(value3, less, bound3);
     let json = json_to(value3);
     let json2 = json_to(value_after);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -211,7 +211,7 @@ export function app_code_lesson_for_after_change() {
     let lines5 = while_lines(numbers3);
     app_learn_js_code_lines_writes_out(box_one, lines5, value4);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "Move ",
       "n += 2",
       " up into a ",
@@ -225,7 +225,7 @@ export function app_code_lesson_for_after_change() {
     said(box_two, 4, 5, 6);
     let check = js_code_binary_spaced_nb(6, less, 5);
     let r2 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       check,
       " is ",
@@ -235,17 +235,17 @@ export function app_code_lesson_for_after_change() {
       " is skipped, and the code continues after it",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "These two loops do not do the same thing",
     ]);
     let r3 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "The last part of a ",
       "for",
       " always runs after the lines inside the ",
       r3,
     ]);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "So this ",
       "for",
       " writes out ",
@@ -254,7 +254,7 @@ export function app_code_lesson_for_after_change() {
       "while",
       " writes it out after",
     ]);
-    app_code_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_three, [
       "Some programs below are a ",
       "for",
       " and some are a ",

@@ -15,7 +15,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "./app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_div_code_multiple } from "./app_learn_js_div_code_multiple.mjs";
 import { app_learn_js_div_cycle_code_multiple } from "./app_learn_js_div_cycle_code_multiple.mjs";
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
@@ -78,7 +78,7 @@ export function app_code_lesson_operators_minus_generic({
       sign,
       ", there is only a number on right side of the ",
     ]);
-    app_code_div_cycle_code(c, [combined8, operator, " : "]);
+    app_learn_js_div_cycle_code(c, [combined8, operator, " : "]);
     let combined2 = text_combine_right_fn(operator, right_random_get);
     let right2 = "right";
     let combined4 = text_combine(operator, right2);

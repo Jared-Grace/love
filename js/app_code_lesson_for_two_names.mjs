@@ -3,7 +3,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { js_code_two_names_while_b_first_lines } from "./js_code_two_names_while_b_first_lines.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_two_names_for_lines } from "./js_code_two_names_for_lines.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_two_names_generic } from "./app_code_lesson_two_names_generic.mjs";
@@ -25,9 +25,13 @@ export function app_code_lesson_for_two_names() {
     );
     example(box_one, js_code_two_names_while_b_first_lines);
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, ["We can write it with a ", "for", ":"]);
+    app_learn_js_div_cycle_code(box_two, [
+      "We can write it with a ",
+      "for",
+      ":",
+    ]);
     example(box_two, js_code_two_names_for_lines);
-    app_code_div_cycle_code(box_two, ["These two loops do the same thing"]);
+    app_learn_js_div_cycle_code(box_two, ["These two loops do the same thing"]);
     walk(box_two);
   }
   let name_id = app_code_lesson_statement_title_name_id(

@@ -25,7 +25,7 @@ import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { json_to } from "./json_to.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -125,7 +125,7 @@ export function app_code_lesson_while_start_end() {
     "value < 2 is true, so it writes out the word, and n becomes the next value";
     let condition2 = js_code_binary_spaced_nb(value, less, 2);
     let json = json_to(value + 1);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -151,7 +151,7 @@ export function app_code_lesson_while_start_end() {
     );
     let box_two = app_learn_js_container_light_blue(root);
     let r2 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "Lines inside the ",
       r2,
       " repeat, and lines outside it run once:",
@@ -160,7 +160,7 @@ export function app_code_lesson_while_start_end() {
     let list = word_between(joy, 2);
     let value2 = list_join_newline(list);
     app_learn_js_code_lines_writes_out(box_two, lines4, value2);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "The first line writes out ",
       word_before,
       ", once",
@@ -169,7 +169,7 @@ export function app_code_lesson_while_start_end() {
     said(box_two, 1, joy);
     let check = js_code_binary_spaced_nb(2, less, 2);
     let r3 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       check,
       " is ",
@@ -178,7 +178,7 @@ export function app_code_lesson_while_start_end() {
       r3,
       " is skipped, and the code continues after it",
     ]);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "The last line writes out ",
       word_after,
       ", once",

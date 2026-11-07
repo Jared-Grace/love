@@ -28,7 +28,7 @@ import { list_size } from "./list_size.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
@@ -175,7 +175,7 @@ export function app_code_lesson_while_two_lines() {
     let json = json_to(value);
     let object = add(value, 1);
     let after = json_to(object);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -204,7 +204,7 @@ export function app_code_lesson_while_two_lines() {
     );
     let box_two = app_learn_js_container_light_blue(root);
     let r2 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "Lines inside the ",
       r2,
       " run from top to bottom, every run:",
@@ -216,7 +216,7 @@ export function app_code_lesson_while_two_lines() {
     said(box_two, 2, 3, joy);
     let check = js_code_binary_spaced_nb(3, less, 3);
     let r3 = app_learn_js_braces_dots();
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       check,
       " is ",

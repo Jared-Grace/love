@@ -28,7 +28,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
@@ -161,7 +161,7 @@ export function app_code_lesson_while_product() {
     let after = json_to(product_after);
     let object = add(value, 1);
     let n_after = json_to(object);
-    app_code_div_cycle_code(root, [
+    app_learn_js_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -194,7 +194,7 @@ export function app_code_lesson_while_product() {
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       "product *= n;",
       " multiplies instead. It starts at 1, not 0, because 0 times anything is 0. Here ",
@@ -207,7 +207,7 @@ export function app_code_lesson_while_product() {
     said(box_two, 3, 5, 6);
     said(box_two, 4, 5, 24);
     let last2 = js_code_binary_spaced_nb(5, less, 5);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "",
       last2,
       " is ",
@@ -218,7 +218,7 @@ export function app_code_lesson_while_product() {
     ]);
     let left = js_code_binary_spaced_nb(2, times, 3);
     let product_shown = js_code_binary_spaced_nb(left, times, 4);
-    app_code_div_cycle_code(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
       "So ",
       product_name,
       " is ",

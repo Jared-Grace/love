@@ -1,6 +1,6 @@
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_code_output_explain_box(root) {
   arguments_assert(arguments, 1);
   ("the box that says what a card of code and its output is doing above the questions, read once, on the first screen where such a card is not the lesson's own example");
@@ -9,13 +9,13 @@ export function app_learn_js_code_output_explain_box(root) {
   ("Said once and never again. From the next screen on a learner has been told, and every screen after that would be spending a box on a thing they know - which is the cost the app pays everywhere else by writing Remember once and trusting it.");
   ("Not the example is said outright rather than left to be worked out from the example coming later. The whole of the confusion is a reader guessing, so a line that only implies the answer leaves the guess where it was.");
   let box = app_learn_js_container_light_blue(root);
-  app_code_div_cycle_code(box, [
+  app_learn_js_div_cycle_code(box, [
     "The box above shows code and what it writes out",
   ]);
-  app_code_div_cycle_code(box, [
+  app_learn_js_div_cycle_code(box, [
     "It is part of the explanation, not the example",
   ]);
-  app_code_div_cycle_code(box, [
+  app_learn_js_div_cycle_code(box, [
     "The example for this lesson comes at the end",
   ]);
   return box;
