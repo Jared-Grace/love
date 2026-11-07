@@ -345,7 +345,7 @@ import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
 import { app_code_lesson_for_if } from "./app_code_lesson_for_if.mjs";
 import { app_learn_js_lesson_for_count_if } from "./app_learn_js_lesson_for_count_if.mjs";
 import { app_code_lesson_for_total_if } from "./app_code_lesson_for_total_if.mjs";
-import { app_code_lesson_for_if_even } from "./app_code_lesson_for_if_even.mjs";
+import { app_learn_js_lesson_for_if_even } from "./app_learn_js_lesson_for_if_even.mjs";
 import { app_learn_js_lesson_for_if_else } from "./app_learn_js_lesson_for_if_else.mjs";
 import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_first.mjs";
 import { app_learn_js_lesson_array_second } from "./app_learn_js_lesson_array_second.mjs";
@@ -706,7 +706,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_for_if,
     app_learn_js_lesson_for_count_if,
     app_code_lesson_for_total_if,
-    app_code_lesson_for_if_even,
+    app_learn_js_lesson_for_if_even,
     app_learn_js_lesson_for_if_else,
     app_learn_js_lesson_array_first,
     app_learn_js_lesson_array_second,

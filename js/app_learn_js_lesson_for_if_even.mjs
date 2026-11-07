@@ -11,7 +11,7 @@ import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_state
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_learn_js_lesson_for_if_even_options } from "./app_learn_js_lesson_for_if_even_options.mjs";
 import { app_code_lesson_for_if_generic } from "./app_code_lesson_for_if_generic.mjs";
-export function app_code_lesson_for_if_even() {
+export function app_learn_js_lesson_for_if_even() {
   arguments_assert(arguments, 0);
   ("even numbers in a for: for (let n = 2; n < 5; n++) { if (n % 2 === 0) { console.log(n); } } writes out 2 and 4, one under the other");
   ("The one new fact is that the remainder after dividing by 2 can be what an if asks, so a for can pick out the even numbers, or with === 1 the odd ones.");
