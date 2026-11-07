@@ -25,7 +25,7 @@ import { html_div } from "./html_div.mjs";
 import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
 import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
 import { app_learn_js_lesson_name_no_quotes_box } from "./app_learn_js_lesson_name_no_quotes_box.mjs";
-export function app_code_lesson_statement_name_copy_single_above(
+export function app_learn_js_lesson_statement_name_copy_single_above(
   root,
   context,
 ) {
