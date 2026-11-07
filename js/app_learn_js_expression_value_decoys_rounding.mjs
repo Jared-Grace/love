@@ -13,7 +13,7 @@ import { ceil } from "./ceil.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_unique } from "./list_unique.mjs";
-export function app_code_expression_value_decoys_rounding(current, node) {
+export function app_learn_js_expression_value_decoys_rounding(current, node) {
   arguments_assert(arguments, 2);
   ("the wrong values to offer beside the right one on a line whose division is rounded down: the decimal the rounding is about and the two whole numbers either side of it, and the value of the whole line");
   ("One decimal decides the whole press either way. On the division it is the value the division comes to, and on the rounding it is the number standing inside the brackets - the same number, one press apart, which is why the three values offered are the same three on both presses and the right answer is a different one of them each time.");

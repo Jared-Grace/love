@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_integer_division_title_name_id } from "./app_code_lesson_expression_choose_order_integer_division_title_name_id.mjs";
 import { app_learn_js_expression_integer_division_random } from "./app_learn_js_expression_integer_division_random.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
-import { app_code_expression_value_decoys_rounding } from "./app_code_expression_value_decoys_rounding.mjs";
+import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_integer_division_tree_of_code } from "./app_code_lesson_expression_choose_order_integer_division_tree_of_code.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_expression_choose_order_integer_division() {
       on_success,
       on_wrong,
       answer_label_set,
-      app_code_expression_value_decoys_rounding,
+      app_learn_js_expression_value_decoys_rounding,
     );
   }
   function example_draw(parent, card, tree) {
@@ -41,7 +41,7 @@ export function app_code_lesson_expression_choose_order_integer_division() {
       parent,
       card,
       tree,
-      app_code_expression_value_decoys_rounding,
+      app_learn_js_expression_value_decoys_rounding,
     );
   }
   let bank = app_code_lesson_expression_choose_order_questions_generic(
