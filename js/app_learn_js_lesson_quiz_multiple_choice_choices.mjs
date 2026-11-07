@@ -5,7 +5,7 @@ import { property_text_to } from "./property_text_to.mjs";
 import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { or } from "./or.mjs";
-import { app_code_lesson_quiz_multiple_choice_logs_words } from "./app_code_lesson_quiz_multiple_choice_logs_words.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_logs_words } from "./app_learn_js_lesson_quiz_multiple_choice_logs_words.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_quiz_multiple_choice_choices(
     let ambiguous = equal(question_text, quiz_question_text);
     let already = list_includes(seen, answer_text);
     let skip = or(already, ambiguous);
-    let logs_words = app_code_lesson_quiz_multiple_choice_logs_words(
+    let logs_words = app_learn_js_lesson_quiz_multiple_choice_logs_words(
       quiz_question_text,
       quiz_answer_text,
       answer_text,

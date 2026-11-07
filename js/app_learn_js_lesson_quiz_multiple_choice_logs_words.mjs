@@ -2,7 +2,7 @@ import { not } from "./not.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_includes } from "./text_includes.mjs";
-export function app_code_lesson_quiz_multiple_choice_logs_words(
+export function app_learn_js_lesson_quiz_multiple_choice_logs_words(
   quiz_question_text,
   quiz_answer_text,
   candidate_text,
