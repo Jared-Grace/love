@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_arithmetic_to_value_symbols } from "./app_code_arithmetic_to_value_symbols.mjs";
+import { app_learn_js_arithmetic_to_value_symbols } from "./app_learn_js_arithmetic_to_value_symbols.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_code_cycle_parts_and_list } from "./app_code_cycle_parts_and_list.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_arithmetic_equality_above(root) {
   ("EVERY OPERATOR THE QUIZ CAN PUT ON A LINE IS NAMED, and the naming is built from the very list the lines are drawn from rather than typed out beside it. The rule used to name the plus alone - + is solved before === - while the sides of a line are each drawn an operator of their own from plus, minus and divide. Measured 2026-08-28 over four hundred drawn lines: of the eight hundred sides, 251 were written with +, 281 with - and 268 with /, and only 33 of the four hundred lines carried a + on both sides. So a learner was told a rule about one symbol and then handed 27 / 3 === 18 / 2, a line holding none of it, better than half the time.");
   ("Naming all three costs nothing a learner has to hold. The three are not three rules - they are the one rule about the one thing arithmetic is, and a row that says so is shorter to read than three rows saying it once each. What it removes is the learner's job of guessing whether the sentence they were given was about the plus or about the arithmetic.");
   ("Built from the symbols list so it cannot drift from it: a fourth operator added to the list the sides are drawn from is named here the moment it can appear, where a typed-out row would go on naming three and be wrong without anything going red.");
-  let symbols = app_code_arithmetic_to_value_symbols();
+  let symbols = app_learn_js_arithmetic_to_value_symbols();
   let equality = js_operator_triple_equal_symbol();
   let rule_parts = app_code_cycle_parts_and_list(symbols);
   let rule_tail = [" are all solved before ", equality];
