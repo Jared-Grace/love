@@ -11,7 +11,7 @@ import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_learn_js_lesson_cups_copy_story } from "./app_learn_js_lesson_cups_copy_story.mjs";
 import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
-export function app_code_lesson_statement_name_copy_above(root, context) {
+export function app_learn_js_lesson_statement_name_copy_above(root, context) {
   arguments_assert(arguments, 2);
   ("the cup boxes read before the first question: two cups got and then filled, a third cup got and then filled from one of them, and nothing taken out of anything");
   ("Every cup is drawn empty before it is drawn full, and the two are said in two sentences. Getting a cup and putting something in it are two things a person does, and the whole lesson is about the second one happening to a cup that already exists - so a row of full cups appearing at the word suppose would be the two steps shown as one, and the one being taught is the one that got hidden.");
