@@ -5,7 +5,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { app_learn_js_if_blocks_kept } from "./app_learn_js_if_blocks_kept.mjs";
 import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
-import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
+import { app_learn_js_lesson_quiz_step_info } from "./app_learn_js_lesson_quiz_step_info.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -44,7 +44,7 @@ export function app_code_lesson_step_programs_generic(
     answer_on_button: app_learn_js_brace_marked_div,
     answer_count_override: null,
   };
-  let info = app_code_lesson_quiz_step_info();
+  let info = app_learn_js_lesson_quiz_step_info();
   let quizzes_get = app_code_lesson_quizzes_generic({
     lines: false,
     forwards,

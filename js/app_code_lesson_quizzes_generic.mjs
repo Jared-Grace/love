@@ -9,7 +9,7 @@ import { object_copy } from "./object_copy.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { each } from "./each.mjs";
 import { app_code_lesson_quizzes_lines_add } from "./app_code_lesson_quizzes_lines_add.mjs";
-import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
+import { app_learn_js_lesson_quiz_step_info } from "./app_learn_js_lesson_quiz_step_info.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
@@ -95,7 +95,7 @@ export function app_code_lesson_quizzes_generic(params) {
   ("Putting it first moves every quiz after it, and the progress kept against their places; the human accepted that. Not picked: the step quiz last, after even the quizzes about lines, which kept every place but asked the harder way first; nor fading the stepping out over a stage, which the human's rule did not ask for");
   let steps = property_get_or(params, "steps", false);
   if (steps) {
-    let step_first_info = app_code_lesson_quiz_step_info();
+    let step_first_info = app_learn_js_lesson_quiz_step_info();
     let step_first = object_copy(forwards);
     object_assign(step_first, step_first_info);
     list_add_first(infos, step_first);
