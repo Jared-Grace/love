@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { range_from } from "./range_from.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_expression_step_operands_dividends(
+export function app_learn_js_expression_step_operands_dividends(
   most,
   value,
   least,

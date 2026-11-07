@@ -1,6 +1,6 @@
 import { app_code_expression_step_operands_times_is } from "./app_code_expression_step_operands_times_is.mjs";
 import { app_code_expression_step_operands_minus_is } from "./app_code_expression_step_operands_minus_is.mjs";
-import { app_code_expression_step_operands_dividends } from "./app_code_expression_step_operands_dividends.mjs";
+import { app_learn_js_expression_step_operands_dividends } from "./app_learn_js_expression_step_operands_dividends.mjs";
 import { app_code_expression_step_value_least } from "./app_code_expression_step_value_least.mjs";
 import { app_code_expression_step_value_most } from "./app_code_expression_step_value_most.mjs";
 import { add } from "./add.mjs";
@@ -63,7 +63,7 @@ export function app_code_expression_step_operands(value, symbol, value_left) {
     let divisors = list_filter(candidates, exact_is);
     return divisors;
   }
-  let dividends = app_code_expression_step_operands_dividends(
+  let dividends = app_learn_js_expression_step_operands_dividends(
     most,
     value,
     least,
