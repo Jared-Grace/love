@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_id_length_ceiling() {
+export function app_learn_js_lesson_id_length_ceiling() {
   arguments_assert(arguments, 0);
   ("How many characters one code lesson's id may be.");
   ("An id is read by a person in two places, and length is the whole of what it costs in both. It sits in the address of the lesson, which is the thing somebody sends to somebody else; and it is the key a learner's finished work is written down under on their own device, where a record with a hundred and thirty three long keys in it is what a person reads when they go looking for why their progress is gone.");
