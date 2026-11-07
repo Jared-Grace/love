@@ -23,7 +23,7 @@ import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_numb
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
-import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
+import { app_learn_js_lesson_statement_name_meetings_overlap } from "./app_learn_js_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_learn_js_lesson_statement_name_meeting_inside() {
   arguments_assert(arguments, 0);
@@ -334,7 +334,7 @@ export function app_learn_js_lesson_statement_name_meeting_inside() {
     values_get,
     example_values: [8, 12, 9, 11],
     step,
-    remember_lesson: app_code_lesson_statement_name_meetings_overlap,
+    remember_lesson: app_learn_js_lesson_statement_name_meetings_overlap,
     remember_parts: ["we can check whether two meetings overlap:"],
     remember_lines,
     explain: [

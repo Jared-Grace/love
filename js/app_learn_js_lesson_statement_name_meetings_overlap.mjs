@@ -19,7 +19,7 @@ import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_
 import { app_learn_js_lesson_expression_larger } from "./app_learn_js_lesson_expression_larger.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_meetings_overlap() {
+export function app_learn_js_lesson_statement_name_meetings_overlap() {
   arguments_assert(arguments, 0);
   ("whether two meetings overlap: let start = Math.max(s1, s2); let end = Math.min(e1, e2); let overlap = start < end; - picked by the human 2026-10-03 from a list of next lessons. In DSA it is the interval overlap check, used to merge ranges, to find clashes in a schedule, and to test whether two boxes touch.");
   ("The time two meetings share starts at the later start and ends at the earlier end, so the lesson is the previous one's Math.max and Math.min used on two meetings, and Larger is the reminder, quoted the same way the heater lesson quotes it.");

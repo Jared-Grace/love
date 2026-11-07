@@ -17,7 +17,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
-import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
+import { app_learn_js_lesson_statement_name_meetings_overlap } from "./app_learn_js_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -145,7 +145,7 @@ export function app_learn_js_lesson_statement_name_meetings_join() {
     app_learn_js_lesson_reference_draw(
       line,
       context,
-      app_code_lesson_statement_name_meetings_overlap,
+      app_learn_js_lesson_statement_name_meetings_overlap,
     );
     app_learn_js_cycle_code(line, [
       ", we used the later start and the earlier end, so we used ",
@@ -162,7 +162,7 @@ export function app_learn_js_lesson_statement_name_meetings_join() {
     values_get,
     example_values: [9, 11, 10, 12],
     step,
-    remember_lesson: app_code_lesson_statement_name_meetings_overlap,
+    remember_lesson: app_learn_js_lesson_statement_name_meetings_overlap,
     remember_parts: [
       "we can find when the overlap of two meetings starts and ends:",
     ],
