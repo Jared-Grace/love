@@ -216,7 +216,7 @@ import { app_learn_js_lesson_statement_name_pages_read } from "./app_learn_js_le
 import { app_learn_js_lesson_statement_name_last_seat } from "./app_learn_js_lesson_statement_name_last_seat.mjs";
 import { app_code_lesson_statement_name_seat_one } from "./app_code_lesson_statement_name_seat_one.mjs";
 import { app_code_lesson_statement_name_seat_zero } from "./app_code_lesson_statement_name_seat_zero.mjs";
-import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
+import { app_learn_js_lesson_statement_name_seat_less } from "./app_learn_js_lesson_statement_name_seat_less.mjs";
 import { app_learn_js_lesson_statement_name_king_steps } from "./app_learn_js_lesson_statement_name_king_steps.mjs";
 import { app_learn_js_lesson_statement_name_grid_inside } from "./app_learn_js_lesson_statement_name_grid_inside.mjs";
 import { app_learn_js_lesson_statement_name_clock_back } from "./app_learn_js_lesson_statement_name_clock_back.mjs";
@@ -529,7 +529,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_statement_name_last_seat,
     app_code_lesson_statement_name_seat_one,
     app_code_lesson_statement_name_seat_zero,
-    app_code_lesson_statement_name_seat_less,
+    app_learn_js_lesson_statement_name_seat_less,
     app_learn_js_lesson_statement_name_king_steps,
     app_learn_js_lesson_statement_name_grid_inside,
     app_learn_js_lesson_statement_name_clock_back,

@@ -24,7 +24,7 @@ import { equal } from "./equal.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
-import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
+import { app_learn_js_lesson_statement_name_seat_less } from "./app_learn_js_lesson_statement_name_seat_less.mjs";
 import { app_learn_js_explain_containers } from "./app_learn_js_explain_containers.mjs";
 export function app_learn_js_lesson_statement_name_grid_inside() {
   arguments_assert(arguments, 0);
@@ -294,7 +294,7 @@ export function app_learn_js_lesson_statement_name_grid_inside() {
     values_get,
     example_values: [2, 1, 4, 3],
     step,
-    remember_lesson: app_code_lesson_statement_name_seat_less,
+    remember_lesson: app_learn_js_lesson_statement_name_seat_less,
     remember_parts: [
       "we can check whether a seat is in a row numbered from ",
       "0",

@@ -14,7 +14,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_zero } from "./app_code_lesson_statement_name_seat_zero.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_seat_less() {
+export function app_learn_js_lesson_statement_name_seat_less() {
   arguments_assert(arguments, 0);
   ("whether a seat is in a row numbered from 0, written the shorter way: let ok = 0 <= n && n < max; - picked by the human 2026-10-02, after the same check written with the last seat, n <= max - 1. In DSA it is how a bounds check is usually written, index < length, so a learner reading other code meets this form most.");
   ("The reminder is the previous lesson, Seat in the row from 0, quoted as its own program with that lesson's example numbers, 4 and 5, so the two checks can be read side by side.");
