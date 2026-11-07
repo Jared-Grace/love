@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_exercise_on_answer_is } from "./app_code_exercise_on_answer_is.mjs";
+import { app_learn_js_exercise_on_answer_is } from "./app_learn_js_exercise_on_answer_is.mjs";
 import { app_code_lesson_quiz_lines_order } from "./app_code_lesson_quiz_lines_order.mjs";
 import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -21,7 +21,7 @@ export function app_code_quiz_lines_order_indent_unlike() {
   let found = [];
   function on_exercise(exercise_visit) {
     let exercise = property_get(exercise_visit, "exercise");
-    let lines_order = app_code_exercise_on_answer_is(
+    let lines_order = app_learn_js_exercise_on_answer_is(
       exercise,
       app_code_lesson_quiz_lines_order,
     );

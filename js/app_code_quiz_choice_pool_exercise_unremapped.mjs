@@ -1,4 +1,4 @@
-import { app_code_exercise_on_answer_is } from "./app_code_exercise_on_answer_is.mjs";
+import { app_learn_js_exercise_on_answer_is } from "./app_learn_js_exercise_on_answer_is.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
 import { equal } from "./equal.mjs";
@@ -10,7 +10,7 @@ import { property_text_to } from "./property_text_to.mjs";
 export function app_code_quiz_choice_pool_exercise_unremapped(qa, exercise) {
   "What one exercise has to say about where its wrong answers will come from: a record of the disagreement when the pair it shows the learner is not the pair the batch line it was built from spells, and nothing at all when the two agree.";
   "Nothing is said about an exercise that is not a multiple choice, because only a multiple choice draws on the rest of the batch, and nothing is said about one carrying an info.qa_for either, because that is the lesson saying how a drawn line is to be remapped.";
-  let choice = app_code_exercise_on_answer_is(
+  let choice = app_learn_js_exercise_on_answer_is(
     exercise,
     app_code_lesson_quiz_multiple_choice,
   );

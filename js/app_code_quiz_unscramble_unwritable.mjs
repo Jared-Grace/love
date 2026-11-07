@@ -1,5 +1,5 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { app_code_exercise_on_answer_is } from "./app_code_exercise_on_answer_is.mjs";
+import { app_learn_js_exercise_on_answer_is } from "./app_learn_js_exercise_on_answer_is.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lessons_exercises_each } from "./app_code_lessons_exercises_each.mjs";
 import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
@@ -20,7 +20,7 @@ export function app_code_quiz_unscramble_unwritable() {
   let found = [];
   function on_exercise(exercise_visit) {
     let exercise = property_get(exercise_visit, "exercise");
-    let unscramble = app_code_exercise_on_answer_is(
+    let unscramble = app_learn_js_exercise_on_answer_is(
       exercise,
       app_code_lesson_quiz_token_select,
     );
