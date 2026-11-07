@@ -9,7 +9,7 @@ import { ternary } from "./ternary.mjs";
 import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_first } from "./list_first.mjs";
-export function app_code_lesson_expression_arithmetic_less_than_one(combo) {
+export function app_learn_js_lesson_expression_arithmetic_less_than_one(combo) {
   arguments_assert(arguments, 1);
   ("one comparison code string whose true/false answer is fixed by construction: the arithmetic piece makes a value, and the OTHER number is chosen from below/above/equal to that value so the combo's comparison operator yields the wanted answer - decided by RUNNING the operator's own fn, so the boolean can never be mis-derived per operator (=== needs the equal case, < never uses it). The arithmetic sits on the LEFT of the comparison (arithmetic_left) or on the RIGHT, so the learner meets arithmetic on both sides.");
   let op = property_get(combo, "op");
