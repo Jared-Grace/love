@@ -26,7 +26,7 @@
   "qa_gates -> app_learn_js_lesson_expression_which_part_first_gate_run",
   "qa_gates -> app_learn_js_lesson_id_length_gate_run",
   "qa_gates -> app_learn_js_lesson_ids_gate_run",
-  "qa_gates -> app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run",
+  "qa_gates -> app_learn_js_lesson_quiz_token_select_meaning_variations_cases_gate_run",
   "qa_gates -> app_code_lesson_telling_shapes_gate_run",
   "qa_gates -> app_code_lesson_telling_symbols_gate_run",
   "qa_gates -> app_code_lesson_titles_capital_gate_run",

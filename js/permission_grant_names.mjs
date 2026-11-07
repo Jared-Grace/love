@@ -1203,7 +1203,7 @@ export function permission_grant_names() {
     fn_name("functions_inside_duplicate_names"),
     fn_name("functions_tail_duplicate_names"),
     fn_name(
-      "app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run",
+      "app_learn_js_lesson_quiz_token_select_meaning_variations_cases_gate_run",
     ),
     fn_name("app_learn_ceb_gloss_chapters_absent"),
     fn_name("app_learn_ceb_gloss_generate_chapter_bible_folders"),

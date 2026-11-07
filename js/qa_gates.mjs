@@ -391,7 +391,7 @@ import { bless_marks_climbed_cases_gate_run } from "./bless_marks_climbed_cases_
 import { bless_block_materials_gate_run } from "./bless_block_materials_gate_run.mjs";
 import { g_npc_path_clear_facing_best_cases_gate_run } from "./g_npc_path_clear_facing_best_cases_gate_run.mjs";
 import { g_npc_path_clear_places_cases_gate_run } from "./g_npc_path_clear_places_cases_gate_run.mjs";
-import { app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run } from "./app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run.mjs";
+import { app_learn_js_lesson_quiz_token_select_meaning_variations_cases_gate_run } from "./app_learn_js_lesson_quiz_token_select_meaning_variations_cases_gate_run.mjs";
 import { js_code_same_meaning_is_cases_gate_run } from "./js_code_same_meaning_is_cases_gate_run.mjs";
 import { app_shared_bible_hash_field_reference_cases_gate_run } from "./app_shared_bible_hash_field_reference_cases_gate_run.mjs";
 import { app_code_quiz_unscramble_gate_run } from "./app_code_quiz_unscramble_gate_run.mjs";
@@ -1042,7 +1042,7 @@ export function qa_gates() {
     bless_block_materials_gate_run,
     g_npc_path_clear_facing_best_cases_gate_run,
     g_npc_path_clear_places_cases_gate_run,
-    app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run,
+    app_learn_js_lesson_quiz_token_select_meaning_variations_cases_gate_run,
     js_code_same_meaning_is_cases_gate_run,
     app_shared_bible_hash_field_reference_cases_gate_run,
     app_code_quiz_unscramble_gate_run,
