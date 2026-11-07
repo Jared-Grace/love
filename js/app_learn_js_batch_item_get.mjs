@@ -4,7 +4,7 @@ import { list_iterator_refillable_on } from "./list_iterator_refillable_on.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
-export function app_code_batch_item_get(
+export function app_learn_js_batch_item_get(
   parent,
   lesson,
   on_batch_item,

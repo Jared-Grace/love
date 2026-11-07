@@ -8,7 +8,7 @@ import { app_code_lesson_current } from "./app_code_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
 import { app_code_batch_on_refill } from "./app_code_batch_on_refill.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { app_code_batch_item_get } from "./app_code_batch_item_get.mjs";
+import { app_learn_js_batch_item_get } from "./app_learn_js_batch_item_get.mjs";
 import { list_single } from "./list_single.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_example_answer_gap } from "./app_code_example_answer_gap.mjs";
@@ -54,7 +54,14 @@ export function app_code_quiz(context) {
   property_set(context, "lesson_progress_render", render_again);
   let on_batch = app_code_batch_on_refill(list_shuffle);
   ("the first question is drawn by the getter itself, as it is made, so it is not drawn again here - a second draw threw the first away and spent a question and a missing line the learner never saw");
-  app_code_batch_item_get(root, lesson, on_batch_item, on_batch, true, null);
+  app_learn_js_batch_item_get(
+    root,
+    lesson,
+    on_batch_item,
+    on_batch,
+    true,
+    null,
+  );
   function on_batch_item(container, bs, refresh_given, next_get) {
     let b = list_single(bs);
     let c = app_code_container_light_blue(container);
