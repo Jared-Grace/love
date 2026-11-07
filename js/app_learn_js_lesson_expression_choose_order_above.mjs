@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_expression } from "./app_learn_js_lesson_expression_choose_order_expression.mjs";
-import { app_code_lesson_expression_choose_order_run_worked } from "./app_code_lesson_expression_choose_order_run_worked.mjs";
+import { app_learn_js_lesson_expression_choose_order_run_worked } from "./app_learn_js_lesson_expression_choose_order_run_worked.mjs";
 export function app_learn_js_lesson_expression_choose_order_above(
   root,
   context,
@@ -12,5 +12,5 @@ export function app_learn_js_lesson_expression_choose_order_above(
   let strong_right = true;
   let tree =
     app_learn_js_lesson_expression_choose_order_expression(strong_right);
-  app_code_lesson_expression_choose_order_run_worked(root, tree, "Suppose");
+  app_learn_js_lesson_expression_choose_order_run_worked(root, tree, "Suppose");
 }
