@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
 import { app_code_symbols_separated_on_question_numbered_fifth } from "./app_code_symbols_separated_on_question_numbered_fifth.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
-import { app_code_lesson_symbols_letters_batch_get } from "./app_code_lesson_symbols_letters_batch_get.mjs";
+import { app_learn_js_lesson_symbols_letters_batch_get } from "./app_learn_js_lesson_symbols_letters_batch_get.mjs";
 import { identity } from "./identity.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { text_transform } from "./text_transform.mjs";
@@ -70,7 +70,7 @@ export function app_code_lesson_symbols_letters() {
     return joined;
   }
   function batch_get() {
-    let mapped = app_code_lesson_symbols_letters_batch_get(lambda2);
+    let mapped = app_learn_js_lesson_symbols_letters_batch_get(lambda2);
     return mapped;
   }
   let name_id = app_learn_js_lesson_name_id("symbols", ["letters"]);
