@@ -11,7 +11,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { app_learn_js_expression_remainder_tree } from "./app_learn_js_expression_remainder_tree.mjs";
-export function app_code_expression_written_shapes_numbers() {
+export function app_learn_js_expression_written_shapes_numbers() {
   arguments_assert(arguments, 0);
   ("shapes of arithmetic to hold every printed line against: one operator, then two with the deeper one first on the left and then on the right, then rounding down over a division and over a plain number, then a rounding down standing on either side of another operator, and the remainder formula whole");
   ("Built out of the operator classes rather than written out as a list of lines, so an operator added to a class is covered here the same day. A list of lines would have covered whatever somebody thought of on the day they typed it, and the two brackets that went missing on real screens were both things nobody thought of.");
