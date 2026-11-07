@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_string_concat_above } from "./app_code_lesson_expression_string_concat_above.mjs";
+import { app_learn_js_lesson_expression_string_concat_above } from "./app_learn_js_lesson_expression_string_concat_above.mjs";
 import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson_expression_string_concat_pair.mjs";
 import { app_code_lesson_expression_string_concat_title_name_id } from "./app_code_lesson_expression_string_concat_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
@@ -54,7 +54,7 @@ export function app_code_lesson_expression_string_concat() {
   });
   return lesson;
   function above(root, context) {
-    let r2 = app_code_lesson_expression_string_concat_above(root, context);
+    let r2 = app_learn_js_lesson_expression_string_concat_above(root, context);
     return r2;
   }
 }

@@ -5,7 +5,10 @@ import { app_learn_js_lesson_expression_string_concat_above_right_line } from ".
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_string_colored } from "./app_code_string_colored.mjs";
-export function app_code_lesson_expression_string_concat_above(root, context) {
+export function app_learn_js_lesson_expression_string_concat_above(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("anchor on the plus the learner already knows (it adds numbers), then reveal it does something different for strings - it combines them. The value is derived by reducing the combination to a plain string literal they already understand (the value of the two joined is the same as the value of one string written out), then the proper name is attached. Finally the order is made concrete with left and right rather than abstract firsts, and the absence of any space is stated outright.");
   let r = app_learn_js_lesson_expression_string_concat_above_right_line(
