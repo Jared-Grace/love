@@ -7,7 +7,7 @@ import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app
 import { app_learn_js_lesson_expression_choose_order_questions_generic } from "./app_learn_js_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_whole_part_tree_of_code } from "./app_code_lesson_expression_choose_order_whole_part_tree_of_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
-import { app_code_lesson_expression_choose_order_whole_part_above } from "./app_code_lesson_expression_choose_order_whole_part_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_whole_part_above } from "./app_learn_js_lesson_expression_choose_order_whole_part_above.mjs";
 export function app_code_lesson_expression_choose_order_whole_part() {
   arguments_assert(arguments, 0);
   ("the whole part of a division taken a press at a time: Math.floor(17 / 5) * 5, press the division, press 3.4, see Math.floor(3.4) * 5, press the rounding, press 3, see 3 * 5, press the times, press 15");
@@ -49,7 +49,7 @@ export function app_code_lesson_expression_choose_order_whole_part() {
   );
   let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
-    app_code_lesson_expression_choose_order_whole_part_above,
+    app_learn_js_lesson_expression_choose_order_whole_part_above,
     answer_draw,
     example_draw,
     bank,
