@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_render_next } from "./app_code_lesson_quiz_render_next.mjs";
+import { app_learn_js_lesson_quiz_render_next } from "./app_learn_js_lesson_quiz_render_next.mjs";
 import { not } from "./not.mjs";
 export function app_learn_js_lesson_quiz_has_next_step(r4, r, last_lesson_end) {
   arguments_assert(arguments, 3);
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_quiz_has_next_step(r4, r, last_lesson_end) {
   let container_success_message = property_get(r4, "container_success_message");
   let quiz_index = property_get(r, "quiz_index");
   function render_next(next_parent) {
-    let r3 = app_code_lesson_quiz_render_next(next_parent, on_next);
+    let r3 = app_learn_js_lesson_quiz_render_next(next_parent, on_next);
     return r3;
   }
   let has_next_step = not(last_lesson_end);
