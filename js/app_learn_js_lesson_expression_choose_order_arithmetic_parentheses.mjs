@@ -6,7 +6,7 @@ import { app_code_lesson_expression_choose_order_solve_example } from "./app_cod
 import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_questions } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_questions.mjs";
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_above } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_above.mjs";
-export function app_code_lesson_expression_choose_order_arithmetic_parentheses() {
+export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses() {
   arguments_assert(arguments, 0);
   ("( and ) round a + or a - among numbers, taken a press at a time: 4 * (5 - 3), choose the minus, choose 2, see 4 * 2, choose the times, choose 8");
   ("It stands in front of the lesson that asks the same lines whole, which is where a pressing lesson stands throughout this course. Until now the marks were the one thing a learner met whole first: they were shown, explained and then asked for in one go, while every other rule on a line was pressed apart before it was asked for.");
