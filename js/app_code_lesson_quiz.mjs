@@ -2,7 +2,7 @@ import { app_learn_js_lesson_progress_render } from "./app_learn_js_lesson_progr
 import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_quiz_answer_label_set } from "./app_learn_js_lesson_quiz_answer_label_set.mjs";
-import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
+import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_learn_js_lesson_quiz_correction_code_set } from "./app_learn_js_lesson_quiz_correction_code_set.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_quiz({
   ("the first question is painted here, below everything it reads, and not up where the pieces are gathered");
   on_qa_change();
   function on_qa_change() {
-    quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
+    quiz_question = app_learn_js_lesson_quiz_qa_question(qa, answer_property);
     html_clear(container_question);
     on_question(container_question, quiz_question);
     html_clear(answers_div);

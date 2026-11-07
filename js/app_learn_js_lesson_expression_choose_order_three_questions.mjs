@@ -3,7 +3,7 @@ import { app_learn_js_expression_flat_random_strong_first } from "./app_learn_js
 import { app_learn_js_expression_flat_tree_of_code } from "./app_learn_js_expression_flat_tree_of_code.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_learn_js_lesson_expression_choose_order_three_operator_count } from "./app_learn_js_lesson_expression_choose_order_three_operator_count.mjs";
-import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
+import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_learn_js_lesson_expression_choose_order_three_questions() {
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_expression_choose_order_three_questions() {
   function tree_of(qa, info) {
     "the same working out done from a quiz's question and answer pair, which is how the quiz side of a lesson holds the line it is asking about";
     let answer_property = property_get(info, "answer_property");
-    let question = app_code_lesson_quiz_qa_question(qa, answer_property);
+    let question = app_learn_js_lesson_quiz_qa_question(qa, answer_property);
     let tree = tree_for(question);
     return tree;
   }

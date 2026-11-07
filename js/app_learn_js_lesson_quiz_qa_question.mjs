@@ -1,6 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_quiz_qa_property_other } from "./app_learn_js_lesson_quiz_qa_property_other.mjs";
-export function app_code_lesson_quiz_qa_question(qa, answer_property) {
+export function app_learn_js_lesson_quiz_qa_question(qa, answer_property) {
   let question_property =
     app_learn_js_lesson_quiz_qa_property_other(answer_property);
   let quiz_question = property_get(qa, question_property);

@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { identity } from "./identity.mjs";
-import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
+import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
 import { app_learn_js_lesson_above } from "./app_learn_js_lesson_above.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_quiz_index(
   let answer_property = property_get(info, "answer_property");
   ("a batch line spells one pair, and a quiz that asks about something worked out from that pair rather than about the pair itself remaps every line it draws. Its wrong answers are already drawn through this remap; the line it moves on to after a right answer is drawn the same way, or the quiz would open its next question showing the pair as the batch spells it - the very thing it does not ask about. Every other quiz shows the pair as it stands, and identity leaves it alone");
   let qa_for = property_get_or(info, "qa_for", identity);
-  let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
+  let quiz_question = app_learn_js_lesson_quiz_qa_question(qa, answer_property);
   let a = app_learn_js_lesson_above(
     container_blue_light,
     question_label,

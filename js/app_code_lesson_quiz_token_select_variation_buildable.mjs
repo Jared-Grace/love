@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
+import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_quiz_token_select_variations.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_quiz_token_select_variation_buildable(
 ) {
   arguments_assert(arguments, 3);
   let answer_property = property_get(info, "answer_property");
-  app_code_lesson_quiz_qa_question(qa, answer_property);
+  app_learn_js_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
   ("ensures div is visible from beginning");
   let text = text_space_nb();
