@@ -4,7 +4,7 @@ import { not } from "./not.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
-import { app_code_after_lesson } from "./app_code_after_lesson.mjs";
+import { app_learn_js_after_lesson } from "./app_learn_js_after_lesson.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -25,10 +25,10 @@ export function app_code_button_skip_lesson(context, parent) {
   }
   async function skip() {
     app_code_quiz_index_reset(context);
-    await app_code_after_lesson(context);
+    await app_learn_js_after_lesson(context);
   }
   ("when this lesson is a checkpoint, ",
-    fn_name("app_code_after_lesson"),
+    fn_name("app_learn_js_after_lesson"),
     " goes to the REVIEW next, so the button should say review, not lesson");
   let destination = "lesson";
   if (has_review) {
