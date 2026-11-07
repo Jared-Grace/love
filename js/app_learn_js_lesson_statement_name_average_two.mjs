@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { app_learn_js_lesson_statement_name_value_names } from "./app_learn_js_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_learn_js_lesson_statement_name_average_two_step } from "./app_learn_js_lesson_statement_name_average_two_step.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_statement_name_average_two() {
   ("Every number in the writing is a code chip, and 3, 7 and 5 wear the pointing colours they wear on the number line, so the sentences and the picture are seen to be about the same three numbers. The 2 they are apart by and the 2 the sum is divided by stay plain: they are not on the line.");
   ("The worked program uses 1 and 7, asked by the human 2026-09-28, after a day of 3 and 7, the explanation's own numbers: a new pair shows the lines work on more than the one pair explained, and its average, 4, is none of the five questions' answers.");
   ("The human's wording, 2026-09-27: the average of two numbers is named where it is found, and the code adds the two numbers rather than them, so neither sentence leans on the one before it.");
-  let names = app_code_lesson_statement_name_value_names();
+  let names = app_learn_js_lesson_statement_name_value_names();
   let name_a = list_first(names);
   let name_b = list_second(names);
   let step = app_learn_js_lesson_statement_name_average_two_step();

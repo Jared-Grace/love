@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { app_learn_js_lesson_statement_name_value_names } from "./app_learn_js_lesson_statement_name_value_names.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_first } from "./list_first.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_statement_name_average_three() {
   ("the average of three names: let sum = a + b + c; let average = sum / 3; console.log(average);");
   ("The average-of-two program with one more name added and 3 in place of 2, so the one new thing is that the number divided by is how many numbers there are.");
   ("Every sum divides by 3 exactly, no average is one of the numbers on its own screen or the 3 it is divided by, and the five averages differ.");
-  let names_two = app_code_lesson_statement_name_value_names();
+  let names_two = app_learn_js_lesson_statement_name_value_names();
   let name_c = app_learn_js_lesson_statement_name_third();
   let names = list_concat(names_two, [name_c]);
   let name_a = list_first(names);

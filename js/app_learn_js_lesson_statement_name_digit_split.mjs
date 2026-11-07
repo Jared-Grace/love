@@ -3,7 +3,7 @@ import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_p
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { app_learn_js_lesson_statement_name_value_names } from "./app_learn_js_lesson_statement_name_value_names.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_learn_js_lesson_statement_name_remainder } from "./app_learn_js_lesson_statement_name_remainder.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_statement_name_digit_split() {
     middle: [line_digit],
     logged: [digit],
   };
-  let value_names = app_code_lesson_statement_name_value_names();
+  let value_names = app_learn_js_lesson_statement_name_value_names();
   let name_a = list_first(value_names);
   let name_b = list_second(value_names);
   let remainder = "remainder";

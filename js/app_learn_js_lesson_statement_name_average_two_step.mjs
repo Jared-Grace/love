@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { app_learn_js_lesson_statement_name_value_names } from "./app_learn_js_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -9,7 +9,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 export function app_learn_js_lesson_statement_name_average_two_step() {
   arguments_assert(arguments, 0);
   ("the lines of the average-of-two lesson: let sum = a + b; let average = sum / 2; - and average is written out");
-  let names = app_code_lesson_statement_name_value_names();
+  let names = app_learn_js_lesson_statement_name_value_names();
   let name_a = list_first(names);
   let name_b = list_second(names);
   let sum = "sum";

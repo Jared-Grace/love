@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { app_learn_js_lesson_statement_name_value_names } from "./app_learn_js_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_learn_js_lesson_statement_name_fill_from_step } from "./app_learn_js_lesson_statement_name_fill_from_step.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_swap_try() {
   arguments_assert(arguments, 0);
   ("the second lesson of the swapping ladder: the swap a learner tries first - a = b; b = a; - which leaves both names holding the same number");
   ("It is taught as a trap on purpose. The reason swapping needs a third name is that this program loses a number, and a learner who has predicted 8 and 8 here knows why the next lesson saves one first.");
-  let names = app_code_lesson_statement_name_value_names();
+  let names = app_learn_js_lesson_statement_name_value_names();
   let name_a = list_first(names);
   let name_b = list_second(names);
   let before = app_learn_js_lesson_statement_name_fill_from_step();

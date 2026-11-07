@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { app_learn_js_lesson_statement_name_value_names } from "./app_learn_js_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_learn_js_lesson_statement_name_temp } from "./app_learn_js_lesson_statement_name_temp.mjs";
@@ -11,7 +11,7 @@ import { app_learn_js_lesson_statement_name_swap_backwards_decoys } from "./app_
 export function app_learn_js_lesson_statement_name_swap_step() {
   arguments_assert(arguments, 0);
   ("the last step of the swapping ladder: the third step's lines with b = temp; after them - a and b have swapped, and both are written out");
-  let names = app_code_lesson_statement_name_value_names();
+  let names = app_learn_js_lesson_statement_name_value_names();
   let name_a = list_first(names);
   let name_b = list_second(names);
   let temp = app_learn_js_lesson_statement_name_temp();
