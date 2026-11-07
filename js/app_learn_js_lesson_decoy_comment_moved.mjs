@@ -6,7 +6,7 @@ import { text_combine } from "./text_combine.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-export function app_code_lesson_decoy_comment_moved(question, answer) {
+export function app_learn_js_lesson_decoy_comment_moved(question, answer) {
   arguments_assert(arguments, 2);
   ("the one tempting wrong program for a screen asking which code wrote something out: the same program with its note on the other line");
   ("Every other program the screen could offer is made of different numbers, so a learner could pick the right one by finding a number and never read which line the note was on. This one holds the same two lines and differs in nothing but that, so it can only be turned down by reading it.");
