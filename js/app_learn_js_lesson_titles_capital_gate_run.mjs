@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_lesson_titles_lower } from "./app_code_lesson_titles_lower.mjs";
+import { app_learn_js_lesson_titles_lower } from "./app_learn_js_lesson_titles_lower.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_walked_generic } from "./list_empty_is_assert_walked_generic.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_titles_capital_gate_run() {
   ("How many lessons were looked at travels out beside the verdict, because nothing wrong is also what this says on the day its walk stopped reaching any lessons at all.");
   let fns = app_code_lessons_fns();
   let walked = list_size(fns);
-  let offenders = app_code_lesson_titles_lower();
+  let offenders = app_learn_js_lesson_titles_lower();
   let hint = text_combine_multiple([
     "these lesson titles open with a small letter where a capital belongs - repair every one of them with ",
     fn_name("app_learn_js_lesson_titles_capital_repair"),

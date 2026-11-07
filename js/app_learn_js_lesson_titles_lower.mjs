@@ -7,7 +7,7 @@ import { text_trim } from "./text_trim.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { each } from "./each.mjs";
-export function app_code_lesson_titles_lower() {
+export function app_learn_js_lesson_titles_lower() {
   arguments_assert(arguments, 0);
   ("the lessons whose home title opens with a small letter where a capital belongs: the lesson's name, the whole title as drawn, and the words that should have been capitalised");
   ("A title is a name on a list, and a list where some names open with a capital and some do not reads as two lists. Every one of these was written on its own day by whoever was writing that lesson, so the split is not a decision anybody made - it is what happens when nothing says.");

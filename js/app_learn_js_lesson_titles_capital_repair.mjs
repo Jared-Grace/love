@@ -1,6 +1,6 @@
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_titles_lower } from "./app_code_lesson_titles_lower.mjs";
+import { app_learn_js_lesson_titles_lower } from "./app_learn_js_lesson_titles_lower.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_title_words_site } from "./app_learn_js_lesson_title_words_site.mjs";
 import { list_add } from "./list_add.mjs";
@@ -17,7 +17,7 @@ export async function app_learn_js_lesson_titles_capital_repair() {
   ("It finds its own set rather than being handed one. The lessons wanting a capital are asked for, not listed, so this cannot drift from what is actually wrong, and running it when nothing is wrong changes nothing and says so.");
   ("Two lessons can be drawn by one maker, and three sibling lessons can each spell the same fragment in their own file. So the places are gathered and the repeats dropped before anything is written, and each file is asked for exactly one change - a maker shared by two lessons would otherwise be told twice to change a run of text that is only there once, and the second telling would refuse.");
   ("What comes back does not claim the titles now read right. The lessons were drawn to find them, so their code is already loaded and running them again would draw the old words however the files now read. The proof is the gate, asked afresh.");
-  let lower = app_code_lesson_titles_lower();
+  let lower = app_learn_js_lesson_titles_lower();
   let keys = [];
   let planned = [];
   let unplaced = [];
