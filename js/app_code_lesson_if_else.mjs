@@ -4,7 +4,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_braces_run_if_else } from "./app_code_lesson_braces_run_if_else.mjs";
+import { app_learn_js_lesson_braces_run_if_else } from "./app_learn_js_lesson_braces_run_if_else.mjs";
 import { app_learn_js_if_else_explain } from "./app_learn_js_if_else_explain.mjs";
 import { app_learn_js_if_else_program_lines } from "./app_learn_js_if_else_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -40,7 +40,7 @@ export function app_code_lesson_if_else() {
     app_code_remember_from_lesson(
       box,
       context,
-      app_code_lesson_braces_run_if_else,
+      app_learn_js_lesson_braces_run_if_else,
       [
         "",
         code2,
