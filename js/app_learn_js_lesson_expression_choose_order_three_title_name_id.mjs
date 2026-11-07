@@ -6,7 +6,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-export function app_code_lesson_expression_choose_order_three_title_name_id() {
+export function app_learn_js_lesson_expression_choose_order_three_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: a three step line where the operator that goes first has to be looked for rather than read off the left, an Expressions lesson");
   ("The title names the rule rather than the length, because the length is no longer what changed. The lesson before this one is also three steps long, and every operator on it is the same strength, so the learner starts at the left without looking. Here the one that goes first can be anywhere on the line, and the rule that finds it is the work.");
