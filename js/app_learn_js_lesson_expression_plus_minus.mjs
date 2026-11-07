@@ -8,7 +8,7 @@ import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_plus_minus() {
+export function app_learn_js_lesson_expression_plus_minus() {
   "mixing + and - in one expression: console.log(a + b - c) and console.log(a - b + c); + and - are the same strength, so it just works from left to right; the first number is 5..9 and the others 2..4 so the answer never drops below 0";
   let plus = js_operator_plus_symbol();
   let minus = js_operator_minus_symbol();
