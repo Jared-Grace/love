@@ -1,7 +1,7 @@
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { list_max } from "./list_max.mjs";
 import { list_min } from "./list_min.mjs";
@@ -172,9 +172,9 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
   let right_arrow = app_learn_js_arrow_inline_draw(0);
   let down_arrow = app_learn_js_arrow_inline_draw(90);
   let color2 = app_code_highlight_color_fourth();
-  let purple = app_code_explain_word_colored("purple", color2);
+  let purple = app_learn_js_explain_word_colored("purple", color2);
   let color3 = app_code_highlight_color_fifth();
-  let orange = app_code_explain_word_colored("orange", color3);
+  let orange = app_learn_js_explain_word_colored("orange", color3);
   function call_worked(name, first, second, color) {
     "name(first, second) as one code chip, both edges in the colour of the part they play";
     let chip = app_learn_js_explain_code_colored_inline(
@@ -186,7 +186,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
   let overlap_color = app_code_highlight_color_third();
   function red(text) {
     "a word for the overlap, in the colour of the part the rectangles share, asked by the human 2026-10-04";
-    let word = app_code_explain_word_colored(text, overlap_color);
+    let word = app_learn_js_explain_word_colored(text, overlap_color);
     return word;
   }
   let overlap_word = red("overlap");

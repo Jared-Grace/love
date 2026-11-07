@@ -18,7 +18,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_explain_code_colored } from "./app_learn_js_explain_code_colored.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_emoji_square } from "./app_learn_js_explain_emoji_square.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_arrow_turned_draw } from "./app_learn_js_arrow_turned_draw.mjs";
@@ -128,10 +128,10 @@ export function app_code_lesson_statement_name_king_steps() {
       end_color,
     ],
   );
-  let rows_word = app_code_explain_word_colored("rows", row_color);
-  let columns_word = app_code_explain_word_colored("columns", column_color);
-  let row_word = app_code_explain_word_colored("row", row_color);
-  let column_word = app_code_explain_word_colored("column", column_color);
+  let rows_word = app_learn_js_explain_word_colored("rows", row_color);
+  let columns_word = app_learn_js_explain_word_colored("columns", column_color);
+  let row_word = app_learn_js_explain_word_colored("row", row_color);
+  let column_word = app_learn_js_explain_word_colored("column", column_color);
   let draw = app_learn_js_explain_number_colored("1", row_color);
   let draw2 = app_learn_js_explain_number_colored("1", column_color);
   let draw3 = app_learn_js_explain_number_colored("4", row_color);
@@ -221,7 +221,7 @@ export function app_code_lesson_statement_name_king_steps() {
     let count = app_learn_js_explain_number_colored("3", end_color);
     count(line);
     html_span_text(line, " ");
-    let blue = app_code_explain_word_colored("blue squares", end_color);
+    let blue = app_learn_js_explain_word_colored("blue squares", end_color);
     blue(line);
     html_span_text(line, " total");
   }

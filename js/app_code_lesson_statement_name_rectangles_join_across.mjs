@@ -14,7 +14,7 @@ import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
@@ -110,12 +110,12 @@ export function app_code_lesson_statement_name_rectangles_join_across() {
   }
   function one(text) {
     "words naming the first rectangle, in the colour the picture fills it with";
-    let word = app_code_explain_word_colored(text, first_color);
+    let word = app_learn_js_explain_word_colored(text, first_color);
     return word;
   }
   function two(text) {
     "words naming the second rectangle, in the colour the picture fills it with";
-    let word = app_code_explain_word_colored(text, second_color);
+    let word = app_learn_js_explain_word_colored(text, second_color);
     return word;
   }
   function rectangles_draw(across) {

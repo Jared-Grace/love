@@ -6,7 +6,7 @@ import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -103,7 +103,7 @@ export function app_code_lesson_statement_name_even() {
     );
     return chip;
   }
-  let remainder_word = app_code_explain_word_colored(
+  let remainder_word = app_learn_js_explain_word_colored(
     "remainder",
     remainder_color,
   );

@@ -19,7 +19,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_statement_name_grid_inside.mjs";
@@ -170,9 +170,9 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   }
   let right_arrow = app_learn_js_arrow_inline_draw(0);
   let down_arrow = app_learn_js_arrow_inline_draw(90);
-  let square_word = app_code_explain_word_colored("square", square_color);
+  let square_word = app_learn_js_explain_word_colored("square", square_color);
   let rectangle_color = app_code_highlight_color_fourth();
-  let rectangle_word = app_code_explain_word_colored(
+  let rectangle_word = app_learn_js_explain_word_colored(
     "rectangle",
     rectangle_color,
   );

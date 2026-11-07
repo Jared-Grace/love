@@ -15,7 +15,7 @@ import { app_code_highlight_color_fourth } from "./app_code_highlight_color_four
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { range } from "./range.mjs";
@@ -96,10 +96,10 @@ export function app_code_lesson_statement_name_grid_inside() {
   let rows_count_color = app_code_highlight_color_second();
   let columns_count_color = app_code_highlight_color_fifth();
   let plain = app_shared_color_code_background();
-  let grid_word = app_code_explain_word_colored("grid", grid_color);
-  let blue_word = app_code_explain_word_colored("blue", grid_color);
-  let row_word = app_code_explain_word_colored("row", row_color);
-  let column_word = app_code_explain_word_colored("column", column_color);
+  let grid_word = app_learn_js_explain_word_colored("grid", grid_color);
+  let blue_word = app_learn_js_explain_word_colored("blue", grid_color);
+  let row_word = app_learn_js_explain_word_colored("row", row_color);
+  let column_word = app_learn_js_explain_word_colored("column", column_color);
   let is_true = app_learn_js_explain_number_colored("true", plain);
   let is_false = app_learn_js_explain_number_colored("false", plain);
   let spaced_at_most = js_code_binary_spaced_nb("", at_most, "");

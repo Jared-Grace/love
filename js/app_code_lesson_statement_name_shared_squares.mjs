@@ -18,7 +18,7 @@ import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_numb
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_overlap } from "./app_code_lesson_statement_name_rectangles_overlap.mjs";
@@ -132,8 +132,8 @@ export function app_code_lesson_statement_name_shared_squares() {
   }
   let right_arrow = app_learn_js_arrow_inline_draw(0);
   let down_arrow = app_learn_js_arrow_inline_draw(90);
-  let shared_word = app_code_explain_word_colored("shared", overlap_color);
-  let share_word = app_code_explain_word_colored("share", overlap_color);
+  let shared_word = app_learn_js_explain_word_colored("shared", overlap_color);
+  let share_word = app_learn_js_explain_word_colored("share", overlap_color);
   let v = from("2");
   let v2 = till("3");
   let v3 = from("1");

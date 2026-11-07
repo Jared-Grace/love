@@ -15,7 +15,7 @@ import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
@@ -120,12 +120,12 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
   }
   function one(text) {
     "words naming the first rectangle, in the colour the picture fills it with";
-    let word = app_code_explain_word_colored(text, first_color);
+    let word = app_learn_js_explain_word_colored(text, first_color);
     return word;
   }
   function two(text) {
     "words naming the second rectangle, in the colour the picture fills it with";
-    let word = app_code_explain_word_colored(text, second_color);
+    let word = app_learn_js_explain_word_colored(text, second_color);
     return word;
   }
   let spaced_plus = js_code_binary_spaced_nb("", plus, "");
@@ -156,7 +156,7 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
   let first_rectangle = one("first rectangle");
   let first = one("first");
   let second = two("second");
-  let shared_word = app_code_explain_word_colored("shared", overlap_color);
+  let shared_word = app_learn_js_explain_word_colored("shared", overlap_color);
   let v = first_area("4");
   let v2 = second_area("6");
   let suppose_said = app_learn_js_explain_said([

@@ -5,7 +5,7 @@ import { app_learn_js_explain_code_colored } from "./app_learn_js_explain_code_c
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_learn_js_explain_abs_apart_colored } from "./app_learn_js_explain_abs_apart_colored.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_arrow_turned_draw } from "./app_learn_js_arrow_turned_draw.mjs";
@@ -106,8 +106,8 @@ export function app_code_lesson_statement_name_grid_steps() {
     ["3", " " + plus + " ", "2", " " + same + " ", "5"],
     [rows_count_color, plain, columns_count_color, plain, end_color],
   );
-  let row_word = app_code_explain_word_colored("row", row_color);
-  let column_word = app_code_explain_word_colored("column", column_color);
+  let row_word = app_learn_js_explain_word_colored("row", row_color);
+  let column_word = app_learn_js_explain_word_colored("column", column_color);
   let v5 = app_learn_js_explain_number_colored("1", row_color);
   let v6 = app_learn_js_explain_number_colored("1", column_color);
   let v7 = app_learn_js_explain_number_colored("4", row_color);
@@ -137,7 +137,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     v8,
     "?",
   ]);
-  let v9 = app_code_explain_word_colored("rows", row_color);
+  let v9 = app_learn_js_explain_word_colored("rows", row_color);
   let v10 = app_learn_js_explain_number_colored("1", row_color);
   let v11 = app_learn_js_explain_number_colored("4", row_color);
   let rows_said = app_learn_js_explain_said([
@@ -153,7 +153,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     v11,
     " is",
   ]);
-  let v12 = app_code_explain_word_colored("columns", column_color);
+  let v12 = app_learn_js_explain_word_colored("columns", column_color);
   let v13 = app_learn_js_explain_number_colored("1", column_color);
   let v14 = app_learn_js_explain_number_colored("3", column_color);
   let columns_said = app_learn_js_explain_said([
@@ -203,7 +203,10 @@ export function app_code_lesson_statement_name_grid_steps() {
     let count = app_learn_js_explain_number_colored("5", end_color);
     count(line);
     html_span_text(line, " ");
-    let blue = app_code_explain_word_colored("blue-ringed squares", end_color);
+    let blue = app_learn_js_explain_word_colored(
+      "blue-ringed squares",
+      end_color,
+    );
     blue(line);
     html_span_text(line, " total");
   }

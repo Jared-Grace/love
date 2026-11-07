@@ -19,7 +19,7 @@ import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_numb
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
@@ -157,12 +157,12 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   }
   let right_arrow = app_learn_js_arrow_inline_draw(0);
   let down_arrow = app_learn_js_arrow_inline_draw(90);
-  let rectangle_word = app_code_explain_word_colored(
+  let rectangle_word = app_learn_js_explain_word_colored(
     "rectangle",
     rectangle_color,
   );
-  let width_word = app_code_explain_word_colored(width, length_color);
-  let height_word = app_code_explain_word_colored(height, length_color);
+  let width_word = app_learn_js_explain_word_colored(width, length_color);
+  let height_word = app_learn_js_explain_word_colored(height, length_color);
   let is_true = app_learn_js_explain_number_colored("true", plain);
   function goes_said(start_across, end_across, start_down, end_down) {
     "The rectangle goes across from start_across to end_across, and down from start_down to end_down";

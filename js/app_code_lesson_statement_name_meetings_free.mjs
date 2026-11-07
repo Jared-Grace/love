@@ -16,7 +16,7 @@ import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_numb
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
@@ -125,12 +125,12 @@ export function app_code_lesson_statement_name_meetings_free() {
   let second_color = app_code_highlight_color_fifth();
   function one(text) {
     "words naming the first meeting, in the colour the picture fills it with";
-    let word = app_code_explain_word_colored(text, first_color);
+    let word = app_learn_js_explain_word_colored(text, first_color);
     return word;
   }
   function two(text) {
     "words naming the second meeting, in the colour the picture fills it with";
-    let word = app_code_explain_word_colored(text, second_color);
+    let word = app_learn_js_explain_word_colored(text, second_color);
     return word;
   }
   function meetings_draw(second_start, second_end) {

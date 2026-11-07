@@ -18,7 +18,7 @@ import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -187,11 +187,11 @@ export function app_code_lesson_statement_name_rectangles_cover_edges() {
     ]);
     return said;
   }
-  let first_rectangle = app_code_explain_word_colored(
+  let first_rectangle = app_learn_js_explain_word_colored(
     "first rectangle",
     first_color,
   );
-  let second_rectangle = app_code_explain_word_colored(
+  let second_rectangle = app_learn_js_explain_word_colored(
     "second rectangle",
     second_color,
   );

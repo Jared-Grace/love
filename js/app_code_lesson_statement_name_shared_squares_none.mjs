@@ -20,7 +20,7 @@ import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_numb
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
@@ -161,9 +161,12 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   }
   let right_arrow = app_learn_js_arrow_inline_draw(0);
   let down_arrow = app_learn_js_arrow_inline_draw(90);
-  let shared_word = app_code_explain_word_colored("shared", overlap_color);
-  let share_word = app_code_explain_word_colored("share", overlap_color);
-  let overlap_word = app_code_explain_word_colored("overlap", overlap_color);
+  let shared_word = app_learn_js_explain_word_colored("shared", overlap_color);
+  let share_word = app_learn_js_explain_word_colored("share", overlap_color);
+  let overlap_word = app_learn_js_explain_word_colored(
+    "overlap",
+    overlap_color,
+  );
   let draw = app_learn_js_explain_said([
     "These two rectangles do not ",
     overlap_word,
@@ -190,8 +193,8 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     v4,
   ]);
   let v5 = raw("-1");
-  let width_word = app_code_explain_word_colored(width, length_color);
-  let height_word = app_code_explain_word_colored(height, length_color);
+  let width_word = app_learn_js_explain_word_colored(width, length_color);
+  let height_word = app_learn_js_explain_word_colored(height, length_color);
   let draw4 = app_learn_js_explain_said([
     "So the ",
     width_word,
