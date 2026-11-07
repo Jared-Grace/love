@@ -17,7 +17,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
-import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
+import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
@@ -131,7 +131,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
   let at_most_chip = app_learn_js_explain_number_colored(at_most, plain);
   let less_chip = app_learn_js_explain_number_colored(less, plain);
   let first_color = app_code_highlight_color_fourth();
-  let second_color = app_code_highlight_color_fifth();
+  let second_color = app_learn_js_highlight_color_fifth();
   function one(text) {
     "words naming the first meeting, in the colour the picture fills it with";
     let word = app_learn_js_explain_word_colored(text, first_color);

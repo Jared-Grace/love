@@ -12,7 +12,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
-import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
+import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { list_size } from "./list_size.mjs";
@@ -46,7 +46,7 @@ export function app_code_meetings_hours_draw(
   let end_color = app_code_highlight_color_second();
   let plain = app_shared_color_code_background();
   let color2 = app_code_highlight_color_fourth();
-  let color3 = app_code_highlight_color_fifth();
+  let color3 = app_learn_js_highlight_color_fifth();
   let fills = [color2, color3];
   let border_color = app_shared_color_blue_dark();
   let gap = app_shared_spaced_tiny_gap();

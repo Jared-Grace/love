@@ -11,7 +11,7 @@ import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
-import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
+import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_learn_js_explain_abs_apart_colored } from "./app_learn_js_explain_abs_apart_colored.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
@@ -94,7 +94,7 @@ export function app_code_lesson_statement_name_king_steps() {
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
   let rows_count_color = app_code_highlight_color_second();
-  let columns_count_color = app_code_highlight_color_fifth();
+  let columns_count_color = app_learn_js_highlight_color_fifth();
   let end_color = app_code_highlight_color();
   let rows_worked = app_learn_js_explain_abs_apart_colored(
     "4",
