@@ -1,5 +1,5 @@
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
-import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
+import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_choose_order_operators_expression_parts(
   left,
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_choose_order_operators_expression_par
     );
     return tree_right;
   }
-  let tree_left = app_code_expression_node_left_operator_first(
+  let tree_left = app_learn_js_expression_node_left_operator_first(
     left,
     strong_symbol,
     middle,

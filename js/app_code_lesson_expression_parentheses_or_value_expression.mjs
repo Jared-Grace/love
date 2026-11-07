@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_parentheses_expression } from "
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { boolean_random } from "./boolean_random.mjs";
-import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
+import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 export function app_code_lesson_expression_parentheses_or_value_expression(
   want_true,
@@ -30,7 +30,7 @@ export function app_code_lesson_expression_parentheses_or_value_expression(
   let middle_word = boolean_random();
   if (parentheses_left) {
     ("the parentheses at the left end: ( true || middle ) && false, which without them would read true || ( middle && false ) and come to true");
-    let tree_left = app_code_expression_node_left_operator_first(
+    let tree_left = app_learn_js_expression_node_left_operator_first(
       true,
       or_symbol,
       middle_word,

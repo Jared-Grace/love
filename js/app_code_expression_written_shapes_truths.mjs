@@ -12,7 +12,7 @@ import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
+import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { each } from "./each.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
@@ -45,7 +45,7 @@ export function app_code_expression_written_shapes_truths() {
     "Both lopsided shapes are asked of the pair of builders that exist for them, one for each side, rather than the right-hand one being written out here out of the plain builder twice. Written out, the two sides of the same idea stopped looking like each other, and the shape the builder settles - which of the two operators gathers first - was being settled again here, where nothing says that is what it is doing.";
     let item = app_code_expression_node(14, symbol, 4);
     list_add(shapes, item);
-    let arithmetic_left = app_code_expression_node_left_operator_first(
+    let arithmetic_left = app_learn_js_expression_node_left_operator_first(
       14,
       plus,
       4,

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
+import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { app_learn_js_expression_node_left_operator_first_parenthesis_wrapped } from "./app_learn_js_expression_node_left_operator_first_parenthesis_wrapped.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { app_code_expression_node_right_operator_first_parenthesis_wrapped } from "./app_code_expression_node_right_operator_first_parenthesis_wrapped.mjs";
@@ -34,7 +34,7 @@ export function app_code_expression_node_truths_wanted(
   let build_left = ternary(
     parenthesised,
     app_learn_js_expression_node_left_operator_first_parenthesis_wrapped,
-    app_code_expression_node_left_operator_first,
+    app_learn_js_expression_node_left_operator_first,
   );
   let build_right = ternary(
     parenthesised,

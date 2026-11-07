@@ -1,4 +1,4 @@
-import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
+import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { js_operator_double_asterisk_symbol } from "./js_operator_double_asterisk_symbol.mjs";
@@ -30,7 +30,7 @@ export function app_code_expression_written_shapes_unpressed() {
   list_add(shapes, under_times);
   let under_plus = app_code_expression_node(2, plus, alone);
   list_add(shapes, under_plus);
-  let over_plus = app_code_expression_node_left_operator_first(
+  let over_plus = app_learn_js_expression_node_left_operator_first(
     2,
     plus,
     14,
