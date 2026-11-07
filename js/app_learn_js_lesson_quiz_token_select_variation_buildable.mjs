@@ -7,7 +7,7 @@ import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_quiz_variation_buildable_is } from "./app_code_quiz_variation_buildable_is.mjs";
-export function app_code_lesson_quiz_token_select_variation_buildable(
+export function app_learn_js_lesson_quiz_token_select_variation_buildable(
   info,
   qa,
   answer_div,
