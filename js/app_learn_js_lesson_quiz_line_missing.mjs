@@ -9,7 +9,7 @@ import { list_get } from "./list_get.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
-import { app_code_lesson_quiz_token_select_pieces } from "./app_code_lesson_quiz_token_select_pieces.mjs";
+import { app_learn_js_lesson_quiz_token_select_pieces } from "./app_learn_js_lesson_quiz_token_select_pieces.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_set } from "./list_set.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -47,7 +47,7 @@ export function app_learn_js_lesson_quiz_line_missing(
   let note_div = html_div_text(parent, "");
   let line_missing = list_get(lines, index);
   let qa_line = object_copy_property_set(qa, answer_property, line_missing);
-  let pieces = app_code_lesson_quiz_token_select_pieces(
+  let pieces = app_learn_js_lesson_quiz_token_select_pieces(
     info,
     qa_line,
     answer_div,

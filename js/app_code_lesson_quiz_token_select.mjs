@@ -1,6 +1,6 @@
 import { html_div_code_dark } from "./html_div_code_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_lesson_quiz_token_select_pieces } from "./app_code_lesson_quiz_token_select_pieces.mjs";
+import { app_learn_js_lesson_quiz_token_select_pieces } from "./app_learn_js_lesson_quiz_token_select_pieces.mjs";
 import { app_learn_js_lesson_quiz_token_select_code_show } from "./app_learn_js_lesson_quiz_token_select_code_show.mjs";
 import { app_learn_js_lesson_quiz_pieces_select } from "./app_learn_js_lesson_quiz_pieces_select.mjs";
 export function app_code_lesson_quiz_token_select(
@@ -18,7 +18,11 @@ export function app_code_lesson_quiz_token_select(
   "THE ORDER BEING AIMED AT IS SAID OUT LOUD after every tap that is accepted, because it is the answer this quiz would have to show if the student asked to see one. The line can be built several ways, and which of them is still reachable is known here and nowhere else. A student who has correctly built 2 * and asks for the answer must be shown 2 * 3 + 2 and not 2 + 2 * 3, or the screen tells them their own first two pieces were a mistake when they were not.";
   let answer_div = html_div_code_dark(parent);
   let note_div = html_div_text(parent, "");
-  let pieces = app_code_lesson_quiz_token_select_pieces(info, qa, answer_div);
+  let pieces = app_learn_js_lesson_quiz_token_select_pieces(
+    info,
+    qa,
+    answer_div,
+  );
   function show(variations, chosen) {
     app_learn_js_lesson_quiz_token_select_code_show(
       variations,
