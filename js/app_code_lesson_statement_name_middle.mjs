@@ -3,7 +3,7 @@ import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
+import { app_learn_js_lesson_bold_term } from "./app_learn_js_lesson_bold_term.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
@@ -140,7 +140,7 @@ export function app_code_lesson_statement_name_middle() {
   let code_odd = js_code_binary_result_nb("7", slash, "2", "3.5");
   function even_draw(box) {
     "the word even, defined in bold where it is first used";
-    let line = app_code_lesson_bold_term(box, "A number is ", "even");
+    let line = app_learn_js_lesson_bold_term(box, "A number is ", "even");
     html_span_text_content(
       line,
       " when we divide it by 2 and get a whole number",
@@ -148,7 +148,7 @@ export function app_code_lesson_statement_name_middle() {
   }
   function odd_draw(box) {
     "the word odd, defined in bold where it is first used";
-    app_code_lesson_bold_term(
+    app_learn_js_lesson_bold_term(
       box,
       "A whole number that is not even is ",
       "odd",

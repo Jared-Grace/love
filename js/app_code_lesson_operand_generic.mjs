@@ -1,6 +1,6 @@
 import { app_code_lesson_operand_generic_quizzes_get } from "./app_code_lesson_operand_generic_quizzes_get.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
+import { app_learn_js_lesson_bold_term } from "./app_learn_js_lesson_bold_term.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_first } from "./list_first.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_operand_generic(params) {
   function above(root, context) {
     "define the role with the term bolded, then a RANDOM worked example from the same generator as the quiz, then the ask";
     let intro = app_learn_js_container_light_blue(root);
-    app_code_lesson_bold_term(intro, define_prose, role);
+    app_learn_js_lesson_bold_term(intro, define_prose, role);
     let list = batch_get();
     let sample = list_first(list);
     let sample_question = property_get(sample, "question");
