@@ -5,7 +5,7 @@ import { app_learn_js_lesson_above_shown } from "./app_learn_js_lesson_above_sho
 import { app_learn_js_above_draw } from "./app_learn_js_above_draw.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_example_answer_gap } from "./app_learn_js_example_answer_gap.mjs";
-import { app_code_lesson_text_example_another } from "./app_code_lesson_text_example_another.mjs";
+import { app_learn_js_lesson_text_example_another } from "./app_learn_js_lesson_text_example_another.mjs";
 import { app_learn_js_lesson_examples_plural_is } from "./app_learn_js_lesson_examples_plural_is.mjs";
 import { app_learn_js_lesson_examples_complete_is } from "./app_learn_js_lesson_examples_complete_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_examples_example_another(context, root) {
   let above_line = app_learn_js_above_draw(root, above, context);
   let c = app_learn_js_container_light_blue(root);
   app_learn_js_example_answer_gap(c);
-  let another = app_code_lesson_text_example_another(lesson);
+  let another = app_learn_js_lesson_text_example_another(lesson);
   let plural = app_learn_js_lesson_examples_plural_is(lesson);
   let complete = app_learn_js_lesson_examples_complete_is(lesson);
   ("A lesson whose examples are every example it has says THE rather than SOME. Some names a sample, and a reader who is told they have been shown some goes looking for the rest - which is the very promise the see-more button makes and the very one such a lesson cannot keep. The word and the button are written from the one answer here, so neither can say what the other denies.");
