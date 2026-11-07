@@ -25,7 +25,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_number_text_plus() {
+export function app_learn_js_lesson_number_text_plus() {
   arguments_assert(arguments, 0);
   ('a number joined to a string with a plus: console.log(5 + " is a number"); writes out 5 is a number');
   ("Split from the lesson that joins a name holding a number, by the human's word 2026-10-07: that lesson asked two things at once, that a plus between a number and a string joins them, and that a name stands for the number it holds. Only the first was new, so it comes first and alone, as if (2 < 3) came before if (a < b).");
