@@ -4,7 +4,7 @@ import { greater_than } from "./greater_than.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
-export function app_code_lesson_decrement_log_options() {
+export function app_learn_js_lesson_decrement_log_options() {
   arguments_assert(arguments, 0);
   ("what a lesson about a loop taking one away from n hands in, whichever loop it is written with: let n = 3; n > 0; n-- writes out 3, 2 and 1");
   ("Only a program already running three times compares against zero. Another is offered a wrong program one further on, and a number below zero has not been shown in this course.");
