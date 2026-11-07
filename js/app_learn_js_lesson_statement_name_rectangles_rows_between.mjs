@@ -23,7 +23,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_statement_name_rectangle_above } from "./app_learn_js_lesson_statement_name_rectangle_above.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rectangles_rows_between() {
+export function app_learn_js_lesson_statement_name_rectangles_rows_between() {
   arguments_assert(arguments, 0);
   ("how many rows are between two rectangles, once the first is above the second: let between = t2 - b1; - picked by Claude 2026-10-05 when the human asked to continue on the code app, as Is one rectangle above another done the way How many hours are free between two meetings follows Has one meeting ended by the time another starts. In DSA it is the gap between two boxes one above the other, the distance a layout keeps between them.");
   ("Not picked: the gap across, let between = l2 - r1; which needs a grid wide enough for both side by side, the reason Is one rectangle above another went down and not across; and how far apart two rectangles are either way, which needs the larger of two gaps. Every pair asked here has the first rectangle above the second, so the answer is never negative and the lesson stays one subtraction.");
