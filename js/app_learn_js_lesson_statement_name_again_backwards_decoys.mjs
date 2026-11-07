@@ -10,7 +10,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_lesson_statement_name_again_backwards_decoys(
+export function app_learn_js_lesson_statement_name_again_backwards_decoys(
   question,
   answer,
 ) {
