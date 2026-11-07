@@ -19,7 +19,7 @@ import { app_learn_js_expression_node_before } from "./app_learn_js_expression_n
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { app_learn_js_expression_node_parenthesis_wrapped } from "./app_learn_js_expression_node_parenthesis_wrapped.mjs";
-export function app_code_expression_written_shapes_truths() {
+export function app_learn_js_expression_written_shapes_truths() {
   arguments_assert(arguments, 0);
   ("shapes that come out true or false to hold every printed line against: each comparison over two numbers and over a piece of arithmetic on either side, then && and || over two comparisons, one nested inside the other both ways round, a denial over a comparison, a denial of a denial, and a pair of parentheses a lesson wrote where nothing required them");
   ("Built out of the comparison list and the two joining classes rather than written out, for the same reason the arithmetic shapes are: a comparison added to the language is covered here on the day it is added.");
