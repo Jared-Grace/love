@@ -4,7 +4,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_color_page_complete } from "./app_shared_color_page_complete.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { app_code_celebration } from "./app_code_celebration.mjs";
+import { app_learn_js_celebration } from "./app_learn_js_celebration.mjs";
 export function app_code_home_all_complete(parent, bar, context) {
   "At the foot of the lesson list, once this learner has finished every lesson and every review there is: the same celebration the end of a review draws, saying they have done all of it - at the human's request, 2026-09-27. Renders nothing (returns null) while anything is left unfinished.";
   "AVAILABLE AT THIS TIME, because the course is still being written: a learner who has done all of it today will find more tomorrow, and a line saying they had finished the course would stop being true the day a lesson is added.";
@@ -24,6 +24,6 @@ export function app_code_home_all_complete(parent, bar, context) {
   html_style_background_color_set(bar, green);
   let message =
     "Congratulations! You completed all the lessons and reviews that are available at this time";
-  let celebration = app_code_celebration(parent, message);
+  let celebration = app_learn_js_celebration(parent, message);
   return celebration;
 }
