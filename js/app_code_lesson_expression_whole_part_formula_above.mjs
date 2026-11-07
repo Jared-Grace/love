@@ -1,6 +1,6 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_divisor } from "./app_learn_js_lesson_expression_divisor.mjs";
-import { app_code_lesson_expression_quotient } from "./app_code_lesson_expression_quotient.mjs";
+import { app_learn_js_lesson_expression_quotient } from "./app_learn_js_lesson_expression_quotient.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_expression_whole_part_formula_above(
   app_code_remember_from_lesson(
     setup,
     context,
-    app_code_lesson_expression_quotient,
+    app_learn_js_lesson_expression_quotient,
     ["", "Math.floor(14 / 4)", " is the quotient"],
   );
   let derivation = app_learn_js_container_light_blue(root);
