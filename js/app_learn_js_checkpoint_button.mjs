@@ -8,7 +8,7 @@ import { app_shared_milestone_complete_background_color } from "./app_shared_mil
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-export function app_code_checkpoint_button(
+export function app_learn_js_checkpoint_button(
   parent,
   prefix,
   label,
