@@ -9,7 +9,7 @@ import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
-export function app_code_code_dark_lines_comments(component, code) {
+export function app_learn_js_code_dark_lines_comments(component, code) {
   "code standing on more than one line, written into a code chip with every note in it drawn dimmer than the code around it, and every name a note marks drawn in the same colour there as in the code";
   "A note is the one part of the screen the machine does not read, and the only thing a picture can do to say so is draw it as less than what surrounds it.";
   "A NAME IS SAID THREE WAYS AT ONCE, and each way is the one that still works when the way above it is gone. The brackets survive plain text, a reader with no colour vision at all, and a screen read aloud. The brightness differs between names as well as the hue, so a reader who cannot tell two hues apart can still pair the name in the note with the name in the code. The hue is the fastest of the three for the reader who has it, and it is not decoration for being the fastest - three greys have to be compared, three colours are known at a glance.";

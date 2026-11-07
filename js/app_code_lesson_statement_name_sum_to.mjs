@@ -1,7 +1,7 @@
 import { html_div } from "./html_div.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { html_span } from "./html_span.mjs";
-import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
+import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_code_line_dots_draw } from "./app_code_line_dots_draw.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
@@ -78,7 +78,7 @@ export function app_code_lesson_statement_name_sum_to() {
     let line = html_div(box);
     let code = list_join_newline(middle_lines);
     let chip_inner = html_span(line);
-    app_code_code_dark_lines_comments(chip_inner, code);
+    app_learn_js_code_dark_lines_comments(chip_inner, code);
     html_style_assign(chip_inner, {
       display: "block",
     });

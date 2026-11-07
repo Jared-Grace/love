@@ -1,6 +1,6 @@
 import { not } from "./not.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
+import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
@@ -37,7 +37,7 @@ export function app_code_code_dark_lines_pointed_cut(cut) {
     return all;
   }
   function paint(component, code) {
-    app_code_code_dark_lines_comments(component, code);
+    app_learn_js_code_dark_lines_comments(component, code);
     let nothing = text_empty();
     html_text_set(component, nothing);
     let runs = app_code_note_runs(code);

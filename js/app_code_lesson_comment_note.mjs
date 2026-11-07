@@ -1,5 +1,5 @@
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
+import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_lesson_comment_note_above } from "./app_code_lesson_comment_note_above.mjs";
 import { app_code_lesson_comment_note_batch } from "./app_code_lesson_comment_note_batch.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_comment_note() {
     name_id,
     batch_get: batch,
     example_count: 1,
-    on_question: app_code_code_dark_lines_comments,
+    on_question: app_learn_js_code_dark_lines_comments,
     unscramble: false,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,

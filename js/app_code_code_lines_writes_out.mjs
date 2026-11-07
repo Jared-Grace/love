@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_code_lines_writes_out_on } from "./app_code_code_lines_writes_out_on.mjs";
-import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
+import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 export function app_code_code_lines_writes_out(parent, lines, value) {
   arguments_assert(arguments, 3);
@@ -12,7 +12,7 @@ export function app_code_code_lines_writes_out(parent, lines, value) {
     parent,
     lines,
     value,
-    app_code_code_dark_lines_comments,
+    app_learn_js_code_dark_lines_comments,
     app_code_style_normal_text,
   );
   return container;
