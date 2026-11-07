@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
+import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
@@ -43,7 +43,7 @@ export function app_code_lesson_if_cases_generic(
     let parts = parts_get(seed, runs);
     let setup = list_first(parts);
     let condition = list_last(parts);
-    let lines = app_code_if_program_lines(
+    let lines = app_learn_js_if_program_lines(
       setup,
       condition,
       inside_word,

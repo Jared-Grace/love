@@ -11,7 +11,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
+import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_lesson_if_cases_generic } from "./app_code_lesson_if_cases_generic.mjs";
 export function app_code_lesson_if_name() {
@@ -59,7 +59,7 @@ export function app_code_lesson_if_name() {
       ":",
     ]);
     let setup2 = setup_get(name, true);
-    let true_lines = app_code_if_program_lines(
+    let true_lines = app_learn_js_if_program_lines(
       setup2,
       name,
       inside_shown,
@@ -85,7 +85,7 @@ export function app_code_lesson_if_name() {
       ":",
     ]);
     let setup3 = setup_get(name, false);
-    let false_lines = app_code_if_program_lines(
+    let false_lines = app_learn_js_if_program_lines(
       setup3,
       name,
       inside_shown,

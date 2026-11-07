@@ -2,7 +2,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_if_program_lines(
+export function app_learn_js_if_program_lines(
   setup,
   condition,
   inside_word,

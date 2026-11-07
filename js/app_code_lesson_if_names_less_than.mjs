@@ -12,7 +12,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
+import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_if_cases_generic } from "./app_code_lesson_if_cases_generic.mjs";
@@ -71,7 +71,7 @@ export function app_code_lesson_if_names_less_than() {
       ],
     );
     let both = list_join_newline([inside_shown, after_shown]);
-    let remember_lines = app_code_if_program_lines(
+    let remember_lines = app_learn_js_if_program_lines(
       [],
       small_first,
       inside_shown,
@@ -84,7 +84,7 @@ export function app_code_lesson_if_names_less_than() {
       "Names can hold the numbers instead:",
     ]);
     let setup2 = setup_get(2, 3);
-    let true_lines = app_code_if_program_lines(
+    let true_lines = app_learn_js_if_program_lines(
       setup2,
       condition,
       inside_shown,
@@ -114,7 +114,7 @@ export function app_code_lesson_if_names_less_than() {
       ":",
     ]);
     let setup3 = setup_get(3, 2);
-    let false_lines = app_code_if_program_lines(
+    let false_lines = app_learn_js_if_program_lines(
       setup3,
       condition,
       inside_shown,
