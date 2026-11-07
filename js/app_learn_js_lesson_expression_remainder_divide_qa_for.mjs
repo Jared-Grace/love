@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-export function app_code_lesson_expression_remainder_divide_qa_for(
+export function app_learn_js_lesson_expression_remainder_divide_qa_for(
   info,
   question,
   answer,

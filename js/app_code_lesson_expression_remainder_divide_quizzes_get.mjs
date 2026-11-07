@@ -6,7 +6,7 @@ import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_mul
 import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_item_qa_for } from "./app_learn_js_lesson_expression_remainder_divide_item_qa_for.mjs";
-import { app_code_lesson_expression_remainder_divide_qa_for } from "./app_code_lesson_expression_remainder_divide_qa_for.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_qa_for } from "./app_learn_js_lesson_expression_remainder_divide_qa_for.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
@@ -58,7 +58,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
   };
   let infos = [recognize, build, backwards];
   function each_info(info) {
-    let quiz_qa = app_code_lesson_expression_remainder_divide_qa_for(
+    let quiz_qa = app_learn_js_lesson_expression_remainder_divide_qa_for(
       info,
       question,
       answer,
@@ -81,7 +81,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
   }
   let quizzes = list_map(infos, each_info);
   function each_exercise(info) {
-    let quiz_qa = app_code_lesson_expression_remainder_divide_qa_for(
+    let quiz_qa = app_learn_js_lesson_expression_remainder_divide_qa_for(
       info,
       question,
       answer,
