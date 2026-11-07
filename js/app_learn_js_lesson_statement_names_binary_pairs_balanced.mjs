@@ -8,7 +8,7 @@ import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_lesson_statement_names_binary_pairs_balanced(
+export function app_learn_js_lesson_statement_names_binary_pairs_balanced(
   symbol,
   candidates,
 ) {

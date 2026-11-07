@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
-import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
+import { app_learn_js_lesson_statement_names_binary_pairs_balanced } from "./app_learn_js_lesson_statement_names_binary_pairs_balanced.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_greater_than } from "./app_learn_js_lesson_expression_greater_than.mjs";
 export function app_learn_js_lesson_statement_name_greater() {
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_statement_name_greater() {
       [1, 7],
       [4, 10],
     ];
-    let pairs = app_code_lesson_statement_names_binary_pairs_balanced(
+    let pairs = app_learn_js_lesson_statement_names_binary_pairs_balanced(
       symbol,
       candidates,
     );
