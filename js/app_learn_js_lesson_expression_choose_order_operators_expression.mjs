@@ -10,7 +10,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_expression_choose_order_operators_expression(
+export function app_learn_js_lesson_expression_choose_order_operators_expression(
   strong_right,
 ) {
   arguments_assert(arguments, 1);

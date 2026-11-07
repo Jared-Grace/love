@@ -6,7 +6,7 @@ import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_n
 import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_expression_replace_swap_say.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
-import { app_code_lesson_expression_choose_order_operators_expression } from "./app_code_lesson_expression_choose_order_operators_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_operators_expression } from "./app_learn_js_lesson_expression_choose_order_operators_expression.mjs";
 import { app_code_lesson_expression_choose_order_operators_intro } from "./app_code_lesson_expression_choose_order_operators_intro.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -29,7 +29,9 @@ export function app_learn_js_lesson_expression_choose_order_operators_above(
   app_code_lesson_expression_choose_order_strong_card(root, context);
   let strong_right = true;
   let tree =
-    app_code_lesson_expression_choose_order_operators_expression(strong_right);
+    app_learn_js_lesson_expression_choose_order_operators_expression(
+      strong_right,
+    );
   let whole_line = app_learn_js_expression_code(tree);
   let ready = app_learn_js_expression_nodes_ready(tree);
   let step = list_first(ready);
