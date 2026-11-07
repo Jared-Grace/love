@@ -13,7 +13,7 @@ import { app_learn_js_lesson_statement_name_itself_sum } from "./app_learn_js_le
 import { app_learn_js_lesson_statement_name_product_number_pairs } from "./app_learn_js_lesson_statement_name_product_number_pairs.mjs";
 import { app_learn_js_lesson_statement_name_first_written_batch } from "./app_learn_js_lesson_statement_name_first_written_batch.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
-export function app_code_lesson_statement_name_times_assign_pair() {
+export function app_learn_js_lesson_statement_name_times_assign_pair() {
   arguments_assert(arguments, 0);
   ("the pair on the shorter way to multiply what a name holds, a *= b; for a = a * b;: its programs, its title line, and the words its lesson is called by");
   ("No lesson teaches a = a * b; on its own. The reminder is the lesson that adds to what a name holds, with the one change a learner has already met in the lesson that multiplies two names - the asterisk in place of the plus.");
