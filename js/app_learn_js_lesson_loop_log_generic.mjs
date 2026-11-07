@@ -33,7 +33,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_loop_log_generic(params) {
+export function app_learn_js_lesson_loop_log_generic(params) {
   arguments_assert(arguments, 1);
   ("A lesson about one loop with a console.log inside: let n = start; loop (n < bound) { console.log(n); n += added; } writes out each value n holds as the loop runs, asked forwards and backwards.");
   ("What differs between lessons is the title, what is shown above, and how the whole program is written, which program_write does when handed the let, the condition and the two lines. Above is handed example, which draws the program of 1, 9 and 3 and what it writes out in a given way of writing it, and walk, which says what that program does run by run.");

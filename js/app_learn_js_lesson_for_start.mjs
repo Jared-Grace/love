@@ -7,7 +7,7 @@ import { js_code_for_condition_update_lines } from "./js_code_for_condition_upda
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_loop_log_generic } from "./app_code_lesson_loop_log_generic.mjs";
+import { app_learn_js_lesson_loop_log_generic } from "./app_learn_js_lesson_loop_log_generic.mjs";
 export function app_learn_js_lesson_for_start() {
   arguments_assert(arguments, 0);
   ("the third for: for (let n = 1; n < 9; n += 3) { console.log(n); } writes out 1, 4 and 7, the same as the second for, with let n = 1 moved in");
@@ -47,7 +47,7 @@ export function app_learn_js_lesson_for_start() {
     "For with a start",
     "for (let n = 1; ...) { ... }",
   );
-  let lesson = app_code_lesson_loop_log_generic({
+  let lesson = app_learn_js_lesson_loop_log_generic({
     name_id,
     above,
     program_write: js_code_for_start_condition_update_lines,

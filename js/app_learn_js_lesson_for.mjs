@@ -9,7 +9,7 @@ import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_for_condition_lines } from "./js_code_for_condition_lines.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_loop_log_generic } from "./app_code_lesson_loop_log_generic.mjs";
+import { app_learn_js_lesson_loop_log_generic } from "./app_learn_js_lesson_loop_log_generic.mjs";
 export function app_learn_js_lesson_for() {
   arguments_assert(arguments, 0);
   ("the first for: let n = 1; for (; n < 9;) { console.log(n); n += 3; } writes out 1, 4 and 7, the same as while (n < 9) { console.log(n); n += 3; }");
@@ -51,7 +51,7 @@ export function app_learn_js_lesson_for() {
     "For",
     "for (; n < 9;) { ... }",
   );
-  let lesson = app_code_lesson_loop_log_generic({
+  let lesson = app_learn_js_lesson_loop_log_generic({
     name_id,
     above,
     program_write: js_code_start_above_lines(js_code_for_condition_lines),

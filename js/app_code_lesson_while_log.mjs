@@ -7,7 +7,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_loop_log_generic } from "./app_code_lesson_loop_log_generic.mjs";
+import { app_learn_js_lesson_loop_log_generic } from "./app_learn_js_lesson_loop_log_generic.mjs";
 export function app_code_lesson_while_log() {
   arguments_assert(arguments, 0);
   ("a console.log inside a while: let n = 1; while (n < 9) { console.log(n); n += 3; } writes out 1, 4 and 7, one under the other");
@@ -52,7 +52,7 @@ export function app_code_lesson_while_log() {
     "A log inside a while",
     "{ console.log(n); ... }",
   );
-  let lesson = app_code_lesson_loop_log_generic({
+  let lesson = app_learn_js_lesson_loop_log_generic({
     name_id,
     above,
     program_write: js_code_start_above_lines(js_code_while_lines_multiple),
