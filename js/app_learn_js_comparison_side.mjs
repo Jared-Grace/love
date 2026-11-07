@@ -8,7 +8,7 @@ import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_comparison_side() {
+export function app_learn_js_comparison_side() {
   arguments_assert(arguments, 0);
   ("a comparison of two small numbers, with the true or false it works out to");
   let same = js_operator_triple_equal();
