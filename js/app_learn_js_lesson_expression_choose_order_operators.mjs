@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn
 import { app_learn_js_lesson_expression_choose_order_operators_above } from "./app_learn_js_lesson_expression_choose_order_operators_above.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_questions } from "./app_learn_js_lesson_expression_choose_order_operators_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_title_name_id } from "./app_learn_js_lesson_expression_choose_order_operators_title_name_id.mjs";
-import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 export function app_learn_js_lesson_expression_choose_order_operators() {
   "choosing which part of a line to solve and then what that part comes to, on a line built from any of the four arithmetic operators: 8 - 2 * 3, choose the times, choose 6, see 8 - 6, choose the minus, choose 2";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_expression_choose_order_operators() {
   ("the quiz and the front page are the ones the lessons on either side use, handed this lesson's wrong values - the pressing, the layout and the finishing are the same doing, and only what could be pressed instead differs");
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz, with this lesson's wrong values: the value the other operator would have given, and the value of the whole line";
-    app_code_lesson_expression_choose_order_solve_answer_draw(
+    app_learn_js_lesson_expression_choose_order_solve_answer_draw(
       parent,
       tree,
       on_success,

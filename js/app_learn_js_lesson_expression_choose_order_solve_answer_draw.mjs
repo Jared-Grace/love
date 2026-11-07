@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_expression_choose_order_ask.mjs";
 import { noop } from "./noop.mjs";
-export function app_code_lesson_expression_choose_order_solve_answer_draw(
+export function app_learn_js_lesson_expression_choose_order_solve_answer_draw(
   parent,
   tree,
   on_success,

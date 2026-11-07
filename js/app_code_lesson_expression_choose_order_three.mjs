@@ -1,6 +1,6 @@
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
-import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 import { app_code_lesson_expression_choose_order_three_above } from "./app_code_lesson_expression_choose_order_three_above.mjs";
 import { app_code_lesson_expression_choose_order_three_questions } from "./app_code_lesson_expression_choose_order_three_questions.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_choose_order_three() {
   ("the quiz and the front page are the ones the lessons on either side use, handed this lesson's wrong values - the pressing, the layout and the finishing are the same doing, and only what could be pressed instead differs");
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz, with this lesson's wrong values: the value the other operator would have given, and the value of the whole line";
-    app_code_lesson_expression_choose_order_solve_answer_draw(
+    app_learn_js_lesson_expression_choose_order_solve_answer_draw(
       parent,
       tree,
       on_success,

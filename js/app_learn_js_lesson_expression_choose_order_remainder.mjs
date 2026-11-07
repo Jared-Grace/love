@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_remainder_title_name_id } from "./app_learn_js_lesson_expression_choose_order_remainder_title_name_id.mjs";
 import { app_learn_js_expression_remainder_random } from "./app_learn_js_expression_remainder_random.mjs";
-import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 import { app_learn_js_lesson_expression_choose_order_questions_generic } from "./app_learn_js_lesson_expression_choose_order_questions_generic.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_expression_choose_order_remainder() {
   }
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz, with this lesson's wrong values";
-    app_code_lesson_expression_choose_order_solve_answer_draw(
+    app_learn_js_lesson_expression_choose_order_solve_answer_draw(
       parent,
       tree,
       on_success,
