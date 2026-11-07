@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_remainder_divide_make } from "./app_lear
 import { app_learn_js_lesson_expression_remainder_divide_backwards_decoys } from "./app_learn_js_lesson_expression_remainder_divide_backwards_decoys.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_recognize_decoys } from "./app_learn_js_lesson_expression_remainder_divide_recognize_decoys.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_above } from "./app_learn_js_lesson_expression_remainder_divide_above.mjs";
-import { app_code_lesson_expression_remainder_divide_title_name_id } from "./app_code_lesson_expression_remainder_divide_title_name_id.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_title_name_id } from "./app_learn_js_lesson_expression_remainder_divide_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_expression_remainder_divide() {
     html_text_set_code_dark(div, text);
   }
   let name_id =
-    app_code_lesson_expression_remainder_divide_title_name_id(percent);
+    app_learn_js_lesson_expression_remainder_divide_title_name_id(percent);
   let lesson = app_learn_js_lesson_base(
     name_id,
     above,
