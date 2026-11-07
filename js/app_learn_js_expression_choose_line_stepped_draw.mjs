@@ -3,7 +3,7 @@ import { app_code_expression_replaced_settle } from "./app_code_expression_repla
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_learn_js_expression_choose_line_draw } from "./app_learn_js_expression_choose_line_draw.mjs";
 import { app_learn_js_expression_chips_rise } from "./app_learn_js_expression_chips_rise.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 export async function app_learn_js_expression_choose_line_stepped_draw({
   line,
   node_span,
@@ -34,7 +34,7 @@ export async function app_learn_js_expression_choose_line_stepped_draw({
     on_change,
   });
   await app_learn_js_expression_chips_rise(line, risen);
-  let more = app_code_expression_node_is(stepped);
+  let more = app_learn_js_expression_node_is(stepped);
   if (more) {
     return;
   }

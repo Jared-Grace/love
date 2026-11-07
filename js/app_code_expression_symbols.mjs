@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
@@ -9,7 +9,7 @@ export function app_code_expression_symbols(item) {
   arguments_assert(arguments, 1);
   ("every operator standing in a shape, by its symbol, however deep it sits: the shape printed as Math.floor(14 / 4) * 4 gives back Math.floor, / and *");
   ("What a check over generated shapes needs in order to say it looked at anything. A generator quietly narrowed back to one operator still hands over a list of shapes and still passes every check made of them, and the only way to tell that apart from a full sweep is to ask the shapes themselves which operators they turned out to hold.");
-  let node_is = app_code_expression_node_is(item);
+  let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {
     let none = [];
     return none;

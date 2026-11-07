@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_stops_early_is } from "./app_code_expression_node_stops_early_is.mjs";
 import { app_code_expression_node_settled_is } from "./app_code_expression_node_settled_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { app_code_expression_node_parentheses_is } from "./app_code_expression_node_parentheses_is.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
@@ -22,7 +22,7 @@ export function app_code_expression_step_reason_of(item, node) {
   let stopped = app_code_expression_node_stops_early_is(node);
   if (stopped && app_code_expression_node_settled_is(node)) {
     let right_side = property_get(node, "right");
-    if (app_code_expression_node_is(right_side)) {
+    if (app_learn_js_expression_node_is(right_side)) {
       let symbol_stopped = property_get(node, "operator");
       let left_text = property_text_to(node, "left");
       let stops = [

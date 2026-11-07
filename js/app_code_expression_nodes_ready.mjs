@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
@@ -19,7 +19,7 @@ export function app_code_expression_nodes_ready(item) {
   ("The two questions are kept apart because a value can be worked out in any of these orders and come to the same number - that is what lets ",
     fn_name("app_code_expression_value"),
     " walk the list freely - while a LEARNER being asked which operator goes next has exactly one right answer, the one the machine would take. A single function answering both would have to be wrong for one of them.");
-  let node_is = app_code_expression_node_is(item);
+  let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {
     let none = [];
     return none;
@@ -33,7 +33,7 @@ export function app_code_expression_nodes_ready(item) {
   if (before_is) {
     ("a one-sided operator has only the one side to wait on, so it is ready as soon as that side is a value");
     let acted_on = property_get(item, "right");
-    let acted_on_is = app_code_expression_node_is(acted_on);
+    let acted_on_is = app_learn_js_expression_node_is(acted_on);
     if (not(acted_on_is)) {
       let alone = [item];
       return alone;
@@ -43,8 +43,8 @@ export function app_code_expression_nodes_ready(item) {
   }
   let left = property_get(item, "left");
   let right = property_get(item, "right");
-  let left_is = app_code_expression_node_is(left);
-  let right_is = app_code_expression_node_is(right);
+  let left_is = app_learn_js_expression_node_is(left);
+  let right_is = app_learn_js_expression_node_is(right);
   ("2026-10-17, at the human's asking: an && or an || waits on both its sides, as every other operator does. JavaScript stops at the left side when that already decides the answer, but on a line made only of values, names and operators, working out the right side as well cannot change the answer, so a beginner learns one rule for every operator, as simple sorts are taught before fast ones. Stopping early is a lesson of its own, for the lines where it changes what happens. Not picked: offering only the left side until it settles the line, built earlier the same day, which asked a beginner for a second rule before it could make any difference to them");
   ("2026-10-17, at the human's asking: an && or an || the lesson on stopping early marked is read as JavaScript reads it - its left side first, and once that value decides the answer the operator is ready at once, its right side never worked out. Not picked: offering the right side alongside the left, which is the beginner's rule this lesson is there to go past");
   if (app_code_expression_node_stops_early_is(item)) {

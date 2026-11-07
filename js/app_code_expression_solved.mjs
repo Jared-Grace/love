@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { app_code_operator_solve_before } from "./app_code_operator_solve_before.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
@@ -45,7 +45,7 @@ export function app_code_expression_solved(item, node) {
     );
     return value;
   }
-  let node_is = app_code_expression_node_is(item);
+  let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {
     return item;
   }

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
@@ -15,7 +15,7 @@ export function app_code_expression_node_parentheses_is(item, node) {
   ("For a telling that wants to point at the marks. A part is gathered because of what stands around it rather than because of anything it holds, so the part on its own cannot be asked - it has to be found on the line it belongs to, and the answer is about that pairing rather than about either one.");
   ("It asks the same question the printer asks, out of the one place the printer asks it, rather than reading the printed line back for a parenthesis. A second reading could disagree with the line the learner is looking at, and a sentence naming marks that are not there is worse than no sentence.");
   ("The two sides do not ask for the same strength, and which of them asks for more is the printer's own rule read out of the printer's own place: the side an operator works out LAST is the one that has to be gathered.");
-  let node_is = app_code_expression_node_is(item);
+  let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {
     let value_side = false;
     return value_side;

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { text_to } from "./text_to.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -20,7 +20,7 @@ export function app_code_expression_paint(parent, item, on_operator) {
     fn_name("app_learn_js_expression_code"),
     " writes, character for character - the spacing and the parentheses are decided by the same two helpers, so a learner pressing a line and a learner reading one are looking at the same line.");
   ("on_operator receives the operator, the piece of page the symbol was written into, and the piece holding the symbol together with both of its sides; the caller decides from there what pressing it does: the lesson makes the one that may be worked out next pressable and leaves the rest plain.");
-  let node_is = app_code_expression_node_is(item);
+  let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {
     ("nothing but a value, so there is no operator to offer and the number is written as it stands");
     let text = text_to(item);

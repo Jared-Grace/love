@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_expression_code(item) {
   arguments_assert(arguments, 1);
   ("the code a learner reads for a whole expression shape: the shape for 1 + 2 * 3 prints as 1 + 2 * 3, and the shape for (1 + 2) * 3 prints with its parentheses");
   ("Parentheses are worked out rather than remembered. The shape says which operator holds which, so a parenthesis is needed exactly where leaving it out would let a reader take the parts in a different order - and that is a question the ranks answer. Remembering instead which parentheses were typed would let a shape print as a line that does not mean it.");
-  let node_is = app_code_expression_node_is(item);
+  let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {
     let text = text_to(item);
     return text;

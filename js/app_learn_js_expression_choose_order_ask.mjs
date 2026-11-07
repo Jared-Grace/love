@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
@@ -31,7 +31,7 @@ export function app_learn_js_expression_choose_order_ask({
   let current = tree;
   async function on_change(step) {
     current = property_get(step, "current");
-    let more = app_code_expression_node_is(current);
+    let more = app_learn_js_expression_node_is(current);
     if (not(more)) {
       await finished();
       return;

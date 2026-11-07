@@ -3,7 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_code_expression_node_logical_is } from "./app_code_expression_node_logical_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { equal } from "./equal.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 export function app_code_expression_node_settled_is(item) {
@@ -17,7 +17,7 @@ export function app_code_expression_node_settled_is(item) {
     return false;
   }
   let left = property_get(item, "left");
-  if (app_code_expression_node_is(left)) {
+  if (app_learn_js_expression_node_is(left)) {
     return false;
   }
   let left2 = property_get(item, "operator");

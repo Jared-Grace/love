@@ -1,5 +1,5 @@
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_expression_lines_after(tree, node) {
   ("After the first step whatever is ready goes next, and which one is not asked, because from there the order no longer changes where the line lands - which is the very thing this is written to show.");
   let stepped = app_code_expression_solved(tree, node);
   let code = app_learn_js_expression_code(stepped);
-  let node_is = app_code_expression_node_is(stepped);
+  let node_is = app_learn_js_expression_node_is(stepped);
   if (not(node_is)) {
     let last = [code];
     return last;
