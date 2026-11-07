@@ -1,7 +1,7 @@
 import { app_learn_js_hash_field_lesson } from "./app_learn_js_hash_field_lesson.mjs";
 import { app_code_hash_field_screen } from "./app_code_hash_field_screen.mjs";
 import { app_learn_js_hash_field_quiz } from "./app_learn_js_hash_field_quiz.mjs";
-import { app_code_hash_field_review } from "./app_code_hash_field_review.mjs";
+import { app_learn_js_hash_field_review } from "./app_learn_js_hash_field_review.mjs";
 import { app_learn_js_hash_field_complete } from "./app_learn_js_hash_field_complete.mjs";
 import { app_learn_js_hash_field_course } from "./app_learn_js_hash_field_course.mjs";
 import { app_learn_js_hash_field_milestone } from "./app_learn_js_hash_field_milestone.mjs";
@@ -12,7 +12,7 @@ export function app_code_hash_fields() {
   let lesson = app_learn_js_hash_field_lesson();
   let screen = app_code_hash_field_screen();
   let quiz = app_learn_js_hash_field_quiz();
-  let review = app_code_hash_field_review();
+  let review = app_learn_js_hash_field_review();
   let complete = app_learn_js_hash_field_complete();
   let course = app_learn_js_hash_field_course();
   let milestone = app_learn_js_hash_field_milestone();
