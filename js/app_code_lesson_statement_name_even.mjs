@@ -2,7 +2,7 @@ import { app_learn_js_code_dark_lines_part_pointed } from "./app_learn_js_code_d
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
-import { app_code_code_lines_writes_out_on } from "./app_code_code_lines_writes_out_on.mjs";
+import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines_writes_out_on.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
@@ -59,7 +59,7 @@ export function app_code_lesson_statement_name_even() {
       remainder_color,
     );
     let on_output = app_code_output_pointed(pointers);
-    app_code_code_lines_writes_out_on(
+    app_learn_js_code_lines_writes_out_on(
       box,
       remember_program,
       output_before,
@@ -154,7 +154,7 @@ export function app_code_lesson_statement_name_even() {
       remainder_color,
     );
     let on_output = app_code_output_pointed([]);
-    app_code_code_lines_writes_out_on(box, lines, output, paint, on_output);
+    app_learn_js_code_lines_writes_out_on(box, lines, output, paint, on_output);
   }
   let lesson = app_code_lesson_statement_formula_answer_count({
     words: "Is a number even",

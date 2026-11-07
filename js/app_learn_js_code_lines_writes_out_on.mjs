@@ -4,7 +4,7 @@ import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_code_output } from "./app_code_code_output.mjs";
-export function app_code_code_lines_writes_out_on(
+export function app_learn_js_code_lines_writes_out_on(
   parent,
   lines,
   value,
