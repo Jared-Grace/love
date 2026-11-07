@@ -8,7 +8,7 @@ import { app_code_lesson_quiz_braces_order_colored } from "./app_code_lesson_qui
 import { app_learn_js_braces_painter_shared } from "./app_learn_js_braces_painter_shared.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-export function app_code_lesson_braces_among_colored_generic(
+export function app_learn_js_lesson_braces_among_colored_generic(
   name_id,
   above,
   batch,

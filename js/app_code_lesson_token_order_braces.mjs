@@ -1,4 +1,4 @@
-import { app_code_lesson_braces_among_colored_generic } from "./app_code_lesson_braces_among_colored_generic.mjs";
+import { app_learn_js_lesson_braces_among_colored_generic } from "./app_learn_js_lesson_braces_among_colored_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -55,7 +55,7 @@ export function app_code_lesson_token_order_braces() {
     "The braces among the tokens",
     "{ { } }",
   );
-  let lesson = app_code_lesson_braces_among_colored_generic(
+  let lesson = app_learn_js_lesson_braces_among_colored_generic(
     name_id,
     above,
     batch,

@@ -13,7 +13,7 @@ import { list_get } from "./list_get.mjs";
 import { app_learn_js_braces_paired_with_order } from "./app_learn_js_braces_paired_with_order.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_braces_among_colored_generic } from "./app_code_lesson_braces_among_colored_generic.mjs";
+import { app_learn_js_lesson_braces_among_colored_generic } from "./app_learn_js_lesson_braces_among_colored_generic.mjs";
 export function app_code_lesson_token_order_braces_three() {
   arguments_assert(arguments, 0);
   ("the braces among the tokens, three pairs: as The braces among the tokens, but every program has three pairs of braces, each pair in a colour of its own");
@@ -60,7 +60,7 @@ export function app_code_lesson_token_order_braces_three() {
     "The braces among the tokens, three pairs",
     "{ { } } { }",
   );
-  let lesson = app_code_lesson_braces_among_colored_generic(
+  let lesson = app_learn_js_lesson_braces_among_colored_generic(
     name_id,
     above,
     batch,
