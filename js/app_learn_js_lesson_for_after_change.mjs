@@ -41,7 +41,7 @@ import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_for_after_change() {
+export function app_learn_js_lesson_for_after_change() {
   arguments_assert(arguments, 0);
   ("a for and a while that do not do the same thing: let n = 2; while (n < 5) { n += 2; console.log(n); } writes out 4 and 6, but for (let n = 2; n < 5; n += 2) { console.log(n); } writes out 2 and 4");
   ("The one new fact is that the last part of a for always runs after the lines inside, so a line that changes n first in a while cannot simply move up into a for. It is the first lesson saying the two loops are not always the same.");
