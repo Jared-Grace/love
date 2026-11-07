@@ -4,7 +4,7 @@ import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_learn_js_lesson_current_last_is } from "./app_learn_js_lesson_current_last_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id.mjs";
-import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_next.mjs";
+import { app_learn_js_lesson_incomplete_next } from "./app_learn_js_lesson_incomplete_next.mjs";
 import { null_is } from "./null_is.mjs";
 export function app_code_lesson_next_none_is(context) {
   "Whether there is nowhere at all to go on to from the lesson the learner is reading: no review after it, no lesson after it, and no unfinished lesson anywhere else in the course.";
@@ -22,7 +22,7 @@ export function app_code_lesson_next_none_is(context) {
     return false;
   }
   let id = app_learn_js_lesson_current_id(context);
-  let lesson = app_code_lesson_incomplete_next(context, number, id);
+  let lesson = app_learn_js_lesson_incomplete_next(context, number, id);
   let none = null_is(lesson);
   return none;
 }

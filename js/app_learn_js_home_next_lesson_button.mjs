@@ -1,6 +1,6 @@
 import { app_code_lessons_any_complete } from "./app_code_lessons_any_complete.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_next.mjs";
+import { app_learn_js_lesson_incomplete_next } from "./app_learn_js_lesson_incomplete_next.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
@@ -16,7 +16,11 @@ export function app_learn_js_home_next_lesson_button(parent, context) {
   let index_start = 0;
   let id_none = null;
   ("the learner is standing on the list rather than inside a lesson, so no lesson is being left behind: the search starts at the very top and skips nothing");
-  let lesson = app_code_lesson_incomplete_next(context, index_start, id_none);
+  let lesson = app_learn_js_lesson_incomplete_next(
+    context,
+    index_start,
+    id_none,
+  );
   let none = null_is(lesson);
   if (none) {
     return null;

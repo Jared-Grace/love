@@ -1,6 +1,6 @@
 import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_next.mjs";
+import { app_learn_js_lesson_incomplete_next } from "./app_learn_js_lesson_incomplete_next.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { list_take } from "./list_take.mjs";
@@ -21,7 +21,7 @@ export function app_code_review_button_unfinished_before(
   "It looks from the very top of the list, the same place the home screen's button looks from, and offers the lesson only when it stands before the review. A first unfinished lesson further on is not a way back, and the other buttons already offer that.";
   arguments_assert(arguments, 3);
   let lesson_none = null;
-  let first = app_code_lesson_incomplete_next(context, 0, lesson_none);
+  let first = app_learn_js_lesson_incomplete_next(context, 0, lesson_none);
   let none = null_is(first);
   if (none) {
     return null;

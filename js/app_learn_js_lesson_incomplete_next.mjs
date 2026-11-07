@@ -8,7 +8,7 @@ import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_first_try } from "./list_first_try.mjs";
-export function app_code_lesson_incomplete_next(
+export function app_learn_js_lesson_incomplete_next(
   context,
   index_start,
   id_skipped,

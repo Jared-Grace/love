@@ -5,7 +5,7 @@ import { list_get_or_null } from "./list_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_next.mjs";
+import { app_learn_js_lesson_incomplete_next } from "./app_learn_js_lesson_incomplete_next.mjs";
 import { app_learn_js_lesson_first_id } from "./app_learn_js_lesson_first_id.mjs";
 import { storage_session_transform_context } from "./storage_session_transform_context.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
@@ -25,7 +25,11 @@ export async function app_code_lesson_next(context) {
       let id_in_order = property_get(in_order, "id");
       return id_in_order;
     }
-    let lesson = app_code_lesson_incomplete_next(context, index_next, value);
+    let lesson = app_learn_js_lesson_incomplete_next(
+      context,
+      index_next,
+      value,
+    );
     let none = null_is(lesson);
     if (none) {
       return value;
