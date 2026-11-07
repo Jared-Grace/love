@@ -10,7 +10,7 @@ import { js_list_calls_named_nodes } from "./js_list_calls_named_nodes.mjs";
 import { app_learn_js_lesson_name_id_category_then_maker_or_null } from "./app_learn_js_lesson_name_id_category_then_maker_or_null.mjs";
 import { app_code_lesson_name_id_category_then_painter_or_null } from "./app_code_lesson_name_id_category_then_painter_or_null.mjs";
 import { app_learn_js_lesson_name_id_category_then_opens_category_is } from "./app_learn_js_lesson_name_id_category_then_opens_category_is.mjs";
-import { app_code_lesson_name_id_category_then_paint_name } from "./app_code_lesson_name_id_category_then_paint_name.mjs";
+import { app_learn_js_lesson_name_id_category_then_paint_name } from "./app_learn_js_lesson_name_id_category_then_paint_name.mjs";
 export function app_code_lesson_name_id_category_then_rewrite(ast) {
   arguments_assert(arguments, 1);
   ("Puts one lesson file onto the shared unit: the three-deep nest that opened its title with the category word becomes a single painter, holding only the lines that were ever its own.");
@@ -56,7 +56,10 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
     property_set(callee, "name", "app_code_lesson_name_id_category_then");
   }
   let swapped = list_each_size(calls, callee_swap);
-  let renamed = app_code_lesson_name_id_category_then_paint_name(ast, maker);
+  let renamed = app_learn_js_lesson_name_id_category_then_paint_name(
+    ast,
+    maker,
+  );
   let done = {
     done: true,
     swapped,

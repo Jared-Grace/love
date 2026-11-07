@@ -7,7 +7,10 @@ import { property_set } from "./property_set.mjs";
 import { js_name_taken_is } from "./js_name_taken_is.mjs";
 import { each } from "./each.mjs";
 import { js_identifiers_referenced_nodes } from "./js_identifiers_referenced_nodes.mjs";
-export function app_code_lesson_name_id_category_then_paint_name(ast, maker) {
+export function app_learn_js_lesson_name_id_category_then_paint_name(
+  ast,
+  maker,
+) {
   arguments_assert(arguments, 2);
   ("Gives the collapsed title maker the name of what it now is. It was a maker handing back a painter; it is the painter itself, so a name saying it makes something is a name that has stopped being true.");
   ("Only a plainly defined one is renamed. Where the function was given to a name instead, the name the caller passes is that other name, and reaching it needs the line above rather than the function - a second shape for the sake of a handful of files, left for whoever wants it.");
