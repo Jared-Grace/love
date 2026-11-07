@@ -229,7 +229,7 @@ import { app_learn_js_lesson_statement_name_meetings_join } from "./app_learn_js
 import { app_learn_js_lesson_statement_name_rectangles_overlap } from "./app_learn_js_lesson_statement_name_rectangles_overlap.mjs";
 import { app_learn_js_lesson_statement_name_shared_squares } from "./app_learn_js_lesson_statement_name_shared_squares.mjs";
 import { app_learn_js_lesson_statement_name_shared_squares_none } from "./app_learn_js_lesson_statement_name_shared_squares_none.mjs";
-import { app_code_lesson_statement_name_square_in_rectangle } from "./app_code_lesson_statement_name_square_in_rectangle.mjs";
+import { app_learn_js_lesson_statement_name_square_in_rectangle } from "./app_learn_js_lesson_statement_name_square_in_rectangle.mjs";
 import { app_learn_js_lesson_statement_name_meeting_inside } from "./app_learn_js_lesson_statement_name_meeting_inside.mjs";
 import { app_learn_js_lesson_statement_name_rectangle_inside } from "./app_learn_js_lesson_statement_name_rectangle_inside.mjs";
 import { app_learn_js_lesson_statement_name_meeting_ended } from "./app_learn_js_lesson_statement_name_meeting_ended.mjs";
@@ -590,7 +590,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_statement_name_rectangles_overlap,
     app_learn_js_lesson_statement_name_shared_squares,
     app_learn_js_lesson_statement_name_shared_squares_none,
-    app_code_lesson_statement_name_square_in_rectangle,
+    app_learn_js_lesson_statement_name_square_in_rectangle,
     app_learn_js_lesson_statement_name_meeting_inside,
     app_learn_js_lesson_statement_name_rectangle_inside,
     app_learn_js_lesson_statement_name_meeting_ended,

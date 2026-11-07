@@ -24,7 +24,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_statement_name_grid_inside } from "./app_learn_js_lesson_statement_name_grid_inside.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_square_in_rectangle() {
+export function app_learn_js_lesson_statement_name_square_in_rectangle() {
   arguments_assert(arguments, 0);
   ("whether a square is inside a rectangle: let in_x = left <= x && x < right; let in_y = top <= y && y < bottom; let inside = in_x && in_y; - picked by the human 2026-10-04 from a list of next lessons. In DSA it is the check of whether a point lies in a box, used to find which box on a screen a tap landed in, and it is Inside the grid with the 0 replaced by the box's left and top edges.");
   ("Inside the grid is the reminder, so the new idea is only that the low bound is an edge rather than 0. The rectangle's edges are numbered as the lines between squares, as in Do two rectangles overlap, and a square is named by the line on its left, x, and the line above it, y, so it covers x to x + 1: it is inside when left <= x and x + 1 <= right, which is x < right. The writing shows the square on the right edge, where x <= right would be wrong.");
