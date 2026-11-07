@@ -114,7 +114,7 @@ import { app_code_lesson_expression_parentheses_or } from "./app_code_lesson_exp
 import { app_learn_js_lesson_expression_choose_order_parentheses_and_or } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or.mjs";
 import { app_code_lesson_expression_parentheses_and_or } from "./app_code_lesson_expression_parentheses_and_or.mjs";
 import { app_learn_js_lesson_expression_choose_order_stop_early_and } from "./app_learn_js_lesson_expression_choose_order_stop_early_and.mjs";
-import { app_code_lesson_expression_choose_order_stop_early_both } from "./app_code_lesson_expression_choose_order_stop_early_both.mjs";
+import { app_learn_js_lesson_expression_choose_order_stop_early_both } from "./app_learn_js_lesson_expression_choose_order_stop_early_both.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice } from "./app_learn_js_lesson_expression_choose_order_not_twice.mjs";
 import { app_code_lesson_expression_not_twice } from "./app_code_lesson_expression_not_twice.mjs";
 import { app_learn_js_lesson_expression_choose_order_not } from "./app_learn_js_lesson_expression_choose_order_not.mjs";
@@ -475,7 +475,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_expression_choose_order_parentheses_and_or,
     app_code_lesson_expression_parentheses_and_or,
     app_learn_js_lesson_expression_choose_order_stop_early_and,
-    app_code_lesson_expression_choose_order_stop_early_both,
+    app_learn_js_lesson_expression_choose_order_stop_early_both,
     app_learn_js_lesson_expression_choose_order_not_twice,
     app_code_lesson_expression_not_twice,
     app_learn_js_lesson_expression_choose_order_not,
