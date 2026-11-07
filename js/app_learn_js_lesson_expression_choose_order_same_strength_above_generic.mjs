@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_flat_random_same_strength } from "./app_learn_js_expression_flat_random_same_strength.mjs";
 import { app_learn_js_lesson_expression_choose_order_reason_run } from "./app_learn_js_lesson_expression_choose_order_reason_run.mjs";
-export function app_code_lesson_expression_choose_order_same_strength_above_generic(
+export function app_learn_js_lesson_expression_choose_order_same_strength_above_generic(
   root,
   operator_count,
 ) {
