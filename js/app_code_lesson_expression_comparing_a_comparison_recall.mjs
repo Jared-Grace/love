@@ -1,6 +1,6 @@
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_arithmetic_less_than } from "./app_code_lesson_expression_arithmetic_less_than.mjs";
+import { app_learn_js_lesson_expression_arithmetic_less_than } from "./app_learn_js_lesson_expression_arithmetic_less_than.mjs";
 import { app_code_operators_comparison_or_list } from "./app_code_operators_comparison_or_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_comparing_a_comparison_recall(
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_comparing_a_comparison_recall(
   let line = app_code_remember_from_lesson(
     card,
     context,
-    app_code_lesson_expression_arithmetic_less_than,
+    app_learn_js_lesson_expression_arithmetic_less_than,
     ["a comparison uses one of "],
   );
   app_code_operators_comparison_or_list(line);
