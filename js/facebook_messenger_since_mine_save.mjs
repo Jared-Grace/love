@@ -1,7 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { facebook_messenger_since_mine_read } from "./facebook_messenger_since_mine_read.mjs";
-import { folder_private_path } from "./folder_private_path.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { messenger_since_mine_file } from "./messenger_since_mine_file.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function facebook_messenger_since_mine_save(url) {
   "$plain url";
@@ -11,11 +10,7 @@ export async function facebook_messenger_since_mine_save(url) {
     " is the one door out.");
   let r = await facebook_messenger_since_mine_read(url);
   let id = url.match(/\/t\/(\d+)/)[1];
-  let file = folder_private_path(
-    text_combine_multiple([fn_name("messenger_since_mine"), "/"]) +
-      id +
-      ".json",
-  );
+  let file = messenger_since_mine_file(id);
   let saved = {
     url,
     read_at: new Date().toISOString(),
