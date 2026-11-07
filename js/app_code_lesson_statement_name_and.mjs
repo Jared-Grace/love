@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
-import { app_code_lesson_expression_and } from "./app_code_lesson_expression_and.mjs";
+import { app_learn_js_lesson_expression_and } from "./app_learn_js_lesson_expression_and.mjs";
 export function app_code_lesson_statement_name_and() {
   arguments_assert(arguments, 0);
   ("two names joined with and: let a = true; let b = false; let a_and_b = a && b; console.log(a_and_b); writes out false");
@@ -26,7 +26,7 @@ export function app_code_lesson_statement_name_and() {
     symbol,
     pairs_get,
     example_pair: [true, false],
-    remember_lesson: app_code_lesson_expression_and,
+    remember_lesson: app_learn_js_lesson_expression_and,
     remember_parts: ["we can ask whether both sides are true (", symbol, "):"],
     answer_name: "a_and_b",
     answer_count: 2,

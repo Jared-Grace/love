@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_and } from "./app_code_lesson_expression_and.mjs";
+import { app_learn_js_lesson_expression_and } from "./app_learn_js_lesson_expression_and.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_recall(
   app_code_remember_from_lesson(
     recall_card,
     context,
-    app_code_lesson_expression_and,
+    app_learn_js_lesson_expression_and,
     [
       "",
       and_symbol,
