@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
 import { app_learn_js_lesson_decrement_log_options } from "./app_learn_js_lesson_decrement_log_options.mjs";
-import { app_code_lesson_statement_name_decrement } from "./app_code_lesson_statement_name_decrement.mjs";
+import { app_learn_js_lesson_statement_name_decrement } from "./app_learn_js_lesson_statement_name_decrement.mjs";
 export function app_code_lesson_while_decrement() {
   arguments_assert(arguments, 0);
   ("n-- in a while: let n = 3; while (n > 0) { console.log(n); n--; } writes out 3, 2 and 1");
@@ -15,7 +15,7 @@ export function app_code_lesson_while_decrement() {
   let lesson = app_code_lesson_while_update_log_generic({
     ...app_learn_js_lesson_decrement_log_options(),
     name_id,
-    remembered: app_code_lesson_statement_name_decrement,
+    remembered: app_learn_js_lesson_statement_name_decrement,
     remembered_parts: ["", "n--", " takes one away from ", "n", "."],
     intro_parts: [
       "Inside a ",
