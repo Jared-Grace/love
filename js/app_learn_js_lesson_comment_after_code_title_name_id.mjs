@@ -3,7 +3,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-export function app_code_lesson_comment_after_code_title_name_id() {
+export function app_learn_js_lesson_comment_after_code_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: a comment after code, followed by a line that writes out with a comment after it on the same line");
   ("The title of the lesson before this one puts the slashes in front of a line, and this one puts them after code. The two titles side by side show the one thing that moved: where on the line the slashes stand.");
