@@ -2176,7 +2176,7 @@ export function permission_grant_names() {
     fn_name("public_chunks_orphaned_gate_run"),
     fn_name("ebible_verses_sentence_ends_report"),
     fn_name("bible_audio_chapter_verses_stale"),
-    fn_name("app_code_lesson_telling_shapes_gate_run"),
+    fn_name("app_learn_js_lesson_telling_shapes_gate_run"),
     fn_name("midi_chords_recover_gate_run"),
     fn_name("qa_promoted_unbuilt_linked_gate_run"),
     fn_name("bible_usfm_chapter_paragraphed_text_cases_gate_run"),

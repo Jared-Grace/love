@@ -7,7 +7,7 @@ import { app_learn_js_lesson_telling_reports_apart } from "./app_learn_js_lesson
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_telling_report_said } from "./app_learn_js_lesson_telling_report_said.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-export async function app_code_lesson_telling_shapes_gate_run() {
+export async function app_learn_js_lesson_telling_shapes_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: no lesson of the code app asks about a shape of line its own telling never showed.");
   ("The finer of the two checks that hold a lesson's telling against its own question bank. The other asks whether an operator was ever shown; this one asks whether a line was ever shown written the way the questions write it.");
