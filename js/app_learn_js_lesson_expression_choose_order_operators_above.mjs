@@ -15,7 +15,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_lesson_expression_choose_order_operators_above(
+export function app_learn_js_lesson_expression_choose_order_operators_above(
   root,
   context,
 ) {
