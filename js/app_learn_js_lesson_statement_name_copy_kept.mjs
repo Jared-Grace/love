@@ -17,7 +17,7 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { app_learn_js_lesson_statement_name_copy_kept_above } from "./app_learn_js_lesson_statement_name_copy_kept_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
-export function app_code_lesson_statement_name_copy_kept() {
+export function app_learn_js_lesson_statement_name_copy_kept() {
   arguments_assert(arguments, 0);
   ('a name keeps what it was given after the name it was filled from changes: let a = "grapes"; let c = a; a = "olives"; console.log(c); writes out grapes');
   ("The screen that taught copying said in the picture that nothing was removed from the cup that was copied. This one asks the question from the other end - the copied cup changes afterwards - and the answer is the same fact seen from the side a learner will actually meet it on.");
