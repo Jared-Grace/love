@@ -13,7 +13,7 @@ import { app_code_span_text_highlight_color } from "./app_code_span_text_highlig
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_width_fit_content } from "./html_style_width_fit_content.mjs";
-import { app_code_code_dark_parts_fill } from "./app_code_code_dark_parts_fill.mjs";
+import { app_learn_js_code_dark_parts_fill } from "./app_learn_js_code_dark_parts_fill.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span } from "./html_span.mjs";
 export function app_code_lesson_inside_parenthesis_box(
@@ -51,7 +51,7 @@ export function app_code_lesson_inside_parenthesis_box(
   let line_call = html_div(box_care);
   html_style_code_dark(line_call);
   html_style_width_fit_content(line_call);
-  app_code_code_dark_parts_fill(line_call, [
+  app_learn_js_code_dark_parts_fill(line_call, [
     [log_name, null],
     [paren_left, marking],
     [name_written, highlight],
@@ -71,14 +71,14 @@ export function app_code_lesson_inside_parenthesis_box(
   html_span_text(line_other, " ");
   let chip_opened = html_span(line_other);
   html_style_code_dark(chip_opened);
-  app_code_code_dark_parts_fill(chip_opened, [
+  app_learn_js_code_dark_parts_fill(chip_opened, [
     [log_name, null],
     [paren_left, marking],
   ]);
   html_span_text(line_other, " and ");
   let chip_closed = html_span(line_other);
   html_style_code_dark(chip_closed);
-  app_code_code_dark_parts_fill(chip_closed, [
+  app_learn_js_code_dark_parts_fill(chip_closed, [
     [paren_right, marking],
     [semicolon, null],
   ]);
