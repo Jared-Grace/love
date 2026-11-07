@@ -2,7 +2,7 @@ import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_code_if_either_decoys } from "./app_code_if_either_decoys.mjs";
-import { app_code_if_boolean_flipped } from "./app_code_if_boolean_flipped.mjs";
+import { app_learn_js_if_boolean_flipped } from "./app_learn_js_if_boolean_flipped.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -91,7 +91,7 @@ export function app_code_lesson_if_and_if_not() {
   }
   function backwards_decoys(question, answer) {
     "the same program with the name holding the opposite";
-    let code4 = app_code_if_boolean_flipped(answer);
+    let code4 = app_learn_js_if_boolean_flipped(answer);
     let found2 = [code4];
     return found2;
   }

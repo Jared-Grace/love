@@ -15,7 +15,7 @@ import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_if_either_decoys } from "./app_code_if_either_decoys.mjs";
-import { app_code_if_boolean_flipped } from "./app_code_if_boolean_flipped.mjs";
+import { app_learn_js_if_boolean_flipped } from "./app_learn_js_if_boolean_flipped.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -87,7 +87,7 @@ export function app_code_lesson_if_else() {
   }
   function backwards_decoys(question, answer) {
     "the same program with the name holding the opposite";
-    let code4 = app_code_if_boolean_flipped(answer);
+    let code4 = app_learn_js_if_boolean_flipped(answer);
     let found2 = [code4];
     return found2;
   }

@@ -20,7 +20,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_code_if_boolean_flipped } from "./app_code_if_boolean_flipped.mjs";
+import { app_learn_js_if_boolean_flipped } from "./app_learn_js_if_boolean_flipped.mjs";
 import { list_without } from "./list_without.mjs";
 import { text_between } from "./text_between.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -101,7 +101,7 @@ export function app_code_lesson_if_else_once() {
     let written = eval_console_log_lines(code3);
     let lines3 = text_split_newline(written);
     let first = list_first(lines3);
-    let flipped = app_code_if_boolean_flipped(code3);
+    let flipped = app_learn_js_if_boolean_flipped(code3);
     let second = eval_console_log_lines(flipped);
     let words4 = [first, second];
     return words4;

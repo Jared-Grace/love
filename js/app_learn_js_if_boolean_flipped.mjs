@@ -6,7 +6,7 @@ import { text_replace } from "./text_replace.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_if_boolean_flipped(code) {
+export function app_learn_js_if_boolean_flipped(code) {
   "the same program with the name its first line sets holding the opposite: let a = true; becomes let a = false;, and false becomes true";
   let lines = text_split_newline(code);
   let first = list_first(lines);
