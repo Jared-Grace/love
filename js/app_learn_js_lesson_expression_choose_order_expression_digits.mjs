@@ -2,7 +2,7 @@ import { app_code_lesson_expression_choose_order_operators_expression_parts } fr
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-export function app_code_lesson_expression_choose_order_expression_digits(
+export function app_learn_js_lesson_expression_choose_order_expression_digits(
   left,
   middle,
   right,

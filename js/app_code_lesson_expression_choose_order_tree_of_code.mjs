@@ -1,5 +1,5 @@
 import { app_learn_js_expression_step_operands_times_is } from "./app_learn_js_expression_step_operands_times_is.mjs";
-import { app_code_lesson_expression_choose_order_expression_digits } from "./app_code_lesson_expression_choose_order_expression_digits.mjs";
+import { app_learn_js_lesson_expression_choose_order_expression_digits } from "./app_learn_js_lesson_expression_choose_order_expression_digits.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_choose_order_tree_of_code(code) {
   let second_symbol = list_get(pieces, 3);
   let strong_right =
     app_learn_js_expression_step_operands_times_is(second_symbol);
-  let tree = app_code_lesson_expression_choose_order_expression_digits(
+  let tree = app_learn_js_lesson_expression_choose_order_expression_digits(
     left,
     middle,
     right,
