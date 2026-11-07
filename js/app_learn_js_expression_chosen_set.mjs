@@ -1,7 +1,7 @@
 import { app_code_expression_operator_chip_room_clear } from "./app_code_expression_operator_chip_room_clear.mjs";
 import { app_code_expression_operator_chip_uncolored } from "./app_code_expression_operator_chip_uncolored.mjs";
 import { app_learn_js_expression_chosen_style_assign } from "./app_learn_js_expression_chosen_style_assign.mjs";
-import { app_code_expression_colored_slowly } from "./app_code_expression_colored_slowly.mjs";
+import { app_learn_js_expression_colored_slowly } from "./app_learn_js_expression_colored_slowly.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { app_learn_js_expression_chip_style } from "./app_learn_js_expression_chip_style.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_expression_chosen_set(node_span, operator_span) {
   ("A run of lettering left as plain text has no shape of its own to move - it is only the letters where the sentence happens to have reached - so anything asking it to travel is quietly ignored and the swap is read as having simply appeared.");
   html_display_inline_block(node_span);
   ("the blue comes up rather than appearing, so the block is watched becoming one thing instead of being swapped between two frames");
-  app_code_expression_colored_slowly(node_span);
+  app_learn_js_expression_colored_slowly(node_span);
   ("the operator's own chip is not faded with it - it goes plain in the very frame it narrows, because the narrowing cannot be slowed and a chip still wearing its grey while it closes up is read as the grey itself shrinking");
   ("Faded, the two are seen out of step: the room goes between one frame and the next, the colour takes half a second to follow, and for that half second there is a grey standing at a width it never had.");
   ("its edge goes with its fill, in the same breath: an edge left drawn round the operator keeps it marked out as one thing inside the blue, and the whole point of the blue is that the operator and its two sides have just become one thing");
