@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
-import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 export function app_learn_js_lesson_expression_choose_order_decoys_generic(
   name_id,
   above,
@@ -32,7 +32,7 @@ export function app_learn_js_lesson_expression_choose_order_decoys_generic(
       decoys,
     );
   }
-  let lesson = app_code_lesson_expression_choose_order_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
     above,
     answer_draw,

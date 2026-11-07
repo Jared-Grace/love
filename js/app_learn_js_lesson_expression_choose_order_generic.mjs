@@ -7,7 +7,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { noop } from "./noop.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_choose_order_generic(
+export function app_learn_js_lesson_expression_choose_order_generic(
   name_id,
   above,
   answer_draw,

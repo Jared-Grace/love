@@ -5,7 +5,7 @@ import { app_learn_js_label_solve_next } from "./app_learn_js_label_solve_next.m
 import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
 import { app_learn_js_expression_chosen_pause } from "./app_learn_js_expression_chosen_pause.mjs";
 import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
-import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_above } from "./app_learn_js_lesson_expression_choose_order_above.mjs";
 import { app_code_lesson_expression_choose_order_walkthrough } from "./app_code_lesson_expression_choose_order_walkthrough.mjs";
 export function app_code_lesson_expression_choose_order() {
@@ -40,7 +40,7 @@ export function app_code_lesson_expression_choose_order() {
   ("everything else this lesson is made of - the one quiz kind, the labels, the front page finding its own line - is what it has in common with the lesson after it, and is written once for the two of them");
   ("a line of its own worked all the way through stands above the example, the way the comparison lesson's order screen has one - at the human's request. What the example says INSIDE it, about the line the learner is about to press, stays as it was");
   let bank = app_code_lesson_expression_choose_order_questions();
-  let lesson = app_code_lesson_expression_choose_order_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_above,
     answer_draw,

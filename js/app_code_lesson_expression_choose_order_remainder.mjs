@@ -6,7 +6,7 @@ import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_ex
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_remainder_tree_of_code } from "./app_code_lesson_expression_choose_order_remainder_tree_of_code.mjs";
-import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_code_lesson_expression_choose_order_remainder_above } from "./app_code_lesson_expression_choose_order_remainder_above.mjs";
 export function app_code_lesson_expression_choose_order_remainder() {
   arguments_assert(arguments, 0);
@@ -47,7 +47,7 @@ export function app_code_lesson_expression_choose_order_remainder() {
     expression,
     app_code_lesson_expression_choose_order_remainder_tree_of_code,
   );
-  let lesson = app_code_lesson_expression_choose_order_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
     app_code_lesson_expression_choose_order_remainder_above,
     answer_draw,

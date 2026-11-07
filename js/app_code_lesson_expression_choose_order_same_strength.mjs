@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 import { app_code_lesson_expression_choose_order_same_strength_questions } from "./app_code_lesson_expression_choose_order_same_strength_questions.mjs";
-import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_code_lesson_expression_choose_order_same_strength_above } from "./app_code_lesson_expression_choose_order_same_strength_above.mjs";
 export function app_code_lesson_expression_choose_order_same_strength() {
   "choosing which part of a line to solve and then what that part comes to, three times over on a line whose operators are all one strength: 8 - 2 - 4 + 7, choose the first minus, choose 6, see 6 - 4 + 7, choose the minus, choose 2, see 2 + 7, choose the plus, choose 9";
@@ -36,7 +36,7 @@ export function app_code_lesson_expression_choose_order_same_strength() {
     );
   }
   let bank = app_code_lesson_expression_choose_order_same_strength_questions();
-  let lesson = app_code_lesson_expression_choose_order_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
     app_code_lesson_expression_choose_order_same_strength_above,
     answer_draw,
