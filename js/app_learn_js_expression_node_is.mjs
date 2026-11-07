@@ -7,7 +7,7 @@ export function app_learn_js_expression_node_is(item) {
   arguments_assert(arguments, 1);
   ("whether a side of an expression is still an operator waiting to be worked out, rather than a value already worked out");
   ("The whole of what a step-by-step solver has to decide. An operator may be taken next exactly when neither of its sides is one of these any more, so this is the question underneath ",
-    fn_name("app_code_expression_nodes_ready"),
+    fn_name("app_learn_js_expression_nodes_ready"),
     ".");
   ("2026-10-17: a name still to be read is waiting to be worked out too, as an operator is, so it holds up whatever it stands in until it is read");
   if (app_learn_js_expression_name_is(item)) {

@@ -1,5 +1,5 @@
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
-import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
+import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
@@ -12,7 +12,7 @@ export function app_code_expression_value(item) {
   if (not(node_is)) {
     return item;
   }
-  let ready = app_code_expression_nodes_ready(item);
+  let ready = app_learn_js_expression_nodes_ready(item);
   let first = ready[0];
   let stepped = app_code_expression_solved(item, first);
   let value = app_code_expression_value(stepped);

@@ -1,6 +1,6 @@
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
-import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
+import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_concat_single } from "./list_concat_single.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_expression_lines_after(tree, node) {
     let last = [code];
     return last;
   }
-  let ready = app_code_expression_nodes_ready(stepped);
+  let ready = app_learn_js_expression_nodes_ready(stepped);
   let first = list_first(ready);
   let rest = app_learn_js_expression_lines_after(stepped, first);
   let lines = list_concat_single(code, rest);

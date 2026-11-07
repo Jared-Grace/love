@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_solve_intro } from "./app_code_
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_equals_text } from "./app_learn_js_expression_equals_text.mjs";
-import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
+import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_expression } from "./app_code_lesson_expression_choose_order_expression.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_choose_order_solve_above(
   let strong_right = true;
   let tree = app_code_lesson_expression_choose_order_expression(strong_right);
   let whole_line = app_learn_js_expression_code(tree);
-  let ready = app_code_expression_nodes_ready(tree);
+  let ready = app_learn_js_expression_nodes_ready(tree);
   let step = list_first(ready);
   let first_symbol = property_get(step, "operator");
   let next_symbol = property_get(tree, "operator");

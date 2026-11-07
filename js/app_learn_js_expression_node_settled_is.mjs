@@ -10,7 +10,7 @@ export function app_learn_js_expression_node_settled_is(item) {
   arguments_assert(arguments, 1);
   ("whether an && or an || already has its answer from its left side alone: false && x < 9 is false and true || x < 9 is true, whatever the right side would come to");
   ("2026-10-17, at the human's asking: JavaScript never reads the right side of one of these, so neither does a learner. Asked by ",
-    fn_name("app_code_expression_nodes_ready"),
+    fn_name("app_learn_js_expression_nodes_ready"),
     ", which then offers the operator itself next. Worked out by the same && and || every step uses, which hands back the left side exactly when it settles the answer. Not picked: working the right side out and throwing it away, which is what a learner would then be taught JavaScript does.");
   let logical = app_learn_js_expression_node_logical_is(item);
   if (not(logical)) {

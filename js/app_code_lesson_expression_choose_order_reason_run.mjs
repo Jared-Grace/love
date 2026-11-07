@@ -3,7 +3,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_expression_choose_order_run_open } from "./app_code_lesson_expression_choose_order_run_open.mjs";
-import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
+import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_expression_choose_order_reason_run(
     tree,
   );
   let current = tree;
-  let ready = app_code_expression_nodes_ready(current);
+  let ready = app_learn_js_expression_nodes_ready(current);
   while (list_empty_not_is(ready)) {
     let node = list_first(ready);
     let step_code = app_learn_js_expression_code(node);

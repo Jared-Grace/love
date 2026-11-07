@@ -9,7 +9,7 @@ import { app_learn_js_expression_node_stops_early_is } from "./app_learn_js_expr
 import { app_learn_js_expression_node_settled_is } from "./app_learn_js_expression_node_settled_is.mjs";
 import { or } from "./or.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_expression_nodes_ready(item) {
+export function app_learn_js_expression_nodes_ready(item) {
   arguments_assert(arguments, 1);
   ("every operator in an expression that may be worked out next - the ones with a value already standing on each side of them");
   ("This is the whole rule a learner is being asked for, and it needs neither a table of strengths nor a reading of the parentheses. An operator whose sides are both values has nothing left underneath it, and an operator that still holds another one cannot go first because the value it would need does not exist yet. Order of work and parentheses both fall out of the shape rather than being checked against it.");
@@ -38,7 +38,7 @@ export function app_code_expression_nodes_ready(item) {
       let alone = [item];
       return alone;
     }
-    let inside = app_code_expression_nodes_ready(acted_on);
+    let inside = app_learn_js_expression_nodes_ready(acted_on);
     return inside;
   }
   let left = property_get(item, "left");
@@ -53,7 +53,7 @@ export function app_code_expression_nodes_ready(item) {
       return settled;
     }
     if (left_is) {
-      let first = app_code_expression_nodes_ready(left);
+      let first = app_learn_js_expression_nodes_ready(left);
       return first;
     }
   }
@@ -62,8 +62,8 @@ export function app_code_expression_nodes_ready(item) {
     let single = [item];
     return single;
   }
-  let from_left = app_code_expression_nodes_ready(left);
-  let from_right = app_code_expression_nodes_ready(right);
+  let from_left = app_learn_js_expression_nodes_ready(left);
+  let from_right = app_learn_js_expression_nodes_ready(right);
   let both = list_concat(from_left, from_right);
   return both;
 }

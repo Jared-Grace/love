@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_compare_expression } from "./app_code_lesson_expression_choose_order_compare_expression.mjs";
-import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
+import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { list_first } from "./list_first.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_choose_order_compare_line_apart(
     want_true,
     comparison_left,
   );
-  let ready = app_code_expression_nodes_ready(tree);
+  let ready = app_learn_js_expression_nodes_ready(tree);
   let step = list_first(ready);
   while (
     equal(property_get(tree, "operator"), property_get(step, "operator"))
@@ -27,7 +27,7 @@ export function app_code_lesson_expression_choose_order_compare_line_apart(
       want_true,
       comparison_left,
     );
-    ready = app_code_expression_nodes_ready(tree);
+    ready = app_learn_js_expression_nodes_ready(tree);
     step = list_first(ready);
   }
   return tree;

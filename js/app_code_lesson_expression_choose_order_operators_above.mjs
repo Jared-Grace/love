@@ -2,7 +2,7 @@ import { app_code_lesson_expression_choose_order_strong_card } from "./app_code_
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
+import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_expression_choose_order_operators_above(
   let tree =
     app_code_lesson_expression_choose_order_operators_expression(strong_right);
   let whole_line = app_learn_js_expression_code(tree);
-  let ready = app_code_expression_nodes_ready(tree);
+  let ready = app_learn_js_expression_nodes_ready(tree);
   let step = list_first(ready);
   let step_code = app_learn_js_expression_code(step);
   let step_value = app_code_expression_value(step);

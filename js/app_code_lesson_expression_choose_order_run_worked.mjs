@@ -1,6 +1,6 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
+import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_expression_choose_order_run_worked(
   ("EVERY ROW BUT THE FIRST IS THE SAME IN BOTH RUNS, and that is the point of the second run rather than a cost of it. What changes between the two shapes is the reason the first part may go; a learner who read the second run laid out differently would take the difference in the wording for a difference in the doing.");
   ("The reason is read off the SHAPE rather than handed in, because the shape is what decides it. A comparison standing on the right of the outer operator is printed inside parentheses, so the parentheses are the reason and can be pointed at; standing on the left it is printed with none, and the ordinary rule for two operators is what decides. A caller telling the run which reason to give could tell it the wrong one about the line it was handed.");
   ("Both readings are asked for at once, out of the one place every lesson that takes a line down an operator at a time asks them - so the sentence the learner reads here is the sentence the quiz marks by, and it names the two operators that are actually on the line. This run used to look at the right side itself and write the parentheses sentence out where it stood. The look was right about the two lines it was given and about nothing else: it asked whether the right side had an operator in it, which is not the same question as whether that part gets printed inside parentheses, and it wrote the sentence a second time in words that had to be kept level with the first copy by hand.");
-  let list = app_code_expression_nodes_ready(tree);
+  let list = app_learn_js_expression_nodes_ready(tree);
   let step = list_first(list);
   let whole_line = app_learn_js_expression_code(tree);
   let step_code = app_learn_js_expression_code(step);
