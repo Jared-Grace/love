@@ -10,7 +10,7 @@ import { null_is } from "./null_is.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { add } from "./add.mjs";
-export function app_code_lesson_text_split_at_operators(text) {
+export function app_learn_js_lesson_text_split_at_operators(text) {
   arguments_assert(arguments, 1);
   ("one walk of a piece of text, handing back both of the things written there: the operators in the order they stand, and the runs of text that stand between them.");
   ("The text is WALKED rather than searched once per operator, because searching would find the == inside every === and the < inside every <=. The walk takes the longest operator that starts where it stands and then steps past the whole of it, so each one is counted as the one thing it is, and every letter it does not step over is kept for whichever operand is being gathered.");
