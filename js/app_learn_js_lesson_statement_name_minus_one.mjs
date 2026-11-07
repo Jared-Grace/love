@@ -3,7 +3,7 @@ import { app_learn_js_lesson_statement_name_minus_one_title_name_id } from "./ap
 import { app_code_lesson_statement_name_one_step_generic } from "./app_code_lesson_statement_name_one_step_generic.mjs";
 import { app_learn_js_lesson_statement_name_minus_one_batch } from "./app_learn_js_lesson_statement_name_minus_one_batch.mjs";
 import { app_learn_js_lesson_statement_name_minus_one_above } from "./app_learn_js_lesson_statement_name_minus_one_above.mjs";
-export function app_code_lesson_statement_name_minus_one() {
+export function app_learn_js_lesson_statement_name_minus_one() {
   arguments_assert(arguments, 0);
   ("one less than a name, kept under a new name: let a = 8; let b = a - 1; console.log(b); writes out 7");
   ("The twin of the lesson on one more than a name, with a minus where the plus is, so it comes right after it, and before the lesson that writes the answer back into the same name.");

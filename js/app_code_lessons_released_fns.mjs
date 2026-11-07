@@ -166,7 +166,7 @@ import { app_learn_js_lesson_expression_choose_order_stop_early_both } from "./a
 import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
 import { app_learn_js_lesson_statement_name_again_last } from "./app_learn_js_lesson_statement_name_again_last.mjs";
 import { app_code_lesson_statement_name_plus_one } from "./app_code_lesson_statement_name_plus_one.mjs";
-import { app_code_lesson_statement_name_minus_one } from "./app_code_lesson_statement_name_minus_one.mjs";
+import { app_learn_js_lesson_statement_name_minus_one } from "./app_learn_js_lesson_statement_name_minus_one.mjs";
 import { app_code_lesson_statement_name_one_more_last } from "./app_code_lesson_statement_name_one_more_last.mjs";
 import { app_code_lesson_statement_name_one_less } from "./app_code_lesson_statement_name_one_less.mjs";
 import { app_code_lesson_statement_name_one_less_last } from "./app_code_lesson_statement_name_one_less_last.mjs";
@@ -479,7 +479,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_step_log_twice,
     app_learn_js_lesson_statement_name_again_last,
     app_code_lesson_statement_name_plus_one,
-    app_code_lesson_statement_name_minus_one,
+    app_learn_js_lesson_statement_name_minus_one,
     app_code_lesson_statement_name_one_more_last,
     app_code_lesson_statement_name_one_less,
     app_code_lesson_statement_name_one_less_last,
