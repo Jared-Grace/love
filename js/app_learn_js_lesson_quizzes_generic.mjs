@@ -8,7 +8,7 @@ import { list_add } from "./list_add.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { each } from "./each.mjs";
-import { app_code_lesson_quizzes_lines_add } from "./app_code_lesson_quizzes_lines_add.mjs";
+import { app_learn_js_lesson_quizzes_lines_add } from "./app_learn_js_lesson_quizzes_lines_add.mjs";
 import { app_learn_js_lesson_quiz_step_info } from "./app_learn_js_lesson_quiz_step_info.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { app_learn_js_lesson_quiz } from "./app_learn_js_lesson_quiz.mjs";
@@ -89,7 +89,7 @@ export function app_learn_js_lesson_quizzes_generic(params) {
   ("THE QUIZZES ABOUT LINES COME LAST, after every quiz a lesson already had, so a quiz keeps its place in the list and the progress kept against that place still names the same quiz");
   let lines = property_get_or(params, "lines", false);
   if (lines) {
-    app_code_lesson_quizzes_lines_add(infos, backwards);
+    app_learn_js_lesson_quizzes_lines_add(infos, backwards);
   }
   ("2026-10-31, at the human's asking - step by step is just one quiz type. 2026-11-01, the human's rule for where it goes: THE STEP-BY-STEP QUIZ COMES FIRST, because going a line at a time is generally easier than working a program out all at once, and easier comes before harder. The one exception is where stepping is introduced, where it is unfamiliar and so comes second - and that is step_log_twice, a lesson of its own straight after the lesson whose programs it steps through, so no lesson here needs the step quiz last");
   ("Putting it first moves every quiz after it, and the progress kept against their places; the human accepted that. Not picked: the step quiz last, after even the quizzes about lines, which kept every place but asked the harder way first; nor fading the stepping out over a stage, which the human's rule did not ask for");
