@@ -11,7 +11,7 @@ import { function_current_selects_empty } from "./function_current_selects_empty
 import { function_node_select_nested } from "./function_node_select_nested.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function sandbox() {
-  let f_name = fn_name("app_code_lesson_functions_console_log_arithmetic");
+  let f_name = fn_name("app_learn_js_lesson_functions_console_log_arithmetic");
   await function_current_set(f_name);
   await function_current_selects_empty();
   ("current_commands: ");

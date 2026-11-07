@@ -13,7 +13,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_console_log_arithmetic() {
+export function app_learn_js_lesson_functions_console_log_arithmetic() {
   let operators = js_operators_arithmetic();
   let number_next = app_code_lesson_operators_value_max_range_1_next();
   function refill() {

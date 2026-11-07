@@ -3,7 +3,7 @@ import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
+import { app_learn_js_lesson_functions_console_log_arithmetic } from "./app_learn_js_lesson_functions_console_log_arithmetic.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_while_log_double() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_functions_console_log_arithmetic,
+      app_learn_js_lesson_functions_console_log_arithmetic,
       ["", "console.log", " does the math first, then writes out the answer."],
     );
     let box_two = app_learn_js_container_light_blue(root);

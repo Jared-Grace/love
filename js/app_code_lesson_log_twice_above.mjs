@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
+import { app_learn_js_lesson_functions_console_log_arithmetic } from "./app_learn_js_lesson_functions_console_log_arithmetic.mjs";
 import { app_code_lesson_sum_lines } from "./app_code_lesson_sum_lines.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_log_twice_above(root, context) {
   app_code_remember_from_lesson(
     box_one,
     context,
-    app_code_lesson_functions_console_log_arithmetic,
+    app_learn_js_lesson_functions_console_log_arithmetic,
     ["a line that writes out puts one answer on the screen:"],
   );
   let first_line = property_get(lines, "first_line");
