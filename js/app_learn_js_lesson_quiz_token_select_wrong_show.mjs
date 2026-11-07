@@ -5,7 +5,7 @@ import { null_is } from "./null_is.mjs";
 import { app_learn_js_lesson_quiz_pieces_later_parts } from "./app_learn_js_lesson_quiz_pieces_later_parts.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-export function app_code_lesson_quiz_token_select_wrong_show({
+export function app_learn_js_lesson_quiz_token_select_wrong_show({
   b,
   note_div,
   chosen,
