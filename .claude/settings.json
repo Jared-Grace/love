@@ -2956,6 +2956,10 @@
       "Bash(node scripts/ai.mjs cloudflare_site_index_apps_boot_cold_report:*)",
       "Bash(node scripts/ai.mjs app_receipts_convert_browser_check:*)",
       "Bash(node scripts/ai.mjs cloudflare_site_app_replace_page_tests_run_e2e:*)",
+      "Bash(node scripts/ai.mjs page_boot_cold_capture:*)",
+      "Bash(node scripts/ai.mjs bible_usfm_versions_english_public_domain:*)",
+      "Bash(node scripts/ai.mjs function_strings_text_replace:*)",
+      "Bash(node scripts/ai.mjs app_shared_prefixes_invalid_repair:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5788,7 +5792,11 @@
       "Bash(node scripts/aig.mjs cloudflare_pages_firebase_compare:*)",
       "Bash(node scripts/aig.mjs cloudflare_site_index_apps_boot_cold_report:*)",
       "Bash(node scripts/aig.mjs app_receipts_convert_browser_check:*)",
-      "Bash(node scripts/aig.mjs cloudflare_site_app_replace_page_tests_run_e2e:*)"
+      "Bash(node scripts/aig.mjs cloudflare_site_app_replace_page_tests_run_e2e:*)",
+      "Bash(node scripts/aig.mjs page_boot_cold_capture:*)",
+      "Bash(node scripts/aig.mjs bible_usfm_versions_english_public_domain:*)",
+      "Bash(node scripts/aig.mjs function_strings_text_replace:*)",
+      "Bash(node scripts/aig.mjs app_shared_prefixes_invalid_repair:*)"
     ],
     "defaultMode": "acceptEdits"
   },
