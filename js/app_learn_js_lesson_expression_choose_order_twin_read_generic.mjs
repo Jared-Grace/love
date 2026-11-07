@@ -7,7 +7,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_learn_js_lesson_expression_choose_order_decoys_generic } from "./app_learn_js_lesson_expression_choose_order_decoys_generic.mjs";
-export function app_code_lesson_expression_choose_order_twin_read_generic(
+export function app_learn_js_lesson_expression_choose_order_twin_read_generic(
   title_words,
   twin_get,
   tree_of_code,
