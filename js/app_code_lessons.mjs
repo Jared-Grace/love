@@ -9,7 +9,7 @@ import { app_learn_js_course_new_fns } from "./app_learn_js_course_new_fns.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_code_course_step_is } from "./app_code_course_step_is.mjs";
+import { app_learn_js_course_step_is } from "./app_learn_js_course_step_is.mjs";
 export function app_code_lessons() {
   arguments_assert(arguments, 0);
   ("Every lesson the code app hands to whoever is reading it, in the order they are learned - each entry is one lesson function invoked to hand back what it holds, so adding a lesson is adding a name to the list next door rather than editing anything here.");
@@ -40,7 +40,7 @@ export function app_code_lessons() {
     let kept = list_filter(lessons, kept_is);
     return kept;
   }
-  let step = app_code_course_step_is();
+  let step = app_learn_js_course_step_is();
   if (step) {
     ("2026-10-15: a link saying course=step shows only the lessons that step through a program, and Next and Previous move among those alone. The cut is on the built lessons, because each step lesson says so of itself, so a new one joins without a list being told. Not picked: a written list of step lessons, which a new one would be missing from until somebody remembered");
     let guided = list_filter(lessons, guided_is);
