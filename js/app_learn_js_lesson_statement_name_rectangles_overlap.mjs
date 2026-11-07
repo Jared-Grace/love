@@ -29,7 +29,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_statement_name_meetings_overlap } from "./app_learn_js_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rectangles_overlap() {
+export function app_learn_js_lesson_statement_name_rectangles_overlap() {
   arguments_assert(arguments, 0);
   ("whether two rectangles overlap: let across = left < right; let down = top < bottom; let overlap = across && down; - picked by the human 2026-10-04 from a list of next lessons. In DSA it is the rectangle overlap check, used to find whether two boxes on a screen or in a game touch, and it is the interval check of Do two meetings overlap done once across and once down.");
   ("It starts from the shared part's four edges rather than from the two rectangles, because the rectangles would start eight names and the shared part's edges are found the way Do two meetings overlap finds a start and an end, so that lesson is the reminder and the new idea is only that a rectangle needs the check twice, joined by &&. Not picked: let across = l1 < r2 && l2 < r1;, which is longer than 30 characters and is a form of the check no lesson teaches.");
