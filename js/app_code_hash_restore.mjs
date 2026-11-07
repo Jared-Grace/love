@@ -8,7 +8,7 @@ import { app_shared_screen_stored_set_context } from "./app_shared_screen_stored
 import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
 import { app_code_hash_review_restore } from "./app_code_hash_review_restore.mjs";
 import { app_code_hash_milestone_restore } from "./app_code_hash_milestone_restore.mjs";
-import { app_code_hash_complete_restore } from "./app_code_hash_complete_restore.mjs";
+import { app_learn_js_hash_complete_restore } from "./app_learn_js_hash_complete_restore.mjs";
 import { app_code_hash_questions_restore } from "./app_code_hash_questions_restore.mjs";
 export function app_code_hash_restore(context) {
   "if the URL carries a shared hash, seed the lesson, screen, and quiz position into storage BEFORE the first render, so the link opens right where it was shared from";
@@ -34,6 +34,6 @@ export function app_code_hash_restore(context) {
   }
   app_code_hash_review_restore(context, hash);
   app_code_hash_milestone_restore(context, hash);
-  app_code_hash_complete_restore(context, hash);
+  app_learn_js_hash_complete_restore(context, hash);
   app_code_hash_questions_restore(context, hash);
 }
