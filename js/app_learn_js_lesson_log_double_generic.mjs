@@ -33,7 +33,7 @@ import { list_last } from "./list_last.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_log_double_generic(options) {
+export function app_learn_js_lesson_log_double_generic(options) {
   arguments_assert(arguments, 1);
   ("a loop that writes out double n: let n = 1; loop (n < 3) { console.log(n * 2); n++; } writes out 2 and 4; the while and the for differ only in what is handed in here");
   ("What differs between lessons is the title, what is shown above, and how the whole program is written, which program_write does when handed the let, the condition and the two lines. Above is handed example, which draws the program of 1 and 3 and what it writes out, and walk, which says what it does run by run.");
