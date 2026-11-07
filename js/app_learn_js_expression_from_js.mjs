@@ -6,7 +6,7 @@ import { js_value_name_built_in_is } from "./js_value_name_built_in_is.mjs";
 import { js_value_names } from "./js_value_names.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
@@ -53,7 +53,7 @@ export function app_learn_js_expression_from_js(node, values) {
     let left = app_learn_js_expression_from_js(node2, values);
     let node3 = property_get(node, "right");
     let right = app_learn_js_expression_from_js(node3, values);
-    let between = app_code_expression_node(left, symbol_between, right);
+    let between = app_learn_js_expression_node(left, symbol_between, right);
     return between;
   }
   if (equal(type, "CallExpression")) {

@@ -5,7 +5,7 @@ import { boolean_random } from "./boolean_random.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_code_lesson_expression_choose_order_comparison_side } from "./app_code_lesson_expression_choose_order_comparison_side.mjs";
 import { app_code_expression_parts_node } from "./app_code_expression_parts_node.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_code_lesson_expression_choose_order_or_expression } from "./app_code_lesson_expression_choose_order_or_expression.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_expression_comparison_or() {
     let side = app_code_expression_parts_node(parts);
     let left = ternary(comparison_left, side, plain);
     let right = ternary(comparison_left, plain, side);
-    let tree = app_code_expression_node(left, symbol, right);
+    let tree = app_learn_js_expression_node(left, symbol, right);
     return tree;
   }
   function refill() {

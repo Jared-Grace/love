@@ -1,4 +1,4 @@
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,6 +13,6 @@ export function app_code_expression_step_choice_grown(item, choice) {
   let other = list_random_item(operands);
   let left = ternary(value_left, item, other);
   let right = ternary(value_left, other, item);
-  let grown = app_code_expression_node(left, symbol, right);
+  let grown = app_learn_js_expression_node(left, symbol, right);
   return grown;
 }

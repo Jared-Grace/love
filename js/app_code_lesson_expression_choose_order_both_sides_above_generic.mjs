@@ -5,7 +5,7 @@ import { app_code_expression_sides_read } from "./app_code_expression_sides_read
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -41,7 +41,11 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   let left_text = text_to(left_value);
   let right_text = text_to(right_value);
   ("what is left when both sides are done is built from the two values rather than stepped to, because the two sides are shown coming to their values one row each just above and stepping to it again would be the same two steps a third time");
-  let both = app_code_expression_node(left_value, outer_symbol, right_value);
+  let both = app_learn_js_expression_node(
+    left_value,
+    outer_symbol,
+    right_value,
+  );
   let both_code = app_learn_js_expression_code(both);
   let final_value = app_code_expression_value(tree);
   let final_text = text_to(final_value);

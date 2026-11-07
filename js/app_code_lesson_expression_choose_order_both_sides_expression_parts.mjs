@@ -1,5 +1,5 @@
 import { app_code_expression_parts_node } from "./app_code_expression_parts_node.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_choose_order_both_sides_expression_parts(
   left_parts,
@@ -13,6 +13,6 @@ export function app_code_lesson_expression_choose_order_both_sides_expression_pa
   ("No parentheses anywhere, and none are needed: arithmetic binds tighter than a comparison, so each side gathers itself and a line printed back from this shape comes out exactly as it went in. That is the whole idea the lesson is teaching, and a parenthesis written round either side would be teaching it by giving it away.");
   let left = app_code_expression_parts_node(left_parts);
   let right = app_code_expression_parts_node(right_parts);
-  let tree = app_code_expression_node(left, outer_symbol, right);
+  let tree = app_learn_js_expression_node(left, outer_symbol, right);
   return tree;
 }

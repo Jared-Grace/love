@@ -6,7 +6,7 @@ import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { app_learn_js_expression_integer_division_tree } from "./app_learn_js_expression_integer_division_tree.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
@@ -33,7 +33,7 @@ export function app_code_expression_written_shapes_numbers() {
   let shapes = [];
   function single(symbol) {
     "one operator with a number on each side";
-    let shape = app_code_expression_node(left_number, symbol, right_number);
+    let shape = app_learn_js_expression_node(left_number, symbol, right_number);
     list_add(shapes, shape);
   }
   each(arithmetic, single);
@@ -65,9 +65,9 @@ export function app_code_expression_written_shapes_numbers() {
   list_add(shapes, item);
   function beside(symbol) {
     "a rounding down standing on the left of another operator, and then on its right";
-    let on_left = app_code_expression_node(rounded, symbol, right_number);
+    let on_left = app_learn_js_expression_node(rounded, symbol, right_number);
     list_add(shapes, on_left);
-    let on_right = app_code_expression_node(right_number, symbol, rounded);
+    let on_right = app_learn_js_expression_node(right_number, symbol, rounded);
     list_add(shapes, on_right);
   }
   each(arithmetic, beside);

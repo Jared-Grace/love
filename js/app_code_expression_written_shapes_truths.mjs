@@ -10,7 +10,7 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
@@ -43,7 +43,7 @@ export function app_code_expression_written_shapes_truths() {
   function comparison(symbol) {
     "the comparison over two numbers, then with arithmetic on the left and on the right";
     "Both lopsided shapes are asked of the pair of builders that exist for them, one for each side, rather than the right-hand one being written out here out of the plain builder twice. Written out, the two sides of the same idea stopped looking like each other, and the shape the builder settles - which of the two operators gathers first - was being settled again here, where nothing says that is what it is doing.";
-    let item = app_code_expression_node(14, symbol, 4);
+    let item = app_learn_js_expression_node(14, symbol, 4);
     list_add(shapes, item);
     let arithmetic_left = app_learn_js_expression_node_left_operator_first(
       14,
@@ -63,25 +63,25 @@ export function app_code_expression_written_shapes_truths() {
     list_add(shapes, arithmetic_right);
   }
   each(comparisons, comparison);
-  let below_is = app_code_expression_node(3, below, 5);
-  let above_is = app_code_expression_node(2, above, 4);
-  let third_is = app_code_expression_node(1, below, 9);
+  let below_is = app_learn_js_expression_node(3, below, 5);
+  let above_is = app_learn_js_expression_node(2, above, 4);
+  let third_is = app_learn_js_expression_node(1, below, 9);
   function join(symbol) {
     "the join over two comparisons, and over a denied comparison";
-    let item2 = app_code_expression_node(below_is, symbol, above_is);
+    let item2 = app_learn_js_expression_node(below_is, symbol, above_is);
     list_add(shapes, item2);
     let denied_side = app_learn_js_expression_node_before(bang, below_is);
-    let item3 = app_code_expression_node(denied_side, symbol, above_is);
+    let item3 = app_learn_js_expression_node(denied_side, symbol, above_is);
     list_add(shapes, item3);
   }
   each(joins, join);
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
-  let anding = app_code_expression_node(below_is, and_symbol, above_is);
-  let oring = app_code_expression_node(above_is, or_symbol, third_is);
-  let and_inside_or = app_code_expression_node(anding, or_symbol, third_is);
+  let anding = app_learn_js_expression_node(below_is, and_symbol, above_is);
+  let oring = app_learn_js_expression_node(above_is, or_symbol, third_is);
+  let and_inside_or = app_learn_js_expression_node(anding, or_symbol, third_is);
   list_add(shapes, and_inside_or);
-  let or_inside_and = app_code_expression_node(below_is, and_symbol, oring);
+  let or_inside_and = app_learn_js_expression_node(below_is, and_symbol, oring);
   list_add(shapes, or_inside_and);
   let item4 = app_learn_js_expression_node_before(bang, below_is);
   list_add(shapes, item4);
@@ -89,8 +89,8 @@ export function app_code_expression_written_shapes_truths() {
   let denied_twice = app_learn_js_expression_node_before(bang, right);
   list_add(shapes, denied_twice);
   let left = app_learn_js_expression_node_parenthesis_wrapped(3, not_equals, 5);
-  let right3 = app_code_expression_node(2, equals, 2);
-  let written_pair = app_code_expression_node(left, not_equals, right3);
+  let right3 = app_learn_js_expression_node(2, equals, 2);
+  let written_pair = app_learn_js_expression_node(left, not_equals, right3);
   list_add(shapes, written_pair);
   return shapes;
 }

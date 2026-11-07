@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_expression_node_parenthesis_wrapped } from "./app_learn_js_expression_node_parenthesis_wrapped.mjs";
 export function app_learn_js_expression_node_left_operator_first_parenthesis_wrapped(
   left,
@@ -18,6 +18,6 @@ export function app_learn_js_expression_node_left_operator_first_parenthesis_wra
     first_symbol,
     middle,
   );
-  let tree = app_code_expression_node(first_node, second_symbol, right);
+  let tree = app_learn_js_expression_node(first_node, second_symbol, right);
   return tree;
 }
