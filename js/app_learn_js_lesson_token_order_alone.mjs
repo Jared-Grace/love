@@ -5,7 +5,7 @@ import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_refere
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_token_order_generic } from "./app_code_lesson_token_order_generic.mjs";
-import { app_code_lesson_token_order_example_choose_next } from "./app_code_lesson_token_order_example_choose_next.mjs";
+import { app_learn_js_lesson_token_order_example_choose_next } from "./app_learn_js_lesson_token_order_example_choose_next.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap_next } from "./app_learn_js_lesson_quiz_tokens_tap_next.mjs";
 export function app_learn_js_lesson_token_order_alone() {
   arguments_assert(arguments, 0);
@@ -35,7 +35,7 @@ export function app_learn_js_lesson_token_order_alone() {
   let lesson = app_code_lesson_token_order_generic(
     name_id,
     above,
-    app_code_lesson_token_order_example_choose_next,
+    app_learn_js_lesson_token_order_example_choose_next,
     app_learn_js_lesson_quiz_tokens_tap_next,
   );
   return lesson;
