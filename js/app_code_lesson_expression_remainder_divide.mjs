@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_expression_remainder_divide_quizzes_get } from "./app_learn_js_lesson_expression_remainder_divide_quizzes_get.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_make } from "./app_learn_js_lesson_expression_remainder_divide_make.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_backwards_decoys } from "./app_learn_js_lesson_expression_remainder_divide_backwards_decoys.mjs";
-import { app_code_lesson_expression_remainder_divide_recognize_decoys } from "./app_code_lesson_expression_remainder_divide_recognize_decoys.mjs";
+import { app_learn_js_lesson_expression_remainder_divide_recognize_decoys } from "./app_learn_js_lesson_expression_remainder_divide_recognize_decoys.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_above } from "./app_learn_js_lesson_expression_remainder_divide_above.mjs";
 import { app_code_lesson_expression_remainder_divide_title_name_id } from "./app_code_lesson_expression_remainder_divide_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_remainder_divide() {
   let example_answer_label = "Remainder formula: ";
   let example_question_label = app_learn_js_label_code_question();
   function recognize_decoys(question, answer) {
-    let r5 = app_code_lesson_expression_remainder_divide_recognize_decoys(
+    let r5 = app_learn_js_lesson_expression_remainder_divide_recognize_decoys(
       question,
       answer,
     );
