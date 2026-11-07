@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { app_code_lesson_statement_names_binary_decoys } from "./app_code_lesson_statement_names_binary_decoys.mjs";
+import { app_learn_js_lesson_statement_names_binary_decoys } from "./app_learn_js_lesson_statement_names_binary_decoys.mjs";
 import { app_learn_js_lesson_statement_name_join_pairs } from "./app_learn_js_lesson_statement_name_join_pairs.mjs";
 import { app_learn_js_lesson_expression_string_concat } from "./app_learn_js_lesson_expression_string_concat.mjs";
 import { app_learn_js_lesson_statement_name_join_decoys } from "./app_learn_js_lesson_statement_name_join_decoys.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_statement_name_join() {
   ("So the new fact is that what a plus does depends on what the names hold, not on the names. The line a + b is spelled the same here as in the lesson on adding two names, and only the values given to a and b decide whether it adds or joins.");
   ("It sits right after the lesson that gives a sum its own name, because it is the same program with the numbers swapped for text.");
   let plus = js_operator_plus_symbol();
-  let lesson = app_code_lesson_statement_names_binary_decoys({
+  let lesson = app_learn_js_lesson_statement_names_binary_decoys({
     words: "Joining two names",
     symbol: plus,
     pairs_get: app_learn_js_lesson_statement_name_join_pairs,
