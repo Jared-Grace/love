@@ -16,7 +16,7 @@ import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_expression_in_between } from "./app_learn_js_lesson_expression_in_between.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_seat_one() {
+export function app_learn_js_lesson_statement_name_seat_one() {
   arguments_assert(arguments, 0);
   ("whether a seat is in a row whose seats are numbered from 1: let ok = 1 <= n && n <= max; - asked for by the human 2026-10-01, before the same check for seats numbered from 0, so the in-between check is met first where the first and last seats are the plain numbers 1 and max. In DSA it is the bounds check made before reading a list at an index.");
   ("The reminder is In between, quoted in its own shape, an expression beside its value: 2 < 5 && 5 < 8 is true. That lesson writes < and this one <=, because the first and last seats are in the row; comparing with <= was taught in its own lessons.");
