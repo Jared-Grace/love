@@ -16,7 +16,7 @@ import { app_learn_js_button_skip_lesson } from "./app_learn_js_button_skip_less
 import { html_clear_context } from "./html_clear_context.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
-export function app_code_examples(context) {
+export function app_learn_js_examples(context) {
   let root = html_clear_context(context);
   let r2 = app_learn_js_examples_on_more(context, root);
   let on_more = property_get(r2, "on_more");
@@ -43,7 +43,7 @@ export function app_code_examples(context) {
   if (lesson_first_not) {
     async function previous() {
       app_code_lesson_previous_set(context);
-      await app_shared_screen_set(context, app_code_examples);
+      await app_shared_screen_set(context, app_learn_js_examples);
     }
     let backs = [];
     list_add_multiple(backs, [

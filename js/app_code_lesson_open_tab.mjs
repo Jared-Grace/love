@@ -18,7 +18,7 @@ export function app_code_lesson_open_tab(context, lesson_id) {
   let app_name = property_path_get_2(context, "app_fn", "name");
   let screen_short = app_shared_screen_name_short(
     app_name,
-    fn_name("app_code_examples"),
+    fn_name("app_learn_js_examples"),
   );
   let screen_key = app_shared_screen_hash_key();
   property_set(hash, screen_key, screen_short);

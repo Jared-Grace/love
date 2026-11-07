@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
-import { app_code_examples } from "./app_code_examples.mjs";
+import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_shared_button_numbered_progress } from "./app_shared_button_numbered_progress.mjs";
 import { app_code_lesson_open_tab } from "./app_code_lesson_open_tab.mjs";
 import { html_on_middle_click } from "./html_on_middle_click.mjs";
@@ -29,7 +29,12 @@ export function app_code_home_lesson_button(
   arguments_assert(arguments, 6);
   let id = property_get(item, "id");
   async function on_click() {
-    await app_shared_screen_go_tab(context, "lesson_id", id, app_code_examples);
+    await app_shared_screen_go_tab(
+      context,
+      "lesson_id",
+      id,
+      app_learn_js_examples,
+    );
   }
   let r = app_shared_button_numbered_progress(
     g,

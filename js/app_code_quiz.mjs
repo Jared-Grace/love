@@ -22,7 +22,7 @@ import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { app_code_examples } from "./app_code_examples.mjs";
+import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_code_go_back } from "./app_code_go_back.mjs";
 import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
@@ -84,7 +84,7 @@ export function app_code_quiz(context) {
   }
   async function lambda() {
     app_code_quiz_index_reset(context);
-    await app_shared_screen_set(context, app_code_examples);
+    await app_shared_screen_set(context, app_learn_js_examples);
   }
   app_code_go_back(root, [
     {

@@ -4,7 +4,7 @@ import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_ne
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
-import { app_code_examples } from "./app_code_examples.mjs";
+import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_code_home_next_lesson_text } from "./app_code_home_next_lesson_text.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 export function app_code_home_next_lesson_button(parent, context) {
@@ -23,7 +23,12 @@ export function app_code_home_next_lesson_button(parent, context) {
   }
   let id = property_get(lesson, "id");
   async function on_click() {
-    await app_shared_screen_go_tab(context, "lesson_id", id, app_code_examples);
+    await app_shared_screen_go_tab(
+      context,
+      "lesson_id",
+      id,
+      app_learn_js_examples,
+    );
   }
   ("the same way in as the row itself uses, so the lesson opens remembering which lesson this tab picked");
   let started = app_code_lessons_any_complete(context);

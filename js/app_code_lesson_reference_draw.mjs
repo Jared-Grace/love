@@ -5,7 +5,7 @@ import { add_1 } from "./add_1.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab_step } from "./app_shared_screen_go_tab_step.mjs";
-import { app_code_examples } from "./app_code_examples.mjs";
+import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
 import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_reference_draw(parent, context, lesson_fn) {
       context,
       "lesson_id",
       lesson_id,
-      app_code_examples,
+      app_learn_js_examples,
     );
   }
   ("THE LESSON JUST BEFORE THIS ONE IS NAMED BY THE RELATION AND NOT BY ITS NUMBER. A number is an address, and an address is what a learner needs for a lesson they finished a week ago - they must be able to find it on the list. For the lesson they were reading a minute ago the address is the one thing they do not need, and reading it as a number makes them subtract to find out that the reference is about the screen they just left. So the near one says the previous lesson and every other one says its number, and the two shapes standing on one screen are themselves the reading: this one is behind you, that one is far back.");

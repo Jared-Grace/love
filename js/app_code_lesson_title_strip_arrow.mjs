@@ -4,7 +4,7 @@ import { list_get_or_null } from "./list_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
-import { app_code_examples } from "./app_code_examples.mjs";
+import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
 export function app_code_lesson_title_strip_arrow(
   parent,
@@ -26,7 +26,12 @@ export function app_code_lesson_title_strip_arrow(
       return;
     }
     let id = property_get(lesson, "id");
-    await app_shared_screen_go_tab(context, "lesson_id", id, app_code_examples);
+    await app_shared_screen_go_tab(
+      context,
+      "lesson_id",
+      id,
+      app_learn_js_examples,
+    );
   }
   let button = button_get(parent, go);
   app_shared_button_disabled_set(button, missing);

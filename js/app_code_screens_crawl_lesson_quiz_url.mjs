@@ -14,7 +14,7 @@ export async function app_code_screens_crawl_lesson_quiz_url(
   records,
 ) {
   arguments_assert(arguments, 5);
-  let f_name = app_code_screen_name_short(fn_name("app_code_examples"));
+  let f_name = app_code_screen_name_short(fn_name("app_learn_js_examples"));
   ("the pairs are joined with a comma, which is the shape the app itself now writes. A crawl that seeded a different shape would still open - both are read - but the mark it later looks for in the address would be spelled one way and the address the other, so the walk would stop after the first click and quietly capture one kind per lesson");
   let combined = text_combine_multiple([",", v, "=", f_name]);
   let v2 = app_code_lesson_hash_key();
