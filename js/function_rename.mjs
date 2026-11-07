@@ -8,7 +8,6 @@ import { permission_settings_allow_rename_report } from "./permission_settings_a
 import { memory_fn_references_rename_report } from "./memory_fn_references_rename_report.mjs";
 import { storage_local_key_owner_renamed_record } from "./storage_local_key_owner_renamed_record.mjs";
 import { folders_function_named_rename } from "./folders_function_named_rename.mjs";
-import { python_mirrors_write } from "./python_mirrors_write.mjs";
 export async function function_rename(f_name_before, f_name_after) {
   arguments_assert(arguments, 2);
   equal_not_assert_json(f_name_before, f_name_after, {
@@ -28,7 +27,5 @@ export async function function_rename(f_name_before, f_name_after) {
   await storage_local_key_owner_renamed_record(f_name_before, f_name_after);
   ("a store on this disk is reachable, so it is moved rather than reported - the sentence a browser key gets is only a sentence because nothing here can reach that disk");
   await folders_function_named_rename(f_name_before, f_name_after);
-  ("the bash guard reads lists of function names copied out of the code, and a copy does not follow a rename - so a renamed name left the guard asking the human about chains it would have sent back, and a renamed function on the deny floor would leave the floor guarding a dead name. Rewritten here rather than reported, unlike the allow list: what it writes comes from the code alone, never from the names handed in, and every file comes out the same when nothing moved");
-  await python_mirrors_write();
   return f_name_before;
 }
