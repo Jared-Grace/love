@@ -14,7 +14,7 @@ import { list_clear } from "./list_clear.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { app_code_lesson_quiz_token_select_row_set } from "./app_code_lesson_quiz_token_select_row_set.mjs";
-import { app_code_lesson_quiz_token_select_done_is } from "./app_code_lesson_quiz_token_select_done_is.mjs";
+import { app_learn_js_lesson_quiz_token_select_done_is } from "./app_learn_js_lesson_quiz_token_select_done_is.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { log } from "./log.mjs";
@@ -80,7 +80,10 @@ export function app_learn_js_lesson_quiz_pieces_select(
         buttons,
       );
       show(variations, chosen);
-      let any = app_code_lesson_quiz_token_select_done_is(variations, chosen);
+      let any = app_learn_js_lesson_quiz_token_select_done_is(
+        variations,
+        chosen,
+      );
       await sleep_seconds(0.1);
       if (any) {
         html_visibility_hidden(b);
