@@ -11,7 +11,7 @@ import { list_get } from "./list_get.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
-export function app_code_lesson_expression_string_concat() {
+export function app_learn_js_lesson_expression_string_concat() {
   "the third string lesson - concatenation: a plus between two strings combines them into one, and the value is the two texts run together with no quotes and no space. The learner meets the plus doing something different than it does for numbers; the words are drawn from the shared verse so they carry meaning, and the two examples come from distinct words.";
   function pair_code(index) {
     "one question: the two words each in quotes, joined by a plus, as a code string";

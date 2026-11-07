@@ -19,7 +19,7 @@ import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_string_concat } from "./app_code_lesson_expression_string_concat.mjs";
+import { app_learn_js_lesson_expression_string_concat } from "./app_learn_js_lesson_expression_string_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -108,7 +108,7 @@ export function app_code_lesson_number_text_plus() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_expression_string_concat,
+      app_learn_js_lesson_expression_string_concat,
       ["a ", plus, " between two strings joins them:"],
     );
     let left2 = app_code_string_code("love");
