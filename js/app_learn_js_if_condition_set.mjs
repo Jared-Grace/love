@@ -5,7 +5,7 @@ import { list_first } from "./list_first.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_if_condition_set(code, condition) {
+export function app_learn_js_if_condition_set(code, condition) {
   arguments_assert(arguments, 2);
   ("the same program with what is inside the if's parentheses replaced: the line that opens the if, the one starting if and a space, is written again around the new condition, and every other line is kept");
   let lines = text_split_newline(code);

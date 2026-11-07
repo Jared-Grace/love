@@ -15,7 +15,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { app_code_if_condition_set } from "./app_code_if_condition_set.mjs";
+import { app_learn_js_if_condition_set } from "./app_learn_js_if_condition_set.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -126,7 +126,7 @@ export function app_code_lesson_if_two_lines() {
   function inside_lines_without(code, inside_index) {
     "the same program run as though the if always ran and the line inside at inside_index were not there, which is what a learner reads who takes only one of the two lines to belong to the if";
     let lines = text_split_newline(code);
-    let ran = app_code_if_condition_set(code, "true");
+    let ran = app_learn_js_if_condition_set(code, "true");
     let ran_lines = text_split_newline(ran);
     let opening_line = list_find(lines, if_line_is);
     let opening = list_index_of(lines, opening_line);
@@ -142,9 +142,9 @@ export function app_code_lesson_if_two_lines() {
   }
   function decoys(question, answer) {
     "when the if runs: the second word inside left out, and the word outside alone; when it does not: the second word inside written out with the word outside, and every word";
-    let code2 = app_code_if_condition_set(question, "true");
+    let code2 = app_learn_js_if_condition_set(question, "true");
     let every = eval_console_log_lines(code2);
-    let code3 = app_code_if_condition_set(question, "false");
+    let code3 = app_learn_js_if_condition_set(question, "false");
     let plain = eval_console_log_lines(code3);
     let runs = equal(answer, every);
     if (runs) {
@@ -167,7 +167,7 @@ export function app_code_lesson_if_two_lines() {
     let message2 = list_last(sides);
     let right = text_trim(message2);
     let v = compared(right, left);
-    let swapped = app_code_if_condition_set(answer, v);
+    let swapped = app_learn_js_if_condition_set(answer, v);
     let found = [swapped];
     return found;
   }

@@ -24,7 +24,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_first } from "./list_first.mjs";
 import { json_to } from "./json_to.mjs";
-import { app_code_if_condition_set } from "./app_code_if_condition_set.mjs";
+import { app_learn_js_if_condition_set } from "./app_learn_js_if_condition_set.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
@@ -98,7 +98,7 @@ export function app_code_lesson_if_halve_or_triple() {
   function backwards_decoys(question, answer) {
     "the same program checked with === 1, so it writes out the other side's answer";
     let odd_check = js_code_remainder_two_is(name, "1");
-    let turned = app_code_if_condition_set(answer, odd_check);
+    let turned = app_learn_js_if_condition_set(answer, odd_check);
     let found2 = [turned];
     return found2;
   }

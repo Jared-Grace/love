@@ -19,7 +19,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_if_condition_set } from "./app_code_if_condition_set.mjs";
+import { app_learn_js_if_condition_set } from "./app_learn_js_if_condition_set.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -94,9 +94,9 @@ export function app_code_lesson_if_even() {
   );
   function decoys(question, answer) {
     "of the three things such a program could write out - both lines, the first line, the line inside - the two that are not the answer";
-    let code3 = app_code_if_condition_set(question, "true");
+    let code3 = app_learn_js_if_condition_set(question, "true");
     let both = eval_console_log_lines(code3);
-    let code4 = app_code_if_condition_set(question, "false");
+    let code4 = app_learn_js_if_condition_set(question, "false");
     let plain = eval_console_log_lines(code4);
     let list2 = text_split_newline(both);
     let inside = list_last(list2);
@@ -111,7 +111,7 @@ export function app_code_lesson_if_even() {
   function backwards_decoys(question, answer) {
     "the same program checked with === 1, so it writes out the other answer";
     let condition = check("1");
-    let turned = app_code_if_condition_set(answer, condition);
+    let turned = app_learn_js_if_condition_set(answer, condition);
     let found = [turned];
     return found;
   }
