@@ -5,7 +5,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_division_formula_recall_words } from "./app_learn_js_division_formula_recall_words.mjs";
 import { app_learn_js_expression_whole_part_tree } from "./app_learn_js_expression_whole_part_tree.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_whole_part_recall(
+export function app_learn_js_lesson_expression_choose_order_whole_part_recall(
   root,
   context,
 ) {
