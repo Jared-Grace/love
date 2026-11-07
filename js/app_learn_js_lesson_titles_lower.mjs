@@ -1,6 +1,6 @@
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_titles } from "./app_code_lesson_titles.mjs";
+import { app_learn_js_lesson_titles } from "./app_learn_js_lesson_titles.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_title_run_first } from "./app_learn_js_lesson_title_run_first.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_titles_lower() {
   ("A title is a name on a list, and a list where some names open with a capital and some do not reads as two lists. Every one of these was written on its own day by whoever was writing that lesson, so the split is not a decision anybody made - it is what happens when nothing says.");
   ("A title that opens with code is left alone, and that is the whole of the exception. console.log, true and !== are spelled the way JavaScript spells them; capitalising one would make it a different word, and on this course a wrong spelling of a name is the thing being taught against. Whether a run is code is read off the drawing rather than guessed at from what it says, so the exception cannot be claimed by a run of ordinary writing that happens to look technical.");
   ("A title opening with a digit or a bracket is left alone too, and not by a rule of its own: those have no letter to change, so upper-casing the first character gives back what was already there and there is nothing to report.");
-  let titles = app_code_lesson_titles();
+  let titles = app_learn_js_lesson_titles();
   let lower = [];
   function judge(read) {
     let runs = property_get(read, "runs");
