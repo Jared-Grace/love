@@ -3,7 +3,7 @@ import { app_code_expression_operator_chip_uncolored } from "./app_code_expressi
 import { app_code_expression_chosen_style_assign } from "./app_code_expression_chosen_style_assign.mjs";
 import { app_code_expression_colored_slowly } from "./app_code_expression_colored_slowly.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
-import { app_code_expression_chip_style } from "./app_code_expression_chip_style.mjs";
+import { app_learn_js_expression_chip_style } from "./app_learn_js_expression_chip_style.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_expression_chosen_set(node_span, operator_span) {
   arguments_assert(arguments, 2);
@@ -23,5 +23,5 @@ export function app_code_expression_chosen_set(node_span, operator_span) {
   app_code_expression_operator_chip_room_clear(operator_span);
   ("the blue is given last, once the operator is already plain and already narrow, so what rises is a block of one colour rather than a blue closing in around a grey");
   app_code_expression_chosen_style_assign(node_span);
-  app_code_expression_chip_style(node_span);
+  app_learn_js_expression_chip_style(node_span);
 }
