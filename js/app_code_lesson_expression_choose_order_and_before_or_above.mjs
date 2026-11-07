@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_expression_choose_order_sides_settled_tree } from "./app_code_lesson_expression_choose_order_sides_settled_tree.mjs";
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
-import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
+import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_either_side } from "./app_code_lesson_expression_choose_order_and_before_or_either_side.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_recall } from "./app_code_lesson_expression_choose_order_and_before_or_recall.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_above(
     );
   let tree_or_first =
     app_code_lesson_expression_choose_order_sides_settled_tree(
-      app_code_expression_node_right_operator_first,
+      app_learn_js_expression_node_right_operator_first,
       true,
       middle_truth,
     );

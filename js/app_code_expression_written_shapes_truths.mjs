@@ -13,7 +13,7 @@ import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symb
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
-import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
+import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
 import { each } from "./each.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
@@ -53,7 +53,7 @@ export function app_code_expression_written_shapes_truths() {
       2,
     );
     list_add(shapes, arithmetic_left);
-    let arithmetic_right = app_code_expression_node_right_operator_first(
+    let arithmetic_right = app_learn_js_expression_node_right_operator_first(
       3,
       symbol,
       4,

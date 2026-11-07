@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
-export function app_code_expression_node_right_operator_first(
+export function app_learn_js_expression_node_right_operator_first(
   left,
   first_symbol,
   middle,

@@ -5,7 +5,7 @@ import { list_get } from "./list_get.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
-import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
+import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
 import { app_code_lesson_expression_choose_order_tree_of_code_generic } from "./app_code_lesson_expression_choose_order_tree_of_code_generic.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_tree_of_code(
   code,
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_tree_of_co
   let node_from_parts = ternary(
     and_leftmost,
     app_learn_js_expression_node_left_operator_first,
-    app_code_expression_node_right_operator_first,
+    app_learn_js_expression_node_right_operator_first,
   );
   let tree = app_code_lesson_expression_choose_order_tree_of_code_generic(
     code,

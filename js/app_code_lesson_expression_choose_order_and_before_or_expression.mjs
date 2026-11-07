@@ -6,7 +6,7 @@ import { boolean_random } from "./boolean_random.mjs";
 import { list_get } from "./list_get.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
-import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
+import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_expression(
   want_true,
 ) {
@@ -40,7 +40,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_expression
     );
     return tree_and_first;
   }
-  let tree_or_first = app_code_expression_node_right_operator_first(
+  let tree_or_first = app_learn_js_expression_node_right_operator_first(
     far_truth,
     or_symbol,
     inner_left,
