@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_choose_order_strong_card } from "./app_learn_js_lesson_expression_choose_order_strong_card.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_choose_order_three_recall(
+export function app_learn_js_lesson_expression_choose_order_three_recall(
   root,
   context,
 ) {
