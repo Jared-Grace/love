@@ -12,7 +12,10 @@ import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_lesson_decoy_lines_starting_values(question, answer) {
+export function app_learn_js_lesson_decoy_lines_starting_values(
+  question,
+  answer,
+) {
   arguments_assert(arguments, 2);
   ("the tempting wrong answers for a program that moves numbers between names: every way of writing the numbers the names started with on the lines the answer has, except the answer itself");
   ("The mistakes a learner makes about swapping are all of this shape - both names holding the first number, both holding the second, or each still holding what it started with - so offering every one of them means each mistake has a button to be caught on.");

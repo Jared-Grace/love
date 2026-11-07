@@ -5,7 +5,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { app_code_lesson_statement_formula_backwards_decoys } from "./app_code_lesson_statement_formula_backwards_decoys.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { app_code_lesson_statement_name_swap_number_pairs } from "./app_code_lesson_statement_name_swap_number_pairs.mjs";
-import { app_code_lesson_decoy_lines_starting_values } from "./app_code_lesson_decoy_lines_starting_values.mjs";
+import { app_learn_js_lesson_decoy_lines_starting_values } from "./app_learn_js_lesson_decoy_lines_starting_values.mjs";
 export function app_code_lesson_statement_name_swap_ladder({
   words,
   step,
@@ -35,7 +35,7 @@ export function app_code_lesson_statement_name_swap_ladder({
     remember_parts,
     remember_lines,
     explain,
-    decoys: app_code_lesson_decoy_lines_starting_values,
+    decoys: app_learn_js_lesson_decoy_lines_starting_values,
     example_pointers: null,
     answer_count: null,
     steps,
