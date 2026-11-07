@@ -1,7 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_sides_comparison_say(run, sides) {
+export function app_learn_js_lesson_expression_sides_comparison_say(
+  run,
+  sides,
+) {
   arguments_assert(arguments, 2);
   ("why the two sides of a line go first, told for a line whose two sides are comparisons: they are named as comparisons, and then the question of which of them goes first is asked for the run underneath to answer");
   ("The two sides here are usually two DIFFERENT comparisons - 2 < 5 and 3 === 3 - so there is no one operator to count two of, and the telling names what the sides ARE instead. What holds them together is the kind, so the kind is what the sentence has to reach for.");
