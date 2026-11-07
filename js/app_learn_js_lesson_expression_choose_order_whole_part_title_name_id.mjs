@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
-export function app_code_lesson_expression_choose_order_whole_part_title_name_id() {
+export function app_learn_js_lesson_expression_choose_order_whole_part_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: solving the whole part of a division one part at a time, an Operators lesson");
   ("It says step by step, which is how every title in this course names a lesson that asks for one press at a time. The lesson straight after it is called Whole part and asks the same line all at once, so the two rows of the home list say the same thing about the same formula and differ by what the learner is asked to do with it.");
