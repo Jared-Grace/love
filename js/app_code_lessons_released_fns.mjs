@@ -5,7 +5,7 @@ import { app_code_lesson_symbols_letters } from "./app_code_lesson_symbols_lette
 import { app_code_lesson_symbols_space } from "./app_code_lesson_symbols_space.mjs";
 import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_code_lesson_identifiers_underscores } from "./app_code_lesson_identifiers_underscores.mjs";
-import { app_code_lesson_identifiers_dollar_signs } from "./app_code_lesson_identifiers_dollar_signs.mjs";
+import { app_learn_js_lesson_identifiers_dollar_signs } from "./app_learn_js_lesson_identifiers_dollar_signs.mjs";
 import { app_code_lesson_identifiers_symbol_first } from "./app_code_lesson_identifiers_symbol_first.mjs";
 import { app_code_lesson_identifiers_symbol_first_unseparated } from "./app_code_lesson_identifiers_symbol_first_unseparated.mjs";
 import { app_code_lesson_operators_addition } from "./app_code_lesson_operators_addition.mjs";
@@ -318,7 +318,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_symbols_space,
     app_code_lesson_identifiers_letters_spaces,
     app_code_lesson_identifiers_underscores,
-    app_code_lesson_identifiers_dollar_signs,
+    app_learn_js_lesson_identifiers_dollar_signs,
     app_code_lesson_identifiers_symbol_first,
     app_code_lesson_identifiers_symbol_first_unseparated,
     app_code_lesson_operators_addition,
