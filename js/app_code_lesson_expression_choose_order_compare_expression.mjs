@@ -1,5 +1,5 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_lesson_expression_choose_order_compare_expression_parts } from "./app_code_lesson_expression_choose_order_compare_expression_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_compare_expression_parts } from "./app_learn_js_lesson_expression_choose_order_compare_expression_parts.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { boolean_random } from "./boolean_random.mjs";
@@ -39,13 +39,14 @@ export function app_code_lesson_expression_choose_order_compare_expression(
   let agree = equal(inner_value, truth);
   let wanted = equal(agree, want_true);
   let outer_symbol = ternary(wanted, same, different);
-  let tree = app_code_lesson_expression_choose_order_compare_expression_parts(
-    left_number,
-    inner_symbol,
-    right_number,
-    outer_symbol,
-    truth,
-    comparison_left,
-  );
+  let tree =
+    app_learn_js_lesson_expression_choose_order_compare_expression_parts(
+      left_number,
+      inner_symbol,
+      right_number,
+      outer_symbol,
+      truth,
+      comparison_left,
+    );
   return tree;
 }

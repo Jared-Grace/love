@@ -1,5 +1,5 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_lesson_expression_choose_order_compare_expression_parts } from "./app_code_lesson_expression_choose_order_compare_expression_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_compare_expression_parts } from "./app_learn_js_lesson_expression_choose_order_compare_expression_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
@@ -34,13 +34,14 @@ export function app_code_lesson_expression_choose_order_compare_tree_of_code(
   let right_number = list_get(numbers, 1);
   let word_true = js_keyword_true();
   let truth = text_includes(code, word_true);
-  let tree = app_code_lesson_expression_choose_order_compare_expression_parts(
-    left_number,
-    inner_symbol,
-    right_number,
-    outer_symbol,
-    truth,
-    comparison_left,
-  );
+  let tree =
+    app_learn_js_lesson_expression_choose_order_compare_expression_parts(
+      left_number,
+      inner_symbol,
+      right_number,
+      outer_symbol,
+      truth,
+      comparison_left,
+    );
   return tree;
 }

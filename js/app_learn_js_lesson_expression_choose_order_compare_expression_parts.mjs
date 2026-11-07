@@ -1,6 +1,6 @@
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_choose_order_compare_expression_parts(
+export function app_learn_js_lesson_expression_choose_order_compare_expression_parts(
   left_number,
   inner_symbol,
   right_number,
