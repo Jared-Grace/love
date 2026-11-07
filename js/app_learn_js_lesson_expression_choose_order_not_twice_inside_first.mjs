@@ -11,7 +11,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_lesson_expression_choose_order_not_twice_rewritten_plain } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_plain.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain } from "./app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip } from "./app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
@@ -50,16 +50,18 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_inside_fir
   html_span_text(line_rewrite, "For example, we could rewrite ");
   html_span_text_code_dark(line_rewrite, bang_bang_true);
   html_span_text(line_rewrite, " as ");
-  app_code_lesson_expression_choose_order_not_twice_rewritten_plain(
+  app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain(
     line_rewrite,
   );
   let line_same = html_div(parent);
-  app_code_lesson_expression_choose_order_not_twice_rewritten_plain(line_same);
+  app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain(
+    line_same,
+  );
   html_span_text(line_same, " solves the same as ");
   html_span_text_code_dark(line_same, bang_bang_true);
   let line_colors = html_div(parent);
   html_span_text(line_colors, "We can write ");
-  app_code_lesson_expression_choose_order_not_twice_rewritten_plain(
+  app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain(
     line_colors,
   );
   html_span_text(line_colors, " with colors like this: ");

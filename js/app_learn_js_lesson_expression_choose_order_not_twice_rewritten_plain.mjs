@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_rewritten_texts } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_texts.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-export function app_code_lesson_expression_choose_order_not_twice_rewritten_plain(
+export function app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain(
   line,
 ) {
   "the rewritten line !(!(true)) written into a line already being built, as an ordinary code chip with no colour on it";
