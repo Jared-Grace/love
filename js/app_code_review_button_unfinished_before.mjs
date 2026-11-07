@@ -6,7 +6,7 @@ import { app_code_lessons } from "./app_code_lessons.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_go } from "./app_code_lesson_go.mjs";
+import { app_learn_js_lesson_go } from "./app_learn_js_lesson_go.mjs";
 import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
@@ -34,7 +34,7 @@ export function app_code_review_button_unfinished_before(
     return null;
   }
   async function go() {
-    await app_code_lesson_go(first, context);
+    await app_learn_js_lesson_go(first, context);
   }
   let left = emoji_arrow_left();
   let text = text_combine_middle_space_nb(
