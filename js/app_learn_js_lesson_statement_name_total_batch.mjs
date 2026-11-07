@@ -10,7 +10,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_statement_name_total_batch() {
+export function app_learn_js_lesson_statement_name_total_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives two numbers two names, gives a third name what those two add up to, and writes the third one out");
   ("The same four pairs of numbers the lesson before this one asks about, because the two lessons differ in one line and not in their arithmetic. A learner who has just answered these four sums meets them again with the total kept under a name, so the only thing that can be new in the answer is the line this lesson added.");
