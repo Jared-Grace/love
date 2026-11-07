@@ -1,7 +1,7 @@
 import { app_code_lesson_same_draw } from "./app_code_lesson_same_draw.mjs";
 import { app_code_lesson_expression_choose_order_same_strength } from "./app_code_lesson_expression_choose_order_same_strength.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_same_strength_operator_count } from "./app_code_lesson_expression_choose_order_same_strength_operator_count.mjs";
+import { app_learn_js_lesson_expression_choose_order_same_strength_operator_count } from "./app_learn_js_lesson_expression_choose_order_same_strength_operator_count.mjs";
 import { app_learn_js_expression_flat_random_same_strength } from "./app_learn_js_expression_flat_random_same_strength.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength_above } from "./app_learn_js_lesson_expression_choose_order_same_strength_above.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_three_steps_left_to_right() {
   function code_new() {
     "one line of this lesson's family, handed over as the text of it";
     let count =
-      app_code_lesson_expression_choose_order_same_strength_operator_count();
+      app_learn_js_lesson_expression_choose_order_same_strength_operator_count();
     let tree = app_learn_js_expression_flat_random_same_strength(count);
     let code = app_learn_js_expression_code(tree);
     return code;
