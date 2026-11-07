@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_fruit_emoji } from "./app_code_lesson_fruit_emoji.mjs";
 import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
-export function app_code_lesson_cup_fruit(parent, word, name, names) {
+export function app_learn_js_lesson_cup_fruit(parent, word, name, names) {
   arguments_assert(arguments, 4);
   ("a cup with a name written on it and the fruit that word names drawn inside it");
   ("Asked for by the word, so a screen names what is in the cup once and the picture follows. Four screens used to fetch the picture themselves and hand it over beside the word, which is the same fact carried twice and two chances to carry it wrong.");

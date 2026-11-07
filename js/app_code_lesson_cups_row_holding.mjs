@@ -3,7 +3,7 @@ import { app_learn_js_cups_row } from "./app_learn_js_cups_row.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
+import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_cups_row_holding(parent, pairs, names) {
@@ -23,7 +23,7 @@ export function app_code_lesson_cups_row_holding(parent, pairs, names) {
     let name = list_last(pair);
     let holding = text_empty_not_is(word);
     if (holding) {
-      let filled = app_code_lesson_cup_fruit(row, word, name, names);
+      let filled = app_learn_js_lesson_cup_fruit(row, word, name, names);
       return filled;
     }
     let empty = app_learn_js_cup(row, word, name, names);

@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
+import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { app_learn_js_lesson_cup_code_box } from "./app_learn_js_lesson_cup_code_box.mjs";
 export function app_code_lesson_statement_name_identifier_above(root, context) {
@@ -33,7 +33,7 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
   ]);
   ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
   let uncolored = [];
-  app_code_lesson_cup_fruit(box_before, grapes, name_before, uncolored);
+  app_learn_js_lesson_cup_fruit(box_before, grapes, name_before, uncolored);
   ("the second picture is the first one with a different word written on it, and the line under it says the one thing a learner has to carry away - that nothing else about the cup moved");
   let box_any = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(box_any, [
@@ -41,7 +41,7 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
   ]);
   ("THIS CUP rather than THIS ONE. One is a word that has to be resolved before the sentence means anything, and the thing it stands for was named two boxes up; naming the cup outright costs one word and leaves nothing to resolve. It also lines the sentence up with every other line on these screens, which all say cup.");
   app_learn_js_div_cycle_code(box_any, ["Suppose you called this cup ", name]);
-  app_code_lesson_cup_fruit(box_any, grapes, name, uncolored);
+  app_learn_js_lesson_cup_fruit(box_any, grapes, name, uncolored);
   app_learn_js_div_cycle_code(box_any, ["What is in the cup did not change"]);
   app_code_value_line(box_any, "Inside the cup: ", grapes);
   let box_id = app_learn_js_container_light_blue(root);

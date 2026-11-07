@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
-import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
+import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -35,7 +35,7 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   );
   ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
   let uncolored = [];
-  app_code_lesson_cup_fruit(box_before, word_before, name, uncolored);
+  app_learn_js_lesson_cup_fruit(box_before, word_before, name, uncolored);
   let box_after = app_learn_js_container_light_blue(root);
   let swap = list_join_empty([
     "Now take the ",
@@ -45,7 +45,7 @@ export function app_code_lesson_statement_name_again_above(root, context) {
     " in",
   ]);
   app_learn_js_div_cycle_code(box_after, [swap]);
-  app_code_lesson_cup_fruit(box_after, word_after, name, uncolored);
+  app_learn_js_lesson_cup_fruit(box_after, word_after, name, uncolored);
   app_learn_js_div_cycle_code(box_after, [
     "It is the same cup, still called ",
     name,

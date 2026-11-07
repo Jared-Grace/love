@@ -7,7 +7,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
-import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
+import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { app_learn_js_lesson_cup_code_box } from "./app_learn_js_lesson_cup_code_box.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_statement_name_value_above(root, context) {
     word,
     " in the cup",
   ]);
-  app_code_lesson_cup_fruit(box_cup, word, name, uncolored);
+  app_learn_js_lesson_cup_fruit(box_cup, word, name, uncolored);
   app_learn_js_div_cycle_code(box_cup, [
     "Now if someone asked you what is inside the cup called ",
     name,
