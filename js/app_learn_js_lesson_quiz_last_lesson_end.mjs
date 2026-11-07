@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_on_next } from "./app_code_lesson_quiz_on_next.mjs";
-export function app_code_lesson_quiz_last_lesson_end(
+export function app_learn_js_lesson_quiz_last_lesson_end(
   r4,
   context,
   quizzes,
