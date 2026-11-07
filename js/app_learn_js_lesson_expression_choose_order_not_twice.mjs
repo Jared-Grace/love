@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_not_twice_title_name_id } f
 import { app_learn_js_lesson_expression_choose_order_not_twice_questions } from "./app_learn_js_lesson_expression_choose_order_not_twice_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice_above } from "./app_learn_js_lesson_expression_choose_order_not_twice_above.mjs";
-export function app_code_lesson_expression_choose_order_not_twice() {
+export function app_learn_js_lesson_expression_choose_order_not_twice() {
   "a true or a false with two ! symbols in front of it, taken a press at a time: !!true, choose the nearer ! , choose what it comes to, then choose the other ! and what that comes to";
   "IT COMES BEFORE THE LESSON THAT READS !! , not after it, which is the order every other pair in this run is in. The press-at-a-time lesson is where a shape is met, one part at a time and with the learner saying which part may go; the lesson after it is where whole lines of that shape are read at a glance. Meeting the shape whole first and only then being asked to take it apart would be the harder of the two orders and is not the one the run uses anywhere else.";
   "The smallest line in the whole run: two operators and one value, and no parentheses in the line itself. Every other press-at-a-time line has an operator with something on each side of it, so which part was ready could be read off what sat beside it. Here there is nothing beside anything - the only thing to read is which ! is nearer the value - and that is the plainest instance of the one rule the run has been asking for all along.";

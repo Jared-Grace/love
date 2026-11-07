@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_choose_order_not_twice } from "./app_code_lesson_expression_choose_order_not_twice.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_twice } from "./app_learn_js_lesson_expression_choose_order_not_twice.mjs";
 import { app_code_lesson_expression_not_twice_title_name_id } from "./app_code_lesson_expression_not_twice_title_name_id.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_code_not } from "./js_code_not.mjs";
@@ -73,7 +73,7 @@ export function app_code_lesson_expression_not_twice() {
     let line_remember = app_code_remember_from_lesson(
       c,
       context,
-      app_code_lesson_expression_choose_order_not_twice,
+      app_learn_js_lesson_expression_choose_order_not_twice,
       ["we can write ", twice_true, " as "],
     );
     app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain(
