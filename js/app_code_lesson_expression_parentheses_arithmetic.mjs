@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_choose_order } from "./app_code_lesson_expression_choose_order.mjs";
+import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_code_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -50,7 +50,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     app_code_remember_from_lesson(
       recall,
       context,
-      app_code_lesson_expression_choose_order,
+      app_learn_js_lesson_expression_choose_order,
       ["", "1 + 2 * 3", " does the ", times, " first"],
     );
     app_learn_js_div_cycle_code(recall, ["So ", "1 + 2 * 3", " is ", "7"]);

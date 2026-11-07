@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_choose_order } from "./app_code_lesson_expression_choose_order.mjs";
+import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_expression_choose_order_strong_card(
   app_code_remember_from_lesson(
     recall_card,
     context,
-    app_code_lesson_expression_choose_order,
+    app_learn_js_lesson_expression_choose_order,
     [
       "",
       times,

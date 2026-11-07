@@ -1,5 +1,5 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_choose_order } from "./app_code_lesson_expression_choose_order.mjs";
+import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -75,7 +75,7 @@ export function app_code_lesson_expression_which_part_first_above(
   app_code_remember_from_lesson(
     right_card,
     context,
-    app_code_lesson_expression_choose_order,
+    app_learn_js_lesson_expression_choose_order,
     ["the ", strong_part, " is solved first, to get ", inner_text],
   );
   app_learn_js_div_cycle_code(right_card, [

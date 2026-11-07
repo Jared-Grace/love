@@ -8,7 +8,7 @@ import { app_learn_js_lesson_expression_choose_order_questions } from "./app_lea
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_above } from "./app_learn_js_lesson_expression_choose_order_above.mjs";
 import { app_learn_js_lesson_expression_choose_order_walkthrough } from "./app_learn_js_lesson_expression_choose_order_walkthrough.mjs";
-export function app_code_lesson_expression_choose_order() {
+export function app_learn_js_lesson_expression_choose_order() {
   "choosing which operator to work out first, and then the next, with the quiz working each one out as it is chosen: 1 + 2 * 3, choose the times, see 1 + 6, choose the plus";
   "Every lesson before this asks for the answer to a whole line at once, so a learner who knows the rule and slips on the arithmetic, and one who does the arithmetic and does not know the rule, are marked the same. Here the two are separated: the arithmetic is done FOR the learner and the only thing asked is the order.";
   "It stands BEFORE the cross-precedence lessons rather than after everything, because it is the tutorial version of what they ask for. A learner met two-step solving here first, as a line worked out one press at a time with the arithmetic done for them, and only then is asked for the answer to such a line in one go. Placed last it taught the step-at-a-time reading to somebody who had already had to find it for themselves - and a learner who never found it was stuck on every two-step line from the cross-precedence ones right through to two comparisons compared, which is where the difficulty was actually reported.";
