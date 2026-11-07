@@ -7,7 +7,7 @@ import { html_display_set } from "./html_display_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_flex_shrink_0 } from "./html_flex_shrink_0.mjs";
-export function app_code_lesson_statement_title_paint_times_get(
+export function app_learn_js_lesson_statement_title_paint_times_get(
   tile_paint,
   times,
 ) {

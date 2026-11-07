@@ -1,6 +1,6 @@
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lesson_statement_title_code_dots_paint_get } from "./app_learn_js_lesson_statement_title_code_dots_paint_get.mjs";
-import { app_code_lesson_statement_title_paint_times_get } from "./app_code_lesson_statement_title_paint_times_get.mjs";
+import { app_learn_js_lesson_statement_title_paint_times_get } from "./app_learn_js_lesson_statement_title_paint_times_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_log_twice_title_name_id() {
   let line = text_combine_multiple([opening, "...", closing]);
   let tile_paint =
     app_learn_js_lesson_statement_title_code_dots_paint_get(line);
-  let paint_code = app_code_lesson_statement_title_paint_times_get(
+  let paint_code = app_learn_js_lesson_statement_title_paint_times_get(
     tile_paint,
     2,
   );
