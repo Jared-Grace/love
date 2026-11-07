@@ -36,7 +36,7 @@ export function app_code_milestones() {
     branches_count = list_index_of(lesson_ids, loop_id);
   }
   ("Starting at the first lesson that runs a program of two pairs of braces, and drawing each lesson's batch once, because this is asked several times for each page: measured 2026-11-02, reading every one of the 302 lessons before While took 650 ms on a computer for each ask. A lesson put before this one would not join a milestone.");
-  let first_id = property_get(ids, fn_name("app_code_lesson_braces_run"));
+  let first_id = property_get(ids, fn_name("app_learn_js_lesson_braces_run"));
   let first_index = list_index_of(lesson_ids, first_id);
   let branches = list_slice(lessons, first_index, branches_count);
   function with_items(lesson) {
