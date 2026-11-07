@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
-import { app_code_lesson_expression_not_equal } from "./app_code_lesson_expression_not_equal.mjs";
+import { app_learn_js_lesson_expression_not_equal } from "./app_learn_js_lesson_expression_not_equal.mjs";
 export function app_code_lesson_statement_name_not_equal() {
   arguments_assert(arguments, 0);
   ("two names asked whether they hold different numbers: let a = 7; let b = 4; let ",
@@ -36,7 +36,7 @@ export function app_code_lesson_statement_name_not_equal() {
     symbol,
     pairs_get,
     example_pair: [6, 2],
-    remember_lesson: app_code_lesson_expression_not_equal,
+    remember_lesson: app_learn_js_lesson_expression_not_equal,
     remember_parts: [
       "we can ask whether two numbers are not equal (",
       symbol,

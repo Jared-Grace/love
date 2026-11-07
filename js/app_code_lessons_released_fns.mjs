@@ -25,7 +25,7 @@ import { app_learn_js_lesson_expression_greater_than } from "./app_learn_js_less
 import { app_learn_js_lesson_expression_less_than_equal } from "./app_learn_js_lesson_expression_less_than_equal.mjs";
 import { app_learn_js_lesson_expression_greater_than_equal } from "./app_learn_js_lesson_expression_greater_than_equal.mjs";
 import { app_learn_js_lesson_expression_equals } from "./app_learn_js_lesson_expression_equals.mjs";
-import { app_code_lesson_expression_not_equal } from "./app_code_lesson_expression_not_equal.mjs";
+import { app_learn_js_lesson_expression_not_equal } from "./app_learn_js_lesson_expression_not_equal.mjs";
 import { app_code_lesson_expression_number_trichotomy } from "./app_code_lesson_expression_number_trichotomy.mjs";
 import { app_code_lesson_expression_string_equality } from "./app_code_lesson_expression_string_equality.mjs";
 import { app_code_lesson_expression_string_order } from "./app_code_lesson_expression_string_order.mjs";
@@ -338,7 +338,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_expression_less_than_equal,
     app_learn_js_lesson_expression_greater_than_equal,
     app_learn_js_lesson_expression_equals,
-    app_code_lesson_expression_not_equal,
+    app_learn_js_lesson_expression_not_equal,
     app_code_lesson_expression_number_trichotomy,
     app_code_lesson_expression_string_equality,
     app_code_lesson_expression_string_order,

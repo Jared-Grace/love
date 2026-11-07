@@ -3,7 +3,7 @@ import { app_learn_js_comparison_pair_inequality } from "./app_learn_js_comparis
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_not_equal() {
+export function app_learn_js_lesson_expression_not_equal() {
   let operator = js_operator_bang_double_equal();
   let symbol = property_get(operator, "operator");
   let pair = app_learn_js_comparison_pair_inequality();

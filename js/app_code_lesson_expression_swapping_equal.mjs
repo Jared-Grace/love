@@ -1,6 +1,6 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_equals } from "./app_learn_js_lesson_expression_equals.mjs";
-import { app_code_lesson_expression_not_equal } from "./app_code_lesson_expression_not_equal.mjs";
+import { app_learn_js_lesson_expression_not_equal } from "./app_learn_js_lesson_expression_not_equal.mjs";
 import { app_code_lesson_expression_parentheses_both_sides } from "./app_code_lesson_expression_parentheses_both_sides.mjs";
 import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_expression_swapping_equal() {
     app_code_remember_from_lesson(
       intro,
       context,
-      app_code_lesson_expression_not_equal,
+      app_learn_js_lesson_expression_not_equal,
       ["", "!==", " asks: are the two numbers different?"],
     );
     let same = app_learn_js_container_light_blue(root);
