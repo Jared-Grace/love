@@ -9,7 +9,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-export function app_code_lesson_statement_name_plus_one_box(root, context) {
+export function app_learn_js_lesson_statement_name_plus_one_box(root, context) {
   arguments_assert(arguments, 2);
   ("a box showing one more than a name kept under a new name, the program the lesson on one more than a name taught, with a link to that lesson");
   ("It starts from an odd number, so its answer is even, and none of its numbers is a starting number or an answer of the programs asked about below it.");
