@@ -4,7 +4,7 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { identity } from "./identity.mjs";
 import { app_learn_js_lesson_operators_generic } from "./app_learn_js_lesson_operators_generic.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_code_lesson_operators_multiplication() {
+export function app_learn_js_lesson_operators_multiplication() {
   let operator_js = js_operator_asterisk_symbol();
   let operator_name_js = js_operator_asterisk_name();
   let operator_math = "×";
