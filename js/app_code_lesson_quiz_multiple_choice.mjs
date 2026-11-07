@@ -6,7 +6,7 @@ import { null_is } from "./null_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-import { app_code_lesson_quiz_multiple_choice_each_button } from "./app_code_lesson_quiz_multiple_choice_each_button.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice_each_button } from "./app_learn_js_lesson_quiz_multiple_choice_each_button.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_div } from "./html_div.mjs";
 export function app_code_lesson_quiz_multiple_choice(
@@ -37,7 +37,7 @@ export function app_code_lesson_quiz_multiple_choice(
       app_learn_js_cycle_code(note, parts);
     }
   }
-  let r2 = app_code_lesson_quiz_multiple_choice_each_button({
+  let r2 = app_learn_js_lesson_quiz_multiple_choice_each_button({
     r,
     distractor_count,
     next_get,
