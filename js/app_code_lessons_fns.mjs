@@ -1,5 +1,5 @@
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
-import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
+import { app_learn_js_lesson_symbols_digit_number } from "./app_learn_js_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
 import { app_code_lesson_symbols_letters } from "./app_code_lesson_symbols_letters.mjs";
 import { app_code_lesson_symbols_space } from "./app_code_lesson_symbols_space.mjs";
@@ -360,7 +360,7 @@ export function app_code_lessons_fns() {
   "2026-11-01, asked next: the six step lessons that came before their lesson, opening with its boxes, taken out too, each lesson they stood before opening with the stepping as its FIRST quiz instead, so the human's order of 2026-10-16 still holds - the line first, then stepping, then the whole program. The lesson that stood before only re-showed the boxes the next one shows anyway, so one lesson says it once. if_change and if_two_lines, which had their stepping last, take it first too";
   let fns = [
     app_code_lesson_symbols_digits_numbered,
-    app_code_lesson_symbols_digit_number,
+    app_learn_js_lesson_symbols_digit_number,
     app_code_lesson_symbols_digits,
     app_code_lesson_symbols_letters,
     app_code_lesson_symbols_space,
