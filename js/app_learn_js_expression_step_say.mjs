@@ -5,7 +5,12 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { not } from "./not.mjs";
-export function app_code_expression_step_say(note, current, ready, line_code) {
+export function app_learn_js_expression_step_say(
+  note,
+  current,
+  ready,
+  line_code,
+) {
   arguments_assert(arguments, 4);
   ("after a replacement has been made: say what the line is now and which operator to choose next, or say the line is finished");
   ("the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished");

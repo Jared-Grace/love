@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_choose_order_walkthrough_on_chosen } from "./app_code_lesson_expression_choose_order_walkthrough_on_chosen.mjs";
 import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
-import { app_code_expression_step_say } from "./app_code_expression_step_say.mjs";
+import { app_learn_js_expression_step_say } from "./app_learn_js_expression_step_say.mjs";
 import { app_learn_js_expression_choose_say } from "./app_learn_js_expression_choose_say.mjs";
 import { app_code_lesson_expression_choose_order_wrong_say } from "./app_code_lesson_expression_choose_order_wrong_say.mjs";
 import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
@@ -49,7 +49,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     function change() {
       "the room above the Code label comes back, because what stands there now is a line to read again rather than the button that had given it up";
       app_code_head_spaced_above_code(head);
-      app_code_expression_step_say(note, current, ready, line_code);
+      app_learn_js_expression_step_say(note, current, ready, line_code);
     }
     head_said(change);
   }
