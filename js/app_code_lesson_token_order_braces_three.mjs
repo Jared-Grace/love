@@ -8,7 +8,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_braces_three_programs } from "./app_code_braces_three_programs.mjs";
+import { app_learn_js_braces_three_programs } from "./app_learn_js_braces_three_programs.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_braces_paired_with_order } from "./app_learn_js_braces_paired_with_order.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -48,7 +48,7 @@ export function app_code_lesson_token_order_braces_three() {
       "{ }",
       ". Each pair has a colour of its own. Under the code are only its braces, in the order we read them:",
     ]);
-    let programs = app_code_braces_three_programs();
+    let programs = app_learn_js_braces_three_programs();
     let after_nested = list_get(programs, 1);
     app_learn_js_braces_paired_with_order(box_two, after_nested);
     html_div_text(

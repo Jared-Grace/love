@@ -7,7 +7,7 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_braces_three_programs() {
+export function app_learn_js_braces_three_programs() {
   arguments_assert(arguments, 0);
   ("the five programs, each with exactly three pairs of braces and each with an order of braces of its own: three ifs one after another, an if inside an if then one after, one before an if inside an if, one with two inside it, and three each inside the one before");
   let fruits = fruits_of_the_spirit();
