@@ -7,7 +7,7 @@ import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs
 import { app_code_lesson_expression_choose_order_intro } from "./app_code_lesson_expression_choose_order_intro.mjs";
 import { html_remove_if_not_null } from "./html_remove_if_not_null.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
-import { app_code_head_flush_above_code } from "./app_code_head_flush_above_code.mjs";
+import { app_learn_js_head_flush_above_code } from "./app_learn_js_head_flush_above_code.mjs";
 import { app_learn_js_expression_replace_await } from "./app_learn_js_expression_replace_await.mjs";
 export function app_code_lesson_expression_choose_order_walkthrough_on_chosen(
   parent,
@@ -54,7 +54,7 @@ export function app_code_lesson_expression_choose_order_walkthrough_on_chosen(
     "the same settling, for words that end in a button rather than in a line to read: the head gives back the room it leaves above the Code label, because the button carries room of its own underneath it";
     "The giving back is done INSIDE the change, where the two heights are measured around it, so the room leaves at the same moment the words do and the head slides once instead of jumping and then sliding.";
     function change_flush() {
-      app_code_head_flush_above_code(head);
+      app_learn_js_head_flush_above_code(head);
       change();
     }
     let promise = await head_said(change_flush);
