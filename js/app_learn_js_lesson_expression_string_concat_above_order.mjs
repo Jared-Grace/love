@@ -1,6 +1,6 @@
 import { app_learn_js_container_light_blue_div } from "./app_learn_js_container_light_blue_div.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_string_concat_above_so_value } from "./app_code_lesson_expression_string_concat_above_so_value.mjs";
+import { app_learn_js_lesson_expression_string_concat_above_so_value } from "./app_learn_js_lesson_expression_string_concat_above_so_value.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_expression_string_concat_above_order(
   context,
 ) {
   arguments_assert(arguments, 2);
-  let r = app_code_lesson_expression_string_concat_above_so_value(
+  let r = app_learn_js_lesson_expression_string_concat_above_so_value(
     root,
     context,
   );

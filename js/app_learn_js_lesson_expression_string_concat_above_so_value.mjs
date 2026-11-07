@@ -10,7 +10,7 @@ import { app_code_lesson_expression_string_concat_value_word } from "./app_code_
 import { app_code_string_value_of_is_say } from "./app_code_string_value_of_is_say.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-export function app_code_lesson_expression_string_concat_above_so_value(
+export function app_learn_js_lesson_expression_string_concat_above_so_value(
   root,
   context,
 ) {
