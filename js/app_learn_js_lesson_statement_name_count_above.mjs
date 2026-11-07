@@ -11,7 +11,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_statement_name_count_above(root, context) {
+export function app_learn_js_lesson_statement_name_count_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the program the screen before this one ended on, and then that same program with its middle line said a second time");
   ("Two boxes and no third, because there is only one change to show. The screen before this one settled everything about how the line is read - the right side worked out first, the name filled second - so all this screen does is put the line down twice and let a learner watch the answer move by one.");
