@@ -8,7 +8,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-export function app_code_lesson_statement_name_value_box(root, context) {
+export function app_learn_js_lesson_statement_name_value_box(root, context) {
   arguments_assert(arguments, 2);
   ("a box showing a name holding a word, the program the lesson on giving a value a name taught, with a link to that lesson");
   ("Shared by every lesson that meets a new kind of value against the word a learner has already seen a name hold.");
