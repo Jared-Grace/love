@@ -1,6 +1,6 @@
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_itself_sum_above } from "./app_code_lesson_statement_name_itself_sum_above.mjs";
+import { app_learn_js_lesson_statement_name_itself_sum_above } from "./app_learn_js_lesson_statement_name_itself_sum_above.mjs";
 import { app_code_lesson_statement_name_itself_sum_batch } from "./app_code_lesson_statement_name_itself_sum_batch.mjs";
 import { app_code_lesson_statement_name_itself_sum_title_code } from "./app_code_lesson_statement_name_itself_sum_title_code.mjs";
 export function app_code_lesson_statement_name_itself_sum_pair() {
@@ -10,7 +10,7 @@ export function app_code_lesson_statement_name_itself_sum_pair() {
   ("No let, because the name already exists - the line before it is what made it. That is the line of the lesson that gives a name a new value, met again with a sum on the right of it.");
   let code = app_code_lesson_statement_name_itself_sum_title_code();
   let pair = {
-    above: app_code_lesson_statement_name_itself_sum_above,
+    above: app_learn_js_lesson_statement_name_itself_sum_above,
     batch: app_code_lesson_statement_name_itself_sum_batch,
     fragment: app_code_lesson_statement_title_code_paint_get(code),
     words: "Adding to what a name holds",

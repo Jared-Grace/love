@@ -15,7 +15,10 @@ import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { app_learn_js_lesson_statement_name_again } from "./app_learn_js_lesson_statement_name_again.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
-export function app_code_lesson_statement_name_itself_sum_above(root, context) {
+export function app_learn_js_lesson_statement_name_itself_sum_above(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the line the screen before this one ended on, a name being given a new value, and then that same line with the new name taken out of it");
   ("This line is the line before it with one thing changed, so that is how it is shown - the earlier line, and then the change. The two lessons it could instead be assembled from are further back and neither of them is shaped like it, so assembling asks a learner to hold two things when the whole line is already in hand a screen ago.");
