@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_expression_integer_division_tree } from "./app_learn_js_expression_integer_division_tree.mjs";
-export function app_code_lesson_expression_choose_order_integer_division_tree_of_code(
+export function app_learn_js_lesson_expression_choose_order_integer_division_tree_of_code(
   code,
 ) {
   arguments_assert(arguments, 1);
