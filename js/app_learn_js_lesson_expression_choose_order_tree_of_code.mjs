@@ -5,7 +5,7 @@ import { list_get } from "./list_get.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { text_split_space } from "./text_split_space.mjs";
-export function app_code_lesson_expression_choose_order_tree_of_code(code) {
+export function app_learn_js_lesson_expression_choose_order_tree_of_code(code) {
   "the shape behind a line this lesson printed, worked out again from the line itself: 1 + 2 * 3 gives back the shape whose times is gathered on the right";
   "the lesson used to keep every shape it built beside the line it printed, and look it back up there. That map only ever holds what THIS run of the lesson built, and a line outlives the run that built it - a review saves the line it is going to ask again, and comes back to it after the page has been loaded afresh. So the question always arrived at a map that had never heard of it, and the lesson threw where a learner was owed a question.";
   "still built rather than parsed, in the sense the shape is: what is read off the line is three digits and which side the times is on, and the shape itself is put together by the very unit that puts a new one together. Reading a line of this lesson's own making is safe because the lesson makes only one kind - three digits, one times, one plus - and it is the same file that decides both";

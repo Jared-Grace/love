@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_tree_of_code } from "./app_code_lesson_expression_choose_order_tree_of_code.mjs";
+import { app_learn_js_lesson_expression_choose_order_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_tree_of_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { app_learn_js_lesson_expression_choose_order_expression } from "./app_learn_js_lesson_expression_choose_order_expression.mjs";
@@ -42,7 +42,8 @@ export function app_learn_js_lesson_expression_choose_order_questions() {
   }
   function tree_for(question) {
     "the shape behind a line, worked out again from the writing it was printed as";
-    let tree = app_code_lesson_expression_choose_order_tree_of_code(question);
+    let tree =
+      app_learn_js_lesson_expression_choose_order_tree_of_code(question);
     return tree;
   }
   function tree_of(qa, info) {
