@@ -4,7 +4,7 @@ import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
-import { app_code_hash_write } from "./app_code_hash_write.mjs";
+import { app_learn_js_hash_write } from "./app_learn_js_hash_write.mjs";
 import { app_learn_js_course_unfinished_go } from "./app_learn_js_course_unfinished_go.mjs";
 import { app_learn_js_button_unfinished_text } from "./app_learn_js_button_unfinished_text.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_quiz_button_unfinished(
       app_code_quiz_index_set(context, index);
       refresh();
       ("redrawing the quiz area on its own does not run the app-level after_refresh, so the new quiz position is written into the url from here - the same reason the Next button beside this one writes it");
-      app_code_hash_write(context);
+      app_learn_js_hash_write(context);
       return;
     }
     await app_learn_js_course_unfinished_go(context, way);

@@ -9,7 +9,7 @@ import { app_learn_js_hash_milestone_add } from "./app_learn_js_hash_milestone_a
 import { app_learn_js_hash_questions_add } from "./app_learn_js_hash_questions_add.mjs";
 import { app_learn_js_hash_course_add } from "./app_learn_js_hash_course_add.mjs";
 import { html_hash_set_object } from "./html_hash_set_object.mjs";
-export function app_code_hash_write(context) {
+export function app_learn_js_hash_write(context) {
   "reflect the current lesson, screen, and quiz position in the URL hash, so the link is shareable and reopens exactly where you are; runs after every refresh";
   "The pairs are stood next to each other the way every other page in the repo stands them, rather than the way a query string does. What made that worth changing is that a reader who is offered a correction and takes it has their answer written back into the address by shared code, in the shared shape - so a page writing its own shape would have had its link change shape underneath it the first time somebody fixed a word in it.";
   let hash = {};
