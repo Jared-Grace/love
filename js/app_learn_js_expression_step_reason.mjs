@@ -10,7 +10,7 @@ import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_first } from "./list_first.mjs";
-export function app_code_expression_step_reason(symbol, others) {
+export function app_learn_js_expression_step_reason(symbol, others) {
   arguments_assert(arguments, 2);
   ("The one sentence saying why this operator is the one that may be worked out next, as the pieces of a row: the operators it outranks, or the one it shares a rank with and stands to the left of, or nothing left to outrank at all.");
   ("A rule the learner can carry to the next line, rather than a fact about this one. Saying that only this part has a value on each side is true of the shape underneath the line and is not something a reader can see: shown 5 - 2 + 4, both the minus and the plus look like they have a number on each side, and the reason the minus goes first is that the two are read left to right. A telling that names what is invisible asks to be taken on trust and leaves the learner nothing to use on the next line.");

@@ -10,7 +10,7 @@ import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_expression_operator_symbols } from "./app_learn_js_expression_operator_symbols.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_expression_step_reason } from "./app_code_expression_step_reason.mjs";
+import { app_learn_js_expression_step_reason } from "./app_learn_js_expression_step_reason.mjs";
 export function app_learn_js_expression_step_reason_of(item, node) {
   arguments_assert(arguments, 2);
   ("the one sentence saying why this part of this line is the one that may be worked out next, as the pieces of a row: the parentheses when the part is written inside a pair, and otherwise what the operators come to");
@@ -50,6 +50,6 @@ export function app_learn_js_expression_step_reason_of(item, node) {
   let solved = app_learn_js_expression_solved(item, node);
   let remaining = app_learn_js_expression_operator_symbols(solved);
   let others = list_unique(remaining);
-  let reason = app_code_expression_step_reason(symbol, others);
+  let reason = app_learn_js_expression_step_reason(symbol, others);
   return reason;
 }
