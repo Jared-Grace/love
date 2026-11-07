@@ -28,7 +28,7 @@ export function app_learn_js_lesson_expression_true_false() {
   return lesson;
   function title_name_id() {
     ("the home title code-styles the literal keywords true and false (and console.log), separated by a COMMA — a plain list of two concepts. NOT 'or' (implies exclusive choice, but we teach both) and NOT 'and' (a beginner reads it as the && operator). Matches how other lessons list items (",
-      fn_name("app_code_lesson_name_id_remaining"),
+      fn_name("app_learn_js_lesson_name_id_remaining"),
       ").");
     function paint(parent) {
       let text = js_keyword_true();

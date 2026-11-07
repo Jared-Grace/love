@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
-import { app_code_lesson_name_id_remaining } from "./app_code_lesson_name_id_remaining.mjs";
+import { app_learn_js_lesson_name_id_remaining } from "./app_learn_js_lesson_name_id_remaining.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_name_id_symbol(left, rights, symbol) {
     html_span_text(parent, first_upper);
     html_span_space(parent);
     html_span_text_code_dark(parent, symbol);
-    app_code_lesson_name_id_remaining(parent, remaining);
+    app_learn_js_lesson_name_id_remaining(parent, remaining);
   };
   let name_id = app_learn_js_lesson_name_id_category_then(left, paint);
   return name_id;
