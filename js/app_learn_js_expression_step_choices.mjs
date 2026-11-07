@@ -1,4 +1,4 @@
-import { app_code_expression_step_operands } from "./app_code_expression_step_operands.mjs";
+import { app_learn_js_expression_step_operands } from "./app_learn_js_expression_step_operands.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
@@ -29,7 +29,11 @@ export function app_learn_js_expression_step_choices(value, rank_most) {
     if (not(room)) {
       return;
     }
-    let operands = app_code_expression_step_operands(value, symbol, value_left);
+    let operands = app_learn_js_expression_step_operands(
+      value,
+      symbol,
+      value_left,
+    );
     let any = list_empty_not_is(operands);
     if (not(any)) {
       return;

@@ -13,7 +13,11 @@ import { modulo } from "./modulo.mjs";
 import { multiply } from "./multiply.mjs";
 import { range_from } from "./range_from.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_expression_step_operands(value, symbol, value_left) {
+export function app_learn_js_expression_step_operands(
+  value,
+  symbol,
+  value_left,
+) {
   arguments_assert(arguments, 3);
   ("every number that may stand on the other side of one operator so that the step comes out a whole number within the allowed range: 6 with a divide and the 6 on the left gives 2 and 3, because 6 / 2 and 6 / 3 both land on a whole number, while 6 / 4 and 6 / 5 do not");
   ("A line is grown one operator at a time, and this is what keeps every step of it answerable. Choosing the numbers first and checking the line afterwards would have to throw away the lines that failed, and a lesson that draws until it gets a good one has no promise it will ever get one.");
