@@ -2,7 +2,7 @@ import { app_learn_js_lesson_expression_choose_order_walkthrough_on_chosen } fro
 import { app_learn_js_head_spaced_above_code } from "./app_learn_js_head_spaced_above_code.mjs";
 import { app_learn_js_expression_step_say } from "./app_learn_js_expression_step_say.mjs";
 import { app_learn_js_expression_choose_say } from "./app_learn_js_expression_choose_say.mjs";
-import { app_code_lesson_expression_choose_order_wrong_say } from "./app_code_lesson_expression_choose_order_wrong_say.mjs";
+import { app_learn_js_lesson_expression_choose_order_wrong_say } from "./app_learn_js_lesson_expression_choose_order_wrong_say.mjs";
 import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -58,7 +58,7 @@ export function app_learn_js_lesson_expression_choose_order_walkthrough(
     "Answered with the rule the head of the example stated, said again of the line being pressed. The refusal alone told a learner that this operator is not the one without ever telling them what decides which is - so the same press was left to be made again on the next line by the same reading that made it here.";
     function change() {
       app_learn_js_head_spaced_above_code(head);
-      app_code_lesson_expression_choose_order_wrong_say(
+      app_learn_js_lesson_expression_choose_order_wrong_say(
         note,
         node,
         ready_now,
