@@ -1,6 +1,6 @@
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_code_not } from "./js_code_not.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
+import { app_learn_js_category_operators } from "./app_learn_js_category_operators.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_not() {
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id_rights: ["not"],
-    category: app_code_category_operators(),
+    category: app_learn_js_category_operators(),
     next_arg,
     example_count: 2,
     forwards_answer_count_override: 2,

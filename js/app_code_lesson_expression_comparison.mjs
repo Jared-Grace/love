@@ -1,4 +1,4 @@
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
+import { app_learn_js_category_operators } from "./app_learn_js_category_operators.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_learn_js_binary_next_arg } from "./app_learn_js_binary_next_arg.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_comparison(params) {
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id_rights,
-    category: app_code_category_operators(),
+    category: app_learn_js_category_operators(),
     next_arg,
     example_count,
     forwards_answer_count_override: 2,
