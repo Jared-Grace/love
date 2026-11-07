@@ -12,7 +12,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_expression_round_up } from "./app_learn_js_lesson_expression_round_up.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_egg_boxes() {
+export function app_learn_js_lesson_statement_name_egg_boxes() {
   arguments_assert(arguments, 0);
   ("how many boxes of 12 hold some eggs: let exact = eggs / 12; let boxes = Math.ceil(exact); - dividing rounded UP, because a box that is not full is still a box. Chosen by the human 2026-09-30 as the next formula lesson; in DSA it is how many pages or chunks a list of items splits into");
   ("Two short lines rather than one: let boxes = Math.ceil(eggs / 12); is 33 characters, past the 30 a code line may be, and it asks for the dividing and the rounding at once. Not picked: the whole-number trick Math.floor((eggs + 11) / 12), which is right but asks the learner to take a trick on trust.");
