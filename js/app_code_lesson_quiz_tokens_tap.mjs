@@ -39,7 +39,7 @@ import { property_set } from "./property_set.mjs";
 import { list_size } from "./list_size.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-import { app_code_expression_chosen_style_assign } from "./app_code_expression_chosen_style_assign.mjs";
+import { app_learn_js_expression_chosen_style_assign } from "./app_learn_js_expression_chosen_style_assign.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { each_index } from "./each_index.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
@@ -195,7 +195,7 @@ export function app_code_lesson_quiz_tokens_tap({
     if (not(guided)) {
       return;
     }
-    app_code_expression_chosen_style_assign(span);
+    app_learn_js_expression_chosen_style_assign(span);
     html_box_shadow_set(span, "none");
   }
   each_index(places, token_add);
