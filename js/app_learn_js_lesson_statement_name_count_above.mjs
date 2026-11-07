@@ -8,7 +8,7 @@ import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
+import { app_learn_js_lesson_statement_name_one_more } from "./app_learn_js_lesson_statement_name_one_more.mjs";
 import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_statement_name_count_above(root, context) {
@@ -32,7 +32,7 @@ export function app_learn_js_lesson_statement_name_count_above(root, context) {
   app_code_remember_from_lesson(
     box_once,
     context,
-    app_code_lesson_statement_name_one_more,
+    app_learn_js_lesson_statement_name_one_more,
     ["we can give a name (", name, ") one more than it holds (", grown, "):"],
   );
   ("the lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");

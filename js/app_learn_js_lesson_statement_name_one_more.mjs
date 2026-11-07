@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_one_more_pair } from "./app_learn_js_lesson_statement_name_one_more_pair.mjs";
 import { app_code_lesson_statement_name_pair_first } from "./app_code_lesson_statement_name_pair_first.mjs";
-export function app_code_lesson_statement_name_one_more() {
+export function app_learn_js_lesson_statement_name_one_more() {
   arguments_assert(arguments, 0);
   ("a name given one more than it holds: let a = 7; console.log(a); a = a + 1; console.log(a); writes out 7 and then 8");
   ("It sits right after the plus one lessons: there a new name was given one more than a name, and here the name on the left is that same name, and nothing else has moved. It used to sit after the lesson that puts a name on both sides of a sum of two names.");

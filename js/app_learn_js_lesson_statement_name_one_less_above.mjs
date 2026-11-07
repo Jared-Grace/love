@@ -8,7 +8,7 @@ import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
+import { app_learn_js_lesson_statement_name_one_more } from "./app_learn_js_lesson_statement_name_one_more.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_statement_name_one_less_above(
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_statement_name_one_less_above(
   app_code_remember_from_lesson(
     box_more,
     context,
-    app_code_lesson_statement_name_one_more,
+    app_learn_js_lesson_statement_name_one_more,
     ["a name can be given one more than it holds (", code_more, "):"],
   );
   let held_more = js_code_let_statement(name, 13);
