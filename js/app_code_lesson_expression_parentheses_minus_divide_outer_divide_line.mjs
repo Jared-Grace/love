@@ -3,7 +3,7 @@ import { integer_random } from "./integer_random.mjs";
 import { multiply } from "./multiply.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { app_code_lesson_expression_parentheses_minus_divide_line } from "./app_code_lesson_expression_parentheses_minus_divide_line.mjs";
+import { app_learn_js_lesson_expression_parentheses_minus_divide_line } from "./app_learn_js_lesson_expression_parentheses_minus_divide_line.mjs";
 export function app_code_lesson_expression_parentheses_minus_divide_outer_divide_line() {
   arguments_assert(arguments, 0);
   ("a / (b * c), with a built as b * c * k so the answer is the whole number k and the parenthesis-less value a / b * c is whole too");
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_parentheses_minus_divide_outer_divide
   let a = multiply(left, k);
   let divided = js_operator_division_symbol();
   let times = js_operator_asterisk_symbol();
-  let code = app_code_lesson_expression_parentheses_minus_divide_line(
+  let code = app_learn_js_lesson_expression_parentheses_minus_divide_line(
     a,
     divided,
     b,
