@@ -26,7 +26,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-export function app_code_lesson_brace_pair() {
+export function app_learn_js_lesson_brace_pair() {
   arguments_assert(arguments, 0);
   ("which brace pairs with which: in if (a) { if (b) { ... } }, the first { is closed by the last }, not by the } nearest to it");
   ("The one new fact is that braces come in pairs, and the pair of a brace is found by eye: a } closes the most recent { still open, so pairs close in the reverse order they opened, shown by naming each brace in the colour it wears in the code (written by the human 2026-10-11, replacing a line saying a } stands under the start of the line its { is on). Rejected 2026-10-11 by the human: counting 1 more for every { and 1 less for every } until the count is 0, which was taught here first; the human asked for the pair to be eyeballed instead.");
