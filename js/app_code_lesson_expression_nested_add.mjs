@@ -1,5 +1,5 @@
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_lesson_console_log_nested_generic } from "./app_code_lesson_console_log_nested_generic.mjs";
+import { app_learn_js_lesson_console_log_nested_generic } from "./app_learn_js_lesson_console_log_nested_generic.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_plus_verb } from "./js_operator_plus_verb.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_nested_add() {
     let triples = list_shuffle_take_map(range_map(8, first_of), 4, triple_of);
     return triples;
   }
-  let lesson = app_code_lesson_console_log_nested_generic({
+  let lesson = app_learn_js_lesson_console_log_nested_generic({
     symbol,
     word: " nested add",
     verb: js_operator_plus_verb(),

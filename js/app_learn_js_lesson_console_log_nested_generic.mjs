@@ -10,7 +10,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_console_log_nested_generic(params) {
+export function app_learn_js_lesson_console_log_nested_generic(params) {
   "a reusable console.log lesson for a NESTED expression: three numbers joined by one operator (x op y op z, which is really (x op y) op z); the caller passes the operator symbol, a word for the id, an example triple for the intro, and triples_get which returns four DISTINCT [x,y,z] triples per refill so no two examples come out the same";
   let symbol = property_get(params, "symbol");
   property_get(params, "word");

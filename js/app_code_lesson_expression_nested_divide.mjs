@@ -1,5 +1,5 @@
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_lesson_console_log_nested_generic } from "./app_code_lesson_console_log_nested_generic.mjs";
+import { app_learn_js_lesson_console_log_nested_generic } from "./app_learn_js_lesson_console_log_nested_generic.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_division_verb } from "./js_operator_division_verb.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_expression_nested_divide() {
     let triples = list_shuffle_take_map(range_map(4, middle_of), 4, triple_of);
     return triples;
   }
-  let lesson = app_code_lesson_console_log_nested_generic({
+  let lesson = app_learn_js_lesson_console_log_nested_generic({
     symbol,
     word: " nested divide",
     verb: js_operator_division_verb(),
