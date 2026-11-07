@@ -6,7 +6,7 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
-export function app_code_lesson_expression_string_concat_above_order(
+export function app_learn_js_lesson_expression_string_concat_above_order(
   root,
   context,
 ) {
