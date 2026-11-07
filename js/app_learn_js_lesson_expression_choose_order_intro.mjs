@@ -1,5 +1,5 @@
 import { app_shared_hr_spaced } from "./app_shared_hr_spaced.mjs";
-import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_rule_parts } from "./app_learn_js_lesson_expression_choose_order_rule_parts.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_expression_choose_order_intro(
   ("A gap alone says the next thing is a little further off. It reads as a paragraph break, which is what stands between the first of these lines and the second, so the same mark cannot also say that the reading has finished and the doing has begun.");
   ("The room the saying used to stand off by is the room the line stands in, shared out above it and below it rather than left above it - so the saying, the line and the rule are evenly apart and the line reads as belonging to neither side.");
   app_shared_hr_spaced(parent);
-  let rule = app_code_lesson_expression_choose_order_rule_parts(
+  let rule = app_learn_js_lesson_expression_choose_order_rule_parts(
     "In ",
     whole_line,
   );

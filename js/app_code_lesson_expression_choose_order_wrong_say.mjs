@@ -3,7 +3,7 @@ import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
 import { noop } from "./noop.mjs";
 import { app_learn_js_expression_operator_chip } from "./app_learn_js_expression_operator_chip.mjs";
 import { html_div_cycle } from "./html_div_cycle.mjs";
-import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_rule_parts } from "./app_learn_js_lesson_expression_choose_order_rule_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_expression_choose_order_wrong_say(
     symbol_ready,
   ];
   html_div_cycle(note, cycles, parts_refused);
-  let parts = app_code_lesson_expression_choose_order_rule_parts(
+  let parts = app_learn_js_lesson_expression_choose_order_rule_parts(
     "Remember: In ",
     line_code,
   );
