@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { noop } from "./noop.mjs";
 import { html_div } from "./html_div.mjs";
-export function app_code_above_draw(root, above, context) {
+export function app_learn_js_above_draw(root, above, context) {
   arguments_assert(arguments, 3);
   ("Draw a lesson's telling at the top of its front page, standing above the examples, for every learner.");
   ("THE TELLING IS ALWAYS THERE. For one day it sat behind a button the learner had to press - Show me how this works - remembered per device and off until asked. The user settled it on 2026-09-11: the explanation should simply be on the screen. A learner who is stuck is not in a state to go hunting for the offer of help, and a learner who is not stuck reads past it at no cost. So there is no flag, nothing stored on the device, and nothing to ask.");
