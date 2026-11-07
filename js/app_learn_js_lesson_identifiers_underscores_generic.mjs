@@ -8,7 +8,7 @@ import { list_swap_beginning } from "./list_swap_beginning.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_to_text_and_list } from "./list_to_text_and_list.mjs";
-import { app_code_lesson_identifiers_valid } from "./app_code_lesson_identifiers_valid.mjs";
+import { app_learn_js_lesson_identifiers_valid } from "./app_learn_js_lesson_identifiers_valid.mjs";
 import { app_code_lesson_name_id_symbol } from "./app_code_lesson_name_id_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
@@ -88,7 +88,7 @@ export function app_learn_js_lesson_identifiers_underscores_generic({
     [combined3, combined4],
     separator_valid,
   );
-  let r5 = app_code_lesson_identifiers_valid(
+  let r5 = app_learn_js_lesson_identifiers_valid(
     name_id,
     above,
     batch_get,

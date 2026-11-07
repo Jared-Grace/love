@@ -3,7 +3,7 @@ import { app_learn_js_batch_question_answer_fns_validity_identifier } from "./ap
 import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "./app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { app_code_lesson_validity_base } from "./app_code_lesson_validity_base.mjs";
 import { app_learn_js_identifier_validity_wrong_say } from "./app_learn_js_identifier_validity_wrong_say.mjs";
-export function app_code_lesson_identifiers_valid(
+export function app_learn_js_lesson_identifiers_valid(
   name_id,
   above,
   batch_get,
