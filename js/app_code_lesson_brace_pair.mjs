@@ -1,7 +1,7 @@
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_brace_pair_programs_three } from "./app_learn_js_brace_pair_programs_three.mjs";
 import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
-import { app_code_lesson_brace_pair_generic } from "./app_code_lesson_brace_pair_generic.mjs";
+import { app_learn_js_lesson_brace_pair_generic } from "./app_learn_js_lesson_brace_pair_generic.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
@@ -190,7 +190,7 @@ export function app_code_lesson_brace_pair() {
     "Which brace pairs with which",
     app_learn_js_braces_dots(),
   );
-  let lesson = app_code_lesson_brace_pair_generic(
+  let lesson = app_learn_js_lesson_brace_pair_generic(
     name_id,
     above,
     app_learn_js_brace_pair_programs_three,
