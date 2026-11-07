@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_two_title_name_id } from "./app_code_lesson_statement_name_two_title_name_id.mjs";
+import { app_learn_js_lesson_statement_name_two_title_name_id } from "./app_learn_js_lesson_statement_name_two_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_statement_name_two_batch } from "./app_learn_js_lesson_statement_name_two_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_statement_name_two() {
   ("Nothing else moves. The values are still words, the names are still the two letters, and the lines are still read in the order they are written. Only the count of names has gone from one to two.");
   ("What is still not asked is what happens when one name is given a value twice. That needs the order of the lines to be noticed rather than used, and it is the lesson after this one.");
   ("Building the code from tokens is left switched off, for the reason the lessons before give: the order the lines go in is a second thing to learn, and there are three of them now.");
-  let name_id = app_code_lesson_statement_name_two_title_name_id();
+  let name_id = app_learn_js_lesson_statement_name_two_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
     app_learn_js_lesson_statement_name_two_batch,
     eval_console_log_to_list,
