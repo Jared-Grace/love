@@ -5,7 +5,7 @@ import { range_map } from "./range_map.mjs";
 import { list_concat_single } from "./list_concat_single.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_join } from "./list_join.mjs";
-export function app_code_lesson_expression_remainder_subtract_code(
+export function app_learn_js_lesson_expression_remainder_subtract_code(
   number,
   divisor,
   count,

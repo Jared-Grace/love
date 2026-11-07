@@ -4,7 +4,7 @@ import { integer_random } from "./integer_random.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_lesson_expression_remainder_subtract_code } from "./app_code_lesson_expression_remainder_subtract_code.mjs";
+import { app_learn_js_lesson_expression_remainder_subtract_code } from "./app_learn_js_lesson_expression_remainder_subtract_code.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lesson_expression_remainder_subtract_title_name_id } from "./app_code_lesson_expression_remainder_subtract_title_name_id.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_expression_remainder_subtract() {
       let leftover = integer_random_below(divisor);
       let number = multiply_add(count, divisor, leftover);
       let question = js_code_binary_spaced_nb(number, percent, divisor);
-      let answer = app_code_lesson_expression_remainder_subtract_code(
+      let answer = app_learn_js_lesson_expression_remainder_subtract_code(
         number,
         divisor,
         count,
@@ -70,7 +70,7 @@ export function app_code_lesson_expression_remainder_subtract() {
     let count_right = list_get(parts, 2);
     let counts = list_without([1, 2, 3, 4], count_right);
     function chain_of(count) {
-      let chain = app_code_lesson_expression_remainder_subtract_code(
+      let chain = app_learn_js_lesson_expression_remainder_subtract_code(
         number,
         divisor,
         count,
