@@ -10,7 +10,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -56,7 +56,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let held_last = js_code_let_statement(name_last, number_last);
   let logged_third = js_code_console_log_statement(name_third);
   let lines_total = [held_first, held_last, code_total, logged_third];
-  app_code_code_lines_writes_out(box_total, lines_total, total);
+  app_learn_js_code_lines_writes_out(box_total, lines_total, total);
   let box_again = app_code_container_light_blue(root);
   ("the line itself stands where the new value alone used to, because the line holds that value and says what is done with it. The number on its own named half of what the reminder is about and left the other half - the name being filled rather than made - to be found by looking down at the program.");
   let given_again = js_code_assign_statement(name_first, number_new);
@@ -69,7 +69,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let held_again = js_code_let_statement(name_first, number_first);
   let logged_again = js_code_console_log_statement(name_first);
   let lines_again = [held_again, given_again, logged_again];
-  app_code_code_lines_writes_out(box_again, lines_again, number_new);
+  app_learn_js_code_lines_writes_out(box_again, lines_again, number_new);
   app_code_div_cycle_code(box_again, [
     "The value the name (",
     name_first,

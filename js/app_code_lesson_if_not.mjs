@@ -13,7 +13,7 @@ import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_if_cases_generic } from "./app_code_lesson_if_cases_generic.mjs";
 export function app_code_lesson_if_not() {
   arguments_assert(arguments, 0);
@@ -81,7 +81,7 @@ export function app_code_lesson_if_not() {
       true,
     );
     let both = list_join_newline([inside_shown, after_shown]);
-    app_code_code_lines_writes_out(box_two, true_lines, both);
+    app_learn_js_code_lines_writes_out(box_two, true_lines, both);
     app_code_div_cycle_code(box_two, ["", name, " is ", "false"]);
     app_code_div_cycle_code(box_two, ["So ", opposite, " is ", "true"]);
     app_code_div_cycle_code(box_two, [
@@ -107,7 +107,7 @@ export function app_code_lesson_if_not() {
       after_shown,
       true,
     );
-    app_code_code_lines_writes_out(box_three, false_lines, after_shown);
+    app_learn_js_code_lines_writes_out(box_three, false_lines, after_shown);
     app_code_div_cycle_code(box_three, ["So ", opposite, " is ", "false"]);
     app_code_div_cycle_code(box_three, [
       "So the lines inside ",

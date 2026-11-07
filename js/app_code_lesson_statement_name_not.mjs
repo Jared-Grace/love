@@ -17,7 +17,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -69,7 +69,11 @@ export function app_code_lesson_statement_name_not() {
       ["we can get the opposite (", symbol, ") of true or false:"],
     );
     let logged_value = js_code_console_log_statement(value_asked);
-    app_code_code_lines_writes_out(box_remember, [logged_value], value_false);
+    app_learn_js_code_lines_writes_out(
+      box_remember,
+      [logged_value],
+      value_false,
+    );
     let box_name = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_name, [
       "Suppose we give a name (",
@@ -95,7 +99,7 @@ export function app_code_lesson_statement_name_not() {
       "):",
     ]);
     let lines_name = list_concat([held], answer_lines);
-    app_code_code_lines_writes_out(box_name, lines_name, value_false);
+    app_learn_js_code_lines_writes_out(box_name, lines_name, value_false);
   }
   let lesson = app_code_lesson_code_logged({
     above,

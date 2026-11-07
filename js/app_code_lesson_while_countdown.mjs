@@ -33,7 +33,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_decrement } from "./app_code_lesson_while_decrement.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -195,7 +195,7 @@ export function app_code_lesson_while_countdown() {
     let written = list_concat(a, [after_word]);
     let lines5 = program_get(3, 0);
     let value2 = list_join_newline(written);
-    app_code_code_lines_writes_out(box_two, lines5, value2);
+    app_learn_js_code_lines_writes_out(box_two, lines5, value2);
     said(box_two, 3);
     said(box_two, 2);
     said(box_two, 1);

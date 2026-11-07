@@ -25,7 +25,7 @@ import { list_filter } from "./list_filter.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { less_than } from "./less_than.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -152,7 +152,7 @@ export function app_code_lesson_for_if_generic(options) {
     let lines6 = program_lines(start5, bound5, threshold5);
     let code5 = list_join_newline(lines6);
     let out2 = eval_console_log_lines(code5);
-    app_code_code_lines_writes_out(root, lines6, out2);
+    app_learn_js_code_lines_writes_out(root, lines6, out2);
   }
   function walk(root) {
     "what the example program does, run by run, until the for stops, then walk_end's line";

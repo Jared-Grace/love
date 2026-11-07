@@ -14,7 +14,7 @@ import { app_code_lesson_braces_run_if_else_in_if_else } from "./app_code_lesson
 import { app_code_lesson_if_else_in_if } from "./app_code_lesson_if_else_in_if.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
 export function app_code_lesson_if_else_in_if_else() {
@@ -103,7 +103,7 @@ export function app_code_lesson_if_else_in_if_else() {
     ]);
     let all_lines = program_lines([true, true], words4);
     let all_written = list_join_newline([love, joy, patience]);
-    app_code_code_lines_writes_out(box_two, all_lines, all_written);
+    app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
     app_code_div_cycle_code(box_two, [
       "",
       "a",
@@ -136,7 +136,7 @@ export function app_code_lesson_if_else_in_if_else() {
     ]);
     let peace_lines = program_lines([true, false], words4);
     let peace_written = list_join_newline([love, peace, patience]);
-    app_code_code_lines_writes_out(box_three, peace_lines, peace_written);
+    app_learn_js_code_lines_writes_out(box_three, peace_lines, peace_written);
     app_code_div_cycle_code(box_three, [
       "",
       "b",
@@ -156,7 +156,11 @@ export function app_code_lesson_if_else_in_if_else() {
     ]);
     let kindness_lines = program_lines([false, true], words4);
     let kindness_written = list_join_newline([kindness, patience]);
-    app_code_code_lines_writes_out(box_four, kindness_lines, kindness_written);
+    app_learn_js_code_lines_writes_out(
+      box_four,
+      kindness_lines,
+      kindness_written,
+    );
     app_code_div_cycle_code(box_four, [
       "",
       "a",

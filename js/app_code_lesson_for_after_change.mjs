@@ -36,7 +36,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_log_after_change } from "./app_code_lesson_while_log_after_change.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -209,7 +209,7 @@ export function app_code_lesson_for_after_change() {
     let numbers3 = [2, 5, 2];
     let value4 = written([4, 6]);
     let lines5 = while_lines(numbers3);
-    app_code_code_lines_writes_out(box_one, lines5, value4);
+    app_learn_js_code_lines_writes_out(box_one, lines5, value4);
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "Move ",
@@ -220,7 +220,7 @@ export function app_code_lesson_for_after_change() {
     ]);
     let value5 = written([2, 4]);
     let lines6 = for_lines(numbers3);
-    app_code_code_lines_writes_out(box_two, lines6, value5);
+    app_learn_js_code_lines_writes_out(box_two, lines6, value5);
     said(box_two, 2, 5, 4);
     said(box_two, 4, 5, 6);
     let check = js_code_binary_spaced_nb(6, less, 5);

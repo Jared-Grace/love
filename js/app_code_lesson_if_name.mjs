@@ -9,7 +9,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -51,7 +51,7 @@ export function app_code_lesson_if_name() {
     let logged = js_code_console_log_statement(name);
     let a = setup_get(name, true);
     let remember_lines = list_concat(a, [logged]);
-    app_code_code_lines_writes_out(box_one, remember_lines, "true");
+    app_learn_js_code_lines_writes_out(box_one, remember_lines, "true");
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, ["We can put the name in an ", "if", ":"]);
     let setup2 = setup_get(name, true);
@@ -63,7 +63,7 @@ export function app_code_lesson_if_name() {
       true,
     );
     let both = list_join_newline([inside_shown, after_shown]);
-    app_code_code_lines_writes_out(box_two, true_lines, both);
+    app_learn_js_code_lines_writes_out(box_two, true_lines, both);
     app_code_div_cycle_code(box_two, ["", name, " is ", "true"]);
     app_code_div_cycle_code(box_two, [
       "So the lines inside ",
@@ -88,7 +88,7 @@ export function app_code_lesson_if_name() {
       after_shown,
       true,
     );
-    app_code_code_lines_writes_out(box_three, false_lines, after_shown);
+    app_learn_js_code_lines_writes_out(box_three, false_lines, after_shown);
     app_code_div_cycle_code(box_three, [
       "So the lines inside ",
       brace_left,

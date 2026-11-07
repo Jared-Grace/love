@@ -9,7 +9,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_halve } from "./app_code_lesson_while_halve.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
 import { multiply } from "./multiply.mjs";
@@ -78,7 +78,7 @@ export function app_code_lesson_while_double() {
       ", so it adds more each run:",
     ]);
     let double_lines = program_lines(3, 20, 2);
-    app_code_code_lines_writes_out(box_two, double_lines, "24");
+    app_learn_js_code_lines_writes_out(box_two, double_lines, "24");
     said(box_two, 3, 20, 6, true);
     said(box_two, 6, 20, 12, true);
     said(box_two, 12, 20, 24, true);

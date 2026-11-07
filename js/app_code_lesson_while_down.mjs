@@ -14,7 +14,7 @@ import { js_code_assign_operator_statement } from "./js_code_assign_operator_sta
 import { js_code_while_lines } from "./js_code_while_lines.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
@@ -80,7 +80,7 @@ export function app_code_lesson_while_down() {
     let while_lines = js_code_while_lines(condition, changed);
     let statement = js_code_console_log_statement(name);
     let up_lines = list_concat_multiple([[code], while_lines, [statement]]);
-    app_code_code_lines_writes_out(box_one, up_lines, "10");
+    app_learn_js_code_lines_writes_out(box_one, up_lines, "10");
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "A ",
@@ -92,7 +92,7 @@ export function app_code_lesson_while_down() {
       " is still greater than a number:",
     ]);
     let down_lines = program_lines(10, 2, 3);
-    app_code_code_lines_writes_out(box_two, down_lines, "1");
+    app_learn_js_code_lines_writes_out(box_two, down_lines, "1");
     said(box_two, 10, 2, 7, true);
     said(box_two, 7, 2, 4, true);
     said(box_two, 4, 2, 1, true);

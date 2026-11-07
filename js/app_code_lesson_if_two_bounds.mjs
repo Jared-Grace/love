@@ -26,7 +26,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -184,7 +184,7 @@ export function app_code_lesson_if_two_bounds() {
     ]);
     let all_lines = program_lines(4, 1, 3, words3);
     let all_written = list_join_newline(words3);
-    app_code_code_lines_writes_out(box_two, all_lines, all_written);
+    app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
     let low_true = js_code_binary_spaced_nb(4, greater, 1);
     let high_true = js_code_binary_spaced_nb(4, greater, 3);
     app_code_div_cycle_code(box_two, [
@@ -205,7 +205,7 @@ export function app_code_lesson_if_two_bounds() {
     ]);
     let first_lines = program_lines(2, 1, 3, words3);
     let first_written = list_join_newline([love, peace]);
-    app_code_code_lines_writes_out(box_three, first_lines, first_written);
+    app_learn_js_code_lines_writes_out(box_three, first_lines, first_written);
     let low_true2 = js_code_binary_spaced_nb(2, greater, 1);
     let high_false = js_code_binary_spaced_nb(2, greater, 3);
     app_code_div_cycle_code(box_three, [

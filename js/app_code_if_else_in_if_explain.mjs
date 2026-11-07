@@ -10,7 +10,7 @@ import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_else_in_if_program_lines } from "./app_code_if_else_in_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_code_if_else_in_if_explain(root, context) {
   arguments_assert(arguments, 2);
   ("an if inside an if remembered, then an if and else inside an if three ways");
@@ -46,7 +46,7 @@ export function app_code_if_else_in_if_explain(root, context) {
   ]);
   let all_lines = app_code_if_else_in_if_program_lines([true, true], words);
   let all_written = list_join_newline([love, joy, patience]);
-  app_code_code_lines_writes_out(box_two, all_lines, all_written);
+  app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
   app_code_div_cycle_code(box_two, [
     "",
     "a",
@@ -77,7 +77,7 @@ export function app_code_if_else_in_if_explain(root, context) {
   ]);
   let else_lines = app_code_if_else_in_if_program_lines([true, false], words);
   let else_written = list_join_newline([love, peace, patience]);
-  app_code_code_lines_writes_out(box_three, else_lines, else_written);
+  app_learn_js_code_lines_writes_out(box_three, else_lines, else_written);
   app_code_div_cycle_code(box_three, [
     "",
     "b",
@@ -98,7 +98,7 @@ export function app_code_if_else_in_if_explain(root, context) {
     ":",
   ]);
   let none_lines = app_code_if_else_in_if_program_lines([false, true], words);
-  app_code_code_lines_writes_out(box_four, none_lines, patience);
+  app_learn_js_code_lines_writes_out(box_four, none_lines, patience);
   app_code_div_cycle_code(box_four, [
     "",
     "a",

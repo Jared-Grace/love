@@ -23,7 +23,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -148,7 +148,7 @@ export function app_code_lesson_if_two_ifs() {
     let let_a = js_code_let_statement("a", 2);
     let b = if_about(0, love);
     let one_if = list_concat([let_a], b);
-    app_code_code_lines_writes_out(box_one, one_if, love);
+    app_learn_js_code_lines_writes_out(box_one, one_if, love);
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "Two ",
@@ -157,7 +157,7 @@ export function app_code_lesson_if_two_ifs() {
     ]);
     let two = program_lines([2, 7], [love, joy, peace]);
     let written = list_join_newline([love, peace]);
-    app_code_code_lines_writes_out(box_two, two, written);
+    app_learn_js_code_lines_writes_out(box_two, two, written);
     let a_less = js_code_binary_spaced_nb(2, less, 5);
     let b_less = js_code_binary_spaced_nb(7, less, 5);
     app_code_div_cycle_code(box_two, [

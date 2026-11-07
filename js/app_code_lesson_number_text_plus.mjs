@@ -20,7 +20,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_string_concat } from "./app_code_lesson_expression_string_concat.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -115,7 +115,7 @@ export function app_code_lesson_number_text_plus() {
     let right3 = app_code_string_code("joy");
     let two_strings = js_code_binary_spaced_nb(left2, plus, right3);
     let statement = js_code_console_log_statement(two_strings);
-    app_code_code_lines_writes_out(box_one, [statement], "lovejoy");
+    app_learn_js_code_lines_writes_out(box_one, [statement], "lovejoy");
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "A ",
@@ -125,7 +125,7 @@ export function app_code_lesson_number_text_plus() {
     let ending = list_first(endings);
     let v = program_get(5, ending);
     let value = text_combine("5", ending);
-    app_code_code_lines_writes_out(box_two, [v], value);
+    app_learn_js_code_lines_writes_out(box_two, [v], value);
     let combined = app_code_string_code(ending);
     let combined2 = app_code_string_code(" ...");
     app_code_div_cycle_code(box_two, [

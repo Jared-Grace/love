@@ -16,7 +16,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_cases_logged } from "./app_code_lesson_cases_logged.mjs";
 export function app_code_lesson_else_if_order() {
@@ -111,7 +111,7 @@ export function app_code_lesson_else_if_order() {
     app_code_div_cycle_code(box_two, ["The checks can be comparisons:"]);
     let joy_lines = program_lines([50], words4);
     let joy_written = list_join_newline([joy, patience]);
-    app_code_code_lines_writes_out(box_two, joy_lines, joy_written);
+    app_learn_js_code_lines_writes_out(box_two, joy_lines, joy_written);
     let v = compared(50, 10);
     let v2 = compared(50, 100);
     app_code_div_cycle_code(box_two, [
@@ -131,7 +131,7 @@ export function app_code_lesson_else_if_order() {
     app_code_div_cycle_code(box_three, ["But suppose ", "n", " is ", "5", ":"]);
     let love_lines = program_lines([5], words4);
     let love_written = list_join_newline([love, patience]);
-    app_code_code_lines_writes_out(box_three, love_lines, love_written);
+    app_learn_js_code_lines_writes_out(box_three, love_lines, love_written);
     let v3 = compared(5, 10);
     app_code_div_cycle_code(box_three, [
       "",
@@ -167,7 +167,7 @@ export function app_code_lesson_else_if_order() {
     ]);
     let peace_lines = program_lines([500], words4);
     let peace_written = list_join_newline([peace, patience]);
-    app_code_code_lines_writes_out(box_four, peace_lines, peace_written);
+    app_learn_js_code_lines_writes_out(box_four, peace_lines, peace_written);
     app_code_div_cycle_code(box_four, [
       "Neither check is ",
       "true",

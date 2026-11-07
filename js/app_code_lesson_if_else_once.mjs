@@ -27,7 +27,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -158,7 +158,7 @@ export function app_code_lesson_if_else_once() {
     ]);
     let ifs_lines = program_lines(name4, words7, false);
     let both_written = list_join_newline(words7);
-    app_code_code_lines_writes_out(box_two, ifs_lines, both_written);
+    app_learn_js_code_lines_writes_out(box_two, ifs_lines, both_written);
     app_code_div_cycle_code(box_two, [
       "",
       name4,
@@ -184,7 +184,7 @@ export function app_code_lesson_if_else_once() {
     let box_three = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_three, ["", else_dots, " asks only once:"]);
     let else_lines = program_lines(name4, words7, true);
-    app_code_code_lines_writes_out(box_three, else_lines, love);
+    app_learn_js_code_lines_writes_out(box_three, else_lines, love);
     app_code_div_cycle_code(box_three, [
       "",
       name4,

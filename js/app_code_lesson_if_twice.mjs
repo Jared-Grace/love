@@ -24,7 +24,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -176,7 +176,7 @@ export function app_code_lesson_if_twice() {
     let if_lines2 = js_code_if_lines(condition3, change2);
     let statement2 = js_code_console_log_statement(name);
     let one_if = list_concat_multiple([[code5], if_lines2, [statement2]]);
-    app_code_code_lines_writes_out(box_one, one_if, "4");
+    app_learn_js_code_lines_writes_out(box_one, one_if, "4");
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "We can write the same ",
@@ -184,7 +184,7 @@ export function app_code_lesson_if_twice() {
       " twice:",
     ]);
     let twice_lines = program_lines(1, 5, 3);
-    app_code_code_lines_writes_out(box_two, twice_lines, "7");
+    app_learn_js_code_lines_writes_out(box_two, twice_lines, "7");
     said(box_two, 1, 4, true);
     said(box_two, 4, 7, true);
     let box_three = app_code_container_light_blue(root);
@@ -196,7 +196,7 @@ export function app_code_lesson_if_twice() {
       ":",
     ]);
     let once_lines = program_lines(3, 5, 3);
-    app_code_code_lines_writes_out(box_three, once_lines, "6");
+    app_learn_js_code_lines_writes_out(box_three, once_lines, "6");
     said(box_three, 3, 6, true);
     said(box_three, 6, 6, false);
   }

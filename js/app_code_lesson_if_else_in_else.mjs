@@ -15,7 +15,7 @@ import { app_code_lesson_braces_run_if_else_in_else } from "./app_code_lesson_br
 import { app_code_lesson_if_in_else } from "./app_code_lesson_if_in_else.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
 export function app_code_lesson_if_else_in_else() {
@@ -107,7 +107,7 @@ export function app_code_lesson_if_else_in_else() {
     ]);
     let all_lines = program_lines([false, true], words4);
     let all_written = list_join_newline([joy, peace, patience]);
-    app_code_code_lines_writes_out(box_two, all_lines, all_written);
+    app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
     app_code_div_cycle_code(box_two, [
       "",
       "a",
@@ -140,7 +140,11 @@ export function app_code_lesson_if_else_in_else() {
     ]);
     let kindness_lines = program_lines([false, false], words4);
     let kindness_written = list_join_newline([joy, kindness, patience]);
-    app_code_code_lines_writes_out(box_three, kindness_lines, kindness_written);
+    app_learn_js_code_lines_writes_out(
+      box_three,
+      kindness_lines,
+      kindness_written,
+    );
     app_code_div_cycle_code(box_three, [
       "",
       "b",
@@ -160,7 +164,7 @@ export function app_code_lesson_if_else_in_else() {
     ]);
     let love_lines = program_lines([true, true], words4);
     let love_written = list_join_newline([love, patience]);
-    app_code_code_lines_writes_out(box_four, love_lines, love_written);
+    app_learn_js_code_lines_writes_out(box_four, love_lines, love_written);
     app_code_div_cycle_code(box_four, [
       "",
       "a",

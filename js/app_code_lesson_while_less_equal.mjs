@@ -8,7 +8,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
@@ -84,7 +84,7 @@ export function app_code_lesson_while_less_equal() {
       " runs once more:",
     ]);
     let lines = program_lines(1, 7, 3);
-    app_code_code_lines_writes_out(box_two, lines, "10");
+    app_learn_js_code_lines_writes_out(box_two, lines, "10");
     said(box_two, 1, 7, 4, true);
     said(box_two, 4, 7, 7, true);
     said(box_two, 7, 7, 10, true);

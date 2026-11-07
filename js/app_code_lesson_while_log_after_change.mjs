@@ -33,7 +33,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -179,7 +179,7 @@ export function app_code_lesson_while_log_after_change() {
     ]);
     let lines3 = program_lines([2, 5, 2]);
     let value2 = written([4, 6]);
-    app_code_code_lines_writes_out(box_two, lines3, value2);
+    app_learn_js_code_lines_writes_out(box_two, lines3, value2);
     said(box_two, 2, 5, 4);
     said(box_two, 4, 5, 6);
     let check = js_code_binary_spaced_nb(6, less, 5);

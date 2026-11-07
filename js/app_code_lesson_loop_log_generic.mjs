@@ -29,7 +29,7 @@ import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -174,7 +174,7 @@ export function app_code_lesson_loop_log_generic(params) {
     "the program of 1, 9 and 3, written with write, and what it writes out";
     let lines3 = program_lines(write, 1, 9, 3);
     let value2 = written([1, 4, 7]);
-    app_code_code_lines_writes_out(root, lines3, value2);
+    app_learn_js_code_lines_writes_out(root, lines3, value2);
   }
   function walk(root) {
     "what the program of 1, 9 and 3 does, run by run, until what it asks is false";

@@ -14,7 +14,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { function_is } from "./function_is.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -106,7 +106,11 @@ export function app_code_lesson_statement_formula_backwards_decoys({
     } else {
       let code_before = list_join_newline(remember_lines);
       let output_before = eval_console_log_lines(code_before);
-      app_code_code_lines_writes_out(box_before, remember_lines, output_before);
+      app_learn_js_code_lines_writes_out(
+        box_before,
+        remember_lines,
+        output_before,
+      );
     }
     let box_now = app_code_container_light_blue(root);
     for (let parts of explain) {
@@ -123,7 +127,7 @@ export function app_code_lesson_statement_formula_backwards_decoys({
     let lines_now = text_split_newline(example);
     let output_now = eval_console_log_lines(example);
     if (null_is(example_pointers)) {
-      app_code_code_lines_writes_out(box_now, lines_now, output_now);
+      app_learn_js_code_lines_writes_out(box_now, lines_now, output_now);
     } else if (function_is(example_pointers)) {
       example_pointers(box_now, lines_now, output_now);
     } else {

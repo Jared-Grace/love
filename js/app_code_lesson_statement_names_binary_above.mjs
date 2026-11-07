@@ -12,7 +12,7 @@ import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_statement_names_binary_above({
     remember_lesson,
     remember_parts,
   );
-  app_code_code_lines_writes_out(box_remember, [logged_numbers], written);
+  app_learn_js_code_lines_writes_out(box_remember, [logged_numbers], written);
   let box_names = app_code_container_light_blue(root);
   app_code_div_cycle_code(box_names, [
     "Suppose we give names (",
@@ -104,5 +104,5 @@ export function app_code_lesson_statement_names_binary_above({
     answer_name,
   );
   let lines_names = list_concat([held_first, held_last], answer_lines);
-  app_code_code_lines_writes_out(box_names, lines_names, written);
+  app_learn_js_code_lines_writes_out(box_names, lines_names, written);
 }

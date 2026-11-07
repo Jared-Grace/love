@@ -30,7 +30,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -193,7 +193,7 @@ export function app_code_lesson_if_less_than() {
       true,
     );
     let both = list_join_newline([inside_shown, after_shown]);
-    app_code_code_lines_writes_out(box_two, true_lines, both);
+    app_learn_js_code_lines_writes_out(box_two, true_lines, both);
     app_code_div_cycle_code(box_two, ["", small_first, " is ", "true"]);
     app_code_div_cycle_code(box_two, [
       "So the lines inside ",
@@ -205,7 +205,7 @@ export function app_code_lesson_if_less_than() {
     let box_three = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_three, ["But suppose we swap the numbers:"]);
     let false_lines = program_lines(big_first, inside_shown, after_shown, true);
-    app_code_code_lines_writes_out(box_three, false_lines, after_shown);
+    app_learn_js_code_lines_writes_out(box_three, false_lines, after_shown);
     app_code_div_cycle_code(box_three, ["", big_first, " is ", "false"]);
     app_code_div_cycle_code(box_three, [
       "So the lines inside ",

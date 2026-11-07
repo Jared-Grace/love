@@ -21,7 +21,7 @@ import { list_find } from "./list_find.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { list_get } from "./list_get.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -129,7 +129,7 @@ export function app_code_lesson_array_index_generic(options) {
     let code5 = program_of(example_items, example_index);
     let lines3 = text_split_newline(code5);
     let out = eval_console_log_lines(code5);
-    app_code_code_lines_writes_out(root, lines3, out);
+    app_learn_js_code_lines_writes_out(root, lines3, out);
   }
   function walk(root) {
     "the example's items counted from 0 up to its index, then the one written out";

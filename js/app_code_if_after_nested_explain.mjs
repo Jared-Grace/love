@@ -10,7 +10,7 @@ import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_after_nested_program_lines } from "./app_code_if_after_nested_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_code_if_after_nested_explain(root, context) {
   arguments_assert(arguments, 2);
   ("an if inside an if remembered, then an if after it, then the program with a false, which is where the if inside is never reached and the if after still runs");
@@ -44,7 +44,7 @@ export function app_code_if_after_nested_explain(root, context) {
   ]);
   let all_lines = app_code_if_after_nested_program_lines([true, true], words);
   let all_written = list_join_newline(words);
-  app_code_code_lines_writes_out(box_two, all_lines, all_written);
+  app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
   app_code_div_cycle_code(box_two, ["", if_joy, " is inside ", if_a]);
   app_code_div_cycle_code(box_two, [
     "",
@@ -66,7 +66,7 @@ export function app_code_if_after_nested_explain(root, context) {
   ]);
   let none_lines = app_code_if_after_nested_program_lines([false, true], words);
   let none_written = list_join_newline([peace, patience]);
-  app_code_code_lines_writes_out(box_three, none_lines, none_written);
+  app_learn_js_code_lines_writes_out(box_three, none_lines, none_written);
   app_code_div_cycle_code(box_three, [
     "",
     "a",

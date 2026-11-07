@@ -12,7 +12,7 @@ import { app_code_lesson_if_and_if_not } from "./app_code_lesson_if_and_if_not.m
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_else_program_lines } from "./app_code_if_else_program_lines.mjs";
 export function app_code_if_else_explain(root, context) {
@@ -42,7 +42,7 @@ export function app_code_if_else_explain(root, context) {
   let if_yes = js_code_if_lines(name, statement_love);
   let if_no = js_code_if_lines(opposite, statement_joy);
   let both_lines = list_concat_multiple([[setup], if_yes, if_no]);
-  app_code_code_lines_writes_out(box_one, both_lines, love);
+  app_learn_js_code_lines_writes_out(box_one, both_lines, love);
   let box_two = app_code_container_light_blue(root);
   app_code_div_cycle_code(box_two, [
     "",
@@ -54,7 +54,7 @@ export function app_code_if_else_explain(root, context) {
     " in between:",
   ]);
   let true_lines = app_code_if_else_program_lines(name, true, words);
-  app_code_code_lines_writes_out(box_two, true_lines, love);
+  app_learn_js_code_lines_writes_out(box_two, true_lines, love);
   app_code_div_cycle_code(box_two, [
     "",
     name,
@@ -75,7 +75,7 @@ export function app_code_if_else_explain(root, context) {
     ":",
   ]);
   let false_lines = app_code_if_else_program_lines(name, false, words);
-  app_code_code_lines_writes_out(box_three, false_lines, joy);
+  app_learn_js_code_lines_writes_out(box_three, false_lines, joy);
   app_code_div_cycle_code(box_three, [
     "",
     name,

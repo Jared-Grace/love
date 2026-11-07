@@ -27,7 +27,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_even } from "./app_code_lesson_statement_name_even.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -133,7 +133,7 @@ export function app_code_lesson_if_even() {
     let even_code = program_get(4);
     let lines2 = program_lines(4);
     let value = eval_console_log_lines(even_code);
-    app_code_code_lines_writes_out(box_two, lines2, value);
+    app_learn_js_code_lines_writes_out(box_two, lines2, value);
     let combined = js_code_binary_spaced_nb(4, percent, 2);
     app_code_div_cycle_code(box_two, ["", combined, " is ", "0"]);
     let left = js_code_binary_spaced_nb(4, percent, 2);
@@ -157,7 +157,7 @@ export function app_code_lesson_if_even() {
     let odd_code = program_get(5);
     let lines3 = program_lines(5);
     let value2 = eval_console_log_lines(odd_code);
-    app_code_code_lines_writes_out(box_three, lines3, value2);
+    app_learn_js_code_lines_writes_out(box_three, lines3, value2);
     let combined3 = js_code_binary_spaced_nb(5, percent, 2);
     app_code_div_cycle_code(box_three, ["", combined3, " is ", "1"]);
     let left3 = js_code_binary_spaced_nb(5, percent, 2);

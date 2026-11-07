@@ -8,7 +8,7 @@ import { app_code_lesson_statement_name_plus_one } from "./app_code_lesson_state
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_code_lesson_statement_name_plus_one_box(root, context) {
   arguments_assert(arguments, 2);
   ("a box showing one more than a name kept under a new name, the program the lesson on one more than a name taught, with a link to that lesson");
@@ -28,6 +28,6 @@ export function app_code_lesson_statement_name_plus_one_box(root, context) {
   let held = js_code_let_statement(name_first, 13);
   let held_more = js_code_let_statement(name_last, more);
   let logged = js_code_console_log_statement(name_last);
-  app_code_code_lines_writes_out(box, [held, held_more, logged], "14");
+  app_learn_js_code_lines_writes_out(box, [held, held_more, logged], "14");
   return box;
 }

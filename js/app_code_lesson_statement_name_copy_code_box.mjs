@@ -12,7 +12,7 @@ import { app_code_js_written_that_text } from "./app_code_js_written_that_text.m
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_name_copy_lines } from "./app_code_lesson_name_copy_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_note_names_marked } from "./app_code_note_names_marked.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
@@ -59,7 +59,7 @@ export function app_code_lesson_statement_name_copy_code_box(
     [note_cups, held_first, held_last, blank],
     copy_lines,
   );
-  app_code_code_lines_writes_out(box_code, lines, word_first);
+  app_learn_js_code_lines_writes_out(box_code, lines, word_first);
   let code = list_join_newline(lines);
   let names = app_code_note_names_marked(code);
   app_code_lesson_name_no_quotes_box(

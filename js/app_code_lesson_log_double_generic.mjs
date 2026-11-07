@@ -27,7 +27,7 @@ import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { each } from "./each.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
@@ -202,7 +202,7 @@ export function app_code_lesson_log_double_generic(options) {
     let values5 = values_of(start, bound);
     let list5 = list_map(values5, double_of);
     let written = lines_of(list5);
-    app_code_code_lines_writes_out(root, lines3, written);
+    app_learn_js_code_lines_writes_out(root, lines3, written);
   }
   function walk(root) {
     "what the program of 1 and 3 does, run by run, until what it asks is false";

@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines_writes_out_on.mjs";
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
-export function app_code_code_lines_writes_out(parent, lines, value) {
+export function app_learn_js_code_lines_writes_out(parent, lines, value) {
   arguments_assert(arguments, 3);
   ("a program and what it writes out, the pair a lesson shows in a box read before the questions start");
   ("It is drawn as the card the worked example is drawn as, because it is the same thing: this code, and what came out of it. A learner who has read that card once reads this one without going back to the labels. What the example has beside it is a button asking for another example, and a box whose code never changes does not get one - which is the difference between the two, and the only one.");

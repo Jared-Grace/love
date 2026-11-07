@@ -15,7 +15,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_if_cases_generic } from "./app_code_lesson_if_cases_generic.mjs";
 export function app_code_lesson_if_steps() {
   arguments_assert(arguments, 0);
@@ -95,7 +95,7 @@ export function app_code_lesson_if_steps() {
       true,
     );
     let both = list_join_newline([inside_shown, after_shown]);
-    app_code_code_lines_writes_out(box, lines, both);
+    app_learn_js_code_lines_writes_out(box, lines, both);
     app_code_div_cycle_code(box, ["", "a", " is ", "4"]);
     let combined = js_code_binary_spaced_nb(4, times, 3);
     app_code_div_cycle_code(box, [

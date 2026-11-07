@@ -22,7 +22,7 @@ import { less_than } from "./less_than.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_plus_assign } from "./app_code_lesson_statement_name_plus_assign.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -139,7 +139,11 @@ export function app_code_lesson_if_change() {
     let code5 = js_code_let_statement(name, 4);
     let change2 = js_code_assign_operator_statement(name, plus, 3);
     let statement2 = js_code_console_log_statement(name);
-    app_code_code_lines_writes_out(box_one, [code5, change2, statement2], "7");
+    app_learn_js_code_lines_writes_out(
+      box_one,
+      [code5, change2, statement2],
+      "7",
+    );
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "We can put ",
@@ -149,7 +153,7 @@ export function app_code_lesson_if_change() {
       ":",
     ]);
     let true_lines = program_lines(4, 5, 3);
-    app_code_code_lines_writes_out(box_two, true_lines, "7");
+    app_learn_js_code_lines_writes_out(box_two, true_lines, "7");
     let true_condition = js_code_binary_spaced_nb(4, less, 5);
     app_code_div_cycle_code(box_two, [
       "",
@@ -174,7 +178,7 @@ export function app_code_lesson_if_change() {
       ":",
     ]);
     let false_lines = program_lines(6, 5, 3);
-    app_code_code_lines_writes_out(box_three, false_lines, "6");
+    app_learn_js_code_lines_writes_out(box_three, false_lines, "6");
     let false_condition = js_code_binary_spaced_nb(6, less, 5);
     app_code_div_cycle_code(box_three, [
       "",

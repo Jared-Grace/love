@@ -34,7 +34,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -267,7 +267,7 @@ export function app_code_lesson_while_and() {
     ]);
     let lines3 = program_lines(3, 4);
     let value = written([5, 2]);
-    app_code_code_lines_writes_out(box_two, lines3, value);
+    app_learn_js_code_lines_writes_out(box_two, lines3, value);
     said(box_two, 3, 4);
     said(box_two, 4, 3);
     let combined = js_code_binary_spaced_nb(5, less, bound_a);
@@ -280,7 +280,7 @@ export function app_code_lesson_while_and() {
     ]);
     let lines4 = program_lines(1, 2);
     let value2 = written([3, 0]);
-    app_code_code_lines_writes_out(box_three, lines4, value2);
+    app_learn_js_code_lines_writes_out(box_three, lines4, value2);
     said(box_three, 1, 2);
     said(box_three, 2, 1);
     let combined2 = js_code_binary_spaced_nb(0, greater, bound_b);

@@ -35,7 +35,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -195,7 +195,7 @@ export function app_code_lesson_while_log_skipped() {
       " from the start, the lines inside never run:",
     ]);
     let lines3 = program_lines(9, 5, 2);
-    app_code_code_lines_writes_out(box_two, lines3, "9");
+    app_learn_js_code_lines_writes_out(box_two, lines3, "9");
     let first = js_code_binary_spaced_nb(9, less, 5);
     let r = app_learn_js_braces_dots();
     app_code_div_cycle_code(box_two, [

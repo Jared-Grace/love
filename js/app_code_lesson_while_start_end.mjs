@@ -31,7 +31,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_repeat_word } from "./app_code_lesson_while_repeat_word.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -159,7 +159,7 @@ export function app_code_lesson_while_start_end() {
     let lines4 = program_get(0, 2, joy);
     let list = word_between(joy, 2);
     let value2 = list_join_newline(list);
-    app_code_code_lines_writes_out(box_two, lines4, value2);
+    app_learn_js_code_lines_writes_out(box_two, lines4, value2);
     app_code_div_cycle_code(box_two, [
       "The first line writes out ",
       word_before,

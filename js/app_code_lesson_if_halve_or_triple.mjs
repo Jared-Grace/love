@@ -29,7 +29,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -118,7 +118,7 @@ export function app_code_lesson_if_halve_or_triple() {
       " can give odd numbers their own change:",
     ]);
     let odd_lines = program_lines(7);
-    app_code_code_lines_writes_out(box_two, odd_lines, "22");
+    app_learn_js_code_lines_writes_out(box_two, odd_lines, "22");
     let seven_check = js_code_remainder_two_is(7, "0");
     let else_dots = js_code_else_dots();
     app_code_div_cycle_code(box_two, [
@@ -151,7 +151,7 @@ export function app_code_lesson_if_halve_or_triple() {
       ":",
     ]);
     let even_lines = program_lines(8);
-    app_code_code_lines_writes_out(box_three, even_lines, "4");
+    app_learn_js_code_lines_writes_out(box_three, even_lines, "4");
     let eight_check = js_code_remainder_two_is(8, "0");
     app_code_div_cycle_code(box_three, [
       "",

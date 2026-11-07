@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_log_twice } from "./app_code_lesson_log_twice.mjs";
 import { app_code_lesson_sum_lines } from "./app_code_lesson_sum_lines.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_comment_skip_line_above(root, context) {
   let first_total = property_get(lines, "first_total");
   let last_total = property_get(lines, "last_total");
   let both = list_join_newline([first_total, last_total]);
-  app_code_code_lines_writes_out(box_both, [first_line, last_line], both);
+  app_learn_js_code_lines_writes_out(box_both, [first_line, last_line], both);
   let slashes = js_comment_start();
   let box_last_off = app_code_container_light_blue(root);
   app_code_div_cycle_code(box_last_off, [
@@ -40,7 +40,11 @@ export function app_code_lesson_comment_skip_line_above(root, context) {
     ") in front of the second line:",
   ]);
   let value = text_to(first_total);
-  app_code_code_lines_writes_out(box_last_off, [first_line, last_noted], value);
+  app_learn_js_code_lines_writes_out(
+    box_last_off,
+    [first_line, last_noted],
+    value,
+  );
   app_code_div_cycle_code(box_last_off, [
     "That line is a comment now, so it is skipped",
   ]);
@@ -50,7 +54,7 @@ export function app_code_lesson_comment_skip_line_above(root, context) {
     "If we put the slashes in front of the first line instead:",
   ]);
   let value2 = text_to(last_total);
-  app_code_code_lines_writes_out(
+  app_learn_js_code_lines_writes_out(
     box_first_off,
     [first_noted, last_line],
     value2,

@@ -6,7 +6,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { js_comment_start } from "./js_comment_start.mjs";
@@ -30,12 +30,12 @@ export function app_code_lesson_comment_note_above(root, context) {
     app_code_lesson_functions_console_log_arithmetic,
     ["we can write out what two numbers add up to:"],
   );
-  app_code_code_lines_writes_out(box_plain, [logged], total);
+  app_learn_js_code_lines_writes_out(box_plain, [logged], total);
   let box_note = app_code_container_light_blue(root);
   app_code_div_cycle_code(box_note, ["We can write a comment above the line:"]);
   ("the comment says what the line below it does, because that is what a comment is for. A comment reading anything else would be teaching the shape and leaving the use of it to be guessed at.");
   let note = js_code_comment_line("add ten and twenty");
-  app_code_code_lines_writes_out(box_note, [note, logged], total);
+  app_learn_js_code_lines_writes_out(box_note, [note, logged], total);
   app_code_div_cycle_code(box_note, ["The answer did not change"]);
   let slashes = js_comment_start();
   let box_slashes = app_code_container_light_blue(root);

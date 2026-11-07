@@ -22,7 +22,7 @@ import { app_code_lesson_braces_run_else_if_twice } from "./app_code_lesson_brac
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_cases_logged } from "./app_code_lesson_cases_logged.mjs";
 export function app_code_lesson_else_if_twice() {
@@ -127,7 +127,7 @@ export function app_code_lesson_else_if_twice() {
     ]);
     let peace_lines = program_lines([false, false, true], words4);
     let peace_written = list_join_newline([peace, kindness]);
-    app_code_code_lines_writes_out(box_two, peace_lines, peace_written);
+    app_learn_js_code_lines_writes_out(box_two, peace_lines, peace_written);
     app_code_div_cycle_code(box_two, [
       "",
       "a",
@@ -162,7 +162,7 @@ export function app_code_lesson_else_if_twice() {
     ]);
     let joy_lines = program_lines([false, true, true], words4);
     let joy_written = list_join_newline([joy, kindness]);
-    app_code_code_lines_writes_out(box_three, joy_lines, joy_written);
+    app_learn_js_code_lines_writes_out(box_three, joy_lines, joy_written);
     app_code_div_cycle_code(box_three, [
       "",
       "b",
@@ -194,7 +194,11 @@ export function app_code_lesson_else_if_twice() {
     ]);
     let patience_lines = program_lines([false, false, false], words4);
     let patience_written = list_join_newline([patience, kindness]);
-    app_code_code_lines_writes_out(box_four, patience_lines, patience_written);
+    app_learn_js_code_lines_writes_out(
+      box_four,
+      patience_lines,
+      patience_written,
+    );
     app_code_div_cycle_code(box_four, [
       "None is ",
       "true",

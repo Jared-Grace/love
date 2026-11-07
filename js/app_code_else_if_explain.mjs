@@ -11,7 +11,7 @@ import { app_code_lesson_if_in_else } from "./app_code_lesson_if_in_else.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_else_if_nested_lines } from "./app_code_else_if_nested_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_else_if_program_lines } from "./app_code_else_if_program_lines.mjs";
 export function app_code_else_if_explain(root, context) {
   arguments_assert(arguments, 2);
@@ -44,7 +44,7 @@ export function app_code_else_if_explain(root, context) {
   ]);
   let nested = app_code_else_if_nested_lines([false, true], words);
   let written = list_join_newline([joy, peace]);
-  app_code_code_lines_writes_out(box_two, nested, written);
+  app_learn_js_code_lines_writes_out(box_two, nested, written);
   let box_three = app_code_container_light_blue(root);
   app_code_div_cycle_code(box_three, [
     "So ",
@@ -54,7 +54,7 @@ export function app_code_else_if_explain(root, context) {
     ":",
   ]);
   let chain_lines = app_code_else_if_program_lines([false, true], words);
-  app_code_code_lines_writes_out(box_three, chain_lines, written);
+  app_learn_js_code_lines_writes_out(box_three, chain_lines, written);
   app_code_div_cycle_code(box_three, [
     "",
     "a",
@@ -72,7 +72,7 @@ export function app_code_else_if_explain(root, context) {
   app_code_div_cycle_code(box_four, ["But suppose ", "a", " is ", "true", ":"]);
   let love_lines = app_code_else_if_program_lines([true, true], words);
   let love_written = list_join_newline([love, peace]);
-  app_code_code_lines_writes_out(box_four, love_lines, love_written);
+  app_learn_js_code_lines_writes_out(box_four, love_lines, love_written);
   app_code_div_cycle_code(box_four, [
     "",
     "a",

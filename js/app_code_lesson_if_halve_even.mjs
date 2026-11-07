@@ -23,7 +23,7 @@ import { app_code_if_condition_set } from "./app_code_if_condition_set.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_divide_assign } from "./app_code_lesson_statement_name_divide_assign.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -99,7 +99,11 @@ export function app_code_lesson_if_halve_even() {
     let setup2 = js_code_let_statement(name, 8);
     let change2 = js_code_assign_operator_statement(name, slash, 2);
     let statement2 = js_code_console_log_statement(name);
-    app_code_code_lines_writes_out(box_one, [setup2, change2, statement2], "4");
+    app_learn_js_code_lines_writes_out(
+      box_one,
+      [setup2, change2, statement2],
+      "4",
+    );
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "We can put ",
@@ -109,7 +113,7 @@ export function app_code_lesson_if_halve_even() {
       " that checks for even:",
     ]);
     let even_lines = program_lines(8);
-    app_code_code_lines_writes_out(box_two, even_lines, "4");
+    app_learn_js_code_lines_writes_out(box_two, even_lines, "4");
     let eight_check = js_code_remainder_two_is(8, "0");
     app_code_div_cycle_code(box_two, [
       "",
@@ -130,7 +134,7 @@ export function app_code_lesson_if_halve_even() {
       ":",
     ]);
     let odd_lines = program_lines(7);
-    app_code_code_lines_writes_out(box_three, odd_lines, "7");
+    app_learn_js_code_lines_writes_out(box_three, odd_lines, "7");
     let seven_check = js_code_remainder_two_is(7, "0");
     app_code_div_cycle_code(box_three, [
       "",

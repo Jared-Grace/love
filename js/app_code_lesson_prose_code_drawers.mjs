@@ -9,7 +9,7 @@ export function app_code_lesson_prose_code_drawers() {
     fn_name("app_code_div_code"),
     fn_name("html_div_code_lines"),
     fn_name("app_code_div_code_multiple"),
-    fn_name("app_code_code_lines_writes_out"),
+    fn_name("app_learn_js_code_lines_writes_out"),
   ];
   return drawers;
 }

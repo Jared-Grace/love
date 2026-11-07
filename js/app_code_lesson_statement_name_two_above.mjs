@@ -11,7 +11,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_inside_parenthesis_box } from "./app_code_lesson_inside_parenthesis_box.mjs";
 export function app_code_lesson_statement_name_two_above(root, context) {
   arguments_assert(arguments, 2);
@@ -71,7 +71,7 @@ export function app_code_lesson_statement_name_two_above(root, context) {
   ]);
   ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The two lines that make the cups stand a row up as the lines being taught, and stand here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on two lines a learner had to carry down from higher in the box - and with two cups on the screen, which word comes out is exactly the thing those two lines decide.");
   let lines = [held_first, held_last, logged];
-  app_code_code_lines_writes_out(box_code, lines, word_last);
+  app_learn_js_code_lines_writes_out(box_code, lines, word_last);
   ("the last box says which of the two names comes out, and says it by colour rather than by words - the name written out and the word inside wear the same coloured tile a line apart");
   app_code_lesson_inside_parenthesis_box(root, name_last, name_first);
 }

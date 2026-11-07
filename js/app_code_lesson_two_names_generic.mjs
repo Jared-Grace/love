@@ -28,7 +28,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -188,7 +188,7 @@ export function app_code_lesson_two_names_generic(options) {
   function example(root, write) {
     "the program of 1, 9 and 4, written with write, and what it writes out";
     let lines3 = program_lines(write, 1, 9, 4);
-    app_code_code_lines_writes_out(root, lines3, "6");
+    app_learn_js_code_lines_writes_out(root, lines3, "6");
   }
   function walk(root) {
     "what the program of 1, 9 and 4 does, run by run, until what it asks is false, then how many times b lost one";

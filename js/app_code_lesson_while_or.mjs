@@ -32,7 +32,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -263,7 +263,7 @@ export function app_code_lesson_while_or() {
     ]);
     let lines3 = program_lines(2, 4);
     let value = written([5, 7]);
-    app_code_code_lines_writes_out(box_two, lines3, value);
+    app_learn_js_code_lines_writes_out(box_two, lines3, value);
     said(box_two, 2, 4);
     said(box_two, 3, 5);
     said(box_two, 4, 6);

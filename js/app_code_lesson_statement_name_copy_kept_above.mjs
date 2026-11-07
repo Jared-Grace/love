@@ -18,7 +18,7 @@ import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_code_js_written_that_text } from "./app_code_js_written_that_text.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the two cups the copying lesson left standing, then one of them emptied and refilled while the other keeps what it was given, and then the same story as one program");
@@ -143,7 +143,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
     note_logged,
     logged,
   ];
-  app_code_code_lines_writes_out(box_code, lines, word_first);
+  app_learn_js_code_lines_writes_out(box_code, lines, word_first);
   app_code_note_div_cycle_code(
     box_code,
     [

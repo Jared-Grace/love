@@ -7,7 +7,7 @@ import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.m
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_nested_program_lines } from "./app_code_if_nested_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 export function app_code_if_nested_explain(root, context) {
@@ -36,7 +36,7 @@ export function app_code_if_nested_explain(root, context) {
   ]);
   let all_lines = app_code_if_nested_program_lines([true, true], words);
   let all_written = list_join_newline(words);
-  app_code_code_lines_writes_out(box_two, all_lines, all_written);
+  app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
   let say_love = app_code_word_console_log_statement(love);
   let say_joy = app_code_word_console_log_statement(joy);
   let say_peace = app_code_word_console_log_statement(peace);
@@ -81,7 +81,7 @@ export function app_code_if_nested_explain(root, context) {
   ]);
   let outer_lines = app_code_if_nested_program_lines([true, false], words);
   let outer_written = list_join_newline([love, peace]);
-  app_code_code_lines_writes_out(box_three, outer_lines, outer_written);
+  app_learn_js_code_lines_writes_out(box_three, outer_lines, outer_written);
   app_code_div_cycle_code(box_three, [
     "",
     "a",
@@ -109,7 +109,7 @@ export function app_code_if_nested_explain(root, context) {
     ":",
   ]);
   let none_lines = app_code_if_nested_program_lines([false, true], words);
-  app_code_code_lines_writes_out(box_four, none_lines, peace);
+  app_learn_js_code_lines_writes_out(box_four, none_lines, peace);
   app_code_div_cycle_code(box_four, [
     "",
     "a",

@@ -7,7 +7,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_greater_equal } from "./app_code_lesson_while_greater_equal.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
 import { subtract } from "./subtract.mjs";
@@ -80,7 +80,7 @@ export function app_code_lesson_while_not_equal() {
       " is exactly the number:",
     ]);
     let lines = program_lines(1, 7, 2);
-    app_code_code_lines_writes_out(box_two, lines, "7");
+    app_learn_js_code_lines_writes_out(box_two, lines, "7");
     said(box_two, 1, 7, 3, true);
     said(box_two, 3, 7, 5, true);
     said(box_two, 5, 7, 7, true);

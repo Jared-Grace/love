@@ -34,7 +34,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_start_end } from "./app_code_lesson_while_start_end.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -211,7 +211,7 @@ export function app_code_lesson_while_two_lines() {
     ]);
     let lines5 = program_lines(1, 3, joy);
     let written = turns_text([1, 2], joy);
-    app_code_code_lines_writes_out(box_two, lines5, written);
+    app_learn_js_code_lines_writes_out(box_two, lines5, written);
     said(box_two, 1, 3, joy);
     said(box_two, 2, 3, joy);
     let check = js_code_binary_spaced_nb(3, less, 3);
