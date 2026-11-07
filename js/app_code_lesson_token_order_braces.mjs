@@ -10,7 +10,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
-import { app_code_braces_paired_with_order } from "./app_code_braces_paired_with_order.mjs";
+import { app_learn_js_braces_paired_with_order } from "./app_learn_js_braces_paired_with_order.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 export function app_code_lesson_token_order_braces() {
   arguments_assert(arguments, 0);
@@ -49,7 +49,7 @@ export function app_code_lesson_token_order_braces() {
       " has a colour of its own. Under the code are only its braces, in the order we read them:",
     ]);
     let nested = app_code_braces_two_nested();
-    app_code_braces_paired_with_order(box_two, nested);
+    app_learn_js_braces_paired_with_order(box_two, nested);
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "The braces among the tokens",

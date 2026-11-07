@@ -10,7 +10,7 @@ import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_orde
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_braces_three_programs } from "./app_code_braces_three_programs.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_braces_paired_with_order } from "./app_code_braces_paired_with_order.mjs";
+import { app_learn_js_braces_paired_with_order } from "./app_learn_js_braces_paired_with_order.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_braces_among_colored_generic } from "./app_code_lesson_braces_among_colored_generic.mjs";
@@ -50,7 +50,7 @@ export function app_code_lesson_token_order_braces_three() {
     ]);
     let programs = app_code_braces_three_programs();
     let after_nested = list_get(programs, 1);
-    app_code_braces_paired_with_order(box_two, after_nested);
+    app_learn_js_braces_paired_with_order(box_two, after_nested);
     html_div_text(
       box_two,
       "Some of this code is taught in later lessons. For now, only find its braces in order",
