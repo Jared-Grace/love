@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_source_symbols } from "./app_learn_js_lesson_source_symbols.mjs";
 import { app_learn_js_lesson_telling_missing_generic } from "./app_learn_js_lesson_telling_missing_generic.mjs";
-export async function app_code_lesson_telling_symbols_missing_one(
+export async function app_learn_js_lesson_telling_symbols_missing_one(
   root,
   roots,
   names,
