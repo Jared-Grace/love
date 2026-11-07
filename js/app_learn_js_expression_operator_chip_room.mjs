@@ -1,7 +1,7 @@
 import { app_shared_code_padding_x } from "./app_shared_code_padding_x.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
-export function app_code_expression_operator_chip_room(span) {
+export function app_learn_js_expression_operator_chip_room(span) {
   arguments_assert(arguments, 1);
   ("give an operator the room a chip stands in either side of it, and nothing else of the chip");
   ("The exact undoing of giving that room back, and wanted for the same reason the giving back is wanted on its own: room is the only part of a chip the rest of the line can feel. The fill arriving changes nothing outside the operator's own square, while the room arriving pushes everything to the right of it along.");

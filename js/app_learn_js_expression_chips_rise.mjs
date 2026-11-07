@@ -1,4 +1,4 @@
-import { app_code_expression_operator_chip_room } from "./app_code_expression_operator_chip_room.mjs";
+import { app_learn_js_expression_operator_chip_room } from "./app_learn_js_expression_operator_chip_room.mjs";
 import { app_code_expression_operator_pressable } from "./app_code_expression_operator_pressable.mjs";
 import { app_shared_animation_duration_quick } from "./app_shared_animation_duration_quick.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,7 +15,7 @@ export async function app_learn_js_expression_chips_rise(line, spans) {
   ("the line is measured whole rather than only where the chips are, the same way every other settling on this line measures it, because a chip opening in the middle moves everything after it and none of those pieces knows a chip was involved");
   let pieces = html_descendants_innermost(line);
   function change() {
-    each(spans, app_code_expression_operator_chip_room);
+    each(spans, app_learn_js_expression_operator_chip_room);
   }
   ("the short while, not the whole one: nothing is worked out here and no answer changes - this is the line offering the next press after a step the learner has already watched being answered");
   let duration = app_shared_animation_duration_quick();
