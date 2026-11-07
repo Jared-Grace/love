@@ -8,7 +8,7 @@ import { app_learn_js_lesson_expression_choose_order_questions_generic } from ".
 import { app_learn_js_lesson_expression_choose_order_whole_part_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_whole_part_tree_of_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_whole_part_above } from "./app_learn_js_lesson_expression_choose_order_whole_part_above.mjs";
-export function app_code_lesson_expression_choose_order_whole_part() {
+export function app_learn_js_lesson_expression_choose_order_whole_part() {
   arguments_assert(arguments, 0);
   ("the whole part of a division taken a press at a time: Math.floor(17 / 5) * 5, press the division, press 3.4, see Math.floor(3.4) * 5, press the rounding, press 3, see 3 * 5, press the times, press 15");
   ("It stands in front of the lesson that asks the same line all at once, which is where a pressing lesson stands throughout this course. The formula was the one thing a learner met whole first: they were shown it worked out in words on a card and then asked for its value in one go, while every other line in the course was pressed apart before it was asked for.");
