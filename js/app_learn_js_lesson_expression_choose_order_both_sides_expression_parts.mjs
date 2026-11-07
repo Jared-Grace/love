@@ -1,7 +1,7 @@
 import { app_learn_js_expression_parts_node } from "./app_learn_js_expression_parts_node.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_choose_order_both_sides_expression_parts(
+export function app_learn_js_lesson_expression_choose_order_both_sides_expression_parts(
   left_parts,
   outer_symbol,
   right_parts,

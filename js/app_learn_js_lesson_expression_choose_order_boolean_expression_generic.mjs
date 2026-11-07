@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { app_code_lesson_expression_choose_order_comparison_side } from "./app_code_lesson_expression_choose_order_comparison_side.mjs";
 import { app_learn_js_expression_parts_code } from "./app_learn_js_expression_parts_code.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_expression_parts } from "./app_code_lesson_expression_choose_order_both_sides_expression_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_expression_parts } from "./app_learn_js_lesson_expression_choose_order_both_sides_expression_parts.mjs";
 import { equal } from "./equal.mjs";
 export function app_learn_js_lesson_expression_choose_order_boolean_expression_generic(
   want_true,
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_expression_choose_order_boolean_expression_g
     right_code = app_learn_js_expression_parts_code(right_parts);
   }
   let tree =
-    app_code_lesson_expression_choose_order_both_sides_expression_parts(
+    app_learn_js_lesson_expression_choose_order_both_sides_expression_parts(
       left_parts,
       outer_symbol,
       right_parts,

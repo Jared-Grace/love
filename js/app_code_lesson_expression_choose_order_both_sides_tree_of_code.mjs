@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_both_sides_expression_parts } from "./app_code_lesson_expression_choose_order_both_sides_expression_parts.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_expression_parts } from "./app_learn_js_lesson_expression_choose_order_both_sides_expression_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_expression_choose_order_both_sides_tree_of_code(
     right: list_get(numbers, 3),
   };
   let tree =
-    app_code_lesson_expression_choose_order_both_sides_expression_parts(
+    app_learn_js_lesson_expression_choose_order_both_sides_expression_parts(
       left_parts,
       outer_symbol,
       right_parts,
