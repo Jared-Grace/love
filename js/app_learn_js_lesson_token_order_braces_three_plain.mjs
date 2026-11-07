@@ -7,7 +7,7 @@ import { app_learn_js_braces_three_programs } from "./app_learn_js_braces_three_
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_lesson_braces_among_plain_generic } from "./app_learn_js_lesson_braces_among_plain_generic.mjs";
 import { app_code_lesson_token_order_braces_three } from "./app_code_lesson_token_order_braces_three.mjs";
-export function app_code_lesson_token_order_braces_three_plain() {
+export function app_learn_js_lesson_token_order_braces_three_plain() {
   arguments_assert(arguments, 0);
   ("the braces among the tokens, three pairs, with no colours: as The braces among the tokens, three pairs, with its colours taken away, so the learner finds every brace by reading alone");
   ("Asked for by the human 2026-10-11, straight after The braces among the tokens, three pairs, as The braces among the tokens, with no colors is straight after The braces among the tokens.");
