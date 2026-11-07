@@ -22,7 +22,7 @@ import { equal } from "./equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
+import { app_learn_js_lesson_if_twice } from "./app_learn_js_lesson_if_twice.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
@@ -172,11 +172,12 @@ export function app_learn_js_lesson_if_thrice() {
   function above(root, context) {
     "the same if twice remembered, then three times, running three times and then twice";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_if_twice, [
-      "the same ",
-      "if",
-      " can be written twice",
-    ]);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_if_twice,
+      ["the same ", "if", " can be written twice"],
+    );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "We can write the same ",

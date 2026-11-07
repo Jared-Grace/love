@@ -24,7 +24,7 @@ import { list_filter } from "./list_filter.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
+import { app_learn_js_lesson_if_twice } from "./app_learn_js_lesson_if_twice.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -171,11 +171,12 @@ export function app_code_lesson_if_two_bounds() {
     let peace = list_get(fruits, 2);
     let words3 = [love, joy, peace];
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_if_twice, [
-      "The same ",
-      "if",
-      " can be written twice",
-    ]);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_if_twice,
+      ["The same ", "if", " can be written twice"],
+    );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "Two ",

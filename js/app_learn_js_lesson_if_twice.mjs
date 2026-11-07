@@ -28,7 +28,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_twice() {
+export function app_learn_js_lesson_if_twice() {
   arguments_assert(arguments, 0);
   ("the same if written twice: let n = 1; if (n < 5) { n += 3; } if (n < 5) { n += 3; } console.log(n); writes out 7, and with n starting at 3 writes out 6");
   ("The one new fact is that the first if can change whether the second runs, because the second asks about n after the first has changed it. So the same if written twice may run twice, once, or not at all.");
