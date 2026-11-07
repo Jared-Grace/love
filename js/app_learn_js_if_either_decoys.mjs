@@ -5,7 +5,7 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
-export function app_code_if_either_decoys(question, answer) {
+export function app_learn_js_if_either_decoys(question, answer) {
   "the wrong answers for a program whose first line sets a name to true or false and which then writes out one word when it is true and another when it is false: the other word, and both words in the order the program writes them";
   let flipped = app_learn_js_if_boolean_flipped(question);
   let other = eval_console_log_lines(flipped);

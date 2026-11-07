@@ -14,7 +14,7 @@ import { list_map } from "./list_map.mjs";
 import { app_learn_js_if_codes_halves } from "./app_learn_js_if_codes_halves.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_if_either_decoys } from "./app_code_if_either_decoys.mjs";
+import { app_learn_js_if_either_decoys } from "./app_learn_js_if_either_decoys.mjs";
 import { app_learn_js_if_boolean_flipped } from "./app_learn_js_if_boolean_flipped.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -82,7 +82,7 @@ export function app_code_lesson_if_else() {
   );
   function decoys(question, answer) {
     "the other word, and both words";
-    let found = app_code_if_either_decoys(question, answer);
+    let found = app_learn_js_if_either_decoys(question, answer);
     return found;
   }
   function backwards_decoys(question, answer) {
