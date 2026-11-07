@@ -66,7 +66,7 @@ import { app_learn_js_lesson_expression_minus_divide } from "./app_learn_js_less
 import { app_code_lesson_expression_which_part_first } from "./app_code_lesson_expression_which_part_first.mjs";
 import { app_learn_js_lesson_expression_exponent } from "./app_learn_js_lesson_expression_exponent.mjs";
 import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses.mjs";
-import { app_code_lesson_expression_parentheses_arithmetic } from "./app_code_lesson_expression_parentheses_arithmetic.mjs";
+import { app_learn_js_lesson_expression_parentheses_arithmetic } from "./app_learn_js_lesson_expression_parentheses_arithmetic.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_minus_divide } from "./app_learn_js_lesson_expression_choose_order_parentheses_minus_divide.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide } from "./app_code_lesson_expression_parentheses_minus_divide.mjs";
 import { app_code_lesson_expression_parentheses_moved } from "./app_code_lesson_expression_parentheses_moved.mjs";
@@ -427,7 +427,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_which_part_first,
     app_learn_js_lesson_expression_exponent,
     app_learn_js_lesson_expression_choose_order_arithmetic_parentheses,
-    app_code_lesson_expression_parentheses_arithmetic,
+    app_learn_js_lesson_expression_parentheses_arithmetic,
     app_learn_js_lesson_expression_choose_order_parentheses_minus_divide,
     app_code_lesson_expression_parentheses_minus_divide,
     app_code_lesson_expression_parentheses_moved,
