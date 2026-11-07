@@ -161,7 +161,7 @@ import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_state
 import { app_code_lesson_statement_name_count } from "./app_code_lesson_statement_name_count.mjs";
 import { app_code_lesson_statement_name_compare } from "./app_code_lesson_statement_name_compare.mjs";
 import { app_code_lesson_expression_choose_order_stop_early_or } from "./app_code_lesson_expression_choose_order_stop_early_or.mjs";
-import { app_code_lesson_expression_choose_order_stop_early_and } from "./app_code_lesson_expression_choose_order_stop_early_and.mjs";
+import { app_learn_js_lesson_expression_choose_order_stop_early_and } from "./app_learn_js_lesson_expression_choose_order_stop_early_and.mjs";
 import { app_code_lesson_expression_choose_order_stop_early_both } from "./app_code_lesson_expression_choose_order_stop_early_both.mjs";
 import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
 import { app_code_lesson_statement_name_again_last } from "./app_code_lesson_statement_name_again_last.mjs";
@@ -474,7 +474,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_statement_name_count,
     app_code_lesson_statement_name_compare,
     app_code_lesson_expression_choose_order_stop_early_or,
-    app_code_lesson_expression_choose_order_stop_early_and,
+    app_learn_js_lesson_expression_choose_order_stop_early_and,
     app_code_lesson_expression_choose_order_stop_early_both,
     app_code_lesson_step_log_twice,
     app_code_lesson_statement_name_again_last,

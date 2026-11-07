@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_stop_early_or } from "./app_code_lesson_expression_choose_order_stop_early_or.mjs";
-import { app_code_lesson_expression_choose_order_stop_early_and } from "./app_code_lesson_expression_choose_order_stop_early_and.mjs";
+import { app_learn_js_lesson_expression_choose_order_stop_early_and } from "./app_learn_js_lesson_expression_choose_order_stop_early_and.mjs";
 import { app_code_lesson_expression_choose_order_stop_early_both } from "./app_code_lesson_expression_choose_order_stop_early_both.mjs";
 import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
 import { app_learn_js_lesson_else_if_order } from "./app_learn_js_lesson_else_if_order.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_course_new_fns() {
   arguments_assert(arguments, 0);
   let fns = [
     app_code_lesson_expression_choose_order_stop_early_or,
-    app_code_lesson_expression_choose_order_stop_early_and,
+    app_learn_js_lesson_expression_choose_order_stop_early_and,
     app_code_lesson_expression_choose_order_stop_early_both,
     app_code_lesson_step_log_twice,
     app_learn_js_lesson_else_if_order,
