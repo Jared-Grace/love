@@ -1,7 +1,7 @@
 import { each_index } from "./each_index.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
-import { app_code_lesson_title_code_breakable } from "./app_code_lesson_title_code_breakable.mjs";
+import { app_learn_js_lesson_title_code_breakable } from "./app_learn_js_lesson_title_code_breakable.mjs";
 import { app_code_lesson_title_code_tile } from "./app_code_lesson_title_code_tile.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split } from "./text_split.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_lesson_statement_title_code_dots_paint_get(code) {
   ("what paints one piece of a home title's code whose value is left out as three dots: the code in one tile, with the dots in the placeholder grey");
   ("The dots are a place to fill in, not three characters the line has, so they wear the grey the log title's gap wears. Asked for by the human. The line is handed in whole and split on the dots rather than rebuilt, so its two ends stay whatever the line builders wrote.");
   let dots = "...";
-  let shown = app_code_lesson_title_code_breakable(code);
+  let shown = app_learn_js_lesson_title_code_breakable(code);
   let pieces = text_split(shown, dots);
   function fill(host) {
     "every piece between the dots is kept, so if (b) ... else ... keeps its else - the middle was once dropped, when a line had only ever held one set of dots";
