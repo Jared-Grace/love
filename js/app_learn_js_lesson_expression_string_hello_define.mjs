@@ -8,7 +8,7 @@ import { app_code_string_value_color_on_light } from "./app_code_string_value_co
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_code_string_value_shape } from "./app_code_string_value_shape.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_string_hello_define(root, word) {
+export function app_learn_js_lesson_expression_string_hello_define(root, word) {
   arguments_assert(arguments, 2);
   ("the second box: says what the value of a string is, then shows it on the same word the box above used - quoted on one side, bare on the other, with the value coloured both times so the eye follows what changed. The one thing to take away is written underneath: the quotes are how it is written, not part of what it is.");
   let define = app_learn_js_container_light_blue(root);
