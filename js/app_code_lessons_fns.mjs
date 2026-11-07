@@ -167,7 +167,7 @@ import { app_code_lesson_statement_name_one_less } from "./app_code_lesson_state
 import { app_code_lesson_statement_name_one_less_last } from "./app_code_lesson_statement_name_one_less_last.mjs";
 import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
 import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
-import { app_code_lesson_statement_name_join } from "./app_code_lesson_statement_name_join.mjs";
+import { app_learn_js_lesson_statement_name_join } from "./app_learn_js_lesson_statement_name_join.mjs";
 import { app_learn_js_lesson_statement_name_itself_sum } from "./app_learn_js_lesson_statement_name_itself_sum.mjs";
 import { app_learn_js_lesson_statement_name_itself_sum_last } from "./app_learn_js_lesson_statement_name_itself_sum_last.mjs";
 import { app_learn_js_lesson_statement_name_count } from "./app_learn_js_lesson_statement_name_count.mjs";
@@ -528,7 +528,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_one_less_last,
     app_code_lesson_statement_name_sum,
     app_code_lesson_statement_name_total,
-    app_code_lesson_statement_name_join,
+    app_learn_js_lesson_statement_name_join,
     app_learn_js_lesson_statement_name_itself_sum,
     app_learn_js_lesson_statement_name_itself_sum_last,
     app_learn_js_lesson_statement_name_count,

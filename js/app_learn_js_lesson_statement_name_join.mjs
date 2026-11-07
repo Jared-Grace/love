@@ -4,7 +4,7 @@ import { app_code_lesson_statement_names_binary_decoys } from "./app_code_lesson
 import { app_learn_js_lesson_statement_name_join_pairs } from "./app_learn_js_lesson_statement_name_join_pairs.mjs";
 import { app_learn_js_lesson_expression_string_concat } from "./app_learn_js_lesson_expression_string_concat.mjs";
 import { app_learn_js_lesson_statement_name_join_decoys } from "./app_learn_js_lesson_statement_name_join_decoys.mjs";
-export function app_code_lesson_statement_name_join() {
+export function app_learn_js_lesson_statement_name_join() {
   arguments_assert(arguments, 0);
   ('two names holding text, joined: let a = "God"; let b = "love"; let joined = a + b; console.log(joined); writes out Godlove');
   ("The lesson on joining two pieces of text showed a plus between two strings. The lessons on adding two names showed a plus between two names holding numbers. This one puts the two together: the same plus, between names holding text, joins the text.");
