@@ -4,7 +4,7 @@ import { app_code_lesson_expression_choose_order_comparison_side } from "./app_c
 import { app_learn_js_expression_parts_code } from "./app_learn_js_expression_parts_code.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression_parts } from "./app_code_lesson_expression_choose_order_both_sides_expression_parts.mjs";
 import { equal } from "./equal.mjs";
-export function app_code_lesson_expression_choose_order_boolean_expression_generic(
+export function app_learn_js_lesson_expression_choose_order_boolean_expression_generic(
   want_true,
   outer_symbol,
 ) {
