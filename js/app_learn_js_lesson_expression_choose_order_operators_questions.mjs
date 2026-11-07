@@ -6,7 +6,7 @@ import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_ques
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_choose_order_operators_questions() {
+export function app_learn_js_lesson_expression_choose_order_operators_questions() {
   arguments_assert(arguments, 0);
   ("the question bank this lesson draws on: lines built as shapes, handed out one a screen, and worked out again from the writing they were printed as");
   ("The first line a learner ever meets puts the stronger operator on the RIGHT, so choosing the leftmost operator is wrong on the very first press. A learner shown the other shape first would be right by reading position rather than by reading the operators, and would be right for a reason that fails on the next question - the same reason the two banks before this one open the way they do.");

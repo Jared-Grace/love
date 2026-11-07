@@ -1,7 +1,7 @@
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_above } from "./app_learn_js_lesson_expression_choose_order_operators_above.mjs";
-import { app_code_lesson_expression_choose_order_operators_questions } from "./app_code_lesson_expression_choose_order_operators_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_operators_questions } from "./app_learn_js_lesson_expression_choose_order_operators_questions.mjs";
 import { app_code_lesson_expression_choose_order_operators_title_name_id } from "./app_code_lesson_expression_choose_order_operators_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_choose_order_operators() {
       app_learn_js_expression_value_decoys,
     );
   }
-  let bank = app_code_lesson_expression_choose_order_operators_questions();
+  let bank = app_learn_js_lesson_expression_choose_order_operators_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_operators_above,
