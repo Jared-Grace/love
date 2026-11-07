@@ -4,7 +4,7 @@ import { app_code_lesson_current_number } from "./app_code_lesson_current_number
 import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
 import { app_code_course_unfinished_next } from "./app_code_course_unfinished_next.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_course_unfinished_go } from "./app_code_course_unfinished_go.mjs";
+import { app_learn_js_course_unfinished_go } from "./app_learn_js_course_unfinished_go.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_button_unfinished_text } from "./app_learn_js_button_unfinished_text.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_button_skip_lesson_unfinished(context, parent) {
     return null;
   }
   async function go() {
-    await app_code_course_unfinished_go(context, way);
+    await app_learn_js_course_unfinished_go(context, way);
   }
   let kind = property_get(way, "kind");
   let text = app_learn_js_button_unfinished_text(kind);

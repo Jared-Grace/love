@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
 import { app_code_hash_write } from "./app_code_hash_write.mjs";
-import { app_code_course_unfinished_go } from "./app_code_course_unfinished_go.mjs";
+import { app_learn_js_course_unfinished_go } from "./app_learn_js_course_unfinished_go.mjs";
 import { app_learn_js_button_unfinished_text } from "./app_learn_js_button_unfinished_text.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
 export function app_code_lesson_quiz_button_unfinished(
@@ -42,7 +42,7 @@ export function app_code_lesson_quiz_button_unfinished(
       app_code_hash_write(context);
       return;
     }
-    await app_code_course_unfinished_go(context, way);
+    await app_learn_js_course_unfinished_go(context, way);
   }
   let text = app_learn_js_button_unfinished_text(kind);
   let button = app_shared_button_wide_spaced(parent, text, go);
