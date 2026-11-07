@@ -11,7 +11,7 @@ import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { app_code_lesson_cup_code_box } from "./app_code_lesson_cup_code_box.mjs";
-import { app_code_code_output_explain_box } from "./app_code_code_output_explain_box.mjs";
+import { app_learn_js_code_output_explain_box } from "./app_learn_js_code_output_explain_box.mjs";
 export function app_code_lesson_statement_name_value_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: what a learner has already been told about names, a cup with grapes in it, the word for such a cup, and the same thing written as code");
@@ -59,5 +59,5 @@ export function app_code_lesson_statement_name_value_above(root, context) {
   ]);
   app_code_lesson_cup_code_box(root, name, word);
   ("this is the first screen in the whole app where code and its output are drawn above the questions, so it is the one screen that says what that card is; the screens after it are read by a learner who has been told");
-  app_code_code_output_explain_box(root);
+  app_learn_js_code_output_explain_box(root);
 }

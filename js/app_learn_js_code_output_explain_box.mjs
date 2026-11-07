@@ -1,7 +1,7 @@
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-export function app_code_code_output_explain_box(root) {
+export function app_learn_js_code_output_explain_box(root) {
   arguments_assert(arguments, 1);
   ("the box that says what a card of code and its output is doing above the questions, read once, on the first screen where such a card is not the lesson's own example");
   ("A learner reaching that screen has finished a hundred lessons that each ended with one of these cards, so by now the shape itself says example. The first screen to put one higher up is therefore the one screen where the shape says the wrong thing, and it says it in the same breath as the real example a box below.");
