@@ -12,7 +12,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
-export function app_code_lesson_expression_min_max_of_three_above(root) {
+export function app_learn_js_lesson_expression_min_max_of_three_above(root) {
   arguments_assert(arguments, 1);
   ("the duo: Math.min and Math.max each shown with the same three numbers, so both are established as taking more than two; randomized each visit");
   let three = app_code_lesson_expression_min_max_of_three_numbers();

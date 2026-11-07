@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_min_max_of_three_above } from "./app_code_lesson_expression_min_max_of_three_above.mjs";
+import { app_learn_js_lesson_expression_min_max_of_three_above } from "./app_learn_js_lesson_expression_min_max_of_three_above.mjs";
 import { app_code_lesson_expression_min_max_of_three_numbers } from "./app_code_lesson_expression_min_max_of_three_numbers.mjs";
 import { app_code_lesson_expression_min_max_of_three_code } from "./app_code_lesson_expression_min_max_of_three_code.mjs";
 import { app_code_lesson_expression_min_max_of_three_title_name_id } from "./app_code_lesson_expression_min_max_of_three_title_name_id.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_expression_min_max_of_three() {
   });
   return lesson;
   function above(root) {
-    let r2 = app_code_lesson_expression_min_max_of_three_above(root);
+    let r2 = app_learn_js_lesson_expression_min_max_of_three_above(root);
     return r2;
   }
 }
