@@ -4,7 +4,7 @@ import { app_code_lesson_expression_choose_order_compare_line_apart } from "./ap
 import { app_code_lesson_expression_choose_order_run_worked } from "./app_code_lesson_expression_choose_order_run_worked.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_expression_choose_order_compare_intro } from "./app_code_lesson_expression_choose_order_compare_intro.mjs";
-export function app_code_lesson_expression_choose_order_compare_above(
+export function app_learn_js_lesson_expression_choose_order_compare_above(
   root,
   context,
 ) {

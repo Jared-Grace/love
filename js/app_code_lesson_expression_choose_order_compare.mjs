@@ -1,7 +1,7 @@
 import { app_code_lesson_expression_choose_order_compare_title_name_id } from "./app_code_lesson_expression_choose_order_compare_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_compare_questions } from "./app_code_lesson_expression_choose_order_compare_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
-import { app_code_lesson_expression_choose_order_compare_above } from "./app_code_lesson_expression_choose_order_compare_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_compare_above } from "./app_learn_js_lesson_expression_choose_order_compare_above.mjs";
 export function app_code_lesson_expression_choose_order_compare() {
   "choosing which part of a line to solve and then what that part comes to, on a line whose parts are comparisons: true === (3 < 5), choose the 3 < 5, choose true out of true and false, see true === true, choose the ===, choose true";
   "The same two presses on the same engine as the press-at-a-time arithmetic lessons, with one thing changed: the operators are comparisons rather than arithmetic. A learner has chosen the order and chosen the value on a line of numbers; here they do it again where every value is a true or a false.";
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_choose_order_compare() {
   let bank = app_code_lesson_expression_choose_order_compare_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
-    app_code_lesson_expression_choose_order_compare_above,
+    app_learn_js_lesson_expression_choose_order_compare_above,
     bank,
   );
   return lesson;
