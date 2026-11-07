@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_three_operator_count } from "./app_code_lesson_expression_choose_order_three_operator_count.mjs";
 import { app_learn_js_expression_flat_random_strong_first } from "./app_learn_js_expression_flat_random_strong_first.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_lesson_expression_choose_order_three_above } from "./app_code_lesson_expression_choose_order_three_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_three_above } from "./app_learn_js_lesson_expression_choose_order_three_above.mjs";
 import { app_learn_js_expression_flat_value_left_to_right } from "./app_learn_js_expression_flat_value_left_to_right.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_three_steps_strong_first_title_name_id } from "./app_code_lesson_expression_three_steps_strong_first_title_name_id.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_three_steps_strong_first() {
       app_code_lesson_expression_choose_order_three,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
-    app_code_lesson_expression_choose_order_three_above(root, context);
+    app_learn_js_lesson_expression_choose_order_three_above(root, context);
   }
   function refill() {
     "two lines a screen, each drawn on its own so where the stronger operator falls is left to the growing rather than arranged";

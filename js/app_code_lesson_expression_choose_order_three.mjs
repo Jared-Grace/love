@@ -2,7 +2,7 @@ import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
-import { app_code_lesson_expression_choose_order_three_above } from "./app_code_lesson_expression_choose_order_three_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_three_above } from "./app_learn_js_lesson_expression_choose_order_three_above.mjs";
 import { app_code_lesson_expression_choose_order_three_questions } from "./app_code_lesson_expression_choose_order_three_questions.mjs";
 import { app_code_lesson_expression_choose_order_three_title_name_id } from "./app_code_lesson_expression_choose_order_three_title_name_id.mjs";
 export function app_code_lesson_expression_choose_order_three() {
@@ -36,7 +36,7 @@ export function app_code_lesson_expression_choose_order_three() {
   let bank = app_code_lesson_expression_choose_order_three_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
-    app_code_lesson_expression_choose_order_three_above,
+    app_learn_js_lesson_expression_choose_order_three_above,
     answer_draw,
     example_draw,
     bank,
