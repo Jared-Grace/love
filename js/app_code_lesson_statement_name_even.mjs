@@ -1,4 +1,4 @@
-import { app_code_code_dark_lines_part_pointed } from "./app_code_code_dark_lines_part_pointed.mjs";
+import { app_learn_js_code_dark_lines_part_pointed } from "./app_learn_js_code_dark_lines_part_pointed.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
@@ -53,7 +53,7 @@ export function app_code_lesson_statement_name_even() {
     let code_before = list_join_newline(remember_program);
     let output_before = eval_console_log_lines(code_before);
     let pointers = [[[left, "1"], remainder_color]];
-    let paint = app_code_code_dark_lines_part_pointed(
+    let paint = app_learn_js_code_dark_lines_part_pointed(
       pointers,
       remainder,
       remainder_color,
@@ -148,7 +148,7 @@ export function app_code_lesson_statement_name_even() {
   let seven_check_said = app_code_explain_said(["", v4, " is ", is_false]);
   function example_draw(box, lines, output) {
     "the last example's program with its remainder, n % 2, in the remainder's colour, as in the writing above it; what it writes out is true or false, not a remainder, so it stays plain";
-    let paint = app_code_code_dark_lines_part_pointed(
+    let paint = app_learn_js_code_dark_lines_part_pointed(
       [],
       remainder,
       remainder_color,
