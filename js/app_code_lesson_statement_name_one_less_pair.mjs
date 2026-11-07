@@ -2,7 +2,7 @@ import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesso
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { app_learn_js_lesson_statement_name_one_less_above } from "./app_learn_js_lesson_statement_name_one_less_above.mjs";
-import { app_code_lesson_statement_name_one_less_batch } from "./app_code_lesson_statement_name_one_less_batch.mjs";
+import { app_learn_js_lesson_statement_name_one_less_batch } from "./app_learn_js_lesson_statement_name_one_less_batch.mjs";
 import { app_learn_js_lesson_statement_name_itself_step_title_code } from "./app_learn_js_lesson_statement_name_itself_step_title_code.mjs";
 export function app_code_lesson_statement_name_one_less_pair() {
   arguments_assert(arguments, 0);
@@ -11,7 +11,7 @@ export function app_code_lesson_statement_name_one_less_pair() {
   let code = app_learn_js_lesson_statement_name_itself_step_title_code(minus);
   let pair = {
     above: app_learn_js_lesson_statement_name_one_less_above,
-    batch: app_code_lesson_statement_name_one_less_batch,
+    batch: app_learn_js_lesson_statement_name_one_less_batch,
     fragment: app_code_lesson_statement_title_code_paint_get(code),
     words: "Taking one from a name",
     decoys_last: null,
