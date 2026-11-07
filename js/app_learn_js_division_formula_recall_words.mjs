@@ -5,7 +5,7 @@ import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_division_formula_recall_words(what, tree_of) {
+export function app_learn_js_division_formula_recall_words(what, tree_of) {
   arguments_assert(arguments, 2);
   ("the row that puts a division formula back in front of a learner: Remember, the whole part of 14 / 4 is Math.floor(14 / 4) * 4, as the pieces of one line, with the name of the thing and the shape of its formula handed in");
   ("Four lessons say a sentence of this shape - the whole part and the remainder, each asked for all at once on one screen and pressed apart a part at a time on the screen in front of it - and each pair must say it in the same words. A learner recognises a sentence they have already read in the second it takes, while a near-copy stops them to compare two sentences that mean the same thing.");
