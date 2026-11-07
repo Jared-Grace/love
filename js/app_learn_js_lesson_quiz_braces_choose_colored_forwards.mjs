@@ -1,5 +1,5 @@
 import { app_code_lesson_quiz_braces_choose_colored_generic } from "./app_code_lesson_quiz_braces_choose_colored_generic.mjs";
-export function app_code_lesson_quiz_braces_choose_colored_forwards(
+export function app_learn_js_lesson_quiz_braces_choose_colored_forwards(
   parent,
   info,
   qa,
