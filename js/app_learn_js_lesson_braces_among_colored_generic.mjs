@@ -3,7 +3,7 @@ import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_quest
 import { app_learn_js_code_dark_lines_braces_paired_random } from "./app_learn_js_code_dark_lines_braces_paired_random.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_braces_choose_colored_forwards } from "./app_code_lesson_quiz_braces_choose_colored_forwards.mjs";
-import { app_code_lesson_quiz_braces_choose_colored_backwards } from "./app_code_lesson_quiz_braces_choose_colored_backwards.mjs";
+import { app_learn_js_lesson_quiz_braces_choose_colored_backwards } from "./app_learn_js_lesson_quiz_braces_choose_colored_backwards.mjs";
 import { app_code_lesson_quiz_braces_order_colored } from "./app_code_lesson_quiz_braces_order_colored.mjs";
 import { app_learn_js_braces_painter_shared } from "./app_learn_js_braces_painter_shared.mjs";
 import { html_div } from "./html_div.mjs";
@@ -44,7 +44,7 @@ export function app_learn_js_lesson_braces_among_colored_generic(
         question_label: "",
         on_question: app_code_lesson_quiz_question_none,
         answer_label: "Which code has these braces, in order?",
-        on_answer: app_code_lesson_quiz_braces_choose_colored_backwards,
+        on_answer: app_learn_js_lesson_quiz_braces_choose_colored_backwards,
       },
       {
         question_label: "",
