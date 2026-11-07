@@ -13,7 +13,7 @@ import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_remainder() {
+export function app_learn_js_lesson_expression_remainder() {
   "identify the REMAINDER (what is left over) in a % b === r - the dividend a and divisor b stand as decoys; the sibling of the dividend / divisor / quotient identify lessons, a thin lesson over the shared identify-an-operand generic. The quotient is at least 1, so the dividend is always bigger than the divisor which is bigger than the remainder - all three numbers distinct, so the learner really has to know which is the remainder";
   function make(divisor) {
     "dividend % divisor === remainder - dividend = quotient*divisor + remainder with quotient 1..3 and remainder 1..divisor-1, so the three numbers dividend, divisor and remainder are all different; the answer is the remainder, with the dividend and divisor as decoys";
