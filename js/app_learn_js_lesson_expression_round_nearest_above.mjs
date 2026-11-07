@@ -17,7 +17,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_code_lesson_expression_round_nearest_rounds_line } from "./app_code_lesson_expression_round_nearest_rounds_line.mjs";
-export function app_code_lesson_expression_round_nearest_above(root) {
+export function app_learn_js_lesson_expression_round_nearest_above(root) {
   arguments_assert(arguments, 1);
   ("TWO QUESTIONS, ASKED IN ORDER, each with its answer under it. First: what is the first digit after the decimal point? Second: what does Math.round do with it? The whole screen is those two and nothing else, and a learner can say where they are on it at any point by which question they are under.");
   ("It used to open on two worked Math.round lines and the word nearest, and only then explain what decides. So the answer arrived before the question, and the digit that decides was named for the first time three lines after two numbers had already been rounded by it. Now the deciding digit is found first, on its own, and every line after it is about what that digit does.");
