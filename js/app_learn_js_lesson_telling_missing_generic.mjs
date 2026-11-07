@@ -6,7 +6,7 @@ import { list_includes_not } from "./list_includes_not.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_unique } from "./list_unique.mjs";
-export async function app_code_lesson_telling_missing_generic(
+export async function app_learn_js_lesson_telling_missing_generic(
   root,
   roots,
   names,

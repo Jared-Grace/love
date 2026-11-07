@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_source_symbols } from "./app_learn_js_lesson_source_symbols.mjs";
-import { app_code_lesson_telling_missing_generic } from "./app_code_lesson_telling_missing_generic.mjs";
+import { app_learn_js_lesson_telling_missing_generic } from "./app_learn_js_lesson_telling_missing_generic.mjs";
 export async function app_code_lesson_telling_symbols_missing_one(
   root,
   roots,
@@ -18,7 +18,7 @@ export async function app_code_lesson_telling_symbols_missing_one(
     );
     return symbols;
   }
-  let report = await app_code_lesson_telling_missing_generic(
+  let report = await app_learn_js_lesson_telling_missing_generic(
     root,
     roots,
     names,
