@@ -7,7 +7,7 @@ import { app_learn_js_expression_node_right_operator_first_parenthesis_wrapped }
 import { app_code_lesson_expression_choose_order_parentheses_and_or_other_pair } from "./app_code_lesson_expression_choose_order_parentheses_and_or_other_pair.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_recall } from "./app_code_lesson_expression_choose_order_parentheses_recall.mjs";
-import { app_code_lesson_expression_choose_order_parentheses_and_or_intro } from "./app_code_lesson_expression_choose_order_parentheses_and_or_intro.mjs";
+import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_intro } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_parentheses_and_or_above(
   root,
   context,
@@ -59,7 +59,7 @@ export function app_learn_js_lesson_expression_choose_order_parentheses_and_or_a
     root,
     app_code_lesson_expression_choose_order_parentheses_recall,
     walks,
-    app_code_lesson_expression_choose_order_parentheses_and_or_intro,
+    app_learn_js_lesson_expression_choose_order_parentheses_and_or_intro,
     context,
   );
 }
