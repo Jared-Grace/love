@@ -1,7 +1,7 @@
 import { app_code_lesson_telling_symbols_missing } from "./app_code_lesson_telling_symbols_missing.mjs";
 import { app_code_lesson_telling_reports_apart } from "./app_code_lesson_telling_reports_apart.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_telling_report_said } from "./app_code_lesson_telling_report_said.mjs";
+import { app_learn_js_lesson_telling_report_said } from "./app_learn_js_lesson_telling_report_said.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function app_code_lesson_telling_symbols_gate_run() {
   "QA gate: no lesson of the code app asks about an operator its own telling never showed.";
@@ -13,7 +13,7 @@ export async function app_code_lesson_telling_symbols_gate_run() {
   let offenders = property_get(apart, "offenders");
   let unjudged = property_get(apart, "unjudged");
   for (let report of offenders) {
-    let said = app_code_lesson_telling_report_said(report);
+    let said = app_learn_js_lesson_telling_report_said(report);
     console.log("NEVER SHOWN  " + said);
   }
   console.log(

@@ -5,7 +5,7 @@ import { list_size } from "./list_size.mjs";
 import { app_code_lesson_telling_shapes_missing } from "./app_code_lesson_telling_shapes_missing.mjs";
 import { app_code_lesson_telling_reports_apart } from "./app_code_lesson_telling_reports_apart.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_telling_report_said } from "./app_code_lesson_telling_report_said.mjs";
+import { app_learn_js_lesson_telling_report_said } from "./app_learn_js_lesson_telling_report_said.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function app_code_lesson_telling_shapes_gate_run() {
   arguments_assert(arguments, 0);
@@ -26,7 +26,7 @@ export async function app_code_lesson_telling_shapes_gate_run() {
   let offenders = property_get(apart, "offenders");
   let unjudged = property_get(apart, "unjudged");
   for (let report of offenders) {
-    let said = app_code_lesson_telling_report_said(report);
+    let said = app_learn_js_lesson_telling_report_said(report);
     console.log("NEVER SHOWN WRITTEN THAT WAY  " + said);
   }
   let unjudged_count = list_size(unjudged);
