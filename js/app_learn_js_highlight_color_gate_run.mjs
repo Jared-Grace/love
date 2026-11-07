@@ -5,7 +5,7 @@ import { app_learn_js_highlight_color_baseline_path } from "./app_learn_js_highl
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_code_highlight_color_gate_run() {
+export async function app_learn_js_highlight_color_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: nothing about the pointing colours may change without saying so. Every colour is measured at each of the three jobs it does, and every pair of them at how far apart it looks to ordinary sight and to each of the three ways a cone can be missing; each reading is compared with what the same reading came to before.");
   ("IT HOLDS THE SET STILL RATHER THAN HOLDING IT TO A STANDARD, the same way its twin over the chip palette does, and for the same reason: the colour decisions here are waiting on somebody who has worked in colour, and a gate that failed on a known fault would have to be ignored or silenced. It decides nothing and refuses only movement - a reading the record does not hold fails, and a reading the record holds that is no longer produced fails too.");
