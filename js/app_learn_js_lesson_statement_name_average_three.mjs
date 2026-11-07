@@ -11,7 +11,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
-export function app_code_lesson_statement_name_average_three() {
+export function app_learn_js_lesson_statement_name_average_three() {
   arguments_assert(arguments, 0);
   ("the average of three names: let sum = a + b + c; let average = sum / 3; console.log(average);");
   ("The average-of-two program with one more name added and 3 in place of 2, so the one new thing is that the number divided by is how many numbers there are.");
