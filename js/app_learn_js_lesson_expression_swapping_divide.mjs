@@ -7,7 +7,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_swapping_divide() {
+export function app_learn_js_lesson_expression_swapping_divide() {
   "the second swapping lesson: the arithmetic operators that do NOT swap - / (divide), % (remainder) and ** (power). Each gets an everyday reason it is directional, so the rule is understood, not memorised, and both sides are worked out so the swap is seen. + and * are recalled as the ones that do swap, so the quiz mixes them (true) with / % ** (false). Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
   let lesson = app_code_lesson_swapping_generic({
