@@ -3,7 +3,7 @@ import { app_code_lesson_group_parts_at } from "./app_code_lesson_group_parts_at
 import { null_is } from "./null_is.mjs";
 import { app_code_lesson_group_words } from "./app_code_lesson_group_words.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-export function app_code_lesson_group_category_paint(parent, lesson_index) {
+export function app_learn_js_lesson_group_category_paint(parent, lesson_index) {
   arguments_assert(arguments, 2);
   ("the name of the group the lesson at lesson_index sits under on the home list, in words alone with a colon, styled the way a lesson's category word always was, into parent - the lesson heading's Branching: where every if lesson used to say Statements");
   ("Asked for by the human 2026-10-18: the group is named instead of the category, and the home list, which already shows the group as the card a row sits in, shows neither.");

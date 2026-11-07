@@ -8,7 +8,7 @@ export function app_code_lesson_name_id_category_then(left, paint) {
   ("The title maker is handed the capitalised category word, which is what the category line wants. It used to be handed a list of the lesson's own words ahead of that word as well, and that list was what the lesson's id was built out of. Ids are written down under each lesson's function name now, so the list was read by nobody and came off here and off every caller in one move.");
   ("A wrapper that paints its words into the title still receives them - that is a title, not an id. What went is the second, silent use the same list was being put to.");
   ("2026-10-18, asked for by the human: the category word is no longer painted. The home list shows each lesson inside the card of its group, which already names it, and the heading at the top of a lesson names that group instead (",
-    fn_name("app_code_lesson_group_category_paint"),
+    fn_name("app_learn_js_lesson_group_category_paint"),
     "), since a category word - Statements on every if lesson - could disagree with the group the lesson sits in. The word is still handed in, so the fifty callers are unchanged.");
   function title_get(left_upper) {
     function render(parent) {
