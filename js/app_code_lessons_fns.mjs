@@ -30,7 +30,7 @@ import { app_learn_js_lesson_expression_number_trichotomy } from "./app_learn_js
 import { app_learn_js_lesson_expression_string_equality } from "./app_learn_js_lesson_expression_string_equality.mjs";
 import { app_code_lesson_expression_string_order } from "./app_code_lesson_expression_string_order.mjs";
 import { app_code_lesson_expression_string_trichotomy } from "./app_code_lesson_expression_string_trichotomy.mjs";
-import { app_code_lesson_expression_string_order_equal } from "./app_code_lesson_expression_string_order_equal.mjs";
+import { app_learn_js_lesson_expression_string_order_equal } from "./app_learn_js_lesson_expression_string_order_equal.mjs";
 import { app_code_lesson_expression_true_false } from "./app_code_lesson_expression_true_false.mjs";
 import { app_learn_js_lesson_expression_equal_true_false } from "./app_learn_js_lesson_expression_equal_true_false.mjs";
 import { app_learn_js_lesson_expression_not_equal_true_false } from "./app_learn_js_lesson_expression_not_equal_true_false.mjs";
@@ -391,7 +391,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_expression_string_equality,
     app_code_lesson_expression_string_order,
     app_code_lesson_expression_string_trichotomy,
-    app_code_lesson_expression_string_order_equal,
+    app_learn_js_lesson_expression_string_order_equal,
     app_code_lesson_expression_true_false,
     app_learn_js_lesson_expression_equal_true_false,
     app_learn_js_lesson_expression_not_equal_true_false,
