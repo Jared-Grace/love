@@ -1,6 +1,6 @@
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
-export function bible_word_articles_with_cited_titled(
+export function bible_word_articles_with_cited(
   articles,
   table,
   site_name,
