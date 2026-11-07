@@ -19,7 +19,10 @@ import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_that_text.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-export function app_code_lesson_statement_name_copy_kept_above(root, context) {
+export function app_learn_js_lesson_statement_name_copy_kept_above(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the two cups the copying lesson left standing, then one of them emptied and refilled while the other keeps what it was given, and then the same story as one program");
   ("The cups are the ones the copying lesson ended on, holding the same word, drawn the same way. A learner is being asked what happens next to a picture they have already watched being built, so nothing before the change is new and the change is the only thing to look at.");
