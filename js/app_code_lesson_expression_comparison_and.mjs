@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_expression_comparison_and_card_one_side } from "./app_learn_js_lesson_expression_comparison_and_card_one_side.mjs";
 import { app_learn_js_lesson_expression_comparison_and_operands_false } from "./app_learn_js_lesson_expression_comparison_and_operands_false.mjs";
 import { app_learn_js_lesson_expression_comparison_and_comparison } from "./app_learn_js_lesson_expression_comparison_and_comparison.mjs";
-import { app_code_lesson_expression_comparison_and_title_name_id } from "./app_code_lesson_expression_comparison_and_title_name_id.mjs";
+import { app_learn_js_lesson_expression_comparison_and_title_name_id } from "./app_learn_js_lesson_expression_comparison_and_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -54,7 +54,7 @@ export function app_code_lesson_expression_comparison_and() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_expression_comparison_and_title_name_id();
+  let name_id = app_learn_js_lesson_expression_comparison_and_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
