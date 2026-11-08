@@ -10,7 +10,7 @@ import { app_learn_js_lesson_go } from "./app_learn_js_lesson_go.mjs";
 import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
-export function app_code_review_button_unfinished_before(
+export function app_learn_js_review_button_unfinished_before(
   context,
   parent,
   number,

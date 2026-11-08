@@ -11,7 +11,7 @@ import { app_code_review_explain } from "./app_code_review_explain.mjs";
 import { html_parent_append } from "./html_parent_append.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_learn_js_advance_or_no_more } from "./app_learn_js_advance_or_no_more.mjs";
-import { app_code_review_button_unfinished_before } from "./app_code_review_button_unfinished_before.mjs";
+import { app_learn_js_review_button_unfinished_before } from "./app_learn_js_review_button_unfinished_before.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 export function app_code_review_finish_show({
   success_container,
@@ -57,7 +57,7 @@ export function app_code_review_finish_show({
   app_learn_js_advance_or_no_more(c, has_next, render_continue);
   ("the next unfinished lesson is not drawn here: it is already among the buttons under the review from the start, and stays there once the review is finished");
   ("a lesson skipped before this review is offered too, as a way back");
-  app_code_review_button_unfinished_before(context, c, number);
+  app_learn_js_review_button_unfinished_before(context, c, number);
   let again = property_get(checkpoint, "again");
   html_text_set(restart_button, again);
 }
