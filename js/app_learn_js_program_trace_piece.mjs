@@ -11,7 +11,7 @@ import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { error } from "./error.mjs";
 import { app_learn_js_program_trace_piece_solved } from "./app_learn_js_program_trace_piece_solved.mjs";
-export function app_code_program_trace_piece(state, piece, side) {
+export function app_learn_js_program_trace_piece(state, piece, side) {
   arguments_assert(arguments, 3);
   ("what a piece of the expression comes to, any evaluating it took added to state's actions; side says it stands on a side of an operator rather than being the whole expression");
   ("state holds what every piece of one expression shares: the program's code, the values its names hold, the actions, the pieces of the line already written as their values, the evaluates of operators so far, and where the whole expression starts and ends");
@@ -86,15 +86,15 @@ export function app_code_program_trace_piece(state, piece, side) {
     equal(property_get(piece, "operator"), "!");
   if (equal(type, "BinaryExpression") || equal(type, "LogicalExpression")) {
     let piece2 = property_get(piece, "left");
-    let left = app_code_program_trace_piece(state, piece2, true);
+    let left = app_learn_js_program_trace_piece(state, piece2, true);
     let piece3 = property_get(piece, "right");
     let operator = property_get(piece, "operator");
     ("2026-10-17, at the human's asking: both sides of an && or an || are read, as both sides of every other operator are - the beginner's rule the lessons teach. Nothing this can trace changes a name or can fail on being read, so reading a side JavaScript would skip never changes the answer; a name not declared yet, on a side JavaScript skips, is the one line it could not trace, and no lesson draws one. Not picked: skipping the right side once the left settles it, as JavaScript does, built earlier the same day and kept for the lesson on stopping early");
-    let right = app_code_program_trace_piece(state, piece3, true);
+    let right = app_learn_js_program_trace_piece(state, piece3, true);
     expression = app_learn_js_expression_node(left, operator, right);
   } else if (unary_is) {
     let piece4 = property_get(piece, "argument");
-    let argument = app_code_program_trace_piece(state, piece4, true);
+    let argument = app_learn_js_program_trace_piece(state, piece4, true);
     expression = app_learn_js_expression_node_before("!", argument);
   } else {
     error({

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_program_trace_piece } from "./app_code_program_trace_piece.mjs";
+import { app_learn_js_program_trace_piece } from "./app_learn_js_program_trace_piece.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_code_program_trace_value(node, actions, code, values) {
   arguments_assert(arguments, 4);
@@ -18,7 +18,7 @@ export function app_code_program_trace_value(node, actions, code, values) {
     top_from: property_get(node, "start"),
     top_to: property_get(node, "end"),
   };
-  let value = app_code_program_trace_piece(state, node, false);
+  let value = app_learn_js_program_trace_piece(state, node, false);
   let operated = property_get(state, "operated");
   for (let action of operated) {
     property_set(action, "whole_value", value);
