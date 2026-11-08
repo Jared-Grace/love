@@ -37,7 +37,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_two_meet() {
+export function app_learn_js_lesson_while_two_meet() {
   arguments_assert(arguments, 0);
   ("two numbers meeting: let a = 1; let b = 7; while (a < b) { a++; b--; } console.log(a); console.log(b); writes out 4 and 4");
   ("2026-11-01, asked by the human: a++ and b-- rather than a += 1 and b -= 1, since ++ and -- are taught long before the while lessons and are the way one is added or taken away");

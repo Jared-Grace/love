@@ -33,7 +33,7 @@ import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
+import { app_learn_js_lesson_while_two_meet } from "./app_learn_js_lesson_while_two_meet.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
@@ -246,7 +246,7 @@ export function app_learn_js_lesson_while_and() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_while_two_meet,
+      app_learn_js_lesson_while_two_meet,
       [
         "a ",
         "while",
