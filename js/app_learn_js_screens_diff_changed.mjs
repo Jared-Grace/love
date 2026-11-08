@@ -9,7 +9,7 @@ import { app_learn_js_screen_text_normalize } from "./app_learn_js_screen_text_n
 import { app_code_screens_diff_key_of } from "./app_code_screens_diff_key_of.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-export async function app_code_screens_diff_changed(
+export async function app_learn_js_screens_diff_changed(
   current_path,
   baseline_json,
 ) {
