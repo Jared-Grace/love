@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { equal } from "./equal.mjs";
 import { js_visit } from "./js_visit.mjs";
-export function app_code_line_part_is(whole, part) {
+export function app_learn_js_line_part_is(whole, part) {
   arguments_assert(arguments, 2);
   ("Whether one piece of code is, word for word, a piece standing inside another - 1 * 6 inside 6 + 1 * 6.");
   ("The pieces are the ones the parser finds, not any run of letters that happens to match, so a piece is a piece of the line's own making. The whole line counts as a piece of itself, which is the cautious answer wherever two sides are the same.");
