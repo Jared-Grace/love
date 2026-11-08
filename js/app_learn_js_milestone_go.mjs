@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_milestone_begun_key } from "./app_learn_js_milestone_begun_key.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
-import { app_code_milestone_key } from "./app_code_milestone_key.mjs";
+import { app_learn_js_milestone_key } from "./app_learn_js_milestone_key.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_code_review } from "./app_code_review.mjs";
 export async function app_learn_js_milestone_go(context, id) {
@@ -11,6 +11,6 @@ export async function app_learn_js_milestone_go(context, id) {
   ("opened from home it starts on its own first screen again, so whatever Begin this tab pressed before is forgotten");
   let key_begun = app_learn_js_milestone_begun_key();
   storage_session_set_context(context, key_begun, "");
-  let key = app_code_milestone_key();
+  let key = app_learn_js_milestone_key();
   await app_shared_screen_go_tab(context, key, id, app_code_review);
 }

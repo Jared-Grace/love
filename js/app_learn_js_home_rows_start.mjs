@@ -6,7 +6,7 @@ import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_milestone_left_is } from "./app_code_milestone_left_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_milestone_key } from "./app_code_milestone_key.mjs";
+import { app_learn_js_milestone_key } from "./app_learn_js_milestone_key.mjs";
 export function app_learn_js_home_rows_start(context) {
   arguments_assert(arguments, 1);
   let just_left = null;
@@ -28,7 +28,7 @@ export function app_learn_js_home_rows_start(context) {
   ("the milestone left is carried as its id, or as nothing when what was left was not a milestone, so the rows only have to compare ids");
   let milestone_id_left = null;
   if (milestone_left) {
-    let milestone_key = app_code_milestone_key();
+    let milestone_key = app_learn_js_milestone_key();
     milestone_id_left = storage_session_get_context(context, milestone_key);
   }
   let r = {

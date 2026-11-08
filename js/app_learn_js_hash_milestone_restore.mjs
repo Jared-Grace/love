@@ -1,7 +1,7 @@
 import { app_learn_js_milestone_hash_key } from "./app_learn_js_milestone_hash_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_milestone_key } from "./app_code_milestone_key.mjs";
+import { app_learn_js_milestone_key } from "./app_learn_js_milestone_key.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
 import { app_shared_screen_tab_key_last } from "./app_shared_screen_tab_key_last.mjs";
 export function app_learn_js_hash_milestone_restore(context, hash) {
@@ -11,7 +11,7 @@ export function app_learn_js_hash_milestone_restore(context, hash) {
   let said = property_get_or_null(hash, word);
   let present = null_not_is(said);
   if (present) {
-    let key = app_code_milestone_key();
+    let key = app_learn_js_milestone_key();
     storage_session_set_context(context, key, said);
     let key_last = app_shared_screen_tab_key_last();
     storage_session_set_context(context, key_last, key);
