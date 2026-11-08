@@ -17,7 +17,7 @@ import { app_learn_js_batch_kind_has } from "./app_learn_js_batch_kind_has.mjs";
 import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { app_code_review_kind_run_is } from "./app_code_review_kind_run_is.mjs";
 import { app_code_review_kind_step_is } from "./app_code_review_kind_step_is.mjs";
-import { app_code_review_kind_line_missing_is } from "./app_code_review_kind_line_missing_is.mjs";
+import { app_learn_js_review_kind_line_missing_is } from "./app_learn_js_review_kind_line_missing_is.mjs";
 import { app_learn_js_review_kind_all_at_once_is } from "./app_learn_js_review_kind_all_at_once_is.mjs";
 export function app_learn_js_milestones() {
   arguments_assert(arguments, 0);
@@ -95,7 +95,7 @@ export function app_learn_js_milestones() {
   let v3 = milestone(
     "milestone_braces_at_once",
     "all at once",
-    app_code_review_kind_line_missing_is,
+    app_learn_js_review_kind_line_missing_is,
     app_learn_js_review_kind_all_at_once_is,
   );
   let r = [v, v2, v3];
