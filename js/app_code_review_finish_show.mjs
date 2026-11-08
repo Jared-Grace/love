@@ -5,7 +5,7 @@ import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { app_code_milestone_celebration } from "./app_code_milestone_celebration.mjs";
+import { app_learn_js_milestone_celebration } from "./app_learn_js_milestone_celebration.mjs";
 import { app_code_review_celebration } from "./app_code_review_celebration.mjs";
 import { app_code_review_explain } from "./app_code_review_explain.mjs";
 import { html_parent_append } from "./html_parent_append.mjs";
@@ -41,7 +41,7 @@ export function app_code_review_finish_show({
   let explain = property_get(checkpoint, "explain");
   ("A milestone is told it finished a milestone, not a review - asked for by the human 2026-10-23. Only a milestone has words to explain itself");
   if (list_empty_not_is(explain)) {
-    app_code_milestone_celebration(c);
+    app_learn_js_milestone_celebration(c);
   } else {
     app_code_review_celebration(c);
   }
