@@ -3,7 +3,7 @@ import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_import } from "./function_import.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
-import { app_message_private_records_replied } from "./app_message_private_records_replied.mjs";
+import { app_message_private_records_replied_people } from "./app_message_private_records_replied_people.mjs";
 import { reply_case_key } from "./reply_case_key.mjs";
 import { reply_message_words } from "./reply_message_words.mjs";
 export async function reply_unanswered_read_after(f_name, lead, control) {
@@ -15,7 +15,7 @@ export async function reply_unanswered_read_after(f_name, lead, control) {
   let lead_words = lead.split(",");
   let spoken = lead_words.join(" ");
   let control_attempt = await reply_attempt(`${spoken} ${control}`, start);
-  let records = await app_message_private_records_replied();
+  let records = await app_message_private_records_replied_people();
   let seen = new Set();
   let rows = [];
   for (let record of records) {
