@@ -6,7 +6,7 @@ import { app_learn_js_tokens_choose_label } from "./app_learn_js_tokens_choose_l
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
+import { app_learn_js_tokens_order_div } from "./app_learn_js_tokens_order_div.mjs";
 export function app_learn_js_lesson_token_order_codes_generic(
   name_id,
   above,
@@ -49,7 +49,7 @@ export function app_learn_js_lesson_token_order_codes_generic(
     null,
     quizzes_get,
     app_learn_js_tokens_choose_label,
-    app_code_tokens_order_div,
+    app_learn_js_tokens_order_div,
   );
   return lesson;
 }

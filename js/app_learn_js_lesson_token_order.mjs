@@ -1,4 +1,4 @@
-import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
+import { app_learn_js_tokens_order_div } from "./app_learn_js_tokens_order_div.mjs";
 import { app_learn_js_token_order_batch } from "./app_learn_js_token_order_batch.mjs";
 import { app_learn_js_token_order_longer } from "./app_learn_js_token_order_longer.mjs";
 import { app_learn_js_tokens_choose_say } from "./app_learn_js_tokens_choose_say.mjs";
@@ -90,7 +90,7 @@ export function app_learn_js_lesson_token_order() {
     null,
     quizzes_get,
     app_learn_js_tokens_choose_label_guided,
-    app_code_tokens_order_div,
+    app_learn_js_tokens_order_div,
   );
   return lesson;
 }
