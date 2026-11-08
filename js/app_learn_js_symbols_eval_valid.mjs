@@ -1,6 +1,6 @@
 import { boolean_to_text_validity } from "./boolean_to_text_validity.mjs";
 import { throws_not } from "./throws_not.mjs";
-export function app_code_symbols_eval_valid(symbols) {
+export function app_learn_js_symbols_eval_valid(symbols) {
   function lambda() {
     eval(symbols);
   }
