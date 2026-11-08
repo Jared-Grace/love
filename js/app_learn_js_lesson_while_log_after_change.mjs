@@ -38,7 +38,7 @@ import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_log_after_change() {
+export function app_learn_js_lesson_while_log_after_change() {
   arguments_assert(arguments, 0);
   ("the change before the console.log inside a while: let n = 2; while (n < 5) { n += 2; console.log(n); } writes out 4 and 6, though 6 < 5 is false");
   ("The one new fact is that the while asks only before the lines inside run, so a number past the one compared against can still be written out, when the change comes before the console.log.");
