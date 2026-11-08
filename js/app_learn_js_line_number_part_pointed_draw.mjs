@@ -1,5 +1,5 @@
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
-import { app_code_number_pointed_parts } from "./app_code_number_pointed_parts.mjs";
+import { app_learn_js_number_pointed_parts } from "./app_learn_js_number_pointed_parts.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
@@ -60,7 +60,7 @@ export function app_learn_js_line_number_part_pointed_draw(parts, pointers) {
       let pieces = [];
       let colors = [];
       for (let piece of whole) {
-        let found = app_code_number_pointed_parts(pointers, piece);
+        let found = app_learn_js_number_pointed_parts(pointers, piece);
         if (null_not_is(found)) {
           for (let pair of found) {
             pieces.push(pair[0]);
