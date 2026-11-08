@@ -4,7 +4,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_console_log_wrong_say } from "./app_learn_js_console_log_wrong_say.mjs";
 import { app_learn_js_expression_wrong_say } from "./app_learn_js_expression_wrong_say.mjs";
 import { app_learn_js_math_call_wrong_say } from "./app_learn_js_math_call_wrong_say.mjs";
-import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_say.mjs";
+import { app_learn_js_string_value_wrong_say } from "./app_learn_js_string_value_wrong_say.mjs";
 import { app_learn_js_lines_wrong_say } from "./app_learn_js_lines_wrong_say.mjs";
 import { app_learn_js_program_trace_wrong_say } from "./app_learn_js_program_trace_wrong_say.mjs";
 import { app_learn_js_program_lets_wrong_say } from "./app_learn_js_program_lets_wrong_say.mjs";
@@ -34,7 +34,7 @@ export function app_learn_js_forwards_wrong_say(question, answer, choice) {
     return math;
   }
   ("2026-10-26: a string standing alone has no operator and is no call, so it is answered here by what its quote marks mean");
-  let string = app_code_string_value_wrong_say(question, answer, choice);
+  let string = app_learn_js_string_value_wrong_say(question, answer, choice);
   if (null_not_is(string)) {
     return string;
   }

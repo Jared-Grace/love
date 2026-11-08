@@ -10,7 +10,7 @@ import { text_size } from "./text_size.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_string_value_wrong_say(question, answer, choice) {
+export function app_learn_js_string_value_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong value for a string standing alone: the quote marks only show where the string starts and ends, so its value is what is between them, spaces and all, as parts that take turns between words and code. null for anything but one string in double quotes whose inside is the right answer");
   ("Not picked: a word about the other words offered; the picks are other strings or the same one with its quote marks kept, and what is between the marks answers both");
