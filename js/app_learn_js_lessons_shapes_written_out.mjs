@@ -1,4 +1,4 @@
-import { app_code_lessons_shapes } from "./app_code_lessons_shapes.mjs";
+import { app_learn_js_lessons_shapes } from "./app_learn_js_lessons_shapes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
@@ -10,7 +10,7 @@ export function app_learn_js_lessons_shapes_written_out(rounds) {
   ("The whole course as one column to read down: every lesson in the order it is learned, with how many operators stand on the hardest line it can hand out and how deep they sit.");
   ("The twin next door hands back the same reading as entries to be counted and sorted. This one is for a person looking at it, and a person reading a hundred and thirty three rows is looking for where the twos end and the threes begin - which is a shape in the column rather than a number in any one row, and only shows up when the numbers line up under each other.");
   ("A lesson that hands out no code writes a dash rather than a nought, because it has no line to be simple and a nought would read as the easiest lesson in the course.");
-  let shapes = app_code_lessons_shapes(rounds);
+  let shapes = app_learn_js_lessons_shapes(rounds);
   let none = "-";
   function column(place_text, ops_text, depth_text, id) {
     "one row of the column, each number ending under the one above it";

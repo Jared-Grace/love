@@ -11,7 +11,7 @@ import { app_code_line_shape } from "./app_code_line_shape.mjs";
 import { null_is } from "./null_is.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_lessons_shapes(rounds) {
+export function app_learn_js_lessons_shapes(rounds) {
   arguments_assert(arguments, 1);
   ("Every lesson in the order it is learned, beside the hardest line it can hand out: how many operators stand on that line, how deep they sit, the line itself, and every kind of thing the lesson writes.");
   ("The kinds are what tells one part of the course from the next. A lesson carrying a kind no lesson before it carried is starting something, and the lessons after it are learning that rather than carrying on with what came before.");

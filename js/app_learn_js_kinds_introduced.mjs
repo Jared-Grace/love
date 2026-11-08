@@ -2,7 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
-import { app_code_lessons_shapes } from "./app_code_lessons_shapes.mjs";
+import { app_learn_js_lessons_shapes } from "./app_learn_js_lessons_shapes.mjs";
 import { app_code_lessons_stretched } from "./app_code_lessons_stretched.mjs";
 import { list_get } from "./list_get.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_kinds_introduced(rounds) {
   ("A lesson that hands out no worked-out code brings in no kinds and is simply not here, which is nothing rather than none.");
   ("The share is near enough rather than exact, and the reading leans on the part of it that is exact. A lesson is asked what it can hand out, and for some lessons that comes back a slightly different size each time - lesson seventy answered a hundred and thirty-five, a hundred and thirty-two and a hundred and twenty-eight on three runs, while the four lines carrying the power sign were the same four every time. So the share moves a little and the ordering does not, and the question this is really for - does the lesson carry what it brings in on every line - is steady whatever the size, because a lesson carrying it on all of them carries it on all of however many it drew.");
   let fns = app_learn_js_lessons_fns();
-  let shapes = app_code_lessons_shapes(rounds);
+  let shapes = app_learn_js_lessons_shapes(rounds);
   let stretched = app_code_lessons_stretched(shapes);
   let introduced = [];
   let place = 0;

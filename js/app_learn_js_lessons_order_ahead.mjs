@@ -3,7 +3,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { add_1 } from "./add_1.mjs";
-import { app_code_lessons_shapes } from "./app_code_lessons_shapes.mjs";
+import { app_learn_js_lessons_shapes } from "./app_learn_js_lessons_shapes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lessons_order_ahead(rounds) {
   ("A second blind spot this uncovered: only operators are counted, so a program costs nothing for being long. name_copy is four lines, three names and a copy to follow, and prices zero, which reads as easier than 1 + 2. Counting a line as a step is the correction, and it has not been made.");
   ("So this is a place to look and has never been more than that. It was read by a gate for a time, which turned each entry into an accusation; that was measured wrong sixteen times in seventeen and the gate should not be believed without opening the lesson.");
   ("The lessons that hand out no code are passed over rather than counted as nothing, because the front of the course teaches how symbols and names are spelled, and a lesson with no line on it is not a simple line.");
-  let measured = app_code_lessons_shapes(rounds);
+  let measured = app_learn_js_lessons_shapes(rounds);
   let shapes = app_code_lessons_stretched(measured);
   function code_is(shape) {
     let code = property_get(shape, "code");
