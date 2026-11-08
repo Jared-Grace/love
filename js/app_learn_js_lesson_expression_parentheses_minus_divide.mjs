@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_choose_order_plus_minus } from "./app_learn_js_lesson_expression_choose_order_plus_minus.mjs";
 import { app_learn_js_parentheses_inside_before_outside } from "./app_learn_js_parentheses_inside_before_outside.mjs";
 import { app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line } from "./app_learn_js_lesson_expression_parentheses_minus_divide_outer_divide_line.mjs";
@@ -52,7 +52,7 @@ export function app_learn_js_lesson_expression_parentheses_minus_divide() {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       recall,
       context,
       app_learn_js_lesson_expression_choose_order_plus_minus,

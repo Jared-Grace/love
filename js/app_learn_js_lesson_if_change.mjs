@@ -20,7 +20,7 @@ import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_plus_assign } from "./app_learn_js_lesson_statement_name_plus_assign.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -130,7 +130,7 @@ export function app_learn_js_lesson_if_change() {
   function above(root, context) {
     "+= remembered, then the same line inside an if that runs, then inside one that does not";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_statement_name_plus_assign,

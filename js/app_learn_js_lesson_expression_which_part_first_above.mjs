@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -72,7 +72,7 @@ export function app_learn_js_lesson_expression_which_part_first_above(
   let wrong_value_text = text_to(wrong_value);
   let right_card = app_learn_js_container_light_blue(root);
   app_learn_js_lesson_suppose_solve_line(right_card, "Suppose", whole);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     right_card,
     context,
     app_learn_js_lesson_expression_choose_order,

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_braces_run_after_nested } from "./app_learn_js_lesson_braces_run_after_nested.mjs";
 import { app_learn_js_if_after_nested_explain } from "./app_learn_js_if_after_nested_explain.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_if_after_nested() {
   function above(root, context) {
     "the section-run lesson remembered";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_braces_run_after_nested,

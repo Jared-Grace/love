@@ -8,7 +8,7 @@ import { js_code_for_start_condition_update_lines } from "./js_code_for_start_co
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_for_comparison_other_above(
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_for_comparison_other_above(
     let earlier_joined = list_join_newline(earlier_lines);
     let earlier_written = eval_console_log_lines(earlier_joined);
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, lesson_earlier, [
+    app_learn_js_remember_from_lesson(box_one, context, lesson_earlier, [
       "we can write this:",
     ]);
     app_learn_js_code_lines_writes_out(box_one, earlier_lines, earlier_written);

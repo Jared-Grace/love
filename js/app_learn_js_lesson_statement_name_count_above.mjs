@@ -7,7 +7,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_one_more } from "./app_learn_js_lesson_statement_name_one_more.mjs";
 import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_statement_name_count_above(root, context) {
   let logged = js_code_console_log_statement(name);
   let box_once = app_learn_js_container_light_blue(root);
   ("the reminder names the whole line, semicolon and all, rather than the sum on its right. The sentence below it names a line and so does this one, and the two are the same line - said as half of it here and whole there, a learner has to put the halves together to see that. Every other reminder on these screens names the line it is about whole.");
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_once,
     context,
     app_learn_js_lesson_statement_name_one_more,

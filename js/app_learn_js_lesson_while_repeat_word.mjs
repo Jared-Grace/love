@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while_increment } from "./app_learn_js_lesson_while_increment.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_while_repeat_word() {
   function above(root, context, example, walk) {
     "While adding one remembered, then a while that writes out one word each run while n only counts";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_while_increment,

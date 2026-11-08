@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_operators_minus } from "./app_learn_js_lesson_operators_minus.mjs";
 import { app_learn_js_div_code_multiple } from "./app_learn_js_div_code_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_operators_asterisk_generic_minus(
 ) {
   let c = app_learn_js_container_light_blue(root);
   let minus = js_operator_minus_symbol();
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     c,
     context,
     app_learn_js_lesson_operators_minus,

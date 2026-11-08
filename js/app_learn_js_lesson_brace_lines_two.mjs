@@ -6,7 +6,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_brace_pair_two } from "./app_learn_js_lesson_brace_pair_two.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_lesson_brace_lines_two() {
   function above(root, context) {
     "a { beginning a section remembered, then the section as the lines between the { and its }";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_brace_pair_two,

@@ -4,7 +4,7 @@ import { app_learn_js_lesson_statement_name_identifier_name } from "./app_learn_
 import { app_learn_js_lesson_statement_name_identifier_word } from "./app_learn_js_lesson_statement_name_identifier_word.mjs";
 import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_lesson_statement_name_value_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_value } from "./app_learn_js_lesson_statement_name_value.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_statement_name_identifier_above(
   let word = app_learn_js_lesson_statement_name_identifier_word();
   let grapes = app_learn_js_lesson_statement_name_value_word();
   let box_before = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_before,
     context,
     app_learn_js_lesson_statement_name_value,

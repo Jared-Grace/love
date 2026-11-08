@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_remember_from_lesson_names } from "./app_learn_js_remember_from_lesson_names.mjs";
-export function app_code_remember_from_lesson(
+export function app_learn_js_remember_from_lesson(
   parent,
   context,
   lesson_fn,

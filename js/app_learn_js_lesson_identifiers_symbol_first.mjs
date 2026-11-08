@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_identifiers_letters_spaces } from "./app_learn_js_lesson_identifiers_letters_spaces.mjs";
 import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
 import { list_to_and_list } from "./list_to_and_list.mjs";
@@ -66,7 +66,7 @@ export function app_learn_js_lesson_identifiers_symbol_first() {
       "identifiers can have different kinds of symbols including ",
       identifiers_valid_anywhere,
     );
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       c2,
       context,
       app_learn_js_lesson_identifiers_letters_spaces,

@@ -7,7 +7,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_and_if_not } from "./app_learn_js_lesson_if_and_if_not.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
@@ -32,7 +32,7 @@ export function app_learn_js_if_else_explain(root, context) {
   let if_not_dots = js_code_if_dots(opposite);
   let else_dots = js_code_else_dots();
   let box_one = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_one,
     context,
     app_learn_js_lesson_if_and_if_not,

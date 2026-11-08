@@ -6,7 +6,7 @@ import { app_learn_js_for_if_skipped_parts } from "./app_learn_js_for_if_skipped
 import { add } from "./add.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_for_total } from "./app_learn_js_lesson_for_total.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_for_total_if() {
   function above(root, context, example, walk) {
     "For with a running total remembered, then the total inside an if";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_for_total,

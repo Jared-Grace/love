@@ -7,7 +7,7 @@ import { app_learn_js_lesson_statement_names_added } from "./app_learn_js_lesson
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_total } from "./app_learn_js_lesson_statement_name_total.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_statement_name_itself_sum_above(
   ("Every reminder names its cups in brackets as well, not just the box the lesson turns on. A reminder is read fastest of all - a learner is checking that they already know it rather than working it out - and a sentence made only of the words a name and two names makes them look down at the code to find out which cups it is talking about, which is slower than reading the letters in place.");
   ("A reminder ends by naming the line it is about, whole and with its semicolon, because that line is drawn a few rows below it and again further down the screen. Described in words alone, a learner has to read the sentence, look down at the program and work out which of its lines the sentence was pointing at - and this screen is about one line turning into another, so which line is the whole question.");
   let code_total = js_code_let_statement(name_third, names_sum);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_total,
     context,
     app_learn_js_lesson_statement_name_total,
@@ -63,7 +63,7 @@ export function app_learn_js_lesson_statement_name_itself_sum_above(
   let box_again = app_learn_js_container_light_blue(root);
   ("the line itself stands where the new value alone used to, because the line holds that value and says what is done with it. The number on its own named half of what the reminder is about and left the other half - the name being filled rather than made - to be found by looking down at the program.");
   let given_again = js_code_assign_statement(name_first, number_new);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_again,
     context,
     app_learn_js_lesson_statement_name_again,
@@ -84,7 +84,7 @@ export function app_learn_js_lesson_statement_name_itself_sum_above(
   ("the earlier line is set above the changed one so the change can be seen rather than described, which is the shape the screen before this one ended on and so the shape a learner read a moment ago.");
   ("Neither line is said to be the other. They do different things - one makes a name and one fills a name that is already there - and the whole misreading this screen guards against is a learner taking the sum to be tied to the name for good, so the two lines are never put forward as swaps for each other. The word instead appears twice below and neither time stands between those two lines. Once it stands between two names, a new one and one we already have, which really are alternatives and the sentence is choosing between them. Once it stands between the sum and the value the sum comes to, which really are swaps, and the line above it says so.");
   ("Which lesson that line came from is asked of the lesson order here too, rather than written into the sentence, so this box points the same way the two boxes above it do. In the lesson before said it in words a learner could not press, and it stops being true the moment a lesson is put in between the two - while the number is worked out from where the lessons actually stand and so cannot come to name the wrong one.");
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_itself,
     context,
     app_learn_js_lesson_statement_name_total,

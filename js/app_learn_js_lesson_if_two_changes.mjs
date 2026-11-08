@@ -23,7 +23,7 @@ import { text_integers } from "./text_integers.mjs";
 import { json_to } from "./json_to.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_change } from "./app_learn_js_lesson_if_change.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -136,7 +136,7 @@ export function app_learn_js_lesson_if_two_changes() {
   function above(root, context) {
     "one change in an if remembered, then two, then the same two the other way round";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_if_change,

@@ -3,7 +3,7 @@ import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_le
 import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_lesson_statement_name_value_word.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_identifiers_letters_spaces } from "./app_learn_js_lesson_identifiers_letters_spaces.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_statement_name_value_above(root, context) {
   let nothing = text_empty();
   ("a reminder rather than a new fact: the identifier lessons already said identifiers are used as names, and this is the first screen where one actually names something. Saying it again here is what joins the two, and it costs nothing to read because a learner has met every word of it.");
   let box_remember = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_remember,
     context,
     app_learn_js_lesson_identifiers_letters_spaces,

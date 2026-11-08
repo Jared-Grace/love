@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_update_log_generic } from "./app_learn_js_lesson_update_log_generic.mjs";
 export function app_learn_js_lesson_while_update_log_generic(options) {
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_while_update_log_generic(options) {
   function above(root, context, example, walk) {
     "the lesson on changing by one remembered, then a while doing it, writing out each run";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       remembered,

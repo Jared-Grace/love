@@ -19,7 +19,7 @@ import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { app_learn_js_lesson_name_copy_lines } from "./app_learn_js_lesson_name_copy_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_two } from "./app_learn_js_lesson_statement_name_two.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_note_cycle_code } from "./app_learn_js_note_cycle_code.mjs";
@@ -81,7 +81,7 @@ export function app_learn_js_lesson_statement_name_copy_single_above(
   ("THE SCREEN OPENS WITH THE CUPS, AND THE REMINDER OF THE LESSON BEFORE COMES AFTER THE PROGRAM THAT TELLS THEM, directly above the sentence comparing the two programs - so the two programs being compared stand one under the other, and nothing the cups never hold is read before the cups, at the human's request");
   ("the reminder names the two names and the two words they held, rather than one line of the program, and leaves the names uncoloured - the colours belong to the cups of this lesson, and the reminder is about the lesson before, at the human's request");
   let box_two = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_two,
     context,
     app_learn_js_lesson_statement_name_two,

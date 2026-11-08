@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_whole_part_formula } from "./app_learn_js_lesson_expression_whole_part_formula.mjs";
 import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
@@ -66,7 +66,7 @@ export function app_learn_js_lesson_expression_whole_part() {
   }
   function above(root, context) {
     let recall = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       recall,
       context,
       app_learn_js_lesson_expression_whole_part_formula,

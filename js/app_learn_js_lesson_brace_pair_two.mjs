@@ -5,7 +5,7 @@ import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_braces_two_nested } from "./app_learn_js_braces_two_nested.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_code_dark_lines_braces_paired_random } from "./app_learn_js_code_dark_lines_braces_paired_random.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_brace_pair_two() {
   function above(root, context) {
     "the braces among the tokens remembered, then braces in pairs, shown in colours";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_token_order_braces,

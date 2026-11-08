@@ -6,7 +6,7 @@ import { integer_is } from "./integer_is.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while_halve } from "./app_learn_js_lesson_while_halve.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -61,7 +61,7 @@ export function app_learn_js_lesson_while_double() {
   function above(root, context, program_lines, said) {
     "While halving remembered, then a while doubling n";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_while_halve,

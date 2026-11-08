@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_string_hello } from "./app_learn_js_lesson_expression_string_hello.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_string_concat_pair } from "./app_learn_js_lesson_expression_string_concat_pair.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_expression_string_concat_above_so_value(
   let join_code = property_get(r, "join_code");
   let code_b = property_get(r, "code_b");
   let code_a = property_get(r, "code_a");
-  let reminded = app_code_remember_from_lesson(
+  let reminded = app_learn_js_remember_from_lesson(
     remember_line,
     context,
     app_learn_js_lesson_expression_string_hello,

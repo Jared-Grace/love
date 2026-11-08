@@ -11,7 +11,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -63,7 +63,7 @@ export function app_learn_js_lesson_statement_names_binary_above({
     written = value;
   }
   let box_remember = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_remember,
     context,
     remember_lesson,

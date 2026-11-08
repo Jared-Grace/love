@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_two_bounds } from "./app_learn_js_lesson_if_two_bounds.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_if_nested_program_lines } from "./app_learn_js_if_nested_program_lines.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_if_nested_explain(root, context) {
   let peace = list_get(fruits, 2);
   let words = [love, joy, peace];
   let box_one = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_one,
     context,
     app_learn_js_lesson_if_two_bounds,

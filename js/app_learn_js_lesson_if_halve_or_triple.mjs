@@ -26,7 +26,7 @@ import { list_first } from "./list_first.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_if_condition_set } from "./app_learn_js_if_condition_set.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_halve_even } from "./app_learn_js_lesson_if_halve_even.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -105,7 +105,7 @@ export function app_learn_js_lesson_if_halve_or_triple() {
   function above(root, context) {
     "halving if even remembered, then the else for odd numbers, with n odd and then even, then where the step leads";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_if_halve_even,

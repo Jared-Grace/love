@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while } from "./app_learn_js_lesson_while.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -19,15 +19,20 @@ export function app_learn_js_lesson_while_two_names() {
     "While remembered, then a while changing a second name it never asks about";
     let box_one = app_learn_js_container_light_blue(root);
     let r = app_learn_js_braces_dots();
-    app_code_remember_from_lesson(box_one, context, app_learn_js_lesson_while, [
-      "a ",
-      "while",
-      " runs its ",
-      r,
-      " again and again, while what it asks is ",
-      "true",
-      ".",
-    ]);
+    app_learn_js_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_while,
+      [
+        "a ",
+        "while",
+        " runs its ",
+        r,
+        " again and again, while what it asks is ",
+        "true",
+        ".",
+      ],
+    );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "A ",

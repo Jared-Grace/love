@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_remainder_2 } from "./app_learn_js_lesson_expression_remainder_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_remainde
   let rest = " we divide two numbers, sometimes the numbers divide evenly";
   if (review) {
     let reminded = text_combine("when", rest);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       intro,
       context,
       app_learn_js_lesson_expression_remainder_2,

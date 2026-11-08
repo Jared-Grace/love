@@ -1,5 +1,5 @@
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than } from "./app_learn_js_lesson_expression_arithmetic_less_than.mjs";
 import { app_learn_js_operators_comparison_or_list } from "./app_learn_js_operators_comparison_or_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_expression_comparing_a_comparison_recall(
   ("The six come from the one list that holds them, so no other lesson can teach the word a different set");
   ("Nothing here is bold, and that is the point. A bold word is how the repo says a term is BEING DEFINED, and it is spent at first mention - bolding it a second time tells a learner a second term has arrived and stops them on a line they were meant to recognise and pass over in a second. Same reason this says Remember and joins the six with or: it echoes the shape of the defining line rather than restating it a new way, and a recall is worth its card only when it is recognised");
   let card = app_learn_js_container_light_blue(root);
-  let line = app_code_remember_from_lesson(
+  let line = app_learn_js_remember_from_lesson(
     card,
     context,
     app_learn_js_lesson_expression_arithmetic_less_than,

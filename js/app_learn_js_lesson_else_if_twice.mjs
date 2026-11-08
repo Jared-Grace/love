@@ -17,7 +17,7 @@ import { list_index_of } from "./list_index_of.mjs";
 import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_braces_run_else_if_twice } from "./app_learn_js_lesson_braces_run_else_if_twice.mjs";
 import { app_learn_js_lesson_else_if_else } from "./app_learn_js_lesson_else_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -98,7 +98,7 @@ export function app_learn_js_lesson_else_if_twice() {
     let else_dots = js_code_else_dots();
     ("2026-10-14, at the human's asking: the section-run lesson straight before is remembered first, as Else if and else remembers its own, and this lesson's explanation stays here, where what the code writes out is first asked");
     let box_run = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_run,
       context,
       app_learn_js_lesson_braces_run_else_if_twice,
@@ -111,7 +111,7 @@ export function app_learn_js_lesson_else_if_twice() {
       ],
     );
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_else_if_else,

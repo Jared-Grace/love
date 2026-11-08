@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while_two_names } from "./app_learn_js_lesson_while_two_names.mjs";
 import { js_code_two_names_while_b_first_lines } from "./js_code_two_names_while_b_first_lines.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_lesson_for_two_names() {
   function above(root, context, example, walk) {
     "Two names in a while remembered, written so the for is that while with two lines moved, then the for, then every run walked through";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_while_two_names,

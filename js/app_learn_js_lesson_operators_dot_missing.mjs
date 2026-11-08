@@ -1,6 +1,6 @@
 import { text_trim } from "./text_trim.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_operators_dot_numbers } from "./app_learn_js_lesson_operators_dot_numbers.mjs";
 import { app_learn_js_div_code_multiple } from "./app_learn_js_div_code_multiple.mjs";
 import { app_learn_js_lesson_validity_operator } from "./app_learn_js_lesson_validity_operator.mjs";
@@ -33,7 +33,7 @@ export function app_learn_js_lesson_operators_dot_missing() {
       " on both the left and right sides of the ",
     );
     let card = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       card,
       context,
       app_learn_js_lesson_operators_dot_numbers,

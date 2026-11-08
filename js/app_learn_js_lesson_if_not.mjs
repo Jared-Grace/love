@@ -8,7 +8,7 @@ import { text_combine } from "./text_combine.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_not } from "./app_learn_js_lesson_statement_name_not.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.mjs";
@@ -47,7 +47,7 @@ export function app_learn_js_lesson_if_not() {
     let name = "a";
     let opposite = text_combine(bang, name);
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_statement_name_not,

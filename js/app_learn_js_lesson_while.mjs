@@ -6,7 +6,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { add } from "./add.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_thrice } from "./app_learn_js_lesson_if_thrice.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
@@ -64,7 +64,7 @@ export function app_learn_js_lesson_while() {
     "the same if three times remembered, then while doing the same, and a while that never runs";
     let condition = js_code_binary_spaced_nb(name, less, 9);
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_if_thrice,

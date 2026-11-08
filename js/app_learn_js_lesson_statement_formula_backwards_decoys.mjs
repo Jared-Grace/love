@@ -12,7 +12,7 @@ import { app_learn_js_programs_answers_paired } from "./app_learn_js_programs_an
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { function_is } from "./function_is.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -93,7 +93,7 @@ export function app_learn_js_lesson_statement_formula_backwards_decoys({
   function above(root, context) {
     "the earlier lesson, whole, and then the writing that leads to this lesson's program, whole";
     let box_before = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_before,
       context,
       remember_lesson,

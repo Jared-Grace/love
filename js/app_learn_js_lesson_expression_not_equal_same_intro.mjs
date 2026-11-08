@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_not } from "./app_learn_js_lesson_expression_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
@@ -63,7 +63,7 @@ export function app_learn_js_lesson_expression_not_equal_same_intro(
     " are opposites",
   ]);
   let changes = app_learn_js_not_changes_true_false("a ");
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     joins,
     context,
     app_learn_js_lesson_expression_not,

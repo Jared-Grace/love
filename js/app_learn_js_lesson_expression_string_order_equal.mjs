@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_string_trichotomy } from "./app_learn_js_lesson_expression_string_trichotomy.mjs";
 import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
 import { app_learn_js_lesson_expression_string_order_equal_title_name_id } from "./app_learn_js_lesson_expression_string_order_equal_title_name_id.mjs";
@@ -79,7 +79,7 @@ export function app_learn_js_lesson_expression_string_order_equal() {
       ["text", " and "],
       ["code", ">"],
     ]);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       recall,
       context,
       app_learn_js_lesson_expression_string_trichotomy,

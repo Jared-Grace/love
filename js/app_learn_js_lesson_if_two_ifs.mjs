@@ -20,7 +20,7 @@ import { text_integers } from "./text_integers.mjs";
 import { equal } from "./equal.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_name } from "./app_learn_js_lesson_if_name.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -140,7 +140,7 @@ export function app_learn_js_lesson_if_two_ifs() {
     let joy = list_get(fruits, 1);
     let peace = list_get(fruits, 2);
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_if_name,

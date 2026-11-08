@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_remainder_divide } from "./app_learn_js_lesson_expression_remainder_divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_strong_card } from "./app_learn_js_lesson_expression_choose_order_strong_card.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_lesson_expression_choose_order_remainder_recall(
     "remainder",
     app_learn_js_expression_remainder_tree,
   );
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     recall_card,
     context,
     app_learn_js_lesson_expression_remainder_divide,

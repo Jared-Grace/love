@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_parentheses_one_side } from "./app_learn_js_lesson_expression_parentheses_one_side.mjs";
 import { app_learn_js_lesson_expression_parentheses_both_sides_card_flat_line } from "./app_learn_js_lesson_expression_parentheses_both_sides_card_flat_line.mjs";
 import { app_learn_js_comparison_side_wrapped } from "./app_learn_js_comparison_side_wrapped.mjs";
@@ -70,7 +70,7 @@ export function app_learn_js_lesson_expression_parentheses_both_sides() {
     let recall = app_learn_js_container_light_blue(root);
     ("On its own is this lesson's OWN angle and is kept deliberately - it does not reach for the shared inside-before-outside sentence, which is the wrong frame here: with a parenthesis on each side, neither one is outside the other, so before what has no answer. What each parenthesis does have is that it collapses to a single true or false by itself, which is exactly what the two lines below then show.");
     ("Solve, not work it out. The track runs on solve - a childhood math word, decided in the arithmetic-both-sides lesson - and work out is nowhere else in learner-facing text. The comparison is also named rather than left as it, and it is the comparison that is solved rather than the parentheses doing the solving: parentheses do not solve anything, they say what is solved apart from the rest.");
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       recall,
       context,
       app_learn_js_lesson_expression_parentheses_one_side,

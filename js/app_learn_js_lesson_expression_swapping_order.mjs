@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_less_than } from "./app_learn_js_lesson_expression_less_than.mjs";
 import { app_learn_js_lesson_swapping_same_numbers_line } from "./app_learn_js_lesson_swapping_same_numbers_line.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
@@ -39,7 +39,7 @@ export function app_learn_js_lesson_expression_swapping_order() {
   function above(root, context) {
     "show that ordering comparisons flip when swapped, with the reason: if 2 < 3 is true then 3 < 2 is false, because the bigger number would now be the smaller one. + and * are recalled as the swappers";
     let intro = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       intro,
       context,
       app_learn_js_lesson_expression_less_than,

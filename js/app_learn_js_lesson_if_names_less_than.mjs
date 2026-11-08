@@ -9,7 +9,7 @@ import { list_last } from "./list_last.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_less_than } from "./app_learn_js_lesson_if_less_than.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.mjs";
@@ -54,7 +54,7 @@ export function app_learn_js_lesson_if_names_less_than() {
     let small_first = js_code_binary_spaced_nb(2, less, 3);
     let big_first = js_code_binary_spaced_nb(3, less, 2);
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_if_less_than,

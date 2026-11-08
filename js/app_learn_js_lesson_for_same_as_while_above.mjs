@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -10,7 +10,7 @@ export function app_learn_js_lesson_for_same_as_while_above(lesson_while) {
   ("What sits above a for lesson that says the same as a while lesson: the while lesson remembered with its program, then the program written as a for, then one line saying they do the same, then every run walked through. In the shape the human asked for on the second for.");
   function above(root, context, example, walk) {
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, lesson_while, [
+    app_learn_js_remember_from_lesson(box_one, context, lesson_while, [
       "we can write this:",
     ]);
     let program_lines = js_code_start_above_lines(js_code_while_lines_multiple);

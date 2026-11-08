@@ -5,7 +5,7 @@ import { list_get } from "./list_get.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_true_false } from "./app_learn_js_lesson_statement_name_true_false.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_lesson_if_name() {
     ("The name goes in an if, worded so since 2026-10-08, as in If less than at the human's word. Not picked: inside ( and ), the first wording, since a ( and a ) also group a value.");
     let name = "a";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_statement_name_true_false,

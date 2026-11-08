@@ -3,7 +3,7 @@ import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_le
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_plus_one } from "./app_learn_js_lesson_statement_name_plus_one.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_name_plus_one_box(root, context) {
   let plus = js_operator_plus_symbol();
   let box = app_learn_js_container_light_blue(root);
   ("the box shows a program an earlier lesson taught, so it opens with the reminder every such box opens with, whose lesson number is a button back to it");
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box,
     context,
     app_learn_js_lesson_statement_name_plus_one,

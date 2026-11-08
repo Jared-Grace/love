@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_braces_among_plain_generic(
     let left = js_code_brace_left();
     let right = js_code_brace_right();
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, lesson_colored, [
+    app_learn_js_remember_from_lesson(box_one, context, lesson_colored, [
       "the braces of code are its ",
       left,
       " and ",

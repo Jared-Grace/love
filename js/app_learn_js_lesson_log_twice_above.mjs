@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_functions_console_log_arithmetic } from "./app_learn_js_lesson_functions_console_log_arithmetic.mjs";
 import { app_learn_js_lesson_sum_lines } from "./app_learn_js_lesson_sum_lines.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_log_twice_above(root, context) {
   ("The numbers here are in none of the programs the questions ask about - neither as something written nor as something worked out - so no number a learner meets on this screen turns up later as something to recognise rather than to read.");
   let lines = app_learn_js_lesson_sum_lines();
   let box_one = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_one,
     context,
     app_learn_js_lesson_functions_console_log_arithmetic,

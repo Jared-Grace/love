@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_number_trichotomy } from "./app_learn_js_lesson_expression_number_trichotomy.mjs";
 import { app_learn_js_lesson_expression_string_order } from "./app_learn_js_lesson_expression_string_order.mjs";
 import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
@@ -91,7 +91,7 @@ export function app_learn_js_lesson_expression_string_trichotomy() {
   function above(root, context) {
     "first a transfer box tying back to the number trichotomy the learner just did; then a dictionary box with a worked pair (same, different, before); then the three-cases box: any two strings give exactly one of the three, listed a/b/c with the operator that tests each case tagged in parentheses. Same shape as the number lesson, with smaller/bigger becoming before/after in the dictionary.";
     let transfer = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       transfer,
       context,
       app_learn_js_lesson_expression_number_trichotomy,
@@ -109,7 +109,7 @@ export function app_learn_js_lesson_expression_string_trichotomy() {
       ["text", "Two strings work the same way"],
     ]);
     let dictionary = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       dictionary,
       context,
       app_learn_js_lesson_expression_string_order,

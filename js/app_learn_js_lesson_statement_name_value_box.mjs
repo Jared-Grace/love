@@ -4,7 +4,7 @@ import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_le
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_value } from "./app_learn_js_lesson_statement_name_value.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_name_value_box(root, context) {
   let logged = js_code_console_log_statement(name);
   let box = app_learn_js_container_light_blue(root);
   ("the box shows a program an earlier lesson taught, so it opens with the reminder every such box opens with, whose lesson number is a button back to it");
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box,
     context,
     app_learn_js_lesson_statement_name_value,

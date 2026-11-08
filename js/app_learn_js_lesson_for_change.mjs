@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_for } from "./app_learn_js_lesson_for.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_for_condition_lines } from "./js_code_for_condition_lines.mjs";
@@ -17,9 +17,12 @@ export function app_learn_js_lesson_for_change() {
     "For remembered, then the same program with its change moved up";
     let box_one = app_learn_js_container_light_blue(root);
     ("2026-11-04, the human's words: the code before and after, then one line saying they do the same, since code is easier to understand than English about code. Not picked: my first draft, which explained the move in English and said when the moved code runs; the step by step below shows that");
-    app_code_remember_from_lesson(box_one, context, app_learn_js_lesson_for, [
-      "we can write this:",
-    ]);
+    app_learn_js_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_for,
+      ["we can write this:"],
+    );
     let lines_one = js_code_start_above_lines(js_code_for_condition_lines);
     example(box_one, lines_one);
     let box_two = app_learn_js_container_light_blue(root);

@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_divisor } from "./app_learn_js_lesson_expression_divisor.mjs";
 import { app_learn_js_lesson_expression_quotient } from "./app_learn_js_lesson_expression_quotient.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -18,13 +18,13 @@ export function app_learn_js_lesson_expression_whole_part_formula_above(
   let setup = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(setup, ["Suppose we are dividing two numbers:"]);
   app_learn_js_div_cycle_code(setup, ["", "14 / 4"]);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     setup,
     context,
     app_learn_js_lesson_expression_divisor,
     ["", "4", " is the divisor"],
   );
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     setup,
     context,
     app_learn_js_lesson_expression_quotient,

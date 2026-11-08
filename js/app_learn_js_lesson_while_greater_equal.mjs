@@ -5,7 +5,7 @@ import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symb
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while_less_equal } from "./app_learn_js_lesson_while_less_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -58,7 +58,7 @@ export function app_learn_js_lesson_while_greater_equal() {
   function above(root, context, program_lines, said) {
     "While asking <= remembered, then the same counting down with >=";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       box_one,
       context,
       app_learn_js_lesson_while_less_equal,

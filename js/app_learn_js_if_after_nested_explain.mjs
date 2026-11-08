@@ -5,7 +5,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_if_one_line } from "./js_code_if_one_line.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_nested } from "./app_learn_js_lesson_if_nested.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_if_after_nested_program_lines } from "./app_learn_js_if_after_nested_program_lines.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_if_after_nested_explain(root, context) {
   let if_joy = js_code_if_one_line("b", say_joy);
   let if_peace = js_code_if_one_line("b", say_peace);
   let box_one = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_one,
     context,
     app_learn_js_lesson_if_nested,

@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_swapping_add } from "./app_learn_js_lesson_expression_swapping_add.mjs";
 import { app_learn_js_lesson_swapping_same_numbers_line } from "./app_learn_js_lesson_swapping_same_numbers_line.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_expression_swapping_divide() {
   function above(root, context) {
     "recall + * swap, then show /, % and ** each changing when swapped, with an everyday reason and both sides worked out";
     let recall = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       recall,
       context,
       app_learn_js_lesson_expression_swapping_add,

@@ -5,7 +5,7 @@ import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_le
 import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_statement_name_value } from "./app_learn_js_lesson_statement_name_value.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_statement_name_again_above(root, context) {
   let word_after = app_learn_js_lesson_statement_name_two_word();
   let box_before = app_learn_js_container_light_blue(root);
   let has = list_join_empty([" has ", word_before, " in it"]);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_before,
     context,
     app_learn_js_lesson_statement_name_value,
@@ -84,7 +84,7 @@ export function app_learn_js_lesson_statement_name_again_above(root, context) {
   ("Then the rule is spent on the very cup in front of them rather than left general. WHAT COMES OUT IS WHATEVER WENT IN LAST is true and says nothing about this screen; naming the cup, and saying out loud that its value was set twice here, is the same rule with the working shown - and this screen is the one place a learner can check it against a picture.");
   let semicolon = js_code_semicolon();
   let box_care = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_learn_js_remember_from_lesson(
     box_care,
     context,
     app_learn_js_lesson_functions_console_log_statement,

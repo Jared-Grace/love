@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { app_learn_js_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_learn_js_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -49,7 +49,7 @@ export function app_learn_js_lesson_expression_parentheses_arithmetic() {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       recall,
       context,
       app_learn_js_lesson_expression_choose_order,

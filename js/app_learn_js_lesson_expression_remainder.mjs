@@ -1,4 +1,4 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_dividend } from "./app_learn_js_lesson_expression_dividend.mjs";
 import { app_learn_js_lesson_expression_divisor } from "./app_learn_js_lesson_expression_divisor.mjs";
 import { app_learn_js_lesson_naming_words } from "./app_learn_js_lesson_naming_words.mjs";
@@ -51,13 +51,13 @@ export function app_learn_js_lesson_expression_remainder() {
     "remind all three roles at once, since the remainder question 17 % 5 === 2 shows the dividend, divisor and remainder together";
     let remember = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(remember, ["", "17 % 5 === 2"]);
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       remember,
       context,
       app_learn_js_lesson_expression_dividend,
       ["the ", "17", " is the dividend"],
     );
-    app_code_remember_from_lesson(
+    app_learn_js_remember_from_lesson(
       remember,
       context,
       app_learn_js_lesson_expression_divisor,
