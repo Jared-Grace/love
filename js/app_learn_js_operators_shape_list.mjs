@@ -2,7 +2,7 @@ import { equal_not } from "./equal_not.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_operators_shape_list(
+export function app_learn_js_operators_shape_list(
   parent,
   placeholder_tile,
   operators,
