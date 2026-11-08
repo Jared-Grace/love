@@ -5,8 +5,10 @@ export function app_shared_hash_fields_unknown_several_text() {
   let texts = {
     en: "This link asks for things we do not have",
     ur: "یہ لنک ایسی چیزیں مانگتا ہے جو ہمارے پاس نہیں ہیں",
+    tgl: "Humihingi ang link na ito ng mga bagay na wala sa amin",
     translated_from: {
       ur: "This link asks for things we do not have",
+      tgl: "This link asks for things we do not have",
     },
   };
   let text = app_shared_text_reader_language(texts);
