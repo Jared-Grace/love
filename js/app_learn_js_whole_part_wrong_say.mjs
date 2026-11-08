@@ -15,7 +15,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_whole_part_wrong_say(question, answer, choice) {
+export function app_learn_js_whole_part_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks wrong in the whole part and remainder lessons: how Math.floor(a / b) * b is the whole part of a / b, what it comes to, or how taking it away from a leaves the remainder a % b, as parts that take turns between words and code. null when the two sides are not a division and one of those");
   ("2026-10-26: one reminder for the four pairs those lessons ask - a division and its whole part formula, a division and its whole part value in either order, a division and its remainder formula, and the remainder formula and its % line - because all four are worked from the same two numbers, and naming the pair is all that differs");
