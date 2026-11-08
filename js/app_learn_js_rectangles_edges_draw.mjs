@@ -1,6 +1,6 @@
 import { app_code_rectangles_edges_marked_draw } from "./app_code_rectangles_edges_marked_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_rectangles_edges_draw({
+export function app_learn_js_rectangles_edges_draw({
   parent,
   columns,
   rows,

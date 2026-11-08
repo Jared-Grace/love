@@ -6,7 +6,7 @@ import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_col
 import { list_max } from "./list_max.mjs";
 import { list_min } from "./list_min.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
+import { app_learn_js_rectangles_edges_draw } from "./app_learn_js_rectangles_edges_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -140,7 +140,7 @@ export function app_learn_js_lesson_statement_name_rectangles_overlap() {
   ) {
     "the picture of two rectangles with their edges numbered, as an entry of the writing";
     function draw_inner(box) {
-      app_code_rectangles_edges_draw({
+      app_learn_js_rectangles_edges_draw({
         parent: box,
         columns,
         rows,

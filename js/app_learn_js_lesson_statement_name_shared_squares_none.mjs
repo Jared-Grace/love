@@ -18,7 +18,7 @@ import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_col
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
-import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
+import { app_learn_js_rectangles_edges_draw } from "./app_learn_js_rectangles_edges_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
@@ -149,7 +149,7 @@ export function app_learn_js_lesson_statement_name_shared_squares_none() {
   );
   function apart_draw(box) {
     "two rectangles apart corner to corner, so they share no square";
-    app_code_rectangles_edges_draw({
+    app_learn_js_rectangles_edges_draw({
       parent: box,
       columns: 5,
       rows: 5,
