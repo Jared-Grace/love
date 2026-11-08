@@ -54,7 +54,7 @@ export async function functions_rename_map(renames) {
   });
   for (let after of afters) {
     await function_rename_check(after);
-    ("a store on this disk is named after the function that owns it, so a name already holding one is as taken as a name already bound");
+    ("a store on this disk is named after the function that owns it, so a name already holding one is as taken as a name already bound - asked before anything moves, because code renamed away from its own data is worse than a rename left undone");
     await folders_function_named_rename_check(after);
   }
   for (let before of befores) {
@@ -80,13 +80,17 @@ export async function functions_rename_map(renames) {
     await function_move_unchecked(before, after);
   }
   await functions_identifiers_rename_map(unaliased, identifiers);
-  ("a fetch made while running names the file as a piece of writing, which the identifier rename never reads");
+  ("a fetch made while running names the file as a piece of writing, which the identifier rename never reads - so it is moved here, or it keeps naming a file that is no longer there and fails only when somebody opens it");
   await functions_imports_dynamic_rename_map(unaliased);
   for (let before of befores) {
     let after = property_get(unaliased, before);
+    ("a standing approval names the function as plain text, so the generated rules file stops matching when the function it names moves. renaming is itself auto-approved, so this says so rather than writing the file - an auto-approved command that edits the allow list is the one shape the permission system refuses, and it refused this");
     permission_settings_allow_rename_report(before, after);
+    ("aliases already follow a rename; memory notes are the other named referrer, so marked pointers follow too and bare mentions are reported for a human to weigh");
     await memory_fn_references_rename_report(before, after);
+    ("a browser storage key is the owning function's own name, so settings people saved are filed under the old name. The rename is recorded, and the browser carries those settings across to the new name the first time it reads them");
     await storage_local_key_owner_renamed_record(before, after);
+    ("a store on this disk is reachable, so it is moved rather than reported - the sentence a browser key gets is only a sentence because nothing here can reach that disk");
     await folders_function_named_rename(before, after);
   }
   return unaliased;
