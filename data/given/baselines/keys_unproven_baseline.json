@@ -51,7 +51,7 @@
    ]
   },
   {
-   "name": "app_code_lessons_review_since_lesson_reached_paths",
+   "name": "app_learn_js_lessons_review_since_lesson_reached_paths",
    "keys": [
     "lesson_name",
     "imported_name"

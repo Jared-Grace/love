@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_review_since_lesson_reached_paths } from "./app_code_lessons_review_since_lesson_reached_paths.mjs";
+import { app_learn_js_lessons_review_since_lesson_reached_paths } from "./app_learn_js_lessons_review_since_lesson_reached_paths.mjs";
 import { not } from "./not.mjs";
 export async function app_code_lessons_review_since_lessons_of_path(
   names_after,
@@ -13,7 +13,7 @@ export async function app_code_lessons_review_since_lessons_of_path(
   let lessons_of_path = {};
   for (let lesson_name of names_after) {
     let reached_paths =
-      await app_code_lessons_review_since_lesson_reached_paths(
+      await app_learn_js_lessons_review_since_lesson_reached_paths(
         lesson_name,
         imports_remembered,
       );

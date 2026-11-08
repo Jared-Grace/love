@@ -5,7 +5,7 @@ import { greater_than } from "./greater_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lessons_review_since_lesson_imports_of } from "./app_learn_js_lessons_review_since_lesson_imports_of.mjs";
-export async function app_code_lessons_review_since_lesson_reached_paths(
+export async function app_learn_js_lessons_review_since_lesson_reached_paths(
   lesson_name,
   imports_remembered,
 ) {
