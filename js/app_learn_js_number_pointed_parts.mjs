@@ -1,7 +1,7 @@
 import { text_combine } from "./text_combine.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { app_code_pointer_color_or_null } from "./app_code_pointer_color_or_null.mjs";
+import { app_learn_js_pointer_color_or_null } from "./app_learn_js_pointer_color_or_null.mjs";
 export function app_learn_js_number_pointed_parts(pointers, piece) {
   "a piece of code ending in a number, cut where a pointer names part of that number: what comes before the number, the number but its last digit, that last digit - or the .3 after a dot - and what follows, each as a pair of its text and its colour, or null for a part no pointer names; so with the 3 pointed 123 is 12 and a coloured 3, with the 12 pointed 12.3 is a coloured 12 and .3, and Math.floor(123 is Math.floor( then 12 and 3";
   "Null when nothing is to be cut: the piece does not end in a number of two or more digits, or no pointer names either part. The caller then colours the piece whole, as a pointed line does, so a pointer naming a whole number still reaches it.";
@@ -17,10 +17,10 @@ export function app_learn_js_number_pointed_parts(pointers, piece) {
   if (equal(body, "") && equal(dot, "")) {
     return null;
   }
-  let color_body = app_code_pointer_color_or_null(pointers, body);
-  let color_dot = app_code_pointer_color_or_null(pointers, dot);
+  let color_body = app_learn_js_pointer_color_or_null(pointers, body);
+  let color_dot = app_learn_js_pointer_color_or_null(pointers, dot);
   let digit_named = text_combine(dot, digit);
-  let color_digit = app_code_pointer_color_or_null(pointers, digit_named);
+  let color_digit = app_learn_js_pointer_color_or_null(pointers, digit_named);
   if (
     equal(color_body, null) &&
     equal(color_dot, null) &&

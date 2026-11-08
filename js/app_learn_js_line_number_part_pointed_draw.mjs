@@ -3,7 +3,7 @@ import { app_learn_js_number_pointed_parts } from "./app_learn_js_number_pointed
 import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_code_pointer_color_or_null } from "./app_code_pointer_color_or_null.mjs";
+import { app_learn_js_pointer_color_or_null } from "./app_learn_js_pointer_color_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_div } from "./html_div.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_line_number_part_pointed_draw(parts, pointers) {
   ("Not picked: teaching the pointed line itself to colour the ends of numbers, which would colour the 3 at the end of every 13 and 23 in every lesson that points at a 3.");
   let plain = app_shared_color_code_background();
   function color_get(piece) {
-    let color = app_code_pointer_color_or_null(pointers, piece);
+    let color = app_learn_js_pointer_color_or_null(pointers, piece);
     if (null_is(color)) {
       return plain;
     }

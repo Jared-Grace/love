@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_style_normal } from "./app_code_style_normal.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { app_code_pointer_color_or_null } from "./app_code_pointer_color_or_null.mjs";
+import { app_learn_js_pointer_color_or_null } from "./app_learn_js_pointer_color_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 export function app_learn_js_output_pointed(pointers) {
@@ -15,7 +15,7 @@ export function app_learn_js_output_pointed(pointers) {
     let lines = text_split_newline(answer);
     for (let line of lines) {
       let line_div = html_div(answer_div);
-      let color = app_code_pointer_color_or_null(pointers, line);
+      let color = app_learn_js_pointer_color_or_null(pointers, line);
       if (null_is(color)) {
         html_span_text(line_div, line);
       } else {

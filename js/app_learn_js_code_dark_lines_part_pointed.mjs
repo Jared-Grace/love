@@ -2,7 +2,7 @@ import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_pointer_color_or_null } from "./app_code_pointer_color_or_null.mjs";
+import { app_learn_js_pointer_color_or_null } from "./app_learn_js_pointer_color_or_null.mjs";
 import { app_learn_js_code_dark_lines_pointed_cut } from "./app_learn_js_code_dark_lines_pointed_cut.mjs";
 export function app_learn_js_code_dark_lines_part_pointed(
   pointers,
@@ -32,7 +32,7 @@ export function app_learn_js_code_dark_lines_part_pointed(
       if (equal(count, first)) {
         on = true;
       }
-      let pointed = app_code_pointer_color_or_null(pointers, piece);
+      let pointed = app_learn_js_pointer_color_or_null(pointers, piece);
       let drawn = [[piece, on ? color : pointed]];
       if (equal(count, last)) {
         on = false;
