@@ -1,3 +1,4 @@
+import { reply_meeting_blessed } from "./reply_meeting_blessed.mjs";
 import { app_shared_message_reply_iam_titled_name } from "./app_shared_message_reply_iam_titled_name.mjs";
 import { reply_pray_for_me } from "./reply_pray_for_me.mjs";
 import { reply_we_should } from "./reply_we_should.mjs";
@@ -68,6 +69,7 @@ export function app_shared_message_reply_choices() {
   let we_should = reply_we_should();
   let age = reply_age_said();
   let name_alone = app_shared_message_reply_iam_titled_name();
+  let meeting = reply_meeting_blessed();
   let choices_main = reply_choice([
     hru,
     greeting,
@@ -85,6 +87,7 @@ export function app_shared_message_reply_choices() {
     we_should,
     age,
     name_alone,
+    meeting,
   ]);
   let choices_cheapest = reply_cheapest_per_position(choices_main);
   let room = reply_once_or_more(choices_cheapest);
