@@ -10,7 +10,7 @@ import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
+import { app_learn_js_not_changes_true_false } from "./app_learn_js_not_changes_true_false.mjs";
 export function app_learn_js_lesson_expression_not_equal_same_intro(
   root,
   context,
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_expression_not_equal_same_intro(
     false_word,
     " are opposites",
   ]);
-  let changes = app_code_not_changes_true_false("a ");
+  let changes = app_learn_js_not_changes_true_false("a ");
   app_code_remember_from_lesson(
     joins,
     context,

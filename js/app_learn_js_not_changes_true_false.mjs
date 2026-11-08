@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-export function app_code_not_changes_true_false(lead) {
+export function app_learn_js_not_changes_true_false(lead) {
   arguments_assert(arguments, 1);
   ("the one sentence the ! lessons say about what a ! does, as the pieces of a row, held in one place so the lessons saying it cannot drift into saying it almost the same way. The caller passes only its own lead-in, because the lessons that recall it open with Remember and the one that is arguing from it opens with Remember: a.");
   ("Written as pieces rather than as a string because three of the words in it are code - the mark itself and the two keywords - and a sentence handed over already joined has nowhere left to put a code chip.");

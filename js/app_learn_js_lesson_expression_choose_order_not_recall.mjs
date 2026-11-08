@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_not } from "./app_learn_js_lesson_expres
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
+import { app_learn_js_not_changes_true_false } from "./app_learn_js_not_changes_true_false.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_expression_choose_order_not_recall(
   ("BOTH MOVES ARE SHOWN, not only the one the worked line happens to need. The card used to show !true alone, and a learner reading it would be right to wonder whether the other way round had been left out because it works differently. Two lines and there is nothing left to wonder about - which is the whole job of a recall card, since a learner who has to reason on a recall has not been reminded of anything.");
   let symbol = js_operator_bang_symbol();
   let recall_card = app_learn_js_container_light_blue(root);
-  let changes = app_code_not_changes_true_false("");
+  let changes = app_learn_js_not_changes_true_false("");
   app_code_remember_from_lesson(
     recall_card,
     context,
