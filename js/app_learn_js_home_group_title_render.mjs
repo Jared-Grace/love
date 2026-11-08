@@ -5,7 +5,7 @@ import { emoji_check } from "./emoji_check.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-import { app_code_lessons_range_text } from "./app_code_lessons_range_text.mjs";
+import { app_learn_js_lessons_range_text } from "./app_learn_js_lessons_range_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_home_group_title_render(entry) {
   app_learn_js_cycle_code(title_mark, parts);
   let first = property_get(entry, "first");
   let last = property_get(entry, "last");
-  let range_span = app_code_lessons_range_text(first, last);
+  let range_span = app_learn_js_lessons_range_text(first, last);
   let range_named = text_combine("Lessons ", range_span);
   let range_wrapped = text_wrap_parenthesis(range_named);
   html_span_space(title_mark);
