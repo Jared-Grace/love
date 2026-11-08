@@ -3,7 +3,7 @@ import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_review_preview_question_show } from "./app_learn_js_review_preview_question_show.mjs";
 import { app_learn_js_review_preview_pickers } from "./app_learn_js_review_preview_pickers.mjs";
-export function app_code_review_preview_shortlist_show() {
+export function app_learn_js_review_preview_shortlist_show() {
   arguments_assert(arguments, 0);
   let root = html_body_div();
   let picker = html_div(root);

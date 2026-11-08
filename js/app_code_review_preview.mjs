@@ -1,4 +1,4 @@
-import { app_code_review_preview_shortlist_show } from "./app_code_review_preview_shortlist_show.mjs";
+import { app_learn_js_review_preview_shortlist_show } from "./app_learn_js_review_preview_shortlist_show.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_buttons_cap_style } from "./app_learn_js_buttons_cap_style.mjs";
 export function app_code_review_preview() {
@@ -9,6 +9,6 @@ export function app_code_review_preview() {
   ("The success message is shown and hidden exactly as the review shows and hides it, because when it arrives and what it does to the answer already on the screen is one of the things this page is here to be looked at for.");
   ("The kind buttons stay on the screen under the question rather than being cleared away with the picker. Asking the same kind again is then the same tap that asked it the first time, and a fresh line comes up each time because the batch is generated again on every ask.");
   app_learn_js_buttons_cap_style();
-  let shortlist_show = app_code_review_preview_shortlist_show();
+  let shortlist_show = app_learn_js_review_preview_shortlist_show();
   shortlist_show();
 }
