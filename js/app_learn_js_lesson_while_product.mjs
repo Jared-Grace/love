@@ -36,7 +36,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_product() {
+export function app_learn_js_lesson_while_product() {
   arguments_assert(arguments, 0);
   ("a while multiplying up a product: let product = 1; let n = 2; while (n < 5) { product *= n; n += 1; } console.log(product); writes out 24, which is 2 * 3 * 4");
   ("The one new fact is that a running product starts at 1, not 0, since 0 times anything is 0; otherwise it is A running total with *= in place of +=.");
