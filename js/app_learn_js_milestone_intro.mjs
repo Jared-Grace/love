@@ -9,7 +9,7 @@ import { storage_local_get_context } from "./storage_local_get_context.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
-import { app_code_review_cursor_key } from "./app_code_review_cursor_key.mjs";
+import { app_learn_js_review_cursor_key } from "./app_learn_js_review_cursor_key.mjs";
 import { app_learn_js_milestone_begun_key } from "./app_learn_js_milestone_begun_key.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
 import { app_code_review } from "./app_code_review.mjs";
@@ -33,7 +33,7 @@ export function app_learn_js_milestone_intro(root, context, checkpoint) {
       let seeds = property_get(stored, "seeds");
       if (list_empty_is(seeds)) {
         storage_local_remove_context(context, state_key);
-        let cursor_key = app_code_review_cursor_key(state_key);
+        let cursor_key = app_learn_js_review_cursor_key(state_key);
         storage_local_remove_context(context, cursor_key);
       }
     }
