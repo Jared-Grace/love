@@ -1,4 +1,4 @@
-import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
+import { app_learn_js_uneven_dividend_only } from "./app_learn_js_uneven_dividend_only.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_expression_whole_part_numbers() {
   ("The quotient is the small one the lessons around this use, so the value of the line stays inside what a learner can check in their head.");
   let quotient = integer_random(2, 3);
   let divisor = list_random_item([4, 5, 10]);
-  let dividend = app_code_uneven_dividend_only(quotient, divisor);
+  let dividend = app_learn_js_uneven_dividend_only(quotient, divisor);
   let numbers = {
     dividend,
     divisor,

@@ -4,7 +4,7 @@ import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.m
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
-import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
+import { app_learn_js_uneven_dividend_only } from "./app_learn_js_uneven_dividend_only.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_expression_dividend() {
   "identify the DIVIDEND (the number being divided) in a division a / b - the divisor b stands as the decoy; a thin lesson over the shared identify-an-operand generic";
   function make(divisor, quotient) {
     "a division whose dividend is quotient*divisor + a leftover; the answer is the dividend and the divisor is the decoy button. When quotient is 0 the dividend is smaller than the divisor (e.g. 2 / 3), so the dividend is still whichever number is divided, even when it is the smaller one";
-    let dividend = app_code_uneven_dividend_only(quotient, divisor);
+    let dividend = app_learn_js_uneven_dividend_only(quotient, divisor);
     let question = js_code_binary_spaced_nb(dividend, "/", divisor);
     let answer = text_to(dividend);
     let r = {

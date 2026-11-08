@@ -1,7 +1,7 @@
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_remainder_divide } from "./app_learn_js_lesson_expression_remainder_divide.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_solve_title_name_id } from "./app_learn_js_lesson_expression_remainder_divide_solve_title_name_id.mjs";
-import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
+import { app_learn_js_uneven_dividend_only } from "./app_learn_js_uneven_dividend_only.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_expression_remainder_divide_solve() {
   function make(divisor) {
     "the full remainder formula dividend - Math.floor(dividend / divisor) * divisor for the given divisor; the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division is uneven and the formula works out to that leftover - the remainder";
     let quotient = integer_random(2, 3);
-    let dividend = app_code_uneven_dividend_only(quotient, divisor);
+    let dividend = app_learn_js_uneven_dividend_only(quotient, divisor);
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
     let t = text_to(divisor);
     let whole_part = text_combine_multiple([
