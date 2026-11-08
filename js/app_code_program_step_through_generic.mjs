@@ -46,7 +46,7 @@ import { subtract } from "./subtract.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_note_name_mark_open } from "./app_learn_js_note_name_mark_open.mjs";
-import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
+import { app_learn_js_note_name_mark } from "./app_learn_js_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
@@ -450,7 +450,7 @@ export function app_code_program_step_through_generic(
     let comment = list_get(comments, line_index);
     ("the name is marked as every note in this course marks one, at the human's asking 2026-10-14");
     let open = app_learn_js_note_name_mark_open();
-    let marked = app_code_note_name_mark(name);
+    let marked = app_learn_js_note_name_mark(name);
     let before = "// ";
     let note = text_combine_multiple([before, marked, " value: ", value_text]);
     list_set(noted, line_index, value_text);

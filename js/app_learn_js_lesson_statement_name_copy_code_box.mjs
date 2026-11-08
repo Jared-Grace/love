@@ -4,7 +4,7 @@ import { list_last } from "./list_last.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
+import { app_learn_js_note_name_mark } from "./app_learn_js_note_name_mark.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
@@ -42,8 +42,8 @@ export function app_learn_js_lesson_statement_name_copy_code_box(
   ("A blank line between each note and the group before it, because the notes are what would otherwise have been separate sentences with code between them, and the blank line is what is left of that break.");
   ("A NAME STANDING IN A SENTENCE IS MARKED. The first name a learner meets is a, which is also an English word, so 'this does not remove it from a' reads as a sentence that stops before its last word. The mark says the letter is the name of a cup and not the start of a phrase, and it says it in writing, so the reader who cannot tell two colours apart is told the same thing as everybody else.");
   ("What the mark is made of is not spelled here and is not this screen's to choose. Marking a name is asked for by name, and the same asking is what the painter looks for again when it comes to fade the mark and colour what it holds - so the two cannot fall out of step, and the day the course wants a different mark it is changed once for every lesson at once.");
-  let first_named = app_code_note_name_mark(name_first);
-  let last_named = app_code_note_name_mark(name_last);
+  let first_named = app_learn_js_note_name_mark(name_first);
+  let last_named = app_learn_js_note_name_mark(name_last);
   let words = list_join_empty([
     "We make cups ",
     first_named,

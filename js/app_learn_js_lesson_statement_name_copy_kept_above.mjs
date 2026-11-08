@@ -14,7 +14,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
+import { app_learn_js_note_name_mark } from "./app_learn_js_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_that_text.mjs";
@@ -91,8 +91,8 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
   let logged = js_code_console_log_statement(name_copy);
   ("THE STORY IS SAID AGAIN INSIDE THE PROGRAM, AS THE PROGRAM'S OWN NOTES, RATHER THAN IN SENTENCES BETWEEN CHIPS. What was three chips with plain writing between them is one chip, because every one of those sentences is a thing a programmer writes down next to the line it is about, and writing them as notes puts each one on the line it describes instead of above a fragment of the program. The copying lesson before this one is already read that way, so a learner arriving here meets a shape they have just been taught rather than a second one.");
   ("The names in those notes are marked and coloured, and the same two names are coloured everywhere above. That is the join this screen was missing: a cup drawn in the picture, the word for it in the story, and the name in the program are now one thing to look at rather than three that happen to be spelled alike.");
-  let first_named = app_code_note_name_mark(name_first);
-  let copy_named = app_code_note_name_mark(name_copy);
+  let first_named = app_learn_js_note_name_mark(name_first);
+  let copy_named = app_learn_js_note_name_mark(name_copy);
   ("ORDER OF FIRST MARKING. The cup that changes is marked in the first note and the cup that keeps its word in the second, which is the order the list above lends the colours in. The code box reads its own order off these notes, so the two agree only while this stays first.");
   let words_held = list_join_empty([
     "We fill cup ",

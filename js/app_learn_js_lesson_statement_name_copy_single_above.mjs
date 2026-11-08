@@ -14,7 +14,7 @@ import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups
 import { app_learn_js_lesson_cups_copy_story } from "./app_learn_js_lesson_cups_copy_story.mjs";
 import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_that_text.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
+import { app_learn_js_note_name_mark } from "./app_learn_js_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { app_learn_js_lesson_name_copy_lines } from "./app_learn_js_lesson_name_copy_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -72,7 +72,7 @@ export function app_learn_js_lesson_statement_name_copy_single_above(
   ("the program box directly under the cups opens with the line the lesson that copies into a third cup opens its program with, and says nothing else, so the program reads as the cup story written in JS - every word in it is one the cups hold");
   let written = app_learn_js_js_written_that_text();
   app_learn_js_div_cycle_code(box_copy, [written]);
-  let first_named = app_code_note_name_mark(name_first);
+  let first_named = app_learn_js_note_name_mark(name_first);
   let words_made = list_join_empty(["We make cup ", first_named]);
   let note_made = js_code_comment_line(words_made);
   let copy_lines = app_learn_js_lesson_name_copy_lines(name_first, name_last);

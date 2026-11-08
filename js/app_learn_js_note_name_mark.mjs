@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_note_name_mark_open } from "./app_learn_js_note_name_mark_open.mjs";
 import { app_learn_js_note_name_mark_close } from "./app_learn_js_note_name_mark_close.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
-export function app_code_note_name_mark(name) {
+export function app_learn_js_note_name_mark(name) {
   arguments_assert(arguments, 1);
   ("a name written the way a note in a lesson's program writes it: marked, so a reader can tell the letter is the name of a cup and not an English word");
   ("THIS IS WHAT A LESSON CALLS, AND THE ONLY THING IT CALLS. A lesson author never spells the mark, so changing the mark changes every note in the course at once, and the painter that finds the mark again is looking for the same two characters by construction.");

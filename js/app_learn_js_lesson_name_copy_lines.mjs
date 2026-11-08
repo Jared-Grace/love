@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
+import { app_learn_js_note_name_mark } from "./app_learn_js_note_name_mark.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -10,8 +10,8 @@ export function app_learn_js_lesson_name_copy_lines(name_from, name_to) {
   ("the end of a program that copies one name into another, notes and all: the copying line with the notes saying what it does and what it does not do, then the line writing out the copy");
   ("Written once for every lesson that copies a name, so the notes a learner reads above the copying line are the same words wherever they meet it. The line that fills the cup says in the same breath that nothing leaves the cup it was filled from, because that is the one thing a learner will doubt.");
   ("The names are marked in the notes, and the marks are what the code box reads its colours from.");
-  let from_named = app_code_note_name_mark(name_from);
-  let to_named = app_code_note_name_mark(name_to);
+  let from_named = app_learn_js_note_name_mark(name_from);
+  let to_named = app_learn_js_note_name_mark(name_to);
   let words_copy = list_join_empty([
     "We make ",
     to_named,
