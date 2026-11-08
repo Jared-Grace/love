@@ -12,7 +12,7 @@ import { list_add } from "./list_add.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
-export function app_code_quiz_choice_button_answer_generic({
+export function app_learn_js_quiz_choice_button_answer_generic({
   parent,
   text,
   right,

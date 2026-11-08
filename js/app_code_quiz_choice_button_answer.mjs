@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_quiz_choice_button_answer_generic } from "./app_code_quiz_choice_button_answer_generic.mjs";
+import { app_learn_js_quiz_choice_button_answer_generic } from "./app_learn_js_quiz_choice_button_answer_generic.mjs";
 export function app_code_quiz_choice_button_answer(
   parent,
   text,
@@ -14,7 +14,7 @@ export function app_code_quiz_choice_button_answer(
     let r = false;
     return r;
   }
-  let b = app_code_quiz_choice_button_answer_generic({
+  let b = app_learn_js_quiz_choice_button_answer_generic({
     parent,
     text,
     right,

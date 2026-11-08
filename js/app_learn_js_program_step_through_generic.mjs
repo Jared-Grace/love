@@ -92,7 +92,7 @@ import { list_copy } from "./list_copy.mjs";
 import { app_learn_js_program_step_guide_line_next } from "./app_learn_js_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { property_in_list } from "./property_in_list.mjs";
-import { app_code_quiz_choice_button_answer_generic } from "./app_code_quiz_choice_button_answer_generic.mjs";
+import { app_learn_js_quiz_choice_button_answer_generic } from "./app_learn_js_quiz_choice_button_answer_generic.mjs";
 import { each } from "./each.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -865,7 +865,7 @@ export function app_learn_js_program_step_through_generic(
       ]);
       return true;
     }
-    let complete = app_code_quiz_choice_button_answer_generic({
+    let complete = app_learn_js_quiz_choice_button_answer_generic({
       parent: choices,
       text: "The program is complete",
       right: done,
@@ -1425,7 +1425,7 @@ export function app_learn_js_program_step_through_generic(
         }
         return soft;
       }
-      let b = app_code_quiz_choice_button_answer_generic({
+      let b = app_learn_js_quiz_choice_button_answer_generic({
         parent: choices,
         text: words,
         right: right2,
@@ -1470,7 +1470,7 @@ export function app_learn_js_program_step_through_generic(
       reason_show(program_reason);
       return false;
     }
-    let program_button = app_code_quiz_choice_button_answer_generic({
+    let program_button = app_learn_js_quiz_choice_button_answer_generic({
       parent: choices,
       text: "This program is complete",
       right: program_right,
