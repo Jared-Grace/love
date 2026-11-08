@@ -2,7 +2,7 @@ import { app_learn_js_lesson_statement_title_name_id_dots } from "./app_learn_js
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
-import { app_code_string_any_code } from "./app_code_string_any_code.mjs";
+import { app_learn_js_string_any_code } from "./app_learn_js_string_any_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_title_name_id() {
   let words = "Changing a name after copying it";
   let name_first = app_learn_js_lesson_statement_name_value_name();
   let name_copy = app_learn_js_lesson_statement_name_third();
-  let any = app_code_string_any_code();
+  let any = app_learn_js_string_any_code();
   let copied = js_code_let_statement(name_copy, name_first);
   let changed = js_code_assign_statement(name_first, any);
   let code = text_combine_multiple([copied, " ", changed]);
