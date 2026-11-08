@@ -23,7 +23,7 @@ import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-export function app_code_program_step_correction(container, qa) {
+export function app_learn_js_program_step_correction(container, qa) {
   arguments_assert(arguments, 2);
   ("the answer to a step-by-step question: every right press in order, one numbered row each, ending with The program is complete. 2026-10-23, at the human's asking. Not picked: the program and its kept lines, the answer every other quiz shows, which said what the program comes to and not how to get there - and getting there is what the question asks");
   ("2026-10-23, at the human's asking: what is pressed as a button is drawn as one, the steps already pressed are green, and the next one glows. How many are pressed is the answer the quiz hands in as the learner goes; before it hands one in, the program itself stands there, and none is pressed yet. Not picked: a count kept by this drawing, which is drawn again on every press and so keeps nothing");

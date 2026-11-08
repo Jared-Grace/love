@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_program_step_correction } from "./app_code_program_step_correction.mjs";
+import { app_learn_js_program_step_correction } from "./app_learn_js_program_step_correction.mjs";
 import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -27,7 +27,7 @@ export function app_code_program_step_presses_unexplained() {
   function on_exercise(exercise_visit) {
     let info = property_path_get_2(exercise_visit, "exercise", "info");
     let correction = property_get_or(info, "correction", null);
-    let b = equal(correction, app_code_program_step_correction);
+    let b = equal(correction, app_learn_js_program_step_correction);
     if (not(b)) {
       return;
     }
