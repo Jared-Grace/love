@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_shape_alike_is } from "./js_code_shape_alike_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_quiz_dealing_value_alike_is } from "./app_code_quiz_dealing_value_alike_is.mjs";
+import { app_learn_js_quiz_dealing_value_alike_is } from "./app_learn_js_quiz_dealing_value_alike_is.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { app_code_quiz_tokens_group_skeletons } from "./app_code_quiz_tokens_group_skeletons.mjs";
 import { json_equal } from "./json_equal.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_quiz_dealing_alike_is(code, candidate) {
   if (not(shape_alike)) {
     return false;
   }
-  let value_alike = app_code_quiz_dealing_value_alike_is(code, candidate);
+  let value_alike = app_learn_js_quiz_dealing_value_alike_is(code, candidate);
   if (not(value_alike)) {
     return false;
   }
