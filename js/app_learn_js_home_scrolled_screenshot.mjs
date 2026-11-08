@@ -17,7 +17,7 @@ export async function app_learn_js_home_scrolled_screenshot(
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let id = app_learn_js_lesson_first_id();
   let key_end = app_learn_js_progress_storage_key();
-  let url = "http://localhost:8080/dev/code.html";
+  let url = "http://localhost:8080/dev/learn_js.html";
   async function on_page(page) {
     let viewport = {
       width: number_from_text(width),

@@ -10,7 +10,7 @@ export function app_learn_js_lesson_symbol_source_names(names) {
   let found = [];
   for (let name of names) {
     let operator_named = text_starts_with(name, "js_operator");
-    let class_named = text_starts_with(name, "app_code_operators");
+    let class_named = text_starts_with(name, "app_learn_js_operators");
     let symbols_named = text_ends_with(name, "_symbols");
     let symbol_named = text_ends_with(name, "_symbol");
     let starts = or(operator_named, class_named);

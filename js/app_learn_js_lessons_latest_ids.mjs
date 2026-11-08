@@ -14,9 +14,9 @@ export async function app_learn_js_lessons_latest_ids() {
   ("Read off the built file rather than off the lesson list, because latest is whatever was last built and sent, and the lesson list is whatever the source says now: a lesson added since is in the list and not on latest. Not picked: writing the ids to a file of their own each time latest is built, which is a second claim about the build beside the build itself, and a step the shared build would take for this one app.");
   ("The built file keeps the id table as each lesson's function name, a colon, and a call handed its id in quotes, because the id is frozen text the build must not rename. The pattern asks for that and nothing looser, so an id is never taken from anywhere else in the file; if a build ever writes the table another way nothing matches, and the assert says so rather than marking nothing in silence.");
   ("It reads the folder latest is copied to before it is sent, so a build copied there and not yet sent counts as latest. The one command that copies it also sends it, so the two only part if a sending fails.");
-  let folders = await html_public_latest_folder("code");
+  let folders = await html_public_latest_folder("learn_js");
   let to_folder = property_get(folders, "to_folder");
-  let file_path = path_join([to_folder, "code.js"]);
+  let file_path = path_join([to_folder, "learn_js.js"]);
   let built = await file_read_uncached(file_path);
   let pattern =
     /app_code_lesson_[a-z0-9_]+:\(0,[A-Za-z0-9_$.]+\)\("([a-z0-9_]+)"\)/g;

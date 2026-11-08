@@ -25,7 +25,7 @@ export async function app_learn_js_lessons_rights_space_carrying() {
   let paths = await functions_names_to_paths();
   let found = [];
   for (let f_name of object_property_names(paths)) {
-    let lesson_is = text_starts_with(f_name, "app_code_lesson");
+    let lesson_is = text_starts_with(f_name, "app_learn_js_lesson");
     if (not(lesson_is)) {
       continue;
     }

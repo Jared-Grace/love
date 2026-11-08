@@ -17,7 +17,7 @@ export async function app_learn_js_milestone_screen_screenshot(id) {
   });
   let screen = app_learn_js_screen_name_short(fn_name("app_learn_js_review"));
   let url =
-    "http://localhost:8080/dev/code.html#" +
+    "http://localhost:8080/dev/learn_js.html#" +
     app_learn_js_lesson_hash_key() +
     "=while_decrement," +
     app_shared_screen_hash_key() +

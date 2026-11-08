@@ -16,7 +16,7 @@ export async function app_learn_js_lesson_screens_screenshot(id) {
   mkdirSync(folder, {
     recursive: true,
   });
-  let prefix = "http://localhost:8080/dev/code.html";
+  let prefix = "http://localhost:8080/dev/learn_js.html";
   let lesson = app_learn_js_lesson_hash_key() + "=" + id;
   let screen = app_shared_screen_hash_key() + "=";
   let examples = app_learn_js_screen_name_short(

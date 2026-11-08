@@ -13,7 +13,7 @@ export async function app_learn_js_lessons_review_since_names_after(
 ) {
   "What has become of the code lessons since a given commit - which were added, changed, hidden, moved or taken away, which shared helpers were edited, and how many of the lessons a student can reach are released.";
   arguments_assert(arguments, 3);
-  let lesson_prefix = "app_code_lesson_";
+  let lesson_prefix = "app_learn_js_lesson_";
   let shown = text_combine_multiple([commit, ":", list_path]);
   let list_text = await git_folder_run(folder, ["show", shown]);
   let names_before = app_learn_js_lessons_review_since_lesson_names_of_text(

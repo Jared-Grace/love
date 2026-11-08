@@ -18,7 +18,7 @@ export async function app_learn_js_parentheses_word_write() {
   ("Which files are held back, and why each one is, is said next door rather than here, because that is the part a reader has to be able to check.");
   ("Only the code app is walked. The picture Bible writes square [ ] round a word a translator supplied and calls those brackets, correctly, so a sweep any wider than this would rename the one shape this word is still right for.");
   let f_names = await functions_names();
-  let prefix = "app_code_";
+  let prefix = "app_learn_js_";
   let held = app_learn_js_parentheses_word_held();
   let changed = [];
   for (let f_name of f_names) {

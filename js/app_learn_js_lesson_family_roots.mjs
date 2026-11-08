@@ -13,7 +13,7 @@ export async function app_learn_js_lesson_family_roots(names) {
   ("Taking nothing is the second half of the test and it is not a formality. Several makers here ask the lesson maker to build something too, and are handed the operator and the words to say by whoever calls them; a maker has no telling of its own, so holding one against a bank accuses it of never showing a symbol that its callers show for it. That is exactly what happened before this line existed, to the one maker whose name does not end in the word generic.");
   let found = [];
   for (let name of names) {
-    let lesson_named = text_starts_with(name, "app_code_lesson_");
+    let lesson_named = text_starts_with(name, "app_learn_js_lesson_");
     if (lesson_named) {
       let source = await repo_love_function_read(name);
       let call = text_combine(
