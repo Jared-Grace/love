@@ -122,7 +122,7 @@ import { app_learn_js_label_of_code } from "./app_learn_js_label_of_code.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_program_step_complete_words } from "./app_code_program_step_complete_words.mjs";
+import { app_learn_js_program_step_complete_words } from "./app_learn_js_program_step_complete_words.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
@@ -1259,7 +1259,7 @@ export function app_code_program_step_through_generic(
       ? text_trim(message_now)
       : property_get(piece_now, "text");
     ("2026-10-21, at the human's asking: writing a line the long way comes after the four things a line does, because only a line written the shorter way needs it; and moving on to the next line comes very last, because it is the way out of a line, taken once everything above it is done. Not picked: the long way first, as it was, which put the rarest choice where every line's eye lands first");
-    let r3 = app_code_program_step_complete_words(noun);
+    let r3 = app_learn_js_program_step_complete_words(noun);
     let options = [
       ["declare", "Declare a variable"],
       ["evaluate", "Solve an expression"],
