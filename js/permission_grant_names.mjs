@@ -2851,6 +2851,7 @@ export function permission_grant_names() {
     fn_name("notes_reply"),
     fn_name("reply_bible_verse_function_new"),
     fn_name("playwright_url_firefox_console"),
+    fn_name("app_shared_dev_build_multiple_args"),
   ];
   return names;
 }
