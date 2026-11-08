@@ -2,7 +2,7 @@ import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
+import { app_learn_js_note_name_mark_open } from "./app_learn_js_note_name_mark_open.mjs";
 import { app_learn_js_note_name_mark_close } from "./app_learn_js_note_name_mark_close.mjs";
 import { js_comments_get } from "./js_comments_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_note_marks(code) {
   ("A NOTE IS NOT SAFE GROUND EITHER, BECAUSE THIS COURSE TEACHES PUTTING THE TWO SLASHES IN FRONT OF A LINE OF CODE. A skipped line is a note holding a whole call, brackets and all, so the lesson about skipping a line drew 40 + 20 in a cup's red. Two things are asked of a bracket before it counts as a mark, and they are the two a reader uses without thinking: a call's bracket is stuck to the end of the name being called, where a mark's stands free after a space; and a mark holds a name, where a call holds whatever is being handed over.");
   ("Neither test alone would do. The first alone would take the brackets in add (4 + 6) first for a mark, and the second alone would take the c in a skipped console.log(c) for the cup the lesson is teaching about.");
   ("A bracket that opens and never closes ends the search of that note rather than throwing. What is being painted is a lesson's own writing, and the worst an unclosed bracket can do here is leave a note drawn plainly - which is what it looked like before any of this existed.");
-  let open = app_code_note_name_mark_open();
+  let open = app_learn_js_note_name_mark_open();
   let close = app_learn_js_note_name_mark_close();
   let comments = js_comments_get(code);
   let marks = [];
