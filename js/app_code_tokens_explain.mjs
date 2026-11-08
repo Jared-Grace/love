@@ -2,7 +2,7 @@ import { app_code_tokens_explain_colors } from "./app_code_tokens_explain_colors
 import { app_code_tokens_painted } from "./app_code_tokens_painted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_quiz_tokens_order } from "./app_code_quiz_tokens_order.mjs";
+import { app_learn_js_quiz_tokens_order } from "./app_learn_js_quiz_tokens_order.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { each } from "./each.mjs";
@@ -14,7 +14,7 @@ export function app_code_tokens_explain(parent) {
   let example = "if (a) { }";
   app_learn_js_div_cycle_code(parent, ["Suppose this is our code:"]);
   app_learn_js_div_cycle_code(parent, ["", example]);
-  let order = app_code_quiz_tokens_order(example);
+  let order = app_learn_js_quiz_tokens_order(example);
   let tokens = text_split_space(order);
   let parts = [""];
   function part_add(token) {

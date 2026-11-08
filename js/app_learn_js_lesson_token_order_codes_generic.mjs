@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_quiz_tokens_order } from "./app_code_quiz_tokens_order.mjs";
+import { app_learn_js_quiz_tokens_order } from "./app_learn_js_quiz_tokens_order.mjs";
 import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
 import { app_code_tokens_choose_label } from "./app_code_tokens_choose_label.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_token_order_codes_generic(
   ("a lesson whose tokens are chosen in order with nothing shown to follow, on the programs codes_get hands back: one worked example chosen through by example_choose, then quizzes chosen through by quiz_choose, so the lessons after The order of the tokens differ only in their opening, their programs and in how the choosing is drawn");
   let batch = app_learn_js_batch_question_answer_fns(
     codes_get,
-    app_code_quiz_tokens_order,
+    app_learn_js_quiz_tokens_order,
   );
   let forwards = {
     question_label: "",

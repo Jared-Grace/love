@@ -10,7 +10,7 @@ import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_qu
 import { app_code_tokens_explain } from "./app_code_tokens_explain.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_quiz_tokens_order } from "./app_code_quiz_tokens_order.mjs";
+import { app_learn_js_quiz_tokens_order } from "./app_learn_js_quiz_tokens_order.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_token_order() {
   ("The writing is a first draft by Claude 2026-10-10.");
   let batch = app_learn_js_batch_question_answer_fns(
     app_code_token_order_batch,
-    app_code_quiz_tokens_order,
+    app_learn_js_quiz_tokens_order,
   );
   let order_label = "Its tokens, in order:";
   function above(root, context) {
