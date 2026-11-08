@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_quiz_tokens_places } from "./app_code_quiz_tokens_places.mjs";
+import { app_learn_js_quiz_tokens_places } from "./app_learn_js_quiz_tokens_places.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -20,7 +20,7 @@ export function app_code_tokens_painted(parent, code, colors, spaced) {
   ("Not spaced, it is the very chip a piece of code in a sentence is drawn as, with nothing added round any token - only the ground behind each token coloured - so it reads as the plain code above it with colour put on, as the human asked 2026-10-10.");
   ("Spaced, every token is a chip of its own, one space apart and with no dark line behind them, the way tokens apart are drawn plain, so the coloured tokens and the plain ones differ only in colour.");
   let div = html_div(parent);
-  let places = app_code_quiz_tokens_places(code);
+  let places = app_learn_js_quiz_tokens_places(code);
   if (spaced) {
     function chip_add(place, index) {
       let first = equal(index, 0);

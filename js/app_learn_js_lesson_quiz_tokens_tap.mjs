@@ -16,7 +16,7 @@ import { list_join_space } from "./list_join_space.mjs";
 import { app_learn_js_code_dark_lines_braces_paired_colors } from "./app_learn_js_code_dark_lines_braces_paired_colors.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-import { app_code_quiz_tokens_places } from "./app_code_quiz_tokens_places.mjs";
+import { app_learn_js_quiz_tokens_places } from "./app_learn_js_quiz_tokens_places.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_brace_is } from "./js_code_brace_is.mjs";
 import { text_get } from "./text_get.mjs";
@@ -113,7 +113,7 @@ export function app_learn_js_lesson_quiz_tokens_tap({
     "Which token comes next, reading left to right, then top to bottom?",
   );
   html_visibility_hidden(note_div);
-  let places = app_code_quiz_tokens_places(code);
+  let places = app_learn_js_quiz_tokens_places(code);
   let spans = [];
   let refused = [];
   let state = {
