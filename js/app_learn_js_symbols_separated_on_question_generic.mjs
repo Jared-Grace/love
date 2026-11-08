@@ -8,7 +8,7 @@ import { app_learn_js_symbol_separated } from "./app_learn_js_symbol_separated.m
 import { html_flex_column_center } from "./html_flex_column_center.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-export function app_code_symbols_separated_on_question_generic(
+export function app_learn_js_symbols_separated_on_question_generic(
   parent,
   question,
   on_symbol,
