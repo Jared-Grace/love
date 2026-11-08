@@ -1,6 +1,6 @@
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
-import { app_code_symbols_separated_on_question_numbered_fifth } from "./app_code_symbols_separated_on_question_numbered_fifth.mjs";
+import { app_learn_js_symbols_separated_on_question_numbered_fifth } from "./app_learn_js_symbols_separated_on_question_numbered_fifth.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { app_learn_js_lesson_symbols_letters_batch_get } from "./app_learn_js_lesson_symbols_letters_batch_get.mjs";
 import { identity } from "./identity.mjs";
@@ -78,7 +78,7 @@ export function app_learn_js_lesson_symbols_letters() {
     name_id,
     lambda,
     batch_get,
-    app_code_symbols_separated_on_question_numbered_fifth,
+    app_learn_js_symbols_separated_on_question_numbered_fifth,
   );
   return r5;
 }

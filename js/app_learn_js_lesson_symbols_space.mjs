@@ -1,5 +1,5 @@
 import { app_code_verse_words_letters_only } from "./app_code_verse_words_letters_only.mjs";
-import { app_code_symbols_separated_on_question_numbered_fifth } from "./app_code_symbols_separated_on_question_numbered_fifth.mjs";
+import { app_learn_js_symbols_separated_on_question_numbered_fifth } from "./app_learn_js_symbols_separated_on_question_numbered_fifth.mjs";
 import { app_learn_js_lesson_symbols_digits_numbered_fifth_on_symbol } from "./app_learn_js_lesson_symbols_digits_numbered_fifth_on_symbol.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
 import { app_learn_js_lesson_symbols_space_style } from "./app_learn_js_lesson_symbols_space_style.mjs";
@@ -44,7 +44,7 @@ export function app_learn_js_lesson_symbols_space() {
     name_id,
     lambda,
     batch_get,
-    app_code_symbols_separated_on_question_numbered_fifth,
+    app_learn_js_symbols_separated_on_question_numbered_fifth,
   );
   return r;
 }
