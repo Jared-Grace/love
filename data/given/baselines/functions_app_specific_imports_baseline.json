@@ -36,7 +36,7 @@
   "qa_gates -> app_learn_js_quiz_choice_pool_gate_run",
   "qa_gates -> app_learn_js_quiz_leniency_gate_run",
   "qa_gates -> app_learn_js_quiz_unscramble_gate_run",
-  "qa_gates -> app_code_quiz_unscramble_other_answer_gate_run",
+  "qa_gates -> app_learn_js_quiz_unscramble_other_answer_gate_run",
   "qa_gates -> app_code_quiz_unscramble_own_wording_gate_run",
   "qa_gates -> app_code_quiz_unscramble_shortcut_gate_run",
   "qa_gates -> app_learn_en_gloss_urdu_glosses_empty_gate_run",

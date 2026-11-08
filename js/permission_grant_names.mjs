@@ -2454,7 +2454,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_chapters_prose_missing"),
     fn_name("bible_glyph_chapter_chains_write"),
     fn_name("bible_glyph_chapter_word_mark_write"),
-    fn_name("app_code_quiz_unscramble_other_answer_gate_run"),
+    fn_name("app_learn_js_quiz_unscramble_other_answer_gate_run"),
     fn_name("baseline_writers_growth_exempt_dead"),
     fn_name("bible_glyph_chapter_references_write"),
     fn_name("bible_glyph_chapters_collision_marks_baseline_path"),

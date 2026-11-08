@@ -1,7 +1,7 @@
 import { app_code_quiz_unscramble_other_answer_rejected } from "./app_code_quiz_unscramble_other_answer_rejected.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-export function app_code_quiz_unscramble_other_answer_gate_run() {
+export function app_learn_js_quiz_unscramble_other_answer_gate_run() {
   "Gate: no unscramble in the course refuses an answer that is right by everything the learner was shown. Throws so the dispatcher seam exits nonzero.";
   "It is the third reading of the same pool. One asks whether the taught line is in it, one asks whether anything easier than the taught line is in it, and this one asks whether anything as good as the taught line has been left out of it.";
   "Twenty-three of five hundred and sixty-three lines the course can hand out failed this when it was first asked. Nothing was red: every accepted ordering meant what the question meant, and meaning was the only thing being checked - against a line the backwards question never puts on the screen.";

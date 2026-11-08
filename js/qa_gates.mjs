@@ -496,7 +496,7 @@ import { urdu_glued_words_gate_run } from "./urdu_glued_words_gate_run.mjs";
 import { red_proof_cases_claims_unmatched_cases_gate_run } from "./red_proof_cases_claims_unmatched_cases_gate_run.mjs";
 import { functions_gate_walk_escapes_gate_run } from "./functions_gate_walk_escapes_gate_run.mjs";
 import { bible_glyph_chapters_prose_gate_run } from "./bible_glyph_chapters_prose_gate_run.mjs";
-import { app_code_quiz_unscramble_other_answer_gate_run } from "./app_code_quiz_unscramble_other_answer_gate_run.mjs";
+import { app_learn_js_quiz_unscramble_other_answer_gate_run } from "./app_learn_js_quiz_unscramble_other_answer_gate_run.mjs";
 import { qa_promoted_public_pieces_served_is_cases_gate_run } from "./qa_promoted_public_pieces_served_is_cases_gate_run.mjs";
 import { git_hook_commit_msg_gate_run } from "./git_hook_commit_msg_gate_run.mjs";
 import { web_assets_storage_prefix_granted_gate_run } from "./web_assets_storage_prefix_granted_gate_run.mjs";
@@ -1147,7 +1147,7 @@ export function qa_gates() {
     red_proof_cases_claims_unmatched_cases_gate_run,
     functions_gate_walk_escapes_gate_run,
     bible_glyph_chapters_prose_gate_run,
-    app_code_quiz_unscramble_other_answer_gate_run,
+    app_learn_js_quiz_unscramble_other_answer_gate_run,
     qa_promoted_public_pieces_served_is_cases_gate_run,
     git_hook_commit_msg_gate_run,
     web_assets_storage_prefix_granted_gate_run,
