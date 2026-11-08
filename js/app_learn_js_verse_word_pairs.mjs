@@ -1,5 +1,5 @@
 import { list_size_less_1 } from "./list_size_less_1.mjs";
-import { app_code_verse_words_clean } from "./app_code_verse_words_clean.mjs";
+import { app_learn_js_verse_words_clean } from "./app_learn_js_verse_words_clean.mjs";
 import { range } from "./range.mjs";
 import { list_get } from "./list_get.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -7,7 +7,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_learn_js_verse_word_pairs() {
   "adjacent word pairs drawn from the shared verse text, each two clean words joined by a space - a large single-sourced set of two-word strings for the spaces lesson. Reusing the verse is cheaper to maintain and changed in one place, and it yields many more example pairs than a hand-written list";
-  let words = app_code_verse_words_clean();
+  let words = app_learn_js_verse_words_clean();
   let count = list_size_less_1(words);
   let indexes = range(count);
   function pair(index) {
