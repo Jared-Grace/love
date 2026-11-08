@@ -6,8 +6,10 @@ export function app_shared_money_text() {
   let texts = {
     en: " What happens with money here",
     ur: " یہاں پیسے کا کیا ہوتا ہے",
+    tgl: " Ano ang nangyayari sa pera rito",
     translated_from: {
       ur: " What happens with money here",
+      tgl: " What happens with money here",
     },
   };
   let label = app_shared_text_reader_language(texts);
