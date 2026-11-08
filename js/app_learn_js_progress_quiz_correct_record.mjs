@@ -6,7 +6,7 @@ import { null_is } from "./null_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
 import { storage_local_transform_empty_context } from "./storage_local_transform_empty_context.mjs";
-export function app_code_progress_quiz_correct_record(
+export function app_learn_js_progress_quiz_correct_record(
   context,
   quiz_index,
   quizzes_total,

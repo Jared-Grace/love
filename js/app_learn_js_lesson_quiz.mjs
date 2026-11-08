@@ -8,7 +8,7 @@ import { app_learn_js_lesson_quiz_render_correction } from "./app_learn_js_lesso
 import { app_learn_js_lesson_quiz_correction_code_set } from "./app_learn_js_lesson_quiz_correction_code_set.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
+import { app_learn_js_progress_quiz_correct_record } from "./app_learn_js_progress_quiz_correct_record.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
@@ -89,7 +89,11 @@ export function app_learn_js_lesson_quiz({
     "on any correct answer, flash success then auto-advance to the NEXT QUESTION of the SAME kind (the player loops through as many questions as they want; Next changes the kind, Skip leaves)";
     "the correct answer is written down here, at the one place that knows both which quiz of the lesson this is and how many the lesson has - the list screen shows a lesson as finished once every one of them has been answered right at least once";
     let quizzes_total = list_size(quizzes);
-    app_code_progress_quiz_correct_record(context, quiz_index, quizzes_total);
+    app_learn_js_progress_quiz_correct_record(
+      context,
+      quiz_index,
+      quizzes_total,
+    );
     ("the progress just changed, so the screen draws what shows it again, and the answer that finishes the lesson turns the screen green as it is given rather than only once the learner leaves and comes back, at the human's request, 2026-10-03. Redrawing the whole screen was the other choice, and it would throw away the question the learner is on");
     app_learn_js_lesson_progress_render(context);
     html_data_test_quiz_correct_bump();
