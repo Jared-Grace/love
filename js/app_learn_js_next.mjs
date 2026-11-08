@@ -7,7 +7,7 @@ import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { emoji_repeat_1 } from "./emoji_repeat_1.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_next({
+export function app_learn_js_next({
   context,
   parent_more,
   more_text,

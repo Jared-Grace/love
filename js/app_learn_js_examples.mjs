@@ -9,7 +9,7 @@ import { app_shared_button_screen_wide } from "./app_shared_button_screen_wide.m
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
 import { app_learn_js_go_back } from "./app_learn_js_go_back.mjs";
 import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
-import { app_code_next } from "./app_code_next.mjs";
+import { app_learn_js_next } from "./app_learn_js_next.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_learn_js_container_padded_x } from "./app_learn_js_container_padded_x.mjs";
 import { app_learn_js_button_skip_lesson } from "./app_learn_js_button_skip_lesson.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_examples(context) {
   if (complete) {
     on_more = null;
   }
-  app_code_next({
+  app_learn_js_next({
     context,
     parent_more: c,
     more_text,
