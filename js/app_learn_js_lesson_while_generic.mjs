@@ -21,7 +21,7 @@ import { list_unique } from "./list_unique.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
@@ -107,7 +107,7 @@ export function app_learn_js_lesson_while_generic(params) {
     }
     ("2026-11-01, for While asking !==: bound_past is handed the amount too, since the bound !== stops on once more is one step past where n ends; a lesson whose bound needs only the end ignores it");
     let v = bound_past(ended2, amount3);
-    let a = app_code_while_runs_max();
+    let a = app_learn_js_while_runs_max();
     if (less_than_equal(a, runs)) {
       v = step_back(ended2, amount3);
     }

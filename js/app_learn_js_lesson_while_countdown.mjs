@@ -26,7 +26,7 @@ import { list_flat } from "./list_flat.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -138,7 +138,7 @@ export function app_learn_js_lesson_while_countdown() {
     let lines4 = number_lines(start3, bound3);
     let left = list_size(lines4);
     let bound4 = subtract(bound3, 1);
-    let most = app_code_while_runs_max();
+    let most = app_learn_js_while_runs_max();
     if (less_than_equal(most, left)) {
       bound4 = bound3 + 1;
     }

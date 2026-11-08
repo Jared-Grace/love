@@ -27,7 +27,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -182,7 +182,7 @@ export function app_learn_js_lesson_while_or() {
     let start_b3 = list_get(numbers2, 1);
     let runs3 = runs_of(start_a3, start_b3, true, true);
     let shift = 1;
-    let most = app_code_while_runs_max();
+    let most = app_learn_js_while_runs_max();
     if (less_than_equal(most, runs3)) {
       shift = -1;
     }

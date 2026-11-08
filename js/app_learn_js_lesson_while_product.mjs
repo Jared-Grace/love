@@ -26,7 +26,7 @@ import { subtract } from "./subtract.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -147,7 +147,7 @@ export function app_learn_js_lesson_while_product() {
     }
     let bound_other = add(ended, 1);
     let runs = subtract(ended, start3);
-    let a = app_code_while_runs_max();
+    let a = app_learn_js_while_runs_max();
     if (less_than_equal(a, runs)) {
       bound_other = subtract(ended, 1);
     }

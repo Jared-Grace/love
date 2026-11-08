@@ -22,7 +22,7 @@ import { list_multiply } from "./list_multiply.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -112,7 +112,7 @@ export function app_learn_js_lesson_while_start_end() {
     let question_lines = text_split_newline(question);
     let question_word = list_get(question_lines, 1);
     let bound4 = bound3 + 1;
-    let most = app_code_while_runs_max();
+    let most = app_learn_js_while_runs_max();
     let b = subtract(bound3, start3);
     if (less_than_equal(most, b)) {
       bound4 = subtract(bound3, 1);

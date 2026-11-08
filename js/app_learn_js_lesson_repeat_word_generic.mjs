@@ -17,7 +17,7 @@ import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -99,7 +99,7 @@ export function app_learn_js_lesson_repeat_word_generic(
     let values3 = values_of(lower2, higher2);
     let left = list_size(values3);
     let higher3 = add(higher2, 1);
-    let most = app_code_while_runs_max();
+    let most = app_learn_js_while_runs_max();
     if (less_than_equal(most, left)) {
       higher3 = subtract(higher2, 1);
     }

@@ -26,7 +26,7 @@ import { list_filter } from "./list_filter.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { multiply } from "./multiply.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_count_generic(
   ("counted_first is there because a for takes the last line handed to it as its update, and the line that belongs up there is n /= 2. Neither order changes what is written out, since neither line reads what the other changes; what is said run by run follows the order, so the words match the lines they sit under.");
   ("Every start is a power of 2 and every end is 2 or more, so n stays a whole number on every run, and so does the bound of every wrong program.");
   ("Each screen has four programs, one from each of four counts of runs - none, one, two and three - no more than ",
-    fn_name("app_code_while_runs_max"),
+    fn_name("app_learn_js_while_runs_max"),
     " allows.");
   ("Reading forwards, the wrong answers are the count one run fewer, one run more, and n where it ends, the name not written out; each once, never the answer, never below zero.");
   ("Reading backwards, the wrong program is the same program compared against half of where n ends, so it runs once more; or, for a program already running three times, against twice where n ends, so it runs once fewer.");
@@ -147,7 +147,7 @@ export function app_learn_js_lesson_count_generic(
     let written = eval_console_log_lines(answer);
     let runs = json_from(written);
     let v = divide(ended2, 2);
-    let a = app_code_while_runs_max();
+    let a = app_learn_js_while_runs_max();
     if (less_than_equal(a, runs)) {
       v = multiply(ended2, 2);
     }

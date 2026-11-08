@@ -21,7 +21,7 @@ export function app_learn_js_lesson_while_double() {
   ("The one new fact is that a while can grow n by more each run: doubling adds 3 the first time, 6 the next, then 12, so each run has to be worked out rather than counted - halving, turned the other way.");
   ("Asked for by the human 2026-11-01, as the lesson after While halving: *= 2 counting up.");
   ("Each screen has four programs, one from each of four counts of runs - none, one, two and three - no more than ",
-    fn_name("app_code_while_runs_max"),
+    fn_name("app_learn_js_while_runs_max"),
     " allows, as in While. No two groups write out the same number, so a screen never shows one answer twice.");
   ("Reading forwards, the wrong answers are n after one run fewer, one run more, and where n starts, each once and never the answer, never below where n starts and never a number with a point.");
   ("Reading backwards, the wrong program is the same program compared against one more than what it writes out, so it runs once more; or, for a program already running three times, against half of what it writes out, so it runs once fewer.");

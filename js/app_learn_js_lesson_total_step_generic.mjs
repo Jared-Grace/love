@@ -26,7 +26,7 @@ import { list_filter } from "./list_filter.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
@@ -151,7 +151,7 @@ export function app_learn_js_lesson_total_step_generic(
     let run2 = added_values(start3, bound3, step3);
     let values3 = run2.values;
     let bound_wrong = add(run2.ended, 1);
-    let a = app_code_while_runs_max();
+    let a = app_learn_js_while_runs_max();
     let b2 = list_size(values3);
     if (less_than_equal(a, b2)) {
       bound_wrong = list_last(values3);

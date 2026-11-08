@@ -25,7 +25,7 @@ import { subtract } from "./subtract.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -144,7 +144,7 @@ export function app_learn_js_lesson_loop_log_generic(params) {
     let right2 = multiply(left, added3);
     let ended2 = add(start3, right2);
     let sum = add(ended2, 1);
-    let a2 = app_code_while_runs_max();
+    let a2 = app_learn_js_while_runs_max();
     if (less_than_equal(a2, left)) {
       sum = list_last(values3);
     }

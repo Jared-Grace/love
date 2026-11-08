@@ -22,7 +22,7 @@ import { subtract } from "./subtract.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -137,7 +137,7 @@ export function app_learn_js_lesson_update_log_generic(options) {
     let values3 = values_of(start3, bound3);
     let left = list_size(values3);
     let bound4 = step(bound3, 1);
-    let most = app_code_while_runs_max();
+    let most = app_learn_js_while_runs_max();
     if (less_than_equal(most, left)) {
       bound4 = step_back(bound3, 1);
     }

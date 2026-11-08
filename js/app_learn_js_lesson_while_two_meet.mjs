@@ -28,7 +28,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -44,7 +44,7 @@ export function app_learn_js_lesson_while_two_meet() {
   ("The one new fact is that a while may change two names each run, and what it asks is about both, so each run both have to be followed before asking again. Started an odd distance apart they pass each other rather than landing together - 3 and 4 become 4 and 3 - which is what asking each time, rather than guessing where they meet, gets right.");
   ("Asked for by the human 2026-11-01, as a while lesson with a simple shape before An if inside a while.");
   ("Each screen has four programs, one from each of four counts of runs - none, one, two and three - no more than ",
-    fn_name("app_code_while_runs_max"),
+    fn_name("app_learn_js_while_runs_max"),
     " allows. Each count has one program that lands a and b together and one that passes them, and no two write out the same.");
   ("Reading forwards, the wrong answers are a and b after one run fewer, one run more, and where they start, each once, never the answer and never below zero.");
   ("Reading backwards, the wrong program starts b further off, so it runs once more; or, for a program already running three times, starts b nearer, so it runs once fewer.");
@@ -171,7 +171,7 @@ export function app_learn_js_lesson_while_two_meet() {
     if (equal(runs3, 0)) {
       start_b4 = add(start_a3, 2);
     }
-    let most = app_code_while_runs_max();
+    let most = app_learn_js_while_runs_max();
     if (less_than_equal(most, runs3)) {
       start_b4 = subtract(start_b3, 2);
     }

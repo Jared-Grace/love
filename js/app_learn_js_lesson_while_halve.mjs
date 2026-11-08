@@ -27,7 +27,7 @@ export function app_learn_js_lesson_while_halve() {
   ("Asked for by the human 2026-10-27, as the lesson after While counting down: /= 2 on a power of 2.");
   ("Every start is a power of 2 and every end is 2 or more, so n stays a whole number on every run, and so does every wrong answer and the bound of every wrong program; halving 1 would give a number with a point, which this course has not shown inside a while.");
   ("Each screen has four programs, one from each of four counts of runs - none, one, two and three - no more than ",
-    fn_name("app_code_while_runs_max"),
+    fn_name("app_learn_js_while_runs_max"),
     " allows, as in While.");
   ("Reading forwards, the wrong answers are n after one run fewer, one run more, and where n starts, each once and never the answer, never above where n starts and never a number with a point.");
   ("Reading backwards, the wrong program is the same program compared against half of what it writes out, so it runs once more; or, for a program already running three times, against twice what it writes out, so it runs once fewer.");

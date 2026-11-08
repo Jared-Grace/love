@@ -25,7 +25,7 @@ import { list_first } from "./list_first.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -160,7 +160,7 @@ export function app_learn_js_lesson_while_two_lines() {
     let list3 = values_of(start3, bound3);
     let left = list_size(list3);
     let bound4 = add(bound3, 1);
-    let most = app_code_while_runs_max();
+    let most = app_learn_js_while_runs_max();
     if (less_than_equal(most, left)) {
       bound4 = subtract(bound3, 1);
     }
