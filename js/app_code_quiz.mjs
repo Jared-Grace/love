@@ -1,7 +1,7 @@
 import { html_div } from "./html_div.mjs";
 import { html_attached_is } from "./html_attached_is.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_code_page_complete_paint } from "./app_code_page_complete_paint.mjs";
+import { app_learn_js_page_complete_paint } from "./app_learn_js_page_complete_paint.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_learn_js_lesson_current } from "./app_learn_js_lesson_current.mjs";
@@ -49,7 +49,7 @@ export function app_code_quiz(context) {
       return;
     }
     render();
-    app_code_page_complete_paint(context);
+    app_learn_js_page_complete_paint(context);
   }
   property_set(context, "lesson_progress_render", render_again);
   let on_batch = app_learn_js_batch_on_refill(list_shuffle);

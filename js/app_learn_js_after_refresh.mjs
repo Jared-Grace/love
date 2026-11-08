@@ -1,4 +1,4 @@
-import { app_code_page_complete_paint } from "./app_code_page_complete_paint.mjs";
+import { app_learn_js_page_complete_paint } from "./app_learn_js_page_complete_paint.mjs";
 import { app_learn_js_hash_write } from "./app_learn_js_hash_write.mjs";
 import { app_shared_screen_asking_is } from "./app_shared_screen_asking_is.mjs";
 import { app_shared_footer_column_context } from "./app_shared_footer_column_context.mjs";
@@ -6,7 +6,7 @@ export function app_learn_js_after_refresh(context) {
   "runs after each screen draws: keep the url in step with where you are, and end the page with its footer (re-added every render because navigating clears the page).";
   "a screen that asks before doing something offers two answers and nothing else, so it is the one screen this app does not end with the footer";
   app_learn_js_hash_write(context);
-  app_code_page_complete_paint(context);
+  app_learn_js_page_complete_paint(context);
   let asking = app_shared_screen_asking_is(context);
   if (asking) {
     return;
