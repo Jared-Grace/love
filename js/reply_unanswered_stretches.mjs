@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_import } from "./function_import.mjs";
-import { app_message_private_records_replied } from "./app_message_private_records_replied.mjs";
+import { app_message_private_records_replied_people } from "./app_message_private_records_replied_people.mjs";
 import { reply_case_key } from "./reply_case_key.mjs";
 import { reply_message_words } from "./reply_message_words.mjs";
 import { less_than } from "./less_than.mjs";
@@ -15,7 +15,7 @@ export async function reply_unanswered_stretches(f_name) {
   ("★ A RUN IS TRIED UP TO FIFTY WORDS, BECAUSE A BIBLE VERSE ONLY READS WHOLE. A shorter limit reports a verse the rules know as a gap. So a stretch that reaches fifty may go on further, and the next stretch starts where it stopped.");
   let f = await function_import(f_name);
   let start = f();
-  let records = await app_message_private_records_replied();
+  let records = await app_message_private_records_replied_people();
   let seen = new Set();
   let rows = [];
   for (let record of records) {
