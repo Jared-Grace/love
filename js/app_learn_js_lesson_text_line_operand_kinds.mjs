@@ -6,7 +6,7 @@ import { app_learn_js_lesson_text_split_at_operators } from "./app_learn_js_less
 import { property_get } from "./property_get.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { app_code_lesson_value_words } from "./app_code_lesson_value_words.mjs";
+import { app_learn_js_lesson_value_words } from "./app_learn_js_lesson_value_words.mjs";
 import { text_replace_multiple_to_space } from "./text_replace_multiple_to_space.mjs";
 import { text_words } from "./text_words.mjs";
 import { text_digits_is } from "./text_digits_is.mjs";
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_text_line_operand_kinds(text) {
   let left = js_code_parenthesis_left();
   let right = js_code_parenthesis_right();
   let parentheses = [left, right];
-  let values = app_code_lesson_value_words();
+  let values = app_learn_js_lesson_value_words();
   let operands = property_get(split, "operands");
   let found = [];
   for (let operand of operands) {

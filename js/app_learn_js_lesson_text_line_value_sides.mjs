@@ -1,7 +1,7 @@
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_text_operators_written } from "./app_learn_js_lesson_text_operators_written.mjs";
-import { app_code_lesson_value_words } from "./app_code_lesson_value_words.mjs";
+import { app_learn_js_lesson_value_words } from "./app_learn_js_lesson_value_words.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_lesson_text_line_value_sides(text) {
     let r = [];
     return r;
   }
-  let words = app_code_lesson_value_words();
+  let words = app_learn_js_lesson_value_words();
   let found = [];
   for (let word of words) {
     let left = text_starts_with(text, word);
