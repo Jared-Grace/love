@@ -641,7 +641,7 @@ import { app_learn_en_gloss_urdu_occurrence_claim_gate_run } from "./app_learn_e
 import { app_learn_en_gloss_urdu_occurrence_claim_rule_gate_run } from "./app_learn_en_gloss_urdu_occurrence_claim_rule_gate_run.mjs";
 import { giveaway_psalms_boxes_whole_gate_run } from "./giveaway_psalms_boxes_whole_gate_run.mjs";
 import { app_code_quiz_lines_order_indent_gate_run } from "./app_code_quiz_lines_order_indent_gate_run.mjs";
-import { app_code_program_step_presses_gate_run } from "./app_code_program_step_presses_gate_run.mjs";
+import { app_learn_js_program_step_presses_gate_run } from "./app_learn_js_program_step_presses_gate_run.mjs";
 import { bible_glyph_chapters_note_glyph_gate_run } from "./bible_glyph_chapters_note_glyph_gate_run.mjs";
 import { functions_outside_direct_gate_run } from "./functions_outside_direct_gate_run.mjs";
 import { app_learn_en_gloss_urdu_bible_quotes_absent_gate_run } from "./app_learn_en_gloss_urdu_bible_quotes_absent_gate_run.mjs";
@@ -1292,7 +1292,7 @@ export function qa_gates() {
     app_learn_en_gloss_urdu_occurrence_claim_rule_gate_run,
     giveaway_psalms_boxes_whole_gate_run,
     app_code_quiz_lines_order_indent_gate_run,
-    app_code_program_step_presses_gate_run,
+    app_learn_js_program_step_presses_gate_run,
     bible_glyph_chapters_note_glyph_gate_run,
     functions_outside_direct_gate_run,
     app_learn_en_gloss_urdu_bible_quotes_absent_gate_run,
