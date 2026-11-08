@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
+import { app_learn_js_lesson_while_update_log_generic } from "./app_learn_js_lesson_while_update_log_generic.mjs";
 import { app_learn_js_lesson_up_to_log_options } from "./app_learn_js_lesson_up_to_log_options.mjs";
 import { app_learn_js_lesson_while_less_equal } from "./app_learn_js_lesson_while_less_equal.mjs";
 export function app_learn_js_lesson_while_up_to() {
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_while_up_to() {
     "Up to and including",
     "while (n <= 3) { n++; }",
   );
-  let lesson = app_code_lesson_while_update_log_generic({
+  let lesson = app_learn_js_lesson_while_update_log_generic({
     ...app_learn_js_lesson_up_to_log_options(),
     name_id,
     remembered: app_learn_js_lesson_while_less_equal,

@@ -6,7 +6,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_update_log_generic } from "./app_learn_js_lesson_update_log_generic.mjs";
-export function app_code_lesson_while_update_log_generic(options) {
+export function app_learn_js_lesson_while_update_log_generic(options) {
   arguments_assert(arguments, 1);
   ("a while that writes out n and then changes it by one: let n = 1; while (n < 4) { console.log(n); n++; } writes out 1, 2 and 3, shown under the lesson on changing by one");
   let remembered = property_get(options, "remembered");
