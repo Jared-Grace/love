@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_for_same_as_while_above } from "./app_learn_js_lesson_for_same_as_while_above.mjs";
-import { app_code_lesson_while_count } from "./app_code_lesson_while_count.mjs";
+import { app_learn_js_lesson_while_count } from "./app_learn_js_lesson_while_count.mjs";
 import { app_learn_js_lesson_count_generic } from "./app_learn_js_lesson_count_generic.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 export function app_learn_js_lesson_for_count() {
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_for_count() {
     "for (...) { count += 1; }",
   );
   let above_inner = app_learn_js_lesson_for_same_as_while_above(
-    app_code_lesson_while_count,
+    app_learn_js_lesson_while_count,
   );
   let lesson = app_learn_js_lesson_count_generic(
     js_code_for_start_condition_update_lines,

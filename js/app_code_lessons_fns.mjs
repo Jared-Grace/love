@@ -310,7 +310,7 @@ import { app_code_lesson_while_greater_equal } from "./app_code_lesson_while_gre
 import { app_code_lesson_while_not_equal } from "./app_code_lesson_while_not_equal.mjs";
 import { app_code_lesson_while_halve } from "./app_code_lesson_while_halve.mjs";
 import { app_code_lesson_while_double } from "./app_code_lesson_while_double.mjs";
-import { app_code_lesson_while_count } from "./app_code_lesson_while_count.mjs";
+import { app_learn_js_lesson_while_count } from "./app_learn_js_lesson_while_count.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
 import { app_code_lesson_while_total_squares } from "./app_code_lesson_while_total_squares.mjs";
@@ -671,7 +671,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_not_equal,
     app_code_lesson_while_halve,
     app_code_lesson_while_double,
-    app_code_lesson_while_count,
+    app_learn_js_lesson_while_count,
     app_code_lesson_while_total,
     app_code_lesson_while_total_step,
     app_code_lesson_while_total_squares,
