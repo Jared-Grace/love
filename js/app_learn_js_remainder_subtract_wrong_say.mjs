@@ -16,7 +16,7 @@ import { list_get } from "./list_get.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-export function app_code_remainder_subtract_wrong_say(
+export function app_learn_js_remainder_subtract_wrong_say(
   question,
   answer,
   choice,

@@ -16,7 +16,7 @@ import { list_size } from "./list_size.mjs";
 import { list_without } from "./list_without.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
-import { app_code_remainder_subtract_wrong_say } from "./app_code_remainder_subtract_wrong_say.mjs";
+import { app_learn_js_remainder_subtract_wrong_say } from "./app_learn_js_remainder_subtract_wrong_say.mjs";
 import { app_learn_js_lesson_quizzes_unscramble_both } from "./app_learn_js_lesson_quizzes_unscramble_both.mjs";
 import { app_learn_js_lesson_expression_remainder_subtract_above } from "./app_learn_js_lesson_expression_remainder_subtract_above.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -97,7 +97,7 @@ export function app_learn_js_lesson_expression_remainder_subtract() {
     answer_label: "What is this worked out by subtracting? ",
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
-    wrong_say: app_code_remainder_subtract_wrong_say,
+    wrong_say: app_learn_js_remainder_subtract_wrong_say,
     decoys: decoys_forwards,
   };
   let backwards = {
@@ -106,7 +106,7 @@ export function app_learn_js_lesson_expression_remainder_subtract() {
     answer_label: "Which code uses % for this? ",
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
-    wrong_say: app_code_remainder_subtract_wrong_say,
+    wrong_say: app_learn_js_remainder_subtract_wrong_say,
     decoys: decoys_backwards,
   };
   let quizzes_get = app_learn_js_lesson_quizzes_unscramble_both({
