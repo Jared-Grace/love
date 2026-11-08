@@ -8,7 +8,7 @@ import { fn_name } from "./fn_name.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
-import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
+import { app_learn_js_screen_capture } from "./app_learn_js_screen_capture.mjs";
 import { app_code_screen_next_click_script } from "./app_code_screen_next_click_script.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
@@ -57,7 +57,7 @@ export async function app_code_screens_crawl_lesson(
     if (not(still)) {
       break;
     }
-    let rec = await app_code_screen_capture(page);
+    let rec = await app_learn_js_screen_capture(page);
     rec.id = id;
     rec.screen = "quiz";
     rec.kind = kind;

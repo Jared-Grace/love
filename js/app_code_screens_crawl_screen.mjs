@@ -3,7 +3,7 @@ import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_learn_js_screen_buttons } from "./app_learn_js_screen_buttons.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { and } from "./and.mjs";
-import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
+import { app_learn_js_screen_capture } from "./app_learn_js_screen_capture.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
@@ -33,7 +33,7 @@ export async function app_code_screens_crawl_screen(
   await page.goto(url);
   let v = page_capture_settle_ms();
   await page.waitForTimeout(v);
-  let record = await app_code_screen_capture(page);
+  let record = await app_learn_js_screen_capture(page);
   let buttons = await app_learn_js_screen_buttons(page);
   ("a screen made of nothing but buttons - which the settings screen is - reads as empty to the text capture, because that capture walks past every button. So the blank-screen signal is asked again here with the buttons counted: a screen is blank when there is neither text nor a button on it, and only then");
   let no_buttons = list_empty_is(buttons);
