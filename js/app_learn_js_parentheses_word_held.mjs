@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-export function app_code_parentheses_word_held() {
+export function app_learn_js_parentheses_word_held() {
   arguments_assert(arguments, 0);
   ("The code app files the word sweep next door must not write over, and there are only four.");
   ("★ THE TABLE OF SHORT IDS IS HELD BACK BECAUSE ITS WORDS ARE ALREADY ON SOMEBODY'S DEVICE. A learner's finished work is stored under those short words and several of them spell brackets. They are frozen for that reason, and a sweep that moved one would take that learner's progress out from under them without a single thing going red. The sentences in that file keep the old word as the price of the ids beside them being left alone.");
@@ -8,7 +8,7 @@ export function app_code_parentheses_word_held() {
   ("Named here rather than inside the walk, because a reader checking that a sweep is safe is checking exactly this list, and it should not have to be dug out of a loop.");
   let held = [
     fn_name("app_learn_js_lesson_ids_short"),
-    fn_name("app_code_parentheses_word_held"),
+    fn_name("app_learn_js_parentheses_word_held"),
     fn_name("app_code_parentheses_word_text"),
     fn_name("app_code_parentheses_word_write"),
   ];

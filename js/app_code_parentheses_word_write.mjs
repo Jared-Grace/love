@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names } from "./functions_names.mjs";
-import { app_code_parentheses_word_held } from "./app_code_parentheses_word_held.mjs";
+import { app_learn_js_parentheses_word_held } from "./app_learn_js_parentheses_word_held.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -19,7 +19,7 @@ export async function app_code_parentheses_word_write() {
   ("Only the code app is walked. The picture Bible writes square [ ] round a word a translator supplied and calls those brackets, correctly, so a sweep any wider than this would rename the one shape this word is still right for.");
   let f_names = await functions_names();
   let prefix = "app_code_";
-  let held = app_code_parentheses_word_held();
+  let held = app_learn_js_parentheses_word_held();
   let changed = [];
   for (let f_name of f_names) {
     let chosen = text_starts_with(f_name, prefix);
