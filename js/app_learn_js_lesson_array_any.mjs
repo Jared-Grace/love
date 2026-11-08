@@ -21,10 +21,14 @@ export function app_learn_js_lesson_array_any() {
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
-      "The same counting reaches every item, so in an array of four the last is ",
-      "a[3]",
-      ":",
+      "First is ",
+      "a[0]",
+      " and second is ",
+      "a[1]",
     ]);
+    app_learn_js_div_cycle_code(box_two, ["This counting continues"]);
+    app_learn_js_div_cycle_code(box_two, ["So third is ", "a[2]"]);
+    app_learn_js_div_cycle_code(box_two, ["And fourth is ", "a[3]"]);
     example(box_two);
     walk(box_two);
   }
