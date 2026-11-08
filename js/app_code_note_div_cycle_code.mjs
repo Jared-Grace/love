@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
+import { app_learn_js_note_cycle_code } from "./app_learn_js_note_cycle_code.mjs";
 export function app_code_note_div_cycle_code(parent, parts, names) {
   arguments_assert(arguments, 3);
   ("a line of the lesson's own writing with pieces of code set into it, where a piece that is one of the lesson's names is written in that name's colour");
@@ -11,6 +11,6 @@ export function app_code_note_div_cycle_code(parent, parts, names) {
   ("The brackets the code box puts round a name are not put round it here, because a chip is already the mark: the name is standing on a black ground in a different letterform from every word beside it, which is the same thing the brackets are for and is not lost by a reader who sees no colour.");
   ("This is a line of its own around the writer that fills one, and holds nothing else. Sentences that begin with something before the alternating part - a reminder opening with a button naming a lesson - need the writer without the line, so the two were split; this one is what a caller that just wants a line still asks for, and the split is not something it should have to know about.");
   let div = html_div(parent);
-  app_code_note_cycle_code(div, parts, names);
+  app_learn_js_note_cycle_code(div, parts, names);
   return div;
 }

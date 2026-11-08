@@ -5,7 +5,7 @@ import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_refere
 import { list_first } from "./list_first.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
+import { app_learn_js_note_cycle_code } from "./app_learn_js_note_cycle_code.mjs";
 export function app_code_remember_from_lesson_names(
   parent,
   context,
@@ -24,6 +24,6 @@ export function app_code_remember_from_lesson_names(
   let rest = list_skip(parts, 1);
   let opening = text_combine_multiple([", ", first]);
   ("The alternating part is written into the line this already started rather than into one of its own, which is why the writer used here is the one that fills something given to it. The sentence opens with words and a button before any of the parts arrive, so the writer that makes its own line could not have been used and the colour stopped here.");
-  app_code_note_cycle_code(div, [opening, ...rest], names);
+  app_learn_js_note_cycle_code(div, [opening, ...rest], names);
   return div;
 }

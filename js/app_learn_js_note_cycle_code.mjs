@@ -5,7 +5,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { app_code_note_name_color_or_null } from "./app_code_note_name_color_or_null.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-export function app_code_note_cycle_code(parent, parts, names) {
+export function app_learn_js_note_cycle_code(parent, parts, names) {
   arguments_assert(arguments, 3);
   ("writes plain writing and pieces of code in turn into something already on the page, colouring a code piece that is one of the lesson's names");
   ("WRITES INTO WHAT IT IS GIVEN RATHER THAN MAKING A LINE OF ITS OWN, which is the whole reason it is separate from the twin that does. Some of these sentences begin before the alternating part does - a reminder opens with the words Remember, from and a button naming the lesson, and only then turns into writing and code in turn. A writer that made its own line could not be used there, so the colour stopped at the door and those sentences were the last plain ones on the screen.");
