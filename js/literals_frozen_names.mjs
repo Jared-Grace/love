@@ -78,7 +78,7 @@ export function literals_frozen_names() {
     fn_name("firebase_prod_app_backup_namespace"),
     fn_name("app_replace_animation_duration_hash_key"),
     fn_name("app_shared_bible_verses_count_hash_key"),
-    fn_name("app_code_progress_storage_key"),
+    fn_name("app_learn_js_progress_storage_key"),
     fn_name("app_shared_bible_verses_shown_hash_key"),
     fn_name("gloss_upload_namespace_en_learn_bible_urdu"),
     fn_name("g_arc_write_upload_namespace"),

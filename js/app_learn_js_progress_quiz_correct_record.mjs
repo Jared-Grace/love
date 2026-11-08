@@ -1,6 +1,6 @@
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id.mjs";
-import { app_code_progress_storage_key } from "./app_code_progress_storage_key.mjs";
+import { app_learn_js_progress_storage_key } from "./app_learn_js_progress_storage_key.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_progress_quiz_correct_record(
   "The index is added only if it is not already there, so answering the same quiz ten times reads the same as answering it once - the question being kept is which quizzes have been got right, not how many answers were given.";
   "How many quizzes the lesson has is written down again on every recording rather than only when the record is made. A lesson that later gains a quiz would otherwise keep counting as finished against the old number, and nobody would be told the new one was never answered.";
   "A record can already stand with no list of answered quizzes under it, because marking every lesson finished by hand writes a record that says only that it is finished, so the list is asked for here in the way that makes it when it is not there - before, the first real answer after such a mark was handed nothing to add itself to and the page died on the click that got the question right.";
-  let key = app_code_progress_storage_key();
+  let key = app_learn_js_progress_storage_key();
   let lesson_id = app_learn_js_lesson_current_id(context);
   function lambda$progress(progress) {
     let record = property_get_or_null(progress, lesson_id);

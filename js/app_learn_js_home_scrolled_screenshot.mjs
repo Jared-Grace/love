@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_first_id } from "./app_learn_js_lesson_first_id.mjs";
-import { app_code_progress_storage_key } from "./app_code_progress_storage_key.mjs";
+import { app_learn_js_progress_storage_key } from "./app_learn_js_progress_storage_key.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function app_learn_js_home_scrolled_screenshot(
@@ -16,7 +16,7 @@ export async function app_learn_js_home_scrolled_screenshot(
   "A narrow width stands in for a phone with the text size turned up: the same words take more of the row.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let id = app_learn_js_lesson_first_id();
-  let key_end = app_code_progress_storage_key();
+  let key_end = app_learn_js_progress_storage_key();
   let url = "http://localhost:8080/dev/code.html";
   async function on_page(page) {
     let viewport = {
