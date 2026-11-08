@@ -5,8 +5,10 @@ export function app_g_ask_what_to_say_text() {
   let texts = {
     en: "What would you like to say?",
     ur: "آپ کیا کہنا چاہیں گے؟",
+    tgl: "Ano ang gusto mong sabihin?",
     translated_from: {
       ur: "What would you like to say?",
+      tgl: "What would you like to say?",
     },
   };
   let text = app_shared_text_reader_language(texts);
