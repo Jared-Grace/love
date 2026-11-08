@@ -3,7 +3,7 @@ import { js_parse } from "./js_parse.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { error } from "./error.mjs";
-import { app_code_program_trace_for_start_split_or_null } from "./app_code_program_trace_for_start_split_or_null.mjs";
+import { app_learn_js_program_trace_for_start_split_or_null } from "./app_learn_js_program_trace_for_start_split_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_program_trace_statement } from "./app_code_program_trace_statement.mjs";
 import { app_code_program_trace_line } from "./app_code_program_trace_line.mjs";
@@ -38,7 +38,7 @@ export function app_code_program_trace(code) {
         code,
       });
     }
-    let split = app_code_program_trace_for_start_split_or_null(node);
+    let split = app_learn_js_program_trace_for_start_split_or_null(node);
     if (null_not_is(split)) {
       statements_run(split);
       return;
