@@ -16,8 +16,16 @@ export function app_shared_button_back_to_text(destination) {
       before: " ",
       after: " پر واپس",
     },
+    tgl: {
+      before: " Bumalik sa ",
+      after: "",
+    },
     translated_from: {
       ur: {
+        before: " Back to ",
+        after: "",
+      },
+      tgl: {
         before: " Back to ",
         after: "",
       },
