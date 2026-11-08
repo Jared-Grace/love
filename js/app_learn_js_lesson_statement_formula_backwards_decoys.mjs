@@ -8,7 +8,7 @@ import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_
 import { list_join_newline } from "./list_join_newline.mjs";
 import { equal } from "./equal.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_programs_answers_paired } from "./app_code_programs_answers_paired.mjs";
+import { app_learn_js_programs_answers_paired } from "./app_learn_js_programs_answers_paired.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -81,7 +81,7 @@ export function app_learn_js_lesson_statement_formula_backwards_decoys({
     let values_list = values_get();
     let codes = list_map(values_list, program_of);
     if (two_cases) {
-      let paired = app_code_programs_answers_paired(codes);
+      let paired = app_learn_js_programs_answers_paired(codes);
       return paired;
     }
     return codes;

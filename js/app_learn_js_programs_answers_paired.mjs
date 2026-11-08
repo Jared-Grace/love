@@ -10,7 +10,7 @@ import { list_chunk } from "./list_chunk.mjs";
 import { each } from "./each.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_flat } from "./list_flat.mjs";
-export function app_code_programs_answers_paired(codes) {
+export function app_learn_js_programs_answers_paired(codes) {
   arguments_assert(arguments, 1);
   ("programs whose answers are one of two, put in pairs that each hold both answers, each pair in a fresh order: the first two programs write out different things, then the next two, and so on, as far as both answers last");
   ("The examples are the first programs of a list, two at a time, so pairing the list is what lets each pair of examples show both cases. Asked for by the human 2026-10-22: as many examples as the program has cases.");
