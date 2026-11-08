@@ -1,6 +1,6 @@
 import { app_learn_js_milestone_left_is } from "./app_learn_js_milestone_left_is.mjs";
 import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
-import { app_code_review_hash_key } from "./app_code_review_hash_key.mjs";
+import { app_learn_js_review_hash_key } from "./app_learn_js_review_hash_key.mjs";
 import { app_shared_hash_add_on_screen } from "./app_shared_hash_add_on_screen.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function app_learn_js_hash_review_add(context, hash) {
@@ -15,7 +15,7 @@ export function app_learn_js_hash_review_add(context, hash) {
     return;
   }
   let key = app_code_review_number_key();
-  let word = app_code_review_hash_key();
+  let word = app_learn_js_review_hash_key();
   app_shared_hash_add_on_screen(
     context,
     hash,
