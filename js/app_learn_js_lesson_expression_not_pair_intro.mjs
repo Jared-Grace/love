@@ -10,7 +10,7 @@ import { js_code_not } from "./js_code_not.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -43,11 +43,11 @@ export function app_learn_js_lesson_expression_not_pair_intro(root, context) {
     "the shape ( ... op ... ) for one of the two joining marks, with both gaps grey";
     function fill_pair(host) {
       html_span_text(host, left_parenthesis);
-      app_code_placeholder_dots(host);
+      app_learn_js_placeholder_dots(host);
       html_span_text(host, " ");
       html_span_text(host, joining_symbol);
       html_span_text(host, " ");
-      app_code_placeholder_dots(host);
+      app_learn_js_placeholder_dots(host);
       html_span_text(host, right_parenthesis);
     }
     return fill_pair;

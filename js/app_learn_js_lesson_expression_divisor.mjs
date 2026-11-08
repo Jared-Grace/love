@@ -2,7 +2,7 @@ import { app_learn_js_lesson_naming_words } from "./app_learn_js_lesson_naming_w
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { text_to } from "./text_to.mjs";
@@ -46,7 +46,7 @@ export function app_learn_js_lesson_expression_divisor() {
       let slash = js_operator_division_symbol();
       let words = text_combine(slash, " ");
       html_span_text(host, words);
-      app_code_placeholder_dots(host);
+      app_learn_js_placeholder_dots(host);
     }
     let name_id2 = app_learn_js_lesson_name_id_operators(paint);
     return name_id2;

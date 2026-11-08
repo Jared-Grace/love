@@ -1,7 +1,7 @@
 import { range } from "./range.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 import { each_index } from "./each_index.mjs";
 import { app_code_string_tile } from "./app_code_string_tile.mjs";
 export function app_code_string_shape(parent, word_count) {
@@ -15,7 +15,7 @@ export function app_code_string_shape(parent, word_count) {
       if (later) {
         html_span_text(host, " ");
       }
-      app_code_placeholder_dots(host);
+      app_learn_js_placeholder_dots(host);
     }
     each_index(groups, group);
   }

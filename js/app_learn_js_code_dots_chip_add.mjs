@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { text_split } from "./text_split.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { each_index } from "./each_index.mjs";
 export function app_learn_js_code_dots_chip_add(parent, code) {
@@ -23,7 +23,7 @@ export function app_learn_js_code_dots_chip_add(parent, code) {
   let pieces = text_split(code, "...");
   function piece_add(piece, index) {
     if (greater_than(index, 0)) {
-      app_code_placeholder_dots(chip);
+      app_learn_js_placeholder_dots(chip);
     }
     html_span_text(chip, piece);
   }

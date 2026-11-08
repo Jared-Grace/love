@@ -3,7 +3,7 @@ import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 export function app_learn_js_not_parenthesis_shape(parent) {
   "the shape !( ... ) as ONE code tile: the mark, the parentheses it stands in front of, and a grey gap standing where the part it turns over goes";
@@ -16,7 +16,7 @@ export function app_learn_js_not_parenthesis_shape(parent) {
     let right_parenthesis = js_code_parenthesis_right();
     html_span_text(host, symbol);
     html_span_text(host, left_parenthesis);
-    app_code_placeholder_dots(host);
+    app_learn_js_placeholder_dots(host);
     html_span_text(host, right_parenthesis);
   }
   let tile = app_learn_js_code_tile(parent, fill);

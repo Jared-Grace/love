@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_naming_words } from "./app_learn_js_lesson_naming_words.mjs";
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_expression_dividend() {
     }
     function fill(host) {
       "a gap and then the slash, so the shape says the dividend is whatever stands in front of the dividing";
-      app_code_placeholder_dots(host);
+      app_learn_js_placeholder_dots(host);
       let slash = js_operator_division_symbol();
       let words = text_combine(" ", slash);
       html_span_text(host, words);

@@ -3,7 +3,7 @@ import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -21,11 +21,11 @@ export function app_learn_js_lesson_expression_integer_division_title_name_id() 
     let left = js_code_parenthesis_left();
     let opening = text_combine(name, left);
     html_span_text(host, opening);
-    app_code_placeholder_dots(host);
+    app_learn_js_placeholder_dots(host);
     let slash = js_operator_division_symbol();
     let spaced = text_combine_multiple([" ", slash, " "]);
     html_span_text(host, spaced);
-    app_code_placeholder_dots(host);
+    app_learn_js_placeholder_dots(host);
     let right = js_code_parenthesis_right();
     html_span_text(host, right);
   }

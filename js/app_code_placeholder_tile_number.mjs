@@ -1,5 +1,5 @@
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 export function app_code_placeholder_tile_number(parent) {
   "a code tile holding a greyed ... standing for any number - the unquoted number counterpart of the quoted string placeholder tile";
@@ -7,7 +7,7 @@ export function app_code_placeholder_tile_number(parent) {
   let counting = "1, 2, 3,";
   function fill(host) {
     html_span_text(host, counting);
-    app_code_placeholder_dots(host);
+    app_learn_js_placeholder_dots(host);
   }
   let tile = app_learn_js_code_tile(parent, fill);
   return tile;

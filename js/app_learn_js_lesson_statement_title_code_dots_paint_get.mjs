@@ -6,7 +6,7 @@ import { app_learn_js_lesson_title_code_tile } from "./app_learn_js_lesson_title
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split } from "./text_split.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 export function app_learn_js_lesson_statement_title_code_dots_paint_get(code) {
   arguments_assert(arguments, 1);
   ("what paints one piece of a home title's code whose value is left out as three dots: the code in one tile, with the dots in the placeholder grey");
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_statement_title_code_dots_paint_get(code) {
     "every piece between the dots is kept, so if (b) ... else ... keeps its else - the middle was once dropped, when a line had only ever held one set of dots";
     function piece_add(piece, index) {
       if (greater_than(index, 0)) {
-        app_code_placeholder_dots(host);
+        app_learn_js_placeholder_dots(host);
       }
       html_text_code_breakable_add(host, piece, html_span_text);
     }
