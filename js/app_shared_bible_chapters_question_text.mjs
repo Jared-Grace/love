@@ -15,8 +15,16 @@ export function app_shared_bible_chapters_question_text(book_name) {
       before: "آپ ",
       after: " کی کتاب سے کون سا باب چننا چاہتے ہیں؟",
     },
+    tgl: {
+      before: "Anong kabanata ng aklat ng ",
+      after: " ang gusto mong piliin?",
+    },
     translated_from: {
       ur: {
+        before: "Which chapter from the book of ",
+        after: " do you want to choose?",
+      },
+      tgl: {
         before: "Which chapter from the book of ",
         after: " do you want to choose?",
       },
