@@ -13,7 +13,7 @@ import { app_learn_js_note_marks } from "./app_learn_js_note_marks.mjs";
 import { app_learn_js_note_name_color_or_null } from "./app_learn_js_note_name_color_or_null.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_note_name_spans } from "./app_learn_js_note_name_spans.mjs";
-export function app_code_note_styles(code) {
+export function app_learn_js_note_styles(code) {
   arguments_assert(arguments, 1);
   ("one colour and one strength for every single character of a program, in the order the characters stand, so that whoever draws it never has to decide anything");
   ("A NAME IS WRITTEN IN ITS COLOUR HERE RATHER THAN ON A PATCH OF IT, BECAUSE EVERYTHING THIS ANSWERS FOR STANDS ON BLACK. A filled patch behind every name was tried and taken out: on a black chip a bright colour is already at its most legible as ink, so the patch bought no legibility, and a program with a dozen names in it came back as a program with a dozen coloured blocks stamped through it - the colour stopped being a mark on a name and became the loudest thing on the screen. The patch is for the cup card, which is pale, and it is kept in one place for that.");
