@@ -3,7 +3,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
-import { app_code_note_name_mark_close } from "./app_code_note_name_mark_close.mjs";
+import { app_learn_js_note_name_mark_close } from "./app_learn_js_note_name_mark_close.mjs";
 import { js_comments_get } from "./js_comments_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_slice } from "./text_slice.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_note_marks(code) {
   ("Neither test alone would do. The first alone would take the brackets in add (4 + 6) first for a mark, and the second alone would take the c in a skipped console.log(c) for the cup the lesson is teaching about.");
   ("A bracket that opens and never closes ends the search of that note rather than throwing. What is being painted is a lesson's own writing, and the worst an unclosed bracket can do here is leave a note drawn plainly - which is what it looked like before any of this existed.");
   let open = app_code_note_name_mark_open();
-  let close = app_code_note_name_mark_close();
+  let close = app_learn_js_note_name_mark_close();
   let comments = js_comments_get(code);
   let marks = [];
   for (let comment of comments) {
