@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_review_g(r4) {
+export function app_learn_js_review_g(r4) {
   arguments_assert(arguments, 1);
   let key = property_get(r4, "key");
   let c = property_get(r4, "c");
