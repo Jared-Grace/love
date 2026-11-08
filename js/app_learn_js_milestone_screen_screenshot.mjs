@@ -7,7 +7,7 @@ import { app_learn_js_milestone_hash_key } from "./app_learn_js_milestone_hash_k
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_code_screens_seed_script } from "./app_code_screens_seed_script.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
-export async function app_code_milestone_screen_screenshot(id) {
+export async function app_learn_js_milestone_screen_screenshot(id) {
   "$plain id";
   "Opens one milestone of the code app on the dev build at phone width, as fresh as a learner who has not started it, and saves a picture of its first question, returning the picture's path, the words on the page and any error the page threw.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
