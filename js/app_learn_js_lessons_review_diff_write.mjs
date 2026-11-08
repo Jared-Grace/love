@@ -7,7 +7,7 @@ import { add } from "./add.mjs";
 import { app_learn_js_lessons_review_diff_counted } from "./app_learn_js_lessons_review_diff_counted.mjs";
 import { app_learn_js_lessons_review_diff_section } from "./app_learn_js_lessons_review_diff_section.mjs";
 import { app_learn_js_lessons_review_diff_size } from "./app_learn_js_lessons_review_diff_size.mjs";
-import { app_code_lessons_review_since } from "./app_code_lessons_review_since.mjs";
+import { app_learn_js_lessons_review_since } from "./app_learn_js_lessons_review_since.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
@@ -22,7 +22,7 @@ export async function app_learn_js_lessons_review_diff_write(commit) {
   "THE FILE IS WRITTEN UNDER GITIGNORE, because it is a reading of the repo at one moment and not a part of it - a second run against a different commit answers a different question and should not leave both answers behind.";
   arguments_assert(arguments, 1);
   let folder = folder_repo_love();
-  let review = await app_code_lessons_review_since(commit);
+  let review = await app_learn_js_lessons_review_since(commit);
   let changed = review.changed;
   let sized = [];
   for (let entry of changed) {

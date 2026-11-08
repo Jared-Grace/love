@@ -5,7 +5,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lessons_review_since_names_after } from "./app_learn_js_lessons_review_since_names_after.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_code_lessons_review_since(commit) {
+export async function app_learn_js_lessons_review_since(commit) {
   arguments_assert(arguments, 1);
   ("Everything about the code app's lesson run that somebody would have to look at again before releasing it, measured against the run as it stood at one commit: the lessons that did not exist then, the ones whose own writing has been edited since, the ones standing somewhere else in the order now, and the ones the learner already had that are no longer released.");
   ("The commit to measure against is the one that built what the learner is reading, not the last one anybody made. Those are different questions and only the first has an answer worth reviewing: a lesson written and rewritten twice since the last release still needs reading once, and a lesson touched twice since yesterday may already have been read.");
