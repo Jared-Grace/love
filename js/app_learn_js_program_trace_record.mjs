@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_line_pieces_add } from "./app_learn_js_line_pieces_add.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_code_program_trace_record(state, from, to, value) {
+export function app_learn_js_program_trace_record(state, from, to, value) {
   arguments_assert(arguments, 4);
   ("a piece of the line just worked out, written into it as its value, so what is read off the line from then on reads the value there: state's pieces gain it, from to to");
   let pieces = property_get(state, "pieces");

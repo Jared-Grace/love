@@ -3,7 +3,7 @@ import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_line_pieces_text } from "./app_learn_js_line_pieces_text.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_program_trace_record } from "./app_code_program_trace_record.mjs";
+import { app_learn_js_program_trace_record } from "./app_learn_js_program_trace_record.mjs";
 export function app_learn_js_program_trace_piece_solved(
   state,
   piece,
@@ -39,6 +39,6 @@ export function app_learn_js_program_trace_piece_solved(
   list_add(list, action);
   let list2 = property_get(state, "operated");
   list_add(list2, action);
-  app_code_program_trace_record(state, from, to, value);
+  app_learn_js_program_trace_record(state, from, to, value);
   return value;
 }

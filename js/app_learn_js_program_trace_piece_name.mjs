@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_line_pieces_text } from "./app_learn_js_line_pieces_text.mjs";
 import { app_learn_js_program_trace_name } from "./app_learn_js_program_trace_name.mjs";
-import { app_code_program_trace_record } from "./app_code_program_trace_record.mjs";
+import { app_learn_js_program_trace_record } from "./app_learn_js_program_trace_record.mjs";
 export function app_learn_js_program_trace_piece_name(
   state,
   piece,
@@ -29,6 +29,6 @@ export function app_learn_js_program_trace_piece_name(
     within,
     values,
   );
-  app_code_program_trace_record(state, from, to, value);
+  app_learn_js_program_trace_record(state, from, to, value);
   return value;
 }
