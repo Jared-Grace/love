@@ -17,3 +17,7 @@ Showing-as-a-value fixes the whole class at once instead of growing twenty new t
 `function_copy_open` is `function_copy` then `function_copy_result_open`; `function_new_open_transform` is `function_new_transform` then `function_open`; `function_new_js_open` is `function_new_js` then `function_open`. The work lives in one place and the wrapper only adds the showing, so the two can't drift.
 
 That is also why you should still call the plain twin when there is one (`function_new`, not `function_new_open`): the return values differ, and the plain one's is usually what you want.
+
+## The allow list is generated
+
+The one source is `permission_grant_names()`; `permission_allow_generated` derives *both* rule families from it (the plain `node scripts/ai.mjs <fn>` form and the one-per-function `<command> <fn>` form), `permission_settings_allow_write` renders the file, and `permission_settings_allow_assert` (in `q`) fails if the file and the list disagree. Editing the JSON directly just makes that gate red.
