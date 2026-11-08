@@ -2,7 +2,7 @@ import { html_shown_when_under_bar } from "./html_shown_when_under_bar.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_home_bar_content } from "./app_learn_js_home_bar_content.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lessons_any_complete } from "./app_code_lessons_any_complete.mjs";
+import { app_learn_js_lessons_any_complete } from "./app_learn_js_lessons_any_complete.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_home_start_button } from "./app_learn_js_home_start_button.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_home_value(root, context) {
   let frame = app_learn_js_home_bar_content(root, context);
   let bar = property_get(frame, "bar");
   let g = property_get(frame, "content");
-  let started = app_code_lessons_any_complete(context);
+  let started = app_learn_js_lessons_any_complete(context);
   if (not(started)) {
     let big = app_learn_js_home_start_button(g, context);
     let next = property_get(frame, "next");

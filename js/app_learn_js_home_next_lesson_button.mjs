@@ -1,4 +1,4 @@
-import { app_code_lessons_any_complete } from "./app_code_lessons_any_complete.mjs";
+import { app_learn_js_lessons_any_complete } from "./app_learn_js_lessons_any_complete.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_incomplete_next } from "./app_learn_js_lesson_incomplete_next.mjs";
 import { null_is } from "./null_is.mjs";
@@ -35,7 +35,7 @@ export function app_learn_js_home_next_lesson_button(parent, context) {
     );
   }
   ("the same way in as the row itself uses, so the lesson opens remembering which lesson this tab picked");
-  let started = app_code_lessons_any_complete(context);
+  let started = app_learn_js_lessons_any_complete(context);
   let text = app_learn_js_home_next_lesson_text(started);
   let button = app_shared_button(parent, text, on_click);
   return button;
