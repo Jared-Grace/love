@@ -7,7 +7,7 @@ import { equal } from "./equal.mjs";
 import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_learn_js_expression_side_parenthesis_is } from "./app_learn_js_expression_side_parenthesis_is.mjs";
-import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
+import { app_learn_js_operator_rank_least_left } from "./app_learn_js_operator_rank_least_left.mjs";
 import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
 export function app_learn_js_expression_node_parentheses_is(item, node) {
   arguments_assert(arguments, 2);
@@ -48,7 +48,7 @@ export function app_learn_js_expression_node_parentheses_is(item, node) {
   let left = property_get(item, "left");
   let left_here = equal(left, node);
   if (left_here) {
-    let rank_left = app_code_operator_rank_least_left(symbol);
+    let rank_left = app_learn_js_operator_rank_least_left(symbol);
     let gathered_left = app_learn_js_expression_side_parenthesis_is(
       left,
       rank_left,
