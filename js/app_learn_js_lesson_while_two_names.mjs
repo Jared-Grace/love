@@ -7,7 +7,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_two_names_while_lines } from "./js_code_two_names_while_lines.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_two_names_generic } from "./app_learn_js_lesson_two_names_generic.mjs";
-export function app_code_lesson_while_two_names() {
+export function app_learn_js_lesson_while_two_names() {
   arguments_assert(arguments, 0);
   ("a while changing a name it never asks about: let a = 1; let b = 9; while (a < 4) { a++; b--; } console.log(b); writes out 6");
   ("The one new fact is that a while may change a second name, which it does not ask about, so that name is found by counting how many times the { ... } ran. Two numbers meeting, next, then asks about both.");

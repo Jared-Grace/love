@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
+import { app_learn_js_lesson_while_two_names } from "./app_learn_js_lesson_while_two_names.mjs";
 import { app_learn_js_lesson_while_two_meet } from "./app_learn_js_lesson_while_two_meet.mjs";
 import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
 import { app_learn_js_lesson_while_if } from "./app_learn_js_lesson_while_if.mjs";
@@ -123,7 +123,7 @@ export function app_code_lessons_latest_held_fns() {
   ("2026-11-02: latest runs through Inside and outside and stops there, at the human's asking: While asking !== and A running product released, and Two names held along with everything after it");
   ("2026-11-04: latest runs through the for lessons and stops there, at the human's asking: For and its next lesson released, and Two names held along with everything after it");
   let fns = [
-    app_code_lesson_while_two_names,
+    app_learn_js_lesson_while_two_names,
     app_learn_js_lesson_while_two_meet,
     app_learn_js_lesson_while_and,
     app_learn_js_lesson_while_if,

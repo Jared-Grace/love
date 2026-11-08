@@ -13,7 +13,7 @@ import { app_learn_js_lesson_token_order } from "./app_learn_js_lesson_token_ord
 import { app_learn_js_lesson_braces_run_nested } from "./app_learn_js_lesson_braces_run_nested.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_learn_js_lesson_for } from "./app_learn_js_lesson_for.mjs";
-import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
+import { app_learn_js_lesson_while_two_names } from "./app_learn_js_lesson_while_two_names.mjs";
 import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_first.mjs";
 export function app_learn_js_lesson_groups() {
   arguments_assert(arguments, 0);
@@ -114,7 +114,7 @@ export function app_learn_js_lesson_groups() {
     },
     {
       parts: ["More looping: ", "while"],
-      lesson: app_code_lesson_while_two_names,
+      lesson: app_learn_js_lesson_while_two_names,
     },
     {
       parts: ["Arrays"],
