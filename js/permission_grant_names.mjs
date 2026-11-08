@@ -63,7 +63,7 @@ export function permission_grant_names() {
     fn_name("apps_names"),
     fn_name("apps_node_only_gate_run"),
     fn_name("apps_dependency_paths_multiple"),
-    fn_name("app_code_screens_diff"),
+    fn_name("app_learn_js_screens_diff"),
     fn_name("examples_notes_gate_run"),
     fn_name("memory_frontmatter_gate_run"),
     fn_name("memory_symbols_baseline_write"),

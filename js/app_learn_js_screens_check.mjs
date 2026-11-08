@@ -1,7 +1,7 @@
 import { app_learn_js_screens_accepted_path } from "./app_learn_js_screens_accepted_path.mjs";
 import { app_code_screens_records_summary } from "./app_code_screens_records_summary.mjs";
 import { app_code_screens_manifest_records_write } from "./app_code_screens_manifest_records_write.mjs";
-import { app_code_screens_diff } from "./app_code_screens_diff.mjs";
+import { app_learn_js_screens_diff } from "./app_learn_js_screens_diff.mjs";
 import { app_learn_js_reload_persists_test } from "./app_learn_js_reload_persists_test.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_learn_js_screens_check(url_prefix, current_path) {
@@ -12,7 +12,7 @@ export async function app_learn_js_screens_check(url_prefix, current_path) {
   await app_code_screens_manifest_records_write(records, current_path);
   let reload = await app_learn_js_reload_persists_test(url_prefix);
   let baseline_path = app_learn_js_screens_accepted_path();
-  let diff = await app_code_screens_diff(baseline_path, current_path);
+  let diff = await app_learn_js_screens_diff(baseline_path, current_path);
   let report = {
     mechanical,
     reload,

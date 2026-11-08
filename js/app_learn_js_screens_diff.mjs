@@ -4,7 +4,7 @@ import { app_learn_js_screens_diff_check_removed } from "./app_learn_js_screens_
 import { app_learn_js_screens_diff_check_current } from "./app_learn_js_screens_diff_check_current.mjs";
 import { app_learn_js_screens_diff_added } from "./app_learn_js_screens_diff_added.mjs";
 import { file_read } from "./file_read.mjs";
-export async function app_code_screens_diff(baseline_path, current_path) {
+export async function app_learn_js_screens_diff(baseline_path, current_path) {
   "compare a fresh screen manifest against the committed baseline and return which screens changed - keyed by lesson id, screen, and kind, comparing digit-masked text so the random numbers in each quiz do not count as changes. Returns { changed, added, removed } lists of keys for the make-sense judge to focus on";
   let baseline_json = await file_read(baseline_path);
   let r = await app_learn_js_screens_diff_added(current_path, baseline_json);
