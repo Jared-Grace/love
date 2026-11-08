@@ -5,7 +5,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_size } from "./text_size.mjs";
 import { js_parse_expression_at } from "./js_parse_expression_at.mjs";
-export function app_code_program_trace_long_way(
+export function app_learn_js_program_trace_long_way(
   expression,
   name,
   symbol,

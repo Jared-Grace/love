@@ -9,7 +9,7 @@ import { text_slice } from "./text_slice.mjs";
 import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
-import { app_code_program_trace_long_way } from "./app_code_program_trace_long_way.mjs";
+import { app_learn_js_program_trace_long_way } from "./app_learn_js_program_trace_long_way.mjs";
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
@@ -63,7 +63,7 @@ export function app_learn_js_program_trace_assign(
     let right_to = property_get(right, "end");
     let right_text = text_slice(code, right_from, right_to);
     ("2026-10-21, at the human's asking: the line is written the long way first, and the long line is then run as one written that way is - the name's value asked for in its place in the line, then the right side, then the operator. What is said above of the value asked for without a place in the line, and of not writing the line out first, was so until then");
-    let long = app_code_program_trace_long_way(
+    let long = app_learn_js_program_trace_long_way(
       expression,
       name3,
       symbol,
