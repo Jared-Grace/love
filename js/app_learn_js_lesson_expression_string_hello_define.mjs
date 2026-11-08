@@ -6,7 +6,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_learn_js_string_value_color_on_light } from "./app_learn_js_string_value_color_on_light.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_code_string_value_shape } from "./app_code_string_value_shape.mjs";
+import { app_learn_js_string_value_shape } from "./app_learn_js_string_value_shape.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_expression_string_hello_define(root, word) {
   arguments_assert(arguments, 2);
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_expression_string_hello_define(root, word) {
   html_font_color_set(value_term, color);
   html_span_text(concept, " is what's between the quotes");
   html_span_text(concept, " ");
-  app_code_string_value_shape(concept);
+  app_learn_js_string_value_shape(concept);
   let example = html_div(define);
   html_span_text(example, "For example, the ");
   let value_word = html_span_text(example, "value");
