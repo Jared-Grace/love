@@ -319,7 +319,7 @@ import { app_code_lesson_while_increment } from "./app_code_lesson_while_increme
 import { app_code_lesson_while_up_to } from "./app_code_lesson_while_up_to.mjs";
 import { app_code_lesson_while_log_double } from "./app_code_lesson_while_log_double.mjs";
 import { app_code_lesson_while_decrement } from "./app_code_lesson_while_decrement.mjs";
-import { app_code_lesson_while_countdown } from "./app_code_lesson_while_countdown.mjs";
+import { app_learn_js_lesson_while_countdown } from "./app_learn_js_lesson_while_countdown.mjs";
 import { app_code_lesson_while_repeat_word } from "./app_code_lesson_while_repeat_word.mjs";
 import { app_code_lesson_while_repeat_word_down } from "./app_code_lesson_while_repeat_word_down.mjs";
 import { app_code_lesson_while_start_end } from "./app_code_lesson_while_start_end.mjs";
@@ -680,7 +680,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_up_to,
     app_code_lesson_while_log_double,
     app_code_lesson_while_decrement,
-    app_code_lesson_while_countdown,
+    app_learn_js_lesson_while_countdown,
     app_code_lesson_while_repeat_word,
     app_code_lesson_while_repeat_word_down,
     app_code_lesson_while_start_end,

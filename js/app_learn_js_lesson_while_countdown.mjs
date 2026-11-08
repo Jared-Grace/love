@@ -37,7 +37,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_countdown() {
+export function app_learn_js_lesson_while_countdown() {
   arguments_assert(arguments, 0);
   ('a countdown with one line after it: let n = 3; while (n > 0) { console.log(n); n--; } console.log("go"); writes out 3, 2, 1 and go');
   ("The one new fact is that a line after the { ... } waits for the while to finish, and then runs once, however many times the { ... } ran.");
