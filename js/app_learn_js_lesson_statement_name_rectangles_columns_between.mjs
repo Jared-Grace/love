@@ -16,7 +16,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
-import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
+import { app_learn_js_rectangles_edges_colored_draw } from "./app_learn_js_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
@@ -138,7 +138,7 @@ export function app_learn_js_lesson_statement_name_rectangles_columns_between() 
     let first_edges = [1, 3, 1, 3];
     let second_edges = [left, right2, 2, 4];
     function draw(box) {
-      app_code_rectangles_edges_colored_draw({
+      app_learn_js_rectangles_edges_colored_draw({
         parent: box,
         columns,
         rows: 5,

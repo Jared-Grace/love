@@ -1,5 +1,5 @@
 import { null_is } from "./null_is.mjs";
-import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
+import { app_learn_js_rectangles_edges_colored_draw } from "./app_learn_js_rectangles_edges_colored_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 export function app_code_rectangles_edges_marked_draw({
@@ -18,7 +18,7 @@ export function app_code_rectangles_edges_marked_draw({
   ("marked is [left, right, top, bottom] of squares filled with the overlap colour whether or not both rectangles cover them, or null for none - asked by the human 2026-10-04 to show the square a wrong answer counts, between two rectangles that share none");
   ("The numbers sit on the lines and not on the squares, unlike the grid lessons' headings, because a meeting from 9 to 11 is two hours: the numbers are the edges, and left < right reads true exactly when a rectangle has a square between them.");
   let overlap_color = app_learn_js_highlight_color_third();
-  let grid = app_code_rectangles_edges_colored_draw({
+  let grid = app_learn_js_rectangles_edges_colored_draw({
     parent,
     columns,
     rows,

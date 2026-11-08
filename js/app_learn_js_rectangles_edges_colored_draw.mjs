@@ -30,7 +30,7 @@ import { less_than } from "./less_than.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { not } from "./not.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-export function app_code_rectangles_edges_colored_draw({
+export function app_learn_js_rectangles_edges_colored_draw({
   parent,
   columns,
   rows,

@@ -17,7 +17,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { app_learn_js_explain_number_colored } from "./app_learn_js_explain_number_colored.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
-import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
+import { app_learn_js_rectangles_edges_colored_draw } from "./app_learn_js_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_statement_name_shared_squares } from "./app_learn_js_lesson_statement_name_shared_squares.mjs";
@@ -140,7 +140,7 @@ export function app_learn_js_lesson_statement_name_rectangles_cover_together() {
   );
   function rectangles_draw(box) {
     "the first rectangle, 1 to 3 across and down, 4 squares, and the second 2 to 4 across and 1 to 4 down, 6 squares, sharing the 2 squares of column 2";
-    app_code_rectangles_edges_colored_draw({
+    app_learn_js_rectangles_edges_colored_draw({
       parent: box,
       columns: 5,
       rows: 5,

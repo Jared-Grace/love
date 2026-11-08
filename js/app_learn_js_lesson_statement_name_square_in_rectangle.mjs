@@ -1,4 +1,4 @@
-import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
+import { app_learn_js_rectangles_edges_colored_draw } from "./app_learn_js_rectangles_edges_colored_draw.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
@@ -145,7 +145,7 @@ export function app_learn_js_lesson_statement_name_square_in_rectangle() {
   function rectangle_draw(marked, corner) {
     "the rectangle from 1 to 4 across and 1 to 3 down, with the marked squares filled in the square's colour and the corner's lines drawn in it, either null for none";
     function draw_box(box) {
-      app_code_rectangles_edges_colored_draw({
+      app_learn_js_rectangles_edges_colored_draw({
         parent: box,
         columns: 5,
         rows: 4,
