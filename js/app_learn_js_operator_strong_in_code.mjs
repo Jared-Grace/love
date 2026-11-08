@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_single_message } from "./list_single_message.mjs";
-export function app_code_operator_strong_in_code(code) {
+export function app_learn_js_operator_strong_in_code(code) {
   "$plain code";
   "The operator in one line that is solved before the other: for 1 + 2 * 4 the *, and for 6 - 8 / 2 the /.";
   "Read back off the line rather than handed over by whatever built it, the same way the answer to the lesson is. The generator arranges a line and this reads the arrangement, so the two agree because they are about the same text - handed over instead they would be two records of one fact, and either could drift.";
