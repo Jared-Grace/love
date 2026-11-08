@@ -3,7 +3,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_repeat_word_up_generic } from "./app_learn_js_lesson_repeat_word_up_generic.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { app_learn_js_lesson_for_same_as_while_above } from "./app_learn_js_lesson_for_same_as_while_above.mjs";
-import { app_code_lesson_while_repeat_word } from "./app_code_lesson_while_repeat_word.mjs";
+import { app_learn_js_lesson_while_repeat_word } from "./app_learn_js_lesson_while_repeat_word.mjs";
 export function app_learn_js_lesson_for_repeat_word() {
   arguments_assert(arguments, 0);
   ('a for that writes out the same word each run: for (let n = 0; n < 3; n++) { console.log("joy"); } writes out joy three times, the same as The same word each run');
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_for_repeat_word() {
     '{ console.log("joy"); }',
   );
   let above_inner = app_learn_js_lesson_for_same_as_while_above(
-    app_code_lesson_while_repeat_word,
+    app_learn_js_lesson_while_repeat_word,
   );
   let lesson = app_learn_js_lesson_repeat_word_up_generic(
     js_code_for_start_condition_update_lines,

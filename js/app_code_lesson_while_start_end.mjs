@@ -29,7 +29,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_while_repeat_word } from "./app_code_lesson_while_repeat_word.mjs";
+import { app_learn_js_lesson_while_repeat_word } from "./app_learn_js_lesson_while_repeat_word.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
@@ -146,7 +146,7 @@ export function app_code_lesson_while_start_end() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_while_repeat_word,
+      app_learn_js_lesson_while_repeat_word,
       ["a ", "while", " can write out the same word each run."],
     );
     let box_two = app_learn_js_container_light_blue(root);

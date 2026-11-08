@@ -7,7 +7,7 @@ import { app_learn_js_lesson_while_increment } from "./app_learn_js_lesson_while
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_repeat_word_up_generic } from "./app_learn_js_lesson_repeat_word_up_generic.mjs";
-export function app_code_lesson_while_repeat_word() {
+export function app_learn_js_lesson_while_repeat_word() {
   arguments_assert(arguments, 0);
   ('a while that writes out the same word each run: let n = 0; while (n < 3) { console.log("joy"); n++; } writes out joy three times');
   ("The one new fact is that n need not be what is written out: here it only counts the runs, which is the first time in the course a while repeats something that does not change.");
