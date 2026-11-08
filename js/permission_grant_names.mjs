@@ -2584,7 +2584,7 @@ export function permission_grant_names() {
     fn_name("song_image_couplets_description_brief"),
     fn_name("bible_glyph_chapters_seat_split_redraw"),
     fn_name("bible_glyph_chapters_seat_split_planned"),
-    fn_name("app_code_tests_run_e2e_happy_dev_newest"),
+    fn_name("app_learn_js_tests_run_e2e_happy_dev_newest"),
     fn_name("app_shared_bible_bare_start_gate_run"),
     fn_name("app_shared_bible_verses_choices_gate_run"),
     fn_name("app_bible_search_query_link_cases_gate_run"),
