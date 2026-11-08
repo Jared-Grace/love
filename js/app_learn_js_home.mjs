@@ -19,7 +19,7 @@ import { app_learn_js_home_lesson_button } from "./app_learn_js_home_lesson_butt
 import { app_learn_js_home_way_marked_next } from "./app_learn_js_home_way_marked_next.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_home_just_left_next } from "./app_learn_js_home_just_left_next.mjs";
-import { app_code_review_scope } from "./app_code_review_scope.mjs";
+import { app_learn_js_review_scope } from "./app_learn_js_review_scope.mjs";
 import { app_learn_js_review_complete_is } from "./app_learn_js_review_complete_is.mjs";
 import { app_learn_js_home_review_row } from "./app_learn_js_home_review_row.mjs";
 import { app_learn_js_home_milestone_rows } from "./app_learn_js_home_milestone_rows.mjs";
@@ -93,7 +93,7 @@ export async function app_learn_js_home(context) {
     if (lesson_is) {
       opened = group;
     }
-    let scope = app_code_review_scope(lesson_number);
+    let scope = app_learn_js_review_scope(lesson_number);
     let has_review = null_not_is(scope);
     if (has_review) {
       let review_complete = app_learn_js_review_complete_is(

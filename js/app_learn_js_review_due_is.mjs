@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_review_scope } from "./app_code_review_scope.mjs";
+import { app_learn_js_review_scope } from "./app_learn_js_review_scope.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 export function app_learn_js_review_due_is(number) {
   arguments_assert(arguments, 1);
@@ -9,7 +9,7 @@ export function app_learn_js_review_due_is(number) {
   ("review card, the skip button, the end of a lesson. How far back it looks is");
   ("wanted in exactly one place, the load itself, so everywhere else the number in");
   ("between is asked for and thrown away.");
-  let scope = app_code_review_scope(number);
+  let scope = app_learn_js_review_scope(number);
   let due = null_not_is(scope);
   return due;
 }

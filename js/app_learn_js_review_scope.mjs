@@ -4,7 +4,7 @@ import { equal } from "./equal.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 import { math_min } from "./math_min.mjs";
-export function app_code_review_scope(lesson_number) {
+export function app_learn_js_review_scope(lesson_number) {
   "how many past lessons a review after lesson_number covers, or null for no review";
   "the largest power of five dividing lesson_number, so 5,10,15,20 give 5 and 25 gives 25";
   let five = 5;
