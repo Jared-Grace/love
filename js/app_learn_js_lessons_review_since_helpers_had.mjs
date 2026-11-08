@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_includes } from "./list_includes.mjs";
-export function app_code_lessons_review_since_helpers_had(
+export function app_learn_js_lessons_review_since_helpers_had(
   helpers_shared_edited,
   names_before,
 ) {

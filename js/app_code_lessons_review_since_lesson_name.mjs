@@ -6,7 +6,7 @@ import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { app_code_lessons_review_since_helpers_had } from "./app_code_lessons_review_since_helpers_had.mjs";
+import { app_learn_js_lessons_review_since_helpers_had } from "./app_learn_js_lessons_review_since_helpers_had.mjs";
 import { list_size } from "./list_size.mjs";
 export function app_code_lessons_review_since_lesson_name(
   r2,
@@ -88,7 +88,7 @@ export function app_code_lessons_review_since_lesson_name(
     });
   }
   let helpers_shared_edited = property_get(r2, "helpers_shared_edited");
-  let helpers_annotated = app_code_lessons_review_since_helpers_had(
+  let helpers_annotated = app_learn_js_lessons_review_since_helpers_had(
     helpers_shared_edited,
     names_before,
   );
