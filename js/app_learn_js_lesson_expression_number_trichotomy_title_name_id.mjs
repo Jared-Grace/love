@@ -2,7 +2,7 @@ import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_operators_shape_list } from "./app_learn_js_operators_shape_list.mjs";
-import { app_code_placeholder_tile_number } from "./app_code_placeholder_tile_number.mjs";
+import { app_learn_js_placeholder_tile_number } from "./app_learn_js_placeholder_tile_number.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 export function app_learn_js_lesson_expression_number_trichotomy_title_name_id(
   equals_operator,
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_expression_number_trichotomy_title_name_id(
     html_span_text(parent, "Same, smaller, or bigger ");
     app_learn_js_operators_shape_list(
       parent,
-      app_code_placeholder_tile_number,
+      app_learn_js_placeholder_tile_number,
       [equals_operator, less_operator, greater_operator],
     );
   }
