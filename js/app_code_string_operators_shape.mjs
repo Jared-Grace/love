@@ -1,5 +1,5 @@
 import { app_learn_js_operators_shape_list } from "./app_learn_js_operators_shape_list.mjs";
-import { app_code_placeholder_tile_string } from "./app_code_placeholder_tile_string.mjs";
+import { app_learn_js_placeholder_tile_string } from "./app_learn_js_placeholder_tile_string.mjs";
 export function app_code_string_operators_shape(
   parent,
   operator_a,
@@ -9,7 +9,7 @@ export function app_code_string_operators_shape(
   let operators = [operator_a, operator_b];
   let tile = app_learn_js_operators_shape_list(
     parent,
-    app_code_placeholder_tile_string,
+    app_learn_js_placeholder_tile_string,
     operators,
   );
   return tile;
