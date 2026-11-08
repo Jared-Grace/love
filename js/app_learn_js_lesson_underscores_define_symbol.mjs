@@ -4,7 +4,7 @@ import { text_articled_split } from "./text_articled_split.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_underscores_define_symbol(
+export function app_learn_js_lesson_underscores_define_symbol(
   c,
   symbol_name,
   symbol,

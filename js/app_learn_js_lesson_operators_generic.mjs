@@ -7,7 +7,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { app_learn_js_lesson_name_id_symbol } from "./app_learn_js_lesson_name_id_symbol.mjs";
-import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
+import { app_learn_js_lesson_underscores_define_symbol } from "./app_learn_js_lesson_underscores_define_symbol.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_operators_generic({
   );
   function above(root) {
     let c = app_learn_js_container_light_blue(root);
-    app_code_lesson_underscores_define_symbol(
+    app_learn_js_lesson_underscores_define_symbol(
       c,
       operator_name_math,
       operator_math,
@@ -47,7 +47,7 @@ export function app_learn_js_lesson_operators_generic({
     let ne = equal_not(operator_js, operator_math);
     if (ne) {
       c = app_learn_js_container_light_blue(root);
-      app_code_lesson_underscores_define_symbol(
+      app_learn_js_lesson_underscores_define_symbol(
         c,
         operator_name_js,
         operator_js,

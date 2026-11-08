@@ -11,7 +11,7 @@ import { list_to_text_and_list } from "./list_to_text_and_list.mjs";
 import { app_learn_js_lesson_identifiers_valid } from "./app_learn_js_lesson_identifiers_valid.mjs";
 import { app_learn_js_lesson_name_id_symbol } from "./app_learn_js_lesson_name_id_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
+import { app_learn_js_lesson_underscores_define_symbol } from "./app_learn_js_lesson_underscores_define_symbol.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_learn_js_lesson_identifiers_underscores_generic({
@@ -60,14 +60,14 @@ export function app_learn_js_lesson_identifiers_underscores_generic({
     ]);
     app_learn_js_div_cycle_code(c2, [combined2, separator_invalid]);
     function define_valid() {
-      app_code_lesson_underscores_define_symbol(
+      app_learn_js_lesson_underscores_define_symbol(
         c,
         separator_valid_name,
         separator_valid,
       );
     }
     function define_invalid() {
-      app_code_lesson_underscores_define_symbol(
+      app_learn_js_lesson_underscores_define_symbol(
         c,
         separator_invalid_name,
         separator_invalid,
