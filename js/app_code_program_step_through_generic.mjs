@@ -126,7 +126,7 @@ import { app_learn_js_program_step_complete_words } from "./app_learn_js_program
 import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
-import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
+import { app_learn_js_program_step_order_words } from "./app_learn_js_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
@@ -1354,7 +1354,7 @@ export function app_code_program_step_through_generic(
       let reason = null;
       let reason_words = null;
       ("a step this line does at another time - later, or already - is said first, since it is the truer reason; only a step the line never does falls to the reasons below");
-      let order = app_code_program_step_order_words(
+      let order = app_learn_js_program_step_order_words(
         actions,
         k,
         option_kind,
@@ -1449,7 +1449,7 @@ export function app_code_program_step_through_generic(
     function soft_none() {
       "2026-10-23, at the human's asking: said too soon, the program's being complete is answered with a sign - this line's step still to do, or else the last line still to run";
       let program_reason = program_left_words();
-      let complete_order = app_code_program_step_order_words(
+      let complete_order = app_learn_js_program_step_order_words(
         actions,
         k,
         "complete",
