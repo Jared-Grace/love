@@ -6,7 +6,7 @@ import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_less
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
-import { app_code_value_line } from "./app_code_value_line.mjs";
+import { app_learn_js_value_line } from "./app_learn_js_value_line.mjs";
 import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -48,12 +48,12 @@ export function app_learn_js_lesson_statement_name_two_above(root, context) {
     "If someone asked what is inside the cup called ",
     name_first,
   ]);
-  app_code_value_line(box_ask, "You could answer: ", word_first);
+  app_learn_js_value_line(box_ask, "You could answer: ", word_first);
   app_learn_js_div_cycle_code(box_ask, [
     "And if they asked what is inside the cup called ",
     name_last,
   ]);
-  app_code_value_line(box_ask, "You could answer: ", word_last);
+  app_learn_js_value_line(box_ask, "You could answer: ", word_last);
   app_learn_js_div_cycle_code(box_ask, ["The name says which cup they mean"]);
   ("the code box makes both cups first and then asks for one of them, in that order, because both lines have to have happened before either name means anything");
   let quoted_first = app_learn_js_string_code(word_first);

@@ -8,7 +8,7 @@ import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_
 import { app_learn_js_lesson_statement_name_value } from "./app_learn_js_lesson_statement_name_value.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
-import { app_code_value_line } from "./app_code_value_line.mjs";
+import { app_learn_js_value_line } from "./app_learn_js_value_line.mjs";
 import { app_learn_js_lesson_cup_code_box } from "./app_learn_js_lesson_cup_code_box.mjs";
 export function app_learn_js_lesson_statement_name_identifier_above(
   root,
@@ -46,7 +46,7 @@ export function app_learn_js_lesson_statement_name_identifier_above(
   app_learn_js_div_cycle_code(box_any, ["Suppose you called this cup ", name]);
   app_learn_js_lesson_cup_fruit(box_any, grapes, name, uncolored);
   app_learn_js_div_cycle_code(box_any, ["What is in the cup did not change"]);
-  app_code_value_line(box_any, "Inside the cup: ", grapes);
+  app_learn_js_value_line(box_any, "Inside the cup: ", grapes);
   let box_id = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(box_id, ["A name can be any identifier"]);
   app_learn_js_div_cycle_code(box_id, [

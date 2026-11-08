@@ -8,7 +8,7 @@ import { app_learn_js_lesson_identifiers_letters_spaces } from "./app_learn_js_l
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
-import { app_code_value_line } from "./app_code_value_line.mjs";
+import { app_learn_js_value_line } from "./app_learn_js_value_line.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { app_learn_js_lesson_cup_code_box } from "./app_learn_js_lesson_cup_code_box.mjs";
 import { app_learn_js_code_output_explain_box } from "./app_learn_js_code_output_explain_box.mjs";
@@ -47,7 +47,7 @@ export function app_learn_js_lesson_statement_name_value_above(root, context) {
     name,
   ]);
   ("the answer is dressed the way a value that comes out is dressed, because that is what it is - the very thing the code at the bottom of the screen writes out, said first in a story where nobody has to read any code to know it");
-  app_code_value_line(box_cup, "You could answer: ", word);
+  app_learn_js_value_line(box_cup, "You could answer: ", word);
   ("the word is bolded here and nowhere else, because this is the one place it is being given a meaning rather than used");
   let box_word = app_learn_js_container_light_blue(root);
   html_div_cycle_bold(box_word, [
