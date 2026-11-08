@@ -13,7 +13,7 @@ import { list_find_or_null } from "./list_find_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_math_call_wrong_say(question, answer, choice) {
+export function app_learn_js_math_call_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong value for one Math call given only numbers: what that Math function does with the numbers inside its ( ), then the value the call comes to, as parts that take turns between words and code. null for any other line, for a Math function the lessons do not teach, and when the value does not match the right answer");
   ("Each function's words say what its own lesson teaches - round sends a .5 up, ceil always goes up, floor always goes down - so the reminder repeats the lesson's rule rather than a new one. Not picked: naming why the pick is wrong; a pick may be the other function's answer, the number unchanged, or a number off by one, and the rule with the right value beside it answers each of them");

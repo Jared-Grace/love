@@ -3,7 +3,7 @@ import { app_learn_js_comment_wrong_say } from "./app_learn_js_comment_wrong_say
 import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_console_log_wrong_say } from "./app_learn_js_console_log_wrong_say.mjs";
 import { app_learn_js_expression_wrong_say } from "./app_learn_js_expression_wrong_say.mjs";
-import { app_code_math_call_wrong_say } from "./app_code_math_call_wrong_say.mjs";
+import { app_learn_js_math_call_wrong_say } from "./app_learn_js_math_call_wrong_say.mjs";
 import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_say.mjs";
 import { app_learn_js_lines_wrong_say } from "./app_learn_js_lines_wrong_say.mjs";
 import { app_code_program_trace_wrong_say } from "./app_code_program_trace_wrong_say.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_forwards_wrong_say(question, answer, choice) {
     return expression;
   }
   ("2026-10-26: one Math call given numbers is answered after the working of operators, which has no step for a call, so the two never both speak on a call that only holds numbers");
-  let math = app_code_math_call_wrong_say(question, answer, choice);
+  let math = app_learn_js_math_call_wrong_say(question, answer, choice);
   if (null_not_is(math)) {
     return math;
   }
