@@ -6,7 +6,7 @@ import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js
 import { list_join_space } from "./list_join_space.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
-export function app_code_quiz_unscramble_unreadable_accepted(rounds) {
+export function app_learn_js_quiz_unscramble_unreadable_accepted(rounds) {
   "Every unscramble that will accept an answer that is not a line of code at all - one the language cannot even read - though the question it was asked about reads fine.";
   "Paid for by a real lesson: let equal = a === b; accepted let equal === a = b; because the dealing of signs counted the assignment as a sign and swapped it with the comparison. Nothing that reads meaning could object, because only expressions are asked their meaning and a let line is a statement; so the one question every accepted answer must pass - does it read at all - is asked here of every line, statement or not.";
   "A question that does not read is passed over rather than reported. Its whole pool fails for the question's sake, which says nothing about the pool.";
