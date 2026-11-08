@@ -16,7 +16,7 @@ import { list_get } from "./list_get.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_first } from "./list_first.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-export function app_code_repeated_wrong_say(question, answer, choice) {
+export function app_learn_js_repeated_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks the wrong writing out of a * or ** line, or the wrong short form of a written-out line: that the short form writes its first number out as many times as its second number says, with the smaller operator between them, as parts that take turns between words and code. null when the two sides are not one short form and its writing out");
   ("2026-10-26: for the lessons on * as repeated + and ** as repeated *. Not picked: the value of either side, which these lessons leave out on purpose, because what they teach is what the short form means");
