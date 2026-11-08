@@ -6,7 +6,7 @@ import { list_first } from "./list_first.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_note_cycle_code } from "./app_learn_js_note_cycle_code.mjs";
-export function app_code_remember_from_lesson_names(
+export function app_learn_js_remember_from_lesson_names(
   parent,
   context,
   lesson_fn,

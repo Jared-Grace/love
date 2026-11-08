@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_remember_from_lesson_names } from "./app_code_remember_from_lesson_names.mjs";
+import { app_learn_js_remember_from_lesson_names } from "./app_learn_js_remember_from_lesson_names.mjs";
 export function app_code_remember_from_lesson(
   parent,
   context,
@@ -12,7 +12,7 @@ export function app_code_remember_from_lesson(
   ("Most screens are this one. A reminder on a lesson about arithmetic or about what a name may be spelled with has no cups and no coloured names to carry in, and a screen with no names to lend is not a screen missing something - the empty list is the right answer and the ordinary code colour is what its code pieces should be.");
   ("A screen that does hand out names calls the twin by its own name rather than being switched over from here. That is one word at the call and it is visible in the lesson's own text, which is where whoever added the names is already reading.");
   let names = [];
-  let div = app_code_remember_from_lesson_names(
+  let div = app_learn_js_remember_from_lesson_names(
     parent,
     context,
     lesson_fn,

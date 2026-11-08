@@ -4,7 +4,7 @@ import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_
 import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_lesson_statement_name_value_word.mjs";
 import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_remember_from_lesson_names } from "./app_code_remember_from_lesson_names.mjs";
+import { app_learn_js_remember_from_lesson_names } from "./app_learn_js_remember_from_lesson_names.mjs";
 import { app_learn_js_lesson_statement_name_copy } from "./app_learn_js_lesson_statement_name_copy.mjs";
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
   ("The list is made before the first box rather than beside the cups, because the reminder above them says both names and says them first. A colour that started at the cups would leave the sentence carrying the story in from the previous lesson as the one plain mention on the screen - which is the joining work this list exists to take away, left in the place a reader meets first.");
   let names = [name_first, name_copy];
   let box_have = app_learn_js_container_light_blue(root);
-  app_code_remember_from_lesson_names(
+  app_learn_js_remember_from_lesson_names(
     box_have,
     context,
     app_learn_js_lesson_statement_name_copy,
