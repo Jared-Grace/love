@@ -16,7 +16,7 @@ import { list_get } from "./list_get.mjs";
 import { app_learn_js_program_step_line_press_words } from "./app_learn_js_program_step_line_press_words.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
-export function app_code_program_step_presses_unexplained() {
+export function app_learn_js_program_step_presses_unexplained() {
   arguments_assert(arguments, 0);
   ("Every wrong press a step-by-step quiz can be given that says no reason: the lesson, the program, the line due and the line pressed. Hands back how many presses were looked at beside them, since nothing found is also what this says on the day it stops reaching any.");
   ("2026-10-23, the human's goal: each wrong choice has a helpful reminder. The step quiz asks which line runs next, again and again, so a wrong press is any line but the one due, at every step of every program, and each is asked the same function the screen asks");

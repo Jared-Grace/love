@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_program_step_presses_unexplained } from "./app_code_program_step_presses_unexplained.mjs";
+import { app_learn_js_program_step_presses_unexplained } from "./app_learn_js_program_step_presses_unexplained.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -8,7 +8,7 @@ export function app_learn_js_program_step_presses_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: every wrong press a step-by-step quiz can be given says why it is wrong. Throws so the dispatcher seam exits nonzero.");
   ("IT RATCHETS AGAINST NOTHING. Measured 2026-10-23 over five rounds of every lesson: thirty seven step lessons, three hundred and twelve programs, about six thousand wrong presses, every one with a reason, the last two found that day being a later } else if pressed while an earlier one was due. So a lesson of a new shape, a while say, fails here before a learner presses into the silence");
-  let r = app_code_program_step_presses_unexplained();
+  let r = app_learn_js_program_step_presses_unexplained();
   let walked = property_get(r, "walked");
   let found = property_get(r, "found");
   let hint = text_combine_multiple([
