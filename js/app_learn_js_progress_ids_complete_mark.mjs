@@ -9,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { list_all } from "./list_all.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { each } from "./each.mjs";
-export function app_code_progress_ids_complete_mark(context, lesson_ids) {
+export function app_learn_js_progress_ids_complete_mark(context, lesson_ids) {
   arguments_assert(arguments, 2);
   ("Writes the lessons with these ids down as finished on this reader's own disk, and every review standing where each lesson at or above it is one of them, so a review before the first lesson left open reads done and every one after it stays open, because it may ask about that lesson.");
   app_code_progress_lessons_complete_mark(context, lesson_ids);

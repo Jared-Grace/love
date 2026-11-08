@@ -5,7 +5,7 @@ import { app_learn_js_hash_complete_latest_word } from "./app_learn_js_hash_comp
 import { equal } from "./equal.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_progress_ids_complete_mark } from "./app_code_progress_ids_complete_mark.mjs";
+import { app_learn_js_progress_ids_complete_mark } from "./app_learn_js_progress_ids_complete_mark.mjs";
 export async function app_learn_js_hash_complete_latest_restore(context, hash) {
   arguments_assert(arguments, 2);
   ("If the link says complete=latest, ask the machine serving this page which lessons latest has, and mark them finished before anything is drawn.");
@@ -19,6 +19,6 @@ export async function app_learn_js_hash_complete_latest_restore(context, hash) {
       f_name: fn_name("app_learn_js_lessons_latest_ids"),
       args: [],
     });
-    app_code_progress_ids_complete_mark(context, ids);
+    app_learn_js_progress_ids_complete_mark(context, ids);
   }
 }

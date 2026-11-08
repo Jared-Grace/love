@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_code_progress_ids_complete_mark } from "./app_code_progress_ids_complete_mark.mjs";
+import { app_learn_js_progress_ids_complete_mark } from "./app_learn_js_progress_ids_complete_mark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lessons_released_fns } from "./app_learn_js_lessons_released_fns.mjs";
 import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
@@ -19,5 +19,5 @@ export function app_code_progress_released_complete_mark(context) {
   }
   let lesson_ids = list_map(released, id_of);
   ("A review is marked when every lesson at or above it is released, which the marking below does for any list of lessons");
-  app_code_progress_ids_complete_mark(context, lesson_ids);
+  app_learn_js_progress_ids_complete_mark(context, lesson_ids);
 }
