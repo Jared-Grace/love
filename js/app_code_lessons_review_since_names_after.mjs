@@ -5,7 +5,7 @@ import { app_code_lessons_review_since_lesson_names_of_text } from "./app_code_l
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_lessons_review_since_changed_path } from "./app_learn_js_lessons_review_since_changed_path.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lessons_review_since_lesson_name } from "./app_code_lessons_review_since_lesson_name.mjs";
+import { app_learn_js_lessons_review_since_lesson_name } from "./app_learn_js_lessons_review_since_lesson_name.mjs";
 export async function app_code_lessons_review_since_names_after(
   commit,
   list_path,
@@ -34,7 +34,7 @@ export async function app_code_lessons_review_since_names_after(
   );
   let r2 = await app_learn_js_lessons_review_since_changed_path(folder, commit);
   let files_of_lesson = property_get(r2, "files_of_lesson");
-  let r3 = app_code_lessons_review_since_lesson_name(
+  let r3 = app_learn_js_lessons_review_since_lesson_name(
     r2,
     names_before,
     files_of_lesson,

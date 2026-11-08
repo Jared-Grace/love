@@ -8,7 +8,7 @@ import { list_index_of } from "./list_index_of.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_learn_js_lessons_review_since_helpers_had } from "./app_learn_js_lessons_review_since_helpers_had.mjs";
 import { list_size } from "./list_size.mjs";
-export function app_code_lessons_review_since_lesson_name(
+export function app_learn_js_lessons_review_since_lesson_name(
   r2,
   names_before,
   files_of_lesson,
