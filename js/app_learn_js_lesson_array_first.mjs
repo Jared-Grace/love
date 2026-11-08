@@ -2,6 +2,9 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_prose_code_list_numbered } from "./app_learn_js_prose_code_list_numbered.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_array_index_generic } from "./app_learn_js_lesson_array_index_generic.mjs";
 export function app_learn_js_lesson_array_first() {
@@ -21,20 +24,25 @@ export function app_learn_js_lesson_array_first() {
       [["text", "27"]],
       [["text", "35"]],
     ]);
-    app_learn_js_div_cycle_code(box_one, [
-      "In JS lists are called Arrays. Here's how we write that list in JS:",
-    ]);
+    let called = html_div(box_one);
+    html_span_text(called, "In JS lists are called ");
+    app_learn_js_definition_term(called, "Arrays");
+    html_span_text(called, ". Here's how we write that list in JS:");
     app_learn_js_div_cycle_code(box_one, ["", "let a = [14, 27, 35];"]);
     app_learn_js_div_cycle_code(box_one, [
       "Square brackets ",
-      "[ ]",
-      " hold 0 or more values. There is a comma ",
+      "[",
+      " ",
+      "]",
+      " hold 0 or more values in between. There is a comma ",
       ",",
       " in between each value.",
     ]);
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
-      "In our list above, the first number is 14. How do we ask for the first item of an Array? Someone might think that ",
+      "In our list above, the first number is ",
+      "14",
+      ". How do we ask for the first item of an Array? Someone might think that ",
       "a[1]",
       " would return the first item in the list, because of the ",
       "1",
