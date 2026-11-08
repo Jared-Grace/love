@@ -4,7 +4,7 @@ import { sleep } from "./sleep.mjs";
 export async function facebook_reel_cover_set(reel_url, picture_path) {
   "$plain reel_url";
   "$plain picture_path";
-  "Sets the cover of a reel that is already posted to the picture at picture_path, through the reel's own menu: Menu, Edit reel, Choose a thumbnail, hand over the picture, Save the thumbnail, Save the reel. Every step leaves a picture, numbered in order.";
+  "Sets the cover of a reel that is already posted to the picture at picture_path, through the reel's own menu: More options, Edit reel, Choose a thumbnail, hand over the picture, Save the thumbnail, Save the reel. Every step leaves a picture, numbered in order.";
   "★ IT RUNS AFTER POSTING, NEVER DURING IT. Setting the cover on the posting page was tried from 2026-10-20: of five posts, four failed - two sat on 'Posting' for good and two lost the page - and with that step off the next post went through in two minutes (2026-10-22).";
   "★ ONLY A PICTURE HANDED OVER SHOWS ON THE REELS TAB. A reel left on facebook's own chosen frame shows black there until played, though its edit page shows a frame; the one reel given an uploaded picture shows it.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
@@ -21,14 +21,14 @@ export async function facebook_reel_cover_set(reel_url, picture_path) {
     });
     steps.push(step + " " + picture);
   }
-  async function click_named(w) {
+  async function click_named(ws) {
     let c = await page.evaluate(
-      "(function(w){var es=[].slice.call(document.querySelectorAll('[role=button],[role=menuitem],button')).filter(function(x){var r=x.getBoundingClientRect();return r.width>0&&r.height>0&&((x.getAttribute('aria-label')||'')===w||(x.innerText||'').trim()===w)});var e=es[0];if(!e)return false;e.click();return true})(" +
-        JSON.stringify(w) +
+      "(function(ws){var es=[].slice.call(document.querySelectorAll('[role=button],[role=menuitem],button')).filter(function(x){var r=x.getBoundingClientRect();return r.width>0&&r.height>0&&ws.some(function(w){return (x.getAttribute('aria-label')||'')===w||(x.innerText||'').trim()===w})});var e=es[0];if(!e)return false;e.click();return true})(" +
+        JSON.stringify(ws) +
         ")",
     );
     if (!c) {
-      throw new Error("nothing named '" + w + "' to click");
+      throw new Error("nothing named '" + ws.join("' or '") + "' to click");
     }
     await sleep(5000);
     await picture_take();
@@ -36,11 +36,12 @@ export async function facebook_reel_cover_set(reel_url, picture_path) {
   try {
     await picture_take();
     step = "menu";
-    await click_named("Menu");
+    ("The reel's three-dot button was named 'Menu' until it was renamed 'More options' (seen 2026-11-08); either name is taken.");
+    await click_named(["More options", "Menu"]);
     step = "edit reel";
-    await click_named("Edit reel");
+    await click_named(["Edit reel"]);
     step = "choose a thumbnail";
-    await click_named("Choose a thumbnail");
+    await click_named(["Choose a thumbnail"]);
     step = "hand over the picture";
     let input = await page.waitForSelector(
       'input[type=file][accept=".png,.jpg,.jpeg"]',
