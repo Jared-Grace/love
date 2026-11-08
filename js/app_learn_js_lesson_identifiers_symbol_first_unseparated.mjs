@@ -6,7 +6,7 @@ import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_span_code_dark } from "./html_span_code_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_symbol_separated_curried } from "./app_code_symbol_separated_curried.mjs";
-import { app_code_symbol_curried } from "./app_code_symbol_curried.mjs";
+import { app_learn_js_symbol_curried } from "./app_learn_js_symbol_curried.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { each } from "./each.mjs";
 import { text_pad_space } from "./text_pad_space.mjs";
@@ -53,7 +53,7 @@ export function app_learn_js_lesson_identifiers_symbol_first_unseparated() {
     html_div_text(c, "You will now see: ");
     let div4 = html_div(c);
     let after = html_span_code_dark(div4);
-    let lambda$item = app_code_symbol_curried(after);
+    let lambda$item = app_learn_js_symbol_curried(after);
     each(split, lambda$item);
   }
   return r;
