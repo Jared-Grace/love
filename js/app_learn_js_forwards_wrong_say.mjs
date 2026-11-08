@@ -6,7 +6,7 @@ import { app_learn_js_expression_wrong_say } from "./app_learn_js_expression_wro
 import { app_learn_js_math_call_wrong_say } from "./app_learn_js_math_call_wrong_say.mjs";
 import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_say.mjs";
 import { app_learn_js_lines_wrong_say } from "./app_learn_js_lines_wrong_say.mjs";
-import { app_code_program_trace_wrong_say } from "./app_code_program_trace_wrong_say.mjs";
+import { app_learn_js_program_trace_wrong_say } from "./app_learn_js_program_trace_wrong_say.mjs";
 import { app_learn_js_program_lets_wrong_say } from "./app_learn_js_program_lets_wrong_say.mjs";
 import { app_code_value_itself_wrong_say } from "./app_code_value_itself_wrong_say.mjs";
 import { app_learn_js_part_first_wrong_say } from "./app_learn_js_part_first_wrong_say.mjs";
@@ -43,7 +43,7 @@ export function app_learn_js_forwards_wrong_say(question, answer, choice) {
     return lines;
   }
   ("2026-10-26: a program that gives names values is followed line by line last, because it answers any wrong pick, while the two reminders about lines name the one mistake a pick makes");
-  let traced = app_code_program_trace_wrong_say(question, answer, choice);
+  let traced = app_learn_js_program_trace_wrong_say(question, answer, choice);
   if (null_not_is(traced)) {
     return traced;
   }

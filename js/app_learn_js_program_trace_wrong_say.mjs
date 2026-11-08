@@ -15,7 +15,7 @@ import { list_add } from "./list_add.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_program_trace_wrong_say(question, answer, choice) {
+export function app_learn_js_program_trace_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong output for a program that gives names values or asks an if: the program followed line by line, saying what each name holds as it is given it, what each if's condition comes to and so whether its { } runs, and what each line writes out, as parts that take turns between words and code. null when the program cannot be traced, gives no name a value and asks no if, or traces to anything but the right answer");
   ("2026-10-26: ifs were added because a program of ifs and writing-out alone was left silent, and the only reminder it ever met was the reversed-lines one, when the shuffle happened to offer that pick - which made a lesson's silence differ from run to run");
