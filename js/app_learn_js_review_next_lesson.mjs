@@ -10,7 +10,7 @@ import { subtract } from "./subtract.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_lesson_go } from "./app_learn_js_lesson_go.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_code_review_next_lesson(context, root) {
+export function app_learn_js_review_next_lesson(context, root) {
   arguments_assert(arguments, 2);
   let checkpoint = app_learn_js_review_checkpoint(context);
   let number = property_get(checkpoint, "number");
