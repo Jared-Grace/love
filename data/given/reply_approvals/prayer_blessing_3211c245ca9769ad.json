@@ -1,0 +1,1 @@
+{"f_name":"prayer_blessing_3211c245ca9769ad","text":"-  let v2 = text_lord_bless_always();\n-  let prayer = text_combine_multiple([\n-    v2,\n+  let request = text_combine_multiple([\n+    \"always bless \",\n+ let prayer = text_may_the_lord_exclamation(request);"}
