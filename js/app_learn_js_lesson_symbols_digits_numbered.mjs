@@ -1,4 +1,4 @@
-import { app_code_symbols_separated_on_question_numbered } from "./app_code_symbols_separated_on_question_numbered.mjs";
+import { app_learn_js_symbols_separated_on_question_numbered } from "./app_learn_js_symbols_separated_on_question_numbered.mjs";
 import { app_learn_js_lesson_symbols_batch_digits } from "./app_learn_js_lesson_symbols_batch_digits.mjs";
 import { html_cycle_mono_list_between_comma_space_before_after } from "./html_cycle_mono_list_between_comma_space_before_after.mjs";
 import { html_span_text_bold } from "./html_span_text_bold.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_symbols_digits_numbered() {
     name_id,
     above,
     app_learn_js_lesson_symbols_batch_digits,
-    app_code_symbols_separated_on_question_numbered,
+    app_learn_js_symbols_separated_on_question_numbered,
   );
   return r;
   function above(root) {

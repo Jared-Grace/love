@@ -1,4 +1,4 @@
-import { app_code_symbols_separated_on_question_numbered } from "./app_code_symbols_separated_on_question_numbered.mjs";
+import { app_learn_js_symbols_separated_on_question_numbered } from "./app_learn_js_symbols_separated_on_question_numbered.mjs";
 import { app_learn_js_lesson_symbols_batch_digits } from "./app_learn_js_lesson_symbols_batch_digits.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { integer_positive_random_digits_text } from "./integer_positive_random_digits_text.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_symbols_digit_number() {
     name_id,
     above,
     app_learn_js_lesson_symbols_batch_digits,
-    app_code_symbols_separated_on_question_numbered,
+    app_learn_js_symbols_separated_on_question_numbered,
   );
   return r;
   function above(root) {
