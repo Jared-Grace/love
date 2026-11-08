@@ -1,4 +1,4 @@
-import { app_code_tokens_rows_all } from "./app_code_tokens_rows_all.mjs";
+import { app_learn_js_tokens_rows_all } from "./app_learn_js_tokens_rows_all.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_token_order_example_choose_generic } from "./app_learn_js_lesson_token_order_example_choose_generic.mjs";
 export function app_learn_js_lesson_token_order_example_choose(
@@ -9,7 +9,7 @@ export function app_learn_js_lesson_token_order_example_choose(
   arguments_assert(arguments, 3);
   ("a worked example whose tokens are chosen in order on the page itself, the next one always in blue");
   ("Takes the example's outer box as well because that is how every worked example is drawn; the choosing needs only the box it is drawn in.");
-  let rows = app_code_tokens_rows_all();
+  let rows = app_learn_js_tokens_rows_all();
   app_learn_js_lesson_token_order_example_choose_generic(
     component,
     code,
