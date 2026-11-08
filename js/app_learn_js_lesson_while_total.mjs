@@ -8,7 +8,7 @@ import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_total_up_generic } from "./app_learn_js_lesson_total_up_generic.mjs";
-export function app_code_lesson_while_total() {
+export function app_learn_js_lesson_while_total() {
   arguments_assert(arguments, 0);
   ("a while adding up a total: let total = 0; let n = 1; while (n < 4) { total += n; n += 1; } console.log(total); writes out 6, which is 1 + 2 + 3");
   ("The one new fact is that a while can change two names each time it runs, so one name can count while the other adds up, and what is written out is the one that adds up.");

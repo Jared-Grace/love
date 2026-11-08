@@ -3,7 +3,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_total_up_generic } from "./app_learn_js_lesson_total_up_generic.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { app_learn_js_lesson_for_same_as_while_above } from "./app_learn_js_lesson_for_same_as_while_above.mjs";
-import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
+import { app_learn_js_lesson_while_total } from "./app_learn_js_lesson_while_total.mjs";
 export function app_learn_js_lesson_for_total() {
   arguments_assert(arguments, 0);
   ("a for adding up a total: let total = 0; for (let n = 1; n < 4; n += 1) { total += n; } console.log(total); writes out 6, the same as A running total");
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_for_total() {
     "for (...) { total += n; }",
   );
   let above_inner = app_learn_js_lesson_for_same_as_while_above(
-    app_code_lesson_while_total,
+    app_learn_js_lesson_while_total,
   );
   let lesson = app_learn_js_lesson_total_up_generic(
     js_code_for_start_condition_update_lines,
