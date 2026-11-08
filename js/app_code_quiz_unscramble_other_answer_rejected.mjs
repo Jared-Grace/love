@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_unscramble_codes } from "./app_code_lessons_unscramble_codes.mjs";
+import { app_learn_js_lessons_unscramble_codes } from "./app_learn_js_lessons_unscramble_codes.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_quiz_tile_arrangements_unpooled } from "./app_code_quiz_tile_arrangements_unpooled.mjs";
 import { list_add } from "./list_add.mjs";
@@ -10,7 +10,7 @@ export function app_code_quiz_unscramble_other_answer_rejected(rounds) {
   "Only the value tiles are dealt round. Every parenthesis, name and sign stays exactly where the question put it, so each candidate here is the taught shape with the numbers in a different order - which is the one thing a learner looking at a value and a row of tiles has no way to rule out.";
   "What counts as a refused answer for one question is asked of the reader named below, so this walks the draw and nothing more.";
   arguments_assert(arguments, 1);
-  let asked = app_code_lessons_unscramble_codes(rounds);
+  let asked = app_learn_js_lessons_unscramble_codes(rounds);
   let found = [];
   for (let item of asked) {
     let code = property_get(item, "code");

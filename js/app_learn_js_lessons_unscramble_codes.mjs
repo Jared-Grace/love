@@ -7,7 +7,7 @@ import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lessons_unscramble_codes(rounds) {
+export function app_learn_js_lessons_unscramble_codes(rounds) {
   "Every line the whole course can hand a learner to unscramble, each one named with the lesson that asks it, and each one listed once however often it comes up.";
   "Which lessons ask an unscramble is read off the lessons themselves - the exercise whose answer is handled by the token select - rather than from a list written here. A list would have to be kept in step with the lessons by hand, and a lesson added with a new shape of answer is exactly what a reader of this wants to hear about.";
   "The lines are generated rather than listed for the same reason, and each lesson is asked several rounds' worth, because a lesson varies what it asks and only some of what it can ask may be worth reporting.";

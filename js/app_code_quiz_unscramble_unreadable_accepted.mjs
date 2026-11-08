@@ -1,4 +1,4 @@
-import { app_code_lessons_unscramble_codes } from "./app_code_lessons_unscramble_codes.mjs";
+import { app_learn_js_lessons_unscramble_codes } from "./app_learn_js_lessons_unscramble_codes.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_parse_try } from "./js_parse_try.mjs";
 import { null_is } from "./null_is.mjs";
@@ -10,7 +10,7 @@ export function app_code_quiz_unscramble_unreadable_accepted(rounds) {
   "Every unscramble that will accept an answer that is not a line of code at all - one the language cannot even read - though the question it was asked about reads fine.";
   "Paid for by a real lesson: let equal = a === b; accepted let equal === a = b; because the dealing of signs counted the assignment as a sign and swapped it with the comparison. Nothing that reads meaning could object, because only expressions are asked their meaning and a let line is a statement; so the one question every accepted answer must pass - does it read at all - is asked here of every line, statement or not.";
   "A question that does not read is passed over rather than reported. Its whole pool fails for the question's sake, which says nothing about the pool.";
-  let asked = app_code_lessons_unscramble_codes(rounds);
+  let asked = app_learn_js_lessons_unscramble_codes(rounds);
   let found = [];
   let orderings = 0;
   for (let item of asked) {

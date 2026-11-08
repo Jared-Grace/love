@@ -2,7 +2,7 @@ import { list_size } from "./list_size.mjs";
 import { and } from "./and.mjs";
 import { or } from "./or.mjs";
 import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js_lesson_quiz_token_select_variations.mjs";
-import { app_code_lessons_unscramble_codes } from "./app_code_lessons_unscramble_codes.mjs";
+import { app_learn_js_lessons_unscramble_codes } from "./app_learn_js_lessons_unscramble_codes.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { app_code_quiz_variation_buildable_is } from "./app_code_quiz_variation_buildable_is.mjs";
 import { js_tokens_parenthesis_group_sizes } from "./js_tokens_parenthesis_group_sizes.mjs";
@@ -23,7 +23,7 @@ export function app_code_quiz_unscramble_shortcut_accepted(rounds) {
   "A parenthesis is asked how much it gathered, not which tiles. Rearranging the tiles is the thing the learner was asked to do, so a parenthesis that ends up around a different comparison of the same size is not an easier answer - and whether the rearranged line still says what the question said is the other gate's business, not this one's.";
   "An ordering the learner has no button for is passed over. It cannot be pressed, so it is not an answer, and reporting it would fill this with orderings nobody could reach.";
   "A trailing semicolon is taken off the question when the question is an expression, because the pool has already had it taken off there. Comparing the two on different footings would report every such line as a fault and say nothing true.";
-  let asked = app_code_lessons_unscramble_codes(rounds);
+  let asked = app_learn_js_lessons_unscramble_codes(rounds);
   let found = [];
   for (let item of asked) {
     let code = property_get(item, "code");
