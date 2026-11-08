@@ -12,8 +12,16 @@ export function app_shared_bible_offline_free_text(name) {
       before: "",
       after: " کی جگہ خالی کریں",
     },
+    tgl: {
+      before: "Bakantehin ang espasyong ginagamit ng ",
+      after: "",
+    },
     translated_from: {
       ur: {
+        before: "Free the space ",
+        after: " uses",
+      },
+      tgl: {
         before: "Free the space ",
         after: " uses",
       },
