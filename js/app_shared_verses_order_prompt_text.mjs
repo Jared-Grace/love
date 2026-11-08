@@ -7,8 +7,10 @@ export function app_shared_verses_order_prompt_text() {
   let texts = {
     en: "What order do you want the verses in?",
     ur: "آپ آیات کو کس ترتیب میں چاہتے ہیں؟",
+    tgl: "Sa anong pagkakasunod-sunod mo gusto ang mga talata?",
     translated_from: {
       ur: "What order do you want the verses in?",
+      tgl: "What order do you want the verses in?",
     },
   };
   let text = app_shared_text_reader_language(texts);
