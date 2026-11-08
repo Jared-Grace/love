@@ -5,12 +5,11 @@ import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_right_aligned } from "./text_right_aligned.mjs";
-
-export function app_code_lessons_shapes_written_out(rounds) {
+export function app_learn_js_lessons_shapes_written_out(rounds) {
   arguments_assert(arguments, 1);
-  "The whole course as one column to read down: every lesson in the order it is learned, with how many operators stand on the hardest line it can hand out and how deep they sit.";
-  "The twin next door hands back the same reading as entries to be counted and sorted. This one is for a person looking at it, and a person reading a hundred and thirty three rows is looking for where the twos end and the threes begin - which is a shape in the column rather than a number in any one row, and only shows up when the numbers line up under each other.";
-  "A lesson that hands out no code writes a dash rather than a nought, because it has no line to be simple and a nought would read as the easiest lesson in the course.";
+  ("The whole course as one column to read down: every lesson in the order it is learned, with how many operators stand on the hardest line it can hand out and how deep they sit.");
+  ("The twin next door hands back the same reading as entries to be counted and sorted. This one is for a person looking at it, and a person reading a hundred and thirty three rows is looking for where the twos end and the threes begin - which is a shape in the column rather than a number in any one row, and only shows up when the numbers line up under each other.");
+  ("A lesson that hands out no code writes a dash rather than a nought, because it has no line to be simple and a nought would read as the easiest lesson in the course.");
   let shapes = app_code_lessons_shapes(rounds);
   let none = "-";
   function column(place_text, ops_text, depth_text, id) {
