@@ -10,7 +10,7 @@ import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
-import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
+import { app_learn_js_line_number_part_pointed_draw } from "./app_learn_js_line_number_part_pointed_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_statement_name_digit_rest } from "./app_learn_js_lesson_statement_name_digit_rest.mjs";
@@ -70,7 +70,7 @@ export function app_learn_js_lesson_statement_name_digit_append() {
   ];
   function pointed(parts) {
     "a line whose two parts wear the colours the last lesson gave them, the kept 12 blue and the last digit 3 purple, wherever they are said or worked out, so the reader sees the same two pieces go back together";
-    let draw = app_code_line_number_part_pointed_draw(parts, pointers);
+    let draw = app_learn_js_line_number_part_pointed_draw(parts, pointers);
     return draw;
   }
   let v = pointed([
