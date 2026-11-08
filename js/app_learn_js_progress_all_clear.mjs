@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_progress_storage_key } from "./app_learn_js_progress_storage_key.mjs";
 import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
-import { app_code_reviews_complete_storage_key } from "./app_code_reviews_complete_storage_key.mjs";
+import { app_learn_js_reviews_complete_storage_key } from "./app_learn_js_reviews_complete_storage_key.mjs";
 import { app_learn_js_checkpoints } from "./app_learn_js_checkpoints.mjs";
 import { app_learn_js_review_state_key } from "./app_learn_js_review_state_key.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_progress_all_clear(context) {
   let key = app_learn_js_progress_storage_key();
   storage_local_remove_context(context, key);
   ("the reviews are filed apart from the lessons and have to be forgotten by name here. A clearing that took only the lessons would leave every review still green under a list of lessons that had gone back to the start, which reads as the clearing having half worked.");
-  let key_reviews = app_code_reviews_complete_storage_key();
+  let key_reviews = app_learn_js_reviews_complete_storage_key();
   storage_local_remove_context(context, key_reviews);
   ("a checkpoint left half answered is thrown away too, and each of those is filed under its own key rather than together, so every checkpoint is asked for and each one taken. Left behind, a review or a milestone would open again in the middle of a run of questions belonging to a learner who had just asked to start over.");
   let checkpoints = app_learn_js_checkpoints();
