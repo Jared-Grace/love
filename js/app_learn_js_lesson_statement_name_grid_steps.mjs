@@ -1,5 +1,5 @@
 import { app_learn_js_explain_emoji_square } from "./app_learn_js_explain_emoji_square.mjs";
-import { app_code_square_ringed } from "./app_code_square_ringed.mjs";
+import { app_learn_js_square_ringed } from "./app_learn_js_square_ringed.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_code_colored } from "./app_learn_js_explain_code_colored.mjs";
 import { app_learn_js_highlight_color_sixth } from "./app_learn_js_highlight_color_sixth.mjs";
@@ -213,11 +213,11 @@ export function app_learn_js_lesson_statement_name_grid_steps() {
   function squares_draw(box) {
     "the two squares of the question, row 1 column 1 and row 4 column 3, with the rows and columns numbered, and a path between them filled in: down the rows first, then right along the columns, asked by the human 2026-10-01";
     "each path square has a thick blue ring for the path, and is filled green when it is one of the 3 squares down and orange when it is one of the 2 squares right, the colours of the rows count and the columns count, asked by the human 2026-10-02. Not picked: solid blue, which said the path but not which count each square is part of";
-    let draw7 = app_code_square_ringed("", rows_count_color);
-    let draw8 = app_code_square_ringed("", rows_count_color);
-    let draw9 = app_code_square_ringed("", rows_count_color);
-    let draw10 = app_code_square_ringed("", columns_count_color);
-    let draw11 = app_code_square_ringed("🏁", columns_count_color);
+    let draw7 = app_learn_js_square_ringed("", rows_count_color);
+    let draw8 = app_learn_js_square_ringed("", rows_count_color);
+    let draw9 = app_learn_js_square_ringed("", rows_count_color);
+    let draw10 = app_learn_js_square_ringed("", columns_count_color);
+    let draw11 = app_learn_js_square_ringed("🏁", columns_count_color);
     app_learn_js_square_grid(box, 5, 4, true, [
       [1, 1, "🙂", start_color],
       [2, 1, draw7, end_color],
