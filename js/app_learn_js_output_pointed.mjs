@@ -1,7 +1,7 @@
 import { app_learn_js_span_text_tile_color } from "./app_learn_js_span_text_tile_color.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_style_normal } from "./app_code_style_normal.mjs";
+import { app_learn_js_style_normal } from "./app_learn_js_style_normal.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { app_learn_js_pointer_color_or_null } from "./app_learn_js_pointer_color_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_output_pointed(pointers) {
   ("a painter for what a program wrote out, one line each, where a line a pointer names is drawn as a tile in that pointer's colour - so the 2 written out for the row wears the row's colour, as it does in the writing above");
   function paint(container, answer) {
     let answer_div = html_div(container);
-    app_code_style_normal(answer_div);
+    app_learn_js_style_normal(answer_div);
     let lines = text_split_newline(answer);
     for (let line of lines) {
       let line_div = html_div(answer_div);

@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_style_normal } from "./app_code_style_normal.mjs";
+import { app_learn_js_style_normal } from "./app_learn_js_style_normal.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 export function app_learn_js_style_normal_box(container) {
   arguments_assert(arguments, 1);
@@ -10,7 +10,7 @@ export function app_learn_js_style_normal_box(container) {
     fn_name("app_learn_js_style_normal_text"),
     ", which writes a whole value into one of these.");
   let box = html_div(container);
-  app_code_style_normal(box);
+  app_learn_js_style_normal(box);
   html_style_white_space(box, "pre-wrap");
   return box;
 }
