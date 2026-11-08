@@ -1,5 +1,5 @@
 import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
-import { app_code_quiz_choice_pool_exercise_unremapped } from "./app_code_quiz_choice_pool_exercise_unremapped.mjs";
+import { app_learn_js_quiz_choice_pool_exercise_unremapped } from "./app_learn_js_quiz_choice_pool_exercise_unremapped.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { null_is } from "./null_is.mjs";
@@ -15,7 +15,7 @@ export function app_code_quiz_choice_pool_unremapped(rounds) {
   function on_exercise(exercise_visit) {
     let qa = property_get(exercise_visit, "qa");
     let exercise = property_get(exercise_visit, "exercise");
-    let said = app_code_quiz_choice_pool_exercise_unremapped(qa, exercise);
+    let said = app_learn_js_quiz_choice_pool_exercise_unremapped(qa, exercise);
     let agrees = null_is(said);
     if (agrees) {
       return;
