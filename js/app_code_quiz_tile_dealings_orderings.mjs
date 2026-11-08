@@ -10,7 +10,7 @@ import { list_copy } from "./list_copy.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_quiz_tile_dealings_or_null } from "./app_code_quiz_tile_dealings_or_null.mjs";
+import { app_learn_js_quiz_tile_dealings_or_null } from "./app_learn_js_quiz_tile_dealings_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_quiz_dealing_alike_is } from "./app_learn_js_quiz_dealing_alike_is.mjs";
@@ -44,7 +44,7 @@ export function app_code_quiz_tile_dealings_orderings(orderings, code) {
       return;
     }
     list_add(keys_seen, key);
-    let dealt_from = app_code_quiz_tile_dealings_or_null(ordering);
+    let dealt_from = app_learn_js_quiz_tile_dealings_or_null(ordering);
     let unwalkable = null_is(dealt_from);
     if (unwalkable) {
       return;

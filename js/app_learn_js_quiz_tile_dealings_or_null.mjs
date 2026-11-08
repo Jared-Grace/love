@@ -9,7 +9,7 @@ import { greater_than } from "./greater_than.mjs";
 import { list_places_set_copy } from "./list_places_set_copy.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-export function app_code_quiz_tile_dealings_or_null(code) {
+export function app_learn_js_quiz_tile_dealings_or_null(code) {
   "$plain code";
   arguments_assert(arguments, 1);
   ("One line's tiles, and every line its own tiles can be dealt into - each tile handed round among the places of its own kind, values among value places and signs among sign places - or nothing at all, when there are more ways than anybody would walk.");

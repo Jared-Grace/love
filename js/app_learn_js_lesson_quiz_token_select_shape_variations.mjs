@@ -1,6 +1,6 @@
 import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_quiz_tile_dealings_or_null } from "./app_code_quiz_tile_dealings_or_null.mjs";
+import { app_learn_js_quiz_tile_dealings_or_null } from "./app_learn_js_quiz_tile_dealings_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_quiz_token_select_shape_variations(code) {
   ("Dealing rather than re-printing is what keeps the parentheses. A line written back out from its tree loses a parenthesis the tree does not need, and a lesson about parentheses then loses the very answer it teaches; here nothing is parsed and nothing is printed, so a parenthesis cannot go missing.");
   ("Nothing is judged here. Every dealing is offered, and the caller asks of each whether it still says what the question said - which is the only thing that keeps this from handing a learner a line that merely lands on the right answer.");
   ("A line too long to deal is answered with no variations rather than with nothing at all, because a lesson asking for extra answers can use an empty list and has no use for a null. That costs a lesson nothing it had before: everything this reaches is over and above the two makers already there, and the question's own wording is put in the pool by hand.");
-  let laid = app_code_quiz_tile_dealings_or_null(code);
+  let laid = app_learn_js_quiz_tile_dealings_or_null(code);
   let too_many = null_is(laid);
   if (too_many) {
     let none = [];
