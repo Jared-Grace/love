@@ -4,8 +4,10 @@ export function app_shared_bible_licences_heading_text() {
   let texts = {
     en: "The Bibles in this app, and who gave them",
     ur: "اس ایپ کی بائبلیں، اور کن لوگوں نے دیں",
+    tgl: "Ang mga Biblia sa app na ito, at kung sino ang nagbigay ng mga ito",
     translated_from: {
       ur: "The Bibles in this app, and who gave them",
+      tgl: "The Bibles in this app, and who gave them",
     },
   };
   let text = app_shared_text_reader_language(texts);
