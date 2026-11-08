@@ -7,7 +7,7 @@ import { list_repeated } from "./list_repeated.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_quiz_unscramble_tiles_hidden(rounds) {
+export function app_learn_js_quiz_unscramble_tiles_hidden(rounds) {
   "$plain rounds";
   arguments_assert(arguments, 1);
   ("Every unscramble whose row of buttons cannot say how long its answer is - the line uses some piece more than once, and the row holds one button per DIFFERENT piece, so the count is nowhere on the screen.");
