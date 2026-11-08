@@ -6,8 +6,10 @@ export function app_shared_bible_licences_text() {
   let texts = {
     en: " The Bibles here, and who gave them",
     ur: " یہاں کی بائبلیں، اور کن لوگوں نے دیں",
+    tgl: " Ang mga Biblia rito, at kung sino ang nagbigay ng mga ito",
     translated_from: {
       ur: " The Bibles here, and who gave them",
+      tgl: " The Bibles here, and who gave them",
     },
   };
   let label = app_shared_text_reader_language(texts);
