@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_review_numbers } from "./app_code_review_numbers.mjs";
+import { app_learn_js_review_numbers } from "./app_learn_js_review_numbers.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { app_learn_js_milestones } from "./app_learn_js_milestones.mjs";
@@ -9,7 +9,7 @@ export function app_learn_js_checkpoints() {
   "One list, so that anything walking every checkpoint - forgetting them, marking them finished - walks all of them. Asked as two lists, a kind added later was walked by the clearing and missed by both markings, and nothing went red.";
   arguments_assert(arguments, 0);
   let checkpoints = [];
-  let numbers = app_code_review_numbers();
+  let numbers = app_learn_js_review_numbers();
   function each_number(number) {
     list_add(checkpoints, {
       key: number,

@@ -1,7 +1,7 @@
 import { text_digits_is } from "./text_digits_is.mjs";
 import { not } from "./not.mjs";
 import { number_from_text } from "./number_from_text.mjs";
-import { app_code_review_numbers } from "./app_code_review_numbers.mjs";
+import { app_learn_js_review_numbers } from "./app_learn_js_review_numbers.mjs";
 import { list_includes } from "./list_includes.mjs";
 export function app_learn_js_review_number_known_is(word) {
   "Whether a word standing where a review goes in a link names a lesson number that actually has a review standing under it.";
@@ -12,7 +12,7 @@ export function app_learn_js_review_number_known_is(word) {
     return false;
   }
   let number = number_from_text(word);
-  let numbers = app_code_review_numbers();
+  let numbers = app_learn_js_review_numbers();
   let known = list_includes(numbers, number);
   return known;
 }
