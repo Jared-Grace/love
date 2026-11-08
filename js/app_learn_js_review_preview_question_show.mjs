@@ -4,7 +4,7 @@ import { app_learn_js_review_containers } from "./app_learn_js_review_containers
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_review_seed_fresh } from "./app_learn_js_review_seed_fresh.mjs";
 import { app_learn_js_review_seed_to_exercise } from "./app_learn_js_review_seed_to_exercise.mjs";
-import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
+import { app_learn_js_review_show_success } from "./app_learn_js_review_show_success.mjs";
 import { app_learn_js_review_hide_success } from "./app_learn_js_review_hide_success.mjs";
 import { app_learn_js_review_exercise } from "./app_learn_js_review_exercise.mjs";
 export function app_learn_js_review_preview_question_show(stage) {
@@ -19,7 +19,7 @@ export function app_learn_js_review_preview_question_show(stage) {
     let exercise = app_learn_js_review_seed_to_exercise(seed);
     function on_correct(clean) {
       "answered right - whether it was answered right first time is what the review counts, and there is nothing here counting, so all that is left is the well done";
-      app_code_review_show_success(success_container);
+      app_learn_js_review_show_success(success_container);
     }
     function on_incorrect() {
       app_learn_js_review_hide_success(success_container);

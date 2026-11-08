@@ -21,7 +21,7 @@ import { list_get } from "./list_get.mjs";
 import { app_learn_js_review_seed_to_exercise } from "./app_learn_js_review_seed_to_exercise.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
+import { app_learn_js_review_show_success } from "./app_learn_js_review_show_success.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { not } from "./not.mjs";
@@ -125,7 +125,7 @@ export function app_learn_js_review_present_fn_present(
     }
     let places = [place_next, place_end];
     async function on_correct(clean) {
-      app_code_review_show_success(success_container);
+      app_learn_js_review_show_success(success_container);
       await sleep_success_color();
       list_remove_at(queue, cursor);
       passed = add_1(passed);
