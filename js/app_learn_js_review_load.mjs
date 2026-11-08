@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_review_seeds_live } from "./app_code_review_seeds_live.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_code_review_questions_cap } from "./app_code_review_questions_cap.mjs";
+import { app_learn_js_review_questions_cap } from "./app_learn_js_review_questions_cap.mjs";
 import { app_code_review_seeds_gather } from "./app_code_review_seeds_gather.mjs";
 export function app_learn_js_review_load(
   context,
@@ -29,7 +29,7 @@ export function app_learn_js_review_load(
     let finished = list_empty_is(queue_stored);
     let usable = live_any || finished;
     if (usable) {
-      let queue_capped = app_code_review_questions_cap(context, queue_live);
+      let queue_capped = app_learn_js_review_questions_cap(context, queue_live);
       let resumed = {
         queue: queue_capped,
         passed: passed_stored,
@@ -38,7 +38,7 @@ export function app_learn_js_review_load(
     }
   }
   let gathered = app_code_review_seeds_gather(lessons, kind_is);
-  let queue = app_code_review_questions_cap(context, gathered);
+  let queue = app_learn_js_review_questions_cap(context, gathered);
   let passed = 0;
   let fresh = {
     queue,
