@@ -7,7 +7,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
-export async function app_code_scroll_center_faded(component) {
+export async function app_learn_js_scroll_center_faded(component) {
   "cover the screen with white INSTANTLY (opacity 1 at creation, so the top-scrolled list is never painted), snap the just-left lesson to center while hidden behind the white, then FADE the white OUT to reveal the already-centered list. Only the reveal fades - the white must appear at once, not fade in, because fading it in would let the top-scrolled list show through the half-transparent white first (which looked like 'scrolled up, then white, then scrolled properly')";
   let cover = html_body_div();
   html_style_assign(cover, {
