@@ -5,7 +5,7 @@ import { app_learn_js_checkpoints } from "./app_learn_js_checkpoints.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
-export function app_code_progress_all_complete_mark(context) {
+export function app_learn_js_progress_all_complete_mark(context) {
   "Writes every lesson down as finished on this learner's own disk, for somebody who has already learnt this elsewhere and wants the list to say so rather than working back through it.";
   "It marks rather than counts: a record gains a complete flag, and the quizzes it has actually answered are left exactly as they were. So the mark is honest about being a mark, and a learner who later answers a quiz for real still has that answer written down under it.";
   arguments_assert(arguments, 1);
