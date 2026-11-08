@@ -9,7 +9,7 @@ import { integer_is_assert } from "./integer_is_assert.mjs";
 import { equal } from "./equal.mjs";
 import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_span_text_code_highlight } from "./app_code_span_text_code_highlight.mjs";
+import { app_learn_js_span_text_code_highlight } from "./app_learn_js_span_text_code_highlight.mjs";
 export function app_learn_js_code_dark_lines_brace_marked(component, text) {
   "code standing on more than one line, written into a code chip with the one brace the text points at drawn on the highlight colour";
   "The count of arguments is deliberately not asserted, because this stands in the slot a lesson paints its code with, and that slot is called with three arguments by the worked example and with two by the quiz - the same reason the plain multi-line writer has never asserted either.";
@@ -32,6 +32,6 @@ export function app_learn_js_code_dark_lines_brace_marked(component, text) {
   let brace = code[index];
   let after = code.slice(index + 1);
   html_text_code_breakable_add(component, before, html_span_text);
-  app_code_span_text_code_highlight(component, brace);
+  app_learn_js_span_text_code_highlight(component, brace);
   html_text_code_breakable_add(component, after, html_span_text);
 }
