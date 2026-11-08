@@ -13,8 +13,16 @@ export function app_shared_bible_offline_save_text(name) {
       before: " ",
       after: " محفوظ کریں",
     },
+    tgl: {
+      before: " I-save ang ",
+      after: "",
+    },
     translated_from: {
       ur: {
+        before: " Save ",
+        after: "",
+      },
+      tgl: {
         before: " Save ",
         after: "",
       },
