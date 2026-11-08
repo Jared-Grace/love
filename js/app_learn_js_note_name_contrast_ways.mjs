@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { color_contrast_floor_text } from "./color_contrast_floor_text.mjs";
 import { color_contrast_floor_shape } from "./color_contrast_floor_shape.mjs";
 import { app_learn_js_note_name_colors } from "./app_learn_js_note_name_colors.mjs";
-import { app_code_note_name_ink } from "./app_code_note_name_ink.mjs";
+import { app_learn_js_note_name_ink } from "./app_learn_js_note_name_ink.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
 export function app_learn_js_note_name_contrast_ways() {
@@ -15,7 +15,7 @@ export function app_learn_js_note_name_contrast_ways() {
   let text_floor = color_contrast_floor_text();
   let shape_floor = color_contrast_floor_shape();
   let colors = app_learn_js_note_name_colors();
-  let ink = app_code_note_name_ink();
+  let ink = app_learn_js_note_name_ink();
   let dark = app_shared_color_code_background();
   let card = app_shared_container_blue_background_color();
   let ways = [

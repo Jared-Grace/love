@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_color_ink } from "./app_shared_color_ink.mjs";
-export function app_code_note_name_ink() {
+export function app_learn_js_note_name_ink() {
   arguments_assert(arguments, 0);
   ("the one colour a name is written in once its own colour has moved behind it - the near-black that every coloured patch carries its letters in");
   ("THE COLOUR MOVED TO THE BACKGROUND SO THAT ONE LIST COULD SERVE EVERY SURFACE, and this is what that costs and what it buys. A letter drawn in a colour has to be readable against whatever is behind it, so a colour bright enough for a black code chip was hopeless on a pale card and the list had to be kept twice - two greens, which a reader said plainly did not look like one green. A patch brings its own background with it. What the patch must be read against is this ink, which does not change, so the patch itself is free to be the same colour wherever it is put.");

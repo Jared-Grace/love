@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_note_name_ink } from "./app_code_note_name_ink.mjs";
+import { app_learn_js_note_name_ink } from "./app_learn_js_note_name_ink.mjs";
 import { html_style_code_unfonted } from "./html_style_code_unfonted.mjs";
 import { html_box_shadow_inset_value } from "./html_box_shadow_inset_value.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
@@ -13,7 +13,7 @@ export function app_code_note_name_pill(component, color) {
   ("Padded sideways but not up and down. A name inside a line of code has to leave the line's height alone - a patch that made its own line taller would push the lines of a program apart wherever a name appeared, and a program whose lines are unevenly spaced reads as a program with something wrong with it.");
   ("THE EDGE IS DRAWN INSIDE THE PATCH, NOT AROUND IT, FOR THAT SAME REASON. A border is drawn outside the box and grows it, and this one grew a name in a code chip from twenty-one points tall to twenty-three against a line exactly twenty-one points apart - so the patch stood a point proud into the line above and the line below. Measured, not guessed; it was there in the first build. Drawn inside, the edge takes no room at all and the patch is exactly as tall as the plain writing beside it.");
   ("THE FILLING AND THE SHAPING ARE THE REPO'S OWN, NOT WRITTEN AGAIN HERE. A piece of code that has been filled with a colour and lettered so the letters read on that fill is already a thing this app draws - it is what a block being worked out wears while a sentence points at it, and that block reaches its blue through the same call this reaches its patch colour through. Written again, the two drift: this one was carrying a third of an em of rounding and a third of an em of sideways room, both typed in by hand, against the shared half and the shared thirty-seven hundredths every other run of code on the page wears. Nobody chose that difference; it was two numbers guessed at once and never compared.");
-  let ink = app_code_note_name_ink();
+  let ink = app_learn_js_note_name_ink();
   html_style_code_unfonted(component, color, ink);
   let style_value = html_box_shadow_inset_value(ink, "0.06em");
   html_box_shadow_set(component, style_value);
