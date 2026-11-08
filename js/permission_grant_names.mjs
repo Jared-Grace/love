@@ -2523,7 +2523,7 @@ export function permission_grant_names() {
     fn_name("ebible_book_codes_new_testament_first"),
     fn_name("bible_glyph_chapter_verse_text_write"),
     fn_name("bible_glyph_chapter_verse_word_replace"),
-    fn_name("app_code_lessons_above_broken_gate_run"),
+    fn_name("app_learn_js_lessons_above_broken_gate_run"),
     fn_name("bible_glyph_chapter_verse_word_remove"),
     fn_name("bible_glyph_chapters_verse_marks_underdrawn_absorbed"),
     fn_name("bible_glyph_chapters_chapter_add"),

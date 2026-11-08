@@ -3,7 +3,7 @@ import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { app_code_lessons_above_broken } from "./app_code_lessons_above_broken.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lessons_above_broken_gate_run() {
+export function app_learn_js_lessons_above_broken_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: fail if any lesson's telling - the part drawn above the examples - stops rather than draws. Throws so the dispatcher seam exits nonzero.");
   ("It ratchets against none rather than against a written-down list, because there is no honest number of lessons that may refuse to open. A learner who reaches one of these sees the screen stop, and the lesson after it is as far away as the lesson itself.");
