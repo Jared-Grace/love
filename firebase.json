@@ -10,6 +10,16 @@
     "cleanUrls": true,
     "redirects": [
       {
+        "source": "/latest/code",
+        "destination": "/latest/learn_js",
+        "type": 301
+      },
+      {
+        "source": "/latest/code.html",
+        "destination": "/latest/learn_js",
+        "type": 301
+      },
+      {
         "source": "/alarms.apk",
         "destination": "https://firebasestorage.googleapis.com/v0/b/jared-grace.firebasestorage.app/o/http%2Falarms%2Fapp-debug.apk?alt=media",
         "type": 302
