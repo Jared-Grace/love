@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-import { app_code_operator_shape_parenthesis_first } from "./app_code_operator_shape_parenthesis_first.mjs";
+import { app_learn_js_operator_shape_parenthesis_first } from "./app_learn_js_operator_shape_parenthesis_first.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_expression_choose_order_parentheses_and_or_t
   function paint(parent) {
     let and_symbol = js_operator_and_symbol();
     let or_symbol = js_operator_or_symbol();
-    let shape = app_code_operator_shape_parenthesis_first(
+    let shape = app_learn_js_operator_shape_parenthesis_first(
       and_symbol,
       or_symbol,
     );

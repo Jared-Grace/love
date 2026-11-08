@@ -3,7 +3,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_operator_shape_parenthesis_first(
+export function app_learn_js_operator_shape_parenthesis_first(
   inner_symbol,
   outer_symbol,
 ) {
