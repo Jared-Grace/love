@@ -1,6 +1,6 @@
 import { app_code_operator_strong_in_code } from "./app_code_operator_strong_in_code.mjs";
 import { change_if_equal } from "./change_if_equal.mjs";
-import { app_code_operator_part_around } from "./app_code_operator_part_around.mjs";
+import { app_learn_js_operator_part_around } from "./app_learn_js_operator_part_around.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_expression_which_part_first_decoys(
   let operator_first = list_get(tokens, 1);
   let operator_last = list_get_end_1(tokens);
   let weak = change_if_equal(operator_first, strong, operator_last);
-  let part = app_code_operator_part_around(question, weak);
+  let part = app_learn_js_operator_part_around(question, weak);
   let r = [part];
   return r;
 }

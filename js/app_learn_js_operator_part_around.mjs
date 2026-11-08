@@ -5,7 +5,7 @@ import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_operator_part_around(code, symbol) {
+export function app_learn_js_operator_part_around(code, symbol) {
   arguments_assert(arguments, 2);
   ("the two-sided part of a line built around one operator, asked for by that operator's symbol: given 1 + 2 * 4 and *, the part 2 * 4");
   ("the tokenizer rather than a search through the characters, so a digit is one token and each side of the symbol is a whole number rather than whatever character happens to sit next to it");
