@@ -9,7 +9,7 @@ import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs
 import { app_learn_js_screen_capture } from "./app_learn_js_screen_capture.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_screen_text_normalize } from "./app_code_screen_text_normalize.mjs";
-import { app_code_screen_next_click_script } from "./app_code_screen_next_click_script.mjs";
+import { app_learn_js_screen_next_click_script } from "./app_learn_js_screen_next_click_script.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
@@ -45,7 +45,7 @@ export async function app_learn_js_reload_persists_test_on_page(
     let first = await app_learn_js_screen_capture(page);
     let text = property_get(first, "text");
     let kind0 = app_code_screen_text_normalize(text);
-    let script = app_code_screen_next_click_script();
+    let script = app_learn_js_screen_next_click_script();
     await page.evaluate(script);
     let v5 = page_capture_settle_ms();
     await page.waitForTimeout(v5);

@@ -9,7 +9,7 @@ import { text_includes } from "./text_includes.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_screen_capture } from "./app_learn_js_screen_capture.mjs";
-import { app_code_screen_next_click_script } from "./app_code_screen_next_click_script.mjs";
+import { app_learn_js_screen_next_click_script } from "./app_learn_js_screen_next_click_script.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 export async function app_code_screens_crawl_lesson(
@@ -42,7 +42,7 @@ export async function app_code_screens_crawl_lesson(
   let combined = text_combine_multiple([",", v6, "=", f_name]);
   let v7 = app_learn_js_lesson_hash_key();
   let quiz_marker = text_combine_multiple([v7, "=", id, combined]);
-  let script = app_code_screen_next_click_script();
+  let script = app_learn_js_screen_next_click_script();
   let kind = 1;
   while (less_than(kind, 8)) {
     let clicked = await page.evaluate(script);

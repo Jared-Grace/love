@@ -5,7 +5,7 @@ import { app_learn_js_screen_name_short } from "./app_learn_js_screen_name_short
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_quiz_hash_key } from "./app_learn_js_quiz_hash_key.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
-import { app_code_screen_next_click_script } from "./app_code_screen_next_click_script.mjs";
+import { app_learn_js_screen_next_click_script } from "./app_learn_js_screen_next_click_script.mjs";
 import { app_code_screens_seed_script } from "./app_code_screens_seed_script.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function app_learn_js_lesson_screens_screenshot(id) {
@@ -28,7 +28,7 @@ export async function app_learn_js_lesson_screens_screenshot(id) {
   let quiz_url =
     prefix + "#" + quiz_part + "," + app_learn_js_quiz_hash_key() + "=0";
   let settle = page_capture_settle_ms();
-  let next_script = app_code_screen_next_click_script();
+  let next_script = app_learn_js_screen_next_click_script();
   let pictures = [];
   let errors = [];
   async function on_page(page) {
