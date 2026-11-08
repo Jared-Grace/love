@@ -4442,6 +4442,56 @@ def arithmetic_substitutions_hoisted(command, safe_verbs, safe_exact_commands):
     return result
 
 
+# A plain two-path `cp` standing as its own statement: start of the command or
+# after a separator, then exactly two plain words, then the end or another
+# separator. A path word holds no quote, dollar, glob or leading dash, so what
+# is matched is exactly what the shell would hand cp.
+CP_PLAIN_RE = re.compile(
+    r"(^|[;&|]\s*)cp\s+([A-Za-z0-9_./][A-Za-z0-9_./-]*)\s+([A-Za-z0-9_./][A-Za-z0-9_./-]*)(?=\s*(?:$|[;&|]))"
+)
+
+
+def cp_plain_as_cat(command, safe_verbs, safe_exact_commands):
+    """For a command whose `cp SRC DEST` copies are the only thing asking,
+    the same command with each written `cat SRC > DEST`; otherwise None.
+
+    `cp` has no rule beyond copies wholly inside Claude's own temp folders,
+    because a copy out of anywhere into a folder this hook reads freely would
+    get round every read prompt. But `cat SRC > DEST` is already approved
+    wherever the reader may read SRC and the redirect may land at DEST - so
+    a peer's `cp firebase.json <scratchpad>/fb1.json` asked the human for a
+    copy the guard would have run unasked spelled the other way.
+
+    Only offered when the cat form passes as a whole, so nothing becomes
+    readable that was not already: this never widens what cat may read or
+    where a redirect may write, it only names the spelling that is already
+    approved.
+
+    The two write the same bytes. The differences are kept out rather than
+    argued: a flag (-r, -p, ...) changes what cp does, so a flagged copy is
+    not matched; and `cp FILE DIR` lands inside the folder where a redirect
+    would fail, so a destination that is a folder, or is written as one, is
+    refused. Mode bits can differ - cp gives a new file the source's mode,
+    a redirect the default - which matters for nothing a copy into scratch
+    space is for."""
+    matches = list(CP_PLAIN_RE.finditer(command))
+    if not matches:
+        return None
+    for match in matches:
+        dest = match.group(3)
+        if dest.endswith("/") or os.path.isdir(dest):
+            return None
+    rewritten = CP_PLAIN_RE.sub(
+        lambda m: m.group(1) + "cat " + m.group(2) + " > " + m.group(3), command
+    )
+    try:
+        if not is_safe(rewritten, safe_verbs, safe_exact_commands):
+            return None
+    except Unsupported:
+        return None
+    return rewritten
+
+
 def tokens_text(tokens):
     """`tokens` spelled back as one line a person can read: separators become
     themselves again and a substitution reads as `$(...)`. For a reason only -
@@ -6629,6 +6679,19 @@ def main():
             "the arithmetic reads the variable. It runs at the same point, "
             "and bash reads a variable in arithmetic as the expression its "
             "value spells, so the answer is the same."
+        ))
+
+    as_cat = cp_plain_as_cat(command, safe_verbs, safe_exact_commands)
+    if as_cat is not None:
+        return decide("deny", (
+            "Run this instead - it is already approved, so it needs no "
+            "human at all:\n"
+            f"  {as_cat}\n"
+            "`cp` has no rule outside Claude's own temp folders, but `cat "
+            "SRC > DEST` is approved wherever the reader may read SRC and "
+            "the redirect may land, and it writes the same bytes. (Only "
+            "offered for a plain two-path copy into a file, never a folder, "
+            "and only when the reworded command passes on its own.)"
         ))
 
     split = splittable_statements(command, safe_verbs, safe_exact_commands)
