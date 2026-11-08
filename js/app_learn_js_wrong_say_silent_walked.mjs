@@ -13,7 +13,7 @@ import { app_learn_js_lesson_quiz_multiple_choice_answered } from "./app_learn_j
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-export function app_code_wrong_say_silent_walked() {
+export function app_learn_js_wrong_say_silent_walked() {
   arguments_assert(arguments, 0);
   ("every code lesson whose pick-the-output quizzes never say anything when a wrong answer is picked, and how many of those quizzes were asked to find out");
   ("A quiz is asked as the learner meets it, through the same choosing of question and buttons, and every wrong button on it is pressed; the lesson is silent when no press on any of its quizzes, over two rounds of its questions, is answered with a reminder. Not picked: silent on any one quiz, since a reminder that speaks to some wrong picks and not others is the intended shape, and the questions are drawn at random, so a per-quiz count would move between runs with nothing changed. Not picked: the backwards quizzes, which pick the code for an output and have no shared reminder yet - a ratchet over them would hold almost every lesson");
