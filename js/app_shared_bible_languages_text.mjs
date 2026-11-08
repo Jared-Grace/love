@@ -6,8 +6,10 @@ export function app_shared_bible_languages_text() {
   let texts = {
     en: " Choose languages",
     ur: " زبانیں منتخب کریں",
+    tgl: " Pumili ng mga wika",
     translated_from: {
       ur: " Choose languages",
+      tgl: " Choose languages",
     },
   };
   let label = app_shared_text_reader_language(texts);
