@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_review_load } from "./app_learn_js_review_load.mjs";
-import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
+import { app_learn_js_review_state_key } from "./app_learn_js_review_state_key.mjs";
 import { app_learn_js_review_containers } from "./app_learn_js_review_containers.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_size } from "./list_size.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_review_next_lesson(context, root) {
   );
   let queue = property_get(loaded, "queue");
   let passed = property_get(loaded, "passed");
-  let key = app_code_review_state_key(checkpoint_key);
+  let key = app_learn_js_review_state_key(checkpoint_key);
   let frame = app_learn_js_review_containers(root);
   let g = property_get(frame, "g");
   let progress = property_get(frame, "progress");

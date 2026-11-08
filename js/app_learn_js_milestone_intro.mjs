@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_review_explain } from "./app_learn_js_review_explain.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
-import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
+import { app_learn_js_review_state_key } from "./app_learn_js_review_state_key.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_milestone_intro(root, context, checkpoint) {
   let key = property_get(checkpoint, "key");
   function begin() {
     "Begin asks for questions, so a save already finished is cleared first, as the restart button clears it - measured 2026-10-23: a milestone finished before was resumed as finished, and Begin went straight to the celebration with no question asked";
-    let state_key = app_code_review_state_key(key);
+    let state_key = app_learn_js_review_state_key(key);
     let stored = storage_local_get_context(context, state_key);
     if (null_not_is(stored)) {
       let seeds = property_get(stored, "seeds");

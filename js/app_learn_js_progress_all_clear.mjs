@@ -3,7 +3,7 @@ import { app_learn_js_progress_storage_key } from "./app_learn_js_progress_stora
 import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
 import { app_code_reviews_complete_storage_key } from "./app_code_reviews_complete_storage_key.mjs";
 import { app_learn_js_checkpoints } from "./app_learn_js_checkpoints.mjs";
-import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
+import { app_learn_js_review_state_key } from "./app_learn_js_review_state_key.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 export function app_learn_js_progress_all_clear(context) {
@@ -19,7 +19,7 @@ export function app_learn_js_progress_all_clear(context) {
   let checkpoints = app_learn_js_checkpoints();
   function each_checkpoint(checkpoint) {
     let number = property_get(checkpoint, "key");
-    let key_state = app_code_review_state_key(number);
+    let key_state = app_learn_js_review_state_key(number);
     storage_local_remove_context(context, key_state);
   }
   each(checkpoints, each_checkpoint);

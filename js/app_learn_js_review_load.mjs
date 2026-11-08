@@ -1,4 +1,4 @@
-import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
+import { app_learn_js_review_state_key } from "./app_learn_js_review_state_key.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_review_load(
   "resume the persisted seed queue when one is saved for this same checkpoint, otherwise gather a fresh shuffled queue";
   "★ A SAVED QUEUE IS FILTERED BEFORE IT IS RESUMED. A seed can name a lesson this page no longer hands out, and rebuilding one of those throws hard enough to take the whole boot with it - so a queue saved before the run of lessons moved is the one thing on a learner's device that can lock them out of the app for good. What survives the filter is resumed; what does not is gone, and next door says why.";
   "A save that is emptied by the filter is treated as unusable rather than resumed, because an empty queue is how a review says it is finished - resuming one would tell the learner they had completed a review they never took, and take the checkpoint away with it. A save that was already empty is a real finished review, so that one is resumed as it stands.";
-  let key = app_code_review_state_key(checkpoint_key);
+  let key = app_learn_js_review_state_key(checkpoint_key);
   let stored = storage_local_get_context(context, key);
   let stored_present = null_not_is(stored);
   if (stored_present) {
