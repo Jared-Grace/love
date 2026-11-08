@@ -10,7 +10,7 @@ import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_program_trace_long_way } from "./app_learn_js_program_trace_long_way.mjs";
-import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
+import { app_learn_js_program_trace_value } from "./app_learn_js_program_trace_value.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_learn_js_program_trace_assign(
@@ -81,7 +81,7 @@ export function app_learn_js_program_trace_assign(
     );
     return;
   }
-  let value9 = app_code_program_trace_value(right, actions, code, values);
+  let value9 = app_learn_js_program_trace_value(right, actions, code, values);
   list_add(actions, {
     kind: "assign",
     name: name3,

@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
+import { app_learn_js_program_trace_value } from "./app_learn_js_program_trace_value.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_learn_js_program_trace_declare(
   node,
@@ -26,7 +26,7 @@ export function app_learn_js_program_trace_declare(
     to: property_get(id, "end"),
   });
   ("a declare says where its name is written, and an assign where what is right of the = is written, as an evaluate says where its name is, so a stepper can send a copy of either into the note it writes");
-  let value = app_code_program_trace_value(init, actions, code, values);
+  let value = app_learn_js_program_trace_value(init, actions, code, values);
   list_add(actions, {
     kind: "assign",
     name,

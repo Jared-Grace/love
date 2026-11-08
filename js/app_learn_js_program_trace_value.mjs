@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_program_trace_piece } from "./app_learn_js_program_trace_piece.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_code_program_trace_value(node, actions, code, values) {
+export function app_learn_js_program_trace_value(node, actions, code, values) {
   arguments_assert(arguments, 4);
   ("what an expression comes to, with any evaluating it took added to actions");
   ("2026-10-15, at the human's asking: an operator between two values written out is solved in one evaluate, as the lessons on operators solve one, so a program that logs 9 + 7 can be run a line at a time. Its name is the expression with each side written as the value it came to, and expression says the operator and its two sides, so a stepper can ask for what it comes to and offer the wrong values the operator lessons offer");

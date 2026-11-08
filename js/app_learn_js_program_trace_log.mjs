@@ -5,7 +5,7 @@ import { not_equal } from "./not_equal.mjs";
 import { error } from "./error.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
+import { app_learn_js_program_trace_value } from "./app_learn_js_program_trace_value.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_learn_js_program_trace_log(
   expression,
@@ -27,7 +27,7 @@ export function app_learn_js_program_trace_log(
   let args = property_get(expression, "arguments");
   list_size_assert(args, 1);
   let arg = list_get(args, 0);
-  let value3 = app_code_program_trace_value(arg, actions, code, values);
+  let value3 = app_learn_js_program_trace_value(arg, actions, code, values);
   list_add(actions, {
     kind: "log",
     value: value3,
