@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-export function app_code_string_value_of_is_say(line, word) {
+export function app_learn_js_string_value_of_is_say(line, word) {
   arguments_assert(arguments, 2);
   ('the tail of a sentence about what a string comes to: of "hello" is hello - the string written the way it is typed, then the same word again without its quotes');
   ("The words before it differ - one lesson says For example, another says Remember - and everything from the of onward is the same sentence saying the same thing about the same word, so the two lessons said it twice and either could have been changed alone.");

@@ -1,4 +1,4 @@
-import { app_code_string_value_of_is_say } from "./app_code_string_value_of_is_say.mjs";
+import { app_learn_js_string_value_of_is_say } from "./app_learn_js_string_value_of_is_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_expression_string_hello_define(root, word) {
   let value_word = html_span_text(example, "value");
   let color4 = app_learn_js_string_value_color_on_light();
   html_font_color_set(value_word, color4);
-  app_code_string_value_of_is_say(example, word);
+  app_learn_js_string_value_of_is_say(example, word);
   app_learn_js_div_cycle_code(define, [
     "A string's value does not include its quotes",
   ]);
