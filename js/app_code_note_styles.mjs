@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_code_font } from "./app_shared_color_code_font.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
-import { app_code_note_name_mark_opacity } from "./app_code_note_name_mark_opacity.mjs";
+import { app_learn_js_note_name_mark_opacity } from "./app_learn_js_note_name_mark_opacity.mjs";
 import { text_size } from "./text_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { range_from } from "./range_from.mjs";
@@ -24,7 +24,7 @@ export function app_code_note_styles(code) {
   let white = app_shared_color_code_font();
   let dim = app_shared_color_gray();
   let full = "1";
-  let faded = app_code_note_name_mark_opacity();
+  let faded = app_learn_js_note_name_mark_opacity();
   let size = text_size(code);
   let last_of_code = subtract(size, 1);
   let styles = [];
