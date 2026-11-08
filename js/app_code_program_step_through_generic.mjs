@@ -89,7 +89,7 @@ import { list_get_property } from "./list_get_property.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
 import { list_copy } from "./list_copy.mjs";
-import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
+import { app_learn_js_program_step_guide_line_next } from "./app_learn_js_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { app_code_quiz_choice_button_answer_generic } from "./app_code_quiz_choice_button_answer_generic.mjs";
@@ -769,7 +769,7 @@ export function app_code_program_step_through_generic(
     ("2026-10-29, at the human's asking: the line to choose is named as it reads on the screen now, so a while run again is named while (true) {, the way it shows, and not as it is written");
     ("2026-11-07, at the human's asking: a piece of a line is named the same way, so a for's condition come round again is named true, the way it shows, until the learner resets it");
     let trace_now = trace_piece_named_now(index);
-    let r = app_code_program_step_guide_line_next(shown, trace_now, index);
+    let r = app_learn_js_program_step_guide_line_next(shown, trace_now, index);
     let done = list_index_past_end_is(trace, index);
     let holder = {
       button: null,

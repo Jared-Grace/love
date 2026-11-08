@@ -19,7 +19,7 @@ import { add } from "./add.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_code_program_step_guide_line_next(lines, trace, index) {
+export function app_learn_js_program_step_guide_line_next(lines, trace, index) {
   arguments_assert(arguments, 3);
   ("what a guided example says while it asks which line runs next: why that line, and then which to choose. Each sentence is a list of parts, words and code taking turns, the way every sentence in this app that holds code is written.");
   ("Asked for by the human 2026-10-14, in words modelled on the order lesson's guided example: We always run the first line of code; the line at the top. Choose: ...");
