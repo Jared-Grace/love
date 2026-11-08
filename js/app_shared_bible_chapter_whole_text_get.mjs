@@ -7,8 +7,10 @@ export function app_shared_bible_chapter_whole_text_get() {
   let texts = {
     en: "Whole chapter",
     ur: "پورا باب",
+    tgl: "Buong kabanata",
     translated_from: {
       ur: "Whole chapter",
+      tgl: "Whole chapter",
     },
   };
   let label = app_shared_text_reader_language(texts);
