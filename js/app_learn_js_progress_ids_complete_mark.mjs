@@ -7,7 +7,7 @@ import { app_learn_js_checkpoints } from "./app_learn_js_checkpoints.mjs";
 import { list_take } from "./list_take.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_all } from "./list_all.mjs";
-import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
+import { app_learn_js_review_complete_record } from "./app_learn_js_review_complete_record.mjs";
 import { each } from "./each.mjs";
 export function app_learn_js_progress_ids_complete_mark(context, lesson_ids) {
   arguments_assert(arguments, 2);
@@ -27,7 +27,7 @@ export function app_learn_js_progress_ids_complete_mark(context, lesson_ids) {
     let all = list_all(above, marked_is);
     if (all) {
       let number = property_get(checkpoint, "key");
-      app_code_review_complete_record(context, number);
+      app_learn_js_review_complete_record(context, number);
     }
   }
   each(checkpoints, each_checkpoint);

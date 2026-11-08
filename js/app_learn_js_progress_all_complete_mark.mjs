@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
 import { app_learn_js_progress_lessons_complete_mark } from "./app_learn_js_progress_lessons_complete_mark.mjs";
 import { app_learn_js_checkpoints } from "./app_learn_js_checkpoints.mjs";
-import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
+import { app_learn_js_review_complete_record } from "./app_learn_js_review_complete_record.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 export function app_learn_js_progress_all_complete_mark(context) {
@@ -15,7 +15,7 @@ export function app_learn_js_progress_all_complete_mark(context) {
   let checkpoints = app_learn_js_checkpoints();
   function each_checkpoint(checkpoint) {
     let number = property_get(checkpoint, "key");
-    app_code_review_complete_record(context, number);
+    app_learn_js_review_complete_record(context, number);
   }
   each(checkpoints, each_checkpoint);
 }
