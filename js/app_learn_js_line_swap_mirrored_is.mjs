@@ -10,7 +10,7 @@ import { not } from "./not.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { and } from "./and.mjs";
-export function app_code_line_swap_mirrored_is(code) {
+export function app_learn_js_line_swap_mirrored_is(code) {
   arguments_assert(arguments, 1);
   ("Whether one line is a comparison of the same two things turned round: 5 ** 3 === 3 ** 5, 7 + 5 === 5 + 7, (2 < 5) === (5 < 2).");
   ("A line like that asks a learner nothing about what either side comes to. Both sides hold the same two things under the same sign, so the only question left is whether that sign gives the same answer either way round - which is the one thing the lesson teaches. A learner ticks true for plus and times, false for take away and divide and power, and never works out 3 ** 5.");

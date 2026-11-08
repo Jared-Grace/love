@@ -11,7 +11,7 @@ import { add } from "./add.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { js_visit } from "./js_visit.mjs";
-import { app_code_line_swap_mirrored_is } from "./app_code_line_swap_mirrored_is.mjs";
+import { app_learn_js_line_swap_mirrored_is } from "./app_learn_js_line_swap_mirrored_is.mjs";
 export function app_learn_js_line_shape(code) {
   arguments_assert(arguments, 1);
   ("How much working out one line asks of a learner: how many operators stand on it, and how deep the deepest of them sits inside the others. Nothing at all when the text is not a line of code.");
@@ -57,7 +57,7 @@ export function app_learn_js_line_shape(code) {
     return null;
   }
   ("asked after the walk rather than instead of it, because a line with no written-out value on it is not a line of code here however it is shaped, and that is the walk's answer to give");
-  let turned = app_code_line_swap_mirrored_is(code);
+  let turned = app_learn_js_line_swap_mirrored_is(code);
   if (turned) {
     operators = 1;
     depth = 1;
