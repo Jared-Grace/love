@@ -7,7 +7,7 @@ import { app_learn_js_hash_complete_known_is } from "./app_learn_js_hash_complet
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_hash_complete_key } from "./app_learn_js_hash_complete_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { app_code_progress_released_complete_mark } from "./app_code_progress_released_complete_mark.mjs";
+import { app_learn_js_progress_released_complete_mark } from "./app_learn_js_progress_released_complete_mark.mjs";
 export function app_learn_js_hash_complete_restore(context, hash) {
   arguments_assert(arguments, 2);
   ("If the link says complete=released, mark every released lesson finished before anything is drawn, so the lesson list opens with only the lessons latest does not have left open.");
@@ -28,6 +28,6 @@ export function app_learn_js_hash_complete_restore(context, hash) {
   }
   let asked = app_learn_js_hash_complete_known_is(said);
   if (asked) {
-    app_code_progress_released_complete_mark(context);
+    app_learn_js_progress_released_complete_mark(context);
   }
 }
