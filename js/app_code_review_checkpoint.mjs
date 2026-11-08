@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_milestone_left_is } from "./app_code_milestone_left_is.mjs";
 import { app_code_milestone_key } from "./app_code_milestone_key.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
-import { app_code_milestone_get_or_null } from "./app_code_milestone_get_or_null.mjs";
+import { app_learn_js_milestone_get_or_null } from "./app_learn_js_milestone_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -26,7 +26,7 @@ export function app_code_review_checkpoint(context) {
   if (milestone_left) {
     let key_milestone = app_code_milestone_key();
     let id = storage_session_get_context(context, key_milestone);
-    let milestone = app_code_milestone_get_or_null(id);
+    let milestone = app_learn_js_milestone_get_or_null(id);
     if (null_not_is(milestone)) {
       let label_inner = property_get(milestone, "label");
       let title_inner = text_combine("Milestone: ", label_inner);
