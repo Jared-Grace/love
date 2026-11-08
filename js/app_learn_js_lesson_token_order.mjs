@@ -4,7 +4,7 @@ import { app_learn_js_token_order_longer } from "./app_learn_js_token_order_long
 import { app_code_tokens_choose_say } from "./app_code_tokens_choose_say.mjs";
 import { app_code_tokens_choose_label_guided } from "./app_code_tokens_choose_label_guided.mjs";
 import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
-import { app_code_tokens_chips } from "./app_code_tokens_chips.mjs";
+import { app_learn_js_tokens_chips } from "./app_learn_js_tokens_chips.mjs";
 import { app_learn_js_lesson_token_order_example_choose } from "./app_learn_js_lesson_token_order_example_choose.mjs";
 import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
 import { app_code_tokens_explain } from "./app_code_tokens_explain.mjs";
@@ -52,7 +52,7 @@ export function app_learn_js_lesson_token_order() {
       on_code: html_text_set_code_dark_lines,
       output_label: order_label,
       output: longer,
-      on_output: app_code_tokens_chips,
+      on_output: app_learn_js_tokens_chips,
     });
     let box_three = app_learn_js_container_light_blue(root);
     app_code_tokens_choose_say(box_three, "Now you will ", "choose", true);
