@@ -20,7 +20,7 @@ export async function app_learn_js_lesson_screens_screenshot(id) {
   let lesson = app_learn_js_lesson_hash_key() + "=" + id;
   let screen = app_shared_screen_hash_key() + "=";
   let examples = app_code_screen_name_short(fn_name("app_learn_js_examples"));
-  let quiz = app_code_screen_name_short(fn_name("app_code_quiz"));
+  let quiz = app_code_screen_name_short(fn_name("app_learn_js_quiz"));
   let quiz_part = lesson + "," + screen + quiz;
   let examples_url = prefix + "#" + lesson + "," + screen + examples;
   let quiz_url =

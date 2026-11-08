@@ -6,7 +6,7 @@ import { list_first_property } from "./list_first_property.mjs";
 import { list_index_last } from "./list_index_last.mjs";
 import { app_learn_js_quiz_index_set } from "./app_learn_js_quiz_index_set.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { app_code_quiz } from "./app_code_quiz.mjs";
+import { app_learn_js_quiz } from "./app_learn_js_quiz.mjs";
 export async function app_learn_js_examples_lambda(context) {
   arguments_assert(arguments, 1);
   app_learn_js_lesson_previous_set(context);
@@ -16,5 +16,5 @@ export async function app_learn_js_examples_lambda(context) {
   let quizzes = list_first_property(list, "quizzes");
   let index_last = list_index_last(quizzes);
   app_learn_js_quiz_index_set(context, index_last);
-  await app_shared_screen_set(context, app_code_quiz);
+  await app_shared_screen_set(context, app_learn_js_quiz);
 }

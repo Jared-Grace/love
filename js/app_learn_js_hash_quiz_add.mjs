@@ -9,7 +9,7 @@ export function app_learn_js_hash_quiz_add(context, hash) {
   app_shared_hash_add_on_screen(
     context,
     hash,
-    fn_name("app_code_quiz"),
+    fn_name("app_learn_js_quiz"),
     "quiz_index",
     hash_key,
   );

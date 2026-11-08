@@ -31,7 +31,7 @@ import { app_learn_js_container_padded_x } from "./app_learn_js_container_padded
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-export function app_code_quiz(context) {
+export function app_learn_js_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_learn_js_lesson_current(context);
   ("the bar is drawn inside a holder of its own, so it can be drawn again in the same place without redrawing the question under it");

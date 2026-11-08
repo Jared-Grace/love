@@ -37,7 +37,7 @@ export async function app_code_screens_crawl_lesson_quiz_url(
     records,
   );
   let v3 = app_shared_screen_hash_key();
-  let f_name2 = app_code_screen_name_short(fn_name("app_code_quiz"));
+  let f_name2 = app_code_screen_name_short(fn_name("app_learn_js_quiz"));
   let v4 = app_learn_js_quiz_hash_key();
   let combined2 = text_combine_multiple([",", v3, "=", f_name2, ",", v4, "=0"]);
   let v5 = app_learn_js_lesson_hash_key();
