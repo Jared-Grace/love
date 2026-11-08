@@ -3,7 +3,7 @@ import { app_learn_js_lessons_review_diff_counted } from "./app_learn_js_lessons
 import { git_folder_run } from "./git_folder_run.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
-export async function app_code_lessons_review_diff_shared_sized(
+export async function app_learn_js_lessons_review_diff_shared_sized(
   folder,
   commit,
   groups,

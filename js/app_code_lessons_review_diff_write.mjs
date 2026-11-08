@@ -1,4 +1,4 @@
-import { app_code_lessons_review_diff_shared_sized } from "./app_code_lessons_review_diff_shared_sized.mjs";
+import { app_learn_js_lessons_review_diff_shared_sized } from "./app_learn_js_lessons_review_diff_shared_sized.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_lessons_review_diff_shared_section } from "./app_learn_js_lessons_review_diff_shared_section.mjs";
 import { app_learn_js_lessons_review_diff_shared_size } from "./app_learn_js_lessons_review_diff_shared_size.mjs";
@@ -51,7 +51,7 @@ export async function app_code_lessons_review_diff_write(commit) {
   ("THE SHARED HELPERS ARE IN THE SAME FILE, because a reading that stops short of them is not a reading of everything that changed. A helper two lessons share is edited by somebody who was thinking about one of them, and it lands on both screens; left out of the report it is the one kind of change nobody is ever handed.");
   ("They come after the lessons and are sized the same way, so the same rule applies twice over: within each part the cheap reading is done before the expensive one starts.");
   let lessons_now = review.lessons_now;
-  let shared_sized = await app_code_lessons_review_diff_shared_sized(
+  let shared_sized = await app_learn_js_lessons_review_diff_shared_sized(
     folder,
     commit,
     review.shared_helpers_changed,
