@@ -583,7 +583,7 @@ import { gloss_same_as_gate_run } from "./gloss_same_as_gate_run.mjs";
 import { bible_glyph_chapters_name_tag_fire_joined_gate_run } from "./bible_glyph_chapters_name_tag_fire_joined_gate_run.mjs";
 import { bible_glyph_marks_wordless_assert } from "./bible_glyph_marks_wordless_assert.mjs";
 import { bible_glyph_divine_numbers_assert } from "./bible_glyph_divine_numbers_assert.mjs";
-import { app_code_lessons_released_gate_run } from "./app_code_lessons_released_gate_run.mjs";
+import { app_learn_js_lessons_released_gate_run } from "./app_learn_js_lessons_released_gate_run.mjs";
 import { bible_glyph_seats_contested_gate_run } from "./bible_glyph_seats_contested_gate_run.mjs";
 import { messages_real_quoted_gate_run } from "./messages_real_quoted_gate_run.mjs";
 import { reply_parser_gate_run } from "./reply_parser_gate_run.mjs";
@@ -1234,7 +1234,7 @@ export function qa_gates() {
     bible_glyph_chapters_name_tag_fire_joined_gate_run,
     bible_glyph_marks_wordless_assert,
     bible_glyph_divine_numbers_assert,
-    app_code_lessons_released_gate_run,
+    app_learn_js_lessons_released_gate_run,
     bible_glyph_seats_contested_gate_run,
     messages_real_quoted_gate_run,
     reply_parser_gate_run,
