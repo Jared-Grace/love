@@ -1,7 +1,7 @@
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than } from "./app_learn_js_lesson_expression_arithmetic_less_than.mjs";
-import { app_code_operators_comparison_or_list } from "./app_code_operators_comparison_or_list.mjs";
+import { app_learn_js_operators_comparison_or_list } from "./app_learn_js_operators_comparison_or_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_learn_js_lesson_expression_comparing_a_comparison_recall(
   root,
@@ -19,5 +19,5 @@ export function app_learn_js_lesson_expression_comparing_a_comparison_recall(
     app_learn_js_lesson_expression_arithmetic_less_than,
     ["a comparison uses one of "],
   );
-  app_code_operators_comparison_or_list(line);
+  app_learn_js_operators_comparison_or_list(line);
 }

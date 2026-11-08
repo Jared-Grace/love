@@ -8,7 +8,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_to_or_list_word } from "./list_to_or_list_word.mjs";
 import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs";
 import { js_operator_symbol } from "./js_operator_symbol.mjs";
-import { app_code_operators_comparison_or_list } from "./app_code_operators_comparison_or_list.mjs";
+import { app_learn_js_operators_comparison_or_list } from "./app_learn_js_operators_comparison_or_list.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_lesson_expression_arithmetic_less_than_worked_example } from "./app_learn_js_lesson_expression_arithmetic_less_than_worked_example.mjs";
 import { multiply } from "./multiply.mjs";
@@ -36,7 +36,7 @@ export function app_learn_js_lesson_expression_arithmetic_less_than_above(
   html_span_text(line, " before any ");
   app_learn_js_definition_term(line, "comparison");
   html_span_text(line, ": ");
-  app_code_operators_comparison_or_list(line);
+  app_learn_js_operators_comparison_or_list(line);
   let sum = add(2, 3);
   app_learn_js_lesson_expression_arithmetic_less_than_worked_example({
     other: 9,
