@@ -397,7 +397,7 @@ import { app_shared_bible_hash_field_reference_cases_gate_run } from "./app_shar
 import { app_learn_js_quiz_unscramble_gate_run } from "./app_learn_js_quiz_unscramble_gate_run.mjs";
 import { app_code_quiz_unscramble_shortcut_gate_run } from "./app_code_quiz_unscramble_shortcut_gate_run.mjs";
 import { app_code_quiz_unscramble_unreadable_gate_run } from "./app_code_quiz_unscramble_unreadable_gate_run.mjs";
-import { app_code_quiz_unscramble_own_wording_gate_run } from "./app_code_quiz_unscramble_own_wording_gate_run.mjs";
+import { app_learn_js_quiz_unscramble_own_wording_gate_run } from "./app_learn_js_quiz_unscramble_own_wording_gate_run.mjs";
 import { app_learn_js_quiz_choice_pool_gate_run } from "./app_learn_js_quiz_choice_pool_gate_run.mjs";
 import { qa_gates_countless_gate_run } from "./qa_gates_countless_gate_run.mjs";
 import { qa_gates_miscounted_gate_run } from "./qa_gates_miscounted_gate_run.mjs";
@@ -1048,7 +1048,7 @@ export function qa_gates() {
     app_learn_js_quiz_unscramble_gate_run,
     app_code_quiz_unscramble_shortcut_gate_run,
     app_code_quiz_unscramble_unreadable_gate_run,
-    app_code_quiz_unscramble_own_wording_gate_run,
+    app_learn_js_quiz_unscramble_own_wording_gate_run,
     app_learn_js_quiz_choice_pool_gate_run,
     qa_gates_countless_gate_run,
     qa_gates_miscounted_gate_run,

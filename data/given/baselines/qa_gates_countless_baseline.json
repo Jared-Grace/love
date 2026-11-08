@@ -84,7 +84,7 @@
   "git_push_urls_gate_run",
   "daemons_stale_gate_run",
   "app_learn_js_quiz_unscramble_gate_run",
-  "app_code_quiz_unscramble_own_wording_gate_run",
+  "app_learn_js_quiz_unscramble_own_wording_gate_run",
   "app_learn_js_quiz_choice_pool_gate_run"
  ]
 }
