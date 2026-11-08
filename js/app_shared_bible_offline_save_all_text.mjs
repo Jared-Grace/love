@@ -14,8 +14,16 @@ export function app_shared_bible_offline_save_all_text(size) {
       before: " سبھی ",
       after: " محفوظ کریں",
     },
+    tgl: {
+      before: " I-save ang lahat ng ",
+      after: "",
+    },
     translated_from: {
       ur: {
+        before: " Save all ",
+        after: " of them",
+      },
+      tgl: {
         before: " Save all ",
         after: " of them",
       },
