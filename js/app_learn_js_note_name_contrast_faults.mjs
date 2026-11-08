@@ -3,7 +3,7 @@ import { app_code_note_name_contrast_ways } from "./app_code_note_name_contrast_
 import { color_contrast_or_null } from "./color_contrast_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_code_note_name_contrast_faults() {
+export function app_learn_js_note_name_contrast_faults() {
   arguments_assert(arguments, 0);
   ("every way a name standing in a lesson note is drawn that a reader could not read, as a list of what was drawn on what and how far apart the two were - empty when every one of them can be read");
   ("A NAME IN A NOTE IS DRAWN SEVERAL WAYS AND EVERY ONE OF THEM HAS TO BE READABLE. On a run of code it is the lettering, coloured against the black the code sits on. On a cup it is the lettering again, ringed in that same black. On a filled patch the same colour is behind dark lettering instead. One colour doing all of those jobs is the whole design, so one colour going wrong breaks it in several places and a check of one way round would find only one of them.");

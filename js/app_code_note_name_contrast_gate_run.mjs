@@ -1,6 +1,6 @@
 import { app_code_note_name_contrast_ways } from "./app_code_note_name_contrast_ways.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_note_name_contrast_faults } from "./app_code_note_name_contrast_faults.mjs";
+import { app_learn_js_note_name_contrast_faults } from "./app_learn_js_note_name_contrast_faults.mjs";
 import { property_get } from "./property_get.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -11,7 +11,7 @@ export function app_code_note_name_contrast_gate_run() {
   "HOW MANY WAYS WERE WALKED GOES OUT WITH THE VERDICT, and it is the length of the list of ways rather than the count of faults. Those two were the same word on every run that passed - nought - so a reader could not tell a clean sweep from one pointed at nothing. The ways are worked out from the colour functions, so the number falling is exactly what a colour list gone missing looks like, and that is the failure a green verdict would otherwise hide.";
   let ways = app_code_note_name_contrast_ways();
   let walked = list_size(ways);
-  let faults = app_code_note_name_contrast_faults();
+  let faults = app_learn_js_note_name_contrast_faults();
   for (let fault of faults) {
     let drawn = property_get(fault, "drawn");
     let text = json_to(fault);
