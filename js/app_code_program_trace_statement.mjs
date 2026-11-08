@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_program_trace_declare } from "./app_code_program_trace_declare.mjs";
+import { app_learn_js_program_trace_declare } from "./app_learn_js_program_trace_declare.mjs";
 import { app_learn_js_program_trace_assign } from "./app_learn_js_program_trace_assign.mjs";
 import { app_code_program_trace_update } from "./app_code_program_trace_update.mjs";
 import { app_code_program_trace_log } from "./app_code_program_trace_log.mjs";
@@ -15,7 +15,7 @@ export function app_code_program_trace_statement(node, actions, code, values) {
   ("one statement's own line run, what running it does added to actions, answering the statements that run next because of it: an if's picked { ... }, and nothing for any other line. An if also answers what its condition came to and what stands after its { ... }");
   let type = property_get(node, "type");
   if (equal(type, "VariableDeclaration")) {
-    app_code_program_trace_declare(node, actions, code, values);
+    app_learn_js_program_trace_declare(node, actions, code, values);
     let r = {
       next: [],
     };

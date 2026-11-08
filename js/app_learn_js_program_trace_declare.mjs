@@ -5,7 +5,12 @@ import { list_get } from "./list_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_code_program_trace_declare(node, actions, code, values) {
+export function app_learn_js_program_trace_declare(
+  node,
+  actions,
+  code,
+  values,
+) {
   arguments_assert(arguments, 4);
   ("a let line run: its name declared, what is right of the = worked out, and the value assigned to the name, each added to actions, and the name given the value in values");
   let declarations = property_get(node, "declarations");
