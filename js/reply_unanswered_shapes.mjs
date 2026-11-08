@@ -8,7 +8,7 @@ import { reply_names_common } from "./reply_names_common.mjs";
 import { reply_countries_names } from "./reply_countries_names.mjs";
 import { reply_countries_aliases } from "./reply_countries_aliases.mjs";
 import { reply_countries_authored } from "./reply_countries_authored.mjs";
-import { app_message_private_records_replied } from "./app_message_private_records_replied.mjs";
+import { app_message_private_records_replied_people } from "./app_message_private_records_replied_people.mjs";
 export async function reply_unanswered_shapes() {
   arguments_assert(arguments, 0);
   ("What the real messages still waiting for a reply are shaped like, commonest first, so the reply rules can grow in the order those messages need.");
@@ -137,7 +137,7 @@ export async function reply_unanswered_shapes() {
     let r8 = not(b2) && y_ie_swaps(word).some(known);
     return r8;
   }
-  let records = await app_message_private_records_replied();
+  let records = await app_message_private_records_replied_people();
   let answered = 0;
   let broke = 0;
   let y_ie = 0;
