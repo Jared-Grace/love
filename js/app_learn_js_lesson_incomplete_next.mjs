@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
-import { app_code_progress_read } from "./app_code_progress_read.mjs";
+import { app_learn_js_progress_read } from "./app_learn_js_progress_read.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_lesson_incomplete_next(
   "Nothing at all is the answer where every lesson from here on is finished, rather than the first lesson - a learner who has done all of it has no unfinished lesson to be sent to, and each caller says for itself where a finished course goes instead.";
   arguments_assert(arguments, 3);
   let lessons = app_learn_js_lessons();
-  let progress = app_code_progress_read(context);
+  let progress = app_learn_js_progress_read(context);
   let onwards = list_skip(lessons, index_start);
   function lambda(item) {
     let id = property_get(item, "id");

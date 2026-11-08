@@ -10,7 +10,7 @@ import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
-import { app_code_progress_read } from "./app_code_progress_read.mjs";
+import { app_learn_js_progress_read } from "./app_learn_js_progress_read.mjs";
 import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_is.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_above_shown(context, lesson) {
   if (not_equal(taught_id, lesson_id)) {
     return above;
   }
-  let progress = app_code_progress_read(context);
+  let progress = app_learn_js_progress_read(context);
   let before_id = property_get(before, "id");
   let finished = app_learn_js_lesson_complete_is(progress, before_id);
   if (not(finished)) {

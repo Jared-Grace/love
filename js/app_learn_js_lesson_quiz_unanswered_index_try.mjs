@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_progress_read } from "./app_code_progress_read.mjs";
+import { app_learn_js_progress_read } from "./app_learn_js_progress_read.mjs";
 import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_quiz_unanswered_index_try(
   "THE ONE THEY ARE READING IS LEFT OUT, because it is where they already are, and because the buttons around a quiz are drawn before it has been answered. Counting it would name the current question as the unfinished one on every quiz in the course, and the way on would be a button that redrew the page it was pressed on.";
   "Which quizzes have been answered is read off the record this learner keeps for this lesson on their own disk, so a lesson nobody has answered anything in reads as none answered rather than as missing.";
   arguments_assert(arguments, 3);
-  let progress = app_code_progress_read(context);
+  let progress = app_learn_js_progress_read(context);
   let lesson_id = app_learn_js_lesson_current_id(context);
   let record = property_get_or_null(progress, lesson_id);
   let missing = null_is(record);
