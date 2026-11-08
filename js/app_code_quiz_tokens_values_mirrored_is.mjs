@@ -1,6 +1,6 @@
 import { integer_even_is } from "./integer_even_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_quiz_token_places_of_kind } from "./app_code_quiz_token_places_of_kind.mjs";
+import { app_learn_js_quiz_token_places_of_kind } from "./app_learn_js_quiz_token_places_of_kind.mjs";
 import { list_places_get } from "./list_places_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
@@ -11,7 +11,7 @@ export function app_code_quiz_tokens_values_mirrored_is(tokens) {
   "A SWAP NEEDS TWO HALVES TO EXCHANGE. An odd count of values reads the same backwards whenever the ones around the middle do, and the middle one is its own partner - so nothing has been turned round and there was never a swap to protect. Counted without that, 8 - 3 > 8 and 4 > 2 * 4 and true && false || true were all read as swapping lessons on the strength of their first and last value agreeing, and every other true arrangement of their tiles was refused on a lesson about taking away, about times, and about which join binds first.";
   "Only the value tiles are read. A parenthesis or a sign holds its place rather than standing for something, so it is never dealt anywhere else and its position says nothing about how a learner arranged the line.";
   arguments_assert(arguments, 1);
-  let places = app_code_quiz_token_places_of_kind(tokens, "value");
+  let places = app_learn_js_quiz_token_places_of_kind(tokens, "value");
   let values = list_places_get(tokens, places);
   let size = list_size(values);
   let halved = integer_even_is(size);

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
-import { app_code_quiz_token_places_of_kind } from "./app_code_quiz_token_places_of_kind.mjs";
+import { app_learn_js_quiz_token_places_of_kind } from "./app_learn_js_quiz_token_places_of_kind.mjs";
 import { list_places_get } from "./list_places_get.mjs";
 import { list_permutations } from "./list_permutations.mjs";
 import { list_size } from "./list_size.mjs";
@@ -18,8 +18,8 @@ export function app_learn_js_quiz_tile_dealings_or_null(code) {
   ("What keeps a dealt sign honest is asked further down rather than here: a sign in another sign's place can change what binds to what, and the keeper of dealings holds every dealt line to the shape of the question. Walking them and keeping them are two jobs, and this is the walking one - it offers every deal and judges none.");
   ("The ceiling counts the dealt lines rather than the tiles, so a line whose tiles repeat is not refused for a length it does not really have. Declining costs nothing: everything reached this way is over and above the answers a lesson already holds.");
   let tokens = app_code_quiz_tokens(code);
-  let value_places = app_code_quiz_token_places_of_kind(tokens, "value");
-  let sign_places = app_code_quiz_token_places_of_kind(tokens, "sign");
+  let value_places = app_learn_js_quiz_token_places_of_kind(tokens, "value");
+  let sign_places = app_learn_js_quiz_token_places_of_kind(tokens, "sign");
   let values = list_places_get(tokens, value_places);
   let signs = list_places_get(tokens, sign_places);
   let value_orderings = list_permutations(values);
