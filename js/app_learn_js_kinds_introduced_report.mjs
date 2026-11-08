@@ -1,7 +1,7 @@
 import { equal_not } from "./equal_not.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_order_rounds } from "./app_code_lessons_order_rounds.mjs";
+import { app_learn_js_lessons_order_rounds } from "./app_learn_js_lessons_order_rounds.mjs";
 import { app_learn_js_kinds_introduced } from "./app_learn_js_kinds_introduced.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_kinds_introduced_report() {
   ("The lessons that bring in a kind of code without being about it, and how many other lessons bring one in and are about it. Ask this to find a sign the course uses and never teaches.");
   ("Asked with no arguments so it can be run from the command line, which is the only way anyone reaches the reading it wraps.");
   ("Only the short ones are handed back, because the ones carrying what they brought in on every line are the answer being right and there are two dozen of them.");
-  let rounds = app_code_lessons_order_rounds();
+  let rounds = app_learn_js_lessons_order_rounds();
   let read = app_learn_js_kinds_introduced(rounds);
   let introduced = property_get(read, "introduced");
   function partly_is(entry) {
