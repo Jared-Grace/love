@@ -10,7 +10,7 @@ import { list_includes } from "./list_includes.mjs";
 import { app_learn_js_quiz_dealing_alike_is } from "./app_learn_js_quiz_dealing_alike_is.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_quiz_tile_arrangements_unpooled(code) {
+export function app_learn_js_quiz_tile_arrangements_unpooled(code) {
   "$plain code";
   arguments_assert(arguments, 1);
   ("Every line an unscramble would refuse although it is right by everything the learner was actually shown - the question's own shape, its own tiles, and the one value printed above them - because it is not the line the question happened to be generated from.");
