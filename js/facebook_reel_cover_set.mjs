@@ -68,8 +68,9 @@ export async function facebook_reel_cover_set(reel_url, picture_path) {
     await sleep(6000);
     await picture_take();
     step = "save the reel";
+    ("On 2026-11-08 two reels (Psalm 135 song 3, Psalm 136:13-26) showed the Save button but had no dialog starting 'Edit reel' around it, so when that dialog holds no Save the whole page is searched.");
     let reel_saved = await page.evaluate(
-      "(function(){var ds=[].slice.call(document.querySelectorAll('[role=dialog]')).filter(function(d){return (d.innerText||'').indexOf('Edit reel')===0});var d=ds[ds.length-1];if(!d)return null;var es=[].slice.call(d.querySelectorAll('[role=button]')).filter(function(x){var r=x.getBoundingClientRect();return r.width>0&&r.height>0&&(x.innerText||'').trim()==='Save'});var e=es[es.length-1];if(!e)return null;if(e.getAttribute('aria-disabled')==='true')return 'disabled';e.click();return 'clicked'})()",
+      "(function(){function saves(r){return [].slice.call(r.querySelectorAll('[role=button]')).filter(function(x){var b=x.getBoundingClientRect();return b.width>0&&b.height>0&&(x.innerText||'').trim()==='Save'})}var ds=[].slice.call(document.querySelectorAll('[role=dialog]')).filter(function(d){return (d.innerText||'').indexOf('Edit reel')===0});var d=ds[ds.length-1];var es=d?saves(d):[];if(es.length===0)es=saves(document);var e=es[es.length-1];if(!e)return null;if(e.getAttribute('aria-disabled')==='true')return 'disabled';e.click();return 'clicked'})()",
     );
     if (reel_saved !== "clicked") {
       throw new Error("the reel's Save was " + reel_saved);
