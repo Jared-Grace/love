@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { list_get } from "./list_get.mjs";
-export function app_code_operator_truths_wanted_nested(
+export function app_learn_js_operator_truths_wanted_nested(
   alone_symbol,
   gathered_symbol,
   want_true,

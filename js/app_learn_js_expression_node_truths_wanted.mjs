@@ -3,7 +3,7 @@ import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js
 import { app_learn_js_expression_node_left_operator_first_parenthesis_wrapped } from "./app_learn_js_expression_node_left_operator_first_parenthesis_wrapped.mjs";
 import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
 import { app_learn_js_expression_node_right_operator_first_parenthesis_wrapped } from "./app_learn_js_expression_node_right_operator_first_parenthesis_wrapped.mjs";
-import { app_code_operator_truths_wanted_nested } from "./app_code_operator_truths_wanted_nested.mjs";
+import { app_learn_js_operator_truths_wanted_nested } from "./app_learn_js_operator_truths_wanted_nested.mjs";
 import { list_get } from "./list_get.mjs";
 import { ternary } from "./ternary.mjs";
 export function app_learn_js_expression_node_truths_wanted(
@@ -22,7 +22,7 @@ export function app_learn_js_expression_node_truths_wanted(
   ("Two lessons built this same run by hand and neither said it by name: the same call for the trues and falses, the same three of them pulled out in the same order, the same five pieces hung on a builder chosen the same way.");
   let alone_symbol = ternary(gathered_left, second_symbol, first_symbol);
   let gathered_symbol = ternary(gathered_left, first_symbol, second_symbol);
-  let truths = app_code_operator_truths_wanted_nested(
+  let truths = app_learn_js_operator_truths_wanted_nested(
     alone_symbol,
     gathered_symbol,
     want_true,
