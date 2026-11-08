@@ -8,7 +8,7 @@ import { list_first_property } from "./list_first_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_review_preview_pickers_kinds_show(
+export function app_learn_js_review_preview_pickers_kinds_show(
   lesson_id,
   picker,
   stage,

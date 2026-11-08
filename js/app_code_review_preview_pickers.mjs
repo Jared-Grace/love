@@ -1,4 +1,4 @@
-import { app_code_review_preview_pickers_kinds_show } from "./app_code_review_preview_pickers_kinds_show.mjs";
+import { app_learn_js_review_preview_pickers_kinds_show } from "./app_learn_js_review_preview_pickers_kinds_show.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -20,7 +20,7 @@ export function app_code_review_preview_pickers(picker, stage, question_show) {
     function each_lesson(lesson) {
       let lesson_id = property_get(lesson, "id");
       function lesson_chosen() {
-        app_code_review_preview_pickers_kinds_show(
+        app_learn_js_review_preview_pickers_kinds_show(
           lesson_id,
           picker,
           stage,
@@ -44,7 +44,7 @@ export function app_code_review_preview_pickers(picker, stage, question_show) {
       let lesson = fn();
       let lesson_id = property_get(lesson, "id");
       function fn_chosen() {
-        app_code_review_preview_pickers_kinds_show(
+        app_learn_js_review_preview_pickers_kinds_show(
           lesson_id,
           picker,
           stage,
