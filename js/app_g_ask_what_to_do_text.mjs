@@ -6,8 +6,10 @@ export function app_g_ask_what_to_do_text() {
   let texts = {
     en: "What would you like to do?",
     ur: "آپ کیا کرنا چاہیں گے؟",
+    tgl: "Ano ang gusto mong gawin?",
     translated_from: {
       ur: "What would you like to do?",
+      tgl: "What would you like to do?",
     },
   };
   let text = app_shared_text_reader_language(texts);
