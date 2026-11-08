@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operators_weakest } from "./app_code_operators_weakest.mjs";
 import { app_code_operators_weaker } from "./app_code_operators_weaker.mjs";
-import { app_code_operators_equating } from "./app_code_operators_equating.mjs";
+import { app_learn_js_operators_equating } from "./app_learn_js_operators_equating.mjs";
 import { app_code_operators_relating } from "./app_code_operators_relating.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_code_operators_scaling } from "./app_code_operators_scaling.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_operators_by_rank() {
   ("Every operator the app can work out appears in exactly one of these. That is what lets the question REFUSE instead of guess: a class reached by falling through cannot be told apart from an operator nobody has classed at all, so there is no class here reached that way. The remainder sign and the power sign both sat in that hole, and the printer wrote the shape 14 % (4 * 2) as the line 14 % 4 * 2.");
   let weakest = app_code_operators_weakest();
   let weaker = app_code_operators_weaker();
-  let equating = app_code_operators_equating();
+  let equating = app_learn_js_operators_equating();
   let relating = app_code_operators_relating();
   let weak = app_code_operators_weak();
   let scaling = app_code_operators_scaling();
