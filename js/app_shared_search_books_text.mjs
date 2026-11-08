@@ -5,8 +5,10 @@ export function app_shared_search_books_text() {
   let texts = {
     en: "Search books",
     ur: "کتابیں تلاش کریں",
+    tgl: "Maghanap ng mga aklat",
     translated_from: {
       ur: "Search books",
+      tgl: "Search books",
     },
   };
   let text = app_shared_text_reader_language(texts);
