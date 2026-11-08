@@ -1,4 +1,4 @@
-import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
+import { app_learn_js_screen_name_short } from "./app_learn_js_screen_name_short.mjs";
 import { property_text_includes } from "./property_text_includes.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_happy_trail_quizzes_skipped(trail) {
   "It reads the address rather than the screen, because the address is all a finished walk kept - and the address is enough: the quiz says which lesson and which question it is, so a run of steps sharing one says how many presses that one question took.";
   arguments_assert(arguments, 1);
   let key = app_shared_screen_hash_key();
-  let screen = app_code_screen_name_short(fn_name("app_learn_js_quiz"));
+  let screen = app_learn_js_screen_name_short(fn_name("app_learn_js_quiz"));
   let quiz_marker = text_combine_multiple([key, "=", screen]);
   ("the steps are gathered into runs of one address rather than counted per address, because a course comes back: a review asks about a lesson already walked, and the same question answered properly twice would otherwise be one address seen four times and look fine even if each visit had been skipped");
   let runs = [];

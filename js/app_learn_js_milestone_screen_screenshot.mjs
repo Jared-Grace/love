@@ -1,5 +1,5 @@
 import { mkdirSync } from "node:fs";
-import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
+import { app_learn_js_screen_name_short } from "./app_learn_js_screen_name_short.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
@@ -15,7 +15,7 @@ export async function app_learn_js_milestone_screen_screenshot(id) {
   mkdirSync(folder, {
     recursive: true,
   });
-  let screen = app_code_screen_name_short(fn_name("app_learn_js_review"));
+  let screen = app_learn_js_screen_name_short(fn_name("app_learn_js_review"));
   let url =
     "http://localhost:8080/dev/code.html#" +
     app_learn_js_lesson_hash_key() +

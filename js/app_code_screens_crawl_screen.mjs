@@ -1,4 +1,4 @@
-import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
+import { app_learn_js_screen_name_short } from "./app_learn_js_screen_name_short.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_learn_js_screen_buttons } from "./app_learn_js_screen_buttons.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -20,7 +20,7 @@ export async function app_code_screens_crawl_screen(
   arguments_assert(arguments, 4);
   let name = property_get(screen, "name");
   let key = app_shared_screen_hash_key();
-  let short = app_code_screen_name_short(name);
+  let short = app_learn_js_screen_name_short(name);
   let url = text_combine_multiple([
     url_prefix,
     "?s=",

@@ -1,7 +1,7 @@
 import { mkdirSync } from "node:fs";
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
-import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
+import { app_learn_js_screen_name_short } from "./app_learn_js_screen_name_short.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_quiz_hash_key } from "./app_learn_js_quiz_hash_key.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
@@ -19,8 +19,10 @@ export async function app_learn_js_lesson_screens_screenshot(id) {
   let prefix = "http://localhost:8080/dev/code.html";
   let lesson = app_learn_js_lesson_hash_key() + "=" + id;
   let screen = app_shared_screen_hash_key() + "=";
-  let examples = app_code_screen_name_short(fn_name("app_learn_js_examples"));
-  let quiz = app_code_screen_name_short(fn_name("app_learn_js_quiz"));
+  let examples = app_learn_js_screen_name_short(
+    fn_name("app_learn_js_examples"),
+  );
+  let quiz = app_learn_js_screen_name_short(fn_name("app_learn_js_quiz"));
   let quiz_part = lesson + "," + screen + quiz;
   let examples_url = prefix + "#" + lesson + "," + screen + examples;
   let quiz_url =
