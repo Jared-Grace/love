@@ -12,7 +12,11 @@ import { text_split } from "./text_split.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { list_get } from "./list_get.mjs";
 import { boolean_to_text_validity } from "./boolean_to_text_validity.mjs";
-export function app_code_operator_validity_wrong_say(question, answer, choice) {
+export function app_learn_js_operator_validity_wrong_say(
+  question,
+  answer,
+  choice,
+) {
   arguments_assert(arguments, 3);
   ("said when a learner calls a line with one arithmetic operator valid or invalid wrongly: what the operator needs on each side, and whether the line has it, as parts that take turns between words and code. null for a line holding no arithmetic operator, more than one, or one used twice, and for an invalid line with a value on both sides, whose fault is something else");
   ("The operator is read off the line rather than handed in by the lesson, so every lesson asking about such lines is answered without being changed, and a lesson about something else is left silent. Not picked: the parser's own complaint, which is written for programmers; one sentence for every line, which would call a line valid without saying why");
