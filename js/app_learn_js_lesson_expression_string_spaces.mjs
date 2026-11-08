@@ -15,7 +15,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_string_colored } from "./app_learn_js_string_colored.mjs";
-import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
+import { app_learn_js_string_value_color } from "./app_learn_js_string_value_color.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 export function app_learn_js_lesson_expression_string_spaces() {
   "the second string lesson, reusing the first one's machinery: a string can hold more than one word - a phrase with a SPACE - and the space is part of the string's value (it is not dropped). The word source is adjacent word pairs from the shared verse.";
@@ -76,7 +76,7 @@ export function app_learn_js_lesson_expression_string_spaces() {
     app_learn_js_string_colored(ex, phrase);
     html_span_text(ex, " is ");
     let value_out = html_span_text_code_dark(ex, phrase);
-    let color = app_code_string_value_color();
+    let color = app_learn_js_string_value_color();
     html_font_color_set(value_out, color);
     app_learn_js_div_cycle_code(define, ["The space is part of the value"]);
   }

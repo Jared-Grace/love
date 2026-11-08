@@ -1,5 +1,5 @@
 import { app_learn_js_string_colored } from "./app_learn_js_string_colored.mjs";
-import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
+import { app_learn_js_string_value_color } from "./app_learn_js_string_value_color.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -13,6 +13,6 @@ export function app_code_string_value_of_is_say(line, word) {
   app_learn_js_string_colored(line, word);
   html_span_text(line, " is ");
   let value_out = html_span_text_code_dark(line, word);
-  let color = app_code_string_value_color();
+  let color = app_learn_js_string_value_color();
   html_font_color_set(value_out, color);
 }

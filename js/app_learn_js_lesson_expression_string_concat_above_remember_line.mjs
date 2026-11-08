@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
+import { app_learn_js_string_value_color } from "./app_learn_js_string_value_color.mjs";
 import { app_learn_js_string_value_color_on_light } from "./app_learn_js_string_value_color_on_light.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_expression_string_concat_above_remember_line
   let code_b = app_learn_js_string_code(b);
   let join_code = text_combine_multiple([code_a, " + ", code_b]);
   let joined_value = text_combine_multiple([a, b]);
-  let color = app_code_string_value_color();
+  let color = app_learn_js_string_value_color();
   let on_light = app_learn_js_string_value_color_on_light();
   let concept = app_learn_js_container_light_blue(root);
   let seen_line = html_div(concept);
