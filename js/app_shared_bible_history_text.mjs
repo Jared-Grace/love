@@ -7,8 +7,10 @@ export function app_shared_bible_history_text() {
   let texts = {
     en: " Where you were reading (history)",
     ur: " آپ کہاں پڑھ رہے تھے (تاریخچہ)",
+    tgl: " Kung saan ka nagbabasa (kasaysayan)",
     translated_from: {
       ur: " Where you were reading (history)",
+      tgl: " Where you were reading (history)",
     },
   };
   let label = app_shared_text_reader_language(texts);
