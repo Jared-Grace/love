@@ -13,7 +13,7 @@ import { each } from "./each.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_quiz_tokens_parentheses_balanced_is } from "./app_code_quiz_tokens_parentheses_balanced_is.mjs";
-export function app_code_quiz_tile_arrangements_or_null(code) {
+export function app_learn_js_quiz_tile_arrangements_or_null(code) {
   "$plain code";
   arguments_assert(arguments, 1);
   ("One line's tiles, and every line those tiles can be laid out into with no rule at all about which tile may stand where - or nothing at all, when there are more layouts than anybody would walk.");

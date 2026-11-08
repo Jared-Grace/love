@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js_lesson_quiz_token_select_variations.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { app_code_quiz_tile_arrangements_or_null } from "./app_code_quiz_tile_arrangements_or_null.mjs";
+import { app_learn_js_quiz_tile_arrangements_or_null } from "./app_learn_js_quiz_tile_arrangements_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -19,7 +19,7 @@ export function app_code_quiz_tile_arrangements_unpooled(code) {
   ("A line with more tiles than the walk will lay out declines rather than counting out its factorial, and declining loses a check rather than an answer - nothing found here is ever offered to a learner.");
   let variations = app_learn_js_lesson_quiz_token_select_variations(code);
   let accepted = list_map(variations, list_join_space);
-  let laid = app_code_quiz_tile_arrangements_or_null(code);
+  let laid = app_learn_js_quiz_tile_arrangements_or_null(code);
   let unwalkable = null_is(laid);
   if (unwalkable) {
     let none = [];
