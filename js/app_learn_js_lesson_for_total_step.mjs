@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_for_same_as_while_above } from "./app_learn_js_lesson_for_same_as_while_above.mjs";
 import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
-import { app_code_lesson_total_step_generic } from "./app_code_lesson_total_step_generic.mjs";
+import { app_learn_js_lesson_total_step_generic } from "./app_learn_js_lesson_total_step_generic.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 export function app_learn_js_lesson_for_total_step() {
   arguments_assert(arguments, 0);
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_for_total_step() {
   let above_inner = app_learn_js_lesson_for_same_as_while_above(
     app_code_lesson_while_total_step,
   );
-  let lesson = app_code_lesson_total_step_generic(
+  let lesson = app_learn_js_lesson_total_step_generic(
     js_code_for_start_condition_update_lines,
     above_inner,
     name_id,
