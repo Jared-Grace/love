@@ -4,8 +4,10 @@ export function app_shared_bible_word_sites_recent_text_get() {
   let texts = {
     en: "Recent:",
     ur: "حالیہ:",
+    tgl: "Kamakailan:",
     translated_from: {
       ur: "Recent:",
+      tgl: "Recent:",
     },
   };
   let v = app_shared_text_reader_language(texts);
