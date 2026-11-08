@@ -36,7 +36,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_total_squares() {
+export function app_learn_js_lesson_while_total_squares() {
   arguments_assert(arguments, 0);
   ("a running total of squares: let total = 0; let n = 1; while (n < 4) { total += n * n; n += 1; } console.log(total); writes out 14, which is 1 + 4 + 9");
   ("The one new fact is that what is added does not have to be the name that counts: n counts 1, 2, 3 while total grows by n * n, which is 1, 4, 9.");
