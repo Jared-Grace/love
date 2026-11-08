@@ -17,7 +17,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_title_words_keywords_paint(parent, text) {
+export function app_learn_js_title_words_keywords_paint(parent, text) {
   arguments_assert(arguments, 2);
   ("the words of a home title, with every if and else in them painted as code, written lower case as the code spells them, and the rest as ",
     fn_name("app_code_title_words_percent_paint"),

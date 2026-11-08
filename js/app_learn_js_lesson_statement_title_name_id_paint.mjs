@@ -1,4 +1,4 @@
-import { app_code_title_words_keywords_paint } from "./app_code_title_words_keywords_paint.mjs";
+import { app_learn_js_title_words_keywords_paint } from "./app_learn_js_title_words_keywords_paint.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_category_statements } from "./app_learn_js_category_statements.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_title_name_id_paint(
   ("It exists because the home list is the other place the course shows a shape with the parts left out, and the card inside the lesson that shows the same shape paints the gap grey. A title that could not paint would have said the gap in white, which is the one thing the grey is there to deny.");
   let spaced = text_combine(words, " ");
   function paint(parent) {
-    app_code_title_words_keywords_paint(parent, spaced);
+    app_learn_js_title_words_keywords_paint(parent, spaced);
     paint_code(parent);
   }
   let left = app_learn_js_category_statements();
