@@ -1,4 +1,4 @@
-import { app_code_screens_seed_script } from "./app_code_screens_seed_script.mjs";
+import { app_learn_js_screens_seed_script } from "./app_learn_js_screens_seed_script.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 import { app_learn_js_screens_no_lesson } from "./app_learn_js_screens_no_lesson.mjs";
 import { app_learn_js_screens_crawl_screen } from "./app_learn_js_screens_crawl_screen.mjs";
@@ -20,7 +20,7 @@ export async function app_learn_js_screens_records(url_prefix) {
     }
     page.on("pageerror", on_error);
     ("every screen is opened with the same seed already sitting on the page, so the words and numbers a lesson draws for itself come out the same on every crawl - a screen that reads differently the next time round reads differently because somebody changed it");
-    let seed_script = app_code_screens_seed_script();
+    let seed_script = app_learn_js_screens_seed_script();
     await page.addInitScript(seed_script);
     await page.goto(url_prefix);
     async function crawl_one(id) {

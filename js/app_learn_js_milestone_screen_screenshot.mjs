@@ -5,7 +5,7 @@ import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_learn_js_milestone_hash_key } from "./app_learn_js_milestone_hash_key.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
-import { app_code_screens_seed_script } from "./app_code_screens_seed_script.mjs";
+import { app_learn_js_screens_seed_script } from "./app_learn_js_screens_seed_script.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function app_learn_js_milestone_screen_screenshot(id) {
   "$plain id";
@@ -37,7 +37,7 @@ export async function app_learn_js_milestone_screen_screenshot(id) {
       errors.push(v);
     }
     page.on("pageerror", on_error);
-    let script = app_code_screens_seed_script();
+    let script = app_learn_js_screens_seed_script();
     await page.addInitScript(script);
     await page.setViewportSize({
       width: 400,
