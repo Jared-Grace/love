@@ -1,4 +1,4 @@
-export function app_code_screen_capture_script() {
+export function app_learn_js_screen_capture_script() {
   "the browser-side capture, kept as a STRING on purpose: it runs inside the page via page.evaluate, so it must not be canonicalized (that would turn its operators into repo calls the page has never heard of). Walks the DOM collecting text but SKIPPING every button subtree and every HIDDEN subtree (display none or visibility hidden). Buttons hold randomly sampled distractors and a global !important rule stops an inline hide; the hidden subtrees are the success message and the correction, both randomized for variety and both present-but-hidden until you answer - including any of them would make a screen look changed every crawl. Returns overflow pixels, an empty flag, a title line, and the collapsed visible non-button text";
   let script = [
     "(() => {",
