@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_review_range_label } from "./app_code_review_range_label.mjs";
+import { app_learn_js_review_range_label } from "./app_learn_js_review_range_label.mjs";
 import { app_learn_js_review_go } from "./app_learn_js_review_go.mjs";
 import { app_learn_js_review_button } from "./app_learn_js_review_button.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_home_review_row(
   "It is drawn only where a lesson has a review to open, so the caller asks for the range first and draws nothing where there is none - a review button that led nowhere would read as a lesson the learner had missed.";
   "It hands back the button rather than nothing, for the reason a lesson row does: the caller scrolls back to the row the learner just left, and a review is one of the rows they can have left.";
   arguments_assert(arguments, 5);
-  let label = app_code_review_range_label(lesson_number, scope);
+  let label = app_learn_js_review_range_label(lesson_number, scope);
   async function on_click() {
     await app_learn_js_review_go(context, lesson_number);
   }
