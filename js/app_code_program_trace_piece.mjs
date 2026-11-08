@@ -10,7 +10,7 @@ import { app_learn_js_program_trace_piece_name } from "./app_learn_js_program_tr
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { error } from "./error.mjs";
-import { app_code_program_trace_piece_solved } from "./app_code_program_trace_piece_solved.mjs";
+import { app_learn_js_program_trace_piece_solved } from "./app_learn_js_program_trace_piece_solved.mjs";
 export function app_code_program_trace_piece(state, piece, side) {
   arguments_assert(arguments, 3);
   ("what a piece of the expression comes to, any evaluating it took added to state's actions; side says it stands on a side of an operator rather than being the whole expression");
@@ -104,7 +104,7 @@ export function app_code_program_trace_piece(state, piece, side) {
       type,
     });
   }
-  let value3 = app_code_program_trace_piece_solved(
+  let value3 = app_learn_js_program_trace_piece_solved(
     state,
     piece,
     expression,

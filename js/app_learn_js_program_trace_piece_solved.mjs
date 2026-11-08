@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_line_pieces_text } from "./app_learn_js_line_pieces_text.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_code_program_trace_record } from "./app_code_program_trace_record.mjs";
-export function app_code_program_trace_piece_solved(
+export function app_learn_js_program_trace_piece_solved(
   state,
   piece,
   expression,
