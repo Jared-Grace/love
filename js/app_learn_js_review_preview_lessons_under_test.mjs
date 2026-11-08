@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_solve } from "./app_learn_j
 import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_lesson_expression_choose_order.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_solve } from "./app_learn_js_lesson_expression_remainder_divide_solve.mjs";
 import { app_learn_js_lesson_functions_arithmetic } from "./app_learn_js_lesson_functions_arithmetic.mjs";
-export function app_code_review_preview_lessons_under_test() {
+export function app_learn_js_review_preview_lessons_under_test() {
   arguments_assert(arguments, 0);
   ("the handful of lessons the sandbox's review preview opens on: the ones whose screens have just been changed and are waiting to be looked at");
   ("Lessons rather than lesson ids, because a lesson is a function this file imports and an id is a word typed out. A name renamed away stops the build; a word renamed away draws a button that throws when it is pressed, and the person pressing it is the one person who cannot tell whether the fault is the button or the thing they were asked to look at.");

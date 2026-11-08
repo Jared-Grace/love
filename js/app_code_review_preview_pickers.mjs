@@ -6,7 +6,7 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
-import { app_code_review_preview_lessons_under_test } from "./app_code_review_preview_lessons_under_test.mjs";
+import { app_learn_js_review_preview_lessons_under_test } from "./app_learn_js_review_preview_lessons_under_test.mjs";
 export function app_code_review_preview_pickers(picker, stage, question_show) {
   arguments_assert(arguments, 3);
   function lessons_show() {
@@ -39,7 +39,7 @@ export function app_code_review_preview_pickers(picker, stage, question_show) {
     let asked =
       "The lessons waiting to be looked at. Pick one, then a question kind - that draws one real review question, and picking the same kind again asks it again on a fresh line.";
     html_p_text(picker, asked);
-    let fns = app_code_review_preview_lessons_under_test();
+    let fns = app_learn_js_review_preview_lessons_under_test();
     function each_fn(fn) {
       let lesson = fn();
       let lesson_id = property_get(lesson, "id");
