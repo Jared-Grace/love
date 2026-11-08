@@ -8,7 +8,7 @@ import { app_code_program_trace_log } from "./app_code_program_trace_log.mjs";
 import { app_code_program_trace_if } from "./app_code_program_trace_if.mjs";
 import { app_code_program_trace_while } from "./app_code_program_trace_while.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_program_trace_for } from "./app_code_program_trace_for.mjs";
+import { app_learn_js_program_trace_for } from "./app_learn_js_program_trace_for.mjs";
 import { error } from "./error.mjs";
 export function app_code_program_trace_statement(node, actions, code, values) {
   arguments_assert(arguments, 4);
@@ -48,7 +48,7 @@ export function app_code_program_trace_statement(node, actions, code, values) {
   let start_none =
     equal(type, "ForStatement") && null_is(property_get(node, "init"));
   if (start_none) {
-    let run3 = app_code_program_trace_for(node, actions, code, values);
+    let run3 = app_learn_js_program_trace_for(node, actions, code, values);
     return run3;
   }
   error({
