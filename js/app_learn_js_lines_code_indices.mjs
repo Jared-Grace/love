@@ -6,7 +6,7 @@ import { list_filter } from "./list_filter.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-export function app_code_lines_code_indices(lines) {
+export function app_learn_js_lines_code_indices(lines) {
   "The places in a program that hold code, as opposed to a comment - the lines a student could be asked to build.";
   "A COMMENT IS NEVER ONE OF THEM. Its words are the writer's own and could be anything, so there is no way to build one from pieces, and nothing the program does would say whether it was built right.";
   "NOR IS A LINE OF ONE PIECE, such as a closing }. The line is built from its own pieces and nothing else, so one piece is one button and pressing it decides nothing; measured 2026-10-27, 194 of the 2820 lines these quizzes could leave out were a lone }, in 35 lessons. A program with no line of two pieces keeps its lines of one, so there is always a line to ask.";

@@ -1,4 +1,4 @@
-import { app_code_lines_code_indices } from "./app_code_lines_code_indices.mjs";
+import { app_learn_js_lines_code_indices } from "./app_learn_js_lines_code_indices.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -14,7 +14,7 @@ export function app_code_lines_missing_next_new() {
   let index_last = null;
   ("A round is made from one program's lines, and the programs of a quiz need not all be the same length: one with else beside one with two ifs differ by a line. So before each question the round keeps only the lines this program has as code, and starts afresh when none are left; without that it asked for line 8 of a program of 7, 2026-10-08. Where every program has the same lines, which was every quiz before then, it keeps the whole round and changes nothing.");
   function next(lines) {
-    let indices = app_code_lines_code_indices(lines);
+    let indices = app_learn_js_lines_code_indices(lines);
     function fits(index) {
       let included = list_includes(indices, index);
       return included;
