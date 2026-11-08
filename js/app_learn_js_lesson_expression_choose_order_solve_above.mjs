@@ -8,7 +8,7 @@ import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_express
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_learn_js_lesson_expression_choose_order_expression } from "./app_learn_js_lesson_expression_choose_order_expression.mjs";
 import { app_learn_js_lesson_suppose_solve_line } from "./app_learn_js_lesson_suppose_solve_line.mjs";
-import { app_code_operators_say } from "./app_code_operators_say.mjs";
+import { app_learn_js_operators_say } from "./app_learn_js_operators_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_expression_choose_order_solve_above(
   ("The times is on the right of it, for the reason the first question of the bank puts it there: the operator to choose is not the leftmost one, so a learner reading the run learns to read the operator rather than the position.");
   ("The steps are told in the past tense and of the learner - you chose, you saw, you replaced - because they are not being taught here. They happened, on the screen before this one, and what they are doing in this lesson is holding the place the change goes into.");
   let definition_card = app_learn_js_container_light_blue(root);
-  app_code_operators_say(definition_card);
+  app_learn_js_operators_say(definition_card);
   let strong_right = true;
   let tree =
     app_learn_js_lesson_expression_choose_order_expression(strong_right);
