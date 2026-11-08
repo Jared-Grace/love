@@ -6,7 +6,7 @@ import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs
 import { text_combine } from "./text_combine.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
-export function app_code_review_arrow(r2, context) {
+export function app_learn_js_review_arrow(r2, context) {
   arguments_assert(arguments, 2);
   let skip_button = property_get(r2, "skip_button");
   let go_next = property_get(r2, "go_next");
