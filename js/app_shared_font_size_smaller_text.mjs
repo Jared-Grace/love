@@ -7,8 +7,10 @@ export function app_shared_font_size_smaller_text() {
   let texts = {
     en: " Font size smaller",
     ur: " لکھائی چھوٹی کریں",
+    tgl: " Paliitin ang titik",
     translated_from: {
       ur: " Font size smaller",
+      tgl: " Font size smaller",
     },
   };
   let label = app_shared_text_reader_language(texts);
