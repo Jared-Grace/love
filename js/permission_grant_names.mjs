@@ -2461,7 +2461,7 @@ export function permission_grant_names() {
     fn_name("webpack_watch_bundle_stale_is"),
     fn_name("g_arc_feedback_person_standing"),
     fn_name("qa_promoted_public_pieces_served_is_cases_gate_run"),
-    fn_name("app_code_tests_run_e2e_happy_steps_max"),
+    fn_name("app_learn_js_tests_run_e2e_happy_steps_max"),
     fn_name("song_image_notes_done"),
     fn_name("function_parameters_record_multiple"),
     fn_name("app_message_download_private_missing"),

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_tests_run_e2e_happy_steps_max } from "./app_code_tests_run_e2e_happy_steps_max.mjs";
+import { app_learn_js_tests_run_e2e_happy_steps_max } from "./app_learn_js_tests_run_e2e_happy_steps_max.mjs";
 import { phone_test_width } from "./phone_test_width.mjs";
 import { phone_test_height } from "./phone_test_height.mjs";
 import { playwright_happy_walk } from "./playwright_happy_walk.mjs";
@@ -16,7 +16,7 @@ export async function app_learn_js_happy_url_walked_generic(url, page_prepare) {
   "WHERE the course is served is asked for rather than looked up, because there are two answers and they are answers to different questions. The dev server on this machine says what the folder holds right now, which is what somebody editing wants to know. A server put up over a frozen copy says what one commit holds, which is what a judgement of that commit has to be about, and there is no other way to be sure the two agree.";
   "page_prepare is what lets a build be walked at an address it has not been put at yet - the build waiting to go out, walked at the top of the site, where the public opens it. A page decides what it shows by its address, so a walk anywhere else walks a different course.";
   arguments_assert(arguments, 2);
-  let steps_max = app_code_tests_run_e2e_happy_steps_max();
+  let steps_max = app_learn_js_tests_run_e2e_happy_steps_max();
   let walked = null;
   async function on_page(page) {
     "the walk is taken on a screen the size of a phone, because a phone is what the course is held on - and the walk measures every screen it reaches, so a part too wide for a phone is caught there rather than by a learner scrolling sideways";

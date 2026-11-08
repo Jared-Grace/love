@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { list_size } from "./list_size.mjs";
 import { multiply } from "./multiply.mjs";
-export function app_code_tests_run_e2e_happy_steps_max() {
+export function app_learn_js_tests_run_e2e_happy_steps_max() {
   "the most presses a walk of the whole code course may take before it is called a loop rather than a long course";
   "It has to stand well above the real number, because the real number grows every time a lesson is written and a limit that had to be raised with each lesson would be raised without being thought about. It has to stand below forever, because the failure it is here to catch is a screen that leads back to itself, and that walk never ends on its own.";
   "So it is counted from the course rather than written down. The number of lessons is the one thing the walk's length actually follows, and asking the course how long it is means writing a lesson never touches this - which is what the paragraph above asked for and a written number could not keep.";
