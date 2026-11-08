@@ -2,7 +2,7 @@ import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_review_seeds_live } from "./app_code_review_seeds_live.mjs";
+import { app_learn_js_review_seeds_live } from "./app_learn_js_review_seeds_live.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_learn_js_review_questions_cap } from "./app_learn_js_review_questions_cap.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_review_load(
   if (stored_present) {
     let queue_stored = property_get(stored, "seeds");
     let passed_stored = property_get(stored, "passed");
-    let queue_live = app_code_review_seeds_live(queue_stored, kind_is);
+    let queue_live = app_learn_js_review_seeds_live(queue_stored, kind_is);
     let live_any = list_empty_not_is(queue_live);
     let finished = list_empty_is(queue_stored);
     let usable = live_any || finished;
