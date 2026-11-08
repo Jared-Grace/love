@@ -1,5 +1,5 @@
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
-import { app_code_progress_all_clear } from "./app_code_progress_all_clear.mjs";
+import { app_learn_js_progress_all_clear } from "./app_learn_js_progress_all_clear.mjs";
 import { app_code_screen_capped } from "./app_code_screen_capped.mjs";
 import { app_code_settings } from "./app_code_settings.mjs";
 import { app_shared_confirm_red } from "./app_shared_confirm_red.mjs";
@@ -17,7 +17,7 @@ export function app_code_settings_clear_confirm(context) {
     " Yes, mark lessons and reviews incomplete",
   );
   async function on_confirm() {
-    app_code_progress_all_clear(context);
+    app_learn_js_progress_all_clear(context);
     await app_shared_screen_set(context, app_learn_js_home);
   }
   app_shared_confirm_red(
