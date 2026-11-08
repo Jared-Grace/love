@@ -7,7 +7,7 @@ import { list_includes } from "./list_includes.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_lines_indent_braces } from "./app_code_lines_indent_braces.mjs";
+import { app_learn_js_lines_indent_braces } from "./app_learn_js_lines_indent_braces.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
@@ -41,7 +41,7 @@ export function app_code_quiz_lines_order_indent_unlike() {
     );
     let code = property_get(exercise, answer_property);
     let lines = text_split_newline(code);
-    let list = app_code_lines_indent_braces(lines);
+    let list = app_learn_js_lines_indent_braces(lines);
     let drawn = list_join_newline(list);
     let b = equal(drawn, code);
     if (not(b)) {

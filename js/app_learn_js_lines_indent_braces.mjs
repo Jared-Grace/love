@@ -1,7 +1,7 @@
 import { math_max } from "./math_max.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lines_indent_braces(lines) {
+export function app_learn_js_lines_indent_braces(lines) {
   arguments_assert(arguments, 1);
   ("The lines indented by the { } they stand inside, in the order given: two spaces for each { still open, a line starting with } standing at the depth it closes. The indent each line came with is dropped, since it belongs to whatever order it was first written in");
   let depth = 0;

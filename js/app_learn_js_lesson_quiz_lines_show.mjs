@@ -3,7 +3,7 @@ import { list_skip } from "./list_skip.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { app_code_lines_indent_braces } from "./app_code_lines_indent_braces.mjs";
+import { app_learn_js_lines_indent_braces } from "./app_learn_js_lines_indent_braces.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_quiz_lines_show(answer_div, chosen, lines) {
@@ -17,7 +17,7 @@ export function app_learn_js_lesson_quiz_lines_show(answer_div, chosen, lines) {
   }
   let blanks = list_map(rest, line_blank);
   ("2026-10-23, at the human's asking: the lines tapped are indented by the { } of the order they were tapped in, since another right order can put a line inside a { } it was not inside before, or outside one it was");
-  let a = app_code_lines_indent_braces(chosen);
+  let a = app_learn_js_lines_indent_braces(chosen);
   let shown = list_concat(a, blanks);
   let text = list_join_newline(shown);
   html_text_set_code_dark_lines(answer_div, text);

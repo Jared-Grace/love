@@ -14,7 +14,7 @@ import { list_sort_text } from "./list_sort_text.mjs";
 import { list_take } from "./list_take.mjs";
 import { app_learn_js_lesson_quiz_lines_show } from "./app_learn_js_lesson_quiz_lines_show.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_code_lines_indent_braces } from "./app_code_lines_indent_braces.mjs";
+import { app_learn_js_lines_indent_braces } from "./app_learn_js_lines_indent_braces.mjs";
 import { app_learn_js_lesson_quiz_pieces_select } from "./app_learn_js_lesson_quiz_pieces_select.mjs";
 export function app_learn_js_lesson_quiz_lines_order(
   parent,
@@ -56,7 +56,7 @@ export function app_learn_js_lesson_quiz_lines_order(
   function show(variations_now, chosen_now) {
     let order = list_first(variations_now);
     ("the answer shown is indented by its own { }, for the same reason the lines tapped are");
-    let list = app_code_lines_indent_braces(order);
+    let list = app_learn_js_lines_indent_braces(order);
     let joined = list_join_newline(list);
     correction_code_set(joined);
     app_learn_js_lesson_quiz_lines_show(answer_div, chosen_now, lines);

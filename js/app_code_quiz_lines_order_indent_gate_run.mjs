@@ -13,7 +13,7 @@ export function app_code_quiz_lines_order_indent_gate_run() {
   let found = property_get(r, "found");
   let hint = text_combine_multiple([
     "these lessons write a program the unscramble quiz draws with a different indent, so the quiz shows it unlike the lesson - write it with two spaces for each { still open, as ",
-    fn_name("app_code_lines_indent_braces"),
+    fn_name("app_learn_js_lines_indent_braces"),
     " draws it",
   ]);
   let result = list_empty_is_assert_walked_generic(walked, found, hint);
