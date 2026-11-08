@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_tokens_rows_braces } from "./app_code_tokens_rows_braces.mjs";
+import { app_learn_js_tokens_rows_braces } from "./app_learn_js_tokens_rows_braces.mjs";
 import { app_learn_js_lesson_token_order_example_choose_generic } from "./app_learn_js_lesson_token_order_example_choose_generic.mjs";
 export function app_learn_js_lesson_token_order_example_choose_braces_only(
   component,
@@ -9,7 +9,7 @@ export function app_learn_js_lesson_token_order_example_choose_braces_only(
   arguments_assert(arguments, 3);
   ("a worked example whose tokens are chosen in order on the page itself, with nothing showing which comes next, every pair of braces in a colour of its own, and under the code only the braces chosen, in their colours");
   ("Takes the example's outer box as well because that is how every worked example is drawn; the choosing needs only the box it is drawn in.");
-  let rows = app_code_tokens_rows_braces();
+  let rows = app_learn_js_tokens_rows_braces();
   app_learn_js_lesson_token_order_example_choose_generic(
     component,
     code,
