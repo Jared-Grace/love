@@ -5,7 +5,7 @@ import { fn_name } from "./fn_name.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_learn_js_lines_missing_batch } from "./app_learn_js_lines_missing_batch.mjs";
 import { list_remove_first } from "./list_remove_first.mjs";
-export function app_code_lines_missing_next_new() {
+export function app_learn_js_lines_missing_next_new() {
   ("Makes what hands out which line to leave out, one question at a time, in the rounds ",
     fn_name("app_learn_js_lines_missing_batch"),
     " makes.");
