@@ -20,8 +20,24 @@ export function app_shared_money_section_free() {
         "اگر آپ کے پاس دینے کے لیے پیسے نہیں ہیں، تب بھی ہر چیز آپ کے لیے کھلی ہے۔",
       ],
     },
+    tgl: {
+      title: "Libre ang lahat, at laging magiging libre ang lahat",
+      lines: [
+        "Walang anumang kailangang bayaran.",
+        "Hindi ka kailanman pipilitin na magbayad para gumamit ng anuman.",
+        "Kung wala kang perang maibibigay, magagamit mo pa rin ang lahat.",
+      ],
+    },
     translated_from: {
       ur: {
+        title: "Everything is free, and everything always will be",
+        lines: [
+          "Nothing requires payment.",
+          "You will never be forced to pay to use anything.",
+          "If you have no money to give, you still have access to everything.",
+        ],
+      },
+      tgl: {
         title: "Everything is free, and everything always will be",
         lines: [
           "Nothing requires payment.",
