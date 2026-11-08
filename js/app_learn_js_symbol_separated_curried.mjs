@@ -1,7 +1,7 @@
-import { app_code_symbol_separated } from "./app_code_symbol_separated.mjs";
+import { app_learn_js_symbol_separated } from "./app_learn_js_symbol_separated.mjs";
 export function app_learn_js_symbol_separated_curried(parent) {
   let c = function app_code_symbol_separated_curried_result(d) {
-    let s = app_code_symbol_separated(parent, d);
+    let s = app_learn_js_symbol_separated(parent, d);
     return s;
   };
   return c;
