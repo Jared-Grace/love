@@ -4,8 +4,10 @@ export function app_shared_bible_word_sites_others_text_get() {
   let texts = {
     en: "Others:",
     ur: "دیگر:",
+    tgl: "Iba pa:",
     translated_from: {
       ur: "Others:",
+      tgl: "Others:",
     },
   };
   let v = app_shared_text_reader_language(texts);
