@@ -13,7 +13,7 @@ import { list_first } from "./list_first.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_lines_wrong_say(question, answer, choice) {
+export function app_learn_js_lines_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong output for a program that writes out several lines: the lines the other way round are answered with the order they run in, and one line standing on every line is answered with each line's own value. Parts take turns between words and code. null for any other wrong pick, so nothing beside the point is said");
   ("The question is not looked at, the same as the decoys these answer: both mistakes are properties of the answer and the pick alone, so the reminder holds for every lesson that offers them, whichever decoy function built them. Not picked: a reminder per lesson, which would say the same two things many times over; naming the first line that differs, which says where the pick is wrong but not why");

@@ -5,7 +5,7 @@ import { app_learn_js_console_log_wrong_say } from "./app_learn_js_console_log_w
 import { app_learn_js_expression_wrong_say } from "./app_learn_js_expression_wrong_say.mjs";
 import { app_code_math_call_wrong_say } from "./app_code_math_call_wrong_say.mjs";
 import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_say.mjs";
-import { app_code_lines_wrong_say } from "./app_code_lines_wrong_say.mjs";
+import { app_learn_js_lines_wrong_say } from "./app_learn_js_lines_wrong_say.mjs";
 import { app_code_program_trace_wrong_say } from "./app_code_program_trace_wrong_say.mjs";
 import { app_code_program_lets_wrong_say } from "./app_code_program_lets_wrong_say.mjs";
 import { app_code_value_itself_wrong_say } from "./app_code_value_itself_wrong_say.mjs";
@@ -38,7 +38,7 @@ export function app_learn_js_forwards_wrong_say(question, answer, choice) {
   if (null_not_is(string)) {
     return string;
   }
-  let lines = app_code_lines_wrong_say(question, answer, choice);
+  let lines = app_learn_js_lines_wrong_say(question, answer, choice);
   if (null_not_is(lines)) {
     return lines;
   }
