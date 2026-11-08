@@ -5,7 +5,7 @@ import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_quiz_exercise_wrong_texts(exercise, qa_texts) {
+export function app_learn_js_quiz_exercise_wrong_texts(exercise, qa_texts) {
   "Every wrong answer one quiz screen could put in front of a learner, as the letters they would read.";
   "They are worked out the way the screen works them out: a fresh run of the batch, its own question left out, and whatever the lesson asked for by name put in beside them. Not the four programs the learner is looking at - those are a different run, which is the whole reason a lesson can mean to offer a word and not offer it.";
   "Anything answering the same as the right answer is left out of both runs. Two questions can differ and still be answered the same way, and a wrong answer that is not wrong is one the learner cannot be marked down for picking - counting it would make a screen look harder than it is.";
