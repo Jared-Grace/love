@@ -4,8 +4,10 @@ export function app_shared_bible_word_ask_ai_text_get() {
   let texts = {
     en: "Ask an AI:",
     ur: "کسی AI سے پوچھیں:",
+    tgl: "Magtanong sa isang AI:",
     translated_from: {
       ur: "Ask an AI:",
+      tgl: "Ask an AI:",
     },
   };
   let v = app_shared_text_reader_language(texts);
