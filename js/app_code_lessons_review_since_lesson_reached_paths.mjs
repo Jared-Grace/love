@@ -32,7 +32,7 @@ export async function app_code_lessons_review_since_lesson_reached_paths(
         continue;
       }
       seen[imported_name] = true;
-      if (equal(imported_name, fn_name("app_code_lessons_fns"))) {
+      if (equal(imported_name, fn_name("app_learn_js_lessons_fns"))) {
         continue;
       }
       waiting.push(imported_name);

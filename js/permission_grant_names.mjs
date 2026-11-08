@@ -820,7 +820,7 @@ export function permission_grant_names() {
     fn_name("address_key_doors_wrapped_gate_run"),
     fn_name("qa_commit_named_apps_report"),
     fn_name("functions_granted_silent_baseline_write"),
-    fn_name("app_code_lessons_fns"),
+    fn_name("app_learn_js_lessons_fns"),
     fn_name("function_param_new_first"),
     fn_name("function_rename_commit"),
     fn_name("hash_object_word_calls_unknown_gate_run"),

@@ -1,7 +1,7 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { not } from "./not.mjs";
@@ -19,7 +19,7 @@ export function app_code_wrong_say_silent_walked() {
   ("A quiz is asked as the learner meets it, through the same choosing of question and buttons, and every wrong button on it is pressed; the lesson is silent when no press on any of its quizzes, over two rounds of its questions, is answered with a reminder. Not picked: silent on any one quiz, since a reminder that speaks to some wrong picks and not others is the intended shape, and the questions are drawn at random, so a per-quiz count would move between runs with nothing changed. Not picked: the backwards quizzes, which pick the code for an output and have no shared reminder yet - a ratchet over them would hold almost every lesson");
   let walked = 0;
   let offenders = [];
-  for (let fn of app_code_lessons_fns()) {
+  for (let fn of app_learn_js_lessons_fns()) {
     let lesson = fn();
     let asked = 0;
     let said = 0;

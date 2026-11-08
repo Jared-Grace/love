@@ -1,6 +1,6 @@
 import { app_shared_page_stage_prod_is } from "./app_shared_page_stage_prod_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { app_shared_page_stage_latest_is } from "./app_shared_page_stage_latest_is.mjs";
 import { app_code_lessons_latest_held_fns } from "./app_code_lessons_latest_held_fns.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lessons_fns_shown() {
   ("latest shows every lesson, the same as a working copy - at the human's request, 2026-09-26, so the whole course can be tried there. Only the public site still shows just the released run");
   let handed_to_a_learner = prod;
   let whole = not(handed_to_a_learner);
-  let fns = app_code_lessons_fns();
+  let fns = app_learn_js_lessons_fns();
   if (whole) {
     ("latest leaves out only the lessons held back from it, so one not ready yet can be kept off while the rest are tried there");
     ("2026-10-27, at the human's asking - prod without the while lessons, latest with what exists now, then we develop in dev: the working copy shows every lesson again, held ones too, so a new lesson is read there while latest goes on leaving it out. This takes back the 2026-10-24 choice that the working copy show exactly what latest will.");

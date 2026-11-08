@@ -2,7 +2,7 @@ import { app_code_line_kinds } from "./app_code_line_kinds.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,7 +19,7 @@ export function app_code_lessons_shapes(rounds) {
   ("A lesson that hands out no code at all is kept in the list and marked, rather than left out of it, so that a reading of the order still has every lesson in its own place and can say which places it passed over.");
   ("Every lesson here, rather than the run the built site shows, because the order is a fact about the course as written and a reading of it should not change with what has been released.");
   ("The lesson is asked for through the helper that puts its id on rather than by calling the function, which is what keeps the names in this reading the same names the app stores progress under. Calling the function got the id the lesson built for itself, and that one is on its way out.");
-  let fns = app_code_lessons_fns();
+  let fns = app_learn_js_lessons_fns();
   let shapes = [];
   let place = 0;
   for (let fn of fns) {

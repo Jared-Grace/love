@@ -16,7 +16,7 @@ export async function app_code_lessons_review_since(commit) {
   let folder = folder_repo_love();
   let list_path = text_combine_multiple([
     "js/",
-    fn_name("app_code_lessons_fns"),
+    fn_name("app_learn_js_lessons_fns"),
     ".mjs",
   ]);
   let r2 = await app_code_lessons_review_since_names_after(

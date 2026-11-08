@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { list_size } from "./list_size.mjs";
 import { multiply } from "./multiply.mjs";
 export function app_code_tests_run_e2e_happy_steps_max() {
@@ -11,7 +11,7 @@ export function app_code_tests_run_e2e_happy_steps_max() {
   "It was two hundred until then, three times an average of seventy-six, and the average fell by three quarters without the course changing at all. What changed is the walk: answering a question and leaving its screen became two different presses, so it now stops asking once a screen has said two answers were right, where before it pressed on until the screen let go of it. The rule is the one that was here before - three times what a lesson costs - and only the measurement under it is new.";
   "The AVERAGE is what it is set against and not the dearest lesson, because what is being allowed is a whole walk and not one screen of it. The dearest lesson measured 224 presses, more than the allowance for one lesson on its own, and it is paid for out of the hundred and thirty-two that came in under theirs - which is what a total budget is for. Set against the dearest instead, the limit would stand at thirty thousand and catch a screen leading back to itself some hours after it started leading back to itself.";
   arguments_assert(arguments, 0);
-  let fns = app_code_lessons_fns();
+  let fns = app_learn_js_lessons_fns();
   let lessons = list_size(fns);
   let v = multiply(lessons, 80);
   return v;

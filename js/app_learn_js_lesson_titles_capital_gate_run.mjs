@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_learn_js_lesson_titles_lower } from "./app_learn_js_lesson_titles_lower.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_lesson_titles_capital_gate_run() {
   ("IT RATCHETS AGAINST NOTHING. Forty eight titles were small the first time anybody looked and all forty eight were changed the same day, so a shrink-only record would hold nothing and exist only to say so.");
   ("A title opening with code is not a fault and is not counted, and the reading knows that from the drawing rather than from a list of exceptions. console.log and true and !== are spelled the way JavaScript spells them, and a capital would make each one a different word.");
   ("How many lessons were looked at travels out beside the verdict, because nothing wrong is also what this says on the day its walk stopped reaching any lessons at all.");
-  let fns = app_code_lessons_fns();
+  let fns = app_learn_js_lessons_fns();
   let walked = list_size(fns);
   let offenders = app_learn_js_lesson_titles_lower();
   let hint = text_combine_multiple([

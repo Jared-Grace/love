@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_above_fake_draw } from "./app_learn_js_lesson_above_fake_draw.mjs";
 import { app_learn_js_lessons_fake_page_lambda } from "./app_learn_js_lessons_fake_page_lambda.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { catch_error_text_or_null } from "./catch_error_text_or_null.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lessons_above_broken() {
   ("★ THE TELLING IS HANDED THE SURROUNDINGS THE APP HANDS IT, WHICH IS WHICH APP THIS IS. For its first days it was handed an empty set instead, on the reading that a telling is given them only to hand on and so nothing should read them. That reading was wrong, and wrong about half the lessons here: a telling that ends with Remember, from lesson 3 and a button back to it has to know which app to ask where the reader is, and asking is the whole point of the reminder. Measured 2026-09-23, sixty-six of a hundred and fifty-nine lessons were named as broken by this and every one of them drew perfectly well on a phone. A check that fails on working screens is worse than no check, because the sixty-six teach whoever runs it to read past the one line that is real.");
   ("The surroundings are the real app rather than something shaped like it, because everything filed for a reader is filed under the app's own name and a stand-in name would file it somewhere no reader ever looks. There is nothing else in them: a telling that reaches for more than the app it is in is named here, and that is the fault the empty set was reaching for.");
   ("One tab's memory is stood in for as well, because that is where the reader's place is kept and reaching for it where there is no browser stops the drawing on the browser's absence rather than on anything about the lesson.");
-  let fns = app_code_lessons_fns();
+  let fns = app_learn_js_lessons_fns();
   let broken = [];
   function all_draw() {
     for (let i = 0; less_than(i, fns.length); i++) {

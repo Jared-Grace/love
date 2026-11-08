@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_lesson_reference_draw(parent, context, lesson_fn) {
   ("writes where an earlier lesson is into a line already started: lesson N with the number a button to it, or, for the lesson just before this one, the previous lesson as the button. Any sentence that leans on an earlier lesson can say which and let a learner who does not know it go and look, and step down again from there until they reach one they do know");
   ("The number is asked of the lesson order rather than written into the sentence, so a lesson moved or put in ahead of the one pointed at changes every reference with it, and no reference can go on naming a lesson that is now somewhere else.");
   ("The number is itself the button, so a learner who does not remember can go and look without hunting through the list for it.");
-  let fns = app_code_lessons_fns();
+  let fns = app_learn_js_lessons_fns();
   let index = list_index_of(fns, lesson_fn);
   let number_whole = add_1(index);
   let ids = app_learn_js_lesson_ids_short();

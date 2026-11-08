@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { app_code_lessons_shapes } from "./app_code_lessons_shapes.mjs";
 import { app_code_lessons_stretched } from "./app_code_lessons_stretched.mjs";
 import { list_get } from "./list_get.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_kinds_introduced(rounds) {
   ("The three, at that measurement, were lesson fifteen at about thirteen in a hundred, lesson seventy-two at half, and lesson seventy at about three in a hundred. The first two explain themselves once opened - fifteen teaches a subtraction whose answer goes below nothing, so the minus sign it brings in stands on the answers rather than the questions, and seventy-two teaches four named functions by setting each beside the sign it stands for, so half of what it hands out is deliberately the old form. Seventy does not explain itself: it is a lesson about which of two numbers is less, and the power sign it brings in is on four of its lines and on twelve lines in the whole course, and no lesson anywhere is about it.");
   ("A lesson that hands out no worked-out code brings in no kinds and is simply not here, which is nothing rather than none.");
   ("The share is near enough rather than exact, and the reading leans on the part of it that is exact. A lesson is asked what it can hand out, and for some lessons that comes back a slightly different size each time - lesson seventy answered a hundred and thirty-five, a hundred and thirty-two and a hundred and twenty-eight on three runs, while the four lines carrying the power sign were the same four every time. So the share moves a little and the ordering does not, and the question this is really for - does the lesson carry what it brings in on every line - is steady whatever the size, because a lesson carrying it on all of them carries it on all of however many it drew.");
-  let fns = app_code_lessons_fns();
+  let fns = app_learn_js_lessons_fns();
   let shapes = app_code_lessons_shapes(rounds);
   let stretched = app_code_lessons_stretched(shapes);
   let introduced = [];

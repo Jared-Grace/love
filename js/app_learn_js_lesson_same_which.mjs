@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_same_which(fn_reading, fn_repeated) {
   ("A lesson that is not in the list at all is a mistake worth stopping on, and ",
     fn_name("list_index_of"),
     " stops on it already, so there is nothing to check here.");
-  let fns = app_code_lessons_fns();
+  let fns = app_learn_js_lessons_fns();
   let here = list_index_of(fns, fn_reading);
   let there = list_index_of(fns, fn_repeated);
   let gap = subtract(here, there);

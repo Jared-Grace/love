@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { object_values } from "./object_values.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
+import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { list_map } from "./list_map.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { text_lines_working } from "./text_lines_working.mjs";
@@ -20,7 +20,7 @@ export async function app_code_lessons_review_since_changed_path(
     let named = f.name;
     return named;
   }
-  let list = app_code_lessons_fns();
+  let list = app_learn_js_lessons_fns();
   let names_after = list_map(list, fn_named);
   let diff_text = await git_folder_run(folder, [
     "diff",
