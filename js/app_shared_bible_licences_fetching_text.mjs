@@ -5,8 +5,10 @@ export function app_shared_bible_licences_fetching_text() {
   let texts = {
     en: "Fetching the credits",
     ur: "دینے والوں کی فہرست لائی جا رہی ہے",
+    tgl: "Kinukuha ang mga pagkilala",
     translated_from: {
       ur: "Fetching the credits",
+      tgl: "Fetching the credits",
     },
   };
   let text = app_shared_text_reader_language(texts);
