@@ -1,5 +1,5 @@
 import { text_split_space } from "./text_split_space.mjs";
-export function app_code_verse_words() {
+export function app_learn_js_verse_words() {
   let verse =
     "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life";
   let words = text_split_space(verse);
