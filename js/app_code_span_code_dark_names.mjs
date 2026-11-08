@@ -1,7 +1,7 @@
 import { text_skip } from "./text_skip.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_code_dark } from "./html_span_code_dark.mjs";
-import { app_code_note_name_spans } from "./app_code_note_name_spans.mjs";
+import { app_learn_js_note_name_spans } from "./app_learn_js_note_name_spans.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { text_slice } from "./text_slice.mjs";
@@ -13,7 +13,7 @@ export function app_code_span_code_dark_names(parent, code, names) {
   ("The colour is asked of the same place the program's own chip asks it, with the same list of names in the same order, so a name cannot come out one colour in the code and another in the sentence underneath it. The pairing is the whole point, and two answers would make it a lie.");
   ("The code is parsed, never searched, for the reason the program's chip gives: the letter a is inside the word grapes. So a letter inside quote marks is left white here - it is a letter, not a cup.");
   let chip = html_span_code_dark(parent);
-  let spans = app_code_note_name_spans(code, names);
+  let spans = app_learn_js_note_name_spans(code, names);
   function lambda_start(span) {
     let start = list_first(span);
     return start;

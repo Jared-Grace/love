@@ -3,7 +3,7 @@ import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_note_name_color_or_null } from "./app_learn_js_note_name_color_or_null.mjs";
 import { js_visit_identifiers_nodes } from "./js_visit_identifiers_nodes.mjs";
-export function app_code_note_name_spans(code, names) {
+export function app_learn_js_note_name_spans(code, names) {
   arguments_assert(arguments, 2);
   ("where in a program's code each marked name stands, and the colour it is lent there, so the name in a note and the same name in the code can be drawn alike");
   ('THE CODE IS PARSED, NEVER SEARCHED. The names this course hands out are single letters, and a single letter is inside half the words a program holds - the letter a is in the word grapes, and let a = "grapes"; would light up twice if the text were searched. Only the parser knows which of those letters is a name.');

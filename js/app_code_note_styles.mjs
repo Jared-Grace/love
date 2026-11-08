@@ -12,7 +12,7 @@ import { app_code_note_names_marked } from "./app_code_note_names_marked.mjs";
 import { app_learn_js_note_marks } from "./app_learn_js_note_marks.mjs";
 import { app_learn_js_note_name_color_or_null } from "./app_learn_js_note_name_color_or_null.mjs";
 import { add } from "./add.mjs";
-import { app_code_note_name_spans } from "./app_code_note_name_spans.mjs";
+import { app_learn_js_note_name_spans } from "./app_learn_js_note_name_spans.mjs";
 export function app_code_note_styles(code) {
   arguments_assert(arguments, 1);
   ("one colour and one strength for every single character of a program, in the order the characters stand, so that whoever draws it never has to decide anything");
@@ -61,7 +61,7 @@ export function app_code_note_styles(code) {
       }
     }
   }
-  let spans = app_code_note_name_spans(code, names);
+  let spans = app_learn_js_note_name_spans(code, names);
   for (let span of spans) {
     let span_last = subtract(span[1], 1);
     for (let index of range_from(span[0], span_last)) {
