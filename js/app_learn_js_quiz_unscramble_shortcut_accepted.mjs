@@ -4,7 +4,7 @@ import { or } from "./or.mjs";
 import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js_lesson_quiz_token_select_variations.mjs";
 import { app_learn_js_lessons_unscramble_codes } from "./app_learn_js_lessons_unscramble_codes.mjs";
 import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
-import { app_code_quiz_variation_buildable_is } from "./app_code_quiz_variation_buildable_is.mjs";
+import { app_learn_js_quiz_variation_buildable_is } from "./app_learn_js_quiz_variation_buildable_is.mjs";
 import { js_tokens_parenthesis_group_sizes } from "./js_tokens_parenthesis_group_sizes.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -40,7 +40,10 @@ export function app_learn_js_quiz_unscramble_shortcut_accepted(rounds) {
     let groups = js_tokens_parenthesis_group_sizes(tokens);
     let variations = app_learn_js_lesson_quiz_token_select_variations(code);
     for (let variation of variations) {
-      let buildable = app_code_quiz_variation_buildable_is(variation, offered);
+      let buildable = app_learn_js_quiz_variation_buildable_is(
+        variation,
+        offered,
+      );
       if (not(buildable)) {
         continue;
       }

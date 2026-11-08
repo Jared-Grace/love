@@ -6,7 +6,7 @@ import { html_text_set } from "./html_text_set.mjs";
 import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js_lesson_quiz_token_select_variations.mjs";
 import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_code_quiz_variation_buildable_is } from "./app_code_quiz_variation_buildable_is.mjs";
+import { app_learn_js_quiz_variation_buildable_is } from "./app_learn_js_quiz_variation_buildable_is.mjs";
 export function app_learn_js_lesson_quiz_token_select_variation_buildable(
   info,
   qa,
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_quiz_token_select_variation_buildable(
   let tokens_unique = list_unique(normalized);
   function variation_buildable(variation) {
     "keep only variations whose every token is an available button; a commutative swap across a non-commutative neighbour introduces parentheses (e.g. 9 - 4 + 4 gives 4 + (9 - 4)) that the answer never had, so there is no ( or ) button - that would be an unbuildable trap that accepts the first token then dead-ends";
-    let a = app_code_quiz_variation_buildable_is(variation, tokens_unique);
+    let a = app_learn_js_quiz_variation_buildable_is(variation, tokens_unique);
     return a;
   }
   let r = {

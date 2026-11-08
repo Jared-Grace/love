@@ -1,5 +1,5 @@
 import { list_included_in_is } from "./list_included_in_is.mjs";
-export function app_code_quiz_variation_buildable_is(
+export function app_learn_js_quiz_variation_buildable_is(
   variation,
   tokens_offered,
 ) {
