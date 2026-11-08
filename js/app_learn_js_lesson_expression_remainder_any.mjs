@@ -7,7 +7,7 @@ import { app_learn_js_lesson_expression_remainder_any_title_name_id } from "./ap
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
+import { app_learn_js_remainder_percent_labels } from "./app_learn_js_remainder_percent_labels.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { multiply } from "./multiply.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -58,7 +58,7 @@ export function app_learn_js_lesson_expression_remainder_any() {
     example_count: 2,
     decoys,
   };
-  let from2 = app_code_remainder_percent_labels();
+  let from2 = app_learn_js_remainder_percent_labels();
   object_merge(params, from2);
   let lesson = app_learn_js_lesson_expression_generic(params);
   return lesson;

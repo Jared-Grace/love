@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_console_log_remainder_generic_above } from "./app_learn_js_lesson_console_log_remainder_generic_above.mjs";
 import { app_learn_js_lesson_console_log_remainder_generic_code_of } from "./app_learn_js_lesson_console_log_remainder_generic_code_of.mjs";
 import { app_learn_js_lesson_console_log_remainder_generic_title_name_id } from "./app_learn_js_lesson_console_log_remainder_generic_title_name_id.mjs";
-import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
+import { app_learn_js_remainder_percent_labels } from "./app_learn_js_remainder_percent_labels.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
@@ -49,7 +49,7 @@ export function app_learn_js_lesson_console_log_remainder_generic(
     next_arg,
     example_count: 2,
   };
-  let from2 = app_code_remainder_percent_labels();
+  let from2 = app_learn_js_remainder_percent_labels();
   object_merge(params, from2);
   let lesson = app_learn_js_lesson_expression_generic(params);
   return lesson;
