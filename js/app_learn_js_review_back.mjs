@@ -7,7 +7,7 @@ import { app_learn_js_milestone_go } from "./app_learn_js_milestone_go.mjs";
 import { app_learn_js_lesson_go } from "./app_learn_js_lesson_go.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
-export function app_code_review_back(r2, context) {
+export function app_learn_js_review_back(r2, context) {
   arguments_assert(arguments, 2);
   let next_lesson = property_get(r2, "next_lesson");
   let has_next = property_get(r2, "has_next");
