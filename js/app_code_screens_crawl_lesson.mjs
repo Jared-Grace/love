@@ -1,7 +1,7 @@
 import { app_learn_js_screen_name_short } from "./app_learn_js_screen_name_short.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_learn_js_screen_capture_record } from "./app_learn_js_screen_capture_record.mjs";
-import { app_code_screens_crawl_lesson_quiz_url } from "./app_code_screens_crawl_lesson_quiz_url.mjs";
+import { app_learn_js_screens_crawl_lesson_quiz_url } from "./app_learn_js_screens_crawl_lesson_quiz_url.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -22,7 +22,7 @@ export async function app_code_screens_crawl_lesson(
   "the three words this address stands on are frozen, so each is read off the function holding it rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let v = app_shared_screen_hash_key();
-  let quiz_url = await app_code_screens_crawl_lesson_quiz_url(
+  let quiz_url = await app_learn_js_screens_crawl_lesson_quiz_url(
     v,
     url_prefix,
     id,
