@@ -23,7 +23,14 @@ import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 import { not } from "./not.mjs";
 import { and } from "./and.mjs";
 import { each } from "./each.mjs";
-export function app_code_number_line(parent, low, high, step, ends, middle) {
+export function app_learn_js_number_line(
+  parent,
+  low,
+  high,
+  step,
+  ends,
+  middle,
+) {
   arguments_assert(arguments, 6);
   ("$plain middle");
   ("a picture of a number line from low to high, a tick every step: the two ends a question is about filled blue and the middle filled green, so a reader can see the middle sit the same distance from both ends");
