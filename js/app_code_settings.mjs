@@ -1,7 +1,7 @@
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_learn_js_screen_capped } from "./app_learn_js_screen_capped.mjs";
 import { app_learn_js_settings_clear_confirm } from "./app_learn_js_settings_clear_confirm.mjs";
-import { app_code_settings_complete_confirm } from "./app_code_settings_complete_confirm.mjs";
+import { app_learn_js_settings_complete_confirm } from "./app_learn_js_settings_complete_confirm.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
 import { app_shared_font_size_buttons } from "./app_shared_font_size_buttons.mjs";
 import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
@@ -22,7 +22,7 @@ export function app_code_settings(context) {
   app_shared_screen_set_button(
     g,
     context,
-    app_code_settings_complete_confirm,
+    app_learn_js_settings_complete_confirm,
     combined,
   );
   let cross = emoji_x_red();

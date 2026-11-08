@@ -3843,7 +3843,7 @@
       "✅ Yes, mark lessons complete",
       "⬅️ Back"
     ],
-    "id": "app_code_settings_complete_confirm",
+    "id": "app_learn_js_settings_complete_confirm",
     "screen": "screen",
     "kind": 0
   },
