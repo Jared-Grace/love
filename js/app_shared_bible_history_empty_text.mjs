@@ -5,8 +5,10 @@ export function app_shared_bible_history_empty_text() {
   let texts = {
     en: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
     ur: "ابھی کچھ نہیں۔ آپ جو بھی پڑھ رہے ہوں وہ یہاں یاد رکھا جاتا ہے، تاکہ کوئی ٹیب بند ہو جائے تو آپ واپس آ سکیں۔",
+    tgl: "Wala pa. Anumang binabasa mo ay naaalala rito, para mabalikan mo ito kung magsara ang isang tab.",
     translated_from: {
       ur: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
+      tgl: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
     },
   };
   let text = app_shared_text_reader_language(texts);
