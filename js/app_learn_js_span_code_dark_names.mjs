@@ -7,7 +7,7 @@ import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-export function app_code_span_code_dark_names(parent, code, names) {
+export function app_learn_js_span_code_dark_names(parent, code, names) {
   arguments_assert(arguments, 3);
   ("one dark code chip set inside a sentence, with every cup name in it written in the colour that cup wears in the program above, so the name the sentence talks about and the name in the code can be seen to be the same cup");
   ("The colour is asked of the same place the program's own chip asks it, with the same list of names in the same order, so a name cannot come out one colour in the code and another in the sentence underneath it. The pairing is the whole point, and two answers would make it a lie.");

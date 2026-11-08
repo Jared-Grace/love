@@ -23,7 +23,7 @@ import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_
 import { app_learn_js_lesson_statement_name_two } from "./app_learn_js_lesson_statement_name_two.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_note_cycle_code } from "./app_learn_js_note_cycle_code.mjs";
-import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
+import { app_learn_js_span_code_dark_names } from "./app_learn_js_span_code_dark_names.mjs";
 import { app_learn_js_lesson_name_no_quotes_box } from "./app_learn_js_lesson_name_no_quotes_box.mjs";
 export function app_learn_js_lesson_statement_name_copy_single_above(
   root,
@@ -129,7 +129,7 @@ export function app_learn_js_lesson_statement_name_copy_single_above(
     ["In other words, ", held_last, " was changed to: "],
     uncolored,
   );
-  app_code_span_code_dark_names(changed, copied, names);
+  app_learn_js_span_code_dark_names(changed, copied, names);
   app_learn_js_lesson_name_no_quotes_box(
     root,
     name_first,

@@ -4,7 +4,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
+import { app_learn_js_span_code_dark_names } from "./app_learn_js_span_code_dark_names.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_style_normal_span } from "./app_code_style_normal_span.mjs";
 export function app_learn_js_lesson_name_quoted_letter_line(
@@ -24,11 +24,11 @@ export function app_learn_js_lesson_name_quoted_letter_line(
   let line_quoted = js_code_let_statement(name_copy, quoted);
   let line = html_div(parent);
   html_span_text(line, "If ");
-  app_code_span_code_dark_names(line, name_source, names);
+  app_learn_js_span_code_dark_names(line, name_source, names);
   html_span_text(line, " had quote marks ");
   html_span_text_code_dark(line, quote);
   html_span_text(line, " around it ");
-  app_code_span_code_dark_names(line, line_quoted, names);
+  app_learn_js_span_code_dark_names(line, line_quoted, names);
   html_span_text(line, " then that would put the letter ");
   app_code_style_normal_span(line, name_source);
   html_span_text(line, " in the cup instead");
