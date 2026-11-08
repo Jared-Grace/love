@@ -3,7 +3,7 @@ import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_b
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
-import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
+import { app_learn_js_prose_code_list } from "./app_learn_js_prose_code_list.mjs";
 import { app_learn_js_prose_code_line } from "./app_learn_js_prose_code_line.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
@@ -135,7 +135,7 @@ export function app_learn_js_lesson_expression_number_trichotomy() {
       ["code", "true"],
       ["text", ":"],
     ]);
-    app_code_prose_code_list(cases, [
+    app_learn_js_prose_code_list(cases, [
       [
         ["text", "They are the same ("],
         ["code", equals_operator],
