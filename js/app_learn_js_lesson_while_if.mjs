@@ -8,7 +8,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_if_inside_generic } from "./app_learn_js_lesson_if_inside_generic.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
-export function app_code_lesson_while_if() {
+export function app_learn_js_lesson_while_if() {
   arguments_assert(arguments, 0);
   ("an if inside a while: let n = 1; while (n < 6) { if (n > 2) { console.log(n); } n += 2; } writes out 3 and 5, one under the other, and not 1");
   ("The one new fact is that an if inside a while is asked again every time the while runs, so its { ... } can run on some runs and be skipped on others.");
