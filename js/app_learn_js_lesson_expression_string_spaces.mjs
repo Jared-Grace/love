@@ -4,7 +4,7 @@ import { list_map } from "./list_map.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { app_learn_js_lesson_expression_string_generic } from "./app_learn_js_lesson_expression_string_generic.mjs";
-import { app_code_verse_word_pairs } from "./app_code_verse_word_pairs.mjs";
+import { app_learn_js_verse_word_pairs } from "./app_learn_js_verse_word_pairs.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_string_shape } from "./app_learn_js_string_shape.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_expression_string_spaces() {
   }
   let name_id = title_name_id();
   let lesson = app_learn_js_lesson_expression_string_generic({
-    words_get: app_code_verse_word_pairs,
+    words_get: app_learn_js_verse_word_pairs,
     decoys,
     backwards_decoys,
     above,
@@ -59,7 +59,7 @@ export function app_learn_js_lesson_expression_string_spaces() {
   }
   function above(root) {
     "recall that a string is text in quotes (not re-bolded here - it was defined in the first string lesson), then the new idea: it can hold more than one word. The first example shows the SPACE as plain syntax; the definition then colours the value and notes the space is part of it";
-    let list = app_code_verse_word_pairs();
+    let list = app_learn_js_verse_word_pairs();
     let phrase = list_random_item(list);
     let code = app_learn_js_string_code(phrase);
     let intro = app_learn_js_container_light_blue(root);
