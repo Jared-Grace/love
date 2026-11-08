@@ -16,7 +16,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_quiz_dealing_alike_is } from "./app_learn_js_quiz_dealing_alike_is.mjs";
 import { each } from "./each.mjs";
 import { list_unique } from "./list_unique.mjs";
-export function app_code_quiz_tile_dealings_orderings(orderings, code) {
+export function app_learn_js_quiz_tile_dealings_orderings(orderings, code) {
   "$plain code";
   arguments_assert(arguments, 2);
   ("Every line the tiles of any one of these orderings can be dealt into - each tile handed round among the places of its own kind - kept only where the line is still a right answer to the question the orderings all came from.");
