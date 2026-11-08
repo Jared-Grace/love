@@ -15,7 +15,7 @@ import { add_1 } from "./add_1.mjs";
 import { list_max } from "./list_max.mjs";
 import { app_learn_js_batch_kind_has } from "./app_learn_js_batch_kind_has.mjs";
 import { list_filter_map_property } from "./list_filter_map_property.mjs";
-import { app_code_review_kind_run_is } from "./app_code_review_kind_run_is.mjs";
+import { app_learn_js_review_kind_run_is } from "./app_learn_js_review_kind_run_is.mjs";
 import { app_code_review_kind_step_is } from "./app_code_review_kind_step_is.mjs";
 import { app_learn_js_review_kind_line_missing_is } from "./app_learn_js_review_kind_line_missing_is.mjs";
 import { app_learn_js_review_kind_all_at_once_is } from "./app_learn_js_review_kind_all_at_once_is.mjs";
@@ -83,8 +83,8 @@ export function app_learn_js_milestones() {
   let v = milestone(
     "milestone_braces_run",
     "does this section run?",
-    app_code_review_kind_run_is,
-    app_code_review_kind_run_is,
+    app_learn_js_review_kind_run_is,
+    app_learn_js_review_kind_run_is,
   );
   let v2 = milestone(
     "milestone_braces_steps",
