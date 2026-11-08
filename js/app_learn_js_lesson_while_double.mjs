@@ -11,7 +11,7 @@ import { app_code_lesson_while_halve } from "./app_code_lesson_while_halve.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
+import { app_learn_js_lesson_while_generic } from "./app_learn_js_lesson_while_generic.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 import { js_code_while_lines } from "./js_code_while_lines.mjs";
@@ -88,7 +88,7 @@ export function app_learn_js_lesson_while_double() {
     "While doubling",
     "while (n < 20) { n *= 2; }",
   );
-  let lesson = app_code_lesson_while_generic({
+  let lesson = app_learn_js_lesson_while_generic({
     name_id,
     comparison: less,
     change: asterisk,

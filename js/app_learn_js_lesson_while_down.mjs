@@ -17,7 +17,7 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
+import { app_learn_js_lesson_while_generic } from "./app_learn_js_lesson_while_generic.mjs";
 import { add } from "./add.mjs";
 export function app_learn_js_lesson_while_down() {
   arguments_assert(arguments, 0);
@@ -102,7 +102,7 @@ export function app_learn_js_lesson_while_down() {
     "While counting down",
     "while (n > 2) { ... }",
   );
-  let lesson = app_code_lesson_while_generic({
+  let lesson = app_learn_js_lesson_while_generic({
     name_id,
     comparison: greater,
     change: minus,

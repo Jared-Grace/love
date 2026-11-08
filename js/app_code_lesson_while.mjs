@@ -16,7 +16,7 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
+import { app_learn_js_lesson_while_generic } from "./app_learn_js_lesson_while_generic.mjs";
 import { subtract } from "./subtract.mjs";
 import { js_code_while_lines } from "./js_code_while_lines.mjs";
 export function app_code_lesson_while() {
@@ -121,7 +121,7 @@ export function app_code_lesson_while() {
     "While",
     "while (n < 9) { ... }",
   );
-  let lesson = app_code_lesson_while_generic({
+  let lesson = app_learn_js_lesson_while_generic({
     name_id,
     comparison: less,
     change: plus,

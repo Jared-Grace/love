@@ -26,7 +26,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_generic(params) {
+export function app_learn_js_lesson_while_generic(params) {
   "A lesson about one while: let n = start; while (n comparison bound) { n change= amount; } console.log(n); asked forwards and backwards, its screens drawn from groups of programs, one group for each number of runs.";
   "What differs between lessons is the comparison, the change, the groups, how one run moves n and how it is undone, which values a wrong answer may take, the bound that makes the program run once more, and what is shown above; everything else is the same, so it is written here once.";
   let name_id = property_get(params, "name_id");
