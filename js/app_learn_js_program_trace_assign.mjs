@@ -13,7 +13,7 @@ import { app_code_program_trace_long_way } from "./app_code_program_trace_long_w
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_code_program_trace_assign(
+export function app_learn_js_program_trace_assign(
   expression,
   actions,
   code,
@@ -73,7 +73,12 @@ export function app_code_program_trace_assign(
     );
     let expression_long = property_get(long, "expression");
     let code_long = property_get(long, "code");
-    app_code_program_trace_assign(expression_long, actions, code_long, values);
+    app_learn_js_program_trace_assign(
+      expression_long,
+      actions,
+      code_long,
+      values,
+    );
     return;
   }
   let value9 = app_code_program_trace_value(right, actions, code, values);

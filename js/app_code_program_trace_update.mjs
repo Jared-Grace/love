@@ -4,7 +4,7 @@ import { not_equal } from "./not_equal.mjs";
 import { error } from "./error.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { app_code_program_trace_long_way } from "./app_code_program_trace_long_way.mjs";
-import { app_code_program_trace_assign } from "./app_code_program_trace_assign.mjs";
+import { app_learn_js_program_trace_assign } from "./app_learn_js_program_trace_assign.mjs";
 export function app_code_program_trace_update(
   expression,
   actions,
@@ -37,5 +37,10 @@ export function app_code_program_trace_update(
   );
   let expression_long = property_get(long, "expression");
   let code_long = property_get(long, "code");
-  app_code_program_trace_assign(expression_long, actions, code_long, values);
+  app_learn_js_program_trace_assign(
+    expression_long,
+    actions,
+    code_long,
+    values,
+  );
 }
