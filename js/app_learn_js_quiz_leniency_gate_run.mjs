@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_quiz_leniency_baseline_path } from "./app_learn_js_quiz_leniency_baseline_path.mjs";
 import { baseline_names_gate_walked_generic } from "./baseline_names_gate_walked_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
-export async function app_code_quiz_leniency_gate_run() {
+export async function app_learn_js_quiz_leniency_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: a quiz question cannot be answered by reading the right answer off the code.");
   ("A screen that marks a learner right for a reason that has nothing to do with what it teaches teaches nothing, and it does not look any different from one that works. The wrong answers are what tell them apart, and the wrong answers are made when the screen is drawn - nobody reading the lesson sees them.");

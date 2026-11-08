@@ -1663,7 +1663,7 @@ export function permission_grant_names() {
     fn_name("folders_function_named_roots"),
     fn_name("functions_calls_unawaited_baseline_path"),
     fn_name("functions_number_route"),
-    fn_name("app_code_quiz_leniency_gate_run"),
+    fn_name("app_learn_js_quiz_leniency_gate_run"),
     fn_name("app_learn_js_lesson_statement_name_total_batch"),
     fn_name("js_relabel_only_cases_gate_run"),
     fn_name("function_lift_refusal_rows"),

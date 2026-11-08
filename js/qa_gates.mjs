@@ -411,7 +411,7 @@ import { permission_file_hook_registered_gate_run } from "./permission_file_hook
 import { permission_file_hook_live_gate_run } from "./permission_file_hook_live_gate_run.mjs";
 import { bible_storage_empty_gate_run } from "./bible_storage_empty_gate_run.mjs";
 import { bible_search_built_path_gate_run } from "./bible_search_built_path_gate_run.mjs";
-import { app_code_quiz_leniency_gate_run } from "./app_code_quiz_leniency_gate_run.mjs";
+import { app_learn_js_quiz_leniency_gate_run } from "./app_learn_js_quiz_leniency_gate_run.mjs";
 import { app_shared_text_reader_language_gate_run } from "./app_shared_text_reader_language_gate_run.mjs";
 import { app_shared_text_reader_untranslated_gate_run } from "./app_shared_text_reader_untranslated_gate_run.mjs";
 import { js_dollar_choices_parameters_gate_run } from "./js_dollar_choices_parameters_gate_run.mjs";
@@ -1062,7 +1062,7 @@ export function qa_gates() {
     permission_file_hook_live_gate_run,
     bible_storage_empty_gate_run,
     bible_search_built_path_gate_run,
-    app_code_quiz_leniency_gate_run,
+    app_learn_js_quiz_leniency_gate_run,
     app_shared_text_reader_language_gate_run,
     app_shared_text_reader_untranslated_gate_run,
     js_dollar_choices_parameters_gate_run,
