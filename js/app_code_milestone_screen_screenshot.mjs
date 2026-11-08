@@ -3,7 +3,7 @@ import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
-import { app_code_milestone_hash_key } from "./app_code_milestone_hash_key.mjs";
+import { app_learn_js_milestone_hash_key } from "./app_learn_js_milestone_hash_key.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_code_screens_seed_script } from "./app_code_screens_seed_script.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
@@ -24,7 +24,7 @@ export async function app_code_milestone_screen_screenshot(id) {
     "=" +
     screen +
     "," +
-    app_code_milestone_hash_key() +
+    app_learn_js_milestone_hash_key() +
     "=" +
     id;
   let settle = page_capture_settle_ms();
