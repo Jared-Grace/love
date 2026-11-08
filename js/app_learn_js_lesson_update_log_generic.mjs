@@ -31,7 +31,7 @@ import { each } from "./each.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_update_log_generic(options) {
+export function app_learn_js_lesson_update_log_generic(options) {
   arguments_assert(arguments, 1);
   ("a loop that writes out n and then changes it by one: let n = 1; loop (n < 4) { console.log(n); n++; } writes out 1, 2 and 3; the adding and the taking away differ only in what is handed in here");
   ("What differs between lessons is the title, what is shown above, and how the whole program is written, which program_write does when handed the let, the condition and the two lines. Above is handed example, which draws the program of start and bound and what it writes out, and walk, which says what it does run by run.");

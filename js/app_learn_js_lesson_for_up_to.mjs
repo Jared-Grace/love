@@ -4,7 +4,7 @@ import { app_learn_js_lesson_up_to_log_options } from "./app_learn_js_lesson_up_
 import { app_learn_js_lesson_for_comparison_other_above } from "./app_learn_js_lesson_for_comparison_other_above.mjs";
 import { app_learn_js_lesson_for_increment } from "./app_learn_js_lesson_for_increment.mjs";
 import { app_learn_js_lesson_increment_log_options } from "./app_learn_js_lesson_increment_log_options.mjs";
-import { app_code_lesson_update_log_generic } from "./app_code_lesson_update_log_generic.mjs";
+import { app_learn_js_lesson_update_log_generic } from "./app_learn_js_lesson_update_log_generic.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 export function app_learn_js_lesson_for_up_to() {
   arguments_assert(arguments, 0);
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_for_up_to() {
     earlier,
     options,
   );
-  let lesson = app_code_lesson_update_log_generic({
+  let lesson = app_learn_js_lesson_update_log_generic({
     ...options,
     name_id,
     above,
