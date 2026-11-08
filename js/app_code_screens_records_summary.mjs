@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_screens_records } from "./app_code_screens_records.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_screens_crawl_summary } from "./app_code_screens_crawl_summary.mjs";
+import { app_learn_js_screens_crawl_summary } from "./app_learn_js_screens_crawl_summary.mjs";
 export async function app_code_screens_records_summary(url_prefix) {
   arguments_assert(arguments, 1);
   ("one crawl of every code screen, handed back as both halves at once: the raw records and the mechanical summary read off them");
@@ -9,7 +9,7 @@ export async function app_code_screens_records_summary(url_prefix) {
   let collected = await app_code_screens_records(url_prefix);
   let records = property_get(collected, "records");
   let errors = property_get(collected, "errors");
-  let summary = app_code_screens_crawl_summary(records, errors);
+  let summary = app_learn_js_screens_crawl_summary(records, errors);
   let both = {
     records,
     summary,
