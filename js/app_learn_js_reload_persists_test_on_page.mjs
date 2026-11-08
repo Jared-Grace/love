@@ -14,7 +14,7 @@ import { equal_not } from "./equal_not.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { each_async } from "./each_async.mjs";
-export async function app_code_reload_persists_test_on_page(
+export async function app_learn_js_reload_persists_test_on_page(
   page,
   url_prefix,
   results,

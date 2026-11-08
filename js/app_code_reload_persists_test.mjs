@@ -1,4 +1,4 @@
-import { app_code_reload_persists_test_on_page } from "./app_code_reload_persists_test_on_page.mjs";
+import { app_learn_js_reload_persists_test_on_page } from "./app_learn_js_reload_persists_test_on_page.mjs";
 import { playwright_test_url } from "./playwright_test_url.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { each } from "./each.mjs";
@@ -14,7 +14,7 @@ export async function app_code_reload_persists_test(url_prefix) {
   ];
   let results = [];
   async function on_page(page) {
-    let r = await app_code_reload_persists_test_on_page(
+    let r = await app_learn_js_reload_persists_test_on_page(
       page,
       url_prefix,
       results,
