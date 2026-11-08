@@ -4,8 +4,10 @@ export function app_shared_contact_button_text() {
   let texts = {
     en: " Contact the developer",
     ur: " ڈویلپر سے رابطہ کریں",
+    tgl: " Makipag-ugnayan sa developer",
     translated_from: {
       ur: " Contact the developer",
+      tgl: " Contact the developer",
     },
   };
   let label = app_shared_text_reader_language(texts);
