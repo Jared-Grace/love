@@ -15,8 +15,16 @@ export function app_shared_bible_offline_saved_text(name) {
       before: " ",
       after: " اس آلے پر محفوظ ہے",
     },
+    tgl: {
+      before: " Naka-save ang ",
+      after: " sa device na ito",
+    },
     translated_from: {
       ur: {
+        before: " ",
+        after: " is saved on this device",
+      },
+      tgl: {
         before: " ",
         after: " is saved on this device",
       },
