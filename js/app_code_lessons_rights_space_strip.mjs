@@ -1,4 +1,4 @@
-import { app_code_lessons_rights_space_carrying } from "./app_code_lessons_rights_space_carrying.mjs";
+import { app_learn_js_lessons_rights_space_carrying } from "./app_learn_js_lessons_rights_space_carrying.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { function_lesson_rights_space_strip } from "./function_lesson_rights_space_strip.mjs";
@@ -16,13 +16,13 @@ export async function app_code_lessons_rights_space_strip() {
   "Asking again at the end is the proof. A sweep that answers with a list of what it";
   "meant to do is not evidence it did any of it.";
   await ai_git_noted();
-  let before = await app_code_lessons_rights_space_carrying();
+  let before = await app_learn_js_lessons_rights_space_carrying();
   console.log("lessons carrying a leading space  " + list_size(before));
   for (let f_name of before) {
     let args = [f_name];
     await function_call_commit(function_lesson_rights_space_strip, args);
   }
-  let after = await app_code_lessons_rights_space_carrying();
+  let after = await app_learn_js_lessons_rights_space_carrying();
   console.log("lessons carrying one now  " + list_size(after));
   let told = {
     stripped: list_size(before),

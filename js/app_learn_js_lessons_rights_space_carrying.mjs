@@ -10,7 +10,7 @@ import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
-export async function app_code_lessons_rights_space_carrying() {
+export async function app_learn_js_lessons_rights_space_carrying() {
   "names every code lesson that still hands over a name-word starting with a space, found by asking the strip of a tree nobody writes back";
   "The question is asked of the same transform that does the fixing, on a tree that";
   "is thrown away, so what the gate watches for and what the sweep repairs can never";
