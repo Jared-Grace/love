@@ -7,7 +7,7 @@ import { app_learn_js_review_passed } from "./app_learn_js_review_passed.mjs";
 import { app_learn_js_review_key } from "./app_learn_js_review_key.mjs";
 import { app_learn_js_review_g } from "./app_learn_js_review_g.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_review_progress } from "./app_code_review_progress.mjs";
+import { app_learn_js_review_progress } from "./app_learn_js_review_progress.mjs";
 import { app_code_review_restart_button } from "./app_code_review_restart_button.mjs";
 import { app_learn_js_review_home_text } from "./app_learn_js_review_home_text.mjs";
 import { app_learn_js_review_go_home } from "./app_learn_js_review_go_home.mjs";
@@ -27,7 +27,7 @@ export function app_code_review(context) {
   let r4 = app_learn_js_review_key(r);
   let r5 = app_learn_js_review_g(r4);
   let g = property_get(r5, "g");
-  let r3 = app_code_review_progress(r5);
+  let r3 = app_learn_js_review_progress(r5);
   let r6 = app_code_review_restart_button(r3, g);
   let r7 = app_learn_js_review_home_text(r6);
   let r8 = app_learn_js_review_go_home(r7, context);
