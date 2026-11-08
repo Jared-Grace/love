@@ -3,7 +3,7 @@ import { app_learn_js_review_c } from "./app_learn_js_review_c.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_restart_text } from "./app_code_review_restart_text.mjs";
 import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
-export function app_code_review_passed(context, root) {
+export function app_learn_js_review_passed(context, root) {
   arguments_assert(arguments, 2);
   let r2 = app_learn_js_review_c(context, root);
   let c = property_get(r2, "c");

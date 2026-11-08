@@ -3,7 +3,7 @@ import { app_code_review_title_strip } from "./app_code_review_title_strip.mjs";
 import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
 import { app_learn_js_milestone_intro_is } from "./app_learn_js_milestone_intro_is.mjs";
 import { app_learn_js_milestone_intro } from "./app_learn_js_milestone_intro.mjs";
-import { app_code_review_passed } from "./app_code_review_passed.mjs";
+import { app_learn_js_review_passed } from "./app_learn_js_review_passed.mjs";
 import { app_learn_js_review_key } from "./app_learn_js_review_key.mjs";
 import { app_learn_js_review_g } from "./app_learn_js_review_g.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,7 +23,7 @@ export function app_code_review(context) {
     app_learn_js_milestone_intro(root, context, checkpoint);
     return;
   }
-  let r = app_code_review_passed(context, root);
+  let r = app_learn_js_review_passed(context, root);
   let r4 = app_learn_js_review_key(r);
   let r5 = app_learn_js_review_g(r4);
   let g = property_get(r5, "g");
