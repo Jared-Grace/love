@@ -9,7 +9,7 @@ import { text_combine } from "./text_combine.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_symbols_count_wrong_say(question, answer, choice) {
+export function app_learn_js_symbols_count_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong count of symbols: the symbols counted out one at a time, each named once, then the count they make, as parts that take turns between words and code. null when the answer is not the number of symbols in the question");
   ("A space is said in words, since a space in a code chip shows as nothing, and the lesson on spaces teaches that a space is a symbol like any other. Not picked: numbering each symbol, which doubles what is read for a learner who only needs to see that each one counts once");

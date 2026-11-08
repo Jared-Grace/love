@@ -3,7 +3,7 @@ import { app_learn_js_label_symbols } from "./app_learn_js_label_symbols.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_symbols_counting_quiz_backwards_on_button } from "./app_learn_js_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { noop } from "./noop.mjs";
-import { app_code_symbols_count_wrong_say } from "./app_code_symbols_count_wrong_say.mjs";
+import { app_learn_js_symbols_count_wrong_say } from "./app_learn_js_symbols_count_wrong_say.mjs";
 import { app_learn_js_style_normal_text } from "./app_learn_js_style_normal_text.mjs";
 import { app_learn_js_lesson_quizzes } from "./app_learn_js_lesson_quizzes.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -32,7 +32,7 @@ export function app_learn_js_lesson_symbols_counting(
     answer_label: label_answer_forwards,
     answer_on_button: noop,
     answer_count_override: null,
-    wrong_say: app_code_symbols_count_wrong_say,
+    wrong_say: app_learn_js_symbols_count_wrong_say,
   };
   let backwards = {
     question_label: "Count: ",
