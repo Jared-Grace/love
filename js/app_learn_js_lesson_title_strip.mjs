@@ -10,7 +10,7 @@ import { emoji_check } from "./emoji_check.mjs";
 import { app_learn_js_lesson_group_category_paint } from "./app_learn_js_lesson_group_category_paint.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
 import { add_1 } from "./add_1.mjs";
-import { app_code_title_strip } from "./app_code_title_strip.mjs";
+import { app_learn_js_title_strip } from "./app_learn_js_title_strip.mjs";
 export function app_learn_js_lesson_title_strip(root, context, lesson) {
   ("a quiet top bar on every lesson screen - a small home button (just the house) sitting right beside the lesson title, the pair centered together, so home is one tap away without scrolling to the bottom and reads as part of the header rather than floating alone in a corner; the title reuses the lesson's own home title (",
     app_learn_js_lesson_title_render.name,
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_title_strip(root, context, lesson) {
   }
   let index_previous = subtract_1(lesson_index);
   let index_next = add_1(lesson_index);
-  let strip = app_code_title_strip(
+  let strip = app_learn_js_title_strip(
     root,
     context,
     complete,

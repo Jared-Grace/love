@@ -25,7 +25,7 @@ import { app_shared_color_green_tint } from "./app_shared_color_green_tint.mjs";
 import { app_shared_color_green } from "./app_shared_color_green.mjs";
 import { app_shared_button_border_width } from "./app_shared_button_border_width.mjs";
 import { html_border } from "./html_border.mjs";
-export function app_code_title_strip(
+export function app_learn_js_title_strip(
   root,
   context,
   complete,
