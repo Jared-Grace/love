@@ -8,7 +8,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
 import { app_code_title_strip } from "./app_code_title_strip.mjs";
-export function app_code_review_title_strip(root, context) {
+export function app_learn_js_review_title_strip(root, context) {
   arguments_assert(arguments, 2);
   ("the top bar of a review screen: the same bar a lesson wears, with home, an arrow back to the lesson the review stands under, an arrow on to the lesson after it, and the lessons the review covers as its title, at the human's request");
   ("The review stands under the lesson with its own number, so counted from zero that lesson sits one place before the number and the next lesson sits at the number itself.");

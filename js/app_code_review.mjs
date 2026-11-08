@@ -1,5 +1,5 @@
 import { html_clear_context } from "./html_clear_context.mjs";
-import { app_code_review_title_strip } from "./app_code_review_title_strip.mjs";
+import { app_learn_js_review_title_strip } from "./app_learn_js_review_title_strip.mjs";
 import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
 import { app_learn_js_milestone_intro_is } from "./app_learn_js_milestone_intro_is.mjs";
 import { app_learn_js_milestone_intro } from "./app_learn_js_milestone_intro.mjs";
@@ -16,7 +16,7 @@ import { app_learn_js_review_present } from "./app_learn_js_review_present.mjs";
 export function app_code_review(context) {
   "The review screen at a checkpoint: the milestone intro on first arrival and otherwise the result with its restart and home buttons.";
   let root = html_clear_context(context);
-  app_code_review_title_strip(root, context);
+  app_learn_js_review_title_strip(root, context);
   let checkpoint = app_learn_js_review_checkpoint(context);
   let intro = app_learn_js_milestone_intro_is(context, checkpoint);
   if (intro) {
