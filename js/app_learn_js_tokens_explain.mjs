@@ -1,5 +1,5 @@
 import { app_learn_js_tokens_explain_colors } from "./app_learn_js_tokens_explain_colors.mjs";
-import { app_code_tokens_painted } from "./app_code_tokens_painted.mjs";
+import { app_learn_js_tokens_painted } from "./app_learn_js_tokens_painted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_quiz_tokens_order } from "./app_learn_js_quiz_tokens_order.mjs";
@@ -25,11 +25,11 @@ export function app_learn_js_tokens_explain(parent) {
   app_learn_js_div_cycle_code(parent, [
     "Then we can add colors to each token/piece:",
   ]);
-  app_code_tokens_painted(parent, example, colors, false);
+  app_learn_js_tokens_painted(parent, example, colors, false);
   app_learn_js_div_cycle_code(parent, [
     "Therefore, here are the colored tokens separated from each other:",
   ]);
-  app_code_tokens_painted(parent, example, colors, true);
+  app_learn_js_tokens_painted(parent, example, colors, true);
   app_learn_js_div_cycle_code(parent, ["And here are the tokens uncolored:"]);
   app_learn_js_div_cycle_code(parent, parts);
   app_learn_js_div_cycle_code(parent, [

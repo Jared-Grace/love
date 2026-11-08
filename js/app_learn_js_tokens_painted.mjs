@@ -14,7 +14,7 @@ import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
-export function app_code_tokens_painted(parent, code, colors, spaced) {
+export function app_learn_js_tokens_painted(parent, code, colors, spaced) {
   arguments_assert(arguments, 4);
   ("a piece of code with every token wearing a colour of its own, taken in turn from colors, so the same colours seen two ways show which written piece became which token");
   ("Not spaced, it is the very chip a piece of code in a sentence is drawn as, with nothing added round any token - only the ground behind each token coloured - so it reads as the plain code above it with colour put on, as the human asked 2026-10-10.");
