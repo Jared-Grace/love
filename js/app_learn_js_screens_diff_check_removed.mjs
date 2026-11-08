@@ -5,7 +5,7 @@ import { app_code_screens_diff_key_of } from "./app_code_screens_diff_key_of.mjs
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_screens_diff_check_removed(r2) {
+export function app_learn_js_screens_diff_check_removed(r2) {
   arguments_assert(arguments, 1);
   let r3 = app_code_screens_diff_removed(r2);
   let removed = property_get(r3, "removed");
