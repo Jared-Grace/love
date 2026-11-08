@@ -3856,7 +3856,7 @@
       "❌ Yes, mark lessons incomplete",
       "⬅️ Back"
     ],
-    "id": "app_code_settings_clear_confirm",
+    "id": "app_learn_js_settings_clear_confirm",
     "screen": "screen",
     "kind": 0
   }
