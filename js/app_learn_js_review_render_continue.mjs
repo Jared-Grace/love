@@ -5,7 +5,7 @@ import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs
 import { text_combine } from "./text_combine.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-export function app_code_review_render_continue(
+export function app_learn_js_review_render_continue(
   continue_parent,
   go_next,
   context,
