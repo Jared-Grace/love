@@ -6,8 +6,10 @@ export function html_button_copy_text() {
   let texts = {
     en: " Copy",
     ur: " کاپی کریں",
+    tgl: " Kopyahin",
     translated_from: {
       ur: " Copy",
+      tgl: " Copy",
     },
   };
   let label = app_shared_text_reader_language(texts);
