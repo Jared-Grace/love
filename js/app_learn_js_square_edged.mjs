@@ -7,7 +7,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { html_div } from "./html_div.mjs";
-export function app_code_square_edged(text, left_color, top_color) {
+export function app_learn_js_square_edged(text, left_color, top_color) {
   "a square of the square grid showing the text with a thick bar of left_color down its left edge and of top_color along its top edge, either null for no bar, as a mark's drawing: in King steps a bar down the left says the step into the square moved a row, and a bar along the top that it moved a column, so a diagonal step shows both, asked by the human 2026-10-02";
   "The bars are the square's own left and top borders, so where both are drawn they meet on a diagonal seam, as the corner of a picture frame does, asked by the human the same day. A thin light line runs between each bar and the fill, and another along the seam, so the three colours stay apart. Not picked: inset shadows for the bars, which overlap at the corner instead of meeting on a seam.";
   "The seam is drawn from the inside corner outwards, as long as a bar is wide: the square's outer corner is rounded by as much as a bar is wide, so the seam ends on that curve rather than running past it.";
