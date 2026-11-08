@@ -14,8 +14,16 @@ export function app_shared_hash_fields_unknown_number_text(name) {
       before: "اس لنک میں دیا گیا ",
       after: " عدد نہیں ہے",
     },
+    tgl: {
+      before: "Hindi numero ang ",
+      after: " sa link na ito",
+    },
     translated_from: {
       ur: {
+        before: "The ",
+        after: " in this link is not a number",
+      },
+      tgl: {
         before: "The ",
         after: " in this link is not a number",
       },
