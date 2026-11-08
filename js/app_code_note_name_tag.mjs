@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_code_note_name_halo_width } from "./app_code_note_name_halo_width.mjs";
+import { app_learn_js_note_name_halo_width } from "./app_learn_js_note_name_halo_width.mjs";
 import { html_text_halo_set } from "./html_text_halo_set.mjs";
 export function app_code_note_name_tag(component, color) {
   arguments_assert(arguments, 2);
@@ -15,7 +15,7 @@ export function app_code_note_name_tag(component, color) {
   ("The reading rejected before all of them: putting the colour behind the letter as a bright patch and writing the letter dark, which is what the code chip still does. Legible, one colour, and it costs the correspondence - the cup shows a green block where the program shows a green letter.");
   let ground = app_shared_color_code_background();
   html_font_color_set(component, color);
-  let width = app_code_note_name_halo_width();
+  let width = app_learn_js_note_name_halo_width();
   html_text_halo_set(component, width, ground);
   return component;
 }
