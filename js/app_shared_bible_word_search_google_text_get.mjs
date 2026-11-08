@@ -4,8 +4,10 @@ export function app_shared_bible_word_search_google_text_get() {
   let texts = {
     en: "🔍 Search Google",
     ur: "🔍 گوگل پر تلاش کریں",
+    tgl: "🔍 Maghanap sa Google",
     translated_from: {
       ur: "🔍 Search Google",
+      tgl: "🔍 Search Google",
     },
   };
   let v = app_shared_text_reader_language(texts);
