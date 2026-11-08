@@ -20,7 +20,7 @@ export function app_shared_names() {
     supper: "Lord's Supper",
     supper_tl: "Lord's Supper in Tagalog",
     pray_auto: "Auto Pray",
-    code: "Code",
+    learn_js: "Code",
     replace: "Replace",
     examples: "Code Examples",
     design: "Designs",
