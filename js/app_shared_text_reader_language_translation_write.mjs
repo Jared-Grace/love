@@ -76,7 +76,6 @@ export async function app_shared_text_reader_language_translation_write(
     f_name,
     lambda$saying,
   );
-  async function lambda(saying2) {}
   let output2 = await app_shared_text_reader_language_held_change(
     f_name,
     lambda$saying,
