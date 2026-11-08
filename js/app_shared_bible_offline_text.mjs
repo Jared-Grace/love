@@ -5,8 +5,10 @@ export function app_shared_bible_offline_text() {
   let texts = {
     en: " Download for offline",
     ur: " آف لائن کے لیے ڈاؤن لوڈ کریں",
+    tgl: " I-download para magamit nang offline",
     translated_from: {
       ur: " Download for offline",
+      tgl: " Download for offline",
     },
   };
   let label = app_shared_text_reader_language(texts);
