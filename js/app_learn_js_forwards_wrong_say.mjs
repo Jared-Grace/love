@@ -9,7 +9,7 @@ import { app_learn_js_lines_wrong_say } from "./app_learn_js_lines_wrong_say.mjs
 import { app_code_program_trace_wrong_say } from "./app_code_program_trace_wrong_say.mjs";
 import { app_code_program_lets_wrong_say } from "./app_code_program_lets_wrong_say.mjs";
 import { app_code_value_itself_wrong_say } from "./app_code_value_itself_wrong_say.mjs";
-import { app_code_part_first_wrong_say } from "./app_code_part_first_wrong_say.mjs";
+import { app_learn_js_part_first_wrong_say } from "./app_learn_js_part_first_wrong_say.mjs";
 export function app_learn_js_forwards_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong output for code: the first reminder that has something to say about this pick, or null when none does");
@@ -57,6 +57,6 @@ export function app_learn_js_forwards_wrong_say(question, answer, choice) {
   if (null_not_is(itself)) {
     return itself;
   }
-  let part = app_code_part_first_wrong_say(question, answer, choice);
+  let part = app_learn_js_part_first_wrong_say(question, answer, choice);
   return part;
 }

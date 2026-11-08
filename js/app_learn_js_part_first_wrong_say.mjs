@@ -3,7 +3,7 @@ import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_tokenizer_normalized_or_null } from "./js_tokenizer_normalized_or_null.mjs";
-export function app_code_part_first_wrong_say(question, answer, choice) {
+export function app_learn_js_part_first_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("for a quiz asking which part of a line with two marks is solved first, as in 4 + 4 * 5: says that * and / are solved before + and -, wherever they stand; null unless the answer is the part around the one mark of the two that goes first");
   let q = js_tokenizer_normalized_or_null(question);
