@@ -4323,6 +4323,125 @@ def time_subshell_stripped(command, safe_verbs, safe_exact_commands):
     return stripped
 
 
+# Characters that may not stand between a statement's start and the
+# arithmetic being hoisted out of it. Each one is a shape where "just before
+# this statement" stops being one plain place: a quote could hide the
+# separator found, a pipe or ampersand puts the statement inside a list or a
+# pipeline, a bracket inside a group, and a dollar another expansion whose
+# order against the hoisted one would have to be argued for.
+ARITHMETIC_HOIST_PREFIX_REFUSED = set("'\"`|&(){}<>\\$")
+
+
+def _unquoted_at(command, index):
+    """True when `index` in `command` stands outside every quote."""
+    quote = None
+    i = 0
+    while i < index:
+        c = command[i]
+        if quote == "'":
+            if c == "'":
+                quote = None
+        elif quote == '"':
+            if c == "\\":
+                i += 1
+            elif c == '"':
+                quote = None
+        elif c == "\\":
+            i += 1
+        elif c in ("'", '"'):
+            quote = c
+        i += 1
+    return quote is None
+
+
+def arithmetic_substitutions_hoisted(command, safe_verbs, safe_exact_commands):
+    """For a command whose only unreadable part is a `$(...)` inside `$((
+    ... ))`, the same command with each such substitution moved into a
+    variable set just before its statement; otherwise None.
+
+    The guard never reads a command run from inside arithmetic, so `echo
+    $(( $(grep -a pswpin /proc/vmstat | cut -d' ' -f2) - a ))` prompted
+    although every verb in it is trusted - pasted twice in one week, the
+    same swap check each time, and each time the fix was a person passing a
+    reword along by hand. `b=$(...)` then `$(( b - a ))` is that reword,
+    and the guard already reads both halves.
+
+    Why the two spellings do the same thing: the substitution runs at the
+    same point - first among the statement's expansions, since nothing that
+    could expand stands before it - and bash reads a variable inside
+    arithmetic as the expression its value spells, which is what the
+    substituted text was read as. Empty output is 0 both ways. The only
+    leftover is a variable the shell keeps, under a name the command does
+    not already use.
+
+    Narrow on purpose. The statement must start at the beginning or after a
+    `;` or newline outside quotes, with nothing between that start and the
+    arithmetic that is quoted, piped, grouped, a list operator, another
+    expansion, or a shell keyword - each of those makes "just before this
+    statement" a place that needs arguing for. And, as with the parentheses
+    rewrite, it is only offered when the whole result passes: a deny must
+    leave a way forward or it is worse than the prompt it replaced."""
+    edits = []
+    counter = 0
+    index = command.find("$((")
+    while index != -1:
+        try:
+            body, end = _scan_arithmetic(command, index + 3)
+        except Unsupported:
+            return None
+        if "$(" not in body:
+            index = command.find("$((", end)
+            continue
+        if not _unquoted_at(command, index):
+            return None
+        start = max(command.rfind(";", 0, index), command.rfind("\n", 0, index)) + 1
+        prefix = command[start:index]
+        if any(c in ARITHMETIC_HOIST_PREFIX_REFUSED for c in prefix):
+            return None
+        words = prefix.split()
+        if words and words[0] in SHELL_STRUCTURE_WORDS:
+            return None
+        assignments = []
+        rewritten = ""
+        cursor = 0
+        j = body.find("$(")
+        while j != -1:
+            try:
+                inner, inner_end = _scan_substitution(body, j + 2)
+            except Unsupported:
+                return None
+            counter += 1
+            name = f"love_hoisted_{counter}"
+            if name in command:
+                return None
+            assignments.append(f"{name}=$({inner})")
+            rewritten += body[cursor:j] + name
+            cursor = inner_end
+            j = body.find("$(", cursor)
+        rewritten += body[cursor:]
+        if not _arithmetic_is_inert(rewritten):
+            return None
+        edits.append((start, assignments, index, end, "$((" + rewritten + "))"))
+        index = command.find("$((", end)
+    if not edits:
+        return None
+    result = ""
+    cursor = 0
+    for start, assignments, span_start, span_end, text in edits:
+        lead = command[start:span_start]
+        gap = lead[:len(lead) - len(lead.lstrip())]
+        result += (command[cursor:start] + gap + "; ".join(assignments) + "; "
+                   + lead.lstrip() + text)
+        cursor = span_end
+    result += command[cursor:]
+    try:
+        if not is_safe(result, safe_verbs, safe_exact_commands):
+            return None
+    except Unsupported:
+        return None
+    return result
+
+
 def tokens_text(tokens):
     """`tokens` spelled back as one line a person can read: separators become
     themselves again and a substitution reads as `$(...)`. For a reason only -
@@ -6497,6 +6616,19 @@ def main():
             "keeping around a `cd` or an assignment, or in `( time "
             "CMD ) 2>&1 | ...` where they decide whose stderr the "
             "redirect catches - none of which is the case here.)"
+        ))
+
+    hoisted = arithmetic_substitutions_hoisted(command, safe_verbs, safe_exact_commands)
+    if hoisted is not None:
+        return decide("deny", (
+            "Run this instead - it is already approved, so it needs no "
+            "human at all:\n"
+            f"  {hoisted}\n"
+            "This hook never reads a command run from inside `$(( ))`, so "
+            "each one is set into a variable just before its statement and "
+            "the arithmetic reads the variable. It runs at the same point, "
+            "and bash reads a variable in arithmetic as the expression its "
+            "value spells, so the answer is the same."
         ))
 
     split = splittable_statements(command, safe_verbs, safe_exact_commands)
