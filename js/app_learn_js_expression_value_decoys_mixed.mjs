@@ -1,6 +1,6 @@
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_learn_js_expression_value_decoys_boolean } from "./app_learn_js_expression_value_decoys_boolean.mjs";
-import { app_code_operator_comparison_is } from "./app_code_operator_comparison_is.mjs";
+import { app_learn_js_operator_comparison_is } from "./app_learn_js_operator_comparison_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { number_is } from "./number_is.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_expression_value_decoys_mixed(current, node) {
   ("Which kind it is comes from the operator that was pressed rather than from how far through the line the learner is. Counting steps would be right on this lesson's shape and quietly wrong on the next one built from the same pieces.");
   ("The arithmetic side keeps only the wrong values that are numbers, because the set it borrows includes what the WHOLE line comes to - which on a line like this one is a true or a false. That is a real mistake on a line of numbers, where it is the near-answer a learner reaches for; here it is a different kind of thing altogether, and reads as the odd one out rather than as a tempting reading.");
   let symbol = property_get(node, "operator");
-  let comparison_is = app_code_operator_comparison_is(symbol);
+  let comparison_is = app_learn_js_operator_comparison_is(symbol);
   if (comparison_is) {
     let boolean_decoys = app_learn_js_expression_value_decoys_boolean(
       current,

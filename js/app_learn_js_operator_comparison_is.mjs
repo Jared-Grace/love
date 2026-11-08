@@ -1,7 +1,7 @@
 import { js_operators_comparison_symbols } from "./js_operators_comparison_symbols.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_includes } from "./list_includes.mjs";
-export function app_code_operator_comparison_is(symbol) {
+export function app_learn_js_operator_comparison_is(symbol) {
   arguments_assert(arguments, 1);
   ("whether one operator symbol is one of the six that compare two values and answer true or false");
   ("Asked wherever a line holds both kinds at once - arithmetic on each side of a comparison - because what a part of such a line comes to depends on which kind it is, and a screen that offers true and false for 3 + 4 is asking a question the line never posed.");
