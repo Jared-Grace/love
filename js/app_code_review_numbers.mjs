@@ -1,4 +1,4 @@
-import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
+import { app_learn_js_review_due_is } from "./app_learn_js_review_due_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -13,7 +13,7 @@ export function app_code_review_numbers() {
   let numbers = [];
   function lambda(lesson, index) {
     let number = add_1(index);
-    let has_review = app_code_review_due_is(number);
+    let has_review = app_learn_js_review_due_is(number);
     if (has_review) {
       list_add(numbers, number);
     }

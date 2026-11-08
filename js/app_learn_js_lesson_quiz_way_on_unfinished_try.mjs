@@ -11,7 +11,7 @@ import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id
 import { app_learn_js_course_unfinished_next } from "./app_learn_js_course_unfinished_next.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
+import { app_learn_js_review_due_is } from "./app_learn_js_review_due_is.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 export function app_learn_js_lesson_quiz_way_on_unfinished_try(
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_quiz_way_on_unfinished_try(
   ("the plain way on leaves this lesson only at the end of its last quiz: to the review standing after it where there is one, and otherwise to the lesson straight after it. Anywhere else it is a quiz, and an unfinished lesson or review is somewhere else than that by construction.");
   if (qli) {
     let kind = property_get(way, "kind");
-    let has_review = app_code_review_due_is(number);
+    let has_review = app_learn_js_review_due_is(number);
     if (has_review) {
       ("an unfinished review found first can only be the one straight after this lesson, which is where the plain way on goes");
       let to_review = equal(kind, "review");

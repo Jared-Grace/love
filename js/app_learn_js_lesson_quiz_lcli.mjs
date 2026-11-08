@@ -3,7 +3,7 @@ import { app_learn_js_lesson_quiz_index } from "./app_learn_js_lesson_quiz_index
 import { property_get } from "./property_get.mjs";
 import { list_index_last_is } from "./list_index_last_is.mjs";
 import { app_learn_js_lesson_current_number } from "./app_learn_js_lesson_current_number.mjs";
-import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
+import { app_learn_js_review_due_is } from "./app_learn_js_review_due_is.mjs";
 import { app_learn_js_lesson_current_last_is } from "./app_learn_js_lesson_current_last_is.mjs";
 export function app_learn_js_lesson_quiz_lcli({
   info,
@@ -39,7 +39,7 @@ export function app_learn_js_lesson_quiz_lcli({
   let on_question = property_get(r4, "on_question");
   let qli = list_index_last_is(quizzes, quiz_index);
   let number = app_learn_js_lesson_current_number(context);
-  let has_review = app_code_review_due_is(number);
+  let has_review = app_learn_js_review_due_is(number);
   let lcli = app_learn_js_lesson_current_last_is(context);
   let r = {
     quiz_index,
