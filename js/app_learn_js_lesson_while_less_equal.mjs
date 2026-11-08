@@ -6,7 +6,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
+import { app_learn_js_lesson_while } from "./app_learn_js_lesson_while.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -58,7 +58,7 @@ export function app_learn_js_lesson_while_less_equal() {
   function above(root, context, program_lines, said) {
     "While remembered, then a while asking <=, which runs once more when n lands on the number";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_while, [
+    app_code_remember_from_lesson(box_one, context, app_learn_js_lesson_while, [
       "a ",
       "while",
       " runs its ",

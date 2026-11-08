@@ -7,7 +7,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
+import { app_learn_js_lesson_while } from "./app_learn_js_lesson_while.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
@@ -65,7 +65,7 @@ export function app_learn_js_lesson_while_down() {
   function above(root, context, program_lines, said) {
     "the first while remembered, adding to n; then a while taking away from n, asked with greater than";
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_while, [
+    app_code_remember_from_lesson(box_one, context, app_learn_js_lesson_while, [
       "a ",
       "while",
       " can add to ",

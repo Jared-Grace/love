@@ -27,7 +27,7 @@ export function app_code_milestones() {
   let lessons = app_code_lessons();
   ("2026-11-02: only lessons before the first while, so both stand in Nested branches, at the human's asking. A step lesson with an if inside a while had joined them and pulled them to the end of Looping, and the lesson after the last if lesson is While itself. Stopping at the lesson the Looping group names, rather than testing each program for the word while, so for and any later loop stay out too.");
   let ids = app_learn_js_lesson_ids_short();
-  let loop_id = property_get(ids, fn_name("app_code_lesson_while"));
+  let loop_id = property_get(ids, fn_name("app_learn_js_lesson_while"));
   let lesson_ids = list_map_property(lessons, "id");
   ("2026-11-06: the public site is handed only the released lessons, and While is not one of them, so asking where While stands threw there and every learner opening the page got an error instead of the home list. With no While in this run, every lesson in it is before the first while, so the run goes to its end. Measured the same day: the walk reads latest, which holds While, so it could not see this.");
   let loop_shown = list_includes(lesson_ids, loop_id);

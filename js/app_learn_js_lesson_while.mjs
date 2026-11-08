@@ -19,7 +19,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_while_generic } from "./app_learn_js_lesson_while_generic.mjs";
 import { subtract } from "./subtract.mjs";
 import { js_code_while_lines } from "./js_code_while_lines.mjs";
-export function app_code_lesson_while() {
+export function app_learn_js_lesson_while() {
   arguments_assert(arguments, 0);
   ("the first while: let n = 1; while (n < 9) { n += 3; } console.log(n); writes out 10, the same as if (n < 9) { n += 3; } written three times");
   ("The one new fact is that while asks again after its lines run, and keeps going until what it asks is false, so it does what the same if written over and over does, without the learner counting how many to write.");
