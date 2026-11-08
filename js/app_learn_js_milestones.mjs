@@ -19,7 +19,7 @@ import { app_code_review_kind_run_is } from "./app_code_review_kind_run_is.mjs";
 import { app_code_review_kind_step_is } from "./app_code_review_kind_step_is.mjs";
 import { app_code_review_kind_line_missing_is } from "./app_code_review_kind_line_missing_is.mjs";
 import { app_code_review_kind_all_at_once_is } from "./app_code_review_kind_all_at_once_is.mjs";
-export function app_code_milestones() {
+export function app_learn_js_milestones() {
   arguments_assert(arguments, 0);
   ("the milestones: like a review, a mix of questions from many lessons, but chosen by what the lessons hold rather than by being the last ones before it - asked for by the human 2026-10-22, so a learner can practise one kind of program until it is easy");
   ("2026-11-02, at the human's asking: three milestones over programs of two or more pairs of braces, each asking one way of reading them and no other. First whether each section runs, then a program a line at a time, then everything else about a whole program. Which quizzes each asks is decided per quiz, not per lesson, because a step lesson holds a step quiz and four others.");

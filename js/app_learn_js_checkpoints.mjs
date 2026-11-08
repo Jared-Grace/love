@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_review_numbers } from "./app_code_review_numbers.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { app_code_milestones } from "./app_code_milestones.mjs";
+import { app_learn_js_milestones } from "./app_learn_js_milestones.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_learn_js_checkpoints() {
   "every checkpoint standing between the lessons, each as the key it is filed under and the number of the lesson it stands under - the reviews first, filed by their number, then the milestones, filed by their id";
@@ -17,7 +17,7 @@ export function app_learn_js_checkpoints() {
     });
   }
   each(numbers, each_number);
-  let milestones = app_code_milestones();
+  let milestones = app_learn_js_milestones();
   function each_milestone(milestone) {
     let key = property_get(milestone, "id");
     let number = property_get(milestone, "number");
