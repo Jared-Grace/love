@@ -5,8 +5,10 @@ export function app_shared_bible_books_text() {
   let texts = {
     en: "Books",
     ur: "کتابیں",
+    tgl: "Mga aklat",
     translated_from: {
       ur: "Books",
+      tgl: "Books",
     },
   };
   let text = app_shared_text_reader_language(texts);
