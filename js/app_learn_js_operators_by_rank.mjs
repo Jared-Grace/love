@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operators_weakest } from "./app_code_operators_weakest.mjs";
 import { app_code_operators_weaker } from "./app_code_operators_weaker.mjs";
 import { app_learn_js_operators_equating } from "./app_learn_js_operators_equating.mjs";
-import { app_code_operators_relating } from "./app_code_operators_relating.mjs";
+import { app_learn_js_operators_relating } from "./app_learn_js_operators_relating.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_code_operators_scaling } from "./app_code_operators_scaling.mjs";
 import { app_learn_js_operators_powering } from "./app_learn_js_operators_powering.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_operators_by_rank() {
   let weakest = app_code_operators_weakest();
   let weaker = app_code_operators_weaker();
   let equating = app_learn_js_operators_equating();
-  let relating = app_code_operators_relating();
+  let relating = app_learn_js_operators_relating();
   let weak = app_code_operators_weak();
   let scaling = app_code_operators_scaling();
   let powering = app_learn_js_operators_powering();

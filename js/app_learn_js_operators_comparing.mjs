@@ -10,7 +10,7 @@ export function app_learn_js_operators_comparing() {
   ("Not a lesson class: what a lesson may write on a line is the six, that list is asked for in its own place, and it stays six. This one holds every sign that compares, taught or not. It was a strength class too, until it turned out to be two: javascript works < and the rest out before === and the rest, so how tightly a sign is held is asked of ",
     fn_name("app_learn_js_operators_equating"),
     " and ",
-    fn_name("app_code_operators_relating"),
+    fn_name("app_learn_js_operators_relating"),
     " instead.");
   ("== and != are the two a learner is never shown, on purpose: the three-sign form is the one worth teaching. They are still operators this app can work out, so a shape may hold one, and an operator nobody has given a strength is the exact fault this class exists to rule out.");
   let taught = js_operators_comparison_symbols();
