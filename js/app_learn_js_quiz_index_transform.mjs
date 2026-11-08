@@ -1,6 +1,6 @@
 import { app_learn_js_quiz_index_transform_get } from "./app_learn_js_quiz_index_transform_get.mjs";
 import { app_learn_js_quiz_index_set } from "./app_learn_js_quiz_index_set.mjs";
-export function app_code_quiz_index_transform(context, quizzes, transform) {
+export function app_learn_js_quiz_index_transform(context, quizzes, transform) {
   let index_new = app_learn_js_quiz_index_transform_get(
     context,
     quizzes,
