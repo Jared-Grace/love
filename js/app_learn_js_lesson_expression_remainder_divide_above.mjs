@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
+import { app_learn_js_row_flex_center } from "./app_learn_js_row_flex_center.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_arrow } from "./app_learn_js_arrow.mjs";
 export function app_learn_js_lesson_expression_remainder_divide_above(root) {
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_expression_remainder_divide_above(root) {
     ", so the quotient is ",
     "3",
   ]);
-  let step = app_code_row_flex_center(setup);
+  let step = app_learn_js_row_flex_center(setup);
   html_span_text_code_dark(step, "quotient * divisor");
   app_learn_js_arrow(step);
   html_span_text_code_dark(step, "3 * 4 === 12");
