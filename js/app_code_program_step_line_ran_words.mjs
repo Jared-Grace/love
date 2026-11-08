@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_program_step_noun } from "./app_code_program_step_noun.mjs";
 import { not } from "./not.mjs";
-import { app_code_program_line_in_loop_is } from "./app_code_program_line_in_loop_is.mjs";
+import { app_learn_js_program_line_in_loop_is } from "./app_learn_js_program_line_in_loop_is.mjs";
 export function app_code_program_step_line_ran_words(
   lines,
   trace,
@@ -26,7 +26,7 @@ export function app_code_program_step_line_ran_words(
   ("2026-11-01, for An if inside a while: a line in a loop that has run and does not run again is said to have already run too, since then it cannot run again; on a while's last run, the if line and the lines inside it otherwise said nothing");
   if (
     ran.includes(pressed) &&
-    (not(app_code_program_line_in_loop_is(lines, pressed)) ||
+    (not(app_learn_js_program_line_in_loop_is(lines, pressed)) ||
       not(later.includes(pressed)))
   ) {
     let r = {

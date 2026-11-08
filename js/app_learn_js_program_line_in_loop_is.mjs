@@ -4,7 +4,7 @@ import { subtract } from "./subtract.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { text_get } from "./text_get.mjs";
 import { equal } from "./equal.mjs";
-export function app_code_program_line_in_loop_is(lines, i) {
+export function app_learn_js_program_line_in_loop_is(lines, i) {
   arguments_assert(arguments, 2);
   ("Whether line i of a program can run more than once: it heads a while or a for, or some { } around it belongs to one. Read upward from line i, each { that no later } has closed is one that line i is inside");
   let loop = function lambda(text) {
