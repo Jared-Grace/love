@@ -120,7 +120,7 @@ import { property_text_to } from "./property_text_to.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { app_learn_js_label_of_code } from "./app_learn_js_label_of_code.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
-import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
+import { app_learn_js_style_normal_box } from "./app_learn_js_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_program_step_complete_words } from "./app_learn_js_program_step_complete_words.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -1228,7 +1228,7 @@ export function app_learn_js_program_step_through_generic(
           let output = app_code_value_logged_output();
           let label = app_learn_js_label_of_code(output);
           app_learn_js_example_answer_label(entry, label);
-          let box3 = app_code_style_normal_box(entry);
+          let box3 = app_learn_js_style_normal_box(entry);
           html_div_text(box3, answer);
           property_set(state, "logged_box", box3);
         }
