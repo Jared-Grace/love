@@ -7,7 +7,7 @@ import { text_trim } from "./text_trim.mjs";
 import { app_code_lines_orders } from "./app_code_lines_orders.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lines_held_count } from "./app_code_lines_held_count.mjs";
+import { app_learn_js_lines_held_count } from "./app_learn_js_lines_held_count.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -39,9 +39,9 @@ export function app_learn_js_lesson_quiz_lines_order(
   let code2 = list_join_newline(lines);
   let variations = app_code_lines_orders(code2);
   ("A LONG PROGRAM STARTS WITH ITS FIRST LINES ALREADY PUT IN, as many as ",
-    fn_name("app_code_lines_held_count"),
+    fn_name("app_learn_js_lines_held_count"),
     " says, because the orders are all tried and a twelve-line program was too many for a phone; those lines are not in the row.");
-  let held_count = app_code_lines_held_count(lines);
+  let held_count = app_learn_js_lines_held_count(lines);
   let rest = list_skip(lines, held_count);
   let tokens_unique = list_unique(rest);
   list_sort_text(tokens_unique);

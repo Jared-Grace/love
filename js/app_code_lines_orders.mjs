@@ -1,6 +1,6 @@
 import { js_code_loops_guarded } from "./js_code_loops_guarded.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lines_held_count } from "./app_code_lines_held_count.mjs";
+import { app_learn_js_lines_held_count } from "./app_learn_js_lines_held_count.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -20,9 +20,9 @@ export function app_code_lines_orders(code) {
   let lines = text_split_newline(code);
   let logged = eval_console_log_to_list(code);
   ("THE FIRST LINES MAY BE HELD IN PLACE, as many as ",
-    fn_name("app_code_lines_held_count"),
+    fn_name("app_learn_js_lines_held_count"),
     " says, and only the rest are reordered: every order is tried, so a long program was too many orders for a phone - measured 2026-10-04, a twelve-line program left the quiz blank.");
-  let held_count = app_code_lines_held_count(lines);
+  let held_count = app_learn_js_lines_held_count(lines);
   let held = list_take(lines, held_count);
   let rest = list_skip(lines, held_count);
   let rest_orders = list_permutations(rest);
