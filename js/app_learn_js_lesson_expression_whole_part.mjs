@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_whole_part_formula } from "./app_learn_j
 import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
-import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
+import { app_learn_js_uneven_division_code } from "./app_learn_js_uneven_division_code.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_expression_whole_part() {
   function make(divisor) {
     "Math.floor(dividend / divisor) * divisor for the given divisor - the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division never comes out even; Math.floor gives the quotient and times the divisor gives the whole part (the biggest multiple of the divisor that fits), so the answer is quotient*divisor";
     let quotient = integer_random(2, 3);
-    let division = app_code_uneven_division_code(quotient, divisor);
+    let division = app_learn_js_uneven_division_code(quotient, divisor);
     let floored = text_combine_multiple(["Math.floor(", division, ")"]);
     let t = text_to(divisor);
     let code = text_combine_multiple([floored, " * ", t]);

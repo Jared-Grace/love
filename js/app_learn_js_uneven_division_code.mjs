@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_uneven_dividend_only } from "./app_learn_js_uneven_dividend_only.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-export function app_code_uneven_division_code(quotient, divisor) {
+export function app_learn_js_uneven_division_code(quotient, divisor) {
   arguments_assert(arguments, 2);
   ("A division written out as code, from the whole result wanted and the number");
   ("divided by - and it does not come out even.");

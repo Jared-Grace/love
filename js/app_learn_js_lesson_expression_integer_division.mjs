@@ -2,7 +2,7 @@ import { app_learn_js_integer_division_uneven_cards } from "./app_learn_js_integ
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
 import { app_learn_js_lesson_expression_integer_division_title_name_id } from "./app_learn_js_lesson_expression_integer_division_title_name_id.mjs";
-import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
+import { app_learn_js_uneven_division_code } from "./app_learn_js_uneven_division_code.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_expression_integer_division() {
   "practice integer division: how many WHOLE times the divisor fits into the number, written as Math.floor(number / divisor); dividing gives a decimal (14 / 4 is 3.5) and Math.floor throws the decimal away to leave the whole count (3); the answer is that whole number; divisor 3..6, quotient 2..3 with one quotient-0 edge case per batch (number smaller than the divisor, e.g. 5 / 6), leftover 1..divisor-1 so the division never comes out even";
   function make(divisor, quotient) {
     "one integer-division expression whose divisor does NOT divide evenly - number = quotient*divisor + leftover with a leftover of at least 1 - so discarding a real decimal is always needed. When quotient is 0 the number is SMALLER than the divisor (e.g. 5 / 6), the edge case where the divisor does not fit even once and the whole count is 0";
-    let division = app_code_uneven_division_code(quotient, divisor);
+    let division = app_learn_js_uneven_division_code(quotient, divisor);
     let code = text_combine_multiple(["Math.floor(", division, ")"]);
     return code;
   }

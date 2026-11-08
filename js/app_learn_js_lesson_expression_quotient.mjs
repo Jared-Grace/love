@@ -4,7 +4,7 @@ import { app_learn_js_lesson_expression_divisor } from "./app_learn_js_lesson_ex
 import { app_learn_js_lesson_naming_words } from "./app_learn_js_lesson_naming_words.mjs";
 import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { app_learn_js_lesson_operand_generic } from "./app_learn_js_lesson_operand_generic.mjs";
-import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
+import { app_learn_js_uneven_division_code } from "./app_learn_js_uneven_division_code.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lesson_divisor_quotient_batch } from "./app_learn_js_lesson_divisor_quotient_batch.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_expression_quotient() {
     ". The question shows the honest Math.floor form (a / b === c alone would be false, since a / b is a decimal) and the quotient c must appear as a number so it can be a choice");
   function make(divisor, quotient) {
     "Math.floor(dividend / divisor) === quotient - dividend = quotient*divisor + a leftover so the division is uneven; the answer is the quotient, with the dividend and divisor as decoys. When quotient is 0 the dividend is smaller than the divisor (e.g. Math.floor(2 / 3) === 0), the edge case where the answer to pick is 0 itself";
-    let division = app_code_uneven_division_code(quotient, divisor);
+    let division = app_learn_js_uneven_division_code(quotient, divisor);
     let t = text_to(quotient);
     let question = text_combine_multiple([
       "Math.floor(",
