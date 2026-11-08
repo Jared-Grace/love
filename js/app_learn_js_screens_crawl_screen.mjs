@@ -9,7 +9,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function app_code_screens_crawl_screen(
+export async function app_learn_js_screens_crawl_screen(
   page,
   url_prefix,
   screen,
