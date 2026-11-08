@@ -7,8 +7,10 @@ export function app_shared_bible_verse_words_none_text() {
   let texts = {
     en: "This Bible has no words for this verse.",
     ur: "اِس بائبل میں اِس آیت کے لیے کوئی الفاظ نہیں ہیں۔",
+    tgl: "Walang salita ang Bibliang ito para sa talatang ito.",
     translated_from: {
       ur: "This Bible has no words for this verse.",
+      tgl: "This Bible has no words for this verse.",
     },
   };
   let text = app_shared_text_reader_language(texts);
