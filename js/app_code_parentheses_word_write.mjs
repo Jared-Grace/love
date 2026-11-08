@@ -7,7 +7,7 @@ import { not } from "./not.mjs";
 import { function_name_to_path_unalias } from "./function_name_to_path_unalias.mjs";
 import { property_get } from "./property_get.mjs";
 import { file_read } from "./file_read.mjs";
-import { app_code_parentheses_word_text } from "./app_code_parentheses_word_text.mjs";
+import { app_learn_js_parentheses_word_text } from "./app_learn_js_parentheses_word_text.mjs";
 import { equal } from "./equal.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { list_add } from "./list_add.mjs";
@@ -31,7 +31,7 @@ export async function app_code_parentheses_word_write() {
     let found = await function_name_to_path_unalias(f_name);
     let f_path = property_get(found, "f_path");
     let before = await file_read(f_path);
-    let after = app_code_parentheses_word_text(before);
+    let after = app_learn_js_parentheses_word_text(before);
     let same = equal(before, after);
     if (same) {
       continue;

@@ -9,7 +9,7 @@ export function app_learn_js_parentheses_word_held() {
   let held = [
     fn_name("app_learn_js_lesson_ids_short"),
     fn_name("app_learn_js_parentheses_word_held"),
-    fn_name("app_code_parentheses_word_text"),
+    fn_name("app_learn_js_parentheses_word_text"),
     fn_name("app_code_parentheses_word_write"),
   ];
   return held;

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_replace } from "./text_replace.mjs";
-export function app_code_parentheses_word_text(text) {
+export function app_learn_js_parentheses_word_text(text) {
   arguments_assert(arguments, 1);
   ("the same piece of a code app file with every word for a round ( ) written the way the app itself says it - parentheses, parenthesis, parenthesised - in place of the word brackets, which this repo keeps for the square [ ] ones.");
   ("Two shapes were being called by one word. The picture Bible writes [ ] round a word a translator supplied and calls those brackets, and the code app was calling ( ) brackets too, so a reader arriving at either had to work out which shape was meant from what was around it. The lessons a learner reads were put right first; this is the same word finished off everywhere behind them.");
