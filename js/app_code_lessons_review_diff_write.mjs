@@ -5,7 +5,7 @@ import { app_code_lessons_review_diff_shared_size } from "./app_code_lessons_rev
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_lessons_review_diff_counted } from "./app_learn_js_lessons_review_diff_counted.mjs";
-import { app_code_lessons_review_diff_section } from "./app_code_lessons_review_diff_section.mjs";
+import { app_learn_js_lessons_review_diff_section } from "./app_learn_js_lessons_review_diff_section.mjs";
 import { app_code_lessons_review_diff_size } from "./app_code_lessons_review_diff_size.mjs";
 import { app_code_lessons_review_since } from "./app_code_lessons_review_since.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
@@ -44,7 +44,10 @@ export async function app_code_lessons_review_diff_write(commit) {
     return touched;
   }
   let smallest_first = list_sort_number_mapper(sized, lines_touched);
-  let sections = list_map(smallest_first, app_code_lessons_review_diff_section);
+  let sections = list_map(
+    smallest_first,
+    app_learn_js_lessons_review_diff_section,
+  );
   ("THE SHARED HELPERS ARE IN THE SAME FILE, because a reading that stops short of them is not a reading of everything that changed. A helper two lessons share is edited by somebody who was thinking about one of them, and it lands on both screens; left out of the report it is the one kind of change nobody is ever handed.");
   ("They come after the lessons and are sized the same way, so the same rule applies twice over: within each part the cheap reading is done before the expensive one starts.");
   let lessons_now = review.lessons_now;
