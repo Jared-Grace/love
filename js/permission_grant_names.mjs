@@ -2638,7 +2638,7 @@ export function permission_grant_names() {
     fn_name("app_learn_js_color_tone_gate_run"),
     fn_name("app_learn_js_highlight_color_gate_run"),
     fn_name("app_learn_js_lesson_chip_color_gate_run"),
-    fn_name("app_code_note_name_contrast_gate_run"),
+    fn_name("app_learn_js_note_name_contrast_gate_run"),
     fn_name("app_learn_en_gloss_tagalog_glosses_empty_gate_run"),
     fn_name("app_learn_en_gloss_tagalog_misaligned_gate_run"),
     fn_name("app_learn_en_gloss_urdu_bible_quotes_absent_gate_run"),

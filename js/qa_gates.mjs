@@ -588,7 +588,7 @@ import { bible_glyph_seats_contested_gate_run } from "./bible_glyph_seats_contes
 import { messages_real_quoted_gate_run } from "./messages_real_quoted_gate_run.mjs";
 import { reply_parser_gate_run } from "./reply_parser_gate_run.mjs";
 import { reply_cases_no_reply_yet_gate_run } from "./reply_cases_no_reply_yet_gate_run.mjs";
-import { app_code_note_name_contrast_gate_run } from "./app_code_note_name_contrast_gate_run.mjs";
+import { app_learn_js_note_name_contrast_gate_run } from "./app_learn_js_note_name_contrast_gate_run.mjs";
 import { functions_calls_walk_unwaited_gate_run } from "./functions_calls_walk_unwaited_gate_run.mjs";
 import { app_learn_js_highlight_color_gate_run } from "./app_learn_js_highlight_color_gate_run.mjs";
 import { app_learn_js_color_tone_gate_run } from "./app_learn_js_color_tone_gate_run.mjs";
@@ -1239,7 +1239,7 @@ export function qa_gates() {
     messages_real_quoted_gate_run,
     reply_parser_gate_run,
     reply_cases_no_reply_yet_gate_run,
-    app_code_note_name_contrast_gate_run,
+    app_learn_js_note_name_contrast_gate_run,
     functions_calls_walk_unwaited_gate_run,
     app_learn_js_highlight_color_gate_run,
     app_learn_js_color_tone_gate_run,
