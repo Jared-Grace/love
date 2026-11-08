@@ -7,7 +7,7 @@ import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.m
 import { app_learn_js_lesson_above_fake_draw } from "./app_learn_js_lesson_above_fake_draw.mjs";
 import { html_element_fake_lines } from "./html_element_fake_lines.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_lessons_fake_page_lambda } from "./app_code_lessons_fake_page_lambda.mjs";
+import { app_learn_js_lessons_fake_page_lambda } from "./app_learn_js_lessons_fake_page_lambda.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -48,7 +48,7 @@ export function app_learn_js_lessons_above_repeated() {
     }
     drawn = list_map(fns, one_read);
   }
-  app_code_lessons_fake_page_lambda(all_read);
+  app_learn_js_lessons_fake_page_lambda(all_read);
   function one_check(d, index) {
     let lesson = property_get(d, "lesson");
     let guided = equal(lesson.examples_guided, true);
