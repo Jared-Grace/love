@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
+import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_load } from "./app_code_review_load.mjs";
 import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
@@ -12,7 +12,7 @@ import { app_learn_js_lesson_go } from "./app_learn_js_lesson_go.mjs";
 import { less_than } from "./less_than.mjs";
 export function app_code_review_next_lesson(context, root) {
   arguments_assert(arguments, 2);
-  let checkpoint = app_code_review_checkpoint(context);
+  let checkpoint = app_learn_js_review_checkpoint(context);
   let number = property_get(checkpoint, "number");
   let checkpoint_key = property_get(checkpoint, "key");
   let covered = property_get(checkpoint, "lessons");

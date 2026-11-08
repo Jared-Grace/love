@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_remove } from "./html_remove.mjs";
-import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
+import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -34,7 +34,7 @@ export function app_code_review_finish_show({
   if (has_next) {
     html_remove(skip_button);
   }
-  let checkpoint = app_code_review_checkpoint(context);
+  let checkpoint = app_learn_js_review_checkpoint(context);
   let number = property_get(checkpoint, "number");
   let checkpoint_key = property_get(checkpoint, "key");
   app_code_review_complete_record(context, checkpoint_key);

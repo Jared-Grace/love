@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
+import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_checkpoints } from "./app_learn_js_checkpoints.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -14,7 +14,7 @@ export function app_code_review_milestone_next_or_null(context) {
   "Asked because the way on used to be only the lesson after, and two milestones stand under one lesson: finishing the first, with no lesson after it, said there were no more lessons while the second was waiting right below it.";
   "Always a milestone and never a review: the checkpoints under one lesson are its review first, if it has one, then its milestones in their order - the order the list of lessons draws them in - and a lesson has at most one review, so whatever comes after the one this tab is on is a milestone.";
   arguments_assert(arguments, 1);
-  let checkpoint = app_code_review_checkpoint(context);
+  let checkpoint = app_learn_js_review_checkpoint(context);
   let key = property_get(checkpoint, "key");
   let number = property_get(checkpoint, "number");
   let checkpoints = app_learn_js_checkpoints();

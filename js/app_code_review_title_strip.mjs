@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
+import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_reviews_complete_read } from "./app_code_reviews_complete_read.mjs";
 import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
@@ -12,7 +12,7 @@ export function app_code_review_title_strip(root, context) {
   arguments_assert(arguments, 2);
   ("the top bar of a review screen: the same bar a lesson wears, with home, an arrow back to the lesson the review stands under, an arrow on to the lesson after it, and the lessons the review covers as its title, at the human's request");
   ("The review stands under the lesson with its own number, so counted from zero that lesson sits one place before the number and the next lesson sits at the number itself.");
-  let checkpoint = app_code_review_checkpoint(context);
+  let checkpoint = app_learn_js_review_checkpoint(context);
   let number = property_get(checkpoint, "number");
   let checkpoint_key = property_get(checkpoint, "key");
   let words = property_get(checkpoint, "title");
