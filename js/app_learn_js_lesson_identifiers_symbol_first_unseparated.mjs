@@ -5,7 +5,7 @@ import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_span_code_dark } from "./html_span_code_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_symbol_separated_curried } from "./app_code_symbol_separated_curried.mjs";
+import { app_learn_js_symbol_separated_curried } from "./app_learn_js_symbol_separated_curried.mjs";
 import { app_learn_js_symbol_curried } from "./app_learn_js_symbol_curried.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { each } from "./each.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_identifiers_symbol_first_unseparated() {
     let div = html_div(c);
     let before = html_span_code_dark(div);
     html_display_inline_block(before);
-    let lambda$item2 = app_code_symbol_separated_curried(before);
+    let lambda$item2 = app_learn_js_symbol_separated_curried(before);
     each(split, lambda$item2);
     html_span_text(div, " , ");
     emoji_arrow_right();
