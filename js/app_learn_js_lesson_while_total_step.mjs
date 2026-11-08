@@ -7,7 +7,7 @@ import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_total_step_generic } from "./app_learn_js_lesson_total_step_generic.mjs";
-export function app_code_lesson_while_total_step() {
+export function app_learn_js_lesson_while_total_step() {
   arguments_assert(arguments, 0);
   ("a running total counting by more than one: let total = 0; let n = 1; while (n < 7) { total += n; n += 2; } console.log(total); writes out 9, which is 1 + 3 + 5");
   ("The one new fact is that n can go up by more than 1 each run, so which numbers are added up depends on where n starts and how big its step is: start at 1 and add 2 for the odd numbers, start at 2 for the even ones.");
