@@ -11,7 +11,7 @@ import { app_learn_js_parentheses_word_text } from "./app_learn_js_parentheses_w
 import { equal } from "./equal.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { list_add } from "./list_add.mjs";
-export async function app_code_parentheses_word_write() {
+export async function app_learn_js_parentheses_word_write() {
   arguments_assert(arguments, 0);
   ("Writes every file of the code app out again with the word brackets replaced by the word for the round pair the app actually draws, and hands back the names it changed.");
   ("It finds its own set rather than being handed one, so it cannot be pointed at a file it should not touch and cannot drift from what is actually still spelled the old way. Run twice it changes nothing the second time, which is also how you check it did the whole job.");
