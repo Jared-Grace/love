@@ -36,7 +36,7 @@ export function js_hash_key_getters_cases() {
     },
     {
       code: text_frozen(
-        "let hash = html_hash_get();\nlet key = list_get(kv, 0);\nlet is_lesson = equal(key, app_code_lesson_hash_key());",
+        "let hash = html_hash_get();\nlet key = list_get(kv, 0);\nlet is_lesson = equal(key, app_learn_js_lesson_hash_key());",
       ),
       getters: [f_name4],
       own: [f_name4],
@@ -44,7 +44,7 @@ export function js_hash_key_getters_cases() {
     },
     {
       code: text_frozen(
-        "let key = list_get(kv, 0);\nlet is_lesson = equal(key, app_code_lesson_hash_key());",
+        "let key = list_get(kv, 0);\nlet is_lesson = equal(key, app_learn_js_lesson_hash_key());",
       ),
       getters: [],
       own: [],
