@@ -1,7 +1,7 @@
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_code_review_title_strip } from "./app_code_review_title_strip.mjs";
 import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
-import { app_code_milestone_intro_is } from "./app_code_milestone_intro_is.mjs";
+import { app_learn_js_milestone_intro_is } from "./app_learn_js_milestone_intro_is.mjs";
 import { app_code_milestone_intro } from "./app_code_milestone_intro.mjs";
 import { app_code_review_passed } from "./app_code_review_passed.mjs";
 import { app_code_review_key } from "./app_code_review_key.mjs";
@@ -18,7 +18,7 @@ export function app_code_review(context) {
   let root = html_clear_context(context);
   app_code_review_title_strip(root, context);
   let checkpoint = app_code_review_checkpoint(context);
-  let intro = app_code_milestone_intro_is(context, checkpoint);
+  let intro = app_learn_js_milestone_intro_is(context, checkpoint);
   if (intro) {
     app_code_milestone_intro(root, context, checkpoint);
     return;
