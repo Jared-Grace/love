@@ -119,6 +119,7 @@
       "Edit(/home/j/a/repos/love/scripts/temp/**)",
       "Edit(/home/j/a/user/storage/gloss_write/**)",
       "Read(/home/j/a/user/storage/gloss_write/**)",
+      "Read(/home/j/a/user/storage/function/**)",
       "Bash(mkdir /tmp/claude-1000/-home-j-a-repos-love/:*)",
       "Bash(mkdir -p /tmp/claude-1000/-home-j-a-repos-love/:*)",
       "Bash(rm /tmp/claude-1000/-home-j-a-repos-love/:*)",
