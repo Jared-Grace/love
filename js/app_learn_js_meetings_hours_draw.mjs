@@ -32,7 +32,7 @@ import { text_combine } from "./text_combine.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-export function app_code_meetings_hours_draw(
+export function app_learn_js_meetings_hours_draw(
   parent,
   first_hour,
   last_hour,

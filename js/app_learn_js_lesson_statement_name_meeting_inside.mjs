@@ -1,7 +1,7 @@
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
-import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs";
+import { app_learn_js_meetings_hours_draw } from "./app_learn_js_meetings_hours_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -203,7 +203,7 @@ export function app_learn_js_lesson_statement_name_meeting_inside() {
   ]);
   function meetings_draw(box) {
     "the first meeting, 8 to 12, above the second, 9 to 11, on a ruler of the hours";
-    app_code_meetings_hours_draw(box, 8, 12, [
+    app_learn_js_meetings_hours_draw(box, 8, 12, [
       [8, 12],
       [9, 11],
     ]);
