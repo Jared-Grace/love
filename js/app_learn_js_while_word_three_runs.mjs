@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_word_three_runs_example } from "./app_code_word_three_runs_example.mjs";
 import { app_code_word_three_runs_walk } from "./app_code_word_three_runs_walk.mjs";
-export function app_code_while_word_three_runs(
+export function app_learn_js_while_word_three_runs(
   box,
   lines,
   word,

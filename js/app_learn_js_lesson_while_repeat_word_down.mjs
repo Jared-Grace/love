@@ -17,7 +17,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while_repeat_word } from "./app_learn_js_lesson_while_repeat_word.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_while_word_three_runs } from "./app_code_while_word_three_runs.mjs";
+import { app_learn_js_while_word_three_runs } from "./app_learn_js_while_word_three_runs.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_repeat_word_generic } from "./app_learn_js_lesson_repeat_word_generic.mjs";
 export function app_learn_js_lesson_while_repeat_word_down() {
@@ -71,7 +71,7 @@ export function app_learn_js_lesson_while_repeat_word_down() {
       " can count the runs down instead of up:",
     ]);
     let lines2 = program_lines(0, 3, joy);
-    app_code_while_word_three_runs(box_two, lines2, joy, greater, 3, -1);
+    app_learn_js_while_word_three_runs(box_two, lines2, joy, greater, 3, -1);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "The same word, counting down",
