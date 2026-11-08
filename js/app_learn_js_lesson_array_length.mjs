@@ -157,12 +157,22 @@ export function app_learn_js_lesson_array_length() {
       ["", "a[3]", " is the fourth item, since counting starts at ", "0", "."],
     );
     let box_two = app_learn_js_container_light_blue(root);
+    app_learn_js_div_cycle_code(box_two, ["Suppose we have an array:"]);
     app_learn_js_div_cycle_code(box_two, [
       "",
-      "a.length",
-      " is how many items the array ",
+      'let a = ["love", "joy", "peace"];',
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "This array has ",
+      "3",
+      " items in it",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "If we have an array named ",
       "a",
-      " holds:",
+      ", and we want to find how many items are in the array, then we can use ",
+      "a.length",
+      ":",
     ]);
     example(box_two);
     walk(box_two);
