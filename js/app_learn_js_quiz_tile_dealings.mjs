@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_quiz_tile_dealings_alike } from "./app_learn_js_quiz_tile_dealings_alike.mjs";
-export function app_code_quiz_tile_dealings(code) {
+export function app_learn_js_quiz_tile_dealings(code) {
   "$plain code";
   arguments_assert(arguments, 1);
   ("Every other line a learner could reasonably build out of an unscramble's own tiles: the question's shape exactly as it wrote it - every parenthesis, every comma and every name left standing where it stands - with the tiles handed round among the places of their own kind, values among value places and signs among sign places, and only the dealings kept that come out to the value the learner was shown and go on saying it the way the question said it.");
