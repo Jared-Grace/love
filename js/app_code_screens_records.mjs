@@ -1,6 +1,6 @@
 import { app_code_screens_seed_script } from "./app_code_screens_seed_script.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
-import { app_code_screens_no_lesson } from "./app_code_screens_no_lesson.mjs";
+import { app_learn_js_screens_no_lesson } from "./app_learn_js_screens_no_lesson.mjs";
 import { app_learn_js_screens_crawl_screen } from "./app_learn_js_screens_crawl_screen.mjs";
 import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
 import { app_learn_js_screens_crawl_lesson } from "./app_learn_js_screens_crawl_lesson.mjs";
@@ -10,7 +10,7 @@ export async function app_code_screens_records(url_prefix) {
   "crawl every code screen and return the raw capture { records, errors }: records is one entry per screen (examples plus each quiz kind, reached by clicking Next, then every screen that opens without a lesson - the list, the settings, and the two that ask before changing what a learner has finished) carrying its text and mechanical signals, errors is any javascript error seen. The shared collection behind both the mechanical crawl summary and the text manifest";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let ids = app_learn_js_lesson_ids();
-  let screens = app_code_screens_no_lesson();
+  let screens = app_learn_js_screens_no_lesson();
   let records = [];
   let errors = [];
   async function on_page(page) {
