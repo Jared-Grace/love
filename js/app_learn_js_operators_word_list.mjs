@@ -5,7 +5,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_is } from "./text_is.mjs";
 import { list_to_or_list_generic } from "./list_to_or_list_generic.mjs";
-export function app_code_operators_word_list(
+export function app_learn_js_operators_word_list(
   parent,
   operators,
   word_relationship,

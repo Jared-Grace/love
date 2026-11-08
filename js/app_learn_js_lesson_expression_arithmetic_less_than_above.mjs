@@ -6,7 +6,7 @@ import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_to_or_list_word } from "./list_to_or_list_word.mjs";
-import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs";
+import { app_learn_js_operators_word_list } from "./app_learn_js_operators_word_list.mjs";
 import { js_operator_symbol } from "./js_operator_symbol.mjs";
 import { app_learn_js_operators_comparison_or_list } from "./app_learn_js_operators_comparison_or_list.mjs";
 import { add } from "./add.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_expression_arithmetic_less_than_above(
   let more = [o];
   let operators = list_concat(four, more);
   let word_relationship = list_to_or_list_word();
-  app_code_operators_word_list(
+  app_learn_js_operators_word_list(
     line,
     operators,
     word_relationship,
