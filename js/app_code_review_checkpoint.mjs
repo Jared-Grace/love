@@ -6,7 +6,7 @@ import { app_code_milestone_get_or_null } from "./app_code_milestone_get_or_null
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_milestone_explain } from "./app_code_milestone_explain.mjs";
+import { app_learn_js_milestone_explain } from "./app_learn_js_milestone_explain.mjs";
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
 import { app_code_review_number_get } from "./app_code_review_number_get.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
@@ -30,7 +30,7 @@ export function app_code_review_checkpoint(context) {
     if (null_not_is(milestone)) {
       let label_inner = property_get(milestone, "label");
       let title_inner = text_combine("Milestone: ", label_inner);
-      let explain = app_code_milestone_explain();
+      let explain = app_learn_js_milestone_explain();
       let again_inner = app_shared_button_restart_text(
         "Do this milestone again",
       );
