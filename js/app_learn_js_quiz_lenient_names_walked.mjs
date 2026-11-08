@@ -8,7 +8,7 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-export function app_code_quiz_lenient_names_walked() {
+export function app_learn_js_quiz_lenient_names_walked() {
   arguments_assert(arguments, 0);
   ("every lesson and way round in the whole course that can be passed by reading the right answer off the code, named as the lesson and the way joined by a space, and how many lessons were drawn to say so");
   ("Each lesson is read many times over and a name is kept only where every reading agrees. A lesson draws new numbers and new words every time it is asked, so one reading answers about the draw it happened to get - and this list is measured against a written record, which fails on a name it does not hold as well as on a name it holds for nothing. A name that came and went between runs would fail that record in both directions by turns.");
