@@ -10,7 +10,7 @@ import { list_includes } from "./list_includes.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_quiz_unscramble_unwritable() {
+export function app_learn_js_quiz_unscramble_unwritable() {
   "names every code lesson whose unscramble can ask a question the screen cannot then SHOW - one whose tokens do not come back unchanged when they are written out as code again.";
   "The unscramble hands the learner one button per token and, after each press, shows how much of the answer is built by finding the pressed tokens inside the written-out code. So a token that goes missing on the way out is not a cosmetic fault: the search for it throws, in front of the learner, on the press that was CORRECT. That is what a redundant parenthesis did to four lessons - the writing-out was a parse and an unparse, and a tree does not keep a parenthesis it does not need.";
   "Which lessons ask an unscramble is read off the lessons themselves - the exercise whose answer is handled by the token select - rather than from a list written here. A list would have to be kept in step with the lessons by hand, and a lesson added with a new shape of answer is exactly what this is for.";
