@@ -18,8 +18,10 @@ export function app_shared_bible_licence_words_reader(licence) {
     let texts = {
       en: "Terms not read",
       ur: "شرائط پڑھی نہیں گئیں",
+      tgl: "Hindi nabasa ang mga tuntunin",
       translated_from: {
         ur: "Terms not read",
+        tgl: "Terms not read",
       },
     };
     let said = app_shared_text_reader_language(texts);
