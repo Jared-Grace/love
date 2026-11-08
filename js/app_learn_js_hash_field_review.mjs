@@ -1,6 +1,6 @@
 import { app_learn_js_review_hash_key } from "./app_learn_js_review_hash_key.mjs";
 import { app_learn_js_review_number_known_is } from "./app_learn_js_review_number_known_is.mjs";
-import { app_code_review_number_suggestions } from "./app_code_review_number_suggestions.mjs";
+import { app_learn_js_review_number_suggestions } from "./app_learn_js_review_number_suggestions.mjs";
 import { hash_number_label } from "./hash_number_label.mjs";
 export function app_learn_js_hash_field_review() {
   "The review field of a code app link, described in the shape the checking of links reads.";
@@ -11,7 +11,7 @@ export function app_learn_js_hash_field_review() {
     list_is: false,
     number_is: true,
     valid_is: app_learn_js_review_number_known_is,
-    suggestions: app_code_review_number_suggestions,
+    suggestions: app_learn_js_review_number_suggestions,
     label: hash_number_label,
   };
   return field;
