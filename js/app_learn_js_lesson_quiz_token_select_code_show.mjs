@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
+import { app_learn_js_quiz_string_tokens_merge } from "./app_learn_js_quiz_string_tokens_merge.mjs";
 import { js_tokens_to_code } from "./js_tokens_to_code.mjs";
 import { text_index_of_from_start } from "./text_index_of_from_start.mjs";
 import { list_reduce } from "./list_reduce.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_quiz_token_select_code_show(
   "The cut is found by walking the taps through the line one at a time, each search beginning where the last one ended, so a piece that occurs twice in the line is matched at its second place the second time it is tapped.";
   arguments_assert(arguments, 4);
   let variation_first = list_first(variations);
-  let merged = app_code_quiz_string_tokens_merge(variation_first);
+  let merged = app_learn_js_quiz_string_tokens_merge(variation_first);
   let code = js_tokens_to_code(merged);
   correction_code_set(code);
   function lambda(index, token_each) {
