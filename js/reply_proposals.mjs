@@ -27,6 +27,7 @@ import { reply_choices_age } from "./reply_choices_age.mjs";
 import { prayer_according_to_desire } from "./prayer_according_to_desire.mjs";
 import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
 import { reply_choices_praise } from "./reply_choices_praise.mjs";
+import { text_may_the_lord_exclamation } from "./text_may_the_lord_exclamation.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -2736,6 +2737,93 @@ export function reply_proposals() {
       "leaving out the Amen is caution, not a rejection: the reply still praises God and pronounces a blessing on the meeting. No Amen is said to the message itself because Amen agrees that what was said is so, and nobody here saw the meeting. Amen stays where its object is on the page - a verse quoted back, a praise of God, the end of the reply's own prayer. The rejected reading was keeping the Amen because the rule matches only these exact words; that proves a person read the words, not that the meeting was blessed.",
     ],
   };
+  function blessing_exclaimed_for(blessed) {
+    let request = text_combine_multiple([
+      "always bless ",
+      blessed,
+      " exceedingly abundantly more than anyone can ask or think",
+    ]);
+    let line = text_may_the_lord_exclamation(request);
+    let wrapped = prayer_wrap(line);
+    return wrapped;
+  }
+  let exclaimed_v2_out = text_combine_multiple([
+    "-  let v2 = ",
+    fn_name("text_lord_bless_always"),
+    "();",
+  ]);
+  let exclaimed_combine_out = text_combine_multiple([
+    "-  let prayer = ",
+    fn_name("text_combine_multiple"),
+    "([",
+  ]);
+  let exclaimed_combine_in = text_combine_multiple([
+    "+  let request = ",
+    fn_name("text_combine_multiple"),
+    "([",
+  ]);
+  let exclaimed_line_in = text_combine_multiple([
+    "+  let prayer = ",
+    fn_name("text_may_the_lord_exclamation"),
+    "(request);",
+  ]);
+  let exclaimed_pastor = blessing_exclaimed_for("your ministry");
+  let exclaimed_kenya = blessing_exclaimed_for(
+    "your ministry and the people of Kenya",
+  );
+  let exclaimed_desire = prayer_according_to_desire();
+  let exclaimed_family = blessing_exclaimed_for(
+    "you, your family, your church and your country",
+  );
+  let combined73 = text_combine_multiple([
+    "the ! is added the same way the provider prayer already adds it, through ",
+    fn_name("text_may_the_lord_exclamation"),
+    ", so the two prayers end alike.",
+  ]);
+  let blessing_exclaimed = {
+    title: "the blessing prayer ends with !",
+    fn: fn_name("prayer_blessing"),
+    whole: [],
+    diff: [
+      exclaimed_v2_out,
+      exclaimed_combine_out,
+      "-    v2,",
+      exclaimed_combine_in,
+      '+    "always bless ",',
+      "     blessed,",
+      '     " exceedingly abundantly more than anyone can ask or think",',
+      "   ]);",
+      exclaimed_line_in,
+      blessing_kept_wrap,
+      "   return v;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I am a pastor",
+        answered: true,
+        outputs: [exclaimed_pastor],
+      },
+      {
+        from: "",
+        message: "I do ministry work in Kenya",
+        answered: true,
+        outputs: [exclaimed_kenya],
+      },
+      {
+        from: "",
+        message: "I ask you to pray for me",
+        answered: true,
+        outputs: [exclaimed_desire, exclaimed_family],
+      },
+    ],
+    decide: [
+      "this changes only the words: the blessing prayer now reads ... more than anyone can ask or think! Amen. Nothing new is matched, so no message gets a reply that got none before.",
+      "four replies use this one blessing: a pastor or minister, ministry work in a country, the Bless button's longer blessing on you, your family, your church and your country, and the meeting change waiting above. All four change together.",
+      combined73,
+      "the rejected reading was leaving the blessing without !, as the heal, job, provide and safe travels prayers still are. Those can follow in their own change.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2771,6 +2859,7 @@ export function reply_proposals() {
     name_alone_said,
     blessing_always_said,
     meeting_blessed_said,
+    blessing_exclaimed,
   ];
   return proposals;
 }
