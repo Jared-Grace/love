@@ -14,7 +14,7 @@ import { js_visit } from "./js_visit.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { error } from "./error.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { app_learn_js_program_trace } from "./app_learn_js_program_trace.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { list_size } from "./list_size.mjs";
@@ -112,7 +112,7 @@ export function app_learn_js_if_blocks(code) {
     }
     if (null_is(conditions)) {
       conditions = {};
-      let trace = app_code_program_trace(code);
+      let trace = app_learn_js_program_trace(code);
       for (let entry of trace) {
         if (property_exists(entry, "condition")) {
           let line = property_get(entry, "line");

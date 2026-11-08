@@ -10,7 +10,7 @@ import { text_size } from "./text_size.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { app_learn_js_program_trace } from "./app_learn_js_program_trace.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -58,7 +58,7 @@ export function app_learn_js_console_log_wrong_say(question, answer, choice) {
   let message2 = text_slice(call, start_size, to2);
   let inside = text_trim(message2);
   function trace_get() {
-    let traced = app_code_program_trace(code);
+    let traced = app_learn_js_program_trace(code);
     return traced;
   }
   let trace = catch_null(trace_get);

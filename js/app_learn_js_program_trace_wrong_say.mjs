@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { app_learn_js_program_trace } from "./app_learn_js_program_trace.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_program_trace_wrong_say(question, answer, choice) {
   ("2026-10-26: ifs were added because a program of ifs and writing-out alone was left silent, and the only reminder it ever met was the reversed-lines one, when the shuffle happened to offer that pick - which made a lesson's silence differ from run to run");
   ("The working comes from the trace the step-by-step lessons are built on, so this reminder and those lessons follow a program by one rule. The choice pressed is not read: every wrong output is answered by the same working, because following the names is what was missed. Not picked: a sentence per kind of wrong pick, which says why one pick is wrong but leaves the learner to work out the right one; only the lines that change a name, which leaves out the writing-out the question is asking about");
   function trace_get() {
-    let traced = app_code_program_trace(question);
+    let traced = app_learn_js_program_trace(question);
     return traced;
   }
   let trace = catch_null(trace_get);

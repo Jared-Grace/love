@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { app_learn_js_program_trace } from "./app_learn_js_program_trace.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_program_step_actions_solve_whole } from "./app_learn_js_program_step_actions_solve_whole.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_program_step_trace(code) {
   ("2026-10-28, at the human's asking, for the while lessons: a line keeps what was solved into it while the program runs, so a while line run a second time still reads while (true) {, and the first thing chosen there is to reset the line - its condition written again with its names - before it is solved again. Every line run again that had something solved or written the long way into it is reset the same way, the lines inside the { } as well as the while line, since each of them would otherwise be solved from values that are no longer true. Not picked: resetting only the while line, which leaves total += 1 standing where the second run must read total += n; and putting a line back by itself once it is complete, taken back 2026-10-14 for the if lessons because the value turned back into the name before the learner had used it");
   ("The steps the step-through asks for and the steps Show me the answer lists are both read from this, so the two cannot come to disagree");
   ("2026-10-29, at the human's asking: a while line run again resets its whole block - itself and every line inside its { } that ran since it last ran and had something solved into it - in one step, so the learner need not remember to reset n += 2 inside the block on its own. The lines it puts back leave the changed list, so none of them is asked to reset again by itself. Any other line run again still resets only itself. Not picked: resetting every line run since for any line run again, which for a function called twice would put back lines between the two calls that never run again");
-  let traced = app_code_program_trace(code);
+  let traced = app_learn_js_program_trace(code);
   let changed = [];
   let ran = [];
   let trace = [];

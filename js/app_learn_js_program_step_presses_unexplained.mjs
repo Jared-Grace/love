@@ -8,7 +8,7 @@ import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { app_learn_js_program_trace } from "./app_learn_js_program_trace.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
@@ -37,7 +37,7 @@ export function app_learn_js_program_step_presses_unexplained() {
     }
     list_add(seen, code);
     let lines = text_split_newline(code);
-    let trace = app_code_program_trace(code);
+    let trace = app_learn_js_program_trace(code);
     ("the last step looked at is the one after the program has finished, where no line is due and every press is wrong");
     for (let index = 0; less_than_equal(index, list_size(trace)); index++) {
       let due = -1;

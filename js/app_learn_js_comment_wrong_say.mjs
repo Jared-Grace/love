@@ -12,7 +12,7 @@ import { text_trim } from "./text_trim.mjs";
 import { not } from "./not.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { app_learn_js_program_trace } from "./app_learn_js_program_trace.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -49,7 +49,7 @@ export function app_learn_js_comment_wrong_say(question, answer, choice) {
   }
   let program = list_join_newline(kept);
   function trace_get() {
-    let traced = app_code_program_trace(program);
+    let traced = app_learn_js_program_trace(program);
     return traced;
   }
   let trace = catch_null(trace_get);
