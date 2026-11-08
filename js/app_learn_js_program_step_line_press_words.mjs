@@ -9,7 +9,7 @@ import { list_get_property } from "./list_get_property.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_program_step_line_while_words } from "./app_code_program_step_line_while_words.mjs";
+import { app_learn_js_program_step_line_while_words } from "./app_learn_js_program_step_line_while_words.mjs";
 import { app_code_program_step_line_wrong_words } from "./app_code_program_step_line_wrong_words.mjs";
 import { app_learn_js_program_step_line_ran_words } from "./app_learn_js_program_step_line_ran_words.mjs";
 import { app_learn_js_program_step_line_never_words } from "./app_learn_js_program_step_line_never_words.mjs";
@@ -69,7 +69,7 @@ export function app_learn_js_program_step_line_press_words(
     }
     ("2026-10-23, at the human's asking that every wrong press says why: otherwise the rule that decides the next line is said, where one does");
     if (null_is(reason)) {
-      let wrong = app_code_program_step_line_while_words(
+      let wrong = app_learn_js_program_step_line_while_words(
         lines,
         trace,
         index,

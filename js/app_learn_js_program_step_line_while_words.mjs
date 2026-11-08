@@ -9,7 +9,7 @@ import { less_than } from "./less_than.mjs";
 import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
 import { not } from "./not.mjs";
 import { greater_than } from "./greater_than.mjs";
-export function app_code_program_step_line_while_words(
+export function app_learn_js_program_step_line_while_words(
   lines,
   trace,
   index,
