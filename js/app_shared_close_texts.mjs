@@ -5,8 +5,10 @@ export function app_shared_close_texts() {
   let r = {
     en: "Close",
     ur: "بند کریں",
+    tgl: "Isara",
     translated_from: {
       ur: "Close",
+      tgl: "Close",
     },
   };
   return r;
