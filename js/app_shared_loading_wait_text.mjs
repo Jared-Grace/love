@@ -7,8 +7,10 @@ export function app_shared_loading_wait_text() {
   let texts = {
     en: "One moment, please",
     ur: "ایک لمحہ، براہِ کرم",
+    tgl: "Sandali lang po",
     translated_from: {
       ur: "One moment, please",
+      tgl: "One moment, please",
     },
   };
   let text = app_shared_text_reader_language(texts);
