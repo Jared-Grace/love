@@ -6349,6 +6349,40 @@ def decide(decision, reason):
     return None
 
 
+# Where this machine keeps something that unlocks an account: the ssh keys
+# (no passphrase, and each pushes to a git host), gpg, the shell and python
+# histories (typed tokens land there), and the token files of the tools this
+# repo uses - gh, firebase (configstore), archive.org (ia.ini), Cloudflare
+# (.wrangler) - plus the generic stores. Matched as text anywhere in the
+# command, so a mention in any position asks; a false match costs one click,
+# a missed one costs a key. Measured 2026-11-08: across every transcript of
+# this repo only one command outside the session that wrote this named any of
+# them, so asking here interrupts nothing routine.
+#
+# This is against mistakes, not against a determined author: a glob
+# (`~/.s?h`), a quote split (`.ss''h`) or a variable gets past a text match,
+# which is why it asks rather than claiming to be a wall.
+SECRET_PATH_RE = re.compile(
+    r"(?<![A-Za-z0-9_])\.(?:ssh|gnupg|netrc|git-credentials|wrangler)(?![A-Za-z0-9_-])"
+    r"|(?<![A-Za-z0-9_])\.(?:bash|zsh|python)_history\b"
+    r"|\.config/(?:gh|gcloud|configstore|firebase)(?![A-Za-z0-9_-])"
+    r"|\.config/ia\.ini\b"
+    r"|\.local/share/keyrings\b"
+)
+
+
+def secret_path_ask_reason(found):
+    return (
+        f"This command names `{found}`, where this machine keeps something "
+        "that unlocks an account (a key, a token, or a history that may hold "
+        "one). Anything it prints lands in a transcript that leaves the "
+        "machine, so it is asked about every time rather than approved by "
+        "the verb's grant. If the work does not need the secret itself, "
+        "reach it another way (a repo function that uses the token without "
+        "printing it); otherwise approve it once."
+    )
+
+
 def main():
     try:
         payload = json.load(sys.stdin)
@@ -6381,6 +6415,15 @@ def main():
     # so this only ever converts a 'silent'/'ask' into a self-correcting 'deny'.
     if find_python_eval(command):
         return decide("deny", PYTHON_EVAL_DENY_REASON)
+
+    # A floor that asks rather than denies: a command naming where this
+    # machine keeps a secret. Before any allow decision, because `cat` is
+    # granted and reads anywhere - measured 2026-11-08, `cat ~/.ssh/id_ed25519`
+    # was approved unasked, and whatever prints lands in a transcript that
+    # leaves the machine. See SECRET_PATH_RE.
+    secret = SECRET_PATH_RE.search(command)
+    if secret:
+        return decide("ask", secret_path_ask_reason(secret.group(0)))
 
     # Same floor-instead-of-prompt reasoning, applied to the shell writing a
     # file from a heredoc: the Write and Edit tools do it without a prompt and
