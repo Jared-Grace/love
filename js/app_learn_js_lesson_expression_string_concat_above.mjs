@@ -4,7 +4,7 @@ import { app_learn_js_lesson_expression_string_concat_above_after_line } from ".
 import { app_learn_js_lesson_expression_string_concat_above_right_line } from "./app_learn_js_lesson_expression_string_concat_above_right_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_string_colored } from "./app_code_string_colored.mjs";
+import { app_learn_js_string_colored } from "./app_learn_js_string_colored.mjs";
 export function app_learn_js_lesson_expression_string_concat_above(
   root,
   context,
@@ -20,5 +20,5 @@ export function app_learn_js_lesson_expression_string_concat_above(
   let space_line = property_get(r3, "space_line");
   let joined_value = property_get(r3, "joined_value");
   html_span_text(space_line, "There is no space between them: ");
-  app_code_string_colored(space_line, joined_value);
+  app_learn_js_string_colored(space_line, joined_value);
 }

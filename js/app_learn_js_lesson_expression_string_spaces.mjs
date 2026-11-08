@@ -14,7 +14,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_string_colored } from "./app_code_string_colored.mjs";
+import { app_learn_js_string_colored } from "./app_learn_js_string_colored.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 export function app_learn_js_lesson_expression_string_spaces() {
@@ -73,7 +73,7 @@ export function app_learn_js_lesson_expression_string_spaces() {
     let define = app_learn_js_container_light_blue(root);
     let ex = html_div(define);
     html_span_text(ex, "The value of ");
-    app_code_string_colored(ex, phrase);
+    app_learn_js_string_colored(ex, phrase);
     html_span_text(ex, " is ");
     let value_out = html_span_text_code_dark(ex, phrase);
     let color = app_code_string_value_color();

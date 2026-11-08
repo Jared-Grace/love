@@ -9,7 +9,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_lesson_expression_string_concat_value_word } from "./app_learn_js_lesson_expression_string_concat_value_word.mjs";
-import { app_code_string_colored } from "./app_code_string_colored.mjs";
+import { app_learn_js_string_colored } from "./app_learn_js_string_colored.mjs";
 export function app_learn_js_lesson_expression_string_concat_above_remember_line(
   two,
   a,
@@ -46,7 +46,7 @@ export function app_learn_js_lesson_expression_string_concat_above_remember_line
   html_span_text(same_line, " is the same as the ");
   app_learn_js_lesson_expression_string_concat_value_word(same_line, on_light);
   html_span_text(same_line, " of ");
-  app_code_string_colored(same_line, joined_value);
+  app_learn_js_string_colored(same_line, joined_value);
   let remember_line = html_div(derive);
   let r = {
     code_a,
