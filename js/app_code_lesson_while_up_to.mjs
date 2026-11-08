@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
 import { app_learn_js_lesson_up_to_log_options } from "./app_learn_js_lesson_up_to_log_options.mjs";
-import { app_code_lesson_while_less_equal } from "./app_code_lesson_while_less_equal.mjs";
+import { app_learn_js_lesson_while_less_equal } from "./app_learn_js_lesson_while_less_equal.mjs";
 export function app_code_lesson_while_up_to() {
   arguments_assert(arguments, 0);
   ("<= with a console.log and n++: let n = 1; while (n <= 3) { console.log(n); n++; } writes out 1, 2 and 3");
@@ -17,7 +17,7 @@ export function app_code_lesson_while_up_to() {
   let lesson = app_code_lesson_while_update_log_generic({
     ...app_learn_js_lesson_up_to_log_options(),
     name_id,
-    remembered: app_code_lesson_while_less_equal,
+    remembered: app_learn_js_lesson_while_less_equal,
     remembered_parts: [
       "",
       "<=",
