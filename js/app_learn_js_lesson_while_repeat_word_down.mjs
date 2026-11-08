@@ -20,7 +20,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_while_word_three_runs } from "./app_code_while_word_three_runs.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_repeat_word_generic } from "./app_learn_js_lesson_repeat_word_generic.mjs";
-export function app_code_lesson_while_repeat_word_down() {
+export function app_learn_js_lesson_while_repeat_word_down() {
   arguments_assert(arguments, 0);
   ('a while that writes out the same word each run while n counts down: let n = 3; while (n > 0) { console.log("joy"); n--; } writes out joy three times');
   ("The one new fact is that n can count the runs downwards just as well as upwards: nothing about the word depends on which way it goes.");
