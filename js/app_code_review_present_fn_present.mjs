@@ -28,7 +28,7 @@ import { not } from "./not.mjs";
 import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
-import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
+import { app_learn_js_review_exercise } from "./app_learn_js_review_exercise.mjs";
 export function app_code_review_present_fn_present(
   r,
   {
@@ -147,7 +147,7 @@ export function app_code_review_present_fn_present(
       app_code_review_hide_success(success_container);
     }
     let added_count = list_size(places);
-    app_code_review_exercise(
+    app_learn_js_review_exercise(
       c,
       exercise,
       on_correct,

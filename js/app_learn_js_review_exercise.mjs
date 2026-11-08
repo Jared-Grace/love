@@ -15,7 +15,7 @@ import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { or } from "./or.mjs";
 import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
-export function app_code_review_exercise(
+export function app_learn_js_review_exercise(
   parent,
   exercise,
   on_correct,
