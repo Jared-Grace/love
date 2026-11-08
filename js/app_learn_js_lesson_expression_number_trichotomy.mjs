@@ -4,7 +4,7 @@ import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
-import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
+import { app_learn_js_prose_code_line } from "./app_learn_js_prose_code_line.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_lesson_operators_value_max } from "./app_learn_js_lesson_operators_value_max.mjs";
@@ -94,14 +94,14 @@ export function app_learn_js_lesson_expression_number_trichotomy() {
   function above(root) {
     "first an example box: two numbers can be the same or different; then a reasoning box - when they are different one is bigger, shown both as bigger and as smaller; then the three-cases box: any two numbers give exactly one of the three, listed a/b/c with the operator that tests each case tagged in parentheses. Everyday words bigger/smaller, and the general rule stated in words (the first / the second number) because variables are not taught yet, so all code shown is concrete numbers.";
     let example = app_learn_js_container_light_blue(root);
-    app_code_prose_code_line(example, [
+    app_learn_js_prose_code_line(example, [
       ["code", "1"],
       ["text", " and "],
       ["code", "1"],
       ["text", " are the same: "],
       ["code", "1 === 1"],
     ]);
-    app_code_prose_code_line(example, [
+    app_learn_js_prose_code_line(example, [
       ["code", "2"],
       ["text", " and "],
       ["code", "3"],
@@ -109,17 +109,17 @@ export function app_learn_js_lesson_expression_number_trichotomy() {
       ["code", "2 !== 3"],
     ]);
     let reasoning = app_learn_js_container_light_blue(root);
-    app_code_prose_code_line(reasoning, [
+    app_learn_js_prose_code_line(reasoning, [
       ["text", "When two numbers are different, one is bigger than the other"],
     ]);
-    app_code_prose_code_line(reasoning, [
+    app_learn_js_prose_code_line(reasoning, [
       ["code", "3"],
       ["text", " is bigger than "],
       ["code", "2"],
       ["text", ": "],
       ["code", "3 > 2"],
     ]);
-    app_code_prose_code_line(reasoning, [
+    app_learn_js_prose_code_line(reasoning, [
       ["code", "2"],
       ["text", " is smaller than "],
       ["code", "3"],
@@ -127,8 +127,10 @@ export function app_learn_js_lesson_expression_number_trichotomy() {
       ["code", "2 < 3"],
     ]);
     let cases = app_learn_js_container_light_blue(root);
-    app_code_prose_code_line(cases, [["text", "Suppose we have two numbers"]]);
-    app_code_prose_code_line(cases, [
+    app_learn_js_prose_code_line(cases, [
+      ["text", "Suppose we have two numbers"],
+    ]);
+    app_learn_js_prose_code_line(cases, [
       ["text", "Then exactly one of these will be "],
       ["code", "true"],
       ["text", ":"],

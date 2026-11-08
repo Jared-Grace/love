@@ -8,7 +8,7 @@ import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_b
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
-import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
+import { app_learn_js_prose_code_line } from "./app_learn_js_prose_code_line.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -105,7 +105,7 @@ export function app_learn_js_lesson_expression_string_trichotomy() {
         ")",
       ],
     );
-    app_code_prose_code_line(transfer, [
+    app_learn_js_prose_code_line(transfer, [
       ["text", "Two strings work the same way"],
     ]);
     let dictionary = app_learn_js_container_light_blue(root);
@@ -117,26 +117,28 @@ export function app_learn_js_lesson_expression_string_trichotomy() {
         "strings are compared in alphabetical order, the order they appear in the dictionary",
       ],
     );
-    app_code_prose_code_line(dictionary, [
+    app_learn_js_prose_code_line(dictionary, [
       ["code", '"grace"'],
       ["text", " and "],
       ["code", '"grace"'],
       ["text", " are the same"],
     ]);
-    app_code_prose_code_line(dictionary, [
+    app_learn_js_prose_code_line(dictionary, [
       ["code", '"grace"'],
       ["text", " and "],
       ["code", '"truth"'],
       ["text", " are different"],
     ]);
-    app_code_prose_code_line(dictionary, [
+    app_learn_js_prose_code_line(dictionary, [
       ["code", '"grace"'],
       ["text", " comes before "],
       ["code", '"truth"'],
     ]);
     let cases = app_learn_js_container_light_blue(root);
-    app_code_prose_code_line(cases, [["text", "Suppose we have two strings"]]);
-    app_code_prose_code_line(cases, [
+    app_learn_js_prose_code_line(cases, [
+      ["text", "Suppose we have two strings"],
+    ]);
+    app_learn_js_prose_code_line(cases, [
       ["text", "Then exactly one of these will be "],
       ["code", "true"],
       ["text", ":"],

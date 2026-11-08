@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_string_equality_title_name_id } from "./
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
-import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
+import { app_learn_js_prose_code_line } from "./app_learn_js_prose_code_line.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
@@ -89,12 +89,12 @@ export function app_learn_js_lesson_expression_string_equality() {
     let true_text = js_keyword_true();
     let false_text = js_keyword_false();
     let recall = app_learn_js_container_light_blue(root);
-    app_code_prose_code_line(recall, [
+    app_learn_js_prose_code_line(recall, [
       ["text", "You've seen that "],
       ["code", "==="],
       ["text", " asks if two numbers are the same"],
     ]);
-    app_code_prose_code_line(recall, [
+    app_learn_js_prose_code_line(recall, [
       ["code", "==="],
       ["text", " also compares two strings"],
     ]);
@@ -112,7 +112,7 @@ export function app_learn_js_lesson_expression_string_equality() {
       false_text,
     );
     let not_box = app_learn_js_container_light_blue(root);
-    app_code_prose_code_line(not_box, [
+    app_learn_js_prose_code_line(not_box, [
       ["code", "!=="],
       ["text", " is the opposite"],
     ]);

@@ -6,7 +6,7 @@ import { app_code_string_comparison_code } from "./app_code_string_comparison_co
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
-import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
+import { app_learn_js_prose_code_line } from "./app_learn_js_prose_code_line.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -73,7 +73,7 @@ export function app_learn_js_lesson_expression_string_order_equal() {
   function above(root, context) {
     "three teach boxes then the refreshable examples. Box 1 recalls that the learner already compared strings with < and >, and that when two strings are equal both are false. Box 2 teaches <= and >= DIFFERENTIALLY - each is the same as the < or > they already know, with the one change named at the point it happens: where the strict operator is false (the two strings equal), this one is true instead. Naming both the before value (false) and the after value (true) inline is what makes the delta line self-contained, on top of the recall box's general premise. Box 3 restates the same fact POSITIVELY - <= means comes-before-or-equal, >= means comes-after-or-equal. Two framings of one small addition on purpose: different learners latch onto different explanations, and a simple labelled line is cheap to skim past for anyone who already got it. What is avoided is the earlier version's re-definition of every case from scratch, which buried the one new thing. No worked examples here: the four refreshable examples below demonstrate the cases.";
     let recall = app_learn_js_container_light_blue(root);
-    app_code_prose_code_line(recall, [
+    app_learn_js_prose_code_line(recall, [
       ["text", "You've compared strings with "],
       ["code", "<"],
       ["text", " and "],
@@ -93,7 +93,7 @@ export function app_learn_js_lesson_expression_string_order_equal() {
       ],
     );
     let addition = app_learn_js_container_light_blue(root);
-    app_code_prose_code_line(addition, [
+    app_learn_js_prose_code_line(addition, [
       ["text", "We can use "],
       ["code", "<="],
       ["text", " and "],
@@ -102,7 +102,7 @@ export function app_learn_js_lesson_expression_string_order_equal() {
     ]);
     function differential(operator, strict_operator) {
       "one differential line: this operator is the same as its strict form, but true (instead of false) when the two strings are equal - the frame single-sourced so <= and >= cannot drift and a wording change is made once, not once per operator";
-      app_code_prose_code_line(addition, [
+      app_learn_js_prose_code_line(addition, [
         ["code", operator],
         ["text", " is the same as "],
         ["code", strict_operator],
@@ -123,7 +123,7 @@ export function app_learn_js_lesson_expression_string_order_equal() {
         direction,
         " the second string, or the two strings are equal",
       ]);
-      app_code_prose_code_line(meaning, [
+      app_learn_js_prose_code_line(meaning, [
         ["code", operator],
         ["text", phrase],
       ]);
