@@ -6,7 +6,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_lessons_review_diff_counted } from "./app_learn_js_lessons_review_diff_counted.mjs";
 import { app_learn_js_lessons_review_diff_section } from "./app_learn_js_lessons_review_diff_section.mjs";
-import { app_code_lessons_review_diff_size } from "./app_code_lessons_review_diff_size.mjs";
+import { app_learn_js_lessons_review_diff_size } from "./app_learn_js_lessons_review_diff_size.mjs";
 import { app_code_lessons_review_since } from "./app_code_lessons_review_since.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
@@ -82,7 +82,7 @@ export async function app_code_lessons_review_diff_write(commit) {
     "/gitignore/app_code_lessons_review_diff.txt",
   ]);
   await file_overwrite(report_path, report);
-  let sizes = list_map(smallest_first, app_code_lessons_review_diff_size);
+  let sizes = list_map(smallest_first, app_learn_js_lessons_review_diff_size);
   let shared_sizes = list_map(
     shared_smallest_first,
     app_learn_js_lessons_review_diff_shared_size,
