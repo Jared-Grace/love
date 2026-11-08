@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_above_vague } from "./app_code_lessons_above_vague.mjs";
+import { app_learn_js_lessons_above_vague } from "./app_learn_js_lessons_above_vague.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_above_vague_baseline_path } from "./app_learn_js_above_vague_baseline_path.mjs";
 import { baseline_names_gate_walked_generic } from "./baseline_names_gate_walked_generic.mjs";
@@ -12,7 +12,7 @@ export async function app_learn_js_above_vague_gate_run() {
   ("The words are a narrow list on purpose, kept in ",
     fn_name("app_learn_js_above_vague_pattern"),
     " with the reasons for each one left out. A check that fails on clear writing teaches whoever reads it to read past the one line that is real.");
-  let told = app_code_lessons_above_vague();
+  let told = app_learn_js_lessons_above_vague();
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "offenders");
   let path = app_learn_js_above_vague_baseline_path();

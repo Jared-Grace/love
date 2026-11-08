@@ -7,7 +7,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { app_code_lessons_fake_page_lambda } from "./app_code_lessons_fake_page_lambda.mjs";
-export function app_code_lessons_above_vague() {
+export function app_learn_js_lessons_above_vague() {
   arguments_assert(arguments, 0);
   ("Every piece of a lesson's telling that points at code with a word instead of showing the code, as lesson name | the piece. Read off the drawn screen, not the files, so prose a function says about itself is never counted and a piece handed to a shared painter is.");
   ("Also says how many lessons were drawn, because nothing found is the answer on a clean run and on a run that drew nothing.");
