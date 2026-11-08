@@ -5,7 +5,7 @@ import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_learn_js_home_rows_start } from "./app_learn_js_home_rows_start.mjs";
-import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
+import { app_learn_js_review_number_key } from "./app_learn_js_review_number_key.mjs";
 import { app_code_reviews_complete_read } from "./app_code_reviews_complete_read.mjs";
 import { app_learn_js_milestones } from "./app_learn_js_milestones.mjs";
 import { app_learn_js_lesson_groups_numbered } from "./app_learn_js_lesson_groups_numbered.mjs";
@@ -45,7 +45,7 @@ export async function app_learn_js_home(context) {
   let just_left = property_get(r2, "just_left");
   let lesson_left = property_get(r2, "lesson_left");
   let review_left = property_get(r2, "review_left");
-  let property_name = app_code_review_number_key();
+  let property_name = app_learn_js_review_number_key();
   let review_number = property_get(r2, property_name);
   let milestone_id_left = property_get(r2, "milestone_id_left");
   ("which reviews have been finished is read once for the whole list, the same way the finished lessons are, rather than once inside every row");

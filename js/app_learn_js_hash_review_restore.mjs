@@ -2,7 +2,7 @@ import { app_learn_js_review_hash_key } from "./app_learn_js_review_hash_key.mjs
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { number_from_text } from "./number_from_text.mjs";
-import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
+import { app_learn_js_review_number_key } from "./app_learn_js_review_number_key.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
 import { app_shared_screen_tab_key_last } from "./app_shared_screen_tab_key_last.mjs";
 export function app_learn_js_hash_review_restore(context, hash) {
@@ -13,7 +13,7 @@ export function app_learn_js_hash_review_restore(context, hash) {
   let present = null_not_is(said);
   if (present) {
     let counted = number_from_text(said);
-    let key = app_code_review_number_key();
+    let key = app_learn_js_review_number_key();
     storage_session_set_context(context, key, counted);
     ("the tab is told a review was the last thing picked, because the review screen asks that to choose between a review and a milestone");
     let key_last = app_shared_screen_tab_key_last();
