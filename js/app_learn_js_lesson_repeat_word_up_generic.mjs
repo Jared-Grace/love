@@ -11,7 +11,7 @@ import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_word_three_runs_example } from "./app_learn_js_word_three_runs_example.mjs";
-import { app_code_word_three_runs_walk } from "./app_code_word_three_runs_walk.mjs";
+import { app_learn_js_word_three_runs_walk } from "./app_learn_js_word_three_runs_walk.mjs";
 import { app_learn_js_lesson_repeat_word_generic } from "./app_learn_js_lesson_repeat_word_generic.mjs";
 export function app_learn_js_lesson_repeat_word_up_generic(
   program_write,
@@ -56,7 +56,7 @@ export function app_learn_js_lesson_repeat_word_up_generic(
   }
   function walk(root) {
     "what the program of 0 and 3 does, run by run, until what it asks is false";
-    app_code_word_three_runs_walk(root, joy, less, 0, 1);
+    app_learn_js_word_three_runs_walk(root, joy, less, 0, 1);
   }
   function above(root, context) {
     above_inner(root, context, example, walk);

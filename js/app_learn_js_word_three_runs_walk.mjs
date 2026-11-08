@@ -5,7 +5,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
-export function app_code_word_three_runs_walk(
+export function app_learn_js_word_three_runs_walk(
   box,
   word,
   comparison_symbol,
