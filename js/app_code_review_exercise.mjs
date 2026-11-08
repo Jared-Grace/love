@@ -1,6 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
+import { app_learn_js_quiz_correction } from "./app_learn_js_quiz_correction.mjs";
 import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
 import { app_learn_js_lesson_above } from "./app_learn_js_lesson_above.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
@@ -39,7 +39,7 @@ export function app_code_review_exercise(
   let correction_render = property_get_or(
     info,
     "correction",
-    app_code_quiz_correction,
+    app_learn_js_quiz_correction,
   );
   let qa = {
     question,
