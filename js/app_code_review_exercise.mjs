@@ -8,7 +8,7 @@ import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
 import { app_learn_js_lesson_quiz_show_correction } from "./app_learn_js_lesson_quiz_show_correction.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_review_exercise_excuse } from "./app_code_review_exercise_excuse.mjs";
-import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
+import { app_learn_js_quiz_reveal_button } from "./app_learn_js_quiz_reveal_button.mjs";
 import { app_learn_js_lesson_quiz_render_correction } from "./app_learn_js_lesson_quiz_render_correction.mjs";
 import { app_learn_js_lesson_quiz_correction_code_set } from "./app_learn_js_lesson_quiz_correction_code_set.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -68,7 +68,7 @@ export function app_code_review_exercise(
   let answers_div = html_div(a_container);
   ("a miss adds added_count more of this quiz to the review, and the learner may say it was a slip and keep them out; added_count is 0 where nothing is added, and then nothing is offered");
   let excuse = app_code_review_exercise_excuse(parent, added_count);
-  app_code_quiz_reveal_button(parent, on_reveal);
+  app_learn_js_quiz_reveal_button(parent, on_reveal);
   let container_correction = html_div(parent);
   app_learn_js_lesson_quiz_render_correction(
     container_correction,

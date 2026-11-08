@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
+import { app_learn_js_quiz_reveal_button } from "./app_learn_js_quiz_reveal_button.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 export function app_learn_js_lesson_quiz_value(r4, parent_container) {
   arguments_assert(arguments, 2);
@@ -18,7 +18,10 @@ export function app_learn_js_lesson_quiz_value(r4, parent_container) {
   let answers_div = property_get(r3, "answers_div");
   let answer_label_set = property_get(r3, "answer_label_set");
   let container_question = property_get(r3, "container_question");
-  let reveal_button = app_code_quiz_reveal_button(parent_container, on_reveal);
+  let reveal_button = app_learn_js_quiz_reveal_button(
+    parent_container,
+    on_reveal,
+  );
   let value = app_shared_spaced_gap();
   let r = {
     reveal_button,
