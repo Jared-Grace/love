@@ -1,7 +1,7 @@
 import { property_get } from "./property_get.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_review_seed_from_items } from "./app_code_review_seed_from_items.mjs";
+import { app_learn_js_review_seed_from_items } from "./app_learn_js_review_seed_from_items.mjs";
 import { list_get } from "./list_get.mjs";
 import { range } from "./range.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -18,7 +18,11 @@ export function app_code_review_seeds_gather(lessons, kind_is) {
     let kinds = list_first_property(items, "exercises");
     let kind_count = list_size(kinds);
     function each_kind(kind_index) {
-      let seed = app_code_review_seed_from_items(lesson_id, kind_index, items);
+      let seed = app_learn_js_review_seed_from_items(
+        lesson_id,
+        kind_index,
+        items,
+      );
       return seed;
     }
     function kind_asked(kind_index) {
