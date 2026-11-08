@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
-import { app_code_lessons_latest_held_fns } from "./app_code_lessons_latest_held_fns.mjs";
+import { app_learn_js_lessons_latest_held_fns } from "./app_learn_js_lessons_latest_held_fns.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -31,7 +31,7 @@ export async function app_code_lessons_latest_ids() {
     let id = property_get(ids_short, fn.name);
     return id;
   }
-  let list = app_code_lessons_latest_held_fns();
+  let list = app_learn_js_lessons_latest_held_fns();
   let held = list_map(list, id_of);
   let shown = list_without_multiple(ids, held);
   return shown;

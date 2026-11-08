@@ -2,7 +2,7 @@ import { app_shared_page_stage_prod_is } from "./app_shared_page_stage_prod_is.m
 import { not } from "./not.mjs";
 import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { app_shared_page_stage_latest_is } from "./app_shared_page_stage_latest_is.mjs";
-import { app_code_lessons_latest_held_fns } from "./app_code_lessons_latest_held_fns.mjs";
+import { app_learn_js_lessons_latest_held_fns } from "./app_learn_js_lessons_latest_held_fns.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { app_code_lessons_released_fns } from "./app_code_lessons_released_fns.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_lessons_fns_shown() {
     if (not(latest)) {
       return fns;
     }
-    let held = app_code_lessons_latest_held_fns();
+    let held = app_learn_js_lessons_latest_held_fns();
     let kept = list_without_multiple(fns, held);
     return kept;
   }
