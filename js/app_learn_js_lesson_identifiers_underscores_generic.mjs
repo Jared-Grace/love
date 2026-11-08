@@ -1,7 +1,7 @@
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_identifiers_letters_spaces } from "./app_learn_js_lesson_identifiers_letters_spaces.mjs";
 import { app_learn_js_lesson_identifiers_underscores_generic_batch_get } from "./app_learn_js_lesson_identifiers_underscores_generic_batch_get.mjs";
-import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
+import { app_learn_js_symbols_separated_on_question } from "./app_learn_js_symbols_separated_on_question.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { word_plural } from "./word_plural.mjs";
 import { list_swap_beginning } from "./list_swap_beginning.mjs";
@@ -92,7 +92,7 @@ export function app_learn_js_lesson_identifiers_underscores_generic({
     name_id,
     above,
     batch_get,
-    app_code_symbols_separated_on_question,
+    app_learn_js_symbols_separated_on_question,
   );
   return r5;
 }

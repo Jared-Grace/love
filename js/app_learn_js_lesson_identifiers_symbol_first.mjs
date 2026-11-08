@@ -1,6 +1,6 @@
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_identifiers_letters_spaces } from "./app_learn_js_lesson_identifiers_letters_spaces.mjs";
-import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
+import { app_learn_js_symbols_separated_on_question } from "./app_learn_js_symbols_separated_on_question.mjs";
 import { list_to_and_list } from "./list_to_and_list.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_span_text_padded_space } from "./html_span_text_padded_space.mjs";
@@ -31,7 +31,7 @@ export function app_learn_js_lesson_identifiers_symbol_first() {
   let r = app_learn_js_lesson_identifiers_symbol_first_generic(
     name_id,
     above,
-    app_code_symbols_separated_on_question,
+    app_learn_js_symbols_separated_on_question,
   );
   function above(root, context) {
     let identifier_symbols_types = [

@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_same_draw } from "./app_learn_js_lesson_same_draw.mjs";
 import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_lesson_symbols_digits_numbered.mjs";
-import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
+import { app_learn_js_symbols_separated_on_question } from "./app_learn_js_symbols_separated_on_question.mjs";
 import { app_learn_js_lesson_symbols_batch_digits } from "./app_learn_js_lesson_symbols_batch_digits.mjs";
 import { app_learn_js_lesson_symbols_counting } from "./app_learn_js_lesson_symbols_counting.mjs";
 import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_symbols_digits() {
     name_id,
     lambda,
     app_learn_js_lesson_symbols_batch_digits,
-    app_code_symbols_separated_on_question,
+    app_learn_js_symbols_separated_on_question,
   );
   return r;
 }

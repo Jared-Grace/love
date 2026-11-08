@@ -3,7 +3,7 @@ import { list_map_first_upper_join } from "./list_map_first_upper_join.mjs";
 import { list_map_cycle } from "./list_map_cycle.mjs";
 import { list_shuffle_cycled_size } from "./list_shuffle_cycled_size.mjs";
 import { list_slices_size_cycler } from "./list_slices_size_cycler.mjs";
-import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
+import { app_learn_js_symbols_separated_on_question } from "./app_learn_js_symbols_separated_on_question.mjs";
 import { list_join_space_nb } from "./list_join_space_nb.mjs";
 import { js_identifier_words_invalid } from "./js_identifier_words_invalid.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -76,7 +76,7 @@ export function app_learn_js_lesson_identifiers_letters_spaces() {
     name_id,
     lambda,
     batch_get,
-    app_code_symbols_separated_on_question,
+    app_learn_js_symbols_separated_on_question,
   );
   return r;
 }
