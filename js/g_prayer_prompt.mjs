@@ -5,8 +5,10 @@ export function g_prayer_prompt() {
   let texts = {
     en: "What would you like to pray to God?",
     ur: "آپ خدا سے کیا دعا کرنا چاہیں گے؟",
+    tgl: "Ano ang gusto mong ipanalangin sa Diyos?",
     translated_from: {
       ur: "What would you like to pray to God?",
+      tgl: "What would you like to pray to God?",
     },
   };
   let v = app_shared_text_reader_language(texts);
