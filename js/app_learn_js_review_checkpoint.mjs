@@ -8,7 +8,7 @@ import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_milestone_explain } from "./app_learn_js_milestone_explain.mjs";
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
-import { app_code_review_number_get } from "./app_code_review_number_get.mjs";
+import { app_learn_js_review_number_get } from "./app_learn_js_review_number_get.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
@@ -48,7 +48,7 @@ export function app_learn_js_review_checkpoint(context) {
       return r_inner;
     }
   }
-  let number = app_code_review_number_get(context);
+  let number = app_learn_js_review_number_get(context);
   let scope = app_code_review_scope(number);
   let start = subtract(number, scope);
   let all = app_learn_js_lessons();
