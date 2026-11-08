@@ -14,8 +14,18 @@ export function app_shared_bible_offline_unfinished_text(name) {
       before: "وہ ڈاؤن لوڈ مکمل نہیں ہوا۔ کیا آپ اپنا کنکشن دیکھ کر ",
       after: " دوبارہ آزمانا چاہیں گے؟",
     },
+    tgl: {
+      before:
+        "Hindi natapos ang pag-download na iyon. Gusto mo bang suriin ang iyong koneksyon at subukan muli ang ",
+      after: "?",
+    },
     translated_from: {
       ur: {
+        before:
+          "That download did not finish. Would you like to check your connection and try ",
+        after: " again?",
+      },
+      tgl: {
         before:
           "That download did not finish. Would you like to check your connection and try ",
         after: " again?",
