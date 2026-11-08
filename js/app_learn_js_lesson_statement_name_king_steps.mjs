@@ -22,7 +22,7 @@ import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_c
 import { app_learn_js_explain_emoji_square } from "./app_learn_js_explain_emoji_square.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_arrow_turned_draw } from "./app_learn_js_arrow_turned_draw.mjs";
-import { app_code_square_grid } from "./app_code_square_grid.mjs";
+import { app_learn_js_square_grid } from "./app_learn_js_square_grid.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_square_edged } from "./app_learn_js_square_edged.mjs";
@@ -201,7 +201,7 @@ export function app_learn_js_lesson_statement_name_king_steps() {
     let draw16 = app_learn_js_arrow_turned_draw(315);
     let draw17 = app_learn_js_arrow_turned_draw(135);
     let draw18 = app_learn_js_arrow_turned_draw(45);
-    app_code_square_grid(box, 3, 3, false, [
+    app_learn_js_square_grid(box, 3, 3, false, [
       [1, 1, "🫅", start_color],
       [0, 1, draw11, null],
       [2, 1, draw12, null],
@@ -239,7 +239,7 @@ export function app_learn_js_lesson_statement_name_king_steps() {
       columns_count_color,
     );
     let draw32 = app_learn_js_square_edged("🏁", rows_count_color, null);
-    app_code_square_grid(box, 5, 4, true, [
+    app_learn_js_square_grid(box, 5, 4, true, [
       [1, 1, "🫅", start_color],
       [2, 2, draw30, end_color],
       [3, 3, draw31, end_color],

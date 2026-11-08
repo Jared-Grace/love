@@ -16,7 +16,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_arrow_inline } from "./app_learn_js_arrow_inline.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
-import { app_code_square_grid } from "./app_code_square_grid.mjs";
+import { app_learn_js_square_grid } from "./app_learn_js_square_grid.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -175,7 +175,7 @@ export function app_learn_js_lesson_statement_name_grid_steps() {
     let v2 = app_learn_js_arrow_turned_draw(90);
     let v3 = app_learn_js_arrow_turned_draw(180);
     let v4 = app_learn_js_arrow_turned_draw(0);
-    app_code_square_grid(box, 3, 3, false, [
+    app_learn_js_square_grid(box, 3, 3, false, [
       [1, 1, "🙂", start_color],
       [0, 1, v, null],
       [2, 1, v2, null],
@@ -218,7 +218,7 @@ export function app_learn_js_lesson_statement_name_grid_steps() {
     let draw9 = app_code_square_ringed("", rows_count_color);
     let draw10 = app_code_square_ringed("", columns_count_color);
     let draw11 = app_code_square_ringed("🏁", columns_count_color);
-    app_code_square_grid(box, 5, 4, true, [
+    app_learn_js_square_grid(box, 5, 4, true, [
       [1, 1, "🙂", start_color],
       [2, 1, draw7, end_color],
       [3, 1, draw8, end_color],

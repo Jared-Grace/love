@@ -21,7 +21,7 @@ import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain
 import { range } from "./range.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_square_grid } from "./app_code_square_grid.mjs";
+import { app_learn_js_square_grid } from "./app_learn_js_square_grid.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_learn_js_lesson_statement_name_seat_less } from "./app_learn_js_lesson_statement_name_seat_less.mjs";
@@ -136,7 +136,7 @@ export function app_learn_js_lesson_statement_name_grid_inside() {
           }
         }
       }
-      app_code_square_grid(box, 5, 4, true, marks);
+      app_learn_js_square_grid(box, 5, 4, true, marks);
     }
     return draw;
   }

@@ -18,7 +18,13 @@ import { range } from "./range.mjs";
 import { list_find_or_null } from "./list_find_or_null.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-export function app_code_square_grid(parent, rows, columns, headings, marks) {
+export function app_learn_js_square_grid(
+  parent,
+  rows,
+  columns,
+  headings,
+  marks,
+) {
   arguments_assert(arguments, 5);
   ("a picture of empty squares in rows and columns, as the chair pictures draw chairs: when headings is true the row numbers go down the left in the third pointing colour and the column numbers across the top in the fourth, each a code chip, as ",
     fn_name("app_learn_js_chair_grid"),
