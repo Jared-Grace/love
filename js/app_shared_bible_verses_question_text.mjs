@@ -10,8 +10,10 @@ export function app_shared_bible_verses_question_text(book_name, chapter_name) {
   let texts = {
     en: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
     ur: "آپ {book} کی کتاب کے باب {chapter} سے کون سی آیت چننا چاہتے ہیں؟",
+    tgl: "Anong talata mula sa kabanata {chapter} ng aklat ng {book} ang gusto mong piliin?",
     translated_from: {
       ur: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
+      tgl: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
     },
   };
   let text = app_shared_text_reader_language_filled(texts, {
