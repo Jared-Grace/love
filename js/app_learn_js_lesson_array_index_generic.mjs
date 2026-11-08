@@ -8,7 +8,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { range_from } from "./range_from.mjs";
+import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -30,9 +30,9 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_array_index_generic(options) {
   arguments_assert(arguments, 1);
-  ("an array of numbers given a name, then one of its items written out by its index: let a = [14, 27, 35]; console.log(a[0]); writes out 14. What differs between lessons is handed in here.");
+  ("an array of words given a name, then one of its items written out by its index: let a = ['love', 'joy', 'peace']; console.log(a[0]); writes out love. What differs between lessons is handed in here.");
   ("item_count is how many items each array holds, indexes the indexes a question may ask for, example the items and index of the example program, and above is handed the root, the context, the example drawer and the walk drawer.");
-  ("The items are two-digit numbers, all different, so an item can never be mistaken for an index: reading a[1] as the number 1 is a wrong answer of its own, not a right one reached the wrong way.");
+  ("The items are words, the fruits of the Spirit, all different, so an item can never be mistaken for an index: reading a[1] as the number 1 is a wrong answer of its own, not a right one reached the wrong way. Words rather than numbers, chosen by the human 2026-11-08: we give people names, not numbers.");
   ("Reading forwards, the wrong answers are the array's other items - which is also the answer of counting from 1 instead of 0 - and the index itself. Each is worked out by running the program with another index rather than reasoned out. Reading backwards, the wrong programs are the same array with another index.");
   ("A program's index is found by trying every index against it, not by reading its digits, so nothing here depends on how the line is spaced.");
   ("No stepping, 2026-11-06: the tracer that steps a program line by line cannot yet read an array, and threw on the example screen. Not picked: teaching the tracer arrays first, a larger change than these lessons; it is the way to give them stepping back.");
@@ -68,7 +68,7 @@ export function app_learn_js_lesson_array_index_generic(options) {
   }
   function batch_get() {
     "four programs, each a fresh array and an index from the ones this lesson asks";
-    let numbers = range_from(11, 49);
+    let numbers = fruits_of_the_spirit();
     let codes2 = [];
     for (let i = 0; less_than(i, 4); i++) {
       let items3 = list_shuffle_take(numbers, item_count);
@@ -133,11 +133,11 @@ export function app_learn_js_lesson_array_index_generic(options) {
   }
   function walk(root) {
     "the example's items counted from 0 up to its index, then the one written out";
-    let object = list_get(example_items, example_index);
-    let value = json_to(object);
+    let code6 = program_of(example_items, example_index);
+    let value = eval_console_log_lines(code6);
     function counted(index10) {
-      let object2 = list_get(example_items, index10);
-      let item = json_to(object2);
+      let object = list_get(example_items, index10);
+      let item = json_to(object);
       let index9 = json_to(index10);
       let written = js_code_index(name, index9);
       let parts = ["", written, " is ", item];

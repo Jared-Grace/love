@@ -7,7 +7,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_array_index_generic } from "./app_learn_js_lesson_array_index_generic.mjs";
 export function app_learn_js_lesson_array_second() {
   arguments_assert(arguments, 0);
-  ("the second item of an array: let a = [14, 27, 35]; console.log(a[1]); writes out 27");
+  ("the second item of an array: let a = ['love', 'joy', 'peace']; console.log(a[1]); writes out joy");
   ("The one new fact is that counting from 0 makes a[1] the second item, not the first. Reading a[1] as the first item, or as the number 1, are both wrong answers on every screen.");
   ("The second lesson of arrays, chosen by the human 2026-11-06. The writing is a first draft by Claude 2026-11-06.");
   function above(root, context, example, walk) {
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_array_second() {
     item_count: 3,
     indexes: [1],
     example: {
-      items: [14, 27, 35],
+      items: ["love", "joy", "peace"],
       index: 1,
     },
   });

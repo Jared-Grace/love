@@ -7,7 +7,7 @@ import { js_code_length } from "./js_code_length.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
-import { range_from } from "./range_from.mjs";
+import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
@@ -38,17 +38,17 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_array_length() {
   arguments_assert(arguments, 0);
-  ("how many items an array holds: let a = [14, 27, 35]; console.log(a.length); writes out 3");
+  ("how many items an array holds: let a = ['love', 'joy', 'peace']; console.log(a.length); writes out 3");
   ("The fourth lesson of arrays, after any item, chosen by the human 2026-11-08: items before length, because a length is a count of items and the items must be known before a count of them means anything. The last item, a[a.length - 1], is the lesson after, and needs both.");
   ("The one new fact is that .length after an array's name is how many items it holds. Arrays hold two to five items, so the length changes from question to question, and the example holds three, so its length is not its last index.");
   ("Reading forwards, the wrong answers are the last index - the count reached by counting from 0 - and the first and the last item, the answer of reading .length as one of the items. Reading backwards, the wrong programs are the same array with its last item taken off, and with one more item.");
-  ("The items are two-digit numbers, all different, and a length is at most five, so an item can never be mistaken for a length.");
+  ("The items are words, the fruits of the Spirit, all different, and a length is a number, so an item can never be mistaken for a length. Words rather than numbers, chosen by the human 2026-11-08: we give people names, not numbers.");
   ("A program's items are found by running its first line and writing out the array, not by reading its digits, so nothing here depends on how the line is spaced.");
   ("No stepping, for the reason the index lessons give: the tracer cannot yet read an array.");
   ("The writing is a first draft by Claude 2026-11-08.");
   let name = "a";
   let sizes = [2, 3, 4, 5];
-  let example_items = [14, 27, 35];
+  let example_items = ["love", "joy", "peace"];
   function head_line(items) {
     let codes = list_map(items, json_to);
     let array = js_code_array(codes);
@@ -67,7 +67,7 @@ export function app_learn_js_lesson_array_length() {
     "four programs, each a fresh array of two to five items";
     let codes2 = [];
     for (let i = 0; less_than(i, 4); i++) {
-      let numbers = range_from(11, 49);
+      let numbers = fruits_of_the_spirit();
       let size = list_random_item(sizes);
       let items3 = list_shuffle_take(numbers, size);
       let v = program_of(items3);
@@ -98,8 +98,8 @@ export function app_learn_js_lesson_array_length() {
     let index = subtract(size2, 1);
     let first2 = list_first(items5);
     let last = list_last(items5);
-    let numbers2 = [index, first2, last];
-    let candidates = list_map(numbers2, json_to);
+    let index_written = json_to(index);
+    let candidates = [index_written, first2, last];
     let found = list_without(candidates, answer);
     let once = list_unique(found);
     return once;
@@ -113,7 +113,7 @@ export function app_learn_js_lesson_array_length() {
       let free = not(used);
       return free;
     }
-    let numbers3 = range_from(11, 49);
+    let numbers3 = fruits_of_the_spirit();
     let free_numbers = list_filter(numbers3, unused);
     let extra = list_random_item(free_numbers);
     let more = list_concat(items6, [extra]);
