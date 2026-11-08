@@ -4498,6 +4498,42 @@ def cp_plain_as_cat(command, safe_verbs, safe_exact_commands):
     return rewritten
 
 
+# The finishing command that files a commit under a named command. It can
+# never be granted - it takes arguments and runs the whole gate, which reaches
+# code-running and folder-deleting steps - yet the instructions name it as the
+# way to finish after a named change, so every agent following them asked the
+# human. Its two halves are each granted on their own.
+FINISH_BASELINE_RE = re.compile(
+    r"^node scripts/ai\.mjs ai_finish_baseline_command_args (\S+) (\S+) (\S+)"
+)
+
+
+def finish_baseline_split(command, safe_verbs, safe_exact_commands):
+    """For `ai_finish_baseline_command_args <baseline> <fn> <args>`, the same
+    command with the call swapped for the granted commit half,
+    `ai_git_command_args <fn> <args>`, keeping whatever followed it; otherwise
+    None.
+
+    The gate half is left for a separate call rather than chained on, because
+    it runs for half an hour or more and belongs in the background. What the
+    swap loses is the report of files peers moved since <baseline>, which the
+    deny reason hands back as a plain git command. Offered only when the
+    reworded command passes on its own."""
+    match = FINISH_BASELINE_RE.match(command)
+    if not match:
+        return None
+    rewritten = (
+        "node scripts/ai.mjs ai_git_command_args "
+        + match.group(2) + " " + match.group(3) + command[match.end():]
+    )
+    try:
+        if not is_safe(rewritten, safe_verbs, safe_exact_commands):
+            return None
+    except Unsupported:
+        return None
+    return {"rewritten": rewritten, "baseline": match.group(1)}
+
+
 def tokens_text(tokens):
     """`tokens` spelled back as one line a person can read: separators become
     themselves again and a substitution reads as `$(...)`. For a reason only -
@@ -6728,6 +6764,22 @@ def main():
             "the arithmetic reads the variable. It runs at the same point, "
             "and bash reads a variable in arithmetic as the expression its "
             "value spells, so the answer is the same."
+        ))
+
+    finish = finish_baseline_split(command, safe_verbs, safe_exact_commands)
+    if finish is not None:
+        return decide("deny", (
+            "Run these instead - each is already approved, so neither needs "
+            "a human at all:\n"
+            f"  {finish['rewritten']}\n"
+            "  node scripts/ai.mjs qa_gate_run   (in the background - it "
+            "runs for half an hour or more)\n"
+            "The finishing command can never be granted: it takes arguments "
+            "and runs the whole gate, which reaches steps that run code and "
+            "delete folders. The first line is its commit half, filed under "
+            "the same command name; the second is its gate half. What peers "
+            "changed since your baseline is "
+            f"`git diff --stat {finish['baseline']} HEAD`."
         ))
 
     as_cat = cp_plain_as_cat(command, safe_verbs, safe_exact_commands)
