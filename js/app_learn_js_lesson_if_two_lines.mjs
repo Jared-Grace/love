@@ -1,4 +1,4 @@
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -57,7 +57,7 @@ export function app_learn_js_lesson_if_two_lines() {
   }
   function logged(word) {
     'console.log("word");';
-    let statement = app_code_word_console_log_statement(word);
+    let statement = app_learn_js_word_console_log_statement(word);
     return statement;
   }
   function program_lines(condition, words, if_first) {

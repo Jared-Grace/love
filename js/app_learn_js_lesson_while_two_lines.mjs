@@ -7,7 +7,7 @@ import { js_code_update_statement } from "./js_code_update_statement.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
@@ -66,7 +66,7 @@ export function app_learn_js_lesson_while_two_lines() {
     return lines;
   }
   function program_lines(start, bound, word) {
-    let logged_word = app_code_word_console_log_statement(word);
+    let logged_word = app_learn_js_word_console_log_statement(word);
     let logged_number = js_code_console_log_statement(name);
     let lines2 = body_lines(start, bound, [logged_word, logged_number]);
     return lines2;
@@ -78,7 +78,7 @@ export function app_learn_js_lesson_while_two_lines() {
   }
   function program_swapped(start, bound, word) {
     "the same program with its two lines the other way round";
-    let logged_word2 = app_code_word_console_log_statement(word);
+    let logged_word2 = app_learn_js_word_console_log_statement(word);
     let logged_number2 = js_code_console_log_statement(name);
     let lines4 = body_lines(start, bound, [logged_number2, logged_word2]);
     let joined2 = list_join_newline(lines4);

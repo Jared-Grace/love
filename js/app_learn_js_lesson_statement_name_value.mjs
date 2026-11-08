@@ -8,7 +8,7 @@ import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_le
 import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_statement_name_value() {
     let quoted = app_learn_js_string_code(word);
     let held = js_code_let_statement(name, quoted);
     let logged = js_code_console_log_statement(name);
-    let logged_name = app_code_word_console_log_statement(name);
+    let logged_name = app_learn_js_word_console_log_statement(name);
     let name_written = list_join_newline([held, logged_name]);
     let written_twice = list_join_newline([held, logged, logged]);
     let found = [held, name_written, written_twice];

@@ -1,6 +1,6 @@
 import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-export function app_code_word_console_log_statement(word) {
+export function app_learn_js_word_console_log_statement(word) {
   'console.log("word");';
   let code = app_learn_js_string_code(word);
   let statement = js_code_console_log_statement(code);

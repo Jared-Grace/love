@@ -1,5 +1,5 @@
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_learn_js_if_either_decoys } from "./app_learn_js_if_either_decoys.mjs";
 import { app_learn_js_if_boolean_flipped } from "./app_learn_js_if_boolean_flipped.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_if_and_if_not() {
   let fruits = fruits_of_the_spirit();
   function logged(word) {
     'console.log("word");';
-    let statement = app_code_word_console_log_statement(word);
+    let statement = app_learn_js_word_console_log_statement(word);
     return statement;
   }
   function program_lines(name, value, words) {

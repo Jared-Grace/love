@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_braces_three_says } from "./app_learn_js_braces_three_says.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_braces_four_if_else_in_if_else() {
   let says = app_learn_js_braces_three_says();
   let fruits = fruits_of_the_spirit();
   let patience = list_get(fruits, 3);
-  let say_patience = app_code_word_console_log_statement(patience);
+  let say_patience = app_learn_js_word_console_log_statement(patience);
   let value = property_get(says, "say_joy");
   let value2 = property_get(says, "say_peace");
   let inner = js_code_if_else_lines_multiple("b", [value], [value2]);

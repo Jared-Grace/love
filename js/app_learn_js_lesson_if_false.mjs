@@ -1,4 +1,4 @@
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
@@ -47,8 +47,8 @@ export function app_learn_js_lesson_if_false() {
   let after_shown = list_get(fruits, 1);
   function program_lines(condition, inside_word, plain_word, if_first) {
     "an if around a line writing out one word, and a line writing out another, the if first or last";
-    let inside = app_code_word_console_log_statement(inside_word);
-    let plain = app_code_word_console_log_statement(plain_word);
+    let inside = app_learn_js_word_console_log_statement(inside_word);
+    let plain = app_learn_js_word_console_log_statement(plain_word);
     let if_lines = js_code_if_lines(condition, inside);
     if (if_first) {
       let first = list_concat(if_lines, [plain]);
@@ -165,7 +165,7 @@ export function app_learn_js_lesson_if_false() {
       " do not run:",
     ]);
     let false_lines = program_lines("false", inside_shown, after_shown, true);
-    let after_line = app_code_word_console_log_statement(after_shown);
+    let after_line = app_learn_js_word_console_log_statement(after_shown);
     app_learn_js_code_lines_writes_out(box_two, false_lines, after_shown);
     app_learn_js_div_cycle_code(box_two, [
       "",

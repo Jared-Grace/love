@@ -13,7 +13,7 @@ import { app_learn_js_div_braces_painted } from "./app_learn_js_div_braces_paint
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -40,9 +40,9 @@ export function app_learn_js_lesson_brace_pair() {
   let love = list_get(fruits, 0);
   let joy = list_get(fruits, 1);
   let peace = list_get(fruits, 2);
-  let say_love = app_code_word_console_log_statement(love);
-  let say_joy = app_code_word_console_log_statement(joy);
-  let say_peace = app_code_word_console_log_statement(peace);
+  let say_love = app_learn_js_word_console_log_statement(love);
+  let say_joy = app_learn_js_word_console_log_statement(joy);
+  let say_peace = app_learn_js_word_console_log_statement(peace);
   function above(root, context) {
     "braces in pairs remembered, then shown in colours, with the first } closing the most recent { rather than the first";
     let left = js_code_brace_left();

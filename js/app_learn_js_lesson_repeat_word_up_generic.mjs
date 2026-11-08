@@ -5,7 +5,7 @@ import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_update_statement } from "./js_code_update_statement.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_repeat_word_up_generic(
     'let n = start; the loop asking n < bound around console.log("word"); n++;';
     let code = js_code_let_statement(name, start);
     let condition = js_code_binary_spaced_nb(name, less, bound);
-    let logged = app_code_word_console_log_statement(said_word);
+    let logged = app_learn_js_word_console_log_statement(said_word);
     let changed = js_code_update_statement(name, plus);
     let lines = write(code, condition, [logged, changed]);
     return lines;

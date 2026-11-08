@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -39,7 +39,7 @@ export function app_learn_js_lesson_if_true() {
   let shown = list_first(fruits);
   function program_lines(word) {
     "the if around the line that writes the word out";
-    let statement = app_code_word_console_log_statement(word);
+    let statement = app_learn_js_word_console_log_statement(word);
     let lines = js_code_if_lines("true", statement);
     return lines;
   }
@@ -96,7 +96,7 @@ export function app_learn_js_lesson_if_true() {
   }
   function above(root, context) {
     "the line the learner knows, then the same line inside an if, writing out the same word";
-    let statement = app_code_word_console_log_statement(shown);
+    let statement = app_learn_js_word_console_log_statement(shown);
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,

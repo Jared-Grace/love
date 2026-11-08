@@ -15,7 +15,7 @@ import { ternary } from "./ternary.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_statement_name_two_above } from "./app_learn_js_lesson_statement_name_two_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_statement_name_two() {
     let v = program_of(word_first, word_last, statement);
     let statement2 = js_code_console_log_statement(name_logged);
     let v2 = program_of(word_last, word_first, statement2);
-    let statement3 = app_code_word_console_log_statement(name_logged);
+    let statement3 = app_learn_js_word_console_log_statement(name_logged);
     let v3 = program_of(word_first, word_last, statement3);
     let found = [v, v2, v3];
     return found;

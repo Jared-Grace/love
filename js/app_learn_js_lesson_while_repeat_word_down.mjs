@@ -3,7 +3,7 @@ import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symb
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_update_statement } from "./js_code_update_statement.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
 import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
@@ -33,7 +33,7 @@ export function app_learn_js_lesson_while_repeat_word_down() {
     'let n = high; while (n > low) { console.log("word"); n--; }';
     let code = js_code_let_statement(name, high);
     let condition = js_code_binary_spaced_nb(name, greater, low);
-    let logged = app_code_word_console_log_statement(said_word);
+    let logged = app_learn_js_word_console_log_statement(said_word);
     let changed = js_code_update_statement(name, minus);
     let keyword = js_keyword_while();
     let while_lines = js_code_keyword_block_lines_multiple(keyword, condition, [

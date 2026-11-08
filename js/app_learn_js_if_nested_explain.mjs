@@ -8,7 +8,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_if_nested_program_lines } from "./app_learn_js_if_nested_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 export function app_learn_js_if_nested_explain(root, context) {
   arguments_assert(arguments, 2);
@@ -37,9 +37,9 @@ export function app_learn_js_if_nested_explain(root, context) {
   let all_lines = app_learn_js_if_nested_program_lines([true, true], words);
   let all_written = list_join_newline(words);
   app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
-  let say_love = app_code_word_console_log_statement(love);
-  let say_joy = app_code_word_console_log_statement(joy);
-  let say_peace = app_code_word_console_log_statement(peace);
+  let say_love = app_learn_js_word_console_log_statement(love);
+  let say_joy = app_learn_js_word_console_log_statement(joy);
+  let say_peace = app_learn_js_word_console_log_statement(peace);
   let if_a = js_code_if_dots("a");
   let if_b = js_code_if_dots("b");
   app_learn_js_div_cycle_code(box_two, [

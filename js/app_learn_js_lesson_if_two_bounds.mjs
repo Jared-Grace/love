@@ -1,4 +1,4 @@
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_if_two_bounds() {
   let fruits = fruits_of_the_spirit();
   function logged(word) {
     'console.log("word");';
-    let statement = app_code_word_console_log_statement(word);
+    let statement = app_learn_js_word_console_log_statement(word);
     return statement;
   }
   function if_about(bound, word) {

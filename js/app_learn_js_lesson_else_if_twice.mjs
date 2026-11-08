@@ -4,7 +4,7 @@ import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_take } from "./list_take.mjs";
 import { js_code_if_else_if_chain_lines_multiple } from "./js_code_if_else_if_chain_lines_multiple.mjs";
@@ -44,7 +44,7 @@ export function app_learn_js_lesson_else_if_twice() {
     }
     let setups = list_map_index(names, setup_of);
     function said_of(word) {
-      let statement = app_code_word_console_log_statement(word);
+      let statement = app_learn_js_word_console_log_statement(word);
       let r = [statement];
       return r;
     }
@@ -90,9 +90,9 @@ export function app_learn_js_lesson_else_if_twice() {
     let patience = list_get(fruits, 3);
     let kindness = list_get(fruits, 4);
     let words4 = [love, joy, peace, patience, kindness];
-    let say_joy = app_code_word_console_log_statement(joy);
-    let say_peace = app_code_word_console_log_statement(peace);
-    let say_patience = app_code_word_console_log_statement(patience);
+    let say_joy = app_learn_js_word_console_log_statement(joy);
+    let say_peace = app_learn_js_word_console_log_statement(peace);
+    let say_patience = app_learn_js_word_console_log_statement(patience);
     let else_if_b = js_code_else_if_dots("b");
     let else_if_c = js_code_else_if_dots("c");
     let else_dots = js_code_else_dots();

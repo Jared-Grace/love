@@ -11,7 +11,7 @@ import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_statement_name_identifier_above } from "./app_learn_js_lesson_statement_name_identifier_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -44,7 +44,7 @@ export function app_learn_js_lesson_statement_name_identifier() {
     let code = js_code_let_statement(word, right);
     let statement = js_code_console_log_statement(word);
     let swapped = list_join_newline([code, statement]);
-    let statement2 = app_code_word_console_log_statement(name);
+    let statement2 = app_learn_js_word_console_log_statement(name);
     let name_written = list_join_newline([held, statement2]);
     let written_twice = list_join_newline([held, logged, logged]);
     let found = [swapped, name_written, written_twice];

@@ -2,7 +2,7 @@ import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_update_statement } from "./js_code_update_statement.mjs";
@@ -50,17 +50,17 @@ export function app_learn_js_lesson_while_start_end() {
   let word_before = "start";
   let word_after = "end";
   function program_get(start, bound, word) {
-    let before = app_code_word_console_log_statement(word_before);
+    let before = app_learn_js_word_console_log_statement(word_before);
     let code = js_code_let_statement(name, start);
     let condition = js_code_binary_spaced_nb(name, less, bound);
-    let logged = app_code_word_console_log_statement(word);
+    let logged = app_learn_js_word_console_log_statement(word);
     let changed = js_code_update_statement(name, plus);
     let keyword = js_keyword_while();
     let while_lines = js_code_keyword_block_lines_multiple(keyword, condition, [
       logged,
       changed,
     ]);
-    let after = app_code_word_console_log_statement(word_after);
+    let after = app_learn_js_word_console_log_statement(word_after);
     let lines = list_concat_multiple([[before, code], while_lines, [after]]);
     return lines;
   }

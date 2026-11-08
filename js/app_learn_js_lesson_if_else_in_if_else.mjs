@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
@@ -35,20 +35,20 @@ export function app_learn_js_lesson_if_else_in_if_else() {
     let value_b = list_get(values, 1);
     let setup_b = js_code_let_json_statement("b", value_b);
     let item = list_get(words, 0);
-    let statement = app_code_word_console_log_statement(item);
+    let statement = app_learn_js_word_console_log_statement(item);
     let item2 = list_get(words, 1);
-    let statement3 = app_code_word_console_log_statement(item2);
+    let statement3 = app_learn_js_word_console_log_statement(item2);
     let item3 = list_get(words, 2);
-    let statement4 = app_code_word_console_log_statement(item3);
+    let statement4 = app_learn_js_word_console_log_statement(item3);
     let item4 = list_get(words, 3);
-    let statement5 = app_code_word_console_log_statement(item4);
+    let statement5 = app_learn_js_word_console_log_statement(item4);
     let inner = js_code_if_else_lines_multiple("b", [statement3], [statement4]);
     let outer_insides = list_concat([statement], inner);
     let outer = js_code_if_else_lines_multiple("a", outer_insides, [
       statement5,
     ]);
     let item5 = list_get(words, 4);
-    let statement6 = app_code_word_console_log_statement(item5);
+    let statement6 = app_learn_js_word_console_log_statement(item5);
     let lines = list_concat_multiple([[setup_a, setup_b], outer, [statement6]]);
     return lines;
   }
@@ -60,10 +60,10 @@ export function app_learn_js_lesson_if_else_in_if_else() {
     let kindness = list_get(fruits, 4);
     let patience = list_get(fruits, 3);
     let words4 = [love, joy, peace, kindness, patience];
-    let say_joy = app_code_word_console_log_statement(joy);
-    let say_peace = app_code_word_console_log_statement(peace);
-    let say_kindness = app_code_word_console_log_statement(kindness);
-    let say_patience = app_code_word_console_log_statement(patience);
+    let say_joy = app_learn_js_word_console_log_statement(joy);
+    let say_peace = app_learn_js_word_console_log_statement(peace);
+    let say_kindness = app_learn_js_word_console_log_statement(kindness);
+    let say_patience = app_learn_js_word_console_log_statement(patience);
     let if_a = js_code_if_dots("a");
     let if_b = js_code_if_dots("b");
     let else_peace = js_code_else_one_line(say_peace);

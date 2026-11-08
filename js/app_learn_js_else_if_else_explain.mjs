@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
 import { js_code_else_one_line } from "./js_code_else_one_line.mjs";
@@ -23,9 +23,9 @@ export function app_learn_js_else_if_else_explain(root, context) {
   let peace = list_get(fruits, 2);
   let patience = list_get(fruits, 3);
   let words = [love, joy, peace, patience];
-  let say_love = app_code_word_console_log_statement(love);
-  let say_joy = app_code_word_console_log_statement(joy);
-  let say_patience = app_code_word_console_log_statement(patience);
+  let say_love = app_learn_js_word_console_log_statement(love);
+  let say_joy = app_learn_js_word_console_log_statement(joy);
+  let say_patience = app_learn_js_word_console_log_statement(patience);
   let if_a = js_code_if_dots("a");
   let if_b = js_code_if_dots("b");
   let else_if_b = js_code_else_if_dots("b");

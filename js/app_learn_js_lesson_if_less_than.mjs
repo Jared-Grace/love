@@ -1,4 +1,4 @@
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { app_learn_js_if_codes_halves } from "./app_learn_js_if_codes_halves.mjs";
 import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -56,8 +56,8 @@ export function app_learn_js_lesson_if_less_than() {
   }
   function program_lines(condition, inside_word, plain_word, if_first) {
     "an if around a line writing out one word, and a line writing out another, the if first or last";
-    let inside = app_code_word_console_log_statement(inside_word);
-    let plain = app_code_word_console_log_statement(plain_word);
+    let inside = app_learn_js_word_console_log_statement(inside_word);
+    let plain = app_learn_js_word_console_log_statement(plain_word);
     let if_lines = js_code_if_lines(condition, inside);
     if (if_first) {
       let first = list_concat(if_lines, [plain]);

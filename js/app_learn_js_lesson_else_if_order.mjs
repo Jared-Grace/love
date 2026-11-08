@@ -5,7 +5,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_if_else_if_with_else_lines_multiple } from "./js_code_if_else_if_with_else_lines_multiple.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -44,11 +44,11 @@ export function app_learn_js_lesson_else_if_order() {
     let value = list_first(values);
     let setup = js_code_let_json_statement("n", value);
     let item = list_get(words, 0);
-    let statement = app_code_word_console_log_statement(item);
+    let statement = app_learn_js_word_console_log_statement(item);
     let item2 = list_get(words, 1);
-    let statement2 = app_code_word_console_log_statement(item2);
+    let statement2 = app_learn_js_word_console_log_statement(item2);
     let item3 = list_get(words, 2);
-    let statement3 = app_code_word_console_log_statement(item3);
+    let statement3 = app_learn_js_word_console_log_statement(item3);
     let chain = js_code_if_else_if_with_else_lines_multiple(
       first_check,
       [statement],
@@ -57,7 +57,7 @@ export function app_learn_js_lesson_else_if_order() {
       [statement3],
     );
     let item4 = list_get(words, 3);
-    let statement4 = app_code_word_console_log_statement(item4);
+    let statement4 = app_learn_js_word_console_log_statement(item4);
     let lines = list_concat_multiple([[setup], chain, [statement4]]);
     return lines;
   }
@@ -95,9 +95,9 @@ export function app_learn_js_lesson_else_if_order() {
     let peace = list_get(fruits, 2);
     let patience = list_get(fruits, 3);
     let words4 = [love, joy, peace, patience];
-    let say_love = app_code_word_console_log_statement(love);
-    let say_joy = app_code_word_console_log_statement(joy);
-    let say_peace = app_code_word_console_log_statement(peace);
+    let say_love = app_learn_js_word_console_log_statement(love);
+    let say_joy = app_learn_js_word_console_log_statement(joy);
+    let say_peace = app_learn_js_word_console_log_statement(peace);
     let else_if_b = js_code_else_if_dots("b");
     let else_if_second = js_code_else_if_dots(second_check);
     let box_one = app_learn_js_container_light_blue(root);

@@ -7,7 +7,7 @@ import { list_last } from "./list_last.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_lesson_statement_name_copy_single_title_name_id } from "./app_learn_js_lesson_statement_name_copy_single_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_statement_name_copy_single() {
     let logged = js_code_console_log_statement(name_last);
     let right2 = app_learn_js_string_code(name_first);
     let spelled = js_code_let_statement(name_last, right2);
-    let name_written = app_code_word_console_log_statement(name_last);
+    let name_written = app_learn_js_word_console_log_statement(name_last);
     let joined = list_join_newline([held, spelled, logged]);
     let joined2 = list_join_newline([held, copied, name_written]);
     let joined3 = list_join_newline([held, copied, logged, logged]);

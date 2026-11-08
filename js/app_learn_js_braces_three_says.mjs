@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_braces_two_says } from "./app_learn_js_braces_two_says.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_learn_js_braces_three_says() {
   arguments_assert(arguments, 0);
@@ -10,7 +10,7 @@ export function app_learn_js_braces_three_says() {
   let says = app_learn_js_braces_two_says();
   let fruits = fruits_of_the_spirit();
   let peace = list_get(fruits, 2);
-  let say_peace = app_code_word_console_log_statement(peace);
+  let say_peace = app_learn_js_word_console_log_statement(peace);
   let three = {
     say_love: property_get(says, "say_love"),
     say_joy: property_get(says, "say_joy"),

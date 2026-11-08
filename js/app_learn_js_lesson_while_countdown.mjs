@@ -7,7 +7,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { js_code_update_statement } from "./js_code_update_statement.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
 import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -60,7 +60,7 @@ export function app_learn_js_lesson_while_countdown() {
       logged,
       changed,
     ]);
-    let after_line = app_code_word_console_log_statement(after_word);
+    let after_line = app_learn_js_word_console_log_statement(after_word);
     let lines = list_concat_multiple([[code], while_lines, [after_line]]);
     return lines;
   }
