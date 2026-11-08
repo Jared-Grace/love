@@ -4,7 +4,7 @@ import { js_operators_comparison_symbols } from "./js_operators_comparison_symbo
 import { js_operator_double_equal_symbol } from "./js_operator_double_equal_symbol.mjs";
 import { js_operator_bang_equal_symbol } from "./js_operator_bang_equal_symbol.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_operators_comparing() {
+export function app_learn_js_operators_comparing() {
   arguments_assert(arguments, 0);
   ("every operator that compares two things and comes to true or false, by its symbol: the six a lesson teaches, and == and != standing beside them");
   ("Not a lesson class: what a lesson may write on a line is the six, that list is asked for in its own place, and it stays six. This one holds every sign that compares, taught or not. It was a strength class too, until it turned out to be two: javascript works < and the rest out before === and the rest, so how tightly a sign is held is asked of ",
