@@ -20,7 +20,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_code_dark_lines_pointed } from "./app_learn_js_code_dark_lines_pointed.mjs";
-import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
+import { app_learn_js_output_pointed } from "./app_learn_js_output_pointed.mjs";
 import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines_writes_out_on.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -132,7 +132,7 @@ export function app_learn_js_lesson_statement_formula_backwards_decoys({
       example_pointers(box_now, lines_now, output_now);
     } else {
       let on_code = app_learn_js_code_dark_lines_pointed(example_pointers);
-      let on_output = app_code_output_pointed(example_pointers);
+      let on_output = app_learn_js_output_pointed(example_pointers);
       app_learn_js_code_lines_writes_out_on(
         box_now,
         lines_now,

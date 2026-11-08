@@ -1,7 +1,7 @@
 import { app_learn_js_code_dark_lines_part_pointed } from "./app_learn_js_code_dark_lines_part_pointed.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
+import { app_learn_js_output_pointed } from "./app_learn_js_output_pointed.mjs";
 import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines_writes_out_on.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
@@ -58,7 +58,7 @@ export function app_learn_js_lesson_statement_name_even() {
       remainder,
       remainder_color,
     );
-    let on_output = app_code_output_pointed(pointers);
+    let on_output = app_learn_js_output_pointed(pointers);
     app_learn_js_code_lines_writes_out_on(
       box,
       remember_program,
@@ -153,7 +153,7 @@ export function app_learn_js_lesson_statement_name_even() {
       remainder,
       remainder_color,
     );
-    let on_output = app_code_output_pointed([]);
+    let on_output = app_learn_js_output_pointed([]);
     app_learn_js_code_lines_writes_out_on(box, lines, output, paint, on_output);
   }
   let lesson = app_learn_js_lesson_statement_formula_answer_count({

@@ -6,7 +6,7 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { app_code_pointer_color_or_null } from "./app_code_pointer_color_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_output_pointed(pointers) {
+export function app_learn_js_output_pointed(pointers) {
   arguments_assert(arguments, 1);
   ("a painter for what a program wrote out, one line each, where a line a pointer names is drawn as a tile in that pointer's colour - so the 2 written out for the row wears the row's colour, as it does in the writing above");
   function paint(container, answer) {
