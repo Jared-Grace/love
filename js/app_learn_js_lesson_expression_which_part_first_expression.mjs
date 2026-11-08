@@ -1,4 +1,4 @@
-import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
+import { app_learn_js_operators_strong } from "./app_learn_js_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_learn_js_operator_code_subject_first } from "./app_learn_js_operator_code_subject_first.mjs";
 import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_expression_which_part_first_expression() {
   ("the stronger operator lands on either side, half the time each. A lesson that always put it last would teach the shape of the line rather than the rule about it - the learner would answer every question by tapping the right-hand part without ever asking which operator is there");
   ("both operators of each class appear, because the rule is about one class outranking the other rather than about * and + in particular, and one pair throughout would let it read as a fact about that pair. All four pairings were taught before this lesson, one lesson each");
   ("digits rather than larger numbers: nothing here is worked out, so a bigger number would only be more to read on the button. Nothing here divides either - the line is looked at rather than solved, so a / needs no whole answer behind it");
-  let strong_symbols = app_code_operators_strong();
+  let strong_symbols = app_learn_js_operators_strong();
   let strong = list_random_item(strong_symbols);
   let weak_symbols = app_code_operators_weak();
   let weak = list_random_item(weak_symbols);

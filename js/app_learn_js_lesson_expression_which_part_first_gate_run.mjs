@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_expression_which_part_first_line_assert } from "./app_learn_js_lesson_expression_which_part_first_line_assert.mjs";
-import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
+import { app_learn_js_operators_strong } from "./app_learn_js_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { list_add } from "./list_add.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_expression_which_part_first_gate_run() {
   ("that is what happened: the wrong button came back as * 8 - for the line 3 * 8 - 5. It is even a substring of the line, so asking whether the buttons are made of the line's own characters would have called it correct. What tells them apart is the operator each one is built around, which is exactly what this checks");
   ("the lines are generated rather than listed, because the arrangement is what the counting depends on - the stronger operator falls on either side, half the time each - so a fixed list would need to be kept in step with the generator by hand. Enough of them that both arrangements and all four pairings of the two classes are certain to appear");
   ("every pairing is also required to turn up rather than merely allowed to. A generator quietly narrowed back to one operator would still pass every check below on every line it made, because each line would be perfectly consistent - the narrowing shows only in what is missing");
-  let strong_symbols = app_code_operators_strong();
+  let strong_symbols = app_learn_js_operators_strong();
   let weak_symbols = app_code_operators_weak();
   let seen = [];
   let count = 200;

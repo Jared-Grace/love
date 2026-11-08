@@ -1,6 +1,6 @@
 import { app_learn_js_expression_step_operands } from "./app_learn_js_expression_step_operands.mjs";
 import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
-import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
+import { app_learn_js_operators_strong } from "./app_learn_js_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_expression_step_choices(value, rank_most) {
   ("A line is grown by putting an operator beside what is already there, and only some of those growings print back as the line they mean. Put a times beside a plus with the plus on the left and the line reads 2 + 3 * 4, which is a different shape from the one that was built. This says which growings are safe, so a line is never built that cannot be written down.");
   ("The rule is one comparison of strengths, and it is not the same comparison on the two sides. On the left an equal strength is enough, because a reader takes equal strengths from the left anyway; on the right it has to be strictly stronger, since 8 - 2 - 1 read from the left is not 8 - (2 - 1).");
   ("A choice carries the numbers that may join it rather than only the symbol, because whether an operator fits here depends on both: a times may be written beside a 2 and not beside a 7, and the caller would otherwise have to ask a second time to find that out.");
-  let strong = app_code_operators_strong();
+  let strong = app_learn_js_operators_strong();
   let weak = app_code_operators_weak();
   let symbols = list_concat(strong, weak);
   let choices = [];

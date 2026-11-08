@@ -1,4 +1,4 @@
-import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
+import { app_learn_js_operators_strong } from "./app_learn_js_operators_strong.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
@@ -10,7 +10,7 @@ export function app_learn_js_lesson_expression_choose_order_operators_title_name
   ("the home title: Solve * / before + -, an Expressions lesson where a line may hold any of the four arithmetic operators");
   ("The title names all four operators rather than only the two new here: the two lessons before it are named Choose * before + and Solve * before +, so the list itself shows what widened. The symbols are read off the two operator classes rather than typed, so widening a class widens the title with it.");
   function paint(parent) {
-    let strong = app_code_operators_strong();
+    let strong = app_learn_js_operators_strong();
     let strong_said = list_join_space(strong);
     let weak = app_code_operators_weak();
     let weak_said = list_join_space(weak);

@@ -1,4 +1,4 @@
-import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
+import { app_learn_js_operators_strong } from "./app_learn_js_operators_strong.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
@@ -10,7 +10,7 @@ export function app_learn_js_lesson_expression_which_part_first_title_name_id() 
   ("the home title: * / before + -, an Expressions lesson");
   ("The title names every operator the lesson mixes rather than one pair as an example, read off the same two classes the lesson draws its lines from, so widening a class widens the title with it.");
   function paint(parent) {
-    let strong = app_code_operators_strong();
+    let strong = app_learn_js_operators_strong();
     let strong_said = list_join_space(strong);
     let weak = app_code_operators_weak();
     let weak_said = list_join_space(weak);
