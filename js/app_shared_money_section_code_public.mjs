@@ -18,8 +18,22 @@ export function app_shared_money_section_code_public() {
         "پولوس نے کلیسیا سے کہا کہ ایک دوسرے کو دنیاوی عدالتوں میں نہ گھسیٹیں (1 کرنتھیوں 6:1-8)۔ ہم کسی حکومت کے حقِ اشاعت کو لے کر کسی بھائی پر اِس لیے دعویٰ نہیں کریں گے کہ اُس نے بائبل بانٹی۔ اگر کچھ طے کرنا ہو تو وہ کلیسیا کے سامنے طے ہوتا ہے، کسی دنیاوی حکومت کے سامنے نہیں۔",
       ],
     },
+    tgl: {
+      title: "Pampubliko ang source code",
+      lines: [
+        "Maaaring kunin at gamitin ng sinuman ang source code, kasama na ang paggawa ng kaparehong bagay sa ibang lugar. Ang source code ay nasa https://github.com/Jared-Grace/love",
+        "Sinabi ni Pablo sa iglesya na huwag dalhin ang isa't isa sa harap ng mga hukom na hindi mananampalataya (1 Corinto 6:1-8). Hindi namin gagamitin ang copyright ng isang pamahalaan para idemanda ang isang kapatid dahil sa pagbabahagi ng Biblia. Kung may kailangang ayusin, inaayos ito sa harap ng iglesya, hindi sa harap ng isang makamundong pamahalaan.",
+      ],
+    },
     translated_from: {
       ur: {
+        title: "The source code is public",
+        lines: [
+          "Anyone may take the source code and use it, including to build the same thing somewhere else. The source code is at https://github.com/Jared-Grace/love",
+          "Paul told the church not to drag one another before secular judges (1 Corinthians 6:1-8). We are not going to use a government's copyright to sue a brother for sharing the Bible. If there is something to settle, it is settled before the church, not a secular government.",
+        ],
+      },
+      tgl: {
         title: "The source code is public",
         lines: [
           "Anyone may take the source code and use it, including to build the same thing somewhere else. The source code is at https://github.com/Jared-Grace/love",
