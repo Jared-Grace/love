@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
-import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
+import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
 import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
@@ -125,7 +125,7 @@ export function app_code_lessons_latest_held_fns() {
   let fns = [
     app_code_lesson_while_two_names,
     app_code_lesson_while_two_meet,
-    app_code_lesson_while_and,
+    app_learn_js_lesson_while_and,
     app_code_lesson_while_if,
   ];
   return fns;

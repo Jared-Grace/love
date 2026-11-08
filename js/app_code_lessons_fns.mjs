@@ -340,7 +340,7 @@ import { app_learn_js_lesson_for_down_to } from "./app_learn_js_lesson_for_down_
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { app_learn_js_lesson_for_two_names } from "./app_learn_js_lesson_for_two_names.mjs";
 import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
-import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
+import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
 import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
 import { app_learn_js_lesson_for_if } from "./app_learn_js_lesson_for_if.mjs";
 import { app_learn_js_lesson_for_count_if } from "./app_learn_js_lesson_for_count_if.mjs";
@@ -701,7 +701,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_two_names,
     app_learn_js_lesson_for_two_names,
     app_code_lesson_while_two_meet,
-    app_code_lesson_while_and,
+    app_learn_js_lesson_while_and,
     app_code_lesson_while_if,
     app_learn_js_lesson_for_if,
     app_learn_js_lesson_for_count_if,
