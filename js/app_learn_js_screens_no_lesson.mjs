@@ -1,7 +1,7 @@
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_learn_js_quiz } from "./app_learn_js_quiz.mjs";
 import { app_learn_js_review } from "./app_learn_js_review.mjs";
-import { app_code_screens } from "./app_code_screens.mjs";
+import { app_learn_js_screens } from "./app_learn_js_screens.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_screens_no_lesson() {
     let wanted = list_includes_not(lesson_screens, screen);
     return wanted;
   }
-  let screens = app_code_screens();
+  let screens = app_learn_js_screens();
   let kept = list_filter(screens, keep);
   return kept;
 }

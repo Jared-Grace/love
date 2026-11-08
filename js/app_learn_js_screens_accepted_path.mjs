@@ -13,7 +13,7 @@ export function app_learn_js_screens_accepted_path() {
   let folder = data_given_accepted_folder();
   let path = path_join([
     folder,
-    text_combine_multiple([fn_name("app_code_screens"), json_extension()]),
+    text_combine_multiple([fn_name("app_learn_js_screens"), json_extension()]),
   ]);
   return path;
 }
