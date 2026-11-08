@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_above_repeated } from "./app_code_lessons_above_repeated.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is_assert_walked_generic } from "./list_empty_is_assert_walked_generic.mjs";
-export function app_code_lessons_above_repeated_gate_run() {
+export function app_learn_js_lessons_above_repeated_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: a step lesson never repeats the whole telling of the lesson after it without saying so, and never says so about a lesson that is not the one after it.");
   ("The human's goal, 2026-10-22: a step lesson and its regular lesson do not needlessly repeat their telling. Eight step-first pairs did, and were patched that day; this keeps the ninth from being written the old way.");

@@ -577,7 +577,7 @@ import { bible_usfm_markers_named_gate_run } from "./bible_usfm_markers_named_ga
 import { ebible_version_words_spelled_gate_run } from "./ebible_version_words_spelled_gate_run.mjs";
 import { app_learn_js_lessons_above_broken_gate_run } from "./app_learn_js_lessons_above_broken_gate_run.mjs";
 import { app_learn_js_above_vague_gate_run } from "./app_learn_js_above_vague_gate_run.mjs";
-import { app_code_lessons_above_repeated_gate_run } from "./app_code_lessons_above_repeated_gate_run.mjs";
+import { app_learn_js_lessons_above_repeated_gate_run } from "./app_learn_js_lessons_above_repeated_gate_run.mjs";
 import { bible_glyph_chapters_unlisted_gate_run } from "./bible_glyph_chapters_unlisted_gate_run.mjs";
 import { gloss_same_as_gate_run } from "./gloss_same_as_gate_run.mjs";
 import { bible_glyph_chapters_name_tag_fire_joined_gate_run } from "./bible_glyph_chapters_name_tag_fire_joined_gate_run.mjs";
@@ -1228,7 +1228,7 @@ export function qa_gates() {
     ebible_version_words_spelled_gate_run,
     app_learn_js_lessons_above_broken_gate_run,
     app_learn_js_above_vague_gate_run,
-    app_code_lessons_above_repeated_gate_run,
+    app_learn_js_lessons_above_repeated_gate_run,
     bible_glyph_chapters_unlisted_gate_run,
     gloss_same_as_gate_run,
     bible_glyph_chapters_name_tag_fire_joined_gate_run,
