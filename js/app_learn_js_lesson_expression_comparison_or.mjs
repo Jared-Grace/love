@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
+import { app_learn_js_operator_truths_wanted } from "./app_learn_js_operator_truths_wanted.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_learn_js_lesson_expression_choose_order_comparison_side } from "./app_learn_js_lesson_expression_choose_order_comparison_side.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_expression_comparison_or() {
     "a comparison one side of the || and a plain true or false the other, the pair of them drawn to come out to want_true";
     "Which side the comparison lands on is drawn rather than fixed, because the card above says a comparison can be either side of an || and a bank that always put it on the left would be saying otherwise.";
     let symbol = js_operator_or_symbol();
-    let truths = app_code_operator_truths_wanted(symbol, want_true);
+    let truths = app_learn_js_operator_truths_wanted(symbol, want_true);
     let comparison_left = boolean_random();
     let comparison_truth = ternary(comparison_left, truths[0], truths[1]);
     let plain = ternary(comparison_left, truths[1], truths[0]);

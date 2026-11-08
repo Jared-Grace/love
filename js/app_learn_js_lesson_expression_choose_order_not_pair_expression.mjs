@@ -1,5 +1,5 @@
 import { app_learn_js_expression_node_not_of_parts } from "./app_learn_js_expression_node_not_of_parts.mjs";
-import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
+import { app_learn_js_operator_truths_wanted } from "./app_learn_js_operator_truths_wanted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_expression_choose_order_not_pair_expression(
   let or_symbol = js_operator_or_symbol();
   let joins = [and_symbol, or_symbol];
   let symbol = list_random_item(joins);
-  let truths = app_code_operator_truths_wanted(symbol, inner_true);
+  let truths = app_learn_js_operator_truths_wanted(symbol, inner_true);
   let parts = {
     left: list_get(truths, 0),
     symbol,

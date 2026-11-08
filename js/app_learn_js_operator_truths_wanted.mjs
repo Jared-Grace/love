@@ -4,7 +4,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { equal } from "./equal.mjs";
-export function app_code_operator_truths_wanted(symbol, want_true) {
+export function app_learn_js_operator_truths_wanted(symbol, want_true) {
   arguments_assert(arguments, 2);
   ("a pair of truth values to stand either side of a given operator so that it comes out true, or comes out false, whichever was asked for: || with false asked for gives back false and false");
   ("The sibling of the one that chooses two numbers for a comparison, and it works the same way: nothing here reasons about the symbol at all. Every pair of a true and a false is tried against the operator's own working out, and the ones that answer the way the caller asked are the ones to choose between.");

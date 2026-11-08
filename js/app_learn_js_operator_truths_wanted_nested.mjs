@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
+import { app_learn_js_operator_truths_wanted } from "./app_learn_js_operator_truths_wanted.mjs";
 import { list_get } from "./list_get.mjs";
 export function app_learn_js_operator_truths_wanted_nested(
   alone_symbol,
@@ -12,11 +12,11 @@ export function app_learn_js_operator_truths_wanted_nested(
   ("Both lessons that build such a line said this the same way and neither said it by name. What the whole line has to come to says what the outer operator needs on each side of it; what it needs on the gathered side says what the inner operator has to come to; and that says what stands either side of the inner one. So neither operator is ever asked what it means - each is asked which pairs reach the answer wanted, which is the reading the lessons exist to teach.");
   ("The outer operator is the one standing alone, because the gathered pair is solved first and arrives at the outer one as a single answer. That is why only the two symbols are handed in and nothing is told which is outer: being gathered is what makes an operator inner.");
   ("Which side the pair is gathered on moves from line to line, and it is handed in rather than settled here, because the lessons drawing on this cannot move it the same way. Answered in the order read, a caller can hand the three straight to the shape it is building without knowing which side gathered.");
-  let outer = app_code_operator_truths_wanted(alone_symbol, want_true);
+  let outer = app_learn_js_operator_truths_wanted(alone_symbol, want_true);
   if (gathered_left) {
     let gathered_value = list_get(outer, 0);
     let alone_truth = list_get(outer, 1);
-    let inner = app_code_operator_truths_wanted(
+    let inner = app_learn_js_operator_truths_wanted(
       gathered_symbol,
       gathered_value,
     );
@@ -28,7 +28,7 @@ export function app_learn_js_operator_truths_wanted_nested(
   ("2026-10-17, at the human's asking: the side standing alone may be any value the outer answer allows, false before && among them, because the lessons solve both sides before an && or an || - a beginner's rule that comes to JavaScript's answer on every line drawn here - so the pair in the parentheses always runs. Not picked: giving the alone side only the value that does not settle the line, built earlier the same day while the lessons followed JavaScript in skipping; it kept the pair from being skipped, but by leaving out every line that starts false &&");
   let alone_truth_right = list_get(outer, 0);
   let gathered_value_right = list_get(outer, 1);
-  let inner_right = app_code_operator_truths_wanted(
+  let inner_right = app_learn_js_operator_truths_wanted(
     gathered_symbol,
     gathered_value_right,
   );
