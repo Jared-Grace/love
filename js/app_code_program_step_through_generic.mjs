@@ -140,7 +140,7 @@ export function app_code_program_step_through_generic(
 ) {
   arguments_assert(arguments, 6);
   ("on_step is called on every right press, in the order ",
-    fn_name("app_code_program_step_clicks"),
+    fn_name("app_learn_js_program_step_clicks"),
     " lists them, so a list of the presses can say which are done. 2026-10-23, at the human's asking: Show me the answer colours its finished steps green and lights the next one");
   ("guide: where to say what to do and why before each question, as the order lesson's example guides step by step, at the human's asking 2026-10-14; null when nothing is to be said, as in a quiz. The caller puts it on top, above the program, where the human asked for it the same day. Not picked: writing the guide under the program, just over the question, tried first and taken back.");
   ("a program the learner runs as the computer would, one step at a time. They are asked what the next line of code to run is, and press a line of the program, or that the program is complete; then what that line does, until they say it is complete: declare a variable, evaluate an expression, assign a value, log a value to the console. A name declared gets a note above its line saying what it holds, what is logged is written under the program, and a name evaluated is asked for and then stands in the line as its value. Asked for by the human 2026-10-13, so every step of the computing is done by the learner before they are asked what a program logs.");

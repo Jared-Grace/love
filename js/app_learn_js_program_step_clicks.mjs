@@ -16,7 +16,7 @@ import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-export function app_code_program_step_clicks(code) {
+export function app_learn_js_program_step_clicks(code) {
   arguments_assert(arguments, 1);
   ("every right press a learner makes stepping through the program code, in order: the line that runs next, what it does, the value a name or an operator comes to, and last that the program is complete. 2026-10-23, asked for by the human so Show me the answer on a step-by-step question says the steps to press rather than the program again");
   ("The presses are the ones the step-through asks for, read off the same trace and the same grouping of an expression solved whole, so the two cannot come to disagree. An expression solved whole is one step, since the operators can be pressed in more than one right order. Not picked: one step per operator, which would name one order as the answer when another is right too");
