@@ -1,4 +1,4 @@
-import { app_code_review_present_fn_present } from "./app_code_review_present_fn_present.mjs";
+import { app_learn_js_review_present_fn_present } from "./app_learn_js_review_present_fn_present.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_review_present_fn({
@@ -17,7 +17,7 @@ export function app_code_review_present_fn({
   let skip_button = property_get(r, "skip_button");
   let go_next = property_get(r, "go_next");
   let progress = property_get(r, "progress");
-  let present = app_code_review_present_fn_present(r, {
+  let present = app_learn_js_review_present_fn_present(r, {
     home_button,
     progress,
     c,
