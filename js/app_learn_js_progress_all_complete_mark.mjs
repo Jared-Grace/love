@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
-import { app_code_progress_lessons_complete_mark } from "./app_code_progress_lessons_complete_mark.mjs";
+import { app_learn_js_progress_lessons_complete_mark } from "./app_learn_js_progress_lessons_complete_mark.mjs";
 import { app_learn_js_checkpoints } from "./app_learn_js_checkpoints.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,7 +10,7 @@ export function app_learn_js_progress_all_complete_mark(context) {
   "It marks rather than counts: a record gains a complete flag, and the quizzes it has actually answered are left exactly as they were. So the mark is honest about being a mark, and a learner who later answers a quiz for real still has that answer written down under it.";
   arguments_assert(arguments, 1);
   let lesson_ids = app_learn_js_lesson_ids();
-  app_code_progress_lessons_complete_mark(context, lesson_ids);
+  app_learn_js_progress_lessons_complete_mark(context, lesson_ids);
   ("the checkpoints - reviews and milestones - are marked too, and are filed apart from the lessons, so they are written down by their own key here. Marking only the lessons would leave a list of finished lessons with unfinished checkpoints standing between them, which says the learner has work left to do that they have just said they have not.");
   let checkpoints = app_learn_js_checkpoints();
   function each_checkpoint(checkpoint) {
