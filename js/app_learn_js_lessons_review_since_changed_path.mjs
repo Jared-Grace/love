@@ -1,4 +1,4 @@
-import { app_code_lessons_review_since_lessons_of_path } from "./app_code_lessons_review_since_lessons_of_path.mjs";
+import { app_learn_js_lessons_review_since_lessons_of_path } from "./app_learn_js_lessons_review_since_lessons_of_path.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_values } from "./object_values.mjs";
@@ -32,7 +32,7 @@ export async function app_learn_js_lessons_review_since_changed_path(
   ]);
   let changed_paths = text_lines_working(diff_text);
   let lessons_of_path =
-    await app_code_lessons_review_since_lessons_of_path(names_after);
+    await app_learn_js_lessons_review_since_lessons_of_path(names_after);
   ("Shared helpers are grouped by WHICH lessons stand on them rather than listed one file at a time, because the reading a person does is per group and not per file. Four helpers all reached by the same four lessons are one thing to go and look at, and named as four rows they read as four.");
   ("Grouping by the set also says what the count alone could not: a group of a hundred and thirty-three is the app itself and needs no lesson named, while a group of four names its four and can be gone through. Both fall out of the same grouping, so neither needs a number typed in to tell them apart.");
   let files_of_lesson = {};

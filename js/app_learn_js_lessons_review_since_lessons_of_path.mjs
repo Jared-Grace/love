@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lessons_review_since_lesson_reached_paths } from "./app_learn_js_lessons_review_since_lesson_reached_paths.mjs";
 import { not } from "./not.mjs";
-export async function app_code_lessons_review_since_lessons_of_path(
+export async function app_learn_js_lessons_review_since_lessons_of_path(
   names_after,
 ) {
   "Every file the lessons reach, each one answered with the lessons that reach it.";
