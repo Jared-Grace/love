@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_url_dev } from "./app_shared_url_dev.mjs";
-import { app_code } from "./app_code.mjs";
+import { app_learn_js } from "./app_learn_js.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_happy_url_walked } from "./app_learn_js_happy_url_walked.mjs";
 import { server_static_free_port_run } from "./server_static_free_port_run.mjs";
@@ -22,7 +22,7 @@ export async function app_learn_js_happy_gate_run() {
   arguments_assert(arguments, 0);
   let reached = null;
   async function walk(base) {
-    let path = await app_shared_url_dev(app_code);
+    let path = await app_shared_url_dev(app_learn_js);
     let url = text_combine(base, path);
     reached = await app_learn_js_happy_url_walked(url);
   }
@@ -32,7 +32,7 @@ export async function app_learn_js_happy_gate_run() {
   let failed = await catch_error_text_or_null_async(served);
   let broken = null_not_is(failed);
   if (broken) {
-    list_empty_is_assert_json([fn_name("app_code")], {
+    list_empty_is_assert_json([fn_name("app_learn_js")], {
       hint: "the code course cannot be walked to its end in the copy this commit carries, so the code app is held out of a deployment and nothing else is - what the walk ran into is under walk here",
       walk: failed,
     });

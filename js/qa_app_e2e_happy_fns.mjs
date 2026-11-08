@@ -13,7 +13,7 @@ export function qa_app_e2e_happy_fns() {
   arguments_assert(arguments, 0);
   let fns = [
     {
-      app_name: app_shared_name_prefix_without(fn_name("app_code")),
+      app_name: app_shared_name_prefix_without(fn_name("app_learn_js")),
       happy_f_name: fn_name("app_learn_js_tests_run_e2e_happy"),
     },
     {

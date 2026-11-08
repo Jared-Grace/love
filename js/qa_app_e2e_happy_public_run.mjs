@@ -13,7 +13,7 @@ export async function qa_app_e2e_happy_public_run(app_name) {
   arguments_assert(arguments, 1);
   let fns = [
     {
-      app_name: app_shared_name_prefix_without(fn_name("app_code")),
+      app_name: app_shared_name_prefix_without(fn_name("app_learn_js")),
       happy_f_name: fn_name("app_learn_js_tests_run_e2e_happy_public"),
     },
     {

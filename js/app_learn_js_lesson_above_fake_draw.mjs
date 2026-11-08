@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_element_fake } from "./html_element_fake.mjs";
 import { html_component_wrap } from "./html_component_wrap.mjs";
-import { app_code } from "./app_code.mjs";
+import { app_learn_js } from "./app_learn_js.mjs";
 import { app_learn_js_above_draw } from "./app_learn_js_above_draw.mjs";
 export function app_learn_js_lesson_above_fake_draw(fn) {
   arguments_assert(arguments, 1);
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_above_fake_draw(fn) {
   let element = html_element_fake();
   let root = html_component_wrap(element);
   let context = {
-    app_fn: app_code,
+    app_fn: app_learn_js,
   };
   app_learn_js_above_draw(root, above, context);
   return element;

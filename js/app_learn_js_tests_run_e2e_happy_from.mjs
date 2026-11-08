@@ -3,7 +3,7 @@ import { app_learn_js_hash_complete_key } from "./app_learn_js_hash_complete_key
 import { app_learn_js_hash_complete_before_word } from "./app_learn_js_hash_complete_before_word.mjs";
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_shared_url_suffix_stage_hash } from "./app_shared_url_suffix_stage_hash.mjs";
-import { app_code } from "./app_code.mjs";
+import { app_learn_js } from "./app_learn_js.mjs";
 import { server_url } from "./server_url.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_happy_url_walked } from "./app_learn_js_happy_url_walked.mjs";
@@ -23,7 +23,11 @@ export async function app_learn_js_tests_run_e2e_happy_from(
     [complete]: before,
     [lesson]: lesson_id,
   };
-  let path = await app_shared_url_suffix_stage_hash(app_code, stage_name, hash);
+  let path = await app_shared_url_suffix_stage_hash(
+    app_learn_js,
+    stage_name,
+    hash,
+  );
   let left = server_url();
   let url = text_combine(left, path);
   let walked = await app_learn_js_happy_url_walked(url);

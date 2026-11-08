@@ -10,14 +10,14 @@ import { app_learn_js_hash_restore } from "./app_learn_js_hash_restore.mjs";
 import { app_learn_js_after_refresh } from "./app_learn_js_after_refresh.mjs";
 import { app_learn_js_buttons_cap_style } from "./app_learn_js_buttons_cap_style.mjs";
 import { object_merge } from "./object_merge.mjs";
-export async function app_code(context) {
+export async function app_learn_js(context) {
   let hash = html_hash_object_get();
   ("the link is read back to the reader before any of it is believed, so a lesson or a screen that does not exist is answered rather than written into this tab's memory on the way to a page that opens somewhere nobody asked for");
   let unknown_shown = app_learn_js_hash_unknown_page_shown_is(context, hash);
   if (unknown_shown) {
     return;
   }
-  let app_fn = app_code;
+  let app_fn = app_learn_js;
   html_margin_0_context_root(context);
   let screens = app_learn_js_screens();
   app_shared_initialize(context, app_fn, screens);

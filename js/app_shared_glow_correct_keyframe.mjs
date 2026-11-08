@@ -6,7 +6,7 @@ export function app_shared_glow_correct_keyframe() {
   ("the gold correct-answer pulse keyframe, shared by ",
     fn_name("app_g"),
     "'s pray-for-discernment glow and ",
-    fn_name("app_code"),
+    fn_name("app_learn_js"),
     "'s correct-answer highlight");
   ("Nothing but a colour and a name now. The pulse itself is written once for every glow on the page, so this one and the blue look-here one are the same movement in two colours - which is what lets a learner read the colour as the whole of the difference between them.");
   let gold = app_shared_color_gold_glow();

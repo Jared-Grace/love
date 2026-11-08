@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_url_stage_local } from "./app_shared_url_stage_local.mjs";
-import { app_code } from "./app_code.mjs";
+import { app_learn_js } from "./app_learn_js.mjs";
 import { app_learn_js_happy_url_walked } from "./app_learn_js_happy_url_walked.mjs";
 export async function app_learn_js_tests_run_e2e_happy(stage_name) {
   "$plain stage_name";
@@ -9,7 +9,7 @@ export async function app_learn_js_tests_run_e2e_happy(stage_name) {
   "Walking what is already deployed would be a different thing again - a check on a copy made days ago rather than on either of the ones in hand.";
   "Its twin in the gates walks the same course at a frozen copy of one commit instead, and the two differ in nothing but the address. This one answers about a folder, that one answers about a commit, and neither can stand in for the other.";
   arguments_assert(arguments, 1);
-  let url = await app_shared_url_stage_local(app_code, stage_name);
+  let url = await app_shared_url_stage_local(app_learn_js, stage_name);
   let walked = await app_learn_js_happy_url_walked(url);
   return walked;
 }

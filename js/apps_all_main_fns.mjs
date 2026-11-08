@@ -11,7 +11,7 @@ export function apps_all_main_fns() {
     fn_name("app_calendar_paste"),
     fn_name("app_learn_ceb"),
     fn_name("app_chapter_group"),
-    fn_name("app_code"),
+    fn_name("app_learn_js"),
     fn_name("app_design"),
     fn_name("app_bible_emoji"),
     fn_name("app_learn_en"),

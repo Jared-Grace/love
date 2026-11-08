@@ -111,7 +111,7 @@ export function app_index_main_fns(about_opened) {
       category: worship,
     },
     {
-      app_fn: fn_name("app_code"),
+      app_fn: fn_name("app_learn_js"),
       text: "Teaches the JavaScript programming language one small step at a time, by solving code",
       category: programming,
     },

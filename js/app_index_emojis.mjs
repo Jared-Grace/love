@@ -69,7 +69,7 @@ export function app_index_emojis() {
       emoji: emoji_pray(),
     },
     {
-      app_fn: fn_name("app_code"),
+      app_fn: fn_name("app_learn_js"),
       emoji: emoji_computer(),
     },
     {
