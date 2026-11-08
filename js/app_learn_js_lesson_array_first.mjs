@@ -20,9 +20,9 @@ export function app_learn_js_lesson_array_first() {
       "Suppose we have a list of numbers:",
     ]);
     app_learn_js_prose_code_list_numbered(box_one, [
-      [["text", "14"]],
-      [["text", "27"]],
-      [["text", "35"]],
+      [["code", "14"]],
+      [["code", "27"]],
+      [["code", "35"]],
     ]);
     let called = html_div(box_one);
     html_span_text(called, "In JS lists are called ");
