@@ -9,7 +9,7 @@ import { equal_assert_json } from "./equal_assert_json.mjs";
 import { list_single_message } from "./list_single_message.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { false_is_assert_json } from "./false_is_assert_json.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_learn_js_lesson_expression_which_part_first_line_assert(
@@ -59,10 +59,10 @@ export function app_learn_js_lesson_expression_which_part_first_line_assert(
   let b = text_includes(decoy, strong);
   false_is_assert_json(b, json);
   ("three tokens each - a number, an operator, a number - so a miscount that lands on an operator or runs off the end is caught even when the characters it returns look like code");
-  let list = app_code_quiz_tokens(answer);
+  let list = app_learn_js_quiz_tokens(answer);
   let left2 = list_size(list);
   equal_assert_json(left2, 3, json);
-  let list2 = app_code_quiz_tokens(decoy);
+  let list2 = app_learn_js_quiz_tokens(decoy);
   let left3 = list_size(list2);
   equal_assert_json(left3, 3, json);
   equal_not_assert_json(answer, decoy, json);

@@ -17,7 +17,7 @@ import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_quiz_tile_dealings_orderings } from "./app_learn_js_quiz_tile_dealings_orderings.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { app_learn_js_lesson_quiz_token_select_variations_spelled } from "./app_learn_js_lesson_quiz_token_select_variations_spelled.mjs";
 import { lists_unique } from "./lists_unique.mjs";
 export function app_learn_js_lesson_quiz_token_select_variations(code) {
@@ -76,7 +76,7 @@ export function app_learn_js_lesson_quiz_token_select_variations(code) {
   ("EVERY ORDERING IS DEALT, NOT ONLY THE QUESTION. A dealing cannot move a parenthesis and a swap cannot move a value, so an answer needing both moves was reachable by no road at all: shown true and the tiles of (true && true) || false, a learner who built true || (false && true) had exchanged the two sides of the or - which the swap half is allowed to do - and then handed the values round inside the bracket, which the dealing half is allowed to do, and was told they were wrong for doing both. Dealing what the swap half already made is what closes that, and it costs almost nothing: dealings reach the same lines from any two orderings shaped the same way, so all but one of each shape is skipped.");
   let dealings = app_learn_js_quiz_tile_dealings_orderings(said, code);
   let offered = list_concat(said, dealings);
-  let tokenised = list_map(offered, app_code_quiz_tokens);
+  let tokenised = list_map(offered, app_learn_js_quiz_tokens);
   let variations = app_learn_js_lesson_quiz_token_select_variations_spelled(
     tokenised,
     code,

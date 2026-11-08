@@ -3,7 +3,7 @@ import { list_to_indices } from "./list_to_indices.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export function app_learn_js_lines_code_indices(lines) {
@@ -19,7 +19,7 @@ export function app_learn_js_lines_code_indices(lines) {
   let code = list_filter(indices, index_code_is);
   function index_pieces_is(index) {
     let line = list_get(lines, index);
-    let tokens = app_code_quiz_tokens(line);
+    let tokens = app_learn_js_quiz_tokens(line);
     let pieces = list_unique(tokens);
     let several = list_size_greater_than(pieces, 1);
     return several;

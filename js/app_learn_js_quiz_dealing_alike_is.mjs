@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_shape_alike_is } from "./js_code_shape_alike_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_quiz_dealing_value_alike_is } from "./app_learn_js_quiz_dealing_value_alike_is.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { app_learn_js_quiz_tokens_group_skeletons } from "./app_learn_js_quiz_tokens_group_skeletons.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { js_tokens_comparisons_chained_is } from "./js_tokens_comparisons_chained_is.mjs";
@@ -28,8 +28,8 @@ export function app_learn_js_quiz_dealing_alike_is(code, candidate) {
   if (not(value_alike)) {
     return false;
   }
-  let asked = app_code_quiz_tokens(code);
-  let dealt = app_code_quiz_tokens(candidate);
+  let asked = app_learn_js_quiz_tokens(code);
+  let dealt = app_learn_js_quiz_tokens(candidate);
   let groups_asked = app_learn_js_quiz_tokens_group_skeletons(asked);
   let groups_dealt = app_learn_js_quiz_tokens_group_skeletons(dealt);
   let groups_alike = json_equal(groups_asked, groups_dealt);

@@ -4,7 +4,7 @@ import { not } from "./not.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
@@ -16,7 +16,7 @@ import { list_filter } from "./list_filter.mjs";
 export function app_learn_js_lesson_quiz_token_select_meaning_variations(code) {
   "Every rearrangement of the SAME tiles that says the SAME thing - so the unscramble accepts any right ordering, not just the one it was written in. `1 < 3 - 1` and `1 - 1 < 3` are built from the identical tiles and say the same thing, so both are right. The commutative-swap variations only move sides of a commutative node; this moves any tile anywhere. Every ordering is the same multiset of tiles, so it can never accept an answer the learner could not have built.";
   "Bounded by permuting all tiles (n!) and evaluating each: cheap because these are flat 3-operand expressions (5 tiles, 120 orderings), most of which do not parse and are dropped. Above a small tile cap it declines rather than blow the factorial up, and a code that does not itself evaluate (an identifier, a call, anything with side effects) yields no target and so no variations.";
-  let tokens = app_code_quiz_tokens(code);
+  let tokens = app_learn_js_quiz_tokens(code);
   let semicolon = ";";
   let has_semicolon = list_last_is(tokens, semicolon);
   if (has_semicolon) {

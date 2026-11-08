@@ -1,5 +1,5 @@
 import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
@@ -10,7 +10,7 @@ export function app_learn_js_operator_part_around(code, symbol) {
   ("the two-sided part of a line built around one operator, asked for by that operator's symbol: given 1 + 2 * 4 and *, the part 2 * 4");
   ("the tokenizer rather than a search through the characters, so a digit is one token and each side of the symbol is a whole number rather than whatever character happens to sit next to it");
   ("the first place the symbol occurs. A line holding the same operator twice has two such parts and this would quietly name only the earlier - callers that can generate one need to say which they mean rather than lean on the order here");
-  let tokens = app_code_quiz_tokens(code);
+  let tokens = app_learn_js_quiz_tokens(code);
   let index = list_index_of(tokens, symbol);
   let index2 = subtract(index, 1);
   let left = list_get(tokens, index2);

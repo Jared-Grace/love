@@ -1,7 +1,7 @@
 import { app_learn_js_operator_strong_in_code } from "./app_learn_js_operator_strong_in_code.mjs";
 import { change_if_equal } from "./change_if_equal.mjs";
 import { app_learn_js_operator_part_around } from "./app_learn_js_operator_part_around.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_expression_which_part_first_decoys(
   ("five tokens, a number at each end and the two operators between them, so the operators are the second token and the second-from-last. The weaker one is whichever of those two is not the stronger one, which is read off the line rather than assumed, because this lesson uses either of the stronger operators");
   ("the answer is passed in and not used: the wrong part is read off the question, and reading it off the answer instead would mean subtracting one part of the line from another rather than simply naming the other operator");
   let strong = app_learn_js_operator_strong_in_code(question);
-  let tokens = app_code_quiz_tokens(question);
+  let tokens = app_learn_js_quiz_tokens(question);
   let operator_first = list_get(tokens, 1);
   let operator_last = list_get_end_1(tokens);
   let weak = change_if_equal(operator_first, strong, operator_last);

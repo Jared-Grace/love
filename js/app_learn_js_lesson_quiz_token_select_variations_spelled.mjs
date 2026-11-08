@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { list_tally_covers_is } from "./list_tally_covers_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_tokens_parenthesis_group_sizes } from "./js_tokens_parenthesis_group_sizes.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_quiz_token_select_variations_spelled(
   ("Measured across every line the course can hand out, this drops something in twenty-seven of seven hundred and sixty-one, and every one of them is a lesson losing an answer that omitted its own subject: the four parenthesis lessons, and the statement lesson, which was accepting console.log(5) without the semicolon it had just taught.");
   ("The other direction is left alone on purpose. An arrangement with MORE in it than the question is not this fault - it is either a real second way of saying the line, or unbuildable for want of a button, and the caller already drops the unbuildable ones.");
   ("This cannot empty the pool. The question's own wording is put in by hand by the caller, and it holds its own tokens exactly.");
-  let asked = app_code_quiz_tokens(code);
+  let asked = app_learn_js_quiz_tokens(code);
   function tokens_none_missing_is(variation) {
     let covers = list_tally_covers_is(variation, asked);
     return covers;

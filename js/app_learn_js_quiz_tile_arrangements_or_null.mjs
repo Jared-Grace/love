@@ -1,6 +1,6 @@
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { app_learn_js_quiz_token_places_of_kind } from "./app_learn_js_quiz_token_places_of_kind.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_places_get } from "./list_places_get.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_quiz_tile_arrangements_or_null(code) {
   ("THE SECOND ROAD IS ADDED AND NEVER SUBSTITUTED, so that widening the walk cannot narrow it. Its ceiling is counted over all the tiles rather than the movable ones, so a long line - a console.log, a Math.floor - is over it while its movable tiles are well under, and if the wide road replaced the narrow one those lines would stop being checked at all. Added, the worst a full row does is decline the extra road and keep the check it already had.");
   ("The wide road throws out a row whose brackets do not close before the row is read, because such a row is a line in no language and the reader would refuse it anyway. That is a saving and not a judgment: everything it lets through is judged in full, by the same reader as ever.");
   ("The ceiling is larger than the dealer's because this walk is wider by construction, and a line over it declines rather than counting out its factorial. Declining costs a check rather than an answer: nothing here is offered to a learner.");
-  let tokens = app_code_quiz_tokens(code);
+  let tokens = app_learn_js_quiz_tokens(code);
   let value_places = app_learn_js_quiz_token_places_of_kind(tokens, "value");
   let sign_places = app_learn_js_quiz_token_places_of_kind(tokens, "sign");
   let places = list_concat(value_places, sign_places);

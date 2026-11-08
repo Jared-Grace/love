@@ -3,7 +3,7 @@ import { and } from "./and.mjs";
 import { or } from "./or.mjs";
 import { app_learn_js_lesson_quiz_token_select_variations } from "./app_learn_js_lesson_quiz_token_select_variations.mjs";
 import { app_learn_js_lessons_unscramble_codes } from "./app_learn_js_lessons_unscramble_codes.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { app_code_quiz_variation_buildable_is } from "./app_code_quiz_variation_buildable_is.mjs";
 import { js_tokens_parenthesis_group_sizes } from "./js_tokens_parenthesis_group_sizes.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
@@ -28,7 +28,7 @@ export function app_code_quiz_unscramble_shortcut_accepted(rounds) {
   for (let item of asked) {
     let code = property_get(item, "code");
     let lesson = property_get(item, "lesson");
-    let tokens = app_code_quiz_tokens(code);
+    let tokens = app_learn_js_quiz_tokens(code);
     let expression_is = js_expression_is(code);
     let semicolon = ";";
     let has_semicolon = list_last_is(tokens, semicolon);

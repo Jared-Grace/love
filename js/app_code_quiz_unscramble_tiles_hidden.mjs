@@ -2,7 +2,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lessons_unscramble_codes } from "./app_learn_js_lessons_unscramble_codes.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { list_repeated } from "./list_repeated.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -19,7 +19,7 @@ export function app_code_quiz_unscramble_tiles_hidden(rounds) {
   for (let item of asked) {
     let code = property_get(item, "code");
     let lesson = property_get(item, "lesson");
-    let tokens = app_code_quiz_tokens(code);
+    let tokens = app_learn_js_quiz_tokens(code);
     let repeated = list_repeated(tokens);
     let hides = list_empty_not_is(repeated);
     if (hides) {

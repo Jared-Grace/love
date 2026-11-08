@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { undefined_is } from "./undefined_is.mjs";
 import { equal } from "./equal.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_quiz_tokens(code) {
+export function app_learn_js_quiz_tokens(code) {
   "tokenize code for the unscramble quiz. Like the normalized tokenizer, EXCEPT a string literal becomes THREE tokens - an opening quote, its text, and a closing quote - so the learner has to place the quotes themselves. The plain JS tokenizer lumps a whole string into one token and drops its quotes, which would make a string unscramble trivial and never teach quote placement.";
   let quote = '"';
   let string_label = "string";

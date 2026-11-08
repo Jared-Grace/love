@@ -3,7 +3,7 @@ import { app_learn_js_exercise_on_answer_is } from "./app_learn_js_exercise_on_a
 import { app_learn_js_lesson_quiz_token_select } from "./app_learn_js_lesson_quiz_token_select.mjs";
 import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
 import { app_learn_js_quiz_string_tokens_merge } from "./app_learn_js_quiz_string_tokens_merge.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { js_tokens_to_code } from "./js_tokens_to_code.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -38,10 +38,10 @@ export function app_code_quiz_unscramble_unwritable() {
       "answer_property",
     );
     let code = property_get(exercise, answer_property);
-    let tokens2 = app_code_quiz_tokens(code);
+    let tokens2 = app_learn_js_quiz_tokens(code);
     let tokens = app_learn_js_quiz_string_tokens_merge(tokens2);
     let written = js_tokens_to_code(tokens);
-    let tokens3 = app_code_quiz_tokens(written);
+    let tokens3 = app_learn_js_quiz_tokens(written);
     let back = app_learn_js_quiz_string_tokens_merge(tokens3);
     let same = lists_equal_pair(back, tokens);
     if (not(same)) {

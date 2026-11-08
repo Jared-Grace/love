@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
+import { app_learn_js_quiz_tokens } from "./app_learn_js_quiz_tokens.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_quiz_token_kind } from "./app_learn_js_quiz_token_kind.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -32,7 +32,7 @@ export function app_learn_js_quiz_tile_dealings_orderings(orderings, code) {
   let keys_seen = [];
   let written_kept = [];
   function deal(ordering) {
-    let tokens = app_code_quiz_tokens(ordering);
+    let tokens = app_learn_js_quiz_tokens(ordering);
     let kinds = list_map(tokens, app_learn_js_quiz_token_kind);
     let skeleton = list_join_space(kinds);
     let list = list_copy(tokens);
