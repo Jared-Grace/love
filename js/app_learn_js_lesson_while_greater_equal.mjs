@@ -15,7 +15,7 @@ import { app_learn_js_lesson_while_generic } from "./app_learn_js_lesson_while_g
 import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
 import { js_code_while_lines } from "./js_code_while_lines.mjs";
-export function app_code_lesson_while_greater_equal() {
+export function app_learn_js_lesson_while_greater_equal() {
   arguments_assert(arguments, 0);
   ("a while counting down asking >=: let n = 9; while (n >= 3) { n -= 3; } console.log(n); writes out 0, because when n is 3, 3 >= 3 is still true and the { ... } runs once more");
   ("The one new fact is the one While asking <= taught, counting down: with >= a while keeps going when n lands exactly on the number, and stops only once n is below it.");
