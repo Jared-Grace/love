@@ -4,7 +4,7 @@ import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_while_word_programs(program_get) {
+export function app_learn_js_while_word_programs(program_get) {
   arguments_assert(arguments, 1);
   ("three programs, running one, two and three times, each writing out a word chosen at random; program_get is given (start, bound, word) and returns the program's text");
   let fruits = fruits_of_the_spirit();

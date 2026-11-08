@@ -13,7 +13,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
-import { app_code_while_word_programs } from "./app_code_while_word_programs.mjs";
+import { app_learn_js_while_word_programs } from "./app_learn_js_while_word_programs.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { json_to } from "./json_to.mjs";
@@ -96,7 +96,7 @@ export function app_learn_js_lesson_while_two_lines() {
   }
   function batch_get() {
     "three programs, running one, two and three times";
-    let codes = app_code_while_word_programs(program_get);
+    let codes = app_learn_js_while_word_programs(program_get);
     return codes;
   }
   let batch = app_learn_js_batch_question_answer_fns(

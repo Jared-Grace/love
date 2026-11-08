@@ -11,7 +11,7 @@ import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_li
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { object_multiply } from "./object_multiply.mjs";
-import { app_code_while_word_programs } from "./app_code_while_word_programs.mjs";
+import { app_learn_js_while_word_programs } from "./app_learn_js_while_word_programs.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
@@ -77,7 +77,7 @@ export function app_learn_js_lesson_while_start_end() {
   }
   function batch_get() {
     "three programs, running one, two and three times";
-    let codes = app_code_while_word_programs(program_text);
+    let codes = app_learn_js_while_word_programs(program_text);
     return codes;
   }
   let batch = app_learn_js_batch_question_answer_fns(
