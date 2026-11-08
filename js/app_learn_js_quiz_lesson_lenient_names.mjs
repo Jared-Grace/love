@@ -9,7 +9,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-export function app_code_quiz_lesson_lenient_names(lesson) {
+export function app_learn_js_quiz_lesson_lenient_names(lesson) {
   arguments_assert(arguments, 1);
   ("one lesson read once over: the ways round it whose every question can be answered by reading the right answer off the code");
   ("A lesson is asked about each way round on its own, because the two are different screens. Reading forwards the answer is what the code writes out and the code is in front of the learner; reading backwards the answer is the code and what it writes out is in front of them. A lesson can be passable one way and not the other, and a reading that mixed them would say neither.");

@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
-import { app_code_quiz_lesson_lenient_names } from "./app_code_quiz_lesson_lenient_names.mjs";
+import { app_learn_js_quiz_lesson_lenient_names } from "./app_learn_js_quiz_lesson_lenient_names.mjs";
 import { app_learn_js_quiz_leniency_readings } from "./app_learn_js_quiz_leniency_readings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each_range } from "./each_range.mjs";
@@ -22,10 +22,10 @@ export function app_learn_js_quiz_lenient_names_walked() {
   for (let fn of fns) {
     let lesson = app_learn_js_lesson_fn_id_set(fn);
     walked = walked + 1;
-    let kept = app_code_quiz_lesson_lenient_names(lesson);
+    let kept = app_learn_js_quiz_lesson_lenient_names(lesson);
     function held(name) {
       "true when this reading of the lesson found the same way round passable too";
-      let again = app_code_quiz_lesson_lenient_names(lesson);
+      let again = app_learn_js_quiz_lesson_lenient_names(lesson);
       let has = list_includes(again, name);
       return has;
     }
