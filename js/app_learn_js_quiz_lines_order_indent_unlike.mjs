@@ -11,7 +11,7 @@ import { app_learn_js_lines_indent_braces } from "./app_learn_js_lines_indent_br
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
-export function app_code_quiz_lines_order_indent_unlike() {
+export function app_learn_js_quiz_lines_order_indent_unlike() {
   arguments_assert(arguments, 0);
   ("Names every code lesson whose put-the-lines-in-order quiz asks for a program that, drawn the way the quiz draws the lines tapped, does not look the way the lesson wrote it. Hands back how many programs were looked at beside them, since nothing found is also what this says on the day it stops reaching any.");
   ("THE QUIZ DRAWS ITS OWN INDENT. Each line tapped is drawn by the { } it stands inside in the order tapped, because the indent a line was written with belongs to that one order and was wrong for every other order that logs the same - the human found a line standing at the wrong depth on 2026-10-23. So the order the lesson wrote must come out drawn exactly as the lesson wrote it, or the program on the examples screen and the same program in the quiz are two different-looking things. A lesson written with four spaces, or a { not at the end of its line, is what this finds.");
