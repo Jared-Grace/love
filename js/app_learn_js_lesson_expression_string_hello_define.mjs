@@ -4,7 +4,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
-import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
+import { app_learn_js_string_value_color_on_light } from "./app_learn_js_string_value_color_on_light.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_code_string_value_shape } from "./app_code_string_value_shape.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_expression_string_hello_define(root, word) {
   html_span_text(concept, "The ");
   let value_term = html_span_text(concept, "value of a string");
   html_bold(value_term);
-  let color = app_code_string_value_color_on_light();
+  let color = app_learn_js_string_value_color_on_light();
   html_font_color_set(value_term, color);
   html_span_text(concept, " is what's between the quotes");
   html_span_text(concept, " ");
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_expression_string_hello_define(root, word) {
   let example = html_div(define);
   html_span_text(example, "For example, the ");
   let value_word = html_span_text(example, "value");
-  let color4 = app_code_string_value_color_on_light();
+  let color4 = app_learn_js_string_value_color_on_light();
   html_font_color_set(value_word, color4);
   app_code_string_value_of_is_say(example, word);
   app_learn_js_div_cycle_code(define, [
