@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lessons_review_since_lesson_imports_of } from "./app_code_lessons_review_since_lesson_imports_of.mjs";
+import { app_learn_js_lessons_review_since_lesson_imports_of } from "./app_learn_js_lessons_review_since_lesson_imports_of.mjs";
 export async function app_code_lessons_review_since_lesson_reached_paths(
   lesson_name,
   imports_remembered,
@@ -23,7 +23,7 @@ export async function app_code_lessons_review_since_lesson_reached_paths(
     let name = waiting.pop();
     let reached_path = text_combine_multiple(["js/", name, ".mjs"]);
     paths.push(reached_path);
-    let imported = await app_code_lessons_review_since_lesson_imports_of(
+    let imported = await app_learn_js_lessons_review_since_lesson_imports_of(
       name,
       imports_remembered,
     );

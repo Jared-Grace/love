@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_imports } from "./function_imports.mjs";
-export async function app_code_lessons_review_since_lesson_imports_of(
+export async function app_learn_js_lessons_review_since_lesson_imports_of(
   name,
   imports_remembered,
 ) {
