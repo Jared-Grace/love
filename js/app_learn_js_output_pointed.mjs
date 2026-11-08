@@ -1,4 +1,4 @@
-import { app_code_span_text_tile_color } from "./app_code_span_text_tile_color.mjs";
+import { app_learn_js_span_text_tile_color } from "./app_learn_js_span_text_tile_color.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_style_normal } from "./app_code_style_normal.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_output_pointed(pointers) {
       if (null_is(color)) {
         html_span_text(line_div, line);
       } else {
-        app_code_span_text_tile_color(line_div, line, color);
+        app_learn_js_span_text_tile_color(line_div, line, color);
       }
     }
   }

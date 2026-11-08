@@ -15,7 +15,7 @@ export function app_learn_js_span_text_highlight_color(
     fn_name("app_learn_js_span_text_highlight"),
     " asks for the app's one pointing colour and no caller has to choose.");
   ("COLOURED LETTERS, NOT A TILE, the human's rule, 2026-10-01: a filled background is kept for code (a number, a name, a line written out, which wears ",
-    fn_name("app_code_span_text_tile_color"),
+    fn_name("app_learn_js_span_text_tile_color"),
     "), so a tile always means code and coloured letters mean English. Bold, because thin coloured letters read faintly. Not picked: the tile this used to draw - same background, rounding and padding as a code chip in the reading font - which read as code");
   let span = html_span(parent);
   html_text_set(span, text);
