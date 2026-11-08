@@ -9,7 +9,7 @@ import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs
 import { app_learn_js_label_of_code } from "./app_learn_js_label_of_code.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_learn_js_style_normal_text } from "./app_learn_js_style_normal_text.mjs";
 import { html_height } from "./html_height.mjs";
 import { html_height_animate } from "./html_height_animate.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -37,7 +37,7 @@ export async function app_learn_js_braces_run_output_show(
   if (equal(output, "")) {
     output = "Nothing is logged";
   }
-  app_code_style_normal_text(out, output);
+  app_learn_js_style_normal_text(out, output);
   let height = html_height(out);
   await html_height_animate(out, 0, height, duration);
   let timing = text_combine_multiple(["opacity ", duration, "ms"]);

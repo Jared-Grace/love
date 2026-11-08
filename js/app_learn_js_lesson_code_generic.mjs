@@ -9,7 +9,7 @@ import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { app_learn_js_button_value_lines } from "./app_learn_js_button_value_lines.mjs";
 import { app_learn_js_forwards_wrong_say } from "./app_learn_js_forwards_wrong_say.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_learn_js_style_normal_text } from "./app_learn_js_style_normal_text.mjs";
 import { app_learn_js_lesson_quizzes_unscramble } from "./app_learn_js_lesson_quizzes_unscramble.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_learn_js_lesson_example_guided } from "./app_learn_js_lesson_example_guided.mjs";
@@ -113,7 +113,7 @@ export function app_learn_js_lesson_code_generic(params) {
   );
   let backwards = {
     question_label: backwards_question_label_final,
-    on_question: app_code_style_normal_text,
+    on_question: app_learn_js_style_normal_text,
     answer_label: backwards_answer_label_final,
     answer_on_button: on_question,
     answer_count_override: quiz_backwards_answer_count_override,
@@ -149,7 +149,7 @@ export function app_learn_js_lesson_code_generic(params) {
       null,
       quizzes_get,
       forwards_question_label,
-      app_code_style_normal_text,
+      app_learn_js_style_normal_text,
     );
     property_set(lesson_guided, "examples_guided", true);
     return lesson_guided;
@@ -163,7 +163,7 @@ export function app_learn_js_lesson_code_generic(params) {
     example_answer_label,
     quizzes_get,
     forwards_question_label,
-    app_code_style_normal_text,
+    app_learn_js_style_normal_text,
   );
   return lesson;
 }

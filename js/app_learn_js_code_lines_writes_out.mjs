@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines_writes_out_on.mjs";
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_learn_js_style_normal_text } from "./app_learn_js_style_normal_text.mjs";
 export function app_learn_js_code_lines_writes_out(parent, lines, value) {
   arguments_assert(arguments, 3);
   ("a program and what it writes out, the pair a lesson shows in a box read before the questions start");
@@ -13,7 +13,7 @@ export function app_learn_js_code_lines_writes_out(parent, lines, value) {
     lines,
     value,
     app_learn_js_code_dark_lines_comments,
-    app_code_style_normal_text,
+    app_learn_js_style_normal_text,
   );
   return container;
 }

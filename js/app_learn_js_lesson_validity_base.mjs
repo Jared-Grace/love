@@ -1,7 +1,7 @@
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_quiz_backwards_label_answer_validity } from "./app_learn_js_quiz_backwards_label_answer_validity.mjs";
 import { noop } from "./noop.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_learn_js_style_normal_text } from "./app_learn_js_style_normal_text.mjs";
 import { app_learn_js_lesson_quizzes } from "./app_learn_js_lesson_quizzes.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_learn_js_lesson_validity_base({
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_validity_base({
   };
   let backwards = {
     question_label: backwards_question_label,
-    on_question: app_code_style_normal_text,
+    on_question: app_learn_js_style_normal_text,
     answer_label: quiz_backwards_label_answer,
     answer_on_button: backwards_answer_on_button,
     answer_count_override: 2,
@@ -48,7 +48,7 @@ export function app_learn_js_lesson_validity_base({
     backwards_question_label,
     quizzes_get,
     example_question_label,
-    app_code_style_normal_text,
+    app_learn_js_style_normal_text,
   );
   return lesson;
 }

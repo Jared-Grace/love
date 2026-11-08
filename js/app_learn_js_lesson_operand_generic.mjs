@@ -6,7 +6,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_learn_js_style_normal_text } from "./app_learn_js_style_normal_text.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -68,7 +68,7 @@ export function app_learn_js_lesson_operand_generic(params) {
     example_answer_label,
     quizzes_get,
     example_question_label,
-    app_code_style_normal_text,
+    app_learn_js_style_normal_text,
   );
   return lesson;
 }
