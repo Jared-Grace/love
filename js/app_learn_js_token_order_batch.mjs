@@ -6,7 +6,7 @@ import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-export function app_code_token_order_batch() {
+export function app_learn_js_token_order_batch() {
   arguments_assert(arguments, 0);
   ("the programs whose tokens The order of the tokens asks for, in a random order: each has one if only, because the lesson stands before any lesson with more than one if, as the human asked 2026-10-10");
   let says = app_learn_js_braces_two_says();

@@ -1,5 +1,5 @@
 import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
-import { app_code_token_order_batch } from "./app_code_token_order_batch.mjs";
+import { app_learn_js_token_order_batch } from "./app_learn_js_token_order_batch.mjs";
 import { app_code_token_order_longer } from "./app_code_token_order_longer.mjs";
 import { app_code_tokens_choose_say } from "./app_code_tokens_choose_say.mjs";
 import { app_code_tokens_choose_label_guided } from "./app_code_tokens_choose_label_guided.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_token_order() {
   ("The quiz does not show the program a second time above the one being tapped, so the label over it is left empty and its drawing draws nothing.");
   ("The writing is a first draft by Claude 2026-10-10.");
   let batch = app_learn_js_batch_question_answer_fns(
-    app_code_token_order_batch,
+    app_learn_js_token_order_batch,
     app_learn_js_quiz_tokens_order,
   );
   let order_label = "Its tokens, in order:";

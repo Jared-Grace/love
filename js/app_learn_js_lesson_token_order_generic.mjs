@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_token_order_codes_generic } from "./app_learn_js_lesson_token_order_codes_generic.mjs";
-import { app_code_token_order_batch } from "./app_code_token_order_batch.mjs";
+import { app_learn_js_token_order_batch } from "./app_learn_js_token_order_batch.mjs";
 export function app_learn_js_lesson_token_order_generic(
   name_id,
   above,
@@ -14,7 +14,7 @@ export function app_learn_js_lesson_token_order_generic(
     above,
     example_choose,
     quiz_choose,
-    app_code_token_order_batch,
+    app_learn_js_token_order_batch,
   );
   return lesson;
 }
