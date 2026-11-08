@@ -14,7 +14,7 @@ import { subtract } from "./subtract.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { app_code_review_range_label } from "./app_code_review_range_label.mjs";
-import { app_code_review_kind_any_is } from "./app_code_review_kind_any_is.mjs";
+import { app_learn_js_review_kind_any_is } from "./app_learn_js_review_kind_any_is.mjs";
 export function app_learn_js_review_checkpoint(context) {
   "What the review screen is asking about in this tab: a review, or a milestone - both drawn by the one screen.";
   "key is what it is filed under, both its half-answered questions and the list of finished checkpoints: a review's number, or a milestone's id. A review's number is a count and a milestone's id is a word, so the two can never be mistaken for each other in that one list.";
@@ -61,7 +61,7 @@ export function app_learn_js_review_checkpoint(context) {
     key: number,
     number,
     lessons,
-    kind_is: app_code_review_kind_any_is,
+    kind_is: app_learn_js_review_kind_any_is,
     title,
     explain: [],
     again,
