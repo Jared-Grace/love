@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
-export function app_code_review_home_text(r6) {
+export function app_learn_js_review_home_text(r6) {
   arguments_assert(arguments, 1);
   let restart_button = property_get(r6, "restart_button");
   let passed = property_get(r6, "passed");
