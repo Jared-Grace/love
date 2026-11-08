@@ -20,7 +20,7 @@ import { list_includes } from "./list_includes.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_all } from "./list_all.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_lessons_above_repeated() {
+export function app_learn_js_lessons_above_repeated() {
   arguments_assert(arguments, 0);
   ("Every step lesson whose telling repeats the whole telling of the lesson after it without saying so, and every step lesson that says so about a lesson that is not the one after it, as lesson name | what is wrong.");
   ("Saying so is carrying above_taught_fn_name, which ",
