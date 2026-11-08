@@ -1,4 +1,4 @@
-import { app_code_quiz_tokens_value } from "./app_code_quiz_tokens_value.mjs";
+import { app_learn_js_quiz_tokens_value } from "./app_learn_js_quiz_tokens_value.mjs";
 import { js_code_same_meaning_is } from "./js_code_same_meaning_is.mjs";
 import { not } from "./not.mjs";
 import { list_last_is } from "./list_last_is.mjs";
@@ -35,7 +35,7 @@ export function app_learn_js_lesson_quiz_token_select_meaning_variations(code) {
     return r2;
   }
   let separator = " ";
-  let target = app_code_quiz_tokens_value(tokens);
+  let target = app_learn_js_quiz_tokens_value(tokens);
   let no_target = null_is(target);
   if (no_target) {
     let r5 = [];
@@ -49,7 +49,7 @@ export function app_learn_js_lesson_quiz_token_select_meaning_variations(code) {
   ("Landing on the right value is not enough on its own, and a line that comes out false is where it fails worst. 11 - 3 === 44 / 4 is false, and so are 11 - 3 === 4 / 44 and 11 === 3 - 44 / 4 and a hundred and forty others built from the same tiles - every one of them was being marked right, because every one of them is false. What the learner was asked to build is a sentence, so the sentence is what is checked.");
   ("The value is still asked first, and only as the cheap half of the pair. Two lines that say the same thing always come out the same, so an ordering that comes out differently can be dropped before anything is read of it, and the reading is left with the few that got that far.");
   function matches(perm) {
-    let value = app_code_quiz_tokens_value(perm);
+    let value = app_learn_js_quiz_tokens_value(perm);
     let same = equal(value, target);
     if (not(same)) {
       return false;

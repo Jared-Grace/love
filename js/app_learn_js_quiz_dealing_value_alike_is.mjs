@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
-import { app_code_quiz_tokens_value } from "./app_code_quiz_tokens_value.mjs";
+import { app_learn_js_quiz_tokens_value } from "./app_learn_js_quiz_tokens_value.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -10,13 +10,13 @@ export function app_learn_js_quiz_dealing_value_alike_is(code, candidate) {
   "A question that does not come out to anything is answered no, not asked further. Nothing was shown for a learner to build towards, so there is no value for their line to agree with.";
   arguments_assert(arguments, 2);
   let asked = app_code_quiz_tokens(code);
-  let value_asked = app_code_quiz_tokens_value(asked);
+  let value_asked = app_learn_js_quiz_tokens_value(asked);
   let asked_no_value = null_is(value_asked);
   if (asked_no_value) {
     return false;
   }
   let dealt = app_code_quiz_tokens(candidate);
-  let value_dealt = app_code_quiz_tokens_value(dealt);
+  let value_dealt = app_learn_js_quiz_tokens_value(dealt);
   let value_alike = equal(value_asked, value_dealt);
   if (not(value_alike)) {
     return false;
