@@ -2,7 +2,7 @@ import { app_code_line_part_is } from "./app_code_line_part_is.mjs";
 import { or } from "./or.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_line_operators_carried_is } from "./app_code_line_operators_carried_is.mjs";
+import { app_learn_js_line_operators_carried_is } from "./app_learn_js_line_operators_carried_is.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
 export function app_learn_js_exercise_solving_is(exercise) {
@@ -13,8 +13,8 @@ export function app_learn_js_exercise_solving_is(exercise) {
   ("A line that does not read as code, or reads as one with no value written on it, counts as not carrying operators, so the exercise holding it is treated as solving. That is the cautious way round: an exercise wrongly called solving is priced as it always was, while one wrongly called matching would go unpriced.");
   let question = property_get(exercise, "question");
   let answer = property_get(exercise, "answer");
-  let question_carried = app_code_line_operators_carried_is(question);
-  let answer_carried = app_code_line_operators_carried_is(answer);
+  let question_carried = app_learn_js_line_operators_carried_is(question);
+  let answer_carried = app_learn_js_line_operators_carried_is(answer);
   let both_carried = and(question_carried, answer_carried);
   ("a lesson asking which part is worked out first answers with a part of the line it showed, and that is working out. Only a rewriting of the whole of it is a match.");
   let answer_inside = app_code_line_part_is(question, answer);

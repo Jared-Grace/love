@@ -2,7 +2,7 @@ import { property_greater_than } from "./property_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_line_shape } from "./app_code_line_shape.mjs";
 import { null_is } from "./null_is.mjs";
-export function app_code_line_operators_carried_is(code) {
+export function app_learn_js_line_operators_carried_is(code) {
   arguments_assert(arguments, 1);
   ("Whether one line of code has any operator standing on it at all.");
   ("A line carrying no operator is a value already: a learner reads it rather than works it out. A line carrying one or more is something that has a result other than what is written, which is what makes it a thing to be solved.");
