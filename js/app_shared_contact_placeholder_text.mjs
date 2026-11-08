@@ -7,8 +7,10 @@ export function app_shared_contact_placeholder_text() {
   let texts = {
     en: "Please write your message here",
     ur: "براہِ کرم اپنا پیغام یہاں لکھیں",
+    tgl: "Pakisulat ang iyong mensahe rito",
     translated_from: {
       ur: "Please write your message here",
+      tgl: "Please write your message here",
     },
   };
   let text = app_shared_text_reader_language(texts);
