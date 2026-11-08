@@ -5,7 +5,7 @@ import { app_learn_js_program_trace_declare } from "./app_learn_js_program_trace
 import { app_learn_js_program_trace_assign } from "./app_learn_js_program_trace_assign.mjs";
 import { app_code_program_trace_update } from "./app_code_program_trace_update.mjs";
 import { app_code_program_trace_log } from "./app_code_program_trace_log.mjs";
-import { app_code_program_trace_if } from "./app_code_program_trace_if.mjs";
+import { app_learn_js_program_trace_if } from "./app_learn_js_program_trace_if.mjs";
 import { app_code_program_trace_while } from "./app_code_program_trace_while.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_program_trace_for } from "./app_learn_js_program_trace_for.mjs";
@@ -37,7 +37,7 @@ export function app_code_program_trace_statement(node, actions, code, values) {
     return r2;
   }
   if (equal(type, "IfStatement")) {
-    let run = app_code_program_trace_if(node, actions, code, values);
+    let run = app_learn_js_program_trace_if(node, actions, code, values);
     return run;
   }
   if (equal(type, "WhileStatement")) {

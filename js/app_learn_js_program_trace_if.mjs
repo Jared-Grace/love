@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-export function app_code_program_trace_if(node, actions, code, values) {
+export function app_learn_js_program_trace_if(node, actions, code, values) {
   arguments_assert(arguments, 4);
   ("an if line run: its condition worked out, with any evaluating it took added to actions, answering what the condition came to, what stands after its { ... }, and the statements that run next");
   ("next is the { ... } the condition picks, or the else if itself, which runs as a statement of its own, or nothing when there is no else; the caller runs them, so the lines they add come after the if's own");
