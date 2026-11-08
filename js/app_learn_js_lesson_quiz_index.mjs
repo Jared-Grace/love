@@ -13,7 +13,7 @@ import { app_learn_js_feedback_slot_style } from "./app_learn_js_feedback_slot_s
 import { app_learn_js_feedback_cell } from "./app_learn_js_feedback_cell.mjs";
 import { app_learn_js_content_cap } from "./app_learn_js_content_cap.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { app_code_quiz_index_get } from "./app_code_quiz_index_get.mjs";
+import { app_learn_js_quiz_index_get } from "./app_learn_js_quiz_index_get.mjs";
 export function app_learn_js_lesson_quiz_index(
   info,
   qa,
@@ -64,7 +64,7 @@ export function app_learn_js_lesson_quiz_index(
   );
   app_learn_js_content_cap(container_success_message);
   app_shared_success_message(container_success_message);
-  let quiz_index = app_code_quiz_index_get(context);
+  let quiz_index = app_learn_js_quiz_index_get(context);
   let r = {
     on_question,
     answer_label,
