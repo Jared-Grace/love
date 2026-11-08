@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-export function app_code_program_trace_line(node, code) {
+export function app_learn_js_program_trace_line(node, code) {
   arguments_assert(arguments, 2);
   ("which line of the program a node begins on, counting from 0");
   let start = property_get(node, "start");

@@ -1,4 +1,4 @@
-import { app_code_program_trace_line } from "./app_code_program_trace_line.mjs";
+import { app_learn_js_program_trace_line } from "./app_learn_js_program_trace_line.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -121,7 +121,7 @@ export function app_learn_js_if_blocks(code) {
         }
       }
     }
-    let line2 = app_code_program_trace_line(test, code);
+    let line2 = app_learn_js_program_trace_line(test, code);
     let b2 = property_exists(conditions, line2);
     if (not(b2)) {
       error({
