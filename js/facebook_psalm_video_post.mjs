@@ -1,6 +1,7 @@
 import { facebook_psalm_post_text } from "./facebook_psalm_post_text.mjs";
 import { file_read } from "./file_read.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
+import { path_basename } from "./path_basename.mjs";
 import { video_frame_write } from "./video_frame_write.mjs";
 import { facebook_reel_newest_url } from "./facebook_reel_newest_url.mjs";
 import { facebook_video_post } from "./facebook_video_post.mjs";
@@ -16,7 +17,10 @@ export async function facebook_psalm_video_post(file_path) {
   let description = await file_read(description_path);
   let passage = description.split("\n")[0].split(" (BSB)")[0];
   ("The cover is the frame two seconds in: by then the first painting and the opening words are on screen, where the first frame is still dark. Measured 2026-10-20 on Psalm 149: half a second in was already the full picture.");
-  let cover_path = folder_gitignore_join("facebook_reel_cover.jpg");
+  ("★ EACH VIDEO GETS ITS OWN COVER FILE, NAMED AFTER IT. Until 2026-11-08 every run wrote one shared file, so a hand fix reading it after the next run put Psalm 134's frame on a Psalm 135 reel.");
+  let cover_path = folder_gitignore_join(
+    "facebook_reel_cover_" + (await path_basename(file_path)) + ".jpg",
+  );
   await video_frame_write(file_path, 2, cover_path);
   let before_url = await facebook_reel_newest_url();
   let r = await facebook_video_post(file_path, text, cover_path);
