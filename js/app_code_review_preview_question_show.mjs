@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_code_review_containers } from "./app_code_review_containers.mjs";
+import { app_learn_js_review_containers } from "./app_learn_js_review_containers.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
 import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exercise.mjs";
@@ -12,7 +12,7 @@ export function app_code_review_preview_question_show(stage) {
   function question_show(lesson_id, kind_index) {
     "draw one real review question for this lesson and this kind, in the review's own frame and answering the way the review answers";
     html_clear(stage);
-    let frame = app_code_review_containers(stage);
+    let frame = app_learn_js_review_containers(stage);
     let success_container = property_get(frame, "success_container");
     let c = property_get(frame, "c");
     let seed = app_code_review_seed_fresh(lesson_id, kind_index);
