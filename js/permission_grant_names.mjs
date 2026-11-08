@@ -1177,7 +1177,7 @@ export function permission_grant_names() {
     fn_name("binisaya_words_known"),
     fn_name("js_operators_comparison"),
     fn_name("clipboard_paste"),
-    fn_name("app_code_quiz_unscramble_gate_run"),
+    fn_name("app_learn_js_quiz_unscramble_gate_run"),
     fn_name("browser_secure_context_baseline_path"),
     fn_name("app_replace_url_dev"),
     fn_name("daemons_stale_restart"),
