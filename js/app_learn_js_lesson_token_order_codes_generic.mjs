@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_quiz_tokens_order } from "./app_learn_js_quiz_tokens_order.mjs";
 import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
-import { app_code_tokens_choose_label } from "./app_code_tokens_choose_label.mjs";
+import { app_learn_js_tokens_choose_label } from "./app_learn_js_tokens_choose_label.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_token_order_codes_generic(
   let forwards = {
     question_label: "",
     on_question: app_learn_js_lesson_quiz_question_none,
-    answer_label: app_code_tokens_choose_label,
+    answer_label: app_learn_js_tokens_choose_label,
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
   };
@@ -36,7 +36,7 @@ export function app_learn_js_lesson_token_order_codes_generic(
     forwards_include: false,
     batch_get: batch,
     forwards_code: true,
-    unscramble_label: app_code_tokens_choose_label,
+    unscramble_label: app_learn_js_tokens_choose_label,
     unscramble_on_answer: quiz_choose,
     builds_more: [],
   });
@@ -48,7 +48,7 @@ export function app_learn_js_lesson_token_order_codes_generic(
     example_choose,
     null,
     quizzes_get,
-    app_code_tokens_choose_label,
+    app_learn_js_tokens_choose_label,
     app_code_tokens_order_div,
   );
   return lesson;
