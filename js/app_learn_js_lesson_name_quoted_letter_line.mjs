@@ -6,7 +6,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_span_code_dark_names } from "./app_learn_js_span_code_dark_names.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_style_normal_span } from "./app_code_style_normal_span.mjs";
+import { app_learn_js_style_normal_span } from "./app_learn_js_style_normal_span.mjs";
 export function app_learn_js_lesson_name_quoted_letter_line(
   parent,
   name_source,
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_name_quoted_letter_line(
   html_span_text(line, " around it ");
   app_learn_js_span_code_dark_names(line, line_quoted, names);
   html_span_text(line, " then that would put the letter ");
-  app_code_style_normal_span(line, name_source);
+  app_learn_js_style_normal_span(line, name_source);
   html_span_text(line, " in the cup instead");
   return line;
 }
