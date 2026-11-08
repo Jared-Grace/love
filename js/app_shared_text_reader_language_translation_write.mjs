@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language_held_change } from "./app_shared_text_reader_language_held_change.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -74,6 +75,11 @@ export async function app_shared_text_reader_language_translation_write(
   let output = await app_shared_text_reader_language_sayings_change(
     f_name,
     lambda$saying,
+  );
+  async function lambda(saying2) {}
+  let output2 = await app_shared_text_reader_language_held_change(
+    f_name2,
+    lambda,
   );
   return output;
 }
