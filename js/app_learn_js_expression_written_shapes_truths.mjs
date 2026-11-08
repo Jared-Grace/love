@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_operators_comparing } from "./app_learn_js_operators_comparing.mjs";
 import { app_learn_js_operators_weaker } from "./app_learn_js_operators_weaker.mjs";
-import { app_code_operators_weakest } from "./app_code_operators_weakest.mjs";
+import { app_learn_js_operators_weakest } from "./app_learn_js_operators_weakest.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_expression_written_shapes_truths() {
   ("The written pair of parentheses is the case where the shape carries something the strengths cannot account for. (3 !== 5) !== (2 === 2) means exactly what the line without the left pair means, so a printer writing only what is needed would drop it - and a lesson showing a learner that pair is entitled to have it stay.");
   let comparisons = app_learn_js_operators_comparing();
   let weaker = app_learn_js_operators_weaker();
-  let weakest = app_code_operators_weakest();
+  let weakest = app_learn_js_operators_weakest();
   let joins = list_concat(weaker, weakest);
   let bang = js_operator_bang_symbol();
   let plus = js_operator_plus_symbol();
