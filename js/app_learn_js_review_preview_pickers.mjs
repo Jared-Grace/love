@@ -7,7 +7,11 @@ import { html_p_text } from "./html_p_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { app_learn_js_review_preview_lessons_under_test } from "./app_learn_js_review_preview_lessons_under_test.mjs";
-export function app_code_review_preview_pickers(picker, stage, question_show) {
+export function app_learn_js_review_preview_pickers(
+  picker,
+  stage,
+  question_show,
+) {
   arguments_assert(arguments, 3);
   function lessons_show() {
     "every lesson the page is showing, named by its id - the id and not the painted home title, because the id is a plain word that can be read down a long list and typed into a search, and a hundred painted titles is a hundred running animations";
