@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lessons_released_fns } from "./app_code_lessons_released_fns.mjs";
+import { app_learn_js_lessons_released_fns } from "./app_learn_js_lessons_released_fns.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -16,7 +16,7 @@ export function app_code_lessons_review_since_lesson_name(
 ) {
   arguments_assert(arguments, 4);
   let names_after = property_get(r2, "names_after");
-  let released_fns = app_code_lessons_released_fns();
+  let released_fns = app_learn_js_lessons_released_fns();
   let released_names = list_map_property(released_fns, "name");
   let lessons_added = [];
   let lessons_changed = [];

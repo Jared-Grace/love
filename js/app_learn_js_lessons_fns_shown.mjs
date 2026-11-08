@@ -4,7 +4,7 @@ import { app_learn_js_lessons_fns } from "./app_learn_js_lessons_fns.mjs";
 import { app_shared_page_stage_latest_is } from "./app_shared_page_stage_latest_is.mjs";
 import { app_learn_js_lessons_latest_held_fns } from "./app_learn_js_lessons_latest_held_fns.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
-import { app_code_lessons_released_fns } from "./app_code_lessons_released_fns.mjs";
+import { app_learn_js_lessons_released_fns } from "./app_learn_js_lessons_released_fns.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function app_learn_js_lessons_fns_shown() {
@@ -29,7 +29,7 @@ export function app_learn_js_lessons_fns_shown() {
     return kept;
   }
   ("filtered by a list of released lessons rather than cut at the last one released, because lessons get put in between released ones - a cut hands every one of those over, a list hands over none of them");
-  let released = app_code_lessons_released_fns();
+  let released = app_learn_js_lessons_released_fns();
   function released_is(lesson) {
     let included = list_includes(released, lesson);
     return included;

@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { app_code_progress_ids_complete_mark } from "./app_code_progress_ids_complete_mark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_released_fns } from "./app_code_lessons_released_fns.mjs";
+import { app_learn_js_lessons_released_fns } from "./app_learn_js_lessons_released_fns.mjs";
 import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -11,7 +11,7 @@ export function app_code_progress_released_complete_mark(context) {
   ("Released is read off the released list, the same list the public site is cut by, so what is marked is what the public site shows and nothing else. Latest used to be cut by it too; since 2026-09-26 latest shows every lesson, so what latest has is marked by ",
     fn_name("app_learn_js_lessons_latest_ids"),
     " instead.");
-  let released = app_code_lessons_released_fns();
+  let released = app_learn_js_lessons_released_fns();
   let ids_short = app_learn_js_lesson_ids_short();
   function id_of(fn) {
     let id = property_get(ids_short, fn.name);
