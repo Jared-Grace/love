@@ -8,7 +8,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-export function app_code_review_seeds_gather(lessons, kind_is) {
+export function app_learn_js_review_seeds_gather(lessons, kind_is) {
   "for each lesson, for each quiz kind kind_is accepts, one random batch item, as a JSON-safe seed {lesson_id, kind_index, question, answer}; concatenated and shuffled so a review can be persisted and resumed";
   "The kinds are filtered as positions rather than the list being narrowed, because a seed is rebuilt by its position among all of the lesson's kinds.";
   function each_lesson(lesson) {
