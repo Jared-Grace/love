@@ -9,7 +9,7 @@ import { math_number_clamp } from "./math_number_clamp.mjs";
 import { less_than } from "./less_than.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_note_runs_cut(runs, from, to) {
+export function app_learn_js_note_runs_cut(runs, from, to) {
   arguments_assert(arguments, 3);
   ("the runs of a note, as ",
     fn_name("app_code_note_runs"),
