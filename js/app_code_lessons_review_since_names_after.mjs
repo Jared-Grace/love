@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
-import { app_code_lessons_review_since_lesson_names_of_text } from "./app_code_lessons_review_since_lesson_names_of_text.mjs";
+import { app_learn_js_lessons_review_since_lesson_names_of_text } from "./app_learn_js_lessons_review_since_lesson_names_of_text.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_lessons_review_since_changed_path } from "./app_learn_js_lessons_review_since_changed_path.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,7 +16,7 @@ export async function app_code_lessons_review_since_names_after(
   let lesson_prefix = "app_code_lesson_";
   let shown = text_combine_multiple([commit, ":", list_path]);
   let list_text = await git_folder_run(folder, ["show", shown]);
-  let names_before = app_code_lessons_review_since_lesson_names_of_text(
+  let names_before = app_learn_js_lessons_review_since_lesson_names_of_text(
     list_text,
     lesson_prefix,
   );
@@ -28,7 +28,7 @@ export async function app_code_lessons_review_since_names_after(
   ]);
   let released_shown = text_combine_multiple([commit, ":", released_path]);
   let released_text = await git_folder_run(folder, ["show", released_shown]);
-  let released_before = app_code_lessons_review_since_lesson_names_of_text(
+  let released_before = app_learn_js_lessons_review_since_lesson_names_of_text(
     released_text,
     lesson_prefix,
   );
