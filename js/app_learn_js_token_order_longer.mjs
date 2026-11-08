@@ -3,7 +3,7 @@ import { app_learn_js_braces_two_says } from "./app_learn_js_braces_two_says.mjs
 import { property_get } from "./property_get.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_token_order_longer() {
+export function app_learn_js_token_order_longer() {
   arguments_assert(arguments, 0);
   ("a program with one if and two lines inside it, longer than the first example of The order of the tokens and still with only one if, because that lesson stands before any lesson with more than one if, as the human asked 2026-10-10");
   let says = app_learn_js_braces_two_says();

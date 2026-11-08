@@ -1,6 +1,6 @@
 import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
 import { app_learn_js_token_order_batch } from "./app_learn_js_token_order_batch.mjs";
-import { app_code_token_order_longer } from "./app_code_token_order_longer.mjs";
+import { app_learn_js_token_order_longer } from "./app_learn_js_token_order_longer.mjs";
 import { app_code_tokens_choose_say } from "./app_code_tokens_choose_say.mjs";
 import { app_code_tokens_choose_label_guided } from "./app_code_tokens_choose_label_guided.mjs";
 import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
@@ -44,7 +44,7 @@ export function app_learn_js_lesson_token_order() {
     app_learn_js_div_cycle_code(box_two, [
       "Here is a longer program, and its tokens in the order we read them:",
     ]);
-    let longer = app_code_token_order_longer();
+    let longer = app_learn_js_token_order_longer();
     app_learn_js_code_output({
       parent: box_two,
       code_label: "Code:",
