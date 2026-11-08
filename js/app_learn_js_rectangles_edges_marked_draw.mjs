@@ -2,7 +2,7 @@ import { null_is } from "./null_is.mjs";
 import { app_learn_js_rectangles_edges_colored_draw } from "./app_learn_js_rectangles_edges_colored_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
-export function app_code_rectangles_edges_marked_draw({
+export function app_learn_js_rectangles_edges_marked_draw({
   parent,
   columns,
   rows,

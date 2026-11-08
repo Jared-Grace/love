@@ -1,4 +1,4 @@
-import { app_code_rectangles_edges_marked_draw } from "./app_code_rectangles_edges_marked_draw.mjs";
+import { app_learn_js_rectangles_edges_marked_draw } from "./app_learn_js_rectangles_edges_marked_draw.mjs";
 import { app_learn_js_highlight_color_sixth } from "./app_learn_js_highlight_color_sixth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -289,7 +289,7 @@ export function app_learn_js_lesson_statement_name_shared_squares_none() {
   ]);
   function solved_draw(box) {
     "the same two rectangles, with the square a wrong answer counts between them filled in the overlap colour, asked by the human 2026-10-04";
-    app_code_rectangles_edges_marked_draw({
+    app_learn_js_rectangles_edges_marked_draw({
       parent: box,
       columns: 5,
       rows: 5,
