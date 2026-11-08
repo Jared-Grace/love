@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_operators_by_rank } from "./app_learn_js_operators_by_rank.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-export function app_code_operators_classed() {
+export function app_learn_js_operators_classed() {
   arguments_assert(arguments, 0);
   ("every operator this app has said how strong it is, gathered from the classes themselves: || , &&, the comparisons including == and !=, + and -, * / and the remainder, the power sign, and ! and Math.floor");
   ("Gathered from the strength classes rather than listed, so an operator added to a class is covered by whatever asks this without anybody remembering to come here. A list typed out here would agree with the classes on the day it was typed and never again.");

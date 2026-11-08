@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_written_shapes } from "./app_learn_js_expression_written_shapes.mjs";
-import { app_code_operators_classed } from "./app_code_operators_classed.mjs";
+import { app_learn_js_operators_classed } from "./app_learn_js_operators_classed.mjs";
 import { app_learn_js_expression_press_steps } from "./app_learn_js_expression_press_steps.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_learn_js_expression_symbols } from "./app_learn_js_expression_symbols.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_expression_written_report() {
   ("Three numbers travel with the verdict because nothing wrong is also what a run that looked at nothing would say. A sweep narrowed by an edit somewhere above still hands back a list of shapes, still prints every line in it, and still finds no fault - and the shape count, the step count and the unprinted operators are the three things that fall apart in that case and in no other.");
   ("Steps and not lines, because a line is printed afresh after every press. A shape with four operators in it is five lines, and the middle three are the ones nobody has read.");
   let shapes = app_learn_js_expression_written_shapes();
-  let classed = app_code_operators_classed();
+  let classed = app_learn_js_operators_classed();
   let faults = [];
   let printed = [];
   let step_count = 0;
