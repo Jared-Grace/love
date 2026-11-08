@@ -5,7 +5,7 @@ import { less_than } from "./less_than.mjs";
 import { error } from "./error.mjs";
 import { app_learn_js_program_trace_for_start_split_or_null } from "./app_learn_js_program_trace_for_start_split_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_program_trace_statement } from "./app_code_program_trace_statement.mjs";
+import { app_learn_js_program_trace_statement } from "./app_learn_js_program_trace_statement.mjs";
 import { app_learn_js_program_trace_line } from "./app_learn_js_program_trace_line.mjs";
 import { app_learn_js_program_trace_statement_piece } from "./app_learn_js_program_trace_statement_piece.mjs";
 import { property_set } from "./property_set.mjs";
@@ -44,7 +44,7 @@ export function app_code_program_trace(code) {
       return;
     }
     let actions = [];
-    let run = app_code_program_trace_statement(node, actions, code, values);
+    let run = app_learn_js_program_trace_statement(node, actions, code, values);
     let line = app_learn_js_program_trace_line(node, code);
     let entry = {
       line,

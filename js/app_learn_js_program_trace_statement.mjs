@@ -10,7 +10,12 @@ import { app_code_program_trace_while } from "./app_code_program_trace_while.mjs
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_program_trace_for } from "./app_learn_js_program_trace_for.mjs";
 import { error } from "./error.mjs";
-export function app_code_program_trace_statement(node, actions, code, values) {
+export function app_learn_js_program_trace_statement(
+  node,
+  actions,
+  code,
+  values,
+) {
   arguments_assert(arguments, 4);
   ("one statement's own line run, what running it does added to actions, answering the statements that run next because of it: an if's picked { ... }, and nothing for any other line. An if also answers what its condition came to and what stands after its { ... }");
   let type = property_get(node, "type");
