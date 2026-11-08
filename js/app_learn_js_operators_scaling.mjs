@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { list_concat_single_right } from "./list_concat_single_right.mjs";
-export function app_code_operators_scaling() {
+export function app_learn_js_operators_scaling() {
   arguments_assert(arguments, 0);
   ("every operator javascript works out at the strength of a times or a divide, by its symbol: * and / and the remainder sign %");
   ("A STRENGTH class, and not a lesson class. The pair a lesson solves first is asked for in its own place and stays a pair, because a lesson that mixes strengths draws one operator from each of two classes, and the remainder sign is not one a learner meets that early.");
