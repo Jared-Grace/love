@@ -4,8 +4,10 @@ export function app_shared_bible_offline_free_all_text() {
   let texts = {
     en: "Free the space all of them use",
     ur: "ان سب کی جگہ خالی کریں",
+    tgl: "Bakantehin ang espasyong ginagamit nilang lahat",
     translated_from: {
       ur: "Free the space all of them use",
+      tgl: "Free the space all of them use",
     },
   };
   let text = app_shared_text_reader_language(texts);
