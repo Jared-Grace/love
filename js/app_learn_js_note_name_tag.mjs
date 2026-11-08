@@ -3,7 +3,7 @@ import { app_shared_color_code_background } from "./app_shared_color_code_backgr
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_learn_js_note_name_halo_width } from "./app_learn_js_note_name_halo_width.mjs";
 import { html_text_halo_set } from "./html_text_halo_set.mjs";
-export function app_code_note_name_tag(component, color) {
+export function app_learn_js_note_name_tag(component, color) {
   arguments_assert(arguments, 2);
   ("writes a name as its own colour, ringed in the very black that the same name is read against inside a run of code, which is how a name wears its colour on a pale card");
   ("★ THE NAME ITSELF IS THE COLOURED THING HERE, WHICH IS THE WHOLE DIFFERENCE FROM THE PATCH. On a black code chip a name is written in its colour and read against the black, and the same name on a pale card could not be: a colour bright enough to read as ink on black is invisible on a card this light - the green measured about 1.2 to 1 against it, where 4.5 is the floor. So the card was given the colour behind the name instead, and the name went dark. That worked and cost something, because the two grounds then said the name different ways round, and a reader comparing the cup with the program was comparing a green block against a green letter.");
