@@ -19,7 +19,7 @@ export async function app_code_wrong_say_silent_gate_run() {
     offenders,
     path,
     "these code lessons say nothing when a wrong output is picked - give their quizzes a wrong_say reminder, or, for a lesson that now speaks, shrink the record",
-    fn_name("app_code_wrong_say_silent_baseline_write"),
+    fn_name("app_learn_js_wrong_say_silent_baseline_write"),
   );
   return r;
 }
