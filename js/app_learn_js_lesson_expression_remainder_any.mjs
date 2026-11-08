@@ -1,6 +1,6 @@
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_dividend } from "./app_learn_js_lesson_expression_dividend.mjs";
-import { app_code_uneven_dividend_between } from "./app_code_uneven_dividend_between.mjs";
+import { app_learn_js_uneven_dividend_between } from "./app_learn_js_uneven_dividend_between.mjs";
 import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
 import { app_learn_js_division_divisor } from "./app_learn_js_division_divisor.mjs";
 import { app_learn_js_lesson_expression_remainder_any_title_name_id } from "./app_learn_js_lesson_expression_remainder_any_title_name_id.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_expression_remainder_any() {
   let percent = js_operator_percent_sign();
   function make(divisor) {
     "n % d for the given divisor, with the number from 5 to 20 so it is a real division rather than a tiny one, and never a number the divisor goes into exactly - a remainder of nought leaves a learner practising remainders nothing to work out";
-    let number = app_code_uneven_dividend_between(5, 20, divisor);
+    let number = app_learn_js_uneven_dividend_between(5, 20, divisor);
     let code = js_code_binary_spaced_nb(number, percent, divisor);
     return code;
   }
