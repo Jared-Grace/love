@@ -9,7 +9,7 @@ import { js_code_binary } from "./js_code_binary.mjs";
 import { app_learn_js_lesson_operators_minus_generic_container_both_sides } from "./app_learn_js_lesson_operators_minus_generic_container_both_sides.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_operators_arithmetic } from "./app_code_operators_arithmetic.mjs";
+import { app_learn_js_operators_arithmetic } from "./app_learn_js_operators_arithmetic.mjs";
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
@@ -47,10 +47,10 @@ export function app_learn_js_lesson_operators_dot_numbers() {
       operator,
       " is a symbol that can be used like: ",
     ]);
-    app_code_operators_arithmetic(d);
+    app_learn_js_operators_arithmetic(d);
     let c2 = app_learn_js_container_light_blue(root);
     let d2 = html_div_text(c2, "We can use ");
-    app_code_operators_arithmetic(d2);
+    app_learn_js_operators_arithmetic(d2);
     html_span_text(d2, " with numbers");
     app_learn_js_div_cycle_code(c2, [
       "And we can use ",
