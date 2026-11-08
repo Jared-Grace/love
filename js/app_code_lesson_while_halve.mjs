@@ -8,7 +8,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { divide } from "./divide.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
+import { app_learn_js_lesson_while_down } from "./app_learn_js_lesson_while_down.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
@@ -74,7 +74,7 @@ export function app_code_lesson_while_halve() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_while_down,
+      app_learn_js_lesson_while_down,
       [
         "a ",
         "while",

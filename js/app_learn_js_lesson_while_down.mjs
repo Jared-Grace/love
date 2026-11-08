@@ -19,7 +19,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
 import { add } from "./add.mjs";
-export function app_code_lesson_while_down() {
+export function app_learn_js_lesson_while_down() {
   arguments_assert(arguments, 0);
   ("a while that counts down: let n = 10; while (n > 2) { n -= 3; } console.log(n); writes out 1");
   ("The one new fact is that a while works the same whichever way n moves: it asks, runs its lines while what it asks is true, and stops asking once it is false, here with n growing smaller and compared with greater than.");

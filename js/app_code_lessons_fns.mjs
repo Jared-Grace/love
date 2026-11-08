@@ -304,7 +304,7 @@ import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_log_after_change } from "./app_code_lesson_while_log_after_change.mjs";
 import { app_code_lesson_while_log_skipped } from "./app_code_lesson_while_log_skipped.mjs";
-import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
+import { app_learn_js_lesson_while_down } from "./app_learn_js_lesson_while_down.mjs";
 import { app_code_lesson_while_less_equal } from "./app_code_lesson_while_less_equal.mjs";
 import { app_code_lesson_while_greater_equal } from "./app_code_lesson_while_greater_equal.mjs";
 import { app_code_lesson_while_not_equal } from "./app_code_lesson_while_not_equal.mjs";
@@ -665,7 +665,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_log,
     app_code_lesson_while_log_after_change,
     app_code_lesson_while_log_skipped,
-    app_code_lesson_while_down,
+    app_learn_js_lesson_while_down,
     app_code_lesson_while_less_equal,
     app_code_lesson_while_greater_equal,
     app_code_lesson_while_not_equal,
