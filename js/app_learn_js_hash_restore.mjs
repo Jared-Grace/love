@@ -5,7 +5,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
 import { app_shared_hash_screen_get } from "./app_shared_hash_screen_get.mjs";
 import { app_shared_screen_stored_set_context } from "./app_shared_screen_stored_set_context.mjs";
-import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
+import { app_learn_js_quiz_hash_key } from "./app_learn_js_quiz_hash_key.mjs";
 import { app_learn_js_hash_review_restore } from "./app_learn_js_hash_review_restore.mjs";
 import { app_learn_js_hash_milestone_restore } from "./app_learn_js_hash_milestone_restore.mjs";
 import { app_learn_js_hash_complete_restore } from "./app_learn_js_hash_complete_restore.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_hash_restore(context) {
   if (screen_said) {
     app_shared_screen_stored_set_context(context, screen_name_full);
   }
-  let property3 = app_code_quiz_hash_key();
+  let property3 = app_learn_js_quiz_hash_key();
   let quiz_index = property_get_or_null(hash, property3);
   let quiz_said = null_not_is(quiz_index);
   if (quiz_said) {

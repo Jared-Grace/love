@@ -60,7 +60,7 @@ export function literals_frozen_names() {
     fn_name("app_shared_bible_reference_hash_key"),
     fn_name("app_learn_js_lesson_hash_key"),
     fn_name("app_shared_screen_hash_key"),
-    fn_name("app_code_quiz_hash_key"),
+    fn_name("app_learn_js_quiz_hash_key"),
     fn_name("g_verify_chapter_query_key"),
     fn_name("g_verify_chapter_storage_key"),
     fn_name("verse_number_key"),

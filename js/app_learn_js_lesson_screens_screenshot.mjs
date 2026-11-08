@@ -3,7 +3,7 @@ import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
+import { app_learn_js_quiz_hash_key } from "./app_learn_js_quiz_hash_key.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_code_screen_next_click_script } from "./app_code_screen_next_click_script.mjs";
 import { app_code_screens_seed_script } from "./app_code_screens_seed_script.mjs";
@@ -24,7 +24,7 @@ export async function app_learn_js_lesson_screens_screenshot(id) {
   let quiz_part = lesson + "," + screen + quiz;
   let examples_url = prefix + "#" + lesson + "," + screen + examples;
   let quiz_url =
-    prefix + "#" + quiz_part + "," + app_code_quiz_hash_key() + "=0";
+    prefix + "#" + quiz_part + "," + app_learn_js_quiz_hash_key() + "=0";
   let settle = page_capture_settle_ms();
   let next_script = app_code_screen_next_click_script();
   let pictures = [];

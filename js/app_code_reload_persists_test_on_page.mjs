@@ -3,7 +3,7 @@ import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
+import { app_learn_js_quiz_hash_key } from "./app_learn_js_quiz_hash_key.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
@@ -26,7 +26,7 @@ export async function app_code_reload_persists_test_on_page(
     "the three words this address stands on are frozen, so each is read off the function holding it rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change";
     let v = app_shared_screen_hash_key();
     let f_name = app_code_screen_name_short(fn_name("app_code_quiz"));
-    let v2 = app_code_quiz_hash_key();
+    let v2 = app_learn_js_quiz_hash_key();
     let combined = text_combine_multiple([",", v, "=", f_name, ",", v2, "=0"]);
     let v3 = app_learn_js_lesson_hash_key();
     let url = text_combine_multiple([
