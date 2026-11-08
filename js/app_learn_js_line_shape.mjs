@@ -12,7 +12,7 @@ import { list_filter_size } from "./list_filter_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { app_code_line_swap_mirrored_is } from "./app_code_line_swap_mirrored_is.mjs";
-export function app_code_line_shape(code) {
+export function app_learn_js_line_shape(code) {
   arguments_assert(arguments, 1);
   ("How much working out one line asks of a learner: how many operators stand on it, and how deep the deepest of them sits inside the others. Nothing at all when the text is not a line of code.");
   ("The lessons at the front of the course hand out words rather than lines - For God so, TheWorld, God-so-loved - and several of those read in as code even so, because a hyphen between two words is a subtraction and the word in between two others is an operator JS knows. A line is counted here only when reading it in finds a written-out value on it: a number, a piece of text in quotes, a true or a false. That is what every lesson about solving a line has and no lesson about how names are spelled has.");

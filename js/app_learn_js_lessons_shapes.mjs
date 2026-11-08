@@ -7,7 +7,7 @@ import { add_1 } from "./add_1.mjs";
 import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_lines_solved } from "./app_learn_js_lesson_lines_solved.mjs";
-import { app_code_line_shape } from "./app_code_line_shape.mjs";
+import { app_learn_js_line_shape } from "./app_learn_js_line_shape.mjs";
 import { null_is } from "./null_is.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
@@ -34,7 +34,7 @@ export function app_learn_js_lessons_shapes(rounds) {
     ("what is on this lesson that a learner may never have seen, gathered from every line it asks to be worked out");
     let kinds_all = [];
     for (let line of lines) {
-      let shape = app_code_line_shape(line);
+      let shape = app_learn_js_line_shape(line);
       let unread = null_is(shape);
       if (unread) {
         continue;
