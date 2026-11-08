@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_review_milestone_next_or_null } from "./app_code_review_milestone_next_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_milestone_go } from "./app_code_milestone_go.mjs";
+import { app_learn_js_milestone_go } from "./app_learn_js_milestone_go.mjs";
 import { app_learn_js_lesson_go } from "./app_learn_js_lesson_go.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
@@ -31,7 +31,7 @@ export function app_code_review_back(r2, context) {
   has_next = null_not_is(next_lesson) || milestone_is;
   async function go_next() {
     if (milestone_is) {
-      await app_code_milestone_go(context, milestone_next);
+      await app_learn_js_milestone_go(context, milestone_next);
       return;
     }
     await app_learn_js_lesson_go(next_lesson, context);

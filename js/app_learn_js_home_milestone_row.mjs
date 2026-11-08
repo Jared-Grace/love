@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_milestone_go } from "./app_code_milestone_go.mjs";
+import { app_learn_js_milestone_go } from "./app_learn_js_milestone_go.mjs";
 import { app_learn_js_checkpoint_button } from "./app_learn_js_checkpoint_button.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_home_milestone_row(
   let label = property_get(milestone, "label");
   let id = property_get(milestone, "id");
   async function on_click() {
-    await app_code_milestone_go(context, id);
+    await app_learn_js_milestone_go(context, id);
   }
   let row = app_learn_js_checkpoint_button(
     g,
