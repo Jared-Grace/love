@@ -1,7 +1,7 @@
 import { app_learn_js_quiz_unscramble_unreadable_accepted } from "./app_learn_js_quiz_unscramble_unreadable_accepted.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-export function app_code_quiz_unscramble_unreadable_gate_run() {
+export function app_learn_js_quiz_unscramble_unreadable_gate_run() {
   "Gate: no unscramble in the course accepts an answer that is not a line of code at all. Throws so the dispatcher seam exits nonzero.";
   "How many lines and orderings were looked at travels out with the verdict, because nothing unreadable is also what a course with no lines would say.";
   let rounds = 3;
