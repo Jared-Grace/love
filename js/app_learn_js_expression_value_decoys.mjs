@@ -7,7 +7,7 @@ import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { text_is } from "./text_is.mjs";
-import { app_code_text_join_decoys } from "./app_code_text_join_decoys.mjs";
+import { app_learn_js_text_join_decoys } from "./app_learn_js_text_join_decoys.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { number_nan_is } from "./number_nan_is.mjs";
@@ -33,7 +33,7 @@ export function app_learn_js_expression_value_decoys(current, node) {
   let candidates = [slipped, whole];
   ("2026-10-15, seen on screen: two pieces of text joined have no other operator's value, since text times text is not a value, so on its own a join was asked with one button. It is offered the wrong joins the lesson on joining two names offers");
   if (text_is(left) && text_is(right)) {
-    let joins_wrong = app_code_text_join_decoys(left, right);
+    let joins_wrong = app_learn_js_text_join_decoys(left, right);
     candidates = list_concat(candidates, joins_wrong);
   }
   function wrong_is(candidate) {

@@ -4,7 +4,7 @@ import { list_map } from "./list_map.mjs";
 import { json_from } from "./json_from.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_code_text_join_decoys } from "./app_code_text_join_decoys.mjs";
+import { app_learn_js_text_join_decoys } from "./app_learn_js_text_join_decoys.mjs";
 import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 export function app_learn_js_lesson_statement_name_join_decoys(
   question,
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_statement_name_join_decoys(
   let texts = list_map(quoted, json_from);
   let first = list_first(texts);
   let last = list_last(texts);
-  let joins_wrong = app_code_text_join_decoys(first, last);
+  let joins_wrong = app_learn_js_text_join_decoys(first, last);
   ("An answer is what each writing-out was handed - a list of lines, each a list of values - so each wrong answer is shaped the same way: one line holding one piece of text.");
   let line = list_first(answer);
   let written = list_first(line);
