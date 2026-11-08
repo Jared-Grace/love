@@ -4,7 +4,7 @@ import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_not_parenthesis_shape } from "./app_code_not_parenthesis_shape.mjs";
+import { app_learn_js_not_parenthesis_shape } from "./app_learn_js_not_parenthesis_shape.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_intro(parent) {
   arguments_assert(arguments, 1);
   ("the sentences that say what is different about this lesson, in a card of their own");
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_expression_choose_order_not_intro(parent) {
     marks,
     " like this: ",
   ]);
-  app_code_not_parenthesis_shape(row_shape);
+  app_learn_js_not_parenthesis_shape(row_shape);
   app_learn_js_div_cycle_code(parent, [
     "The parenthesis means: solve what's inside the parenthesis, first, and then apply ",
     symbol,

@@ -15,7 +15,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
-import { app_code_not_parenthesis_shape } from "./app_code_not_parenthesis_shape.mjs";
+import { app_learn_js_not_parenthesis_shape } from "./app_learn_js_not_parenthesis_shape.mjs";
 import { app_learn_js_lesson_expression_worked_card_not } from "./app_learn_js_lesson_expression_worked_card_not.mjs";
 export function app_learn_js_lesson_expression_not_pair_intro(root, context) {
   arguments_assert(arguments, 2);
@@ -64,7 +64,7 @@ export function app_learn_js_lesson_expression_not_pair_intro(root, context) {
   let row_not = html_div(card);
   html_span_text_code_dark(row_not, symbol);
   html_span_text(row_not, " can go in front of parenthesis: ");
-  app_code_not_parenthesis_shape(row_not);
+  app_learn_js_not_parenthesis_shape(row_not);
   let v = fill_pair_get(and_symbol);
   shape_row("", and_symbol, v);
   let v2 = fill_pair_get(or_symbol);
