@@ -1,13 +1,13 @@
-import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
-import { app_learn_js_lessons_latest_held_fns } from "./app_learn_js_lessons_latest_held_fns.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_without_multiple } from "./list_without_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_public_latest_folder } from "./html_public_latest_folder.mjs";
 import { property_get } from "./property_get.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read_uncached } from "./file_read_uncached.mjs";
 import { list_empty_not_is_assert } from "./list_empty_not_is_assert.mjs";
+import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
+import { app_learn_js_lessons_latest_held_fns } from "./app_learn_js_lessons_latest_held_fns.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_without_multiple } from "./list_without_multiple.mjs";
 export async function app_learn_js_lessons_latest_ids() {
   arguments_assert(arguments, 0);
   ("the ids of every lesson latest has, read off latest's own built code, so a working copy can mark finished exactly what latest shows - asked for by the human, 2026-09-30, when marking the released list left lessons 194 to 202 open that latest already had");
@@ -19,7 +19,7 @@ export async function app_learn_js_lessons_latest_ids() {
   let file_path = path_join([to_folder, "learn_js.js"]);
   let built = await file_read_uncached(file_path);
   let pattern =
-    /app_code_lesson_[a-z0-9_]+:\(0,[A-Za-z0-9_$.]+\)\("([a-z0-9_]+)"\)/g;
+    /app_learn_js_lesson_[a-z0-9_]+:\(0,[A-Za-z0-9_$.]+\)\("([a-z0-9_]+)"\)/g;
   let ids = [];
   for (let found of built.matchAll(pattern)) {
     ids.push(found[1]);

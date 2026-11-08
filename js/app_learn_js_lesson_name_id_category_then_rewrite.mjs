@@ -1,15 +1,15 @@
-import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { list_first_remaining } from "./list_first_remaining.mjs";
-import { list_each_size } from "./list_each_size.mjs";
-import { js_list_calls_named_nodes } from "./js_list_calls_named_nodes.mjs";
 import { app_learn_js_lesson_name_id_category_then_maker_or_null } from "./app_learn_js_lesson_name_id_category_then_maker_or_null.mjs";
+import { equal } from "./equal.mjs";
 import { app_learn_js_lesson_name_id_category_then_painter_or_null } from "./app_learn_js_lesson_name_id_category_then_painter_or_null.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_first_remaining } from "./list_first_remaining.mjs";
 import { app_learn_js_lesson_name_id_category_then_opens_category_is } from "./app_learn_js_lesson_name_id_category_then_opens_category_is.mjs";
+import { not } from "./not.mjs";
+import { property_set } from "./property_set.mjs";
+import { js_list_calls_named_nodes } from "./js_list_calls_named_nodes.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { list_each_size } from "./list_each_size.mjs";
 import { app_learn_js_lesson_name_id_category_then_paint_name } from "./app_learn_js_lesson_name_id_category_then_paint_name.mjs";
 export function app_learn_js_lesson_name_id_category_then_rewrite(ast) {
   arguments_assert(arguments, 1);
@@ -54,7 +54,11 @@ export function app_learn_js_lesson_name_id_category_then_rewrite(ast) {
   );
   function callee_swap(call) {
     let callee = property_get(call, "callee");
-    property_set(callee, "name", "app_code_lesson_name_id_category_then");
+    property_set(
+      callee,
+      "name",
+      fn_name("app_learn_js_lesson_name_id_category_then"),
+    );
   }
   let swapped = list_each_size(calls, callee_swap);
   let renamed = app_learn_js_lesson_name_id_category_then_paint_name(
