@@ -19,8 +19,24 @@ export function app_shared_money_section_why_receive() {
         "خوشی سے دیے ہوئے تحفے، کبھی مانگے ہوئے نہیں، خدا کے خادموں کی پرورش کر سکتے ہیں۔",
       ],
     },
+    tgl: {
+      title: "Kung gayon, bakit pa tumatanggap ng anuman?",
+      lines: [
+        "Huwag busalan ang baka habang gumigiik ito ng butil (Deuteronomio 25:4, at inulit ito ni Pablo tungkol sa mga manggagawa sa 1 Timoteo 5:18).",
+        "Pinapakain ang baka para patuloy itong makapagbunga para sa iba.",
+        "Ang mga kaloob na kusang ibinigay, hindi kailanman hiningi nang sapilitan, ay maaaring tumustos sa mga lingkod ng Diyos.",
+      ],
+    },
     translated_from: {
       ur: {
+        title: "Then why receive anything at all?",
+        lines: [
+          "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
+          "The ox is fed so it can keep producing for others.",
+          "Freely given gifts, never demanded ones, can provide for ministers of God.",
+        ],
+      },
+      tgl: {
         title: "Then why receive anything at all?",
         lines: [
           "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
