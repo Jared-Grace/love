@@ -3,7 +3,7 @@ import { app_learn_js_note_name_ink } from "./app_learn_js_note_name_ink.mjs";
 import { html_style_code_unfonted } from "./html_style_code_unfonted.mjs";
 import { html_box_shadow_inset_value } from "./html_box_shadow_inset_value.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
-export function app_code_note_name_pill(component, color) {
+export function app_learn_js_note_name_pill(component, color) {
   arguments_assert(arguments, 2);
   ("writes a name as a small coloured patch with the name on it, which is how a name wears its colour anywhere on the screen");
   ("THE COLOUR IS BEHIND THE NAME RATHER THAN IN IT, AND THAT IS WHAT LETS ONE LIST OF COLOURS SERVE THE WHOLE SCREEN. A coloured letter must be read against whatever it is put on, so the same name needed one colour on a black code chip and a different one on a pale card, and a reader looking at both said the two greens were not the same green - correctly, because they were not. A patch is read against its own ink instead. Nothing behind it is being asked to make it legible, so it can be the same colour in both places, which is the one thing the colour exists to say.");
