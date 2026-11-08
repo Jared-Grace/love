@@ -38,7 +38,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_two_lines() {
+export function app_learn_js_lesson_while_two_lines() {
   arguments_assert(arguments, 0);
   ('two lines that write inside a while: let n = 1; while (n < 3) { console.log("joy"); console.log(n); n++; } writes out joy, 1, joy and 2');
   ("The one new fact is that the lines inside the { ... } run from top to bottom on every run, so what they write out takes turns: all of one run comes before any of the next.");
