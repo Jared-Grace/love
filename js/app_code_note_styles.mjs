@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { integer_is_assert } from "./integer_is_assert.mjs";
 import { app_code_note_names_marked } from "./app_code_note_names_marked.mjs";
 import { app_learn_js_note_marks } from "./app_learn_js_note_marks.mjs";
-import { app_code_note_name_color_or_null } from "./app_code_note_name_color_or_null.mjs";
+import { app_learn_js_note_name_color_or_null } from "./app_learn_js_note_name_color_or_null.mjs";
 import { add } from "./add.mjs";
 import { app_code_note_name_spans } from "./app_code_note_name_spans.mjs";
 export function app_code_note_styles(code) {
@@ -51,7 +51,7 @@ export function app_code_note_styles(code) {
     let mark_last = subtract(mark_to, 1);
     styles[mark_from] = [dim, faded];
     styles[mark_last] = [dim, faded];
-    let color = app_code_note_name_color_or_null(names, name);
+    let color = app_learn_js_note_name_color_or_null(names, name);
     if (color) {
       let name_from = add(mark_from, 1);
       let name_last = subtract(mark_last, 1);

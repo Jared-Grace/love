@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_note_name_color_or_null } from "./app_code_note_name_color_or_null.mjs";
+import { app_learn_js_note_name_color_or_null } from "./app_learn_js_note_name_color_or_null.mjs";
 import { js_visit_identifiers_nodes } from "./js_visit_identifiers_nodes.mjs";
 export function app_code_note_name_spans(code, names) {
   arguments_assert(arguments, 2);
@@ -13,7 +13,7 @@ export function app_code_note_name_spans(code, names) {
   let spans = [];
   function lambda_identifier(node) {
     let name = property_get(node, "name");
-    let color = app_code_note_name_color_or_null(names, name);
+    let color = app_learn_js_note_name_color_or_null(names, name);
     if (color) {
       let start = property_get(node, "start");
       let end = property_get(node, "end");

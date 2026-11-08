@@ -3,7 +3,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
-import { app_code_note_name_color_or_null } from "./app_code_note_name_color_or_null.mjs";
+import { app_learn_js_note_name_color_or_null } from "./app_learn_js_note_name_color_or_null.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 export function app_learn_js_note_cycle_code(parent, parts, names) {
   arguments_assert(arguments, 3);
@@ -25,7 +25,7 @@ export function app_learn_js_note_cycle_code(parent, parts, names) {
       continue;
     }
     html_style_code_dark_nowrap(span);
-    let color = app_code_note_name_color_or_null(names, part);
+    let color = app_learn_js_note_name_color_or_null(names, part);
     if (color) {
       html_font_color_set(span, color);
     }

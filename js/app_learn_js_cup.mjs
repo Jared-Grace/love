@@ -6,7 +6,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_button_border_width } from "./app_shared_button_border_width.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { app_code_note_name_color_or_null } from "./app_code_note_name_color_or_null.mjs";
+import { app_learn_js_note_name_color_or_null } from "./app_learn_js_note_name_color_or_null.mjs";
 import { app_code_note_name_tag } from "./app_code_note_name_tag.mjs";
 import { not } from "./not.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -92,7 +92,7 @@ export function app_learn_js_cup(parent, inside, name, names) {
   let named = text_empty_not_is(name);
   if (named) {
     let written = html_div_text(bowl, name);
-    let lent = app_code_note_name_color_or_null(names, name);
+    let lent = app_learn_js_note_name_color_or_null(names, name);
     if (lent) {
       app_code_note_name_tag(written, lent);
     }
