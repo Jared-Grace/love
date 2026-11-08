@@ -6,7 +6,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { list_concat_single } from "./list_concat_single.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_screen_text_normalize } from "./app_learn_js_screen_text_normalize.mjs";
-import { app_code_screens_diff_key_of } from "./app_code_screens_diff_key_of.mjs";
+import { app_learn_js_screens_diff_key_of } from "./app_learn_js_screens_diff_key_of.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 export async function app_learn_js_screens_diff_changed(
@@ -28,7 +28,7 @@ export async function app_learn_js_screens_diff_changed(
   }
   let baseline_map = {};
   function index_baseline(record) {
-    let key = app_code_screens_diff_key_of(record);
+    let key = app_learn_js_screens_diff_key_of(record);
     let masked = masked_of(record);
     property_set(baseline_map, key, masked);
   }

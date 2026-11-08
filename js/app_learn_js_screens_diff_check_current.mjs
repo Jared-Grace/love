@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_screens_diff_key_of } from "./app_code_screens_diff_key_of.mjs";
+import { app_learn_js_screens_diff_key_of } from "./app_learn_js_screens_diff_key_of.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_screens_diff_check_current(r) {
   let current_map = property_get(r, "current_map");
   let changed = property_get(r, "changed");
   function check_current(record) {
-    let key = app_code_screens_diff_key_of(record);
+    let key = app_learn_js_screens_diff_key_of(record);
     property_set(current_map, key, true);
     let masked = masked_of(record);
     let known = property_exists(baseline_map, key);
