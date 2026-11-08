@@ -78,8 +78,8 @@ export async function app_shared_text_reader_language_translation_write(
   );
   async function lambda(saying2) {}
   let output2 = await app_shared_text_reader_language_held_change(
-    f_name2,
-    lambda,
+    f_name,
+    lambda$saying,
   );
   return output;
 }
