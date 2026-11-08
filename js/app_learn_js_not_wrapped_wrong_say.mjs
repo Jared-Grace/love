@@ -6,7 +6,7 @@ import { js_tokenizer_normalized_or_null } from "./js_tokenizer_normalized_or_nu
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_not_wrapped_wrong_say(question, answer, choice) {
+export function app_learn_js_not_wrapped_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("for a quiz between a comparison and the same line written with a ! around the opposite mark, in either direction: a !== b is !(a === b), and a === b is !(a !== b); null for any other pair");
   let different = js_operator_bang_double_equal_symbol();

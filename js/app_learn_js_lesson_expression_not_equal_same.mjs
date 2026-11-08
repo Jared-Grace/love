@@ -20,7 +20,7 @@ import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symb
 import { js_operator_greater_than_equal_symbol } from "./js_operator_greater_than_equal_symbol.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
-import { app_code_not_wrapped_wrong_say } from "./app_code_not_wrapped_wrong_say.mjs";
+import { app_learn_js_not_wrapped_wrong_say } from "./app_learn_js_not_wrapped_wrong_say.mjs";
 import { app_learn_js_lesson_quizzes_unscramble_both } from "./app_learn_js_lesson_quizzes_unscramble_both.mjs";
 import { app_learn_js_lesson_expression_not_equal_same_title_name_id } from "./app_learn_js_lesson_expression_not_equal_same_title_name_id.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -165,7 +165,7 @@ export function app_learn_js_lesson_expression_not_equal_same() {
     answer_label: written_with,
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
-    wrong_say: app_code_not_wrapped_wrong_say,
+    wrong_say: app_learn_js_not_wrapped_wrong_say,
     decoys: decoys_forwards,
   };
   let backwards = {
@@ -174,7 +174,7 @@ export function app_learn_js_lesson_expression_not_equal_same() {
     answer_label: which_code,
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
-    wrong_say: app_code_not_wrapped_wrong_say,
+    wrong_say: app_learn_js_not_wrapped_wrong_say,
     decoys: decoys_backwards,
   };
   let quizzes_get = app_learn_js_lesson_quizzes_unscramble_both({
