@@ -16,7 +16,7 @@ export async function app_learn_js_hash_complete_latest_restore(context, hash) {
   let asked = equal(said, latest);
   if (asked) {
     let ids = await app_shared_api({
-      f_name: fn_name("app_code_lessons_latest_ids"),
+      f_name: fn_name("app_learn_js_lessons_latest_ids"),
       args: [],
     });
     app_code_progress_ids_complete_mark(context, ids);

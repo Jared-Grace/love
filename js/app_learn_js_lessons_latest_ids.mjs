@@ -8,7 +8,7 @@ import { property_get } from "./property_get.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read_uncached } from "./file_read_uncached.mjs";
 import { list_empty_not_is_assert } from "./list_empty_not_is_assert.mjs";
-export async function app_code_lessons_latest_ids() {
+export async function app_learn_js_lessons_latest_ids() {
   arguments_assert(arguments, 0);
   ("the ids of every lesson latest has, read off latest's own built code, so a working copy can mark finished exactly what latest shows - asked for by the human, 2026-09-30, when marking the released list left lessons 194 to 202 open that latest already had");
   ("Read off the built file rather than off the lesson list, because latest is whatever was last built and sent, and the lesson list is whatever the source says now: a lesson added since is in the list and not on latest. Not picked: writing the ids to a file of their own each time latest is built, which is a second claim about the build beside the build itself, and a step the shared build would take for this one app.");
