@@ -1,6 +1,6 @@
 import { app_learn_js_settings_clear_confirm } from "./app_learn_js_settings_clear_confirm.mjs";
 import { app_learn_js_settings_complete_confirm } from "./app_learn_js_settings_complete_confirm.mjs";
-import { app_code_settings } from "./app_code_settings.mjs";
+import { app_learn_js_settings } from "./app_learn_js_settings.mjs";
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_learn_js_quiz } from "./app_learn_js_quiz.mjs";
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_screens() {
     app_learn_js_quiz,
     app_learn_js_examples,
     app_learn_js_review,
-    app_code_settings,
+    app_learn_js_settings,
     app_learn_js_settings_complete_confirm,
     app_learn_js_settings_clear_confirm,
   ];

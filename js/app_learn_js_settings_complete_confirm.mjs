@@ -1,7 +1,7 @@
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_learn_js_progress_all_complete_mark } from "./app_learn_js_progress_all_complete_mark.mjs";
 import { app_learn_js_screen_capped } from "./app_learn_js_screen_capped.mjs";
-import { app_code_settings } from "./app_code_settings.mjs";
+import { app_learn_js_settings } from "./app_learn_js_settings.mjs";
 import { app_shared_confirm } from "./app_shared_confirm.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_settings_complete_confirm(context) {
   app_shared_confirm(
     g,
     context,
-    app_code_settings,
+    app_learn_js_settings,
     "Are you sure you want to mark every lesson and every review as complete? You can still open any of them you like.",
     text_confirm,
     on_confirm,

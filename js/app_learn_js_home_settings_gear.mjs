@@ -1,5 +1,5 @@
 import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
-import { app_code_settings } from "./app_code_settings.mjs";
+import { app_learn_js_settings } from "./app_learn_js_settings.mjs";
 import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_learn_js_home_settings_gear(parent, context) {
@@ -10,7 +10,7 @@ export function app_learn_js_home_settings_gear(parent, context) {
   let button = app_shared_screen_set_button(
     parent,
     context,
-    app_code_settings,
+    app_learn_js_settings,
     text,
   );
   return button;

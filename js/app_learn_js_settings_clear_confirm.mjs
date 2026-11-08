@@ -1,7 +1,7 @@
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_learn_js_progress_all_clear } from "./app_learn_js_progress_all_clear.mjs";
 import { app_learn_js_screen_capped } from "./app_learn_js_screen_capped.mjs";
-import { app_code_settings } from "./app_code_settings.mjs";
+import { app_learn_js_settings } from "./app_learn_js_settings.mjs";
 import { app_shared_confirm_red } from "./app_shared_confirm_red.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_settings_clear_confirm(context) {
   app_shared_confirm_red(
     g,
     context,
-    app_code_settings,
+    app_learn_js_settings,
     "Are you sure you want to mark all lessons and reviews as incomplete? The lesson list goes back to how it looked on your first day, and every lesson and review is yours to complete again. This only affects whether or not you've completed them.",
     text_confirm,
     on_confirm,
