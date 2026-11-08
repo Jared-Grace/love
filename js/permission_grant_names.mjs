@@ -2411,7 +2411,7 @@ export function permission_grant_names() {
     fn_name("folder_public_root_lock_name"),
     fn_name("git_files_restore_at"),
     fn_name("function_declarations_unused_clear_multiple"),
-    fn_name("app_code_quiz_leniency_baseline_path"),
+    fn_name("app_learn_js_quiz_leniency_baseline_path"),
     fn_name("example_files_command_args_miscounted"),
     fn_name("example_files_command_cores"),
     fn_name("functions_rewrite_seams"),
