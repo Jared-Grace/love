@@ -4,7 +4,7 @@ import { fn_name } from "./fn_name.mjs";
 import { js_operator_plus } from "./js_operator_plus.mjs";
 import { js_operators_binary } from "./js_operators_binary.mjs";
 import { list_concat_single_right } from "./list_concat_single_right.mjs";
-export function app_code_operators_solvable() {
+export function app_learn_js_operators_solvable() {
   "every operator a code lesson may put between two things and then work out, each carrying the function that works it out";
   ("It is ",
     fn_name("js_operators_binary"),
