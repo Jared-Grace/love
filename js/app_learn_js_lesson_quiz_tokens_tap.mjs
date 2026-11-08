@@ -23,7 +23,7 @@ import { text_get } from "./text_get.mjs";
 import { app_learn_js_braces_pair_color } from "./app_learn_js_braces_pair_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
-import { app_code_token_chip_thin } from "./app_code_token_chip_thin.mjs";
+import { app_learn_js_token_chip_thin } from "./app_learn_js_token_chip_thin.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { less_than } from "./less_than.mjs";
@@ -136,7 +136,7 @@ export function app_learn_js_lesson_quiz_tokens_tap({
   function chip(index) {
     "a token's pale chip, wearing its pair's colour when it is a coloured brace";
     let span = list_get(spans, index);
-    app_code_token_chip_thin(span);
+    app_learn_js_token_chip_thin(span);
     paint(index);
   }
   function token_add(place, index) {
