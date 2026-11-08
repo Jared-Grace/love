@@ -12,7 +12,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_while_generic } from "./app_learn_js_lesson_while_generic.mjs";
 import { subtract } from "./subtract.mjs";
 import { js_code_while_lines } from "./js_code_while_lines.mjs";
-export function app_code_lesson_while_not_equal() {
+export function app_learn_js_lesson_while_not_equal() {
   arguments_assert(arguments, 0);
   ("a while asking !==: let n = 1; while (n !== 7) { n += 2; } console.log(n); writes out 7, because the { ... } runs until n is exactly 7");
   ("The one new fact: with !== a while stops only when n lands exactly on the number. Every program here lands on it, so none runs forever; that a step passing the number never stops is said once above and never asked.");
