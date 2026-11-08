@@ -26,7 +26,7 @@ import { sleep_success_color } from "./sleep_success_color.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { not } from "./not.mjs";
 import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
-import { app_code_review_persist } from "./app_code_review_persist.mjs";
+import { app_learn_js_review_persist } from "./app_learn_js_review_persist.mjs";
 import { app_learn_js_review_hide_success } from "./app_learn_js_review_hide_success.mjs";
 import { app_learn_js_review_exercise } from "./app_learn_js_review_exercise.mjs";
 export function app_code_review_present_fn_present(
@@ -140,7 +140,7 @@ export function app_code_review_present_fn_present(
         }
         each(places, each_place);
       }
-      app_code_review_persist(context, key, passed, queue);
+      app_learn_js_review_persist(context, key, passed, queue);
       present();
     }
     function on_incorrect() {
