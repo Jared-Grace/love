@@ -2,7 +2,7 @@ import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
 import { app_learn_js_token_order_batch } from "./app_learn_js_token_order_batch.mjs";
 import { app_learn_js_token_order_longer } from "./app_learn_js_token_order_longer.mjs";
 import { app_code_tokens_choose_say } from "./app_code_tokens_choose_say.mjs";
-import { app_code_tokens_choose_label_guided } from "./app_code_tokens_choose_label_guided.mjs";
+import { app_learn_js_tokens_choose_label_guided } from "./app_learn_js_tokens_choose_label_guided.mjs";
 import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
 import { app_learn_js_tokens_chips } from "./app_learn_js_tokens_chips.mjs";
 import { app_learn_js_lesson_token_order_example_choose } from "./app_learn_js_lesson_token_order_example_choose.mjs";
@@ -64,7 +64,7 @@ export function app_learn_js_lesson_token_order() {
   let forwards = {
     question_label: "",
     on_question: app_learn_js_lesson_quiz_question_none,
-    answer_label: app_code_tokens_choose_label_guided,
+    answer_label: app_learn_js_tokens_choose_label_guided,
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
   };
@@ -77,7 +77,7 @@ export function app_learn_js_lesson_token_order() {
     forwards_include: false,
     batch_get: batch,
     forwards_code: true,
-    unscramble_label: app_code_tokens_choose_label_guided,
+    unscramble_label: app_learn_js_tokens_choose_label_guided,
     unscramble_on_answer: app_learn_js_lesson_quiz_tokens_tap_guided,
     builds_more: [],
   });
@@ -89,7 +89,7 @@ export function app_learn_js_lesson_token_order() {
     app_learn_js_lesson_token_order_example_choose,
     null,
     quizzes_get,
-    app_code_tokens_choose_label_guided,
+    app_learn_js_tokens_choose_label_guided,
     app_code_tokens_order_div,
   );
   return lesson;
