@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_program_step_piece_start_is } from "./app_code_program_step_piece_start_is.mjs";
+import { app_learn_js_program_step_piece_start_is } from "./app_learn_js_program_step_piece_start_is.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_program_step_entry_start_is } from "./app_learn_js_program_step_entry_start_is.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_program_step_piece_press_words(
     return r;
   }
   ("2026-11-04: the code before the first ; has two rules of its own: nothing else on the line runs ahead of it, and once it has run it never runs again");
-  if (app_code_program_step_piece_start_is(pressed_piece)) {
+  if (app_learn_js_program_step_piece_start_is(pressed_piece)) {
     let r5 = {
       reason: "piece_start_once",
       words: [
