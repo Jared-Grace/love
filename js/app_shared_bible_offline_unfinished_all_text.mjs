@@ -13,8 +13,17 @@ export function app_shared_bible_offline_unfinished_all_text(names) {
       before: "یہ مکمل نہیں ہوئیں: ",
       after: "۔ کیا آپ اپنا کنکشن دیکھ کر انہیں دوبارہ آزمانا چاہیں گے؟",
     },
+    tgl: {
+      before: "Hindi natapos ang mga ito: ",
+      after:
+        ". Gusto mo bang suriin ang iyong koneksyon at subukan muli ang mga ito?",
+    },
     translated_from: {
       ur: {
+        before: "These did not finish: ",
+        after: ". Would you like to check your connection and try them again?",
+      },
+      tgl: {
         before: "These did not finish: ",
         after: ". Would you like to check your connection and try them again?",
       },
