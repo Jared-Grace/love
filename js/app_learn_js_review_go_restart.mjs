@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { app_code_review } from "./app_code_review.mjs";
+import { app_learn_js_review } from "./app_learn_js_review.mjs";
 export function app_learn_js_review_go_restart(r3, context) {
   arguments_assert(arguments, 2);
   let back_button = property_get(r3, "back_button");
@@ -21,7 +21,7 @@ export function app_learn_js_review_go_restart(r3, context) {
     storage_local_remove_context(context, key);
     let cursor_key = app_learn_js_review_cursor_key(key);
     storage_local_remove_context(context, cursor_key);
-    await app_shared_screen_set(context, app_code_review);
+    await app_shared_screen_set(context, app_learn_js_review);
   }
   let r = {
     back_button,

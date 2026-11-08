@@ -12,7 +12,7 @@ import { storage_local_remove_context } from "./storage_local_remove_context.mjs
 import { app_learn_js_review_cursor_key } from "./app_learn_js_review_cursor_key.mjs";
 import { app_learn_js_milestone_begun_key } from "./app_learn_js_milestone_begun_key.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
-import { app_code_review } from "./app_code_review.mjs";
+import { app_learn_js_review } from "./app_learn_js_review.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 export function app_learn_js_milestone_intro(root, context, checkpoint) {
@@ -39,7 +39,7 @@ export function app_learn_js_milestone_intro(root, context, checkpoint) {
     }
     let key_begun = app_learn_js_milestone_begun_key();
     storage_session_set_context(context, key_begun, key);
-    app_code_review(context);
+    app_learn_js_review(context);
   }
   let button = app_shared_button_wide(c, text, begin);
   html_data_set_test_happy(button);

@@ -19,7 +19,7 @@ export function app_learn_js_hash_review_add(context, hash) {
   app_shared_hash_add_on_screen(
     context,
     hash,
-    fn_name("app_code_review"),
+    fn_name("app_learn_js_review"),
     key,
     word,
   );

@@ -15,7 +15,7 @@ export async function app_learn_js_milestone_screen_screenshot(id) {
   mkdirSync(folder, {
     recursive: true,
   });
-  let screen = app_code_screen_name_short(fn_name("app_code_review"));
+  let screen = app_code_screen_name_short(fn_name("app_learn_js_review"));
   let url =
     "http://localhost:8080/dev/code.html#" +
     app_learn_js_lesson_hash_key() +

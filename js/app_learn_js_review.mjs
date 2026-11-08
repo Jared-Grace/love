@@ -13,7 +13,7 @@ import { app_learn_js_review_home_text } from "./app_learn_js_review_home_text.m
 import { app_learn_js_review_go_home } from "./app_learn_js_review_go_home.mjs";
 import { app_learn_js_review_home_button } from "./app_learn_js_review_home_button.mjs";
 import { app_learn_js_review_present } from "./app_learn_js_review_present.mjs";
-export function app_code_review(context) {
+export function app_learn_js_review(context) {
   "The review screen at a checkpoint: the milestone intro on first arrival and otherwise the result with its restart and home buttons.";
   let root = html_clear_context(context);
   app_learn_js_review_title_strip(root, context);
