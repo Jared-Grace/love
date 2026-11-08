@@ -1,4 +1,4 @@
-import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
+import { app_learn_js_uneven_dividend } from "./app_learn_js_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_to } from "./text_to.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_expression_whole_part_both() {
   "the THIRD whole-part lesson: DO BOTH steps at once. Given a division a / b, the learner gives its whole part value directly (rewrite with the formula Math.floor(a / b) * b, then evaluate). The answer is the whole part quotient*divisor - NOT what a / b evaluates to - so this is an explicit-answer multiple choice, not an eval lesson. Tailored decoys are the tempting partial answers: the quotient (rounded down but not multiplied back), the remainder, and the raw decimal division";
   function make(divisor, quotient) {
     "given a / b whose dividend is quotient*divisor + a leftover, the answer is the whole part quotient*divisor";
-    let parts = app_code_uneven_dividend(quotient, divisor);
+    let parts = app_learn_js_uneven_dividend(quotient, divisor);
     let dividend = property_get(parts, "dividend");
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
     let whole_part = property_get(parts, "whole_part");

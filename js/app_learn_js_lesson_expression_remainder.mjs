@@ -4,7 +4,7 @@ import { app_learn_js_lesson_expression_divisor } from "./app_learn_js_lesson_ex
 import { app_learn_js_lesson_naming_words } from "./app_learn_js_lesson_naming_words.mjs";
 import { app_learn_js_lesson_name_id_operators } from "./app_learn_js_lesson_name_id_operators.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
+import { app_learn_js_uneven_dividend } from "./app_learn_js_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_operand_generic } from "./app_learn_js_lesson_operand_generic.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_expression_remainder() {
   function make(divisor) {
     "dividend % divisor === remainder - dividend = quotient*divisor + remainder with quotient 1..3 and remainder 1..divisor-1, so the three numbers dividend, divisor and remainder are all different; the answer is the remainder, with the dividend and divisor as decoys";
     let quotient = integer_random(1, 3);
-    let parts = app_code_uneven_dividend(quotient, divisor);
+    let parts = app_learn_js_uneven_dividend(quotient, divisor);
     let dividend = property_get(parts, "dividend");
     let remainder = property_get(parts, "leftover");
     let division = js_code_binary_spaced_nb(dividend, "%", divisor);
