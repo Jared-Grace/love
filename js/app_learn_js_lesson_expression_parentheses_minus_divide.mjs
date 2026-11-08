@@ -6,7 +6,7 @@ import { app_learn_js_lesson_expression_parentheses_minus_divide_outer_minus_lin
 import { app_learn_js_lesson_expression_parentheses_minus_divide_title_name_id } from "./app_learn_js_lesson_expression_parentheses_minus_divide_title_name_id.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
-import { app_code_parentheses_flat_decoys } from "./app_code_parentheses_flat_decoys.mjs";
+import { app_learn_js_parentheses_flat_decoys } from "./app_learn_js_parentheses_flat_decoys.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_expression_parentheses_minus_divide() {
     name_id,
     next_arg,
     example_count: 2,
-    decoys: app_code_parentheses_flat_decoys,
+    decoys: app_learn_js_parentheses_flat_decoys,
   });
   return lesson;
   function refill() {

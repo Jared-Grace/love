@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order } from "./app_learn_js_less
 import { app_learn_js_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_learn_js_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
-import { app_code_parentheses_flat_decoys } from "./app_code_parentheses_flat_decoys.mjs";
+import { app_learn_js_parentheses_flat_decoys } from "./app_learn_js_parentheses_flat_decoys.mjs";
 import { app_learn_js_lesson_expression_parentheses_arithmetic_expression } from "./app_learn_js_lesson_expression_parentheses_arithmetic_expression.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_expression_parentheses_arithmetic() {
     name_id,
     next_arg,
     example_count: 2,
-    decoys: app_code_parentheses_flat_decoys,
+    decoys: app_learn_js_parentheses_flat_decoys,
   });
   return lesson;
   function refill() {
