@@ -2,7 +2,7 @@ import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { app_learn_js_progress_read } from "./app_learn_js_progress_read.mjs";
-import { app_code_reviews_complete_read } from "./app_code_reviews_complete_read.mjs";
+import { app_learn_js_reviews_complete_read } from "./app_learn_js_reviews_complete_read.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_course_unfinished_next(
   arguments_assert(arguments, 3);
   let lessons = app_learn_js_lessons();
   let progress = app_learn_js_progress_read(context);
-  let reviews_complete = app_code_reviews_complete_read(context);
+  let reviews_complete = app_learn_js_reviews_complete_read(context);
   let count = list_size(lessons);
   let index = index_start;
   while (less_than(index, count)) {
