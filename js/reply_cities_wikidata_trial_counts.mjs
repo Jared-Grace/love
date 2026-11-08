@@ -8,7 +8,7 @@ import { reply_cities_names } from "./reply_cities_names.mjs";
 import { app_shared_message_reply_choices } from "./app_shared_message_reply_choices.mjs";
 import { reply_messages_inner_transform } from "./reply_messages_inner_transform.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
-import { app_message_private_records_replied } from "./app_message_private_records_replied.mjs";
+import { app_message_private_records_replied_people } from "./app_message_private_records_replied_people.mjs";
 import { reply_cases_no_reply_yet } from "./reply_cases_no_reply_yet.mjs";
 export async function reply_cities_wikidata_trial_counts(population) {
   arguments_assert(arguments, 1);
@@ -43,7 +43,7 @@ export async function reply_cities_wikidata_trial_counts(population) {
     }
     return best;
   }
-  let records = await app_message_private_records_replied();
+  let records = await app_message_private_records_replied_people();
   function lambda2(record) {
     let r2 = not(record.reply.answered) && not(record.reply.broke);
     return r2;
