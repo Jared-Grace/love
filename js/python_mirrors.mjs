@@ -8,6 +8,7 @@ import { memory_folder_spellings } from "./memory_folder_spellings.mjs";
 import { curl_read_hosts } from "./curl_read_hosts.mjs";
 import { functions_input_taken_away } from "./functions_input_taken_away.mjs";
 import { functions_fixed_call_twins } from "./functions_fixed_call_twins.mjs";
+import { functions_outside_irreversible_seams } from "./functions_outside_irreversible_seams.mjs";
 export function python_mirrors() {
   arguments_assert(arguments, 0);
   ("Every list of names the python guard needs, together with where its generated");
@@ -81,6 +82,15 @@ export function python_mirrors() {
         ".py",
       ]),
       source: functions_fixed_call_twins,
+    },
+    {
+      constant: "FUNCTIONS_OUTSIDE_IRREVERSIBLE_SEAMS",
+      path: text_combine_multiple([
+        ".claude/hooks/",
+        functions_outside_irreversible_seams.name,
+        ".py",
+      ]),
+      source: functions_outside_irreversible_seams,
     },
   ];
   return mirrors;
