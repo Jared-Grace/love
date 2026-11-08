@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_milestone_left_is } from "./app_code_milestone_left_is.mjs";
+import { app_learn_js_milestone_left_is } from "./app_learn_js_milestone_left_is.mjs";
 import { app_learn_js_milestone_key } from "./app_learn_js_milestone_key.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_learn_js_milestone_get_or_null } from "./app_learn_js_milestone_get_or_null.mjs";
@@ -22,7 +22,7 @@ export function app_code_review_checkpoint(context) {
   "explain is the lines it says about itself under the title and again once finished - none for a review; again is the restart button's words once it is finished, and restart its words before.";
   "A milestone is asked for only when one was the last thing this tab picked, and only when its id still names one - otherwise the review this tab holds is what is shown, as it always was.";
   arguments_assert(arguments, 1);
-  let milestone_left = app_code_milestone_left_is(context);
+  let milestone_left = app_learn_js_milestone_left_is(context);
   if (milestone_left) {
     let key_milestone = app_learn_js_milestone_key();
     let id = storage_session_get_context(context, key_milestone);

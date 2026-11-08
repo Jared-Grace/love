@@ -1,4 +1,4 @@
-import { app_code_milestone_left_is } from "./app_code_milestone_left_is.mjs";
+import { app_learn_js_milestone_left_is } from "./app_learn_js_milestone_left_is.mjs";
 import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
 import { app_code_review_hash_key } from "./app_code_review_hash_key.mjs";
 import { app_shared_hash_add_on_screen } from "./app_shared_hash_add_on_screen.mjs";
@@ -10,7 +10,7 @@ export function app_learn_js_hash_review_add(context, hash) {
   "Left in, it is not merely noise. The address is read back on the way in, so a link copied from a lesson would quietly point whoever opened it at the copier's review rather than the one their own progress stands at - a wrong answer given silently, to somebody who never mentioned a review.";
   "Leaving the review does not forget which one it was: the number stays in this tab, and the review's own half-finished queue is kept on the device under that number. So the word comes back into the address the moment the review is opened again, and a refresh in this same tab never needed it at all.";
   "Nor while a milestone is what this tab picked last: the milestone is on the same screen, and writes its own word instead.";
-  let milestone_left = app_code_milestone_left_is(context);
+  let milestone_left = app_learn_js_milestone_left_is(context);
   if (milestone_left) {
     return;
   }
