@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
+import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { equal } from "./equal.mjs";
 import { or } from "./or.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_expression_value_decoys_rounding(current, node) {
   ("A candidate equal to the right answer is dropped, so the decimal goes when the division is the press and the whole number below it goes when the rounding is: the right answer is never also offered as a wrong one.");
   ("The division these lines are drawn from never comes out even, so the decimal always has a whole number on each side of it and there is always more than one wrong value to offer.");
   let symbol = property_get(node, "operator");
-  let called = app_code_operator_called_is(symbol);
+  let called = app_learn_js_operator_called_is(symbol);
   let divided_by = js_operator_division_symbol();
   let dividing = equal(symbol, divided_by);
   let rounding_part = or(called, dividing);

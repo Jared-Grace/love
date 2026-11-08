@@ -8,7 +8,7 @@ import { app_learn_js_expression_node_before } from "./app_learn_js_expression_n
 import { list_includes } from "./list_includes.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
+import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { error } from "./error.mjs";
@@ -60,7 +60,7 @@ export function app_learn_js_expression_from_js(node, values) {
     let handed = property_get(node, "arguments");
     let ast = property_get(node, "callee");
     let name_called = js_unparse(ast);
-    let called = app_code_operator_called_is(name_called);
+    let called = app_learn_js_operator_called_is(name_called);
     if (called && list_size_equal(handed, 1)) {
       let node4 = list_get(handed, 0);
       let inside = app_learn_js_expression_from_js(node4, values);

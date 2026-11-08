@@ -4,7 +4,7 @@ import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
+import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_learn_js_expression_side_parenthesis_is } from "./app_learn_js_expression_side_parenthesis_is.mjs";
 import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_expression_node_parentheses_is(item, node) {
     let acted_on_here = equal(right, node);
     if (acted_on_here) {
       ("an operator spelled as a name with brackets always shows them, so whatever is inside one is inside a pair whatever its own strength - this is the same answer the printer gives, read out of the same list");
-      let called = app_code_operator_called_is(symbol);
+      let called = app_learn_js_operator_called_is(symbol);
       if (called) {
         return called;
       }
