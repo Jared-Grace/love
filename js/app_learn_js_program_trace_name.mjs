@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_program_trace_name(
+export function app_learn_js_program_trace_name(
   node,
   from,
   to,

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_line_pieces_text } from "./app_learn_js_line_pieces_text.mjs";
-import { app_code_program_trace_name } from "./app_code_program_trace_name.mjs";
+import { app_learn_js_program_trace_name } from "./app_learn_js_program_trace_name.mjs";
 import { app_code_program_trace_record } from "./app_code_program_trace_record.mjs";
 export function app_code_program_trace_piece_name(
   state,
@@ -21,7 +21,7 @@ export function app_code_program_trace_piece_name(
     : null;
   let actions = property_get(state, "actions");
   let values = property_get(state, "values");
-  let value = app_code_program_trace_name(
+  let value = app_learn_js_program_trace_name(
     piece,
     from,
     to,
