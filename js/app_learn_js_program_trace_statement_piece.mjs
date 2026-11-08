@@ -9,7 +9,7 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_size } from "./text_size.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_program_trace_statement_piece(node, code) {
+export function app_learn_js_program_trace_statement_piece(node, code) {
   arguments_assert(arguments, 2);
   ("the piece of its line a statement run is, when it is less than the whole line: from and to as places in the line as it is written, and the text between them; null when the statement is its whole line");
   ("2026-11-04, at the human's asking: a for with code after its second ; runs two things on one line at two different times, so the learner presses the one that runs, not the whole for. A for holding only its condition runs one thing, and is pressed whole, as a while is");
