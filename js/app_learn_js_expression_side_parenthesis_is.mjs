@@ -4,7 +4,7 @@ import { not } from "./not.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
+import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
 import { less_than } from "./less_than.mjs";
 import { or } from "./or.mjs";
 export function app_learn_js_expression_side_parenthesis_is(side, rank_least) {
@@ -23,7 +23,7 @@ export function app_learn_js_expression_side_parenthesis_is(side, rank_least) {
   }
   let written = property_get_or(side, "parenthesised", false);
   let symbol = property_get(side, "operator");
-  let rank = app_code_operator_rank(symbol);
+  let rank = app_learn_js_operator_rank(symbol);
   let weaker = less_than(rank, rank_least);
   let parenthesis = or(written, weaker);
   return parenthesis;

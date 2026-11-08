@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
+import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_max } from "./list_max.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -26,8 +26,8 @@ export function app_learn_js_expression_step_reason(symbol, others) {
     let alone = [];
     return alone;
   }
-  let rank = app_code_operator_rank(symbol);
-  let other_ranks = list_map(others, app_code_operator_rank);
+  let rank = app_learn_js_operator_rank(symbol);
+  let other_ranks = list_map(others, app_learn_js_operator_rank);
   let top = list_max(other_ranks);
   let outranks = greater_than(rank, top);
   if (outranks) {
@@ -45,7 +45,7 @@ export function app_learn_js_expression_step_reason(symbol, others) {
   }
   function rank_same_is(candidate) {
     "whether one of the other operators is of this one's own strength";
-    let candidate_rank = app_code_operator_rank(candidate);
+    let candidate_rank = app_learn_js_operator_rank(candidate);
     let level = equal(candidate_rank, rank);
     return level;
   }

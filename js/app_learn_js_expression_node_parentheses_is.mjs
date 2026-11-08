@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
-import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
+import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
 import { app_learn_js_expression_side_parenthesis_is } from "./app_learn_js_expression_side_parenthesis_is.mjs";
 import { app_learn_js_operator_rank_least_left } from "./app_learn_js_operator_rank_least_left.mjs";
 import { app_learn_js_operator_rank_least_right } from "./app_learn_js_operator_rank_least_right.mjs";
@@ -32,7 +32,7 @@ export function app_learn_js_expression_node_parentheses_is(item, node) {
       if (called) {
         return called;
       }
-      let rank = app_code_operator_rank(symbol);
+      let rank = app_learn_js_operator_rank(symbol);
       let gathered_before = app_learn_js_expression_side_parenthesis_is(
         right,
         rank,

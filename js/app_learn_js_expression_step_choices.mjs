@@ -1,5 +1,5 @@
 import { app_learn_js_expression_step_operands } from "./app_learn_js_expression_step_operands.mjs";
-import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
+import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -47,7 +47,7 @@ export function app_learn_js_expression_step_choices(value, rank_most) {
   }
   function symbol_add(symbol) {
     "a symbol is tried on both sides of what is already there";
-    let rank = app_code_operator_rank(symbol);
+    let rank = app_learn_js_operator_rank(symbol);
     side_add(symbol, rank, true);
     side_add(symbol, rank, false);
   }

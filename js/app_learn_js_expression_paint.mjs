@@ -8,7 +8,7 @@ import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_
 import { property_get } from "./property_get.mjs";
 import { html_span } from "./html_span.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
-import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
+import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
 import { app_learn_js_expression_paint_before_side } from "./app_learn_js_expression_paint_before_side.mjs";
 import { app_learn_js_operator_rank_least_left } from "./app_learn_js_operator_rank_least_left.mjs";
 import { app_learn_js_expression_paint_side } from "./app_learn_js_expression_paint_side.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_expression_paint(parent, item, on_operator) {
   let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     ("a one-sided operator is written in front of the one thing it acts on, with no space between them and no side to its left, and how that one thing is gathered depends on how the operator is spelled");
-    let rank = app_code_operator_rank(symbol);
+    let rank = app_learn_js_operator_rank(symbol);
     let operator_span_before = html_span_text(node_span, symbol);
     let acted_on = property_get(item, "right");
     app_learn_js_expression_paint_before_side(

@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { js_code_called } from "./js_code_called.mjs";
-import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
+import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
 import { app_learn_js_expression_side_code } from "./app_learn_js_expression_side_code.mjs";
 import { app_learn_js_operator_code_before } from "./app_learn_js_operator_code_before.mjs";
 import { app_learn_js_operator_rank_least_left } from "./app_learn_js_operator_rank_least_left.mjs";
@@ -39,7 +39,7 @@ export function app_learn_js_expression_code(item) {
       let code_called = js_code_called(symbol, inside_code);
       return code_called;
     }
-    let rank = app_code_operator_rank(symbol);
+    let rank = app_learn_js_operator_rank(symbol);
     let acted_on_code = app_learn_js_expression_side_code(acted_on, rank);
     let code_before = app_learn_js_operator_code_before(symbol, acted_on_code);
     return code_before;
