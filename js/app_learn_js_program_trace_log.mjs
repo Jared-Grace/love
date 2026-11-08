@@ -7,7 +7,12 @@ import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_program_trace_log(expression, actions, code, values) {
+export function app_learn_js_program_trace_log(
+  expression,
+  actions,
+  code,
+  values,
+) {
   arguments_assert(arguments, 4);
   ("a console.log line run: what is in its ( ) worked out and then logged, each added to actions; any other call is refused");
   let callee = property_get(expression, "callee");
