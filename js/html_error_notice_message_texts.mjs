@@ -7,8 +7,10 @@ export function html_error_notice_message_texts() {
   let r = {
     en: "Sorry — this didn't finish loading.",
     ur: "معذرت — یہ پوری طرح کھل نہیں سکا۔",
+    tgl: "Paumanhin — hindi ito natapos mag-load.",
     translated_from: {
       ur: "Sorry — this didn't finish loading.",
+      tgl: "Sorry — this didn't finish loading.",
     },
   };
   return r;

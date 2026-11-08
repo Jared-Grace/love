@@ -6,8 +6,10 @@ export function html_error_notice_button_texts() {
   let r = {
     en: "Try again",
     ur: "دوبارہ کوشش کریں",
+    tgl: "Subukang muli",
     translated_from: {
       ur: "Try again",
+      tgl: "Try again",
     },
   };
   return r;
