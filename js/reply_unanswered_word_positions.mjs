@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_message_private_records_replied } from "./app_message_private_records_replied.mjs";
+import { app_message_private_records_replied_people } from "./app_message_private_records_replied_people.mjs";
 import { reply_case_key } from "./reply_case_key.mjs";
 import { reply_message_words } from "./reply_message_words.mjs";
 import { less_than } from "./less_than.mjs";
@@ -9,7 +9,7 @@ export async function reply_unanswered_word_positions(asked) {
   ("Where the words asked about sit in each different waiting message, as word positions. asked is the words, joined by commas.");
   ("★ THE ANSWER HOLDS ONLY THE WORDS ASKED AND NUMBERS, BECAUSE THE REST IS PRIVATE. When a drafted rule reads nothing at a place, this says whether the words it expected are there at all, without printing what is.");
   let words_asked = asked.split(",");
-  let records = await app_message_private_records_replied();
+  let records = await app_message_private_records_replied_people();
   let seen = new Set();
   let rows = [];
   for (let record of records) {
