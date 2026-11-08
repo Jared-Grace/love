@@ -1,6 +1,6 @@
 import { app_learn_js_operators_strong } from "./app_learn_js_operators_strong.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
+import { app_learn_js_operators_weak } from "./app_learn_js_operators_weak.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_lesson_expression_which_part_first_title_name_id() 
   function paint(parent) {
     let strong = app_learn_js_operators_strong();
     let strong_said = list_join_space(strong);
-    let weak = app_code_operators_weak();
+    let weak = app_learn_js_operators_weak();
     let weak_said = list_join_space(weak);
     app_learn_js_cycle_code(parent, ["", strong_said, " before ", weak_said]);
   }

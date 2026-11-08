@@ -2,7 +2,7 @@ import { app_learn_js_expression_node_right_operator_first } from "./app_learn_j
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_operators_strong } from "./app_learn_js_operators_strong.mjs";
-import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
+import { app_learn_js_operators_weak } from "./app_learn_js_operators_weak.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { app_learn_js_expression_integer_division_tree } from "./app_learn_js_expression_integer_division_tree.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_expression_written_shapes_numbers() {
   ("Fourteen, four and two, so that every line lands on a number that can be written out exactly. A line that came to a number javascript prints with a long tail would be compared against that tail on both sides and so still pass, but a reader looking at a failure needs to see the arithmetic rather than the tail.");
   ("The remainder formula is asked for from the place the lessons build it, not built again here. It is the deepest line a learner meets - four operators, one of them called - and it is the line that both reported faults were found on.");
   let strong = app_learn_js_operators_strong();
-  let weak = app_code_operators_weak();
+  let weak = app_learn_js_operators_weak();
   let arithmetic = list_concat(strong, weak);
   let floor_name = js_code_math_floor_name();
   let left_number = 14;

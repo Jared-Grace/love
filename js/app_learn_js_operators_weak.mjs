@@ -1,6 +1,6 @@
 import { js_operator_adding_symbols } from "./js_operator_adding_symbols.mjs";
 import { fn_name } from "./fn_name.mjs";
-export function app_code_operators_weak() {
+export function app_learn_js_operators_weak() {
   "The operators a code lesson solves after the others, by their symbols: + and -.";
   ("The other half of the pair of classes, beside ",
     fn_name("app_learn_js_operators_strong"),

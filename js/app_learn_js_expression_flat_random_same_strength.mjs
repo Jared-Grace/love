@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_operators_strong } from "./app_learn_js_operators_strong.mjs";
-import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
+import { app_learn_js_operators_weak } from "./app_learn_js_operators_weak.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_expression_step_value_least } from "./app_learn_js_expression_step_value_least.mjs";
 import { app_learn_js_expression_step_value_most } from "./app_learn_js_expression_step_value_most.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_expression_flat_random_same_strength(
   ("★ THE GROWING CANNOT DEAD-END, AND THAT IS A FACT ABOUT THESE NUMBERS RATHER THAN A HOPE. Values run 2 through 9. On the weaker pair every value in that range has a move: a plus fits below 8 and a minus fits at 4 and above, so nothing in 2 through 9 is stuck. On the stronger pair the only values with no move are 5 and 7, and neither can ever be reached - both are prime, the multiplications that would land on them need a 1, and the divisions that would need a 10 or a 14 above the line are past the largest value allowed. So a walk begun on a value that has a move never meets one that has not, and there is no drawing again.");
   ("Which class a line is drawn from is left to chance rather than alternated, for the same reason the operators inside a line are: a learner who can predict what the next question looks like has stopped reading it.");
   let strong = app_learn_js_operators_strong();
-  let weak = app_code_operators_weak();
+  let weak = app_learn_js_operators_weak();
   let classes = [strong, weak];
   let symbols = list_random_item(classes);
   let least = app_learn_js_expression_step_value_least();
