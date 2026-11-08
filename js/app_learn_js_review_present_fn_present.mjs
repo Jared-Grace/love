@@ -25,7 +25,7 @@ import { app_code_review_show_success } from "./app_code_review_show_success.mjs
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { not } from "./not.mjs";
-import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
+import { app_learn_js_review_seed_fresh } from "./app_learn_js_review_seed_fresh.mjs";
 import { app_learn_js_review_persist } from "./app_learn_js_review_persist.mjs";
 import { app_learn_js_review_hide_success } from "./app_learn_js_review_hide_success.mjs";
 import { app_learn_js_review_exercise } from "./app_learn_js_review_exercise.mjs";
@@ -135,7 +135,7 @@ export function app_learn_js_review_present_fn_present(
         let lesson_id = property_get(seed, "lesson_id");
         let kind_index = property_get(seed, "kind_index");
         function each_place(place) {
-          let copy = app_code_review_seed_fresh(lesson_id, kind_index);
+          let copy = app_learn_js_review_seed_fresh(lesson_id, kind_index);
           place(copy);
         }
         each(places, each_place);
