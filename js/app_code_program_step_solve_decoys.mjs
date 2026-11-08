@@ -9,7 +9,7 @@ export function app_code_program_step_solve_decoys(current, node) {
   ("the wrong values offered for the operator a learner stepping through a program just pressed, on an expression of that program solved whole: current is the expression as it reads now and node the part pressed - the decoys_get of ",
     fn_name("app_learn_js_expression_choose_order_ask"));
   ("The same rule ",
-    fn_name("app_code_program_step_operator_decoys"),
+    fn_name("app_learn_js_program_step_operator_decoys"),
     " gives for an operator asked for alone, read off the pressed part rather than off the trace: a true or false is offered the other of the two and nothing else; a number inside an expression that comes to true or false is offered only the other operator's value on the same two values; any other number is offered what the operator lessons offer, which includes what the whole expression comes to. So pressing one at a time or being asked for one cannot offer different wrong values for the same step.");
   let value = app_learn_js_expression_value(node);
   if (boolean_is(value)) {

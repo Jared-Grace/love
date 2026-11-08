@@ -110,7 +110,7 @@ import { html_move_animate_settle } from "./html_move_animate_settle.mjs";
 import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_expression_choose_order_ask.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
 import { html_remove } from "./html_remove.mjs";
-import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
+import { app_learn_js_program_step_operator_decoys } from "./app_learn_js_program_step_operator_decoys.mjs";
 import { app_learn_js_expression_value_choose_buttons_generic } from "./app_learn_js_expression_value_choose_buttons_generic.mjs";
 import { app_learn_js_line_pieces_add } from "./app_learn_js_line_pieces_add.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
@@ -1052,7 +1052,8 @@ export function app_code_program_step_through_generic(
         let decoys = [];
         ("an operator solved is offered the wrong values the lessons on operators offer, the value the other operator would give on the same two values, so the same mistake is caught here as there");
         if (operator_is) {
-          let operator_decoys = app_code_program_step_operator_decoys(action);
+          let operator_decoys =
+            app_learn_js_program_step_operator_decoys(action);
           decoys = app_learn_js_decoys_near_add(operator_decoys, value);
         } else {
           decoys = name_decoys(name, value);

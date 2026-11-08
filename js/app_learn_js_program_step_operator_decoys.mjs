@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
-export function app_code_program_step_operator_decoys(action) {
+export function app_learn_js_program_step_operator_decoys(action) {
   arguments_assert(arguments, 1);
   ("the wrong values offered beside the right one when a learner stepping through a program is asked what an operator in a line comes to; action is an evaluate from the program's trace that has an expression");
   ("2026-10-15, at the human's asking, when !, && and || came to be stepped through: an operator that comes to true or false is offered the other of the two and nothing else, the reason ",
