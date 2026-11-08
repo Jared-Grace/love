@@ -13,7 +13,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_literal_text_is } from "./js_literal_text_is.mjs";
 import { js_literal_boolean_is } from "./js_literal_boolean_is.mjs";
 import { js_visit } from "./js_visit.mjs";
-export function app_code_line_kinds(code) {
+export function app_learn_js_line_kinds(code) {
   arguments_assert(arguments, 1);
   ("Every kind of thing written on one line of code, named once each: the sort of each piece, the sign carried by each operator, and whether a value written out is writing or a yes-or-no.");
   ("What a learner meets on a line is not only how much working out it asks for but what is on it that they have never seen. A first console.log carries one call and no operators at all, and it is the hardest line in the course on the day it arrives.");

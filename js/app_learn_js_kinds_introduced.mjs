@@ -12,7 +12,7 @@ import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.m
 import { app_learn_js_lesson_lines_solved } from "./app_learn_js_lesson_lines_solved.mjs";
 import { app_code_line_shape } from "./app_code_line_shape.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_line_kinds } from "./app_code_line_kinds.mjs";
+import { app_learn_js_line_kinds } from "./app_learn_js_line_kinds.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_add } from "./list_add.mjs";
@@ -53,7 +53,7 @@ export function app_learn_js_kinds_introduced(rounds) {
         continue;
       }
       counted = add_1(counted);
-      let line_kinds = app_code_line_kinds(line);
+      let line_kinds = app_learn_js_line_kinds(line);
       function fresh_is(kind) {
         "this kind of thing, if it is one of the ones this lesson brings in";
         let is = list_includes(fresh, kind);

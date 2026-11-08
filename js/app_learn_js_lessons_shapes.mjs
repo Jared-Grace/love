@@ -1,4 +1,4 @@
-import { app_code_line_kinds } from "./app_code_line_kinds.mjs";
+import { app_learn_js_line_kinds } from "./app_learn_js_line_kinds.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_lessons_shapes(rounds) {
         continue;
       }
       code = true;
-      let line_kinds = app_code_line_kinds(line);
+      let line_kinds = app_learn_js_line_kinds(line);
       list_add_multiple(kinds_all, line_kinds);
       let line_operators = property_get(shape, "operators");
       let harder = greater_than(line_operators, operators);
