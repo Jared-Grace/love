@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
+import { list_size } from "./list_size.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_indexes } from "./list_indexes.mjs";
 import { list_get } from "./list_get.mjs";
@@ -12,7 +13,8 @@ export async function functions_rename_comma(befores_comma, afters_comma) {
   arguments_assert(arguments, 2);
   let befores = text_split_comma(befores_comma);
   let afters = text_split_comma(afters_comma);
-  let paired = list_size_equal(befores, afters);
+  let size = list_size(afters);
+  let paired = list_size_equal(befores, size);
   assert_json(paired, {
     hint: "each old name needs exactly one new name, in the same place in the other list",
     befores,
