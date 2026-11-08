@@ -7,7 +7,7 @@ import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
 import { app_learn_js_tokens_chips } from "./app_learn_js_tokens_chips.mjs";
 import { app_learn_js_lesson_token_order_example_choose } from "./app_learn_js_lesson_token_order_example_choose.mjs";
 import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
-import { app_code_tokens_explain } from "./app_code_tokens_explain.mjs";
+import { app_learn_js_tokens_explain } from "./app_learn_js_tokens_explain.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_quiz_tokens_order } from "./app_learn_js_quiz_tokens_order.mjs";
@@ -39,7 +39,7 @@ export function app_learn_js_lesson_token_order() {
     app_learn_js_div_cycle_code(box_one, [
       "When we unscramble code, we build it out of pieces",
     ]);
-    app_code_tokens_explain(box_one);
+    app_learn_js_tokens_explain(box_one);
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "Here is a longer program, and its tokens in the order we read them:",

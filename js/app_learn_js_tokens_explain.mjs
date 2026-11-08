@@ -6,7 +6,7 @@ import { app_learn_js_quiz_tokens_order } from "./app_learn_js_quiz_tokens_order
 import { text_split_space } from "./text_split_space.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { each } from "./each.mjs";
-export function app_code_tokens_explain(parent) {
+export function app_learn_js_tokens_explain(parent) {
   arguments_assert(arguments, 1);
   ("what a token is, with a small example cut into its tokens, and the order tokens are read in, for a lesson's opening; as the human laid it out 2026-10-10: the example as plain code, then as written with each token in a colour of its own, then its tokens apart in those same colours, then its tokens apart and plain");
   ("The example has both braces, so the learner sees a { and a } each counted as a token of its own before any brace lesson leans on that.");
