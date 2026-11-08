@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -16,7 +16,7 @@ export function app_code_operator_truths_wanted(symbol, want_true) {
     "every pair is a true or a false on the left with a true or a false on the right";
     function right_each(right) {
       "one pair, kept when the operator itself says it answers the way the caller asked";
-      let value = app_code_operator_solve(left, symbol, right);
+      let value = app_learn_js_operator_solve(left, symbol, right);
       let wanted = equal(value, want_true);
       if (wanted) {
         let pair = [left, right];

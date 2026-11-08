@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { equal } from "./equal.mjs";
@@ -23,12 +23,12 @@ export function app_learn_js_expression_value_decoys(current, node) {
   let left = property_get(node, "left");
   let symbol = property_get(node, "operator");
   let right = property_get(node, "right");
-  let value = app_code_operator_solve(left, symbol, right);
+  let value = app_learn_js_operator_solve(left, symbol, right);
   let times = js_operator_asterisk_symbol();
   let plus = js_operator_plus_symbol();
   let times_is = equal(symbol, times);
   let other = ternary(times_is, plus, times);
-  let slipped = app_code_operator_solve(left, other, right);
+  let slipped = app_learn_js_operator_solve(left, other, right);
   let whole = app_learn_js_expression_value(current);
   let candidates = [slipped, whole];
   ("2026-10-15, seen on screen: two pieces of text joined have no other operator's value, since text times text is not a value, so on its own a join was asked with one button. It is offered the wrong joins the lesson on joining two names offers");

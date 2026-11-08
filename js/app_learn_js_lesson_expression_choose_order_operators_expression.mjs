@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_expression_choose_order_operators_expression_parts } from "./app_learn_js_lesson_expression_choose_order_operators_expression_parts.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -39,11 +39,11 @@ export function app_learn_js_lesson_expression_choose_order_operators_expression
   let pair = list_random_item(pairs);
   let pair_first = list_get(pair, 0);
   let pair_second = list_get(pair, 1);
-  let product = app_code_operator_solve(pair_first, times, pair_second);
+  let product = app_learn_js_operator_solve(pair_first, times, pair_second);
   let divide_is = equal(strong_symbol, divided_by);
   ("for times the pair is the two numbers as drawn; for divide the number being divided is their product, so that dividing by the second gives the first back exactly");
   let strong_first = ternary(divide_is, product, pair_first);
-  let strong_value = app_code_operator_solve(
+  let strong_value = app_learn_js_operator_solve(
     strong_first,
     strong_symbol,
     pair_second,

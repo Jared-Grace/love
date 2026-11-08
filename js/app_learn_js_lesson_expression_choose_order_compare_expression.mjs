@@ -1,6 +1,6 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_learn_js_lesson_expression_choose_order_compare_expression_parts } from "./app_learn_js_lesson_expression_choose_order_compare_expression_parts.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { equal } from "./equal.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_expression_choose_order_compare_expression(
   let inner_symbol = list_random_item(symbols);
   let left_number = integer_random(2, 9);
   let right_number = integer_random(2, 9);
-  let inner_value = app_code_operator_solve(
+  let inner_value = app_learn_js_operator_solve(
     left_number,
     inner_symbol,
     right_number,

@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_get } from "./list_get.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
 import { list_size } from "./list_size.mjs";
 import { each_range } from "./each_range.mjs";
 export function app_learn_js_expression_flat_value_right_to_left(code) {
@@ -23,7 +23,7 @@ export function app_learn_js_expression_flat_value_right_to_left(code) {
     let index = subtract(back, offset);
     let symbol = list_get(symbols, index);
     let number = list_get(numbers, index);
-    value = app_code_operator_solve(number, symbol, value);
+    value = app_learn_js_operator_solve(number, symbol, value);
   }
   let operator_count = list_size(symbols);
   each_range(operator_count, step);

@@ -3,7 +3,7 @@ import { app_learn_js_expression_flat_numbers_symbols } from "./app_learn_js_exp
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { add_1 } from "./add_1.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
 import { list_size } from "./list_size.mjs";
 import { each_range } from "./each_range.mjs";
 export function app_learn_js_expression_flat_value_left_to_right(code) {
@@ -20,7 +20,7 @@ export function app_learn_js_expression_flat_value_left_to_right(code) {
     let symbol = list_get(symbols, index);
     let number_at = add_1(index);
     let number = list_get(numbers, number_at);
-    value = app_code_operator_solve(value, symbol, number);
+    value = app_learn_js_operator_solve(value, symbol, number);
   }
   let operator_count = list_size(symbols);
   each_range(operator_count, step);

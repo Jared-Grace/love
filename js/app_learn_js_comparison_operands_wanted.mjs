@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_from } from "./range_from.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { equal } from "./equal.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_comparison_operands_wanted(symbol, want_true) {
   let candidates = range_from(2, 12);
   function lambda(second) {
     "a second number is a fitting one when the operator itself says the pair answers the way the caller asked";
-    let value = app_code_operator_solve(left, symbol, second);
+    let value = app_learn_js_operator_solve(left, symbol, second);
     let wanted = equal(value, want_true);
     return wanted;
   }

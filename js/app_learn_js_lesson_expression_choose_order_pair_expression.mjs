@@ -1,6 +1,6 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_learn_js_lesson_expression_choose_order_pair_expression_parts } from "./app_learn_js_lesson_expression_choose_order_pair_expression_parts.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -31,12 +31,12 @@ export function app_learn_js_lesson_expression_choose_order_pair_expression(
   let second_number = integer_random(2, 9);
   let third_number = integer_random(2, 9);
   let fourth_number = integer_random(2, 9);
-  let left_value = app_code_operator_solve(
+  let left_value = app_learn_js_operator_solve(
     first_number,
     left_symbol,
     second_number,
   );
-  let right_value = app_code_operator_solve(
+  let right_value = app_learn_js_operator_solve(
     third_number,
     right_symbol,
     fourth_number,
