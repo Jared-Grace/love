@@ -4484,6 +4484,12 @@ def cp_plain_as_cat(command, safe_verbs, safe_exact_commands):
     rewritten = CP_PLAIN_RE.sub(
         lambda m: m.group(1) + "cat " + m.group(2) + " > " + m.group(3), command
     )
+    # main() refuses a line of `cat` over this repo's own sources before the
+    # allow decision is reached, so is_safe alone would approve a rewording
+    # that main would then deny - and a deny pointing at a denied command is
+    # worse than the prompt.
+    if cat_js_source_function_names(rewritten) is not None:
+        return None
     try:
         if not is_safe(rewritten, safe_verbs, safe_exact_commands):
             return None
