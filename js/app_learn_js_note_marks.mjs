@@ -12,7 +12,7 @@ import { text_index_of_from_try } from "./text_index_of_from_try.mjs";
 import { add } from "./add.mjs";
 import { text_identifier_whole_is } from "./text_identifier_whole_is.mjs";
 import { text_identifier_char_is } from "./text_identifier_char_is.mjs";
-export function app_code_note_marks(code) {
+export function app_learn_js_note_marks(code) {
   arguments_assert(arguments, 1);
   ("every marked name a program's notes hold, in the order they stand, each as the name and the two places in the whole program where its mark opens and closes");
   ("THE ONE SCAN, because two different questions are asked of the same marks and neither may find them for itself. Which names a program teaches is one; where on the screen to fade a bracket and colour what it holds is the other. Scanned twice, a change to the mark has to be made twice, and the day it is made once the colour lands somewhere the reader sees no bracket.");
