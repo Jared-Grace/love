@@ -23,7 +23,7 @@ import { list_first } from "./list_first.mjs";
 import { text_index_of_try } from "./text_index_of_try.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_program_lets_wrong_say(question, answer, choice) {
+export function app_learn_js_program_lets_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong output for a program of let lines and console.log lines: each let line's right side and the value it comes to, so what its name holds, then what is written out, as parts that take turns between words and code. null for a program holding any other line, one that cannot be run, or one whose output is not the right answer");
   ("2026-10-26: for programs the line-by-line trace refuses, such as those that call Math; that trace is the stepper the step-by-step lessons are built on, so it is left as it is and these programs are run instead, one more line each time, to read what each name holds. Not picked: working out each right side operator by operator, which the trace does for the programs it can follow; the value of a right side is enough to find which line was misread");

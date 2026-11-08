@@ -7,7 +7,7 @@ import { app_learn_js_math_call_wrong_say } from "./app_learn_js_math_call_wrong
 import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_say.mjs";
 import { app_learn_js_lines_wrong_say } from "./app_learn_js_lines_wrong_say.mjs";
 import { app_code_program_trace_wrong_say } from "./app_code_program_trace_wrong_say.mjs";
-import { app_code_program_lets_wrong_say } from "./app_code_program_lets_wrong_say.mjs";
+import { app_learn_js_program_lets_wrong_say } from "./app_learn_js_program_lets_wrong_say.mjs";
 import { app_code_value_itself_wrong_say } from "./app_code_value_itself_wrong_say.mjs";
 import { app_learn_js_part_first_wrong_say } from "./app_learn_js_part_first_wrong_say.mjs";
 export function app_learn_js_forwards_wrong_say(question, answer, choice) {
@@ -48,7 +48,7 @@ export function app_learn_js_forwards_wrong_say(question, answer, choice) {
     return traced;
   }
   ("2026-10-26: a program of let lines the trace cannot follow, such as one calling Math, is run instead and each name's value read off, so it comes after the trace, which says more where it can follow");
-  let lets = app_code_program_lets_wrong_say(question, answer, choice);
+  let lets = app_learn_js_program_lets_wrong_say(question, answer, choice);
   if (null_not_is(lets)) {
     return lets;
   }
