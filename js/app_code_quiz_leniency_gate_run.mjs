@@ -20,7 +20,7 @@ export async function app_code_quiz_leniency_gate_run() {
     offenders,
     path,
     "this lesson can be passed by reading the right answer off the code and could not before - give its quiz a wrong answer that is tempting for this question, the way the lessons around it do",
-    fn_name("app_code_quiz_leniency_baseline_write"),
+    fn_name("app_learn_js_quiz_leniency_baseline_write"),
   );
   return r;
 }

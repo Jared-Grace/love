@@ -1710,7 +1710,7 @@ export function permission_grant_names() {
     fn_name("app_learn_original_gloss_lexicons_named_chapters"),
     fn_name("permission_label_allowed_is"),
     fn_name("ebible_chapter_code_known_is"),
-    fn_name("app_code_quiz_leniency_baseline_write"),
+    fn_name("app_learn_js_quiz_leniency_baseline_write"),
     fn_name("app_learn_js_lesson_statement_name_sum_batch"),
     fn_name("permission_grant_refusals_names"),
     fn_name("js_delegate_only_cases_gate_run"),
