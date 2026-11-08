@@ -17,7 +17,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
 import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
-import { app_code_lesson_validity_code } from "./app_code_lesson_validity_code.mjs";
+import { app_learn_js_lesson_validity_code } from "./app_learn_js_lesson_validity_code.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_learn_js_lesson_functions_invalid() {
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_functions_invalid() {
     batch_get,
     app_code_symbols_eval_valid_expression,
   );
-  let lesson = app_code_lesson_validity_code(b, name_id, above);
+  let lesson = app_learn_js_lesson_validity_code(b, name_id, above);
   return lesson;
   function above(root) {
     let o_f = list_first(operators);
