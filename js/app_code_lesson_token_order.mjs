@@ -5,7 +5,7 @@ import { app_code_tokens_choose_say } from "./app_code_tokens_choose_say.mjs";
 import { app_code_tokens_choose_label_guided } from "./app_code_tokens_choose_label_guided.mjs";
 import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
 import { app_code_tokens_chips } from "./app_code_tokens_chips.mjs";
-import { app_code_lesson_token_order_example_choose } from "./app_code_lesson_token_order_example_choose.mjs";
+import { app_learn_js_lesson_token_order_example_choose } from "./app_learn_js_lesson_token_order_example_choose.mjs";
 import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
 import { app_code_tokens_explain } from "./app_code_tokens_explain.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -86,7 +86,7 @@ export function app_code_lesson_token_order() {
     above,
     1,
     batch,
-    app_code_lesson_token_order_example_choose,
+    app_learn_js_lesson_token_order_example_choose,
     null,
     quizzes_get,
     app_code_tokens_choose_label_guided,
