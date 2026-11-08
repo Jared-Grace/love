@@ -1,5 +1,5 @@
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
-import { app_code_screen_capped } from "./app_code_screen_capped.mjs";
+import { app_learn_js_screen_capped } from "./app_learn_js_screen_capped.mjs";
 import { app_code_settings_clear_confirm } from "./app_code_settings_clear_confirm.mjs";
 import { app_code_settings_complete_confirm } from "./app_code_settings_complete_confirm.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
@@ -13,7 +13,7 @@ export function app_code_settings(context) {
   "the gear on the lesson list opens this: the settings every app offers, plus the two things only this app can be asked - to call every lesson and review finished, and to forget that any of them were. It is laid out like the bible and replace settings so a learner who has met one has met them all";
   "Both of those two ask before they act, and each asks on a screen of its own, so what stands here is a plain list of choices with nothing that grows a question inside it and moves the rest of the list down the page.";
   arguments_assert(arguments, 1);
-  let g = app_code_screen_capped(context);
+  let g = app_learn_js_screen_capped(context);
   let text_home = app_shared_button_home_text();
   app_shared_screen_set_button(g, context, app_learn_js_home, text_home);
   app_shared_font_size_buttons(g, context);

@@ -1,6 +1,6 @@
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_learn_js_progress_all_clear } from "./app_learn_js_progress_all_clear.mjs";
-import { app_code_screen_capped } from "./app_code_screen_capped.mjs";
+import { app_learn_js_screen_capped } from "./app_learn_js_screen_capped.mjs";
 import { app_code_settings } from "./app_code_settings.mjs";
 import { app_shared_confirm_red } from "./app_shared_confirm_red.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
@@ -10,7 +10,7 @@ import { text_combine } from "./text_combine.mjs";
 export function app_code_settings_clear_confirm(context) {
   "the screen that asks before forgetting which lessons and reviews a learner has finished; saying yes goes straight back to the list, where the rows themselves are the whole answer and no message says it as plainly";
   arguments_assert(arguments, 1);
-  let g = app_code_screen_capped(context);
+  let g = app_learn_js_screen_capped(context);
   let cross = emoji_x_red();
   let text_confirm = text_combine(
     cross,
