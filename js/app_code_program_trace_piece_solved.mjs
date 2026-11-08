@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_line_pieces_text } from "./app_code_line_pieces_text.mjs";
+import { app_learn_js_line_pieces_text } from "./app_learn_js_line_pieces_text.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_code_program_trace_record } from "./app_code_program_trace_record.mjs";
 export function app_code_program_trace_piece_solved(
@@ -19,10 +19,10 @@ export function app_code_program_trace_piece_solved(
   let pieces = property_get(state, "pieces");
   let piece_from = property_get(piece, "start");
   let piece_to = property_get(piece, "end");
-  let name = app_code_line_pieces_text(code, pieces, piece_from, piece_to);
+  let name = app_learn_js_line_pieces_text(code, pieces, piece_from, piece_to);
   let top_from = property_get(state, "top_from");
   let top_to = property_get(state, "top_to");
-  let whole = app_code_line_pieces_text(code, pieces, top_from, top_to);
+  let whole = app_learn_js_line_pieces_text(code, pieces, top_from, top_to);
   let action = {
     kind: "evaluate",
     name,

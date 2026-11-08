@@ -41,7 +41,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { list_set } from "./list_set.mjs";
-import { app_code_line_pieces_text } from "./app_code_line_pieces_text.mjs";
+import { app_learn_js_line_pieces_text } from "./app_learn_js_line_pieces_text.mjs";
 import { subtract } from "./subtract.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -370,7 +370,7 @@ export function app_code_program_step_through_generic(
     "where a place in a line as it is written stands in the line as it reads now: moved by every value solved into the line wholly before it";
     let line = list_get(bases, line_index);
     let done = list_get(replaced, line_index);
-    let before = app_code_line_pieces_text(line, done, 0, position);
+    let before = app_learn_js_line_pieces_text(line, done, 0, position);
     let r2 = text_size(before);
     return r2;
   }
@@ -1095,7 +1095,7 @@ export function app_code_program_step_through_generic(
       let done_after = app_learn_js_line_pieces_add(done, from, to, written);
       let line = list_get(bases, line_index);
       let to2 = text_size(line);
-      let evaluated = app_code_line_pieces_text(line, done_after, 0, to2);
+      let evaluated = app_learn_js_line_pieces_text(line, done_after, 0, to2);
       await piece_arrive(line_index, from_now, to_now, written, source);
       let b15 = null_is(solved_box);
       if (not(b15)) {
@@ -1126,7 +1126,12 @@ export function app_code_program_step_through_generic(
       list_set(bases, line_index, long_line);
       let done2 = list_get(replaced, line_index);
       let size_long = text_size(long_line);
-      let long_now = app_code_line_pieces_text(long_line, done2, 0, size_long);
+      let long_now = app_learn_js_line_pieces_text(
+        long_line,
+        done2,
+        0,
+        size_long,
+      );
       row_text_set(line_index, long_now);
       rows_pieces_draw();
       return;
