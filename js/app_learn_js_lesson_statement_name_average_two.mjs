@@ -11,7 +11,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_line_ends_middle_draw } from "./app_code_line_ends_middle_draw.mjs";
+import { app_learn_js_line_ends_middle_draw } from "./app_learn_js_line_ends_middle_draw.mjs";
 import { app_code_number_line_draw } from "./app_code_number_line_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_statement_name_average_two() {
   }
   function pointed(parts) {
     "a line whose 3 and 7 wear the ends' colour and whose 5 wears the middle's, as does the word middle, asked by the human 2026-09-28";
-    let line = app_code_line_ends_middle_draw(
+    let line = app_learn_js_line_ends_middle_draw(
       parts,
       ["3", "7"],
       ["5", "middle"],

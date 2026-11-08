@@ -21,7 +21,7 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_expression_integer_division } from "./app_learn_js_lesson_expression_integer_division.mjs";
-import { app_code_line_ends_middle_draw } from "./app_code_line_ends_middle_draw.mjs";
+import { app_learn_js_line_ends_middle_draw } from "./app_learn_js_line_ends_middle_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_number_line_draw } from "./app_code_number_line_draw.mjs";
 export function app_learn_js_lesson_statement_name_middle() {
@@ -67,28 +67,28 @@ export function app_learn_js_lesson_statement_name_middle() {
   }
   let ends = ["4", "9"];
   let combined = js_code_binary_spaced_nb("sum", slash, "2");
-  let draw = app_code_line_ends_middle_draw(
+  let draw = app_learn_js_line_ends_middle_draw(
     ["For example, suppose we have ", "4", " and ", "9", ":"],
     ends,
     [],
   );
   let code = js_code_binary_result_nb("4", plus, "9", "13");
-  let draw2 = app_code_line_ends_middle_draw(["", code], ends, []);
+  let draw2 = app_learn_js_line_ends_middle_draw(["", code], ends, []);
   let code2 = js_code_binary_result_nb("13", slash, "2", "6.5");
-  let draw3 = app_code_line_ends_middle_draw(["", code2], [], ["6.5"]);
+  let draw3 = app_learn_js_line_ends_middle_draw(["", code2], [], ["6.5"]);
   let draw4 = app_code_number_line_draw(4, 9, 0.5, [4, 9], 6.5);
-  let draw5 = app_code_line_ends_middle_draw(
+  let draw5 = app_learn_js_line_ends_middle_draw(
     ["", "6.5", " is ", "0.5", " away from ", "6"],
     [],
     ["6.5"],
   );
-  let draw5_after = app_code_line_ends_middle_draw(
+  let draw5_after = app_learn_js_line_ends_middle_draw(
     ["And ", "6.5", " is ", "0.5", " away from ", "7"],
     [],
     ["6.5"],
   );
   ("the line under the number line, the human's, 2026-09-28: the sum is odd and so the middle is 6.5, with the word middle in the middle's colour, as the average lesson colours it");
-  let odd_middle = app_code_line_ends_middle_draw(
+  let odd_middle = app_learn_js_line_ends_middle_draw(
     [
       "",
       "13",
@@ -108,7 +108,7 @@ export function app_learn_js_lesson_statement_name_middle() {
   );
   function middle_worded(parts) {
     "a line whose word middle wears the middle colour, as the number line and the average lesson colour it, asked by the human 2026-09-28";
-    let draw_inner = app_code_line_ends_middle_draw(parts, [], ["middle"]);
+    let draw_inner = app_learn_js_line_ends_middle_draw(parts, [], ["middle"]);
     return draw_inner;
   }
   let middle_sum = middle_worded([
