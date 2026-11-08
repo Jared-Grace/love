@@ -3,7 +3,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
-import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
+import { app_learn_js_operator_code_before } from "./app_learn_js_operator_code_before.mjs";
 import { noop } from "./noop.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_bold } from "./html_bold.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_intro(
   let bang = js_operator_bang_symbol();
   let three_plus_four = app_code_operator_code("3", plus, "4");
   let six_minus_five = app_code_operator_code("6", minus, "5");
-  let minus_seven = app_code_operator_code_before(minus, "7");
+  let minus_seven = app_learn_js_operator_code_before(minus, "7");
   ("three pieces of code stand before the word being defined, and the plain, code, plain, bold turn cannot put a code piece and a bold piece where these two sentences want them, so both of them say their styling part by part");
   let cycles = [
     noop,

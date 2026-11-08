@@ -7,7 +7,7 @@ import { app_learn_js_not_changes_true_false } from "./app_learn_js_not_changes_
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
+import { app_learn_js_operator_code_before } from "./app_learn_js_operator_code_before.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_recall(
   root,
   context,
@@ -28,8 +28,8 @@ export function app_learn_js_lesson_expression_choose_order_not_recall(
   );
   let word_true = js_keyword_true();
   let word_false = js_keyword_false();
-  let not_true = app_code_operator_code_before(symbol, word_true);
-  let not_false = app_code_operator_code_before(symbol, word_false);
+  let not_true = app_learn_js_operator_code_before(symbol, word_true);
+  let not_false = app_learn_js_operator_code_before(symbol, word_false);
   app_learn_js_div_cycle_code(recall_card, [
     "So ",
     not_true,

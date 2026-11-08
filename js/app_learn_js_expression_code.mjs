@@ -9,7 +9,7 @@ import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_
 import { js_code_called } from "./js_code_called.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_learn_js_expression_side_code } from "./app_learn_js_expression_side_code.mjs";
-import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
+import { app_learn_js_operator_code_before } from "./app_learn_js_operator_code_before.mjs";
 import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
 import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
@@ -41,7 +41,7 @@ export function app_learn_js_expression_code(item) {
     }
     let rank = app_code_operator_rank(symbol);
     let acted_on_code = app_learn_js_expression_side_code(acted_on, rank);
-    let code_before = app_code_operator_code_before(symbol, acted_on_code);
+    let code_before = app_learn_js_operator_code_before(symbol, acted_on_code);
     return code_before;
   }
   ("each side asks for the strength it has to reach, and the two sides do not ask for the same one: the side an operator works out LAST has to be gathered when it holds an operator of equal strength, because otherwise a reader takes the line the other way round. 8 / 4 / 2 is not 8 / (4 / 2), while nothing on the left of a divide ever needs that - and a power is the other way round, so (2 ** 3) ** 2 keeps its marks and 2 ** 3 ** 2 needs none.");

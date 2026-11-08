@@ -6,7 +6,7 @@ import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
-import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
+import { app_learn_js_operator_code_before } from "./app_learn_js_operator_code_before.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -37,8 +37,8 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_inside_fir
   let color_first = app_learn_js_highlight_color();
   let color_second = app_learn_js_highlight_color_second();
   let color_third = app_learn_js_highlight_color_third();
-  let not_true = app_code_operator_code_before(bang, word_true);
-  let bang_bang_true = app_code_operator_code_before(bang, not_true);
+  let not_true = app_learn_js_operator_code_before(bang, word_true);
+  let bang_bang_true = app_learn_js_operator_code_before(bang, not_true);
   app_learn_js_div_cycle_code(parent, [
     "Suppose we want to solve ",
     bang_bang_true,
