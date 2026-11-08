@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_program_step_noun } from "./app_code_program_step_noun.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_program_line_in_loop_is } from "./app_learn_js_program_line_in_loop_is.mjs";
-export function app_code_program_step_line_ran_words(
+export function app_learn_js_program_step_line_ran_words(
   lines,
   trace,
   index,
