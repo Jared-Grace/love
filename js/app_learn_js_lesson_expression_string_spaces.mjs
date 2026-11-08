@@ -1,4 +1,4 @@
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { text_replace_space_to } from "./text_replace_space_to.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_split_space } from "./text_split_space.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_expression_string_spaces() {
   "the second string lesson, reusing the first one's machinery: a string can hold more than one word - a phrase with a SPACE - and the space is part of the string's value (it is not dropped). The word source is adjacent word pairs from the shared verse.";
   function decoys(question, answer) {
     "two tailored wrongs: the phrase WITH the quotes (thinking the quotes are part of the value), and the phrase with the SPACE removed (forgetting the space is part of the value)";
-    let quoted = app_code_string_code(answer);
+    let quoted = app_learn_js_string_code(answer);
     let no_space = text_replace_space_to(answer, "");
     let r = [quoted, no_space];
     return r;
@@ -32,8 +32,8 @@ export function app_learn_js_lesson_expression_string_spaces() {
     "the phrase with no quote marks, with the space gone, and with each word in its own quote marks";
     let no_space = text_replace_space_to(question, "");
     let list2 = text_split_space(question);
-    let each_quoted = list_map(list2, app_code_string_code);
-    let combined = app_code_string_code(no_space);
+    let each_quoted = list_map(list2, app_learn_js_string_code);
+    let combined = app_learn_js_string_code(no_space);
     let joined = list_join_space(each_quoted);
     let found = [question, combined, joined];
     return found;
@@ -61,7 +61,7 @@ export function app_learn_js_lesson_expression_string_spaces() {
     "recall that a string is text in quotes (not re-bolded here - it was defined in the first string lesson), then the new idea: it can hold more than one word. The first example shows the SPACE as plain syntax; the definition then colours the value and notes the space is part of it";
     let list = app_code_verse_word_pairs();
     let phrase = list_random_item(list);
-    let code = app_code_string_code(phrase);
+    let code = app_learn_js_string_code(phrase);
     let intro = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(intro, ["A string is text in quotes"]);
     app_learn_js_div_cycle_code(intro, [

@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { add } from "./add.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -38,11 +38,11 @@ export function app_learn_js_lesson_statement_name_two_batch() {
     let last_word = ternary(even, word, other);
     let held_first = js_code_let_statement(
       name_first,
-      app_code_string_code(first_word),
+      app_learn_js_string_code(first_word),
     );
     let held_last = js_code_let_statement(
       name_last,
-      app_code_string_code(last_word),
+      app_learn_js_string_code(last_word),
     );
     let logged = js_code_console_log_statement(name_logged);
     let lines = [held_first, held_last, logged];

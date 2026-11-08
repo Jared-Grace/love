@@ -5,7 +5,7 @@ import { app_learn_js_lesson_statement_name_copy_batch } from "./app_learn_js_le
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_strings } from "./js_strings.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
@@ -40,9 +40,9 @@ export function app_learn_js_lesson_statement_name_copy() {
     let ast = js_parse(answer);
     let words = js_strings(ast);
     let word = list_first(words);
-    let word_first = app_code_string_code(word);
+    let word_first = app_learn_js_string_code(word);
     let word2 = list_last(words);
-    let word_last = app_code_string_code(word2);
+    let word_last = app_learn_js_string_code(word2);
     let names = js_declared_names(ast);
     let name_first = list_first(names);
     let name_last = list_get(names, 1);
@@ -64,7 +64,7 @@ export function app_learn_js_lesson_statement_name_copy() {
     }
     let v = program_of(word_first, word_last, name_other);
     let v2 = program_of(word_last, word_first, name_copied);
-    let combined = app_code_string_code(name_copied);
+    let combined = app_learn_js_string_code(name_copied);
     let v3 = program_of(word_first, word_last, combined);
     let found = [v, v2, v3];
     return found;

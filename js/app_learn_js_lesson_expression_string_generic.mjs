@@ -1,6 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_expression_string_generic(params) {
   function refill() {
     "four questions, each a different quoted word or phrase from the lesson's word source";
     let list = words_get();
-    let quoted = list_shuffle_take_map(list, 4, app_code_string_code);
+    let quoted = list_shuffle_take_map(list, 4, app_learn_js_string_code);
     return quoted;
   }
   let next_arg = list_iterator_refillable(refill);

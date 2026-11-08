@@ -3,7 +3,7 @@ import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_le
 import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -34,10 +34,10 @@ export function app_learn_js_lesson_statement_name_copy_kept_batch() {
     equal_not_assert_json(other, word, {
       hint: "a program on this screen would put the same word under the name twice, so the answer would be right whether or not the order of the lines was read",
     });
-    let quoted = app_code_string_code(word);
+    let quoted = app_learn_js_string_code(word);
     let held = js_code_let_statement(name_first, quoted);
     let copied = js_code_let_statement(name_copy, name_first);
-    let quoted_other = app_code_string_code(other);
+    let quoted_other = app_learn_js_string_code(other);
     let changed = js_code_assign_statement(name_first, quoted_other);
     let logged = js_code_console_log_statement(name_copy);
     let lines = [held, copied, changed, logged];

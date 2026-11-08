@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
@@ -17,8 +17,8 @@ export function app_learn_js_lesson_expression_string_concat_above_remember_line
 ) {
   arguments_assert(arguments, 3);
   let b = list_get(two, 1);
-  let code_a = app_code_string_code(a);
-  let code_b = app_code_string_code(b);
+  let code_a = app_learn_js_string_code(a);
+  let code_b = app_learn_js_string_code(b);
   let join_code = text_combine_multiple([code_a, " + ", code_b]);
   let joined_value = text_combine_multiple([a, b]);
   let color = app_code_string_value_color();

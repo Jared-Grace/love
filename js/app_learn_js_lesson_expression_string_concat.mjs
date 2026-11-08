@@ -4,7 +4,7 @@ import { app_learn_js_lesson_expression_string_concat_title_name_id } from "./ap
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_get } from "./list_get.mjs";
@@ -18,8 +18,8 @@ export function app_learn_js_lesson_expression_string_concat() {
     let two = app_learn_js_lesson_expression_string_concat_pair();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
-    let code_a = app_code_string_code(a);
-    let code_b = app_code_string_code(b);
+    let code_a = app_learn_js_string_code(a);
+    let code_b = app_learn_js_string_code(b);
     let joined = text_combine_multiple([code_a, " + ", code_b]);
     return joined;
   }
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_expression_string_concat() {
     let a = list_get(words, 0);
     let b = list_get(words, 1);
     let reversed = text_combine_multiple([b, a]);
-    let quoted = app_code_string_code(answer);
+    let quoted = app_learn_js_string_code(answer);
     let r = [reversed, quoted];
     return r;
   }

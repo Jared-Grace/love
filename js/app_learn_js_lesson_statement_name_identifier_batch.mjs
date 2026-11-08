@@ -1,6 +1,6 @@
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
 import { add } from "./add.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit_identifiers } from "./fruits_of_the_spirit_identifiers.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_statement_name_identifier_batch() {
     equal_not_assert_json(name, word, {
       hint: "a program on this screen would give a value its own word as a name, which would let the name look like the thing written out",
     });
-    let quoted = app_code_string_code(word);
+    let quoted = app_learn_js_string_code(word);
     let held = js_code_let_statement(name, quoted);
     let logged = js_code_console_log_statement(name);
     let lines = [held, logged];

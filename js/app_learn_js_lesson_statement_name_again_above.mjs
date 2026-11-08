@@ -9,7 +9,7 @@ import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_
 import { app_learn_js_lesson_statement_name_value } from "./app_learn_js_lesson_statement_name_value.mjs";
 import { app_learn_js_lesson_cup_fruit } from "./app_learn_js_lesson_cup_fruit.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -59,8 +59,8 @@ export function app_learn_js_lesson_statement_name_again_above(root, context) {
   app_learn_js_div_cycle_code(box_after, [gone]);
   ("the code box says the no-let part before the second line rather than after it, because a learner reading the line first will read the missing word as a mistake");
   let box_code = app_learn_js_container_light_blue(root);
-  let quoted_before = app_code_string_code(word_before);
-  let quoted_after = app_code_string_code(word_after);
+  let quoted_before = app_learn_js_string_code(word_before);
+  let quoted_after = app_learn_js_string_code(word_after);
   let held = js_code_let_statement(name, quoted_before);
   let again = js_code_assign_statement(name, quoted_after);
   let logged = js_code_console_log_statement(name);

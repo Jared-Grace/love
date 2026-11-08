@@ -6,7 +6,7 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -54,7 +54,7 @@ export function app_learn_js_lesson_if_even() {
   let even_check = check("0");
   function logged(ending) {
     'console.log(n + " ending");';
-    let right = app_code_string_code(ending);
+    let right = app_learn_js_string_code(ending);
     let joined = js_code_binary_spaced_nb(name, plus, right);
     let s = js_code_console_log_statement(joined);
     return s;

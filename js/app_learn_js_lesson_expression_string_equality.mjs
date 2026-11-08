@@ -6,7 +6,7 @@ import { app_learn_js_prose_rule_line } from "./app_learn_js_prose_rule_line.mjs
 import { app_learn_js_prose_code_line } from "./app_learn_js_prose_code_line.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_get } from "./list_get.mjs";
@@ -44,8 +44,8 @@ export function app_learn_js_lesson_expression_string_equality() {
     let operator = property_get(combo, "operator");
     let same = property_get(combo, "same");
     let right_word = ternary(same, word_a, word_b);
-    let code_left = app_code_string_code(word_a);
-    let code_right = app_code_string_code(right_word);
+    let code_left = app_learn_js_string_code(word_a);
+    let code_right = app_learn_js_string_code(right_word);
     let joined = text_combine_multiple([
       code_left,
       " ",

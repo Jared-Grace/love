@@ -3,7 +3,7 @@ import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_le
 import { app_learn_js_lesson_statement_name_two_name } from "./app_learn_js_lesson_statement_name_two_name.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_statement_name_copy_single_batch() {
   let picked = list_shuffle_take(words, 4);
   function program_of(word) {
     "the three lines that give a word to a name, give a second name what the first one holds, and write out the second one";
-    let quoted = app_code_string_code(word);
+    let quoted = app_learn_js_string_code(word);
     let held = js_code_let_statement(name_first, quoted);
     let copied = js_code_let_statement(name_last, name_first);
     let logged = js_code_console_log_statement(name_last);

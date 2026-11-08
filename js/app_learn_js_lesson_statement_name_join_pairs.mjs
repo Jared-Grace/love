@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_string_concat_pair } from "./app_learn_js_lesson_expression_string_concat_pair.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { range_map } from "./range_map.mjs";
 export function app_learn_js_lesson_statement_name_join_pairs() {
   arguments_assert(arguments, 0);
@@ -14,8 +14,8 @@ export function app_learn_js_lesson_statement_name_join_pairs() {
     let two = app_learn_js_lesson_expression_string_concat_pair();
     let first = list_first(two);
     let last = list_last(two);
-    let code_first = app_code_string_code(first);
-    let code_last = app_code_string_code(last);
+    let code_first = app_learn_js_string_code(first);
+    let code_last = app_learn_js_string_code(last);
     let pair = [code_first, code_last];
     return pair;
   }

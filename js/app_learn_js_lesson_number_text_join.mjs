@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_number_text_join() {
   let endings = [" is a number", " is my number", " is the answer"];
   function joined(left, ending) {
     "left + ending, the ending in quotes";
-    let right = app_code_string_code(ending);
+    let right = app_learn_js_string_code(ending);
     let j = js_code_binary_spaced_nb(left, plus, right);
     return j;
   }
@@ -91,10 +91,10 @@ export function app_learn_js_lesson_number_text_join() {
       let code = list_join_newline([first, statement]);
       return code;
     }
-    let quoted = app_code_string_code(name);
+    let quoted = app_learn_js_string_code(name);
     let name_quoted = joined(quoted, ending);
     let plus_written = text_combine_multiple([name, " ", plus, ending]);
-    let one_string = app_code_string_code(plus_written);
+    let one_string = app_learn_js_string_code(plus_written);
     let trimmed = text_trim(ending);
     let no_space = joined(name, trimmed);
     let found = list_map([name_quoted, one_string, no_space], program_of);

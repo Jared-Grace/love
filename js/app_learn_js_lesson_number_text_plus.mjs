@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { json_to } from "./json_to.mjs";
@@ -39,7 +39,7 @@ export function app_learn_js_lesson_number_text_plus() {
   let endings = [" is a number", " is my number", " is the answer"];
   function line_get(left, ending) {
     'console.log(left + "ending"); with left already written as code';
-    let right = app_code_string_code(ending);
+    let right = app_learn_js_string_code(ending);
     let joined = js_code_binary_spaced_nb(left, plus, right);
     let code = js_code_console_log_statement(joined);
     return code;
@@ -94,9 +94,9 @@ export function app_learn_js_lesson_number_text_plus() {
     let trimmed = text_trim(ending);
     let no_space = line_get(number, trimmed);
     let plus_written = text_combine_multiple([number, " ", plus, ending]);
-    let one_string = app_code_string_code(plus_written);
+    let one_string = app_learn_js_string_code(plus_written);
     let all_quoted = js_code_console_log_statement(one_string);
-    let ending_code = app_code_string_code(ending);
+    let ending_code = app_learn_js_string_code(ending);
     let swapped = js_code_binary_spaced_nb(ending_code, plus, number);
     let string_first = js_code_console_log_statement(swapped);
     let found = [no_space, all_quoted, string_first];
@@ -111,8 +111,8 @@ export function app_learn_js_lesson_number_text_plus() {
       app_learn_js_lesson_expression_string_concat,
       ["a ", plus, " between two strings joins them:"],
     );
-    let left2 = app_code_string_code("love");
-    let right3 = app_code_string_code("joy");
+    let left2 = app_learn_js_string_code("love");
+    let right3 = app_learn_js_string_code("joy");
     let two_strings = js_code_binary_spaced_nb(left2, plus, right3);
     let statement = js_code_console_log_statement(two_strings);
     app_learn_js_code_lines_writes_out(box_one, [statement], "lovejoy");
@@ -126,8 +126,8 @@ export function app_learn_js_lesson_number_text_plus() {
     let v = program_get(5, ending);
     let value = text_combine("5", ending);
     app_learn_js_code_lines_writes_out(box_two, [v], value);
-    let combined = app_code_string_code(ending);
-    let combined2 = app_code_string_code(" ...");
+    let combined = app_learn_js_string_code(ending);
+    let combined2 = app_learn_js_string_code(" ...");
     app_learn_js_div_cycle_code(box_two, [
       "The string ",
       combined,

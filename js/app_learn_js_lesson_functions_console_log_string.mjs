@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_functions_console_log_string() {
   function refill() {
     "four questions, each a different quoted word from the source the strings lesson used";
     let list = fruits_of_the_spirit();
-    let quoted = list_shuffle_take_map(list, 4, app_code_string_code);
+    let quoted = list_shuffle_take_map(list, 4, app_learn_js_string_code);
     return quoted;
   }
   let next_arg = list_iterator_refillable(refill);
@@ -35,7 +35,7 @@ export function app_learn_js_lesson_functions_console_log_string() {
   function decoys(question, answer) {
     "the word with its quote marks, with its brackets and quote marks, and with its semicolon";
     let word = eval_console_log_lines(question);
-    let quoted = app_code_string_code(word);
+    let quoted = app_learn_js_string_code(word);
     let bracketed = text_combine_multiple(["(", quoted, ")"]);
     let ended = text_combine_multiple([word, ";"]);
     let found = [quoted, bracketed, ended];
@@ -44,7 +44,7 @@ export function app_learn_js_lesson_functions_console_log_string() {
   function backwards_decoys(question, answer) {
     "the string with no console.log, the word without its quote marks, and log with no console";
     let word2 = eval_console_log_lines(answer);
-    let quoted2 = app_code_string_code(word2);
+    let quoted2 = app_learn_js_string_code(word2);
     let alone = js_code_statement(quoted2);
     let unquoted = js_code_console_log_statement(word2);
     let code2 = js_code_call_arg("log", quoted2);

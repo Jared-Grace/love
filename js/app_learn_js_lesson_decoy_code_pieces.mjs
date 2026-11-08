@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_decoy_code_words } from "./app_learn_js_lesson_decoy_code_words.mjs";
 import { app_learn_js_lesson_decoy_code_names } from "./app_learn_js_lesson_decoy_code_names.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_lesson_decoy_code_pieces(question, answer) {
   let words = app_learn_js_lesson_decoy_code_words(question, answer);
   let names = app_learn_js_lesson_decoy_code_names(question, answer);
   let word = eval_console_log_lines(question);
-  let quoted = app_code_string_code(word);
+  let quoted = app_learn_js_string_code(word);
   let twice = list_join_newline([word, word]);
   ("The right answer comes out here too, because a program's words include the one it writes out, and the quiz would drop it after the cut and leave a place for a borrowed word.");
   let words_other = list_without(words, word);

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_statement_name_value_batch() {
   let name = app_learn_js_lesson_statement_name_value_name();
   function program_of(word) {
     "the two lines that give one word a name and write that name out";
-    let quoted = app_code_string_code(word);
+    let quoted = app_learn_js_string_code(word);
     let held = js_code_let_statement(name, quoted);
     let logged = js_code_console_log_statement(name);
     let lines = [held, logged];

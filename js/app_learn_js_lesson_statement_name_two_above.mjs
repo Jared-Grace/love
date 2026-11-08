@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
@@ -56,8 +56,8 @@ export function app_learn_js_lesson_statement_name_two_above(root, context) {
   app_code_value_line(box_ask, "You could answer: ", word_last);
   app_learn_js_div_cycle_code(box_ask, ["The name says which cup they mean"]);
   ("the code box makes both cups first and then asks for one of them, in that order, because both lines have to have happened before either name means anything");
-  let quoted_first = app_code_string_code(word_first);
-  let quoted_last = app_code_string_code(word_last);
+  let quoted_first = app_learn_js_string_code(word_first);
+  let quoted_last = app_learn_js_string_code(word_last);
   let held_first = js_code_let_statement(name_first, quoted_first);
   let held_last = js_code_let_statement(name_last, quoted_last);
   let logged = js_code_console_log_statement(name_last);

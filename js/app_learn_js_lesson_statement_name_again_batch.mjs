@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
 import { add } from "./add.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -27,8 +27,8 @@ export function app_learn_js_lesson_statement_name_again_batch() {
     equal_not_assert_json(replaced, word, {
       hint: "a program on this screen would put the same word under the name twice, so the answer would be right whether or not the second line was read",
     });
-    let held = js_code_let_statement(name, app_code_string_code(replaced));
-    let again = js_code_assign_statement(name, app_code_string_code(word));
+    let held = js_code_let_statement(name, app_learn_js_string_code(replaced));
+    let again = js_code_assign_statement(name, app_learn_js_string_code(word));
     let logged = js_code_console_log_statement(name);
     let lines = [held, again, logged];
     let code = list_join_newline(lines);

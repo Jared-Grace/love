@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_string_quote } from "./js_string_quote.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_name_quoted_letter_line(
   ("The letter at the end is dressed as a value and not as code. Everywhere else on these screens a letter in code dress is a NAME, and this is the one place the same letter means the character itself - so in code dress it would be the same picture saying the opposite thing. The value dress is the one a written-out answer wears, which is what this letter would be: the thing that ends up in the cup.");
   ("The cup names wear the colour they wear in the program above, and the letter inside the quote marks does not - which is the whole difference this line draws, drawn a second way. The name of the cup is coloured and the same letter as a value is left white.");
   let quote = js_string_quote();
-  let quoted = app_code_string_code(name_source);
+  let quoted = app_learn_js_string_code(name_source);
   let line_quoted = js_code_let_statement(name_copy, quoted);
   let line = html_div(parent);
   html_span_text(line, "If ");

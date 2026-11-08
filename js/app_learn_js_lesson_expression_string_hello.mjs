@@ -1,5 +1,5 @@
 import { js_string_quote } from "./js_string_quote.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lesson_expression_string_hello_title_name_id } from "./app_learn_js_lesson_expression_string_hello_title_name_id.mjs";
 import { app_learn_js_lesson_expression_string_generic } from "./app_learn_js_lesson_expression_string_generic.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_expression_string_hello() {
   function decoys(question, answer) {
     "the classic mistake is thinking the quotes are part of the value, so the tailored wrong answer is the same text WITH the quotes still around it";
     "The other two wrong answers keep one of the two quote marks, as the backward wrong answers do. All three hold the word on the screen. Filled from the other questions the rest held other words, so the two buttons with the word on the screen were the only ones to look at. Not picked: the word in other capitals, which has nothing to do with quotes.";
-    let quoted = app_code_string_code(answer);
+    let quoted = app_learn_js_string_code(answer);
     let opened = text_combine_multiple([quote, answer]);
     let closed = text_combine_multiple([answer, quote]);
     let r = [quoted, opened, closed];

@@ -10,7 +10,7 @@ import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_note_div_cycle_code } from "./app_learn_js_note_div_cycle_code.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -83,10 +83,10 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
     names,
   );
   let box_code = app_learn_js_container_light_blue(root);
-  let quoted_first = app_code_string_code(word_first);
+  let quoted_first = app_learn_js_string_code(word_first);
   let held = js_code_let_statement(name_first, quoted_first);
   let copied = js_code_let_statement(name_copy, name_first);
-  let quoted_last = app_code_string_code(word_last);
+  let quoted_last = app_learn_js_string_code(word_last);
   let changed = js_code_assign_statement(name_first, quoted_last);
   let logged = js_code_console_log_statement(name_copy);
   ("THE STORY IS SAID AGAIN INSIDE THE PROGRAM, AS THE PROGRAM'S OWN NOTES, RATHER THAN IN SENTENCES BETWEEN CHIPS. What was three chips with plain writing between them is one chip, because every one of those sentences is a thing a programmer writes down next to the line it is about, and writing them as notes puts each one on the line it describes instead of above a fragment of the program. The copying lesson before this one is already read that way, so a learner arriving here meets a shape they have just been taught rather than a second one.");

@@ -9,7 +9,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
@@ -67,7 +67,7 @@ export function app_learn_js_lesson_if_true() {
     "true, as if the if wrote out the value inside its parentheses: it stands in the code beside the word written out, so the right answer can no longer be picked as the one word on the screen";
     "2026-11-01, when the step-by-step quiz joined this lesson and the gate over quizzes passable by reading found this one: every right answer was the only word in the code. Not picked: if (true) written whole, which no line writes out; and nothing at all, which is the next lesson's answer and is not yet shown here.";
     "2026-11-03: the other two wrong answers hold the word on the screen too. One is the word with its quote marks kept, the mistake the strings lesson is about. The other is true and then the word, as if the if wrote out its value and then ran the line. Filled from the other questions they held other words, so the one button with the word on the screen was still the answer, whenever true was turned down.";
-    let quoted = app_code_string_code(answer);
+    let quoted = app_learn_js_string_code(answer);
     let both = list_join_newline(["true", answer]);
     let found = ["true", quoted, both];
     return found;
