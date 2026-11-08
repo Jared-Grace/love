@@ -1,5 +1,5 @@
 import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
-import { app_code_screen_capture_record } from "./app_code_screen_capture_record.mjs";
+import { app_learn_js_screen_capture_record } from "./app_learn_js_screen_capture_record.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -28,7 +28,7 @@ export async function app_code_screens_crawl_lesson_quiz_url(
     id,
     combined,
   ]);
-  await app_code_screen_capture_record(
+  await app_learn_js_screen_capture_record(
     page,
     examples_url,
     id,

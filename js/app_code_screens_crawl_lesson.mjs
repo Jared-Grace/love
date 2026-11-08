@@ -1,6 +1,6 @@
 import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
-import { app_code_screen_capture_record } from "./app_code_screen_capture_record.mjs";
+import { app_learn_js_screen_capture_record } from "./app_learn_js_screen_capture_record.mjs";
 import { app_code_screens_crawl_lesson_quiz_url } from "./app_code_screens_crawl_lesson_quiz_url.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
@@ -29,7 +29,14 @@ export async function app_code_screens_crawl_lesson(
     page,
     records,
   );
-  await app_code_screen_capture_record(page, quiz_url, id, "quiz", 0, records);
+  await app_learn_js_screen_capture_record(
+    page,
+    quiz_url,
+    id,
+    "quiz",
+    0,
+    records,
+  );
   let v6 = app_shared_screen_hash_key();
   let f_name = app_code_screen_name_short(fn_name("app_learn_js_quiz"));
   let combined = text_combine_multiple([",", v6, "=", f_name]);
