@@ -9,7 +9,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
-import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
+import { app_learn_js_note_div_cycle_code } from "./app_learn_js_note_div_cycle_code.mjs";
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { app_learn_js_lesson_cups_copy_story } from "./app_learn_js_lesson_cups_copy_story.mjs";
 import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_that_text.mjs";
@@ -48,7 +48,7 @@ export function app_learn_js_lesson_statement_name_copy_single_above(
   let cup_first = [word_first, name_first];
   let box_cups = app_learn_js_container_light_blue(root);
   let has_first = list_join_empty([" has ", word_first, " and cup "]);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box_cups,
     ["Suppose cup ", name_first, has_first, name_last, " is empty"],
     names,
@@ -110,7 +110,7 @@ export function app_learn_js_lesson_statement_name_copy_single_above(
     quoted_last,
     ")",
   ]);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box_two,
     [
       "In this lesson, a name (",

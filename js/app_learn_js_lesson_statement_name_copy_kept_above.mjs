@@ -9,7 +9,7 @@ import { app_learn_js_lesson_statement_name_copy } from "./app_learn_js_lesson_s
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
+import { app_learn_js_note_div_cycle_code } from "./app_learn_js_note_div_cycle_code.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
@@ -63,7 +63,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
     " out of cup ",
   ]);
   let put = list_join_empty([" and put ", word_last, " in instead"]);
-  app_code_note_div_cycle_code(box_change, [took, name_first, put], names);
+  app_learn_js_note_div_cycle_code(box_change, [took, name_first, put], names);
   app_learn_js_lesson_cups_row_holding(
     box_change,
     [
@@ -77,7 +77,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
     word_first,
     " in it - nobody touched cup ",
   ]);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box_change,
     ["Cup ", name_copy, still, name_copy],
     names,
@@ -147,7 +147,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
     logged,
   ];
   app_learn_js_code_lines_writes_out(box_code, lines, word_first);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box_code,
     [
       "Cup ",

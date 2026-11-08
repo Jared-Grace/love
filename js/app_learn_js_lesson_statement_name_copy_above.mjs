@@ -6,7 +6,7 @@ import { app_learn_js_lesson_statement_name_value_word } from "./app_learn_js_le
 import { app_learn_js_lesson_statement_name_two_word } from "./app_learn_js_lesson_statement_name_two_word.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
+import { app_learn_js_note_div_cycle_code } from "./app_learn_js_note_div_cycle_code.mjs";
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_learn_js_lesson_cups_copy_story } from "./app_learn_js_lesson_cups_copy_story.mjs";
@@ -31,7 +31,7 @@ export function app_learn_js_lesson_statement_name_copy_above(root, context) {
   let cup_first = [word_first, name_first];
   let cup_last = [word_last, name_last];
   let box_have = app_learn_js_container_light_blue(root);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box_have,
     [
       "Suppose you had two cups, one called ",
@@ -52,14 +52,14 @@ export function app_learn_js_lesson_statement_name_copy_above(root, context) {
   ("the words for what is in a cup are joined into the writing around them rather than given as parts of their own. The parts alternate between plain writing and code, one and then the other all the way along, so a part standing in an odd place comes out dressed as code - and grapes is not code, it is what is in the cup. Only the names on the cups are code here.");
   let has_first = list_join_empty([" has ", word_first, " and cup "]);
   let has_last = list_join_empty([" has ", word_last]);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box_have,
     ["Suppose cup ", name_first, has_first, name_last, has_last],
     names,
   );
   app_learn_js_lesson_cups_row_holding(box_have, [cup_first, cup_last], names);
   let box_new = app_learn_js_container_light_blue(root);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box_new,
     ["Suppose you have a third cup ", name_copy],
     names,

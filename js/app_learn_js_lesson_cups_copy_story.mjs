@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
+import { app_learn_js_note_div_cycle_code } from "./app_learn_js_note_div_cycle_code.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_cups_copy_story(
   ("The cups standing before the one being filled are handed in, so the row drawn here is the row drawn above it with one cup changed, standing in the same place.");
   let word_from = list_first(cup_from);
   let name_from = list_last(cup_from);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box,
     [
       "Suppose you asked someone to look inside cup ",
@@ -40,12 +40,16 @@ export function app_learn_js_lesson_cups_copy_story(
     word_from,
     " in cup ",
   ]);
-  app_code_note_div_cycle_code(box, ["Cup ", name_from, found, name_to], names);
+  app_learn_js_note_div_cycle_code(
+    box,
+    ["Cup ", name_from, found, name_to],
+    names,
+  );
   let cup_to = [word_from, name_to];
   let cups = list_concat(cups_kept, [cup_to]);
   app_learn_js_lesson_cups_row_holding(box, cups, names);
   let both = list_join_empty([" both have ", word_from, " in them"]);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box,
     ["So now cups ", name_from, " and ", name_to, both],
     names,
@@ -57,7 +61,7 @@ export function app_learn_js_lesson_cups_copy_story(
     word_from,
     " to put in cup ",
   ]);
-  app_code_note_div_cycle_code(
+  app_learn_js_note_div_cycle_code(
     box,
     [removed, name_from, other, name_to],
     names,

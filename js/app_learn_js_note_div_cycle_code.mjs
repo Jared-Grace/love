@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_note_cycle_code } from "./app_learn_js_note_cycle_code.mjs";
-export function app_code_note_div_cycle_code(parent, parts, names) {
+export function app_learn_js_note_div_cycle_code(parent, parts, names) {
   arguments_assert(arguments, 3);
   ("a line of the lesson's own writing with pieces of code set into it, where a piece that is one of the lesson's names is written in that name's colour");
   ("THE SAME NAME IS THE SAME COLOUR EVERYWHERE ON THE SCREEN, and the writing above the code box is part of the screen. Until this existed the colour started at the code box: a reader met a plain name in the sentence explaining the idea, then met a red one in the program, and had to work out for themselves that those were the same thing - which is the exact work the colour was added to save them.");
