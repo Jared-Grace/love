@@ -9,7 +9,7 @@ import { noop } from "./noop.mjs";
 import { promise_wrap_unawait } from "./promise_wrap_unawait.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
+import { app_learn_js_quiz_choice_button_answer } from "./app_learn_js_quiz_choice_button_answer.mjs";
 import { each } from "./each.mjs";
 export function app_learn_js_expression_value_choose_buttons_generic(
   parent,
@@ -52,7 +52,7 @@ export function app_learn_js_expression_value_choose_buttons_generic(
   function each_button(choice) {
     let choice_text = value_text(choice);
     let right_is = equal(choice, value);
-    let b = app_code_quiz_choice_button_answer(
+    let b = app_learn_js_quiz_choice_button_answer(
       box,
       choice_text,
       right_is,

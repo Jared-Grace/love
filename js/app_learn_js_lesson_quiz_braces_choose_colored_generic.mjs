@@ -1,4 +1,4 @@
-import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
+import { app_learn_js_quiz_choice_button_answer } from "./app_learn_js_quiz_choice_button_answer.mjs";
 import { list_permutations } from "./list_permutations.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
@@ -81,7 +81,7 @@ export function app_learn_js_lesson_quiz_braces_choose_colored_generic(
     let c_braces = property_get(choice, "braces");
     let c_colors = property_get(choice, "colors");
     let is_right = equal(choice, right);
-    let b = app_code_quiz_choice_button_answer(
+    let b = app_learn_js_quiz_choice_button_answer(
       parent,
       "",
       is_right,

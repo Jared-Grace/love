@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_answered } from "./app_learn_js_lesson_quiz_multiple_choice_answered.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
+import { app_learn_js_quiz_choice_button_answer } from "./app_learn_js_quiz_choice_button_answer.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_shared_button_code_unframed } from "./app_shared_button_code_unframed.mjs";
 export function app_learn_js_lesson_quiz_multiple_choice_each_button({
@@ -31,7 +31,7 @@ export function app_learn_js_lesson_quiz_multiple_choice_each_button({
       "told which choice was pressed, so a reminder can be about that one wrong choice";
       on_wrong(quiz_choice);
     }
-    let b = app_code_quiz_choice_button_answer(
+    let b = app_learn_js_quiz_choice_button_answer(
       parent,
       quiz_choice,
       right,

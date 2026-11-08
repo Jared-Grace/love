@@ -46,7 +46,7 @@ import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_div_braces_painted } from "./app_learn_js_div_braces_painted.mjs";
-import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
+import { app_learn_js_quiz_choice_button_answer } from "./app_learn_js_quiz_choice_button_answer.mjs";
 export function app_learn_js_braces_run_choose(
   parent,
   code,
@@ -279,7 +279,7 @@ export function app_learn_js_braces_run_choose(
     function choice_add(yes, words) {
       "one answer, its braces coloured as the section's are";
       let right2 = equal(yes, runs);
-      let b = app_code_quiz_choice_button_answer(
+      let b = app_learn_js_quiz_choice_button_answer(
         choices,
         "",
         right2,

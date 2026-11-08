@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_quiz_choice_button_answer_generic } from "./app_learn_js_quiz_choice_button_answer_generic.mjs";
-export function app_code_quiz_choice_button_answer(
+export function app_learn_js_quiz_choice_button_answer(
   parent,
   text,
   right,
