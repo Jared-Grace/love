@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
+import { app_learn_js_program_step_trace } from "./app_learn_js_program_step_trace.mjs";
 import { app_learn_js_program_step_noun } from "./app_learn_js_program_step_noun.mjs";
 import { app_learn_js_program_step_complete_words } from "./app_learn_js_program_step_complete_words.mjs";
 import { list_add } from "./list_add.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_program_step_clicks(code) {
   ("The presses are the ones the step-through asks for, read off the same trace and the same grouping of an expression solved whole, so the two cannot come to disagree. An expression solved whole is one step, since the operators can be pressed in more than one right order. Not picked: one step per operator, which would name one order as the answer when another is right too");
   ("Each step is a list of pieces, each piece a text and its kind: words, code, or button - what is pressed as a button on the screen is drawn as one, at the human's asking the same day, so the learner sees the thing to press");
   let lines = text_split_newline(code);
-  let traced = app_code_program_step_trace(code);
+  let traced = app_learn_js_program_step_trace(code);
   let noun = app_learn_js_program_step_noun(traced);
   let complete_words = app_learn_js_program_step_complete_words(noun);
   let options = {

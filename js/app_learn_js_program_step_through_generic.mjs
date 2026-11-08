@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
+import { app_learn_js_program_step_trace } from "./app_learn_js_program_step_trace.mjs";
 import { app_learn_js_program_step_noun } from "./app_learn_js_program_step_noun.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -153,7 +153,7 @@ export function app_learn_js_program_step_through_generic(
   ("2026-10-17, at the human's asking: an expression holding more than one operator is solved whole, as the expression lessons solve a line - the learner presses the operator that goes next and chooses what it comes to, until one value is left - and that value is written into the program's line; which expressions, and how their names are asked for first, is ",
     fn_name("app_learn_js_program_step_actions_solve_whole"),
     "'s to say. This replaces the operators being asked for one after another in the order the computer takes them, which left the order to the program rather than to the learner");
-  let trace = app_code_program_step_trace(code);
+  let trace = app_learn_js_program_step_trace(code);
   let noun = app_learn_js_program_step_noun(trace);
   let resets = false;
   for (let trace_entry of trace) {

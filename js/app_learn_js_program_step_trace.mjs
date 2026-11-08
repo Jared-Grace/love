@@ -14,7 +14,7 @@ import { list_unique } from "./list_unique.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_add } from "./list_add.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
-export function app_code_program_step_trace(code) {
+export function app_learn_js_program_step_trace(code) {
   arguments_assert(arguments, 1);
   ("the steps a learner takes running the program code a line at a time: each line run, in order, with what it does, an expression solved whole being one step, and a line run again first put back the way it is written");
   ("2026-10-28, at the human's asking, for the while lessons: a line keeps what was solved into it while the program runs, so a while line run a second time still reads while (true) {, and the first thing chosen there is to reset the line - its condition written again with its names - before it is solved again. Every line run again that had something solved or written the long way into it is reset the same way, the lines inside the { } as well as the while line, since each of them would otherwise be solved from values that are no longer true. Not picked: resetting only the while line, which leaves total += 1 standing where the second run must read total += n; and putting a line back by itself once it is complete, taken back 2026-10-14 for the if lessons because the value turned back into the name before the learner had used it");
