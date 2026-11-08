@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operators_classed } from "./app_code_operators_classed.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { app_code_operators_by_rank } from "./app_code_operators_by_rank.mjs";
+import { app_learn_js_operators_by_rank } from "./app_learn_js_operators_by_rank.mjs";
 import { lists_index_including } from "./lists_index_including.mjs";
 export function app_learn_js_operator_rank(symbol) {
   arguments_assert(arguments, 1);
@@ -18,7 +18,7 @@ export function app_learn_js_operator_rank(symbol) {
     classed,
     hint: "no strength class holds this operator, so how early it is worked out cannot be said. add it to the class javascript works it out alongside - guessing here prints a line that means something other than the shape it came from",
   });
-  let classes = app_code_operators_by_rank();
+  let classes = app_learn_js_operators_by_rank();
   let rank = lists_index_including(classes, symbol);
   return rank;
 }

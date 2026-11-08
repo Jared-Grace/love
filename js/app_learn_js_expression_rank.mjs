@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
-import { app_code_operators_by_rank } from "./app_code_operators_by_rank.mjs";
+import { app_learn_js_operators_by_rank } from "./app_learn_js_operators_by_rank.mjs";
 import { list_size } from "./list_size.mjs";
 export function app_learn_js_expression_rank(item) {
   arguments_assert(arguments, 1);
@@ -16,7 +16,7 @@ export function app_learn_js_expression_rank(item) {
     let rank = app_learn_js_operator_rank(symbol);
     return rank;
   }
-  let classes = app_code_operators_by_rank();
+  let classes = app_learn_js_operators_by_rank();
   let above = list_size(classes);
   return above;
 }
