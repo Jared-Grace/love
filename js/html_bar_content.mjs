@@ -1,7 +1,7 @@
 import { html_viewport_readout_when_asked } from "./html_viewport_readout_when_asked.mjs";
 import { html_scroll_body_mark } from "./html_scroll_body_mark.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
+import { html_viewport_height_always_visible } from "./html_viewport_height_always_visible.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 export function html_bar_content(root) {
@@ -11,7 +11,7 @@ export function html_bar_content(root) {
   html_style_assign(root, {
     display: "flex",
     "flex-direction": "column",
-    height: html_viewport_height_visible(),
+    height: html_viewport_height_always_visible(),
     margin: "0",
     "box-sizing": "border-box",
   });
