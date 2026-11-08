@@ -128,7 +128,7 @@ import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
 import { app_learn_js_program_step_order_words } from "./app_learn_js_program_step_order_words.mjs";
 import { add } from "./add.mjs";
-import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
+import { app_learn_js_program_step_solved_already_words } from "./app_learn_js_program_step_solved_already_words.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 export function app_code_program_step_through_generic(
   parent,
@@ -1384,7 +1384,7 @@ export function app_code_program_step_through_generic(
           let valued = equal(kind, "declare")
             ? list_get(actions, index3)
             : action;
-          reason_words = app_code_program_step_solved_already_words(
+          reason_words = app_learn_js_program_step_solved_already_words(
             said_text,
             valued,
           );
@@ -1408,7 +1408,7 @@ export function app_code_program_step_through_generic(
           }
           if (null_not_is(valued2)) {
             reason = "solved_already";
-            reason_words = app_code_program_step_solved_already_words(
+            reason_words = app_learn_js_program_step_solved_already_words(
               said_text,
               valued2,
             );
