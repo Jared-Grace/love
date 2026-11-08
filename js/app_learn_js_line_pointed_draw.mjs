@@ -6,7 +6,7 @@ import { list_second } from "./list_second.mjs";
 import { html_div } from "./html_div.mjs";
 import { equal } from "./equal.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { app_learn_js_span_text_highlight_color } from "./app_learn_js_span_text_highlight_color.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { modulo } from "./modulo.mjs";
 import { not } from "./not.mjs";
@@ -44,7 +44,7 @@ export function app_learn_js_line_pointed_draw(parts, pointers) {
         html_span_text(line, part);
         return;
       }
-      app_code_span_text_highlight_color(line, part, color);
+      app_learn_js_span_text_highlight_color(line, part, color);
     }
     function part_draw(part, index) {
       if (text_empty_is(part)) {

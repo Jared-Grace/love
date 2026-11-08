@@ -9,7 +9,7 @@ import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_co
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs";
-import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { app_learn_js_span_text_highlight_color } from "./app_learn_js_span_text_highlight_color.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_width_fit_content } from "./html_style_width_fit_content.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_lesson_inside_parenthesis_box(
   html_span_text(line_only, "Only the name ");
   app_code_span_text_highlight(line_only, "inside");
   html_span_text(line_only, " the ");
-  app_code_span_text_highlight_color(line_only, "parenthesis", marking);
+  app_learn_js_span_text_highlight_color(line_only, "parenthesis", marking);
   html_span_text(line_only, " ");
   html_span_text_code_background(line_only, paren_left, marking);
   html_span_text(line_only, " ");

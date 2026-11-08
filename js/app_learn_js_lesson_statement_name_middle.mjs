@@ -1,7 +1,7 @@
 import { property_list_first } from "./property_list_first.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
-import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { app_learn_js_span_text_highlight_color } from "./app_learn_js_span_text_highlight_color.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_learn_js_lesson_bold_term } from "./app_learn_js_lesson_bold_term.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
@@ -168,7 +168,7 @@ export function app_learn_js_lesson_statement_name_middle() {
       ", the average of two numbers is the number in the ",
     );
     let color_middle = app_learn_js_highlight_color_second();
-    app_code_span_text_highlight_color(line, "middle", color_middle);
+    app_learn_js_span_text_highlight_color(line, "middle", color_middle);
   }
   let color = app_learn_js_highlight_color();
   let color2 = app_learn_js_highlight_color_second();

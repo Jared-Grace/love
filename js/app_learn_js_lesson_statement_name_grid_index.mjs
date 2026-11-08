@@ -10,7 +10,7 @@ import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_refere
 import { app_learn_js_lesson_statement_name_grid_row } from "./app_learn_js_lesson_statement_name_grid_row.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { app_learn_js_span_text_highlight_color } from "./app_learn_js_span_text_highlight_color.mjs";
 import { each_index } from "./each_index.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_chair_line_pointed } from "./app_learn_js_chair_line_pointed.mjs";
@@ -97,7 +97,7 @@ export function app_learn_js_lesson_statement_name_grid_index() {
       app_learn_js_lesson_statement_name_grid_row,
     );
     html_span_text_content(line, ", found its ");
-    app_code_span_text_highlight_color(line, row, color_row);
+    app_learn_js_span_text_highlight_color(line, row, color_row);
     html_span_text_content(line, ":");
     ("the row line as a block of code, which wraps, since a chip is kept on one line and this one runs past a phone's width");
     let parent = html_div(box);
@@ -161,7 +161,7 @@ export function app_learn_js_lesson_statement_name_grid_index() {
       if (greater_than(index, 0)) {
         html_span_text_content(line, " ");
       }
-      app_code_span_text_highlight_color(line, text, color_before);
+      app_learn_js_span_text_highlight_color(line, text, color_before);
     }
     each_index(listed, listed_draw);
     html_span_text_content(line, ")");

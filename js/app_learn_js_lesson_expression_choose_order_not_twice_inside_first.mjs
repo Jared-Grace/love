@@ -13,7 +13,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain } from "./app_learn_js_lesson_expression_choose_order_not_twice_rewritten_plain.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip } from "./app_learn_js_lesson_expression_choose_order_not_twice_rewritten_chip.mjs";
-import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { app_learn_js_span_text_highlight_color } from "./app_learn_js_span_text_highlight_color.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_twice_inside_first(
   parent,
@@ -77,7 +77,7 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_inside_fir
   html_span_text_code_dark(line_show, bang);
   let line_first = html_div(parent);
   html_span_text(line_first, "The ");
-  app_code_span_text_highlight_color(line_first, "first", color_first);
+  app_learn_js_span_text_highlight_color(line_first, "first", color_first);
   html_span_text(line_first, " ");
   html_span_text_code_background(line_first, bang, color_first);
   html_span_text(
@@ -86,14 +86,14 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_inside_fir
   );
   let line_second = html_div(parent);
   html_span_text(line_second, "The ");
-  app_code_span_text_highlight_color(line_second, "second", color_second);
+  app_learn_js_span_text_highlight_color(line_second, "second", color_second);
   html_span_text(line_second, " ");
   html_span_text_code_background(line_second, bang, color_second);
   html_span_text(
     line_second,
     " is solved first because it's on the inside of the ",
   );
-  app_code_span_text_highlight_color(
+  app_learn_js_span_text_highlight_color(
     line_second,
     "outer parentheses",
     color_third,

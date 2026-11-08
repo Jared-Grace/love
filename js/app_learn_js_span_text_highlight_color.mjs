@@ -4,7 +4,11 @@ import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-export function app_code_span_text_highlight_color(parent, text, background) {
+export function app_learn_js_span_text_highlight_color(
+  parent,
+  text,
+  background,
+) {
   arguments_assert(arguments, 3);
   ("an ordinary English word in the colour a piece of code is marked with, in a colour handed in, so that the word and the code can be seen to be about each other");
   ("THE COLOUR IS HANDED IN because a screen pointing at two different pieces of code at once needs two of these words and they must not match. Where only one thing is pointed at, ",

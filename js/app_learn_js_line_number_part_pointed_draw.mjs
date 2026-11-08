@@ -1,4 +1,4 @@
-import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { app_learn_js_span_text_highlight_color } from "./app_learn_js_span_text_highlight_color.mjs";
 import { app_learn_js_number_pointed_parts } from "./app_learn_js_number_pointed_parts.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -43,7 +43,7 @@ export function app_learn_js_line_number_part_pointed_draw(parts, pointers) {
         html_span_text(line, part);
         return;
       }
-      app_code_span_text_highlight_color(line, part, color);
+      app_learn_js_span_text_highlight_color(line, part, color);
     }
     function part_draw(part, index) {
       if (text_empty_is(part)) {
