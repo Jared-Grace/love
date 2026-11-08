@@ -7,7 +7,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { list_all } from "./list_all.mjs";
-export function app_code_quiz_token_kind(token) {
+export function app_learn_js_quiz_token_kind(token) {
   "What a tile of an unscramble is, as far as swapping it with another tile goes: a value, a sign, or something that holds its place.";
   "Two tiles of one kind can stand where the other stood and the line still reads. A number and a true both stand for something, so either can go where the other was; a plus and a triple equals both stand between two things, so likewise. A parenthesis, a comma, a semicolon, a dot and a name are none of that - they are the shape the line is written in, and moving one makes no line at all - so they are answered as holding their place and are never dealt anywhere else.";
   "The signs are asked by their characters rather than listed, because the list would be this language's own and would go out of step the day a sign is met that nobody wrote down here. A tile made of nothing but the characters signs are made of is a sign.";

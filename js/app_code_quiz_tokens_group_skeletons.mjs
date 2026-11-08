@@ -2,7 +2,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_quiz_token_kind } from "./app_code_quiz_token_kind.mjs";
+import { app_learn_js_quiz_token_kind } from "./app_learn_js_quiz_token_kind.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
@@ -28,7 +28,7 @@ export function app_code_quiz_tokens_group_skeletons(tokens) {
   let skeletons = [];
   function record(mark, from, to) {
     let inside = list_slice(tokens, from, to);
-    let kinds = list_map(inside, app_code_quiz_token_kind);
+    let kinds = list_map(inside, app_learn_js_quiz_token_kind);
     let written = list_join_space(kinds);
     let entry = text_combine_multiple([mark, " ", written]);
     list_add(skeletons, entry);

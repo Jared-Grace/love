@@ -1,4 +1,4 @@
-import { app_code_quiz_token_kind } from "./app_code_quiz_token_kind.mjs";
+import { app_learn_js_quiz_token_kind } from "./app_learn_js_quiz_token_kind.mjs";
 import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_get } from "./list_get.mjs";
@@ -9,7 +9,7 @@ export function app_code_quiz_token_places_of_kind(tokens, kind) {
   let places = list_indexes(tokens);
   function of_kind_is(at) {
     let token = list_get(tokens, at);
-    let token_kind = app_code_quiz_token_kind(token);
+    let token_kind = app_learn_js_quiz_token_kind(token);
     let wanted = equal(token_kind, kind);
     return wanted;
   }
