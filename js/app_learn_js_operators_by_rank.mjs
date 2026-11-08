@@ -6,7 +6,7 @@ import { app_learn_js_operators_relating } from "./app_learn_js_operators_relati
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_learn_js_operators_scaling } from "./app_learn_js_operators_scaling.mjs";
 import { app_learn_js_operators_powering } from "./app_learn_js_operators_powering.mjs";
-import { app_code_operators_strongest } from "./app_code_operators_strongest.mjs";
+import { app_learn_js_operators_strongest } from "./app_learn_js_operators_strongest.mjs";
 export function app_learn_js_operators_by_rank() {
   arguments_assert(arguments, 0);
   ("every strength class this app knows, weakest first: || , then &&, then === and the other signs asking whether two things are the same, then < and the others asking which is bigger, then + and -, then * / and the remainder, then the power sign, then ! and Math.floor");
@@ -19,7 +19,7 @@ export function app_learn_js_operators_by_rank() {
   let weak = app_code_operators_weak();
   let scaling = app_learn_js_operators_scaling();
   let powering = app_learn_js_operators_powering();
-  let strongest = app_code_operators_strongest();
+  let strongest = app_learn_js_operators_strongest();
   let classes = [
     weakest,
     weaker,

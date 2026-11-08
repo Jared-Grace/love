@@ -2,7 +2,7 @@ import { app_learn_js_operators_called } from "./app_learn_js_operators_called.m
 import { list_concat } from "./list_concat.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
-export function app_code_operators_strongest() {
+export function app_learn_js_operators_strongest() {
   arguments_assert(arguments, 0);
   ("the operators a code lesson solves before every other one, by their symbols: ! and Math.floor");
   ("A class above * and /, because ! is worked out before anything around it: !true && false takes the ! first, and a line built as a shape has to print back as the line it means. Given the same strength as * it would print without the parentheses that say which side it holds.");
