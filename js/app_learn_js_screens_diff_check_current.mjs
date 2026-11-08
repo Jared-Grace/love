@@ -6,7 +6,7 @@ import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_equals } from "./property_equals.mjs";
-export function app_code_screens_diff_check_current(r) {
+export function app_learn_js_screens_diff_check_current(r) {
   arguments_assert(arguments, 1);
   let added = property_get(r, "added");
   let baseline = property_get(r, "baseline");
