@@ -8,7 +8,7 @@ import { not } from "./not.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { app_code_program_line_enclosing } from "./app_code_program_line_enclosing.mjs";
+import { app_learn_js_program_line_enclosing } from "./app_learn_js_program_line_enclosing.mjs";
 export function app_code_program_step_line_wrong_words(
   lines,
   trace,
@@ -170,7 +170,10 @@ export function app_code_program_step_line_wrong_words(
   if (plain && equal(due, previous + 1)) {
     ("2026-10-23, the human's words for a plain line inside a { ... }, with is ran said as runs: there the next line runs unless something jumps out, which a line with no { } of its own does not");
     if (
-      greater_than(app_code_program_line_enclosing(lines, previous).length, 0)
+      greater_than(
+        app_learn_js_program_line_enclosing(lines, previous).length,
+        0,
+      )
     ) {
       let r7 = {
         reason: "next_inside",

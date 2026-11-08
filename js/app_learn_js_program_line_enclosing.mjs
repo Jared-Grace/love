@@ -2,7 +2,7 @@ import { subtract } from "./subtract.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_program_line_enclosing(lines, i) {
+export function app_learn_js_program_line_enclosing(lines, i) {
   arguments_assert(arguments, 2);
   ("The lines whose { line i is inside, nearest first. Read upward from line i, each { that no later } has closed is one that line i is inside");
   let found = [];

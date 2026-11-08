@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { not } from "./not.mjs";
-import { app_code_program_line_enclosing } from "./app_code_program_line_enclosing.mjs";
+import { app_learn_js_program_line_enclosing } from "./app_learn_js_program_line_enclosing.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
 export function app_code_program_step_line_never_words(lines, trace, pressed) {
@@ -26,7 +26,7 @@ export function app_code_program_step_line_never_words(lines, trace, pressed) {
   }
   let candidates = else_if_head
     ? [pressed]
-    : app_code_program_line_enclosing(lines, pressed);
+    : app_learn_js_program_line_enclosing(lines, pressed);
   for (let j of candidates) {
     let text = list_get(lines, j).trim();
     let entered = runs.includes(j + 1);
@@ -36,7 +36,7 @@ export function app_code_program_step_line_never_words(lines, trace, pressed) {
       let heads_count = 0;
       let k = j;
       while (list_get(lines, k).trim().startsWith("}")) {
-        k = app_code_program_line_enclosing(lines, k)[0];
+        k = app_learn_js_program_line_enclosing(lines, k)[0];
         heads_count = heads_count + 1;
       }
       let b = runs.includes(k);
