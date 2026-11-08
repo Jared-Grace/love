@@ -9,7 +9,7 @@ import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-export function app_code_program_step_piece_press_words(
+export function app_learn_js_program_step_piece_press_words(
   trace,
   index,
   pressed_piece,
