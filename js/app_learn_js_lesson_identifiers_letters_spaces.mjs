@@ -1,4 +1,4 @@
-import { app_code_verse_words_letters_only } from "./app_code_verse_words_letters_only.mjs";
+import { app_learn_js_verse_words_letters_only } from "./app_learn_js_verse_words_letters_only.mjs";
 import { list_map_first_upper_join } from "./list_map_first_upper_join.mjs";
 import { list_map_cycle } from "./list_map_cycle.mjs";
 import { list_shuffle_cycled_size } from "./list_shuffle_cycled_size.mjs";
@@ -56,7 +56,7 @@ export function app_learn_js_lesson_identifiers_letters_spaces() {
     ]);
   }
   function batch_get() {
-    let mapped = app_code_verse_words_letters_only();
+    let mapped = app_learn_js_verse_words_letters_only();
     let counts = [2, 2, 3, 3];
     let list = list_slices_size_cycler(mapped, counts, 1);
     list_shuffle_cycled_size(list, counts);

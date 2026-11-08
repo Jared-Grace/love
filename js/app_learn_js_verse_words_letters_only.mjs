@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_verse_words } from "./app_code_verse_words.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_letters_only } from "./text_letters_only.mjs";
-export function app_code_verse_words_letters_only() {
+export function app_learn_js_verse_words_letters_only() {
   arguments_assert(arguments, 0);
   ("The words of the shared verse with everything but their letters taken off.");
   ("The lessons that teach what a name may be made of draw their words from here.");

@@ -1,4 +1,4 @@
-import { app_code_verse_words_letters_only } from "./app_code_verse_words_letters_only.mjs";
+import { app_learn_js_verse_words_letters_only } from "./app_learn_js_verse_words_letters_only.mjs";
 import { app_learn_js_symbols_separated_on_question_numbered_fifth } from "./app_learn_js_symbols_separated_on_question_numbered_fifth.mjs";
 import { app_learn_js_lesson_symbols_digits_numbered_fifth_on_symbol } from "./app_learn_js_lesson_symbols_digits_numbered_fifth_on_symbol.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_symbols_space() {
     );
   }
   function batch_get() {
-    let mapped = app_code_verse_words_letters_only();
+    let mapped = app_learn_js_verse_words_letters_only();
     let list2 = list_slices_size_random(mapped, 2, 3);
     let mapped2 = list_map(list2, list_join_space_nb);
     return mapped2;

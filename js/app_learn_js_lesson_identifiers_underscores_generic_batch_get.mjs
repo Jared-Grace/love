@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_verse_words_letters_only } from "./app_code_verse_words_letters_only.mjs";
+import { app_learn_js_verse_words_letters_only } from "./app_learn_js_verse_words_letters_only.mjs";
 import { list_slices_size_cycles_shuffled } from "./list_slices_size_cycles_shuffled.mjs";
 import { list_cycler } from "./list_cycler.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_identifiers_underscores_generic_batch_get(
   separator_valid,
 ) {
   arguments_assert(arguments, 2);
-  let mapped = app_code_verse_words_letters_only();
+  let mapped = app_learn_js_verse_words_letters_only();
   let list = list_slices_size_cycles_shuffled(mapped, 2, 4);
   let separators_invalid_next = list_cycler([
     [separator_invalid],

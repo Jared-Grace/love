@@ -1,4 +1,4 @@
-import { app_code_verse_words_letters_only } from "./app_code_verse_words_letters_only.mjs";
+import { app_learn_js_verse_words_letters_only } from "./app_learn_js_verse_words_letters_only.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_identifiers_valid } from "./app_learn_js_lesson_identifiers_valid.mjs";
 import { list_map_index } from "./list_map_index.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_identifiers_symbol_first_generic(
   on_question,
 ) {
   function batch_get() {
-    let mapped = app_code_verse_words_letters_only();
+    let mapped = app_learn_js_verse_words_letters_only();
     let min = 1;
     let max = 2;
     let counts = range_from(min, max);
