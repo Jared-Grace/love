@@ -6,7 +6,7 @@ import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_includes } from "./text_includes.mjs";
-export function app_code_quiz_exercise_lenient_is(exercise) {
+export function app_learn_js_quiz_exercise_lenient_is(exercise) {
   arguments_assert(arguments, 1);
   ("true of one quiz question whose right answer can be picked by reading it off the question itself: the right answer stands in the code, and not one of the wrong answers on offer does");
   ("That is a screen that marks a learner right for a reason that has nothing to do with what it teaches. It happened three times in a row without anybody noticing, because a quiz that looks well made and a quiz that can be passed by luck are the same quiz to read - the difference is in the wrong answers, which are made when the screen is drawn and never written down anywhere.");

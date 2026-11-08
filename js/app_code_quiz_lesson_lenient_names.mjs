@@ -1,6 +1,6 @@
 import { property_equals } from "./property_equals.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice } from "./app_learn_js_lesson_quiz_multiple_choice.mjs";
-import { app_code_quiz_exercise_lenient_is } from "./app_code_quiz_exercise_lenient_is.mjs";
+import { app_learn_js_quiz_exercise_lenient_is } from "./app_learn_js_quiz_exercise_lenient_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
@@ -46,7 +46,7 @@ export function app_code_quiz_lesson_lenient_names(lesson) {
     "note this way round as passable by reading, if it has questions and every one of them is";
     let asked = list_empty_not_is(group);
     if (asked) {
-      let every = list_all(group, app_code_quiz_exercise_lenient_is);
+      let every = list_all(group, app_learn_js_quiz_exercise_lenient_is);
       if (every) {
         let words = [id, way];
         let name = list_join_space(words);
