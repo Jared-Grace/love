@@ -3,7 +3,7 @@ import { app_learn_js_lesson_current_number } from "./app_learn_js_lesson_curren
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_lesson_current_last_is } from "./app_learn_js_lesson_current_last_is.mjs";
-import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
+import { app_learn_js_quiz_index_reset } from "./app_learn_js_quiz_index_reset.mjs";
 import { app_learn_js_lesson_next } from "./app_learn_js_lesson_next.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_button_skip_lesson_past_review(context, parent) {
     return null;
   }
   async function skip() {
-    app_code_quiz_index_reset(context);
+    app_learn_js_quiz_index_reset(context);
     await app_learn_js_lesson_next(context);
   }
   let left = emoji_arrow_right();
