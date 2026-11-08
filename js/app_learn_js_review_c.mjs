@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_review_skip_button } from "./app_code_review_skip_button.mjs";
+import { app_learn_js_review_skip_button } from "./app_learn_js_review_skip_button.mjs";
 import { app_learn_js_review_arrow } from "./app_learn_js_review_arrow.mjs";
 import { app_learn_js_review_go_restart } from "./app_learn_js_review_go_restart.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,7 +13,7 @@ import { app_learn_js_review_next_word } from "./app_learn_js_review_next_word.m
 import { html_text_set } from "./html_text_set.mjs";
 export function app_learn_js_review_c(context, root) {
   arguments_assert(arguments, 2);
-  let r2 = app_code_review_skip_button(context, root);
+  let r2 = app_learn_js_review_skip_button(context, root);
   let r3 = app_learn_js_review_arrow(r2, context);
   let r4 = app_learn_js_review_go_restart(r3, context);
   let go_restart = property_get(r4, "go_restart");
