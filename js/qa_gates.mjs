@@ -295,7 +295,7 @@ import { folders_waiting_to_be_deleted_gate_run } from "./folders_waiting_to_be_
 import { claude_md_size_gate_run } from "./claude_md_size_gate_run.mjs";
 import { instructions_notes_gate_run } from "./instructions_notes_gate_run.mjs";
 import { instructions_commands_gate_run } from "./instructions_commands_gate_run.mjs";
-import { app_code_lessons_rights_space_gate_run } from "./app_code_lessons_rights_space_gate_run.mjs";
+import { app_learn_js_lessons_rights_space_gate_run } from "./app_learn_js_lessons_rights_space_gate_run.mjs";
 import { app_learn_js_lesson_expression_which_part_first_gate_run } from "./app_learn_js_lesson_expression_which_part_first_gate_run.mjs";
 import { functions_assert_json_get_lambda_gate_run } from "./functions_assert_json_get_lambda_gate_run.mjs";
 import { permission_settings_allow_drift_cases_gate_run } from "./permission_settings_allow_drift_cases_gate_run.mjs";
@@ -946,7 +946,7 @@ export function qa_gates() {
     claude_md_size_gate_run,
     instructions_notes_gate_run,
     instructions_commands_gate_run,
-    app_code_lessons_rights_space_gate_run,
+    app_learn_js_lessons_rights_space_gate_run,
     app_learn_js_lesson_expression_which_part_first_gate_run,
     functions_assert_json_get_lambda_gate_run,
     permission_settings_allow_drift_cases_gate_run,

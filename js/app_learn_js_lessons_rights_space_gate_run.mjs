@@ -2,7 +2,7 @@ import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_lessons_rights_space_carrying } from "./app_learn_js_lessons_rights_space_carrying.mjs";
-export async function app_code_lessons_rights_space_gate_run() {
+export async function app_learn_js_lessons_rights_space_gate_run() {
   "Gate: no code lesson hands over a name-word starting with a space. Throws so the dispatcher seam exits nonzero.";
   "The space had no effect on the slug a shared link is written with, because the";
   "normalizer collapses the run of underscores it makes - which is why sixteen";
