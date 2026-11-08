@@ -40,7 +40,7 @@ import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_log_skipped() {
+export function app_learn_js_lesson_while_log_skipped() {
   arguments_assert(arguments, 0);
   ("a console.log inside a while that never runs, and one after it: let n = 9; while (n < 5) { console.log(n); n += 2; } console.log(n); writes out only 9, from the console.log after the while");
   ("The one new fact is that when what a while asks is false from the start, the lines inside its { ... } never run, so a console.log inside it writes out nothing, and the code continues after it.");

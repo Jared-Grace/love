@@ -303,7 +303,7 @@ import { app_learn_js_lesson_if_thrice } from "./app_learn_js_lesson_if_thrice.m
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_learn_js_lesson_while_log_after_change } from "./app_learn_js_lesson_while_log_after_change.mjs";
-import { app_code_lesson_while_log_skipped } from "./app_code_lesson_while_log_skipped.mjs";
+import { app_learn_js_lesson_while_log_skipped } from "./app_learn_js_lesson_while_log_skipped.mjs";
 import { app_learn_js_lesson_while_down } from "./app_learn_js_lesson_while_down.mjs";
 import { app_learn_js_lesson_while_less_equal } from "./app_learn_js_lesson_while_less_equal.mjs";
 import { app_learn_js_lesson_while_greater_equal } from "./app_learn_js_lesson_while_greater_equal.mjs";
@@ -664,7 +664,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while,
     app_code_lesson_while_log,
     app_learn_js_lesson_while_log_after_change,
-    app_code_lesson_while_log_skipped,
+    app_learn_js_lesson_while_log_skipped,
     app_learn_js_lesson_while_down,
     app_learn_js_lesson_while_less_equal,
     app_learn_js_lesson_while_greater_equal,
