@@ -13,8 +13,16 @@ export function app_shared_bible_offline_starting_named_text(name) {
       before: "",
       after: " کا ڈاؤن لوڈ شروع ہو رہا ہے",
     },
+    tgl: {
+      before: "Sinisimulan ang pag-download ng ",
+      after: "",
+    },
     translated_from: {
       ur: {
+        before: "Starting the download of ",
+        after: "",
+      },
+      tgl: {
         before: "Starting the download of ",
         after: "",
       },
