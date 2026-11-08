@@ -13,7 +13,7 @@ import { html_on_click } from "./html_on_click.mjs";
 import { subtract } from "./subtract.mjs";
 import { each } from "./each.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_code_review_finish_show } from "./app_code_review_finish_show.mjs";
+import { app_learn_js_review_finish_show } from "./app_learn_js_review_finish_show.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { add } from "./add.mjs";
@@ -93,7 +93,7 @@ export function app_code_review_present_fn_present(
     each([progress, c], html_clear);
     let done = list_empty_is(queue);
     if (done) {
-      app_code_review_finish_show({
+      app_learn_js_review_finish_show({
         success_container,
         back_button,
         restart_button,

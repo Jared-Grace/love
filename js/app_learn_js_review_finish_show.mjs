@@ -13,7 +13,7 @@ import { app_code_review_render_continue } from "./app_code_review_render_contin
 import { app_learn_js_advance_or_no_more } from "./app_learn_js_advance_or_no_more.mjs";
 import { app_learn_js_review_button_unfinished_before } from "./app_learn_js_review_button_unfinished_before.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-export function app_code_review_finish_show({
+export function app_learn_js_review_finish_show({
   success_container,
   back_button,
   restart_button,
