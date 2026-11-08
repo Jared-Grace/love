@@ -11,7 +11,7 @@ import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_
 import { not } from "./not.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
-import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
+import { app_learn_js_review_complete_is } from "./app_learn_js_review_complete_is.mjs";
 export function app_learn_js_course_unfinished_next(
   context,
   index_start,
@@ -46,7 +46,7 @@ export function app_learn_js_course_unfinished_next(
     let number = add_1(index);
     let due = app_code_review_due_is(number);
     if (due) {
-      let review_complete = app_code_review_complete_is(
+      let review_complete = app_learn_js_review_complete_is(
         reviews_complete,
         number,
       );

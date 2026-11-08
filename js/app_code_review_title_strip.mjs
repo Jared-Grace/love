@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_reviews_complete_read } from "./app_code_reviews_complete_read.mjs";
-import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
+import { app_learn_js_review_complete_is } from "./app_learn_js_review_complete_is.mjs";
 import { emoji_check } from "./emoji_check.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
@@ -17,7 +17,10 @@ export function app_code_review_title_strip(root, context) {
   let checkpoint_key = property_get(checkpoint, "key");
   let words = property_get(checkpoint, "title");
   let reviews_complete = app_code_reviews_complete_read(context);
-  let complete = app_code_review_complete_is(reviews_complete, checkpoint_key);
+  let complete = app_learn_js_review_complete_is(
+    reviews_complete,
+    checkpoint_key,
+  );
   function title_paint(title) {
     "a finished review wears the check a finished lesson wears, in front of its words";
     if (complete) {
