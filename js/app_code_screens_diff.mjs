@@ -1,4 +1,4 @@
-import { app_code_screens_diff_result } from "./app_code_screens_diff_result.mjs";
+import { app_learn_js_screens_diff_result } from "./app_learn_js_screens_diff_result.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_screens_diff_check_removed } from "./app_learn_js_screens_diff_check_removed.mjs";
 import { app_learn_js_screens_diff_check_current } from "./app_learn_js_screens_diff_check_current.mjs";
@@ -11,6 +11,6 @@ export async function app_code_screens_diff(baseline_path, current_path) {
   let r2 = app_learn_js_screens_diff_check_current(r);
   let r3 = app_learn_js_screens_diff_check_removed(r2);
   let check_removed = property_get(r3, "check_removed");
-  let result = app_code_screens_diff_result(r3, check_removed);
+  let result = app_learn_js_screens_diff_result(r3, check_removed);
   return result;
 }

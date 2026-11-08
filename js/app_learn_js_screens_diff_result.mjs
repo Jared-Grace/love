@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
-export function app_code_screens_diff_result(r, check_removed) {
+export function app_learn_js_screens_diff_result(r, check_removed) {
   arguments_assert(arguments, 2);
   let changed = property_get(r, "changed");
   let baseline = property_get(r, "baseline");
