@@ -1,7 +1,7 @@
 import { app_code_lessons_review_diff_shared_sized } from "./app_code_lessons_review_diff_shared_sized.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_lessons_review_diff_shared_section } from "./app_learn_js_lessons_review_diff_shared_section.mjs";
-import { app_code_lessons_review_diff_shared_size } from "./app_code_lessons_review_diff_shared_size.mjs";
+import { app_learn_js_lessons_review_diff_shared_size } from "./app_learn_js_lessons_review_diff_shared_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_lessons_review_diff_counted } from "./app_learn_js_lessons_review_diff_counted.mjs";
@@ -85,7 +85,7 @@ export async function app_code_lessons_review_diff_write(commit) {
   let sizes = list_map(smallest_first, app_code_lessons_review_diff_size);
   let shared_sizes = list_map(
     shared_smallest_first,
-    app_code_lessons_review_diff_shared_size,
+    app_learn_js_lessons_review_diff_shared_size,
   );
   let r = {
     commit,
