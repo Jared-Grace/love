@@ -1,7 +1,7 @@
 import { app_learn_js_hash_complete_before_word } from "./app_learn_js_hash_complete_before_word.mjs";
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_progress_before_complete_mark } from "./app_code_progress_before_complete_mark.mjs";
+import { app_learn_js_progress_before_complete_mark } from "./app_learn_js_progress_before_complete_mark.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_hash_complete_known_is } from "./app_learn_js_hash_complete_known_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_hash_complete_restore(context, hash) {
     let lesson_id = property_get_or_null(hash, property);
     let lesson_said = null_not_is(lesson_id);
     if (lesson_said) {
-      app_code_progress_before_complete_mark(context, lesson_id);
+      app_learn_js_progress_before_complete_mark(context, lesson_id);
     }
     return;
   }

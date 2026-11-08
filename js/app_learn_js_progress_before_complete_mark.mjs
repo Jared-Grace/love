@@ -6,7 +6,7 @@ import { list_map } from "./list_map.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_take } from "./list_take.mjs";
 import { app_code_progress_ids_complete_mark } from "./app_code_progress_ids_complete_mark.mjs";
-export function app_code_progress_before_complete_mark(context, lesson_id) {
+export function app_learn_js_progress_before_complete_mark(context, lesson_id) {
   arguments_assert(arguments, 2);
   ("Writes every lesson shown before the one with this id down as finished on this reader's own disk, and every review standing among them, so the course opens with this lesson the first one left to do.");
   let fns = app_learn_js_lessons_fns_shown();
