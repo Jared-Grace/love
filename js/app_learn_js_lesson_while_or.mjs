@@ -36,7 +36,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_or() {
+export function app_learn_js_lesson_while_or() {
   arguments_assert(arguments, 0);
   ("a while asking two things joined by ||: let a = 2; let b = 4; while (a < 5 || b < 5) { a++; b++; } console.log(a); console.log(b); writes out 5 and 7, still running after b reaches 5 because a < 5 is still true");
   ("The one new fact is that a while asking || keeps going while either side is true, so it stops only once both sides are false - the other way round from While asking &&, which stops at the first false.");
