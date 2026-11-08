@@ -10,7 +10,7 @@ import { text_starts_with } from "./text_starts_with.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_program_step_line_while_words } from "./app_learn_js_program_step_line_while_words.mjs";
-import { app_code_program_step_line_wrong_words } from "./app_code_program_step_line_wrong_words.mjs";
+import { app_learn_js_program_step_line_wrong_words } from "./app_learn_js_program_step_line_wrong_words.mjs";
 import { app_learn_js_program_step_line_ran_words } from "./app_learn_js_program_step_line_ran_words.mjs";
 import { app_learn_js_program_step_line_never_words } from "./app_learn_js_program_step_line_never_words.mjs";
 import { app_code_program_step_noun } from "./app_code_program_step_noun.mjs";
@@ -76,7 +76,12 @@ export function app_learn_js_program_step_line_press_words(
         i,
       );
       if (null_is(wrong)) {
-        wrong = app_code_program_step_line_wrong_words(lines, trace, index, i);
+        wrong = app_learn_js_program_step_line_wrong_words(
+          lines,
+          trace,
+          index,
+          i,
+        );
       }
       if (null_is(wrong)) {
         wrong = app_learn_js_program_step_line_ran_words(

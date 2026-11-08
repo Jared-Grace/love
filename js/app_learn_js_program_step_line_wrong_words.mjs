@@ -9,7 +9,7 @@ import { greater_than } from "./greater_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_learn_js_program_line_enclosing } from "./app_learn_js_program_line_enclosing.mjs";
-export function app_code_program_step_line_wrong_words(
+export function app_learn_js_program_step_line_wrong_words(
   lines,
   trace,
   index,
