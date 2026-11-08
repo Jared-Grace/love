@@ -7,7 +7,10 @@ import { app_code } from "./app_code.mjs";
 import { server_url } from "./server_url.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_happy_url_walked } from "./app_learn_js_happy_url_walked.mjs";
-export async function app_code_tests_run_e2e_happy_from(stage_name, lesson_id) {
+export async function app_learn_js_tests_run_e2e_happy_from(
+  stage_name,
+  lesson_id,
+) {
   "$plain stage_name";
   "$plain lesson_id";
   "click through the code course from one lesson to the end as somebody who gets every question right, walking one named stage of the build on this machine, with every lesson before it marked finished by the link";
