@@ -1,4 +1,4 @@
-import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
+import { app_learn_js_no_more_lessons } from "./app_learn_js_no_more_lessons.mjs";
 export function app_learn_js_advance_or_no_more(
   parent,
   has_next,
@@ -8,6 +8,6 @@ export function app_learn_js_advance_or_no_more(
   if (has_next) {
     render_advance(parent);
   } else {
-    app_code_no_more_lessons(parent);
+    app_learn_js_no_more_lessons(parent);
   }
 }
