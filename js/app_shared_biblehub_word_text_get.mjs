@@ -4,8 +4,10 @@ export function app_shared_biblehub_word_text_get() {
   let texts = {
     en: "Open word in BibleHub",
     ur: "BibleHub پر لفظ کھولیں",
+    tgl: "Buksan ang salita sa BibleHub",
     translated_from: {
       ur: "Open word in BibleHub",
+      tgl: "Open word in BibleHub",
     },
   };
   let v = app_shared_text_reader_language(texts);
