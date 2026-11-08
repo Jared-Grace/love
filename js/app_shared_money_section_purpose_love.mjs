@@ -17,8 +17,22 @@ export function app_shared_money_section_purpose_love() {
         "خدا کا کلام ہمیں مفت دیا گیا ہے۔ اِس لیے ہم آپ کو مفت دیتے ہیں (متی 10:8)۔",
       ],
     },
+    tgl: {
+      title: "Ang aming layunin ay pag-ibig, hindi tubo",
+      lines: [
+        "Ang aming layunin ay ibahagi ang salita ng Diyos.",
+        "Ang salita ng Diyos ay ibinigay sa amin nang walang bayad. Kaya ibinibigay namin ito sa iyo nang walang bayad (Mateo 10:8).",
+      ],
+    },
     translated_from: {
       ur: {
+        title: "Our purpose is love, not profit",
+        lines: [
+          "Our purpose is sharing the word of God.",
+          "The word of God has been freely given to us. So we freely give to you (Matthew 10:8).",
+        ],
+      },
+      tgl: {
         title: "Our purpose is love, not profit",
         lines: [
           "Our purpose is sharing the word of God.",
