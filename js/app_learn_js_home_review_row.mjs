@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_review_range_label } from "./app_code_review_range_label.mjs";
-import { app_code_review_go } from "./app_code_review_go.mjs";
+import { app_learn_js_review_go } from "./app_learn_js_review_go.mjs";
 import { app_learn_js_review_button } from "./app_learn_js_review_button.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_home_review_row(
   arguments_assert(arguments, 5);
   let label = app_code_review_range_label(lesson_number, scope);
   async function on_click() {
-    await app_code_review_go(context, lesson_number);
+    await app_learn_js_review_go(context, lesson_number);
   }
   let review = app_learn_js_review_button(g, label, on_click, complete);
   let gap = app_shared_spaced_gap();

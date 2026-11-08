@@ -1,7 +1,7 @@
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_review_go } from "./app_code_review_go.mjs";
+import { app_learn_js_review_go } from "./app_learn_js_review_go.mjs";
 import { app_learn_js_quiz_index_reset } from "./app_learn_js_quiz_index_reset.mjs";
 import { app_learn_js_lesson_go } from "./app_learn_js_lesson_go.mjs";
 export async function app_learn_js_course_unfinished_go(context, way) {
@@ -10,7 +10,7 @@ export async function app_learn_js_course_unfinished_go(context, way) {
   let to_review = property_equals(way, "kind", "review");
   if (to_review) {
     let number = property_get(way, "number");
-    await app_code_review_go(context, number);
+    await app_learn_js_review_go(context, number);
     return;
   }
   let lesson = property_get(way, "lesson");
