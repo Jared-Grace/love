@@ -3,7 +3,7 @@ import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { function_lesson_rights_space_strip } from "./function_lesson_rights_space_strip.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_code_lessons_rights_space_strip() {
+export async function app_learn_js_lessons_rights_space_strip() {
   "takes the leading space off the name-words of every code lesson still carrying one, finds its own set, and asks again afterwards to show none is left";
   "The set is found rather than given, because a list written into the caller drifts";
   "from what is actually there the moment a lesson is added - and this is the sweep";

@@ -408,7 +408,7 @@ export function permission_grant_names() {
     fn_name("js_identifiers_referenced_names_cases_gate_run"),
     fn_name("firebase_prod_apps_unchanged_report"),
     fn_name("firebase_prod_apps_asset_file_names"),
-    fn_name("app_code_lessons_rights_space_strip"),
+    fn_name("app_learn_js_lessons_rights_space_strip"),
     fn_name("app_learn_js_lessons_rights_space_gate_run"),
     fn_name("app_learn_js_lesson_ids"),
     fn_name("functions_assert_json_get_lambda_sites"),

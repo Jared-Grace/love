@@ -16,7 +16,7 @@ export async function app_learn_js_lessons_rights_space_gate_run() {
   let carrying = await app_learn_js_lessons_rights_space_carrying();
   let hint = text_combine_multiple([
     "these hand over a name-word starting with a space - take it off with ",
-    fn_name("app_code_lessons_rights_space_strip"),
+    fn_name("app_learn_js_lessons_rights_space_strip"),
   ]);
   list_empty_is_assert_json(carrying, {
     hint,
