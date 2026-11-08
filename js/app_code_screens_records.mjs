@@ -3,7 +3,7 @@ import { playwright_test_blank } from "./playwright_test_blank.mjs";
 import { app_code_screens_no_lesson } from "./app_code_screens_no_lesson.mjs";
 import { app_code_screens_crawl_screen } from "./app_code_screens_crawl_screen.mjs";
 import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
-import { app_code_screens_crawl_lesson } from "./app_code_screens_crawl_lesson.mjs";
+import { app_learn_js_screens_crawl_lesson } from "./app_learn_js_screens_crawl_lesson.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_add } from "./list_add.mjs";
 export async function app_code_screens_records(url_prefix) {
@@ -24,7 +24,7 @@ export async function app_code_screens_records(url_prefix) {
     await page.addInitScript(seed_script);
     await page.goto(url_prefix);
     async function crawl_one(id) {
-      await app_code_screens_crawl_lesson(page, url_prefix, id, records);
+      await app_learn_js_screens_crawl_lesson(page, url_prefix, id, records);
     }
     await each_async(ids, crawl_one);
     async function crawl_screen(screen) {

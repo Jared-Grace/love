@@ -12,7 +12,7 @@ import { app_learn_js_screen_capture } from "./app_learn_js_screen_capture.mjs";
 import { app_learn_js_screen_next_click_script } from "./app_learn_js_screen_next_click_script.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-export async function app_code_screens_crawl_lesson(
+export async function app_learn_js_screens_crawl_lesson(
   page,
   url_prefix,
   id,
