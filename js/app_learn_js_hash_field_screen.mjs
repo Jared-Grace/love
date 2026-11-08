@@ -1,5 +1,5 @@
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
-import { app_code_screen_name_known_is } from "./app_code_screen_name_known_is.mjs";
+import { app_learn_js_screen_name_known_is } from "./app_learn_js_screen_name_known_is.mjs";
 import { app_code_screen_name_suggestions } from "./app_code_screen_name_suggestions.mjs";
 import { app_code_screen_name_label } from "./app_code_screen_name_label.mjs";
 export function app_learn_js_hash_field_screen() {
@@ -10,7 +10,7 @@ export function app_learn_js_hash_field_screen() {
     name: "screen",
     list_is: false,
     number_is: false,
-    valid_is: app_code_screen_name_known_is,
+    valid_is: app_learn_js_screen_name_known_is,
     suggestions: app_code_screen_name_suggestions,
     label: app_code_screen_name_label,
   };
