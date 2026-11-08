@@ -12,7 +12,7 @@ import { text_to } from "./text_to.mjs";
 import { equal } from "./equal.mjs";
 import { list_pop } from "./list_pop.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-export function app_code_quiz_tokens_group_skeletons(tokens) {
+export function app_learn_js_quiz_tokens_group_skeletons(tokens) {
   arguments_assert(arguments, 1);
   ("What a row of tiles has been grouped into: one entry for every pair of brackets and every pair of quotes in it, saying what kind of thing each pair encloses. The entries come back sorted, because which pair is written first is not part of the grouping.");
   ('A TREE CANNOT ANSWER THIS, WHICH IS WHY IT IS ASKED OF THE TILES. Parsing a line throws its brackets away - (true && true) || false and true && true || false give the identical tree, and so does true && ( true ) || false. So a reader that compares trees calls all three the same line, and a learner who put the brackets round one value instead of round the and is told they matched a shape they did not write. The same goes for quotes: "world" === "shall" and " world shall " === " " are both one string compared to another, and both come out false.');
