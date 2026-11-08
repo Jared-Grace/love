@@ -4,7 +4,7 @@ import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_length } from "./js_code_length.mjs";
-import { js_operator_minus } from "./js_operator_minus.mjs";
+import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_binary } from "./js_code_binary.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -54,7 +54,7 @@ export function app_learn_js_lesson_array_last_index() {
   }
   function last_index_code() {
     let length = js_code_length(name);
-    let minus = js_operator_minus();
+    let minus = js_operator_minus_symbol();
     let code = js_code_binary(length, minus, "1");
     return code;
   }
@@ -142,7 +142,7 @@ export function app_learn_js_lesson_array_last_index() {
     app_learn_js_div_cycle_code(root, ["", length2, " is ", count]);
     let index = subtract(size3, 1);
     let index_written = json_to(index);
-    let minus2 = js_operator_minus();
+    let minus2 = js_operator_minus_symbol();
     let sum = js_code_binary(count, minus2, "1");
     app_learn_js_div_cycle_code(root, ["", sum, " is ", index_written]);
     app_learn_js_div_cycle_code(root, [
