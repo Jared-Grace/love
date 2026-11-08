@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_verse_words_clean_unique } from "./app_learn_js_verse_words_clean_unique.mjs";
 import { text_lower_is } from "./text_lower_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_code_verse_words_lower_only() {
+export function app_learn_js_verse_words_lower_only() {
   arguments_assert(arguments, 0);
   ("the verse words that are already all lower case, made distinct - the only ones whose character-code order matches alphabetical order, so a capital never sorts ahead of a small letter in front of the learner");
   let distinct = app_learn_js_verse_words_clean_unique();

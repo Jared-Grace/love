@@ -1,6 +1,6 @@
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_string_trichotomy } from "./app_learn_js_lesson_expression_string_trichotomy.mjs";
-import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
+import { app_learn_js_verse_words_lower_only } from "./app_learn_js_verse_words_lower_only.mjs";
 import { app_learn_js_lesson_expression_string_order_equal_title_name_id } from "./app_learn_js_lesson_expression_string_order_equal_title_name_id.mjs";
 import { app_learn_js_string_comparison_code } from "./app_learn_js_string_comparison_code.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_expression_string_order_equal() {
   ];
   function refill() {
     "four comparisons over ONE shared pair of words: <= and >= each shown true (when the strings are equal) and false (when they are in the strictly-wrong direction), so the new equal-is-true behaviour stands out against the < and > the learner already knows";
-    let words = app_code_verse_words_lower_only();
+    let words = app_learn_js_verse_words_lower_only();
     let two = list_shuffle_take(words, 2);
     let ordered = list_sort_text(two);
     let earlier = list_get(ordered, 0);

@@ -1,5 +1,5 @@
 import { app_learn_js_lesson_expression_string_order_above } from "./app_learn_js_lesson_expression_string_order_above.mjs";
-import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
+import { app_learn_js_verse_words_lower_only } from "./app_learn_js_verse_words_lower_only.mjs";
 import { app_learn_js_lesson_expression_string_order_title_name_id } from "./app_learn_js_lesson_expression_string_order_title_name_id.mjs";
 import { app_learn_js_string_comparison_code } from "./app_learn_js_string_comparison_code.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
@@ -36,7 +36,7 @@ export function app_learn_js_lesson_expression_string_order() {
   ];
   function refill() {
     "four comparisons over ONE shared pair of DIFFERENT words: each operator shown true (in its correct direction) and false (in the wrong one), pure alphabetical ordering with no equal case - the equal case now lives in the string trichotomy lesson";
-    let words = app_code_verse_words_lower_only();
+    let words = app_learn_js_verse_words_lower_only();
     let two = list_shuffle_take(words, 2);
     let ordered = list_sort_text(two);
     let earlier = list_get(ordered, 0);

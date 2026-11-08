@@ -1,7 +1,7 @@
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_number_trichotomy } from "./app_learn_js_lesson_expression_number_trichotomy.mjs";
 import { app_learn_js_lesson_expression_string_order } from "./app_learn_js_lesson_expression_string_order.mjs";
-import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
+import { app_learn_js_verse_words_lower_only } from "./app_learn_js_verse_words_lower_only.mjs";
 import { app_learn_js_lesson_expression_string_trichotomy_title_name_id } from "./app_learn_js_lesson_expression_string_trichotomy_title_name_id.mjs";
 import { app_learn_js_string_comparison_code } from "./app_learn_js_string_comparison_code.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_expression_string_trichotomy() {
   ];
   function words_source() {
     "the verse words that are already all lower case, made distinct - the only ones whose character-code order matches alphabetical order, so a capital never sorts ahead of a small letter in front of the learner";
-    let lower_only = app_code_verse_words_lower_only();
+    let lower_only = app_learn_js_verse_words_lower_only();
     return lower_only;
   }
   function refill() {
