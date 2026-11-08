@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-export function app_code_review_home_button(r8, g, go_home) {
+export function app_learn_js_review_home_button(r8, g, go_home) {
   arguments_assert(arguments, 3);
   let restart_button = property_get(r8, "restart_button");
   let passed = property_get(r8, "passed");

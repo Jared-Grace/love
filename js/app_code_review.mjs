@@ -11,7 +11,7 @@ import { app_code_review_progress } from "./app_code_review_progress.mjs";
 import { app_code_review_restart_button } from "./app_code_review_restart_button.mjs";
 import { app_code_review_home_text } from "./app_code_review_home_text.mjs";
 import { app_learn_js_review_go_home } from "./app_learn_js_review_go_home.mjs";
-import { app_code_review_home_button } from "./app_code_review_home_button.mjs";
+import { app_learn_js_review_home_button } from "./app_learn_js_review_home_button.mjs";
 import { app_code_review_present } from "./app_code_review_present.mjs";
 export function app_code_review(context) {
   "The review screen at a checkpoint: the milestone intro on first arrival and otherwise the result with its restart and home buttons.";
@@ -32,7 +32,7 @@ export function app_code_review(context) {
   let r7 = app_code_review_home_text(r6);
   let r8 = app_learn_js_review_go_home(r7, context);
   let go_home = property_get(r8, "go_home");
-  let r9 = app_code_review_home_button(r8, g, go_home);
+  let r9 = app_learn_js_review_home_button(r8, g, go_home);
   let home_button = property_get(r9, "home_button");
   let present = app_code_review_present(r9, home_button, context);
   present();
