@@ -1,4 +1,4 @@
-import { app_code_quiz_unscramble_other_answer_rejected } from "./app_code_quiz_unscramble_other_answer_rejected.mjs";
+import { app_learn_js_quiz_unscramble_other_answer_rejected } from "./app_learn_js_quiz_unscramble_other_answer_rejected.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export function app_learn_js_quiz_unscramble_other_answer_gate_run() {
@@ -8,7 +8,7 @@ export function app_learn_js_quiz_unscramble_other_answer_gate_run() {
   "Read-only. It builds the same lines and the same pools the app builds, and looks at them.";
   "How many lines were built travels out with the verdict, because nothing rejected wrongly is also what this would say if the course handed out no lines at all.";
   let rounds = 3;
-  let swept = app_code_quiz_unscramble_other_answer_rejected(rounds);
+  let swept = app_learn_js_quiz_unscramble_other_answer_rejected(rounds);
   let walked = property_get(swept, "walked");
   let rejected = property_get(swept, "found");
   let hint =
