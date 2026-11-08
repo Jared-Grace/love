@@ -15,7 +15,7 @@ import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function app_code_lessons_review_diff_write(commit) {
+export async function app_learn_js_lessons_review_diff_write(commit) {
   "For every lesson whose own writing was edited since one commit, how much of it was edited and what the edit was: a size for each one, smallest first, and a written file holding the actual change under a heading naming the lesson and its place.";
   "THE SIZE IS WHAT THE READING IS FOR. A lesson two lines different needs two lines read; a lesson rewritten from the top needs reading as if it were new, and only the sizes tell those apart before any of it has been read. Ordering the file smallest first means the cheap ones are all done before the expensive ones start, so the reading can be stopped anywhere and what is left is known.";
   "ADDED AND TAKEN-AWAY LINES ARE COUNTED APART rather than added together, because a change that only takes lines away is a cut and reads far faster than the same number of lines put in.";
