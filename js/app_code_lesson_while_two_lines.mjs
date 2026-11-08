@@ -33,7 +33,7 @@ import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_while_start_end } from "./app_code_lesson_while_start_end.mjs";
+import { app_learn_js_lesson_while_start_end } from "./app_learn_js_lesson_while_start_end.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
@@ -199,7 +199,7 @@ export function app_code_lesson_while_two_lines() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_while_start_end,
+      app_learn_js_lesson_while_start_end,
       ["Lines inside the ", r, " repeat, and lines outside it run once."],
     );
     let box_two = app_learn_js_container_light_blue(root);

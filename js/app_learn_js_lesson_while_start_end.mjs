@@ -35,7 +35,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_start_end() {
+export function app_learn_js_lesson_while_start_end() {
   arguments_assert(arguments, 0);
   ('lines before and after a while: console.log("start"); let n = 0; while (n < 2) { console.log("joy"); n++; } console.log("end"); writes out start, joy, joy and end');
   ("The one new fact is the line between what repeats and what does not: lines inside the { ... } run every time, and lines outside it run once.");
