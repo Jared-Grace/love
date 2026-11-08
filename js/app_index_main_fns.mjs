@@ -1,5 +1,5 @@
-import { emoji_information } from "./emoji_information.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { emoji_information } from "./emoji_information.mjs";
 import { app_index_label_generic } from "./app_index_label_generic.mjs";
 export function app_index_main_fns(about_opened) {
   "The apps the front page offers, each with the sentence shown under it.";
@@ -54,7 +54,7 @@ export function app_index_main_fns(about_opened) {
     },
     {
       app_fn: fn_name("app_learn_en"),
-      text: "Allows learning English by reading the Bible, with every word explained in Urdu",
+      text: "Allows learning English by reading the Bible, with every word explained in Urdu or Tagalog",
       category: languages,
     },
     {
