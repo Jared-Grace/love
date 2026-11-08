@@ -8,8 +8,10 @@ export function app_shared_contact_prompt_text() {
   let texts = {
     en: "Is there anything you would like to tell the developer?",
     ur: "کیا آپ اسے بنانے والے کو کچھ بتانا چاہیں گے؟",
+    tgl: "Mayroon ka bang gustong sabihin sa developer?",
     translated_from: {
       ur: "Is there anything you would like to tell the developer?",
+      tgl: "Is there anything you would like to tell the developer?",
     },
   };
   let text = app_shared_text_reader_language(texts);
