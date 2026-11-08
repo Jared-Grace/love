@@ -4,7 +4,11 @@ import { not } from "./not.mjs";
 import { app_learn_js_program_line_enclosing } from "./app_learn_js_program_line_enclosing.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
-export function app_code_program_step_line_never_words(lines, trace, pressed) {
+export function app_learn_js_program_step_line_never_words(
+  lines,
+  trace,
+  pressed,
+) {
   arguments_assert(arguments, 3);
   ("Why a pressed line is not the next to run, when it never runs at all: the nearest { } around it whose head runs is never entered - an if false each time it runs, or an else whose ifs before it are never all false. null when the line runs, or when something else keeps it from running. lines is the program's lines, trace the lines it runs in order, and pressed the line pressed");
   ("2026-10-23, the human chose these words, and asked what happens when the if's name is changed before it runs: so whether an if is true is read from what ran, never from the condition. An if that runs while the first line inside its { } never runs was false each time it ran, whatever its name held before. Said whether or not the if has run yet, since the line never runs either way. Not picked: saying only once the if has run, which leaves the press before it with no words");
