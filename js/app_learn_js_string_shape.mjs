@@ -3,7 +3,7 @@ import { equal_not } from "./equal_not.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_placeholder_dots } from "./app_learn_js_placeholder_dots.mjs";
 import { each_index } from "./each_index.mjs";
-import { app_code_string_tile } from "./app_code_string_tile.mjs";
+import { app_learn_js_string_tile } from "./app_learn_js_string_tile.mjs";
 export function app_learn_js_string_shape(parent, word_count) {
   "the SHAPE of a string as a code tile: a quote, then word_count groups of ... in the placeholder colour separated by spaces, then a quote. 1 gives a one-word shape, 2 gives a two-word (spaced) shape. Shows the form of a string with the words left as grey placeholders";
   function fill(host) {
@@ -19,6 +19,6 @@ export function app_learn_js_string_shape(parent, word_count) {
     }
     each_index(groups, group);
   }
-  let tile = app_code_string_tile(parent, fill);
+  let tile = app_learn_js_string_tile(parent, fill);
   return tile;
 }

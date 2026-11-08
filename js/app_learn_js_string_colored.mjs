@@ -1,5 +1,5 @@
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
-import { app_code_string_tile } from "./app_code_string_tile.mjs";
+import { app_learn_js_string_tile } from "./app_learn_js_string_tile.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 export function app_learn_js_string_colored(parent, word) {
@@ -10,6 +10,6 @@ export function app_learn_js_string_colored(parent, word) {
     let color = app_code_string_value_color();
     html_font_color_set(inner, color);
   }
-  let tile = app_code_string_tile(parent, fill);
+  let tile = app_learn_js_string_tile(parent, fill);
   return tile;
 }
