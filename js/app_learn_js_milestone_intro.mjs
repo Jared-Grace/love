@@ -15,7 +15,7 @@ import { storage_session_set_context } from "./storage_session_set_context.mjs";
 import { app_code_review } from "./app_code_review.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-export function app_code_milestone_intro(root, context, checkpoint) {
+export function app_learn_js_milestone_intro(root, context, checkpoint) {
   arguments_assert(arguments, 3);
   ("the first screen of a milestone: its words by themselves, and a Begin button that writes down it was pressed and draws the questions - asked for by the human 2026-10-23");
   ("the words and the button share the card a question is drawn in, so the screen is as wide, and as centered, as the questions that follow it");
