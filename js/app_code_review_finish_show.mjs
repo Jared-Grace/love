@@ -7,7 +7,7 @@ import { app_learn_js_review_complete_record } from "./app_learn_js_review_compl
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_learn_js_milestone_celebration } from "./app_learn_js_milestone_celebration.mjs";
 import { app_learn_js_review_celebration } from "./app_learn_js_review_celebration.mjs";
-import { app_code_review_explain } from "./app_code_review_explain.mjs";
+import { app_learn_js_review_explain } from "./app_learn_js_review_explain.mjs";
 import { html_parent_append } from "./html_parent_append.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_learn_js_advance_or_no_more } from "./app_learn_js_advance_or_no_more.mjs";
@@ -45,7 +45,7 @@ export function app_code_review_finish_show({
   } else {
     app_learn_js_review_celebration(c);
   }
-  app_code_review_explain(c, explain);
+  app_learn_js_review_explain(c, explain);
   ("A milestone's again button is moved to straight under its words, which end by telling the learner to do it again - asked for by the human 2026-10-23. A review says nothing there, so its button stays where it was");
   if (list_empty_not_is(explain)) {
     html_parent_append(c, restart_button);

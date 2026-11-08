@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_review_explain } from "./app_code_review_explain.mjs";
+import { app_learn_js_review_explain } from "./app_learn_js_review_explain.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_milestone_intro(root, context, checkpoint) {
   ("the words and the button share the card a question is drawn in, so the screen is as wide, and as centered, as the questions that follow it");
   let c = app_learn_js_container_light_blue(root);
   let explain = property_get(checkpoint, "explain");
-  app_code_review_explain(c, explain);
+  app_learn_js_review_explain(c, explain);
   let arrow = emoji_arrow_right();
   let text = text_combine_middle_space_nb(arrow, "Begin");
   let key = property_get(checkpoint, "key");
