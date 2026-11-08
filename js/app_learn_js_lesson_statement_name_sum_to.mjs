@@ -3,7 +3,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { html_span } from "./html_span.mjs";
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_code_line_dots_draw } from "./app_code_line_dots_draw.mjs";
+import { app_learn_js_line_dots_draw } from "./app_learn_js_line_dots_draw.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -84,12 +84,12 @@ export function app_learn_js_lesson_statement_name_sum_to() {
     });
   }
   let middle_lines = [line_next, line_product, line_sum];
-  let draw = app_code_line_dots_draw([
+  let draw = app_learn_js_line_dots_draw([
     "But what if we wanted to add together the first 100 numbers? ",
     hundred,
     " ?",
   ]);
-  let draw2 = app_code_line_dots_draw([
+  let draw2 = app_learn_js_line_dots_draw([
     "Instead, there's a formula to add the numbers ",
     up_to,
     " together",
