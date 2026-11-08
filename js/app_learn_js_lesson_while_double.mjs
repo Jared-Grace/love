@@ -15,7 +15,7 @@ import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.m
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 import { js_code_while_lines } from "./js_code_while_lines.mjs";
-export function app_code_lesson_while_double() {
+export function app_learn_js_lesson_while_double() {
   arguments_assert(arguments, 0);
   ("a while that doubles: let n = 3; while (n < 20) { n *= 2; } console.log(n); writes out 24");
   ("The one new fact is that a while can grow n by more each run: doubling adds 3 the first time, 6 the next, then 12, so each run has to be worked out rather than counted - halving, turned the other way.");
