@@ -7,7 +7,7 @@ import { app_code_quiz_tile_arrangements_or_null } from "./app_code_quiz_tile_ar
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { app_code_quiz_dealing_alike_is } from "./app_code_quiz_dealing_alike_is.mjs";
+import { app_learn_js_quiz_dealing_alike_is } from "./app_learn_js_quiz_dealing_alike_is.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_code_quiz_tile_arrangements_unpooled(code) {
@@ -33,7 +33,7 @@ export function app_code_quiz_tile_arrangements_unpooled(code) {
     if (holds) {
       continue;
     }
-    let alike = app_code_quiz_dealing_alike_is(code, written);
+    let alike = app_learn_js_quiz_dealing_alike_is(code, written);
     if (not(alike)) {
       continue;
     }

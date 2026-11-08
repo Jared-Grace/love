@@ -8,7 +8,7 @@ import { json_equal } from "./json_equal.mjs";
 import { js_tokens_comparisons_chained_is } from "./js_tokens_comparisons_chained_is.mjs";
 import { implies } from "./implies.mjs";
 import { app_code_quiz_tokens_values_mirrored_is } from "./app_code_quiz_tokens_values_mirrored_is.mjs";
-export function app_code_quiz_dealing_alike_is(code, candidate) {
+export function app_learn_js_quiz_dealing_alike_is(code, candidate) {
   "$plain code";
   "$plain candidate";
   arguments_assert(arguments, 2);

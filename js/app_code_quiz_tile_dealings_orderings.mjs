@@ -13,7 +13,7 @@ import { list_add } from "./list_add.mjs";
 import { app_code_quiz_tile_dealings_or_null } from "./app_code_quiz_tile_dealings_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_quiz_dealing_alike_is } from "./app_code_quiz_dealing_alike_is.mjs";
+import { app_learn_js_quiz_dealing_alike_is } from "./app_learn_js_quiz_dealing_alike_is.mjs";
 import { each } from "./each.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function app_code_quiz_tile_dealings_orderings(orderings, code) {
@@ -52,7 +52,7 @@ export function app_code_quiz_tile_dealings_orderings(orderings, code) {
     let dealings = property_get(dealt_from, "dealings");
     function keep(dealt) {
       let written = list_join_space(dealt);
-      let alike = app_code_quiz_dealing_alike_is(code, written);
+      let alike = app_learn_js_quiz_dealing_alike_is(code, written);
       if (alike) {
         list_add(written_kept, written);
       }
