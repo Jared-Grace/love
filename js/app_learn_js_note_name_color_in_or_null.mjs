@@ -5,7 +5,7 @@ import { list_index_of } from "./list_index_of.mjs";
 import { integer_is_assert } from "./integer_is_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_code_note_name_color_in_or_null(colors, names, name) {
+export function app_learn_js_note_name_color_in_or_null(colors, names, name) {
   arguments_assert(arguments, 3);
   ("the colour a given list of colours lends to a name, taken by where that name stands in the lesson's own list of names, and nothing when the name is not one of them");
   ("THE ORDER OF THE NAMES DECIDES, AND THE LIST OF COLOURS ONLY SAYS WHAT THE ORDER LOOKS LIKE. That is what lets one name be red on a black chip and a darker red on a pale card: the same question is asked twice with a different list of colours, and both times the answer comes from the same place in the same order, so both times it is the same name being spoken about.");
