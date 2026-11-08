@@ -4,7 +4,7 @@ import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-export function app_code_program_step_assign_none_words(line_text) {
+export function app_learn_js_program_step_assign_none_words(line_text) {
   arguments_assert(arguments, 1);
   ("Why a line with no assign has none, said by its sign - 2026-10-23, at the human's asking: If the line has a = then there is an assign, but this line does not have a =. Shaped like the declare one, so it says if and not if and only if. Words alternate text and code, text first");
   ("A line can hold = inside another operator, like === or ==, and saying it has no = would then be false. So those operators are named, in the order the line has them, and the = is said to be one by itself - the human's words: Although this has === and ==, this line does not have a = by itself. Not picked: saying by itself on every line, which asks the learner to think about operators the line does not have");

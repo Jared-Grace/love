@@ -7,7 +7,7 @@ import { equal } from "./equal.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { subtract } from "./subtract.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_program_step_assign_none_words } from "./app_code_program_step_assign_none_words.mjs";
+import { app_learn_js_program_step_assign_none_words } from "./app_learn_js_program_step_assign_none_words.mjs";
 export function app_code_program_step_order_words(
   actions,
   k,
@@ -234,7 +234,7 @@ export function app_code_program_step_order_words(
     ("line_text is the line as written, so the words can name an operator holding = that is not an assign");
     let r20 = {
       reason: "assign_none",
-      words: app_code_program_step_assign_none_words(line_text),
+      words: app_learn_js_program_step_assign_none_words(line_text),
     };
     return r20;
   }
