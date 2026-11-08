@@ -4,7 +4,7 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_symbol_tile_style } from "./app_shared_symbol_tile_style.mjs";
 import { app_shared_symbol_tile } from "./app_shared_symbol_tile.mjs";
-export function app_code_symbol_generic(
+export function app_learn_js_symbol_generic(
   parent,
   d,
   color_background,
