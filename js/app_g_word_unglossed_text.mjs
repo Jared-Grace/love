@@ -7,8 +7,10 @@ export function app_g_word_unglossed_text() {
   let texts = {
     en: "There is nothing written for this word yet.",
     ur: "اس لفظ کے بارے میں ابھی تک کچھ نہیں لکھا گیا۔",
+    tgl: "Wala pang nakasulat para sa salitang ito.",
     translated_from: {
       ur: "There is nothing written for this word yet.",
+      tgl: "There is nothing written for this word yet.",
     },
   };
   let text = app_shared_text_reader_language(texts);
