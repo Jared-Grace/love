@@ -6,7 +6,7 @@ import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
 import { app_learn_js_screens_crawl_lesson } from "./app_learn_js_screens_crawl_lesson.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_add } from "./list_add.mjs";
-export async function app_code_screens_records(url_prefix) {
+export async function app_learn_js_screens_records(url_prefix) {
   "crawl every code screen and return the raw capture { records, errors }: records is one entry per screen (examples plus each quiz kind, reached by clicking Next, then every screen that opens without a lesson - the list, the settings, and the two that ask before changing what a learner has finished) carrying its text and mechanical signals, errors is any javascript error seen. The shared collection behind both the mechanical crawl summary and the text manifest";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let ids = app_learn_js_lesson_ids();
