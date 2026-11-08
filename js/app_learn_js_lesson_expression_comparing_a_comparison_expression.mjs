@@ -1,5 +1,5 @@
 import { app_learn_js_comparison_equality_symbol } from "./app_learn_js_comparison_equality_symbol.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_comparison_side } from "./app_learn_js_comparison_side.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -19,6 +19,6 @@ export function app_learn_js_lesson_expression_comparing_a_comparison_expression
   );
   let left_code = property_get(left, "code");
   let right_code = js_true_false_word(right_value);
-  let code = app_code_operator_code(left_code, symbol, right_code);
+  let code = app_learn_js_operator_code(left_code, symbol, right_code);
   return code;
 }

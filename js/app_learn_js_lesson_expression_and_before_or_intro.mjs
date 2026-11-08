@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_worked_card_two_operators } from "./app_learn_js_lesson_expression_worked_card_two_operators.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
@@ -19,9 +19,9 @@ export function app_learn_js_lesson_expression_and_before_or_intro(
   let or_symbol = js_operator_or_symbol();
   let true_word = js_keyword_true();
   let false_word = js_keyword_false();
-  let pair = app_code_operator_code(false_word, and_symbol, true_word);
-  let whole = app_code_operator_code(pair, or_symbol, true_word);
-  let rest = app_code_operator_code(false_word, or_symbol, true_word);
+  let pair = app_learn_js_operator_code(false_word, and_symbol, true_word);
+  let whole = app_learn_js_operator_code(pair, or_symbol, true_word);
+  let rest = app_learn_js_operator_code(false_word, or_symbol, true_word);
   app_learn_js_container_light_blue_cycle_code(root, [
     "The ",
     and_symbol,

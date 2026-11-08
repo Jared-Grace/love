@@ -1,7 +1,7 @@
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_learn_js_operator_code_subject_first } from "./app_learn_js_operator_code_subject_first.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { digit_positive_random } from "./digit_positive_random.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_expression_which_part_first_expression() {
   let inner_right = text_to(input2);
   let input3 = digit_positive_random();
   let outer = text_to(input3);
-  let inner = app_code_operator_code(inner_left, strong, inner_right);
+  let inner = app_learn_js_operator_code(inner_left, strong, inner_right);
   let strong_first = boolean_random();
   let code = app_learn_js_operator_code_subject_first(
     strong_first,

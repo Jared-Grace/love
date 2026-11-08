@@ -1,4 +1,4 @@
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_comparison_side() {
   let value = fn(a, b);
   let a_code = text_to(a);
   let b_code = text_to(b);
-  let code = app_code_operator_code(a_code, symbol, b_code);
+  let code = app_learn_js_operator_code(a_code, symbol, b_code);
   let r = {
     code,
     value,

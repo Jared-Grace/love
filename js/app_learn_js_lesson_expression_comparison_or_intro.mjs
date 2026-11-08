@@ -1,5 +1,5 @@
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
@@ -19,10 +19,10 @@ export function app_learn_js_lesson_expression_comparison_or_intro(
   let less_than_symbol = js_operator_less_than_symbol();
   let true_word = js_keyword_true();
   let false_word = js_keyword_false();
-  let left_side = app_code_operator_code("3", less_than_symbol, "5");
-  let right_side = app_code_operator_code("8", less_than_symbol, "2");
-  let whole = app_code_operator_code(left_side, symbol, right_side);
-  let values = app_code_operator_code(true_word, symbol, false_word);
+  let left_side = app_learn_js_operator_code("3", less_than_symbol, "5");
+  let right_side = app_learn_js_operator_code("8", less_than_symbol, "2");
+  let whole = app_learn_js_operator_code(left_side, symbol, right_side);
+  let values = app_learn_js_operator_code(true_word, symbol, false_word);
   let what_is_new = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(what_is_new, [
     "A comparison can be either side of ",

@@ -1,6 +1,6 @@
 import { and } from "./and.mjs";
 import { app_learn_js_lesson_expression_worked_card_two_operators } from "./app_learn_js_lesson_expression_worked_card_two_operators.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
@@ -33,18 +33,18 @@ export function app_learn_js_lesson_expression_parentheses_worked_card({
   let outside = ternary(parentheses_left, right, left);
   let inside_first_word = js_true_false_word(inside_first);
   let inside_second_word = js_true_false_word(inside_second);
-  let pair = app_code_operator_code(
+  let pair = app_learn_js_operator_code(
     inside_first_word,
     inner_symbol,
     inside_second_word,
   );
   let parenthesised = js_code_wrap_parenthesis(pair);
-  let whole_left = app_code_operator_code(
+  let whole_left = app_learn_js_operator_code(
     parenthesised,
     outer_symbol,
     right_word,
   );
-  let whole_right = app_code_operator_code(
+  let whole_right = app_learn_js_operator_code(
     left_word,
     outer_symbol,
     parenthesised,
@@ -54,8 +54,16 @@ export function app_learn_js_lesson_expression_parentheses_worked_card({
   let pair_anded = and(inside_first, inside_second);
   let pair_value = ternary(inner_or, pair_ored, pair_anded);
   let pair_word = js_true_false_word(pair_value);
-  let rest_left = app_code_operator_code(pair_word, outer_symbol, right_word);
-  let rest_right = app_code_operator_code(left_word, outer_symbol, pair_word);
+  let rest_left = app_learn_js_operator_code(
+    pair_word,
+    outer_symbol,
+    right_word,
+  );
+  let rest_right = app_learn_js_operator_code(
+    left_word,
+    outer_symbol,
+    pair_word,
+  );
   let rest = ternary(parentheses_left, rest_left, rest_right);
   let rest_ored = or(pair_value, outside);
   let rest_anded = and(pair_value, outside);

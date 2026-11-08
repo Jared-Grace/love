@@ -6,7 +6,7 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -30,8 +30,8 @@ export function app_learn_js_lesson_expression_not_equal_same_intro(
   let false_word = js_keyword_false();
   let three = "3";
   let five = "5";
-  let short = app_code_operator_code(three, different_symbol, five);
-  let inner = app_code_operator_code(three, same_symbol, five);
+  let short = app_learn_js_operator_code(three, different_symbol, five);
+  let inner = app_learn_js_operator_code(three, same_symbol, five);
   let long = js_code_not_parenthesis_wrapped(inner);
   let long_other = js_code_not_parenthesis_wrapped(short);
   let asks = app_learn_js_container_light_blue(root);

@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_expression_worked_card_not } from "./app_learn_js_lesson_expression_worked_card_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { js_code_not } from "./js_code_not.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_expression_not_comparison_intro(
   let equal_symbol = js_operator_triple_equal_symbol();
   let three = "3";
   let five = "5";
-  let comparison = app_code_operator_code(three, equal_symbol, five);
+  let comparison = app_learn_js_operator_code(three, equal_symbol, five);
   let open = js_code_parenthesis_left();
   let close = js_code_parenthesis_right();
   let parenthesised = js_code_wrap_parenthesis(comparison);

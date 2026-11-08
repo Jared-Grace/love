@@ -4,7 +4,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
 import { js_code_not } from "./js_code_not.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_expression_not_pair_intro(root, context) {
   let or_symbol = js_operator_or_symbol();
   let true_word = js_keyword_true();
   let false_word = js_keyword_false();
-  let pair = app_code_operator_code(true_word, and_symbol, false_word);
+  let pair = app_learn_js_operator_code(true_word, and_symbol, false_word);
   let whole = js_code_not_parenthesis_wrapped(pair);
   let not_false = js_code_not(false_word);
   let left_parenthesis = js_code_parenthesis_left();

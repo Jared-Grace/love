@@ -1,4 +1,4 @@
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
@@ -16,6 +16,6 @@ export function app_code_operator_part_around(code, symbol) {
   let left = list_get(tokens, index2);
   let index3 = add(index, 1);
   let right = list_get(tokens, index3);
-  let part = app_code_operator_code(left, symbol, right);
+  let part = app_learn_js_operator_code(left, symbol, right);
   return part;
 }

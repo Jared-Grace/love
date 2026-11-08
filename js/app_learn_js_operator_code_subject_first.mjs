@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { ternary } from "./ternary.mjs";
 export function app_learn_js_operator_code_subject_first(
   subject_first,
@@ -13,6 +13,6 @@ export function app_learn_js_operator_code_subject_first(
   ("Subject is the piece the lesson is about, and other is whatever it is being compared or combined with. Naming them that way is what lets one function serve both, because neither name says comparison or group.");
   let left_code = ternary(subject_first, subject_code, other_code);
   let right_code = ternary(subject_first, other_code, subject_code);
-  let code = app_code_operator_code(left_code, symbol, right_code);
+  let code = app_learn_js_operator_code(left_code, symbol, right_code);
   return code;
 }

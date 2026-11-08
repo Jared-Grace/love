@@ -1,4 +1,4 @@
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -15,6 +15,6 @@ export function app_code_string_comparison_code(combo, earlier, later) {
   let right = ternary(before, later, earlier);
   let code_left = app_code_string_code(left);
   let code_right = app_code_string_code(right);
-  let joined = app_code_operator_code(code_left, operator, code_right);
+  let joined = app_learn_js_operator_code(code_left, operator, code_right);
   return joined;
 }

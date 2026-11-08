@@ -1,7 +1,7 @@
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
 import { app_learn_js_comparison_pair_equality } from "./app_learn_js_comparison_pair_equality.mjs";
 import { property_get } from "./property_get.mjs";
@@ -39,12 +39,12 @@ export function app_learn_js_lesson_expression_not_equal_same() {
   let bang_symbol = js_operator_bang_symbol();
   function short_form(left, right, operator) {
     "the spelling with no ! in it - a !== b, or a === b when the swap is asked the other way round";
-    let code = app_code_operator_code(left, operator, right);
+    let code = app_learn_js_operator_code(left, operator, right);
     return code;
   }
   function long_form(left, right, operator) {
     "the same line spelled with a ! around the opposite mark - !(a === b), or !(a !== b) the other way round";
-    let inner = app_code_operator_code(left, operator, right);
+    let inner = app_learn_js_operator_code(left, operator, right);
     let code = js_code_not_parenthesis_wrapped(inner);
     return code;
   }

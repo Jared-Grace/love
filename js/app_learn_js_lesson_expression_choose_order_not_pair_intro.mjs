@@ -4,7 +4,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
+import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_pair_intro(
@@ -22,8 +22,8 @@ export function app_learn_js_lesson_expression_choose_order_not_pair_intro(
   let or_symbol = js_operator_or_symbol();
   let true_word = js_keyword_true();
   let false_word = js_keyword_false();
-  let and_pair = app_code_operator_code(true_word, and_symbol, true_word);
-  let or_pair = app_code_operator_code(false_word, or_symbol, true_word);
+  let and_pair = app_learn_js_operator_code(true_word, and_symbol, true_word);
+  let or_pair = app_learn_js_operator_code(false_word, or_symbol, true_word);
   let and_whole = js_code_not_parenthesis_wrapped(and_pair);
   let or_whole = js_code_not_parenthesis_wrapped(or_pair);
   app_learn_js_div_cycle_code(parent, ["We can write ", and_whole]);
