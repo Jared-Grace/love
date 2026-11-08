@@ -1,7 +1,7 @@
 import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
 import { app_learn_js_token_order_batch } from "./app_learn_js_token_order_batch.mjs";
 import { app_learn_js_token_order_longer } from "./app_learn_js_token_order_longer.mjs";
-import { app_code_tokens_choose_say } from "./app_code_tokens_choose_say.mjs";
+import { app_learn_js_tokens_choose_say } from "./app_learn_js_tokens_choose_say.mjs";
 import { app_learn_js_tokens_choose_label_guided } from "./app_learn_js_tokens_choose_label_guided.mjs";
 import { app_learn_js_code_output } from "./app_learn_js_code_output.mjs";
 import { app_learn_js_tokens_chips } from "./app_learn_js_tokens_chips.mjs";
@@ -55,7 +55,7 @@ export function app_learn_js_lesson_token_order() {
       on_output: app_learn_js_tokens_chips,
     });
     let box_three = app_learn_js_container_light_blue(root);
-    app_code_tokens_choose_say(box_three, "Now you will ", "choose", true);
+    app_learn_js_tokens_choose_say(box_three, "Now you will ", "choose", true);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "The order of the tokens",

@@ -6,7 +6,7 @@ import { app_learn_js_expression_replace_word_say } from "./app_learn_js_express
 import { app_learn_js_token_chip_thin } from "./app_learn_js_token_chip_thin.mjs";
 import { app_learn_js_expression_chosen_style_assign } from "./app_learn_js_expression_chosen_style_assign.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
-export function app_code_tokens_choose_say(parent, lead, word, guided) {
+export function app_learn_js_tokens_choose_say(parent, lead, word, guided) {
   arguments_assert(arguments, 4);
   ("the asking over code whose tokens are chosen in order: the word choose in the blue and weight lesson 41 gives the word for its swap, and, when the next token is shown, the word blue drawn as that very token is drawn, so the learner reads what to look for in the colour they will see it in, as the human asked 2026-10-10");
   ("When nothing is shown to follow, the word choose is written plainly, as the human asked 2026-10-10: there the blue would point at something the screen never shows.");
