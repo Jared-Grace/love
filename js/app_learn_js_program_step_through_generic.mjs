@@ -76,7 +76,7 @@ import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { app_learn_js_program_step_piece_press_words } from "./app_learn_js_program_step_piece_press_words.mjs";
 import { app_learn_js_program_step_line_press_words } from "./app_learn_js_program_step_line_press_words.mjs";
-import { app_code_step_reasons_told } from "./app_code_step_reasons_told.mjs";
+import { app_learn_js_step_reasons_told } from "./app_learn_js_step_reasons_told.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
@@ -629,7 +629,7 @@ export function app_learn_js_program_step_through_generic(
           reason_words = property_get(press, "words");
         }
         ("2026-10-21, at the human's asking: a press with a reason is a fair guess at a rule nobody has said yet - every line runs, so } must run at some point - so the first time a reason is told it is not counted as a mistake, and the line goes gray rather than red. Once told, the same press counts as any wrong one does, since practising a rule already said is what counting it buys. Not picked: never counting these, which would let the rule go unpractised");
-        let told = app_code_step_reasons_told();
+        let told = app_learn_js_step_reasons_told();
         let b4 = null_is(reason);
         let soft = not(b4) && not(property_exists(told, reason));
         if (soft) {
@@ -842,7 +842,7 @@ export function app_learn_js_program_step_through_generic(
       "2026-10-21, at the human's asking: the program called complete while lines are left to run, when every step left only solves and none changes anything - an if (a) { whose a is false, say - is a shortcut taken in the head, and the learner is right that nothing more happens; so it is let off the first time, gray rather than red, and the rule is said. The lines left still run one at a time, since reading a is the step being taught. Not picked: taking it as right, which would skip that reading; and counting it, which would call a correct answer a mistake. Where anything left declares, assigns, logs or is written the long way, the shortcut is wrong and counts";
       let v = program_left_words();
       line_reason_show(v);
-      let told = app_code_step_reasons_told();
+      let told = app_learn_js_step_reasons_told();
       let reason = "nothing_left";
       if (property_exists(told, reason)) {
         return false;
@@ -1417,7 +1417,7 @@ export function app_learn_js_program_step_through_generic(
       }
       function soft_take() {
         reason_show(reason_words);
-        let told = app_code_step_reasons_told();
+        let told = app_learn_js_step_reasons_told();
         let b11 = null_is(reason);
         let soft = not(b11) && not(property_exists(told, reason));
         if (soft) {
