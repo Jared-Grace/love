@@ -9,7 +9,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_log_double_generic } from "./app_learn_js_lesson_log_double_generic.mjs";
-export function app_code_lesson_while_log_double() {
+export function app_learn_js_lesson_while_log_double() {
   arguments_assert(arguments, 0);
   ("a while that writes out double n: let n = 1; while (n < 3) { console.log(n * 2); n++; } writes out 2 and 4");
   ("The one new fact is that a console.log inside a while can do math on n, and that the math does not change n: only n++ does.");
