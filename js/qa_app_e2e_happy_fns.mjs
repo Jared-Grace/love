@@ -14,7 +14,7 @@ export function qa_app_e2e_happy_fns() {
   let fns = [
     {
       app_name: app_shared_name_prefix_without(fn_name("app_code")),
-      happy_f_name: fn_name("app_code_tests_run_e2e_happy"),
+      happy_f_name: fn_name("app_learn_js_tests_run_e2e_happy"),
     },
     {
       app_name: app_shared_name_prefix_without(fn_name("app_replace")),
