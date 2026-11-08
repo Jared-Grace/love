@@ -1,7 +1,7 @@
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
-import { app_code_lessons_review_diff_lines } from "./app_code_lessons_review_diff_lines.mjs";
+import { app_learn_js_lessons_review_diff_lines } from "./app_learn_js_lessons_review_diff_lines.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_lessons_review_diff_counted(diff_text) {
   "THE KEYS ARE WRITTEN WITH A BAR IN FRONT OF THEM so that a line of code spelling a word every object already answers to cannot be mistaken for a count.";
   "A LINE IS MATCHED ONCE AND THEN SPENT. Three copies taken away and five put back is three moves and two new lines, so the tally is counted down as each match is found rather than only asked whether the line was ever seen.";
   arguments_assert(arguments, 1);
-  let sides = app_code_lessons_review_diff_lines(diff_text);
+  let sides = app_learn_js_lessons_review_diff_lines(diff_text);
   let lines_added = sides.added;
   let lines_taken = sides.taken;
   let taken_counts = {};
