@@ -12,8 +12,10 @@ export function app_shared_language_sort_action_text(mode) {
     let spoken = {
       en: "Sort by most speakers",
       ur: "سب سے زیادہ بولنے والوں کے مطابق ترتیب دیں",
+      tgl: "Ayusin ayon sa pinakamaraming nagsasalita",
       translated_from: {
         ur: "Sort by most speakers",
+        tgl: "Sort by most speakers",
       },
     };
     let s = app_shared_text_reader_language(spoken);
@@ -22,8 +24,10 @@ export function app_shared_language_sort_action_text(mode) {
   let alphabetical = {
     en: "Sort A to Z",
     ur: "حروفِ تہجی کے مطابق ترتیب دیں",
+    tgl: "Ayusin mula A hanggang Z",
     translated_from: {
       ur: "Sort A to Z",
+      tgl: "Sort A to Z",
     },
   };
   let a = app_shared_text_reader_language(alphabetical);
