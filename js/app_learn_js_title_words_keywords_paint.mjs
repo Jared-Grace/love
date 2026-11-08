@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_split } from "./text_split.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { app_code_title_words_percent_paint } from "./app_code_title_words_percent_paint.mjs";
+import { app_learn_js_title_words_percent_paint } from "./app_learn_js_title_words_percent_paint.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_operators_classed } from "./app_learn_js_operators_classed.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -20,7 +20,7 @@ import { each_index } from "./each_index.mjs";
 export function app_learn_js_title_words_keywords_paint(parent, text) {
   arguments_assert(arguments, 2);
   ("the words of a home title, with every if and else in them painted as code, written lower case as the code spells them, and the rest as ",
-    fn_name("app_code_title_words_percent_paint"),
+    fn_name("app_learn_js_title_words_percent_paint"),
     " paints it; keywords next to each other, as in Else if, are one piece of code, else if");
   ("Asked for by the human 2026-10-11: if and else in a title name the keyword, so they look like it. A plural or a mark after the word, Two ifs, one name, paints the if and leaves the s and the comma plain. Weighed: Halve if even, whose if reads as English as well, and painted with the rest since its lesson is an if; a title that means the English word is a reason to reword it rather than to look the word up in a list.");
   ("2026-11-02: while too, asked for by the human: a looping title names the keyword just as a branching one does.");
@@ -30,7 +30,7 @@ export function app_learn_js_title_words_keywords_paint(parent, text) {
   let code = "";
   function plain_flush() {
     if (not_equal(plain, "")) {
-      app_code_title_words_percent_paint(parent, plain);
+      app_learn_js_title_words_percent_paint(parent, plain);
       plain = "";
     }
   }
