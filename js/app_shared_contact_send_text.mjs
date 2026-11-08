@@ -7,8 +7,10 @@ export function app_shared_contact_send_text() {
   let texts = {
     en: " Send",
     ur: " بھیجیں",
+    tgl: " Ipadala",
     translated_from: {
       ur: " Send",
+      tgl: " Send",
     },
   };
   let text = app_shared_text_reader_language(texts);
