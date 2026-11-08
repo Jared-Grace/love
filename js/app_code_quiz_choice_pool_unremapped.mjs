@@ -1,4 +1,4 @@
-import { app_code_lessons_exercises_each } from "./app_code_lessons_exercises_each.mjs";
+import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
 import { app_code_quiz_choice_pool_exercise_unremapped } from "./app_code_quiz_choice_pool_exercise_unremapped.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -33,6 +33,6 @@ export function app_code_quiz_choice_pool_unremapped(rounds) {
     });
     list_add(found, entry);
   }
-  app_code_lessons_exercises_each(rounds, on_exercise);
+  app_learn_js_lessons_exercises_each(rounds, on_exercise);
   return found;
 }

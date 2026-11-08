@@ -15,7 +15,7 @@ import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_lessons_exercises_each } from "./app_code_lessons_exercises_each.mjs";
+import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
 export function app_code_program_step_presses_unexplained() {
   arguments_assert(arguments, 0);
   ("Every wrong press a step-by-step quiz can be given that says no reason: the lesson, the program, the line due and the line pressed. Hands back how many presses were looked at beside them, since nothing found is also what this says on the day it stops reaching any.");
@@ -68,7 +68,7 @@ export function app_code_program_step_presses_unexplained() {
       }
     }
   }
-  app_code_lessons_exercises_each(rounds, on_exercise);
+  app_learn_js_lessons_exercises_each(rounds, on_exercise);
   let r = {
     walked,
     found,

@@ -10,7 +10,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_lines_indent_braces } from "./app_code_lines_indent_braces.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_lessons_exercises_each } from "./app_code_lessons_exercises_each.mjs";
+import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
 export function app_code_quiz_lines_order_indent_unlike() {
   arguments_assert(arguments, 0);
   ("Names every code lesson whose put-the-lines-in-order quiz asks for a program that, drawn the way the quiz draws the lines tapped, does not look the way the lesson wrote it. Hands back how many programs were looked at beside them, since nothing found is also what this says on the day it stops reaching any.");
@@ -53,7 +53,7 @@ export function app_code_quiz_lines_order_indent_unlike() {
       });
     }
   }
-  app_code_lessons_exercises_each(rounds, on_exercise);
+  app_learn_js_lessons_exercises_each(rounds, on_exercise);
   let r = {
     walked,
     found,

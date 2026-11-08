@@ -1,7 +1,7 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_learn_js_exercise_on_answer_is } from "./app_learn_js_exercise_on_answer_is.mjs";
 import { app_learn_js_lesson_quiz_token_select } from "./app_learn_js_lesson_quiz_token_select.mjs";
-import { app_code_lessons_exercises_each } from "./app_code_lessons_exercises_each.mjs";
+import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
 import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { js_tokens_to_code } from "./js_tokens_to_code.mjs";
@@ -53,6 +53,6 @@ export function app_code_quiz_unscramble_unwritable() {
       });
     }
   }
-  app_code_lessons_exercises_each(rounds, on_exercise);
+  app_learn_js_lessons_exercises_each(rounds, on_exercise);
   return found;
 }
