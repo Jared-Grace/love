@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { color_contrast_floor_text } from "./color_contrast_floor_text.mjs";
 import { color_contrast_floor_shape } from "./color_contrast_floor_shape.mjs";
-import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
+import { app_learn_js_note_name_colors } from "./app_learn_js_note_name_colors.mjs";
 import { app_code_note_name_ink } from "./app_code_note_name_ink.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
@@ -14,7 +14,7 @@ export function app_code_note_name_contrast_ways() {
   ("THE BLACK AGAINST THE CARD IS ASKED ONCE AND NOT ONCE PER COLOUR, BECAUSE NO NAME COLOUR APPEARS IN IT. Asked inside the loop it would answer the same thing three times over and report a single fault as three, which reads as a broad failure where there is one narrow one.");
   let text_floor = color_contrast_floor_text();
   let shape_floor = color_contrast_floor_shape();
-  let colors = app_code_note_name_colors();
+  let colors = app_learn_js_note_name_colors();
   let ink = app_code_note_name_ink();
   let dark = app_shared_color_code_background();
   let card = app_shared_container_blue_background_color();

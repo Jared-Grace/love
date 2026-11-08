@@ -50,7 +50,7 @@ import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
-import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
+import { app_learn_js_note_name_colors } from "./app_learn_js_note_name_colors.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_shared_color_code_font } from "./app_shared_color_code_font.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -468,7 +468,7 @@ export function app_code_program_step_through_generic(
       let span = html_span_text(comment, text2);
       let color = list_get(run, 1);
       ("2026-10-15, at the human's asking: the name in a note is drawn in the code's own colour, never a name colour. Here the lines are drawn plain, so a coloured name in the note matches nothing in the code, and the first name colour is a red standing beside lines that turn red when pressed wrongly. Not picked: changing the red in the colours every lesson shares, which elsewhere pairs a name in a note with the same name in the code");
-      let list = app_code_note_name_colors();
+      let list = app_learn_js_note_name_colors();
       if (list_includes(list, color)) {
         color = app_shared_color_code_font();
       }

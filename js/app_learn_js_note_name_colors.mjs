@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_color_name_marks } from "./app_shared_color_name_marks.mjs";
-export function app_code_note_name_colors() {
+export function app_learn_js_note_name_colors() {
   arguments_assert(arguments, 0);
   ("the colours a lesson's program lends to the names inside it, one per name, taken in the order the names are first marked in a note");
   ("EACH COLOUR IS A DIFFERENT BRIGHTNESS AS WELL AS A DIFFERENT HUE, AND THE BRIGHTNESS IS THE PART THAT MUST BE READ. A reader who cannot tell two hues apart still sees three different shades, so the pairing between a name in a note and the same name in the code reaches them too. A hue is not a slower copy of that: three shades have to be compared, three hues are known at a glance, so the reader who has both gets the faster signal and nobody is left with none.");

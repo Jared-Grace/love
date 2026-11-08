@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_lesson_chip_colors } from "./app_learn_js_lesson_chip_colors.mjs";
 import { app_learn_js_highlight_colors } from "./app_learn_js_highlight_colors.mjs";
-import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
+import { app_learn_js_note_name_colors } from "./app_learn_js_note_name_colors.mjs";
 export function app_learn_js_color_tones() {
   arguments_assert(arguments, 0);
   ("the colours of this app's three palettes, sorted into the two tones they have - the dark ones, which carry white lettering, and the light ones, which carry near-black lettering");
@@ -34,7 +34,7 @@ export function app_learn_js_color_tones() {
   let chip = app_learn_js_lesson_chip_colors();
   let pointing = app_learn_js_highlight_colors();
   let dark = chip.concat(pointing);
-  let light = app_code_note_name_colors();
+  let light = app_learn_js_note_name_colors();
   let tones = {
     dark,
     light,
