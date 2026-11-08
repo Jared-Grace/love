@@ -11,8 +11,10 @@ export function html_button_biblehub_open_parallel(
   let texts = {
     en: "Parallel",
     ur: "متوازی تراجم",
+    tgl: "Magkaagapay",
     translated_from: {
       ur: "Parallel",
+      tgl: "Parallel",
     },
   };
   let text = app_shared_text_reader_language(texts);
