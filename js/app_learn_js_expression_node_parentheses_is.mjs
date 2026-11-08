@@ -8,7 +8,7 @@ import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_learn_js_expression_side_parenthesis_is } from "./app_learn_js_expression_side_parenthesis_is.mjs";
 import { app_learn_js_operator_rank_least_left } from "./app_learn_js_operator_rank_least_left.mjs";
-import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
+import { app_learn_js_operator_rank_least_right } from "./app_learn_js_operator_rank_least_right.mjs";
 export function app_learn_js_expression_node_parentheses_is(item, node) {
   arguments_assert(arguments, 2);
   ("whether one part of an expression is written inside a pair of parentheses on the line the whole expression prints as: on false && (true || true) the || comes back yes and the && comes back no");
@@ -57,7 +57,7 @@ export function app_learn_js_expression_node_parentheses_is(item, node) {
   }
   let right_here = equal(right, node);
   if (right_here) {
-    let rank_right = app_code_operator_rank_least_right(symbol);
+    let rank_right = app_learn_js_operator_rank_least_right(symbol);
     let gathered_right = app_learn_js_expression_side_parenthesis_is(
       right,
       rank_right,

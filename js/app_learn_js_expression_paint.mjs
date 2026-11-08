@@ -12,7 +12,7 @@ import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_learn_js_expression_paint_before_side } from "./app_learn_js_expression_paint_before_side.mjs";
 import { app_learn_js_operator_rank_least_left } from "./app_learn_js_operator_rank_least_left.mjs";
 import { app_learn_js_expression_paint_side } from "./app_learn_js_expression_paint_side.mjs";
-import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
+import { app_learn_js_operator_rank_least_right } from "./app_learn_js_operator_rank_least_right.mjs";
 export function app_learn_js_expression_paint(parent, item, on_operator) {
   arguments_assert(arguments, 3);
   ("write an expression shape into a parent as separate pieces rather than as one piece of text, so that each operator standing in it is its own thing on the page and can be pressed");
@@ -60,7 +60,7 @@ export function app_learn_js_expression_paint(parent, item, on_operator) {
   html_span_text(node_span, " ");
   let operator_span = html_span_text(node_span, symbol);
   html_span_text(node_span, " ");
-  let rank_right = app_code_operator_rank_least_right(symbol);
+  let rank_right = app_learn_js_operator_rank_least_right(symbol);
   let right = property_get(item, "right");
   app_learn_js_expression_paint_side(node_span, right, rank_right, on_operator);
   ("handed over once the whole piece is written, so the caller receives an operator that already has its sides standing beside it");

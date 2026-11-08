@@ -11,7 +11,7 @@ import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_learn_js_expression_side_code } from "./app_learn_js_expression_side_code.mjs";
 import { app_learn_js_operator_code_before } from "./app_learn_js_operator_code_before.mjs";
 import { app_learn_js_operator_rank_least_left } from "./app_learn_js_operator_rank_least_left.mjs";
-import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
+import { app_learn_js_operator_rank_least_right } from "./app_learn_js_operator_rank_least_right.mjs";
 import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
 export function app_learn_js_expression_code(item) {
   arguments_assert(arguments, 1);
@@ -48,7 +48,7 @@ export function app_learn_js_expression_code(item) {
   let rank_left = app_learn_js_operator_rank_least_left(symbol);
   let left = property_get(item, "left");
   let left_code = app_learn_js_expression_side_code(left, rank_left);
-  let rank_right = app_code_operator_rank_least_right(symbol);
+  let rank_right = app_learn_js_operator_rank_least_right(symbol);
   let right = property_get(item, "right");
   let right_code = app_learn_js_expression_side_code(right, rank_right);
   let code = app_learn_js_operator_code(left_code, symbol, right_code);
