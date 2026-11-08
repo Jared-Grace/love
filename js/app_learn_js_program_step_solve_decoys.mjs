@@ -4,7 +4,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
-export function app_code_program_step_solve_decoys(current, node) {
+export function app_learn_js_program_step_solve_decoys(current, node) {
   arguments_assert(arguments, 2);
   ("the wrong values offered for the operator a learner stepping through a program just pressed, on an expression of that program solved whole: current is the expression as it reads now and node the part pressed - the decoys_get of ",
     fn_name("app_learn_js_expression_choose_order_ask"));
