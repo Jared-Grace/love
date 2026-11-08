@@ -14,8 +14,16 @@ export function app_shared_hash_fields_unknown_named_text(name) {
       before: "یہ لنک ایسا ",
       after: " مانگتا ہے جو ہمارے پاس نہیں ہے",
     },
+    tgl: {
+      before: "Humihingi ang link na ito ng ",
+      after: " na wala sa amin",
+    },
     translated_from: {
       ur: {
+        before: "This link asks for a ",
+        after: " we do not have",
+      },
+      tgl: {
         before: "This link asks for a ",
         after: " we do not have",
       },
