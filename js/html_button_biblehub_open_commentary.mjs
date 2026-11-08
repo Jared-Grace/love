@@ -11,8 +11,10 @@ export function html_button_biblehub_open_commentary(
   let texts = {
     en: "Commentary",
     ur: "تفسیر",
+    tgl: "Komentaryo",
     translated_from: {
       ur: "Commentary",
+      tgl: "Commentary",
     },
   };
   let text = app_shared_text_reader_language(texts);
