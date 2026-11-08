@@ -18,7 +18,7 @@ import { list_size } from "./list_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exercise.mjs";
+import { app_learn_js_review_seed_to_exercise } from "./app_learn_js_review_seed_to_exercise.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
@@ -115,7 +115,7 @@ export function app_learn_js_review_present_fn_present(
     let position = add(passed, cursor);
     progress_draw(position, total);
     let seed = list_get(queue, cursor);
-    let exercise = app_code_review_seed_to_exercise(seed);
+    let exercise = app_learn_js_review_seed_to_exercise(seed);
     ("where each fresh copy goes after a miss, one place per copy - the count handed to the quiz is read off this list, so what the learner is told is added cannot disagree with what is put back");
     function place_next(copy) {
       list_insert(queue, cursor, copy);
