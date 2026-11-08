@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_note_name_contrast_ways } from "./app_code_note_name_contrast_ways.mjs";
+import { app_learn_js_note_name_contrast_ways } from "./app_learn_js_note_name_contrast_ways.mjs";
 import { color_contrast_or_null } from "./color_contrast_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { less_than } from "./less_than.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_note_name_contrast_faults() {
   ("WHAT THE WAYS ARE IS ASKED FOR BY NAME NEXT DOOR, AND WHAT IS LEFT HERE IS THE MEASURING. The two were one function until a gate asked how much this had walked and there was no honest answer: the only number in hand was the number of faults, which on every passing run is nothing. Splitting the list out gives the count a source that does not depend on the answer. The reasons the list is built the way it is - worked out from the colour functions so a fourth colour is checked the day it arrives, each way carrying its own floor because lettering and shapes are not the same question, the black against the card asked once rather than once per colour - are all written where the list is built. This has already bitten twice: a name drawn in the dark on the dark and read as nothing at all, and a name drawn red where red was the mark for something else entirely.");
   ("The floors are the web's own rule rather than this repo's opinion about what looks alright, and that is why they are worth having: an opinion drifts to fit whatever was drawn last, and a rule someone else wrote cannot.");
   ("A colour that cannot be read at all counts as a fault rather than as a pair passed over. Skipping it would let a misspelled colour, or a name nothing here knows, sit in the palette forever wearing the appearance of having been checked - and the whole point of asking is that every colour here must be one this can measure.");
-  let ways = app_code_note_name_contrast_ways();
+  let ways = app_learn_js_note_name_contrast_ways();
   let faults = [];
   for (let way of ways) {
     let front = way[0];

@@ -5,7 +5,7 @@ import { app_learn_js_note_name_colors } from "./app_learn_js_note_name_colors.m
 import { app_code_note_name_ink } from "./app_code_note_name_ink.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
-export function app_code_note_name_contrast_ways() {
+export function app_learn_js_note_name_contrast_ways() {
   arguments_assert(arguments, 0);
   ("every way a name standing in a lesson note gets drawn, each one as the colour in front, the colour behind, what that way is in words, and the floor that way has to clear - the list the contrast check walks, before anything has been measured");
   ("IT IS SPLIT OUT FROM THE CHECK SO THAT HOW MUCH WAS LOOKED AT CAN BE SAID WITHOUT LOOKING AT THE ANSWER. A gate that finds no faults and reports the number of faults reports nothing: the clean run and the run that swept an empty list say the same word. The honest count is the length of this list, and the only way to have it without working it back from the offenders is for the list to be a thing in its own right.");
