@@ -6,7 +6,7 @@ import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_two_names_while_lines } from "./js_code_two_names_while_lines.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_two_names_generic } from "./app_code_lesson_two_names_generic.mjs";
+import { app_learn_js_lesson_two_names_generic } from "./app_learn_js_lesson_two_names_generic.mjs";
 export function app_code_lesson_while_two_names() {
   arguments_assert(arguments, 0);
   ("a while changing a name it never asks about: let a = 1; let b = 9; while (a < 4) { a++; b--; } console.log(b); writes out 6");
@@ -45,7 +45,7 @@ export function app_code_lesson_while_two_names() {
     "Two names in a while",
     "while (a < 4) { a++; b--; }",
   );
-  let lesson = app_code_lesson_two_names_generic({
+  let lesson = app_learn_js_lesson_two_names_generic({
     name_id,
     above,
     program_write: js_code_two_names_while_lines,

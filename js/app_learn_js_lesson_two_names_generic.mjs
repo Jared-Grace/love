@@ -32,7 +32,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_two_names_generic(options) {
+export function app_learn_js_lesson_two_names_generic(options) {
   arguments_assert(arguments, 1);
   ("a loop changing a name it never asks about: a starts at start_a and goes up by one while a < bound, b starts at start_b and goes down by one each run, and console.log(b); comes after the loop; the while and the for differ only in what is handed in here");
   ("program_write is handed let a = ...;, let b = ...;, the condition, a++; and b--;, and returns every line before console.log(b);, so each lesson chooses the order. Above is handed example, which draws the program of 1, 9 and 4 with the writer it is given and what it writes out, and walk, which says what it does run by run.");

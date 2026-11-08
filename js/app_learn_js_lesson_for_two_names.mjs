@@ -6,7 +6,7 @@ import { js_code_two_names_while_b_first_lines } from "./js_code_two_names_while
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_two_names_for_lines } from "./js_code_two_names_for_lines.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_two_names_generic } from "./app_code_lesson_two_names_generic.mjs";
+import { app_learn_js_lesson_two_names_generic } from "./app_learn_js_lesson_two_names_generic.mjs";
 export function app_learn_js_lesson_for_two_names() {
   arguments_assert(arguments, 0);
   ("a for changing a name it never asks about: let b = 9; for (let a = 1; a < 4; a++) { b--; } console.log(b); writes out 6, the same as Two names in a while");
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_for_two_names() {
     "Two names in a for",
     "for (...) { b--; }",
   );
-  let lesson = app_code_lesson_two_names_generic({
+  let lesson = app_learn_js_lesson_two_names_generic({
     name_id,
     above,
     program_write: js_code_two_names_for_lines,
