@@ -12,7 +12,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_code_lines_orders(code) {
+export function app_learn_js_lines_orders(code) {
   "Every order of a program's lines that logs exactly what the program itself logs, each as a list of its lines.";
   "WHAT DECIDES AN ORDER IS WHAT IT DOES, never how close it sits to the order it was written in. Two lines that do not touch each other may trade places and nothing changes, so both orders are right; a name read before it is made stops the program, so no order doing that is right. The rule is the lesson's own fact, asked of the program by running it rather than written down a second time here.";
   "AN ORDER THAT STOPS WITH AN ERROR COUNTS AS LOGGING NOTHING it can match, so it is simply not kept.";

@@ -4,7 +4,7 @@ import { html_div_code_dark } from "./html_div_code_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { app_code_lines_orders } from "./app_code_lines_orders.mjs";
+import { app_learn_js_lines_orders } from "./app_learn_js_lines_orders.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_lines_held_count } from "./app_learn_js_lines_held_count.mjs";
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_quiz_lines_order(
   ("2026-10-23, at the human's asking: THE LINES ARE CHOSEN WITHOUT THEIR INDENT, which is drawn afresh from the order tapped. An indent belongs to the order a line was first written in, so carried along it showed a line at the wrong depth in another right order, and two lines alike but for their indent stood in the row as two buttons that look the same");
   lines = list_map(lines, text_trim);
   let code2 = list_join_newline(lines);
-  let variations = app_code_lines_orders(code2);
+  let variations = app_learn_js_lines_orders(code2);
   ("A LONG PROGRAM STARTS WITH ITS FIRST LINES ALREADY PUT IN, as many as ",
     fn_name("app_learn_js_lines_held_count"),
     " says, because the orders are all tried and a twelve-line program was too many for a phone; those lines are not in the row.");
