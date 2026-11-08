@@ -7,7 +7,7 @@ import { list_get } from "./list_get.mjs";
 import { catch_error_text_or_null } from "./catch_error_text_or_null.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_lessons_above_broken() {
+export function app_learn_js_lessons_above_broken() {
   arguments_assert(arguments, 0);
   ("Every lesson whose telling - the part drawn above the examples - stops rather than draws, said as one line each: which lesson it was and what stopped it. An empty answer means all of them drew.");
   ("It draws them rather than reading them. A telling is handed to a lesson in two ways, by name in the lesson's own description and by position to a shared painter several lessons share, and a search over the words in the files can only ever see the first of those. Measured on 2026-09-11: searching found four broken tellings, drawing found six. The two invisible ones were the two handed over by position.");

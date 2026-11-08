@@ -2527,7 +2527,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_chapter_verse_word_remove"),
     fn_name("bible_glyph_chapters_verse_marks_underdrawn_absorbed"),
     fn_name("bible_glyph_chapters_chapter_add"),
-    fn_name("app_code_lessons_above_broken"),
+    fn_name("app_learn_js_lessons_above_broken"),
     fn_name("bible_glyph_chapters_gloss_column_walked"),
     fn_name("bible_glyph_chapter_verse_word_insert"),
     fn_name("bible_glyph_chapters_negation_carried_draw"),
