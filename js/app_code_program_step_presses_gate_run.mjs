@@ -13,7 +13,7 @@ export function app_code_program_step_presses_gate_run() {
   let found = property_get(r, "found");
   let hint = text_combine_multiple([
     "these presses in a step-by-step quiz are wrong and say nothing about why - add the rule that decides the line due to ",
-    fn_name("app_code_program_step_line_press_words"),
+    fn_name("app_learn_js_program_step_line_press_words"),
   ]);
   let result = list_empty_is_assert_walked_generic(walked, found, hint);
   return result;

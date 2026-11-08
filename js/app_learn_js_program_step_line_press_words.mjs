@@ -14,7 +14,12 @@ import { app_code_program_step_line_wrong_words } from "./app_code_program_step_
 import { app_code_program_step_line_ran_words } from "./app_code_program_step_line_ran_words.mjs";
 import { app_learn_js_program_step_line_never_words } from "./app_learn_js_program_step_line_never_words.mjs";
 import { app_code_program_step_noun } from "./app_code_program_step_noun.mjs";
-export function app_code_program_step_line_press_words(lines, trace, index, i) {
+export function app_learn_js_program_step_line_press_words(
+  lines,
+  trace,
+  index,
+  i,
+) {
   arguments_assert(arguments, 4);
   ("Why line i is not the line to press next, in the program's lines, run in the order trace gives, with index lines run so far: a reason and its words, words and code taking turns, text first; or null where no rule says why. One function so the step-through screen and the gate over every program ask the same thing");
   let done = list_index_past_end_is(trace, index);

@@ -13,7 +13,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
+import { app_learn_js_program_step_line_press_words } from "./app_learn_js_program_step_line_press_words.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_lessons_exercises_each } from "./app_learn_js_lessons_exercises_each.mjs";
 export function app_code_program_step_presses_unexplained() {
@@ -51,7 +51,7 @@ export function app_code_program_step_presses_unexplained() {
           continue;
         }
         walked++;
-        let press = app_code_program_step_line_press_words(
+        let press = app_learn_js_program_step_line_press_words(
           lines,
           trace,
           index,

@@ -75,7 +75,7 @@ import { app_shared_animation_duration } from "./app_shared_animation_duration.m
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { app_code_program_step_piece_press_words } from "./app_code_program_step_piece_press_words.mjs";
-import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
+import { app_learn_js_program_step_line_press_words } from "./app_learn_js_program_step_line_press_words.mjs";
 import { app_code_step_reasons_told } from "./app_code_step_reasons_told.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
@@ -617,7 +617,7 @@ export function app_code_program_step_through_generic(
         ("why the press is wrong, where a rule says why; asked of the one function the gate over every program also asks. On the line due, only the wrong piece can be why");
         let press = line_right
           ? app_code_program_step_piece_press_words(trace, index, pressed_piece)
-          : app_code_program_step_line_press_words(lines, trace, index, i);
+          : app_learn_js_program_step_line_press_words(lines, trace, index, i);
         let reason = null;
         let reason_words = null;
         if (null_not_is(press)) {
