@@ -6,8 +6,10 @@ export function app_g_pray_tap_self_text() {
   let texts = {
     en: "To pray, tap or click on yourself (You glow with white)",
     ur: "دعا کرنے کے لیے اپنے آپ پر ٹیپ یا کلک کریں (آپ سفید روشنی سے چمکتے ہیں)",
+    tgl: "Para manalangin, i-tap o i-click ang iyong sarili (Ikaw ang may puting liwanag)",
     translated_from: {
       ur: "To pray, tap or click on yourself (You glow with white)",
+      tgl: "To pray, tap or click on yourself (You glow with white)",
     },
   };
   let text = app_shared_text_reader_language(texts);
