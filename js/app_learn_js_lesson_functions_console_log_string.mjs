@@ -16,7 +16,7 @@ import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_con
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_div_code } from "./app_learn_js_div_code.mjs";
-import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
+import { app_learn_js_writes_out_line } from "./app_learn_js_writes_out_line.mjs";
 import { js_string_quote } from "./js_string_quote.mjs";
 export function app_learn_js_lesson_functions_console_log_string() {
   arguments_assert(arguments, 0);
@@ -79,7 +79,7 @@ export function app_learn_js_lesson_functions_console_log_string() {
     let c = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(c, ["", f_name, " can be given a string too:"]);
     app_learn_js_div_code(c, code);
-    app_code_writes_out_line(c, word);
+    app_learn_js_writes_out_line(c, word);
     let quote = js_string_quote();
     app_learn_js_div_cycle_code(c, [
       "The quote marks ",
