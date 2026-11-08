@@ -8,7 +8,7 @@ import { app_learn_js_string_value_wrong_say } from "./app_learn_js_string_value
 import { app_learn_js_lines_wrong_say } from "./app_learn_js_lines_wrong_say.mjs";
 import { app_learn_js_program_trace_wrong_say } from "./app_learn_js_program_trace_wrong_say.mjs";
 import { app_learn_js_program_lets_wrong_say } from "./app_learn_js_program_lets_wrong_say.mjs";
-import { app_code_value_itself_wrong_say } from "./app_code_value_itself_wrong_say.mjs";
+import { app_learn_js_value_itself_wrong_say } from "./app_learn_js_value_itself_wrong_say.mjs";
 import { app_learn_js_part_first_wrong_say } from "./app_learn_js_part_first_wrong_say.mjs";
 export function app_learn_js_forwards_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
@@ -53,7 +53,7 @@ export function app_learn_js_forwards_wrong_say(question, answer, choice) {
     return lets;
   }
   ("2026-10-27: two quizzes whose answer is not a value worked out: true or false standing alone, which gives itself back, and the part of a line solved first. Each takes only its own shape, so neither speaks where one above does");
-  let itself = app_code_value_itself_wrong_say(question, answer, choice);
+  let itself = app_learn_js_value_itself_wrong_say(question, answer, choice);
   if (null_not_is(itself)) {
     return itself;
   }

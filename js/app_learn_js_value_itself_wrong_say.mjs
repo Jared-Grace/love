@@ -3,7 +3,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-export function app_code_value_itself_wrong_say(question, answer, choice) {
+export function app_learn_js_value_itself_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("for a quiz asking the value of true or false written all by itself: it is already a value, with no question to ask, so it gives itself back; null for any other code");
   let t = js_keyword_true();
