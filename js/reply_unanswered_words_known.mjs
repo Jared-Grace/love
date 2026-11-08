@@ -3,7 +3,7 @@ import { file_read } from "./file_read.mjs";
 import { reply_names_common } from "./reply_names_common.mjs";
 import { reply_cities_names_all } from "./reply_cities_names_all.mjs";
 import { reply_countries_names } from "./reply_countries_names.mjs";
-import { app_message_private_records_replied } from "./app_message_private_records_replied.mjs";
+import { app_message_private_records_replied_people } from "./app_message_private_records_replied_people.mjs";
 import { reply_case_key } from "./reply_case_key.mjs";
 import { reply_message_words } from "./reply_message_words.mjs";
 import { not } from "./not.mjs";
@@ -26,7 +26,7 @@ export async function reply_unanswered_words_known() {
     ...reply_cities_names_all(),
     ...reply_countries_names(),
   ]);
-  let records = await app_message_private_records_replied();
+  let records = await app_message_private_records_replied_people();
   let seen = new Set();
   let rows = [];
   for (let record of records) {
