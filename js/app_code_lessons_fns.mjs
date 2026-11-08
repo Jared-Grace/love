@@ -254,7 +254,7 @@ import { app_learn_js_lesson_if_even } from "./app_learn_js_lesson_if_even.mjs";
 import { app_learn_js_lesson_if_change } from "./app_learn_js_lesson_if_change.mjs";
 import { app_learn_js_lesson_if_two_lines } from "./app_learn_js_lesson_if_two_lines.mjs";
 import { app_learn_js_lesson_if_two_changes } from "./app_learn_js_lesson_if_two_changes.mjs";
-import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
+import { app_learn_js_lesson_token_order } from "./app_learn_js_lesson_token_order.mjs";
 import { app_learn_js_lesson_token_order_alone } from "./app_learn_js_lesson_token_order_alone.mjs";
 import { app_learn_js_lesson_token_order_braces_colored } from "./app_learn_js_lesson_token_order_braces_colored.mjs";
 import { app_learn_js_lesson_token_order_braces_only } from "./app_learn_js_lesson_token_order_braces_only.mjs";
@@ -615,7 +615,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_if_change,
     app_learn_js_lesson_if_two_lines,
     app_learn_js_lesson_if_two_changes,
-    app_code_lesson_token_order,
+    app_learn_js_lesson_token_order,
     app_learn_js_lesson_token_order_alone,
     app_learn_js_lesson_token_order_braces_colored,
     app_learn_js_lesson_token_order_braces_only,

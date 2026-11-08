@@ -7,7 +7,7 @@ import { app_learn_js_braces_two_batch } from "./app_learn_js_braces_two_batch.m
 import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
+import { app_learn_js_lesson_token_order } from "./app_learn_js_lesson_token_order.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_two_nested } from "./app_learn_js_braces_two_nested.mjs";
 import { app_learn_js_braces_paired_with_order } from "./app_learn_js_braces_paired_with_order.mjs";
@@ -32,7 +32,7 @@ export function app_learn_js_lesson_token_order_braces() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_token_order,
+      app_learn_js_lesson_token_order,
       ["we read the tokens of code left to right, then top to bottom."],
     );
     let box_two = app_learn_js_container_light_blue(root);

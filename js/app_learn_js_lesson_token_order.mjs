@@ -18,7 +18,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_quizzes_generic } from "./app_learn_js_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap_guided } from "./app_learn_js_lesson_quiz_tokens_tap_guided.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-export function app_code_lesson_token_order() {
+export function app_learn_js_lesson_token_order() {
   arguments_assert(arguments, 0);
   ("the order of the tokens: code is read one token at a time, left to right and then top to bottom, and the learner taps the tokens of a program in that order, with the next one shown in blue; the lesson after it asks for the same order with nothing to follow");
   ("Asked for by the human 2026-10-10: tap the tokens of the code left to right, top to bottom; first told to tap the blue token over and over, then told to choose the next token with none coloured; and after it the braces { { } } explained as the order of the tokens, which the lesson after this one does.");

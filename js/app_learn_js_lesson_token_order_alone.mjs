@@ -2,7 +2,7 @@ import { app_learn_js_container_light_blue_div } from "./app_learn_js_container_
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
-import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
+import { app_learn_js_lesson_token_order } from "./app_learn_js_lesson_token_order.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_token_order_generic } from "./app_learn_js_lesson_token_order_generic.mjs";
 import { app_learn_js_lesson_token_order_example_choose_next } from "./app_learn_js_lesson_token_order_example_choose_next.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_token_order_alone() {
     app_learn_js_lesson_reference_draw(
       line,
       context,
-      app_code_lesson_token_order,
+      app_learn_js_lesson_token_order,
     );
     html_span_text_content(
       line,
