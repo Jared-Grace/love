@@ -12,7 +12,7 @@ import { list_add } from "./list_add.mjs";
 export function app_learn_js_note_runs_cut(runs, from, to) {
   arguments_assert(arguments, 3);
   ("the runs of a note, as ",
-    fn_name("app_code_note_runs"),
+    fn_name("app_learn_js_note_runs"),
     " cuts them, cut again wherever from or to falls inside one, so the characters from to to stand in runs of their own; each run is its text, colour and strength, and then whether it is inside");
   ("So a part of a note - the name in it, or its value - can be drawn as spans of its own, to be hidden and then arrived at, without the note being cut any other way than its colours already cut it.");
   let cut = [];

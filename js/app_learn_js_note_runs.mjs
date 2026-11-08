@@ -9,7 +9,7 @@ import { text_slice } from "./text_slice.mjs";
 import { integer_is_assert } from "./integer_is_assert.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
-export function app_code_note_runs(code) {
+export function app_learn_js_note_runs(code) {
   arguments_assert(arguments, 1);
   ("a program cut into the longest pieces that are all drawn the same way, each piece as the text of it, the colour it is drawn in, and how strongly");
   ("THE CUTTING IS DONE HERE AND THE DRAWING NEXT DOOR, because one of the two is arithmetic over text and the other is a run of spans put into a page, and neither is easier to read while the other is in front of it. This half can be asked a question and its answer read; the half that draws can only be looked at.");

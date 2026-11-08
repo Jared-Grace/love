@@ -5,7 +5,7 @@ import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { app_code_note_runs } from "./app_code_note_runs.mjs";
+import { app_learn_js_note_runs } from "./app_learn_js_note_runs.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_code_dark_lines_comments(component, code) {
   html_text_align_left(component);
   let nothing = text_empty();
   html_text_set(component, nothing);
-  let runs = app_code_note_runs(code);
+  let runs = app_learn_js_note_runs(code);
   for (let run of runs) {
     let span = html_span(component);
     html_text_code_breakable_add(span, run[0], html_span_text);

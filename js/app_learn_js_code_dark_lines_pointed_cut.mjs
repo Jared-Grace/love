@@ -3,7 +3,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { app_code_note_runs } from "./app_code_note_runs.mjs";
+import { app_learn_js_note_runs } from "./app_learn_js_note_runs.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_code_dark_lines_pointed_cut(cut) {
     app_learn_js_code_dark_lines_comments(component, code);
     let nothing = text_empty();
     html_text_set(component, nothing);
-    let runs = app_code_note_runs(code);
+    let runs = app_learn_js_note_runs(code);
     for (let run of runs) {
       function write(parent, text) {
         let pieces = text_split(

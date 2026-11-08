@@ -48,7 +48,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_note_name_mark_open } from "./app_learn_js_note_name_mark_open.mjs";
 import { app_learn_js_note_name_mark } from "./app_learn_js_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_note_runs } from "./app_code_note_runs.mjs";
+import { app_learn_js_note_runs } from "./app_learn_js_note_runs.mjs";
 import { app_learn_js_note_runs_cut } from "./app_learn_js_note_runs_cut.mjs";
 import { app_learn_js_note_name_colors } from "./app_learn_js_note_name_colors.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -460,7 +460,7 @@ export function app_code_program_step_through_generic(
     let from = equal(part, "name") ? name_from : subtract(size, right3);
     let to = equal(part, "name") ? name_from + text_size(name) : size;
     html_clear(comment);
-    let runs = app_code_note_runs(note);
+    let runs = app_learn_js_note_runs(note);
     let cut = app_learn_js_note_runs_cut(runs, from, to);
     let hidden = [];
     for (let run of cut) {
