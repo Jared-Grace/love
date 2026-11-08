@@ -6,7 +6,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_lessons_review_since_changed_path } from "./app_learn_js_lessons_review_since_changed_path.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lessons_review_since_lesson_name } from "./app_learn_js_lessons_review_since_lesson_name.mjs";
-export async function app_code_lessons_review_since_names_after(
+export async function app_learn_js_lessons_review_since_names_after(
   commit,
   list_path,
   folder,

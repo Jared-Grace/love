@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lessons_review_since_names_after } from "./app_code_lessons_review_since_names_after.mjs";
+import { app_learn_js_lessons_review_since_names_after } from "./app_learn_js_lessons_review_since_names_after.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_code_lessons_review_since(commit) {
@@ -19,7 +19,7 @@ export async function app_code_lessons_review_since(commit) {
     fn_name("app_learn_js_lessons_fns"),
     ".mjs",
   ]);
-  let r2 = await app_code_lessons_review_since_names_after(
+  let r2 = await app_learn_js_lessons_review_since_names_after(
     commit,
     list_path,
     folder,
