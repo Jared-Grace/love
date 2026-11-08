@@ -18,7 +18,7 @@ import { storage_session_initialize_context } from "./storage_session_initialize
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
-import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
+import { app_learn_js_quiz_index_set } from "./app_learn_js_quiz_index_set.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_quiz_index_reset } from "./app_learn_js_quiz_index_reset.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
@@ -77,7 +77,7 @@ export function app_code_quiz(context) {
     let in_range = less_than(quiz_index, count);
     if (not(in_range)) {
       quiz_index = 0;
-      app_code_quiz_index_set(context, quiz_index);
+      app_learn_js_quiz_index_set(context, quiz_index);
     }
     let q = list_get(qs, quiz_index);
     q(context, container, c, refresh_given, next_get);
