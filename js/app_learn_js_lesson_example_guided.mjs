@@ -3,7 +3,7 @@ import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_div_first } from "./html_div_first.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_learn_js_head_spaced_above_code } from "./app_learn_js_head_spaced_above_code.mjs";
-import { app_code_program_step_through_generic } from "./app_code_program_step_through_generic.mjs";
+import { app_learn_js_program_step_through_generic } from "./app_learn_js_program_step_through_generic.mjs";
 export function app_learn_js_lesson_example_guided(component, text, container) {
   arguments_assert(arguments, 3);
   ("a worked example that guides the learner step by step through running its program - it says what to do and why, and the learner chooses it - with nothing to tell the lesson when an answer is wrong; the quiz then asks the same without guiding, at the human's asking 2026-10-14");
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_example_guided(component, text, container) {
   ("spaced as the order lesson's guide is, at the human's asking 2026-10-14: one sentence per line, no room between the lines, and the app's gap under the last one, above the Code label. Not picked: the gap the questions under the program have between them, which read as the sentences not belonging together");
   html_flex_column_stretch(guide);
   app_learn_js_head_spaced_above_code(guide);
-  app_code_program_step_through_generic(
+  app_learn_js_program_step_through_generic(
     component,
     text,
     wrong,

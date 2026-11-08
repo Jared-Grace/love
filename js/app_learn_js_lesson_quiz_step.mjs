@@ -1,6 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_code_program_step_through_generic } from "./app_code_program_step_through_generic.mjs";
+import { app_learn_js_program_step_through_generic } from "./app_learn_js_program_step_through_generic.mjs";
 export function app_learn_js_lesson_quiz_step(
   parent,
   info,
@@ -22,7 +22,7 @@ export function app_learn_js_lesson_quiz_step(
     property_set(pressed, "done", property_get(pressed, "done") + 1);
     correction_code_set(pressed);
   }
-  let stepping = app_code_program_step_through_generic(
+  let stepping = app_learn_js_program_step_through_generic(
     parent,
     question,
     on_wrong,

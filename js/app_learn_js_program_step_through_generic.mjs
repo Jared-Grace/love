@@ -130,7 +130,7 @@ import { app_learn_js_program_step_order_words } from "./app_learn_js_program_st
 import { add } from "./add.mjs";
 import { app_learn_js_program_step_solved_already_words } from "./app_learn_js_program_step_solved_already_words.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
-export function app_code_program_step_through_generic(
+export function app_learn_js_program_step_through_generic(
   parent,
   code,
   on_wrong,
