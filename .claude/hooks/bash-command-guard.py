@@ -6419,6 +6419,26 @@ def secret_path_ask_reason(found):
     )
 
 
+try:
+    # Only chooses a message, never a verdict, so a missing mirror is
+    # allowed to fall back to the general wording rather than raise.
+    from functions_outside_irreversible_seams import FUNCTIONS_OUTSIDE_IRREVERSIBLE_SEAMS
+except ImportError:
+    FUNCTIONS_OUTSIDE_IRREVERSIBLE_SEAMS = {"function_new_from_temp_machine"}
+
+PERSON_ONLY_CALL_RE = re.compile(r"^node scripts/ai\.mjs (\S+)")
+
+
+def person_only_function_named(command):
+    found = PERSON_ONLY_CALL_RE.match(command)
+    if found is None:
+        return None
+    name = found.group(1)
+    if name in FUNCTIONS_OUTSIDE_IRREVERSIBLE_SEAMS:
+        return name
+    return None
+
+
 def main():
     try:
         payload = json.load(sys.stdin)
@@ -6823,6 +6843,16 @@ def main():
 
     verb = matched_leading_verb(command, safe_verbs)
     if verb is not None and verb_matched_mid_word(command, verb):
+        person_only = person_only_function_named(command)
+        if person_only is not None:
+            return decide("ask", (
+                f"{person_only} always needs a person: it is on the "
+                "person-only list (functions_outside_irreversible_seams), "
+                "so no grant will ever be accepted for it - asking for "
+                "one is refused every time. Check what it is about to "
+                "do (for a new function, read its source first), then "
+                "approve this once."
+            ))
         return decide("ask", (
             f"The allow rule {verb!r} matches this command only as a "
             "text prefix of a longer word, so the thing actually "

@@ -57,6 +57,7 @@
     { "command": "git diff --stat x && cp /home/j/.ssh/github /tmp/claude-1000/-home-j-a-repos-love/s/k", "decision": "ask", "why": "the floor runs before the cp-as-cat rewording, so a copy of a key is asked about rather than handed a spelling that runs unasked" },
     { "command": "ls ~/.config/ghostty", "decision": "allow", "why": "the boundary: gh is matched as a whole folder name, not a prefix" },
     { "command": "cat a.sshx", "decision": "allow", "why": "the boundary: .ssh inside a longer word is not the folder" },
+    { "command": "node scripts/ai.mjs function_new_from_temp_machine facebook_messenger_row_show", "decision": "ask", "why": "person-only: still asks, and its message says no grant will ever be accepted" },
     { "command": "cp a b c", "decision": "silent", "why": "only a plain two-path copy is matched; three paths means a folder destination" },
     { "command": "NODE_OPTIONS=\"--require /tmp/evil.js\" node scripts/ai.mjs qa_gate_run", "decision": "silent", "why": "REGRESSION 2026-07-27: this was ALLOW. An interpreter's options variable names code to load before the script runs, so it is LD_PRELOAD one level up - and it rode in on the granted function's trust, which never got to run at all. The most granted verb in the repo made it the sharpest version of the hole" },
     { "command": "NODE_OPTIONS='--import file:///tmp/evil.mjs' node scripts/ai.mjs apps_names", "decision": "silent", "why": "--import is the same injection as --require through the ESM loader" },
