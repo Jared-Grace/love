@@ -287,7 +287,7 @@ import { functions_operators_raw_gate_run } from "./functions_operators_raw_gate
 import { functions_arity_gate_run } from "./functions_arity_gate_run.mjs";
 import { functions_arguments_assert_gate_run } from "./functions_arguments_assert_gate_run.mjs";
 import { app_shared_imports_gate_run } from "./app_shared_imports_gate_run.mjs";
-import { app_code_wrong_say_silent_gate_run } from "./app_code_wrong_say_silent_gate_run.mjs";
+import { app_learn_js_wrong_say_silent_gate_run } from "./app_learn_js_wrong_say_silent_gate_run.mjs";
 import { functions_app_specific_imports_gate_run } from "./functions_app_specific_imports_gate_run.mjs";
 import { functions_cross_app_imports_gate_run } from "./functions_cross_app_imports_gate_run.mjs";
 import { folders_function_named_orphaned_gate_run } from "./folders_function_named_orphaned_gate_run.mjs";
@@ -938,7 +938,7 @@ export function qa_gates() {
     functions_arity_gate_run,
     functions_arguments_assert_gate_run,
     app_shared_imports_gate_run,
-    app_code_wrong_say_silent_gate_run,
+    app_learn_js_wrong_say_silent_gate_run,
     functions_app_specific_imports_gate_run,
     functions_cross_app_imports_gate_run,
     folders_function_named_orphaned_gate_run,

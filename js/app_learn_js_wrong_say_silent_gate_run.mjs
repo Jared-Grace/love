@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_wrong_say_silent_baseline_path } from "./app_learn_js_wrong_say_silent_baseline_path.mjs";
 import { baseline_names_gate_walked_generic } from "./baseline_names_gate_walked_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
-export async function app_code_wrong_say_silent_gate_run() {
+export async function app_learn_js_wrong_say_silent_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: a code lesson that asks a learner to pick what code writes out says something when the pick is wrong.");
   ("Asked for by the human 2026-10-26: every wrong choice should have a helpful reminder. A wrong pick that only turns red tells the learner they are wrong and nothing about why, so the next pick is a guess.");
