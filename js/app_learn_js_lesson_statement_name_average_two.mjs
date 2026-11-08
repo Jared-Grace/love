@@ -12,7 +12,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_line_ends_middle_draw } from "./app_learn_js_line_ends_middle_draw.mjs";
-import { app_code_number_line_draw } from "./app_code_number_line_draw.mjs";
+import { app_learn_js_number_line_draw } from "./app_learn_js_number_line_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
@@ -70,7 +70,7 @@ export function app_learn_js_lesson_statement_name_average_two() {
     return line;
   }
   let v = pointed(["Suppose we have two numbers: ", "3", " and ", "7"]);
-  let draw = app_code_number_line_draw(2, 8, 1, [3, 7], 5);
+  let draw = app_learn_js_number_line_draw(2, 8, 1, [3, 7], 5);
   let v2 = pointed([
     "",
     "5",

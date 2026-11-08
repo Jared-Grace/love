@@ -23,7 +23,7 @@ import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_sta
 import { app_learn_js_lesson_expression_integer_division } from "./app_learn_js_lesson_expression_integer_division.mjs";
 import { app_learn_js_line_ends_middle_draw } from "./app_learn_js_line_ends_middle_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
-import { app_code_number_line_draw } from "./app_code_number_line_draw.mjs";
+import { app_learn_js_number_line_draw } from "./app_learn_js_number_line_draw.mjs";
 export function app_learn_js_lesson_statement_name_middle() {
   arguments_assert(arguments, 0);
   ("the whole number in the middle of two names, rounded down: let sum = low + high; let middle = Math.floor(sum / 2); console.log(middle);");
@@ -76,7 +76,7 @@ export function app_learn_js_lesson_statement_name_middle() {
   let draw2 = app_learn_js_line_ends_middle_draw(["", code], ends, []);
   let code2 = js_code_binary_result_nb("13", slash, "2", "6.5");
   let draw3 = app_learn_js_line_ends_middle_draw(["", code2], [], ["6.5"]);
-  let draw4 = app_code_number_line_draw(4, 9, 0.5, [4, 9], 6.5);
+  let draw4 = app_learn_js_number_line_draw(4, 9, 0.5, [4, 9], 6.5);
   let draw5 = app_learn_js_line_ends_middle_draw(
     ["", "6.5", " is ", "0.5", " away from ", "6"],
     [],
@@ -135,7 +135,7 @@ export function app_learn_js_lesson_statement_name_middle() {
     " number to be a whole number?",
   ]);
   let next = app_learn_js_explain_container_next;
-  let draw6 = app_code_number_line_draw(4, 9, 0.5, [4, 9], 6);
+  let draw6 = app_learn_js_number_line_draw(4, 9, 0.5, [4, 9], 6);
   let code_even = js_code_binary_result_nb("8", slash, "2", "4");
   let code_odd = js_code_binary_result_nb("7", slash, "2", "3.5");
   function even_draw(box) {
