@@ -5,7 +5,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
+import { app_learn_js_parentheses_inside_before_outside } from "./app_learn_js_parentheses_inside_before_outside.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_expression_choose_order_parentheses_recall(
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_expression_choose_order_parentheses_recall(
     app_learn_js_lesson_expression_choose_order_and_before_or,
     ["", and_symbol, " is solved before ", or_symbol],
   );
-  let inside_first = app_code_parentheses_inside_before_outside("");
+  let inside_first = app_learn_js_parentheses_inside_before_outside("");
   app_learn_js_div_cycle_code(recall_card, [
     "And whatever is inside ",
     left_parenthesis,

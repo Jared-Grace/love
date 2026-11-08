@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_strong_card } from "./app_learn_js_lesson_expression_choose_order_strong_card.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
+import { app_learn_js_parentheses_inside_before_outside } from "./app_learn_js_parentheses_inside_before_outside.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_recall(
   root,
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_expression_choose_order_arithmetic_parenthes
   );
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
-  let inside_first = app_code_parentheses_inside_before_outside("");
+  let inside_first = app_learn_js_parentheses_inside_before_outside("");
   app_learn_js_div_cycle_code(recall_card, [
     "And whatever is inside ",
     left_parenthesis,

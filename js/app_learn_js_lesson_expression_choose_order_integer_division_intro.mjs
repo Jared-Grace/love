@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
-import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
+import { app_learn_js_parentheses_inside_before_outside } from "./app_learn_js_parentheses_inside_before_outside.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_expression_choose_order_integer_division_intro(
@@ -12,7 +12,7 @@ export function app_learn_js_lesson_expression_choose_order_integer_division_int
   ("The half of the sentence about what brackets do is the half the lessons on brackets said, in their words, out of the one place that holds them. A learner who has just spent a lesson on that sentence should meet it again rather than meet its paraphrase.");
   ("The two halves are joined into one piece before they are handed over, because the pieces of a row are read as words, code, words, code all the way along, and the tail is words.");
   let floor_name = js_code_math_floor_name();
-  let inside_first = app_code_parentheses_inside_before_outside("");
+  let inside_first = app_learn_js_parentheses_inside_before_outside("");
   let tail = text_combine(" itself, and whatever is inside them", inside_first);
   app_learn_js_div_cycle_code(parent, [
     "Now the brackets belong to ",

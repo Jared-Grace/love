@@ -11,7 +11,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
+import { app_learn_js_parentheses_inside_before_outside } from "./app_learn_js_parentheses_inside_before_outside.mjs";
 export function app_learn_js_lesson_expression_parentheses_arithmetic() {
   "the FIRST parentheses a learner ever meets, and they are met where they change the answer: (1 + 2) * 3 is 9 where 1 + 2 * 3 is 7. Everything else here is already known - the numbers, the operators, and the precedence rule itself, which the plus-times lesson taught as we always do the * first, even when it comes later in the line. So exactly one thing is new: a pair of symbols that overrides that rule. The parenthesised group is shown on BOTH sides of the *, the same way the plus-times lesson showed the same multiplication in both positions, so what is learned is the parentheses rather than a position.";
   "The second worked example parentheses a MINUS, because the question bank draws + and - inside the parentheses half the time each and the intro used to show only +. A learner who has seen the parentheses solved first around a + and never around a - has been shown the rule on one of the two lines they are then asked about. It costs nothing to show both: the card that puts the group on the other side of the * was already going to write a second group, so it writes the other operator in the same breath and the intro gains no line. What is learned is then the parentheses rather than a position OR an operator.";
@@ -112,7 +112,7 @@ export function app_learn_js_lesson_expression_parentheses_arithmetic() {
     ]);
     app_learn_js_div_cycle_code(either, ["So ", "4 * (5 - 3)", " is ", "8"]);
     let rule = app_learn_js_container_light_blue(root);
-    let r = app_code_parentheses_inside_before_outside("");
+    let r = app_learn_js_parentheses_inside_before_outside("");
     app_learn_js_div_cycle_code(rule, [
       "Whatever is inside ",
       open,
