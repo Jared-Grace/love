@@ -7,7 +7,7 @@ import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
+import { app_learn_js_program_step_loop_keyword } from "./app_learn_js_program_step_loop_keyword.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   let left = property_get_or(entry, "alternate", null);
   if (equal(left, "loop")) {
     let line = property_get(entry, "line");
-    let keyword = app_code_program_step_loop_keyword(lines, line);
+    let keyword = app_learn_js_program_step_loop_keyword(lines, line);
     if_is = ["This is a ", keyword, " statement"];
   }
   let if_solves = [
@@ -97,7 +97,7 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   if (equal(kind, "reset")) {
     ("2026-10-28, at the human's asking: a line run again still shows the values solved into it the last time it ran, and those values may no longer be true, so it is put back the way it is written first");
     let line2 = property_get(entry, "line");
-    let keyword2 = app_code_program_step_loop_keyword(lines, line2);
+    let keyword2 = app_learn_js_program_step_loop_keyword(lines, line2);
     let r23 = [
       [
         "This ",

@@ -3,7 +3,7 @@ import { list_get } from "./list_get.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_program_line_enclosing } from "./app_learn_js_program_line_enclosing.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
+import { app_learn_js_program_step_loop_keyword } from "./app_learn_js_program_step_loop_keyword.mjs";
 export function app_learn_js_program_step_line_never_words(
   lines,
   trace,
@@ -84,7 +84,7 @@ export function app_learn_js_program_step_line_never_words(
       if (entered) {
         return null;
       }
-      let keyword = app_code_program_step_loop_keyword(lines, j);
+      let keyword = app_learn_js_program_step_loop_keyword(lines, j);
       let r_loop = {
         reason: "never_runs_loop",
         words: [
