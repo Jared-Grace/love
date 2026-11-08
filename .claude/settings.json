@@ -76,6 +76,8 @@
       "Bash(wmctrl -l)",
       "Bash(wmctrl -lx)",
       "Bash(wmctrl -d)",
+      "Bash(ss -ltnp)",
+      "Bash(ss -ltn)",
       "Bash(pkill -f ai.mjs qa_gate_run)",
       "Bash(pkill -f ai.mjs examples_gate_run)",
       "mcp__claude-in-chrome__list_connected_browsers",

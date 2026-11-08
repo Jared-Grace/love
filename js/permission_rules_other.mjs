@@ -111,6 +111,8 @@ export function permission_rules_other() {
     "Bash(wmctrl -l)",
     "Bash(wmctrl -lx)",
     "Bash(wmctrl -d)",
+    "Bash(ss -ltnp)",
+    "Bash(ss -ltn)",
     combined,
     combined2,
     "mcp__claude-in-chrome__list_connected_browsers",
