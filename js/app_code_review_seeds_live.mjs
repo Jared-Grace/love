@@ -3,7 +3,7 @@ import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
-import { app_code_review_items_by_id } from "./app_code_review_items_by_id.mjs";
+import { app_learn_js_review_items_by_id } from "./app_learn_js_review_items_by_id.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
@@ -31,7 +31,7 @@ export function app_code_review_seeds_live(seeds, kind_is) {
   let wanted = list_map_property_unique(by_name, "lesson_id");
   let kinds_by_id = {};
   function kinds_read(lesson_id) {
-    let items = app_code_review_items_by_id(lesson_id);
+    let items = app_learn_js_review_items_by_id(lesson_id);
     let kinds = list_first_property(items, "exercises");
     property_set(kinds_by_id, lesson_id, kinds);
   }

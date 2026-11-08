@@ -1,5 +1,5 @@
 import { list_first_property } from "./list_first_property.mjs";
-import { app_code_review_items_by_id } from "./app_code_review_items_by_id.mjs";
+import { app_learn_js_review_items_by_id } from "./app_learn_js_review_items_by_id.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_review_seed_to_exercise(seed) {
@@ -8,7 +8,7 @@ export function app_code_review_seed_to_exercise(seed) {
   let kind_index = property_get(seed, "kind_index");
   let question = property_get(seed, "question");
   let answer = property_get(seed, "answer");
-  let items = app_code_review_items_by_id(lesson_id);
+  let items = app_learn_js_review_items_by_id(lesson_id);
   let exercises = list_first_property(items, "exercises");
   let template = list_get(exercises, kind_index);
   let info = property_get(template, "info");

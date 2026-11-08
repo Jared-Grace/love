@@ -3,7 +3,7 @@ import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_p_text } from "./html_p_text.mjs";
-import { app_code_review_items_by_id } from "./app_code_review_items_by_id.mjs";
+import { app_learn_js_review_items_by_id } from "./app_learn_js_review_items_by_id.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -20,7 +20,7 @@ export function app_code_review_preview_pickers_kinds_show(
   each([picker, stage], html_clear);
   app_shared_button(picker, "← back", shortlist_show);
   html_p_text(picker, lesson_id);
-  let items = app_code_review_items_by_id(lesson_id);
+  let items = app_learn_js_review_items_by_id(lesson_id);
   let kinds = list_first_property(items, "exercises");
   function each_kind(kind, kind_index) {
     let info = property_get(kind, "info");
