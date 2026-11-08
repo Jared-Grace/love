@@ -8,7 +8,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_span_code_dark_names } from "./app_learn_js_span_code_dark_names.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs";
+import { app_learn_js_span_text_highlight } from "./app_learn_js_span_text_highlight.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { app_learn_js_lesson_name_quoted_letter_line } from "./app_learn_js_lesson_name_quoted_letter_line.mjs";
 export function app_learn_js_lesson_name_no_quotes_box(
@@ -53,7 +53,7 @@ export function app_learn_js_lesson_name_no_quotes_box(
   html_span_text(line_two, "So the cup called ");
   app_learn_js_span_code_dark_names(line_two, name_copy, names);
   html_span_text(line_two, " gets what is ");
-  app_code_span_text_highlight(line_two, "inside");
+  app_learn_js_span_text_highlight(line_two, "inside");
   html_span_text(line_two, " the cup called ");
   app_learn_js_span_code_dark_names(line_two, name_source, names);
   html_span_text(line_two, " (");

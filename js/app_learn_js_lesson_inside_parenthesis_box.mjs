@@ -8,7 +8,7 @@ import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs";
+import { app_learn_js_span_text_highlight } from "./app_learn_js_span_text_highlight.mjs";
 import { app_learn_js_span_text_highlight_color } from "./app_learn_js_span_text_highlight_color.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_inside_parenthesis_box(
   let marking = app_learn_js_highlight_color_second();
   let line_only = html_div(box_care);
   html_span_text(line_only, "Only the name ");
-  app_code_span_text_highlight(line_only, "inside");
+  app_learn_js_span_text_highlight(line_only, "inside");
   html_span_text(line_only, " the ");
   app_learn_js_span_text_highlight_color(line_only, "parenthesis", marking);
   html_span_text(line_only, " ");
@@ -67,7 +67,7 @@ export function app_learn_js_lesson_inside_parenthesis_box(
   html_span_text(line_other, " is not written out because ");
   html_span_text_code_dark(line_other, name_other);
   html_span_text(line_other, " is not ");
-  app_code_span_text_highlight(line_other, "inside");
+  app_learn_js_span_text_highlight(line_other, "inside");
   html_span_text(line_other, " ");
   let chip_opened = html_span(line_other);
   html_style_code_dark(chip_opened);
