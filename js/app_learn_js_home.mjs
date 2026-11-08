@@ -2,7 +2,7 @@ import { html_clear_context } from "./html_clear_context.mjs";
 import { app_learn_js_home_value } from "./app_learn_js_home_value.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_learn_js_home_rows_start } from "./app_learn_js_home_rows_start.mjs";
 import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
@@ -36,7 +36,7 @@ export async function app_learn_js_home(context) {
   let g = property_get(r, "g");
   let bar = property_get(r, "bar");
   html_style_margin_y(div, value);
-  let lessons = app_code_lessons();
+  let lessons = app_learn_js_lessons();
   let current_id = storage_session_get_context(context, "lesson_id");
   let r2 = app_learn_js_home_rows_start(context);
   let way_marked = property_get(r2, "way_marked");

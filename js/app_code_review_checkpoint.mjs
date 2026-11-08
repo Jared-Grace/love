@@ -11,7 +11,7 @@ import { app_shared_button_restart_text } from "./app_shared_button_restart_text
 import { app_code_review_number_get } from "./app_code_review_number_get.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { app_code_review_range_label } from "./app_code_review_range_label.mjs";
 import { app_code_review_kind_any_is } from "./app_code_review_kind_any_is.mjs";
@@ -51,7 +51,7 @@ export function app_code_review_checkpoint(context) {
   let number = app_code_review_number_get(context);
   let scope = app_code_review_scope(number);
   let start = subtract(number, scope);
-  let all = app_code_lessons();
+  let all = app_learn_js_lessons();
   let lessons = list_slice(all, start, number);
   let label = app_code_review_range_label(number, scope);
   let title = text_combine("Review: ", label);

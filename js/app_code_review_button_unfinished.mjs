@@ -4,7 +4,7 @@ import { app_learn_js_course_unfinished_next } from "./app_learn_js_course_unfin
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { app_learn_js_course_unfinished_go } from "./app_learn_js_course_unfinished_go.mjs";
 import { app_learn_js_button_unfinished_text } from "./app_learn_js_button_unfinished_text.mjs";
@@ -24,7 +24,7 @@ export function app_code_review_button_unfinished(context, parent, number) {
   let kind = property_get(way, "kind");
   let to_lesson = equal(kind, "lesson");
   if (to_lesson) {
-    let lessons = app_code_lessons();
+    let lessons = app_learn_js_lessons();
     let in_order = list_get_or_null(lessons, number);
     let id_in_order = property_get(in_order, "id");
     let id_unfinished = property_path_get_2(way, "lesson", "id");

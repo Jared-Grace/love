@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_title_strip_arrow(
   "It opens the lesson exactly the way the home list opens it - straight to that lesson's examples - so arriving by arrow and arriving by pressing that lesson's row land the reader in the same place.";
   "Which arrow to draw is handed in rather than chosen here, because the two directions differ only in the arrow they wear and one of them turns its arrow round for a reader whose language runs the other way. Choosing here would put that reversal in two places.";
   arguments_assert(arguments, 4);
-  let lessons = app_code_lessons();
+  let lessons = app_learn_js_lessons();
   let lesson = list_get_or_null(lessons, index);
   let missing = null_is(lesson);
   async function go() {

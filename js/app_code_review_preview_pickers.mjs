@@ -5,7 +5,7 @@ import { html_clear } from "./html_clear.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { app_code_review_preview_lessons_under_test } from "./app_code_review_preview_lessons_under_test.mjs";
 export function app_code_review_preview_pickers(picker, stage, question_show) {
   arguments_assert(arguments, 3);
@@ -16,7 +16,7 @@ export function app_code_review_preview_pickers(picker, stage, question_show) {
       "Every lesson, in the order they are learned. Pick one, then a question kind.";
     html_p_text(picker, asked);
     app_shared_button(picker, "← the ones under test", shortlist_show);
-    let lessons = app_code_lessons();
+    let lessons = app_learn_js_lessons();
     function each_lesson(lesson) {
       let lesson_id = property_get(lesson, "id");
       function lesson_chosen() {

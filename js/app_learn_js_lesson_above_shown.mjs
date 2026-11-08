@@ -6,7 +6,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_index_by_id } from "./app_learn_js_lesson_index_by_id.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_above_shown(context, lesson) {
   if (less_than(index, 1)) {
     return above;
   }
-  let lessons = app_code_lessons();
+  let lessons = app_learn_js_lessons();
   let index2 = subtract(index, 1);
   let before = list_get(lessons, index2);
   let taught_fn_name = property_get_or_null(before, "above_taught_fn_name");

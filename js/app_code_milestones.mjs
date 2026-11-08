@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -24,7 +24,7 @@ export function app_code_milestones() {
   ("the milestones: like a review, a mix of questions from many lessons, but chosen by what the lessons hold rather than by being the last ones before it - asked for by the human 2026-10-22, so a learner can practise one kind of program until it is easy");
   ("2026-11-02, at the human's asking: three milestones over programs of two or more pairs of braces, each asking one way of reading them and no other. First whether each section runs, then a program a line at a time, then everything else about a whole program. Which quizzes each asks is decided per quiz, not per lesson, because a step lesson holds a step quiz and four others.");
   ("All at once draws from the lessons holding the which-line-is-missing quiz, measured 2026-11-02 as 19: the 12 step lessons and the 7 that run programs without stepping. That quiz is the test because only lessons that run a whole program hold it. Not picked: every lesson with two pairs of braces, which would add 10 that only ask about the braces themselves and run nothing. Not picked: the 12 step lessons alone, which would leave those 7 programs out of every milestone. Not picked: the lesson before each step lesson, used until 2026-11-02, which is a does-this-section-run lesson and so asked the wrong quiz here.");
-  let lessons = app_code_lessons();
+  let lessons = app_learn_js_lessons();
   ("2026-11-02: only lessons before the first while, so both stand in Nested branches, at the human's asking. A step lesson with an if inside a while had joined them and pulled them to the end of Looping, and the lesson after the last if lesson is While itself. Stopping at the lesson the Looping group names, rather than testing each program for the word while, so for and any later loop stay out too.");
   let ids = app_learn_js_lesson_ids_short();
   let loop_id = property_get(ids, fn_name("app_learn_js_lesson_while"));

@@ -1,8 +1,8 @@
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 export function app_learn_js_lesson_ids() {
   "the ordered shareable ids of every code lesson (symbols_digits_numbered, operators_integer_division, ...), for crawling or deep-linking each lesson";
-  let lessons = app_code_lessons();
+  let lessons = app_learn_js_lessons();
   let ids = list_map_property(lessons, "id");
   return ids;
 }

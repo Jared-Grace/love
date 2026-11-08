@@ -1067,7 +1067,7 @@ export function permission_grant_names() {
     fn_name("app_learn_ceb_gloss_words_respell"),
     fn_name("app_shared_bible_hash_unknown_gate_run"),
     fn_name("gloss_words_misaligned_cases_gate_run"),
-    fn_name("app_code_lessons"),
+    fn_name("app_learn_js_lessons"),
     fn_name("claude_bash_labels_alongside"),
     fn_name("app_learn_ceb_gloss_misaligned_show"),
     fn_name("ebible_bible_folders_sorted"),

@@ -12,7 +12,7 @@ import { app_learn_js_course_unfinished_next } from "./app_learn_js_course_unfin
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 export function app_learn_js_lesson_quiz_way_on_unfinished_try(
   context,
@@ -72,7 +72,7 @@ export function app_learn_js_lesson_quiz_way_on_unfinished_try(
         return null;
       }
     } else {
-      let lessons = app_code_lessons();
+      let lessons = app_learn_js_lessons();
       ("the lesson straight after this one sits at the 1-based number of this one, counted from zero");
       let in_order = list_get_or_null(lessons, number);
       ("where there IS no lesson after this one, there is nothing further on to offer either");

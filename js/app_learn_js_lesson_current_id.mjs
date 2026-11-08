@@ -1,6 +1,6 @@
 import { storage_session_initialize_context } from "./storage_session_initialize_context.mjs";
 import { app_learn_js_lesson_first_id } from "./app_learn_js_lesson_first_id.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 export function app_learn_js_lesson_current_id(context) {
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_current_id(context) {
     "lesson_id",
     first_id,
   );
-  let lessons = app_code_lessons();
+  let lessons = app_learn_js_lessons();
   let found = list_find_property_or_null(lessons, "id", lesson_id);
   let missing = null_is(found);
   if (missing) {

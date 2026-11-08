@@ -1,4 +1,4 @@
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_index_of_property } from "./list_index_of_property.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
@@ -16,7 +16,7 @@ export async function app_learn_js_lesson_next(context) {
   "Where there is no lesson after this one it asks for an unfinished lesson further on, which never goes round the top of the list, so on the last lesson it stays put and the screens show that the course is done. It used to wrap round to an early unfinished lesson; that was rejected because a button saying Next must never carry a learner backwards.";
   "Where there is neither, the lesson stays where it is. Nothing else is reachable, and the screens that draw this way on ask separately whether there is anywhere to go and put up the end-of-course note instead - so this is the answer for a press that should never have been offered rather than a destination.";
   function lesson_id_transform(value) {
-    let lessons = app_code_lessons();
+    let lessons = app_learn_js_lessons();
     let index = list_index_of_property(lessons, "id", value);
     let index_next = add_1(index);
     let in_order = list_get_or_null(lessons, index_next);

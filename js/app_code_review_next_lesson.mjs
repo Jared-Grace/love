@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_review_load } from "./app_code_review_load.mjs";
 import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
 import { app_code_review_containers } from "./app_code_review_containers.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_get } from "./list_get.mjs";
@@ -26,7 +26,7 @@ export function app_code_review_next_lesson(context, root) {
   let progress = property_get(frame, "progress");
   let success_container = property_get(frame, "success_container");
   let c = property_get(frame, "c");
-  let lessons = app_code_lessons();
+  let lessons = app_learn_js_lessons();
   let lessons_count = list_size(lessons);
   let previous_index = subtract(number, 1);
   let previous_lesson = list_get(lessons, previous_index);

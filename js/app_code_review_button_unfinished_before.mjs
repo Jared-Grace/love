@@ -2,7 +2,7 @@ import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_incomplete_next } from "./app_learn_js_lesson_incomplete_next.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { not } from "./not.mjs";
@@ -26,7 +26,7 @@ export function app_code_review_button_unfinished_before(
   if (none) {
     return null;
   }
-  let lessons = app_code_lessons();
+  let lessons = app_learn_js_lessons();
   let before = list_take(lessons, number);
   let ids_before = list_map_property(before, "id");
   let is_before = property_in_list(first, "id", ids_before);
