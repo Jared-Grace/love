@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_operator_code_subject_first(
+export function app_learn_js_operator_code_subject_first(
   subject_first,
   subject_code,
   other_code,

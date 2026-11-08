@@ -1,4 +1,4 @@
-import { app_code_operator_code_subject_first } from "./app_code_operator_code_subject_first.mjs";
+import { app_learn_js_operator_code_subject_first } from "./app_learn_js_operator_code_subject_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_parentheses_arithmetic_group } from "./app_learn_js_lesson_expression_parentheses_arithmetic_group.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_expression_parentheses_arithmetic_expression
   let input = integer_random(2, 5);
   let outer = text_to(input);
   let times = js_operator_asterisk_symbol();
-  let code = app_code_operator_code_subject_first(
+  let code = app_learn_js_operator_code_subject_first(
     group_first,
     inner,
     outer,

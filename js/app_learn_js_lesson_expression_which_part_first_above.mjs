@@ -5,7 +5,7 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_operator_code_subject_first } from "./app_code_operator_code_subject_first.mjs";
+import { app_learn_js_operator_code_subject_first } from "./app_learn_js_operator_code_subject_first.mjs";
 import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -32,19 +32,19 @@ export function app_learn_js_lesson_expression_which_part_first_above(
   let outside_text = text_to(outside);
   let middle_text = text_to(middle);
   let far_text = text_to(far);
-  let strong_part = app_code_operator_code_subject_first(
+  let strong_part = app_learn_js_operator_code_subject_first(
     strong_first,
     far_text,
     middle_text,
     times,
   );
-  let weak_part = app_code_operator_code_subject_first(
+  let weak_part = app_learn_js_operator_code_subject_first(
     strong_first,
     middle_text,
     outside_text,
     plus,
   );
-  let whole = app_code_operator_code_subject_first(
+  let whole = app_learn_js_operator_code_subject_first(
     strong_first,
     strong_part,
     outside_text,
@@ -54,7 +54,7 @@ export function app_learn_js_lesson_expression_which_part_first_above(
   let inner_text = text_to(inner);
   let value = add(outside, inner);
   let value_text = text_to(value);
-  let stood_in = app_code_operator_code_subject_first(
+  let stood_in = app_learn_js_operator_code_subject_first(
     strong_first,
     inner_text,
     outside_text,
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_expression_which_part_first_above(
   );
   let wrong_inner = add(outside, middle);
   let wrong_inner_text = text_to(wrong_inner);
-  let wrong_stood_in = app_code_operator_code_subject_first(
+  let wrong_stood_in = app_learn_js_operator_code_subject_first(
     strong_first,
     far_text,
     wrong_inner_text,
