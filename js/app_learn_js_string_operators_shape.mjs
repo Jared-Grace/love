@@ -1,6 +1,6 @@
 import { app_learn_js_operators_shape_list } from "./app_learn_js_operators_shape_list.mjs";
 import { app_learn_js_placeholder_tile_string } from "./app_learn_js_placeholder_tile_string.mjs";
-export function app_code_string_operators_shape(
+export function app_learn_js_string_operators_shape(
   parent,
   operator_a,
   operator_b,
