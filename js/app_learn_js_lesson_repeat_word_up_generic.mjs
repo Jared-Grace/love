@@ -10,7 +10,7 @@ import { js_code_update_statement } from "./js_code_update_statement.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
-import { app_code_word_three_runs_example } from "./app_code_word_three_runs_example.mjs";
+import { app_learn_js_word_three_runs_example } from "./app_learn_js_word_three_runs_example.mjs";
 import { app_code_word_three_runs_walk } from "./app_code_word_three_runs_walk.mjs";
 import { app_learn_js_lesson_repeat_word_generic } from "./app_learn_js_lesson_repeat_word_generic.mjs";
 export function app_learn_js_lesson_repeat_word_up_generic(
@@ -52,7 +52,7 @@ export function app_learn_js_lesson_repeat_word_up_generic(
   function example(root, write) {
     "the program of 0 and 3, written with write, and what it writes out";
     let lines3 = program_lines_written(write, 0, 3, joy);
-    app_code_word_three_runs_example(root, lines3, joy);
+    app_learn_js_word_three_runs_example(root, lines3, joy);
   }
   function walk(root) {
     "what the program of 0 and 3 does, run by run, until what it asks is false";
