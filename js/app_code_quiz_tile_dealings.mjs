@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_quiz_tile_dealings_alike } from "./app_code_quiz_tile_dealings_alike.mjs";
+import { app_learn_js_quiz_tile_dealings_alike } from "./app_learn_js_quiz_tile_dealings_alike.mjs";
 export function app_code_quiz_tile_dealings(code) {
   "$plain code";
   arguments_assert(arguments, 1);
@@ -16,6 +16,6 @@ export function app_code_quiz_tile_dealings(code) {
   if (not(expression_is)) {
     return none;
   }
-  let dealings = app_code_quiz_tile_dealings_alike(code);
+  let dealings = app_learn_js_quiz_tile_dealings_alike(code);
   return dealings;
 }
