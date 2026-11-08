@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_program_trace_declare } from "./app_learn_js_program_trace_declare.mjs";
 import { app_learn_js_program_trace_assign } from "./app_learn_js_program_trace_assign.mjs";
-import { app_code_program_trace_update } from "./app_code_program_trace_update.mjs";
+import { app_learn_js_program_trace_update } from "./app_learn_js_program_trace_update.mjs";
 import { app_learn_js_program_trace_log } from "./app_learn_js_program_trace_log.mjs";
 import { app_learn_js_program_trace_if } from "./app_learn_js_program_trace_if.mjs";
 import { app_code_program_trace_while } from "./app_code_program_trace_while.mjs";
@@ -32,7 +32,7 @@ export function app_learn_js_program_trace_statement(
     if (equal(left_type, "AssignmentExpression")) {
       app_learn_js_program_trace_assign(expression, actions, code, values);
     } else if (equal(left_type, "UpdateExpression")) {
-      app_code_program_trace_update(expression, actions, code, values);
+      app_learn_js_program_trace_update(expression, actions, code, values);
     } else {
       app_learn_js_program_trace_log(expression, actions, code, values);
     }

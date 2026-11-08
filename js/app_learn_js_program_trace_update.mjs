@@ -5,7 +5,7 @@ import { error } from "./error.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { app_learn_js_program_trace_long_way } from "./app_learn_js_program_trace_long_way.mjs";
 import { app_learn_js_program_trace_assign } from "./app_learn_js_program_trace_assign.mjs";
-export function app_code_program_trace_update(
+export function app_learn_js_program_trace_update(
   expression,
   actions,
   code,
