@@ -4,7 +4,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_string_shape } from "./app_code_string_shape.mjs";
+import { app_learn_js_string_shape } from "./app_learn_js_string_shape.mjs";
 export function app_learn_js_lesson_expression_string_hello_intro(
   root,
   quote,
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_expression_string_hello_intro(
   html_span_text(marks, " marks the end");
   let shape_line = html_div(intro);
   html_span_text(shape_line, "A string looks like this: ");
-  app_code_string_shape(shape_line, 1);
+  app_learn_js_string_shape(shape_line, 1);
   let example_line = html_div(intro);
   html_span_text(example_line, "Here is an example string: ");
   html_span_text_code_dark(example_line, code);

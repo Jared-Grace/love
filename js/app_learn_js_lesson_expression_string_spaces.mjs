@@ -6,7 +6,7 @@ import { list_join_space } from "./list_join_space.mjs";
 import { app_learn_js_lesson_expression_string_generic } from "./app_learn_js_lesson_expression_string_generic.mjs";
 import { app_code_verse_word_pairs } from "./app_code_verse_word_pairs.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_string_shape } from "./app_code_string_shape.mjs";
+import { app_learn_js_string_shape } from "./app_learn_js_string_shape.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -51,7 +51,7 @@ export function app_learn_js_lesson_expression_string_spaces() {
     "the home title: a string can hold spaces";
     function paint(parent) {
       html_span_text(parent, "Strings with spaces ");
-      app_code_string_shape(parent, 2);
+      app_learn_js_string_shape(parent, 2);
     }
     let left = app_learn_js_category_expressions();
     let built = app_learn_js_lesson_name_id_category_then(left, paint);
