@@ -22,8 +22,26 @@ export function app_shared_money_section_never_used_for() {
         "اگر کام کی ضرورت سے زیادہ آ جائے تو ہم تحفے لینا بند کر دیتے ہیں، یا حصہ ڈالنے والوں میں سے اور لوگوں کو اجرت دینے لگتے ہیں۔ ہم فرق اپنے پاس نہیں رکھتے، اور آپ کے پیسے وہاں نہیں بھیجتے جہاں آپ نے نہیں چُنا۔",
       ],
     },
+    tgl: {
+      title: "Kung saan hindi kailanman ginagamit ang isang kaloob",
+      lines: [
+        "Hindi kailanman para sa tubo.",
+        "Sinasabi ng Kasulatan na huwag maging sakim sa salapi (1 Timoteo 3:3), kaya hindi namin layunin na payamanin ang aming sarili. Napakaraming tao ang nagugutom at may agarang pangangailangan ngayon para mag-ipon kami ng tubo para sa aming sarili.",
+        "Hindi rin namin layunin na tanggapin ang iyong kaloob at ibigay ito sa ibang layunin para sa iyo.",
+        "Kung higit ang dumating kaysa sa kailangan ng gawain, hihinto kami sa pagtanggap ng mga kaloob, o palalawakin namin kung sino ang binabayaran sa mga taong tumutulong. Hindi namin itinatago ang sobra, at hindi namin ipinapadala ang iyong pera sa lugar na hindi mo pinili.",
+      ],
+    },
     translated_from: {
       ur: {
+        title: "What a gift is never used for",
+        lines: [
+          "Never profit.",
+          "Scripture says not to be greedy for money (1 Timothy 3:3), so our purpose is not to make ourselves rich. There are too many people hungry and in urgent need today for us to store up profit for ourselves.",
+          "It is also not our purpose to receive your gift and give it away for some other purpose on your behalf.",
+          "If more comes in than the work needs, we stop receiving gifts, or we widen who is paid among the people contributing. We do not keep the difference, and we do not send your money somewhere you did not choose.",
+        ],
+      },
+      tgl: {
         title: "What a gift is never used for",
         lines: [
           "Never profit.",
