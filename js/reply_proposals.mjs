@@ -2743,9 +2743,9 @@ export function reply_proposals() {
       blessed,
       " exceedingly abundantly more than anyone can ask or think",
     ]);
-    let line = text_may_the_lord_exclamation(request);
-    let wrapped = prayer_wrap(line);
-    return wrapped;
+    let exclaimed_line = text_may_the_lord_exclamation(request);
+    let exclaimed_wrapped = prayer_wrap(exclaimed_line);
+    return exclaimed_wrapped;
   }
   let exclaimed_v2_out = text_combine_multiple([
     "-  let v2 = ",
@@ -2818,7 +2818,7 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "this changes only the words: the blessing prayer now reads ... more than anyone can ask or think! Amen. Nothing new is matched, so no message gets a reply that got none before.",
+      "this changes only the words: the blessing prayer now reads ... more than anyone can ask or think! Amen! Nothing new is matched, so no message gets a reply that got none before.",
       "four replies use this one blessing: a pastor or minister, ministry work in a country, the Bless button's longer blessing on you, your family, your church and your country, and the meeting change waiting above. All four change together.",
       combined73,
       "the rejected reading was leaving the blessing without !, as the heal, job, provide and safe travels prayers still are. Those can follow in their own change.",
