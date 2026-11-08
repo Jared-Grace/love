@@ -13,8 +13,16 @@ export function app_shared_scripture_reference_god_says(reference) {
       before: "خدا ",
       after: " میں فرماتا ہے",
     },
+    tgl: {
+      before: "Sinasabi ng Diyos sa ",
+      after: "",
+    },
     translated_from: {
       ur: {
+        before: "God says in ",
+        after: "",
+      },
+      tgl: {
         before: "God says in ",
         after: "",
       },
