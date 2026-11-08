@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_code_milestone_begun_key } from "./app_code_milestone_begun_key.mjs";
+import { app_learn_js_milestone_begun_key } from "./app_learn_js_milestone_begun_key.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { equal } from "./equal.mjs";
 export function app_code_milestone_intro_is(context, checkpoint) {
@@ -11,7 +11,7 @@ export function app_code_milestone_intro_is(context, checkpoint) {
   if (list_empty_is(explain)) {
     return false;
   }
-  let key_begun = app_code_milestone_begun_key();
+  let key_begun = app_learn_js_milestone_begun_key();
   let begun = storage_session_get_context(context, key_begun);
   let key = property_get(checkpoint, "key");
   let pressed = equal(begun, key);
