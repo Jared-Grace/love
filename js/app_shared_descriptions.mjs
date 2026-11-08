@@ -16,7 +16,8 @@ export function app_shared_descriptions() {
     next: "Shows the Bible passage somebody sent you a link to, with a way to keep reading on from there. Open it with no link and it still gives you somewhere to start.",
     verses:
       "Choose a language and how many encouraging Bible verses you would like, and it gathers them ready to copy and send to someone.",
-    code: "Learn to program in JavaScript one small step at a time, by working on real code rather than reading about it.",
+    learn_js:
+      "Learn to program in JavaScript one small step at a time, by working on real code rather than reading about it.",
     replace:
       "A puzzle where you rewrite a row of symbols one rule at a time, from a single letter up to a working function. The same moves a compiler makes.",
     learn_en:
