@@ -9,7 +9,7 @@ import { list_get_or_null } from "./list_get_or_null.mjs";
 import { app_learn_js_course_unfinished_go } from "./app_learn_js_course_unfinished_go.mjs";
 import { app_learn_js_button_unfinished_text } from "./app_learn_js_button_unfinished_text.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
-export function app_code_review_button_unfinished(context, parent, number) {
+export function app_learn_js_review_button_unfinished(context, parent, number) {
   "$plain number";
   "The button at the end of a finished review offering the next thing this learner has not finished - a lesson or a review, whichever comes first - drawn only where that is somewhere other than the lesson straight after the review, which the continue button already goes to. Renders nothing (returns null) where there is no such thing.";
   "IT LOOKS ONLY FURTHER ON, never round the top of the list, so the button that says next never carries a learner backwards. Early lessons left unfinished are reached from the home screen.";
