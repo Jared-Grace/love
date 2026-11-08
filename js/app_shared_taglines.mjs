@@ -22,7 +22,7 @@ export function app_shared_taglines() {
     supper: "nine passages, one at a time, in the languages you choose",
     supper_tl: "nine passages, one at a time, with English beside them",
     pray_auto: "leave it open and it prays over every verse of the Bible",
-    code: "learn to program one step at a time",
+    learn_js: "learn to program one step at a time",
     replace: "turn one row of symbols into another",
     examples: "worked examples of the code these apps are made of",
     design: "every arrangement of six colours, side by side",
