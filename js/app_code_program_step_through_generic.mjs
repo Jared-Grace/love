@@ -125,7 +125,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_program_step_complete_words } from "./app_learn_js_program_step_complete_words.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
+import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
 import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
@@ -1288,7 +1288,7 @@ export function app_code_program_step_through_generic(
     let holder = {
       button: null,
     };
-    let r10 = app_code_program_step_guide_action(lines, entry, k, noun);
+    let r10 = app_learn_js_program_step_guide_action(lines, entry, k, noun);
     function action_get() {
       let button = property_get(holder, "button");
       return button;

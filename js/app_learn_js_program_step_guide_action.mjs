@@ -16,7 +16,7 @@ import { js_value_code } from "./js_value_code.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_exists } from "./property_exists.mjs";
-export function app_code_program_step_guide_action(lines, entry, k, noun) {
+export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   arguments_assert(arguments, 4);
   ("2026-11-01: lines, the program's lines, is handed in so a loop line is called by the word it starts with, while or for");
   let actions = property_get(entry, "actions");
