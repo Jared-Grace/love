@@ -13,7 +13,7 @@ import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-export function app_code_review_quiz_jump_choose(
+export function app_learn_js_review_quiz_jump_choose(
   parent,
   passed,
   current,

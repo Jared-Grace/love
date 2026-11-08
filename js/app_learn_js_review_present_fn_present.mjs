@@ -8,7 +8,7 @@ import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 import { add_1 } from "./add_1.mjs";
-import { app_code_review_quiz_jump_choose } from "./app_code_review_quiz_jump_choose.mjs";
+import { app_learn_js_review_quiz_jump_choose } from "./app_learn_js_review_quiz_jump_choose.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { subtract } from "./subtract.mjs";
 import { each } from "./each.mjs";
@@ -71,7 +71,7 @@ export function app_learn_js_review_present_fn_present(
     function choose() {
       html_clear(progress);
       let current = add_1(position);
-      app_code_review_quiz_jump_choose(
+      app_learn_js_review_quiz_jump_choose(
         progress,
         passed,
         current,
