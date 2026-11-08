@@ -1,4 +1,4 @@
-import { app_code_lessons_stretched } from "./app_code_lessons_stretched.mjs";
+import { app_learn_js_lessons_stretched } from "./app_learn_js_lessons_stretched.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_get_property } from "./list_get_property.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_lessons_order_ahead(rounds) {
   ("So this is a place to look and has never been more than that. It was read by a gate for a time, which turned each entry into an accusation; that was measured wrong sixteen times in seventeen and the gate should not be believed without opening the lesson.");
   ("The lessons that hand out no code are passed over rather than counted as nothing, because the front of the course teaches how symbols and names are spelled, and a lesson with no line on it is not a simple line.");
   let measured = app_learn_js_lessons_shapes(rounds);
-  let shapes = app_code_lessons_stretched(measured);
+  let shapes = app_learn_js_lessons_stretched(measured);
   function code_is(shape) {
     let code = property_get(shape, "code");
     return code;

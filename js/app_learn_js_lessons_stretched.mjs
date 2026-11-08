@@ -6,7 +6,7 @@ import { list_filter } from "./list_filter.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_lessons_stretched(shapes) {
+export function app_learn_js_lessons_stretched(shapes) {
   arguments_assert(arguments, 1);
   ("The same lessons, each told which stretch of the course it belongs to. A lesson writing a kind of thing no lesson before it wrote begins a new stretch, and every lesson after it belongs to that stretch until the next one begins.");
   ("A stretch is what a learner is in the middle of. The course teaches a sign, works it hard, then teaches another sign and starts easy again - so a short line late in the course is not a step backwards, it is the first line of something new. Read across stretches, every hard lesson in the course looks out of place, and that reading said so about a hundred and nineteen of a hundred and fifty-eight.");
