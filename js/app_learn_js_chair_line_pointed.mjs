@@ -1,6 +1,6 @@
 import { app_learn_js_chair_parts_words_split } from "./app_learn_js_chair_parts_words_split.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
+import { app_learn_js_line_pointed_draw } from "./app_learn_js_line_pointed_draw.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_chair_line_pointed(
   let color5 = app_learn_js_highlight_color_fifth();
   ("THE WORDS row AND column WEAR THEIR HEADINGS' COLOURS TOO, in writing and in code chips alike, rows red and columns purple, so a word and the numbers it names are seen to be one thing, asked by the human 2026-09-27. A word is drawn as a tile, as blue chairs is. Not picked: colouring the letters only, which is a second way to point beside the tile the lessons already use; and the code cards, whose painter points at numbers only");
   let split = app_learn_js_chair_parts_words_split(parts);
-  let draw = app_code_line_pointed_draw(split, [
+  let draw = app_learn_js_line_pointed_draw(split, [
     [["blue chairs"], color],
     [["7", "green chair"], color2],
     [["row", "rows", "Row", "Rows"], color3],

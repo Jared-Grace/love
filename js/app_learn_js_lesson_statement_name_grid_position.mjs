@@ -14,7 +14,7 @@ import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
+import { app_learn_js_line_pointed_draw } from "./app_learn_js_line_pointed_draw.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
 import { app_learn_js_lesson_statement_name_remainder } from "./app_learn_js_lesson_statement_name_remainder.mjs";
@@ -82,7 +82,7 @@ export function app_learn_js_lesson_statement_name_grid_position() {
   let code = js_code_binary_result_nb("7", minus, "6", "1");
   let column_formula = js_code_binary_spaced_nb(chair, percent, columns);
   let code2 = js_code_binary_result_nb("7", percent, "3", "1");
-  let held = app_code_line_pointed_draw(
+  let held = app_learn_js_line_pointed_draw(
     [
       "Those 2 rows hold 6 chairs: ",
       "0",

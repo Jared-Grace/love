@@ -19,7 +19,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_line_pointed_draw(parts, pointers) {
+export function app_learn_js_line_pointed_draw(parts, pointers) {
   arguments_assert(arguments, 2);
   ("a line of writing for a lesson's explain list, text and code taking turns as in any other line, where each piece named by a pointer wears that pointer's colour - the colour the same thing wears in the picture above, so a 7 in a sentence and the 7 in the picture are seen to be one thing");
   ("pointers is a list of pairs, each the texts to colour and the colour to give them; the first pair naming a piece wins. A line that points at nothing passes an empty list.");

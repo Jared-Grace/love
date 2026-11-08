@@ -14,7 +14,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_chair_grid } from "./app_learn_js_chair_grid.mjs";
 import { app_learn_js_chair_line_pointed } from "./app_learn_js_chair_line_pointed.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
-import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
+import { app_learn_js_line_pointed_draw } from "./app_learn_js_line_pointed_draw.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
@@ -81,7 +81,7 @@ export function app_learn_js_lesson_statement_name_grid_row() {
   let color_before = app_learn_js_highlight_color();
   function chairs_pointed(parts) {
     "a line about the first chairs, whose numbers wear the blue those chairs are filled with in the grid";
-    let draw = app_code_line_pointed_draw(parts, [
+    let draw = app_learn_js_line_pointed_draw(parts, [
       [["0", "1", "2"], color_before],
     ]);
     return draw;
