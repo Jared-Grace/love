@@ -16,7 +16,7 @@ import { list_unique } from "./list_unique.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_quiz_unscramble_shortcut_accepted(rounds) {
+export function app_learn_js_quiz_unscramble_shortcut_accepted(rounds) {
   "Every unscramble that will accept an answer spelled with less in it than the question - a token left out, or the parentheses moved off what the question parenthesised. The learner gets past the question without doing the thing it was asking.";
   "The other gate in this family asks whether the pool is missing the taught line. This asks the opposite of the same pool: whether it holds a line that is easier than the taught one. Both were paid for by a real lesson, and both went unnoticed for the same reason - every accepted ordering said the right thing, so every check that read meaning agreed. Meaning is not the subject of a lesson about how a line is spelled.";
   "The two ways of being easier are asked separately because they read differently to a learner. Leaving a token out is the loud one - a parenthesis lesson accepting a line with no parentheses in it, or a statement lesson accepting the line without its semicolon. Moving a parenthesis is the quiet one, because the tiles all get used and only the grouping is wrong: (3 === 5) === false and (3) === 5 === false are one line by value and two different answers to the question actually asked.";

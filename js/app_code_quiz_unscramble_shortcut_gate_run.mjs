@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_code_quiz_unscramble_shortcut_accepted } from "./app_code_quiz_unscramble_shortcut_accepted.mjs";
+import { app_learn_js_quiz_unscramble_shortcut_accepted } from "./app_learn_js_quiz_unscramble_shortcut_accepted.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export function app_code_quiz_unscramble_shortcut_gate_run() {
   "Gate: no unscramble in the course accepts an answer spelled with less in it than the question. Throws so the dispatcher seam exits nonzero.";
@@ -8,7 +8,7 @@ export function app_code_quiz_unscramble_shortcut_gate_run() {
   "Read-only. It builds the same lines and the same pools the app builds, and looks at them.";
   "How many lines were built and looked at travels out with the verdict. Nothing accepted too easily is what this says on a good day, and it is also what it would say if the course handed out no lines at all, so the count is the only part of the answer telling the two apart.";
   let rounds = 3;
-  let swept = app_code_quiz_unscramble_shortcut_accepted(rounds);
+  let swept = app_learn_js_quiz_unscramble_shortcut_accepted(rounds);
   let walked = property_get(swept, "walked");
   let accepted = property_get(swept, "found");
   let hint =
