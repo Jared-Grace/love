@@ -18,7 +18,7 @@ import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { app_code_review_kind_run_is } from "./app_code_review_kind_run_is.mjs";
 import { app_code_review_kind_step_is } from "./app_code_review_kind_step_is.mjs";
 import { app_code_review_kind_line_missing_is } from "./app_code_review_kind_line_missing_is.mjs";
-import { app_code_review_kind_all_at_once_is } from "./app_code_review_kind_all_at_once_is.mjs";
+import { app_learn_js_review_kind_all_at_once_is } from "./app_learn_js_review_kind_all_at_once_is.mjs";
 export function app_learn_js_milestones() {
   arguments_assert(arguments, 0);
   ("the milestones: like a review, a mix of questions from many lessons, but chosen by what the lessons hold rather than by being the last ones before it - asked for by the human 2026-10-22, so a learner can practise one kind of program until it is easy");
@@ -96,7 +96,7 @@ export function app_learn_js_milestones() {
     "milestone_braces_at_once",
     "all at once",
     app_code_review_kind_line_missing_is,
-    app_code_review_kind_all_at_once_is,
+    app_learn_js_review_kind_all_at_once_is,
   );
   let r = [v, v2, v3];
   return r;
