@@ -3,7 +3,7 @@ import { null_is } from "./null_is.mjs";
 import { app_code_program_step_piece_start_is } from "./app_code_program_step_piece_start_is.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_program_step_entry_start_is } from "./app_code_program_step_entry_start_is.mjs";
+import { app_learn_js_program_step_entry_start_is } from "./app_learn_js_program_step_entry_start_is.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
@@ -40,7 +40,7 @@ export function app_code_program_step_piece_press_words(
   }
   let braces = app_learn_js_braces_dots();
   let entry = list_get(trace, index);
-  if (app_code_program_step_entry_start_is(entry)) {
+  if (app_learn_js_program_step_entry_start_is(entry)) {
     let r6 = {
       reason: "piece_start_first",
       words: [
@@ -72,7 +72,7 @@ export function app_code_program_step_piece_press_words(
   let before = list_get(trace, index_before);
   let line_due = property_get(entry, "line");
   let line_before = property_get(before, "line");
-  let start_before = app_code_program_step_entry_start_is(before);
+  let start_before = app_learn_js_program_step_entry_start_is(before);
   if (equal(line_due, line_before) && not(start_before)) {
     let r3 = {
       reason: "piece_update_ran",

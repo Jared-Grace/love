@@ -7,7 +7,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_program_step_entry_start_is } from "./app_code_program_step_entry_start_is.mjs";
+import { app_learn_js_program_step_entry_start_is } from "./app_learn_js_program_step_entry_start_is.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -38,7 +38,7 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
     ? text_trim(message)
     : property_get(piece_due, "text");
   let choose = ["Choose: ", text];
-  if (app_code_program_step_entry_start_is(entry_due)) {
+  if (app_learn_js_program_step_entry_start_is(entry_due)) {
     ("2026-11-04: the code before a for's first ; runs before the rest of its line, whatever ran before it, so this is said ahead of the rule for the first line");
     let r18 = [
       ["The code before the first ", ";", " runs first, and only once"],
@@ -163,7 +163,7 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
   if (null_not_is(piece_due)) {
     ("2026-11-04: a for with code after its second ; goes three ways, and none of them is the next line down or back to the top of the for alone");
     if (equal(line, line_before)) {
-      if (app_code_program_step_entry_start_is(before)) {
+      if (app_learn_js_program_step_entry_start_is(before)) {
         let r19 = [
           [
             "That code is done, so the computer checks the condition (what's in between the two ",
