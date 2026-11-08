@@ -117,7 +117,7 @@ import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
 import { property_text_to } from "./property_text_to.mjs";
-import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
+import { app_learn_js_value_logged_output } from "./app_learn_js_value_logged_output.mjs";
 import { app_learn_js_label_of_code } from "./app_learn_js_label_of_code.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { app_learn_js_style_normal_box } from "./app_learn_js_style_normal_box.mjs";
@@ -1225,7 +1225,7 @@ export function app_learn_js_program_step_through_generic(
       if (null_is(box2)) {
         let entry = html_div(logged);
         function log_first() {
-          let output = app_code_value_logged_output();
+          let output = app_learn_js_value_logged_output();
           let label = app_learn_js_label_of_code(output);
           app_learn_js_example_answer_label(entry, label);
           let box3 = app_learn_js_style_normal_box(entry);

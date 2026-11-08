@@ -5,7 +5,7 @@ import { app_learn_js_if_blocks_kept } from "./app_learn_js_if_blocks_kept.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
-import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
+import { app_learn_js_value_logged_output } from "./app_learn_js_value_logged_output.mjs";
 import { app_learn_js_label_of_code } from "./app_learn_js_label_of_code.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { equal } from "./equal.mjs";
@@ -31,7 +31,7 @@ export async function app_learn_js_braces_run_output_show(
   let output = eval_console_log_lines(kept);
   let out = html_div(parent);
   html_style_opacity(out, "0");
-  let value = app_code_value_logged_output();
+  let value = app_learn_js_value_logged_output();
   let label = app_learn_js_label_of_code(value);
   app_learn_js_example_answer_label(out, label);
   if (equal(output, "")) {
