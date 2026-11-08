@@ -4,8 +4,10 @@ export function app_shared_all_apps_button_text() {
   let texts = {
     en: " All apps",
     ur: " تمام ایپس",
+    tgl: " Lahat ng app",
     translated_from: {
       ur: " All apps",
+      tgl: " All apps",
     },
   };
   let label = app_shared_text_reader_language(texts);
