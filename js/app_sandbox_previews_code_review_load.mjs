@@ -23,8 +23,8 @@ export function app_sandbox_previews_code_review_load() {
     return r11;
   }
   async function code_review_load() {
-    let m = await import("./app_code_review_preview.mjs");
-    let r10 = m.app_code_review_preview;
+    let m = await import("./app_learn_js_review_preview.mjs");
+    let r10 = m.app_learn_js_review_preview;
     return r10;
   }
   let r = {

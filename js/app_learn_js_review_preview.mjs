@@ -1,7 +1,7 @@
 import { app_learn_js_review_preview_shortlist_show } from "./app_learn_js_review_preview_shortlist_show.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_buttons_cap_style } from "./app_learn_js_buttons_cap_style.mjs";
-export function app_code_review_preview() {
+export function app_learn_js_review_preview() {
   arguments_assert(arguments, 0);
   ("One review question, on the sandbox app at hash code_review: pick a lesson, pick one of its question kinds, and that question is drawn - the real one, out of the review's own parts.");
   ("It exists because the review screen only hands out its questions in a queue of ten in a shuffled order, so reaching the one question worth looking at meant answering the ones in front of it, and reaching it a second time meant doing that again. Nothing about that queue is what is being looked at, so all of it is cost. Here the same question is two taps away and a third tap asks it again.");
