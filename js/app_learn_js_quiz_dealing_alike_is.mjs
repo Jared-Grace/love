@@ -7,7 +7,7 @@ import { app_learn_js_quiz_tokens_group_skeletons } from "./app_learn_js_quiz_to
 import { json_equal } from "./json_equal.mjs";
 import { js_tokens_comparisons_chained_is } from "./js_tokens_comparisons_chained_is.mjs";
 import { implies } from "./implies.mjs";
-import { app_code_quiz_tokens_values_mirrored_is } from "./app_code_quiz_tokens_values_mirrored_is.mjs";
+import { app_learn_js_quiz_tokens_values_mirrored_is } from "./app_learn_js_quiz_tokens_values_mirrored_is.mjs";
 export function app_learn_js_quiz_dealing_alike_is(code, candidate) {
   "$plain code";
   "$plain candidate";
@@ -42,8 +42,8 @@ export function app_learn_js_quiz_dealing_alike_is(code, candidate) {
   if (not(join_alike)) {
     return false;
   }
-  let mirror_asked = app_code_quiz_tokens_values_mirrored_is(asked);
-  let mirror_dealt = app_code_quiz_tokens_values_mirrored_is(dealt);
+  let mirror_asked = app_learn_js_quiz_tokens_values_mirrored_is(asked);
+  let mirror_dealt = app_learn_js_quiz_tokens_values_mirrored_is(dealt);
   let mirror_alike = implies(mirror_asked, mirror_dealt);
   return mirror_alike;
 }
