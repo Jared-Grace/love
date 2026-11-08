@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-export function app_code_review_restart_button(r3, g) {
+export function app_learn_js_review_restart_button(r3, g) {
   arguments_assert(arguments, 2);
   let progress = property_get(r3, "progress");
   let key = property_get(r3, "key");
