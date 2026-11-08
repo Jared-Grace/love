@@ -11,7 +11,7 @@ import { text_lines_working } from "./text_lines_working.mjs";
 import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
-export async function app_code_lessons_review_since_changed_path(
+export async function app_learn_js_lessons_review_since_changed_path(
   folder,
   commit,
 ) {
