@@ -7,7 +7,7 @@ import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exer
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
 import { app_learn_js_review_hide_success } from "./app_learn_js_review_hide_success.mjs";
 import { app_learn_js_review_exercise } from "./app_learn_js_review_exercise.mjs";
-export function app_code_review_preview_question_show(stage) {
+export function app_learn_js_review_preview_question_show(stage) {
   arguments_assert(arguments, 1);
   function question_show(lesson_id, kind_index) {
     "draw one real review question for this lesson and this kind, in the review's own frame and answering the way the review answers";
