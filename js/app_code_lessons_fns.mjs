@@ -301,7 +301,7 @@ import { app_learn_js_lesson_else_if_order } from "./app_learn_js_lesson_else_if
 import { app_learn_js_lesson_braces_run_thrice } from "./app_learn_js_lesson_braces_run_thrice.mjs";
 import { app_learn_js_lesson_if_thrice } from "./app_learn_js_lesson_if_thrice.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
-import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
+import { app_learn_js_lesson_while_log } from "./app_learn_js_lesson_while_log.mjs";
 import { app_learn_js_lesson_while_log_after_change } from "./app_learn_js_lesson_while_log_after_change.mjs";
 import { app_learn_js_lesson_while_log_skipped } from "./app_learn_js_lesson_while_log_skipped.mjs";
 import { app_learn_js_lesson_while_down } from "./app_learn_js_lesson_while_down.mjs";
@@ -662,7 +662,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_braces_run_thrice,
     app_learn_js_lesson_if_thrice,
     app_code_lesson_while,
-    app_code_lesson_while_log,
+    app_learn_js_lesson_while_log,
     app_learn_js_lesson_while_log_after_change,
     app_learn_js_lesson_while_log_skipped,
     app_learn_js_lesson_while_down,

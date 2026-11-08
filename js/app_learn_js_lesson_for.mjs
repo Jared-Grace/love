@@ -3,7 +3,7 @@ import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
+import { app_learn_js_lesson_while_log } from "./app_learn_js_lesson_while_log.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -22,11 +22,12 @@ export function app_learn_js_lesson_for() {
     let operator = js_operator_less_than_symbol();
     let condition = js_code_binary_spaced_nb("n", operator, 9);
     let box_one = app_learn_js_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_while_log, [
-      "a ",
-      "while",
-      " asks again each time its lines run:",
-    ]);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_while_log,
+      ["a ", "while", " asks again each time its lines run:"],
+    );
     let lines_one = js_code_start_above_lines(js_code_while_lines_multiple);
     example(box_one, lines_one);
     let box_two = app_learn_js_container_light_blue(root);

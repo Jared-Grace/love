@@ -8,7 +8,7 @@ import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_loop_log_generic } from "./app_learn_js_lesson_loop_log_generic.mjs";
-export function app_code_lesson_while_log() {
+export function app_learn_js_lesson_while_log() {
   arguments_assert(arguments, 0);
   ("a console.log inside a while: let n = 1; while (n < 9) { console.log(n); n += 3; } writes out 1, 4 and 7, one under the other");
   ("The one new fact is that a line inside a while runs once for every time the while runs, so a console.log inside it writes out one line each time, and the runs can be counted from what is written out.");
