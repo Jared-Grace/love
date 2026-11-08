@@ -2,7 +2,7 @@ import { app_learn_js_lesson_expression_string_concat_pair } from "./app_learn_j
 import { app_learn_js_lesson_expression_string_equality_title_name_id } from "./app_learn_js_lesson_expression_string_equality_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
-import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
+import { app_learn_js_prose_rule_line } from "./app_learn_js_prose_rule_line.mjs";
 import { app_learn_js_prose_code_line } from "./app_learn_js_prose_code_line.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
@@ -99,13 +99,13 @@ export function app_learn_js_lesson_expression_string_equality() {
       ["text", " also compares two strings"],
     ]);
     let equals_box = app_learn_js_container_light_blue(root);
-    app_code_prose_rule_line(
+    app_learn_js_prose_rule_line(
       equals_box,
       "both strings are exactly the same",
       "===",
       true_text,
     );
-    app_code_prose_rule_line(
+    app_learn_js_prose_rule_line(
       equals_box,
       "the strings are different in some way",
       "===",
@@ -116,13 +116,13 @@ export function app_learn_js_lesson_expression_string_equality() {
       ["code", "!=="],
       ["text", " is the opposite"],
     ]);
-    app_code_prose_rule_line(
+    app_learn_js_prose_rule_line(
       not_box,
       "the strings are different in some way",
       "!==",
       true_text,
     );
-    app_code_prose_rule_line(
+    app_learn_js_prose_rule_line(
       not_box,
       "both strings are exactly the same",
       "!==",

@@ -3,7 +3,7 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_prose_code_line } from "./app_learn_js_prose_code_line.mjs";
-import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
+import { app_learn_js_prose_rule_line } from "./app_learn_js_prose_rule_line.mjs";
 export function app_learn_js_lesson_expression_string_order_above(root) {
   arguments_assert(arguments, 1);
   ("first a recall box anchoring on the < and > the learner already knows on numbers, revealing they also order strings alphabetically (dictionary order); then two rule boxes, each its own light-blue container - < and > - within each the true direction and the false direction stated on their own line, condition first (When ... then ... is true/false), the first letter of each paragraph capitalised. Strict ordering only, no equal case - that is the string trichotomy lesson. No worked examples here: the refreshable examples below demonstrate the cases.");
@@ -108,26 +108,26 @@ export function app_learn_js_lesson_expression_string_order_above(root) {
     ],
   ]);
   let less_box = app_learn_js_container_light_blue(root);
-  app_code_prose_rule_line(
+  app_learn_js_prose_rule_line(
     less_box,
     "the left string comes before the right string",
     "<",
     true_text,
   );
-  app_code_prose_rule_line(
+  app_learn_js_prose_rule_line(
     less_box,
     "the left string comes after the right string",
     "<",
     false_text,
   );
   let greater_box = app_learn_js_container_light_blue(root);
-  app_code_prose_rule_line(
+  app_learn_js_prose_rule_line(
     greater_box,
     "the left string comes after the right string",
     ">",
     true_text,
   );
-  app_code_prose_rule_line(
+  app_learn_js_prose_rule_line(
     greater_box,
     "the left string comes before the right string",
     ">",
