@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lessons_review_diff_counted } from "./app_code_lessons_review_diff_counted.mjs";
+import { app_learn_js_lessons_review_diff_counted } from "./app_learn_js_lessons_review_diff_counted.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
@@ -17,7 +17,7 @@ export async function app_code_lessons_review_diff_shared_sized(
   for (let group of groups) {
     let words = ["diff", commit, "HEAD", "--"].concat(group.helpers);
     let diff_text = await git_folder_run(folder, words);
-    let counts = app_code_lessons_review_diff_counted(diff_text);
+    let counts = app_learn_js_lessons_review_diff_counted(diff_text);
     shared_sized.push({
       count: group.count,
       whole_run: equal(group.count, lessons_now),

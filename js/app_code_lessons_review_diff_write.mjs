@@ -4,7 +4,7 @@ import { app_code_lessons_review_diff_shared_section } from "./app_code_lessons_
 import { app_code_lessons_review_diff_shared_size } from "./app_code_lessons_review_diff_shared_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
-import { app_code_lessons_review_diff_counted } from "./app_code_lessons_review_diff_counted.mjs";
+import { app_learn_js_lessons_review_diff_counted } from "./app_learn_js_lessons_review_diff_counted.mjs";
 import { app_code_lessons_review_diff_section } from "./app_code_lessons_review_diff_section.mjs";
 import { app_code_lessons_review_diff_size } from "./app_code_lessons_review_diff_size.mjs";
 import { app_code_lessons_review_since } from "./app_code_lessons_review_since.mjs";
@@ -28,7 +28,7 @@ export async function app_code_lessons_review_diff_write(commit) {
   for (let entry of changed) {
     let words = ["diff", commit, "HEAD", "--"].concat(entry.files);
     let diff_text = await git_folder_run(folder, words);
-    let counts = app_code_lessons_review_diff_counted(diff_text);
+    let counts = app_learn_js_lessons_review_diff_counted(diff_text);
     sized.push({
       place: entry.place,
       lesson: entry.lesson,

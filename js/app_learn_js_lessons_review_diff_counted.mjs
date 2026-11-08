@@ -5,7 +5,7 @@ import { app_code_lessons_review_diff_lines } from "./app_code_lessons_review_di
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lessons_review_diff_counted(diff_text) {
+export function app_learn_js_lessons_review_diff_counted(diff_text) {
   "One written change measured as three numbers: the lines that are really new, the lines that are really gone, and the lines that only went from one file to another.";
   "A LINE THAT LEAVES ONE FILE AND ARRIVES IN ANOTHER IS A MOVE, and a move is not something to review - the lifts this repo does constantly would otherwise read as the largest rewrites on the list. So a line taken away and put back verbatim somewhere in the same change is counted apart, and the two numbers left are the writing that is really new and the writing that is really gone.";
   "THE KEYS ARE WRITTEN WITH A BAR IN FRONT OF THEM so that a line of code spelling a word every object already answers to cannot be mistaken for a count.";
