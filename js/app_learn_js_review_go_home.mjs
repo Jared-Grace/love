@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
-export function app_code_review_go_home(r7, context) {
+export function app_learn_js_review_go_home(r7, context) {
   arguments_assert(arguments, 2);
   let home_text = property_get(r7, "home_text");
   let progress = property_get(r7, "progress");
