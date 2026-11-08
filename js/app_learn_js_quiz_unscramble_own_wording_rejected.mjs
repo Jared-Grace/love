@@ -7,7 +7,7 @@ import { list_join } from "./list_join.mjs";
 import { list_map } from "./list_map.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_quiz_unscramble_own_wording_rejected(rounds) {
+export function app_learn_js_quiz_unscramble_own_wording_rejected(rounds) {
   "Every unscramble that will not accept the line it was asked in - the learner copies the wording the lesson just taught them, presses the tiles in that order, and is told they are wrong.";
   "Two makers fill the pool of right orderings and it is nobody's job to put the question itself there. One re-prints the line from its tree, and printing drops a parenthesis the line does not need; the other declines above a small tile count. Neither is at fault on its own, which is why the hole between them stayed open, and why the answer is asked for here rather than reasoned about.";
   "The wording is the tiles in the order the question spells them, because that is exactly what a learner copying the line off the screen will press.";
