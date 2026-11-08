@@ -7,7 +7,7 @@ import { equal } from "./equal.mjs";
 import { integer_is } from "./integer_is.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
 import { greater_than } from "./greater_than.mjs";
-export function app_code_line_operator_steps(node) {
+export function app_learn_js_line_operator_steps(node) {
   arguments_assert(arguments, 1);
   ("How many steps of working out one operator asks for: one, except a power whose exponent is a whole number written on the line, which asks for one multiplication fewer than the exponent.");
   ("A power looks like one step and is not. 5 ** 4 means 5 * 5 * 5 * 5, so working it out is three multiplications, and a learner meets it as that. Counting it as one operator put it level with a single +, which let the order of the course say a power could come before a line of three multiplications it stands for.");
