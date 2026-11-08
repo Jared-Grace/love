@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_quiz_choice_button } from "./app_code_quiz_choice_button.mjs";
+import { app_learn_js_quiz_choice_button } from "./app_learn_js_quiz_choice_button.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_quiz_choice_button_answer_generic({
   ("Three quizzes were each writing this same pressing out in full, and a fourth was about to; written once, a choice behaves the same wherever it is offered.");
   ("A wrong choice made of words is also dimmed, which says spent without taking the red away; one drawn as a run of code is left at full strength, because the red is on the code block there, and half of it over the page behind comes out as a wash rather than as red.");
   ("soft_take is asked when a wrong one is pressed, and answers whether this press is let off: a fair guess at a rule not yet said, at the human's asking 2026-10-21. One let off is spent and dimmed but not reddened, and on_wrong is not told, so it is not counted as a mistake");
-  let b = app_code_quiz_choice_button(parent, text, on_click);
+  let b = app_learn_js_quiz_choice_button(parent, text, on_click);
   ("the right one is marked as the way on as it is built, where being right is already decided, so a walk of the whole course answers every question of this kind without a second answer key that could disagree with this one");
   if (right) {
     html_data_set_test_happy(b);
