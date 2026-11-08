@@ -1,8 +1,9 @@
-import { object_property_names } from "./object_property_names.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { divide } from "./divide.mjs";
+import { property_name_internal_not_assert } from "./property_name_internal_not_assert.mjs";
 import { html_viewport_readout_update_box } from "./html_viewport_readout_update_box.mjs";
 import { property_get } from "./property_get.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { date_now_iso } from "./date_now_iso.mjs";
 import { app_shared_font_size } from "./app_shared_font_size.mjs";
 export function app_shared_device_report(context) {
@@ -28,6 +29,7 @@ export function app_shared_device_report(context) {
       "pointer-events": "none",
     });
     page.appendChild(probe);
+    property_name_internal_not_assert(unit);
     probes[unit] = probe;
   }
   let box = document.createElement("pre");
