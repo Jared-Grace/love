@@ -13,7 +13,7 @@ import { app_learn_js_program_step_line_while_words } from "./app_learn_js_progr
 import { app_learn_js_program_step_line_wrong_words } from "./app_learn_js_program_step_line_wrong_words.mjs";
 import { app_learn_js_program_step_line_ran_words } from "./app_learn_js_program_step_line_ran_words.mjs";
 import { app_learn_js_program_step_line_never_words } from "./app_learn_js_program_step_line_never_words.mjs";
-import { app_code_program_step_noun } from "./app_code_program_step_noun.mjs";
+import { app_learn_js_program_step_noun } from "./app_learn_js_program_step_noun.mjs";
 export function app_learn_js_program_step_line_press_words(
   lines,
   trace,
@@ -100,7 +100,7 @@ export function app_learn_js_program_step_line_press_words(
   if (done && null_is(reason)) {
     ("2026-10-24, at the human's asking that every wrong press says why: a line pressed once every line due has run. Words picked by the human from the ones offered");
     reason = "program_done";
-    let noun = app_code_program_step_noun(trace);
+    let noun = app_learn_js_program_step_noun(trace);
     reason_words = ["The program is complete - no " + noun + " is left to run"];
   }
   if (null_is(reason)) {

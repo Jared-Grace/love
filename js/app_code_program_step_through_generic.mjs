@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
-import { app_code_program_step_noun } from "./app_code_program_step_noun.mjs";
+import { app_learn_js_program_step_noun } from "./app_learn_js_program_step_noun.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
@@ -154,7 +154,7 @@ export function app_code_program_step_through_generic(
     fn_name("app_learn_js_program_step_actions_solve_whole"),
     "'s to say. This replaces the operators being asked for one after another in the order the computer takes them, which left the order to the program rather than to the learner");
   let trace = app_code_program_step_trace(code);
-  let noun = app_code_program_step_noun(trace);
+  let noun = app_learn_js_program_step_noun(trace);
   let resets = false;
   for (let trace_entry of trace) {
     for (let step_action of property_get(trace_entry, "actions")) {
