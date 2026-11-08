@@ -6,8 +6,10 @@ export function app_shared_about_text() {
   let texts = {
     en: " About",
     ur: " تعارف",
+    tgl: " Tungkol dito",
     translated_from: {
       ur: " About",
+      tgl: " About",
     },
   };
   let label = app_shared_text_reader_language(texts);
