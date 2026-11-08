@@ -6,7 +6,7 @@ import { js_value_name_built_in_is } from "./js_value_name_built_in_is.mjs";
 import { js_value_names } from "./js_value_names.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_program_trace_piece_name } from "./app_code_program_trace_piece_name.mjs";
+import { app_learn_js_program_trace_piece_name } from "./app_learn_js_program_trace_piece_name.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { error } from "./error.mjs";
@@ -71,7 +71,7 @@ export function app_code_program_trace_piece(state, piece, side) {
     to = to + 1;
   }
   if (equal(type, "Identifier")) {
-    let value2 = app_code_program_trace_piece_name(
+    let value2 = app_learn_js_program_trace_piece_name(
       state,
       piece,
       from,
