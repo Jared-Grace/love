@@ -1,4 +1,4 @@
-import { app_code_tokens_explain_colors } from "./app_code_tokens_explain_colors.mjs";
+import { app_learn_js_tokens_explain_colors } from "./app_learn_js_tokens_explain_colors.mjs";
 import { app_code_tokens_painted } from "./app_code_tokens_painted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -21,7 +21,7 @@ export function app_code_tokens_explain(parent) {
     list_add_multiple(parts, [token, " "]);
   }
   each(tokens, part_add);
-  let colors = app_code_tokens_explain_colors();
+  let colors = app_learn_js_tokens_explain_colors();
   app_learn_js_div_cycle_code(parent, [
     "Then we can add colors to each token/piece:",
   ]);
