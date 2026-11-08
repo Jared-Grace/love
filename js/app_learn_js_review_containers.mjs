@@ -3,7 +3,7 @@ import { app_learn_js_container_padded_x } from "./app_learn_js_container_padded
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
+import { app_learn_js_review_hide_success } from "./app_learn_js_review_hide_success.mjs";
 export function app_learn_js_review_containers(root) {
   arguments_assert(arguments, 1);
   ("the frame one review question is drawn in: the padded column, the line the progress bar goes on, the well done waiting out of sight, and the blue card the question itself is drawn in");
@@ -14,7 +14,7 @@ export function app_learn_js_review_containers(root) {
   let success_container = html_div(g);
   let c = app_learn_js_container_light_blue(g);
   app_shared_success_message(success_container);
-  app_code_review_hide_success(success_container);
+  app_learn_js_review_hide_success(success_container);
   let r = {
     g,
     progress,

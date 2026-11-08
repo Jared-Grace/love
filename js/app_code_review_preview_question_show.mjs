@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
 import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exercise.mjs";
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
-import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
+import { app_learn_js_review_hide_success } from "./app_learn_js_review_hide_success.mjs";
 import { app_learn_js_review_exercise } from "./app_learn_js_review_exercise.mjs";
 export function app_code_review_preview_question_show(stage) {
   arguments_assert(arguments, 1);
@@ -22,7 +22,7 @@ export function app_code_review_preview_question_show(stage) {
       app_code_review_show_success(success_container);
     }
     function on_incorrect() {
-      app_code_review_hide_success(success_container);
+      app_learn_js_review_hide_success(success_container);
     }
     app_learn_js_review_exercise(c, exercise, on_correct, on_incorrect, 0);
   }
