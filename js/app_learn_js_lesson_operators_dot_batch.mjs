@@ -1,4 +1,4 @@
-import { app_code_symbols_eval_valid_expression } from "./app_code_symbols_eval_valid_expression.mjs";
+import { app_learn_js_symbols_eval_valid_expression } from "./app_learn_js_symbols_eval_valid_expression.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { list_shuffle_cycled } from "./list_shuffle_cycled.mjs";
 import { list_adder_each } from "./list_adder_each.mjs";
@@ -28,7 +28,7 @@ export function app_learn_js_lesson_operators_dot_batch(operator, next) {
   }
   let b = app_learn_js_batch_question_answer_fns(
     batch_get,
-    app_code_symbols_eval_valid_expression,
+    app_learn_js_symbols_eval_valid_expression,
   );
   return b;
 }

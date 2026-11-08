@@ -8,7 +8,7 @@ import { list_iterator_refillable_value } from "./list_iterator_refillable_value
 import { js_operator_to_code_call_only } from "./js_operator_to_code_call_only.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { js_tokenizer_normalized } from "./js_tokenizer_normalized.mjs";
-import { app_code_symbols_eval_valid_expression } from "./app_code_symbols_eval_valid_expression.mjs";
+import { app_learn_js_symbols_eval_valid_expression } from "./app_learn_js_symbols_eval_valid_expression.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { list_between_space_before } from "./list_between_space_before.mjs";
 import { list_first } from "./list_first.mjs";
@@ -48,7 +48,7 @@ export function app_learn_js_lesson_functions_invalid() {
   }
   let b = app_learn_js_batch_question_answer_fns(
     batch_get,
-    app_code_symbols_eval_valid_expression,
+    app_learn_js_symbols_eval_valid_expression,
   );
   let lesson = app_learn_js_lesson_validity_code(b, name_id, above);
   return lesson;

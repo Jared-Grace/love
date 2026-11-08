@@ -1,4 +1,4 @@
-import { app_code_symbols_eval_valid_expression } from "./app_code_symbols_eval_valid_expression.mjs";
+import { app_learn_js_symbols_eval_valid_expression } from "./app_learn_js_symbols_eval_valid_expression.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_validity_operator } from "./app_learn_js_lesson_validity_operator.mjs";
 import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
@@ -36,7 +36,7 @@ export function app_learn_js_lesson_operators_asterisk_generic(
   }
   let batch_get = app_learn_js_batch_question_answer_fns(
     batch,
-    app_code_symbols_eval_valid_expression,
+    app_learn_js_symbols_eval_valid_expression,
   );
   let lesson = app_learn_js_lesson_validity_operator(
     [lesson_name],
