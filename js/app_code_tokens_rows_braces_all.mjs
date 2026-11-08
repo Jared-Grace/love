@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_is } from "./js_code_brace_is.mjs";
-import { app_code_token_any } from "./app_code_token_any.mjs";
+import { app_learn_js_token_any } from "./app_learn_js_token_any.mjs";
 export function app_code_tokens_rows_braces_all() {
   arguments_assert(arguments, 0);
   ("the two lines written out under code whose tokens are chosen in order: every token chosen, and under that the braces chosen, so the order of the braces is seen as part of the order of every token, as the human asked 2026-10-10");
@@ -11,7 +11,7 @@ export function app_code_tokens_rows_braces_all() {
     label: "Braces chosen:",
   };
   let all = {
-    kept: app_code_token_any,
+    kept: app_learn_js_token_any,
     label: "All tokens chosen:",
   };
   let r = [all, braces];
