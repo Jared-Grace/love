@@ -1,10 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_review_back_button } from "./app_code_review_back_button.mjs";
+import { app_learn_js_review_back_button } from "./app_learn_js_review_back_button.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 export function app_code_review_skip_button(context, root) {
   arguments_assert(arguments, 2);
-  let r2 = app_code_review_back_button(context, root);
+  let r2 = app_learn_js_review_back_button(context, root);
   let back_button = property_get(r2, "back_button");
   let has_next = property_get(r2, "has_next");
   let c = property_get(r2, "c");
