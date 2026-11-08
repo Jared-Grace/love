@@ -1732,7 +1732,7 @@ export function permission_grant_names() {
     fn_name("command_grantable_run_name_cases_gate_run"),
     fn_name("guard_cases_read"),
     fn_name("data_loose_paths_named"),
-    fn_name("app_code_screens_accepted_path"),
+    fn_name("app_learn_js_screens_accepted_path"),
     fn_name("baselines_room_moved"),
     fn_name("findings_from_data_moved"),
     fn_name("folders_root_tracked"),
