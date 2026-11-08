@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_review_checkpoint } from "./app_learn_js_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_review_load } from "./app_code_review_load.mjs";
+import { app_learn_js_review_load } from "./app_learn_js_review_load.mjs";
 import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
 import { app_learn_js_review_containers } from "./app_learn_js_review_containers.mjs";
 import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
@@ -17,7 +17,12 @@ export function app_code_review_next_lesson(context, root) {
   let checkpoint_key = property_get(checkpoint, "key");
   let covered = property_get(checkpoint, "lessons");
   let kind_is = property_get(checkpoint, "kind_is");
-  let loaded = app_code_review_load(context, checkpoint_key, covered, kind_is);
+  let loaded = app_learn_js_review_load(
+    context,
+    checkpoint_key,
+    covered,
+    kind_is,
+  );
   let queue = property_get(loaded, "queue");
   let passed = property_get(loaded, "passed");
   let key = app_code_review_state_key(checkpoint_key);

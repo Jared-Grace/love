@@ -7,7 +7,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_code_review_questions_cap } from "./app_code_review_questions_cap.mjs";
 import { app_code_review_seeds_gather } from "./app_code_review_seeds_gather.mjs";
-export function app_code_review_load(
+export function app_learn_js_review_load(
   context,
   checkpoint_key,
   lessons,
