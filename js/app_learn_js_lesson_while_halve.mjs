@@ -20,7 +20,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_while_generic } from "./app_learn_js_lesson_while_generic.mjs";
 import { multiply } from "./multiply.mjs";
-export function app_code_lesson_while_halve() {
+export function app_learn_js_lesson_while_halve() {
   arguments_assert(arguments, 0);
   ("a while that halves: let n = 16; while (n > 3) { n /= 2; } console.log(n); writes out 2");
   ("The one new fact is that the change inside a while need not be the same amount each run: halving takes 8 away the first time, 4 the next, then 2, so each run has to be worked out rather than counted.");
