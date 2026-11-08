@@ -12,7 +12,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_quiz_tokens_parentheses_balanced_is } from "./app_code_quiz_tokens_parentheses_balanced_is.mjs";
+import { app_learn_js_quiz_tokens_parentheses_balanced_is } from "./app_learn_js_quiz_tokens_parentheses_balanced_is.mjs";
 export function app_learn_js_quiz_tile_arrangements_or_null(code) {
   "$plain code";
   arguments_assert(arguments, 1);
@@ -49,7 +49,7 @@ export function app_learn_js_quiz_tile_arrangements_or_null(code) {
   if (wide_road) {
     let all_layouts = list_permutations(tokens);
     function lay_all(layout) {
-      let balanced = app_code_quiz_tokens_parentheses_balanced_is(layout);
+      let balanced = app_learn_js_quiz_tokens_parentheses_balanced_is(layout);
       if (balanced) {
         list_add(arrangements, layout);
       }

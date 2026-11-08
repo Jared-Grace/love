@@ -3,7 +3,7 @@ import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_code_quiz_tokens_parentheses_balanced_is(tokens) {
+export function app_learn_js_quiz_tokens_parentheses_balanced_is(tokens) {
   arguments_assert(arguments, 1);
   ("Whether a row of tiles has its parentheses in an order that could close: no closing one arrives before an opening one is waiting for it, and none is left waiting at the end.");
   ("It is a cheap question asked in front of an expensive one. A row whose parentheses do not close is a line in no language at all, so the reader that parses a row and judges its shape would throw it out anyway - this only saves it the reading. Every row it lets through is still judged in full afterwards, which is why it can make a walk faster and cannot make it wronger.");
