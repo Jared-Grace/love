@@ -2343,7 +2343,7 @@ export function permission_grant_names() {
     fn_name("function_lift_candidates_generic"),
     fn_name("app_learn_js_lesson_operator_symbols_longest_first"),
     fn_name("bible_usfm_versions_years_gate_run"),
-    fn_name("app_code_lessons_fns_shown"),
+    fn_name("app_learn_js_lessons_fns_shown"),
     fn_name("bible_audio_root_folder"),
     fn_name("firebase_bucket"),
     fn_name("firebase_storage_url_project"),

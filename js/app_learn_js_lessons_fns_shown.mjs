@@ -7,7 +7,7 @@ import { list_without_multiple } from "./list_without_multiple.mjs";
 import { app_code_lessons_released_fns } from "./app_code_lessons_released_fns.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_code_lessons_fns_shown() {
+export function app_learn_js_lessons_fns_shown() {
   "the lessons the page being read right now hands to whoever opens it: every one on the working copy, every one not held back on latest, and on the public page a learner is handed only the ones released to them";
   "The cut is made HERE rather than in the list itself, so that everything asking what lessons EXIST - the gates, the sweep over every exercise, the walk over the lenient names - goes on seeing all of them. Those questions are about the repo, and the repo has all of them; only a reader has a stage.";
   "The working copy shows everything, so the person reading through has the whole run in front of them, held lessons too. From 2026-10-24 to 2026-10-27 it left out what latest holds back, and then a held lesson could only be read by taking it off the held list.";

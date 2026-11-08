@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_progress_lessons_complete_mark } from "./app_code_progress_lessons_complete_mark.mjs";
 import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
 import { property_in_list } from "./property_in_list.mjs";
-import { app_code_lessons_fns_shown } from "./app_code_lessons_fns_shown.mjs";
+import { app_learn_js_lessons_fns_shown } from "./app_learn_js_lessons_fns_shown.mjs";
 import { app_learn_js_checkpoints } from "./app_learn_js_checkpoints.mjs";
 import { list_take } from "./list_take.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,7 +18,7 @@ export function app_code_progress_ids_complete_mark(context, lesson_ids) {
     let included = property_in_list(ids_short, fn.name, lesson_ids);
     return included;
   }
-  let fns = app_code_lessons_fns_shown();
+  let fns = app_learn_js_lessons_fns_shown();
   ("a milestone is marked by the same rule as a review, read at the lesson it stands under, and filed under its own key");
   let checkpoints = app_learn_js_checkpoints();
   function each_checkpoint(checkpoint) {
