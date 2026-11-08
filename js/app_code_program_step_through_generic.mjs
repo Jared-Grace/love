@@ -151,7 +151,7 @@ export function app_code_program_step_through_generic(
   ("2026-10-14, at the human's asking: a name solved into its value stays solved in its line while the program runs, so if (true) { stays in sight while what it decided runs; every line goes back to how it is written once the program is complete, since the program itself does not change. Not picked: putting the line back as soon as it is complete, done first and taken back, since the value then turned back into the name before the learner had used it. Not picked: leaving the solved lines once the program is complete, which would show a program nobody wrote.");
   ("2026-10-15: one operator between two values written out is solved in one step, asked for by its value. 2026-10-17: an expression with more than one operator is worked out by the pressing the expression lessons already teach, once each name in it is solved.");
   ("2026-10-17, at the human's asking: an expression holding more than one operator is solved whole, as the expression lessons solve a line - the learner presses the operator that goes next and chooses what it comes to, until one value is left - and that value is written into the program's line; which expressions, and how their names are asked for first, is ",
-    fn_name("app_code_program_step_actions_solve_whole"),
+    fn_name("app_learn_js_program_step_actions_solve_whole"),
     "'s to say. This replaces the operators being asked for one after another in the order the computer takes them, which left the order to the program rather than to the learner");
   let trace = app_code_program_step_trace(code);
   let noun = app_code_program_step_noun(trace);
@@ -1323,7 +1323,7 @@ export function app_code_program_step_through_generic(
         return;
       }
       ("2026-10-17, at the human's asking: Solve an expression is chosen once for an expression, and its every step after that - each name, then its operators - is asked straight on, without choosing it again; which steps go on is ",
-        fn_name("app_code_program_step_actions_solve_whole"),
+        fn_name("app_learn_js_program_step_actions_solve_whole"),
         "'s to say");
       let next = k + 1;
       while (

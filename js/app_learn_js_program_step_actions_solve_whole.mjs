@@ -25,7 +25,7 @@ import { object_copy_assign } from "./object_copy_assign.mjs";
 import { list_get } from "./list_get.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_set } from "./list_set.mjs";
-export function app_code_program_step_actions_solve_whole(code, actions) {
+export function app_learn_js_program_step_actions_solve_whole(code, actions) {
   arguments_assert(arguments, 2);
   ("the actions of one line of a program's trace, as a learner stepping through it is asked them: an expression holding more than one operator is solved whole, as the expression lessons solve a line - one action carrying the expression's shape, whose names and operators the learner presses in the order JavaScript takes them, choosing what each comes to. code is the whole program, since the trace places every action in it");
   ("Asked for by the human 2026-10-17: when solving an expression, as in let a = ..., the entire expression should be solved step by step, like the existing expression solver - you choose the next operator to solve, and you choose the solved value.");

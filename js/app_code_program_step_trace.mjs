@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_program_step_actions_solve_whole } from "./app_code_program_step_actions_solve_whole.mjs";
+import { app_learn_js_program_step_actions_solve_whole } from "./app_learn_js_program_step_actions_solve_whole.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -26,7 +26,7 @@ export function app_code_program_step_trace(code) {
   let trace = [];
   for (let traced_entry of traced) {
     let traced_actions = property_get(traced_entry, "actions");
-    let grouped = app_code_program_step_actions_solve_whole(
+    let grouped = app_learn_js_program_step_actions_solve_whole(
       code,
       traced_actions,
     );
