@@ -11,7 +11,7 @@ import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs
 import { text_combine } from "./text_combine.mjs";
 import { app_code_review_next_word } from "./app_code_review_next_word.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-export function app_code_review_c(context, root) {
+export function app_learn_js_review_c(context, root) {
   arguments_assert(arguments, 2);
   let r2 = app_code_review_skip_button(context, root);
   let r3 = app_learn_js_review_arrow(r2, context);
