@@ -45,8 +45,10 @@ export function app_learn_js_expression_paint(parent, item, on_operator) {
   ("2026-10-17: a name not yet read is one piece the learner can press, the name itself, so it is handed over as its own operator piece and its own whole");
   if (app_learn_js_expression_name_is(item)) {
     let name = property_get(item, "name");
-    let name_span = html_span_text(parent, name);
-    on_operator(item, name_span, name_span);
+    ("2026-11-09: the name sits inside a whole of its own, as an operator does, because a press colours the whole and then uncolours every pressable piece; one span serving as both lost its colour");
+    let name_node_span = html_span(parent);
+    let name_span = html_span_text(name_node_span, name);
+    on_operator(item, name_span, name_node_span);
     return;
   }
   let symbol = property_get(item, "operator");
