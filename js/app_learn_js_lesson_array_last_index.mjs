@@ -32,6 +32,10 @@ import { js_code_index } from "./js_code_index.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_length } from "./app_learn_js_lesson_array_length.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { add } from "./add.mjs";
+import { list_map_index } from "./list_map_index.mjs";
+import { app_learn_js_rows_aligned } from "./app_learn_js_rows_aligned.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -171,10 +175,59 @@ export function app_learn_js_lesson_array_last_index() {
       ["", "a.length", " is how many items are in the array ", "a", "."],
     );
     let box_two = app_learn_js_container_light_blue(root);
+    ("the wording of this box is the human's, 2026-11-09");
+    app_learn_js_div_cycle_code(box_two, ["Suppose we have an array:"]);
     app_learn_js_div_cycle_code(box_two, [
-      "Counting starts at ",
+      "",
+      'let a = ["love", "joy", "peace"];',
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "This array has ",
+      "3",
+      " items, so ",
+      "a.length === 3",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "Here is that array as a list with their names:",
+    ]);
+    function row_of(word, index4) {
+      "one numbered row: the item's number counting from 1, the item, and its name counting from 0";
+      let object2 = add(index4, 1);
+      let json = json_to(object2);
+      let number = text_combine_multiple([json, "."]);
+      let index2 = json_to(index4);
+      let read5 = js_code_index(name, index2);
+      let json2 = json_to(word);
+      let row = [[number], ["", json2], ["→"], ["", read5]];
+      return row;
+    }
+    let rows = list_map_index(example_items, row_of);
+    app_learn_js_rows_aligned(box_two, rows);
+    app_learn_js_div_cycle_code(box_two, [
+      "Because the list has ",
+      "3",
+      ' items, then the last item is "3."',
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "However, because in JS we count starting at ",
       "0",
-      ", so the index of the last item is one less than how many items there are:",
+      " and not ",
+      "1",
+      ', then item "3." is ',
+      "a[2]",
+      " not ",
+      "a[3]",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "In other words, if we have the number of items in the array (",
+      "a.length",
+      ") and we subtract ",
+      "1",
+      " (",
+      "a.length - 1",
+      ") then we get the number of the last item (",
+      "a[3 - 1] === a[2]",
+      " here)",
     ]);
     example(box_two);
     walk(box_two);
