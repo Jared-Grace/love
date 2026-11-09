@@ -1,12 +1,11 @@
-import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_learn_js_label_line_to_solve } from "./app_learn_js_label_line_to_solve.mjs";
-import { app_learn_js_label_solve_first } from "./app_learn_js_label_solve_first.mjs";
-import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-import { app_learn_js_lesson_quizzes_exercises } from "./app_learn_js_lesson_quizzes_exercises.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { noop } from "./noop.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
+import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
+import { app_learn_js_label_solve_first } from "./app_learn_js_label_solve_first.mjs";
+import { app_learn_js_lesson_quizzes_exercises } from "./app_learn_js_lesson_quizzes_exercises.mjs";
+import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
+import { noop } from "./noop.mjs";
 export function app_learn_js_lesson_expression_choose_order_generic(
   name_id,
   above,
@@ -43,8 +42,9 @@ export function app_learn_js_lesson_expression_choose_order_generic(
   function quizzes_get(question, answer) {
     "the one quiz every press-the-operators lesson asks: a line printed as code, and the learner told to choose what to solve first";
     "One kind, so one quiz. Backwards asks what code produces a value, and the value is not what is being asked for here; unscramble asks the learner to build the line, and the line is given. Both would be questions about something these lessons are not teaching.";
+    "2026-11-09, at the human's asking: the code over the question is called code, as the example card next door calls it, and not the line to solve - the expression to solve is named below it, and a whole program standing above it is not what is solved";
     let info = {
-      question_label: app_learn_js_label_line_to_solve(),
+      question_label: app_learn_js_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label: app_learn_js_label_solve_first(),
       on_answer,
