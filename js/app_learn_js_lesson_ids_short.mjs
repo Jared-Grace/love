@@ -537,6 +537,10 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_step_name_average_two: text_frozen("step_avg_two"),
     app_learn_js_lesson_step_name_grid_inside: text_frozen("step_grid_inside"),
     app_learn_js_lesson_step_name_average_three: text_frozen("step_avg_three"),
+    app_learn_js_lesson_array_last_index_solve: text_frozen(
+      "array_last_index_solve",
+    ),
+    app_learn_js_lesson_array_last_solve: text_frozen("array_last_solve"),
   };
   return short;
 }
