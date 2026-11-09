@@ -1,14 +1,15 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { messenger_since_mine_file } from "./messenger_since_mine_file.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { facebook_page_open } from "./facebook_page_open.mjs";
 import { sleep_human_pace } from "./sleep_human_pace.mjs";
 import { facebook_messenger_row_open } from "./facebook_messenger_row_open.mjs";
 import { facebook_messenger_box_type_send } from "./facebook_messenger_box_type_send.mjs";
 import { facebook_messenger_messages } from "./facebook_messenger_messages.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { facebook_messenger_profile_round_sent } from "./facebook_messenger_profile_round_sent.mjs";
 export async function facebook_messenger_since_mine_reply_send(id) {
   "$plain id";
   "Sends the reply you finalized for conversation number id - the reply field of its private file - as a reply to their last message, so the message it answers shows above it. Answers whether it was sent, or why not.";
@@ -44,12 +45,11 @@ export async function facebook_messenger_since_mine_reply_send(id) {
     };
     return r3;
   }
-  let picture = folder_gitignore_join(
-    text_combine_multiple([
-      fn_name("facebook_messenger_since_mine_reply_send"),
-      ".png",
-    ]),
-  );
+  let name = text_combine_multiple([
+    fn_name("facebook_messenger_since_mine_reply_send"),
+    ".png",
+  ]);
+  let picture = folder_gitignore_join(name);
   let o = await facebook_page_open("https://www.facebook.com/messages/");
   let page = o.page;
   try {
@@ -129,6 +129,7 @@ export async function facebook_messenger_since_mine_reply_send(id) {
     if (sent) {
       saved.sent_at = new Date().toISOString();
       await file_overwrite_json(file, saved);
+      await facebook_messenger_profile_round_sent(id, text, saved.sent_at);
     }
     let r9 = {
       id,
