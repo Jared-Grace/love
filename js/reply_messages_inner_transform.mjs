@@ -1,3 +1,4 @@
+import { text_apostrophe_straightened } from "./text_apostrophe_straightened.mjs";
 import { text_includes_curried_right_get } from "./text_includes_curried_right_get.mjs";
 import { list_any } from "./list_any.mjs";
 import { text_letters_is } from "./text_letters_is.mjs";
@@ -7,7 +8,8 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { digits_text } from "./digits_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function reply_messages_inner_transform(message) {
-  let lower = text_lower_to(message);
+  let straight = text_apostrophe_straightened(message);
+  let lower = text_lower_to(straight);
   let tokens = text_split_empty(lower);
   let string_includes_curry_right = text_includes_curried_right_get(
     text_combine("'", digits_text()),
