@@ -28,6 +28,8 @@ export function app_shared_descriptions() {
       "Read the New Testament in the Greek it was written in, and the Old Testament in Hebrew from Genesis onwards, with every word explained in English: what it means, how it is being used in that sentence, and the number you can look it up by.",
     bible_emoji:
       "The Bible written with pictures in place of its words, so a verse can be met without first knowing the language it was written in. A key under each verse shows the original words and the English beside them, and leaves the pictures for you to work out.",
+    bible_sermons:
+      "Read books of the New Testament a passage at a time, each with a short sermon beneath it in plain words. It is only for reading: there is nothing to sign up for and nothing to type.",
     g: "A game where you walk a street and talk with the people you meet about Jesus. They ask hard questions and say what they do not believe, and you answer them from the Bible, matching each verse to the words that belong with it.",
     g_bless:
       "A game where you walk a street, turn to look at the people around you, and pray a blessing over everyone you can see.",
