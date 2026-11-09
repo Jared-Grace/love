@@ -34,6 +34,8 @@ import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_
 import { app_learn_js_lesson_array_length } from "./app_learn_js_lesson_array_length.mjs";
 import { add } from "./add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_learn_js_cycle_code_draw } from "./app_learn_js_cycle_code_draw.mjs";
+import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_learn_js_rows_aligned } from "./app_learn_js_rows_aligned.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
@@ -198,7 +200,11 @@ export function app_learn_js_lesson_array_last_index() {
       let index2 = json_to(index4);
       let read5 = js_code_index(name, index2);
       let json2 = json_to(word);
-      let row = [[number], ["", json2], ["➡️"], ["", read5]];
+      let draw = app_learn_js_cycle_code_draw([number]);
+      let draw2 = app_learn_js_cycle_code_draw(["", json2]);
+      let draw3 = app_learn_js_arrow_inline_draw(0);
+      let draw4 = app_learn_js_cycle_code_draw(["", read5]);
+      let row = [draw, draw2, draw3, draw4];
       return row;
     }
     let rows = list_map_index(example_items, row_of);
