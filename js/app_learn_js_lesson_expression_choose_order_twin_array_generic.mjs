@@ -3,13 +3,16 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_tree_of_array_program } from "./app_learn_js_expression_tree_of_array_program.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
-import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
+import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
 import { app_learn_js_lesson_expression_choose_order_reason_run } from "./app_learn_js_lesson_expression_choose_order_reason_run.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-import { app_learn_js_lesson_expression_choose_order_decoys_generic } from "./app_learn_js_lesson_expression_choose_order_decoys_generic.mjs";
 import { app_learn_js_expression_array_decoys } from "./app_learn_js_expression_array_decoys.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
+import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 export function app_learn_js_lesson_expression_choose_order_twin_array_generic(
   title,
   code_titled,
@@ -40,8 +43,13 @@ export function app_learn_js_lesson_expression_choose_order_twin_array_generic(
     let list = [item];
     return list;
   }
+  ("each line read is kept beside the line naming its array, looked up by the line itself, so the front page can show the array above the line to press - seen on screen 2026-11-09, a[a.length - 1] standing alone with no array to read it in");
+  let heads = new WeakMap();
   function tree_for(question) {
     let tree = tree_of_code(question);
+    let lines_read = text_split_newline(question);
+    let head_read = list_first(lines_read);
+    heads.set(tree, head_read);
     return tree;
   }
   function tree_of(qa, info) {
@@ -67,11 +75,35 @@ export function app_learn_js_lesson_expression_choose_order_twin_array_generic(
   }
   ("titled the way the twin is, words then code, so the two stand side by side on the home screen as one subject");
   let name_id = app_learn_js_lesson_statement_title_name_id(title, code_titled);
-  let lesson = app_learn_js_lesson_expression_choose_order_decoys_generic(
+  let decoys = app_learn_js_expression_array_decoys;
+  function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
+    "the quiz, whose question above already shows the whole program";
+    app_learn_js_lesson_expression_choose_order_solve_answer_draw(
+      parent,
+      tree,
+      on_success,
+      on_wrong,
+      answer_label_set,
+      decoys,
+    );
+  }
+  function example_draw(parent, card, tree) {
+    "the front page: the line naming the array, then the line to press";
+    let head_shown = heads.get(tree);
+    app_learn_js_div_cycle_code(parent, ["", head_shown]);
+    app_learn_js_lesson_expression_choose_order_solve_example(
+      parent,
+      card,
+      tree,
+      decoys,
+    );
+  }
+  let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
     above,
+    answer_draw,
+    example_draw,
     bank,
-    app_learn_js_expression_array_decoys,
   );
   return lesson;
 }
