@@ -1,0 +1,1 @@
+{"f_name":"reply_messages_inner_transform_b4b9a737ceb6709d","text":"-  let lower = text_lower_to(message);\n+  let straight = text_apostrophe_straightened(message);\n+  let lower = text_lower_to(straight);"}
