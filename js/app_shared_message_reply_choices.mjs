@@ -1,3 +1,4 @@
+import { reply_tiktok_link } from "./reply_tiktok_link.mjs";
 import { reply_meeting_blessed } from "./reply_meeting_blessed.mjs";
 import { app_shared_message_reply_iam_titled_name } from "./app_shared_message_reply_iam_titled_name.mjs";
 import { reply_pray_for_me } from "./reply_pray_for_me.mjs";
@@ -70,6 +71,7 @@ export function app_shared_message_reply_choices() {
   let age = reply_age_said();
   let name_alone = app_shared_message_reply_iam_titled_name();
   let meeting = reply_meeting_blessed();
+  let tiktok = reply_tiktok_link();
   let choices_main = reply_choice([
     hru,
     greeting,
@@ -88,6 +90,7 @@ export function app_shared_message_reply_choices() {
     age,
     name_alone,
     meeting,
+    tiktok,
   ]);
   let choices_cheapest = reply_cheapest_per_position(choices_main);
   let room = reply_once_or_more(choices_cheapest);
