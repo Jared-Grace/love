@@ -32,8 +32,8 @@ import { js_code_index } from "./js_code_index.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_length } from "./app_learn_js_lesson_array_length.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { add } from "./add.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_learn_js_rows_aligned } from "./app_learn_js_rows_aligned.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
@@ -198,7 +198,7 @@ export function app_learn_js_lesson_array_last_index() {
       let index2 = json_to(index4);
       let read5 = js_code_index(name, index2);
       let json2 = json_to(word);
-      let row = [[number], ["", json2], ["→"], ["", read5]];
+      let row = [[number], ["", json2], ["➡️"], ["", read5]];
       return row;
     }
     let rows = list_map_index(example_items, row_of);
