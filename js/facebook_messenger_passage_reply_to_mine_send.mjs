@@ -57,10 +57,10 @@ export async function facebook_messenger_passage_reply_to_mine_send(id) {
     }
     await sleep_human_pace();
     await sleep_human_pace();
-    ("★ EACH MESSAGE CARRIES A LABEL 'At <time>, <name>: <words>' - the last one must be yours, and be the reply on file. A message you deleted or unsent leaves a line that is no one's words, so it is passed over.");
+    ("★ EACH MESSAGE CARRIES A LABEL 'At <time>, <name>: <words>' - the last one must be yours, and be the reply on file. A message you deleted leaves a label ending ', You' with no words, so it is passed over; only yours are, so their words are never skipped.");
     let letters = since.reply.replace(/[^A-Za-z]/g, "").slice(0, 30);
     let found = await page.evaluate(
-      "(function(t){var all=Array.from(document.querySelectorAll('[role=main] [aria-label^=\"At \"]')).filter(function(x){return !/You (deleted|unsent|removed) a message/.test(x.getAttribute('aria-label'))});var e=all[all.length-1];if(!e)return 'none';var l=e.getAttribute('aria-label');var at=l.indexOf(', You: ');if(at<0)return 'theirs';if(l.slice(at+7).replace(/[^A-Za-z]/g,'').indexOf(t)!==0)return 'other';e.setAttribute('data-reply-target','1');e.scrollIntoView({block:'center'});return 'ok'})(" +
+      "(function(t){var all=Array.from(document.querySelectorAll('[role=main] [aria-label^=\"At \"]')).filter(function(x){return !/, You$/.test(x.getAttribute('aria-label'))});var e=all[all.length-1];if(!e)return 'none';var l=e.getAttribute('aria-label');var at=l.indexOf(', You: ');if(at<0)return 'theirs';if(l.slice(at+7).replace(/[^A-Za-z]/g,'').indexOf(t)!==0)return 'other';e.setAttribute('data-reply-target','1');e.scrollIntoView({block:'center'});return 'ok'})(" +
         JSON.stringify(letters) +
         ")",
     );
