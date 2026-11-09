@@ -1,11 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_app_commit_shipped_names } from "./qa_app_commit_shipped_names.mjs";
 import { qa_app_commit_gate_run_reuse_find } from "./qa_app_commit_gate_run_reuse_find.mjs";
+import { qa_commit_named_remembered_is } from "./qa_commit_named_remembered_is.mjs";
+import { qa_app_commit_gate_run_at_reach } from "./qa_app_commit_gate_run_at_reach.mjs";
+import { object_merge } from "./object_merge.mjs";
 import { qa_snapshot_owner } from "./qa_snapshot_owner.mjs";
 import { lock_wait } from "./lock_wait.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { qa_app_commit_gate_run_at_reach } from "./qa_app_commit_gate_run_at_reach.mjs";
-import { object_merge } from "./object_merge.mjs";
 export async function qa_app_commit_gate_run_reuse_at(search, head) {
   "$plain search";
   "Whether one app is sound to send at a commit the caller names, answered from the newest commit already judged whenever nothing this app ships has changed since - and judged afresh at that commit only when something has.";
@@ -21,6 +22,16 @@ export async function qa_app_commit_gate_run_reuse_at(search, head) {
   }
   ("★ ASKED AGAIN AT THE FRONT OF THE LINE. Judging waits its turn behind every other judging on the machine, and the one it waits behind has usually just judged a later commit - which very often answers this app too. Asked only before joining, that answer arrived and went unread, and a second quarter of an hour was spent judging what was already known: measured 2026-10-05, a deploy of one app sat thirty minutes behind a run and timed out still waiting. So the line is waited out first and the record read again once through it, the way the whole-repo run already does.");
   ("The line is only waited out here - the lock is given straight back and the record read outside it. Reading the record can itself judge a commit, and judging takes this same lock, which one holder cannot take twice; read while holding it, that one case would wait on itself for ever. A miss then joins the line again to judge, which costs a place only when the run ahead did not answer this app, and that is when judging was needed anyway.");
+  ("A commit already judged needs no place in the line. The record answers for it now, and the line would end at that same answer: on 2026-11-09 a deploy of six apps, all refused at one commit, took about seven hours, and every app after the first stood in line only to read a verdict already on record. So when the commit we stand on is already on record, its own verdict is read and handed back here.");
+  let judged_already = await qa_commit_named_remembered_is(head);
+  if (judged_already) {
+    let at_head = await qa_app_commit_gate_run_at_reach(search, head, reach);
+    object_merge(at_head, {
+      head,
+      reused: false,
+    });
+    return at_head;
+  }
   async function lambda() {
     return null;
   }
