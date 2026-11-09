@@ -17,10 +17,15 @@ export async function facebook_profile_tab_countries(profile_url, tab) {
     let text = await page.evaluate(
       "(function(){var m=document.querySelector('[role=main]');return (m||document.body).innerText})()",
     );
-    let lines = text
-      .split("\n")
-      .map((l) => l.trim())
-      .filter((l) => l.length > 0);
+    function lambda(l) {
+      let r2 = l.trim();
+      return r2;
+    }
+    function lambda2(l) {
+      let r3 = l.length > 0;
+      return r3;
+    }
+    let lines = text.split("\n").map(lambda).filter(lambda2);
     let r = {
       url,
       countries: text_lines_countries(lines),
