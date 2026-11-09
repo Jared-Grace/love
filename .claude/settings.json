@@ -2976,6 +2976,7 @@
       "Bash(node scripts/ai.mjs reply_bible_verse_function_new:*)",
       "Bash(node scripts/ai.mjs playwright_url_firefox_console:*)",
       "Bash(node scripts/ai.mjs app_shared_dev_build_multiple_args:*)",
+      "Bash(node scripts/ai.mjs app_message_reply_proposals_shown:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5817,7 +5818,8 @@
       "Bash(node scripts/aig.mjs notes_reply:*)",
       "Bash(node scripts/aig.mjs reply_bible_verse_function_new:*)",
       "Bash(node scripts/aig.mjs playwright_url_firefox_console:*)",
-      "Bash(node scripts/aig.mjs app_shared_dev_build_multiple_args:*)"
+      "Bash(node scripts/aig.mjs app_shared_dev_build_multiple_args:*)",
+      "Bash(node scripts/aig.mjs app_message_reply_proposals_shown:*)"
     ],
     "defaultMode": "acceptEdits"
   },
