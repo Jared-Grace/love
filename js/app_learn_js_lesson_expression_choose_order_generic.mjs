@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
+import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_label_solve_first } from "./app_learn_js_label_solve_first.mjs";
 import { app_learn_js_lesson_quizzes_exercises } from "./app_learn_js_lesson_quizzes_exercises.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_expression_choose_order_generic(
     "2026-11-09, at the human's asking: the code over the question is called code, as the example card next door calls it, and not the line to solve - the expression to solve is named below it, and a whole program standing above it is not what is solved";
     let info = {
       question_label: app_learn_js_label_code_question(),
-      on_question: html_text_set_code_dark,
+      on_question: html_text_set_code_dark_lines,
       answer_label: app_learn_js_label_solve_first(),
       on_answer,
       answer_property: "answer",
