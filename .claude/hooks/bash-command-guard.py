@@ -1565,8 +1565,7 @@ FIND_EXEC_FLAGS = {"-exec", "-execdir"}
 # granted so that it could put bytes somewhere. Same reasoning as
 # DANGEROUS_FIND_FLAGS above, one verb wider.
 WRITING_FLAGS_BY_VERB = {
-    "sort": {"-o", "--output"},
-    "ffprobe": {"-o"},
+    "ffprobe": {"-o", "-report"},
 }
 
 # uniq's second positional operand is an OUTPUT file (`uniq [OPT]... [INPUT
@@ -1574,8 +1573,11 @@ WRITING_FLAGS_BY_VERB = {
 # options that take a value, whose value must not be counted as an operand.
 UNIQ_VALUE_FLAGS = {
     "-f", "-s", "-w",
-    "--skip-fields", "--skip-chars", "--check-chars", "--group", "--all-repeated",
+    "--skip-fields", "--skip-chars", "--check-chars",
 }
+# --group and --all-repeated take their value only after `=`, never as the
+# next word, so they are deliberately absent above: listed there, `uniq
+# --group IN OUT` swallowed IN as a value and OUT was written unprompted.
 
 
 def is_dangerous_find(words):
@@ -1604,26 +1606,60 @@ def is_dangerous_find(words):
 SORT_SHORT_VALUE_LETTERS = set("ktST")
 
 
+# The `VAR=<literal path>` map of the command line being judged, innermost
+# last. is_safe pushes it so a check deep inside a statement can resolve
+# `$S/out.txt` exactly as a redirect target is resolved; it only ever adds
+# recognition, because a resolved path still has to pass the scratchpad check.
+_JUDGED_VARS = [{}]
+
+
+def _output_target_in_scratchpad(target):
+    if target is None:
+        return False
+    path = _resolve_leading_var(_redirect_target_unquoted(target), _JUDGED_VARS[-1])
+    return is_safe_scratchpad_target(path)
+
+
 def sort_writes_output(words):
-    """True iff a sort command names an output file in any spelling GNU sort
-    accepts, not just the separate `-o FILE` word: joined (`-oFILE`),
-    bundled after other letters (`-uo FILE`), or a long option shortened to
-    any unique prefix (`--outp=FILE`, `--o FILE`). Each of those was
-    measured auto-approving a write. A value-taking letter (`-t o`) ends the
-    bundle, so a separator that happens to be `o` is not read as the flag;
-    if that reading is ever wrong, the cost is one prompt."""
-    for w in words[1:]:
+    """True iff a sort command writes a file outside this project's
+    scratchpad, or runs a program. Every spelling GNU sort accepts for its
+    output file counts, not just the separate `-o FILE` word: joined
+    (`-oFILE`), bundled after other letters (`-uo FILE`), or a long option
+    shortened to any unique prefix (`--outp=FILE`, `--o FILE`). Each of those
+    was measured auto-approving a write.
+
+    An output file inside the scratchpad is let through, because `sort ... >
+    <scratchpad>/f` already is: the same bytes reach the same place either
+    way, and `-o` is the only spelling that may name its own input (`sort -u
+    -o f f`), which a redirect would empty before sort read it.
+
+    A value-taking letter (`-t o`) ends the bundle, so a separator that
+    happens to be `o` is not read as the flag; if that reading is ever
+    wrong, the cost is one prompt."""
+    rest = words[1:]
+    for index, w in enumerate(rest):
+        following = rest[index + 1] if index + 1 < len(rest) else None
         if w == "--":
             return False
         if w.startswith("--"):
-            name = w.split("=", 1)[0]
+            name, equals, value = w.partition("=")
             if len(name) > 2 and "--output".startswith(name):
+                target = value if equals else following
+                if not _output_target_in_scratchpad(target):
+                    return True
+                continue
+            # --compress-program runs a program of the caller's choosing;
+            # `--co` is the shortest prefix GNU sort accepts for it.
+            if len(name) > 3 and "--compress-program".startswith(name):
                 return True
             continue
         if w.startswith("-") and len(w) > 1:
-            for letter in w[1:]:
+            for position, letter in enumerate(w[1:], start=2):
                 if letter == "o":
-                    return True
+                    target = w[position:] or following
+                    if not _output_target_in_scratchpad(target):
+                        return True
+                    break
                 if letter in SORT_SHORT_VALUE_LETTERS:
                     break
     return False
@@ -3150,7 +3186,11 @@ def is_safe(command, safe_verbs, safe_exact_commands, outer_vars=None):
     tokens = tokenize(command, subst_validator, vars_here)
     if not tokens:
         return False
-    return check_statements(tokens, safe_verbs, safe_exact_commands)
+    _JUDGED_VARS.append(vars_here)
+    try:
+        return check_statements(tokens, safe_verbs, safe_exact_commands)
+    finally:
+        _JUDGED_VARS.pop()
 
 
 def matched_leading_verb(command, safe_verbs):
