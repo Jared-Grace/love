@@ -1,14 +1,17 @@
-import { property_text_to } from "./property_text_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_node_stops_early_is } from "./app_learn_js_expression_node_stops_early_is.mjs";
 import { app_learn_js_expression_node_settled_is } from "./app_learn_js_expression_node_settled_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
-import { app_learn_js_expression_node_parentheses_is } from "./app_learn_js_expression_node_parentheses_is.mjs";
-import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
+import { property_text_to } from "./property_text_to.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_expression_operator_symbols } from "./app_learn_js_expression_operator_symbols.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { app_learn_js_expression_node_bracketed_is } from "./app_learn_js_expression_node_bracketed_is.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
+import { app_learn_js_expression_node_parentheses_is } from "./app_learn_js_expression_node_parentheses_is.mjs";
+import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_expression_step_reason } from "./app_learn_js_expression_step_reason.mjs";
 export function app_learn_js_expression_step_reason_of(item, node) {
@@ -34,6 +37,33 @@ export function app_learn_js_expression_step_reason_of(item, node) {
       ];
       return stops;
     }
+  }
+  ("2026-11-09, the array lessons: a name has no operator to rank, and a part inside an item's brackets goes first for the brackets' sake, as a part inside parentheses does - ranked as operators, 3 - 1 inside a[3 - 1] would be said to be solved left to right with the brackets");
+  if (app_learn_js_expression_name_is(node)) {
+    let name = property_get(node, "name");
+    let solved_name = app_learn_js_expression_solved(item, node);
+    let others_after_name =
+      app_learn_js_expression_operator_symbols(solved_name);
+    if (list_empty_is(others_after_name)) {
+      let alone = [];
+      return alone;
+    }
+    let read_first = [
+      "The value of ",
+      name,
+      " is found before anything is done with it",
+    ];
+    return read_first;
+  }
+  let bracketed = app_learn_js_expression_node_bracketed_is(item, node);
+  if (bracketed) {
+    let inside_code = app_learn_js_expression_code(node);
+    let inside = [
+      "The ",
+      inside_code,
+      " is inside the brackets, so it is solved before the item is read",
+    ];
+    return inside;
   }
   let parentheses = app_learn_js_expression_node_parentheses_is(item, node);
   if (parentheses) {
