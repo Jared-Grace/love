@@ -5181,6 +5181,13 @@ def untrusted_piece_hint(words, safe_verbs):
                 f"unasked: `node scripts/ai.mjs {granted_reader}`, as its own "
                 "Bash call."
             )
+        if verb == "tee":
+            return (
+                "`tee` has no allow rule, because it writes files. Write each "
+                "copy with its own redirect instead - `CMD >> FILE` once per "
+                "file, or print the text again for the second one. A `>`/`>>` "
+                "into your scratchpad or scripts/temp/ runs unasked."
+            )
         if verb in ("mkdir", "rm", "mv"):
             return (
                 f"`{verb}` runs unasked only on WHOLE paths inside your "
@@ -5404,6 +5411,10 @@ def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
     if not plain:
         return False
     if len(plain) >= 3 and plain[0] == "node" and plain[1] in AI_DISPATCHER_SCRIPTS:
+        return True
+    # tee is a redirect that also prints, so `>>` per file is its rewording.
+    # Sending it back approves nothing: the redirect is judged on its own.
+    if plain[0] == "tee":
         return True
     return plain[0] == "sed" or script_file_note(words, command) != ""
 

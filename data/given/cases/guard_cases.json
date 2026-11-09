@@ -730,6 +730,8 @@
     { "command": "jq . a.json > out.json", "decision": "deny", "why": "a trusted reader does not make a redirect into a repo file trusted" },
     { "command": "tail -c 4000 /home/j/a/user/facebook_post.log; echo; crontab -l -u j | grep -a facebook", "decision": "deny", "reason_includes": "crontab_list", "why": "crontab holds no rule because its other forms replace or delete the schedule; the hint names the granted function that only lists it" },
     { "command": "tail -c 4000 /home/j/a/user/facebook_post.log; echo; crontab -l | grep -a facebook", "decision": "allow", "why": "exactly `crontab -l` only prints the table, what the granted crontab_list prints" },
+    { "command": "cd /home/j/a/repos/love; S=/tmp/claude-1000/-home-j-a-repos-love/7f/scratchpad; printf '%s\\n' a b | tee -a $S/used_ch.txt >> scripts/temp/used_ch.txt; echo ok", "decision": "deny", "reason_includes": "own redirect", "why": "tee is sent back to be written as `>>` per file, never asked of the human" },
+    { "command": "echo x | tee /home/j/.bashrc", "decision": "deny", "reason_includes": "own redirect", "why": "sent back, not approved: the `>>` rewording is judged on its own and still asks outside the scratchpad" },
     { "command": "crontab -r", "decision": "silent", "why": "removes the whole schedule" },
     { "command": "crontab -l x", "decision": "silent", "why": "only the two exact words are the reading form" },
     { "command": "taskset -c 6 ls", "decision": "allow", "why": "taskset -c only chooses the processors, so the command underneath is what is judged" },
