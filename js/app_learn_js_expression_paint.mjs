@@ -4,8 +4,8 @@ import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_
 import { not } from "./not.mjs";
 import { app_learn_js_expression_value_code } from "./app_learn_js_expression_value_code.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_learn_js_expression_node_index_is } from "./app_learn_js_expression_node_index_is.mjs";
 import { html_span } from "./html_span.mjs";
+import { app_learn_js_expression_node_index_is } from "./app_learn_js_expression_node_index_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
@@ -28,32 +28,30 @@ export function app_learn_js_expression_paint(parent, item, on_operator) {
     html_span_text(parent, text);
     return;
   }
+  ("whatever is pressed is written inside a piece of its own, so a lesson can colour the whole of what one press is about to work out and not the pressed symbol alone; every kind below shares this one piece, so no kind can forget it");
+  let node_span = html_span(parent);
   if (app_learn_js_expression_node_index_is(item)) {
     ("2026-11-09: an item read by its index is written as the array's name and the index in brackets, the way ",
       fn_name("app_learn_js_expression_code"),
       " writes it; the name is the piece pressed, as a called operator's name is, since the brackets cannot be one piece with the index between them");
-    let index_span = html_span(parent);
     let array_name = property_get(item, "name");
-    let name_piece = html_span_text(index_span, array_name);
-    html_span_text(index_span, "[");
+    let name_piece = html_span_text(node_span, array_name);
+    html_span_text(node_span, "[");
     let index = property_get(item, "right");
-    app_learn_js_expression_paint(index_span, index, on_operator);
-    html_span_text(index_span, "]");
-    on_operator(item, name_piece, index_span);
+    app_learn_js_expression_paint(node_span, index, on_operator);
+    html_span_text(node_span, "]");
+    on_operator(item, name_piece, node_span);
     return;
   }
   ("2026-10-17: a name not yet read is one piece the learner can press, the name itself, so it is handed over as its own operator piece and its own whole");
   if (app_learn_js_expression_name_is(item)) {
     let name = property_get(item, "name");
-    ("2026-11-09: the name sits inside a whole of its own, as an operator does, because a press colours the whole and then uncolours every pressable piece; one span serving as both lost its colour");
-    let name_node_span = html_span(parent);
-    let name_span = html_span_text(name_node_span, name);
-    on_operator(item, name_span, name_node_span);
+    ("2026-11-09: the name is not its own whole, because a press colours the whole and then uncolours every pressable piece; one span serving as both lost its colour");
+    let name_span = html_span_text(node_span, name);
+    on_operator(item, name_span, node_span);
     return;
   }
   let symbol = property_get(item, "operator");
-  ("the operator and its two sides are written inside a piece of their own, so a lesson can colour the whole of what one press is about to work out and not the symbol alone");
-  let node_span = html_span(parent);
   let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     ("a one-sided operator is written in front of the one thing it acts on, with no space between them and no side to its left, and how that one thing is gathered depends on how the operator is spelled");
