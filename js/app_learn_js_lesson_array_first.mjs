@@ -54,6 +54,14 @@ export function app_learn_js_lesson_array_first() {
       "1",
       ") to refer to the first item in a list.",
     ]);
+    ("the line naming the index is Claude's, 2026-11-09, added at the human's asking so that the later lessons may say index: the word was in lesson 354's title and all through 355 with nothing saying what it meant");
+    let index_named = html_div(box_two);
+    html_span_text(
+      index_named,
+      "The number inside the brackets is called the ",
+    );
+    app_learn_js_definition_term(index_named, "index");
+    html_span_text(index_named, ".");
     app_learn_js_div_cycle_code(box_two, [
       "So here's the code to refer to the first item of a list:",
     ]);
