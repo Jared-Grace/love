@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { bible_word_article_bodies_folder } from "./bible_word_article_bodies_folder.mjs";
 import { path_join } from "./path_join.mjs";
 import { folder_read } from "./folder_read.mjs";
@@ -27,7 +28,7 @@ export async function smith_word_articles_stubs_remove(words) {
     let text = bible_word_article_text_own(page);
     let own = text.replace(/\[[NEH]\] indicates.*$/, "");
     let count = own.split(/\s+/).filter(Boolean).length;
-    if (count < fewest) {
+    if (less_than(count, fewest)) {
       stubs.add(file);
     }
   }
