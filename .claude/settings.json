@@ -2979,6 +2979,7 @@
       "Bash(node scripts/ai.mjs app_message_reply_proposals_shown:*)",
       "Bash(node scripts/ai.mjs function_string_whole_replace:*)",
       "Bash(node scripts/ai.mjs qa_commit_named_remembered_is:*)",
+      "Bash(node scripts/ai.mjs bible_glyph_chapters_literal_upload:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5823,7 +5824,8 @@
       "Bash(node scripts/aig.mjs app_shared_dev_build_multiple_args:*)",
       "Bash(node scripts/aig.mjs app_message_reply_proposals_shown:*)",
       "Bash(node scripts/aig.mjs function_string_whole_replace:*)",
-      "Bash(node scripts/aig.mjs qa_commit_named_remembered_is:*)"
+      "Bash(node scripts/aig.mjs qa_commit_named_remembered_is:*)",
+      "Bash(node scripts/aig.mjs bible_glyph_chapters_literal_upload:*)"
     ],
     "defaultMode": "acceptEdits"
   },
