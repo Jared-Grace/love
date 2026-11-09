@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_last } from "./app_learn_js_lesson_array_last.mjs";
 import { app_learn_js_lesson_array_last_index } from "./app_learn_js_lesson_array_last_index.mjs";
 import { app_learn_js_lesson_array_length } from "./app_learn_js_lesson_array_length.mjs";
 import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_lesson_symbols_digits_numbered.mjs";
@@ -715,6 +716,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_any,
     app_learn_js_lesson_array_length,
     app_learn_js_lesson_array_last_index,
+    app_learn_js_lesson_array_last,
   ];
   return fns;
 }

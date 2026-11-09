@@ -497,6 +497,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_any: text_frozen("array_any"),
     app_learn_js_lesson_array_length: text_frozen("array_length"),
     app_learn_js_lesson_array_last_index: text_frozen("array_last_index"),
+    app_learn_js_lesson_array_last: text_frozen("array_last"),
     app_learn_js_lesson_step_while: text_frozen("step_while"),
     app_learn_js_lesson_step_while_log: text_frozen("step_while_log"),
     app_learn_js_lesson_step_while_down: text_frozen("step_while_down"),
