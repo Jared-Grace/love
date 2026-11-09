@@ -1682,6 +1682,17 @@ def printf_sets_dangerous_variable(words):
     return False
 
 
+def is_safe_kill_probe(words):
+    """True iff `words` is `kill -0 PID...` with every PID plain digits.
+    Signal 0 is never delivered: the kernel only checks the process exists,
+    so this is how a wait loop asks whether a job is still running
+    (`while kill -0 123; do sleep 30; done`). Any other signal, a negative
+    PID (a whole process group) or a job spec (`%1`) is not this shape."""
+    if len(words) < 3 or words[0] != "kill" or words[1] != "-0":
+        return False
+    return all(w.isdigit() and w.isascii() for w in words[2:])
+
+
 def is_writing_read_verb(words):
     """True iff this is one of the read-only verbs in permissions.allow being
     asked to WRITE a file - `sort -o FILE`, `ffprobe -o FILE`, or `uniq INPUT
@@ -2777,6 +2788,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_verify_html_rm(words)
             and not is_safe_scripts_temp_rm(words)
             and not is_safe_git_rm_tmp(words)
+            and not is_safe_kill_probe(words)
             # `unwrapped`, like the sandboxed-node templates and unlike the
             # rest: a fetch is the one thing here that waits on somebody else,
             # so it is written with `timeout 30` in front of it more often than
