@@ -1599,6 +1599,36 @@ def is_dangerous_find(words):
     return words[0] == "find" and any(w in DANGEROUS_FIND_FLAGS for w in words[1:])
 
 
+# sort's short options that take a value: the rest of the word after one of
+# these letters is that value, not more option letters.
+SORT_SHORT_VALUE_LETTERS = set("ktST")
+
+
+def sort_writes_output(words):
+    """True iff a sort command names an output file in any spelling GNU sort
+    accepts, not just the separate `-o FILE` word: joined (`-oFILE`),
+    bundled after other letters (`-uo FILE`), or a long option shortened to
+    any unique prefix (`--outp=FILE`, `--o FILE`). Each of those was
+    measured auto-approving a write. A value-taking letter (`-t o`) ends the
+    bundle, so a separator that happens to be `o` is not read as the flag;
+    if that reading is ever wrong, the cost is one prompt."""
+    for w in words[1:]:
+        if w == "--":
+            return False
+        if w.startswith("--"):
+            name = w.split("=", 1)[0]
+            if len(name) > 2 and "--output".startswith(name):
+                return True
+            continue
+        if w.startswith("-") and len(w) > 1:
+            for letter in w[1:]:
+                if letter == "o":
+                    return True
+                if letter in SORT_SHORT_VALUE_LETTERS:
+                    break
+    return False
+
+
 def is_writing_read_verb(words):
     """True iff this is one of the read-only verbs in permissions.allow being
     asked to WRITE a file - `sort -o FILE`, `ffprobe -o FILE`, or `uniq INPUT
@@ -1617,6 +1647,8 @@ def is_writing_read_verb(words):
     A false positive costs one prompt and nothing else - the same trade
     is_dangerous_find already accepts for `find . -name -delete`."""
     verb = words[0]
+    if verb == "sort" and sort_writes_output(words):
+        return True
     flags = WRITING_FLAGS_BY_VERB.get(verb)
     if flags:
         for w in words[1:]:
