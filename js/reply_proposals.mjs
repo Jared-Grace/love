@@ -2860,6 +2860,57 @@ export function reply_proposals() {
       "the video is not watched, so the prayer blesses Christian videos and never this video by name.",
     ],
   };
+  let lower_minus = text_combine_multiple([
+    "-  let lower = ",
+    fn_name("text_lower_to"),
+    "(message);",
+  ]);
+  let straight_plus = text_combine_multiple([
+    "+  let straight = ",
+    fn_name("text_apostrophe_straightened"),
+    "(message);",
+  ]);
+  let lower_plus = text_combine_multiple([
+    "+  let lower = ",
+    fn_name("text_lower_to"),
+    "(straight);",
+  ]);
+  let tokens_then = text_combine_multiple([
+    "   let tokens = ",
+    fn_name("text_split_empty"),
+    "(lower);",
+  ]);
+  let apostrophe_curly = {
+    title: "read a phone's curly apostrophe the same as a straight one",
+    fn: fn_name("reply_messages_inner_transform"),
+    whole: [],
+    diff: [lower_minus, straight_plus, lower_plus, tokens_then],
+    cases: [
+      {
+        from: "",
+        message: "I’m Grace from Kenya",
+        answered: true,
+        outputs: named_and_located,
+      },
+      {
+        from: "",
+        message: "I’m John",
+        answered: true,
+        outputs: [name_response],
+      },
+      {
+        from: "",
+        message: "I’m from Pakistan",
+        answered: true,
+        outputs: [t],
+      },
+    ],
+    decide: [
+      "phones type the curly apostrophe and computers type the straight one. Today the curly one is thrown away before any rule reads the message, so I'm John gets an answer and the same words typed on a phone get nothing. Tested before this change: I'm John, I'm from Pakistan and Hi I'm John from Kenya are answered, and every one of them typed with the curly mark is not.",
+      "this only ever adds answers: a message with no curly apostrophe reads exactly as before, and one with it reads the way the straight spelling already does.",
+      "the straightening is the repo's own step, already used for the Bible word stores for the same reason. It covers the two curly marks only. The rejected reading was also turning other lookalikes into the straight mark (the modifier letter, the backtick, the prime), because no waiting message has been seen using them.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2897,6 +2948,7 @@ export function reply_proposals() {
     meeting_blessed_said,
     blessing_exclaimed,
     tiktok_link_said,
+    apostrophe_curly,
   ];
   return proposals;
 }
