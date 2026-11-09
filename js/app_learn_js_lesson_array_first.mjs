@@ -5,6 +5,7 @@ import { app_learn_js_prose_code_list_numbered } from "./app_learn_js_prose_code
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
+import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_array_index_generic } from "./app_learn_js_lesson_array_index_generic.mjs";
 export function app_learn_js_lesson_array_first() {
@@ -54,14 +55,20 @@ export function app_learn_js_lesson_array_first() {
       "1",
       ") to refer to the first item in a list.",
     ]);
-    ("the line naming the index is Claude's, 2026-11-09, added at the human's asking so that the later lessons may say index: the word was in lesson 354's title and all through 355 with nothing saying what it meant");
+    ("the line naming the index is the human's, 2026-11-09, added at their asking so that the later lessons may say index: the word was in lesson 354's title and all through 355 with nothing saying what it meant");
     let index_named = html_div(box_two);
     html_span_text(
       index_named,
       "The number inside the brackets is called the ",
     );
     app_learn_js_definition_term(index_named, "index");
-    html_span_text(index_named, ".");
+    app_learn_js_cycle_code(index_named, [
+      ". For example in ",
+      "a[0]",
+      " ",
+      "0",
+      " is the index.",
+    ]);
     app_learn_js_div_cycle_code(box_two, [
       "So here's the code to refer to the first item of a list:",
     ]);
