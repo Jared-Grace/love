@@ -1,14 +1,14 @@
-import { list_first_property } from "./list_first_property.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_first } from "./list_first.mjs";
-import { property_get } from "./property_get.mjs";
+import { list_first_property } from "./list_first_property.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { not } from "./not.mjs";
+import { list_first } from "./list_first.mjs";
 import { list_first_last_slice } from "./list_first_last_slice.mjs";
+import { property_get } from "./property_get.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -17,6 +17,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_join_space } from "./list_join_space.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 export async function app_shared_bible_copy(
@@ -52,7 +53,10 @@ export async function app_shared_bible_copy(
     audience_books,
     [first, last],
   );
-  let lines = [reference];
+  ("The reference sits directly on top of the first bible's paragraph, with no blank line between, the way a printed bible sets a heading over its text - so a blank line in the paste always means one thing, the next bible. The human chose this on 2026-11-09, for one bible and for several alike.");
+  ("Rejected: a blank line after the reference - it gave a blank line two meanings, heading-ends and next-bible; and a blank line after it only when several bibles are copied - two shapes where one reads as clearly, since the second paragraph is plainly the same verses again.");
+  let lines = [];
+  let heading = reference;
   function per_language(entry) {
     let verses_l = property_get(entry, "verses");
     let texts = [];
@@ -75,10 +79,20 @@ export async function app_shared_bible_copy(
     let e = list_empty_not_is(texts);
     if (e) {
       let paragraph = list_join_space(texts);
+      let headed = null_not_is(heading);
+      if (headed) {
+        paragraph = list_join_newline([heading, paragraph]);
+        heading = null;
+      }
       list_add(lines, paragraph);
     }
   }
   each(languages_verses, per_language);
+  let unplaced = null_not_is(heading);
+  if (unplaced) {
+    ("no bible had any of these verses, so the reference is the whole of the scripture part, as it always was");
+    list_add(lines, heading);
+  }
   ("Whatever else the screen was showing about this passage follows the scripture, in the order the screen showed it. A reader on a gloss page has the verse in the language they are learning and a line for every word of it explained; copying gave them the english alone, so what landed on the clipboard was the one part of that screen they could already have got anywhere. What is put here is put by the screen that drew it, because only that screen knows what it drew.");
   ("It is added once at the end rather than after each verse, because these readers show a single verse at a time and the whole-chapter reader has nothing extra to add - so there is no verse for the wrong copy of it to attach to.");
   list_add_multiple(lines, lines_extra);
