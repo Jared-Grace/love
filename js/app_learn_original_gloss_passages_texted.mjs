@@ -1,3 +1,4 @@
+import { null_is } from "./null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
@@ -11,7 +12,16 @@ export function app_learn_original_gloss_passages_texted(passages) {
   arguments_assert(arguments, 1);
   function passage_texted(passage) {
     let originals = property_get(passage, "originals");
-    let texts = [originals];
+    ("A verse with no original text of its own is read as an empty text, which holds no words. PSA018 is the case: its English stands the heading apart as verse 0, while the Hebrew counts the heading inside verse 1, so verse 0 has no Hebrew text at all, and the null left there stopped every word check over the whole store.");
+    function original_text(original) {
+      if (null_is(original)) {
+        let r2 = "";
+        return r2;
+      }
+      return original;
+    }
+    let originals_texted = list_map(originals, original_text);
+    let texts = [originals_texted];
     let texted = object_copy_property_set(passage, "texts", texts);
     return texted;
   }
