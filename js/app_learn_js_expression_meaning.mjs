@@ -1,8 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
-import { text_to } from "./text_to.mjs";
+import { app_learn_js_expression_value_code } from "./app_learn_js_expression_value_code.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_learn_js_expression_node_index_is } from "./app_learn_js_expression_node_index_is.mjs";
+import { js_code_index } from "./js_code_index.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_learn_js_expression_meaning(item) {
@@ -14,12 +17,22 @@ export function app_learn_js_expression_meaning(item) {
   let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {
     ("a value is already the whole of what it means");
-    let text = text_to(item);
+    let text = app_learn_js_expression_value_code(item);
     return text;
+  }
+  ("2026-11-09: a name still to be read means itself, as a.length does, and an item read by its index means the array's name and what the index means inside brackets - the array lessons' two pieces, spelled as the line spells them");
+  if (app_learn_js_expression_name_is(item)) {
+    let name = property_get(item, "name");
+    return name;
   }
   let symbol = property_get(item, "operator");
   let right = property_get(item, "right");
   let right_meaning = app_learn_js_expression_meaning(right);
+  if (app_learn_js_expression_node_index_is(item)) {
+    let array_name = property_get(item, "name");
+    let indexed = js_code_index(array_name, right_meaning);
+    return indexed;
+  }
   let before_is = app_learn_js_expression_node_before_is(item);
   if (before_is) {
     let one_sided = text_combine_multiple([symbol, "(", right_meaning, ")"]);

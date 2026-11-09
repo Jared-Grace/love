@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -13,6 +14,11 @@ export function app_learn_js_expression_symbols(item) {
   if (not(node_is)) {
     let none = [];
     return none;
+  }
+  ("2026-11-09: a name still to be read, as a.length, holds no operator");
+  if (app_learn_js_expression_name_is(item)) {
+    let unnamed = [];
+    return unnamed;
   }
   let symbol = property_get(item, "operator");
   let right = property_get(item, "right");

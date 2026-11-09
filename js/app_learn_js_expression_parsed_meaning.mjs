@@ -8,6 +8,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_get } from "./list_get.mjs";
+import { js_code_index } from "./js_code_index.mjs";
 export function app_learn_js_expression_parsed_meaning(node) {
   arguments_assert(arguments, 1);
   ("what a line of javascript MEANS, once it has been read by a real javascript reader, written in the very same words a shape writes its own meaning in: a pair of brackets round every operator and no spaces anywhere, so Math.floor(14 / 4) * 4 comes out (Math.floor((14/4))*4)");
@@ -65,6 +66,21 @@ export function app_learn_js_expression_parsed_meaning(node) {
       let called = text_combine_multiple([name, "(", inside_call, ")"]);
       return called;
     }
+  }
+  let member_is = equal(type, "MemberExpression");
+  if (member_is) {
+    ("2026-11-09: an item read by its index means what is read and what the index means inside brackets; a property read by a name, as a.length, means itself as written");
+    let computed = property_get(node, "computed");
+    if (computed) {
+      let held_by = property_get(node, "object");
+      let held_by_code = js_unparse(held_by);
+      let read = property_get(node, "property");
+      let read_meaning = app_learn_js_expression_parsed_meaning(read);
+      let indexed = js_code_index(held_by_code, read_meaning);
+      return indexed;
+    }
+    let property_read = js_unparse(node);
+    return property_read;
   }
   let strange = text_combine_multiple([
     "a kind of line no shape of this app builds: ",
