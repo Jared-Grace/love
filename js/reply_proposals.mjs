@@ -2824,6 +2824,42 @@ export function reply_proposals() {
       "the rejected reading was leaving the blessing without !, as the heal, job, provide and safe travels prayers still are. Those can follow in their own change.",
     ],
   };
+  let meeting_then = text_combine_multiple([
+    "   let meeting = ",
+    fn_name("reply_meeting_blessed"),
+    "();",
+  ]);
+  let tiktok_add = text_combine_multiple([
+    "+  let tiktok = ",
+    fn_name("reply_tiktok_link"),
+    "();",
+  ]);
+  let exclaimed = text_may_the_lord_exclamation("bless all Christian videos");
+  let prayer2 = text_combine_multiple([
+    "May the word of the LORD go forth! ",
+    exclaimed,
+  ]);
+  let tiktok_prayer = prayer_wrap(prayer2);
+  let tiktok_link_said = {
+    title: "answer somebody sending a TikTok link",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_tiktok_link")],
+    diff: [meeting_then, tiktok_add, "     meeting,", "+    tiktok,"],
+    cases: [
+      {
+        from: "",
+        message: "https://vt.tiktok.com/ZSqGDCgCN/",
+        answered: true,
+        outputs: [tiktok_prayer],
+      },
+    ],
+    decide: [
+      "the words of the prayer are yours: May the word of the LORD go forth! May the LORD bless all Christian videos! It is said inside the prayer, so it opens in the name of the Father, and of the Son, and of the Holy Spirit and ends with Amen.",
+      "you wrote word of LORD; this says word of the LORD, the way the Bible says it (Isaiah 2:3). The rejected reading was keeping word of LORD exactly as typed.",
+      "this is the shape of the link a waiting message really sent - the short vt.tiktok.com address and its code - and only that shape is matched. The rejected reading was also taking www.tiktok.com and other sites' links, because nobody waiting has sent those yet.",
+      "the video is not watched, so the prayer blesses Christian videos and never this video by name.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2860,6 +2896,7 @@ export function reply_proposals() {
     blessing_always_said,
     meeting_blessed_said,
     blessing_exclaimed,
+    tiktok_link_said,
   ];
   return proposals;
 }
