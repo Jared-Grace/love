@@ -12,6 +12,7 @@
     "firebase": "^12.10.0",
     "firebase-admin": "^13.4.0",
     "firebase-tools": "^15.22.1",
+    "franc-all": "^7.2.0",
     "luxon": "^3.7.2",
     "lz-string": "^1.5.0",
     "nearley": "^2.20.1",
