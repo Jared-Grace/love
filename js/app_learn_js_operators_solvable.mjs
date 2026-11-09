@@ -1,9 +1,11 @@
-import { js_operator_or } from "./js_operator_or.mjs";
-import { js_operator_and } from "./js_operator_and.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { js_operator_plus } from "./js_operator_plus.mjs";
 import { js_operators_binary } from "./js_operators_binary.mjs";
+import { js_operator_plus } from "./js_operator_plus.mjs";
 import { list_concat_single_right } from "./list_concat_single_right.mjs";
+import { js_operator_and } from "./js_operator_and.mjs";
+import { js_operator_or } from "./js_operator_or.mjs";
+import { app_learn_js_operator_index_symbol } from "./app_learn_js_operator_index_symbol.mjs";
+import { list_get } from "./list_get.mjs";
 export function app_learn_js_operators_solvable() {
   "every operator a code lesson may put between two things and then work out, each carrying the function that works it out";
   ("It is ",
@@ -16,6 +18,13 @@ export function app_learn_js_operators_solvable() {
   let anding = js_operator_and();
   let with_and = list_concat_single_right(with_plus, anding);
   let oring = js_operator_or();
-  let all = list_concat_single_right(with_and, oring);
+  let with_or = list_concat_single_right(with_and, oring);
+  ("2026-11-09: reading an item by its index joins them, for the array lessons; it has an array on its left and the index on its right, and only these lessons ever build one");
+  let index_symbol = app_learn_js_operator_index_symbol();
+  let indexing = {
+    operator: index_symbol,
+    fn: list_get,
+  };
+  let all = list_concat_single_right(with_or, indexing);
   return all;
 }
