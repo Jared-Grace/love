@@ -11,9 +11,9 @@ export function reply_messages_inner_transform(message) {
   let straight = text_apostrophe_straightened(message);
   let lower = text_lower_to(straight);
   let tokens = text_split_empty(lower);
-  let string_includes_curry_right = text_includes_curried_right_get(
-    text_combine("'", digits_text()),
-  );
+  let right = digits_text();
+  let input = text_combine("'", right);
+  let string_includes_curry_right = text_includes_curried_right_get(input);
   let choices = [text_letters_is, string_includes_curry_right];
   function lambda(item) {
     function lambda2(fn) {
