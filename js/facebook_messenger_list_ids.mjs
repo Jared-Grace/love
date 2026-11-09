@@ -1,4 +1,8 @@
 import { sleep_human_pace } from "./sleep_human_pace.mjs";
+import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { sleep } from "./sleep.mjs";
 export async function facebook_messenger_list_ids(page, list_name) {
   "$plain list_name";
   "Shows the chat list named list_name - one of the buttons above the chats, such as Unread or All - then scrolls down at a person's pace to its end, and answers the conversation number of every row, in the order the list shows them: newest first, so the oldest is last.";
@@ -28,10 +32,19 @@ export async function facebook_messenger_list_ids(page, list_name) {
     await sleep_human_pace();
     if (top === last) {
       stuck = stuck + 1;
-      if (stuck > 3) {
-        ("★ THE END OF THE LIST is where the nudge below has stopped adding rows four times running.");
+      if (stuck > 8) {
+        ("★ THE END OF THE LIST is where the nudge below has stopped adding rows nine times running, with a pause each time. On 2026-11-09 four times with no pause ended the Unread list in September, while the human knew of unread chats from May.");
+        ("A picture of where it stopped is kept, so an early end can be seen rather than guessed.");
+        let name = text_combine_multiple([
+          fn_name("facebook_messenger_list_ids"),
+          ".png",
+        ]);
+        await page.screenshot({
+          path: folder_gitignore_join(name),
+        });
         return ids;
       }
+      await sleep(5000);
       ("★ STUCK AT THE BOTTOM: the list loads more only after a step up and back down.");
       await page.evaluate(
         "(function(){var g=document.querySelector('[role=grid][aria-label=\"Chats\"]');var sc=Array.from(g.querySelectorAll('div')).find(function(d){var s=getComputedStyle(d).overflowY;return (s==='auto'||s==='scroll')&&d.scrollHeight>d.clientHeight});sc.scrollTop-=1500})()",
