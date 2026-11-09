@@ -1,7 +1,4 @@
 import { app_learn_js_lesson_expression_choose_order_title_name_id } from "./app_learn_js_lesson_expression_choose_order_title_name_id.mjs";
-import { property_get } from "./property_get.mjs";
-import { null_is } from "./null_is.mjs";
-import { app_learn_js_label_solve_next } from "./app_learn_js_label_solve_next.mjs";
 import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
 import { app_learn_js_expression_chosen_pause } from "./app_learn_js_expression_chosen_pause.mjs";
 import { app_learn_js_lesson_expression_choose_order_questions } from "./app_learn_js_lesson_expression_choose_order_questions.mjs";
@@ -19,14 +16,9 @@ export function app_learn_js_lesson_expression_choose_order() {
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz: the same line to press as the front page, with nothing said about which operator to press - that is the whole of what is being asked";
     "Drawn wholly inside the answers area rather than partly in the question area above it, because the line CHANGES as it is worked out and the question area is redrawn only when the whole question changes.";
-    "The only thing said as the line is worked out is the asking itself, which moves from first to next once a part has been solved. The front page next door says what to press; here nothing does, and what changes is only the word that would otherwise be wrong.";
+    "Nothing is said as the line is worked out. The front page next door says what to press; here nothing does, and the label over the line names the expression, which stays true after every press.";
     function on_change(step) {
-      let solved = property_get(step, "solved");
-      if (null_is(solved)) {
-        return;
-      }
-      let said = app_learn_js_label_solve_next();
-      answer_label_set(said);
+      "2026-11-09: the label once moved from first to next here; it names the line now, so there is nothing for a press to change";
     }
     app_learn_js_expression_choose_line(
       parent,

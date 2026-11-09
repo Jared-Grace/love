@@ -3,9 +3,7 @@ import { html_div } from "./html_div.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
-import { null_is } from "./null_is.mjs";
 import { app_learn_js_label_solve_first } from "./app_learn_js_label_solve_first.mjs";
-import { app_learn_js_label_solve_next } from "./app_learn_js_label_solve_next.mjs";
 import { app_learn_js_label_solve_choice } from "./app_learn_js_label_solve_choice.mjs";
 import { app_learn_js_expression_value_choose_await } from "./app_learn_js_expression_value_choose_await.mjs";
 import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
@@ -36,15 +34,9 @@ export function app_learn_js_expression_choose_order_ask({
       await finished();
       return;
     }
-    let solved = property_get(step, "solved");
-    let first_is = null_is(solved);
-    if (first_is) {
-      let opening = app_learn_js_label_solve_first();
-      say(opening);
-      return;
-    }
-    let next = app_learn_js_label_solve_next();
-    say(next);
+    ("2026-11-09: one asking for every press, first or later, since it names the line rather than which press is due");
+    let opening = app_learn_js_label_solve_first();
+    say(opening);
   }
   async function on_chosen(node, value, node_span, waiting_on) {
     "the press is answered by asking what the chosen part comes to, and nothing on the line moves until the right value is pressed";
