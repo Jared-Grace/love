@@ -6,6 +6,7 @@ import { app_shared_bible_title_verse_set } from "./app_shared_bible_title_verse
 import { list_last_property } from "./list_last_property.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 export async function app_bible_sermons_home(context) {
   "The verse being read, with the approved sermon on it shown beneath, to be read and not changed.";
@@ -24,10 +25,10 @@ export async function app_bible_sermons_home(context) {
     let verses = property_get(item, "verses");
     let p = list_last_property(verses, "p");
     let lines = property_get(passage, "lines");
-    ("The sermon is set apart from the verse above it - a bar down its left side, a plainer typeface, a little smaller - so a reader never takes a line of preaching for a line of the Bible. The bar is a half-grey, which reads on a light page and a dark one alike.");
+    ("The sermon is set apart from the verse above it - a bar down its left side, a plainer typeface, a little smaller - so a reader never takes a line of preaching for a line of the Bible. The bar is the palette's medium grey, which reads on a light page and a dark one alike.");
     let sermon = html_div(p);
     html_style_assign(sermon, {
-      "border-left": "3px solid rgba(128, 128, 128, 0.6)",
+      "border-left": "3px solid " + app_shared_color_gray(),
       "padding-left": "0.75em",
       "margin-top": "0.75em",
       "font-family": "system-ui, sans-serif",
