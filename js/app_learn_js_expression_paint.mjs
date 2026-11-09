@@ -2,11 +2,12 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
-import { text_to } from "./text_to.mjs";
+import { app_learn_js_expression_value_code } from "./app_learn_js_expression_value_code.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_learn_js_expression_node_index_is } from "./app_learn_js_expression_node_index_is.mjs";
 import { html_span } from "./html_span.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
 import { app_learn_js_expression_paint_before_side } from "./app_learn_js_expression_paint_before_side.mjs";
@@ -23,8 +24,22 @@ export function app_learn_js_expression_paint(parent, item, on_operator) {
   let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {
     ("nothing but a value, so there is no operator to offer and the number is written as it stands");
-    let text = text_to(item);
+    let text = app_learn_js_expression_value_code(item);
     html_span_text(parent, text);
+    return;
+  }
+  if (app_learn_js_expression_node_index_is(item)) {
+    ("2026-11-09: an item read by its index is written as the array's name and the index in brackets, the way ",
+      fn_name("app_learn_js_expression_code"),
+      " writes it; the name is the piece pressed, as a called operator's name is, since the brackets cannot be one piece with the index between them");
+    let index_span = html_span(parent);
+    let array_name = property_get(item, "name");
+    let name_piece = html_span_text(index_span, array_name);
+    html_span_text(index_span, "[");
+    let index = property_get(item, "right");
+    app_learn_js_expression_paint(index_span, index, on_operator);
+    html_span_text(index_span, "]");
+    on_operator(item, name_piece, index_span);
     return;
   }
   ("2026-10-17: a name not yet read is one piece the learner can press, the name itself, so it is handed over as its own operator piece and its own whole");

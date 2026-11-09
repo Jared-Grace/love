@@ -11,6 +11,11 @@ import { js_unparse } from "./js_unparse.mjs";
 import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_get } from "./list_get.mjs";
+import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
+import { app_learn_js_expression_node_index } from "./app_learn_js_expression_node_index.mjs";
+import { js_code_length } from "./js_code_length.mjs";
+import { list_size } from "./list_size.mjs";
+import { app_learn_js_expression_name } from "./app_learn_js_expression_name.mjs";
 import { error } from "./error.mjs";
 export function app_learn_js_expression_from_js(node, values) {
   arguments_assert(arguments, 2);
@@ -68,8 +73,39 @@ export function app_learn_js_expression_from_js(node, values) {
       return call;
     }
   }
+  if (equal(type, "MemberExpression")) {
+    ("2026-11-09, at the human's asking: an array's name is kept as it is written, so a.length and a[2] are each one press, and the line never has the whole array written into it. Only an array held by a plain name is read this way, since that is all the array lessons write");
+    let held_by = property_get(node, "object");
+    let held_by_type = js_node_type(held_by);
+    if (equal(held_by_type, "Identifier")) {
+      let array_name = property_get(held_by, "name");
+      let held = property_get(values, array_name);
+      let items = held;
+      if (app_learn_js_expression_name_is(held)) {
+        items = property_get(held, "value");
+      }
+      let computed = property_get(node, "computed");
+      let read = property_get(node, "property");
+      if (computed) {
+        let index = app_learn_js_expression_from_js(read, values);
+        let indexed = app_learn_js_expression_node_index(
+          array_name,
+          items,
+          index,
+        );
+        return indexed;
+      }
+      let read_name = property_get(read, "name");
+      if (equal(read_name, "length")) {
+        let length_code = js_code_length(array_name);
+        let size = list_size(items);
+        let length = app_learn_js_expression_name(length_code, size);
+        return length;
+      }
+    }
+  }
   error(
-    "only a value written out, a name, an operator, or a call the expression lessons press can become an expression shape: " +
+    "only a value written out, a name, an operator, a call the expression lessons press, or an array's length or item read by its name can become an expression shape: " +
       type,
   );
 }

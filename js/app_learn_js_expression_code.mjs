@@ -1,9 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
-import { text_to } from "./text_to.mjs";
+import { app_learn_js_expression_value_code } from "./app_learn_js_expression_value_code.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_learn_js_expression_node_index_is } from "./app_learn_js_expression_node_index_is.mjs";
+import { js_code_index } from "./js_code_index.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { js_code_called } from "./js_code_called.mjs";
@@ -19,13 +21,21 @@ export function app_learn_js_expression_code(item) {
   ("Parentheses are worked out rather than remembered. The shape says which operator holds which, so a parenthesis is needed exactly where leaving it out would let a reader take the parts in a different order - and that is a question the ranks answer. Remembering instead which parentheses were typed would let a shape print as a line that does not mean it.");
   let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {
-    let text = text_to(item);
+    let text = app_learn_js_expression_value_code(item);
     return text;
   }
   ("2026-10-17: a name not yet read is written as the name, the way the line was typed");
   if (app_learn_js_expression_name_is(item)) {
     let name = property_get(item, "name");
     return name;
+  }
+  if (app_learn_js_expression_node_index_is(item)) {
+    ("2026-11-09: an item read by its index is written with the array's name and the index inside its brackets, which gather the index whatever it holds");
+    let array_name = property_get(item, "name");
+    let index = property_get(item, "right");
+    let index_code = app_learn_js_expression_code(index);
+    let indexed = js_code_index(array_name, index_code);
+    return indexed;
   }
   let symbol = property_get(item, "operator");
   let before_is = app_learn_js_expression_node_before_is(item);
