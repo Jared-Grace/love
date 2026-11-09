@@ -4,13 +4,13 @@ import { app_bible_sermons } from "./app_bible_sermons.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_title_verse_set } from "./app_shared_bible_title_verse_set.mjs";
 import { list_last_property } from "./list_last_property.mjs";
-import { g_openai_split_property } from "./g_openai_split_property.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 export async function app_bible_sermons_home(context) {
   "The verse being read, with the approved sermon on it shown beneath, to be read and not changed.";
   "The same sermons the game's own bible edits, drawn from the same place, but as plain text: nobody here signs in, so nobody here can save, and a box that takes typing would only lose what was typed.";
+  "Each passage arrives with its lines already cut apart, whichever place its sermon came from, so the lines are taken as they are.";
   let r = await app_shared_bible_home_inner(
     context,
     app_bible_sermons_download,
@@ -23,7 +23,7 @@ export async function app_bible_sermons_home(context) {
     let passage = property_get(item, "passage");
     let verses = property_get(item, "verses");
     let p = list_last_property(verses, "p");
-    let lines = g_openai_split_property(passage, "sermon");
+    let lines = property_get(passage, "lines");
     ("The sermon is set apart from the verse above it - a bar down its left side, a plainer typeface, a little smaller - so a reader never takes a line of preaching for a line of the Bible. The bar is a half-grey, which reads on a light page and a dark one alike.");
     let sermon = html_div(p);
     html_style_assign(sermon, {
