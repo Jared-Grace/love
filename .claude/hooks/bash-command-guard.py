@@ -1665,6 +1665,23 @@ def sort_writes_output(words):
     return False
 
 
+def printf_sets_dangerous_variable(words):
+    """True iff a `printf -v NAME` (or `-vNAME`) stores into a name that a
+    plain `NAME=...` assignment would be refused for - PATH, IFS, LD_* and
+    the rest. `printf -v PATH /tmp/x; ls` measured auto-approved, and it
+    changes which `ls` runs exactly as `PATH=/tmp/x; ls` does. An array
+    element (`PATH[0]`) is the same variable."""
+    if not words or words[0] != "printf":
+        return False
+    rest = words[1:]
+    for index, w in enumerate(rest):
+        if w == "--" or not w.startswith("-v"):
+            return False
+        name = w[2:] or (rest[index + 1] if index + 1 < len(rest) else "")
+        return is_dangerous_assignment_name(name.split("[", 1)[0])
+    return False
+
+
 def is_writing_read_verb(words):
     """True iff this is one of the read-only verbs in permissions.allow being
     asked to WRITE a file - `sort -o FILE`, `ffprobe -o FILE`, or `uniq INPUT
@@ -2725,6 +2742,8 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
         if is_dangerous_find(words):
             return False
         if is_writing_read_verb(words):
+            return False
+        if printf_sets_dangerous_variable(words):
             return False
         if " ".join(words) in safe_exact_commands:
             continue
