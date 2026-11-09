@@ -1,78 +1,17 @@
-import { reply_countries_words } from "./reply_countries_words.mjs";
-import { equal } from "./equal.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { facebook_profile_places_lines } from "./facebook_profile_places_lines.mjs";
+import { text_lines_words_masked } from "./text_lines_words_masked.mjs";
 export async function facebook_profile_places_lines_masked(profile_url) {
   "$plain profile_url";
   "The lines of the places page of the facebook profile at profile_url with every word masked as * except the page's own labels and countries - enough to see how the page is laid out, never who the person is.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
-  "★ FOR FINDING WHY A COUNTRY WAS MISSED: names and anything else personal are words no list here holds, so they come out as stars.";
-  let labels = [
-    "lives",
-    "in",
-    "from",
-    "current",
-    "city",
-    "hometown",
-    "places",
-    "lived",
-    "no",
-    "to",
-    "show",
-    "moved",
-    "about",
-    "overview",
-    "work",
-    "education",
-    "contact",
-    "and",
-    "basic",
-    "info",
-    "family",
-    "relationships",
-    "details",
-    "life",
-    "events",
-    "see",
-    "all",
-    "friends",
-    "photos",
-    "posts",
-    "more",
-    "intro",
-    "followers",
-    "following",
-    "reels",
-    "videos",
-    "check",
-    "ins",
-    "log",
-    "into",
-    "facebook",
-  ];
-  ("★ NO CITIES: a city list holds first names - `Victoria` came through as a friend's name on 2026-11-09 - so only labels and countries stay readable.");
-  let sorted = reply_countries_words();
-  let v = labels.concat(sorted);
-  let known = new Set(v);
-  function mask(word) {
-    let key = word
-      .normalize("NFD")
-      .toLowerCase()
-      .replace(/[^a-z]/g, "");
-    if (equal(key.length, 0) || known.has(key)) {
-      return word;
-    }
-    let r2 = "*";
-    return r2;
-  }
+  ("★ FOR FINDING WHY A COUNTRY WAS MISSED: the masking - and what it lets through - lives in `",
+    fn_name("text_lines_words_masked"),
+    "`.");
   let read = await facebook_profile_places_lines(profile_url);
-  function lambda(l) {
-    let r3 = l.split(/\s+/).map(mask).join(" ");
-    return r3;
-  }
-  let lines = read.lines.map(lambda);
   let r = {
     places: read.places,
-    lines,
+    lines: text_lines_words_masked(read.lines),
   };
   return r;
 }
