@@ -6530,6 +6530,41 @@ def person_only_function_named(command):
     return None
 
 
+# A backgrounding `&`: not half of `&&`, not part of a redirection (`2>&1`,
+# `>&2`, `&>f`), and not `|&`.
+DETACH_AMPERSAND_RE = re.compile(r"(?<![<>&|])&(?![&>])")
+DETACHED_JOB_START_RE = re.compile(r"(?:setsid|nohup)\s")
+STATEMENT_BREAK_RE = re.compile(r"[;\n]|&&|\|\|")
+
+
+def detached_jobs_as_sequence(command):
+    """The command with each backgrounding `&` written as `;`, when every job
+    it backgrounds starts with `setsid` or `nohup`; otherwise None.
+
+    CLAUDE.md's own advice for a job longer than the Bash tool's limit is
+    `setsid nohup CMD > LOG 2>&1 &`, and the tokenizer reads no `&`, so that
+    shape asked every time, even with a granted CMD (11 runs in a week).
+
+    Writing `&` as `;` is a reading of the same commands, never a widening:
+    the result still has to pass is_safe whole, so every verb in it is judged
+    exactly as it would be run in the foreground, and a job differs from its
+    foreground run only in when it finishes, not in what it does. An `&`
+    inside quotes becomes a `;` inside quotes, still literal text; anything
+    the replacement makes unparseable raises Unsupported and keeps asking.
+
+    Only `setsid`/`nohup` jobs: a plain `CMD &` keeps its deny pointing at
+    run_in_background, which is tracked and reported, where a detached job
+    is the one that must outlive the tool call."""
+    pieces = DETACH_AMPERSAND_RE.split(command)
+    if len(pieces) < 2:
+        return None
+    for piece in pieces[:-1]:
+        job = STATEMENT_BREAK_RE.split(piece)[-1].strip()
+        if not DETACHED_JOB_START_RE.match(job):
+            return None
+    return ";".join(pieces)
+
+
 def main():
     try:
         payload = json.load(sys.stdin)
@@ -6757,6 +6792,19 @@ def main():
             "Auto-approved: every command in this sequence/for-loop "
             "uses a verb already in permissions.allow."
         ))
+
+    detached = detached_jobs_as_sequence(command)
+    if detached is not None:
+        try:
+            detached_safe = is_safe(detached, safe_verbs, safe_exact_commands)
+        except Unsupported:
+            detached_safe = False
+        if detached_safe:
+            return decide("allow", (
+                "Auto-approved: a `setsid`/`nohup` job sent to the "
+                "background, whose every command uses a verb already in "
+                "permissions.allow."
+            ))
 
     # A writer that may never be granted, called where its granted, checked
     # twin would do. After the allow decision, so it only ever turns a prompt
