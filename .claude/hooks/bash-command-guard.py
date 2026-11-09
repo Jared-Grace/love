@@ -6584,6 +6584,64 @@ def detached_jobs_as_sequence(command):
     return ";".join(pieces)
 
 
+# A `>`/`>>` and the file it writes. A fd-dup (`2>&1`) never matches: its
+# target would start with `&`, which the target's characters exclude.
+DETACHED_LOG_REDIRECT_RE = re.compile(
+    r"(?<![0-9&<>])(\d?>>?)\s*(\"[^\"]*\"|'[^']*'|[^\s;&|<>]+)"
+)
+DETACHED_LOG_STAND_IN = SCRATCHPAD_PREFIX + "session/scratchpad/job.log"
+
+
+def detached_log_outside_scratchpad(detached, safe_verbs, safe_exact_commands):
+    """The log files a detached job writes outside the scratchpad, when moving
+    each of them into the scratchpad is the ONLY change that would let the
+    whole command run unasked; otherwise None.
+
+    `setsid nohup CMD > gitignore/x.log 2>&1 &` asked the human 11 times in a
+    week with CMD granted. A detached job does need its log - unlike a
+    foreground dispatcher call, nothing else catches its output - so the
+    advice is not to drop the redirect but to point it at the scratchpad,
+    where a log is already approved.
+
+    Called only after the allow decision, so it can turn a prompt into a
+    self-correction and never an approval into a refusal. The swapped command
+    is checked whole by is_safe, so a job that would still ask for any other
+    reason (an ungranted CMD) is left to ask and is never told a reword would
+    help."""
+    targets = []
+
+    def swap(match):
+        target = match.group(2)
+        if target[:1] in "\"'":
+            target = target[1:-1]
+        if target == "/dev/null" or is_safe_scratchpad_target(target):
+            return match.group(0)
+        targets.append(target)
+        return f"{match.group(1)} {DETACHED_LOG_STAND_IN}"
+
+    swapped = DETACHED_LOG_REDIRECT_RE.sub(swap, detached)
+    if not targets:
+        return None
+    try:
+        if not is_safe(swapped, safe_verbs, safe_exact_commands):
+            return None
+    except Unsupported:
+        return None
+    return targets
+
+
+def detached_log_deny_reason(targets):
+    named = ", ".join(f"`{t}`" for t in targets)
+    return (
+        f"Write the log into your session scratchpad instead of {named}, as a "
+        "whole path (/tmp/claude-…/scratchpad/<name>.log), and run it again - "
+        "that is the only part of this detached job that needs a person.\n"
+        "A log in the scratchpad is already approved; anywhere else it is a "
+        "write to a path nothing has approved, which is why it reaches the "
+        "human. The job itself is unchanged: same command, same detach."
+    )
+
+
 def main():
     try:
         payload = json.load(sys.stdin)
@@ -6824,6 +6882,12 @@ def main():
                 "background, whose every command uses a verb already in "
                 "permissions.allow."
             ))
+        # After the allow just above, so only a prompt becomes a reword.
+        log_targets = detached_log_outside_scratchpad(
+            detached, safe_verbs, safe_exact_commands
+        )
+        if log_targets:
+            return decide("deny", detached_log_deny_reason(log_targets))
 
     # A writer that may never be granted, called where its granted, checked
     # twin would do. After the allow decision, so it only ever turns a prompt
