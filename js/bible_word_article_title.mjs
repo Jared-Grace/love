@@ -4,7 +4,7 @@ export function bible_word_article_title(site_name, page) {
   "$plain site_name";
   "$plain page";
   "the site name says whose article it is and the page is the article's fetched words. Both are read, and nothing in them runs.";
-  "A GOTQUESTIONS ARTICLE OPENS WITH ITS QUESTION, then the word Answer: What is a holy convocation? Answer A convocation is.... Its summary of a book opens Summary of the Book of 1 John, then Author:. A page opening neither way - an archive, a list, a form - gets null.";
+  "A GOTQUESTIONS ARTICLE OPENS WITH ITS QUESTION, then the word Answer: What is a holy convocation? Answer A convocation is.... Its summary of a book opens Summary of the Book of 1 John, or Summary of the Gospel of John, or Summary of the Song of Solomon, then Author:. A page opening neither way - an archive, a list, a form - gets null.";
   "A CATHOLIC ENCYCLOPEDIA PAGE OPENS WITH CATHOLIC ENCYCLOPEDIA: then its title, then Search:.";
   "NULL MEANS THIS ARTICLE IS NOT OFFERED by a citation, because a button needs a name to say what it opens.";
   let opening = page.slice(0, 400);
@@ -12,7 +12,7 @@ export function bible_word_article_title(site_name, page) {
   if (equal(site_name, "GotQuestions.org")) {
     match =
       opening.match(/^(.{3,250}?) Answer /) ??
-      opening.match(/^(Summary of the Book of .{1,40}?) Author:/);
+      opening.match(/^(Summary of the .{1,40}?) Author:/);
   }
   if (equal(site_name, "the Catholic Encyclopedia")) {
     match = opening.match(/^CATHOLIC ENCYCLOPEDIA: (.{1,250}?) Search:/);
