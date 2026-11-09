@@ -6507,6 +6507,13 @@ SECRET_PATH_RE = re.compile(
     r"|\.config/(?:gh|gcloud|configstore|firebase)(?![A-Za-z0-9_-])"
     r"|\.config/ia\.ini\b"
     r"|\.local/share/keyrings\b"
+    # A process's whole environment, and a variable whose name says it holds
+    # a secret. `cat /proc/self/environ` and `echo $GITHUB_TOKEN` measured
+    # approved unasked on 2026-11-09, printing the same secrets the paths
+    # above guard. Upper case only: that is how an environment secret is
+    # spelled, and a lower-case `$key` is a loop variable far more often.
+    r"|/proc/[A-Za-z0-9_*]+/environ\b"
+    r"|\$\{?[A-Z0-9_]*(?:TOKEN|SECRET|PASSWORD|PASSWD|API_KEY|PRIVATE_KEY|CREDENTIALS?)[A-Z0-9_]*\}?"
 )
 
 
