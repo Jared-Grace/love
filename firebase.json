@@ -145,11 +145,6 @@
         "type": 301
       },
       {
-        "source": "/learn/en",
-        "destination": "/learn_en",
-        "type": 301
-      },
-      {
         "source": "/learn/original",
         "destination": "/learn_original",
         "type": 301
@@ -179,6 +174,12 @@
             "value": "no-cache, no-store, must-revalidate, max-age=0"
           }
         ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/learn/en",
+        "destination": "/learn_en.html"
       }
     ]
   },
