@@ -7107,7 +7107,16 @@ def main():
             + open_twin_advice(command)
         ))
 
-    if verb is not None and untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
+    # A line opening on no allowed verb (`S=…; … | tee …`) gets only the tee
+    # rewording: every other known fix was tuned for lines opening on a verb,
+    # and widening them all sent ungranted uploads back instead of to a person.
+    if (
+        verb is not None
+        and untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands)
+    ) or (
+        verb is None
+        and refused_piece_program(command, safe_verbs, safe_exact_commands) == "tee"
+    ):
         return decide("deny", (
             REWORD_DENY_LEAD
             + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
