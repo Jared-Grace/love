@@ -65,7 +65,7 @@ export function app_learn_js_lesson_array_first() {
     app_learn_js_cycle_code(index_named, [
       ". For example in ",
       "a[0]",
-      " ",
+      ", ",
       "0",
       " is the index.",
     ]);
