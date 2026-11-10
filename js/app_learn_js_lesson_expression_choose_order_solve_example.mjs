@@ -1,9 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_first } from "./html_div_first.mjs";
-import { app_learn_js_head_spaced_above_code } from "./app_learn_js_head_spaced_above_code.mjs";
 import { html_div } from "./html_div.mjs";
+import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
+import { text_empty } from "./text_empty.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
-import { html_text_set } from "./html_text_set.mjs";
+import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
@@ -25,15 +25,14 @@ export function app_learn_js_lesson_expression_choose_order_solve_example(
   ("The asking goes when the line is down to a value, because there is nothing left to press and an instruction still standing there would be asking for a press that cannot be made. What was said ABOVE it stays, because it is what the lesson is for rather than what to do next.");
   ("A wrong press is answered by the line itself, in red, the same way it is in the quiz. Being stopped from getting it wrong is not this page's job.");
   ("Which wrong values are offered is handed in, because it is the one thing the lessons on this page differ by. A line of numbers and a line of comparisons are pressed the same way, laid out the same way and finished the same way; what a learner could plausibly press INSTEAD is the only place the two part company, and a second copy of this page would leave one lesson's habits to be repaired in two files.");
-  let head = html_div_first(card);
-  ("the asking stands off from the Code label under it, by the same small gap the walkthrough of the lesson before leaves there - the two screens are one screen with one thing changed, and a gap on one of them and none on the other would be a second difference to find");
-  ("It never gives that room back, because nothing but words ever stands here: where the walkthrough grows a button to press, this screen asks its question and then asks the next one.");
-  app_learn_js_head_spaced_above_code(head);
-  let asking = html_div(head);
+  ("2026-11-09, at the human's asking: the asking is the label directly over the line it names - Expression to solve - drawn the way the quiz draws its label over the same line, so code shown above it, such as the array a line reads, stands under its own Code label first and the two labels each sit over the one thing they name. It once stood at the top of the card above the Code label, which put the name of the expression over the array");
+  let head = html_div(parent);
+  let quiz_label = text_empty();
+  let asking = app_learn_js_example_answer_label(head, quiz_label);
   let duration = app_shared_animation_duration();
   function ask(words) {
     "the one place the asking is written, so the three askings take turns in it instead of standing beside each other";
-    html_text_set(asking, words);
+    app_learn_js_label_text_set(asking, words);
   }
   function finished_say() {
     "the line is finished, so where the asking stood the learner is told well done - in the very words and the very green the walkthrough of the lesson before ends in, and the quiz ends every question in, out of the one place all three of them read";

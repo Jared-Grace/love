@@ -9,8 +9,13 @@ import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz
 import { app_learn_js_lesson_expression_choose_order_reason_run } from "./app_learn_js_lesson_expression_choose_order_reason_run.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_expression_array_decoys } from "./app_learn_js_expression_array_decoys.mjs";
-import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
+import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
+import { text_empty } from "./text_empty.mjs";
+import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
+import { app_learn_js_label_text } from "./app_learn_js_label_text.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 export function app_learn_js_lesson_expression_choose_order_twin_array_generic(
@@ -77,19 +82,31 @@ export function app_learn_js_lesson_expression_choose_order_twin_array_generic(
   let name_id = app_learn_js_lesson_statement_title_name_id(title, code_titled);
   let decoys = app_learn_js_expression_array_decoys;
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
-    "the quiz, whose question above already shows the whole program";
+    "the quiz: the line naming the array under the quiz's own label, now saying Code, then the line to press under a label of its own that does the asking";
+    "2026-11-09, at the human's asking: Code over the array and Expression to solve over the line, in that order, so each label sits over the one thing it names - the quiz's label slot stands above everything in the answers, so it names the code that comes first, and the asking moves to a label under it";
+    let code_label = app_learn_js_label_code_question();
+    answer_label_set(code_label);
+    let head_shown = heads.get(tree);
+    app_learn_js_div_cycle_code(parent, ["", head_shown]);
+    let quiz_label = text_empty();
+    let asking = app_learn_js_example_answer_label(parent, quiz_label);
+    function say(words) {
+      app_learn_js_label_text_set(asking, words);
+    }
     app_learn_js_lesson_expression_choose_order_solve_answer_draw(
       parent,
       tree,
       on_success,
       on_wrong,
-      answer_label_set,
+      say,
       decoys,
     );
   }
   function example_draw(parent, card, tree) {
-    "the front page: the line naming the array, then the line to press";
+    "the front page: the line naming the array under a Code label, then the line to press under the asking";
     let head_shown = heads.get(tree);
+    let code_label = app_learn_js_label_code_question();
+    app_learn_js_label_text(parent, code_label);
     app_learn_js_div_cycle_code(parent, ["", head_shown]);
     app_learn_js_lesson_expression_choose_order_solve_example(
       parent,

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
+import { text_empty } from "./text_empty.mjs";
+import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
 import { app_learn_js_label_solve_first } from "./app_learn_js_label_solve_first.mjs";
 import { app_learn_js_lesson_quizzes_exercises } from "./app_learn_js_lesson_quizzes_exercises.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
@@ -42,10 +42,10 @@ export function app_learn_js_lesson_expression_choose_order_generic(
   function quizzes_get(question, answer) {
     "the one quiz every press-the-operators lesson asks: a line printed as code, and the learner told to choose what to solve first";
     "One kind, so one quiz. Backwards asks what code produces a value, and the value is not what is being asked for here; unscramble asks the learner to build the line, and the line is given. Both would be questions about something these lessons are not teaching.";
-    "2026-11-09, at the human's asking: the code over the question is called code, as the example card next door calls it, and not the line to solve - the expression to solve is named below it, and a whole program standing above it is not what is solved";
+    "2026-11-09, at the human's asking: nothing is drawn over the line to press, because the line to press IS the question and stands under its own label, Expression to solve; drawn once above it as well, it was the same line twice. A lesson whose line reads something written before it, such as an array, draws that code itself, under a Code label of its own, inside the answers";
     let info = {
-      question_label: app_learn_js_label_code_question(),
-      on_question: html_text_set_code_dark_lines,
+      question_label: text_empty(),
+      on_question: app_learn_js_lesson_quiz_question_none,
       answer_label: app_learn_js_label_solve_first(),
       on_answer,
       answer_property: "answer",
@@ -59,7 +59,8 @@ export function app_learn_js_lesson_expression_choose_order_generic(
     );
     return quizzes_exercises;
   }
-  let example_question_label = app_learn_js_label_code_question();
+  ("2026-11-09: the card names nothing above what the example draws, for the same reason the quiz names nothing above its line: the example labels the line itself, and a lesson with code before the line labels that code itself");
+  let example_question_label = text_empty();
   let lesson = app_learn_js_lesson_base(
     name_id,
     above,
