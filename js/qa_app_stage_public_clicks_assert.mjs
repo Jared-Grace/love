@@ -5,6 +5,7 @@ import { page_boot_arrive_wait } from "./page_boot_arrive_wait.mjs";
 import { math_min } from "./math_min.mjs";
 import { less_than } from "./less_than.mjs";
 import { playwright_error_records_clear } from "./playwright_error_records_clear.mjs";
+import { page_boot_wait_ms } from "./page_boot_wait_ms.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { catch_error_text_or_null_async } from "./catch_error_text_or_null_async.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -48,9 +49,10 @@ export async function qa_app_stage_public_clicks_assert(app_name) {
       await playwright_error_records_clear(page);
       errors.length = 0;
       let button = page.locator("button:visible").nth(index);
+      ("each button is given the whole boot wait to appear, because a fresh open counts as arrived the moment it draws anything, and on bible the chapter numbers came after that: ten of seventeen were missing at the press and read as unpressable.");
       async function label_read() {
         let r2 = await button.innerText({
-          timeout: 3000,
+          timeout: page_boot_wait_ms(),
         });
         return r2;
       }
