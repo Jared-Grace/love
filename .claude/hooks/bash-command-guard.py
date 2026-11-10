@@ -3373,6 +3373,8 @@ def find_raw_node_eval(command):
     reported as "not detected" - it falls through to normal handling rather
     than being force-denied on a guess."""
     for words in statements_words(command):
+        while words and words[0] in STATEMENT_STARTERS:
+            words = words[1:]
         if words and words[0] == "node" and any(is_node_eval_flag(w) for w in words[1:]):
             return True
     return False
