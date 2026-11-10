@@ -2495,6 +2495,27 @@ def sandbox_words_without_heap_flag(words):
     return words[:6] + words[7:]
 
 
+SANDBOX_STORAGE_READ_FLAG = "--allow-fs-read=/home/j/a/user/storage"
+
+
+def sandbox_words_plain(words):
+    """The sandbox templates with the extra words that grant nothing more
+    taken out: the heap size (sandbox_words_without_heap_flag), and a read
+    of the repo's own storage folder. That folder is the function cache, and
+    `cat`/`jq`/`grep` already read it unasked; without the flag a throwaway
+    handed a storage path was approved and then failed to open it. The read
+    stays read-only, with no network, write or process. Accepted only as the
+    exact word, either second after the repo read, or alone in front of
+    `-e` (is_safe_sandboxed_node_eval) - where it reads less than the repo
+    read it stands in for."""
+    words = sandbox_words_without_heap_flag(words)
+    if len(words) < 8:
+        return words
+    if words[6].startswith("--allow-fs-read=") and words[7] == SANDBOX_STORAGE_READ_FLAG:
+        return words[:7] + words[8:]
+    return words
+
+
 def is_safe_sandboxed_node_eval(words):
     """Recognize exactly one template: an ad-hoc `node -e` snippet run
     under real OS/runtime sandboxing rather than trusted by verb prefix.
@@ -2505,7 +2526,7 @@ def is_safe_sandboxed_node_eval(words):
     actually verified to block fs write, out-of-scope fs read,
     child_process, and network. The one word let in is a heap size - see
     sandbox_words_without_heap_flag."""
-    words = sandbox_words_without_heap_flag(words)
+    words = sandbox_words_plain(words)
     if len(words) != 9:
         return False
     if words[0:5] != ["unshare", "--net", "--map-root-user", "--", "node"]:
@@ -2517,6 +2538,8 @@ def is_safe_sandboxed_node_eval(words):
     path = words[6][len("--allow-fs-read="):]
     if not os.path.isabs(path) or os.path.normpath(path) != path:
         return False
+    if words[6] == SANDBOX_STORAGE_READ_FLAG:
+        return words[7] == "-e"
     if path != REPO_ROOT and not path.startswith(REPO_ROOT + os.sep):
         return False
     return words[7] == "-e"
@@ -2552,7 +2575,7 @@ def is_safe_sandboxed_node_script(words):
     between runs. Each argument still has to be one plain word by the same
     character allowlist the script path uses, so nothing the tokenizer read
     as a single word can carry shell punctuation into the line."""
-    words = sandbox_words_without_heap_flag(words)
+    words = sandbox_words_plain(words)
     if len(words) < 8:
         return False
     # A quoted argument of plain words joined by single spaces ("MAT20 26")
@@ -2594,7 +2617,7 @@ def sandbox_read_path_near_miss(words):
     too so this never shadows them). The `--net` requirement is part of the
     prefix, so the no-`--net` variant - a real sandbox weakening, not a typo -
     is deliberately NOT treated as a simple near-miss."""
-    words = sandbox_words_without_heap_flag(words)
+    words = sandbox_words_plain(words)
     if len(words) < 7:
         return None
     if words[0:6] != ["unshare", "--net", "--map-root-user", "--", "node", "--permission"]:
