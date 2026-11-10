@@ -135,7 +135,8 @@ Raw `node -e '...'` **always prompts the human** (arbitrary JS can shell out / h
   ```
   unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/a/repos/love scripts/temp/<name>.mjs [arg …]
   ```
-  Each argument must be one plain word (letters, digits, `_./-`); that is what lets a scratch script be rerun over a different input instead of edited between runs, and it cannot escalate — the sandbox blocks writes, child processes and the network whatever argv holds, and the script is a file you may write anyway. **Create that file with the `Write` tool, never `cat > … <<'EOF'`.** `Write`/`Edit` on `scripts/temp/**` are allow-listed (the folder is gitignored, and `scripts_temp_delete` clears it), so the write costs nothing — while a heredoc has no bash-guard parse at all and prompts the human every single time. Both halves are then prompt-free.
+  **Data in `/home/j/a/user/storage`:** add `--allow-fs-read=/home/j/a/user/storage` straight after the repo read, or with `-e` use it in place of the repo read.
+  Each argument must be one plain word (letters, digits, `_./-`), so a script reruns over new input; it cannot escalate — the sandbox blocks writes, child processes and the network whatever argv holds, and the script is a file you may write anyway. **Create that file with the `Write` tool, never `cat > … <<'EOF'`.** `Write`/`Edit` on `scripts/temp/**` are allow-listed (the folder is gitignored, and `scripts_temp_delete` clears it), so the write costs nothing — while a heredoc has no bash-guard parse at all and prompts the human every single time. Both halves are then prompt-free.
 
 If the task genuinely needs to **write** or **persist** (not just read+print), it isn't a throwaway — add a named alias/function in the `r.mjs` system and commit it (in git = reviewable, reusable, DRY), rather than reaching for raw `node -e`.
 
