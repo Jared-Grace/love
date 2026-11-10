@@ -7,6 +7,7 @@ import { app_sandbox_previews_lyric_video_song_swaps_load } from "./app_sandbox_
 import { app_sandbox_previews_lyric_video_song_words_timing_load } from "./app_sandbox_previews_lyric_video_song_words_timing_load.mjs";
 import { app_sandbox_previews_lyric_video_pictures_review_load } from "./app_sandbox_previews_lyric_video_pictures_review_load.mjs";
 import { app_sandbox_previews_message_private_load } from "./app_sandbox_previews_message_private_load.mjs";
+import { app_sandbox_previews_messenger_replies_load } from "./app_sandbox_previews_messenger_replies_load.mjs";
 import { app_sandbox_previews_glyph_built_load } from "./app_sandbox_previews_glyph_built_load.mjs";
 import { app_sandbox_previews_phone_photos_load } from "./app_sandbox_previews_phone_photos_load.mjs";
 import { app_sandbox_previews_bible_offline_check_load } from "./app_sandbox_previews_bible_offline_check_load.mjs";
@@ -80,6 +81,7 @@ export function app_sandbox_previews() {
       app_sandbox_previews_lyric_video_pictures_review_load,
     word_sound: word_sound_load,
     message_private: app_sandbox_previews_message_private_load,
+    messenger_replies: app_sandbox_previews_messenger_replies_load,
     reply_rules: reply_rules_load,
     bible_word_voice_trial: bible_word_voice_trial_load,
     glyph_built: app_sandbox_previews_glyph_built_load,
