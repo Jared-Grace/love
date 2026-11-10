@@ -3,6 +3,7 @@ import { app_learn_en_store_chosen } from "./app_learn_en_store_chosen.mjs";
 import { property_get } from "./property_get.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { app_shared_language_code_reader_set } from "./app_shared_language_code_reader_set.mjs";
+import { app_shared_bible_folder_interface_set } from "./app_shared_bible_folder_interface_set.mjs";
 import { app_learn_en_language_code_save } from "./app_learn_en_language_code_save.mjs";
 import { app_learn_en_title_set } from "./app_learn_en_title_set.mjs";
 export function app_learn_en_reader_language_set() {
@@ -14,6 +15,8 @@ export function app_learn_en_reader_language_set() {
   let property_name = language_code_key();
   let language_code = property_get(language, property_name);
   app_shared_language_code_reader_set(language_code);
+  let bible_folder = property_get(language, "bible_folder");
+  app_shared_bible_folder_interface_set(bible_folder);
   app_learn_en_language_code_save(language_code);
   app_learn_en_title_set(language);
 }
