@@ -1,4 +1,5 @@
 import { facebook_page_lock_take } from "./facebook_page_lock_take.mjs";
+import { facebook_browser_shared_close_held } from "./facebook_browser_shared_close_held.mjs";
 import { youtube_studio_chrome_path } from "./youtube_studio_chrome_path.mjs";
 import { facebook_page_user_data_path } from "./facebook_page_user_data_path.mjs";
 import { sleep_human_pace } from "./sleep_human_pace.mjs";
@@ -13,6 +14,8 @@ export async function facebook_messenger_row_show(url) {
   let puppeteer = await import("puppeteer");
   let browser = null;
   try {
+    ("★ THE BROWSER KEPT OPEN IN THE PROFILE IS ENDED FIRST: chrome allows one browser per profile, and this one has a window.");
+    await facebook_browser_shared_close_held();
     browser = await puppeteer.launch({
       headless: false,
       executablePath: youtube_studio_chrome_path(),

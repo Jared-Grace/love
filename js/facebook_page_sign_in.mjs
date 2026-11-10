@@ -1,4 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
+import { facebook_page_lock_take } from "./facebook_page_lock_take.mjs";
+import { facebook_browser_shared_close_held } from "./facebook_browser_shared_close_held.mjs";
 import { youtube_studio_chrome_path } from "./youtube_studio_chrome_path.mjs";
 import { facebook_page_user_data_path } from "./facebook_page_user_data_path.mjs";
 export async function facebook_page_sign_in() {
@@ -7,6 +9,14 @@ export async function facebook_page_sign_in() {
     fn_name("youtube_studio_sign_in"),
     ": a password typed by a program is a password stored where a program can read it.");
   ("★ THE SIGN-IN WINDOW IS PLAIN CHROME WITH NOTHING DRIVING IT, and keeps its passwords in the profile itself, so the driven browser that posts later can read the same sign-in.");
+  ("★ IT WAITS ITS TURN AND ENDS THE BROWSER KEPT OPEN IN THE PROFILE FIRST: chrome allows one browser per profile, so a sign-in window beside it would be refused. The turn is held until the window closes.");
+  let lock = await facebook_page_lock_take();
+  try {
+    await facebook_browser_shared_close_held();
+  } catch (e) {
+    lock.kill();
+    throw e;
+  }
   let child_process = await import("node:child_process");
   let r3 = youtube_studio_chrome_path();
   let child = child_process.spawn(
@@ -25,6 +35,7 @@ export async function facebook_page_sign_in() {
     let r = child.on("exit", resolve);
     return r;
   });
+  lock.kill();
   let r2 = {
     closed: true,
     code,
