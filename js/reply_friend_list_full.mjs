@@ -12,7 +12,7 @@ export function reply_friend_list_full() {
   let sad = emoji_disappointed();
   let answer = text_combine_multiple([
     sad,
-    " My friend list has gotten full before, yes, but if God wills we can talk here ",
+    " My Facebook friend list has gotten full before, yes, but if God wills we can talk here ",
     pray,
   ]);
   let said = reply_sequence_outputs(
