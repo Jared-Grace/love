@@ -18,7 +18,7 @@ export function app_learn_js_lesson_array_index_step() {
       context,
       app_learn_js_lesson_array_index_name,
       [
-        "When ",
+        "when ",
         "i",
         " is ",
         "2",
@@ -51,12 +51,12 @@ export function app_learn_js_lesson_array_index_step() {
   let lesson = app_learn_js_lesson_array_index_generic({
     name_id,
     above,
-    item_count: 3,
-    indexes: [0, 1],
+    item_count: 4,
+    indexes: [0, 1, 2],
     index_name: "i",
     index_step: true,
     example: {
-      items: ["love", "joy", "peace"],
+      items: ["love", "joy", "peace", "patience"],
       index: 0,
     },
   });
