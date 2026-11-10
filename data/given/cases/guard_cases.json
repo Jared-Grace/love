@@ -736,6 +736,7 @@
     { "command": "if true; then node -e 'x'; fi", "decision": "deny", "why": "an eval behind `then` is floored like any other" },
     { "command": "for i in 1; do awk 1 f; done", "decision": "deny", "reason_includes": "awk", "why": "every finder walks statements_words, which now reaches into a loop body: a refusal behind `do` is the same refusal" },
     { "command": "if true; then node scripts/r.mjs x; fi", "decision": "deny", "why": "a non-ai dispatcher behind `then` is floored like one at the start" },
+    { "command": "cd /home/j/a/user/storage && for f in a_*; do unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/a/user/storage -e 'console.log(1)' \"$f\"; done | sort -V", "decision": "deny", "reason_includes": "jq length", "why": "a sandbox opened on another folder is a near miss inside a loop body too; no loop value repairs the read path" },
     { "command": "echo x | tee /home/j/.bashrc", "decision": "deny", "reason_includes": "own redirect", "why": "sent back, not approved: the `>>` rewording is judged on its own and still asks outside the scratchpad" },
     { "command": "crontab -r", "decision": "silent", "why": "removes the whole schedule" },
     { "command": "crontab -l x", "decision": "silent", "why": "only the two exact words are the reading form" },

@@ -4279,6 +4279,13 @@ def find_sandbox_path_near_miss(command):
         path = sandbox_read_path_near_miss(words)
         if path is not None:
             return path
+    # Inside a loop body only the read path is judged: a `$c` argument there
+    # is filled in by the loop's own allow, but no loop value can repair the
+    # folder the sandbox is opened on.
+    for words in statements_words(command):
+        path = sandbox_read_path_near_miss(words)
+        if path is not None and path != REPO_ROOT:
+            return path
     return None
 
 
@@ -4291,7 +4298,9 @@ def sandbox_path_near_miss_deny_reason():
         "run from the repo root. Rewrite as exactly one of:\n"
         f"  unshare --net --map-root-user -- node --permission --allow-fs-read={REPO_ROOT} -e '<script>'\n"
         f"  unshare --net --map-root-user -- node --permission --allow-fs-read={REPO_ROOT} scripts/temp/<name>.mjs\n"
-        "Both auto-approve with no prompt. If you genuinely need a different "
+        "Both auto-approve with no prompt. To read JSON outside the repo, "
+        "`jq` runs unasked on any path - `jq length FILE` counts a list. "
+        "If you genuinely need a different "
         "sandbox, ask the human. See CLAUDE.md - 'Throwaway node - never raw `node -e`'."
     )
 
