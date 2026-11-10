@@ -18,6 +18,7 @@ import { json_equal } from "./json_equal.mjs";
 import { qa_app_e2e_happy_public_run } from "./qa_app_e2e_happy_public_run.mjs";
 import { app_shared_name_latest_text } from "./app_shared_name_latest_text.mjs";
 import { qa_app_e2e_happy_run } from "./qa_app_e2e_happy_run.mjs";
+import { qa_app_stage_public_clicks_assert } from "./qa_app_stage_public_clicks_assert.mjs";
 import { qa_stage_pieces_changed } from "./qa_stage_pieces_changed.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { folder_public_root_noting_set } from "./folder_public_root_noting_set.mjs";
@@ -95,6 +96,12 @@ export async function qa_app_commit_promote_judged(search, commit) {
             app_name,
             stage_name,
           ]);
+          ("An app with no public walk has nothing that walks it at the public address, so each button on its opening screen is pressed there once instead. Without this, bible, design and app went out on the startup check alone.");
+          await function_call_timed_add(
+            steps,
+            qa_app_stage_public_clicks_assert,
+            [app_name],
+          );
         }
       }
       ("★ THE FILES ARE READ AGAIN BEFORE THEY MOVE UP. The note made after this would describe the build held in memory, so files replaced during the walk would move up, stand in the folder every send reads from, and refuse every app's send. Refused here, the folder people are served from has not been touched. That happened twice on 2026-11-05, once after five hours.");
