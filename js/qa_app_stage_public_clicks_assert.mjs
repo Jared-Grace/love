@@ -3,6 +3,7 @@ import { page_route_root_from_latest } from "./page_route_root_from_latest.mjs";
 import { list_add } from "./list_add.mjs";
 import { page_boot_arrive_wait } from "./page_boot_arrive_wait.mjs";
 import { math_min } from "./math_min.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { less_than } from "./less_than.mjs";
 import { playwright_error_records_clear } from "./playwright_error_records_clear.mjs";
 import { page_boot_wait_ms } from "./page_boot_wait_ms.mjs";
@@ -23,6 +24,8 @@ export async function qa_app_stage_public_clicks_assert(app_name) {
   let failures = [];
   let pressed = [];
   let skipped = [];
+  ("the names of the buttons the first open showed, so a skipped press can be read against the button it was meant to be.");
+  let seen = [];
   async function on_page(page) {
     await page_route_root_from_latest(page);
     let errors = [];
@@ -36,6 +39,14 @@ export async function qa_app_stage_public_clicks_assert(app_name) {
       await page.goto(url, {
         waitUntil: "domcontentloaded",
       });
+      ("what the page saved on an earlier open is wiped and the page opened again, so every press starts where a first visitor starts. without this a press that saved a choice changed what every later open showed: on bible ten of seventeen buttons never came back.");
+      await page.evaluate(
+        "(function () { try { window.localStorage.clear(); window.sessionStorage.clear(); } catch (ignored) {} return true; })()",
+      );
+      await page.goto("about:blank");
+      await page.goto(url, {
+        waitUntil: "domcontentloaded",
+      });
       let r = await page_boot_arrive_wait(page);
       return r;
     }
@@ -43,6 +54,8 @@ export async function qa_app_stage_public_clicks_assert(app_name) {
     let buttons = page.locator("button:visible");
     let count = await buttons.count();
     let shown = math_min(count, cap);
+    let texts = await buttons.allInnerTexts();
+    list_add_multiple(seen, texts);
     for (let index = 0; less_than(index, shown); index++) {
       await open();
       ("the page writes what it caught into its own storage, and that storage outlives a fresh open - so it is emptied here, after the open, or one press's failure would be blamed on every press after it. the opening itself is the startup check's business.");
@@ -100,6 +113,7 @@ export async function qa_app_stage_public_clicks_assert(app_name) {
     app_name,
     pressed,
     skipped,
+    seen,
   };
   return result;
 }
