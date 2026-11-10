@@ -3012,7 +3012,7 @@ export function reply_proposals() {
   let v17 = emoji_disappointed();
   let full_output = text_combine_multiple([
     v17,
-    " My friend list has gotten full before, yes, but if God wills we can talk here ",
+    " My Facebook friend list has gotten full before, yes, but if God wills we can talk here ",
     v16,
   ]);
   let friend_list_said = {
@@ -3035,7 +3035,7 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "the words are yours: a disappointed face, then My friend list has gotten full before, yes, but if God wills we can talk here, with a praying hands emoji after.",
+      "the words are yours: a disappointed face, then My Facebook friend list has gotten full before, yes, but if God wills we can talk here, with a praying hands emoji after. Facebook is said so it is plain which list is meant; the rejected reading was hearing your Facebook friend list is full as well, because nobody waiting has said Facebook.",
       "brother in front is optional, heard by the same my dear brother piece as every other rule. Oh brother in front is heard only once the change putting oh into that piece goes in too. Only your friend list is full is matched; the rejected reading was also taking other wordings, because nobody waiting has used them yet.",
       "measured with all four of these changes in: a message saying Amen, then God bless you brother, then oh brother your friend list is full, gets three paragraphs - the thanks, the blessing, and this answer - and good morning and hello are answered as before.",
     ],
