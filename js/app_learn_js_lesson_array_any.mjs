@@ -41,6 +41,7 @@ export function app_learn_js_lesson_array_any() {
     above,
     item_count: 4,
     indexes: [0, 1, 2, 3],
+    index_name: null,
     example: {
       items: ["love", "joy", "peace", "patience"],
       index: 3,
