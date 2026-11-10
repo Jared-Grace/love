@@ -9,10 +9,8 @@ import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remo
 import { app_shared_code_surfaces_inside } from "./app_shared_code_surfaces_inside.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { app_shared_button_background } from "./app_shared_button_background.mjs";
+import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_styles_inline_restore_later } from "./html_styles_inline_restore_later.mjs";
 import { list_add } from "./list_add.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -58,10 +56,9 @@ export function app_learn_js_quiz_choice_button_answer_generic({
       let surfaces = app_shared_code_surfaces_inside(b);
       app_shared_button_screen_green_style_assign(b);
       if (list_empty_not_is(surfaces)) {
-        let green = app_shared_button_background();
+        ("2026-11-10, at the human's asking, a lighter green for the button than the code in it, so the code still stands out from the button around it. Its words keep their dark letters, which read on a light green where white would not. Not picked: the same green for both, which ran the code into its button");
+        let green = app_shared_color_green_light();
         html_style_background_color_set(b, green);
-        let font = app_shared_button_font_color();
-        html_font_color_set(b, font);
       }
       ("2026-10-14, at the human's asking: once the right one is pressed, the wrong ones pressed before it lose their red and their dimming at once, so the one answer still marked is the right one. Not picked: leaving them red, as before, which kept saying wrong about a question already answered");
       for (let restore of spent_get()) {
