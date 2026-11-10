@@ -1,6 +1,6 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { subtract } from "./subtract.mjs";
 import { range } from "./range.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -9,10 +9,12 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { equal } from "./equal.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { not } from "./not.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { less_than } from "./less_than.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
@@ -21,14 +23,13 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_without } from "./list_without.mjs";
-import { list_concat } from "./list_concat.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { list_filter } from "./list_filter.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_array_index_generic(options) {
@@ -46,15 +47,17 @@ export function app_learn_js_lesson_array_index_generic(options) {
   let example_given = property_get(options, "example");
   let index_name = property_get(options, "index_name");
   ("index_name is null when the index is written as a number, a[2], or the name the index is given first, let i = 2; then a[i].");
-  let index_step = property_get(options, "index_step");
-  ("index_step is true when, after the named index is read, it is stepped up by one and read again: let i = 0; console.log(a[i]); i++; console.log(a[i]);. Only with a named index.");
+  let index_steps = property_get(options, "index_steps");
+  ("index_steps is how many times, after the named index is read, it is stepped up by one and read again: with 1, let i = 0; console.log(a[i]); i++; console.log(a[i]);. 0 without a named index.");
   let name = "a";
-  let index_last = item_count;
-  if (index_step) {
-    ("stepping reads the index after the one named too, so the named index stops one short of the end");
-    index_last = subtract(item_count, 1);
-  }
+  ("each step reads the index after the one before, so the named index stops that many short of the end");
+  let index_last = subtract(item_count, index_steps);
   let indexes_all = range(index_last);
+  function step_kept() {
+    return true;
+  }
+  let list = range(index_steps);
+  let steps_all = list_map(list, step_kept);
   function head_line(items) {
     let codes = list_map(items, json_to);
     let array = js_code_array(codes);
@@ -62,6 +65,11 @@ export function app_learn_js_lesson_array_index_generic(options) {
     return line;
   }
   function index_line(index) {
+    let all = index_line_steps(index, steps_all);
+    return all;
+  }
+  function index_line_steps(index, steps_kept) {
+    "steps_kept says, for each step, whether its i++ line is written - all of them in the program asked, some left out in a wrong answer";
     let json = json_to(index);
     if (equal(index_name, null)) {
       let read = js_code_index(name, json);
@@ -72,18 +80,36 @@ export function app_learn_js_lesson_array_index_generic(options) {
     let named = js_code_let_statement(index_name, json);
     let read_named = js_code_index(name, index_name);
     let logged = js_code_console_log_statement(read_named);
-    if (not(index_step)) {
-      let both = list_join_newline([named, logged]);
-      return both;
+    ("2026-11-10, at the human's asking: a[i], then i++, then a[i] again, and again - the items a loop's first turns would write out.");
+    let lines4 = [named, logged];
+    for (let kept of steps_kept) {
+      if (kept) {
+        lines4.push(index_name + "++;");
+      }
+      lines4.push(logged);
     }
-    ("2026-11-10, at the human's asking: a[i], then i++, then a[i] again - the two items a loop's first two turns would write out.");
-    let stepped = list_join_newline([
-      named,
-      logged,
-      index_name + "++;",
-      logged,
-    ]);
+    let stepped = list_join_newline(lines4);
     return stepped;
+  }
+  function steps_missed_all() {
+    "every way of leaving out one or more of the i++ lines";
+    let ways = [[]];
+    for (let k = 0; less_than(k, index_steps); k++) {
+      let longer = [];
+      for (let way of ways) {
+        let concated = list_concat(way, [false]);
+        longer.push(concated);
+        let concated2 = list_concat(way, [true]);
+        longer.push(concated2);
+      }
+      ways = longer;
+    }
+    function missed_some(way2) {
+      let some = list_includes(way2, false);
+      return some;
+    }
+    let found3 = list_filter(ways, missed_some);
+    return found3;
   }
   function program_head(head, index2) {
     let v = index_line(index2);
@@ -142,12 +168,18 @@ export function app_learn_js_lesson_array_index_generic(options) {
     let outs = list_map(programs2, eval_console_log_lines);
     let json2 = json_to(index8);
     let extra = [json2];
-    if (index_step) {
-      ("stepping, the index alone is no longer a likely guess; the same item written twice is - what the program writes out if i++ were missed");
-      let list = text_split_newline(answer);
-      let first_out = list_first(list);
-      let joined = list_join_newline([first_out, first_out]);
-      extra = [joined];
+    if (greater_than(index_steps, 0)) {
+      ("stepping, the index alone is no longer a likely guess; what the program writes out with an i++ missed is, each way of missing one or more of them");
+      let lines5 = text_split_newline(question);
+      let head4 = list_first(lines5);
+      function missed_out(way3) {
+        let v3 = index_line_steps(index8, way3);
+        let code7 = list_join_newline([head4, v3]);
+        let out2 = eval_console_log_lines(code7);
+        return out2;
+      }
+      let list2 = steps_missed_all();
+      extra = list_map(list2, missed_out);
     }
     let candidates = list_concat(outs, extra);
     let found2 = list_without(candidates, answer);
@@ -173,8 +205,8 @@ export function app_learn_js_lesson_array_index_generic(options) {
     "the example's items counted from 0 up to its index, then the one written out";
     let code6 = program_of(example_items, example_index);
     let value = eval_console_log_lines(code6);
-    if (index_step) {
-      ("stepping: each read of a[i] worked out with what i holds then, the i++ between, then the two items written out in order");
+    if (greater_than(index_steps, 0)) {
+      ("stepping: each read of a[i] worked out with what i holds then, each i++ between, then the items written out in order");
       let read_named3 = js_code_index(name, index_name);
       function reading(index13) {
         let index_json2 = json_to(index13);
@@ -195,32 +227,34 @@ export function app_learn_js_lesson_array_index_generic(options) {
         ];
         app_learn_js_div_cycle_code(root, parts3);
       }
-      let index_after = example_index + 1;
       reading(example_index);
-      let json3 = json_to(index_after);
-      app_learn_js_div_cycle_code(root, [
-        "",
-        index_name + "++",
-        " adds ",
-        "1",
-        " to ",
-        index_name,
-        ", so ",
-        index_name,
-        " is ",
-        json3,
-      ]);
-      reading(index_after);
+      for (let step = 1; less_than_equal(step, index_steps); step++) {
+        let index_after = example_index + step;
+        let json3 = json_to(index_after);
+        app_learn_js_div_cycle_code(root, [
+          "",
+          index_name + "++",
+          " adds ",
+          "1",
+          " to ",
+          index_name,
+          ", so ",
+          index_name,
+          " is ",
+          json3,
+        ]);
+        reading(index_after);
+      }
       let outs2 = text_split_newline(value);
-      let first = list_first(outs2);
-      let item3 = list_get(outs2, 1);
-      app_learn_js_div_cycle_code(root, [
-        "So ",
-        first,
-        " then ",
-        item3,
-        " are written out",
-      ]);
+      let said = ["So "];
+      for (let out3 of outs2) {
+        if (greater_than(said.length, 1)) {
+          said.push(" then ");
+        }
+        said.push(out3);
+      }
+      said.push(" are written out");
+      app_learn_js_div_cycle_code(root, said);
       return;
     }
     if (not_equal(index_name, null)) {
