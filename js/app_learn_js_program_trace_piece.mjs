@@ -1,13 +1,16 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
+import { list_all } from "./list_all.mjs";
 import { not } from "./not.mjs";
 import { js_value_name_built_in_is } from "./js_value_name_built_in_is.mjs";
+import { list_map } from "./list_map.mjs";
 import { js_value_names } from "./js_value_names.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_learn_js_program_trace_piece_name } from "./app_learn_js_program_trace_piece_name.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
+import { app_learn_js_expression_node_index } from "./app_learn_js_expression_node_index.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { error } from "./error.mjs";
 import { app_learn_js_program_trace_piece_solved } from "./app_learn_js_program_trace_piece_solved.mjs";
@@ -23,6 +26,12 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     if (equal(part_type, "Literal")) {
       return true;
     }
+    if (equal(part_type, "ArrayExpression")) {
+      ("2026-11-10, at the human's asking, so the array lessons can be stepped through: an array whose items are each written out is itself written out, with nothing to evaluate, as the array lessons write every array");
+      let elements = property_get(part, "elements");
+      let all_written = list_all(elements, written_is);
+      return all_written;
+    }
     let b = equal(part_type, "Identifier");
     if (not(b)) {
       return false;
@@ -36,6 +45,11 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     if (equal(part_type, "Literal")) {
       let value = property_get(part, "value");
       return value;
+    }
+    if (equal(part_type, "ArrayExpression")) {
+      let elements2 = property_get(part, "elements");
+      let items = list_map(elements2, written_value);
+      return items;
     }
     let built_in = js_value_names();
     let name_read2 = property_get(part, "name");
@@ -92,6 +106,18 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     ("2026-10-17, at the human's asking: both sides of an && or an || are read, as both sides of every other operator are - the beginner's rule the lessons teach. Nothing this can trace changes a name or can fail on being read, so reading a side JavaScript would skip never changes the answer; a name not declared yet, on a side JavaScript skips, is the one line it could not trace, and no lesson draws one. Not picked: skipping the right side once the left settles it, as JavaScript does, built earlier the same day and kept for the lesson on stopping early");
     let right = app_learn_js_program_trace_piece(state, piece3, true);
     expression = app_learn_js_expression_node(left, operator, right);
+  } else if (
+    equal(type, "MemberExpression") &&
+    property_get(piece, "computed") &&
+    equal(property_get(property_get(piece, "object"), "type"), "Identifier")
+  ) {
+    ("2026-11-10, at the human's asking, so the array lessons can be stepped through: a[i] reads its index first - a name looked up as any name is - then the item at it, in one evaluate, as the expression lessons solve it. The array's name is kept as written, as those lessons keep it, so a[2] is one press");
+    let object2 = property_get(piece, "object");
+    let array_name = property_get(object2, "name");
+    let items2 = property_get(values_held, array_name);
+    let piece5 = property_get(piece, "property");
+    let index = app_learn_js_program_trace_piece(state, piece5, true);
+    expression = app_learn_js_expression_node_index(array_name, items2, index);
   } else if (unary_is) {
     let piece4 = property_get(piece, "argument");
     let argument = app_learn_js_program_trace_piece(state, piece4, true);
