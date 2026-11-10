@@ -7,7 +7,7 @@ import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_n
 import { list_first } from "./list_first.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
-import { text_to } from "./text_to.mjs";
+import { js_value_code } from "./js_value_code.mjs";
 import { app_learn_js_expression_step_reason_of } from "./app_learn_js_expression_step_reason_of.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_lesson_expression_choose_order_run_remains } from "./app_learn_js_lesson_expression_choose_order_run_remains.mjs";
@@ -41,7 +41,8 @@ export function app_learn_js_lesson_expression_choose_order_reason_run(
     let node = list_first(ready);
     let step_code = app_learn_js_expression_code(node);
     let step_value = app_learn_js_expression_value(node);
-    let step_text = text_to(step_value);
+    ('2026-11-10, at the human\'s asking: written as code, a string in its quotes, as the line it is solved into writes it - a[2] was said to get faithfulness and the answer under it was "faithfulness"');
+    let step_text = js_value_code(step_value);
     let reason = app_learn_js_expression_step_reason_of(current, node);
     let reason_written = list_empty_not_is(reason);
     let lead = "We solve ";

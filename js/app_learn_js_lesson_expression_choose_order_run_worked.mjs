@@ -4,7 +4,7 @@ import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_n
 import { list_first } from "./list_first.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
-import { text_to } from "./text_to.mjs";
+import { js_value_code } from "./js_value_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -30,13 +30,14 @@ export function app_learn_js_lesson_expression_choose_order_run_worked(
   let whole_line = app_learn_js_expression_code(tree);
   let step_code = app_learn_js_expression_code(step);
   let step_value = app_learn_js_expression_value(step);
-  let step_text = text_to(step_value);
+  ("2026-11-10: written as code, a string in its quotes, as the line it is solved into writes it - the same rule the run of every step was given at the human's asking");
+  let step_text = js_value_code(step_value);
   let outer_symbol = property_get(tree, "operator");
   let step_symbol = property_get(step, "operator");
   let stepped = app_learn_js_expression_solved(tree, step);
   let stepped_code = app_learn_js_expression_code(stepped);
   let final_value = app_learn_js_expression_value(tree);
-  let final_text = text_to(final_value);
+  let final_text = js_value_code(final_value);
   ("The line stands in a card of its own, and so does the run under it: the line is not a step of the run - it is what the run is done to.");
   let line_card = app_learn_js_container_light_blue(root);
   app_learn_js_lesson_suppose_solve_line(line_card, lead, whole_line);
