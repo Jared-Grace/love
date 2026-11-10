@@ -3419,6 +3419,10 @@ def find_python_eval(command):
     except Unsupported:
         return find_stdin_program_unparsed(command)
     for words in split_statements(tokens):
+        # A loop or `if` body opens on `do`/`then`/`else`; the eval behind it
+        # is the same eval, and without this it fell through to a prompt.
+        while words and words[0] in STATEMENT_STARTERS:
+            words = words[1:]
         words = _strip_command_prefixes(words)
         if words and words[0] in PYTHON_PROGRAMS and "-c" in words[1:]:
             return True
