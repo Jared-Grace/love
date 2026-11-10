@@ -1,3 +1,4 @@
+import { reply_god_bless_you_thanked } from "./reply_god_bless_you_thanked.mjs";
 import { reply_amen_said } from "./reply_amen_said.mjs";
 import { reply_tiktok_link } from "./reply_tiktok_link.mjs";
 import { reply_meeting_blessed } from "./reply_meeting_blessed.mjs";
@@ -72,6 +73,7 @@ export function app_shared_message_reply_choices() {
   let age = reply_age_said();
   let amen = reply_amen_said();
   let name_alone = app_shared_message_reply_iam_titled_name();
+  let blessed_back = reply_god_bless_you_thanked();
   let meeting = reply_meeting_blessed();
   let tiktok = reply_tiktok_link();
   let choices_main = reply_choice([
@@ -92,6 +94,7 @@ export function app_shared_message_reply_choices() {
     age,
     amen,
     name_alone,
+    blessed_back,
     meeting,
     tiktok,
   ]);
