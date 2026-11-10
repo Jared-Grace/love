@@ -170,27 +170,35 @@ export function app_learn_js_lesson_array_index_generic(options) {
     let extra = [json2];
     if (greater_than(index_steps, 0)) {
       ("stepping, the index alone is no longer a likely guess; what the program writes out with an i++ missed is, each way of missing one or more of them");
-      let lines5 = text_split_newline(question);
-      let head4 = list_first(lines5);
-      function missed_out(way3) {
-        let v3 = index_line_steps(index8, way3);
-        let code7 = list_join_newline([head4, v3]);
-        let out2 = eval_console_log_lines(code7);
-        return out2;
-      }
-      let list2 = steps_missed_all();
-      extra = list_map(list2, missed_out);
+      let missed = programs_missed(question, index8);
+      extra = list_map(missed, eval_console_log_lines);
     }
     let candidates = list_concat(outs, extra);
     let found2 = list_without(candidates, answer);
     let once = list_unique(found2);
     return once;
   }
+  function programs_missed(code8, index14) {
+    "the same program with one or more of its i++ lines left out, each way of leaving them out";
+    let lines5 = text_split_newline(code8);
+    let head4 = list_first(lines5);
+    function missed_program(way3) {
+      let v3 = index_line_steps(index14, way3);
+      let code7 = list_join_newline([head4, v3]);
+      return code7;
+    }
+    let list2 = steps_missed_all();
+    let programs4 = list_map(list2, missed_program);
+    return programs4;
+  }
   function backwards_decoys(question, answer) {
-    "the same array with each other index";
+    "the same array with each other index, and, stepping, the same program with an i++ left out";
     let got2 = others(answer);
     let programs3 = property_get(got2, "programs");
-    return programs3;
+    let index15 = property_get(got2, "index");
+    let missed2 = programs_missed(answer, index15);
+    let all2 = list_concat(programs3, missed2);
+    return all2;
   }
   let example_items = property_get(example_given, "items");
   let example_index = property_get(example_given, "index");
