@@ -43,6 +43,7 @@ export function app_learn_js_lesson_array_second() {
     above,
     item_count: 3,
     indexes: [1],
+    index_name: null,
     example: {
       items: ["love", "joy", "peace"],
       index: 1,

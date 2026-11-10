@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { range } from "./range.mjs";
@@ -22,10 +23,10 @@ import { list_without } from "./list_without.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_get } from "./list_get.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_array_index_generic(options) {
@@ -41,6 +42,8 @@ export function app_learn_js_lesson_array_index_generic(options) {
   let item_count = property_get(options, "item_count");
   let indexes = property_get(options, "indexes");
   let example_given = property_get(options, "example");
+  let index_name = property_get(options, "index_name");
+  ("index_name is null when the index is written as a number, a[2], or the name the index is given first, let i = 2; then a[i].");
   let name = "a";
   let indexes_all = range(item_count);
   function head_line(items) {
@@ -51,9 +54,17 @@ export function app_learn_js_lesson_array_index_generic(options) {
   }
   function index_line(index) {
     let json = json_to(index);
-    let read = js_code_index(name, json);
-    let line2 = js_code_console_log_statement(read);
-    return line2;
+    if (equal(index_name, null)) {
+      let read = js_code_index(name, json);
+      let line2 = js_code_console_log_statement(read);
+      return line2;
+    }
+    ("2026-11-10, at the human's asking: the index given a name first, let i = 2; then a[i] - the step before a loop, where i is what changes.");
+    let named = js_code_let_statement(index_name, json);
+    let read_named = js_code_index(name, index_name);
+    let logged = js_code_console_log_statement(read_named);
+    let both = list_join_newline([named, logged]);
+    return both;
   }
   function program_head(head, index2) {
     let v = index_line(index2);
@@ -135,6 +146,18 @@ export function app_learn_js_lesson_array_index_generic(options) {
     "the example's items counted from 0 up to its index, then the one written out";
     let code6 = program_of(example_items, example_index);
     let value = eval_console_log_lines(code6);
+    if (not_equal(index_name, null)) {
+      let index_json = json_to(example_index);
+      let read_named2 = js_code_index(name, index_name);
+      let read_number = js_code_index(name, index_json);
+      app_learn_js_div_cycle_code(root, ["", index_name, " is ", index_json]);
+      app_learn_js_div_cycle_code(root, [
+        "So ",
+        read_named2,
+        " is ",
+        read_number,
+      ]);
+    }
     function counted(index10) {
       let object = list_get(example_items, index10);
       let item = json_to(object);
