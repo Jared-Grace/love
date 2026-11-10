@@ -1,3 +1,4 @@
+import { reply_amen_said } from "./reply_amen_said.mjs";
 import { reply_tiktok_link } from "./reply_tiktok_link.mjs";
 import { reply_meeting_blessed } from "./reply_meeting_blessed.mjs";
 import { app_shared_message_reply_iam_titled_name } from "./app_shared_message_reply_iam_titled_name.mjs";
@@ -69,6 +70,7 @@ export function app_shared_message_reply_choices() {
   let pray_for_me = reply_pray_for_me();
   let we_should = reply_we_should();
   let age = reply_age_said();
+  let amen = reply_amen_said();
   let name_alone = app_shared_message_reply_iam_titled_name();
   let meeting = reply_meeting_blessed();
   let tiktok = reply_tiktok_link();
@@ -88,6 +90,7 @@ export function app_shared_message_reply_choices() {
     pray_for_me,
     we_should,
     age,
+    amen,
     name_alone,
     meeting,
     tiktok,
