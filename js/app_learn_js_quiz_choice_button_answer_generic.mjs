@@ -6,8 +6,8 @@ import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
-import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { app_shared_code_surfaces_inside } from "./app_shared_code_surfaces_inside.mjs";
+import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -54,9 +54,9 @@ export function app_learn_js_quiz_choice_button_answer_generic({
       property_set(state, "answered", true);
       ("taken, so it stops being the way on - a walk that kept pressing this locked button would never reach what comes after it");
       html_data_set_test_happy_remove(b);
-      app_shared_button_screen_green_style_assign(b);
-      ("2026-11-10, at the human's asking: a choice written as code turns green all over, the gray button around the code as well as the code itself, the same green a choice of words turns, so a right answer looks right whether or not it holds code. Only here, where a choice's button stays in sight around its code; other users of the green, as the quiz that picks pieces of code, keep their button out of sight");
+      ("2026-11-10, at the human's asking: a choice written as code turns green all over, the gray button around the code as well as the code itself, the same green a choice of words turns, so a right answer looks right whether or not it holds code. Only here, where a choice's button stays in sight around its code; other users of the green, as the quiz that picks pieces of code, keep their button out of sight. The code is looked for before the green goes on, because it is found by its dark colour and the green paints that colour over");
       let surfaces = app_shared_code_surfaces_inside(b);
+      app_shared_button_screen_green_style_assign(b);
       if (list_empty_not_is(surfaces)) {
         let green = app_shared_button_background();
         html_style_background_color_set(b, green);
