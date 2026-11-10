@@ -3023,7 +3023,7 @@ export function reply_proposals() {
     cases: [
       {
         from: "",
-        message: "Oh brother your friend list is full",
+        message: "brother your friend list is full",
         answered: true,
         outputs: [full_output],
       },
@@ -3036,8 +3036,73 @@ export function reply_proposals() {
     ],
     decide: [
       "the words are yours: a disappointed face, then My friend list has gotten full before, yes, but if God wills we can talk here, with a praying hands emoji after.",
-      "oh and brother in front are optional. Only your friend list is full is matched; the rejected reading was also taking other wordings, because nobody waiting has used them yet.",
-      "measured with all three of these changes in: a message saying Amen, then God bless you brother, then oh brother your friend list is full, gets three paragraphs - the thanks, the blessing, and this answer - and good morning and hello are answered as before.",
+      "brother in front is optional, heard by the same my dear brother piece as every other rule. Oh brother in front is heard only once the change putting oh into that piece goes in too. Only your friend list is full is matched; the rejected reading was also taking other wordings, because nobody waiting has used them yet.",
+      "measured with all four of these changes in: a message saying Amen, then God bless you brother, then oh brother your friend list is full, gets three paragraphs - the thanks, the blessing, and this answer - and good morning and hello are answered as before.",
+    ],
+  };
+  let oh_db_kept = text_combine_multiple([
+    "   let db = ",
+    fn_name("reply_either_both"),
+    "(dear, brother);",
+  ]);
+  let oh_added = text_combine_multiple([
+    "+  let oh = ",
+    fn_name("reply_optional"),
+    '("oh");',
+  ]);
+  let oh_seq_removed = text_combine_multiple([
+    "-  let fn16 = ",
+    fn_name("reply_sequence"),
+    "([my, db, in_christ]);",
+  ]);
+  let oh_seq_added = text_combine_multiple([
+    "+  let fn16 = ",
+    fn_name("reply_sequence"),
+    "([oh, my, db, in_christ]);",
+  ]);
+  let greetings = reply_response_greetings();
+  let oh_hello_said = [greetings];
+  let oh_brother_heard = {
+    title: "hear oh in front of brother everywhere brother is heard",
+    fn: fn_name("reply_phrase_my_dear_brother"),
+    whole: [],
+    diff: [
+      oh_db_kept,
+      oh_added,
+      oh_seq_removed,
+      oh_seq_added,
+      "   let choices = [fn16, my];",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "Hello oh brother",
+        answered: true,
+        outputs: oh_hello_said,
+      },
+      {
+        from: "",
+        message: "Hello oh my dear brother",
+        answered: true,
+        outputs: oh_hello_said,
+      },
+      {
+        from: "",
+        message: "Hello oh dear brother",
+        answered: true,
+        outputs: oh_hello_said,
+      },
+      {
+        from: "",
+        message: "Hello oh",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "this is the shared piece: every rule that hears brother, my brother, dear brother or my dear brother in Christ now also hears oh in front of it - greetings, thank you, God bless you, the friend list answer, and the rest. Nothing is said differently; only more messages are heard.",
+      "oh is heard only right before brother or dear, never alone, so oh by itself and oh my are not newly matched. The rejected reading was hearing oh anywhere as a word to skip, because oh my God would then read as my God.",
+      "the friend list change leans on this one for oh brother your friend list is full. Approved without this, it still answers your friend list is full and brother your friend list is full.",
     ],
   };
   let proposals = [
@@ -3081,6 +3146,7 @@ export function reply_proposals() {
     amen_heard,
     bless_thanked,
     friend_list_said,
+    oh_brother_heard,
   ];
   return proposals;
 }
