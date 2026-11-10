@@ -1,15 +1,16 @@
-import { math_min } from "./math_min.mjs";
-import { less_than } from "./less_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { qa_app_stage_public_url } from "./qa_app_stage_public_url.mjs";
 import { page_route_root_from_latest } from "./page_route_root_from_latest.mjs";
 import { list_add } from "./list_add.mjs";
 import { page_boot_arrive_wait } from "./page_boot_arrive_wait.mjs";
+import { math_min } from "./math_min.mjs";
+import { less_than } from "./less_than.mjs";
 import { playwright_error_records_clear } from "./playwright_error_records_clear.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
 import { catch_error_text_or_null_async } from "./catch_error_text_or_null_async.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { playwright_error_records } from "./playwright_error_records.mjs";
 import { page_boot_reasons } from "./page_boot_reasons.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function qa_app_stage_public_clicks_assert(app_name) {
@@ -20,6 +21,7 @@ export async function qa_app_stage_public_clicks_assert(app_name) {
   let cap = 20;
   let failures = [];
   let pressed = [];
+  let skipped = [];
   async function on_page(page) {
     await page_route_root_from_latest(page);
     let errors = [];
@@ -52,7 +54,7 @@ export async function qa_app_stage_public_clicks_assert(app_name) {
         });
         return r2;
       }
-      let label = await catch_error_text_or_null_async(label_read);
+      let label = await catch_null_async(label_read);
       async function press() {
         await button.click({
           timeout: 3000,
@@ -60,6 +62,11 @@ export async function qa_app_stage_public_clicks_assert(app_name) {
       }
       let refused = await catch_error_text_or_null_async(press);
       if (not_equal(refused, null)) {
+        ("a button that cannot be pressed is reported, never dropped: a run that skipped thirteen of twenty in silence read exactly like a run that pressed them all.");
+        list_add(skipped, {
+          index,
+          label,
+        });
         continue;
       }
       list_add(pressed, label);
@@ -90,6 +97,7 @@ export async function qa_app_stage_public_clicks_assert(app_name) {
   let result = {
     app_name,
     pressed,
+    skipped,
   };
   return result;
 }

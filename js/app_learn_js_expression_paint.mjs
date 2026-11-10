@@ -7,6 +7,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span } from "./html_span.mjs";
 import { app_learn_js_expression_node_index_is } from "./app_learn_js_expression_node_index_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
@@ -35,9 +36,17 @@ export function app_learn_js_expression_paint(parent, item, on_operator) {
       fn_name("app_learn_js_expression_code"),
       " writes it; the name is the piece pressed, as a called operator's name is, since the brackets cannot be one piece with the index between them");
     let array_name = property_get(item, "name");
+    let index = property_get(item, "right");
+    ("2026-11-10, at the human's asking: once the index is a value, the whole a[2] is the one piece pressed, since it is the whole thing read next; the name alone with the brackets left out looked like only a was being read");
+    let index_node_is = app_learn_js_expression_node_is(index);
+    if (not(index_node_is)) {
+      let whole_text = app_learn_js_expression_code(item);
+      let whole_piece = html_span_text(node_span, whole_text);
+      on_operator(item, whole_piece, node_span);
+      return;
+    }
     let name_piece = html_span_text(node_span, array_name);
     html_span_text(node_span, "[");
-    let index = property_get(item, "right");
     app_learn_js_expression_paint(node_span, index, on_operator);
     html_span_text(node_span, "]");
     on_operator(item, name_piece, node_span);
