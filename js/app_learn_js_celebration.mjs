@@ -1,9 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
-import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
-import { html_style_margin_y } from "./html_style_margin_y.mjs";
+import { app_shared_success_message_spaced } from "./app_shared_success_message_spaced.mjs";
 import { emoji_party_popper } from "./emoji_party_popper.mjs";
 import { emoji_party_face } from "./emoji_party_face.mjs";
 import { emoji_trophy } from "./emoji_trophy.mjs";
@@ -15,6 +13,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_spaced_large_gap } from "./app_shared_spaced_large_gap.mjs";
+import { html_style_margin_y } from "./html_style_margin_y.mjs";
 export function app_learn_js_celebration(parent, message) {
   "$plain message";
   "the large celebration drawn when a learner finishes something: an enlarged green success message, then the line handed in, centered and wrapped on each side with one celebration emoji chosen at random, with generous vertical spacing (more under the line than the green message)";
@@ -25,9 +24,7 @@ export function app_learn_js_celebration(parent, message) {
   let celebration = html_div(parent);
   let celebration_size = "1.1em";
   html_style_font_size(celebration, celebration_size);
-  let green = app_shared_success_message(celebration);
-  let value = app_shared_spaced_gap();
-  html_style_margin_y(green, value);
+  app_shared_success_message_spaced(celebration);
   let emojis = [
     emoji_party_popper,
     emoji_party_face,
@@ -41,7 +38,7 @@ export function app_learn_js_celebration(parent, message) {
   let text = text_combine_multiple([emoji, nb, message, nb, emoji]);
   let line = html_div_text(celebration, text);
   html_centered(line);
-  let value2 = app_shared_spaced_large_gap();
-  html_style_margin_y(line, value2);
+  let value = app_shared_spaced_large_gap();
+  html_style_margin_y(line, value);
   return celebration;
 }
