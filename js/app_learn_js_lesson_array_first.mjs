@@ -85,6 +85,7 @@ export function app_learn_js_lesson_array_first() {
     item_count: 3,
     indexes: [0],
     index_name: null,
+    index_step: false,
     example: {
       items: ["love", "joy", "peace"],
       index: 0,
