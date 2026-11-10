@@ -3353,6 +3353,24 @@ def statements_words(text):
         tokens = tokenize(text)
     except Unsupported:
         return
+    for words in statements_words_bodies_skipped(text):
+        # A loop or `if` body opens on `do`/`then`/`else`: the command behind
+        # it is the one every finder means, and without this each one missed it.
+        while words and words[0] in STATEMENT_STARTERS:
+            words = words[1:]
+        yield _strip_command_prefixes(words)
+
+
+def statements_words_bodies_skipped(text):
+    """statements_words without reaching into loop and `if` bodies: a body
+    statement keeps its leading `do`/`then`/`else`, so a finder testing
+    words[0] passes over it. Only for a finder judging words a loop variable
+    fills in - the loop's own allow substitutes the values first, and a body
+    read with `$c` still in it is not what runs."""
+    try:
+        tokens = tokenize(text)
+    except Unsupported:
+        return
     for words in split_statements(tokens):
         yield _strip_command_prefixes(words)
 
@@ -3373,8 +3391,6 @@ def find_raw_node_eval(command):
     reported as "not detected" - it falls through to normal handling rather
     than being force-denied on a guess."""
     for words in statements_words(command):
-        while words and words[0] in STATEMENT_STARTERS:
-            words = words[1:]
         if words and words[0] == "node" and any(is_node_eval_flag(w) for w in words[1:]):
             return True
     return False
@@ -4259,7 +4275,7 @@ def find_sandbox_path_near_miss(command):
     finders; an unparseable command returns None and falls through to normal
     handling. Returns "" (still not None) if the flag value is empty - the deny
     still fires; main() only tests `is not None`."""
-    for words in statements_words(command):
+    for words in statements_words_bodies_skipped(command):
         path = sandbox_read_path_near_miss(words)
         if path is not None:
             return path
