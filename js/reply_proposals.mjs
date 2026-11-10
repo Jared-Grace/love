@@ -30,6 +30,7 @@ import { reply_choices_praise } from "./reply_choices_praise.mjs";
 import { text_may_the_lord_exclamation } from "./text_may_the_lord_exclamation.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
+import { emoji_disappointed } from "./emoji_disappointed.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -3008,8 +3009,10 @@ export function reply_proposals() {
     "();",
   ]);
   let v16 = emoji_pray();
+  let v17 = emoji_disappointed();
   let full_output = text_combine_multiple([
-    "My friend list has gotten full before, yes, but if God wills we can talk here ",
+    v17,
+    " My friend list has gotten full before, yes, but if God wills we can talk here ",
     v16,
   ]);
   let friend_list_said = {
@@ -3032,7 +3035,7 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "the words are yours: My friend list has gotten full before, yes, but if God wills we can talk here, with a praying hands emoji after.",
+      "the words are yours: a disappointed face, then My friend list has gotten full before, yes, but if God wills we can talk here, with a praying hands emoji after.",
       "oh and brother in front are optional. Only your friend list is full is matched; the rejected reading was also taking other wordings, because nobody waiting has used them yet.",
       "measured with all three of these changes in: a message saying Amen, then God bless you brother, then oh brother your friend list is full, gets three paragraphs - the thanks, the blessing, and this answer - and good morning and hello are answered as before.",
     ],
