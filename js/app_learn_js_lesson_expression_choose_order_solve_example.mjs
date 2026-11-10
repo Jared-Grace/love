@@ -6,6 +6,9 @@ import { app_shared_animation_duration } from "./app_shared_animation_duration.m
 import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_success_message_spaced } from "./app_shared_success_message_spaced.mjs";
+import { app_shared_code_surfaces_inside } from "./app_shared_code_surfaces_inside.mjs";
+import { app_shared_button_background } from "./app_shared_button_background.mjs";
+import { app_shared_code_surfaces_color_paint } from "./app_shared_code_surfaces_color_paint.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_expression_choose_order_ask.mjs";
 import { noop } from "./noop.mjs";
@@ -40,6 +43,10 @@ export function app_learn_js_lesson_expression_choose_order_solve_example(
     html_clear(asking);
     ("2026-11-10, at the human's asking: spaced and lettered black, as it is where it stands alone elsewhere, rather than taking the blue of the label it is put in");
     app_shared_success_message_spaced(asking);
+    ("2026-11-10, at the human's asking: the code on the card turns green once the line is solved, the array it reads as well as the line, as a program stepped through turns green once it is complete - green saying solved as it says right everywhere else in this app");
+    let surfaces = app_shared_code_surfaces_inside(parent);
+    let green = app_shared_button_background();
+    app_shared_code_surfaces_color_paint(surfaces, green);
   }
   async function finished_grow() {
     "the well done is three times the height of the asking it stands in place of, so the room for it is taken slowly and the words are held back until it has been taken - by the very unit the walkthrough of the lesson before moves its own head with, so the two screens grow at one speed and in one manner.";
