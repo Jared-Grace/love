@@ -1,11 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { text_empty } from "./text_empty.mjs";
+import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_shared_success_message } from "./app_shared_success_message.mjs";
+import { app_shared_success_message_spaced } from "./app_shared_success_message_spaced.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_expression_choose_order_ask.mjs";
 import { noop } from "./noop.mjs";
@@ -38,7 +38,8 @@ export function app_learn_js_lesson_expression_choose_order_solve_example(
     "the line is finished, so where the asking stood the learner is told well done - in the very words and the very green the walkthrough of the lesson before ends in, and the quiz ends every question in, out of the one place all three of them read";
     "It replaces the asking rather than standing under it, because the asking was the only thing on the card that was ever about what to do next, and there is nothing to do next.";
     html_clear(asking);
-    app_shared_success_message(asking);
+    ("2026-11-10, at the human's asking: spaced and lettered black, as it is where it stands alone elsewhere, rather than taking the blue of the label it is put in");
+    app_shared_success_message_spaced(asking);
   }
   async function finished_grow() {
     "the well done is three times the height of the asking it stands in place of, so the room for it is taken slowly and the words are held back until it has been taken - by the very unit the walkthrough of the lesson before moves its own head with, so the two screens grow at one speed and in one manner.";
