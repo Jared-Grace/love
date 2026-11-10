@@ -10,6 +10,8 @@ import { promise_wrap_unawait } from "./promise_wrap_unawait.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_quiz_choice_button_answer } from "./app_learn_js_quiz_choice_button_answer.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { each } from "./each.mjs";
 export function app_learn_js_expression_value_choose_buttons_generic(
   parent,
@@ -60,6 +62,9 @@ export function app_learn_js_expression_value_choose_buttons_generic(
       on_right,
       on_wrong,
     );
+    ('2026-11-10, at the human\'s asking: every choice is a value about to stand in a line of code, so it is written as code, the way the line will write it once chosen - one rule for every value, text and number alike. What a program logs is not asked for here and is written as the console writes it. Not picked: code for text only, which would make "1" and 1 look more alike than they are');
+    html_clear(b);
+    html_span_text_code_dark(b, choice_text);
     if (right_is) {
       result.right = b;
     }
