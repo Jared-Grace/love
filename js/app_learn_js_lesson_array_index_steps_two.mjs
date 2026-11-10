@@ -39,6 +39,7 @@ export function app_learn_js_lesson_array_index_steps_two() {
     indexes: [0],
     index_name: "i",
     index_steps: 2,
+    steps: true,
     example: {
       items: ["love", "joy", "peace"],
       index: 0,

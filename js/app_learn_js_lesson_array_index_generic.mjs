@@ -40,6 +40,8 @@ export function app_learn_js_lesson_array_index_generic(options) {
   ("Reading forwards, the wrong answers are the array's other items - which is also the answer of counting from 1 instead of 0 - and the index itself. Each is worked out by running the program with another index rather than reasoned out. Reading backwards, the wrong programs are the same array with another index.");
   ("A program's index is found by trying every index against it, not by reading its digits, so nothing here depends on how the line is spaced.");
   ("No stepping, 2026-11-06: the tracer that steps a program line by line cannot yet read an array, and threw on the example screen. Not picked: teaching the tracer arrays first, a larger change than these lessons; it is the way to give them stepping back.");
+  ("2026-11-10, at the human's asking: the tracer now reads an array written out and a[i], so steps says whether a lesson has the step-by-step quiz, its example then guided step by step.");
+  let steps = property_get(options, "steps");
   let name_id = property_get(options, "name_id");
   let above_inner = property_get(options, "above");
   let item_count = property_get(options, "item_count");
@@ -307,7 +309,7 @@ export function app_learn_js_lesson_array_index_generic(options) {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps: false,
+    steps,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,
