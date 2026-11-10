@@ -10,6 +10,7 @@ import { facebook_psalm_youtube_public } from "./facebook_psalm_youtube_public.m
 import { not_equal } from "./not_equal.mjs";
 import { facebook_psalm_video_post } from "./facebook_psalm_video_post.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { facebook_posted_history_add } from "./facebook_posted_history_add.mjs";
 export async function facebook_psalm_video_post_next() {
   arguments_assert(arguments, 0);
   ("Posts to facebook the oldest psalm lyric video that is public on youtube and not posted to facebook yet, and records it - so one scheduled run is one post, and once facebook has caught up each run picks up whatever youtube gained since.");
@@ -55,7 +56,15 @@ export async function facebook_psalm_video_post_next() {
       posted_at: new Date().toISOString(),
     };
     await file_overwrite_json(ledger_path, ledger);
+    let history = await facebook_posted_history_add({
+      kind: "psalm",
+      title: v.title,
+      video_id: v.video_id,
+      file_path: film,
+      url: r.reel_url ?? null,
+    });
     let r4 = {
+      history,
       posted: v.title,
       file_path: film,
       missing,

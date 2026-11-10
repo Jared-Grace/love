@@ -33,6 +33,7 @@ export async function facebook_psalm_video_post(file_path) {
     r.comment_error = e.message;
     return r;
   }
+  r.reel_url = reel_url;
   try {
     r.cover = await facebook_reel_cover_set(reel_url, cover_path);
   } catch (e) {

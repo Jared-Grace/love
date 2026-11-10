@@ -1,14 +1,15 @@
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { facebook_bible_sermon_posted_path } from "./facebook_bible_sermon_posted_path.mjs";
 import { file_read_json_exists_ensure } from "./file_read_json_exists_ensure.mjs";
 import { facebook_bible_sermon_after } from "./facebook_bible_sermon_after.mjs";
+import { equal } from "./equal.mjs";
 import { facebook_bible_sermon_post_text } from "./facebook_bible_sermon_post_text.mjs";
 import { facebook_bible_chapter_tried_up_is } from "./facebook_bible_chapter_tried_up_is.mjs";
+import { not } from "./not.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { facebook_text_post } from "./facebook_text_post.mjs";
 import { facebook_bible_sermon_comment_add } from "./facebook_bible_sermon_comment_add.mjs";
+import { facebook_posted_history_add } from "./facebook_posted_history_add.mjs";
 export async function facebook_bible_sermon_post_next() {
   arguments_assert(arguments, 0);
   ("Posts to facebook the next approved sermon passage after the last one recorded, records it, then comments a link to read on in the sermons app - so one scheduled run is one sermon. Romans first, in the order the sermons app offers its chapters.");
@@ -61,5 +62,11 @@ export async function facebook_bible_sermon_post_next() {
   } catch (e) {
     r.comment_error = e.message;
   }
+  r.history = await facebook_posted_history_add({
+    kind: "sermon",
+    chapter_code,
+    verses_key,
+    url: r.comment?.post_url ?? null,
+  });
   return r;
 }

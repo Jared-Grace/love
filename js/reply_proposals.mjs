@@ -28,6 +28,8 @@ import { prayer_according_to_desire } from "./prayer_according_to_desire.mjs";
 import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
 import { reply_choices_praise } from "./reply_choices_praise.mjs";
 import { text_may_the_lord_exclamation } from "./text_may_the_lord_exclamation.mjs";
+import { emoji_pray } from "./emoji_pray.mjs";
+import { emoji_smile } from "./emoji_smile.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -2911,6 +2913,130 @@ export function reply_proposals() {
       "the straightening is the repo's own step, already used for the Bible word stores for the same reason. It covers the two curly marks only. The rejected reading was also turning other lookalikes into the straight mark (the modifier letter, the backtick, the prime), because no waiting message has been seen using them.",
     ],
   };
+  let amen_let_kept = text_combine_multiple([
+    "   let age = ",
+    fn_name("reply_age_said"),
+    "();",
+  ]);
+  let amen_let_added = text_combine_multiple([
+    "+  let amen = ",
+    fn_name("reply_amen_said"),
+    "();",
+  ]);
+  let amen_heard = {
+    title: "hear an Amen and answer nothing to it",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_amen_said")],
+    diff: [amen_let_kept, amen_let_added, "     age,", "+    amen,"],
+    cases: [
+      {
+        from: "",
+        message: "Amen 🙏",
+        answered: true,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "Amen\ngood morning",
+        answered: true,
+        outputs: ["🌅👋😁 Good morning! ✝️"],
+      },
+    ],
+    decide: [
+      "an Amen gets no words back. Today a message holding an Amen gets no reply at all, even when the rest of it would be answered; after this the Amen is read past and the rest is answered.",
+      "a message that is only Amen now counts as read with nothing to say, instead of as not understood. Nothing is sent either way. The rejected reading was keeping a bare Amen as not understood, so it would still show up as waiting for a new rule.",
+      "the emojis around it are dropped before any rule reads the message, so Amen with emojis reads the same as Amen.",
+    ],
+  };
+  let bless_let_kept = text_combine_multiple([
+    "   let name_alone = ",
+    fn_name("app_shared_message_reply_iam_titled_name"),
+    "();",
+  ]);
+  let bless_let_added = text_combine_multiple([
+    "+  let blessed_back = ",
+    fn_name("reply_god_bless_you_thanked"),
+    "();",
+  ]);
+  let v10 = emoji_pray();
+  let v14 = emoji_smile();
+  let bless_thanks = text_combine_multiple([
+    v10,
+    " Thank you for the blessing! ",
+    v14,
+  ]);
+  let v15 = prayer_blessing_expand();
+  let bless_outputs = [bless_thanks, v15];
+  let bless_thanked = {
+    title: "thank somebody who says God bless you, and bless them back",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_god_bless_you_thanked")],
+    diff: [
+      bless_let_kept,
+      bless_let_added,
+      "     name_alone,",
+      "+    blessed_back,",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "God bless you",
+        answered: true,
+        outputs: bless_outputs,
+      },
+      {
+        from: "",
+        message: "God bless you dear brother",
+        answered: true,
+        outputs: bless_outputs,
+      },
+    ],
+    decide: [
+      "the words are yours: thanks for the blessing, then the longer blessing on you, your family, your church and your country, each as its own paragraph.",
+      "brother after it is optional, and so are my, dear and in Christ, the same way the other replies hear them.",
+      "only God bless you is matched. The rejected reading was also taking God bless or May God bless you, because nobody waiting has said those yet.",
+    ],
+  };
+  let full_let_kept = text_combine_multiple([
+    "   let tiktok = ",
+    fn_name("reply_tiktok_link"),
+    "();",
+  ]);
+  let full_let_added = text_combine_multiple([
+    "+  let friend_list = ",
+    fn_name("reply_friend_list_full"),
+    "();",
+  ]);
+  let v16 = emoji_pray();
+  let full_output = text_combine_multiple([
+    "My friend list has gotten full before, yes, but if God wills we can talk here ",
+    v16,
+  ]);
+  let friend_list_said = {
+    title: "answer somebody who says my friend list is full",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_friend_list_full")],
+    diff: [full_let_kept, full_let_added, "     tiktok,", "+    friend_list,"],
+    cases: [
+      {
+        from: "",
+        message: "Oh brother your friend list is full",
+        answered: true,
+        outputs: [full_output],
+      },
+      {
+        from: "",
+        message: "your friend list is full",
+        answered: true,
+        outputs: [full_output],
+      },
+    ],
+    decide: [
+      "the words are yours: My friend list has gotten full before, yes, but if God wills we can talk here, with a praying hands emoji after.",
+      "oh and brother in front are optional. Only your friend list is full is matched; the rejected reading was also taking other wordings, because nobody waiting has used them yet.",
+      "measured with all three of these changes in: a message saying Amen, then God bless you brother, then oh brother your friend list is full, gets three paragraphs - the thanks, the blessing, and this answer - and good morning and hello are answered as before.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2949,6 +3075,9 @@ export function reply_proposals() {
     blessing_exclaimed,
     tiktok_link_said,
     apostrophe_curly,
+    amen_heard,
+    bless_thanked,
+    friend_list_said,
   ];
   return proposals;
 }
