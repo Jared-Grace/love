@@ -3105,6 +3105,96 @@ export function reply_proposals() {
       "the friend list change leans on this one for oh brother your friend list is full. Approved without this, it still answers your friend list is full and brother your friend list is full.",
     ],
   };
+  let php_cited = "📖 Philippians 4:6-7: Amen! 🙏";
+  let php_kept = text_combine_multiple([
+    "   let noted5 = ",
+    fn_name("reply_bible_1jn_4_10"),
+    "();",
+  ]);
+  let php_lead_words = text_combine_multiple([
+    "+  let today_verse = ",
+    fn_name("reply_words"),
+    `("today's verse philippians 4 6 7");`,
+  ]);
+  let php_lead_optional = text_combine_multiple([
+    "+  let php_lead = ",
+    fn_name("reply_optional"),
+    "(today_verse);",
+  ]);
+  let php_six_read = text_combine_multiple([
+    "+  let php_6 = ",
+    fn_name("reply_bible_php_4_6"),
+    "();",
+  ]);
+  let php_six_led = text_combine_multiple([
+    "+  let php_six = ",
+    fn_name("reply_sequence"),
+    "([php_lead, php_6]);",
+  ]);
+  let php_seven_read = text_combine_multiple([
+    "+  let php_seven = ",
+    fn_name("reply_bible_php_4_7"),
+    "();",
+  ]);
+  let php_either = text_combine_multiple([
+    "+  let php = ",
+    fn_name("reply_choice"),
+    "([php_six, php_seven]);",
+  ]);
+  let php_list_removed = text_combine_multiple([
+    "-  let verses = ",
+    fn_name("reply_choice"),
+    "([noted2, seven, noted3, noted4, noted5]);",
+  ]);
+  let php_list_added = text_combine_multiple([
+    "+  let verses = ",
+    fn_name("reply_choice"),
+    "([noted2, seven, noted3, noted4, noted5, php]);",
+  ]);
+  let php_verses_said = {
+    title: "read Philippians 4:6-7, and answer with the verse and Amen",
+    fn: fn_name("reply_bible_verses"),
+    whole: [fn_name("reply_bible_php_4_6"), fn_name("reply_bible_php_4_7")],
+    diff: [
+      php_kept,
+      php_lead_words,
+      php_lead_optional,
+      php_six_read,
+      php_six_led,
+      php_seven_read,
+      php_either,
+      php_list_removed,
+      php_list_added,
+      "   return verses;",
+    ],
+    cases: [
+      {
+        from: "",
+        message:
+          "*Today’s Verse* ✨ *Philippians 4:6-7* _“Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds.",
+        answered: true,
+        outputs: [php_cited],
+      },
+      {
+        from: "",
+        message:
+          "Be anxious for nothing, but in everything, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
+        answered: true,
+        outputs: [php_cited],
+      },
+      {
+        from: "",
+        message: "Today's Verse Philippians 4:6-7",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "the answer is the same as for the 1 John verses: the reference, then Amen with praying hands. Nothing new is said.",
+      "both verses were first drafted from the Bibles nobody owns, then four words were added that only a newer translation uses - do, anything, situation and transcends - because a waiting daily-verse post quoted it that way. The ending in Christ Jesus may be left off, because that post stopped at your minds. The rejected reading was hearing any wording at all, which would let a message that only looks like the verse through.",
+      "the heading Today's Verse Philippians 4:6-7 is heard only in front of the verse, never alone, the same way the 1 John lead-in is. The rejected reading was hearing Today's Verse before every verse, because nobody waiting has sent it before another one yet.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -3147,6 +3237,7 @@ export function reply_proposals() {
     bless_thanked,
     friend_list_said,
     oh_brother_heard,
+    php_verses_said,
   ];
   return proposals;
 }
