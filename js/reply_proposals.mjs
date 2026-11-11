@@ -3453,7 +3453,8 @@ export function reply_proposals() {
       "once this is applied, the Philippians card goes back to the one shared Jesus piece and its two-word piece is deleted.",
     ],
   };
-  let worship_said = [prayer_blessing("your ministry and worship")];
+  let v18 = prayer_blessing("your ministry and worship");
+  let worship_said = [v18];
   let choir_added_worship = text_combine_multiple([
     "+  let worship = ",
     fn_name("prayer_blessing"),
