@@ -3480,14 +3480,24 @@ export function reply_proposals() {
     fn_name("reply_choice"),
     "([minister, teacher, choir, work]);",
   ]);
+  let choir_kept_teacher = text_combine_multiple([
+    "   let teacher = ",
+    fn_name("reply_i_am_a_output"),
+    "(title, teaching);",
+  ]);
+  let choir_kept_work = text_combine_multiple([
+    "   let work = ",
+    fn_name("reply_ministry_work"),
+    "();",
+  ]);
   let choir_leader_blessed = {
     title:
       "bless the ministry and worship of somebody who says they are a choir leader",
     fn: fn_name("app_shared_message_reply_minister"),
     whole: [fn_name("reply_i_am_a_output"), fn_name("reply_sequence")],
     diff: [
-      "   let teacher = ...;",
-      "   let work = ...;",
+      choir_kept_teacher,
+      choir_kept_work,
       choir_added_worship,
       choir_added_title,
       choir_added_rule,
