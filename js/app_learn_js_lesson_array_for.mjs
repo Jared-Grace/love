@@ -44,7 +44,7 @@ export function app_learn_js_lesson_array_for() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Every item, with a for loop",
-    "for (let i = 0; i < 3; i++) { ... }",
+    "for (let i = 0; i < 3; i++)",
   );
   let lesson = app_learn_js_lesson_array_for_generic({
     name_id,
