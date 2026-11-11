@@ -1713,6 +1713,13 @@ LSLOCKS_FLAGS = {
 }
 
 
+def is_safe_colon_noop(words):
+    """True iff `words` is a bare `:`, the shell's do-nothing, the same as
+    `true` (already allowed). Only bare: words after it are still expanded,
+    so `: ${x:=y}` assigns, and that is left to ask."""
+    return words == [":"]
+
+
 LOGINCTL_LIST_SUBCOMMANDS = {"list-sessions", "list-users", "list-seats"}
 LOGINCTL_LIST_FLAGS = {"--no-legend", "--no-pager"}
 
@@ -2888,6 +2895,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_crontab_list(words)
             and not is_safe_lslocks(words)
             and not is_safe_loginctl_list(words)
+            and not is_safe_colon_noop(words)
             and not is_safe_fuser_list(words)
             # `unwrapped`, like the sandboxed-node templates and unlike the
             # rest: a fetch is the one thing here that waits on somebody else,
