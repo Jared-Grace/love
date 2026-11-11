@@ -5232,6 +5232,13 @@ def untrusted_piece_hint(words, safe_verbs):
     skip = xargs_wrapper_skip(plain)
     if skip:
         plain = plain[skip:]
+    if skip and plain[0] == "sed":
+        return (
+            "`xargs sed` asks even for a safe sed, because the file names "
+            "arrive on input and one starting with `-` (like `-i`) would "
+            "become a flag. `xargs head -n 40` or `xargs cat` runs unasked, "
+            "or spell the files out after the sed."
+        )
     if plain[0] in COMMAND_BUILDING_VERBS:
         return (
             f"`{plain[0]}` runs a command it puts together at run time, so no "
@@ -5508,6 +5515,7 @@ def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
         plain = plain[1:]
     if not plain:
         return False
+    plain = plain[xargs_wrapper_skip(plain):]
     if len(plain) >= 3 and plain[0] == "node" and plain[1] in AI_DISPATCHER_SCRIPTS:
         return True
     # tee is a redirect that also prints, so `>>` per file is its rewording.
