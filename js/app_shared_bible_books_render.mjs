@@ -1,12 +1,13 @@
-import { noop } from "./noop.mjs";
-import { property_equals } from "./property_equals.mjs";
-import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
-import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
-import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_bible_books_matches } from "./app_shared_bible_books_matches.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_shared_bible_book_section_name_reading } from "./app_shared_bible_book_section_name_reading.mjs";
+import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
+import { noop } from "./noop.mjs";
+import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
+import { property_equals } from "./property_equals.mjs";
+import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { app_shared_bible_picker_buttons_enlarge } from "./app_shared_bible_picker_buttons_enlarge.mjs";
@@ -22,7 +23,8 @@ export function app_shared_bible_books_render(
   let testaments = app_shared_bible_books_matches(query, books);
   let all_buttons = [];
   function render_testament(testament) {
-    let t_name = property_get(testament, "name");
+    let t_name_english = property_get(testament, "name");
+    let t_name = app_shared_bible_book_section_name_reading(t_name_english);
     let divisions = property_get(testament, "divisions");
     ("tap the testament title to fold or unfold its sections, so a phone reader can collapse a whole testament and jump straight to the other one; the caret shows which way it is");
     ("this picker offers no open-everything button - there are two cards and both are open - so nothing here needs to hear which way one of them has just gone");
@@ -33,7 +35,8 @@ export function app_shared_bible_books_render(
     );
     let sections_holder = property_get(collapsible, "body");
     function render_section(section) {
-      let s_name = property_get(section, "name");
+      let s_name_english = property_get(section, "name");
+      let s_name = app_shared_bible_book_section_name_reading(s_name_english);
       let s_books = property_get(section, "books");
       let buttons_div = app_shared_container_blue_medium_titled(
         sections_holder,
