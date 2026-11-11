@@ -55,6 +55,7 @@ export function app_learn_js_lesson_array_for_length() {
     bound: "a.length",
     bound_fewer: "a.length - 1",
     example_items: ["love", "joy", "peace", "patience"],
+    skip_ends: false,
   });
   return lesson;
 }

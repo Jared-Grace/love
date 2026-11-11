@@ -1697,6 +1697,41 @@ def is_safe_kill_probe(words):
     return all(w.isdigit() and w.isascii() for w in words[2:])
 
 
+LSLOCKS_FLAGS = {
+    "-n", "--noheadings", "-u", "--notruncate", "-r", "--raw",
+    "-J", "--json", "-b", "--bytes", "-i", "--noinaccessible",
+}
+
+
+def is_safe_lslocks(words):
+    """True iff `words` is `lslocks` with only display flags, or `-p PID`.
+    It prints the table of file locks the kernel keeps (what `cat
+    /proc/locks` already shows unasked) and has no flag that writes."""
+    if words[:1] != ["lslocks"]:
+        return False
+    rest = words[1:]
+    while rest:
+        if rest[0] in LSLOCKS_FLAGS:
+            rest = rest[1:]
+        elif rest[0] == "-p" and len(rest) >= 2 and rest[1].isdigit() and rest[1].isascii():
+            rest = rest[2:]
+        else:
+            return False
+    return True
+
+
+def is_safe_fuser_list(words):
+    """True iff `words` is `fuser` naming files, with only `-v`/`-u`/`-a`.
+    That form only prints which processes have the files open. `-k` kills
+    them, `-i` asks to, and `-SIGNAL` picks the signal - none of those, nor
+    any other flag, is let in."""
+    if words[:1] != ["fuser"] or len(words) < 2:
+        return False
+    flags = [w for w in words[1:] if w.startswith("-")]
+    paths = [w for w in words[1:] if not w.startswith("-")]
+    return bool(paths) and all(f in ("-v", "-u", "-a") for f in flags)
+
+
 def is_safe_crontab_list(words):
     """True iff `words` is exactly `crontab -l`. It only prints this user's
     table - what the granted `crontab_list` already prints unasked - while
@@ -2825,6 +2860,8 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_git_rm_tmp(words)
             and not is_safe_kill_probe(words)
             and not is_safe_crontab_list(words)
+            and not is_safe_lslocks(words)
+            and not is_safe_fuser_list(words)
             # `unwrapped`, like the sandboxed-node templates and unlike the
             # rest: a fetch is the one thing here that waits on somebody else,
             # so it is written with `timeout 30` in front of it more often than
