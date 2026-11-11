@@ -10,6 +10,9 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
 import { app_learn_js_lesson_quiz_token_select_pieces } from "./app_learn_js_lesson_quiz_token_select_pieces.mjs";
+import { list_first } from "./list_first.mjs";
+import { app_learn_js_lesson_quiz_line_missing_variations_output } from "./app_learn_js_lesson_quiz_line_missing_variations_output.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_set } from "./list_set.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -52,6 +55,16 @@ export function app_learn_js_lesson_quiz_line_missing(
     qa_line,
     answer_div,
   );
+  ("ANY ORDER THAT WRITES OUT THE SAME THING IS RIGHT, because the line is asked inside its program: with only the first item logged, the items after it may come in any order");
+  let variations_kept = property_get(pieces, "variations");
+  let variation_first = list_first(variations_kept);
+  let variations_output =
+    app_learn_js_lesson_quiz_line_missing_variations_output(
+      lines,
+      index,
+      variation_first,
+    );
+  list_add_multiple(variations_kept, variations_output);
   function line_code_set(line_code) {
     let lines_filled = list_copy(lines);
     list_set(lines_filled, index, line_code);
