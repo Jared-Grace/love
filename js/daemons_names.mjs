@@ -13,6 +13,7 @@ export function daemons_names() {
     fn_name("qa_commit_named_auto"),
     fn_name("qa_gate_timings_write_when_quiet_auto"),
     fn_name("permission_replay_write_auto"),
+    fn_name("app_message_reply_proposals_shown_warm_auto"),
   ];
   return v;
 }
