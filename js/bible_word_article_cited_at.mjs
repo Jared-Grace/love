@@ -8,7 +8,7 @@ export async function bible_word_article_cited_at(
   chapter_code,
   verse_number,
 ) {
-  "The articles that cite this verse and print this word, as pairs of site name and file. An empty list when there are none, and when the list could not be fetched.";
+  "The articles that cite this verse and print this word, then those on the whole chapter, as pairs of site name and file. An empty list when there are none, and when the list could not be fetched.";
   "$plain word";
   "$plain chapter_code";
   "$plain verse_number";
@@ -25,5 +25,8 @@ export async function bible_word_article_cited_at(
   let chapter = await catch_null_async(chapter_fetch);
   let verse = property_or_null(chapter, verse_number);
   let pairs = property_or_null(verse, word) ?? [];
-  return pairs;
+  ("AN ARTICLE ON THE WHOLE CHAPTER IS OFFERED FOR EVERY WORD OF IT - the Catena Aurea comments chapter by chapter - so the chapter's own list follows the word's.");
+  let whole = property_or_null(chapter, "chapter") ?? [];
+  let r = [...pairs, ...whole];
+  return r;
 }
