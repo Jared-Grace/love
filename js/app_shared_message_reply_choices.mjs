@@ -1,3 +1,4 @@
+import { reply_friend_list_full } from "./reply_friend_list_full.mjs";
 import { reply_god_bless_you_thanked } from "./reply_god_bless_you_thanked.mjs";
 import { reply_amen_said } from "./reply_amen_said.mjs";
 import { reply_tiktok_link } from "./reply_tiktok_link.mjs";
@@ -76,6 +77,7 @@ export function app_shared_message_reply_choices() {
   let blessed_back = reply_god_bless_you_thanked();
   let meeting = reply_meeting_blessed();
   let tiktok = reply_tiktok_link();
+  let friend_list = reply_friend_list_full();
   let choices_main = reply_choice([
     hru,
     greeting,
@@ -97,6 +99,7 @@ export function app_shared_message_reply_choices() {
     blessed_back,
     meeting,
     tiktok,
+    friend_list,
   ]);
   let choices_cheapest = reply_cheapest_per_position(choices_main);
   let room = reply_once_or_more(choices_cheapest);
