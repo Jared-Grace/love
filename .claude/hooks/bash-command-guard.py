@@ -7259,8 +7259,13 @@ def main():
         # The agent can try the grant itself (permission_grant_add_auto
         # refuses anything unsafe), and a prompt shows its reason to the human
         # alone, so the agent would never learn that. Sending it back only
-        # turns a prompt into a refusal; it can never let anything run.
-        if untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
+        # turns a prompt into a refusal; it can never let anything run. Only a
+        # chain: the hint's fallback is "run it as its own call", so refusing
+        # the call on its own too would leave the agent no road to the human.
+        if (
+            len(list(statements_words(command))) > 1
+            and untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands)
+        ):
             return decide("deny", (
                 REWORD_DENY_LEAD
                 + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
