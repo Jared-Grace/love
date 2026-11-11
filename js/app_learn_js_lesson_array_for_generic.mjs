@@ -3,9 +3,8 @@ import { property_get } from "./property_get.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_first } from "./list_first.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -16,7 +15,10 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_random_item } from "./list_random_item.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_get } from "./list_get.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -24,13 +26,13 @@ import { equal } from "./equal.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { list_size } from "./list_size.mjs";
-import { subtract } from "./subtract.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
+import { subtract } from "./subtract.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_array_for_generic(options) {
@@ -40,43 +42,38 @@ export function app_learn_js_lesson_array_for_generic(options) {
   ("The wrong answers are what the loop writes out when it starts at 1 instead of 0, when it stops one short, and both - the two mistakes a loop over an array is known for. Each is worked out by running that program, not reasoned out. Reading backwards, the wrong programs are those same loops.");
   ("A program's start and end are found by trying every pair against it, not by reading its digits, so nothing here depends on how the lines are spaced.");
   ("Drafted by Claude 2026-11-11, for the lesson the human chose after a[i] stepped up twice by hand.");
+  ("2026-11-11: the example, by-hand and walk drawers are each handed the root and the items to draw, so a lesson may draw more than one array");
   let name_id = property_get(options, "name_id");
   let above_inner = property_get(options, "above");
   let item_counts = property_get(options, "item_counts");
-  ("2026-11-11: a lesson with skip_ends asks arrays of at least 3 items, so the loop runs at least once; a loop that never runs is its own lesson");
   ("item_counts is the sizes a question's array may have: only 3 while the loop is written to stop at 3, and several once it stops at a.length, which is what a.length is for");
   let bound = property_get(options, "bound");
   let bound_fewer = property_get(options, "bound_fewer");
-  let example_items = property_get(options, "example_items");
   let name = "a";
   let index_name = "i";
   let less = js_operator_less_than_symbol();
   let read = js_code_index(name, index_name);
   let logged = js_code_console_log_statement(read);
-  let skip_ends = property_get(options, "skip_ends");
-  ("2026-11-11: skip_ends true makes the right loop the one that starts at 1 and stops one short, writing out every item but the first and the last; the loop over every item is then one of the wrong ones");
-  let ways = [
-    {
-      start: 0,
-      end: bound,
-    },
-    {
-      start: 1,
-      end: bound,
-    },
-    {
-      start: 0,
-      end: bound_fewer,
-    },
-    {
-      start: 1,
-      end: bound_fewer,
-    },
-  ];
+  let starts_fewer = property_get(options, "ways");
+  ("2026-11-11: ways is the loops of this lesson, each a start and whether it stops one short, the right loop first and the wrong loops after it - the mistakes worth offering differ by lesson: starting at 1 or stopping short beside the loop over every item, or a start one off beside a loop that starts at 2");
+  function way_of(start_fewer) {
+    let start2 = property_get(start_fewer, "start");
+    let fewer = property_get(start_fewer, "fewer");
+    let end2 = bound;
+    if (fewer) {
+      end2 = bound_fewer;
+    }
+    let r2 = {
+      start: start2,
+      end: end2,
+      fewer,
+    };
+    return r2;
+  }
+  let ways = list_map(starts_fewer, way_of);
   let right = list_first(ways);
   let skipped = 0;
-  if (skip_ends) {
-    right = list_get(ways, 3);
+  if (property_get(right, "fewer")) {
     skipped = 1;
   }
   function head_line(items) {
@@ -110,16 +107,22 @@ export function app_learn_js_lesson_array_for_generic(options) {
     return code2;
   }
   function batch_get() {
-    "four programs, each a fresh array of fruits of the Spirit, each written out whole by the loop";
+    "four programs, each a fresh array of fruits of the Spirit, each looped over by the right loop";
+    "2026-11-11: each size of item_counts is asked once before any size is drawn at random, and the four are then shuffled, so a set always holds the smallest array - the one a loop may not run for at all - beside larger ones, and is never all one kind";
     let fruits = fruits_of_the_spirit();
     let codes2 = [];
     for (let k = 0; less_than(k, 4); k++) {
       let item_count = list_random_item(item_counts);
+      let b = list_size(item_counts);
+      if (less_than(k, b)) {
+        item_count = list_get(item_counts, k);
+      }
       let items3 = list_shuffle_take(fruits, item_count);
       let code3 = program_of(items3, right);
       codes2.push(code3);
     }
-    return codes2;
+    let shuffled = list_shuffle(codes2);
+    return shuffled;
   }
   let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
@@ -153,17 +156,25 @@ export function app_learn_js_lesson_array_for_generic(options) {
   }
   function backwards_decoys(question, answer) {
     "the same array looped over each wrong way";
+    "2026-11-11: a wrong loop that writes out the same as the right one is left out, since it would be a second right answer - starting at 2 or at 3, a loop over 2 items writes out nothing either way";
     let programs3 = programs_wrong(answer);
-    return programs3;
+    let out_right = eval_console_log_lines(answer);
+    function other_out(program) {
+      let out_wrong = eval_console_log_lines(program);
+      let differs = not_equal(out_wrong, out_right);
+      return differs;
+    }
+    let kept = list_filter(programs3, other_out);
+    return kept;
   }
-  function example(root) {
+  function example(root, example_items) {
     "the example program and what it writes out";
     let code6 = program_of(example_items, right);
     let lines4 = text_split_newline(code6);
     let out = eval_console_log_lines(code6);
     app_learn_js_code_lines_writes_out(root, lines4, out);
   }
-  function example_by_hand(root) {
+  function example_by_hand(root, example_items) {
     "the same items written out without a loop: let i = 0; then a[i] read, i++, a[i] read again, until the last item";
     let head4 = head_line(example_items);
     let started2 = js_code_let_statement(index_name, "0");
@@ -177,7 +188,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let out2 = eval_console_log_lines(code7);
     app_learn_js_code_lines_writes_out(root, lines5, out2);
   }
-  function walk(root) {
+  function walk(root, example_items) {
     "the loop run by run: what it asks, the item it reads, the step, until what it asks is false";
     let size2 = list_size(example_items);
     let start_index = property_get(right, "start");
@@ -189,7 +200,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
       ("the end written as a.length is said once as the number it holds, so each run below compares two numbers, as the step-by-step guide solves it");
       app_learn_js_div_cycle_code(root, ["", bound, " is ", size_json]);
     }
-    if (skip_ends) {
+    if (equal(skipped, 1)) {
       ("2026-11-11: the end one short is then worked out from that number, a.length - 1 as 5 - 1, which is 4, in two steps as the step-by-step guide takes them, never at once");
       let fewer = js_code_binary_spaced_nb(size_json, "-", "1");
       app_learn_js_div_cycle_code(root, [
@@ -233,7 +244,13 @@ export function app_learn_js_lesson_array_for_generic(options) {
         after,
       ]);
     }
-    let last = js_code_binary_spaced_nb(count_json, less, count_json);
+    ("2026-11-11: i ends at the end, or stays at its start when it starts there or past it and the loop never runs");
+    let last_index = end_count;
+    if (greater_than(start_index, end_count)) {
+      last_index = start_index;
+    }
+    let last_json = json_to(last_index);
+    let last = js_code_binary_spaced_nb(last_json, less, count_json);
     let r = app_learn_js_braces_dots();
     app_learn_js_div_cycle_code(root, [
       "",
@@ -246,6 +263,11 @@ export function app_learn_js_lesson_array_for_generic(options) {
     ]);
     let code8 = program_of(example_items, right);
     let value = eval_console_log_lines(code8);
+    if (equal(value, "")) {
+      ("2026-11-11: a loop that never ran writes out nothing, said in words, since there is no item to name");
+      app_learn_js_div_cycle_code(root, ["So nothing is written out"]);
+      return;
+    }
     let outs2 = text_split_newline(value);
     let said = ["So "];
     for (let out3 of outs2) {
@@ -254,7 +276,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
       }
       said.push(out3);
     }
-    said.push(" are written out");
+    let verb = " are written out";
+    let left2 = list_size(outs2);
+    if (equal(left2, 1)) {
+      verb = " is written out";
+    }
+    said.push(verb);
     app_learn_js_div_cycle_code(root, said);
   }
   function above(root, context) {

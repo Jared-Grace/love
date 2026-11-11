@@ -10,6 +10,7 @@ export function app_learn_js_lesson_array_for() {
   ("every item of an array written out by a for loop: let a = ['love', 'joy', 'peace']; for (let i = 0; i < 3; i++) { console.log(a[i]); } writes out love then joy then peace");
   ("The one new fact is that the lines of the lesson before - a[i], i++, a[i] again - are what a for loop writes for us: i starts at 0, the loop runs while i < 3, and i++ steps it. Always three items, so the 3 written in the loop is the count of items; writing a.length there is the next lesson.");
   ("Chosen by the human 2026-11-10, after a[i] stepped up twice by hand. The writing is a first draft by Claude 2026-11-11.");
+  let items = ["love", "joy", "peace"];
   function above(root, context, example, example_by_hand, walk) {
     "the stepping by hand remembered, then the same program written as a for loop";
     let box_one = app_learn_js_container_light_blue(root);
@@ -19,7 +20,7 @@ export function app_learn_js_lesson_array_for() {
       app_learn_js_lesson_array_index_steps_two,
       ["this writes out every item, one by one:"],
     );
-    example_by_hand(box_one);
+    example_by_hand(box_one, items);
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "A ",
@@ -28,7 +29,7 @@ export function app_learn_js_lesson_array_for() {
       "console.log(a[i]);",
       " written once:",
     ]);
-    example(box_two);
+    example(box_two, items);
     app_learn_js_div_cycle_code(box_two, [
       "",
       "i",
@@ -40,7 +41,7 @@ export function app_learn_js_lesson_array_for() {
       "3",
       ", the number of items",
     ]);
-    walk(box_two);
+    walk(box_two, items);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Every item, with a for loop",
@@ -52,8 +53,24 @@ export function app_learn_js_lesson_array_for() {
     item_counts: [3],
     bound: "3",
     bound_fewer: "2",
-    example_items: ["love", "joy", "peace"],
-    skip_ends: false,
+    ways: [
+      {
+        start: 0,
+        fewer: false,
+      },
+      {
+        start: 1,
+        fewer: false,
+      },
+      {
+        start: 0,
+        fewer: true,
+      },
+      {
+        start: 1,
+        fewer: true,
+      },
+    ],
   });
   return lesson;
 }
