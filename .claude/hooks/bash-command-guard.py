@@ -5557,6 +5557,22 @@ GIT_REFLOG_READ_DENY_REASON = (
 )
 
 
+# A semicolon from another script standing where the shell wants `;` before a
+# loop or `if` keyword. The shell does not read it as a separator, so the
+# keyword becomes one more word and the command is broken before it runs.
+# Seen with the Urdu `؛` ending a list of Urdu words. Refusing only sends the
+# agent back to type `;`; it can never let anything run.
+LOOKALIKE_SEMICOLON_RE = re.compile(r"([؛；;])\s*(?:do|then|done|fi|else|esac)\b")
+
+
+def lookalike_semicolon_deny_reason(mark):
+    return (
+        f"The `{mark}` before the keyword is not the shell's `;` (U+"
+        f"{ord(mark):04X}), so the shell reads the keyword as one more word "
+        "and the command breaks. Type a plain `;` there and run it again."
+    )
+
+
 def git_reflog_read_is(command):
     """A reflog read has a twin that is already approved, so handing it back
     costs the agent one reword and costs the human nothing. The forms that
@@ -6987,6 +7003,10 @@ def main():
 
     if git_reflog_read_is(command):
         return decide("deny", GIT_REFLOG_READ_DENY_REASON)
+
+    lookalike = LOOKALIKE_SEMICOLON_RE.search(command)
+    if lookalike:
+        return decide("deny", lookalike_semicolon_deny_reason(lookalike.group(1)))
 
     if snapshot_detached_checkout_is(command):
         return decide("allow", (
