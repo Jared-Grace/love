@@ -10,6 +10,7 @@ import { facebook_messenger_list_rows } from "./facebook_messenger_list_rows.mjs
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { facebook_messenger_profile_round_waiting } from "./facebook_messenger_profile_round_waiting.mjs";
 import { facebook_messenger_row_click_up } from "./facebook_messenger_row_click_up.mjs";
+import { facebook_messenger_row_open_list } from "./facebook_messenger_row_open_list.mjs";
 import { facebook_messenger_chat_read } from "./facebook_messenger_chat_read.mjs";
 import { messenger_since_mine } from "./messenger_since_mine.mjs";
 import { facebook_messenger_chat_profile_url } from "./facebook_messenger_chat_profile_url.mjs";
@@ -77,6 +78,10 @@ export async function facebook_messenger_waiting_next() {
         continue;
       }
       let clicked = await facebook_messenger_row_click_up(page, id);
+      if (not(clicked)) {
+        ("★ NOT ABOVE ⇒ LOOK BELOW: on 2026-11-11 a row the upward walk reported missing twice was found at once scrolling DOWN the All list - it lay below where the parked tab had stopped. A failed walk up leaves the list at its top, so the walk down starts there.");
+        clicked = await facebook_messenger_row_open_list(page, id, "All");
+      }
       if (not(clicked)) {
         let r4 = {
           stopped: "row_not_found",
