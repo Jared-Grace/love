@@ -1,3 +1,5 @@
+import { reply_pieces_counted } from "./reply_pieces_counted.mjs";
+import { reply_cheapest_per_position_fewest_pieces } from "./reply_cheapest_per_position_fewest_pieces.mjs";
 import { reply_friend_list_full } from "./reply_friend_list_full.mjs";
 import { reply_god_bless_you_thanked } from "./reply_god_bless_you_thanked.mjs";
 import { reply_amen_said } from "./reply_amen_said.mjs";
@@ -15,7 +17,6 @@ import { app_shared_message_reply_asks } from "./app_shared_message_reply_asks.m
 import { reply_on_match_outputs_codes_multiple } from "./reply_on_match_outputs_codes_multiple.mjs";
 import { reply_prayer_will_done } from "./reply_prayer_will_done.mjs";
 import { reply_on_match_prayer } from "./reply_on_match_prayer.mjs";
-import { reply_cheapest_per_position } from "./reply_cheapest_per_position.mjs";
 import { reply_prayers_closed } from "./reply_prayers_closed.mjs";
 import { reply_outputs_mapped } from "./reply_outputs_mapped.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -101,10 +102,12 @@ export function app_shared_message_reply_choices() {
     tiktok,
     friend_list,
   ]);
-  let choices_cheapest = reply_cheapest_per_position(choices_main);
+  let counted = reply_pieces_counted(choices_main);
+  let choices_cheapest = reply_cheapest_per_position_fewest_pieces(counted);
   let room = reply_once_or_more(choices_cheapest);
   let last = reply_last();
-  let with_repeats = reply_sequence([room, last]);
+  let read_whole = reply_sequence([room, last]);
+  let with_repeats = reply_cheapest_per_position_fewest_pieces(read_whole);
   let said_once = reply_outputs_mapped(with_repeats, list_unique);
   let prayed = reply_prayers_closed(said_once);
   let r = reply_bible_references_closed(prayed);
