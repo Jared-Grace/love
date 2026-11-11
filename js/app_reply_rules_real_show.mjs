@@ -1,10 +1,11 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { not } from "./not.mjs";
+import { app_reply_rules_private_hidden } from "./app_reply_rules_private_hidden.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -27,6 +28,11 @@ export function app_reply_rules_real_show(root, one) {
   if (not(real)) {
     let none = said_line("written for a message nobody has sent yet");
     return none;
+  }
+  ("★ ASKED TO HIDE THEM, IT SAYS ONLY THAT ONE EXISTS. The real message and what it gets back can both carry a sender's name, so neither is drawn; whether the two answers agree is still said by the caller, which needs no words of either.");
+  if (app_reply_rules_private_hidden()) {
+    let hidden = said_line("drawn from a real message, hidden here");
+    return hidden;
   }
   let message = property_get(one, "message");
   let real_message = property_get(real, "message");
