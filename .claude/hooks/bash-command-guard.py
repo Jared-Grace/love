@@ -7269,6 +7269,7 @@ def main():
             return decide("deny", (
                 REWORD_DENY_LEAD
                 + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
+                + open_twin_advice(command)
             ))
         return decide("ask", (
             f"The allow rule {verb!r} matches this command only as a "
