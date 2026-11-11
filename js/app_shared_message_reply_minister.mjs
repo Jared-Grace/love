@@ -14,6 +14,9 @@ export function app_shared_message_reply_minister() {
   let title = reply_sequence([o_sunday_school, "teacher"]);
   let teacher = reply_i_am_a_output(title, teaching);
   let work = reply_ministry_work();
-  let ministers = reply_choice([minister, teacher, work]);
+  let worship = prayer_blessing("your ministry and worship");
+  let choir_title = reply_sequence(["choir", "leader"]);
+  let choir = reply_i_am_a_output(choir_title, worship);
+  let ministers = reply_choice([minister, teacher, choir, work]);
   return ministers;
 }
