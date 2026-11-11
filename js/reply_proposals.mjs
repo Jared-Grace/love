@@ -3494,7 +3494,7 @@ export function reply_proposals() {
     title:
       "bless the ministry and worship of somebody who says they are a choir leader",
     fn: fn_name("app_shared_message_reply_minister"),
-    whole: [fn_name("reply_i_am_a_output"), fn_name("reply_sequence")],
+    whole: [],
     diff: [
       choir_kept_teacher,
       choir_kept_work,
