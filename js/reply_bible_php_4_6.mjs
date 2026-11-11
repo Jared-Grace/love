@@ -1,87 +1,68 @@
-import { reply_choice } from "./reply_choice.mjs";
-import { reply_optional } from "./reply_optional.mjs";
+import { reply_word_god } from "./reply_word_god.mjs";
 import { reply_words } from "./reply_words.mjs";
+import { reply_choice } from "./reply_choice.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
+import { reply_word_u_v } from "./reply_word_u_v.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_php_4_6() {
-  "Philippians 4:6 said whole, in the words of the English Bibles nobody owns, lined up.";
+  "Philippians 4:6 said whole, in the words of the English Bibles nobody owns, a phrase at a time.";
   "★ DO, ANYTHING AND SITUATION ARE NOT IN THE BIBLES NOBODY OWNS: they are heard because a daily-verse post on 2026-11-11 quoted this verse as 'do not be anxious about anything, but in every situation'.";
-  let item = reply_choice(["for", "in", "do"]);
-  let fn = reply_optional(item);
-  let item10 = reply_choice(["nothing", "not"]);
-  let fn2 = reply_optional(item10);
-  let fn3 = reply_optional("be");
-  let item2 = reply_choice(["anxious", "careful", "have"]);
-  let fn4 = reply_optional(item2);
-  let item3 = reply_choice(["about", "for", "no"]);
-  let fn5 = reply_optional(item3);
-  let fn6 = reply_choice(["anxious", "cares", "nothing", "anything"]);
-  let item4 = reply_choice(["carefull", "solicitous"]);
-  let fn7 = reply_optional(item4);
-  let r2 = reply_words("but in");
-  let item5 = reply_choice(["all", "every"]);
-  let fn8 = reply_optional(item5);
-  let fn9 = reply_choice(["everything", "thing", "thinges", "situation"]);
-  let item6 = reply_choice(["by", "with"]);
-  let fn10 = reply_optional(item6);
-  let fn11 = reply_optional("prayer");
-  let fn12 = reply_optional("and");
-  let fn13 = reply_optional("by");
-  let item7 = reply_choice(["petition", "supplication"]);
-  let fn14 = reply_optional(item7);
-  let fn15 = reply_optional("with");
-  let item8 = reply_choice(["praise", "thanksgiving"]);
-  let fn16 = reply_optional(item8);
-  let fn17 = reply_choice(["let", "present", "put"]);
-  let fn18 = reply_choice(["petitions", "requestes", "requests"]);
-  let fn19 = reply_optional("be");
-  let fn20 = reply_optional("made");
-  let item9 = reply_choice(["known", "shewed"]);
-  let fn21 = reply_optional(item9);
-  let fn22 = reply_choice(["before", "to", "unto", "vnto"]);
-  let fn23 = reply_optional("in");
-  let fn24 = reply_optional("praier");
-  let fn25 = reply_optional("and");
-  let fn26 = reply_optional("supplication");
-  let fn27 = reply_optional("with");
-  let fn28 = reply_optional("giuing");
-  let fn29 = reply_optional("of");
-  let fn30 = reply_optional("thankes");
-  let read = reply_sequence([
-    fn,
-    fn2,
-    fn3,
-    fn4,
-    fn5,
-    fn6,
-    fn7,
-    r2,
-    fn8,
-    fn9,
-    fn10,
-    fn11,
-    fn12,
-    fn13,
-    fn14,
-    fn15,
-    fn16,
-    fn17,
-    "your",
-    fn18,
-    fn19,
-    fn20,
-    fn21,
-    fn22,
-    "god",
-    fn23,
-    fn24,
-    fn25,
-    fn26,
-    fn27,
-    fn28,
-    fn29,
-    fn30,
+  "★ EACH PLACE IS A CHOICE OF THE WORDS SOME BIBLE PUTS THERE, NOT A WORD SOME BIBLE LEAVES OUT. Lined up a word at a time, every word one translation lacks became skippable, and the verse could then be read with half of it missing.";
+  "★ ONE BIBLE SAYS THE ASKING BEFORE THE PRAYER AND NOT AFTER IT, so the two orders are two whole readings: let your requests be shewed unto God in prayer and supplication with giving of thanks.";
+  let god = reply_word_god();
+  let careful = reply_words("be careful for nothing");
+  let in_nothing = reply_words("in nothing be anxious");
+  let anxious_for = reply_words("be anxious for nothing");
+  let nothing_kind = reply_choice(["careful", "carefull", "solicitous"]);
+  let be_nothing = reply_sequence(["be", "nothing", nothing_kind]);
+  let do_not = reply_words("do not be anxious about anything");
+  let opening = reply_choice([
+    careful,
+    in_nothing,
+    anxious_for,
+    be_nothing,
+    do_not,
   ]);
+  let every = reply_choice(["every", "all"]);
+  let thing = reply_choice(["thing", "things", "thinges", "situation"]);
+  let every_thing = reply_sequence([every, thing]);
+  let everything = reply_choice(["everything", every_thing]);
+  let asking = reply_choice(["supplication", "petition"]);
+  let prayer = reply_sequence(["by", "prayer", "and", asking]);
+  let thanks = reply_words("with thanksgiving");
+  let requests = reply_choice(["requests", "requestes", "petitions"]);
+  let unto = reply_word_u_v("unto");
+  let to = reply_choice(["to", unto]);
+  let made_known = reply_words("made known");
+  let known = reply_choice([made_known, "shewed"]);
+  let let_known = reply_sequence([
+    "let",
+    "your",
+    requests,
+    "be",
+    known,
+    to,
+    god,
+  ]);
+  let present = reply_sequence(["present", "your", requests, to, god]);
+  let request = reply_choice([let_known, present]);
+  let prayer_first = reply_sequence([prayer, thanks, request]);
+  let prayer_word = reply_choice(["prayer", "praier"]);
+  let giving = reply_word_u_v("giving");
+  let thanks_word = reply_choice(["thanks", "thankes"]);
+  let prayer_after = reply_sequence([
+    "in",
+    prayer_word,
+    "and",
+    "supplication",
+    "with",
+    giving,
+    "of",
+    thanks_word,
+  ]);
+  let asking_first = reply_sequence([let_known, prayer_after]);
+  let order = reply_choice([prayer_first, asking_first]);
+  let read = reply_sequence([opening, "but", "in", everything, order]);
   let r = reply_bible_verse_whole("PHP04", "6", read);
   return r;
 }
