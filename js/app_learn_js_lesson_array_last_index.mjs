@@ -28,6 +28,7 @@ import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { subtract } from "./subtract.mjs";
+import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -151,7 +152,7 @@ export function app_learn_js_lesson_array_last_index() {
     let minus2 = js_operator_minus_symbol();
     let sum = js_code_binary_spaced_nb(count, minus2, "1");
     app_learn_js_div_cycle_code(root, ["", sum, " is ", index_written]);
-    app_learn_js_div_cycle_code(root, [
+    app_learn_js_div_cycle_output(root, [
       "So ",
       index_written,
       " is written out",

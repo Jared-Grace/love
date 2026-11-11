@@ -29,6 +29,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
+import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -264,7 +265,7 @@ export function app_learn_js_lesson_array_index_generic(options) {
         said.push(out3);
       }
       said.push(" are written out");
-      app_learn_js_div_cycle_code(root, said);
+      app_learn_js_div_cycle_output(root, said);
       return;
     }
     if (not_equal(index_name, null)) {
@@ -296,7 +297,7 @@ export function app_learn_js_lesson_array_index_generic(options) {
       let parts2 = counted(index12);
       app_learn_js_div_cycle_code(root, parts2);
     }
-    app_learn_js_div_cycle_code(root, ["So ", value, " is written out"]);
+    app_learn_js_div_cycle_output(root, ["So ", value, " is written out"]);
   }
   function above(root, context) {
     above_inner(root, context, example, walk);

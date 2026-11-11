@@ -31,6 +31,7 @@ import { text_may_the_lord_exclamation } from "./text_may_the_lord_exclamation.m
 import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
 import { emoji_disappointed } from "./emoji_disappointed.mjs";
+import { prayer_blessing_line } from "./prayer_blessing_line.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -3538,6 +3539,83 @@ export function reply_proposals() {
       "rejected wordings: your ministry and singing, your ministry and music, and plain your ministry like a pastor. Worship was the wording asked for.",
     ],
   };
+  let teaching_line = prayer_blessing_line("your ministry and teaching");
+  let ministry_line = prayer_blessing_line("your ministry");
+  let one_prayer_kept_said_once = text_combine_multiple([
+    "   let said_once = ",
+    fn_name("reply_outputs_mapped"),
+    "(with_repeats, ",
+    fn_name("list_unique"),
+    ");",
+  ]);
+  let one_prayer_removed_prayed = text_combine_multiple([
+    "-  let prayed = ",
+    fn_name("reply_prayers_closed"),
+    "(said_once);",
+  ]);
+  let one_prayer_added_gathered = text_combine_multiple([
+    "+  let gathered = ",
+    fn_name("reply_prayers_gathered"),
+    "(said_once);",
+  ]);
+  let one_prayer_added_prayed = text_combine_multiple([
+    "+  let prayed = ",
+    fn_name("reply_prayers_closed"),
+    "(gathered);",
+  ]);
+  let one_prayer_kept_references = text_combine_multiple([
+    "   let r = ",
+    fn_name("reply_bible_references_closed"),
+    "(prayed);",
+  ]);
+  let prayer3 = reply_prayer_closing([teaching_line]);
+  let prayer4 = reply_prayer_closing([teaching_line, ministry_line]);
+  let one_prayer_at_end = {
+    title:
+      "pray once, at the end of the reply, instead of once for each blessing",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_prayers_gathered")],
+    diff: [
+      one_prayer_kept_said_once,
+      one_prayer_removed_prayed,
+      one_prayer_added_gathered,
+      one_prayer_added_prayed,
+      one_prayer_kept_references,
+      "   return r;",
+    ],
+    cases: [
+      {
+        from: "3d27ef64ea033e69",
+        message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
+        answered: true,
+        outputs: [friend_response, t, prayer3],
+      },
+      {
+        from: "",
+        message: "I am a teacher I am a pastor",
+        answered: true,
+        outputs: [prayer4],
+      },
+      {
+        from: "31c5df9f5c22e68d",
+        message:
+          "I am requesting you to support in ministry, God's will, come and fellowship with us, God's will, thank you.",
+        answered: true,
+        outputs: [
+          "🙏 Sorry, I have nothing that I can give you at this time.",
+          "🙏 All glory to God ❤️✝️🕊️ ! ",
+          "🙇 In the name of the Father, and of the Son, and of the Holy Spirit ❤️✝️🕊️ : \n🙏 May the LORD have His will done! 🕊️ May the LORD provide for your ministry! May the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask! Amen! 🙏",
+        ],
+      },
+    ],
+    decide: [
+      "a reply with several blessings opened in the name of the Father and said Amen once for each of them. Now every blessing is taken out of its own prayer and prayed in the one prayer that already closes the reply, after everything else is said.",
+      "a reply with only one blessing changes too: it moves to the end, and the prayer opens on a line of its own the way the closing prayer already does. Keeping a lone blessing where it was would make two shapes of prayer.",
+      "the closing prayer keeps its order: God's will first, being led to somebody who can give last, and the blessings between them in the order the message said them.",
+      "a message with no blessing in it is answered exactly as before, like the request for support above.",
+      "not done here: exceedingly abundantly more than anyone can ask or think is still said once per blessing. Joining the blessings into one sentence is a later change.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -3584,6 +3662,7 @@ export function reply_proposals() {
     fewest_pieces,
     php_verses_said,
     choir_leader_blessed,
+    one_prayer_at_end,
   ];
   return proposals;
 }

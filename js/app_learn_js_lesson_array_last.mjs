@@ -26,6 +26,7 @@ import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_last } from "./list_last.mjs";
+import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_last_index } from "./app_learn_js_lesson_array_last_index.mjs";
@@ -147,7 +148,7 @@ export function app_learn_js_lesson_array_last() {
     let object = list_last(example_items);
     let item = json_to(object);
     app_learn_js_div_cycle_code(root, ["", read4, " is ", item]);
-    app_learn_js_div_cycle_code(root, ["So ", object, " is written out"]);
+    app_learn_js_div_cycle_output(root, ["So ", object, " is written out"]);
   }
   function above(root, context) {
     "a.length - 1 remembered, then put inside the brackets to read the last item";

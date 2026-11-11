@@ -34,6 +34,7 @@ import { subtract } from "./subtract.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_array_for_generic(options) {
@@ -304,7 +305,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
       verb = " is written out";
     }
     said.push(verb);
-    app_learn_js_div_cycle_code(root, said);
+    app_learn_js_div_cycle_output(root, said);
   }
   function above(root, context) {
     above_inner(root, context, example, example_by_hand, walk);
