@@ -17,7 +17,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
+import { app_shared_bible_copy_lines_headed } from "./app_shared_bible_copy_lines_headed.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 export async function app_shared_bible_copy(
@@ -53,10 +53,7 @@ export async function app_shared_bible_copy(
     audience_books,
     [first, last],
   );
-  ("The reference sits directly on top of the first bible's paragraph, with no blank line between, the way a printed bible sets a heading over its text - so a blank line in the paste always means one thing, the next bible. The human chose this on 2026-11-09, for one bible and for several alike.");
-  ("Rejected: a blank line after the reference - it gave a blank line two meanings, heading-ends and next-bible; and a blank line after it only when several bibles are copied - two shapes where one reads as clearly, since the second paragraph is plainly the same verses again.");
-  let lines = [];
-  let heading = reference;
+  let paragraphs = [];
   function per_language(entry) {
     let verses_l = property_get(entry, "verses");
     let texts = [];
@@ -79,20 +76,12 @@ export async function app_shared_bible_copy(
     let e = list_empty_not_is(texts);
     if (e) {
       let paragraph = list_join_space(texts);
-      let headed = null_not_is(heading);
-      if (headed) {
-        paragraph = list_join_newline([heading, paragraph]);
-        heading = null;
-      }
-      list_add(lines, paragraph);
+      list_add(paragraphs, paragraph);
     }
   }
   each(languages_verses, per_language);
-  let unplaced = null_not_is(heading);
-  if (unplaced) {
-    ("no bible had any of these verses, so the reference is the whole of the scripture part, as it always was");
-    list_add(lines, heading);
-  }
+  ("the reference goes on top of the first paragraph by the helper every copy goes through, so a passage pastes alike from the reader and from search");
+  let lines = app_shared_bible_copy_lines_headed(reference, paragraphs);
   ("Whatever else the screen was showing about this passage follows the scripture, in the order the screen showed it. A reader on a gloss page has the verse in the language they are learning and a line for every word of it explained; copying gave them the english alone, so what landed on the clipboard was the one part of that screen they could already have got anywhere. What is put here is put by the screen that drew it, because only that screen knows what it drew.");
   ("It is added once at the end rather than after each verse, because these readers show a single verse at a time and the whole-chapter reader has nothing extra to add - so there is no verse for the wrong copy of it to attach to.");
   list_add_multiple(lines, lines_extra);

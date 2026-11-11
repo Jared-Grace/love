@@ -15,8 +15,8 @@ import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_te
 import { app_shared_bible_reference_entries } from "./app_shared_bible_reference_entries.mjs";
 import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { app_shared_bible_books_audience } from "./app_shared_bible_books_audience.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_map_property } from "./list_map_property.mjs";
+import { app_shared_bible_copy_lines_headed } from "./app_shared_bible_copy_lines_headed.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
@@ -71,10 +71,10 @@ export function app_bible_search_results_verse_button(
       books_audience,
       [verse_number],
     );
-    ("what gets copied is the reference then each language's words, in the order they are read on the page");
-    list_add(bible_texts, reference_paste);
+    ("what gets copied is the reference then each language's words, in the order they are read on the page - shaped by the same helper the bible reader copies through, so a verse pastes alike from both");
     let texts = list_map_property(entries, "text");
-    list_add_multiple(bible_texts, texts);
+    let lines = app_shared_bible_copy_lines_headed(reference_paste, texts);
+    list_add_multiple(bible_texts, lines);
     async function copy() {
       await list_join_newline_2_copy(bible_texts);
     }
