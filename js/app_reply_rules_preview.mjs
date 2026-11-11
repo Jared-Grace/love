@@ -43,8 +43,9 @@ export async function app_reply_rules_preview() {
   let listed = html_div(root);
   ("Every change whose files are all approved is put into the code before anything is read, so a change finished on a visit that was cut off goes in now and is not offered again.");
   await app_shared_api_named(fn_name("reply_proposals_approved_apply"), []);
+  ("The answer is the one the background job already worked out and kept, read rather than put together, so opening the screen only draws it.");
   let shown = await app_shared_api_named(
-    fn_name("app_message_reply_proposals_shown"),
+    fn_name("app_message_reply_proposals_shown_fast"),
     [],
   );
   let proposals_all = property_get(shown, "proposals");
