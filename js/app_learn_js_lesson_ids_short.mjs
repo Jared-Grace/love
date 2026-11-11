@@ -549,6 +549,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for: text_frozen("array_for"),
     app_learn_js_lesson_array_for_length: text_frozen("array_for_length"),
     app_learn_js_lesson_array_for_inner: text_frozen("array_for_inner"),
+    app_learn_js_lesson_array_for_start_two: text_frozen("array_for_start_two"),
   };
   return short;
 }

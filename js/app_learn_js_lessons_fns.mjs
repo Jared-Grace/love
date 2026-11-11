@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_start_two } from "./app_learn_js_lesson_array_for_start_two.mjs";
 import { app_learn_js_lesson_array_for_inner } from "./app_learn_js_lesson_array_for_inner.mjs";
 import { app_learn_js_lesson_array_for_length } from "./app_learn_js_lesson_array_for_length.mjs";
 import { app_learn_js_lesson_array_for } from "./app_learn_js_lesson_array_for.mjs";
@@ -733,6 +734,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for,
     app_learn_js_lesson_array_for_length,
     app_learn_js_lesson_array_for_inner,
+    app_learn_js_lesson_array_for_start_two,
   ];
   return fns;
 }
