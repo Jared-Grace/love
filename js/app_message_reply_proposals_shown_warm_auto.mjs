@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { reply_rules_code_hash } from "./reply_rules_code_hash.mjs";
+import { functions_closure_source_hash } from "./functions_closure_source_hash.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { function_run_fresh_args } from "./function_run_fresh_args.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 export async function app_message_reply_proposals_shown_warm_auto() {
@@ -15,7 +15,12 @@ export async function app_message_reply_proposals_shown_warm_auto() {
   let warmed = null;
   while (true) {
     async function round_take() {
-      let hash = await reply_rules_code_hash();
+      "★ THE WORD COVERS THE SCREEN AND THE LIST OF CHANGES TOO, NOT ONLY THE RULES. Each change's worked messages are kept under their own word, and a change edited or added left the rules' word the same, so the next opening tried that change while the person waited: fourteen seconds, measured 2026-11-11. A new file a change names but no rule reaches yet is still outside this word.";
+      let hash = await functions_closure_source_hash([
+        fn_name("reply_attempt"),
+        fn_name("app_shared_message_reply_choices"),
+        fn_name("app_message_reply_proposals_shown"),
+      ]);
       if (equal(hash, warmed)) {
         return;
       }
