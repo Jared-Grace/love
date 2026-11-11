@@ -3296,6 +3296,7 @@ export function reply_proposals() {
       fn_name("reply_bible_lead"),
       fn_name("reply_bible_reference"),
       fn_name("reply_bible_book"),
+      fn_name("reply_phrase_jesus_whole"),
     ],
     diff: [
       php_said_removed,
@@ -3359,7 +3360,7 @@ export function reply_proposals() {
     ],
     decide: [
       "the answer is the same as for the 1 John verses: the reference, then Amen with praying hands. Nothing new is said.",
-      "each verse is a choice of whole phrases the way each Bible nobody owns words them, using the shared pieces for God and for old u-for-v spellings, rather than a word-by-word lineup where any word one Bible leaves out became skippable. Four words only a newer translation uses are added - do, anything, situation and transcends - because a waiting daily-verse post quoted it that way. The ending in Christ Jesus may be left off, because that post stopped at your minds, and when said it is heard by the shared Jesus piece, as you asked. That needs the change above, which reads Christ Jesus whole before Christ alone; without it the verse would stop at Christ and Jesus would get a second reply. The rejected reading was a name of its own for this verse.",
+      "each verse is a choice of whole phrases the way each Bible nobody owns words them, using the shared pieces for God and for old u-for-v spellings, rather than a word-by-word lineup where any word one Bible leaves out became skippable. Four words only a newer translation uses are added - do, anything, situation and transcends - because a waiting daily-verse post quoted it that way. The ending in Christ Jesus may be left off, because that post stopped at your minds, and when said it is heard by a new shared piece that knows only the two-word names: Christ Jesus, Jesus Christ, Yeshua the Messiah, Messiah Yeshua. The full shared Jesus piece also allows Christ alone, so the verse could stop at Christ and Jesus got a second reply, even with Christ Jesus listed first. The rejected readings were a name of its own for this verse, and preferring a reading with fewer replies whenever two cost the same.",
       "this is the shared piece: a heading - for in the word of the Lord it is written in, or Today's Verse, then where the passage is, either or both - may now come before every verse, including the 1 John ones, instead of each heading only before the verse it first came with. A heading alone is still never answered. Where the passage is may be the or not, 1 or first, then any numbers with verse, chapter, through or to between them. Any of the 66 books may be named, as you asked, taken from the book list the Bible pages already show, with 1, first or 1st (and 2 and 3 the same way) for a numbered book, plus Song of Songs, Song of Solomon and Psalm. So a heading for a verse with no rule yet is still not answered, but a new verse rule needs nothing added here. The rejected reading was checking the heading's numbers against the verse, because the reply names the verse it read.",
     ],
   };
