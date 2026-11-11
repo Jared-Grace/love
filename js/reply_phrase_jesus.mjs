@@ -1,10 +1,10 @@
-import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
+import { reply_sequence } from "./reply_sequence.mjs";
 export function reply_phrase_jesus() {
   "Every way of saying the name of Jesus, each standing for the others. Lord is not one of them, because it also names the Father.";
   let jesus = reply_choice(["jesus", "iesus"]);
   let christ = "christ";
-  ("★ THE TWO-WORD NAMES ARE LISTED BEFORE THE ONE-WORD ONES. Two readings that cost the same are settled by which was found first, so with Christ listed alone ahead of Christ Jesus, a verse ending in Christ Jesus was read as ending at Christ, and Jesus was left over for the rule that answers his name - a second reply. Measured 2026-11-11 on Philippians 4:7.");
+  ("★ THE ORDER HERE DOES NOT DECIDE HOW A MESSAGE IS SPLIT. A verse ending in Christ Jesus can be read as ending at Christ, with Jesus left over for the rule that answers his name. Listing the two-word names first did not stop that, measured 2026-11-11 on Philippians 4:7. What stops it is the tie-break at the top: of two readings costing the same, the one in fewer replies wins.");
   let jesus_christ = reply_sequence([jesus, christ]);
   let christ_jesus = reply_sequence([christ, jesus]);
   let yeshua = "yeshua";
