@@ -546,6 +546,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_index_steps_two: text_frozen(
       "array_index_steps_two",
     ),
+    app_learn_js_lesson_array_for: text_frozen("array_for"),
   };
   return short;
 }
