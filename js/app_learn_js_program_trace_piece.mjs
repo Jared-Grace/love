@@ -8,7 +8,7 @@ import { list_map } from "./list_map.mjs";
 import { js_value_names } from "./js_value_names.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_learn_js_program_trace_piece_name } from "./app_learn_js_program_trace_piece_name.mjs";
+import { app_learn_js_program_trace_piece_named } from "./app_learn_js_program_trace_piece_named.mjs";
 import { js_code_length } from "./js_code_length.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
@@ -89,7 +89,7 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
   if (equal(type, "Identifier")) {
     let name_looked = property_get(piece, "name");
     let value_held = property_get(values_held, name_looked);
-    let value2 = app_learn_js_program_trace_piece_name(
+    let value2 = app_learn_js_program_trace_piece_named(
       state,
       name_looked,
       value_held,
@@ -111,7 +111,7 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     let items3 = property_get(values_held, array_name2);
     let length_code = js_code_length(array_name2);
     let size = list_size(items3);
-    let value4 = app_learn_js_program_trace_piece_name(
+    let value4 = app_learn_js_program_trace_piece_named(
       state,
       length_code,
       size,
