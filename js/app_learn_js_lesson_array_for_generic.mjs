@@ -3,11 +3,13 @@ import { property_get } from "./property_get.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { equal } from "./equal.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -22,7 +24,6 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { equal } from "./equal.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -31,8 +32,8 @@ import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_array_for_generic(options) {
@@ -59,6 +60,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   function way_of(start_fewer) {
     let start2 = property_get(start_fewer, "start");
     let fewer = property_get(start_fewer, "fewer");
+    ("2026-11-11: a way may also say how much i goes up by each time; a way that does not say goes up by 1, as i++");
+    let step = property_get_or(start_fewer, "step", 1);
     let end2 = bound;
     if (fewer) {
       end2 = bound_fewer;
@@ -67,6 +70,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
       start: start2,
       end: end2,
       fewer,
+      step,
     };
     return r2;
   }
@@ -82,13 +86,24 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let line = js_code_let_statement(name, array);
     return line;
   }
+  function step_code(step2) {
+    "i++ when i goes up by 1, else i += and the step";
+    if (equal(step2, 1)) {
+      let r3 = index_name + "++";
+      return r3;
+    }
+    let right2 = json_to(step2);
+    let code9 = js_code_binary_spaced_nb(index_name, "+=", right2);
+    return code9;
+  }
   function loop_lines(way) {
     let start = property_get(way, "start");
     let end = property_get(way, "end");
     let json = json_to(start);
     let started = js_code_let_statement(index_name, json);
     let condition = js_code_binary_spaced_nb(index_name, less, end);
-    let stepped = index_name + "++;";
+    let value2 = property_get(way, "step");
+    let stepped = step_code(value2) + ";";
     let lines = js_code_for_start_condition_update_lines(started, condition, [
       logged,
       stepped,
@@ -212,7 +227,14 @@ export function app_learn_js_lesson_array_for_generic(options) {
         count_json,
       ]);
     }
-    for (let index = start_index; less_than(index, end_count); index++) {
+    let step3 = property_get(right, "step");
+    let stepped2 = step_code(step3);
+    let step_json = json_to(step3);
+    for (
+      let index = start_index;
+      less_than(index, end_count);
+      index = index + step3
+    ) {
       let index_json = json_to(index);
       let condition2 = js_code_binary_spaced_nb(index_json, less, count_json);
       let written = js_code_index(name, index_json);
@@ -230,12 +252,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
         ", which is ",
         item,
       ]);
-      let after = json_to(index + 1);
+      let after = json_to(index + step3);
       app_learn_js_div_cycle_code(root, [
         "",
-        index_name + "++",
+        stepped2,
         " adds ",
-        "1",
+        step_json,
         " to ",
         index_name,
         ", so ",
@@ -244,10 +266,10 @@ export function app_learn_js_lesson_array_for_generic(options) {
         after,
       ]);
     }
-    ("2026-11-11: i ends at the end, or stays at its start when it starts there or past it and the loop never runs");
-    let last_index = end_count;
-    if (greater_than(start_index, end_count)) {
-      last_index = start_index;
+    ("2026-11-11: i ends at the first value the steps reach that is not below the end - the end itself when it goes up by 1, or its start when it starts there or past it and the loop never runs");
+    let last_index = start_index;
+    while (less_than(last_index, end_count)) {
+      last_index = last_index + step3;
     }
     let last_json = json_to(last_index);
     let last = js_code_binary_spaced_nb(last_json, less, count_json);

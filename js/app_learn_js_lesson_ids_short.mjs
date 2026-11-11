@@ -550,6 +550,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_length: text_frozen("array_for_length"),
     app_learn_js_lesson_array_for_inner: text_frozen("array_for_inner"),
     app_learn_js_lesson_array_for_start_two: text_frozen("array_for_start_two"),
+    app_learn_js_lesson_array_for_step_two: text_frozen("array_for_step_two"),
   };
   return short;
 }
