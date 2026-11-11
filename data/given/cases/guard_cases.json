@@ -23,6 +23,10 @@
   "cases": [
     { "command": "ls", "decision": "allow", "reason_includes": "already in permissions.allow", "why": "trusted verb, bare - and the allow says which rule carried it" },
     { "command": "ls && ls", "decision": "allow", "why": "chain of trusted verbs" },
+    { "command": "which notify-send zenity; echo $XDG_CURRENT_DESKTOP; loginctl list-sessions 2>/dev/null | head; ls /run/user/1000/bus", "decision": "allow", "why": "loginctl list-sessions only prints who is logged in" },
+    { "command": "loginctl list-users --no-legend", "decision": "allow", "why": "a list subcommand with a display flag" },
+    { "command": "loginctl terminate-session 2", "decision": "silent", "why": "ends a session; not a list subcommand" },
+    { "command": "loginctl list-sessions -H host", "decision": "silent", "why": "a flag that is not weighed is refused" },
     { "command": "for w in لےخا یوشےو؛ do grep -a -c \"$w\" x.json; done", "decision": "deny", "reason_includes": "U+061B", "why": "the Urdu semicolon is not a separator, so do became a list word and the loop was broken; sent back to type ;" },
     { "command": "for w in لےخا یوشےو; do grep -a -c \"$w\" x.json; done", "decision": "allow", "why": "the same loop with a plain ;" },
     { "command": "grep -a -ln foo js/*.mjs | xargs sed -n 1,40p", "decision": "deny", "reason_includes": "xargs head -n 40", "why": "a file name arriving on input could be -i, so xargs sed stays unapproved; xargs head is its approved twin, so the agent is sent back instead of the human asked" },

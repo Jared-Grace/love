@@ -1713,6 +1713,22 @@ LSLOCKS_FLAGS = {
 }
 
 
+LOGINCTL_LIST_SUBCOMMANDS = {"list-sessions", "list-users", "list-seats"}
+LOGINCTL_LIST_FLAGS = {"--no-legend", "--no-pager"}
+
+
+def is_safe_loginctl_list(words):
+    """True iff `words` is `loginctl list-sessions|list-users|list-seats`
+    with only display flags. Those only print who is logged in; the
+    subcommands that end sessions or kill processes are other words, and
+    any other flag is refused rather than weighed."""
+    if words[:1] != ["loginctl"] or len(words) < 2:
+        return False
+    if words[1] not in LOGINCTL_LIST_SUBCOMMANDS:
+        return False
+    return all(w in LOGINCTL_LIST_FLAGS for w in words[2:])
+
+
 def is_safe_lslocks(words):
     """True iff `words` is `lslocks` with only display flags, or `-p PID`.
     It prints the table of file locks the kernel keeps (what `cat
@@ -2871,6 +2887,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_kill_probe(words)
             and not is_safe_crontab_list(words)
             and not is_safe_lslocks(words)
+            and not is_safe_loginctl_list(words)
             and not is_safe_fuser_list(words)
             # `unwrapped`, like the sandboxed-node templates and unlike the
             # rest: a fetch is the one thing here that waits on somebody else,
