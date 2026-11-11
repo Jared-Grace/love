@@ -121,8 +121,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
       let code3 = program_of(items3, right);
       codes2.push(code3);
     }
-    let shuffled = list_shuffle(codes2);
-    return shuffled;
+    list_shuffle(codes2);
+    return codes2;
   }
   let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
