@@ -1,7 +1,8 @@
-import { not_equal } from "./not_equal.mjs";
 import { gotquestions_article_files_all } from "./gotquestions_article_files_all.mjs";
 import { catholic_encyclopedia_article_files_all } from "./catholic_encyclopedia_article_files_all.mjs";
+import { church_fathers_article_files_all } from "./church_fathers_article_files_all.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { bible_word_article_bodies_fetch_site } from "./bible_word_article_bodies_fetch_site.mjs";
 export async function bible_word_article_bodies_fetch_all(limit_per_site) {
   "Fetches the words of every article of the whole of each site that publishes a list of all of them - not only the articles a bible word names - so an article can be offered on the verses it cites whatever its title is.";
@@ -12,6 +13,7 @@ export async function bible_word_article_bodies_fetch_all(limit_per_site) {
   let wholes = {
     "GotQuestions.org": gotquestions_article_files_all,
     "the Catholic Encyclopedia": catholic_encyclopedia_article_files_all,
+    "the Church Fathers": church_fathers_article_files_all,
   };
   let report = [];
   for (let site of bible_word_article_sites()) {

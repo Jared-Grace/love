@@ -1,14 +1,14 @@
-import { floor } from "./floor.mjs";
-import { multiply } from "./multiply.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { multiply } from "./multiply.mjs";
 import { sleep } from "./sleep.mjs";
+import { floor } from "./floor.mjs";
+import { equal } from "./equal.mjs";
 import { facebook_posted_history_read } from "./facebook_posted_history_read.mjs";
 import { facebook_posted_history_add } from "./facebook_posted_history_add.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { facebook_reels_tab_urls_all } from "./facebook_reels_tab_urls_all.mjs";
+import { less_than } from "./less_than.mjs";
 import { facebook_reel_line_find } from "./facebook_reel_line_find.mjs";
 import { facebook_bible_chapter_post_text } from "./facebook_bible_chapter_post_text.mjs";
 import { facebook_bible_sermon_after } from "./facebook_bible_sermon_after.mjs";
@@ -93,11 +93,20 @@ export async function facebook_posted_history_links_fill() {
       if (not_equal(known, null)) {
         passage = passage_of_title(known);
       } else {
-        await pause();
-        let caption = await facebook_reel_line_find(
-          url,
-          " put to music using AI",
-        );
+        ("★ A REEL THAT WILL NOT OPEN IS TRIED ONCE MORE, THEN READ AS NO CAPTION. Measured 2026-11-10: the very first reel opened timed out at two minutes and, thrown, ended the whole run with nothing filled. Read as no caption, its passage simply comes out one reel short and is named as unfilled, which is the honest answer.");
+        let caption = null;
+        for (let attempt = 0; less_than(attempt, 2); attempt++) {
+          await pause();
+          try {
+            caption = await facebook_reel_line_find(
+              url,
+              " put to music using AI",
+            );
+            break;
+          } catch (e) {
+            caption = null;
+          }
+        }
         passage = equal(caption, null)
           ? null
           : caption.split(" put to music")[0];

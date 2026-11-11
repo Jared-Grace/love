@@ -6,6 +6,8 @@ import { smith_word_articles_fetched } from "./smith_word_articles_fetched.mjs";
 import { smith_article_url } from "./smith_article_url.mjs";
 import { catholic_encyclopedia_word_articles_fetched } from "./catholic_encyclopedia_word_articles_fetched.mjs";
 import { catholic_encyclopedia_article_url } from "./catholic_encyclopedia_article_url.mjs";
+import { church_fathers_word_articles_fetched } from "./church_fathers_word_articles_fetched.mjs";
+import { church_fathers_article_url } from "./church_fathers_article_url.mjs";
 import { orthodoxwiki_word_articles_fetched } from "./orthodoxwiki_word_articles_fetched.mjs";
 import { orthodoxwiki_article_url } from "./orthodoxwiki_article_url.mjs";
 export function bible_word_article_sites() {
@@ -32,6 +34,11 @@ export function bible_word_article_sites() {
       name: "the Catholic Encyclopedia",
       table: catholic_encyclopedia_word_articles_fetched,
       url: catholic_encyclopedia_article_url,
+    },
+    {
+      name: "the Church Fathers",
+      table: church_fathers_word_articles_fetched,
+      url: church_fathers_article_url,
     },
     {
       name: "OrthodoxWiki",
