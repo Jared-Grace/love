@@ -49,7 +49,7 @@ export function app_learn_js_lesson_array_for() {
   let lesson = app_learn_js_lesson_array_for_generic({
     name_id,
     above,
-    item_count: 3,
+    item_counts: [3],
     bound: "3",
     bound_fewer: "2",
     example_items: ["love", "joy", "peace"],

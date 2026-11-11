@@ -1,11 +1,8 @@
-import { less_than } from "./less_than.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { list_without } from "./list_without.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
@@ -15,6 +12,8 @@ import { js_code_for_start_condition_update_lines } from "./js_code_for_start_co
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
+import { less_than } from "./less_than.mjs";
+import { list_random_item } from "./list_random_item.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -22,11 +21,15 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { equal } from "./equal.mjs";
 import { list_find } from "./list_find.mjs";
+import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { list_get } from "./list_get.mjs";
+import { list_size } from "./list_size.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { list_get } from "./list_get.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_array_for_generic(options) {
@@ -38,7 +41,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   ("Drafted by Claude 2026-11-11, for the lesson the human chose after a[i] stepped up twice by hand.");
   let name_id = property_get(options, "name_id");
   let above_inner = property_get(options, "above");
-  let item_count = property_get(options, "item_count");
+  let item_counts = property_get(options, "item_counts");
+  ("item_counts is the sizes a question's array may have: only 3 while the loop is written to stop at 3, and several once it stops at a.length, which is what a.length is for");
   let bound = property_get(options, "bound");
   let bound_fewer = property_get(options, "bound_fewer");
   let example_items = property_get(options, "example_items");
@@ -66,7 +70,6 @@ export function app_learn_js_lesson_array_for_generic(options) {
       end: bound_fewer,
     },
   ];
-  let wrong_ways = list_without(ways, right);
   function head_line(items) {
     let codes = list_map(items, json_to);
     let array = js_code_array(codes);
@@ -102,6 +105,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let fruits = fruits_of_the_spirit();
     let codes2 = [];
     for (let k = 0; less_than(k, 4); k++) {
+      let item_count = list_random_item(item_counts);
       let items3 = list_shuffle_take(fruits, item_count);
       let code3 = program_of(items3, right);
       codes2.push(code3);
@@ -155,7 +159,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let head4 = head_line(example_items);
     let started2 = js_code_let_statement(index_name, "0");
     let lines5 = [head4, started2, logged];
-    for (let k = 1; less_than(k, item_count); k++) {
+    let size = list_size(example_items);
+    for (let k = 1; less_than(k, size); k++) {
       lines5.push(index_name + "++;");
       lines5.push(logged);
     }
@@ -165,9 +170,15 @@ export function app_learn_js_lesson_array_for_generic(options) {
   }
   function walk(root) {
     "the loop run by run: what it asks, the item it reads, the step, until what it asks is false";
-    for (let index = 0; less_than(index, item_count); index++) {
+    let size2 = list_size(example_items);
+    let count_json = json_to(size2);
+    if (not_equal(bound, count_json)) {
+      ("the end written as a.length is said once as the number it holds, so each run below compares two numbers, as the step-by-step guide solves it");
+      app_learn_js_div_cycle_code(root, ["", bound, " is ", count_json]);
+    }
+    for (let index = 0; less_than(index, size2); index++) {
       let index_json = json_to(index);
-      let condition2 = js_code_binary_spaced_nb(index_json, less, bound);
+      let condition2 = js_code_binary_spaced_nb(index_json, less, count_json);
       let written = js_code_index(name, index_json);
       let object = list_get(example_items, index);
       let item = json_to(object);
@@ -197,8 +208,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
         after,
       ]);
     }
-    let count_json = json_to(item_count);
-    let last = js_code_binary_spaced_nb(count_json, less, bound);
+    let last = js_code_binary_spaced_nb(count_json, less, count_json);
     let r = app_learn_js_braces_dots();
     app_learn_js_div_cycle_code(root, [
       "",
