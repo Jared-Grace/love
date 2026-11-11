@@ -3360,8 +3360,98 @@ export function reply_proposals() {
     ],
     decide: [
       "the answer is the same as for the 1 John verses: the reference, then Amen with praying hands. Nothing new is said.",
-      "each verse is a choice of whole phrases the way each Bible nobody owns words them, using the shared pieces for God and for old u-for-v spellings, rather than a word-by-word lineup where any word one Bible leaves out became skippable. Four words only a newer translation uses are added - do, anything, situation and transcends - because a waiting daily-verse post quoted it that way. The ending in Christ Jesus may be left off, because that post stopped at your minds, and when said it is heard by a new shared piece that knows only the two-word names: Christ Jesus, Jesus Christ, Yeshua the Messiah, Messiah Yeshua. The full shared Jesus piece also allows Christ alone, so the verse could stop at Christ and Jesus got a second reply, even with Christ Jesus listed first. The rejected readings were a name of its own for this verse, and preferring a reading with fewer replies whenever two cost the same.",
+      "each verse is a choice of whole phrases the way each Bible nobody owns words them, using the shared pieces for God and for old u-for-v spellings, rather than a word-by-word lineup where any word one Bible leaves out became skippable. Four words only a newer translation uses are added - do, anything, situation and transcends - because a waiting daily-verse post quoted it that way. The ending in Christ Jesus may be left off, because that post stopped at your minds, and when said it is heard by a new shared piece that knows only the two-word names: Christ Jesus, Jesus Christ, Yeshua the Messiah, Messiah Yeshua. The full shared Jesus piece also allows Christ alone, so the verse could stop at Christ and Jesus got a second reply, even with Christ Jesus listed first. Once the card that breaks ties by fewest pieces is applied, this goes back to the one shared Jesus piece and the two-word piece is deleted. The rejected reading was a name of its own for this verse.",
       "this is the shared piece: a heading - for in the word of the Lord it is written in, or Today's Verse, then where the passage is, either or both - may now come before every verse, including the 1 John ones, instead of each heading only before the verse it first came with. A heading alone is still never answered. Where the passage is may be the or not, 1 or first, then any numbers with verse, chapter, through or to between them. Any of the 66 books may be named, as you asked, taken from the book list the Bible pages already show, with 1, first or 1st (and 2 and 3 the same way) for a numbered book, plus Song of Songs, Song of Solomon and Psalm. So a heading for a verse with no rule yet is still not answered, but a new verse rule needs nothing added here. The rejected reading was checking the heading's numbers against the verse, because the reply names the verse it read.",
+    ],
+  };
+  let fewest_per_position = fn_name(
+    "reply_cheapest_per_position_fewest_pieces",
+  );
+  let fewest_cheapest_removed = text_combine_multiple([
+    "-  let choices_cheapest = ",
+    fn_name("reply_cheapest_per_position"),
+    "(choices_main);",
+  ]);
+  let fewest_counted_added = text_combine_multiple([
+    "+  let counted = ",
+    fn_name("reply_pieces_counted"),
+    "(choices_main);",
+  ]);
+  let fewest_cheapest_added = text_combine_multiple([
+    "+  let choices_cheapest = ",
+    fewest_per_position,
+    "(counted);",
+  ]);
+  let fewest_room_kept = text_combine_multiple([
+    "   let room = ",
+    fn_name("reply_once_or_more"),
+    "(choices_cheapest);",
+  ]);
+  let fewest_last_kept = text_combine_multiple([
+    "   let last = ",
+    fn_name("reply_last"),
+    "();",
+  ]);
+  let fewest_repeats_removed = text_combine_multiple([
+    "-  let with_repeats = ",
+    fn_name("reply_sequence"),
+    "([room, last]);",
+  ]);
+  let fewest_whole_added = text_combine_multiple([
+    "+  let read_whole = ",
+    fn_name("reply_sequence"),
+    "([room, last]);",
+  ]);
+  let fewest_repeats_added = text_combine_multiple([
+    "+  let with_repeats = ",
+    fewest_per_position,
+    "(read_whole);",
+  ]);
+  let fewest_said_kept = text_combine_multiple([
+    "   let said_once = ",
+    fn_name("reply_outputs_mapped"),
+    "(with_repeats, ",
+    fn_name("list_unique"),
+    ");",
+  ]);
+  let fewest_pieces = {
+    title: "when two readings cost the same, take the one with fewer replies",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [
+      fn_name("reply_pieces_counted"),
+      fn_name("reply_cheapest_per_position_fewest_pieces"),
+      fn_name("reply_cheapest_fewest_pieces"),
+    ],
+    diff: [
+      fewest_cheapest_removed,
+      fewest_counted_added,
+      fewest_cheapest_added,
+      fewest_room_kept,
+      fewest_last_kept,
+      fewest_repeats_removed,
+      fewest_whole_added,
+      fewest_repeats_added,
+      fewest_said_kept,
+    ],
+    cases: [
+      {
+        from: "",
+        message: "Hello. Amen",
+        answered: true,
+        outputs: said,
+      },
+      {
+        from: "",
+        message: "Christ Jesus.",
+        answered: true,
+        outputs: ["✝️ Jesus is Lord! 👑"],
+      },
+    ],
+    decide: [
+      "nothing is said differently. Measured 2026-11-11 over 174 messages - the worked cases and every card's cases - not one answer changed. The real messages kept outside the repository were not part of that run.",
+      "what it fixes: a message is read as a run of pieces, one reply each, and after every piece reading one more was tried before stopping. When two readings cost the same, the first found won, so the one with more pieces won. Philippians 4:7 ending in Christ Jesus was read as the verse stopping at Christ plus Jesus for the rule that answers his name - two replies. With this, the whole verse wins: one reply.",
+      "the pieces are counted only at the top, where each one is a reply, never inside a rule. They only break a tie: a reading needing one forgiven letter still loses to an exact one however many pieces either has. The rejected readings were a tiny cost per piece, which mixes a count into the typo cost, and trying stop before one more piece, which would still leave the answer to list order.",
+      "once this is applied, the Philippians card goes back to the one shared Jesus piece and its two-word piece is deleted.",
     ],
   };
   let proposals = [
@@ -3407,6 +3497,7 @@ export function reply_proposals() {
     friend_list_said,
     oh_brother_heard,
     jesus_whole_name,
+    fewest_pieces,
     php_verses_said,
   ];
   return proposals;
