@@ -4,7 +4,7 @@ import { reply_choice } from "./reply_choice.mjs";
 import { reply_words } from "./reply_words.mjs";
 import { reply_word_u_v } from "./reply_word_u_v.mjs";
 import { reply_optional } from "./reply_optional.mjs";
-import { reply_phrase_jesus } from "./reply_phrase_jesus.mjs";
+import { reply_phrase_jesus_whole } from "./reply_phrase_jesus_whole.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_php_4_7() {
   "Philippians 4:7 said whole, in the words of the English Bibles nobody owns, a phrase at a time.";
@@ -34,8 +34,8 @@ export function reply_bible_php_4_7() {
   let minds_word = reply_choice(["minds", "mindes", "thoughts"]);
   let minds = reply_sequence([your, minds_word]);
   let through = reply_choice(["in", "through", "by"]);
-  ("★ THE SHARED NAME, WHICH READS THE WHOLE NAME BEFORE EITHER HALF. Read Christ alone first, the verse ended there and handed Jesus to the rule that answers his name, so the verse got two replies. Measured 2026-11-11.");
-  let named = reply_phrase_jesus();
+  ("★ THE WHOLE NAME ONLY, NEVER ONE HALF OF IT. With Christ alone allowed, the verse could end after Christ and hand Jesus to the rule that answers his name. Both readings cost nothing, so the verse got two replies. Listing the whole name first did not help. Measured 2026-11-11.");
+  let named = reply_phrase_jesus_whole();
   let in_jesus = reply_sequence([through, named]);
   let ending = reply_optional(in_jesus);
   let read = reply_sequence([
