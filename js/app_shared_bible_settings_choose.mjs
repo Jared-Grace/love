@@ -3,6 +3,8 @@ import { app_shared_bible_passage_kept_reference } from "./app_shared_bible_pass
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { window_reload } from "./window_reload.mjs";
 import { app_shared_bible_languages_offered } from "./app_shared_bible_languages_offered.mjs";
+import { app_shared_bible_language_single_is } from "./app_shared_bible_language_single_is.mjs";
+import { app_shared_bible_language_choose_one } from "./app_shared_bible_language_choose_one.mjs";
 import { app_shared_bible_language_codes_chosen } from "./app_shared_bible_language_codes_chosen.mjs";
 import { app_shared_bible_languages_choose } from "./app_shared_bible_languages_choose.mjs";
 import { app_shared_bible_languages_choosable_is } from "./app_shared_bible_languages_choosable_is.mjs";
@@ -27,6 +29,12 @@ export async function app_shared_bible_settings_choose(bar, content, context) {
   let unnamed = "";
   function on_languages() {
     let languages = app_shared_bible_languages_offered(context);
+    ("an app that serves one language at a time gets a list where a tap is the whole choice, rather than a list of boxes that lets a reader tick a second language the app would quietly ignore");
+    let single = app_shared_bible_language_single_is(context);
+    if (single) {
+      app_shared_bible_language_choose_one(content, languages, back, unnamed);
+      return;
+    }
     let languages_chosen = app_shared_bible_language_codes_chosen();
     app_shared_bible_languages_choose(
       content,

@@ -1,9 +1,10 @@
-import { not } from "./not.mjs";
 import { app_learn_en_language_known_ensure } from "./app_learn_en_language_known_ensure.mjs";
+import { not } from "./not.mjs";
 import { app_learn_en_reader_language_set } from "./app_learn_en_reader_language_set.mjs";
 import { app_learn_en_languages_offered } from "./app_learn_en_languages_offered.mjs";
 import { app_shared_bible_languages_offered_key } from "./app_shared_bible_languages_offered_key.mjs";
 import { property_set } from "./property_set.mjs";
+import { app_shared_bible_language_single_key } from "./app_shared_bible_language_single_key.mjs";
 import { app_learn_en_gloss_chapters_uploaded } from "./app_learn_en_gloss_chapters_uploaded.mjs";
 import { app_shared_bible_chapters_offered_key } from "./app_shared_bible_chapters_offered_key.mjs";
 import { app_learn_en_screens } from "./app_learn_en_screens.mjs";
@@ -27,6 +28,9 @@ export async function app_learn_en(context) {
   let languages_offered = app_learn_en_languages_offered();
   let key = app_shared_bible_languages_offered_key();
   property_set(context, key, languages_offered);
+  ("one language at a time: every word is explained in the language chosen first, so a second one chosen would change nothing on the screen");
+  let key_single = app_shared_bible_language_single_key();
+  property_set(context, key_single, true);
   let chapters_ask = app_learn_en_gloss_chapters_uploaded;
   let key_chapters = app_shared_bible_chapters_offered_key();
   property_set(context, key_chapters, chapters_ask);
