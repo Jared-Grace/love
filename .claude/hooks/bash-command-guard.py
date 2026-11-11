@@ -1687,7 +1687,11 @@ def is_safe_kill_probe(words):
     Signal 0 is never delivered: the kernel only checks the process exists,
     so this is how a wait loop asks whether a job is still running
     (`while kill -0 123; do sleep 30; done`). Any other signal, a negative
-    PID (a whole process group) or a job spec (`%1`) is not this shape."""
+    PID (a whole process group) or a job spec (`%1`) is not this shape.
+    A leading `!` only flips the answer (`until ! kill -0 123`), so it is
+    taken off first, as transparent_wrapper_skip does for named verbs."""
+    if words[:1] == ["!"]:
+        words = words[1:]
     if len(words) < 3 or words[0] != "kill" or words[1] != "-0":
         return False
     return all(w.isdigit() and w.isascii() for w in words[2:])
