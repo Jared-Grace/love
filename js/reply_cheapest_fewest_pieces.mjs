@@ -1,3 +1,6 @@
+import { reply_possibility_number } from "./reply_possibility_number.mjs";
+import { reply_property_cost } from "./reply_property_cost.mjs";
+import { reply_property_pieces } from "./reply_property_pieces.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 export function reply_cheapest_fewest_pieces(possibilities) {
@@ -8,8 +11,10 @@ export function reply_cheapest_fewest_pieces(possibilities) {
   let best_cost = null;
   let best_pieces = null;
   for (let possibility of possibilities) {
-    let cost = possibility.cost || 0;
-    let pieces = possibility.pieces || 0;
+    let name = reply_property_cost();
+    let cost = reply_possibility_number(possibility, name);
+    let name2 = reply_property_pieces();
+    let pieces = reply_possibility_number(possibility, name2);
     let first = equal(best, null);
     let cheaper = less_than(cost, best_cost);
     let tied = equal(cost, best_cost);

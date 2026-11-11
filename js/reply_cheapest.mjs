@@ -1,3 +1,5 @@
+import { reply_possibility_number } from "./reply_possibility_number.mjs";
+import { reply_property_cost } from "./reply_property_cost.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 export function reply_cheapest(possibilities) {
@@ -7,7 +9,8 @@ export function reply_cheapest(possibilities) {
   let best = null;
   let best_cost = null;
   for (let possibility of possibilities) {
-    let cost = possibility.cost || 0;
+    let name = reply_property_cost();
+    let cost = reply_possibility_number(possibility, name);
     if (equal(best, null) || less_than(cost, best_cost)) {
       best = possibility;
       best_cost = cost;

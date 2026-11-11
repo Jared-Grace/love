@@ -1,6 +1,8 @@
 import { reply_typo_budget } from "./reply_typo_budget.mjs";
 import { not } from "./not.mjs";
 import { reply_typo_ends } from "./reply_typo_ends.mjs";
+import { reply_possibility_number } from "./reply_possibility_number.mjs";
+import { reply_property_cost } from "./reply_property_cost.mjs";
 export function reply_word_cost(word) {
   "One written-out word, matched allowing for the ways it gets typed, and keeping a running note of what the allowance cost.";
   "★ IT TURNS ONE POSSIBILITY INTO SEVERAL, WHERE THE LEAF IT REPLACES TURNED ONE INTO ONE. That is the only structural change the whole tolerance asks for. A word read with a letter missing finishes one step earlier in the message than the same word read whole, so there is no single place to carry on from, and choosing between them here - before the rest of the message has been read - would be guessing. Each ending is answered as its own possibility and the reading that survives to the end of the message decides.";
@@ -20,7 +22,8 @@ export function reply_word_cost(word) {
         allowed,
       );
       for (let [ti, cost] of ends) {
-        let so_far = possibility.cost || 0;
+        let name = reply_property_cost();
+        let so_far = reply_possibility_number(possibility, name);
         let fork = {
           ...possibility,
         };
