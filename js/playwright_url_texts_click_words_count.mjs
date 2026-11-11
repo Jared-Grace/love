@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { url_opened_unasked_assert } from "./url_opened_unasked_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
@@ -23,7 +24,7 @@ export async function playwright_url_texts_click_words_count(
     }
     let shown = await page.innerText("body");
     for (let word of text_split_comma(words)) {
-      counts[word] = shown.split(word).length - 1;
+      counts[word] = subtract(shown.split(word).length, 1);
     }
   }
   await playwright_test_blank(on_page);
