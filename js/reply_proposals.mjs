@@ -3453,6 +3453,80 @@ export function reply_proposals() {
       "once this is applied, the Philippians card goes back to the one shared Jesus piece and its two-word piece is deleted.",
     ],
   };
+  let worship_said = [prayer_blessing("your ministry and worship")];
+  let choir_added_worship = text_combine_multiple([
+    "+  let worship = ",
+    fn_name("prayer_blessing"),
+    '("your ministry and worship");',
+  ]);
+  let choir_added_title = text_combine_multiple([
+    "+  let choir_title = ",
+    fn_name("reply_sequence"),
+    '(["choir", "leader"]);',
+  ]);
+  let choir_added_rule = text_combine_multiple([
+    "+  let choir = ",
+    fn_name("reply_i_am_a_output"),
+    "(choir_title, worship);",
+  ]);
+  let choir_removed_choice = text_combine_multiple([
+    "-  let ministers = ",
+    fn_name("reply_choice"),
+    "([minister, teacher, work]);",
+  ]);
+  let choir_added_choice = text_combine_multiple([
+    "+  let ministers = ",
+    fn_name("reply_choice"),
+    "([minister, teacher, choir, work]);",
+  ]);
+  let choir_leader_blessed = {
+    title:
+      "bless the ministry and worship of somebody who says they are a choir leader",
+    fn: fn_name("app_shared_message_reply_minister"),
+    whole: [fn_name("reply_i_am_a_output"), fn_name("reply_sequence")],
+    diff: [
+      "   let teacher = ...;",
+      "   let work = ...;",
+      choir_added_worship,
+      choir_added_title,
+      choir_added_rule,
+      choir_removed_choice,
+      choir_added_choice,
+      "   return ministers;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I am a choir leader",
+        answered: true,
+        outputs: worship_said,
+      },
+      {
+        from: "",
+        message: "am choir leader",
+        answered: true,
+        outputs: worship_said,
+      },
+      {
+        from: "",
+        message: "I am a teacher",
+        answered: true,
+        outputs: teaching_said,
+      },
+      {
+        from: "",
+        message: "choir leader",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "a choir leader got no answer before this. Now they get the same prayer a teacher gets, with your ministry and worship.",
+      "this is what keeps the two red worked cases red: both long messages from a choir leader stop only at those two words. Swapping in Sunday school teacher answers them, so age, country and name are not the cause.",
+      "only the words choir leader are heard, the same way teacher is: after I am, I'm or am. A choir member, a worship leader or a singer is not heard yet.",
+      "rejected wordings: your ministry and singing, your ministry and music, and plain your ministry like a pastor. Worship was the wording asked for.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -3498,6 +3572,7 @@ export function reply_proposals() {
     jesus_whole_name,
     fewest_pieces,
     php_verses_said,
+    choir_leader_blessed,
   ];
   return proposals;
 }
