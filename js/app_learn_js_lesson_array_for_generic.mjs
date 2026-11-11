@@ -1,4 +1,3 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -27,6 +26,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { list_size } from "./list_size.mjs";
+import { subtract } from "./subtract.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
@@ -184,9 +184,22 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let end_code = property_get(right, "end");
     let end_count = subtract(size2, skipped);
     let count_json = json_to(end_count);
-    if (not_equal(end_code, count_json)) {
+    let size_json = json_to(size2);
+    if (not_equal(bound, size_json)) {
       ("the end written as a.length is said once as the number it holds, so each run below compares two numbers, as the step-by-step guide solves it");
-      app_learn_js_div_cycle_code(root, ["", end_code, " is ", count_json]);
+      app_learn_js_div_cycle_code(root, ["", bound, " is ", size_json]);
+    }
+    if (skip_ends) {
+      ("2026-11-11: the end one short is then worked out from that number, a.length - 1 as 5 - 1, which is 4, in two steps as the step-by-step guide takes them, never at once");
+      let fewer = js_code_binary_spaced_nb(size_json, "-", "1");
+      app_learn_js_div_cycle_code(root, [
+        "",
+        end_code,
+        " is ",
+        fewer,
+        ", which is ",
+        count_json,
+      ]);
     }
     for (let index = start_index; less_than(index, end_count); index++) {
       let index_json = json_to(index);
