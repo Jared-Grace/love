@@ -1321,8 +1321,18 @@ def xargs_wrapper_skip(words):
     if not words or words[0] != "xargs":
         return 0
     i = 1
-    while i < len(words) and words[i] in XARGS_WEIGHED_FLAGS:
-        i += 1
+    while i < len(words):
+        if words[i] in XARGS_WEIGHED_FLAGS:
+            i += 1
+        # `-n N` only splits the input into runs of N arguments each. The same
+        # command runs, with the arguments still appended at its end, so it
+        # moves nothing - unlike `-I{}`.
+        elif re.fullmatch(r"-n[0-9]+", words[i]):
+            i += 1
+        elif words[i] == "-n" and i + 1 < len(words) and words[i + 1].isdigit():
+            i += 2
+        else:
+            break
     if i < len(words) and not words[i].startswith("-"):
         return i
     return 0

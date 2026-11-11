@@ -3106,40 +3106,66 @@ export function reply_proposals() {
     ],
   };
   let php_cited = "📖 Philippians 4:6-7: Amen! 🙏";
+  let php_said_removed =
+    '-  "Every verse the rules know how to read, one at a time. The words that lead into a passage are read only in front of its first verse, because on their own they say nothing to answer.";';
+  let php_said_added =
+    '+  "Every verse the rules know how to read, one at a time, each of which may have a heading in front of it saying a verse is coming and where it is. A heading alone is never read, because a verse must follow it.";';
+  let php_lead_words_removed = text_combine_multiple([
+    "-  let lead_in = ",
+    fn_name("reply_words"),
+    "(",
+  ]);
+  let php_lead_text_removed =
+    '-    "for in the word of the lord it is written in the first john verses 7 through 10",';
+  let php_lead_optional_removed = text_combine_multiple([
+    "-  let fn = ",
+    fn_name("reply_optional"),
+    "(lead_in);",
+  ]);
+  let php_lead_added = text_combine_multiple([
+    "+  let lead = ",
+    fn_name("reply_bible_lead"),
+    "();",
+  ]);
+  let php_seven_kept = text_combine_multiple([
+    "   let noted = ",
+    fn_name("reply_bible_1jn_4_7"),
+    "();",
+  ]);
+  let php_seven_led_removed = text_combine_multiple([
+    "-  let seven = ",
+    fn_name("reply_sequence"),
+    "([fn, noted]);",
+  ]);
+  let php_kept_3_ = text_combine_multiple([
+    "   let noted2 = ",
+    fn_name("reply_bible_1jn_3_23"),
+    "();",
+  ]);
+  let php_kept_4_ = text_combine_multiple([
+    "   let noted3 = ",
+    fn_name("reply_bible_1jn_4_8"),
+    "();",
+  ]);
+  let php_kept_4_9 = text_combine_multiple([
+    "   let noted4 = ",
+    fn_name("reply_bible_1jn_4_9"),
+    "();",
+  ]);
   let php_kept = text_combine_multiple([
     "   let noted5 = ",
     fn_name("reply_bible_1jn_4_10"),
     "();",
-  ]);
-  let php_lead_words = text_combine_multiple([
-    "+  let today_verse = ",
-    fn_name("reply_words"),
-    `("today's verse philippians 4 6 7");`,
-  ]);
-  let php_lead_optional = text_combine_multiple([
-    "+  let php_lead = ",
-    fn_name("reply_optional"),
-    "(today_verse);",
   ]);
   let php_six_read = text_combine_multiple([
     "+  let php_6 = ",
     fn_name("reply_bible_php_4_6"),
     "();",
   ]);
-  let php_six_led = text_combine_multiple([
-    "+  let php_six = ",
-    fn_name("reply_sequence"),
-    "([php_lead, php_6]);",
-  ]);
   let php_seven_read = text_combine_multiple([
-    "+  let php_seven = ",
+    "+  let php_7 = ",
     fn_name("reply_bible_php_4_7"),
     "();",
-  ]);
-  let php_either = text_combine_multiple([
-    "+  let php = ",
-    fn_name("reply_choice"),
-    "([php_six, php_seven]);",
   ]);
   let php_list_removed = text_combine_multiple([
     "-  let verses = ",
@@ -3147,24 +3173,48 @@ export function reply_proposals() {
     "([noted2, seven, noted3, noted4, noted5]);",
   ]);
   let php_list_added = text_combine_multiple([
-    "+  let verses = ",
+    "+  let verse = ",
     fn_name("reply_choice"),
-    "([noted2, seven, noted3, noted4, noted5, php]);",
+    "([noted2, noted, noted3, noted4, noted5, php_6, php_7]);",
   ]);
+  let php_led_added = text_combine_multiple([
+    "+  let verses = ",
+    fn_name("reply_sequence"),
+    "([lead, verse]);",
+  ]);
+  let php_seven_message =
+    "Beloved, let us love one another, for love is from God; and everyone who loves has been born of God and knows God.";
+  let php_bsb_message =
+    "Be anxious for nothing, but in everything, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.";
   let php_verses_said = {
-    title: "read Philippians 4:6-7, and answer with the verse and Amen",
+    title:
+      "read Philippians 4:6-7, hear a heading before any verse, and answer with the verse and Amen",
     fn: fn_name("reply_bible_verses"),
-    whole: [fn_name("reply_bible_php_4_6"), fn_name("reply_bible_php_4_7")],
+    whole: [
+      fn_name("reply_bible_php_4_6"),
+      fn_name("reply_bible_php_4_7"),
+      fn_name("reply_bible_lead"),
+      fn_name("reply_bible_reference"),
+    ],
     diff: [
+      php_said_removed,
+      php_said_added,
+      php_lead_words_removed,
+      php_lead_text_removed,
+      "-  );",
+      php_lead_optional_removed,
+      php_lead_added,
+      php_seven_kept,
+      php_seven_led_removed,
+      php_kept_3_,
+      php_kept_4_,
+      php_kept_4_9,
       php_kept,
-      php_lead_words,
-      php_lead_optional,
       php_six_read,
-      php_six_led,
       php_seven_read,
-      php_either,
       php_list_removed,
       php_list_added,
+      php_led_added,
       "   return verses;",
     ],
     cases: [
@@ -3177,8 +3227,7 @@ export function reply_proposals() {
       },
       {
         from: "",
-        message:
-          "Be anxious for nothing, but in everything, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
+        message: php_bsb_message,
         answered: true,
         outputs: [php_cited],
       },
@@ -3188,11 +3237,29 @@ export function reply_proposals() {
         answered: false,
         outputs: [],
       },
+      {
+        from: "",
+        message: text_combine_multiple([
+          "Today's Verse 1 John 4:7 ",
+          php_seven_message,
+        ]),
+        answered: true,
+        outputs: ["📖 1 John 4:7: Amen! 🙏"],
+      },
+      {
+        from: "",
+        message: text_combine_multiple([
+          "For in the word of the Lord it is written in Philippians 4:6-7 ",
+          php_bsb_message,
+        ]),
+        answered: true,
+        outputs: [php_cited],
+      },
     ],
     decide: [
       "the answer is the same as for the 1 John verses: the reference, then Amen with praying hands. Nothing new is said.",
-      "both verses were first drafted from the Bibles nobody owns, then four words were added that only a newer translation uses - do, anything, situation and transcends - because a waiting daily-verse post quoted it that way. The ending in Christ Jesus may be left off, because that post stopped at your minds. The rejected reading was hearing any wording at all, which would let a message that only looks like the verse through.",
-      "the heading Today's Verse Philippians 4:6-7 is heard only in front of the verse, never alone, the same way the 1 John lead-in is. The rejected reading was hearing Today's Verse before every verse, because nobody waiting has sent it before another one yet.",
+      "each verse is a choice of whole phrases the way each Bible nobody owns words them, using the shared pieces for God and for old u-for-v spellings, rather than a word-by-word lineup where any word one Bible leaves out became skippable. Four words only a newer translation uses are added - do, anything, situation and transcends - because a waiting daily-verse post quoted it that way. The ending in Christ Jesus may be left off, because that post stopped at your minds, but when said it must be both names. The rejected reading was the shared Jesus piece, which takes Christ alone and so let the verse stop there and get a second reply for Jesus.",
+      "this is the shared piece: a heading - for in the word of the Lord it is written in, or Today's Verse, then where the passage is, either or both - may now come before every verse, including the 1 John ones, instead of each heading only before the verse it first came with. A heading alone is still never answered. Where the passage is may be the or not, 1 or first, then any numbers with verse, chapter, through or to between them, for 1 John and Philippians only. The rejected reading was checking the heading's numbers against the verse, because the reply names the verse it read.",
     ],
   };
   let proposals = [

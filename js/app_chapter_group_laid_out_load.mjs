@@ -2,10 +2,14 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
+import { browser_is } from "./browser_is.mjs";
+import { not } from "./not.mjs";
+import { function_import_relative } from "./function_import_relative.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { null_is } from "./null_is.mjs";
 import { web_assets_bible_laid_out_path } from "./web_assets_bible_laid_out_path.mjs";
 import { web_assets_url } from "./web_assets_url.mjs";
 import { http_json_memoized_on_success } from "./http_json_memoized_on_success.mjs";
-import { null_is } from "./null_is.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 export async function app_chapter_group_laid_out_load(
@@ -23,13 +27,24 @@ export async function app_chapter_group_laid_out_load(
     return null;
   }
   let book_code = ebible_chapter_code_to_book(chapter_code);
-  let path = web_assets_bible_laid_out_path("bsb", book_code);
-  let url = web_assets_url(path);
-  let chapters = await http_json_memoized_on_success(
-    app_chapter_group_laid_out_load,
-    book_code,
-    url,
-  );
+  let chapters = null;
+  let b = browser_is();
+  if (not(b)) {
+    ("★ ON THE MACHINE THE BOOK IS READ OFF ITS OWN DISK FIRST: the machine's fetch sleeps five to eight seconds before every ask, which was most of the time the reply-rule screen took to open. Measured 2026-11-11.");
+    let disk = await function_import_relative(
+      fn_name("app_chapter_group_laid_out_book_disk"),
+    );
+    chapters = await disk(book_code);
+  }
+  if (null_is(chapters)) {
+    let path = web_assets_bible_laid_out_path("bsb", book_code);
+    let url = web_assets_url(path);
+    chapters = await http_json_memoized_on_success(
+      app_chapter_group_laid_out_load,
+      book_code,
+      url,
+    );
+  }
   if (null_is(chapters)) {
     return null;
   }

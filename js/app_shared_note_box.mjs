@@ -8,6 +8,7 @@ import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
+import { html_value_set } from "./html_value_set.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { each } from "./each.mjs";
 export function app_shared_note_box(parent, bench, subject, names, filed) {
@@ -58,6 +59,8 @@ export function app_shared_note_box(parent, bench, subject, names, filed) {
       status_working(said);
       try {
         await filed(field, typed);
+        ("THE BOX IS EMPTIED ONLY ONCE THE NOTE IS FILED, so the words a failed filing could not keep are still there to press again. Left full after a success, the note sat in the box looking unsent and invited a second press filing it twice.");
+        html_value_set(box, "");
         let done = text_combine_multiple([
           "filed a note against ",
           field,
