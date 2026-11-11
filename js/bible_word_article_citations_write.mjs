@@ -9,11 +9,14 @@ import { folder_read } from "./folder_read.mjs";
 import { bible_word_article_title } from "./bible_word_article_title.mjs";
 import { ebible_version_chapters_cache } from "./ebible_version_chapters_cache.mjs";
 import { bible_word_article_citations_chapters } from "./bible_word_article_citations_chapters.mjs";
+import { bible_word_article_citations_whole_chapters_add } from "./bible_word_article_citations_whole_chapters_add.mjs";
+import { bible_word_article_sites_published_rows } from "./bible_word_article_sites_published_rows.mjs";
+import { web_assets_folder_join } from "./web_assets_folder_join.mjs";
+import { bible_word_article_sites_path } from "./bible_word_article_sites_path.mjs";
+import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
+import { json_to } from "./json_to.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { bible_word_article_citations_path } from "./bible_word_article_citations_path.mjs";
-import { web_assets_folder_join } from "./web_assets_folder_join.mjs";
-import { json_to } from "./json_to.mjs";
-import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 export async function bible_word_article_citations_write() {
   "Works out which article to offer for which word of which verse from every article fetched so far, writes one file per chapter under the assets folder, and says how much it read and what was missing.";
   "THE LIST OF ARTICLES IS FOUND, NOT GIVEN: every article of every site, read from where the fetching left it. One a site's table names but not fetched yet is counted and named by site rather than treated as citing nothing.";
@@ -51,7 +54,9 @@ export async function bible_word_article_citations_write() {
       }
     }
     let site_folder = path_join([folder, site.name]);
-    let fetched = await folder_read(site_folder);
+    ("A SITE WITH NOTHING DOWNLOADED HAS NO FOLDER - the Catena Aurea is offered by chapter, never read - and reads as no pages.");
+    let downloaded = await file_exists(site_folder);
+    let fetched = downloaded ? await folder_read(site_folder) : [];
     for (let name of fetched) {
       let v = name.replace(/\.txt$/, "");
       let file = decodeURIComponent(v);
@@ -81,6 +86,22 @@ export async function bible_word_article_citations_write() {
     bibles.push(chapters);
   }
   let worked = bible_word_article_citations_chapters(articles, bibles);
+  function code_of(chapter) {
+    let code = chapter.chapter_code;
+    return code;
+  }
+  let all_codes = bibles[0].map(code_of);
+  bible_word_article_citations_whole_chapters_add(
+    worked.index,
+    sites,
+    all_codes,
+  );
+  ("THE LIST OF SITES IS WRITTEN BESIDE THE CITATIONS, so a site added here reaches readers' apps by the same upload, without a rebuild.");
+  let sites_rows = bible_word_article_sites_published_rows();
+  let path = bible_word_article_sites_path();
+  let sites_file = web_assets_folder_join(path);
+  let contents2 = json_to(sites_rows);
+  await file_overwrite_uncached(sites_file, contents2);
   let chapter_codes = object_property_names(worked.index);
   let bytes = 0;
   for (let chapter_code of chapter_codes) {

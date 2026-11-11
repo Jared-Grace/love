@@ -17,7 +17,6 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { bible_word_article_sites_recent } from "./bible_word_article_sites_recent.mjs";
 import { bible_word_article_offers_recent_split } from "./bible_word_article_offers_recent_split.mjs";
 import { app_shared_bible_word_offers_split_draw } from "./app_shared_bible_word_offers_split_draw.mjs";
-import { catena_aurea_chapter_url } from "./catena_aurea_chapter_url.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
 import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
@@ -104,19 +103,6 @@ export async function app_shared_bible_word_overlay_articles_open(
   let recent_names = bible_word_article_sites_recent();
   let split = bible_word_article_offers_recent_split(offers, recent_names);
   app_shared_bible_word_offers_split_draw(split, offer_draw, choices);
-  ("THE CATENA AUREA COMMENTS ON A WHOLE CHAPTER OF A GOSPEL, not on a name, so any word tapped in a Gospel offers it, under the articles - asked for by the human 2026-11-11.");
-  let catena_url = catena_aurea_chapter_url(chapter_code);
-  let catena_none = null_is(catena_url);
-  if (not(catena_none)) {
-    function catena_read() {
-      window_open(catena_url);
-    }
-    app_shared_button(
-      choices,
-      "📖 Open this chapter in the Catena Aurea",
-      catena_read,
-    );
-  }
   function google() {
     let search_term = text_combine(word, " (Bible)");
     window_open_google_define(search_term);
