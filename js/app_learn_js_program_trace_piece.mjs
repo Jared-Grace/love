@@ -9,6 +9,8 @@ import { js_value_names } from "./js_value_names.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_learn_js_program_trace_piece_name } from "./app_learn_js_program_trace_piece_name.mjs";
+import { js_code_length } from "./js_code_length.mjs";
+import { list_size } from "./list_size.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_expression_node_index } from "./app_learn_js_expression_node_index.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
@@ -85,14 +87,39 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     to = to + 1;
   }
   if (equal(type, "Identifier")) {
+    let name_looked = property_get(piece, "name");
+    let value_held = property_get(values_held, name_looked);
     let value2 = app_learn_js_program_trace_piece_name(
       state,
-      piece,
+      name_looked,
+      value_held,
       from,
       to,
       side,
     );
     return value2;
+  }
+  let length_is =
+    equal(type, "MemberExpression") &&
+    not(property_get(piece, "computed")) &&
+    equal(property_get(property_get(piece, "object"), "type"), "Identifier") &&
+    equal(property_get(property_get(piece, "property"), "name"), "length");
+  if (length_is) {
+    ("2026-11-11, so a for loop can run while i < a.length: a.length is read as one name holding the array's size, one press, as the expression lessons read it. Not picked: reading a first and then its length, the order JavaScript reads it in, which writes the whole array into the line in place of the name the lesson is about");
+    let object3 = property_get(piece, "object");
+    let array_name2 = property_get(object3, "name");
+    let items3 = property_get(values_held, array_name2);
+    let length_code = js_code_length(array_name2);
+    let size = list_size(items3);
+    let value4 = app_learn_js_program_trace_piece_name(
+      state,
+      length_code,
+      size,
+      from,
+      to,
+      side,
+    );
+    return value4;
   }
   let expression = null;
   let unary_is =
