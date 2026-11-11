@@ -4,7 +4,6 @@ import { reply_choice } from "./reply_choice.mjs";
 import { reply_words } from "./reply_words.mjs";
 import { reply_word_u_v } from "./reply_word_u_v.mjs";
 import { reply_optional } from "./reply_optional.mjs";
-import { reply_phrase_jesus } from "./reply_phrase_jesus.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_php_4_7() {
   "Philippians 4:7 said whole, in the words of the English Bibles nobody owns, a phrase at a time.";
@@ -34,9 +33,11 @@ export function reply_bible_php_4_7() {
   let minds_word = reply_choice(["minds", "mindes", "thoughts"]);
   let minds = reply_sequence([your, minds_word]);
   let through = reply_choice(["in", "through", "by"]);
-  let jesus = reply_phrase_jesus();
-  let iesus = reply_words("christ iesus");
-  let named = reply_choice([jesus, iesus]);
+  ("★ THE WHOLE NAME, NOT THE SHARED ONE THAT TAKES EITHER HALF. Every Bible here ends with both words, and a name that stops at Christ let the verse end there and hand Jesus to the rule that answers his name, so the verse got two replies. Measured 2026-11-11.");
+  let jesus = reply_choice(["jesus", "iesus"]);
+  let christ_jesus = reply_sequence(["christ", jesus]);
+  let yeshua = reply_words("messiah yeshua");
+  let named = reply_choice([christ_jesus, yeshua]);
   let in_jesus = reply_sequence([through, named]);
   let ending = reply_optional(in_jesus);
   let read = reply_sequence([
