@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_step_two_odd } from "./app_learn_js_lesson_array_for_step_two_odd.mjs";
 import { app_learn_js_lesson_array_for_step_two } from "./app_learn_js_lesson_array_for_step_two.mjs";
 import { app_learn_js_lesson_array_for_start_two } from "./app_learn_js_lesson_array_for_start_two.mjs";
 import { app_learn_js_lesson_array_for_inner } from "./app_learn_js_lesson_array_for_inner.mjs";
@@ -737,6 +738,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_inner,
     app_learn_js_lesson_array_for_start_two,
     app_learn_js_lesson_array_for_step_two,
+    app_learn_js_lesson_array_for_step_two_odd,
   ];
   return fns;
 }
