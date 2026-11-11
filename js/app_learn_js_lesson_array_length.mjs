@@ -30,6 +30,7 @@ import { range } from "./range.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_any } from "./app_learn_js_lesson_array_any.mjs";
@@ -139,10 +140,8 @@ export function app_learn_js_lesson_array_length() {
       app_learn_js_div_cycle_code(root, ["", written, " is ", item]);
     }
     let count = json_to(size3);
-    app_learn_js_div_cycle_code(root, [
-      "That is ",
-      count,
-      " items, so ",
+    app_learn_js_div_cycle_output(root, [
+      "That is " + count + " items, so ",
       count,
       " is written out",
     ]);
