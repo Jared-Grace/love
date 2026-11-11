@@ -1,8 +1,11 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
@@ -18,7 +21,6 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { list_first } from "./list_first.mjs";
 import { equal } from "./equal.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_without } from "./list_without.mjs";
@@ -27,7 +29,6 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { list_size } from "./list_size.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { list_get } from "./list_get.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
@@ -42,6 +43,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let name_id = property_get(options, "name_id");
   let above_inner = property_get(options, "above");
   let item_counts = property_get(options, "item_counts");
+  ("2026-11-11: a lesson with skip_ends asks arrays of at least 3 items, so the loop runs at least once; a loop that never runs is its own lesson");
   ("item_counts is the sizes a question's array may have: only 3 while the loop is written to stop at 3, and several once it stops at a.length, which is what a.length is for");
   let bound = property_get(options, "bound");
   let bound_fewer = property_get(options, "bound_fewer");
@@ -51,12 +53,13 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let less = js_operator_less_than_symbol();
   let read = js_code_index(name, index_name);
   let logged = js_code_console_log_statement(read);
-  let right = {
-    start: 0,
-    end: bound,
-  };
+  let skip_ends = property_get(options, "skip_ends");
+  ("2026-11-11: skip_ends true makes the right loop the one that starts at 1 and stops one short, writing out every item but the first and the last; the loop over every item is then one of the wrong ones");
   let ways = [
-    right,
+    {
+      start: 0,
+      end: bound,
+    },
     {
       start: 1,
       end: bound,
@@ -70,6 +73,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
       end: bound_fewer,
     },
   ];
+  let right = list_first(ways);
+  let skipped = 0;
+  if (skip_ends) {
+    right = list_get(ways, 3);
+    skipped = 1;
+  }
   function head_line(items) {
     let codes = list_map(items, json_to);
     let array = js_code_array(codes);
@@ -171,12 +180,15 @@ export function app_learn_js_lesson_array_for_generic(options) {
   function walk(root) {
     "the loop run by run: what it asks, the item it reads, the step, until what it asks is false";
     let size2 = list_size(example_items);
-    let count_json = json_to(size2);
-    if (not_equal(bound, count_json)) {
+    let start_index = property_get(right, "start");
+    let end_code = property_get(right, "end");
+    let end_count = subtract(size2, skipped);
+    let count_json = json_to(end_count);
+    if (not_equal(end_code, count_json)) {
       ("the end written as a.length is said once as the number it holds, so each run below compares two numbers, as the step-by-step guide solves it");
-      app_learn_js_div_cycle_code(root, ["", bound, " is ", count_json]);
+      app_learn_js_div_cycle_code(root, ["", end_code, " is ", count_json]);
     }
-    for (let index = 0; less_than(index, size2); index++) {
+    for (let index = start_index; less_than(index, end_count); index++) {
       let index_json = json_to(index);
       let condition2 = js_code_binary_spaced_nb(index_json, less, count_json);
       let written = js_code_index(name, index_json);

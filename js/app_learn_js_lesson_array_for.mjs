@@ -53,6 +53,7 @@ export function app_learn_js_lesson_array_for() {
     bound: "3",
     bound_fewer: "2",
     example_items: ["love", "joy", "peace"],
+    skip_ends: false,
   });
   return lesson;
 }
