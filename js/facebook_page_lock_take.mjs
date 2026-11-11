@@ -1,3 +1,4 @@
+import { facebook_page_lock_path } from "./facebook_page_lock_path.mjs";
 export async function facebook_page_lock_take() {
   "Waits until no other run holds the facebook browser profile, then holds it, and answers the holder: a small process to kill when the browser is done. Waits up to three hours, then throws.";
   "★ ONE PROFILE, ONE BROWSER AT A TIME. Several Claudes and several timers all post through the one signed-in profile, and two browsers on one profile fail or step on each other. So every run queues here and they go one after another.";
@@ -11,7 +12,7 @@ export async function facebook_page_lock_take() {
       "-o",
       "-w",
       "10800",
-      "/home/j/facebook-page-profile.lock",
+      facebook_page_lock_path(),
       "/bin/sh",
       "-c",
       "echo held; exec tail --pid=" + process.pid + " -f /dev/null",
