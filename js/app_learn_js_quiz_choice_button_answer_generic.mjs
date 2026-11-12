@@ -124,6 +124,8 @@ export function app_learn_js_quiz_choice_button_answer_generic({
         for (let surface of surfaces) {
           html_font_color_set_inside(surface, letters);
         }
+        ("2026-11-12, at the human's asking: an earlier wrong press is faded as well, so it reads as older than the newest; its letters stay red, so it still says wrong");
+        html_style_opacity(b, "0.6");
         return;
       }
       html_style_opacity(b, "0.5");
