@@ -4068,6 +4068,84 @@ export function reply_proposals() {
       "the longer one ends from ghana, so it also gets where the servant of God is from, the same way any message saying where somebody is from does.",
     ],
   };
+  let tiktok_forth = "May the word of the LORD go forth!";
+  let tiktok_line = prayer_blessing_line("all Christian videos");
+  let tiktok_closing = reply_prayer_closing([tiktok_forth, tiktok_line]);
+  let combined74 = text_combine_multiple([
+    "   let code = ",
+    fn_name("reply_at_most_alphanumeric"),
+    "(20);",
+  ]);
+  let combined75 = text_combine_multiple([
+    "-  let videos = ",
+    fn_name("text_may_the_lord_exclamation"),
+    '("bless all Christian videos");',
+  ]);
+  let combined76 = text_combine_multiple([
+    "-  let request = ",
+    fn_name("text_combine_multiple"),
+    "([forth, videos]);",
+  ]);
+  let combined77 = text_combine_multiple([
+    "-  let prayer = ",
+    fn_name("prayer_wrap"),
+    "(request);",
+  ]);
+  let combined78 = text_combine_multiple([
+    "-  let said = ",
+    fn_name("reply_sequence_outputs"),
+    "(",
+  ]);
+  let combined79 = text_combine_multiple([
+    "+  let link = ",
+    fn_name("reply_sequence"),
+    '(["https", "vt", "tiktok", "com", code]);',
+  ]);
+  let combined80 = text_combine_multiple([
+    "+  let prayed = ",
+    fn_name("reply_on_match_prayer"),
+    "(link, forth);",
+  ]);
+  let combined81 = text_combine_multiple([
+    "+  let said = ",
+    fn_name("reply_on_match_blessings"),
+    "(prayed, blessed);",
+  ]);
+  let tiktok_listed = {
+    title:
+      "a TikTok link adds all Christian videos to the list of blessings, in the one closing prayer",
+    fn: fn_name("reply_tiktok_link"),
+    whole: [],
+    diff: [
+      combined74,
+      '-  let forth = "May the word of the LORD go forth! ";',
+      combined75,
+      combined76,
+      combined77,
+      combined78,
+      '-    ["https", "vt", "tiktok", "com", code],',
+      "-    [prayer],",
+      "-  );",
+      combined79,
+      '+  let forth = "May the word of the LORD go forth!";',
+      combined80,
+      '+  let blessed = ["all Christian videos"];',
+      combined81,
+      "   return said;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "https://vt.tiktok.com/ZSqGDCgCN/",
+        answered: true,
+        outputs: [tiktok_closing],
+      },
+    ],
+    decide: [
+      "the prayer for a TikTok link becomes the one closing prayer every other reply ends with. The word of the LORD going forth is one line of it, and all Christian videos go on the list of blessings.",
+      "so the blessing now reads always bless all Christian videos exceedingly abundantly more than anyone can ask or think, the same words every other blessing uses.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -4120,6 +4198,7 @@ export function reply_proposals() {
     thanked_listed,
     work_listed,
     choir_recorded,
+    tiktok_listed,
   ];
   return proposals;
 }
