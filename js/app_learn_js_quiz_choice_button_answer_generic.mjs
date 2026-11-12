@@ -20,9 +20,11 @@ import { null_not_is } from "./null_not_is.mjs";
 import { html_style_background_color_get } from "./html_style_background_color_get.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { equal } from "./equal.mjs";
-import { app_learn_js_lesson_quiz_wrong_code_letters_color } from "./app_learn_js_lesson_quiz_wrong_code_letters_color.mjs";
+import { app_learn_js_lesson_quiz_wrong_code_newest_background_color } from "./app_learn_js_lesson_quiz_wrong_code_newest_background_color.mjs";
+import { app_learn_js_lesson_quiz_wrong_code_newest_letters_color } from "./app_learn_js_lesson_quiz_wrong_code_newest_letters_color.mjs";
 import { html_font_color_set_inside } from "./html_font_color_set_inside.mjs";
 import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
+import { app_learn_js_lesson_quiz_wrong_code_letters_color } from "./app_learn_js_lesson_quiz_wrong_code_letters_color.mjs";
 export function app_learn_js_quiz_choice_button_answer_generic({
   parent,
   text,
@@ -95,26 +97,33 @@ export function app_learn_js_quiz_choice_button_answer_generic({
     let left = html_style_background_color_get(b);
     let right2 = app_shared_color_code_background();
     let itself_code = equal(left, right2);
-    ("2026-11-12, at the human's asking: a choice written as code keeps its dark block and has its letters turned red while it is the newest wrong press, and goes back to its own letters once another wrong press follows - still spent, not pressable. Not picked: a red block, which hid the code; light red letters kept on every earlier press, which left several choices saying wrong at once");
+    ("2026-11-12, at the human's asking: a choice written as code is filled light red with dark red letters while it is the newest wrong press; once another wrong press follows it goes back to its dark block with light red letters - a different look, still saying wrong, still not pressable. Not picked: its own letters back on an earlier press, which made it look never pressed; a red block under the half-dimming word choices get, which greyed the letters; light red letters on the newest too, which left the newest and the earlier looking alike");
     let surfaces = app_shared_code_surfaces_inside(b);
     if (itself_code) {
       surfaces = [b];
     }
     let coded = list_empty_not_is(surfaces);
     if (coded) {
-      let letters = app_learn_js_lesson_quiz_wrong_code_letters_color();
+      let fill = app_learn_js_lesson_quiz_wrong_code_newest_background_color();
+      let letters_newest =
+        app_learn_js_lesson_quiz_wrong_code_newest_letters_color();
       for (let surface of surfaces) {
-        html_font_color_set_inside(surface, letters);
+        html_style_background_color_set(surface, fill);
+        html_font_color_set_inside(surface, letters_newest);
       }
     } else {
       app_learn_js_lesson_quiz_wrong_set(b);
       html_style_opacity(b, "0.5");
     }
     function dimmed_only() {
-      "the red taken off this press, leaving it not pressable - dimmed too, unless it is code, which goes back to looking as it did";
+      "the red fill taken off this press, leaving it not pressable - dimmed if it is words, its letters light red if it is code";
       restore2();
       html_style_set(b, "pointer-events", "none");
       if (coded) {
+        let letters = app_learn_js_lesson_quiz_wrong_code_letters_color();
+        for (let surface of surfaces) {
+          html_font_color_set_inside(surface, letters);
+        }
         return;
       }
       html_style_opacity(b, "0.5");
