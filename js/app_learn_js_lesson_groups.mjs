@@ -27,6 +27,7 @@ export function app_learn_js_lesson_groups() {
   ("2026-10-29: Branching split in three, at the human's asking: Branching: if, one if; Several branches: else, from the brace-reading lessons before two ifs in a row, through if ... else; Nested branches, from an if inside an if, through else if, which is an if inside an else written shorter. No lesson moved; the order already taught several branches before nested ones. Not picked: else if as a group of its own, four small groups for one idea. Then Multiple branches rather than Several, at the human's asking.");
   ("2026-11-04: Looping: for starts at For, at the human's asking. More looping: while starts at the while lessons that follow For, so those are not filed under for. Not picked: leaving them in the for group, which would name them wrongly; moving For after them, since For comes first for the easiest learning curve, the human's stated goal.");
   ("2026-11-06: Arrays starts at The first item of an array, at the human's asking, a group of its own after the for+if lessons. Named by the one word, since an array has no keyword to show as code. Not picked: Arrays: followed by square brackets as code, which reads as an empty array rather than as the topic.");
+  ("2026-11-12: More looping names for as well as while, at the human's asking, since half its lessons are for lessons");
   let groups = [
     {
       parts: ["Identifiers"],
@@ -113,7 +114,7 @@ export function app_learn_js_lesson_groups() {
       lesson: app_learn_js_lesson_for,
     },
     {
-      parts: ["More looping: ", "while"],
+      parts: ["More looping: ", "while", " and ", "for"],
       lesson: app_learn_js_lesson_while_two_names,
     },
     {
