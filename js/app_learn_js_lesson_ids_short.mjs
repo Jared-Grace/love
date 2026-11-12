@@ -554,6 +554,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_step_two_odd: text_frozen(
       "array_for_step_two_odd",
     ),
+    app_learn_js_lesson_array_for_backwards: text_frozen("array_for_backwards"),
   };
   return short;
 }
