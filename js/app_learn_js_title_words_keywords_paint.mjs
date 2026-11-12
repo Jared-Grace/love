@@ -1,4 +1,3 @@
-import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_split } from "./text_split.mjs";
@@ -9,6 +8,7 @@ import { app_learn_js_operators_classed } from "./app_learn_js_operators_classed
 import { list_includes } from "./list_includes.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { text_letters_digits_none_is } from "./text_letters_digits_none_is.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -24,7 +24,8 @@ export function app_learn_js_title_words_keywords_paint(parent, text) {
     " paints it; keywords next to each other, as in Else if, are one piece of code, else if");
   ("Asked for by the human 2026-10-11: if and else in a title name the keyword, so they look like it. A plural or a mark after the word, Two ifs, one name, paints the if and leaves the s and the comma plain. Weighed: Halve if even, whose if reads as English as well, and painted with the rest since its lesson is an if; a title that means the English word is a reason to reword it rather than to look the word up in a list.");
   ("2026-11-02: while too, asked for by the human: a looping title names the keyword just as a branching one does.");
-  let keywords = ["if", "else", "while"];
+  ("2026-11-12: for too, asked for by the human on An if inside a for. Every title holding the word then, eighteen of them, meant the loop and none the English word");
+  let keywords = ["if", "else", "while", "for"];
   let words = text_split(text, " ");
   let plain = "";
   let code = "";
