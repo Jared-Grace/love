@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_statement_name_not_itself } from "./app_learn_js_lesson_statement_name_not_itself.mjs";
 import { app_learn_js_lesson_array_for_find } from "./app_learn_js_lesson_array_for_find.mjs";
 import { app_learn_js_lesson_array_for_if_odd } from "./app_learn_js_lesson_array_for_if_odd.mjs";
 import { app_learn_js_lesson_array_for_if_even } from "./app_learn_js_lesson_array_for_if_even.mjs";
@@ -570,6 +571,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_statement_name_equal,
     app_learn_js_lesson_statement_name_not_equal,
     app_learn_js_lesson_statement_name_not,
+    app_learn_js_lesson_statement_name_not_itself,
     app_learn_js_lesson_statement_name_or,
     app_learn_js_lesson_statement_name_and,
     app_learn_js_lesson_statement_name_remainder,
