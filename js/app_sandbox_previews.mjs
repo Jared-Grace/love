@@ -11,6 +11,7 @@ import { app_sandbox_previews_messenger_replies_load } from "./app_sandbox_previ
 import { app_sandbox_previews_glyph_built_load } from "./app_sandbox_previews_glyph_built_load.mjs";
 import { app_sandbox_previews_phone_photos_load } from "./app_sandbox_previews_phone_photos_load.mjs";
 import { app_sandbox_previews_bible_offline_check_load } from "./app_sandbox_previews_bible_offline_check_load.mjs";
+import { app_sandbox_previews_sermon_sweep_load } from "./app_sandbox_previews_sermon_sweep_load.mjs";
 export function app_sandbox_previews() {
   "registry of sandbox previews keyed by URL-hash name: add your own file plus one entry here, then open the sandbox app with #<name> — several people can each preview a different thing on the one sandbox app at once";
   "WHAT IS KEPT HERE IS A WAY TO FETCH EACH PREVIEW RATHER THAN THE PREVIEW ITSELF, so a visit downloads the one preview the address names instead of all of them. The page has only ever shown one at a time, and until now every registration was paid for by everybody: seven previews had grown it to a hundred and forty five KiB, of which two thirds could be reached by exactly one of the seven.";
@@ -87,6 +88,7 @@ export function app_sandbox_previews() {
     glyph_built: app_sandbox_previews_glyph_built_load,
     phone_photos: app_sandbox_previews_phone_photos_load,
     bible_offline_check: app_sandbox_previews_bible_offline_check_load,
+    sermon_sweep: app_sandbox_previews_sermon_sweep_load,
   };
   return previews;
 }
