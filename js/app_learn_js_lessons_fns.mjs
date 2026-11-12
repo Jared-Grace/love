@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_find } from "./app_learn_js_lesson_array_for_find.mjs";
 import { app_learn_js_lesson_array_for_if_odd } from "./app_learn_js_lesson_array_for_if_odd.mjs";
 import { app_learn_js_lesson_array_for_if_even } from "./app_learn_js_lesson_array_for_if_even.mjs";
 import { app_learn_js_lesson_array_for_backwards_step_two } from "./app_learn_js_lesson_array_for_backwards_step_two.mjs";
@@ -743,6 +744,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_backwards_step_two,
     app_learn_js_lesson_array_for_if_even,
     app_learn_js_lesson_array_for_if_odd,
+    app_learn_js_lesson_array_for_find,
   ];
   return fns;
 }

@@ -560,6 +560,7 @@ export function app_learn_js_lesson_ids_short() {
     ),
     app_learn_js_lesson_array_for_if_even: text_frozen("array_for_if_even"),
     app_learn_js_lesson_array_for_if_odd: text_frozen("array_for_if_odd"),
+    app_learn_js_lesson_array_for_find: text_frozen("array_for_find"),
   };
   return short;
 }

@@ -1,9 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { json_to } from "./json_to.mjs";
 import { equal } from "./equal.mjs";
@@ -29,12 +29,12 @@ import { list_random_item } from "./list_random_item.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_find } from "./list_find.mjs";
-import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -57,6 +57,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   ("item_counts is the sizes a question's array may have: only 3 while the loop is written to stop at 3, and several once it stops at a.length, which is what a.length is for");
   let bound = property_get(options, "bound");
   let bound_fewer = property_get(options, "bound_fewer");
+  ("2026-11-12: a lesson may name one item every question's array holds, at a place drawn at random, so a loop looking for that item always has one to find");
+  let item_always = property_get_or(options, "item_always", null);
   let name = "a";
   let index_name = "i";
   let less = js_operator_less_than_symbol();
@@ -74,6 +76,9 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let op = property_get_or(start_fewer, "op", less);
     let end_number = property_get_or(start_fewer, "end", null);
     let remainder = property_get_or(start_fewer, "remainder", null);
+    ('2026-11-12: a way may instead name the whole question its if asks, as a[i] === "joy", and what it writes out, as i rather than the item a[i] - so a loop can look for an item and say where it is');
+    let condition_code = property_get_or(start_fewer, "condition", null);
+    let logs = property_get_or(start_fewer, "logs", read);
     let end2 = bound;
     if (fewer) {
       end2 = bound_fewer;
@@ -90,6 +95,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
       fewer,
       step,
       remainder,
+      condition: condition_code,
+      logs,
     };
     return r2;
   }
@@ -181,11 +188,17 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let value2 = property_get(way, "step");
     let stepped = step_code(value2) + ";";
     ("2026-11-12: a way may name a remainder, and then the item is written out only inside if (i % 2 === remainder) - every index visited, only the even or the odd ones let through. Without one the loop writes every index it visits, as every lesson before that one does");
-    let inside = [logged];
+    let logs2 = property_get(way, "logs");
+    let logged_way = js_code_console_log_statement(logs2);
+    let inside = [logged_way];
     let remainder2 = property_get(way, "remainder");
     if (not_equal(remainder2, null)) {
       let asked = js_code_remainder_2_equal(index_name, remainder2);
-      inside = js_code_if_lines(asked, logged);
+      inside = js_code_if_lines(asked, logged_way);
+    }
+    let condition3 = property_get(way, "condition");
+    if (not_equal(condition3, null)) {
+      inside = js_code_if_lines(condition3, logged_way);
     }
     let statements = list_concat(inside, [stepped]);
     let lines = js_code_for_start_condition_update_lines(
@@ -218,6 +231,13 @@ export function app_learn_js_lesson_array_for_generic(options) {
         item_count = list_get(item_counts, k);
       }
       let items3 = list_shuffle_take(fruits, item_count);
+      if (not_equal(item_always, null)) {
+        let others2 = list_without(fruits, item_always);
+        let count = subtract(item_count, 1);
+        items3 = list_shuffle_take(others2, count);
+        items3.push(item_always);
+        list_shuffle(items3);
+      }
       let code3 = program_of(items3, right);
       codes2.push(code3);
     }
