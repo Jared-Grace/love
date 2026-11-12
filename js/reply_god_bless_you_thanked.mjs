@@ -1,7 +1,8 @@
+import { reply_blessings_you_family_church_country } from "./reply_blessings_you_family_church_country.mjs";
+import { reply_on_match_blessings } from "./reply_on_match_blessings.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
 import { reply_phrase_you } from "./reply_phrase_you.mjs";
 import { reply_sequence_outputs } from "./reply_sequence_outputs.mjs";
 export function reply_god_bless_you_thanked() {
@@ -14,8 +15,9 @@ export function reply_god_bless_you_thanked() {
     " Thank you for the blessing! ",
     smile,
   ]);
-  let blessing = prayer_blessing_expand();
   let you = reply_phrase_you();
-  let said = reply_sequence_outputs(["god", "bless", you], [thanks, blessing]);
+  let thanked = reply_sequence_outputs(["god", "bless", you], [thanks]);
+  let blessed = reply_blessings_you_family_church_country();
+  let said = reply_on_match_blessings(thanked, blessed);
   return said;
 }
