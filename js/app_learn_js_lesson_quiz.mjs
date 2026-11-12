@@ -1,5 +1,3 @@
-import { app_learn_js_lesson_progress_render } from "./app_learn_js_lesson_progress_render.mjs";
-import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_quiz_answer_label_set } from "./app_learn_js_lesson_quiz_answer_label_set.mjs";
 import { app_learn_js_lesson_quiz_qa_question } from "./app_learn_js_lesson_quiz_qa_question.mjs";
@@ -9,7 +7,9 @@ import { app_learn_js_lesson_quiz_correction_code_set } from "./app_learn_js_les
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_learn_js_progress_quiz_correct_record } from "./app_learn_js_progress_quiz_correct_record.mjs";
-import { app_shared_success_message } from "./app_shared_success_message.mjs";
+import { app_learn_js_lesson_progress_render } from "./app_learn_js_lesson_progress_render.mjs";
+import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
+import { app_learn_js_success_message } from "./app_learn_js_success_message.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 export function app_learn_js_lesson_quiz({
@@ -98,7 +98,7 @@ export function app_learn_js_lesson_quiz({
     app_learn_js_lesson_progress_render(context);
     html_data_test_quiz_correct_bump();
     html_clear(container_success_message);
-    app_shared_success_message(container_success_message);
+    app_learn_js_success_message(container_success_message);
     html_visibility_visible(container_success_message);
     await sleep_success_color();
     let item = next_get();

@@ -1,4 +1,3 @@
-import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -10,9 +9,10 @@ import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer
 import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_feedback_slot_style } from "./app_learn_js_feedback_slot_style.mjs";
+import { each } from "./each.mjs";
 import { app_learn_js_feedback_cell } from "./app_learn_js_feedback_cell.mjs";
 import { app_learn_js_content_cap } from "./app_learn_js_content_cap.mjs";
-import { app_shared_success_message } from "./app_shared_success_message.mjs";
+import { app_learn_js_success_message } from "./app_learn_js_success_message.mjs";
 import { app_learn_js_quiz_index_get } from "./app_learn_js_quiz_index_get.mjs";
 export function app_learn_js_lesson_quiz_index(
   info,
@@ -63,7 +63,7 @@ export function app_learn_js_lesson_quiz_index(
     app_learn_js_feedback_cell,
   );
   app_learn_js_content_cap(container_success_message);
-  app_shared_success_message(container_success_message);
+  app_learn_js_success_message(container_success_message);
   let quiz_index = app_learn_js_quiz_index_get(context);
   let r = {
     on_question,
