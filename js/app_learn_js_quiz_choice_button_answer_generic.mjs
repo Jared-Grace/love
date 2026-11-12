@@ -17,9 +17,12 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { equal } from "./equal.mjs";
+import { html_style_background_color_get } from "./html_style_background_color_get.mjs";
+import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
 import { app_learn_js_lesson_quiz_wrong_code_letters_color } from "./app_learn_js_lesson_quiz_wrong_code_letters_color.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_font_color_set_inside } from "./html_font_color_set_inside.mjs";
 export function app_learn_js_quiz_choice_button_answer_generic({
   parent,
   text,
@@ -88,6 +91,10 @@ export function app_learn_js_quiz_choice_button_answer_generic({
     if (null_not_is(earlier)) {
       earlier();
     }
+    ("a choice can be a code block itself rather than a button holding one, as each program is in a backwards quiz; asked before the red goes on, while its own background still says so");
+    let left = html_style_background_color_get(b);
+    let right2 = app_shared_color_code_background();
+    let itself_code = equal(left, right2);
     let coded = app_learn_js_lesson_quiz_wrong_set(b);
     if (not(coded)) {
       html_style_opacity(b, "0.5");
@@ -103,8 +110,13 @@ export function app_learn_js_quiz_choice_button_answer_generic({
           let restore3 = html_styles_inline_restore_later(surface);
           let list2 = spent_get();
           list_add(list2, restore3);
-          html_font_color_set(surface, letters);
+          html_font_color_set_inside(surface, letters);
         }
+        return;
+      }
+      if (itself_code) {
+        let letters2 = app_learn_js_lesson_quiz_wrong_code_letters_color();
+        html_font_color_set_inside(b, letters2);
         return;
       }
       html_style_opacity(b, "0.5");
