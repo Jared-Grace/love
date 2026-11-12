@@ -42,6 +42,7 @@ export function app_learn_js_lesson_array_last() {
   ("The one new fact is that an index can be worked out rather than written as a number: a[a.length - 1] reads the item at the last index, whatever the array holds. Arrays hold two to five items, so the last item and its index change from question to question.");
   ("Reading forwards, the wrong answers are the last index itself - writing out the index rather than reading the item at it - the item before the last, and the first item. Reading backwards, the wrong programs are the same array writing out a.length - 1, and the same array reading a[a.length - 2]. Not used: a[a.length], whose answer, undefined, is not taught yet.");
   ("No stepping, for the reason the index lessons give: the tracer cannot yet read an array.");
+  ("2026-11-12: stepping turned on, at the human's asking after a student asked about this lesson: a[a.length - 1] is three steps, the length, the take away, the item, and the tracer now reads arrays, as the for lessons over arrays step");
   ("The writing is a first draft by Claude 2026-11-09.");
   let name = "a";
   let sizes = [2, 3, 4, 5];
@@ -206,7 +207,7 @@ export function app_learn_js_lesson_array_last() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps: false,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

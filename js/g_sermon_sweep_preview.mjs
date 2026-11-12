@@ -1,4 +1,3 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
@@ -8,7 +7,11 @@ import { html_div } from "./html_div.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
+import { equal } from "./equal.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
+import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
+import { noop } from "./noop.mjs";
+import { not } from "./not.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 export async function g_sermon_sweep_preview() {
@@ -38,14 +41,20 @@ export async function g_sermon_sweep_preview() {
     let key = property_get(one, "key");
     let decision = property_get(one, "decision");
     let diff = property_get(one, "diff");
-    let block = html_div(listed);
     let title = chapter_code + " verse " + key;
-    let heading = html_p_text(block, title);
+    ("★ A DECIDED VERSE IS SHUT UNDER ITS TITLE, and its title is the button that shows it again. The diffs are the long part of the page, so leaving decided ones open buries the verses still waiting; the same folding card the reply rules page shuts its approved tests in.");
+    let fold = app_shared_container_blue_collapsible(listed, title, noop);
+    let block = property_get(fold, "body");
+    let heading = property_get(fold, "title_mark");
+    let collapsed_set = property_get(fold, "collapsed_set");
     function heading_set(said) {
       let decided = equal(said, null) ? "" : " - " + said;
       html_text_content_set(heading, title + decided);
     }
     heading_set(decision);
+    let waiting_this = equal(decision, null);
+    let n = not(waiting_this);
+    collapsed_set(n);
     app_reply_rules_diff_show(block, diff);
     let buttons = html_div(block);
     async function decide(word) {
@@ -56,6 +65,7 @@ export async function g_sermon_sweep_preview() {
         word,
       ]);
       heading_set(word);
+      collapsed_set(true);
     }
     async function approve() {
       await decide("approved");
