@@ -71,8 +71,9 @@ export function app_learn_js_lesson_array_for_step_two_odd() {
     example(box_three, items_five);
     walk(box_three, items_five);
   }
+  ("Titled 2026-11-12 after the human asked for Every other item (odd), so it stands beside Every other item as its partner. The word indexes is added because odd items alone reads as the first, third and fifth, which are the items at the even indexes 0, 2 and 4 - the other half from the one this lesson writes out.");
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "The other half",
+    "Every other item (odd indexes)",
     "let i = 1; ... i += 2",
   );
   let lesson = app_learn_js_lesson_array_for_generic({
