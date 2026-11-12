@@ -1,12 +1,12 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_sweep_path } from "./g_sermon_sweep_path.mjs";
 import { file_exists } from "./file_exists.mjs";
+import { not } from "./not.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_sermon_lines_file_path } from "./g_sermon_lines_file_path.mjs";
 import { list_map } from "./list_map.mjs";
-import { diff_lines_signed_positional } from "./diff_lines_signed_positional.mjs";
+import { diff_lines_signed_aligned } from "./diff_lines_signed_aligned.mjs";
 export async function g_sermon_sweep_review() {
   arguments_assert(arguments, 0);
   ("Each proposed rewording of an already-written verse, set beside the lines that verse has now as a signed difference, so it can be drawn and decided on.");
@@ -33,7 +33,7 @@ export async function g_sermon_sweep_review() {
     let before = await file_read_json(lines_path);
     let texts_before = list_map(before, text_of);
     let texts_after = list_map(after, text_of);
-    let diff = diff_lines_signed_positional(texts_before, texts_after);
+    let diff = diff_lines_signed_aligned(texts_before, texts_after);
     shown.push({
       chapter_code,
       key,
