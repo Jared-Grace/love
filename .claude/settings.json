@@ -2982,6 +2982,7 @@
       "Bash(node scripts/ai.mjs bible_glyph_chapters_literal_upload:*)",
       "Bash(node scripts/ai.mjs app_learn_en_gloss_urdu_write_file_from_temp:*)",
       "Bash(node scripts/ai.mjs facebook_page_lock_holder:*)",
+      "Bash(node scripts/ai.mjs g_sermon_sweep_review:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5829,7 +5830,8 @@
       "Bash(node scripts/aig.mjs qa_commit_named_remembered_is:*)",
       "Bash(node scripts/aig.mjs bible_glyph_chapters_literal_upload:*)",
       "Bash(node scripts/aig.mjs app_learn_en_gloss_urdu_write_file_from_temp:*)",
-      "Bash(node scripts/aig.mjs facebook_page_lock_holder:*)"
+      "Bash(node scripts/aig.mjs facebook_page_lock_holder:*)",
+      "Bash(node scripts/aig.mjs g_sermon_sweep_review:*)"
     ],
     "defaultMode": "acceptEdits"
   },
