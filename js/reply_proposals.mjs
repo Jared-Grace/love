@@ -4003,6 +4003,71 @@ export function reply_proposals() {
       "two long real messages of this shape are recorded as getting no reply. Once this goes in, they are written again from what the rules then say.",
     ],
   };
+  let choir_message =
+    "How are you my dear brother I am a choir leader My name is Stephen Mark and I'm 32nd year old I do ministry work in Ghana. I want others to join me so that together we can bring glory to God.And this is his commandment, that we should believe in the name of his Son Jesus Christ, and love one another, as he hath commanded us.For in the word of the Lord it is written in the  first John, verses 7 through 10: Beloved, let us love one another, for love is from God; and everyone who loves has been born of God and knows God. He who does not love does not know God, for God is love.  In this was manifested the love of God among us, because God sent his only begotten Son into the world, that we might live through him. Herein is love, not that we loved God, but that he loved us, and sent his Son to be the propitiation for our sins.And we should also love each other and stay connected to each other.And I ask you to pray for me, my dear brother";
+  let choir_message_from = text_combine_multiple([
+    choir_message,
+    " and myself Stephen Mark from ghana",
+  ]);
+  let choir_line = prayer_blessing_line(
+    "your ministry, your worship, the people of Ghana, you, your family, your church and your country",
+  );
+  let choir_will = reply_prayer_will_done();
+  let choir_prayer = reply_prayer_closing([
+    choir_will,
+    pray_listed_abundance,
+    choir_line,
+  ]);
+  let choir_verses = "📖 1 John 3:23; 4:7-10: Amen! 🙏";
+  let choir_good =
+    "👌 The servant of God is doing good 💯 through the grace of God, because 📖 all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28) However, please pray that the servant of God will be perfectly loving and healed🙏";
+  let choir_name =
+    '🙏 The servant of God is called Jared Patten Mathis - "When Jared was 162 years old, he became the father of Enoch." Genesis 5:18 🤝';
+  let choir_age = "The servant of God is about 37 years old";
+  let choir_glory = reply_choices_glory();
+  let choir_from = reply_choices_location();
+  let choir_outputs = [
+    choir_verses,
+    choir_good,
+    choir_name,
+    choir_age,
+    choir_glory,
+    choir_prayer,
+  ];
+  let choir_outputs_from = [
+    choir_verses,
+    choir_good,
+    choir_name,
+    choir_age,
+    choir_glory,
+    choir_from,
+    choir_prayer,
+  ];
+  let choir_recorded = {
+    title:
+      "the choir leader in Ghana who asks for prayer gets one closing prayer, written into the worked cases",
+    fn: fn_name("reply_ministry_work"),
+    whole: [],
+    diff: ["     return rule;"],
+    cases: [
+      {
+        from: "c157f7e506a2629f",
+        message: choir_message,
+        answered: true,
+        outputs: choir_outputs,
+      },
+      {
+        from: "bbbc8bb621f025ac",
+        message: choir_message_from,
+        answered: true,
+        outputs: choir_outputs_from,
+      },
+    ],
+    decide: [
+      "nothing in the code changes. These two worked messages are recorded as getting no reply, and now get the reply shown. Approving writes it into the worked cases, and the gate goes green.",
+      "the longer one ends from ghana, so it also gets where the servant of God is from, the same way any message saying where somebody is from does.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -4054,6 +4119,7 @@ export function reply_proposals() {
     meeting_listed,
     thanked_listed,
     work_listed,
+    choir_recorded,
   ];
   return proposals;
 }
