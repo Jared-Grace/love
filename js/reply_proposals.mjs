@@ -3854,6 +3854,74 @@ export function reply_proposals() {
       "a pastor who says the meeting was blessed gets one line: your ministry, you and everyone at the meeting. Before, that was two separate prayers.",
     ],
   };
+  let thanked_removed_blessing = text_combine_multiple([
+    "-  let blessing = ",
+    fn_name("prayer_blessing_expand"),
+    "();",
+  ]);
+  let thanked_kept_you = text_combine_multiple([
+    "   let you = ",
+    fn_name("reply_phrase_you"),
+    "();",
+  ]);
+  let thanked_removed_said = text_combine_multiple([
+    "-  let said = ",
+    fn_name("reply_sequence_outputs"),
+    '(["god", "bless", you], [thanks, blessing]);',
+  ]);
+  let thanked_added_thanked = text_combine_multiple([
+    "+  let thanked = ",
+    fn_name("reply_sequence_outputs"),
+    '(["god", "bless", you], [thanks]);',
+  ]);
+  let thanked_added_blessed = text_combine_multiple([
+    "+  let blessed = ",
+    fn_name("reply_blessings_you_family_church_country"),
+    "();",
+  ]);
+  let thanked_added_said = text_combine_multiple([
+    "+  let said = ",
+    fn_name("reply_on_match_blessings"),
+    "(thanked, blessed);",
+  ]);
+  let line12 = prayer_blessing_line(
+    "you, your family, your church and your country",
+  );
+  let thanked_prayer = reply_prayer_closing([line12]);
+  let thanked_outputs = [bless_thanks, thanked_prayer];
+  let thanked_listed = {
+    title:
+      "God bless you adds you, your family, your church and your country to the list of blessings",
+    fn: fn_name("reply_god_bless_you_thanked"),
+    whole: [fn_name("reply_blessings_you_family_church_country")],
+    diff: [
+      thanked_removed_blessing,
+      thanked_kept_you,
+      thanked_removed_said,
+      thanked_added_thanked,
+      thanked_added_blessed,
+      thanked_added_said,
+      "   return said;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "God bless you",
+        answered: true,
+        outputs: thanked_outputs,
+      },
+      {
+        from: "",
+        message: "God bless you dear brother",
+        answered: true,
+        outputs: thanked_outputs,
+      },
+    ],
+    decide: [
+      "the thanks for the blessing stays where it is. The blessing on you, your family, your church and your country moves into the list, so it is asked for in the one blessing line of the closing prayer.",
+      "the four are now written once, in their own small list, so the pray for me rule can use the same list next instead of spelling them again.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -3903,6 +3971,7 @@ export function reply_proposals() {
     blessings_listed,
     pray_for_me_listed,
     meeting_listed,
+    thanked_listed,
   ];
   return proposals;
 }

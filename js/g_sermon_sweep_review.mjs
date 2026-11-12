@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_sweep_path } from "./g_sermon_sweep_path.mjs";
 import { file_exists } from "./file_exists.mjs";
@@ -13,8 +14,9 @@ export async function g_sermon_sweep_review() {
   ("Only the text of each line is compared. The indices ride along unchanged in a rewording, and a difference over them would be noise beside the words a reader is actually deciding on.");
   let path = g_sermon_sweep_path();
   let exists = await file_exists(path);
-  if (!exists) {
-    return [];
+  if (not(exists)) {
+    let r = [];
+    return r;
   }
   let entries = await file_read_json(path);
   function text_of(line) {

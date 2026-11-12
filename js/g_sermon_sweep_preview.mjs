@@ -1,0 +1,69 @@
+import { equal } from "./equal.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_body_div } from "./html_body_div.mjs";
+import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
+import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
+import { html_p_text } from "./html_p_text.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_shared_api_named } from "./app_shared_api_named.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { property_get } from "./property_get.mjs";
+import { html_text_content_set } from "./html_text_content_set.mjs";
+import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+export async function g_sermon_sweep_preview() {
+  arguments_assert(arguments, 0);
+  ("Proposed rewordings of already-written sermon verses, on the sandbox app at hash sermon_sweep: each verse showing its current lines against the proposed ones as a difference, with a button to approve and one to reject.");
+  ("★ NOTHING CHANGES IN A VERSE UNTIL ITS APPROVE IS PRESSED. The proposals sit in their own file beside the lines files, so a whole book can be proposed, read on a phone, and turned down verse by verse without any sermon moving.");
+  ("It runs on the serving machine, because the lines files are kept outside every repo, so it works on the dev server only.");
+  let root = html_body_div();
+  html_font_sans_serif_set_html();
+  html_style_overflow_wrap(root, "anywhere");
+  html_p_text(root, "Changes to past sermons, waiting on you.");
+  let status = html_p_text(root, "Reading...");
+  let listed = html_div(root);
+  let shown = await app_shared_api_named(fn_name("g_sermon_sweep_review"), []);
+  function waiting_is(one) {
+    let decision = property_get(one, "decision");
+    let eq = equal(decision, null);
+    return eq;
+  }
+  let waiting = shown.filter(waiting_is);
+  html_text_content_set(
+    status,
+    waiting.length + " waiting, " + shown.length + " in all.",
+  );
+  for (let one of shown) {
+    let chapter_code = property_get(one, "chapter_code");
+    let key = property_get(one, "key");
+    let decision = property_get(one, "decision");
+    let diff = property_get(one, "diff");
+    let block = html_div(listed);
+    let title = chapter_code + " verse " + key;
+    let heading = html_p_text(block, title);
+    function heading_set(said) {
+      let decided = equal(said, null) ? "" : " - " + said;
+      html_text_content_set(heading, title + decided);
+    }
+    heading_set(decision);
+    app_reply_rules_diff_show(block, diff);
+    let buttons = html_div(block);
+    async function decide(word) {
+      heading_set("saving...");
+      await app_shared_api_named(fn_name("g_sermon_sweep_decide"), [
+        chapter_code,
+        key,
+        word,
+      ]);
+      heading_set(word);
+    }
+    async function approve() {
+      await decide("approved");
+    }
+    async function reject() {
+      await decide("rejected");
+    }
+    app_shared_button_uncolored(buttons, "Approve", approve);
+    app_shared_button_uncolored(buttons, "Reject", reject);
+  }
+}

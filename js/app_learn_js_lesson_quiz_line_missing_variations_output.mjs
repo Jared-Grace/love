@@ -1,12 +1,12 @@
-import { subtract } from "./subtract.mjs";
+import { list_indexes } from "./list_indexes.mjs";
+import { list_get } from "./list_get.mjs";
 import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_places_get } from "./list_places_get.mjs";
+import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { list_indexes } from "./list_indexes.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_get } from "./list_get.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_places_get } from "./list_places_get.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_set } from "./list_set.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -17,7 +17,6 @@ import { list_permutations } from "./list_permutations.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_places_set_copy } from "./list_places_set_copy.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_add } from "./list_add.mjs";
 import { app_learn_js_quiz_string_tokens_merge } from "./app_learn_js_quiz_string_tokens_merge.mjs";
 import { js_tokens_to_code } from "./js_tokens_to_code.mjs";
 import { each } from "./each.mjs";
@@ -32,22 +31,19 @@ export function app_learn_js_lesson_quiz_line_missing_variations_output(
   "Declines past 5040 orders, which costs nothing: every order kept here is over and above the answers the quiz already accepts.";
   let none = [];
   let places = list_indexes(variation);
-  let left = list_size(variation);
-  let last = subtract(left, 1);
-  function quoted_is(at) {
-    if (equal(at, 0)) {
-      return false;
+  ('2026-11-12, from the human\'s report on the lesson logging a.length - 1: a word is inside quotes when an odd number of quote marks stand before it. It used to be any tile with a quote mark either side, and the comma in " , " between two words has one either side too, so the commas were dealt round as words: with five items that made nine, past the limit, and no other order was accepted at all');
+  let quoted = [];
+  let inside = false;
+  for (let at of places) {
+    let token = list_get(variation, at);
+    if (equal(token, '"')) {
+      inside = not(inside);
+      continue;
     }
-    if (equal(at, last)) {
-      return false;
+    if (inside) {
+      list_add(quoted, at);
     }
-    let index2 = subtract(at, 1);
-    let before = list_get(variation, index2);
-    let after = list_get(variation, at + 1);
-    let r = equal(before, '"') && equal(after, '"');
-    return r;
   }
-  let quoted = list_filter(places, quoted_is);
   let words = list_places_get(variation, quoted);
   let count = list_size(words);
   if (less_than(count, 2)) {
@@ -65,8 +61,8 @@ export function app_learn_js_lesson_quiz_line_missing_variations_output(
       let json = json_to(written);
       return json;
     }
-    let r2 = catch_null(run);
-    return r2;
+    let r = catch_null(run);
+    return r;
   }
   let line_original = list_get(lines, index);
   let output_original = output_of(line_original);
