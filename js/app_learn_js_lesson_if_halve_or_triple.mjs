@@ -187,7 +187,7 @@ export function app_learn_js_lesson_if_halve_or_triple() {
     "Halve, or times 3 plus 1",
     "else { n *= 3; n += 1; }",
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

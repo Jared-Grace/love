@@ -9,6 +9,6 @@ export function app_learn_js_lesson_statement_name_itself_sum() {
   ("It is the line a learner will write more than any other once counting starts, which is why it is worth a screen of its own rather than being met for the first time inside something larger.");
   ("Numbers rather than words, for the same reason as the two screens before: a plus between two pieces of text does something a learner has never been told about.");
   let pair = app_learn_js_lesson_statement_name_itself_sum_pair();
-  let lesson = app_learn_js_lesson_statement_name_pair_first(pair, false);
+  let lesson = app_learn_js_lesson_statement_name_pair_first(pair, true);
   return lesson;
 }

@@ -187,7 +187,7 @@ export function app_learn_js_lesson_if_and_if_not() {
     "If and if not",
     "if (a) ... if (!a) ...",
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

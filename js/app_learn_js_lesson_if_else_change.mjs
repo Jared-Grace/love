@@ -189,7 +189,7 @@ export function app_learn_js_lesson_if_else_change() {
     "Else with changes",
     "else { n *= 2; }",
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

@@ -300,7 +300,7 @@ export function app_learn_js_lesson_statement_name_rectangles_columns_between() 
       [[r2, "6"], end_color],
       [[between, "1"], columns_color],
     ],
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

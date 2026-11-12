@@ -69,7 +69,7 @@ export function app_learn_js_lesson_statement_name_copy() {
     let found = [v, v2, v3];
     return found;
   }
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     backwards_decoys,
     above: app_learn_js_lesson_statement_name_copy_above,
     name_id,

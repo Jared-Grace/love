@@ -20,7 +20,7 @@ export function app_learn_js_lesson_comment_after_code() {
     app_learn_js_lesson_comment_after_code_batch,
     eval_console_log_lines,
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above: app_learn_js_lesson_comment_after_code_above,
     name_id,
     batch_get: batch,

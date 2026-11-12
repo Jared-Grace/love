@@ -196,7 +196,7 @@ export function app_learn_js_lesson_else_if_order() {
     values_changed,
     above,
     name_id,
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

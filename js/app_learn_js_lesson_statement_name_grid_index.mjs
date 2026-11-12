@@ -217,7 +217,7 @@ export function app_learn_js_lesson_statement_name_grid_index() {
       [["row"], color_row],
       [["column", "columns"], color_column],
     ],
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

@@ -50,7 +50,7 @@ export function app_learn_js_lesson_statement_name_swap() {
       ],
       ["", name_a, " and ", name_b, " have swapped:"],
     ],
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

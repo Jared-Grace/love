@@ -50,7 +50,7 @@ export function app_learn_js_lesson_statement_name_identifier() {
     let found = [swapped, name_written, written_twice];
     return found;
   }
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     backwards_decoys,
     above: app_learn_js_lesson_statement_name_identifier_above,
     name_id,

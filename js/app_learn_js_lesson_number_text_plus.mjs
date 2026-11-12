@@ -141,7 +141,7 @@ export function app_learn_js_lesson_number_text_plus() {
     "A number plus a string",
     '5 + " is a number"',
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

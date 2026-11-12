@@ -101,7 +101,7 @@ export function app_learn_js_lesson_statement_name_not() {
     let lines_name = list_concat([held], answer_lines);
     app_learn_js_code_lines_writes_out(box_name, lines_name, value_false);
   }
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

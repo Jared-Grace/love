@@ -213,7 +213,7 @@ export function app_learn_js_lesson_if_two_ifs() {
     "Two ifs",
     "if (a < 5) ... if (b < 5) ...",
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

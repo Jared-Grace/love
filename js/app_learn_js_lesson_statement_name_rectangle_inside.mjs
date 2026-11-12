@@ -393,7 +393,7 @@ export function app_learn_js_lesson_statement_name_rectangle_inside() {
       [[r, b, r2, b2, "4", "6", "3"], end_color],
     ],
     answer_count: 2,
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

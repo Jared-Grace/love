@@ -59,7 +59,7 @@ export function app_learn_js_lesson_statement_name_temp_keep() {
       ],
       ["After ", line_fill, ", ", temp, " still holds what ", name_a, " held:"],
     ],
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

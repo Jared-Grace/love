@@ -124,7 +124,7 @@ export function app_learn_js_lesson_statement_name_seat_less() {
     decoys: null,
     example_pointers: null,
     answer_count: 2,
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

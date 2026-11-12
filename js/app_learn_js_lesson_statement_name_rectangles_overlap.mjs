@@ -409,7 +409,7 @@ export function app_learn_js_lesson_statement_name_rectangles_overlap() {
       [[right, bottom, "3"], end_color],
     ],
     answer_count: 2,
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

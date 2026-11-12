@@ -163,7 +163,7 @@ export function app_learn_js_lesson_statement_name_digit_split() {
     example_pointers: app_learn_js_example_number_part_pointed_draw([
       [["3"], color3],
     ]),
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

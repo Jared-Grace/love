@@ -192,7 +192,7 @@ export function app_learn_js_lesson_if_two_changes() {
     "Two changes in an if",
     "if (n < 5) { n *= 3; n += 1; }",
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

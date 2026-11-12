@@ -175,7 +175,7 @@ export function app_learn_js_lesson_if_even() {
     "If even",
     "if (n % 2 === 0) { ... }",
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

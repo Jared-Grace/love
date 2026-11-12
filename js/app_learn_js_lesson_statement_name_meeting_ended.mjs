@@ -341,7 +341,7 @@ export function app_learn_js_lesson_statement_name_meeting_ended() {
       [[e2, "12"], end_color],
     ],
     answer_count: 2,
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

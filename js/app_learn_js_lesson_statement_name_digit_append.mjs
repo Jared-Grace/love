@@ -121,7 +121,7 @@ export function app_learn_js_lesson_statement_name_digit_append() {
       [["12"], color],
       [["3"], color4],
     ]),
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

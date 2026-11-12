@@ -221,7 +221,7 @@ export function app_learn_js_lesson_if_less_than() {
     "If less than",
     "if (2 < 3) { ... }",
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

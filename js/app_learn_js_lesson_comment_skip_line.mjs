@@ -21,7 +21,7 @@ export function app_learn_js_lesson_comment_skip_line() {
     app_learn_js_lesson_comment_skip_line_batch,
     eval_console_log_lines,
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above: app_learn_js_lesson_comment_skip_line_above,
     name_id,
     batch_get: batch,

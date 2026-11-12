@@ -151,7 +151,7 @@ export function app_learn_js_lesson_if_halve_even() {
     "Halve if even",
     "if (n % 2 === 0) { n /= 2; }",
   );
-  let lesson = app_learn_js_lesson_code_logged({
+  let lesson = app_learn_js_lesson_code_logged({steps: true,
     above,
     name_id,
     batch_get: batch,

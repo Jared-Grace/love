@@ -98,7 +98,7 @@ export function app_learn_js_lesson_statement_name_page_start() {
     ],
     decoys: null,
     example_pointers: null,
-    steps: false,
+    steps: true,
   });
   return lesson;
 }
