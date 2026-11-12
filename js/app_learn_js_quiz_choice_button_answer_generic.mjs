@@ -17,12 +17,12 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { equal } from "./equal.mjs";
 import { html_style_background_color_get } from "./html_style_background_color_get.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
+import { equal } from "./equal.mjs";
 import { app_learn_js_lesson_quiz_wrong_code_letters_color } from "./app_learn_js_lesson_quiz_wrong_code_letters_color.mjs";
 import { html_font_color_set_inside } from "./html_font_color_set_inside.mjs";
+import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
 export function app_learn_js_quiz_choice_button_answer_generic({
   parent,
   text,
@@ -95,28 +95,26 @@ export function app_learn_js_quiz_choice_button_answer_generic({
     let left = html_style_background_color_get(b);
     let right2 = app_shared_color_code_background();
     let itself_code = equal(left, right2);
-    let coded = app_learn_js_lesson_quiz_wrong_set(b);
-    if (not(coded)) {
+    ("2026-11-12, at the human's asking: a choice written as code keeps its dark block and has its letters turned red while it is the newest wrong press, and goes back to its own letters once another wrong press follows - still spent, not pressable. Not picked: a red block, which hid the code; light red letters kept on every earlier press, which left several choices saying wrong at once");
+    let surfaces = app_shared_code_surfaces_inside(b);
+    if (itself_code) {
+      surfaces = [b];
+    }
+    let coded = list_empty_not_is(surfaces);
+    if (coded) {
+      let letters = app_learn_js_lesson_quiz_wrong_code_letters_color();
+      for (let surface of surfaces) {
+        html_font_color_set_inside(surface, letters);
+      }
+    } else {
+      app_learn_js_lesson_quiz_wrong_set(b);
       html_style_opacity(b, "0.5");
     }
     function dimmed_only() {
-      "the red taken off this press, leaving it dimmed and not pressable";
+      "the red taken off this press, leaving it not pressable - dimmed too, unless it is code, which goes back to looking as it did";
       restore2();
       html_style_set(b, "pointer-events", "none");
       if (coded) {
-        ("2026-11-12, at the human's asking: a choice written as code keeps its dark block and has its letters turned a light red, rather than greyed, so it still reads as wrong; each block's letters are put back once the right one is pressed");
-        let letters = app_learn_js_lesson_quiz_wrong_code_letters_color();
-        for (let surface of app_shared_code_surfaces_inside(b)) {
-          let restore3 = html_styles_inline_restore_later(surface);
-          let list2 = spent_get();
-          list_add(list2, restore3);
-          html_font_color_set_inside(surface, letters);
-        }
-        return;
-      }
-      if (itself_code) {
-        let letters2 = app_learn_js_lesson_quiz_wrong_code_letters_color();
-        html_font_color_set_inside(b, letters2);
         return;
       }
       html_style_opacity(b, "0.5");
