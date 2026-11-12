@@ -11,6 +11,9 @@ import { church_fathers_article_url } from "./church_fathers_article_url.mjs";
 import { catena_aurea_word_articles_fetched } from "./catena_aurea_word_articles_fetched.mjs";
 import { catena_aurea_article_url } from "./catena_aurea_article_url.mjs";
 import { catena_aurea_chapter_file } from "./catena_aurea_chapter_file.mjs";
+import { matthew_henry_word_articles_fetched } from "./matthew_henry_word_articles_fetched.mjs";
+import { matthew_henry_article_url } from "./matthew_henry_article_url.mjs";
+import { matthew_henry_chapter_file } from "./matthew_henry_chapter_file.mjs";
 import { orthodoxwiki_word_articles_fetched } from "./orthodoxwiki_word_articles_fetched.mjs";
 import { orthodoxwiki_article_url } from "./orthodoxwiki_article_url.mjs";
 export function bible_word_article_sites() {
@@ -49,6 +52,12 @@ export function bible_word_article_sites() {
       table: catena_aurea_word_articles_fetched,
       url: catena_aurea_article_url,
       chapter: catena_aurea_chapter_file,
+    },
+    {
+      name: "Matthew Henry's Commentary",
+      table: matthew_henry_word_articles_fetched,
+      url: matthew_henry_article_url,
+      chapter: matthew_henry_chapter_file,
     },
     {
       name: "OrthodoxWiki",
