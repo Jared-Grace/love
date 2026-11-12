@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_sandbox_previews_lyric_timing_load } from "./app_sandbox_previews_lyric_timing_load.mjs";
@@ -19,6 +20,9 @@ export function app_sandbox_previews() {
   "Each entry is its own small function naming its file outright, and neither half of that is decoration. The builder has to be able to READ which file is wanted before it can set that file aside as a piece of its own to fetch; a path put together while running is a path it cannot read, and what it does with one of those is pack the whole folder in, which is the opposite of what this is for.";
   "★ THE PATH IN EACH FETCH IS SPELLED AS A SIBLING OF THIS FILE, AND A DRAFT WRITTEN ANYWHERE ELSE MUST STILL SPELL IT THAT WAY. The import lines at the top of a draft are rewritten when it is promoted; a path sitting inside a fetch is a piece of text and is not, so a draft that spelled its own folder correctly lands here spelling a folder that is not there. Nothing goes red - it is a fetch that happens when somebody opens that preview, and only then.";
   "★ A RENAME DOES NOT FOLLOW THESE PATHS EITHER, FOR THE SAME REASON. Measured 2026-09-06: renaming a preview into its app's prefix moved the file and left the fetch below spelling the old name, which points at nothing. Every gate that reads import lines stays green, because this is not an import line; the one reading that does see it is the torn-commit check, which scans a commit for any sibling path it has not got, so the fault surfaces as a refused deploy rather than as anything on the machine you renamed it on. After renaming a preview, read this file and mend its entry by hand.";
+  ("A NEW PREVIEW'S LOADER IS WRITTEN BY A COMMAND, NOT DRAFTED: run ",
+    fn_name("app_sandbox_previews_load_new"),
+    " with the loader's middle word and the preview function's full name, then add its entry here. A drafted loader holds an import(...), which the ordinary door for a new function refuses, so it went through the door a person must approve - one click per preview.");
   async function spinner_load() {
     let m = await import("./app_sandbox_spinner_preview.mjs");
     let r = m.app_sandbox_spinner_preview;
