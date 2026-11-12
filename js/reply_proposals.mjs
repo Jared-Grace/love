@@ -3790,6 +3790,70 @@ export function reply_proposals() {
       "the reply app still says the old separate blessing, because it shares only the old piece, which is not changed here.",
     ],
   };
+  let meeting_listed_kept_glory = text_combine_multiple([
+    "   let glory = ",
+    fn_name("reply_choices_glory"),
+    "();",
+  ]);
+  let meeting_listed_removed_blessing = text_combine_multiple([
+    "-  let blessing = ",
+    fn_name("prayer_blessing"),
+    '("you and everyone at the meeting");',
+  ]);
+  let meeting_listed_removed_said = text_combine_multiple([
+    "-  let said = ",
+    fn_name("reply_sequence_outputs"),
+    "(words, [praise, glory, blessing]);",
+  ]);
+  let meeting_listed_added_praised = text_combine_multiple([
+    "+  let praised = ",
+    fn_name("reply_sequence_outputs"),
+    "(words, [praise, glory]);",
+  ]);
+  let meeting_listed_added_said = text_combine_multiple([
+    "+  let said = ",
+    fn_name("reply_on_match_blessings"),
+    "(praised, blessed);",
+  ]);
+  let line10 = prayer_blessing_line("you and everyone at the meeting");
+  let meeting_listed_prayer = reply_prayer_closing([line10]);
+  let line11 = prayer_blessing_line(
+    "your ministry, you and everyone at the meeting",
+  );
+  let meeting_listed_pastor = reply_prayer_closing([line11]);
+  let meeting_listed = {
+    title:
+      "a blessed meeting adds you and everyone at the meeting to the list of blessings",
+    fn: fn_name("reply_meeting_blessed"),
+    whole: [],
+    diff: [
+      meeting_listed_kept_glory,
+      meeting_listed_removed_blessing,
+      meeting_listed_removed_said,
+      meeting_listed_added_praised,
+      '+  let blessed = ["you", "everyone at the meeting"];',
+      meeting_listed_added_said,
+      "   return said;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "Today meeting is very blessed",
+        answered: true,
+        outputs: [meeting_praise, meeting_glory, meeting_listed_prayer],
+      },
+      {
+        from: "",
+        message: "I am a pastor today meeting is very blessed",
+        answered: true,
+        outputs: [meeting_praise, meeting_glory, meeting_listed_pastor],
+      },
+    ],
+    decide: [
+      "praise to the LORD and glory to God stay where they are. The blessing on you and everyone at the meeting moves into the list, so it is asked for in the one blessing line of the closing prayer.",
+      "a pastor who says the meeting was blessed gets one line: your ministry, you and everyone at the meeting. Before, that was two separate prayers.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -3838,6 +3902,7 @@ export function reply_proposals() {
     choir_leader_blessed,
     blessings_listed,
     pray_for_me_listed,
+    meeting_listed,
   ];
   return proposals;
 }
