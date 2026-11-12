@@ -558,6 +558,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_backwards_step_two: text_frozen(
       "array_backwards_step_two",
     ),
+    app_learn_js_lesson_array_for_if_even: text_frozen("array_for_if_even"),
   };
   return short;
 }
