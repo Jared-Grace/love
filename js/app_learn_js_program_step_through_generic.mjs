@@ -190,12 +190,12 @@ export function app_learn_js_program_step_through_generic(
   let bases = [];
   ("the value each line's note says right now, null until there is a note; kept, so the value can fade out of the note before a new one arrives");
   let noted = [];
-  function text_write(parent, text) {
+  function text_write(into, text) {
     "2026-11-12, at the human's asking: the lines and notes are written so a line never ends inside a run with a hyphen in it, as i--) or \"self-control\", which on a phone broke as i- then -)";
-    html_text_hyphen_runs_write(parent, text, html_span_text);
+    html_text_hyphen_runs_write(into, text, html_span_text);
   }
-  function span_text(parent, text) {
-    let span = html_span(parent);
+  function span_text(into, text) {
+    let span = html_span(into);
     text_write(span, text);
     return span;
   }
