@@ -3,8 +3,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
+import { app_reply_rules_case_items_split } from "./app_reply_rules_case_items_split.mjs";
 import { diff_lines_signed_positional } from "./diff_lines_signed_positional.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 export function app_reply_rules_case_reworded_show(root, approved, lines) {
@@ -19,10 +18,8 @@ export function app_reply_rules_case_reworded_show(root, approved, lines) {
   html_style_font_size(said, "0.8em");
   let gray = app_shared_color_gray_dark();
   html_font_color_set(said, gray);
-  let before = text_split_newline(approved);
-  ("The words now are cut at every line break too, the same as the words approved, because one reply can run over several lines - a prayer opens on one line and asks on the next. Left whole, a one-word change in the asking line marks the unchanged opening line as well.");
-  let joined = list_join_newline(lines);
-  let after = text_split_newline(joined);
-  let diff = diff_lines_signed_positional(before, after);
+  ("The words approved are cut back into the message and its replies, so each reply is set against its own old wording whole, however many lines it runs over.");
+  let before = app_reply_rules_case_items_split(approved);
+  let diff = diff_lines_signed_positional(before, lines);
   app_reply_rules_diff_show(root, diff);
 }
