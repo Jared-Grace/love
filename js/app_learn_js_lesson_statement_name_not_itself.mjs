@@ -1,4 +1,3 @@
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
@@ -6,6 +5,7 @@ import { js_code_not } from "./js_code_not.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
@@ -114,6 +114,7 @@ export function app_learn_js_lesson_statement_name_not_itself() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps: true,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: 2,
   });

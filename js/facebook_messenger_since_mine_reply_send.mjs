@@ -1,8 +1,8 @@
 import { messenger_since_mine_file } from "./messenger_since_mine_file.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { facebook_page_open } from "./facebook_page_open.mjs";
 import { sleep_human_pace } from "./sleep_human_pace.mjs";
 import { facebook_messenger_row_open } from "./facebook_messenger_row_open.mjs";
@@ -66,8 +66,9 @@ export async function facebook_messenger_since_mine_reply_send(id) {
     await sleep_human_pace();
     await sleep_human_pace();
     ("★ EACH MESSAGE CARRIES A LABEL 'At <time>, <name>: <words>' - the last one is the message being answered.");
+    ("★ SPACING IS NOT COMPARED: the label keeps a message's line breaks and the kept copy has single spaces, so every run of spaces and line breaks counts as one space on both sides. Compared letter for letter, a verse sent on three lines read as somebody writing again (2026-11-12).");
     let found = await page.evaluate(
-      "(function(t){var all=Array.from(document.querySelectorAll('[role=main] [aria-label^=\"At \"]'));var e=all[all.length-1];if(!e)return 'none';var l=e.getAttribute('aria-label');if(l.indexOf(', You: ')>=0)return 'mine';if(l.indexOf(t)<0)return 'other';e.setAttribute('data-reply-target','1');e.scrollIntoView({block:'center'});return 'ok'})(" +
+      "(function(t){var all=Array.from(document.querySelectorAll('[role=main] [aria-label^=\"At \"]'));var e=all[all.length-1];if(!e)return 'none';var l=e.getAttribute('aria-label');if(l.indexOf(', You: ')>=0)return 'mine';if(l.replace(/\\s+/g,' ').indexOf(t.replace(/\\s+/g,' '))<0)return 'other';e.setAttribute('data-reply-target','1');e.scrollIntoView({block:'center'});return 'ok'})(" +
         JSON.stringify(last.text) +
         ")",
     );
