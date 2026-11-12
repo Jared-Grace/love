@@ -64,8 +64,9 @@ export function app_learn_js_lesson_array_for_step_two() {
     example(box_three, items_four);
     walk(box_three, items_four);
   }
+  ("Titled Every other item (even indexes) 2026-11-12 by the human's choice, to pair with the next lesson, Every other item (odd indexes). It reads indexes 0, 2, 4.");
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Every other item",
+    "Every other item (even indexes)",
     "i += 2",
   );
   let lesson = app_learn_js_lesson_array_for_generic({
