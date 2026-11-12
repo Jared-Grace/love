@@ -1,0 +1,87 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
+import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
+import { app_shared_color_red } from "./app_shared_color_red.mjs";
+import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
+import { equal } from "./equal.mjs";
+import { app_shared_color_green_tint } from "./app_shared_color_green_tint.mjs";
+import { app_shared_color_red_tint } from "./app_shared_color_red_tint.mjs";
+import { text_take } from "./text_take.mjs";
+import { app_reply_rules_diff_line } from "./app_reply_rules_diff_line.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { not } from "./not.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_reply_rules_diff_line_changed } from "./app_reply_rules_diff_line_changed.mjs";
+import { list_map } from "./list_map.mjs";
+export function app_reply_rules_diff_entries_show(root, entries) {
+  arguments_assert(arguments, 2);
+  ("Rows of a difference already sorted into kept, gone, come and reworded lines, drawn the way a difference is read: what would go, what would come, and enough of what stays either side to see where it lands.");
+  ("Split out of the drawing of a signed difference so a caller that has paired its lines some other way - lines that grew rather than were reworded - draws them the same way.");
+  ("★ THE SIGN IS THE FIRST CHARACTER AND THE REST OF THE LINE IS THE CODE UNTOUCHED, so what is on the screen lines up character for character with what is in the file. Any drawing that took the sign off and put the colour on instead would be easier to write and would lose the one thing that makes a difference checkable by eye - that the unsigned lines can be found in the file exactly as they are written here.");
+  ("A LINE THAT WAS MERELY REWORDED IS THE ONE EXCEPTION AND WEARS ITS OWN SIGN TO SAY SO. It carries both wordings at once, so its text is not to be found in either the file or the change; the sign is what warns a reader of that, which is the same job the plus and the minus are doing.");
+  ("Each line is drawn as preformatted text so its indentation survives. Indentation is how a reader sees which call an argument belongs to, and a browser throws it away by default.");
+  ("The colours say the same thing as the signs rather than instead of them. Somebody who cannot tell the two colours apart, or who is reading this printed, still has the signs; somebody scanning quickly has the colour. Neither is asked to carry it alone.");
+  ("★ THE COLOUR IS SAID TWICE, ONCE IN THE WRITING AND ONCE BEHIND IT, AND THE ONE BEHIND IT IS WHAT ACTUALLY GETS SEEN. Coloured writing has to be read a line at a time to be noticed, because the coloured part is a few thin strokes on a wide white line - and these changes are now drawn over whole files, where the altered lines are a handful among a hundred. A tinted line is a shape, and a run of them is a block the eye lands on from across the page without reading anything.");
+  ("The tint behind a line is far fainter than the writing on it, because the two are doing opposite jobs. The writing has to be read and so needs all the contrast it can get against what is behind it; the background only has to be noticed, and a background strong enough to be read would take that contrast away from the thing that needs it.");
+  ("Lines the change leaves alone are given no background at all rather than a third colour. There are far more of them than of anything else, and a page where every line is on a tint is a page with no tints on it.");
+  let block = html_div(root);
+  let value = app_reply_rules_font_size_small();
+  html_style_font_size(block, value);
+  html_style_overflow_wrap(block, "anywhere");
+  let green = app_shared_color_green_deep();
+  let red = app_shared_color_red();
+  let gray = app_shared_color_gray_dark();
+  function color_of(sign) {
+    let added = equal(sign, "+");
+    if (added) {
+      return green;
+    }
+    let removed = equal(sign, "-");
+    if (removed) {
+      return red;
+    }
+    return gray;
+  }
+  let green_tint = app_shared_color_green_tint();
+  let red_tint = app_shared_color_red_tint();
+  function background_of(sign) {
+    let added = equal(sign, "+");
+    if (added) {
+      return green_tint;
+    }
+    let removed = equal(sign, "-");
+    if (removed) {
+      return red_tint;
+    }
+    return null;
+  }
+  function each_line(line) {
+    let sign = text_take(line, 1);
+    let color = color_of(sign);
+    let background = background_of(sign);
+    let one = app_reply_rules_diff_line(block, line);
+    html_font_color_set(one, color);
+    let plain = equal(background, null);
+    if (not(plain)) {
+      html_style_background_color_set(one, background);
+    }
+    return one;
+  }
+  function each_entry(entry) {
+    let changed = property_get(entry, "changed");
+    if (changed) {
+      let segments = property_get(entry, "segments");
+      let line2 = app_reply_rules_diff_line_changed(block, segments);
+      return line2;
+    }
+    let line = property_get(entry, "line");
+    let r = each_line(line);
+    return r;
+  }
+  let drawn = list_map(entries, each_entry);
+  return drawn;
+}
