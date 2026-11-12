@@ -1,11 +1,7 @@
-import { reply_sequence_output } from "./reply_sequence_output.mjs";
-import { reply_phrase_i_am } from "./reply_phrase_i_am.mjs";
-import { reply_optional } from "./reply_optional.mjs";
-import { reply_sequence_optional } from "./reply_sequence_optional.mjs";
+import { reply_i_am_a } from "./reply_i_am_a.mjs";
+import { reply_on_match_output } from "./reply_on_match_output.mjs";
 export function reply_i_am_a_output(title, response) {
-  let iam = reply_phrase_i_am();
-  let o_n = reply_optional("n");
-  let o_a_an = reply_sequence_optional(["a", o_n]);
-  let matched = reply_sequence_output([iam, o_a_an, title], response);
+  let said = reply_i_am_a(title);
+  let matched = reply_on_match_output(said, response);
   return matched;
 }

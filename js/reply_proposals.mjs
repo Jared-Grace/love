@@ -3539,81 +3539,168 @@ export function reply_proposals() {
       "rejected wordings: your ministry and singing, your ministry and music, and plain your ministry like a pastor. Worship was the wording asked for.",
     ],
   };
-  let teaching_line = prayer_blessing_line("your ministry and teaching");
-  let ministry_line = prayer_blessing_line("your ministry");
-  let one_prayer_kept_said_once = text_combine_multiple([
-    "   let said_once = ",
-    fn_name("reply_outputs_mapped"),
-    "(with_repeats, ",
-    fn_name("list_unique"),
-    ");",
+  let blessed_kept_titles = text_combine_multiple([
+    "   let titles = ",
+    fn_name("reply_titles_preaching"),
+    "();",
   ]);
-  let one_prayer_removed_prayed = text_combine_multiple([
-    "-  let prayed = ",
-    fn_name("reply_prayers_closed"),
-    "(said_once);",
+  let blessed_removed_item = text_combine_multiple([
+    "-  let item = ",
+    fn_name("prayer_blessing"),
+    '("your ministry");',
   ]);
-  let one_prayer_added_gathered = text_combine_multiple([
-    "+  let gathered = ",
-    fn_name("reply_prayers_gathered"),
-    "(said_once);",
+  let blessed_removed_minister = text_combine_multiple([
+    "-  let minister = ",
+    fn_name("reply_i_am_a_output"),
+    "(titles, item);",
   ]);
-  let one_prayer_added_prayed = text_combine_multiple([
-    "+  let prayed = ",
-    fn_name("reply_prayers_closed"),
-    "(gathered);",
+  let blessed_removed_teaching = text_combine_multiple([
+    "-  let teaching = ",
+    fn_name("prayer_blessing"),
+    '("your ministry and teaching");',
   ]);
-  let one_prayer_kept_references = text_combine_multiple([
-    "   let r = ",
-    fn_name("reply_bible_references_closed"),
-    "(prayed);",
+  let blessed_added_minister_said = text_combine_multiple([
+    "+  let minister_said = ",
+    fn_name("reply_i_am_a"),
+    "(titles);",
   ]);
-  let prayer3 = reply_prayer_closing([teaching_line]);
-  let prayer4 = reply_prayer_closing([teaching_line, ministry_line]);
-  let one_prayer_at_end = {
+  let blessed_added_minister = text_combine_multiple([
+    "+  let minister = ",
+    fn_name("reply_on_match_blessings"),
+    "(minister_said, ministry);",
+  ]);
+  let blessed_kept_sunday = text_combine_multiple([
+    "   let o_sunday_school = ",
+    fn_name("reply_sequence_optional"),
+    '(["sunday", "school"]);',
+  ]);
+  let blessed_kept_title = text_combine_multiple([
+    "   let title = ",
+    fn_name("reply_sequence"),
+    '([o_sunday_school, "teacher"]);',
+  ]);
+  let blessed_removed_teacher = text_combine_multiple([
+    "-  let teacher = ",
+    fn_name("reply_i_am_a_output"),
+    "(title, teaching);",
+  ]);
+  let blessed_added_teacher_said = text_combine_multiple([
+    "+  let teacher_said = ",
+    fn_name("reply_i_am_a"),
+    "(title);",
+  ]);
+  let blessed_added_teacher = text_combine_multiple([
+    "+  let teacher = ",
+    fn_name("reply_on_match_blessings"),
+    "(teacher_said, teaching);",
+  ]);
+  let blessed_kept_work = text_combine_multiple([
+    "   let work = ",
+    fn_name("reply_ministry_work"),
+    "();",
+  ]);
+  let blessed_removed_worship = text_combine_multiple([
+    "-  let worship = ",
+    fn_name("prayer_blessing"),
+    '("your ministry and worship");',
+  ]);
+  let blessed_kept_choir_title = text_combine_multiple([
+    "   let choir_title = ",
+    fn_name("reply_sequence"),
+    '(["choir", "leader"]);',
+  ]);
+  let blessed_removed_choir = text_combine_multiple([
+    "-  let choir = ",
+    fn_name("reply_i_am_a_output"),
+    "(choir_title, worship);",
+  ]);
+  let blessed_added_choir_said = text_combine_multiple([
+    "+  let choir_said = ",
+    fn_name("reply_i_am_a"),
+    "(choir_title);",
+  ]);
+  let blessed_added_choir = text_combine_multiple([
+    "+  let choir = ",
+    fn_name("reply_on_match_blessings"),
+    "(choir_said, worship);",
+  ]);
+  let blessed_kept_choice = text_combine_multiple([
+    "   let ministers = ",
+    fn_name("reply_choice"),
+    "([minister, teacher, choir, work]);",
+  ]);
+  let line5 = prayer_blessing_line("your ministry and your teaching");
+  let ministry_teaching = reply_prayer_closing([line5]);
+  let line6 = prayer_blessing_line("your ministry and your worship");
+  let ministry_worship = reply_prayer_closing([line6]);
+  let line7 = prayer_blessing_line("your ministry");
+  let ministry_alone = reply_prayer_closing([line7]);
+  let blessings_listed = {
     title:
-      "pray once, at the end of the reply, instead of once for each blessing",
-    fn: fn_name("app_shared_message_reply_choices"),
-    whole: [fn_name("reply_prayers_gathered")],
+      "a teacher, a pastor and a choir leader add words to one list of blessings, prayed for in one line at the end",
+    fn: fn_name("app_shared_message_reply_minister"),
+    whole: [fn_name("reply_i_am_a"), fn_name("reply_on_match_blessings")],
     diff: [
-      one_prayer_kept_said_once,
-      one_prayer_removed_prayed,
-      one_prayer_added_gathered,
-      one_prayer_added_prayed,
-      one_prayer_kept_references,
-      "   return r;",
+      blessed_kept_titles,
+      blessed_removed_item,
+      blessed_removed_minister,
+      blessed_removed_teaching,
+      blessed_added_minister_said,
+      '+  let ministry = ["your ministry"];',
+      blessed_added_minister,
+      '+  let teaching = ["your ministry", "your teaching"];',
+      blessed_kept_sunday,
+      blessed_kept_title,
+      blessed_removed_teacher,
+      blessed_added_teacher_said,
+      blessed_added_teacher,
+      blessed_kept_work,
+      blessed_removed_worship,
+      '+  let worship = ["your ministry", "your worship"];',
+      blessed_kept_choir_title,
+      blessed_removed_choir,
+      blessed_added_choir_said,
+      blessed_added_choir,
+      blessed_kept_choice,
     ],
     cases: [
-      {
-        from: "3d27ef64ea033e69",
-        message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
-        answered: true,
-        outputs: [friend_response, t, prayer3],
-      },
       {
         from: "",
         message: "I am a teacher I am a pastor",
         answered: true,
-        outputs: [prayer4],
+        outputs: [ministry_teaching],
       },
       {
-        from: "31c5df9f5c22e68d",
-        message:
-          "I am requesting you to support in ministry, God's will, come and fellowship with us, God's will, thank you.",
+        from: "",
+        message: "I am a pastor I am a teacher",
         answered: true,
-        outputs: [
-          "🙏 Sorry, I have nothing that I can give you at this time.",
-          "🙏 All glory to God ❤️✝️🕊️ ! ",
-          "🙇 In the name of the Father, and of the Son, and of the Holy Spirit ❤️✝️🕊️ : \n🙏 May the LORD have His will done! 🕊️ May the LORD provide for your ministry! May the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask! Amen! 🙏",
-        ],
+        outputs: [ministry_teaching],
+      },
+      {
+        from: "",
+        message: "I am a pastor",
+        answered: true,
+        outputs: [ministry_alone],
+      },
+      {
+        from: "",
+        message: "I am a choir leader",
+        answered: true,
+        outputs: [ministry_worship],
+      },
+      {
+        from: "3d27ef64ea033e69",
+        message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
+        answered: true,
+        outputs: [friend_response, t, ministry_teaching],
       },
     ],
     decide: [
-      "a reply with several blessings opened in the name of the Father and said Amen once for each of them. Now every blessing is taken out of its own prayer and prayed in the one prayer that already closes the reply, after everything else is said.",
-      "a reply with only one blessing changes too: it moves to the end, and the prayer opens on a line of its own the way the closing prayer already does. Keeping a lone blessing where it was would make two shapes of prayer.",
-      "the closing prayer keeps its order: God's will first, being led to somebody who can give last, and the blessings between them in the order the message said them.",
-      "a message with no blessing in it is answered exactly as before, like the request for support above.",
-      "not done here: exceedingly abundantly more than anyone can ask or think is still said once per blessing. Joining the blessings into one sentence is a later change.",
+      "a teacher adds your ministry and your teaching to a list of blessings, a pastor adds your ministry, a choir leader adds your ministry and your worship. A word already in the list is not added again.",
+      "at the end, the whole list is asked for in one line of the closing prayer: May the LORD always bless your ministry and your teaching exceedingly abundantly more than anyone can ask or think! It goes after His will done and before being led to somebody who can give.",
+      "a message with only one of them changes too: its blessing moves from where it was said into the closing prayer.",
+      "rejected: a separate petition for each blessing, and the earlier card that moved each whole prayer to the end. Both repeat exceedingly abundantly once per blessing.",
+      "not done here: the other rules that bless, like pray for me or a meeting, still say their own prayer. Each moves to the list in a card of its own.",
     ],
   };
   let proposals = [
@@ -3662,7 +3749,7 @@ export function reply_proposals() {
     fewest_pieces,
     php_verses_said,
     choir_leader_blessed,
-    one_prayer_at_end,
+    blessings_listed,
   ];
   return proposals;
 }
