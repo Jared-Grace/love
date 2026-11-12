@@ -5,8 +5,10 @@ import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
-import { null_is } from "./null_is.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
+import { app_learn_js_lesson_quiz_wrong_code_newest_background_color } from "./app_learn_js_lesson_quiz_wrong_code_newest_background_color.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_each_button } from "./app_learn_js_lesson_quiz_multiple_choice_each_button.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_div } from "./html_div.mjs";
@@ -37,6 +39,7 @@ export function app_learn_js_lesson_quiz_multiple_choice(
     on_wrong();
     ("cleared at every wrong press, so a reminder about an earlier choice never stays under a newer one it says nothing about");
     html_clear(note);
+    let said = false;
     if (null_not_is(wrong_output_say)) {
       let written = wrong_output_say(
         quiz_question_text,
@@ -45,15 +48,26 @@ export function app_learn_js_lesson_quiz_multiple_choice(
       );
       if (null_not_is(written)) {
         app_learn_js_div_cycle_output(note, written);
+        said = true;
       }
     }
-    if (null_is(wrong_say)) {
+    if (null_not_is(wrong_say)) {
+      let parts = wrong_say(quiz_question_text, quiz_answer_text, quiz_choice);
+      if (null_not_is(parts)) {
+        app_learn_js_cycle_code(note, parts);
+        said = true;
+      }
+    }
+    ("2026-11-12, at the human's asking: the reminder is filled with the same light red as the newest wrong press, so the eye pairs the two while the reminder stays put under the choices. Not picked: the reminder moved under its own choice, which would push the choices below it down between presses. Left unfilled when nothing is said, so no empty red box shows");
+    if (said) {
+      let fill = app_learn_js_lesson_quiz_wrong_code_newest_background_color();
+      html_style_background_color_set(note, fill);
+      html_style_set(note, "padding", "0.3em 0.5em");
+      html_style_set(note, "border-radius", "0.5em");
       return;
     }
-    let parts = wrong_say(quiz_question_text, quiz_answer_text, quiz_choice);
-    if (null_not_is(parts)) {
-      app_learn_js_cycle_code(note, parts);
-    }
+    html_style_set(note, "background-color", "");
+    html_style_set(note, "padding", "");
   }
   let r2 = app_learn_js_lesson_quiz_multiple_choice_each_button({
     r,
