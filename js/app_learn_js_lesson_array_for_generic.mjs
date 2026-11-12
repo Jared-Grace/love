@@ -1,5 +1,3 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -15,12 +13,16 @@ import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
+import { js_code_remainder_2_equal } from "./js_code_remainder_2_equal.mjs";
+import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -71,6 +73,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let start_back = property_get_or(start_fewer, "start_back", null);
     let op = property_get_or(start_fewer, "op", less);
     let end_number = property_get_or(start_fewer, "end", null);
+    let remainder = property_get_or(start_fewer, "remainder", null);
     let end2 = bound;
     if (fewer) {
       end2 = bound_fewer;
@@ -86,6 +89,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
       op,
       fewer,
       step,
+      remainder,
     };
     return r2;
   }
@@ -176,10 +180,19 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let condition = js_code_binary_spaced_nb(index_name, op3, end);
     let value2 = property_get(way, "step");
     let stepped = step_code(value2) + ";";
-    let lines = js_code_for_start_condition_update_lines(started, condition, [
-      logged,
-      stepped,
-    ]);
+    ("2026-11-12: a way may name a remainder, and then the item is written out only inside if (i % 2 === remainder) - every index visited, only the even or the odd ones let through. Without one the loop writes every index it visits, as every lesson before that one does");
+    let inside = [logged];
+    let remainder2 = property_get(way, "remainder");
+    if (not_equal(remainder2, null)) {
+      let asked = js_code_remainder_2_equal(index_name, remainder2);
+      inside = js_code_if_lines(asked, logged);
+    }
+    let statements = list_concat(inside, [stepped]);
+    let lines = js_code_for_start_condition_update_lines(
+      started,
+      condition,
+      statements,
+    );
     return lines;
   }
   function program_head(head, way2) {
