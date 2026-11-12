@@ -61,9 +61,16 @@ export function app_learn_js_program_step_trace(code) {
     if (not(update_is)) {
       list_add(ran, line);
     }
+    ("2026-11-12: what a for's start solves, as a.length - 1 in let i = a.length - 1, does not count as changing the line. The start never runs again and is not kept as a run of the line, so a line it changed sent the condition coming round looking back for a run that was never kept, and the step-by-step guide stopped with an error. Starts that solve nothing, as let i = 0, were never touched by this. The line is still put back whole when the condition comes round after it has solved something itself.");
+    let for_start_is =
+      update_is &&
+      property_get(property_get(traced_entry, "piece"), "for_start");
     for (let action of grouped) {
       let kind = property_get(action, "kind");
-      if (equal(kind, "evaluate") || equal(kind, "expand")) {
+      if (
+        (equal(kind, "evaluate") || equal(kind, "expand")) &&
+        not(for_start_is)
+      ) {
         list_add(changed, line);
       }
     }
