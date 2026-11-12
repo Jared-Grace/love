@@ -12,10 +12,13 @@ import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
+import { html_text_hyphen_runs_write } from "./html_text_hyphen_runs_write.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_span } from "./html_span.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_shared_code_padding_x } from "./app_shared_code_padding_x.mjs";
 import { html_style_bleed_x } from "./html_style_bleed_x.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { text_size } from "./text_size.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
@@ -35,9 +38,7 @@ import { property_set } from "./property_set.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { list_set } from "./list_set.mjs";
@@ -97,6 +98,7 @@ import { each } from "./each.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
+import { html_text_set } from "./html_text_set.mjs";
 import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
@@ -188,6 +190,19 @@ export function app_learn_js_program_step_through_generic(
   let bases = [];
   ("the value each line's note says right now, null until there is a note; kept, so the value can fade out of the note before a new one arrives");
   let noted = [];
+  function text_write(parent, text) {
+    "2026-11-12, at the human's asking: the lines and notes are written so a line never ends inside a run with a hyphen in it, as i--) or \"self-control\", which on a phone broke as i- then -)";
+    html_text_hyphen_runs_write(parent, text, html_span_text);
+  }
+  function span_text(parent, text) {
+    let span = html_span(parent);
+    text_write(span, text);
+    return span;
+  }
+  function row_text(row, text) {
+    html_clear(row);
+    text_write(row, text);
+  }
   for (let line of lines) {
     let slot = html_div(program);
     let comment = html_div(slot);
@@ -197,7 +212,7 @@ export function app_learn_js_program_step_through_generic(
     ("2026-10-14, at the human's asking: a line's colour runs to both edges of the program rather than stopping at its padding, and its text stays where it was");
     let padding = app_shared_code_padding_x();
     html_style_bleed_x(row, padding);
-    html_text_set(row, line);
+    row_text(row, line);
     list_add(shown, line);
     list_add(replaced, []);
     list_add(bases, line);
@@ -329,9 +344,9 @@ export function app_learn_js_program_step_through_generic(
         let from_now = position_now(line_index, from);
         let to_now = piece_to_now(line_index, k);
         let text6 = text_slice(text, at, from_now);
-        html_span_text(row, text6);
+        span_text(row, text6);
         let text7 = text_slice(text, from_now, to_now);
-        let span = html_span_text(row, text7);
+        let span = span_text(row, text7);
         function on_piece() {
           property_set(state, "pressed_piece", piece);
         }
@@ -351,13 +366,13 @@ export function app_learn_js_program_step_through_generic(
         at = to_now;
       }
       let text8 = text_skip(text, at);
-      html_span_text(row, text8);
+      span_text(row, text8);
       list_set(row_spans, line_index, drawn);
     }
   }
   function row_text_set(line_index, text) {
     let row = list_get(rows, line_index);
-    html_text_set(row, text);
+    row_text(row, text);
     list_set(shown, line_index, text);
   }
   function line_restore(line_index) {
@@ -429,20 +444,20 @@ export function app_learn_js_program_step_through_generic(
     let holder_from = inside ? property_get(lit, "from_now") : from;
     let holder_to = inside ? property_get(lit, "to_now") : to;
     let text3 = text_slice(text, 0, holder_from);
-    html_span_text(row, text3);
-    let holder = html_span_text(row, "");
+    span_text(row, text3);
+    let holder = html_span(row);
     if (inside) {
       let color = property_get(state, "lit_color");
       html_style_background_color_set(holder, color);
     }
     let text4 = text_slice(text, holder_from, from);
-    html_span_text(holder, text4);
+    span_text(holder, text4);
     let text5 = text_slice(text, from, to);
-    let piece = html_span_text(holder, text5);
+    let piece = span_text(holder, text5);
     let text9 = text_slice(text, to, holder_to);
-    html_span_text(holder, text9);
+    span_text(holder, text9);
     let text10 = text_skip(text, holder_to);
-    html_span_text(row, text10);
+    span_text(row, text10);
     return piece;
   }
   function comment_draw(line_index, name, value_text, part) {
@@ -465,7 +480,7 @@ export function app_learn_js_program_step_through_generic(
     let hidden = [];
     for (let run of cut) {
       let text2 = list_get(run, 0);
-      let span = html_span_text(comment, text2);
+      let span = span_text(comment, text2);
       let color = list_get(run, 1);
       ("2026-10-15, at the human's asking: the name in a note is drawn in the code's own colour, never a name colour. Here the lines are drawn plain, so a coloured name in the note matches nothing in the code, and the first name colour is a red standing beside lines that turn red when pressed wrongly. Not picked: changing the red in the colours every lesson shares, which elsewhere pairs a name in a note with the same name in the code");
       let list = app_learn_js_note_name_colors();
