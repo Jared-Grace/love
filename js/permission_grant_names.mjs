@@ -2859,6 +2859,7 @@ export function permission_grant_names() {
     fn_name("app_learn_en_gloss_urdu_write_file_from_temp"),
     fn_name("facebook_page_lock_holder"),
     fn_name("g_sermon_sweep_review"),
+    fn_name("app_sandbox_previews_load_new"),
   ];
   return names;
 }
