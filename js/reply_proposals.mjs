@@ -3703,6 +3703,82 @@ export function reply_proposals() {
       "not done here: the other rules that bless, like pray for me or a meeting, still say their own prayer. Each moves to the list in a card of its own.",
     ],
   };
+  let pray_listed_kept_line = text_combine_multiple([
+    "   let line = ",
+    fn_name("prayer_according_to_desire"),
+    "();",
+  ]);
+  let pray_listed_removed_v = text_combine_multiple([
+    "-  let v = ",
+    fn_name("prayer_blessing_expand"),
+    "();",
+  ]);
+  let pray_listed_removed_answered = text_combine_multiple([
+    "-  let answered = ",
+    fn_name("reply_on_match_output_multiple"),
+    "(asked, lines);",
+  ]);
+  let pray_listed_added_said = text_combine_multiple([
+    "+  let said = ",
+    fn_name("reply_on_match_output"),
+    "(asked, line);",
+  ]);
+  let pray_listed_added_answered = text_combine_multiple([
+    "+  let answered = ",
+    fn_name("reply_on_match_blessings"),
+    "(said, blessed);",
+  ]);
+  let line8 = prayer_blessing_line(
+    "you, your family, your church and your country",
+  );
+  let pray_listed_prayer = reply_prayer_closing([line8]);
+  let pray_listed_lines = [line3, pray_listed_prayer];
+  let line9 = prayer_blessing_line(
+    "your ministry, you, your family, your church and your country",
+  );
+  let pray_listed_pastor = reply_prayer_closing([line9]);
+  let pray_for_me_listed = {
+    title:
+      "I ask you to pray for me adds you, your family, your church and your country to the list of blessings",
+    fn: fn_name("reply_pray_for_me"),
+    whole: [],
+    diff: [
+      pray_listed_kept_line,
+      pray_listed_removed_v,
+      "-  let lines = [line, v];",
+      pray_listed_removed_answered,
+      pray_listed_added_said,
+      '+  let blessed = ["you", "your family", "your church", "your country"];',
+      pray_listed_added_answered,
+      "   return answered;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I ask you to pray for me",
+        answered: true,
+        outputs: pray_listed_lines,
+      },
+      {
+        from: "",
+        message: "I ask you to pray for me, my dear brother",
+        answered: true,
+        outputs: pray_listed_lines,
+      },
+      {
+        from: "",
+        message: "I am a pastor and I ask you to pray for me",
+        answered: true,
+        outputs: [line3, pray_listed_pastor],
+      },
+    ],
+    decide: [
+      "the line According to the desire of God, may there be prayer stays where it is. The blessing on you, your family, your church and your country moves into the list, so it is asked for in the one line that closes the reply.",
+      "this undoes what the earlier card chose, keeping that blessing as a prayer of its own. That was chosen so it would not become a second wording; now every blessing has the same wording, so that reason is gone.",
+      "the list keeps the order the message said things in, so a pastor who then asks for prayer gets your ministry, you, your family, your church and your country. Rejected: always putting you first, which would need a rule for where each word goes.",
+      "the reply app still says the old separate blessing, because it shares only the old piece, which is not changed here.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -3750,6 +3826,7 @@ export function reply_proposals() {
     php_verses_said,
     choir_leader_blessed,
     blessings_listed,
+    pray_for_me_listed,
   ];
   return proposals;
 }
