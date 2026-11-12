@@ -32,6 +32,7 @@ import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
 import { emoji_disappointed } from "./emoji_disappointed.mjs";
 import { prayer_blessing_line } from "./prayer_blessing_line.mjs";
+import { reply_prayer_abundance_of_prayer } from "./reply_prayer_abundance_of_prayer.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -3703,9 +3704,14 @@ export function reply_proposals() {
       "not done here: the other rules that bless, like pray for me or a meeting, still say their own prayer. Each moves to the list in a card of its own.",
     ],
   };
-  let pray_listed_kept_line = text_combine_multiple([
-    "   let line = ",
+  let pray_listed_removed_line = text_combine_multiple([
+    "-  let line = ",
     fn_name("prayer_according_to_desire"),
+    "();",
+  ]);
+  let pray_listed_added_prayed = text_combine_multiple([
+    "+  let prayed = ",
+    fn_name("reply_prayer_abundance_of_prayer"),
     "();",
   ]);
   let pray_listed_removed_v = text_combine_multiple([
@@ -3720,8 +3726,8 @@ export function reply_proposals() {
   ]);
   let pray_listed_added_said = text_combine_multiple([
     "+  let said = ",
-    fn_name("reply_on_match_output"),
-    "(asked, line);",
+    fn_name("reply_on_match_prayer"),
+    "(asked, prayed);",
   ]);
   let pray_listed_added_answered = text_combine_multiple([
     "+  let answered = ",
@@ -3731,22 +3737,25 @@ export function reply_proposals() {
   let line8 = prayer_blessing_line(
     "you, your family, your church and your country",
   );
-  let pray_listed_prayer = reply_prayer_closing([line8]);
-  let pray_listed_lines = [line3, pray_listed_prayer];
+  let pray_listed_abundance = reply_prayer_abundance_of_prayer();
+  let pray_listed_prayer = reply_prayer_closing([pray_listed_abundance, line8]);
+  let pray_listed_lines = [pray_listed_prayer];
   let line9 = prayer_blessing_line(
     "your ministry, you, your family, your church and your country",
   );
-  let pray_listed_pastor = reply_prayer_closing([line9]);
+  let pray_listed_pastor = reply_prayer_closing([pray_listed_abundance, line9]);
   let pray_for_me_listed = {
     title:
-      "I ask you to pray for me adds you, your family, your church and your country to the list of blessings",
+      "I ask you to pray for me is answered in the closing prayer: others led to pray for you, and you, your family, your church and your country added to the list of blessings",
     fn: fn_name("reply_pray_for_me"),
-    whole: [],
+    whole: [fn_name("reply_prayer_abundance_of_prayer")],
     diff: [
-      pray_listed_kept_line,
+      "   ]);",
+      pray_listed_removed_line,
       pray_listed_removed_v,
       "-  let lines = [line, v];",
       pray_listed_removed_answered,
+      pray_listed_added_prayed,
       pray_listed_added_said,
       '+  let blessed = ["you", "your family", "your church", "your country"];',
       pray_listed_added_answered,
@@ -3769,11 +3778,13 @@ export function reply_proposals() {
         from: "",
         message: "I am a pastor and I ask you to pray for me",
         answered: true,
-        outputs: [line3, pray_listed_pastor],
+        outputs: [pray_listed_pastor],
       },
     ],
     decide: [
-      "the line According to the desire of God, may there be prayer stays where it is. The blessing on you, your family, your church and your country moves into the list, so it is asked for in the one line that closes the reply.",
+      "the line According to the desire of God, may there be prayer is gone. In its place the closing prayer asks: May the LORD lead others to provide you with an abundance of prayer! Rejected: keeping both, which says the same thing twice.",
+      "the blessing on you, your family, your church and your country moves into the list, so it is asked for in the one blessing line of the closing prayer.",
+      "the new line comes before the blessing line, because lines a rule notes come first and the blessings are added last. Should the blessing come first instead? That would change every closing prayer that has both.",
       "this undoes what the earlier card chose, keeping that blessing as a prayer of its own. That was chosen so it would not become a second wording; now every blessing has the same wording, so that reason is gone.",
       "the list keeps the order the message said things in, so a pastor who then asks for prayer gets your ministry, you, your family, your church and your country. Rejected: always putting you first, which would need a rule for where each word goes.",
       "the reply app still says the old separate blessing, because it shares only the old piece, which is not changed here.",
