@@ -23,6 +23,7 @@ import { js_code_remainder_2_equal } from "./js_code_remainder_2_equal.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
+import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -79,6 +80,9 @@ export function app_learn_js_lesson_array_for_generic(options) {
     ('2026-11-12: a way may instead name the whole question its if asks, as a[i] === "joy", and what it writes out, as i rather than the item a[i] - so a loop can look for an item and say where it is');
     let condition_code = property_get_or(start_fewer, "condition", null);
     let logs = property_get_or(start_fewer, "logs", read);
+    ('2026-11-12: a way may also keep a true or false value named on across runs: flag_start is what on starts as, and the item is written out only inside if (on). flip says where on = !on stands - "after" the if, "inside" it, or "none" - so a loop can write out every other item by flipping, and the mistakes of flipping in the wrong place or not at all can be offered');
+    let flag_start = property_get_or(start_fewer, "flag_start", null);
+    let flip = property_get_or(start_fewer, "flip", "after");
     let end2 = bound;
     if (fewer) {
       end2 = bound_fewer;
@@ -97,6 +101,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
       remainder,
       condition: condition_code,
       logs,
+      flag_start,
+      flip,
     };
     return r2;
   }
@@ -200,13 +206,38 @@ export function app_learn_js_lesson_array_for_generic(options) {
     if (not_equal(condition3, null)) {
       inside = js_code_if_lines(condition3, logged_way);
     }
-    let statements = list_concat(inside, [stepped]);
-    let lines = js_code_for_start_condition_update_lines(
+    let flag_start2 = property_get(way, "flag_start");
+    if (equal(flag_start2, null)) {
+      let statements = list_concat(inside, [stepped]);
+      let lines = js_code_for_start_condition_update_lines(
+        started,
+        condition,
+        statements,
+      );
+      return lines;
+    }
+    let flag_name = "on";
+    let flag_json = json_to(flag_start2);
+    let flag_line = js_code_let_statement(flag_name, flag_json);
+    let flipped = flag_name + " = !" + flag_name + ";";
+    let flip2 = property_get(way, "flip");
+    let inside_flag = js_code_if_lines(flag_name, logged_way);
+    let after_if = [flipped, stepped];
+    if (equal(flip2, "inside")) {
+      inside_flag = js_code_if_lines_multiple(flag_name, [logged_way, flipped]);
+      after_if = [stepped];
+    }
+    if (equal(flip2, "none")) {
+      after_if = [stepped];
+    }
+    let statements2 = list_concat(inside_flag, after_if);
+    let lines6 = js_code_for_start_condition_update_lines(
       started,
       condition,
-      statements,
+      statements2,
     );
-    return lines;
+    let r14 = list_concat([flag_line], lines6);
+    return r14;
   }
   function program_head(head, way2) {
     let lines2 = loop_lines(way2);
