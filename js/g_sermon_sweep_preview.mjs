@@ -14,9 +14,10 @@ import { noop } from "./noop.mjs";
 import { not } from "./not.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { app_shared_notes_review } from "./app_shared_notes_review.mjs";
 export async function g_sermon_sweep_preview() {
   arguments_assert(arguments, 0);
-  ("Proposed rewordings of already-written sermon verses, on the sandbox app at hash sermon_sweep: each verse showing its current lines against the proposed ones as a difference, with a button to approve and one to reject.");
+  ("Proposed rewordings of already-written sermon verses, on the sandbox app at hash sermon_sweep: each verse showing its current lines against the proposed ones as a difference, with a button to approve and a box to say what is still wrong.");
   ("★ NOTHING CHANGES IN A VERSE UNTIL ITS APPROVE IS PRESSED. The proposals sit in their own file beside the lines files, so a whole book can be proposed, read on a phone, and turned down verse by verse without any sermon moving.");
   ("It runs on the serving machine, because the lines files are kept outside every repo, so it works on the dev server only.");
   let root = html_body_div();
@@ -70,10 +71,16 @@ export async function g_sermon_sweep_preview() {
     async function approve() {
       await decide("approved");
     }
-    async function reject() {
-      await decide("rejected");
-    }
     app_shared_button_uncolored(buttons, "Approve", approve);
-    app_shared_button_uncolored(buttons, "Reject", reject);
+    ("★ THERE IS NO REJECT, ONLY A NOTE. A proposal is reworked until it is accepted, never turned down, so what the reviewer owes is not a verdict but the reason it is not right yet - and the reason is what the next draft is written from. The same notes panel the reply rules files and the lyric video pictures are reviewed with, so a note is filed, shown and answered the same way everywhere.");
+    ("THE STORE IS THIS FUNCTION'S OWN NAME AND THE KEY IS THE CHAPTER AND VERSE, so a note left on one draft is still standing beside the next draft of the same verse.");
+    let names = ["lines"];
+    app_shared_notes_review(
+      block,
+      fn_name("g_sermon_sweep_preview"),
+      chapter_code + "_" + key,
+      title,
+      names,
+    );
   }
 }
