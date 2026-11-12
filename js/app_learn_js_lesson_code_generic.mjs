@@ -1,4 +1,3 @@
-import { not_equal } from "./not_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_label_of_code } from "./app_learn_js_label_of_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -10,8 +9,8 @@ import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { app_learn_js_button_value_lines } from "./app_learn_js_button_value_lines.mjs";
 import { app_learn_js_forwards_wrong_say } from "./app_learn_js_forwards_wrong_say.mjs";
-import { app_learn_js_backwards_wrong_say } from "./app_learn_js_backwards_wrong_say.mjs";
 import { app_learn_js_style_normal_text } from "./app_learn_js_style_normal_text.mjs";
+import { app_learn_js_backwards_wrong_say } from "./app_learn_js_backwards_wrong_say.mjs";
 import { app_learn_js_lesson_quizzes_unscramble } from "./app_learn_js_lesson_quizzes_unscramble.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { app_learn_js_lesson_example_guided } from "./app_learn_js_lesson_example_guided.mjs";
@@ -100,22 +99,11 @@ export function app_learn_js_lesson_code_generic(params) {
   ("the backwards quiz has its own tailored wrong answers, because its answers are code rather than values and a decoy that tempts in one direction says nothing in the other; absent, it offers only the other questions' code, which is what every lesson before this one did");
   let backwards_decoys = property_get_or(params, "backwards_decoys", null);
   ("what to say when a learner picks one of the backwards quiz's wrong programs; see the multiple-choice quiz for how it is asked");
-  let backwards_wrong_say_lesson = property_get_or(
+  let backwards_wrong_say = property_get_or(
     params,
     "backwards_wrong_say",
     null,
   );
-  ("2026-11-12, asked for by the human: when the lesson has nothing of its own to say about a wrong program, the shared reminder says what that program writes out instead");
-  function backwards_wrong_say(question, answer, choice) {
-    if (not_equal(backwards_wrong_say_lesson, null)) {
-      let said = backwards_wrong_say_lesson(question, answer, choice);
-      if (not_equal(said, null)) {
-        return said;
-      }
-    }
-    let shared = app_learn_js_backwards_wrong_say(question, answer, choice);
-    return shared;
-  }
   let backwards_question_label_final = value_or_if_null(
     backwards_question_label_override,
     backwards_question_label,
@@ -132,7 +120,9 @@ export function app_learn_js_lesson_code_generic(params) {
     answer_count_override: quiz_backwards_answer_count_override,
     decoys: backwards_decoys,
     wrong_say: backwards_wrong_say,
+    wrong_output_say: app_learn_js_backwards_wrong_say,
   };
+  ("2026-11-12, asked for by the human: every backwards quiz says what a wrong program writes out, beside whatever the lesson says of its own");
   ("the unscramble (build-from-tokens) answer prompt is set inside the quizzes builder; a lesson may override it too");
   let unscramble_label = property_get_or(params, "unscramble_label", null);
   let unscramble = property_get_or(params, "unscramble", true);

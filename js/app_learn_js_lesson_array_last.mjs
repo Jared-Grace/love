@@ -132,19 +132,14 @@ export function app_learn_js_lesson_array_last() {
   }
   function backwards_wrong_say(question, answer, choice) {
     "said when the learner picks a wrong program: a.length - 1 alone writes out the index, not the item at it; a.length - 2 reads the item before the last. Asked for by the human 2026-11-12, after a student picked the index program";
-    let items9 = items_of(choice);
-    let size4 = list_size(items9);
-    let object2 = subtract(size4, 1);
-    let last_index = json_to(object2);
+    "2026-11-12: what the wrong program writes out is said by the shared line above this one, in the look of output, so this says only why";
     let code8 = minus_code("1");
     let index_log = js_code_console_log_statement(code8);
     if (text_includes(choice, index_log)) {
       let r = [
         "",
         "a.length - 1",
-        " is the index of the last item, so this writes out the index ",
-        last_index,
-        ". To write out the item at that index, put the index inside the brackets: ",
+        " is the index of the last item, not the item. To write out the item at that index, put the index inside the brackets: ",
         "a[a.length - 1]",
       ];
       return r;
@@ -152,14 +147,10 @@ export function app_learn_js_lesson_array_last() {
     let index4 = minus_code("2");
     let before_read = js_code_index(name, index4);
     if (text_includes(choice, before_read)) {
-      let index5 = subtract(size4, 2);
-      let before_item = list_get(items9, index5);
       let r2 = [
         "",
         "a.length - 2",
-        " is the index of the item before the last, so this writes out ",
-        before_item,
-        ". The last index is ",
+        " is the index of the item before the last. The last index is ",
         "a.length - 1",
       ];
       return r2;

@@ -15,6 +15,8 @@ import { html_styles_inline_restore_later } from "./html_styles_inline_restore_l
 import { list_add } from "./list_add.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
 export function app_learn_js_quiz_choice_button_answer_generic({
   parent,
@@ -79,10 +81,22 @@ export function app_learn_js_quiz_choice_button_answer_generic({
       html_style_opacity(b, "0.5");
       return;
     }
+    ("2026-11-12, at the human's asking: only the newest wrong press stays red, so the reminder said under the choices plainly belongs to it; the one red before it loses its red and is left dimmed, still spent. Not picked: the reminder moved under its own choice, which would push the choices below it down between presses");
+    let earlier = property_get_or(state, "wrong_last_restore", null);
+    if (null_not_is(earlier)) {
+      earlier();
+    }
     let coded = app_learn_js_lesson_quiz_wrong_set(b);
     if (not(coded)) {
       html_style_opacity(b, "0.5");
     }
+    function dimmed_only() {
+      "the red taken off this press, leaving it dimmed and not pressable";
+      restore2();
+      html_style_set(b, "pointer-events", "none");
+      html_style_opacity(b, "0.5");
+    }
+    property_set(state, "wrong_last_restore", dimmed_only);
   }
   return b;
 }
