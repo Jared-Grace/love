@@ -1,6 +1,6 @@
+import { reply_on_match_blessings } from "./reply_on_match_blessings.mjs";
 import { reply_choices_praise } from "./reply_choices_praise.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
-import { prayer_blessing } from "./prayer_blessing.mjs";
 import { reply_sequence_outputs } from "./reply_sequence_outputs.mjs";
 export function reply_meeting_blessed() {
   "Somebody saying a meeting today was blessed. It gets praise to the LORD and glory to God back, and a blessing on them and everyone who was at the meeting.";
@@ -9,7 +9,8 @@ export function reply_meeting_blessed() {
   let words = ["today", "meeting", "is", "very", "blessed"];
   let praise = reply_choices_praise();
   let glory = reply_choices_glory();
-  let blessing = prayer_blessing("you and everyone at the meeting");
-  let said = reply_sequence_outputs(words, [praise, glory, blessing]);
+  let praised = reply_sequence_outputs(words, [praise, glory]);
+  let blessed = ["you", "everyone at the meeting"];
+  let said = reply_on_match_blessings(praised, blessed);
   return said;
 }
