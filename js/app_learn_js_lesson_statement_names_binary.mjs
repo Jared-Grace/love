@@ -24,7 +24,7 @@ export function app_learn_js_lesson_statement_names_binary({
     remember_parts,
     answer_count,
     decoys: null,
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

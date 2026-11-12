@@ -54,8 +54,8 @@ export function app_learn_js_lesson_if_steps() {
     let m = list_get(seed, 1);
     let s = list_get(seed, 2);
     let code = js_code_let_json_statement("a", a);
-    let right2 = js_code_binary_spaced_nb("a", times, m);
-    let code2 = js_code_let_statement("b", right2);
+    let right = js_code_binary_spaced_nb("a", times, m);
+    let code2 = js_code_let_statement("b", right);
     let right3 = js_code_binary_spaced_nb("b", minus, s);
     let code3 = js_code_let_statement("c", right3);
     let setup = [code, code2, code3];

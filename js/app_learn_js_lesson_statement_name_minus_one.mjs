@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_minus_one() {
     name_id,
     app_learn_js_lesson_statement_name_minus_one_batch,
     app_learn_js_lesson_statement_name_minus_one_above,
-    false,
+    true,
   );
   return lesson;
 }
