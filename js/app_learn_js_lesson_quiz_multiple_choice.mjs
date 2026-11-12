@@ -9,6 +9,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_lesson_quiz_wrong_code_newest_background_color } from "./app_learn_js_lesson_quiz_wrong_code_newest_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_scroll_nearest } from "./html_scroll_nearest.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_each_button } from "./app_learn_js_lesson_quiz_multiple_choice_each_button.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_div } from "./html_div.mjs";
@@ -35,7 +36,7 @@ export function app_learn_js_lesson_quiz_multiple_choice(
   let quiz_question_text = property_path_get_2(r, "r3", "quiz_question_text");
   let quiz_answer_text = property_get(r, "quiz_answer_text");
   let note = null;
-  function on_wrong_choice(quiz_choice) {
+  async function on_wrong_choice(quiz_choice) {
     on_wrong();
     ("cleared at every wrong press, so a reminder about an earlier choice never stays under a newer one it says nothing about");
     html_clear(note);
@@ -64,6 +65,8 @@ export function app_learn_js_lesson_quiz_multiple_choice(
       html_style_background_color_set(note, fill);
       html_style_set(note, "padding", "0.3em 0.5em");
       html_style_set(note, "border-radius", "0.5em");
+      ("2026-11-12, at the human's asking: the page glides only as far as it takes for the reminder to be in view, not centred, so on a short screen the learner sees why without hunting for it. Not awaited: nothing after it waits on the glide");
+      await html_scroll_nearest(note);
       return;
     }
     html_style_set(note, "background-color", "");
