@@ -35,8 +35,8 @@ export async function g_sermon_sweep_review() {
       chapters[chapter_code] =
         await g_sermon_generate_chapter_passages_get(chapter_code);
     }
-    function key_is(passage) {
-      let left = g_sermon_passage_verses_key(passage);
+    function key_is(candidate) {
+      let left = g_sermon_passage_verses_key(candidate);
       let r = equal(left, key);
       return r;
     }
@@ -56,13 +56,13 @@ export async function g_sermon_sweep_review() {
     let texts_before = list_map(before, text_of);
     let texts_after = list_map(after, text_of);
     ("The rows are paired here rather than on the page, because a line that only grew - a quote that gained who said it - is paired by a test the plain signed difference does not make.");
-    let entries = diff_lines_aligned_entries(texts_before, texts_after);
+    let rows = diff_lines_aligned_entries(texts_before, texts_after);
     shown.push({
       chapter_code,
       key,
       decision,
       passage,
-      entries,
+      entries: rows,
     });
   }
   return shown;
