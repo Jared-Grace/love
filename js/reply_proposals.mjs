@@ -3922,6 +3922,87 @@ export function reply_proposals() {
       "the four are now written once, in their own small list, so the pray for me rule can use the same list next instead of spelling them again.",
     ],
   };
+  let work_added_people = text_combine_multiple([
+    "+    let people = ",
+    fn_name("text_combine_multiple"),
+    '(["the people of ", country]);',
+  ]);
+  let work_removed_blessed = text_combine_multiple([
+    "-    let blessed = ",
+    fn_name("text_combine_multiple"),
+    "([",
+  ]);
+  let work_removed_blessing = text_combine_multiple([
+    "-    let country_blessing = ",
+    fn_name("prayer_blessing"),
+    "(blessed);",
+  ]);
+  let work_kept_words = text_combine_multiple([
+    "     let country_words = ",
+    fn_name("reply_country_shown_words"),
+    "(country);",
+  ]);
+  let work_kept_choice = text_combine_multiple([
+    "     let country_choice = ",
+    fn_name("reply_choice"),
+    "(country_words);",
+  ]);
+  let work_removed_rule = text_combine_multiple([
+    "-    let rule = ",
+    fn_name("reply_sequence_output"),
+    "([country_choice], country_blessing);",
+  ]);
+  let work_added_rule = text_combine_multiple([
+    "+    let rule = ",
+    fn_name("reply_on_match_blessings"),
+    "(country_choice, blessed);",
+  ]);
+  let line13 = prayer_blessing_line("your ministry and the people of Ghana");
+  let work_prayer = reply_prayer_closing([line13]);
+  let line14 = prayer_blessing_line(
+    "your ministry, your worship, the people of Ghana, you, your family, your church and your country",
+  );
+  let work_choir = reply_prayer_closing([pray_listed_abundance, line14]);
+  let work_listed = {
+    title:
+      "ministry work in a country adds your ministry and the people of that country to the list of blessings",
+    fn: fn_name("reply_ministry_work"),
+    whole: [],
+    diff: [
+      work_removed_blessed,
+      '-      "your ministry and the people of ",',
+      "-      country,",
+      "-    ]);",
+      work_removed_blessing,
+      work_added_people,
+      '+    let blessed = ["your ministry", people];',
+      work_kept_words,
+      work_kept_choice,
+      work_removed_rule,
+      work_added_rule,
+      "     return rule;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I do ministry work in Ghana",
+        answered: true,
+        outputs: [work_prayer],
+      },
+      {
+        from: "",
+        message:
+          "I am a choir leader I do ministry work in Ghana and I ask you to pray for me",
+        answered: true,
+        outputs: [work_choir],
+      },
+    ],
+    decide: [
+      "the blessing on your ministry and the people of the country moves into the list, so it is asked for in the one blessing line of the closing prayer.",
+      "a choir leader in Ghana who asks for prayer now gets one closing prayer instead of two, and your ministry is said once instead of twice.",
+      "two long real messages of this shape are recorded as getting no reply. Once this goes in, they are written again from what the rules then say.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -3972,6 +4053,7 @@ export function reply_proposals() {
     pray_for_me_listed,
     meeting_listed,
     thanked_listed,
+    work_listed,
   ];
   return proposals;
 }
