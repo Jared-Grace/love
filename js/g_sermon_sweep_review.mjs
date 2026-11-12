@@ -1,9 +1,13 @@
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_sweep_path } from "./g_sermon_sweep_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { not } from "./not.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
+import { g_sermon_generate_chapter_passages_get } from "./g_sermon_generate_chapter_passages_get.mjs";
+import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
+import { list_find } from "./list_find.mjs";
 import { g_sermon_lines_file_path } from "./g_sermon_lines_file_path.mjs";
 import { list_map } from "./list_map.mjs";
 import { diff_lines_signed_aligned } from "./diff_lines_signed_aligned.mjs";
@@ -23,10 +27,28 @@ export async function g_sermon_sweep_review() {
     let text = property_get(line, "text");
     return text;
   }
+  ("Each verse also comes with the Bible text it preaches, because a rewording of a line can only be judged against what the verse itself says, and a reviewer on a phone has nowhere else to look it up.");
+  let chapters = {};
+  async function passage_text(chapter_code, key) {
+    let known = chapter_code in chapters;
+    if (not(known)) {
+      chapters[chapter_code] =
+        await g_sermon_generate_chapter_passages_get(chapter_code);
+    }
+    function key_is(passage) {
+      let left = g_sermon_passage_verses_key(passage);
+      let r = equal(left, key);
+      return r;
+    }
+    let passage = list_find(chapters[chapter_code], key_is);
+    let text = property_get(passage, "text");
+    return text;
+  }
   let shown = [];
   for (let entry of entries) {
     let chapter_code = property_get(entry, "chapter_code");
     let key = property_get(entry, "key");
+    let passage = await passage_text(chapter_code, key);
     let after = property_get(entry, "after");
     let decision = property_get(entry, "decision");
     let lines_path = g_sermon_lines_file_path(chapter_code, key);
@@ -38,6 +60,7 @@ export async function g_sermon_sweep_review() {
       chapter_code,
       key,
       decision,
+      passage,
       diff,
     });
   }

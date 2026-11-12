@@ -12,6 +12,7 @@ import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
 import { noop } from "./noop.mjs";
 import { not } from "./not.mjs";
+import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_notes_review } from "./app_shared_notes_review.mjs";
@@ -56,6 +57,9 @@ export async function g_sermon_sweep_preview() {
     let waiting_this = equal(decision, null);
     let n = not(waiting_this);
     collapsed_set(n);
+    ("The verse itself sits above the lines, quiet, so each rewording is read against what the Bible says there.");
+    let passage = property_get(one, "passage");
+    app_shared_text_quiet(block, passage);
     app_reply_rules_diff_show(block, diff);
     let buttons = html_div(block);
     async function decide(word) {
