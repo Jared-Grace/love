@@ -94,8 +94,8 @@ export function app_learn_js_lesson_if_two_ifs() {
     function program_of(values2) {
       let words2 = list_shuffle_take(fruits, 3);
       let lines2 = program_lines(values2, words2);
-      let code2 = list_join_newline(lines2);
-      return code2;
+      let code = list_join_newline(lines2);
+      return code;
     }
     let codes = list_map(ways, program_of);
     let ordered = app_learn_js_if_codes_halves(codes);
