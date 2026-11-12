@@ -11,8 +11,8 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_expression_array_decoys } from "./app_learn_js_expression_array_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { text_empty } from "./text_empty.mjs";
+import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_label_text } from "./app_learn_js_label_text.mjs";
@@ -21,12 +21,12 @@ import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn
 export function app_learn_js_lesson_expression_choose_order_twin_array_generic(
   title,
   code_titled,
-  twin_get,
+  twin,
 ) {
   arguments_assert(arguments, 3);
   ('the pressing lesson in front of an array lesson whose programs name an array on one line and write out a line reading it on the next: let a = ["love", "joy", "peace"]; console.log(a[a.length - 1]); pressed as a.length, then 3 - 1, then a[2]');
   ("The lines are the twin's own programs, asked of the twin, for the reason the plain twin reader gives. What differs is that a line reading an array means nothing without the array, so the question kept is the whole program rather than the line printed back from its shape, and the line walked above says which array it reads.");
-  let twin = twin_get();
+  ("2026-11-12: handed the twin itself rather than a way to build it, so the twin can build this lesson from inside itself and merge the two");
   let twin_above = property_get(twin, "above");
   let twin_batch = property_get(twin, "batch");
   let tree_of_code = app_learn_js_expression_tree_of_array_program;

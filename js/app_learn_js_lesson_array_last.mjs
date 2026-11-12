@@ -33,6 +33,8 @@ import { app_learn_js_lesson_array_last_index } from "./app_learn_js_lesson_arra
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
+import { app_learn_js_lesson_expression_choose_order_twin_array_generic } from "./app_learn_js_lesson_expression_choose_order_twin_array_generic.mjs";
+import { app_learn_js_lesson_solve_merged } from "./app_learn_js_lesson_solve_merged.mjs";
 export function app_learn_js_lesson_array_last() {
   arguments_assert(arguments, 0);
   ("the last item of an array: let a = ['love', 'joy', 'peace']; console.log(a[a.length - 1]); writes out peace");
@@ -210,5 +212,12 @@ export function app_learn_js_lesson_array_last() {
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
-  return lesson;
+  ("2026-11-12, asked for by the human: the pressing lesson that stood in front of this one is merged into it - its opening, then one press-at-a-time quiz before the others");
+  let solve = app_learn_js_lesson_expression_choose_order_twin_array_generic(
+    "Solve the last item",
+    "a[a.length - 1]",
+    lesson,
+  );
+  let merged = app_learn_js_lesson_solve_merged(lesson, solve);
+  return merged;
 }
