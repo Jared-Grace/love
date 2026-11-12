@@ -5331,9 +5331,9 @@ def untrusted_piece_hint(words, safe_verbs):
         if verb in ("mkdir", "rm", "mv"):
             return (
                 f"`{verb}` runs unasked only on WHOLE paths inside your "
-                "scratchpad. A path relative to an earlier `cd` is not "
-                "followed, so write each one in full from /tmp/claude-…, "
-                "and drop the `cd`."
+                "scratchpad. A path relative to an earlier `cd`, or one "
+                "built from a variable like `$S`, is not followed, so write "
+                "each one in full from /tmp/claude-…, and drop the `cd`."
             )
         return (
             f"`{verb}` has no allow rule. Run the other parts as their own "
@@ -5553,6 +5553,16 @@ def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
     plain = plain[xargs_wrapper_skip(plain):]
     if len(plain) >= 3 and plain[0] == "node" and plain[1] in AI_DISPATCHER_SCRIPTS:
         return True
+    # A scratchpad mkdir/rm/mv spelled through a variable holding a scratchpad
+    # path: written out in full it runs unasked, so the agent is sent back to
+    # write it out. The variable is not followed for approval, because it may
+    # be set again, or not at all when what came before it failed.
+    if plain[0] in ("mkdir", "rm", "mv"):
+        var_map = _literal_var_map(command)
+        for word in plain[1:]:
+            m = VAR_PREFIX_RE.match(word)
+            if m and var_map.get(m.group(1), "").startswith("/tmp/claude-"):
+                return True
     # tee is a redirect that also prints, so `>>` per file is its rewording.
     # Sending it back approves nothing: the redirect is judged on its own.
     if plain[0] == "tee":

@@ -23,6 +23,8 @@
   "cases": [
     { "command": "ls", "decision": "allow", "reason_includes": "already in permissions.allow", "why": "trusted verb, bare - and the allow says which rule carried it" },
     { "command": "ls && ls", "decision": "allow", "why": "chain of trusted verbs" },
+    { "command": "cd /home/j/a/repos/love && S=/tmp/claude-1000/-home-j-a-repos-love/x/scratchpad; mkdir -p $S/d29; grep -c x $S/d29/lex.txt", "decision": "deny", "reason_includes": "built from a variable", "why": "a scratchpad mkdir through a variable is not followed for approval (it may be set again, or skipped when the cd fails), but written out it runs unasked, so the agent is sent back" },
+    { "command": "S=/etc; mkdir -p $S/d29", "decision": "silent", "why": "a variable that is not a scratchpad path is not sent back; it still reaches the human" },
     { "command": "node scripts/ai.mjs function_new_open a 2>&1 | head", "decision": "deny", "reason_includes": "permission_grant_add_auto function_new_open", "why": "an ungranted call that shares an opening with a granted name, in a chain: the agent can try the grant itself or run it alone, so it is sent back instead of asking the human. An _open twin can never be granted, so this case stays stable" },
     { "command": "node scripts/ai.mjs function_new_open a", "decision": "ask", "reason_includes": "text prefix", "why": "the same call alone still reaches the human: refusing it too would leave the agent no road when the grant is refused" },
     { "command": "which notify-send zenity; echo $XDG_CURRENT_DESKTOP; loginctl list-sessions 2>/dev/null | head; ls /run/user/1000/bus", "decision": "allow", "why": "loginctl list-sessions only prints who is logged in" },

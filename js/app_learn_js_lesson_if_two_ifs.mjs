@@ -1,9 +1,7 @@
-import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
-import { js_code_if_dots } from "./js_code_if_dots.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
@@ -17,6 +15,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_integers } from "./text_integers.mjs";
+import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -25,6 +24,9 @@ import { app_learn_js_lesson_if_name } from "./app_learn_js_lesson_if_name.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_style_normal_span } from "./app_learn_js_style_normal_span.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -161,24 +163,25 @@ export function app_learn_js_lesson_if_two_ifs() {
     app_learn_js_code_lines_writes_out(box_two, two, written);
     let a_less = js_code_binary_spaced_nb(2, less, 5);
     let b_less = js_code_binary_spaced_nb(7, less, 5);
-    app_learn_js_div_cycle_code(box_two, [
+    let a_said = app_learn_js_div_cycle_code(box_two, [
       "",
       a_less,
       " is ",
       "true",
       ", so ",
-      love,
-      " is written out",
     ]);
-    app_learn_js_div_cycle_code(box_two, [
+    ("2026-11-12: the written word wears the logged output look, asked for by the human, while the code before it on the same line stays code");
+    app_learn_js_style_normal_span(a_said, love);
+    html_span_text(a_said, " is written out");
+    let b_said = app_learn_js_div_cycle_code(box_two, [
       "",
       b_less,
       " is ",
       "false",
       ", so ",
-      joy,
-      " is not",
     ]);
+    app_learn_js_style_normal_span(b_said, joy);
+    html_span_text(b_said, " is not");
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "So two ",
