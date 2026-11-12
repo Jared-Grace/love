@@ -6,6 +6,9 @@ import { js_operator_and } from "./js_operator_and.mjs";
 import { js_operator_or } from "./js_operator_or.mjs";
 import { app_learn_js_operator_index_symbol } from "./app_learn_js_operator_index_symbol.mjs";
 import { list_get } from "./list_get.mjs";
+import { math_max } from "./math_max.mjs";
+import { math_min } from "./math_min.mjs";
+import { list_concat } from "./list_concat.mjs";
 export function app_learn_js_operators_solvable() {
   "every operator a code lesson may put between two things and then work out, each carrying the function that works it out";
   ("It is ",
@@ -25,6 +28,16 @@ export function app_learn_js_operators_solvable() {
     operator: index_symbol,
     fn: list_get,
   };
-  let all = list_concat_single_right(with_or, indexing);
+  let with_index = list_concat_single_right(with_or, indexing);
+  ("2026-11-12, at the human's asking: Math.max and Math.min act on two things and are worked out as the operators between two things are, so the Statements lessons that keep a value inside its edges can be stepped through");
+  let larger = {
+    operator: "Math.max",
+    fn: math_max,
+  };
+  let smaller = {
+    operator: "Math.min",
+    fn: math_min,
+  };
+  let all = list_concat(with_index, [larger, smaller]);
   return all;
 }

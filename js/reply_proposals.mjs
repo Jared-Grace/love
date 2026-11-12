@@ -4150,8 +4150,13 @@ export function reply_proposals() {
   };
   let doing_good = reply_response_how_r_u();
   let combined82 = text_combine_multiple([
-    "   let you = ",
+    "-  let you = ",
     fn_name("reply_phrase_you"),
+    "();",
+  ]);
+  let combined82b = text_combine_multiple([
+    "+  let dear = ",
+    fn_name("reply_phrase_my_dear_brother"),
     "();",
   ]);
   let combined83 = text_combine_multiple([
@@ -4167,7 +4172,7 @@ export function reply_proposals() {
   let combined85 = text_combine_multiple([
     "+  let fn = ",
     fn_name("reply_sequence"),
-    '(["how", "are", you, doing]);',
+    '(["how", "are", "you", doing, dear]);',
   ]);
   let combined86 = text_combine_multiple([
     "   let hru_response = ",
@@ -4178,7 +4183,14 @@ export function reply_proposals() {
     title: "how are you doing gets the same answer as how are you",
     fn: fn_name("app_shared_message_reply_how_r_u"),
     whole: [],
-    diff: [combined82, combined83, combined84, combined85, combined86],
+    diff: [
+      combined82,
+      combined82b,
+      combined83,
+      combined84,
+      combined85,
+      combined86,
+    ],
     cases: [
       {
         from: "",

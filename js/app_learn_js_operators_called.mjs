@@ -5,6 +5,7 @@ export function app_learn_js_operators_called() {
   ("the operators written as a name with brackets round the one thing they act on, by their names: Math.floor");
   ("A class of its own because its brackets are part of how it is spelled and not a gathering. Every other pair of brackets on a line is there because of what stands around it, so it comes and goes as the line is worked through - and these never do: Math.floor(14 / 4) keeps its pair after the division inside it has been worked out, because Math.floor3.5 is not a line anybody writes.");
   let name = js_code_math_floor_name();
-  let names = [name];
+  ("2026-11-12, at the human's asking, so the Statements lessons that round up or measure a distance can be stepped through: Math.ceil and Math.abs are spelled and pressed as Math.floor is");
+  let names = [name, "Math.ceil", "Math.abs"];
   return names;
 }

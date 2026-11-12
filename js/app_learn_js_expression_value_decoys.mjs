@@ -1,5 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
+import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
+import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
 import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -20,14 +23,32 @@ export function app_learn_js_expression_value_decoys(current, node) {
   ("Both are mistakes somebody actually makes, and neither is a near miss. The first is the slip of reading the symbol wrong - 2 * 3 answered as 5. The second is answering the line instead of the step, which is the very habit the step-at-a-time lesson before this one exists to break; a learner still thinking in whole lines reaches for it.");
   ("Nothing invented and nothing counted off. A wrong answer built by nudging the right one - one more, one less - would sit in the dead zone where the learner cannot tell whether they have miscounted or misread, and would be asking about arithmetic rather than about the step.");
   ("Either candidate is dropped when it equals the right answer, so the last step of a line offers only the one wrong value: by then the step IS the whole line, and the two are the same number.");
-  let left = property_get(node, "left");
   let symbol = property_get(node, "operator");
+  let called_before =
+    app_learn_js_expression_node_before_is(node) &&
+    app_learn_js_operator_called_is(symbol);
+  if (called_before) {
+    ("2026-11-12: a call round one number, as Math.floor(3.5) is, offers what the rounding lessons offer - the number left as it was, and it rounded the other ways. It has no left side to slip an operator on, and without this a program stepped to one threw, pressed alone or solved whole");
+    let rounded_wrong = app_learn_js_expression_value_decoys_rounding(
+      current,
+      node,
+    );
+    return rounded_wrong;
+  }
+  let left = property_get(node, "left");
   let right = property_get(node, "right");
   let value = app_learn_js_operator_solve(left, symbol, right);
   let times = js_operator_asterisk_symbol();
   let plus = js_operator_plus_symbol();
   let times_is = equal(symbol, times);
   let other = ternary(times_is, plus, times);
+  ("2026-11-12: Math.max slips to Math.min and back, the mix-up the lesson on keeping a value inside its edges warns of, since max sounds like the top");
+  if (equal(symbol, "Math.max")) {
+    other = "Math.min";
+  }
+  if (equal(symbol, "Math.min")) {
+    other = "Math.max";
+  }
   let slipped = app_learn_js_operator_solve(left, other, right);
   let whole = app_learn_js_expression_value(current);
   let candidates = [slipped, whole];

@@ -11,6 +11,7 @@ import { js_unparse } from "./js_unparse.mjs";
 import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_get } from "./list_get.mjs";
+import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_learn_js_expression_node_index } from "./app_learn_js_expression_node_index.mjs";
 import { js_code_length } from "./js_code_length.mjs";
@@ -71,6 +72,15 @@ export function app_learn_js_expression_from_js(node, values) {
       let inside = app_learn_js_expression_from_js(node4, values);
       let call = app_learn_js_expression_node_before(name_called, inside);
       return call;
+    }
+    let called_two = app_learn_js_operators_called_two();
+    if (list_includes(called_two, name_called) && list_size_equal(handed, 2)) {
+      let node5 = list_get(handed, 0);
+      let first = app_learn_js_expression_from_js(node5, values);
+      let node6 = list_get(handed, 1);
+      let second = app_learn_js_expression_from_js(node6, values);
+      let call_two = app_learn_js_expression_node(first, name_called, second);
+      return call_two;
     }
   }
   if (equal(type, "MemberExpression")) {
