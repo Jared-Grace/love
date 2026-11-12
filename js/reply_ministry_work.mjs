@@ -1,8 +1,7 @@
+import { reply_on_match_blessings } from "./reply_on_match_blessings.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { prayer_blessing } from "./prayer_blessing.mjs";
 import { reply_country_shown_words } from "./reply_country_shown_words.mjs";
 import { reply_choice } from "./reply_choice.mjs";
-import { reply_sequence_output } from "./reply_sequence_output.mjs";
 import { reply_countries_shown } from "./reply_countries_shown.mjs";
 import { reply_continents_shown } from "./reply_continents_shown.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -14,14 +13,11 @@ export function reply_ministry_work() {
   "★ ONE RULE PER COUNTRY, SO THE NAME SAID BACK IS ALWAYS THE LISTED ONE AND NEVER THE LETTERS TYPED. Kenia is blessed as Kenya. A spelling added to the country lists with no written name gets no reply here until it is given one, because a silence is safe and a prayer that drops the place was not wanted. The rejected reading was reading the typed word back out of the message, which would repeat a misspelling.";
   "★ THESE ARE THE WORDS A REAL MESSAGE USED AND NO OTHERS, WITH ONLY THE COUNTRY OPEN. Other ways of saying this are added when somebody really says them.";
   function country_rule(country) {
-    let blessed = text_combine_multiple([
-      "your ministry and the people of ",
-      country,
-    ]);
-    let country_blessing = prayer_blessing(blessed);
+    let people = text_combine_multiple(["the people of ", country]);
+    let blessed = ["your ministry", people];
     let country_words = reply_country_shown_words(country);
     let country_choice = reply_choice(country_words);
-    let rule = reply_sequence_output([country_choice], country_blessing);
+    let rule = reply_on_match_blessings(country_choice, blessed);
     return rule;
   }
   let countries_shown = reply_countries_shown();
