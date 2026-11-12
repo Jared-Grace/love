@@ -1,3 +1,4 @@
+import { app_shared_renames_redirects_unready_write } from "./app_shared_renames_redirects_unready_write.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_renames } from "./app_shared_renames.mjs";
@@ -68,5 +69,6 @@ export async function app_shared_renames_redirects_write() {
   property_set(hosting, "redirects", all);
   let json = json_format_to_spaces(config, 2);
   await file_overwrite(path, json + "\n");
+  let made2 = await app_shared_renames_redirects_unready_write();
   return made;
 }
