@@ -4,6 +4,8 @@ import { easton_word_articles_fetched } from "./easton_word_articles_fetched.mjs
 import { easton_article_url } from "./easton_article_url.mjs";
 import { smith_word_articles_fetched } from "./smith_word_articles_fetched.mjs";
 import { smith_article_url } from "./smith_article_url.mjs";
+import { isbe_word_articles_fetched } from "./isbe_word_articles_fetched.mjs";
+import { isbe_article_url } from "./isbe_article_url.mjs";
 import { catholic_encyclopedia_word_articles_fetched } from "./catholic_encyclopedia_word_articles_fetched.mjs";
 import { catholic_encyclopedia_article_url } from "./catholic_encyclopedia_article_url.mjs";
 import { church_fathers_word_articles_fetched } from "./church_fathers_word_articles_fetched.mjs";
@@ -36,6 +38,11 @@ export function bible_word_article_sites() {
       name: "Smith's Bible Dictionary",
       table: smith_word_articles_fetched,
       url: smith_article_url,
+    },
+    {
+      name: "the International Standard Bible Encyclopedia",
+      table: isbe_word_articles_fetched,
+      url: isbe_article_url,
     },
     {
       name: "the Catholic Encyclopedia",
