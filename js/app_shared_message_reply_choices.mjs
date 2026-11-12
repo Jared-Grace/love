@@ -1,3 +1,4 @@
+import { reply_great_day_thanked } from "./reply_great_day_thanked.mjs";
 import { reply_pieces_counted } from "./reply_pieces_counted.mjs";
 import { reply_cheapest_per_position_fewest_pieces } from "./reply_cheapest_per_position_fewest_pieces.mjs";
 import { reply_friend_list_full } from "./reply_friend_list_full.mjs";
@@ -78,6 +79,7 @@ export function app_shared_message_reply_choices() {
   let blessed_back = reply_god_bless_you_thanked();
   let meeting = reply_meeting_blessed();
   let tiktok = reply_tiktok_link();
+  let great_day = reply_great_day_thanked();
   let friend_list = reply_friend_list_full();
   let choices_main = reply_choice([
     hru,
@@ -100,6 +102,7 @@ export function app_shared_message_reply_choices() {
     blessed_back,
     meeting,
     tiktok,
+    great_day,
     friend_list,
   ]);
   let counted = reply_pieces_counted(choices_main);
