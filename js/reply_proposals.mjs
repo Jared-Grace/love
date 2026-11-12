@@ -33,6 +33,8 @@ import { emoji_smile } from "./emoji_smile.mjs";
 import { emoji_disappointed } from "./emoji_disappointed.mjs";
 import { prayer_blessing_line } from "./prayer_blessing_line.mjs";
 import { reply_prayer_abundance_of_prayer } from "./reply_prayer_abundance_of_prayer.mjs";
+import { reply_response_how_r_u } from "./reply_response_how_r_u.mjs";
+import { reply_response_blessing_thanks } from "./reply_response_blessing_thanks.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -4146,6 +4148,108 @@ export function reply_proposals() {
       "so the blessing now reads always bless all Christian videos exceedingly abundantly more than anyone can ask or think, the same words every other blessing uses.",
     ],
   };
+  let doing_good = reply_response_how_r_u();
+  let combined82 = text_combine_multiple([
+    "   let you = ",
+    fn_name("reply_phrase_you"),
+    "();",
+  ]);
+  let combined83 = text_combine_multiple([
+    "+  let doing = ",
+    fn_name("reply_optional"),
+    '("doing");',
+  ]);
+  let combined84 = text_combine_multiple([
+    "-  let fn = ",
+    fn_name("reply_sequence"),
+    '(["how", "are", you]);',
+  ]);
+  let combined85 = text_combine_multiple([
+    "+  let fn = ",
+    fn_name("reply_sequence"),
+    '(["how", "are", you, doing]);',
+  ]);
+  let combined86 = text_combine_multiple([
+    "   let hru_response = ",
+    fn_name("reply_response_how_r_u"),
+    "();",
+  ]);
+  let doing_heard = {
+    title: "how are you doing gets the same answer as how are you",
+    fn: fn_name("app_shared_message_reply_how_r_u"),
+    whole: [],
+    diff: [combined82, combined83, combined84, combined85, combined86],
+    cases: [
+      {
+        from: "",
+        message: "How are you doing brother?",
+        answered: true,
+        outputs: [doing_good],
+      },
+      {
+        from: "",
+        message: "How are you doing",
+        answered: true,
+        outputs: [doing_good],
+      },
+    ],
+    decide: [
+      "the word doing after how are you is allowed, so how are you doing brother gets the answer how are you already gets.",
+    ],
+  };
+  let day_thanks = reply_response_blessing_thanks();
+  let day_line = prayer_blessing_line("your day");
+  let day_closing = reply_prayer_closing([day_line]);
+  let combined87 = text_combine_multiple([
+    "   let tiktok = ",
+    fn_name("reply_tiktok_link"),
+    "();",
+  ]);
+  let combined88 = text_combine_multiple([
+    "+  let great_day = ",
+    fn_name("reply_great_day_thanked"),
+    "();",
+  ]);
+  let combined89 = text_combine_multiple([
+    "   let friend_list = ",
+    fn_name("reply_friend_list_full"),
+    "();",
+  ]);
+  let great_day_thanked = {
+    title:
+      "have a great day gets thanks for the blessing, and your day goes on the list of blessings",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [
+      fn_name("reply_great_day_thanked"),
+      fn_name("reply_response_blessing_thanks"),
+    ],
+    diff: [
+      combined87,
+      combined88,
+      combined89,
+      "     tiktok,",
+      "+    great_day,",
+      "     friend_list,",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "have a great day",
+        answered: true,
+        outputs: [day_thanks, day_closing],
+      },
+      {
+        from: "",
+        message: "Good morning have a great day",
+        answered: true,
+        outputs: ["🌅👋😁 Good morning! ✝️", day_thanks, day_closing],
+      },
+    ],
+    decide: [
+      "have a great day is a blessing, so it gets the same thanks God bless you gets: Thank you for the blessing. Those words are now one shared piece, so both say exactly the same thing.",
+      "your day goes on the list of blessings, so the closing prayer asks the LORD to always bless your day exceedingly abundantly more than anyone can ask or think.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -4199,6 +4303,8 @@ export function reply_proposals() {
     work_listed,
     choir_recorded,
     tiktok_listed,
+    doing_heard,
+    great_day_thanked,
   ];
   return proposals;
 }
