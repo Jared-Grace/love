@@ -1,21 +1,3 @@
-import { app_learn_js_lesson_statement_name_not_itself } from "./app_learn_js_lesson_statement_name_not_itself.mjs";
-import { app_learn_js_lesson_array_for_find } from "./app_learn_js_lesson_array_for_find.mjs";
-import { app_learn_js_lesson_array_for_if_odd } from "./app_learn_js_lesson_array_for_if_odd.mjs";
-import { app_learn_js_lesson_array_for_if_even } from "./app_learn_js_lesson_array_for_if_even.mjs";
-import { app_learn_js_lesson_array_for_backwards_step_two } from "./app_learn_js_lesson_array_for_backwards_step_two.mjs";
-import { app_learn_js_lesson_array_for_backwards } from "./app_learn_js_lesson_array_for_backwards.mjs";
-import { app_learn_js_lesson_array_for_step_two_odd } from "./app_learn_js_lesson_array_for_step_two_odd.mjs";
-import { app_learn_js_lesson_array_for_step_two } from "./app_learn_js_lesson_array_for_step_two.mjs";
-import { app_learn_js_lesson_array_for_start_two } from "./app_learn_js_lesson_array_for_start_two.mjs";
-import { app_learn_js_lesson_array_for_inner } from "./app_learn_js_lesson_array_for_inner.mjs";
-import { app_learn_js_lesson_array_for_length } from "./app_learn_js_lesson_array_for_length.mjs";
-import { app_learn_js_lesson_array_for } from "./app_learn_js_lesson_array_for.mjs";
-import { app_learn_js_lesson_array_index_steps_two } from "./app_learn_js_lesson_array_index_steps_two.mjs";
-import { app_learn_js_lesson_array_index_step } from "./app_learn_js_lesson_array_index_step.mjs";
-import { app_learn_js_lesson_array_index_name } from "./app_learn_js_lesson_array_index_name.mjs";
-import { app_learn_js_lesson_array_last } from "./app_learn_js_lesson_array_last.mjs";
-import { app_learn_js_lesson_array_last_index } from "./app_learn_js_lesson_array_last_index.mjs";
-import { app_learn_js_lesson_array_length } from "./app_learn_js_lesson_array_length.mjs";
 import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_lesson_symbols_digits_numbered.mjs";
 import { app_learn_js_lesson_symbols_digit_number } from "./app_learn_js_lesson_symbols_digit_number.mjs";
 import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
@@ -210,6 +192,7 @@ import { app_learn_js_lesson_statement_name_greater_equal } from "./app_learn_js
 import { app_learn_js_lesson_statement_name_equal } from "./app_learn_js_lesson_statement_name_equal.mjs";
 import { app_learn_js_lesson_statement_name_not_equal } from "./app_learn_js_lesson_statement_name_not_equal.mjs";
 import { app_learn_js_lesson_statement_name_not } from "./app_learn_js_lesson_statement_name_not.mjs";
+import { app_learn_js_lesson_statement_name_not_itself } from "./app_learn_js_lesson_statement_name_not_itself.mjs";
 import { app_learn_js_lesson_statement_name_or } from "./app_learn_js_lesson_statement_name_or.mjs";
 import { app_learn_js_lesson_statement_name_and } from "./app_learn_js_lesson_statement_name_and.mjs";
 import { app_learn_js_lesson_statement_name_remainder } from "./app_learn_js_lesson_statement_name_remainder.mjs";
@@ -368,6 +351,24 @@ import { app_learn_js_lesson_for_if_else } from "./app_learn_js_lesson_for_if_el
 import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_first.mjs";
 import { app_learn_js_lesson_array_second } from "./app_learn_js_lesson_array_second.mjs";
 import { app_learn_js_lesson_array_any } from "./app_learn_js_lesson_array_any.mjs";
+import { app_learn_js_lesson_array_length } from "./app_learn_js_lesson_array_length.mjs";
+import { app_learn_js_lesson_array_last_index } from "./app_learn_js_lesson_array_last_index.mjs";
+import { app_learn_js_lesson_array_last } from "./app_learn_js_lesson_array_last.mjs";
+import { app_learn_js_lesson_array_index_name } from "./app_learn_js_lesson_array_index_name.mjs";
+import { app_learn_js_lesson_array_index_step } from "./app_learn_js_lesson_array_index_step.mjs";
+import { app_learn_js_lesson_array_index_steps_two } from "./app_learn_js_lesson_array_index_steps_two.mjs";
+import { app_learn_js_lesson_array_for } from "./app_learn_js_lesson_array_for.mjs";
+import { app_learn_js_lesson_array_for_length } from "./app_learn_js_lesson_array_for_length.mjs";
+import { app_learn_js_lesson_array_for_inner } from "./app_learn_js_lesson_array_for_inner.mjs";
+import { app_learn_js_lesson_array_for_start_two } from "./app_learn_js_lesson_array_for_start_two.mjs";
+import { app_learn_js_lesson_array_for_step_two } from "./app_learn_js_lesson_array_for_step_two.mjs";
+import { app_learn_js_lesson_array_for_step_two_odd } from "./app_learn_js_lesson_array_for_step_two_odd.mjs";
+import { app_learn_js_lesson_array_for_backwards } from "./app_learn_js_lesson_array_for_backwards.mjs";
+import { app_learn_js_lesson_array_for_backwards_step_two } from "./app_learn_js_lesson_array_for_backwards_step_two.mjs";
+import { app_learn_js_lesson_array_for_if_even } from "./app_learn_js_lesson_array_for_if_even.mjs";
+import { app_learn_js_lesson_array_for_if_odd } from "./app_learn_js_lesson_array_for_if_odd.mjs";
+import { app_learn_js_lesson_array_for_find } from "./app_learn_js_lesson_array_for_find.mjs";
+import { app_learn_js_lesson_array_for_flag } from "./app_learn_js_lesson_array_for_flag.mjs";
 export function app_learn_js_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
@@ -747,6 +748,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_if_even,
     app_learn_js_lesson_array_for_if_odd,
     app_learn_js_lesson_array_for_find,
+    app_learn_js_lesson_array_for_flag,
   ];
   return fns;
 }
