@@ -1,10 +1,7 @@
-import { text_includes_not } from "./text_includes_not.mjs";
-import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
-import { js_code_if_dots } from "./js_code_if_dots.mjs";
-import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
@@ -23,11 +20,16 @@ import { list_first } from "./list_first.mjs";
 import { app_learn_js_if_boolean_flipped } from "./app_learn_js_if_boolean_flipped.mjs";
 import { list_without } from "./list_without.mjs";
 import { text_between } from "./text_between.mjs";
+import { text_includes_not } from "./text_includes_not.mjs";
+import { js_code_if_dots } from "./js_code_if_dots.mjs";
+import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_else } from "./app_learn_js_lesson_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
+import { app_learn_js_style_normal_span } from "./app_learn_js_style_normal_span.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -85,8 +87,8 @@ export function app_learn_js_lesson_if_else_once() {
       let words2 = list_shuffle_take(fruits, 2);
       let item3 = list_get(c, 0);
       let item4 = list_get(c, 1);
-      let code2 = program_get(item3, words2, item4);
-      return code2;
+      let code = program_get(item3, words2, item4);
+      return code;
     }
     let codes = list_map(cases, program_of);
     let ordered = app_learn_js_if_codes_halves(codes);
@@ -173,7 +175,7 @@ export function app_learn_js_lesson_if_else_once() {
       if_dots,
       " run",
     ]);
-    app_learn_js_div_cycle_code(box_two, [
+    let too_said = app_learn_js_div_cycle_code(box_two, [
       "",
       change2,
       " makes ",
@@ -183,9 +185,10 @@ export function app_learn_js_lesson_if_else_once() {
       ", so ",
       if_not_dots,
       " runs too, and ",
-      say_joy,
-      " is written out",
     ]);
+    ("2026-11-12: what is written out is the word, not the line that writes it, and it wears the logged output look, asked for by the human");
+    app_learn_js_style_normal_span(too_said, joy);
+    html_span_text(too_said, " is written out");
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, ["", else_dots, " asks only once:"]);
     let else_lines = program_lines(name4, words7, true);
