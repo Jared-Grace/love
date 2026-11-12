@@ -368,7 +368,7 @@ export function app_learn_js_lesson_statement_name_king_steps() {
       [[r], rows_count_color],
       [[c], columns_count_color],
     ],
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

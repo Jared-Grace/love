@@ -218,7 +218,7 @@ export function app_learn_js_lesson_statement_name_overlap_hours() {
       [[end, "10"], end_color],
       [[gap, hours, "0"], overlap_color],
     ],
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

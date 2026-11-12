@@ -234,7 +234,7 @@ export function app_learn_js_lesson_statement_name_rectangles_join_down() {
       [[t, t2, top, "1", "2"], start_color],
       [[b, b2, bottom, "3", "4"], end_color],
     ],
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

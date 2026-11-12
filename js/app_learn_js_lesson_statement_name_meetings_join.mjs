@@ -204,7 +204,7 @@ export function app_learn_js_lesson_statement_name_meetings_join() {
       [[s, s2, start, "9", "10"], start_color],
       [[e, e2, end, "11", "12"], end_color],
     ],
-    steps: false,
+    steps: true,
   });
   return lesson;
 }

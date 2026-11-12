@@ -240,7 +240,7 @@ export function app_learn_js_lesson_statement_name_rectangles_join_across() {
       [[l, l2, left, "1", "2"], start_color],
       [[r, r2, right, "3", "4"], end_color],
     ],
-    steps: false,
+    steps: true,
   });
   return lesson;
 }
