@@ -13,7 +13,7 @@ import { app_shared_container_blue_collapsible } from "./app_shared_container_bl
 import { noop } from "./noop.mjs";
 import { not } from "./not.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
-import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
+import { app_reply_rules_diff_entries_show } from "./app_reply_rules_diff_entries_show.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_notes_review } from "./app_shared_notes_review.mjs";
 export async function g_sermon_sweep_preview() {
@@ -42,7 +42,7 @@ export async function g_sermon_sweep_preview() {
     let chapter_code = property_get(one, "chapter_code");
     let key = property_get(one, "key");
     let decision = property_get(one, "decision");
-    let diff = property_get(one, "diff");
+    let entries = property_get(one, "entries");
     let title = chapter_code + " verse " + key;
     ("★ A DECIDED VERSE IS SHUT UNDER ITS TITLE, and its title is the button that shows it again. The diffs are the long part of the page, so leaving decided ones open buries the verses still waiting; the same folding card the reply rules page shuts its approved tests in.");
     let fold = app_shared_container_blue_collapsible(listed, title, noop);
@@ -60,7 +60,7 @@ export async function g_sermon_sweep_preview() {
     ("The verse itself sits above the lines, quiet, so each rewording is read against what the Bible says there.");
     let passage = property_get(one, "passage");
     app_shared_text_quiet(block, passage);
-    app_reply_rules_diff_show(block, diff);
+    app_reply_rules_diff_entries_show(block, entries);
     let buttons = html_div(block);
     async function decide(word) {
       heading_set("saving...");
