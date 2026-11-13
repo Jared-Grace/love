@@ -10,6 +10,7 @@ export function app_learn_js_lesson_string_for() {
   ('every letter of a string written out by a for loop: let s = "joy"; for (let i = 0; i < s.length; i++) { console.log(s[i]); }');
   ("2026-11-13, at the human's asking: the second step of the string lessons, on the way to .includes. The one new fact is that s.length is how many letters a string has, so the loop over every item of an array runs over every letter of a string the same way");
   ("The words are love, joy and peace, the three shortest fruits of the Spirit, so a question writes out 3 to 5 letters. Not picked: every fruit, whose longest, faithfulness, would write out 12 lines for one question");
+  ("2026-11-13: kind and good, from the fruits kindness and goodness, are added so a set of four questions never repeats a word. Not picked: patience, the next shortest fruit, which writes out 8 lines");
   ("The wrong answers are the loop's two known mistakes, as in the array lesson: starting at 1, stopping one short, and both");
   let letters = ["j", "o", "y"];
   function above(root, context, example, example_by_hand, walk) {
@@ -42,7 +43,7 @@ export function app_learn_js_lesson_string_for() {
   let lesson = app_learn_js_lesson_array_for_generic({
     name_id,
     above,
-    words: ["love", "joy", "peace"],
+    words: ["love", "joy", "peace", "kind", "good"],
     item_counts: [3],
     bound: "s.length",
     bound_fewer: "s.length - 1",

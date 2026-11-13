@@ -28,14 +28,14 @@ import { js_code_for_start_condition_update_lines } from "./js_code_for_start_co
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { list_get } from "./list_get.mjs";
+import { modulo } from "./modulo.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { modulo } from "./modulo.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_max } from "./list_max.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
@@ -328,6 +328,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
       fruits = numbers;
     }
     let codes2 = [];
+    ("2026-11-13: the words are shuffled once and each question takes the next, so a set repeats a word only when it has fewer words than questions");
+    let words_shuffled = null;
+    if (not_equal(words, null)) {
+      let count4 = list_size(words);
+      words_shuffled = list_shuffle_take(words, count4);
+    }
     for (let k = 0; less_than(k, 4); k++) {
       let item_count = list_random_item(item_counts);
       let b = list_size(item_counts);
@@ -336,7 +342,9 @@ export function app_learn_js_lesson_array_for_generic(options) {
       }
       let items3 = list_shuffle_take(fruits, item_count);
       if (not_equal(words, null)) {
-        let word2 = list_random_item(words);
+        let right5 = list_size(words_shuffled);
+        let index3 = modulo(k, right5);
+        let word2 = list_get(words_shuffled, index3);
         items3 = text_split_empty(word2);
       }
       if (not_equal(item_always, null)) {
