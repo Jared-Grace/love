@@ -1,17 +1,19 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { calendar_db_waiting_expire } from "./calendar_db_waiting_expire.mjs";
 import { calendar_db_session_uid } from "./calendar_db_session_uid.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
 import { not } from "./not.mjs";
-import { calendar_db_guest_book } from "./calendar_db_guest_book.mjs";
+import { calendar_db_waiting_book } from "./calendar_db_waiting_book.mjs";
 import { calendar_db_session_create } from "./calendar_db_session_create.mjs";
 import { owner_email } from "./owner_email.mjs";
 import { calendar_db_upcoming } from "./calendar_db_upcoming.mjs";
 import { calendar_db_cancel } from "./calendar_db_cancel.mjs";
 import { calendar_db_person_delete } from "./calendar_db_person_delete.mjs";
 import { calendar_db_settings } from "./calendar_db_settings.mjs";
+import { calendar_db_confirm } from "./calendar_db_confirm.mjs";
 import { calendar_db_person_save } from "./calendar_db_person_save.mjs";
 import { calendar_db_host_save } from "./calendar_db_host_save.mjs";
 import { calendar_db_schedule_save } from "./calendar_db_schedule_save.mjs";
@@ -35,6 +37,7 @@ export async function calendar_api_handle(
   ("★ ONLY A SIGNED-IN HOST MAY HOST: a session whose uid starts fb_ or firebase_. A guest key never reaches the host routes. firebase_ sessions are made only for ",
     fn_name("owner_email"),
     ", so another Firebase account cannot host. To move off Firebase, replace login_firebase; nothing else here depends on it.");
+  ("★ A BOOKING WAITS FOR ITS CODE. book answers a code and a link that opens WhatsApp to the host with it typed; the host, seeing it arrive, sends confirm with the code and the number it came from. Every request first cancels bookings left waiting 24 hours, so no answer counts an hour nobody proved.");
   let reply = function lambda(status, value) {
     let r = {
       status,
@@ -42,9 +45,11 @@ export async function calendar_api_handle(
     };
     return r;
   };
+  await calendar_db_waiting_expire(db, now_iso);
   let uid = key ? await calendar_db_session_uid(db, key) : null;
   let wanted_post = [
     "book",
+    "confirm",
     "cancel",
     "delete_me",
     "person_save",
@@ -123,7 +128,7 @@ export async function calendar_api_handle(
     let start_minute2 = Number(body.start_minute);
     let weekly2 = equal(body.weekly, true);
     let id2 = outside.uid_new();
-    let booked = await calendar_db_guest_book(
+    let booked = await calendar_db_waiting_book(
       db,
       guest_uid,
       slug3,
@@ -147,6 +152,9 @@ export async function calendar_api_handle(
       ok: true,
       reason: null,
       start_utc: booked.start_utc,
+      code: booked.code,
+      send_url: booked.send_url,
+      expires_utc: booked.expires_utc,
       key: key_given,
     });
     return r9;
@@ -227,6 +235,11 @@ export async function calendar_api_handle(
     return r15;
   }
   let saved = null;
+  if (equal(route, "confirm")) {
+    let code2 = String(body.code);
+    let whatsapp4 = String(body.whatsapp);
+    saved = await calendar_db_confirm(db, uid, code2, whatsapp4, now_iso);
+  }
   if (equal(route, "person_save")) {
     let name3 = String(body.name);
     let whatsapp3 = String(body.whatsapp);
