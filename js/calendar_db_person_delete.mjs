@@ -1,6 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 export async function calendar_db_person_delete(db, uid) {
   arguments_assert(arguments, 2);
   ("Removes everything the calendar keeps about uid: their name, WhatsApp number and time zone, their booking link and hours if they hosted, and every meeting they booked or were booked for. Answers whether there was a person to remove.");
@@ -15,7 +15,8 @@ export async function calendar_db_person_delete(db, uid) {
   let v3 = db.prepare("DELETE FROM openings WHERE host_uid = ?1").bind(uid);
   let v4 = db.prepare("DELETE FROM hosts WHERE uid = ?1").bind(uid);
   let v5 = db.prepare("DELETE FROM people WHERE uid = ?1").bind(uid);
-  let statements = [v, v2, v3, v4, v5];
+  let v6 = db.prepare("DELETE FROM sessions WHERE uid = ?1").bind(uid);
+  let statements = [v6, v, v2, v3, v4, v5];
   let results = await db.batch(statements);
   let person_result = results[subtract(results.length, 1)];
   let eq = equal(person_result.meta.changes, 1);

@@ -19,14 +19,18 @@ import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { js_code_array } from "./js_code_array.mjs";
+import { list_last } from "./list_last.mjs";
+import { js_code_called } from "./js_code_called.mjs";
+import { js_code_statement } from "./js_code_statement.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 import { js_code_remainder_2_equal } from "./js_code_remainder_2_equal.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { js_code_if_else_lines } from "./js_code_if_else_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -37,11 +41,11 @@ import { divide } from "./divide.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { list_last } from "./list_last.mjs";
 import { list_max } from "./list_max.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
+import { list_take } from "./list_take.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -82,6 +86,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let words_without = property_get_or(options, "words_without", null);
   ("2026-11-13, next: a lesson may turn its step-by-step quiz off, for a loop whose if calls something the step tracer cannot step through yet, such as .includes");
   let steps = property_get_or(options, "steps", true);
+  ('2026-11-13, at the human\'s asking, for the step after a push: a lesson may ask that each array is written without its last item, which a.push("...") on the next line then adds, so the loop runs over an array a push grew. Everything after those two lines reads the whole array, as it would have been written at once');
+  let pushed = property_get_or(options, "pushed", false);
   let name = "a";
   if (not_equal(words, null)) {
     name = "s";
@@ -203,10 +209,26 @@ export function app_learn_js_lesson_array_for_generic(options) {
       let line_word = js_code_let_statement(name, word_json);
       return line_word;
     }
+    if (pushed) {
+      let before = list_take_less_1(items);
+      let codes_before = list_map(before, json_to);
+      let array_before = js_code_array(codes_before);
+      let line_before = js_code_let_statement(name, array_before);
+      let object4 = list_last(items);
+      let added = json_to(object4);
+      let call = js_code_called(name + ".push", added);
+      let push_line = js_code_statement(call);
+      let lines_pushed = list_join_newline([line_before, push_line]);
+      return lines_pushed;
+    }
     let codes = list_map(items, json_to);
     let array = js_code_array(codes);
     let line = js_code_let_statement(name, array);
     return line;
+  }
+  let head_size = 1;
+  if (pushed) {
+    head_size = 2;
   }
   function step_code(step2) {
     "i++ when i goes up by 1, else i += and the step";
@@ -426,7 +448,9 @@ export function app_learn_js_lesson_array_for_generic(options) {
   function programs_wrong(code4) {
     "the same array looped over each wrong way";
     let lines3 = text_split_newline(code4);
-    let head3 = list_first(lines3);
+    ("the head is the lines before the loop: the let line, and the push line after it when the lesson pushes");
+    let list = list_take(lines3, head_size);
+    let head3 = list_join_newline(list);
     function is_it(way4) {
       let left = program_head(head3, way4);
       let same = equal(left, code4);
