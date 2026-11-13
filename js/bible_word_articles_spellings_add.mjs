@@ -1,3 +1,4 @@
+import { bible_word_articles_spellings_add_row } from "./bible_word_articles_spellings_add_row.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { bible_word_spellings } from "./bible_word_spellings.mjs";
@@ -30,28 +31,6 @@ export function bible_word_articles_spellings_add(table) {
     }
     return word;
   }
-  let r = [...table];
-  for (let row of table) {
-    let names = [row[0]];
-    for (let part of row[0].match(/\p{L}+/gu) ?? []) {
-      let v2 = part.toLowerCase();
-      let swaps = others.get(v2) ?? [];
-      let next = [];
-      for (let name of names) {
-        for (let swap of swaps) {
-          let v3 = cased(part, swap);
-          let v4 = name.replace(
-            new RegExp("(?<!\\p{L})" + part + "(?!\\p{L})", "u"),
-            v3,
-          );
-          next.push(v4);
-        }
-      }
-      names = [...names, ...next];
-    }
-    for (let name of names.slice(1)) {
-      r.push([name, ...row.slice(1)]);
-    }
-  }
+  let r = bible_word_articles_spellings_add_row(table, others, cased);
   return r;
 }
