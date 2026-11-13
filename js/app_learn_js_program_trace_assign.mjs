@@ -47,8 +47,10 @@ export function app_learn_js_program_trace_assign(
       equal(right_type, "BinaryExpression") &&
       list_includes(["+", "-"], symbol) &&
       list_includes(["*", "/", "%"], property_get(right, "operator"));
+    ("2026-11-13: an item read out of an array, a[i], needs no ( ) either, since it is read before any operator is solved: total += a[i] is total = total + a[i]. Let in for Add them up, stepped through a line at a time.");
     if (
       not_equal(right_type, "Identifier") &&
+      not_equal(right_type, "MemberExpression") &&
       not_equal(right_type, "Literal") &&
       not(tighter)
     ) {
