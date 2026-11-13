@@ -580,6 +580,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_push: text_frozen("array_push"),
     app_learn_js_lesson_array_push_last: text_frozen("array_push_last"),
     app_learn_js_lesson_array_for_pushed: text_frozen("array_for_pushed"),
+    app_learn_js_lesson_array_empty: text_frozen("array_empty"),
   };
   return short;
 }
