@@ -577,6 +577,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_count_e: text_frozen("array_count_e"),
     app_learn_js_lesson_statement_name_not_itself:
       text_frozen("name_not_itself"),
+    app_learn_js_lesson_array_push: text_frozen("array_push"),
   };
   return short;
 }
