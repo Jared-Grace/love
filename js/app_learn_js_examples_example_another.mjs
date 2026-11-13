@@ -57,7 +57,7 @@ export function app_learn_js_examples_example_another(context, root) {
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
   let on_batch = app_learn_js_batch_on_refill(noop);
-  ("2026-11-13, at the human's asking: a guided example is drawn from only the questions of its set that take the fewest steps, since each press past the first few runs of a loop repeats the ones before; the quizzes still draw from the whole set");
+  ("2026-11-13, at the human's asking: a guided example is drawn from only the questions of its set whose loops run the fewest times, since each press past the first few runs of a loop repeats the ones before; the quizzes still draw from the whole set");
   let lesson_drawn = lesson;
   if (guided) {
     lesson_drawn = object_copy(lesson);
