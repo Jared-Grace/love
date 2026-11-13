@@ -1,3 +1,4 @@
+import { modulo } from "./modulo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -21,6 +22,7 @@ import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_remainder_2_equal } from "./js_code_remainder_2_equal.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
+import { js_code_if_else_lines } from "./js_code_if_else_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
@@ -60,6 +62,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let bound_fewer = property_get(options, "bound_fewer");
   ("2026-11-12: a lesson may name one item every question's array holds, at a place drawn at random, so a loop looking for that item always has one to find");
   let item_always = property_get_or(options, "item_always", null);
+  ("2026-11-13: or one item that every other question's array holds and the rest do not, so a loop asking whether it is there is answered true and false alike");
+  let item_sometimes = property_get_or(options, "item_sometimes", null);
   let name = "a";
   let index_name = "i";
   let less = js_operator_less_than_symbol();
@@ -83,6 +87,10 @@ export function app_learn_js_lesson_array_for_generic(options) {
     ('2026-11-12: a way may also keep a true or false value named on across runs: flag_start is what on starts as, and the item is written out only inside if (on). flip says where on = !on stands - "after" the if, "inside" it, or "none" - so a loop can write out every other item by flipping, and the mistakes of flipping in the wrong place or not at all can be offered');
     let flag_start = property_get_or(start_fewer, "flag_start", null);
     let flip = property_get_or(start_fewer, "flip", "after");
+    ('2026-11-13: a way may instead keep a true or false value named found: found_start is what it starts as, the if sets it to true, found_else also sets it back to false in an else, and found_log says where console.log(found) stands - "after" the loop or "inside" it - so a loop can say whether an item is there at all, and the mistakes of resetting it, starting it true, or writing it out every run can be offered');
+    let found_start = property_get_or(start_fewer, "found_start", null);
+    let found_else = property_get_or(start_fewer, "found_else", false);
+    let found_log = property_get_or(start_fewer, "found_log", "after");
     let end2 = bound;
     if (fewer) {
       end2 = bound_fewer;
@@ -103,6 +111,9 @@ export function app_learn_js_lesson_array_for_generic(options) {
       logs,
       flag_start,
       flip,
+      found_start,
+      found_else,
+      found_log,
     };
     return r2;
   }
@@ -206,6 +217,34 @@ export function app_learn_js_lesson_array_for_generic(options) {
     if (not_equal(condition3, null)) {
       inside = js_code_if_lines(condition3, logged_way);
     }
+    let found_start2 = property_get(way, "found_start");
+    if (not_equal(found_start2, null)) {
+      let found_name = "found";
+      let found_json = json_to(found_start2);
+      let found_line = js_code_let_statement(found_name, found_json);
+      let set_true = found_name + " = true;";
+      let found_if = js_code_if_lines(condition3, set_true);
+      if (property_get(way, "found_else")) {
+        let set_false = found_name + " = false;";
+        found_if = js_code_if_else_lines(condition3, set_true, set_false);
+      }
+      let found_logged = js_code_console_log_statement(found_name);
+      let found_body = list_concat(found_if, [stepped]);
+      let found_after = [found_logged];
+      let left4 = property_get(way, "found_log");
+      if (equal(left4, "inside")) {
+        found_body = list_concat(found_if, [found_logged, stepped]);
+        found_after = [];
+      }
+      let lines7 = js_code_for_start_condition_update_lines(
+        started,
+        condition,
+        found_body,
+      );
+      let found_lines = list_concat([found_line], lines7);
+      let r15 = list_concat(found_lines, found_after);
+      return r15;
+    }
     let flag_start2 = property_get(way, "flag_start");
     if (equal(flag_start2, null)) {
       let statements = list_concat(inside, [stepped]);
@@ -268,6 +307,17 @@ export function app_learn_js_lesson_array_for_generic(options) {
         items3 = list_shuffle_take(others2, count);
         items3.push(item_always);
         list_shuffle(items3);
+      }
+      if (not_equal(item_sometimes, null)) {
+        let others3 = list_without(fruits, item_sometimes);
+        items3 = list_shuffle_take(others3, item_count);
+        let left5 = modulo(k, 2);
+        if (equal(left5, 0)) {
+          let count2 = subtract(item_count, 1);
+          items3 = list_shuffle_take(others3, count2);
+          items3.push(item_sometimes);
+          list_shuffle(items3);
+        }
       }
       let code3 = program_of(items3, right);
       codes2.push(code3);
