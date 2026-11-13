@@ -40,6 +40,7 @@ export function js_flow_globals_allowed() {
     "TextEncoder",
     "TextDecoder",
     "crypto",
+    "atob",
     "Intl",
   ];
   return names;
