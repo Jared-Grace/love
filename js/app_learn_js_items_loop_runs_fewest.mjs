@@ -6,7 +6,7 @@ import { list_map } from "./list_map.mjs";
 import { list_min } from "./list_min.mjs";
 import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_learn_js_items_steps_fewest(items) {
+export function app_learn_js_items_loop_runs_fewest(items) {
   arguments_assert(arguments, 1);
   ("the items whose program takes the fewest steps to walk through, every one of them that ties, so a guided example is never longer than its set makes it");
   ("2026-11-13, at the human's asking: a guided example of five items took twenty presses where three items took fourteen, and every run past the first few repeats what the learner has already pressed. No fixed limit, such as three runs of a loop, because some lessons need more to show their idea - every third item needs index 3 reached - so the set decides, and every set already holds its smallest size. Not picked: a limit of three runs, which every third item breaks; the same rule for the step-by-step quiz, whose questions are the lesson's own questions and so keep its sizes");

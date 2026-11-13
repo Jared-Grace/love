@@ -1,3 +1,4 @@
+import { bible_word_articles_spellings_add } from "./bible_word_articles_spellings_add.mjs";
 import { bible_word_articles_matching } from "./bible_word_articles_matching.mjs";
 import { bible_word_articles_placed } from "./bible_word_articles_placed.mjs";
 export async function bible_word_article_offers_at(
@@ -11,7 +12,9 @@ export async function bible_word_article_offers_at(
   "THE SITES ARE HANDED IN, because the caller has already fetched their list and asking again would fetch it twice for one tap.";
   let offers = [];
   for (let site of sites) {
-    let table = await site.table();
+    let table2 = await site.table();
+    ("A NAME THE BIBLES SPELL TWO WAYS ANSWERS TO BOTH, so a reader whose bible prints Nazirite still reaches the article a site files under Nazarite.");
+    let table = bible_word_articles_spellings_add(table2);
     let matched = bible_word_articles_matching(table, words, index);
     let articles = bible_word_articles_placed(
       matched,
