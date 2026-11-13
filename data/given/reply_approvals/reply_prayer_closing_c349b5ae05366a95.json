@@ -1,0 +1,1 @@
+{"f_name":"reply_prayer_closing_c349b5ae05366a95","text":"-  let joined = ordered.join(\" \");\n+  let joined = ordered.join(\"\\n\");\n-  let v2 = prayer_end();\n+  let amen = prayer_amen();\n-  let prayer = text_combine_multiple([v, \"\\n\", pray, \" \", joined, v2]);\n+  let prayer = text_combine_multiple([v, \"\\n\", pray, \" \", joined, \"\\n\", amen, \" \", pray]);"}
