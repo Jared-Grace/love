@@ -181,10 +181,33 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     ];
     return r7;
   }
+  ("2026-11-13, at the human's asking, for Adding to an array: a push line says what it does, which array it adds to and where, the first time it is asked about, in the words of the lesson teaching it");
+  let push_name = list_last_property(actions, "name");
+  let pushes_to = [
+    "This adds an item to the end of the array named ",
+    push_name,
+  ];
+  let push_choose = ["So choose: Add an item to an array"];
+  if (equal(kind, "push")) {
+    if (solved_before) {
+      let r24 = [["The item is solved"], push_choose];
+      return r24;
+    }
+    let value3 = property_get(action, "value");
+    let code3 = js_value_code(value3);
+    let r25 = [
+      pushes_to,
+      ["", code3, " is already a solved value, so no solving is needed"],
+      push_choose,
+    ];
+    return r25;
+  }
   ("2026-10-15: what kind of line a log or an if is, is said only the first time the line is asked about; a line solving a name and then an operator would otherwise say it again before each");
   let first = equal(k, start);
   let lead_log = first ? [logs] : [];
   let lead_if = first ? [if_is, if_solves] : [];
+  let lead_push = first ? [pushes_to] : [];
+  let push_is = list_includes(kinds, "push");
   let name = property_get(action, "name");
   let expression = property_get(action, "expression");
   let b = null_is(expression);
@@ -225,6 +248,13 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
       ]);
       return r11;
     }
+    if (push_is) {
+      let r26 = list_concat(lead_push, [
+        ["The item is ", ...said_of(" first")],
+        solve,
+      ]);
+      return r26;
+    }
     let r13 = list_concat(lead_if, [
       ["The condition is ", ...said_of("")],
       solve,
@@ -254,6 +284,13 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
       ]);
       return r15;
     }
+    if (push_is) {
+      let r27 = list_concat(lead_push, [
+        ["The item is ", within, ...inside],
+        solve,
+      ]);
+      return r27;
+    }
     let r16 = list_concat(lead_if, [
       ["The condition is ", within, ...inside],
       solve,
@@ -278,6 +315,13 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
       solve,
     ]);
     return r9;
+  }
+  if (push_is) {
+    let r28 = list_concat(lead_push, [
+      ["The item is the name ", name, ", so it needs solving first"],
+      solve,
+    ]);
+    return r28;
   }
   let r10 = list_concat(lead_if, [
     ["The condition is the name ", name, ", so it needs solving"],
