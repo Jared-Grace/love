@@ -5256,14 +5256,24 @@ GRANTED_READER_FOR_VERB = {
 }
 
 
+FIND_EXEC_SHELL_PRINT_VERBS = {"echo", "printf", "head", "tail", "cat"}
+
+
 def find_exec_shell_is(words):
-    """True iff `words` is a find whose -exec/-execdir runs a shell."""
+    """True iff `words` is a find whose -exec/-execdir runs `sh -c SCRIPT`
+    with every statement of SCRIPT a printer (echo, head, cat, ...). Only
+    then is head's own `==> FILE <==` header the known rewording; a script
+    that does anything else has no twin to send the agent to."""
     if words[:1] != ["find"]:
         return False
-    return any(
-        w in ("-exec", "-execdir") and words[i + 1] in SHELL_PROGRAMS
-        for i, w in enumerate(words[:-1])
-    )
+    for i, w in enumerate(words[:-3]):
+        if (w in ("-exec", "-execdir") and words[i + 1] in SHELL_PROGRAMS
+                and words[i + 2] == "-c"):
+            pieces = [p.split() for p in re.split(r"[;\n]|&&", words[i + 3])]
+            pieces = [p for p in pieces if p]
+            return bool(pieces) and all(
+                p[0] in FIND_EXEC_SHELL_PRINT_VERBS for p in pieces)
+    return False
 
 
 def untrusted_piece_hint(words, safe_verbs):

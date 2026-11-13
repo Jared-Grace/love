@@ -6881,7 +6881,6 @@ export function isbe_word_articles() {
     ["Power of the Keys", "Keys, Power Of The", "keys-power-of-the.html"],
     ["Keziah", "Keziah", "keziah.html"],
     ["Keziz", "Keziz", "keziz.html"],
-    ["Khan", "Khan", "khan.html"],
     ["Kibroth Hattaavah", "Kibroth-Hattaavah", "kibroth-hattaavah.html"],
     ["Kibzaim", "Kibzaim", "kibzaim.html"],
     ["kick", "Kick", "kick.html"],
