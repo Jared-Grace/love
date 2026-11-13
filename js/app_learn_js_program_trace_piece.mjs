@@ -6,10 +6,12 @@ import { not } from "./not.mjs";
 import { js_value_name_built_in_is } from "./js_value_name_built_in_is.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_value_names } from "./js_value_names.mjs";
-import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
+import { text_slice } from "./text_slice.mjs";
 import { app_learn_js_program_trace_piece_named } from "./app_learn_js_program_trace_piece_named.mjs";
 import { js_code_length } from "./js_code_length.mjs";
+import { text_is } from "./text_is.mjs";
+import { text_size } from "./text_size.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_learn_js_operators_called } from "./app_learn_js_operators_called.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -124,7 +126,13 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     let array_name2 = property_get(object3, "name");
     let items3 = property_get(values_held, array_name2);
     let length_code = js_code_length(array_name2);
-    let size = list_size(items3);
+    ("2026-11-13, so a loop can run over a string's letters while i < s.length: a string's length is read the same way, as one name holding how many letters it has");
+    let size = null;
+    if (text_is(items3)) {
+      size = text_size(items3);
+    } else {
+      size = list_size(items3);
+    }
     let value4 = app_learn_js_program_trace_piece_named(
       state,
       length_code,
