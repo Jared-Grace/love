@@ -57,7 +57,7 @@ export function app_learn_js_lesson_array_for_biggest() {
     item_counts: [3, 4, 5],
     bound: "a.length",
     bound_fewer: "a.length - 1",
-    numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    item_pool: [1, 2, 3, 4, 5, 6, 7, 8, 9],
     biggest_not_last: true,
     ways: [
       {
