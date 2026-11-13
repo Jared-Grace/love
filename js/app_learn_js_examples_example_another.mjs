@@ -16,7 +16,7 @@ import { app_learn_js_batch_on_refill } from "./app_learn_js_batch_on_refill.mjs
 import { noop } from "./noop.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_learn_js_items_loop_runs_fewest } from "./app_learn_js_items_loop_runs_fewest.mjs";
+import { app_learn_js_items_loop_runs_short } from "./app_learn_js_items_loop_runs_short.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_learn_js_batch_item_get } from "./app_learn_js_batch_item_get.mjs";
 import { app_learn_js_examples_on_batch_item } from "./app_learn_js_examples_on_batch_item.mjs";
@@ -64,7 +64,7 @@ export function app_learn_js_examples_example_another(context, root) {
     let batch_whole = property_get(lesson, "batch");
     function batch_fewest() {
       let items = batch_whole();
-      let kept = app_learn_js_items_loop_runs_fewest(items);
+      let kept = app_learn_js_items_loop_runs_short(items);
       return kept;
     }
     property_set(lesson_drawn, "batch", batch_fewest);

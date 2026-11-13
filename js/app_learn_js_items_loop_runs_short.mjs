@@ -9,7 +9,7 @@ import { list_map } from "./list_map.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_min } from "./list_min.mjs";
-export function app_learn_js_items_loop_runs_fewest(items) {
+export function app_learn_js_items_loop_runs_short(items) {
   arguments_assert(arguments, 1);
   ("the items whose loops run the fewest times, counting only items whose loops run at all, every one of them that ties; when no item's loop runs, every item, so a program with no loop is never cut");
   ("2026-11-13, at the human's asking: a guided example of five items took twenty presses where three items took fourteen, and every run past the first few repeats what the learner has already pressed. No fixed limit, such as three runs of a loop, because some lessons need more to show their idea - every third item needs index 3 reached - so the set decides, and every set already holds its smallest size. Not picked: a limit of three runs, which every third item breaks; the same rule for the step-by-step quiz, whose questions are the lesson's own questions and so keep its sizes");
