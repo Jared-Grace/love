@@ -4262,6 +4262,248 @@ export function reply_proposals() {
       "your day goes on the list of blessings, so the closing prayer asks the LORD to always bless your day exceedingly abundantly more than anyone can ask or think.",
     ],
   };
+  let appeal_nothing = reply_response_nothing_to_give();
+  let line15 = reply_prayer_will_done();
+  let exclaimed2 = text_may_the_lord_exclamation(
+    "heal and protect the people and the children",
+  );
+  let exclaimed3 = text_may_the_lord_exclamation(
+    "free the children from brick factories",
+  );
+  let exclaimed4 = text_may_the_lord_exclamation("feed their families");
+  let exclaimed5 = text_may_the_lord_exclamation("provide for these people");
+  let line16 = reply_prayer_abundance_of_prayer();
+  let line17 = reply_prayer_help_you();
+  let line18 = reply_prayer_lead_provider();
+  let appeal_closing = reply_prayer_closing([
+    line15,
+    exclaimed2,
+    exclaimed3,
+    exclaimed4,
+    exclaimed5,
+    line16,
+    line17,
+    line18,
+  ]);
+  let combined90 = text_combine_multiple([
+    "-  let items_said = ",
+    fn_name("reply_choice"),
+    "([fn, fn2, fn3]);",
+  ]);
+  let combined91 = text_combine_multiple([
+    "+  let details = ",
+    fn_name("reply_appeal_details"),
+    "();",
+  ]);
+  let combined92 = text_combine_multiple([
+    "+  let items_said = ",
+    fn_name("reply_choice"),
+    "([fn, fn2, fn3, details]);",
+  ]);
+  let combined93 = text_combine_multiple([
+    "   let give_line = ",
+    fn_name("reply_response_nothing_to_give"),
+    "();",
+  ]);
+  let combined94 = text_combine_multiple([
+    "   let items_told = ",
+    fn_name("reply_on_match_output"),
+    "(items_said, give_line);",
+  ]);
+  let combined95 = text_combine_multiple([
+    "   let will_done = ",
+    fn_name("reply_prayer_will_done"),
+    "();",
+  ]);
+  let combined96 = text_combine_multiple([
+    "   let will_noted = ",
+    fn_name("reply_on_match_prayer"),
+    "(items_told, will_done);",
+  ]);
+  let combined97 = text_combine_multiple([
+    "   let lead_provider = ",
+    fn_name("reply_prayer_lead_provider"),
+    "();",
+  ]);
+  let combined98 = text_combine_multiple([
+    "   let items = ",
+    fn_name("reply_on_match_prayer"),
+    "(will_noted, lead_provider);",
+  ]);
+  let combined99 = text_combine_multiple([
+    "   let me_or_us = ",
+    fn_name("reply_choice"),
+    '(["me", "us"]);',
+  ]);
+  let combined100 = text_combine_multiple([
+    "   let o_me_or_us = ",
+    fn_name("reply_optional"),
+    "(me_or_us);",
+  ]);
+  let combined101 = text_combine_multiple([
+    "-  let help = ",
+    fn_name("reply_sequence"),
+    '(["please", "help", o_me_or_us]);',
+  ]);
+  let combined102 = text_combine_multiple([
+    "+  let please_help = ",
+    fn_name("reply_sequence"),
+    '(["please", "help", o_me_or_us]);',
+  ]);
+  let combined103 = text_combine_multiple([
+    "+  let help_needed = ",
+    fn_name("reply_appeal_help_needed"),
+    "();",
+  ]);
+  let combined104 = text_combine_multiple([
+    "+  let help = ",
+    fn_name("reply_choice"),
+    "([please_help, help_needed]);",
+  ]);
+  let combined105 = text_combine_multiple([
+    "   let output4 = ",
+    fn_name("reply_prayer_help_you"),
+    "();",
+  ]);
+  let combined106 = text_combine_multiple([
+    "   let help_said = ",
+    fn_name("reply_on_match_prayer"),
+    "(help, output4);",
+  ]);
+  let combined107 = text_combine_multiple([
+    "-  let o_help = ",
+    fn_name("reply_optional"),
+    "(help_said);",
+  ]);
+  let combined108 = text_combine_multiple([
+    "-  let asks = ",
+    fn_name("reply_sequence"),
+    "([o_help, items, o_help]);",
+  ]);
+  let combined109 = text_combine_multiple([
+    "+  let more = ",
+    fn_name("reply_appeal_more"),
+    "();",
+  ]);
+  let combined110 = text_combine_multiple([
+    "+  let told = ",
+    fn_name("reply_choice"),
+    "([help_said, more]);",
+  ]);
+  let combined111 = text_combine_multiple([
+    "+  let told_all = ",
+    fn_name("reply_once_or_more"),
+    "(told);",
+  ]);
+  let combined112 = text_combine_multiple([
+    "+  let o_told = ",
+    fn_name("reply_optional"),
+    "(told_all);",
+  ]);
+  let combined113 = text_combine_multiple([
+    "+  let intro = ",
+    fn_name("reply_appeal_intro"),
+    "();",
+  ]);
+  let combined114 = text_combine_multiple([
+    "+  let intros = ",
+    fn_name("reply_once_or_more"),
+    "(intro);",
+  ]);
+  let combined115 = text_combine_multiple([
+    "+  let o_intros = ",
+    fn_name("reply_optional"),
+    "(intros);",
+  ]);
+  let combined116 = text_combine_multiple([
+    "+  let asks = ",
+    fn_name("reply_sequence"),
+    "([o_intros, o_told, items, o_told]);",
+  ]);
+  let appeal_lines = [
+    combined90,
+    combined91,
+    combined92,
+    combined93,
+    combined94,
+    combined95,
+    combined96,
+    combined97,
+    combined98,
+    combined99,
+    combined100,
+    combined101,
+    combined102,
+    combined103,
+    combined104,
+    combined105,
+    combined106,
+    combined107,
+    combined108,
+    combined109,
+    combined110,
+    combined111,
+    combined112,
+    combined113,
+    combined114,
+    combined115,
+    combined116,
+    "   return asks;",
+  ];
+  let line19 = reply_prayer_will_done();
+  let exclaimed6 = text_may_the_lord_exclamation("feed their families");
+  let line20 = reply_prayer_help_you();
+  let line21 = reply_prayer_lead_provider();
+  let prayer3 = reply_prayer_closing([line19, exclaimed6, line20, line21]);
+  let appeal_merged = {
+    title:
+      "an appeal for help that opens with sir or great man of God, tells several needs, and says we need your urgent help gets the same answer as the other asks, with one prayer line for each need",
+    fn: fn_name("app_shared_message_reply_asks"),
+    whole: [
+      fn_name("reply_appeal_details"),
+      fn_name("reply_appeal_help_needed"),
+      fn_name("reply_appeal_more"),
+      fn_name("reply_appeal_intro"),
+    ],
+    diff: appeal_lines,
+    cases: [
+      {
+        from: "4e371b3c0090c03c",
+        message:
+          "And sir I requested you something\nGreat man of God I want to share something with you U know many people and children's suffering from heat stroke\nSome children's are from bricks factory children's and people Even they not able to do work Their families has not food for eating\nIn this days They all are hand to mouth Here is temperature is 55°C or some times more\nWe need your argent help for them\nKeep remembering this children's",
+        answered: true,
+        outputs: [appeal_nothing, appeal_closing],
+      },
+      {
+        from: "",
+        message:
+          "Their families has not food for eating\nWe need your urgent help for them",
+        answered: true,
+        outputs: [appeal_nothing, prayer3],
+      },
+      {
+        from: "",
+        message: "Here is temperature is 55°C or some times more",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "We need your urgent help for them",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "the openings, sir I requested you something and great man of God I want to share something with you, say nothing back. They only count in front of a need.",
+      "only two lines ask for money: their families has not food for eating, and they all are hand to mouth. Each brings the answer already written, Sorry, I have nothing that I can give you at this time, and its own line in the closing prayer: feed their families, provide for these people.",
+      "heat stroke and brick factories ask for no money: each only adds a line to the prayer, heal and protect the people and the children, free the children from brick factories. Without a money line beside them there is no Sorry.",
+      "keep remembering these children is answered like I ask you to pray for me: May the LORD lead others to provide you with an abundance of prayer. Unlike pray for me it adds no blessing on their family, church and country, and it only counts inside an appeal, not alone.",
+      "how hot it is and that they cannot work say nothing back. None of these lines counts alone: a message that only says it is 55 degrees gets no answer.",
+      "we need your urgent help for them counts as the same ask as please help, so it adds May the LORD help you, and like please help it never counts alone.",
+      "the pieces match these exact words for now, with you or u, urgent or argent, and sir, great man of God or my dear brother. Other wordings of the same needs are not caught yet.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -4317,6 +4559,7 @@ export function reply_proposals() {
     tiktok_listed,
     doing_heard,
     great_day_thanked,
+    appeal_merged,
   ];
   return proposals;
 }
