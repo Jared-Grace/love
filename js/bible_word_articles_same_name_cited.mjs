@@ -1,3 +1,4 @@
+import { bible_word_articles_same_name_cited_labelled } from "./bible_word_articles_same_name_cited_labelled.mjs";
 import { bible_word_articles_same_name_cited_survivors } from "./bible_word_articles_same_name_cited_survivors.mjs";
 import { equal } from "./equal.mjs";
 export function bible_word_articles_same_name_cited(rows, cited, site_name) {
@@ -16,21 +17,10 @@ export function bible_word_articles_same_name_cited(rows, cited, site_name) {
   }
   let survivors = bible_word_articles_same_name_cited_survivors(rows, files);
   let counts = new Map();
-  for (let row of survivors) {
-    counts.set(row[1], (counts.get(row[1]) ?? 0) + 1);
-  }
-  let seen = new Map();
-  function labelled(row) {
-    let total = counts.get(row[1]);
-    if (equal(total, 1)) {
-      return row;
-    }
-    let position = (seen.get(row[1]) ?? 0) + 1;
-    seen.set(row[1], position);
-    let copy = [...row];
-    copy[1] = row[1] + ", article " + position + " of " + total;
-    return copy;
-  }
+  let labelled = bible_word_articles_same_name_cited_labelled(
+    survivors,
+    counts,
+  );
   let r = survivors.map(labelled);
   return r;
 }
