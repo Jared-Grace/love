@@ -1,3 +1,5 @@
+import { json_to } from "./json_to.mjs";
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export async function calendar_worker_test_check() {
   arguments_assert(arguments, 0);
@@ -9,7 +11,7 @@ export async function calendar_worker_test_check() {
     redirect: "manual",
   });
   let location = login.headers.get("location") ?? "";
-  let booking = JSON.stringify({
+  let booking = json_to({
     turnstile: "XXXX.DUMMY.TOKEN.XXXX",
     host: "nobody",
     name: "T",
@@ -20,7 +22,7 @@ export async function calendar_worker_test_check() {
     weekly: false,
   });
   let books = [];
-  for (let i = 0; i < 14; i++) {
+  for (let i = 0; less_than(i, 14); i++) {
     let answer = await fetch(site + "/calendar/api/book", {
       method: "POST",
       body: booking,
