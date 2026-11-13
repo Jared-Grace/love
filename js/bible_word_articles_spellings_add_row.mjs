@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 export function bible_word_articles_spellings_add_row(table, others, cased) {
+  "The table with an extra row for every other way its names can be spelled: each word of a name with another spelling is swapped for it, keeping the word's capitals, and the copy points at the same article.";
   arguments_assert(arguments, 3);
   let r = [...table];
   for (let row of table) {
