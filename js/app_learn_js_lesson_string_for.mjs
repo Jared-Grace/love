@@ -29,7 +29,7 @@ export function app_learn_js_lesson_string_for() {
       "s",
       " is like an array of its letters or symbols, and ",
       "s.length",
-      " is how many letters it has. So the same loop writes out every letter of a string:",
+      " is how many letters or symbols it has. So the same loop for an array also writes out every letter of a string:",
     ]);
     let box_two = app_learn_js_container_light_blue(root);
     example(box_two, letters);
