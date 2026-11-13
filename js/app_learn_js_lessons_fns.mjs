@@ -376,6 +376,7 @@ import { app_learn_js_lesson_array_for_count } from "./app_learn_js_lesson_array
 import { app_learn_js_lesson_array_for_total } from "./app_learn_js_lesson_array_for_total.mjs";
 import { app_learn_js_lesson_array_for_biggest } from "./app_learn_js_lesson_array_for_biggest.mjs";
 import { app_learn_js_lesson_string_letter } from "./app_learn_js_lesson_string_letter.mjs";
+import { app_learn_js_lesson_string_for } from "./app_learn_js_lesson_string_for.mjs";
 export function app_learn_js_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
@@ -763,6 +764,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_total,
     app_learn_js_lesson_array_for_biggest,
     app_learn_js_lesson_string_letter,
+    app_learn_js_lesson_string_for,
   ];
   return fns;
 }
