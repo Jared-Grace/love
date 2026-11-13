@@ -182,7 +182,10 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     return r7;
   }
   ("2026-11-13, at the human's asking, for Adding to an array: a push line says what it does, which array it adds to and where, the first time it is asked about, in the words of the lesson teaching it");
-  let push_name = list_last_property(actions, "name");
+  ("2026-11-13: only a push line's last action has a name to add to; a log line such as console.log(a[a.length - 1]) ends in a log, which has none");
+  let push_name = list_includes(kinds, "push")
+    ? list_last_property(actions, "name")
+    : null;
   let pushes_to = [
     "This adds an item to the end of the array named ",
     push_name,
