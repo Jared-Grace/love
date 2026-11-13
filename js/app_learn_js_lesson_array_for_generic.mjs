@@ -1,4 +1,3 @@
-import { modulo } from "./modulo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -34,6 +33,8 @@ import { list_get } from "./list_get.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
+import { modulo } from "./modulo.mjs";
+import { list_last } from "./list_last.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -317,6 +318,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
           items3 = list_shuffle_take(others3, count2);
           items3.push(item_sometimes);
           list_shuffle(items3);
+          ("never last: a loop that sets its answer back in an else is right exactly when the item is last, so the mistake would hide and its wrong answer, false, would never be offered");
+          let left6 = list_last(items3);
+          if (equal(left6, item_sometimes)) {
+            items3.pop();
+            items3.unshift(item_sometimes);
+          }
         }
       }
       let code3 = program_of(items3, right);
