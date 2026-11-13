@@ -9,9 +9,10 @@ import { list_map } from "./list_map.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_min } from "./list_min.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 export function app_learn_js_items_loop_runs_short(items) {
   arguments_assert(arguments, 1);
-  ("the items whose loops run the fewest times, counting only items whose loops run at all, every one of them that ties; when no item's loop runs, every item, so a program with no loop is never cut");
+  ("the items whose loops run 1, 2 or 3 times, or the fewest times when none runs that few, counting only items whose loops run at all; when no item's loop runs, every item, so a program with no loop is never cut");
   ("2026-11-13, at the human's asking: a guided example of five items took twenty presses where three items took fourteen, and every run past the first few repeats what the learner has already pressed. No fixed limit, such as three runs of a loop, because some lessons need more to show their idea - every third item needs index 3 reached - so the set decides, and every set already holds its smallest size. Not picked: a limit of three runs, which every third item breaks; the same rule for the step-by-step quiz, whose questions are the lesson's own questions and so keep its sizes");
   ("2026-11-13, the human asked whether a cut breaks a lesson that shows either of two outcomes, yes taking five steps where no takes four. It did: cutting to the fewest STEPS, as this first did, always kept the shorter outcome - the if that is false, or the loop that never runs - and so lost an outcome in 48 of 201 guided lessons over 30 sets each. Counting only the runs of a loop, and only runs above zero, lost none. Not picked: fewest steps; fewest runs counting zero, which keeps the loop that never runs");
   function runs(item) {
@@ -36,11 +37,16 @@ export function app_learn_js_items_loop_runs_short(items) {
   if (list_empty_is(ran_counts)) {
     return items;
   }
+  ("2026-11-13, the human asked next: keep runs of 1, 2 or 3, or the fewest when none is that short, so a set of three items can be shown beside one of two, and what is looked for is not always at the same place. It keeps every item the fewest kept and more, so it loses no outcome the fewest kept. Not picked: the fewest alone, which shows one size only");
   let fewest = list_min(ran_counts);
+  let most = 3;
+  if (greater_than(fewest, most)) {
+    most = fewest;
+  }
   function keep(item) {
     let count = runs(item);
-    let eq = equal(count, fewest);
-    return eq;
+    let r = greater_than(count, 0) && less_than_equal(count, most);
+    return r;
   }
   let kept = list_filter(items, keep);
   return kept;
