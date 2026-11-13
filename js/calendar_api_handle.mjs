@@ -1,11 +1,13 @@
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_db_session_uid } from "./calendar_db_session_uid.mjs";
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
+import { not } from "./not.mjs";
 import { calendar_db_guest_book } from "./calendar_db_guest_book.mjs";
 import { calendar_db_session_create } from "./calendar_db_session_create.mjs";
+import { owner_email } from "./owner_email.mjs";
 import { calendar_db_upcoming } from "./calendar_db_upcoming.mjs";
 import { calendar_db_cancel } from "./calendar_db_cancel.mjs";
 import { calendar_db_person_delete } from "./calendar_db_person_delete.mjs";
@@ -26,9 +28,13 @@ export async function calendar_api_handle(
 ) {
   arguments_assert(arguments, 7);
   ("Answers one calendar request as {status, body}, with no web objects in it, so the whole of what the Worker decides can be run and checked in node. route is the part after /calendar/api/; body is the query (GET) or the JSON sent (POST); key is the session key the page holds, or null.");
-  ("outside holds what reaches past the database, so a test can stand in for it: rate_ok() (the Worker's rate limiter for this caller), turnstile_ok(token) (Cloudflare's are-you-a-person check), uid_new() (a fresh guest uid).");
-  ("★ GUESTS NEVER SIGN IN. A first booking makes the guest and answers a session key, which the page keeps and offers as a private link; a later booking or cancel sends that key. HOSTS sign in with Facebook, whose sign-in ends in a key the same way, so there is one kind of session.");
-  ("★ ONLY A FACEBOOK SESSION MAY HOST. A guest key never reaches the host routes, so a guest cannot turn themselves into a host without Facebook.");
+  ("outside holds what reaches past the database, so a test can stand in for it: rate_ok() (the Worker's rate limiter for this caller), turnstile_ok(token) (Cloudflare's are-you-a-person check), uid_new() (a fresh guest uid), firebase_claims(id_token) (a checked Firebase sign-in ticket's claims, or null).");
+  ("★ GUESTS NEVER SIGN IN. A first booking makes the guest and answers a session key, which the page keeps and offers as a private link; a later booking or cancel sends that key. HOSTS sign in — with the site's Firebase account (login_firebase, owner only, for now) or with Facebook (",
+    fn_name("calendar_facebook_login"),
+    ", built for other hosts later) — and each sign-in ends in a key the same way, so there is one kind of session.");
+  ("★ ONLY A SIGNED-IN HOST MAY HOST: a session whose uid starts fb_ or firebase_. A guest key never reaches the host routes. firebase_ sessions are made only for ",
+    fn_name("owner_email"),
+    ", so another Firebase account cannot host. To move off Firebase, replace login_firebase; nothing else here depends on it.");
   let reply = function lambda(status, value) {
     let r = {
       status,
@@ -46,6 +52,7 @@ export async function calendar_api_handle(
     "schedule_save",
     "dated_save",
     "dated_delete",
+    "login_firebase",
   ];
   let wanted_get = ["free", "upcoming", "settings"];
   let known = wanted_post.includes(route)
@@ -144,6 +151,35 @@ export async function calendar_api_handle(
     });
     return r9;
   }
+  if (equal(route, "login_firebase")) {
+    let v2 = String(body.id_token);
+    let claims = await outside.firebase_claims(v2);
+    if (equal(claims, null)) {
+      let r17 = reply(401, {
+        ok: false,
+        reason: "token",
+      });
+      return r17;
+    }
+    let right = owner_email();
+    if (not_equal(claims.email, right)) {
+      let r18 = reply(403, {
+        ok: false,
+        reason: "host_only",
+      });
+      return r18;
+    }
+    let host_key = await calendar_db_session_create(
+      db,
+      "firebase_" + claims.sub,
+      now_iso,
+    );
+    let r19 = reply(200, {
+      ok: true,
+      key: host_key,
+    });
+    return r19;
+  }
   if (equal(uid, null)) {
     let r10 = reply(401, {
       ok: false,
@@ -174,7 +210,7 @@ export async function calendar_api_handle(
     });
     return r13;
   }
-  let b3 = uid.startsWith("fb_");
+  let b3 = uid.startsWith("fb_") || uid.startsWith("firebase_");
   if (not(b3)) {
     let r14 = reply(403, {
       ok: false,

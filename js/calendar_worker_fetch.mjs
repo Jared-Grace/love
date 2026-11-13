@@ -1,10 +1,16 @@
+import { floor } from "./floor.mjs";
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { divide } from "./divide.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { json_to } from "./json_to.mjs";
 import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_facebook_login } from "./calendar_facebook_login.mjs";
+import { not } from "./not.mjs";
+import { firebase_id_token_keys } from "./firebase_id_token_keys.mjs";
+import { firebase_id_token_verify } from "./firebase_id_token_verify.mjs";
+import { firebase_project_name_jg } from "./firebase_project_name_jg.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { calendar_api_handle } from "./calendar_api_handle.mjs";
 export async function calendar_worker_fetch(request, env) {
   arguments_assert(arguments, 2);
@@ -69,6 +75,20 @@ export async function calendar_worker_fetch(request, env) {
     uid_new: function lambda4() {
       let r9 = crypto.randomUUID();
       return r9;
+    },
+    firebase_claims: async function lambda5(id_token) {
+      let keys = await firebase_id_token_keys();
+      let top = date_now_milliseconds();
+      let p = divide(top, 1000);
+      let now_seconds = floor(p);
+      let project_id = firebase_project_name_jg();
+      let claims = await firebase_id_token_verify(
+        id_token,
+        project_id,
+        keys,
+        now_seconds,
+      );
+      return claims;
     },
   };
   let body = Object.fromEntries(url.searchParams);
