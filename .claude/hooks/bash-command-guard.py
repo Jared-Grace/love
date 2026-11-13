@@ -1736,6 +1736,27 @@ def is_safe_loginctl_list(words):
     return all(w in LOGINCTL_LIST_FLAGS for w in words[2:])
 
 
+SYSTEMCTL_LIST_SUBCOMMANDS = {
+    "list-timers", "list-units", "list-unit-files", "list-sockets",
+}
+SYSTEMCTL_LIST_FLAGS = {"--all", "-a", "--no-pager", "--no-legend", "--plain"}
+
+
+def is_safe_systemctl_list(words):
+    """True iff `words` is `systemctl [--user] list-timers|list-units|
+    list-unit-files|list-sockets` with only display flags. Those only print;
+    start, stop, enable and the rest are other words, and any other flag or
+    a unit pattern is refused rather than weighed."""
+    if words[:1] != ["systemctl"]:
+        return False
+    rest = words[1:]
+    if rest[:1] == ["--user"]:
+        rest = rest[1:]
+    if not rest or rest[0] not in SYSTEMCTL_LIST_SUBCOMMANDS:
+        return False
+    return all(w in SYSTEMCTL_LIST_FLAGS for w in rest[1:])
+
+
 def is_safe_lslocks(words):
     """True iff `words` is `lslocks` with only display flags, or `-p PID`.
     It prints the table of file locks the kernel keeps (what `cat
@@ -2895,6 +2916,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_crontab_list(words)
             and not is_safe_lslocks(words)
             and not is_safe_loginctl_list(words)
+            and not is_safe_systemctl_list(words)
             and not is_safe_colon_noop(words)
             and not is_safe_fuser_list(words)
             # `unwrapped`, like the sandboxed-node templates and unlike the
