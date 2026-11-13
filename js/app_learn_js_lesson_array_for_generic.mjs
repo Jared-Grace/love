@@ -42,13 +42,17 @@ import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_max } from "./list_max.mjs";
+import { not } from "./not.mjs";
+import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { js_code_identifier_rename_text } from "./js_code_identifier_rename_text.mjs";
+import { text_split_newline } from "./text_split_newline.mjs";
+import { text_between } from "./text_between.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
@@ -439,14 +443,45 @@ export function app_learn_js_lesson_array_for_generic(options) {
       codes2.push(code3);
     }
     list_shuffle(codes2);
-    return codes2;
+    ("2026-11-13, at the human's asking: each question names its array with its own letter, so no two read the same; the programs are built with name, which every way handed in spells, and only then renamed. A letter standing as a word anywhere in a question is never drawn, so a rename cannot join two names into one");
+    let joined = list_join_newline(codes2);
+    function free_letter(letter) {
+      let spelled = new RegExp("\\b" + letter + "\\b").test(joined);
+      let free = not(spelled);
+      return free;
+    }
+    let letters = app_learn_js_name_letters([]);
+    let free_letters = list_filter(letters, free_letter);
+    let count6 = list_size(codes2);
+    let names = list_shuffle_take(free_letters, count6);
+    let renamed = [];
+    for (let n = 0; less_than(n, list_size(codes2)); n++) {
+      let code11 = list_get(codes2, n);
+      let name_to = list_get(names, n);
+      let code_named = js_code_identifier_rename_text(code11, name, name_to);
+      renamed.push(code_named);
+    }
+    return renamed;
+  }
+  function name_of(code10) {
+    "the name a question gives its array or string, read off its first line: let <name> = ...";
+    let list5 = text_split_newline(code10);
+    let head5 = list_first(list5);
+    let found_name = text_between(head5, "let ", " =");
+    return found_name;
   }
   let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
     eval_console_log_lines,
   );
-  function programs_wrong(code4) {
-    "the same array looped over each wrong way";
+  function programs_wrong(code_named2) {
+    "the same array looped over each wrong way, named as the question names it";
+    let name_question = name_of(code_named2);
+    let code4 = js_code_identifier_rename_text(
+      code_named2,
+      name_question,
+      name,
+    );
     let lines3 = text_split_newline(code4);
     ("the head is the lines before the loop: the let line, and the push line after it when the lesson pushes");
     let list = list_take(lines3, head_size);
@@ -460,7 +495,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let others = list_without(ways, way5);
     function program_other(way6) {
       let code5 = program_head(head3, way6);
-      return code5;
+      let code_named3 = js_code_identifier_rename_text(
+        code5,
+        name,
+        name_question,
+      );
+      return code_named3;
     }
     let programs = list_map(others, program_other);
     return programs;
