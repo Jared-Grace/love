@@ -4391,14 +4391,9 @@ export function reply_proposals() {
     "([help_said, more]);",
   ]);
   let combined111 = text_combine_multiple([
-    "+  let told_all = ",
-    fn_name("reply_once_or_more"),
-    "(told);",
-  ]);
-  let combined112 = text_combine_multiple([
-    "+  let o_told = ",
-    fn_name("reply_optional"),
-    "(told_all);",
+    "+  let told_and_items = ",
+    fn_name("reply_any_order_required"),
+    "(items, told);",
   ]);
   let combined113 = text_combine_multiple([
     "+  let intro = ",
@@ -4406,34 +4401,14 @@ export function reply_proposals() {
     "();",
   ]);
   let combined114 = text_combine_multiple([
-    "+  let intros = ",
-    fn_name("reply_once_or_more"),
-    "(intro);",
-  ]);
-  let combined115 = text_combine_multiple([
     "+  let o_intros = ",
-    fn_name("reply_optional"),
-    "(intros);",
+    fn_name("reply_once_or_more_optional"),
+    "(intro);",
   ]);
   let combined116 = text_combine_multiple([
     "+  let asks = ",
     fn_name("reply_sequence"),
-    "([o_intros, o_told, items, o_rest]);",
-  ]);
-  let combined117 = text_combine_multiple([
-    "+  let either = ",
-    fn_name("reply_choice"),
-    "([told, items]);",
-  ]);
-  let combined118 = text_combine_multiple([
-    "+  let rest = ",
-    fn_name("reply_once_or_more"),
-    "(either);",
-  ]);
-  let combined119 = text_combine_multiple([
-    "+  let o_rest = ",
-    fn_name("reply_optional"),
-    "(rest);",
+    "([o_intros, told_and_items]);",
   ]);
   let appeal_lines = [
     combined90,
@@ -4458,13 +4433,8 @@ export function reply_proposals() {
     combined109,
     combined110,
     combined111,
-    combined112,
     combined113,
     combined114,
-    combined115,
-    combined117,
-    combined118,
-    combined119,
     combined116,
     "   return asks;",
   ];
@@ -4482,6 +4452,8 @@ export function reply_proposals() {
       fn_name("reply_appeal_help_needed"),
       fn_name("reply_appeal_more"),
       fn_name("reply_appeal_intro"),
+      fn_name("reply_any_order_required"),
+      fn_name("reply_once_or_more_optional"),
     ],
     diff: appeal_lines,
     cases: [
