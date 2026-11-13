@@ -1,22 +1,96 @@
-import { app_shared_footer } from "./app_shared_footer.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
-import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
-import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { property_get } from "./property_get.mjs";
-import { owner_is } from "./owner_is.mjs";
-import { app_calendar_availability } from "./app_calendar_availability.mjs";
-import { app_calendar_booking } from "./app_calendar_booking.mjs";
+import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
+import { html_hash_object_get } from "./html_hash_object_get.mjs";
+import { storage_local_get } from "./storage_local_get.mjs";
+import { storage_local_set } from "./storage_local_set.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
+import { app_calendar_guest } from "./app_calendar_guest.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_calendar_host } from "./app_calendar_host.mjs";
+import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
+import { calendar_api_call } from "./calendar_api_call.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { app_shared_footer } from "./app_shared_footer.mjs";
 export async function app_calendar(context) {
-  "the /calendar page: after sign-in, the site owner sees the weekly availability editor to choose when they can preach, and everyone else sees the booking form to request a preaching visit";
+  "the /calendar page. A guest opening a host's link (#host=<name>) sees that host's open hours and books one without signing in; a guest who has booked on this device, or opens their private link (#key=), sees their meetings. A host signs in at the bottom and sees their hours, their booking link and who is waiting for a code.";
+  "Guests never sign in: a first booking hands back a private key, kept on this device. The host's key is kept apart from it, so the owner booking someone else's hours books as a guest.";
   app_shared_app_fn_set(context, app_calendar);
   let root = property_get(context, "root");
   app_shared_mobile_default_font_size(context);
-  let user = await firebase_auth_ensure(root);
-  let is_owner = owner_is(user);
-  if (is_owner) {
-    await app_calendar_availability(root, user);
+  let hash = html_hash_object_get();
+  let slug = hash.host ?? null;
+  let guest_key = hash.key ?? storage_local_get(app_calendar, "guest_key");
+  if (hash.key) {
+    storage_local_set(app_calendar, "guest_key", hash.key);
+  }
+  let host_key = storage_local_get(app_calendar, "host_key");
+  let guest_area = html_div(root);
+  let meetings_area = html_div(root);
+  let host_area = html_div(root);
+  let show_meetings = async function lambda() {
+    if (guest_key) {
+      await app_calendar_meetings(meetings_area, guest_key);
+    }
+  };
+  if (slug) {
+    function lambda2(k) {
+      guest_key = k;
+      storage_local_set(app_calendar, "guest_key", k);
+    }
+    await app_calendar_guest(guest_area, slug, guest_key, lambda2);
+  }
+  await show_meetings();
+  let host_open = async function lambda3() {
+    html_clear(host_area);
+    if (host_key) {
+      let drawn = await app_calendar_host(host_area, host_key);
+      if (drawn) {
+        return;
+      }
+      host_key = null;
+      storage_local_set(app_calendar, "host_key", null);
+      html_clear(host_area);
+    }
+    let user = await firebase_auth_ensure(host_area);
+    let id_token = await user.getIdToken();
+    let login = await calendar_api_call(
+      "POST",
+      "login_firebase",
+      {
+        id_token,
+      },
+      null,
+    );
+    if (not(login.body.ok)) {
+      html_div_text(
+        host_area,
+        equal(login.body.reason, "host_only")
+          ? "This account cannot host yet."
+          : "Could not sign in. Try again later.",
+      );
+      return;
+    }
+    host_key = login.body.key;
+    storage_local_set(app_calendar, "host_key", host_key);
+    await app_calendar_host(host_area, host_key);
+  };
+  if (host_key && not(slug)) {
+    await host_open();
   } else {
-    app_calendar_booking(root, user);
+    if (not(slug) && not(guest_key)) {
+      let hint = html_div_text(
+        guest_area,
+        "To book a prayer call, open the booking link you were sent.",
+      );
+      app_shared_text_deemphasized(hint);
+    }
+    app_shared_button_uncolored(host_area, "Host sign in", host_open);
   }
   app_shared_footer(root);
 }

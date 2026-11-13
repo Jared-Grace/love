@@ -13,6 +13,11 @@ import { js_code_length } from "./js_code_length.mjs";
 import { text_is } from "./text_is.mjs";
 import { text_size } from "./text_size.mjs";
 import { list_size } from "./list_size.mjs";
+import { app_learn_js_program_trace_method_is } from "./app_learn_js_program_trace_method_is.mjs";
+import { app_learn_js_program_trace_pop } from "./app_learn_js_program_trace_pop.mjs";
+import { list_last } from "./list_last.mjs";
+import { property_set } from "./property_set.mjs";
+import { app_learn_js_program_trace_record } from "./app_learn_js_program_trace_record.mjs";
 import { app_learn_js_operators_called } from "./app_learn_js_operators_called.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
@@ -143,6 +148,22 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
       side,
     );
     return value4;
+  }
+  if (app_learn_js_program_trace_method_is(piece, "pop")) {
+    ("2026-11-13, at the human's asking, so console.log(a.pop()) can be stepped through: a.pop() takes the last item off first, one step, as a line of its own does, and the item it gives back is written into the line in its place, as a name solved is");
+    let actions_held = property_get(state, "actions");
+    let value_popped = app_learn_js_program_trace_pop(
+      piece,
+      actions_held,
+      code,
+      values_held,
+    );
+    let popped = list_last(actions_held);
+    property_set(popped, "into", true);
+    property_set(popped, "from", from);
+    property_set(popped, "to", to);
+    app_learn_js_program_trace_record(state, from, to, value_popped);
+    return value_popped;
   }
   let expression = null;
   let unary_is =
