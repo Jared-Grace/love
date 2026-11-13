@@ -12,6 +12,7 @@ export function app_learn_js_lesson_array_for_total() {
   ("The one new fact is that the line kept across runs can add the item itself, where the lesson before added 1. The shape is the count lesson's with no if: every run adds, so the step is small. The arrays hold numbers 1 to 9.");
   ("The wrong answers are total = a[i]; in place of total += a[i]; (only the last number is kept), writing total out inside the loop (one line every run, the sum so far), and starting i at 1 (the first number is skipped).");
   ("Chosen by the human 2026-11-13, after How many joys?. Not picked: starting total at 1, which is a number nobody would write, so it teaches nothing. The writing is a first draft by Claude 2026-11-13.");
+  ("2026-11-13, at the human's asking: every array lesson before this one holds words, so this, the first to hold numbers, says in a box of its own that an array can hold numbers too. Not picked: a lesson of its own before this one, which would have nothing to practise.");
   let items_two = [2, 5, 3];
   function above(root, context, example, example_by_hand, walk) {
     "count remembered, += remembered, then total";
@@ -29,6 +30,11 @@ export function app_learn_js_lesson_array_for_total() {
       app_learn_js_lesson_statement_name_plus_assign,
       ["", "+=", " adds what is on its right to a name"],
     );
+    let box_numbers = app_learn_js_container_light_blue(root);
+    app_learn_js_div_cycle_code(box_numbers, [
+      "An array can hold numbers too, not only words: ",
+      "let a = [2, 5, 3];",
+    ]);
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "",
