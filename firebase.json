@@ -25,6 +25,56 @@
         "type": 302
       },
       {
+        "source": "/bible/emoji",
+        "destination": "/bible_emoji",
+        "type": 301
+      },
+      {
+        "source": "/bible/search",
+        "destination": "/bible_search",
+        "type": 301
+      },
+      {
+        "source": "/calendar/paste",
+        "destination": "/calendar_paste",
+        "type": 301
+      },
+      {
+        "source": "/g/bible",
+        "destination": "/g_bible",
+        "type": 301
+      },
+      {
+        "source": "/g/verify",
+        "destination": "/g_verify",
+        "type": 301
+      },
+      {
+        "source": "/learn/ceb",
+        "destination": "/learn_ceb",
+        "type": 301
+      },
+      {
+        "source": "/learn/original",
+        "destination": "/learn_original",
+        "type": 301
+      },
+      {
+        "source": "/pray/auto",
+        "destination": "/pray_auto",
+        "type": 301
+      },
+      {
+        "source": "/replace/2026/05/03",
+        "destination": "/replace_2026_05_03",
+        "type": 301
+      },
+      {
+        "source": "/supper/tl",
+        "destination": "/supper_tl",
+        "type": 301
+      },
+      {
         "source": "/privacy_policy",
         "destination": "/privacy",
         "type": 301
@@ -115,54 +165,9 @@
         "type": 301
       },
       {
-        "source": "/bible/emoji",
-        "destination": "/bible_emoji",
-        "type": 301
-      },
-      {
-        "source": "/bible/search",
-        "destination": "/bible_search",
-        "type": 301
-      },
-      {
-        "source": "/calendar/paste",
-        "destination": "/calendar_paste",
-        "type": 301
-      },
-      {
-        "source": "/g/bible",
-        "destination": "/g_bible",
-        "type": 301
-      },
-      {
-        "source": "/g/verify",
-        "destination": "/g_verify",
-        "type": 301
-      },
-      {
-        "source": "/learn/ceb",
-        "destination": "/learn_ceb",
-        "type": 301
-      },
-      {
-        "source": "/learn/original",
-        "destination": "/learn_original",
-        "type": 301
-      },
-      {
-        "source": "/pray/auto",
-        "destination": "/pray_auto",
-        "type": 301
-      },
-      {
-        "source": "/replace/2026/05/03",
-        "destination": "/replace_2026_05_03",
-        "type": 301
-      },
-      {
-        "source": "/supper/tl",
-        "destination": "/supper_tl",
-        "type": 301
+        "source": "/learn_js",
+        "destination": "/code",
+        "type": 302
       }
     ],
     "headers": [
