@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_empty_for_push_last } from "./app_learn_js_lesson_array_empty_for_push_last.mjs";
 import { app_learn_js_lesson_array_empty_for_push } from "./app_learn_js_lesson_array_empty_for_push.mjs";
 import { app_learn_js_lesson_array_empty_push } from "./app_learn_js_lesson_array_empty_push.mjs";
 import { app_learn_js_lesson_array_empty } from "./app_learn_js_lesson_array_empty.mjs";
@@ -764,6 +765,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_length,
     app_learn_js_lesson_array_for_pushed,
     app_learn_js_lesson_array_empty_for_push,
+    app_learn_js_lesson_array_empty_for_push_last,
     app_learn_js_lesson_array_for_inner,
     app_learn_js_lesson_array_for_start_two,
     app_learn_js_lesson_array_for_step_two,
