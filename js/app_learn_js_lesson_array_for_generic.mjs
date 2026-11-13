@@ -35,6 +35,7 @@ import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { modulo } from "./modulo.mjs";
 import { list_last } from "./list_last.mjs";
+import { list_max } from "./list_max.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -70,6 +71,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let repeat_counts = property_get_or(options, "repeat_counts", []);
   ("2026-11-13: a lesson may hand in numbers to fill the arrays from in place of the fruits of the Spirit, so a loop can add its items up");
   let numbers = property_get_or(options, "numbers", null);
+  ("2026-11-13, next: a lesson may ask that the biggest number is never last, since a loop that keeps every item, with no if, is right exactly when it is, so that mistake would hide and its wrong answer would never be offered");
+  let biggest_not_last = property_get_or(options, "biggest_not_last", false);
   let name = "a";
   let index_name = "i";
   let less = js_operator_less_than_symbol();
@@ -354,6 +357,14 @@ export function app_learn_js_lesson_array_for_generic(options) {
           items3.push(item_repeated);
         }
         list_shuffle(items3);
+      }
+      if (biggest_not_last) {
+        let biggest = list_max(items3);
+        let left7 = list_last(items3);
+        if (equal(left7, biggest)) {
+          items3.pop();
+          items3.unshift(biggest);
+        }
       }
       let code3 = program_of(items3, right);
       codes2.push(code3);
