@@ -158,11 +158,15 @@ export function app_learn_js_program_step_through_generic(
   let trace = app_learn_js_program_step_trace(code);
   let noun = app_learn_js_program_step_noun(trace);
   let resets = false;
+  let pushes = false;
   for (let trace_entry of trace) {
     for (let step_action of property_get(trace_entry, "actions")) {
       let left13 = property_get(step_action, "kind");
       if (equal(left13, "reset")) {
         resets = true;
+      }
+      if (equal(left13, "push")) {
+        pushes = true;
       }
     }
   }
@@ -460,8 +464,8 @@ export function app_learn_js_program_step_through_generic(
     span_text(row, text10);
     return piece;
   }
-  function comment_draw(line_index, name, value_text, part) {
-    "the note above a declared name saying what it holds, drawn as every other note in this app is; part is name or value, and the spans that part is drawn in are handed back hidden, for a copy to arrive into";
+  function comment_draw(line_index, name, value_text, part, last_text) {
+    "the note above a declared name saying what it holds, drawn as every other note in this app is; part is name, value or last (last_text being the last item as code, and empty for the other two), and the spans that part is drawn in are handed back hidden, for a copy to arrive into";
     let comment = list_get(comments, line_index);
     ("the name is marked as every note in this course marks one, at the human's asking 2026-10-14");
     let open = app_learn_js_note_name_mark_open();
@@ -474,6 +478,12 @@ export function app_learn_js_program_step_through_generic(
     let right3 = text_size(value_text);
     let from = equal(part, "name") ? name_from : subtract(size, right3);
     let to = equal(part, "name") ? name_from + text_size(name) : size;
+    ("2026-11-13, at the human's asking, for Adding to an array: part last hides only the array's last item, the one a push brings, so the items already there stay where they were and only the new one arrives. value_text is then the array as code, ending in the item and the ]");
+    if (equal(part, "last")) {
+      let item_size = text_size(last_text);
+      to = subtract(size, 1);
+      from = subtract(to, item_size);
+    }
     html_clear(comment);
     let runs = app_learn_js_note_runs(note);
     let cut = app_learn_js_note_runs_cut(runs, from, to);
@@ -496,6 +506,21 @@ export function app_learn_js_program_step_through_generic(
       }
     }
     return hidden;
+  }
+  async function action_piece_send(line_index, action, hidden, duration) {
+    "the piece of the line an action's from and to name goes up into the hidden spans. It starts where it was written, and what follows it is untouched, so it ends that far from the end of the line as it now stands - which holds whether or not a name in it was evaluated into a value";
+    let line_from3 = list_get(starts, line_index);
+    let left5 = property_get(action, "from");
+    let right_from = subtract(left5, line_from3);
+    let original = list_get(bases, line_index);
+    let left6 = text_size(original);
+    let left7 = property_get(action, "to");
+    let right4 = subtract(left7, line_from3);
+    let after_size = subtract(left6, right4);
+    let now = list_get(shown, line_index);
+    let left8 = text_size(now);
+    let right_to = subtract(left8, after_size);
+    await piece_send(line_index, right_from, right_to, hidden, duration);
   }
   async function piece_send(line_index, from, to, hidden, duration) {
     "a copy of the line from to to goes up into the note, where the part it fills is waiting hidden, and the part shows once it has arrived; asked for by the human 2026-10-14, so the name and the value are seen going from the line into the note";
@@ -900,7 +925,7 @@ export function app_learn_js_program_step_through_generic(
     }
     let note_line2 = property_get(declared3, name);
     let value_text2 = list_get(noted, note_line2);
-    let spans = comment_draw(note_line2, name, value_text2, "value");
+    let spans = comment_draw(note_line2, name, value_text2, "value", "");
     each(spans, html_visibility_visible);
     let first = list_first(spans);
     return first;
@@ -1174,7 +1199,7 @@ export function app_learn_js_program_step_through_generic(
         hidden: [],
       };
       function note_write() {
-        let hidden2 = comment_draw(line_index, name4, "undefined", "name");
+        let hidden2 = comment_draw(line_index, name4, "undefined", "name", "");
         property_set(box, "hidden", hidden2);
       }
       await html_height_change_animate(slot, comment2, note_write, duration);
@@ -1209,26 +1234,38 @@ export function app_learn_js_program_step_through_generic(
       ("2026-10-15, at the human's asking: a name given a new value on a later line, as a = 5; does, has it written into the note above the line that declared it, the one note saying what that name holds, so the guide pointing there stays true. Not picked: a second note above the later line, which would leave the first one saying a value the name no longer holds");
       let note_line = property_path_get_2(state, "declared", name2);
       let old = list_get(noted, note_line);
-      let old_spans = comment_draw(note_line, name2, old, "value");
+      let old_spans = comment_draw(note_line, name2, old, "value", "");
       let duration2 = app_shared_animation_duration();
       for (let span of old_spans) {
         html_visibility_visible(span);
         html_opacity_transition(span, "0", duration2);
       }
       await sleep(duration2);
-      let hidden3 = comment_draw(note_line, name2, t, "value");
-      let line_from3 = list_get(starts, line_index);
-      let left5 = property_get(action, "from");
-      let right_from = subtract(left5, line_from3);
-      let original = list_get(bases, line_index);
-      let left6 = text_size(original);
-      let left7 = property_get(action, "to");
-      let right4 = subtract(left7, line_from3);
-      let after_size = subtract(left6, right4);
-      let now = list_get(shown, line_index);
-      let left8 = text_size(now);
-      let right_to = subtract(left8, after_size);
-      await piece_send(line_index, right_from, right_to, hidden3, duration2);
+      let hidden3 = comment_draw(note_line, name2, t, "value", "");
+      await action_piece_send(line_index, action, hidden3, duration2);
+      return;
+    }
+    if (equal(kind, "push")) {
+      ("2026-11-13, at the human's asking, for Adding to an array: the note above the line that declared the array is written again holding the longer array, the items already there staying in place and unfaded, and a copy of what is inside .push( ) goes up into the end of it. Not picked: fading the whole old array and sending a new one, as an assign does, which would say the whole array was replaced when only one item arrived");
+      let name5 = property_get(action, "name");
+      let after = property_get(action, "after");
+      let held3 = property_get(state, "held");
+      let before2 = property_get(state, "held_before");
+      let b13 = property_exists(before2, name5);
+      if (not(b13)) {
+        property_set(before2, name5, []);
+      }
+      let list3 = property_get(before2, name5);
+      let item3 = property_get(held3, name5);
+      list_add(list3, item3);
+      property_set(held3, name5, after);
+      let note_line3 = property_path_get_2(state, "declared", name5);
+      let value11 = property_get(action, "value");
+      let item_text = js_value_code(value11);
+      let code2 = js_value_code(after);
+      let hidden5 = comment_draw(note_line3, name5, code2, "last", item_text);
+      let duration4 = app_shared_animation_duration();
+      await action_piece_send(line_index, action, hidden5, duration4);
       return;
     }
     if (equal(kind, "log")) {
@@ -1288,6 +1325,7 @@ export function app_learn_js_program_step_through_generic(
       ["evaluate", "Solve an expression"],
       ["assign", "Assign a value"],
       ["log", "Log a value to the console"],
+      ["push", "Add an item to an array"],
       ["expand", "Write it the long way"],
       ["reset", "Reset the block"],
       ["complete", r3],
@@ -1300,6 +1338,15 @@ export function app_learn_js_program_step_through_generic(
         return r;
       }
       options = list_filter(options, reset_not_is);
+    }
+    ("2026-11-13: Add an item to an array is offered only in a program that pushes, the way Reset the block is, so every lesson before it keeps the choices it had");
+    if (not(pushes)) {
+      function push_not_is(offered) {
+        let left23 = list_get(offered, 0);
+        let r = equal_not(left23, "push");
+        return r;
+      }
+      options = list_filter(options, push_not_is);
     }
     let right_words = null;
     for (let option of options) {
@@ -1391,7 +1438,8 @@ export function app_learn_js_program_step_through_generic(
         if (
           equal(kind, "declare") ||
           equal(kind, "assign") ||
-          equal(kind, "log")
+          equal(kind, "log") ||
+          equal(kind, "push")
         ) {
           reason = "solved_already";
           ("the value said is the one this line assigns or logs: the action asked about, or, for a declare, the assign after it");
@@ -1417,7 +1465,11 @@ export function app_learn_js_program_step_through_generic(
           let valued2 = null;
           for (let item2 of actions) {
             let kind2 = property_get(item2, "kind");
-            if (equal(kind2, "assign") || equal(kind2, "log")) {
+            if (
+              equal(kind2, "assign") ||
+              equal(kind2, "log") ||
+              equal(kind2, "push")
+            ) {
               valued2 = item2;
             }
           }
