@@ -4281,8 +4281,8 @@ export function reply_proposals() {
     exclaimed3,
     exclaimed4,
     exclaimed5,
-    line16,
     line17,
+    line16,
     line18,
   ]);
   let combined90 = text_combine_multiple([
