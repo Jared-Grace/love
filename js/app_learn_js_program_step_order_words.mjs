@@ -27,12 +27,12 @@ export function app_learn_js_program_step_order_words(
     kind = property_get(step, "kind");
   }
   function option_matches(step_kind) {
-    "2026-11-13: whether the option chosen is the one a step of step_kind is chosen by; a function called, as push and pop are, is chosen as Call a function";
+    "2026-11-13: whether the option chosen is the one a step of step_kind is chosen by; a function called, as push and pop are, is solved as an expression is, so it is chosen as Solve an expression";
     if (equal(option_kind, step_kind)) {
       return true;
     }
     let r29 =
-      equal(option_kind, "call") &&
+      equal(option_kind, "evaluate") &&
       app_learn_js_program_step_call_is(step_kind);
     return r29;
   }
@@ -322,20 +322,6 @@ export function app_learn_js_program_step_order_words(
     };
     return r21;
   }
-  if (equal(at, -1) && equal(option_kind, "call")) {
-    ("2026-11-13, said the way log_none is: calling a function, chosen on a line calling none of the array functions, names what is missing. console.log(...) is a call too, but it has its own choice, so only the array functions are named");
-    let r27 = {
-      reason: "call_none",
-      words: [
-        "Calling a function on an array needs ",
-        ".push(...)",
-        " or ",
-        ".pop()",
-        " - but there is neither",
-      ],
-    };
-    return r27;
-  }
   if (equal(at, -1) && equal(option_kind, "reset")) {
     ("2026-10-28: Reset the line, chosen on a line running for the first time, says why there is nothing to put back");
     let r24 = {
@@ -380,13 +366,6 @@ export function app_learn_js_program_step_order_words(
       ]),
     };
     return r4;
-  }
-  if (equal(kind, "evaluate") && equal(option_kind, "call")) {
-    let r28 = {
-      reason: "evaluate_first",
-      words: words_then(not_yet, [", and an item is added once it is solved"]),
-    };
-    return r28;
   }
   if (equal(kind, "evaluate") && equal(option_kind, "log")) {
     let r5 = {
