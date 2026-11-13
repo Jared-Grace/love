@@ -1,3 +1,4 @@
+import { app_index_cards_unserved_gate_run } from "./app_index_cards_unserved_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -1297,6 +1298,7 @@ export function qa_gates() {
     functions_outside_direct_gate_run,
     app_learn_en_gloss_urdu_bible_quotes_absent_gate_run,
     files_root_gate_run,
+    app_index_cards_unserved_gate_run,
   ];
   return gates;
 }
