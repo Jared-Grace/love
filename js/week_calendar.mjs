@@ -1,6 +1,8 @@
 import { numbers_up_to } from "./numbers_up_to.mjs";
 import { week_calendar_day } from "./week_calendar_day.mjs";
 import { property_get } from "./property_get.mjs";
+import { each } from "./each.mjs";
+import { week_calendar_paint } from "./week_calendar_paint.mjs";
 import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -20,15 +22,13 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   let r = week_calendar_day({
     parent,
     days: dates,
-    slots,
-    slot_row,
-    paint_record,
-    ranges,
-    summary_line,
   });
   let grid = property_get(r, "grid");
   let summary = property_get(r, "summary");
   let records = property_get(r, "records");
+  ("the rows are drawn here, after the frame is handed back, and not inside it: drawing one reads grid and records, which are not set until the frame returns.");
+  each(slots, slot_row);
+  week_calendar_paint(records, paint_record, summary, ranges, summary_line);
   function slot_row(slot) {
     let r2 = week_calendar_slot_row(slot, grid, cell_pressed, records, dates);
     return r2;
