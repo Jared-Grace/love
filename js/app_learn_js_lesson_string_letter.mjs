@@ -176,7 +176,7 @@ export function app_learn_js_lesson_string_letter() {
     "a string read as an array is, one letter at each index";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_one, [
-      "A string is read like an array of its letters. Each letter has an index, counting from ",
+      "A string is like an array of its letters or symbols. Each letter has an index, counting from ",
       "0",
       ", the same as the items of an array.",
     ]);

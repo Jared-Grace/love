@@ -33,7 +33,7 @@ export function app_learn_js_lesson_array_for_biggest() {
     app_learn_js_div_cycle_code(box_three, [
       "",
       "big",
-      " starts ",
+      " starts as ",
       "0",
       ". Each run, if ",
       "a[i]",
@@ -43,7 +43,7 @@ export function app_learn_js_lesson_array_for_biggest() {
       "big = a[i];",
       " keeps it, so after the loop ",
       "big",
-      " is the biggest number:",
+      " is the biggest number in the array:",
     ]);
     example(box_three, items_two);
   }

@@ -47,7 +47,7 @@ export function app_learn_js_lesson_array_for_total() {
     app_learn_js_div_cycle_code(box_three, [
       "",
       "total",
-      " starts ",
+      " starts as ",
       "0",
       ". Each run, ",
       "total += a[i];",

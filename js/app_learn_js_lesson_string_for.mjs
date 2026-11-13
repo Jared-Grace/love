@@ -25,7 +25,7 @@ export function app_learn_js_lesson_string_for() {
       ],
     );
     app_learn_js_div_cycle_code(box_one, [
-      "A string is read like an array of its letters, and ",
+      "A string is like an array of its letters or symbols, and ",
       "s.length",
       " is how many letters it has. So the same loop writes out every letter of a string:",
     ]);
