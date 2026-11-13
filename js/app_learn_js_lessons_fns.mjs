@@ -380,6 +380,7 @@ import { app_learn_js_lesson_string_for } from "./app_learn_js_lesson_string_for
 import { app_learn_js_lesson_string_index_e } from "./app_learn_js_lesson_string_index_e.mjs";
 import { app_learn_js_lesson_string_found_e } from "./app_learn_js_lesson_string_found_e.mjs";
 import { app_learn_js_lesson_string_includes_e } from "./app_learn_js_lesson_string_includes_e.mjs";
+import { app_learn_js_lesson_array_for_includes_e } from "./app_learn_js_lesson_array_for_includes_e.mjs";
 import { app_learn_js_lesson_array_for_count_e } from "./app_learn_js_lesson_array_for_count_e.mjs";
 export function app_learn_js_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
@@ -772,6 +773,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_string_index_e,
     app_learn_js_lesson_string_found_e,
     app_learn_js_lesson_string_includes_e,
+    app_learn_js_lesson_array_for_includes_e,
     app_learn_js_lesson_array_for_count_e,
   ];
   return fns;
