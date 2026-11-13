@@ -92,7 +92,7 @@ export function app_learn_js_lesson_string_includes_e() {
       context,
       app_learn_js_lesson_string_found_e,
       [
-        "A loop over ",
+        "a loop over ",
         "s",
         " with an ",
         "if",
