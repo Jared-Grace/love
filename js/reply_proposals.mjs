@@ -4586,6 +4586,18 @@ export function reply_proposals() {
         answered: true,
         outputs: [lined_sorry, combined123],
       },
+      {
+        from: "bbbc8bb621f025ac",
+        message: choir_message_from,
+        answered: true,
+        outputs: choir_outputs_from,
+      },
+      {
+        from: "c157f7e506a2629f",
+        message: choir_message,
+        answered: true,
+        outputs: choir_outputs,
+      },
     ],
     decide: [
       "a single line break between the things asked, not a blank line. With a blank line a prayer of eight things runs to sixteen lines on a phone and reads as eight separate paragraphs rather than one prayer.",
