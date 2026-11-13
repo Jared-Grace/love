@@ -1,6 +1,6 @@
 import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { multiply } from "./multiply.mjs";
+import { greater_than } from "./greater_than.mjs";
 export function bible_words_ordinary(bibles) {
   "The words these bibles treat as ordinary words rather than names, in lower case: those printed in lower case more than five times as often as with a capital where a sentence does not start - sin, faith, lot is not, because Lot the man is printed often enough.";
   "$plain bibles";
@@ -29,11 +29,12 @@ export function bible_words_ordinary(bibles) {
       }
     }
   }
-  let r = new Set();
+  ("EACH ORDINARY WORD COMES WITH HOW MANY TIMES IT IS PRINTED IN LOWER CASE, so a caller can tell a word like of, printed tens of thousands of times, from a word like faith.");
+  let r = new Map();
   for (let [word, count] of low) {
     let b = multiply(5, capital.get(word) ?? 0);
     if (greater_than(count, b)) {
-      r.add(word);
+      r.set(word, count);
     }
   }
   return r;

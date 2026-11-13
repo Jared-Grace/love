@@ -8,6 +8,7 @@ import { bible_word_article_title } from "./bible_word_article_title.mjs";
 import { equal } from "./equal.mjs";
 import { isbe_title_words } from "./isbe_title_words.mjs";
 import { not } from "./not.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { isbe_page_pointer_is } from "./isbe_page_pointer_is.mjs";
 export async function isbe_word_articles_rows() {
   "The International Standard Bible Encyclopedia's table of names: for every article fetched, a row for each word a verse would spell for its title, then the title itself, then the article's file - so a tapped Nazirite opens the article on the Nazirite in every verse that prints it, not only in the verses the article cites.";
@@ -39,6 +40,11 @@ export async function isbe_word_articles_rows() {
       let one = not(b);
       let lower = key.toLowerCase();
       let word = one && ordinary.has(lower) ? lower : key;
+      ("A WORD THE BIBLES PRINT MORE THAN TEN THOUSAND TIMES IS LEFT OUT - of, a, to - because an article on it would be offered on nearly every verse; a word like man, king or sin is printed far fewer times and keeps its article.");
+      let common = greater_than(ordinary.get(word) ?? 0, 10000);
+      if (common) {
+        continue;
+      }
       let row = [word, title, file];
       r.push(row);
       if (isbe_page_pointer_is(page)) {
