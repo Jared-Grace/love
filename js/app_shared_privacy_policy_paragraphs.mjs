@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { cloudflare_site_url } from "./cloudflare_site_url.mjs";
 export function app_shared_privacy_policy_paragraphs() {
   "What the privacy policy page says, in the order a person reads it.";
   "Every sentence here is a claim about what the code does, so the words are kept apart from the painting of them - somebody checking whether the policy is still true has one short file to read, and does not have to walk past the styling to find the promises.";
@@ -35,7 +36,7 @@ export function app_shared_privacy_policy_paragraphs() {
     ],
     ["Nothing is sold, and nothing is passed on to anybody."],
     [
-      "Google hosts this website, and like any web host keeps ordinary records of the requests made to it. Those records are Google's and are covered by Google's own privacy policy.",
+      "Cloudflare serves this website, and Google stores its files and what is sent to it. Like any web host, each keeps ordinary records of the requests made to it. Those records are theirs and are covered by their own privacy policies.",
     ],
     [
       "You do not have to take any of this on trust. The code this website is built from is public, at ",
@@ -49,7 +50,7 @@ export function app_shared_privacy_policy_paragraphs() {
       "To have a message you sent deleted, or to ask anything about this, send a message from the ",
       {
         text: "message page",
-        url: "https://jared-grace.web.app/message.html",
+        url: cloudflare_site_url() + "/message",
       },
       ". Send it from the same device you wrote the first one on, because the random number is the only thing tying the two together and it belongs to that browser.",
     ],
