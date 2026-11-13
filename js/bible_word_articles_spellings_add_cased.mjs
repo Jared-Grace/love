@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 export function bible_word_articles_spellings_add_cased() {
+  "A function that writes a word with the capitals of another: all capitals, a capital first letter, or lower case.";
   arguments_assert(arguments, 0);
   function cased(like, word) {
     let right = like.toUpperCase();

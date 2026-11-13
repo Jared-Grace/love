@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 export function bible_word_articles_same_name_cited_survivors(rows, files) {
+  "The rows left when articles sharing one title are cut down to those the verse cites; a title with only one article, or none of whose articles is cited, keeps every row.";
   arguments_assert(arguments, 2);
   let by_name = new Map();
   for (let row of rows) {
