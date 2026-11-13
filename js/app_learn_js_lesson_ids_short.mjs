@@ -588,6 +588,9 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_empty_for_push_last: text_frozen(
       "array_empty_for_push_last",
     ),
+    app_learn_js_lesson_array_empty_for_push_step_two: text_frozen(
+      "array_empty_for_push_step_two",
+    ),
   };
   return short;
 }
