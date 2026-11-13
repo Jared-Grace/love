@@ -4,6 +4,8 @@ import { equal } from "./equal.mjs";
 import { app_learn_js_program_trace_declare } from "./app_learn_js_program_trace_declare.mjs";
 import { app_learn_js_program_trace_assign } from "./app_learn_js_program_trace_assign.mjs";
 import { app_learn_js_program_trace_update } from "./app_learn_js_program_trace_update.mjs";
+import { app_learn_js_program_trace_push_is } from "./app_learn_js_program_trace_push_is.mjs";
+import { app_learn_js_program_trace_push } from "./app_learn_js_program_trace_push.mjs";
 import { app_learn_js_program_trace_log } from "./app_learn_js_program_trace_log.mjs";
 import { app_learn_js_program_trace_if } from "./app_learn_js_program_trace_if.mjs";
 import { app_learn_js_program_trace_while } from "./app_learn_js_program_trace_while.mjs";
@@ -33,6 +35,8 @@ export function app_learn_js_program_trace_statement(
       app_learn_js_program_trace_assign(expression, actions, code, values);
     } else if (equal(left_type, "UpdateExpression")) {
       app_learn_js_program_trace_update(expression, actions, code, values);
+    } else if (app_learn_js_program_trace_push_is(expression)) {
+      app_learn_js_program_trace_push(expression, actions, code, values);
     } else {
       app_learn_js_program_trace_log(expression, actions, code, values);
     }
