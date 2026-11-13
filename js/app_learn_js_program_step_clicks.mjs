@@ -94,13 +94,16 @@ export function app_learn_js_program_step_clicks(code) {
     while (less_than(k, list_size(actions))) {
       let action = list_get(actions, k);
       let kind = property_get(action, "kind");
-      ("2026-11-13: a function called is two presses, Call a function and then which function, as the step-through asks it");
+      ("2026-11-13, at the human's asking: a function called is solved, as an expression is - Solve an expression, then what the function does, and then, where it stands inside a line, what it comes to - as the step-through asks it");
       if (app_learn_js_program_step_call_is(kind)) {
-        let value13 = property_get(options, "call");
+        let value13 = property_get(options, "evaluate");
         choose_add(value13);
         let call_words = app_learn_js_program_step_call_words();
         let value14 = property_get(call_words, kind);
         choose_add(value14);
+        if (property_get_or(action, "into", false)) {
+          value_add(action);
+        }
       } else {
         let value2 = property_get(options, kind);
         choose_add(value2);
