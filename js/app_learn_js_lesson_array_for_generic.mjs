@@ -1,3 +1,4 @@
+import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -28,8 +29,8 @@ import { js_code_for_start_condition_update_lines } from "./js_code_for_start_co
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_size } from "./list_size.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { modulo } from "./modulo.mjs";
@@ -77,6 +78,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let biggest_not_last = property_get_or(options, "biggest_not_last", false);
   ("2026-11-13, at the human's asking, so a loop can run over the letters of a string: a lesson may hand in words, and each question is then one of them named s, let s = \"joy\";, its letters the items looped over. Everything else reads the letters as it reads an array's items, since s[i] and s.length read a string as a[i] and a.length read an array. Not picked: a builder of its own for strings, which would repeat every wrong loop and the walk");
   let words = property_get_or(options, "words", null);
+  ("2026-11-13, next: a lesson may also hand in words_without, words that lack what the loop looks for, and then every other question takes one of them, as item_sometimes puts its item in every other array, so a set always holds both answers");
+  let words_without = property_get_or(options, "words_without", null);
   let name = "a";
   if (not_equal(words, null)) {
     name = "s";
@@ -334,6 +337,11 @@ export function app_learn_js_lesson_array_for_generic(options) {
       let count4 = list_size(words);
       words_shuffled = list_shuffle_take(words, count4);
     }
+    let words_without_shuffled = null;
+    if (not_equal(words_without, null)) {
+      let count5 = list_size(words_without);
+      words_without_shuffled = list_shuffle_take(words_without, count5);
+    }
     for (let k = 0; less_than(k, 4); k++) {
       let item_count = list_random_item(item_counts);
       let b = list_size(item_counts);
@@ -345,6 +353,18 @@ export function app_learn_js_lesson_array_for_generic(options) {
         let right5 = list_size(words_shuffled);
         let index3 = modulo(k, right5);
         let word2 = list_get(words_shuffled, index3);
+        if (not_equal(words_without, null)) {
+          let left8 = modulo(k, 2);
+          let top = subtract(k, left8);
+          let half = divide(top, 2);
+          let pool = words_shuffled;
+          if (equal(left8, 1)) {
+            pool = words_without_shuffled;
+          }
+          let right6 = list_size(pool);
+          let index4 = modulo(half, right6);
+          word2 = list_get(pool, index4);
+        }
         items3 = text_split_empty(word2);
       }
       if (not_equal(item_always, null)) {

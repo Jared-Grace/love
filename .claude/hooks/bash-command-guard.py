@@ -5256,6 +5256,16 @@ GRANTED_READER_FOR_VERB = {
 }
 
 
+def find_exec_shell_is(words):
+    """True iff `words` is a find whose -exec/-execdir runs a shell."""
+    if words[:1] != ["find"]:
+        return False
+    return any(
+        w in ("-exec", "-execdir") and words[i + 1] in SHELL_PROGRAMS
+        for i, w in enumerate(words[:-1])
+    )
+
+
 def untrusted_piece_hint(words, safe_verbs):
     """One sentence on how to reword the refused part `words`, or "" when
     there is nothing better to say than its name."""
@@ -5273,6 +5283,13 @@ def untrusted_piece_hint(words, safe_verbs):
             "arrive on input and one starting with `-` (like `-i`) would "
             "become a flag. `xargs head -n 40` or `xargs cat` runs unasked, "
             "or spell the files out after the sed."
+        )
+    if find_exec_shell_is(plain):
+        return (
+            "`find -exec sh -c` hands a shell a script no rule can read. "
+            "`find … -exec head -c 400 {} +` or `find … | xargs head -c 400` "
+            "runs unasked, and head prints a `==> FILE <==` line before each "
+            "file by itself."
         )
     if plain[0] in COMMAND_BUILDING_VERBS:
         return (
@@ -5563,6 +5580,10 @@ def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
             m = VAR_PREFIX_RE.match(word)
             if m and var_map.get(m.group(1), "").startswith("/tmp/claude-"):
                 return True
+    # A shell under find -exec: head's own per-file header covers what these
+    # are written for. Sending it back approves nothing.
+    if find_exec_shell_is(plain):
+        return True
     # tee is a redirect that also prints, so `>>` per file is its rewording.
     # Sending it back approves nothing: the redirect is judged on its own.
     if plain[0] == "tee":
