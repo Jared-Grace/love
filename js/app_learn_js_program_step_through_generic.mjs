@@ -4,7 +4,6 @@ import { app_learn_js_program_step_trace } from "./app_learn_js_program_step_tra
 import { app_learn_js_program_step_noun } from "./app_learn_js_program_step_noun.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_learn_js_flex_gap } from "./app_learn_js_flex_gap.mjs";
@@ -130,12 +129,12 @@ import { app_learn_js_program_step_option_words } from "./app_learn_js_program_s
 import { properties_get } from "./properties_get.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { app_learn_js_program_step_order_words } from "./app_learn_js_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_program_step_solved_already_words } from "./app_learn_js_program_step_solved_already_words.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 export function app_learn_js_program_step_through_generic(
   parent,
@@ -163,15 +162,11 @@ export function app_learn_js_program_step_through_generic(
   let trace = app_learn_js_program_step_trace(code);
   let noun = app_learn_js_program_step_noun(trace);
   let resets = false;
-  let pushes = false;
   for (let trace_entry of trace) {
     for (let step_action of property_get(trace_entry, "actions")) {
       let left13 = property_get(step_action, "kind");
       if (equal(left13, "reset")) {
         resets = true;
-      }
-      if (app_learn_js_program_step_call_is(left13)) {
-        pushes = true;
       }
     }
   }
@@ -1411,22 +1406,13 @@ export function app_learn_js_program_step_through_generic(
       }
       options = list_filter(options, reset_not_is);
     }
-    ("2026-11-13: Call a function is offered only in a program that calls one, as push and pop are called, the way Reset the block is, so every lesson before it keeps the choices it had");
-    if (not(pushes)) {
-      function push_not_is(offered) {
-        let left23 = list_get(offered, 0);
-        let r = equal_not(left23, "call");
-        return r;
-      }
-      options = list_filter(options, push_not_is);
-    }
     let call_is = app_learn_js_program_step_call_is(kind);
     function option_right_is(offered_kind) {
-      "whether the option is the right one: the step's own kind, or Call a function for a function called";
+      "whether the option is the right one: the step's own kind, or Solve an expression for a function called, since a function called is solved as an expression is";
       if (equal(offered_kind, kind)) {
         return true;
       }
-      let r32 = equal(offered_kind, "call") && call_is;
+      let r32 = equal(offered_kind, "evaluate") && call_is;
       return r32;
     }
     let right_words = null;
@@ -1487,8 +1473,65 @@ export function app_learn_js_program_step_through_generic(
       }
       actions_ask(next);
     }
+    async function on_call_does_right() {
+      "2026-11-13, at the human's asking: a function called inside a line, as console.log(a.pop()) calls one, comes to a value the line goes on with, so once what it does is chosen, what it comes to is asked, as an operator solved is asked what it comes to. A function called alone on its line is not asked: nothing takes what it gives back, and push gives back the array's new length, which no lesson has taught";
+      let b22 = property_get_or(action, "into", false);
+      if (not(b22)) {
+        await on_right();
+        return;
+      }
+      on_step();
+      let element4 = property_get(holder, "button");
+      app_shared_glow_clear(element4);
+      html_clear(ask);
+      let given_name = property_get(action, "name");
+      let given = property_get(action, "value");
+      let given_said = js_value_code(given);
+      let given_code = given_name + "." + kind + "()";
+      let value_holder2 = {
+        button: null,
+      };
+      function given_button_get() {
+        let button2 = property_get(value_holder2, "button");
+        return button2;
+      }
+      guide_say(
+        [
+          ["", given_code, " gives back the item it took off: the last item"],
+          ["So choose: ", given_said],
+        ],
+        {
+          words: given_said,
+          button: true,
+          target_get: given_button_get,
+        },
+      );
+      app_learn_js_div_cycle_code(ask, ["What does ", given_code, " come to?"]);
+      ("the wrong values offered are the array's other items and the whole array, the two mistakes most likely: taking the wrong end, or reading the array itself");
+      let held5 = property_get(state, "held");
+      let items = property_get(held5, given_name);
+      let given_decoys = [items];
+      for (let item5 of items) {
+        let left23 = js_value_code(item5);
+        let b23 = equal(left23, given_said);
+        if (not(b23)) {
+          list_add(given_decoys, item5);
+        }
+      }
+      let asked2 = app_learn_js_expression_value_choose_buttons_generic(
+        ask,
+        given,
+        given_decoys,
+        on_wrong,
+        js_value_code,
+      );
+      property_set(value_holder2, "button", asked2.right);
+      await asked2.pressed;
+      property_set(holder, "button", asked2.right);
+      await on_right();
+    }
     async function on_call_right() {
-      "2026-11-13, at the human's asking, when pop came as the second array function: Call a function chosen rightly asks which function, in place of the question before, and the right one then does what the step does, as any right choice does. A wrong function says which one the line calls";
+      "2026-11-13, at the human's asking: a function called is solved as an expression is, so Solve an expression chosen rightly on it asks what the function does, by what it does rather than by its name, so the choice tests knowing it rather than matching the word in the line. The right one then does what the step does, as any right choice does. A wrong one says which function the line calls";
       on_step();
       let element3 = property_get(holder, "button");
       app_shared_glow_clear(element3);
@@ -1539,7 +1582,7 @@ export function app_learn_js_program_step_through_generic(
           text: call_option_words,
           right: call_right,
           state: call_answered,
-          on_success: on_right,
+          on_success: on_call_does_right,
           on_wrong,
           soft_take: call_soft_take,
         });
@@ -1580,8 +1623,7 @@ export function app_learn_js_program_step_through_generic(
         if (
           equal(kind, "declare") ||
           equal(kind, "assign") ||
-          equal(kind, "log") ||
-          equal(kind, "push")
+          equal(kind, "log")
         ) {
           reason = "solved_already";
           ("the value said is the one this line assigns or logs: the action asked about, or, for a declare, the assign after it");
@@ -1593,14 +1635,6 @@ export function app_learn_js_program_step_through_generic(
             said_text,
             valued,
           );
-        } else if (equal(kind, "pop")) {
-          ("2026-11-13: a pop is handed nothing in its ( ), so there is nothing to solve before it");
-          reason = "solved_already";
-          reason_words = [
-            "",
-            ".pop()",
-            " has nothing inside its ( ), so there is nothing to solve",
-          ];
         } else if (equal(kind, "complete") && equal(b7, 0)) {
           reason = "solved_already";
           reason_words = [
@@ -1623,20 +1657,12 @@ export function app_learn_js_program_step_through_generic(
               valued2 = item2;
             }
           }
-          let list5 = list_map_property(actions, "kind");
           if (null_not_is(valued2)) {
             reason = "solved_already";
             reason_words = app_learn_js_program_step_solved_already_words(
               said_text,
               valued2,
             );
-          } else if (list_includes(list5, "pop")) {
-            reason = "solved_already";
-            reason_words = [
-              "",
-              ".pop()",
-              " has nothing inside its ( ), so there was nothing to solve",
-            ];
           }
         }
       }
@@ -1655,7 +1681,8 @@ export function app_learn_js_program_step_through_generic(
         text: words,
         right: right2,
         state: answered,
-        on_success: equal(option_kind, "call") ? on_call_right : on_right,
+        on_success:
+          equal(option_kind, "evaluate") && call_is ? on_call_right : on_right,
         on_wrong,
         soft_take,
       });

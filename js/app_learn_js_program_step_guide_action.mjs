@@ -196,7 +196,10 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     "This adds an item to the end of the array named ",
     push_name,
   ];
-  let push_choose = ["So choose: Call a function"];
+  ("2026-11-13, at the human's asking: a function called is solved as an expression is, so it is chosen as Solve an expression. Not picked: a choice of its own, Call a function, built first, which made the list of choices grow and set calls apart from Math.floor( ), already solved as an expression");
+  let push_choose = [
+    "A function called is solved as an expression is, so choose: Solve an expression",
+  ];
   if (equal(kind, "pop")) {
     ("2026-11-13, at the human's asking, for Taking an item off: a pop says what it does, in the words of the lesson teaching it. Standing inside a line, as console.log(a.pop()) does, it also says it runs first, since what it gives back is what the line uses");
     let pop_name = property_get(action, "name");
@@ -225,14 +228,17 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   }
   if (equal(kind, "push")) {
     if (solved_before) {
-      let r24 = [["The item is solved"], push_choose];
+      let r24 = [
+        ["The item is solved, so the push itself is next"],
+        push_choose,
+      ];
       return r24;
     }
     let value3 = property_get(action, "value");
     let code3 = js_value_code(value3);
     let r25 = [
       pushes_to,
-      ["", code3, " is already a solved value, so no solving is needed"],
+      ["", code3, " is already a solved value, so the push itself is next"],
       push_choose,
     ];
     return r25;
