@@ -1,5 +1,3 @@
-import { property_get } from "./property_get.mjs";
-import { json_from } from "./json_from.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -12,20 +10,22 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { list_join_newline } from "./list_join_newline.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { add } from "./add.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { list_last } from "./list_last.mjs";
 import { less_than } from "./less_than.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
+import { json_from } from "./json_from.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_lesson_array_push() {
   ('adding an item to the end of an array: let a = ["love", "joy"]; a.push("peace"); console.log(a.length); writes out 3');
   ("2026-11-13, at the human's asking: the first lesson that changes an array, and the first step toward building lists, empty arrays and objects. The one new fact is that a.push(x) adds one item, so the length grows by 1. The length is what is written out because .length is already taught and no lesson yet writes out a whole array. Where the item goes, at the end, is the next lesson, which writes out a[a.length - 1].");
   ("Reading forwards, the wrong answers are the length before the push (reading the push as doing nothing), one more than the answer (counting the pushed word twice), and the pushed word itself. Reading backwards, the wrong programs are the same program with no push, and the push given an array one item longer.");
-  ("No stepping yet: the tracer cannot follow a.push. Teaching it to is the next step for every lesson that builds a list.");
+  ("2026-11-13, at the human's asking: stepped through, the push line asked for as Add an item to an array, and the item going up into the end of the array's // note while the items already there stay.");
   ("The writing is a first draft by Claude 2026-11-13.");
   let name = "a";
   let sizes = [2, 3, 4];
@@ -218,7 +218,7 @@ export function app_learn_js_lesson_array_push() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps: false,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,
