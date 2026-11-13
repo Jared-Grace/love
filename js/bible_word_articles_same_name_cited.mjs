@@ -1,3 +1,4 @@
+import { bible_word_articles_same_name_cited_survivors } from "./bible_word_articles_same_name_cited_survivors.mjs";
 import { equal } from "./equal.mjs";
 export function bible_word_articles_same_name_cited(rows, cited, site_name) {
   "One site's articles for a tapped word, with the articles of one name narrowed to those the tapped verse is cited by, when it is cited by some of them.";
@@ -13,30 +14,7 @@ export function bible_word_articles_same_name_cited(rows, cited, site_name) {
       files.add(cited_file);
     }
   }
-  let by_name = new Map();
-  for (let row of rows) {
-    let name = row[1];
-    let group = by_name.get(name) ?? [];
-    group.push(row);
-    by_name.set(name, group);
-  }
-  function kept(row) {
-    let group = by_name.get(row[1]);
-    if (equal(group.length, 1)) {
-      return true;
-    }
-    function cited_is(other) {
-      let yes = files.has(other[2]);
-      return yes;
-    }
-    let some = group.some(cited_is);
-    if (equal(some, false)) {
-      return true;
-    }
-    let r2 = files.has(row[2]);
-    return r2;
-  }
-  let survivors = rows.filter(kept);
+  let survivors = bible_word_articles_same_name_cited_survivors(rows, files);
   let counts = new Map();
   for (let row of survivors) {
     counts.set(row[1], (counts.get(row[1]) ?? 0) + 1);
