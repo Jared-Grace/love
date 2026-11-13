@@ -125,6 +125,8 @@ import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer
 import { app_learn_js_style_normal_box } from "./app_learn_js_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_program_step_complete_words } from "./app_learn_js_program_step_complete_words.mjs";
+import { app_learn_js_program_step_option_words } from "./app_learn_js_program_step_option_words.mjs";
+import { properties_get } from "./properties_get.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
@@ -1320,16 +1322,13 @@ export function app_learn_js_program_step_through_generic(
       : property_get(piece_now, "text");
     ("2026-10-21, at the human's asking: writing a line the long way comes after the four things a line does, because only a line written the shorter way needs it; and moving on to the next line comes very last, because it is the way out of a line, taken once everything above it is done. Not picked: the long way first, as it was, which put the rarest choice where every line's eye lands first");
     let r3 = app_learn_js_program_step_complete_words(noun);
-    let options = [
-      ["declare", "Declare a variable"],
-      ["evaluate", "Solve an expression"],
-      ["assign", "Assign a value"],
-      ["log", "Log a value to the console"],
-      ["push", "Add an item to an array"],
-      ["expand", "Write it the long way"],
-      ["reset", "Reset the block"],
-      ["complete", r3],
-    ];
+    let options = [];
+    let option_words = app_learn_js_program_step_option_words();
+    for (let option_kind of properties_get(option_words)) {
+      let value12 = property_get(option_words, option_kind);
+      list_add(options, [option_kind, value12]);
+    }
+    list_add(options, ["complete", r3]);
     ("2026-10-28: Reset the line is offered only in a program that runs a line twice, so the if lessons, where it is never right, keep the choices they had");
     if (not(resets)) {
       function reset_not_is(offered) {

@@ -3,6 +3,7 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { app_learn_js_program_step_trace } from "./app_learn_js_program_step_trace.mjs";
 import { app_learn_js_program_step_noun } from "./app_learn_js_program_step_noun.mjs";
 import { app_learn_js_program_step_complete_words } from "./app_learn_js_program_step_complete_words.mjs";
+import { app_learn_js_program_step_option_words } from "./app_learn_js_program_step_option_words.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_value_code } from "./js_value_code.mjs";
@@ -25,14 +26,7 @@ export function app_learn_js_program_step_clicks(code) {
   let traced = app_learn_js_program_step_trace(code);
   let noun = app_learn_js_program_step_noun(traced);
   let complete_words = app_learn_js_program_step_complete_words(noun);
-  let options = {
-    declare: "Declare a variable",
-    evaluate: "Solve an expression",
-    assign: "Assign a value",
-    log: "Log a value to the console",
-    expand: "Write it the long way",
-    reset: "Reset the block",
-  };
+  let options = app_learn_js_program_step_option_words();
   function words(text) {
     let r = {
       text,
