@@ -65,6 +65,9 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let item_always = property_get_or(options, "item_always", null);
   ("2026-11-13: or one item that every other question's array holds and the rest do not, so a loop asking whether it is there is answered true and false alike");
   let item_sometimes = property_get_or(options, "item_sometimes", null);
+  ("2026-11-13, next: or one item an array may hold several times, question k holding it the k-th of repeat_counts times, so a loop counting it has different counts to give");
+  let item_repeated = property_get_or(options, "item_repeated", null);
+  let repeat_counts = property_get_or(options, "repeat_counts", []);
   let name = "a";
   let index_name = "i";
   let less = js_operator_less_than_symbol();
@@ -89,9 +92,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let flag_start = property_get_or(start_fewer, "flag_start", null);
     let flip = property_get_or(start_fewer, "flip", "after");
     ('2026-11-13: a way may instead keep a true or false value named found: found_start is what it starts as, the if sets it to true, found_else also sets it back to false in an else, and found_log says where console.log(found) stands - "after" the loop or "inside" it - so a loop can say whether an item is there at all, and the mistakes of resetting it, starting it true, or writing it out every run can be offered');
-    let found_start = property_get_or(start_fewer, "found_start", null);
-    let found_else = property_get_or(start_fewer, "found_else", false);
-    let found_log = property_get_or(start_fewer, "found_log", "after");
+    ("2026-11-13, next: found generalized to any value kept across runs - keep_name is its name, keep_start what it starts as, keep_set the line the if runs, as found = true; or count++;, keep_else the line an else runs or null for no else, and keep_log where console.log of it stands - so a loop can count as well as say whether");
+    let keep_name = property_get_or(start_fewer, "keep_name", null);
+    let keep_start = property_get_or(start_fewer, "keep_start", null);
+    let keep_set = property_get_or(start_fewer, "keep_set", null);
+    let keep_else = property_get_or(start_fewer, "keep_else", null);
+    let keep_log = property_get_or(start_fewer, "keep_log", "after");
     let end2 = bound;
     if (fewer) {
       end2 = bound_fewer;
@@ -112,9 +118,11 @@ export function app_learn_js_lesson_array_for_generic(options) {
       logs,
       flag_start,
       flip,
-      found_start,
-      found_else,
-      found_log,
+      keep_name,
+      keep_start,
+      keep_set,
+      keep_else,
+      keep_log,
     };
     return r2;
   }
@@ -218,21 +226,21 @@ export function app_learn_js_lesson_array_for_generic(options) {
     if (not_equal(condition3, null)) {
       inside = js_code_if_lines(condition3, logged_way);
     }
-    let found_start2 = property_get(way, "found_start");
-    if (not_equal(found_start2, null)) {
-      let found_name = "found";
-      let found_json = json_to(found_start2);
+    let found_name = property_get(way, "keep_name");
+    if (not_equal(found_name, null)) {
+      let found_start = property_get(way, "keep_start");
+      let found_json = json_to(found_start);
       let found_line = js_code_let_statement(found_name, found_json);
-      let set_true = found_name + " = true;";
+      let set_true = property_get(way, "keep_set");
       let found_if = js_code_if_lines(condition3, set_true);
-      if (property_get(way, "found_else")) {
-        let set_false = found_name + " = false;";
+      let set_false = property_get(way, "keep_else");
+      if (not_equal(set_false, null)) {
         found_if = js_code_if_else_lines(condition3, set_true, set_false);
       }
       let found_logged = js_code_console_log_statement(found_name);
       let found_body = list_concat(found_if, [stepped]);
       let found_after = [found_logged];
-      let left4 = property_get(way, "found_log");
+      let left4 = property_get(way, "keep_log");
       if (equal(left4, "inside")) {
         found_body = list_concat(found_if, [found_logged, stepped]);
         found_after = [];
@@ -325,6 +333,18 @@ export function app_learn_js_lesson_array_for_generic(options) {
             items3.unshift(item_sometimes);
           }
         }
+      }
+      if (not_equal(item_repeated, null)) {
+        let others4 = list_without(fruits, item_repeated);
+        let right4 = list_size(repeat_counts);
+        let index2 = modulo(k, right4);
+        let repeats = list_get(repeat_counts, index2);
+        let count3 = subtract(item_count, repeats);
+        items3 = list_shuffle_take(others4, count3);
+        for (let m = 0; less_than(m, repeats); m++) {
+          items3.push(item_repeated);
+        }
+        list_shuffle(items3);
       }
       let code3 = program_of(items3, right);
       codes2.push(code3);
