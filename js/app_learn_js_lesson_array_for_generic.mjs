@@ -1,10 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { json_to } from "./json_to.mjs";
 import { equal } from "./equal.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -17,8 +17,9 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
-import { js_code_array } from "./js_code_array.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { js_code_array } from "./js_code_array.mjs";
 import { js_code_remainder_2_equal } from "./js_code_remainder_2_equal.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { js_code_if_else_lines } from "./js_code_if_else_lines.mjs";
@@ -31,6 +32,7 @@ import { list_random_item } from "./list_random_item.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { modulo } from "./modulo.mjs";
@@ -73,7 +75,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let numbers = property_get_or(options, "numbers", null);
   ("2026-11-13, next: a lesson may ask that the biggest number is never last, since a loop that keeps every item, with no if, is right exactly when it is, so that mistake would hide and its wrong answer would never be offered");
   let biggest_not_last = property_get_or(options, "biggest_not_last", false);
+  ("2026-11-13, at the human's asking, so a loop can run over the letters of a string: a lesson may hand in words, and each question is then one of them named s, let s = \"joy\";, its letters the items looped over. Everything else reads the letters as it reads an array's items, since s[i] and s.length read a string as a[i] and a.length read an array. Not picked: a builder of its own for strings, which would repeat every wrong loop and the walk");
+  let words = property_get_or(options, "words", null);
   let name = "a";
+  if (not_equal(words, null)) {
+    name = "s";
+  }
   let index_name = "i";
   let less = js_operator_less_than_symbol();
   let read = js_code_index(name, index_name);
@@ -185,6 +192,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
     skipped = 1;
   }
   function head_line(items) {
+    if (not_equal(words, null)) {
+      let word = list_join_empty(items);
+      let word_json = json_to(word);
+      let line_word = js_code_let_statement(name, word_json);
+      return line_word;
+    }
     let codes = list_map(items, json_to);
     let array = js_code_array(codes);
     let line = js_code_let_statement(name, array);
@@ -322,6 +335,10 @@ export function app_learn_js_lesson_array_for_generic(options) {
         item_count = list_get(item_counts, k);
       }
       let items3 = list_shuffle_take(fruits, item_count);
+      if (not_equal(words, null)) {
+        let word2 = list_random_item(words);
+        items3 = text_split_empty(word2);
+      }
       if (not_equal(item_always, null)) {
         let others2 = list_without(fruits, item_always);
         let count = subtract(item_count, 1);
