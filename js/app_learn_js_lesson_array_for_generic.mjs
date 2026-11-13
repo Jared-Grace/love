@@ -1,4 +1,3 @@
-import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -34,6 +33,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { modulo } from "./modulo.mjs";
+import { divide } from "./divide.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -72,8 +72,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   ("2026-11-13, next: or one item an array may hold several times, question k holding it the k-th of repeat_counts times, so a loop counting it has different counts to give");
   let item_repeated = property_get_or(options, "item_repeated", null);
   let repeat_counts = property_get_or(options, "repeat_counts", []);
-  ("2026-11-13: a lesson may hand in numbers to fill the arrays from in place of the fruits of the Spirit, so a loop can add its items up");
-  let numbers = property_get_or(options, "numbers", null);
+  ("2026-11-13: a lesson may hand in a pool of items to fill the arrays from in place of the fruits of the Spirit - numbers, so a loop can add its items up, or words chosen for what the loop looks for");
+  let item_pool = property_get_or(options, "item_pool", null);
   ("2026-11-13, next: a lesson may ask that the biggest number is never last, since a loop that keeps every item, with no if, is right exactly when it is, so that mistake would hide and its wrong answer would never be offered");
   let biggest_not_last = property_get_or(options, "biggest_not_last", false);
   ("2026-11-13, at the human's asking, so a loop can run over the letters of a string: a lesson may hand in words, and each question is then one of them named s, let s = \"joy\";, its letters the items looped over. Everything else reads the letters as it reads an array's items, since s[i] and s.length read a string as a[i] and a.length read an array. Not picked: a builder of its own for strings, which would repeat every wrong loop and the walk");
@@ -327,8 +327,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
     "four programs, each a fresh array of fruits of the Spirit, each looped over by the right loop";
     "2026-11-11: each size of item_counts is asked once before any size is drawn at random, and the four are then shuffled, so a set always holds the smallest array - the one a loop may not run for at all - beside larger ones, and is never all one kind";
     let fruits = fruits_of_the_spirit();
-    if (not_equal(numbers, null)) {
-      fruits = numbers;
+    if (not_equal(item_pool, null)) {
+      fruits = item_pool;
     }
     let codes2 = [];
     ("2026-11-13: the words are shuffled once and each question takes the next, so a set repeats a word only when it has fewer words than questions");
