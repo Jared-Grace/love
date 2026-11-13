@@ -1,5 +1,3 @@
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
@@ -10,10 +8,12 @@ import { html_div } from "./html_div.mjs";
 import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
 import { app_calendar_guest } from "./app_calendar_guest.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { not } from "./not.mjs";
 import { app_calendar_host } from "./app_calendar_host.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { equal } from "./equal.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
@@ -48,6 +48,9 @@ export async function app_calendar(context) {
   await show_meetings();
   let host_open = async function lambda3() {
     html_clear(host_area);
+    if (not(slug)) {
+      html_clear(guest_area);
+    }
     if (host_key) {
       let drawn = await app_calendar_host(host_area, host_key);
       if (drawn) {
