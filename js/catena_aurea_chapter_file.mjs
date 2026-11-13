@@ -1,9 +1,10 @@
+import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
+import { ebible_chapter_code_to_number } from "./ebible_chapter_code_to_number.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
-import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { ebible_chapter_code_to_number } from "./ebible_chapter_code_to_number.mjs";
 export function catena_aurea_chapter_file(chapter_code) {
   "The page of Aquinas's Catena Aurea on ecatholic2000.com that comments on a chapter of the Gospels, or null for a chapter it does not cover.";
   "$plain chapter_code";
@@ -28,8 +29,8 @@ export function catena_aurea_chapter_file(chapter_code) {
     },
   };
   let book_code = ebible_chapter_code_to_book(chapter_code);
-  let gospel = gospels[book_code];
-  if (equal(gospel, undefined)) {
+  let gospel = property_get_or_null(gospels, book_code);
+  if (equal(gospel, null)) {
     return null;
   }
   let chapter = ebible_chapter_code_to_number(chapter_code);
