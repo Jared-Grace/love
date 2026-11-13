@@ -1,7 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { json_to } from "./json_to.mjs";
 export function js_value_code(value) {
@@ -17,6 +17,12 @@ export function js_value_code(value) {
   if (equal(typeof value, "number") && not(Number.isFinite(value))) {
     let number_code = text_to(value);
     return number_code;
+  }
+  ('2026-11-13, at the human\'s asking: a list is written with a comma and a space between its items, as a lesson\'s own code writes it, so the note beside `let x = ["a", "b"];` reads the same and does not look as if assigning took the spaces out');
+  if (Array.isArray(value)) {
+    let items = value.map(js_value_code);
+    let list_code = "[" + items.join(", ") + "]";
+    return list_code;
   }
   let code = json_to(value);
   return code;
