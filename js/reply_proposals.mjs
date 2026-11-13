@@ -4494,6 +4494,105 @@ export function reply_proposals() {
       "the pieces match these exact words for now, with you or u, urgent or argent, and sir, great man of God or my dear brother. Other wordings of the same needs are not caught yet.",
     ],
   };
+  let lined_open =
+    "🙇 In the name of the Father, and of the Son, and of the Holy Spirit ❤️✝️🕊️ : \n🙏 ";
+  let lined_amen = "\nAmen! 🙏";
+  let lined_sorry =
+    "🙏 Sorry, I have nothing that I can give you at this time.";
+  let combined112 = text_combine_multiple([
+    "   let v = ",
+    fn_name("prayer_start"),
+    "();",
+  ]);
+  let combined115 = text_combine_multiple([
+    "-  let v2 = ",
+    fn_name("prayer_end"),
+    "();",
+  ]);
+  let combined117 = text_combine_multiple([
+    "+  let amen = ",
+    fn_name("prayer_amen"),
+    "();",
+  ]);
+  let combined118 = text_combine_multiple([
+    "   let pray = ",
+    fn_name("emoji_pray"),
+    "();",
+  ]);
+  let combined119 = text_combine_multiple([
+    "-  let prayer = ",
+    fn_name("text_combine_multiple"),
+    '([v, "\\n", pray, " ", joined, v2]);',
+  ]);
+  let combined120 = text_combine_multiple([
+    "+  let prayer = ",
+    fn_name("text_combine_multiple"),
+    '([v, "\\n", pray, " ", joined, "\\n", amen, " ", pray]);',
+  ]);
+  let lined_lines = [
+    '-  let joined = ordered.join(" ");',
+    '+  let joined = ordered.join("\\n");',
+    combined112,
+    combined115,
+    combined117,
+    combined118,
+    combined119,
+    combined120,
+    "   return prayer;",
+  ];
+  let combined121 = text_combine_multiple([
+    lined_open,
+    "May the LORD have His will done! 🕊️\nMay the LORD provide for your ministry!\nMay the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask!",
+    lined_amen,
+  ]);
+  let combined122 = text_combine_multiple([
+    lined_open,
+    "May the LORD always bless your ministry and your teaching exceedingly abundantly more than anyone can ask or think!",
+    lined_amen,
+  ]);
+  let combined123 = text_combine_multiple([
+    lined_open,
+    "May the LORD have His will done! 🕊️\nMay the LORD heal and protect the people and the children!\nMay the LORD free the children from brick factories!\nMay the LORD feed their families!\nMay the LORD provide for these people!\nMay the LORD help you!\nMay the LORD lead others to provide you with an abundance of prayer!\nMay the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask!",
+    lined_amen,
+  ]);
+  let prayer_lined = {
+    title:
+      "put each thing asked of God in the closing prayer on a line of its own, with Amen on its own line at the end",
+    fn: fn_name("reply_prayer_closing"),
+    whole: [],
+    diff: lined_lines,
+    cases: [
+      {
+        from: "31c5df9f5c22e68d",
+        message:
+          "I am requesting you to support in ministry, God's will, come and fellowship with us, God's will, thank you.",
+        answered: true,
+        outputs: [lined_sorry, "🙏 All glory to God ❤️✝️🕊️ ! ", combined121],
+      },
+      {
+        from: "3d27ef64ea033e69",
+        message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
+        answered: true,
+        outputs: [
+          "👋😁 Greetings in the name of our LORD Jesus Christ! ✝️ Any friend of Jesus is a friend of mine! 🤝🫂",
+          "🌎 The servant of God is from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. 🙏",
+          combined122,
+        ],
+      },
+      {
+        from: "4e371b3c0090c03c",
+        message:
+          "And sir I requested you something\nGreat man of God I want to share something with you U know many people and children's suffering from heat stroke\nSome children's are from bricks factory children's and people Even they not able to do work Their families has not food for eating\nIn this days They all are hand to mouth Here is temperature is 55°C or some times more\nWe need your argent help for them\nKeep remembering this children's",
+        answered: true,
+        outputs: [lined_sorry, combined123],
+      },
+    ],
+    decide: [
+      "a single line break between the things asked, not a blank line. With a blank line a prayer of eight things runs to sixteen lines on a phone and reads as eight separate paragraphs rather than one prayer.",
+      "the opening, In the name of the Father, and of the Son, and of the Holy Spirit, keeps its own line as now, and the first thing asked stays beside the praying hands on the line after it.",
+      "only the prayer that closes a reply changes. Prayers written elsewhere with the same Amen, such as the daily verse prayers, are left as they are.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -4550,6 +4649,7 @@ export function reply_proposals() {
     doing_heard,
     great_day_thanked,
     appeal_merged,
+    prayer_lined,
   ];
   return proposals;
 }
