@@ -1,8 +1,8 @@
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { calendar_openings_free } from "./calendar_openings_free.mjs";
+import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+import { not_equal } from "./not_equal.mjs";
 export async function calendar_db_book(
   db,
   slug,
@@ -17,12 +17,8 @@ export async function calendar_db_book(
   ("Books guest_uid with the host whose booking link is slug, on the host's own day and minute, once or every week from then on; answers {ok, reason, start_utc}. db is a Cloudflare D1 database, or anything answering the same prepare, bind, first, all and run.");
   ("The hour must be one the host still offers - inside their openings, 24 hours to 14 days ahead, not held - which is asked of the same list the guest was shown, so the page and the booking cannot disagree about what is open.");
   ("★ THE CLASH CHECK AND THE WRITE ARE ONE STATEMENT. Checking first and writing after lets two guests both pass the check; an INSERT that only writes when no clashing meeting exists cannot be split, and the unique indexes back it up. The clashes: the same day, an earlier weekly meeting reaching this day, or - for a weekly booking - any meeting on this weekday at or after its first day.");
-  let host_row = await db
-    .prepare(
-      "SELECT hosts.uid, hosts.block_minutes, hosts.meeting_minutes, people.timezone FROM hosts JOIN people ON people.uid = hosts.uid WHERE hosts.slug = ?",
-    )
-    .bind(slug)
-    .first();
+  let free = await calendar_db_host_free(db, slug, now_iso);
+  let host_row = free.host;
   if (equal(host_row, null)) {
     let r = {
       ok: false,
@@ -32,24 +28,7 @@ export async function calendar_db_book(
     return r;
   }
   let host_uid = host_row.uid;
-  let openings_read = await db
-    .prepare(
-      "SELECT weekday, start_minute, end_minute FROM openings WHERE host_uid = ?",
-    )
-    .bind(host_uid)
-    .all();
-  let meetings_read = await db
-    .prepare(
-      "SELECT day, weekday, start_minute, weekly, cancelled_at FROM meetings WHERE host_uid = ? AND cancelled_at IS NULL",
-    )
-    .bind(host_uid)
-    .all();
-  let slots = calendar_openings_free(
-    host_row,
-    openings_read.results,
-    meetings_read.results,
-    now_iso,
-  );
+  let slots = free.slots;
   function lambda(s) {
     let r2 = equal(s.day, day) && equal(s.start_minute, start_minute);
     return r2;
