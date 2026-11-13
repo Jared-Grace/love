@@ -1,13 +1,23 @@
+import { fn_name } from "./fn_name.mjs";
+import { json_to } from "./json_to.mjs";
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_facebook_login } from "./calendar_facebook_login.mjs";
 import { calendar_api_handle } from "./calendar_api_handle.mjs";
 export async function calendar_worker_fetch(request, env) {
   arguments_assert(arguments, 2);
-  ("The calendar Worker's whole web side: turns a Request into one call of calendar_api_handle and its answer into a JSON Response, and sends /calendar/login/facebook to calendar_facebook_login. Everything it decides lives in those two; this only translates.");
+  ("The calendar Worker's whole web side: turns a Request into one call of ",
+    fn_name("calendar_api_handle"),
+    " and its answer into a JSON Response, and sends /calendar/login/facebook to ",
+    fn_name("calendar_facebook_login"),
+    ". Everything it decides lives in those two; this only translates.");
   ("env holds DB (the D1 database), RATE (a Workers rate limit binding), TURNSTILE_SECRET, FACEBOOK_APP_ID, FACEBOOK_APP_SECRET. The session key arrives as Authorization: Bearer <key>, never a cookie, so no other site can spend it.");
   let url = new URL(request.url);
   let json = function lambda(status, value) {
-    let r = new Response(JSON.stringify(value), {
+    let json2 = json_to(value);
+    let r = new Response(json2, {
       status,
       headers: {
         "content-type": "application/json; charset=utf-8",
@@ -16,12 +26,13 @@ export async function calendar_worker_fetch(request, env) {
     });
     return r;
   };
-  if (url.pathname === "/calendar/login/facebook") {
+  if (equal(url.pathname, "/calendar/login/facebook")) {
     let r2 = await calendar_facebook_login(request, env);
     return r2;
   }
   let prefix = "/calendar/api/";
-  if (!url.pathname.startsWith(prefix)) {
+  let b = url.pathname.startsWith(prefix);
+  if (not(b)) {
     let r3 = json(404, {
       ok: false,
       reason: "route",
@@ -35,7 +46,8 @@ export async function calendar_worker_fetch(request, env) {
       let limited = await env.RATE.limit({
         key: ip,
       });
-      return limited.success;
+      let r8 = limited.success;
+      return r8;
     },
     turnstile_ok: async function lambda3(token) {
       let form = new URLSearchParams({
@@ -51,14 +63,16 @@ export async function calendar_worker_fetch(request, env) {
         },
       );
       let checked = await answer.json();
-      return checked.success === true;
+      let eq = equal(checked.success, true);
+      return eq;
     },
     uid_new: function lambda4() {
-      return crypto.randomUUID();
+      let r9 = crypto.randomUUID();
+      return r9;
     },
   };
   let body = Object.fromEntries(url.searchParams);
-  if (request.method === "POST") {
+  if (equal(request.method, "POST")) {
     try {
       body = await request.json();
     } catch {
@@ -68,7 +82,7 @@ export async function calendar_worker_fetch(request, env) {
       });
       return r4;
     }
-    if (body === null || typeof body !== "object") {
+    if (equal(body, null) || not_equal(typeof body, "object")) {
       let r5 = json(400, {
         ok: false,
         reason: "json",
