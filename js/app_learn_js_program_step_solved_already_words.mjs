@@ -1,9 +1,9 @@
-import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { integer_is } from "./integer_is.mjs";
+import { not } from "./not.mjs";
+import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 export function app_learn_js_program_step_solved_already_words(
@@ -30,6 +30,9 @@ export function app_learn_js_program_step_solved_already_words(
     if (text_starts_with(line_text, "let ")) {
       line_sum = "let " + line_sum;
     }
+  }
+  if (equal(left, "push")) {
+    line_sum = property_get(action, "name") + ".push(" + sum + ");";
   }
   parts = [
     "",

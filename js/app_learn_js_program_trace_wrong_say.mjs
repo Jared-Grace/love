@@ -93,6 +93,16 @@ export function app_learn_js_program_trace_wrong_say(question, answer, choice) {
         code_add(code2);
         list_add(assigned, name);
       }
+      if (equal(kind, "push")) {
+        let name6 = property_get(action, "name");
+        then_add();
+        code_add(name6);
+        words = words + " holds ";
+        let value2 = property_get(action, "after");
+        let code3 = js_value_code(value2);
+        code_add(code3);
+        list_add(assigned, name6);
+      }
       if (equal(kind, "log")) {
         let written = property_text_to(action, "value");
         then_add();

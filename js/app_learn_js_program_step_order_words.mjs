@@ -36,6 +36,7 @@ export function app_learn_js_program_step_order_words(
   let declared = false;
   let assigned = false;
   let logged = false;
+  let pushed = false;
   for (let item of actions) {
     let left = property_get(item, "kind");
     if (equal(left, option_kind) && equal(at, -1)) {
@@ -61,6 +62,12 @@ export function app_learn_js_program_step_order_words(
       let value4 = property_get(item, "value");
       value = js_value_code(value4);
     }
+    if (equal(left, "push")) {
+      pushed = true;
+      name = property_get(item, "name");
+      let value5 = property_get(item, "value");
+      value = js_value_code(value5);
+    }
     index = index + 1;
   }
   ("where the value is solved: inside the ( ) on a line that logs, right of the = on a line that assigns, and otherwise the condition of an if");
@@ -70,6 +77,9 @@ export function app_learn_js_program_step_order_words(
   }
   if (logged) {
     solved_in = ["What is inside ", "console.log( )", " is"];
+  }
+  if (pushed) {
+    solved_in = ["What is inside ", ".push( )", " is"];
   }
   function words_then(words, more) {
     "words followed by more, the last text of words and the first of more joined, so words and code still take turns";
@@ -132,6 +142,18 @@ export function app_learn_js_program_step_order_words(
       ];
       return r11;
     }
+    if (equal(step_kind, "push")) {
+      let r25 = [
+        "The ",
+        "//",
+        " line of ",
+        name,
+        " does not show ",
+        value,
+        " at its end yet, so it has not been added",
+      ];
+      return r25;
+    }
     if (equal(step_kind, "reset")) {
       let r22 = [
         "This block still shows the values solved into it the last time it ran, so it has not been reset",
@@ -180,6 +202,18 @@ export function app_learn_js_program_step_order_words(
         ", so it has already been logged",
       ];
       return r16;
+    }
+    if (equal(step_kind, "push")) {
+      let r26 = [
+        "The ",
+        "//",
+        " line of ",
+        name,
+        " already shows ",
+        value,
+        " at its end, so it has already been added",
+      ];
+      return r26;
     }
     if (equal(step_kind, "reset")) {
       let r23 = [
@@ -251,6 +285,19 @@ export function app_learn_js_program_step_order_words(
     };
     return r21;
   }
+  if (equal(at, -1) && equal(option_kind, "push")) {
+    ("2026-11-13, said the way log_none is: adding an item, chosen on a line with no .push( ), names what is missing");
+    let r27 = {
+      reason: "push_none",
+      words: [
+        "Adding an item to an array needs ",
+        ".push(...)",
+        " - but there is no ",
+        ".push(...)",
+      ],
+    };
+    return r27;
+  }
   if (equal(at, -1) && equal(option_kind, "reset")) {
     ("2026-10-28: Reset the line, chosen on a line running for the first time, says why there is nothing to put back");
     let r24 = {
@@ -293,6 +340,13 @@ export function app_learn_js_program_step_order_words(
       ]),
     };
     return r4;
+  }
+  if (equal(kind, "evaluate") && equal(option_kind, "push")) {
+    let r28 = {
+      reason: "evaluate_first",
+      words: words_then(not_yet, [", and an item is added once it is solved"]),
+    };
+    return r28;
   }
   if (equal(kind, "evaluate") && equal(option_kind, "log")) {
     let r5 = {
