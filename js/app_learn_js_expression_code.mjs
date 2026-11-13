@@ -12,6 +12,8 @@ import { js_code_called } from "./js_code_called.mjs";
 import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
 import { app_learn_js_expression_side_code } from "./app_learn_js_expression_side_code.mjs";
 import { app_learn_js_operator_code_before } from "./app_learn_js_operator_code_before.mjs";
+import { app_learn_js_operator_includes_symbol } from "./app_learn_js_operator_includes_symbol.mjs";
+import { equal } from "./equal.mjs";
 import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_learn_js_operator_rank_least_left } from "./app_learn_js_operator_rank_least_left.mjs";
@@ -57,6 +59,17 @@ export function app_learn_js_expression_code(item) {
     return code_before;
   }
   ("each side asks for the strength it has to reach, and the two sides do not ask for the same one: the side an operator works out LAST has to be gathered when it holds an operator of equal strength, because otherwise a reader takes the line the other way round. 8 / 4 / 2 is not 8 / (4 / 2), while nothing on the left of a divide ever needs that - and a power is the other way round, so (2 ** 3) ** 2 keeps its marks and 2 ** 3 ** 2 needs none.");
+  let includes_symbol = app_learn_js_operator_includes_symbol();
+  if (equal(symbol, includes_symbol)) {
+    ('2026-11-13: "obey".includes("e"): the string, gathered only if something weaker stands there, then .includes, then the piece whole in its brackets');
+    let rank_includes = app_learn_js_operator_rank(symbol);
+    let held = property_get(item, "left");
+    let held_code = app_learn_js_expression_side_code(held, rank_includes);
+    let part = property_get(item, "right");
+    let part_code = app_learn_js_expression_code(part);
+    let code_includes = js_code_called(held_code + symbol, part_code);
+    return code_includes;
+  }
   let called_two = app_learn_js_operators_called_two();
   if (list_includes(called_two, symbol)) {
     ("Math.max(t, 10): the name, then both things in its brackets, a comma between, each whole since the brackets and the comma already keep them apart");

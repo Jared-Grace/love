@@ -78,7 +78,6 @@ export function app_learn_js_lesson_array_for_count_e() {
       "good",
       "faith",
     ],
-    steps: false,
     ways: [
       {
         start: 0,

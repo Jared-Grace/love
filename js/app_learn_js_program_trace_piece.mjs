@@ -20,6 +20,7 @@ import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs
 import { app_learn_js_expression_node_index } from "./app_learn_js_expression_node_index.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { list_first } from "./list_first.mjs";
+import { app_learn_js_operator_includes_symbol } from "./app_learn_js_operator_includes_symbol.mjs";
 import { list_second } from "./list_second.mjs";
 import { error } from "./error.mjs";
 import { app_learn_js_program_trace_piece_solved } from "./app_learn_js_program_trace_piece_solved.mjs";
@@ -163,6 +164,21 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
       list_includes(called_two_names, callee_code) && equal(handed_count, 2);
     called_is = one || two;
   }
+  let includes_is =
+    equal(type, "CallExpression") &&
+    equal(
+      property_get(property_get(piece, "callee"), "type"),
+      "MemberExpression",
+    ) &&
+    not(property_get(property_get(piece, "callee"), "computed")) &&
+    equal(
+      property_get(
+        property_get(property_get(piece, "callee"), "property"),
+        "name",
+      ),
+      "includes",
+    ) &&
+    equal(list_size(property_get(piece, "arguments")), 1);
   if (equal(type, "BinaryExpression") || equal(type, "LogicalExpression")) {
     let piece2 = property_get(piece, "left");
     let left = app_learn_js_program_trace_piece(state, piece2, true);
@@ -187,6 +203,16 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     let piece4 = property_get(piece, "argument");
     let argument = app_learn_js_program_trace_piece(state, piece4, true);
     expression = app_learn_js_expression_node_before("!", argument);
+  } else if (includes_is) {
+    ('2026-11-13, at the human\'s asking, so the string lessons can be stepped through: s.includes("e") reads the string first - a name looked up as any name is - then the piece in its brackets, then asks in one evaluate, as an operator between two things is. Not picked: reading s.includes as a name, which asks the learner about a part of the spelling rather than about what happens');
+    let callee_includes = property_get(piece, "callee");
+    let piece_held = property_get(callee_includes, "object");
+    let held = app_learn_js_program_trace_piece(state, piece_held, true);
+    let list2 = property_get(piece, "arguments");
+    let piece_part = list_first(list2);
+    let part = app_learn_js_program_trace_piece(state, piece_part, true);
+    let includes_symbol = app_learn_js_operator_includes_symbol();
+    expression = app_learn_js_expression_node(held, includes_symbol, part);
   } else if (called_is) {
     ("2026-11-12, at the human's asking, so the Statements lessons that round or measure can be stepped through: Math.floor(n / 10) reads what is in its brackets first, then rounds it, in one evaluate - one press for the call, as the expression lessons press Math.floor. Not picked: reading Math and then floor as names, which asks the learner about a part of the spelling rather than about what happens");
     let callee_piece = property_get(piece, "callee");

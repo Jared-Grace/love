@@ -8,6 +8,8 @@ import { app_learn_js_operator_index_symbol } from "./app_learn_js_operator_inde
 import { list_get } from "./list_get.mjs";
 import { math_max } from "./math_max.mjs";
 import { math_min } from "./math_min.mjs";
+import { app_learn_js_operator_includes_symbol } from "./app_learn_js_operator_includes_symbol.mjs";
+import { text_includes } from "./text_includes.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function app_learn_js_operators_solvable() {
   "every operator a code lesson may put between two things and then work out, each carrying the function that works it out";
@@ -38,6 +40,11 @@ export function app_learn_js_operators_solvable() {
     operator: "Math.min",
     fn: math_min,
   };
-  let all = list_concat(with_index, [larger, smaller]);
+  ('2026-11-13, at the human\'s asking: s.includes("e") has the string on its left and the piece on its right, so the string lessons can be stepped through');
+  let including = {
+    operator: app_learn_js_operator_includes_symbol(),
+    fn: text_includes,
+  };
+  let all = list_concat(with_index, [larger, smaller, including]);
   return all;
 }
