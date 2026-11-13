@@ -14,6 +14,10 @@ import { text_combine } from "./text_combine.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_batch_on_refill } from "./app_learn_js_batch_on_refill.mjs";
 import { noop } from "./noop.mjs";
+import { object_copy } from "./object_copy.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_learn_js_items_steps_fewest } from "./app_learn_js_items_steps_fewest.mjs";
+import { property_set } from "./property_set.mjs";
 import { app_learn_js_batch_item_get } from "./app_learn_js_batch_item_get.mjs";
 import { app_learn_js_examples_on_batch_item } from "./app_learn_js_examples_on_batch_item.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
@@ -53,9 +57,21 @@ export function app_learn_js_examples_example_another(context, root) {
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
   let on_batch = app_learn_js_batch_on_refill(noop);
+  ("2026-11-13, at the human's asking: a guided example is drawn from only the questions of its set that take the fewest steps, since each press past the first few runs of a loop repeats the ones before; the quizzes still draw from the whole set");
+  let lesson_drawn = lesson;
+  if (guided) {
+    lesson_drawn = object_copy(lesson);
+    let batch_whole = property_get(lesson, "batch");
+    function batch_fewest() {
+      let items = batch_whole();
+      let kept = app_learn_js_items_steps_fewest(items);
+      return kept;
+    }
+    property_set(lesson_drawn, "batch", batch_fewest);
+  }
   let refresh = app_learn_js_batch_item_get(
     c,
-    lesson,
+    lesson_drawn,
     on_batch_item,
     on_batch,
     false,
