@@ -1,3 +1,9 @@
+import { reply_appeal_details } from "./reply_appeal_details.mjs";
+import { reply_appeal_help_needed } from "./reply_appeal_help_needed.mjs";
+import { reply_appeal_more } from "./reply_appeal_more.mjs";
+import { reply_any_order_required } from "./reply_any_order_required.mjs";
+import { reply_appeal_intro } from "./reply_appeal_intro.mjs";
+import { reply_once_or_more_optional } from "./reply_once_or_more_optional.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_phrase_i_am } from "./reply_phrase_i_am.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
@@ -53,7 +59,8 @@ export function app_shared_message_reply_asks() {
   let fn2 = reply_on_match_prayer(children, output2);
   let output3 = reply_prayer_provide_ministry();
   let fn3 = reply_on_match_prayer(ministry, output3);
-  let items_said = reply_choice([fn, fn2, fn3]);
+  let details = reply_appeal_details();
+  let items_said = reply_choice([fn, fn2, fn3, details]);
   let give_line = reply_response_nothing_to_give();
   let items_told = reply_on_match_output(items_said, give_line);
   let will_done = reply_prayer_will_done();
@@ -62,10 +69,16 @@ export function app_shared_message_reply_asks() {
   let items = reply_on_match_prayer(will_noted, lead_provider);
   let me_or_us = reply_choice(["me", "us"]);
   let o_me_or_us = reply_optional(me_or_us);
-  let help = reply_sequence(["please", "help", o_me_or_us]);
+  let please_help = reply_sequence(["please", "help", o_me_or_us]);
+  let help_needed = reply_appeal_help_needed();
+  let help = reply_choice([please_help, help_needed]);
   let output4 = reply_prayer_help_you();
   let help_said = reply_on_match_prayer(help, output4);
-  let o_help = reply_optional(help_said);
-  let asks = reply_sequence([o_help, items, o_help]);
+  let more = reply_appeal_more();
+  let told = reply_choice([help_said, more]);
+  let told_and_items = reply_any_order_required(items, told);
+  let intro = reply_appeal_intro();
+  let o_intros = reply_once_or_more_optional(intro);
+  let asks = reply_sequence([o_intros, told_and_items]);
   return asks;
 }
