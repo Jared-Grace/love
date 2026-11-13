@@ -76,9 +76,12 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   let action = list_get(actions, k);
   let kind = property_get(action, "kind");
   ("2026-11-13: a pop just before gave back the item it took off, so what it stood in is solved, as an evaluate leaves it");
-  let index = subtract(k, 1);
-  let object = list_get(actions, index);
-  let kind_before = greater_than(k, 0) ? property_get(object, "kind") : null;
+  let kind_before = null;
+  if (greater_than(k, 0)) {
+    let index = subtract(k, 1);
+    let object = list_get(actions, index);
+    kind_before = property_get(object, "kind");
+  }
   let solved_before =
     equal(kind_before, "evaluate") || equal(kind_before, "pop");
   ("2026-10-15, at the human's asking: a line giving a name a new value, as a = 5; does, assigns without declaring, so the first time it is asked about it says so in the let line's words for its assign. Not picked: saying nothing of what kind of line it is, as the other kinds each say");
