@@ -38,6 +38,7 @@ export function js_flow_globals_allowed() {
     "structuredClone",
     "TextEncoder",
     "TextDecoder",
+    "crypto",
     "Intl",
   ];
   return names;
