@@ -1,3 +1,9 @@
+import { floor } from "./floor.mjs";
+import { math_max } from "./math_max.mjs";
+import { divide } from "./divide.mjs";
+import { modulo } from "./modulo.mjs";
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { date_time_zone_from_iso } from "./date_time_zone_from_iso.mjs";
 import { date_time_zone_parse } from "./date_time_zone_parse.mjs";
@@ -10,31 +16,31 @@ export function calendar_meeting_next_utc(meeting, now_iso) {
     "yyyy-MM-dd",
     meeting.host_timezone,
   );
+  let p = divide(meeting.start_minute, 60);
   let clock = {
-    hour: Math.floor(meeting.start_minute / 60),
-    minute: meeting.start_minute % 60,
+    hour: floor(p),
+    minute: modulo(meeting.start_minute, 60),
   };
   let weeks = 0;
-  if (meeting.weekly === 1) {
-    let weeks_passed = Math.floor(
-      moment_now.diff(midnight_first, "weeks").weeks,
-    );
-    weeks = Math.max(0, weeks_passed);
+  if (equal(meeting.weekly, 1)) {
+    let weeks_passed = floor(moment_now.diff(midnight_first, "weeks").weeks);
+    weeks = math_max(0, weeks_passed);
   }
   let moment_next = midnight_first
     .plus({
       weeks,
     })
     .set(clock);
-  if (meeting.weekly === 1 && moment_next < moment_now) {
+  if (equal(meeting.weekly, 1) && less_than(moment_next, moment_now)) {
     moment_next = midnight_first
       .plus({
         weeks: weeks + 1,
       })
       .set(clock);
   }
-  if (moment_next < moment_now) {
+  if (less_than(moment_next, moment_now)) {
     return null;
   }
-  return moment_next.toUTC().toISO();
+  let r = moment_next.toUTC().toISO();
+  return r;
 }
