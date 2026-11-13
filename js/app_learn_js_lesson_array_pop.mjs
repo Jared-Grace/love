@@ -9,26 +9,26 @@ import { js_code_length } from "./js_code_length.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_size } from "./list_size.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { less_than } from "./less_than.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { list_first } from "./list_first.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
+import { list_first } from "./list_first.mjs";
 import { text_between } from "./text_between.mjs";
 import { json_from } from "./json_from.mjs";
 import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_random_item } from "./list_random_item.mjs";
+import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_random_item } from "./list_random_item.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -44,7 +44,7 @@ import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.m
 export function app_learn_js_lesson_array_pop() {
   arguments_assert(arguments, 0);
   ('taking the last item off an array: let a = ["joy", "peace"]; a.pop(); console.log(a.length); writes out 1');
-  ("2026-11-13, at the human's asking, after the push lessons: pop is the second array function, push undone. The one new fact is that a.pop() takes one item off, so the length goes down by 1; which item it takes, the last, is its own later lesson, as it was for push.");
+  ("2026-11-13, at the human's asking, after the push lessons: pop is the second array function, push undone. The one new fact is that a.pop() removes the last item, so the length goes down by 1. The human's wording, 2026-11-13: a.pop() does the opposite of a.push(): a.pop() removes the last item - saying which item here, rather than leaving it to a later lesson as push did, since the opposite of adding to the end reads most plainly as removing from the end.");
   ("A set is six questions, arrays of one, two and three items twice each, shuffled. An array of one pops down to [], so the empty array comes back as a result, not only as a start. Each question names its array with its own letter; the examples keep a.");
   ("Reading forwards, the wrong answers are the length before the pop, as if nothing changed; one more than that, as if pop added like push; and the last word, the one taken off. Reading backwards, the wrong programs start with one item fewer and one more.");
   ("Not stepped yet: stepping knows push as the only array function, and pop brings the two-level Call a function choice, which is its own piece of work.");
@@ -157,7 +157,11 @@ export function app_learn_js_lesson_array_pop() {
     app_learn_js_div_cycle_code(box_three, [
       "",
       "a.pop()",
-      " does the opposite: it takes one item off",
+      " does the opposite of ",
+      "a.push()",
+      ": ",
+      "a.pop()",
+      " removes the last item",
     ]);
     let code = program_of("a", example_items);
     let lines2 = text_split_newline(code);
@@ -170,7 +174,7 @@ export function app_learn_js_lesson_array_pop() {
       "2",
       " items. ",
       "a.pop();",
-      " takes one off, so now ",
+      " removes the last item, so now ",
       "a",
       " has ",
       "1",

@@ -9,6 +9,7 @@ export function calendar_db_schema() {
   ("★ A WEEKLY SCHEDULE STARTS ON A DATE AND IS NEVER EDITED IN PLACE. All the openings rows sharing a from_day are one schedule; a day keeps the schedule with the latest from_day not after it. Changing the weeks from some date on adds a schedule from that date, so the days before it keep the hours they had.");
   ("A host's free hours are their weekly openings changed on single dates: an openings_dated row with open 0 takes a stretch of that day away (an appointment), with open 1 adds one (an extra free morning).");
   ("★ A SESSION STORES ONLY THE KEY'S HASH. A guest's private link and a host's Facebook sign-in both end in a random key held by the person; the table keeps its SHA-256, so a copy of the database opens nobody's meetings. It names no person row on purpose: a host signed in with Facebook has a session before they have given a WhatsApp number.");
+  ("★ A BOOKING WAITS UNTIL ITS CODE ARRIVES. code is what the guest sends the host from their WhatsApp; confirmed_at is stamped when the host sees it come from the number booked with. A meeting with no confirmed_at is waiting, and is cancelled 24 hours after created_at.");
   ("Nothing is deleted: a cancelled meeting keeps its row with the time it was cancelled, and leaves both indexes, so the hour opens again.");
   let sql = `CREATE TABLE IF NOT EXISTS people (
   uid TEXT PRIMARY KEY,
@@ -52,13 +53,16 @@ CREATE TABLE IF NOT EXISTS meetings (
   start_minute INTEGER NOT NULL CHECK (start_minute BETWEEN 0 AND 1439),
   weekly INTEGER NOT NULL CHECK (weekly IN (0, 1)),
   created_at TEXT NOT NULL,
-  cancelled_at TEXT
+  cancelled_at TEXT,
+  code TEXT,
+  confirmed_at TEXT
 );
 CREATE UNIQUE INDEX IF NOT EXISTS meetings_day_taken
   ON meetings (host_uid, day, start_minute) WHERE cancelled_at IS NULL;
 CREATE UNIQUE INDEX IF NOT EXISTS meetings_weekly_taken
   ON meetings (host_uid, weekday, start_minute) WHERE cancelled_at IS NULL AND weekly = 1;
 CREATE INDEX IF NOT EXISTS meetings_guest ON meetings (guest_uid);
+CREATE INDEX IF NOT EXISTS meetings_code ON meetings (host_uid, code);
 CREATE TABLE IF NOT EXISTS sessions (
   key_hash TEXT PRIMARY KEY,
   uid TEXT NOT NULL,
