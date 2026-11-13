@@ -68,6 +68,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   ("2026-11-13, next: or one item an array may hold several times, question k holding it the k-th of repeat_counts times, so a loop counting it has different counts to give");
   let item_repeated = property_get_or(options, "item_repeated", null);
   let repeat_counts = property_get_or(options, "repeat_counts", []);
+  ("2026-11-13: a lesson may hand in numbers to fill the arrays from in place of the fruits of the Spirit, so a loop can add its items up");
+  let numbers = property_get_or(options, "numbers", null);
   let name = "a";
   let index_name = "i";
   let less = js_operator_less_than_symbol();
@@ -232,7 +234,11 @@ export function app_learn_js_lesson_array_for_generic(options) {
       let found_json = json_to(found_start);
       let found_line = js_code_let_statement(found_name, found_json);
       let set_true = property_get(way, "keep_set");
-      let found_if = js_code_if_lines(condition3, set_true);
+      ("2026-11-13: a way with no condition runs keep_set every run, with no if around it, as total += a[i];");
+      let found_if = [set_true];
+      if (not_equal(condition3, null)) {
+        found_if = js_code_if_lines(condition3, set_true);
+      }
       let set_false = property_get(way, "keep_else");
       if (not_equal(set_false, null)) {
         found_if = js_code_if_else_lines(condition3, set_true, set_false);
@@ -302,6 +308,9 @@ export function app_learn_js_lesson_array_for_generic(options) {
     "four programs, each a fresh array of fruits of the Spirit, each looped over by the right loop";
     "2026-11-11: each size of item_counts is asked once before any size is drawn at random, and the four are then shuffled, so a set always holds the smallest array - the one a loop may not run for at all - beside larger ones, and is never all one kind";
     let fruits = fruits_of_the_spirit();
+    if (not_equal(numbers, null)) {
+      fruits = numbers;
+    }
     let codes2 = [];
     for (let k = 0; less_than(k, 4); k++) {
       let item_count = list_random_item(item_counts);
