@@ -7,16 +7,16 @@ import { js_code_called } from "./js_code_called.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_size } from "./list_size.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { less_than } from "./less_than.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { list_first } from "./list_first.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
+import { list_first } from "./list_first.mjs";
 import { text_between } from "./text_between.mjs";
 import { json_from } from "./json_from.mjs";
 import { subtract } from "./subtract.mjs";
@@ -164,7 +164,7 @@ export function app_learn_js_lesson_array_pop_value() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps: false,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,
