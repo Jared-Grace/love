@@ -1,8 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function calendar_privacy_html(contact) {
-  arguments_assert(arguments, 1);
+import { cloudflare_site_url } from "./cloudflare_site_url.mjs";
+export function calendar_privacy_html() {
+  arguments_assert(arguments, 0);
   ("The privacy page Facebook asks for before strangers may sign in: what is kept, why, who sees it, and how to delete it — in plain words.");
-  ("`contact` is the public way to reach the owner (an email or a Facebook page); it is the human's choice, so it is handed in, never written here.");
+  ("The contact is the site's message page (the human's choice, 2026-11-13): a form, so no email address goes public.");
+  let contact_url = cloudflare_site_url() + "/message";
   let lines = [
     "<h1>Calendar: privacy</h1>",
     "<p>This calendar lets people book a call with each other.</p>",
@@ -17,7 +19,11 @@ export function calendar_privacy_html(contact) {
     "<p>On Cloudflare's servers.</p>",
     "<h2>Delete your data</h2>",
     '<p>Sign in and press "Delete my data". Everything about you is removed at once, including your meetings.</p>',
-    "<p>Or ask us: " + contact + ".</p>",
+    '<p>Or ask us on <a href="' +
+      contact_url +
+      '">' +
+      contact_url +
+      "</a>.</p>",
   ];
   let r = lines.join("\n");
   return r;
