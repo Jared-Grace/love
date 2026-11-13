@@ -16,6 +16,7 @@ export function js_flow_globals_allowed() {
     "Number",
     "Boolean",
     "Array",
+    "Uint8Array",
     "Set",
     "Map",
     "WeakMap",
