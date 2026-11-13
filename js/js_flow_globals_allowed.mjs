@@ -1,6 +1,7 @@
 export function js_flow_globals_allowed() {
   "The outside names a function may read and still be edited without asking: each one only works on values handed to it, and none reaches a file, a command, the network or the language's machinery.";
   "This is a whitelist, so a name nobody thought about is refused rather than let through.";
+  "Uint8Array only holds bytes, like Array. crypto is Web Crypto, the global and not node's module: it hashes, makes random ids and encrypts values handed to it, and reaches no file, command or network, so pure Worker code such as a session key hash lands without a person. fetch stays out, so anything that calls the network still asks.";
   let names = [
     "console",
     "Math",
