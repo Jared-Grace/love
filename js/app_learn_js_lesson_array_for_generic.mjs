@@ -80,6 +80,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let words = property_get_or(options, "words", null);
   ("2026-11-13, next: a lesson may also hand in words_without, words that lack what the loop looks for, and then every other question takes one of them, as item_sometimes puts its item in every other array, so a set always holds both answers");
   let words_without = property_get_or(options, "words_without", null);
+  ("2026-11-13, next: a lesson may turn its step-by-step quiz off, for a loop whose if calls something the step tracer cannot step through yet, such as .includes");
+  let steps = property_get_or(options, "steps", true);
   let name = "a";
   if (not_equal(words, null)) {
     name = "s";
@@ -624,7 +626,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps: true,
+    steps,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,
