@@ -6,17 +6,19 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_length } from "./js_code_length.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { text_split_newline } from "./text_split_newline.mjs";
+import { list_first } from "./list_first.mjs";
+import { text_between } from "./text_between.mjs";
+import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_size } from "./list_size.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { list_first } from "./list_first.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
 import { json_from } from "./json_from.mjs";
-import { list_size } from "./list_size.mjs";
-import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_without } from "./list_without.mjs";
@@ -40,32 +42,43 @@ export function app_learn_js_lesson_array_empty() {
   ("an array holding no items: let a = []; console.log(a.length); writes out 0");
   ("2026-11-13, at the human's asking, the step after the push lessons and before pushing into an empty array. The one new fact is that [] is an array with nothing in it, so its length is 0.");
   ("The human's mix, 2026-11-13: a set is six questions, three of them the empty array and one each of 1, 2 and 3 items, shuffled. Half are empty, so the new fact gets the most practice, yet answering 0 every time is wrong half the time; and every length from 0 to 3 is seen, so the length is seen growing from nothing. Rejected: sizes 0 to 3 drawn evenly (about one empty in four, the least practice for the new fact), and more than half empty (0 every time would mostly pass).");
-  ("The three empty questions are the same program, since an empty array has nothing to vary.");
+  ("An empty array has nothing to vary, so each question names its array with a different letter (the human's, 2026-11-13); the examples above keep a, so the one taught name stays steady while the learner first meets it.");
   ("Reading forwards, an empty array's wrong answers are 1, reading [] as one thing, and 2, counting its two brackets as items; a fuller array's are the length lesson's - its last index, and its first and last items. Reading backwards, the wrong programs are the same array one item shorter and one item longer, or for the empty array, arrays of one and two items.");
   ("The writing is a first draft by Claude 2026-11-13.");
-  let name = "a";
   let sizes = [0, 0, 0, 1, 2, 3];
-  function head_line(items) {
+  function head_line(name, items) {
     let codes = list_map(items, json_to);
     let array = js_code_array(codes);
     let line = js_code_let_statement(name, array);
     return line;
   }
-  function program_of(items2) {
-    let read = js_code_length(name);
+  function program_of(name2, items2) {
+    let read = js_code_length(name2);
     let line2 = js_code_console_log_statement(read);
-    let v = head_line(items2);
+    let v = head_line(name2, items2);
     let code = list_join_newline([v, line2]);
     return code;
   }
+  function name_of(code4) {
+    "the array's name, read off the first line: let <name> = [...]";
+    let list4 = text_split_newline(code4);
+    let head2 = list_first(list4);
+    let found_name = text_between(head2, "let ", " =");
+    return found_name;
+  }
   function batch_get() {
-    "six programs: three empty arrays and one each of 1, 2 and 3 items, shuffled";
+    "six programs: three empty arrays and one each of 1, 2 and 3 items, shuffled; each names its array with its own letter";
     let codes2 = [];
+    let letters = app_learn_js_name_letters([]);
+    let count = list_size(sizes);
+    let names = list_shuffle_take(letters, count);
+    let index = 0;
     for (let size of sizes) {
       let list = fruits_of_the_spirit();
       let items3 = list_shuffle_take(list, size);
-      let v2 = program_of(items3);
+      let v2 = program_of(names[index], items3);
       codes2.push(v2);
+      index = index + 1;
     }
     list_shuffle(codes2);
     return codes2;
@@ -103,6 +116,11 @@ export function app_learn_js_lesson_array_empty() {
   function backwards_decoys(question, answer) {
     "the same array one item shorter and one item longer; for the empty array, arrays of one and two items";
     let items6 = items_of(answer);
+    let name3 = name_of(answer);
+    function program_named(items7) {
+      let program = program_of(name3, items7);
+      return program;
+    }
     function unused(word) {
       let used = list_includes(items6, word);
       let free = not(used);
@@ -115,18 +133,18 @@ export function app_learn_js_lesson_array_empty() {
       let two = list_shuffle_take(free_words, 2);
       let first2 = list_first(two);
       let one = [first2];
-      let programs = list_map([one, two], program_of);
+      let programs = list_map([one, two], program_named);
       return programs;
     }
     let fewer = list_take_less_1(items6);
     let extra = list_random_item(free_words);
     let more = list_concat(items6, [extra]);
-    let programs2 = list_map([fewer, more], program_of);
+    let programs2 = list_map([fewer, more], program_named);
     return programs2;
   }
   function example(root, example_items) {
     "an example program and what it writes out";
-    let code5 = program_of(example_items);
+    let code5 = program_of("a", example_items);
     let lines4 = text_split_newline(code5);
     let out = eval_console_log_lines(code5);
     app_learn_js_code_lines_writes_out(root, lines4, out);
