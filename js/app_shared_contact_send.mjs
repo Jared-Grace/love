@@ -1,5 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { host_local_network_is } from "./host_local_network_is.mjs";
+import { app_shared_contact_send_local } from "./app_shared_contact_send_local.mjs";
 import { app_shared_contact_user_id } from "./app_shared_contact_user_id.mjs";
 import { uuid } from "./uuid.mjs";
 import { messages_firebase_path } from "./messages_firebase_path.mjs";
@@ -11,11 +12,12 @@ import { date_now_iso } from "./date_now_iso.mjs";
 export async function app_shared_contact_send(message) {
   "send one message to the developer's inbox: <messages path>/<device id>/<message id>.json = { message, url, when }. The one send used by every app's Contact screen and by the message app.";
   "`url` is the page as it stood when they wrote, which names the app, the stage it was served from and - in the hash - the screen they were on. It replaced a hand-typed app name at every call site: a typed name is one more thing to keep true, and the one in the message app had already stopped being able to follow a rename. The address is measured rather than typed, so it cannot drift, and it says more.";
-  ("A page served from this network sends nothing. Testing the box from there used to put test messages in the real inbox, beside messages from real people. Every send comes through here, so this one check covers the message app and every Contact screen. `",
+  ("A page served from this network never sends to the real inbox; the message is written down on this computer instead. Testing the box from there used to put test messages in the real inbox, beside messages from real people, and dropping them instead lost real notes the human wrote while testing. Every send comes through here, so this one check covers the message app and every Contact screen. `",
     fn_name("app_shared_contact_local_note"),
     "` says so on the page.");
   let local = host_local_network_is();
   if (local) {
+    await app_shared_contact_send_local(message);
     return;
   }
   let user_id = await app_shared_contact_user_id();
