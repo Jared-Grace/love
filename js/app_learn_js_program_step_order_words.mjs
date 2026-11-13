@@ -4,6 +4,7 @@ import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
+import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { subtract } from "./subtract.mjs";
 import { null_is } from "./null_is.mjs";
@@ -25,7 +26,17 @@ export function app_learn_js_program_step_order_words(
     let step = list_get(actions, k);
     kind = property_get(step, "kind");
   }
-  if (equal(option_kind, kind)) {
+  function option_matches(step_kind) {
+    "2026-11-13: whether the option chosen is the one a step of step_kind is chosen by; a function called, as push and pop are, is chosen as Call a function";
+    if (equal(option_kind, step_kind)) {
+      return true;
+    }
+    let r29 =
+      equal(option_kind, "call") &&
+      app_learn_js_program_step_call_is(step_kind);
+    return r29;
+  }
+  if (option_matches(kind)) {
     return null;
   }
   let at = -1;
@@ -39,7 +50,7 @@ export function app_learn_js_program_step_order_words(
   let pushed = false;
   for (let item of actions) {
     let left = property_get(item, "kind");
-    if (equal(left, option_kind) && equal(at, -1)) {
+    if (option_matches(left) && equal(at, -1)) {
       at = index;
     }
     if (equal(left, "declare")) {
@@ -64,6 +75,8 @@ export function app_learn_js_program_step_order_words(
     }
     if (equal(left, "push")) {
       pushed = true;
+    }
+    if (equal(left, "push") || equal(left, "pop")) {
       name = property_get(item, "name");
       let value5 = property_get(item, "value");
       value = js_value_code(value5);
@@ -154,6 +167,18 @@ export function app_learn_js_program_step_order_words(
       ];
       return r25;
     }
+    if (equal(step_kind, "pop")) {
+      let r30 = [
+        "The ",
+        "//",
+        " line of ",
+        name,
+        " still shows ",
+        value,
+        " at its end, so it has not been taken off",
+      ];
+      return r30;
+    }
     if (equal(step_kind, "reset")) {
       let r22 = [
         "This block still shows the values solved into it the last time it ran, so it has not been reset",
@@ -214,6 +239,18 @@ export function app_learn_js_program_step_order_words(
         " at its end, so it has already been added",
       ];
       return r26;
+    }
+    if (equal(step_kind, "pop")) {
+      let r31 = [
+        "The ",
+        "//",
+        " line of ",
+        name,
+        " no longer shows ",
+        value,
+        " at its end, so it has already been taken off",
+      ];
+      return r31;
     }
     if (equal(step_kind, "reset")) {
       let r23 = [
@@ -285,15 +322,16 @@ export function app_learn_js_program_step_order_words(
     };
     return r21;
   }
-  if (equal(at, -1) && equal(option_kind, "push")) {
-    ("2026-11-13, said the way log_none is: adding an item, chosen on a line with no .push( ), names what is missing");
+  if (equal(at, -1) && equal(option_kind, "call")) {
+    ("2026-11-13, said the way log_none is: calling a function, chosen on a line calling none of the array functions, names what is missing. console.log(...) is a call too, but it has its own choice, so only the array functions are named");
     let r27 = {
-      reason: "push_none",
+      reason: "call_none",
       words: [
-        "Adding an item to an array needs ",
+        "Calling a function on an array needs ",
         ".push(...)",
-        " - but there is no ",
-        ".push(...)",
+        " or ",
+        ".pop()",
+        " - but there is neither",
       ],
     };
     return r27;
@@ -312,9 +350,11 @@ export function app_learn_js_program_step_order_words(
     return null;
   }
   if (less_than(at, k)) {
+    let object = list_get(actions, at);
+    let value6 = property_get(object, "kind");
     let r2 = {
       reason: "done_already",
-      words: sign_done(option_kind),
+      words: sign_done(value6),
     };
     return r2;
   }
@@ -341,7 +381,7 @@ export function app_learn_js_program_step_order_words(
     };
     return r4;
   }
-  if (equal(kind, "evaluate") && equal(option_kind, "push")) {
+  if (equal(kind, "evaluate") && equal(option_kind, "call")) {
     let r28 = {
       reason: "evaluate_first",
       words: words_then(not_yet, [", and an item is added once it is solved"]),

@@ -14,6 +14,8 @@ import { text_trim } from "./text_trim.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { less_than } from "./less_than.mjs";
+import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
+import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -92,8 +94,17 @@ export function app_learn_js_program_step_clicks(code) {
     while (less_than(k, list_size(actions))) {
       let action = list_get(actions, k);
       let kind = property_get(action, "kind");
-      let value2 = property_get(options, kind);
-      choose_add(value2);
+      ("2026-11-13: a function called is two presses, Call a function and then which function, as the step-through asks it");
+      if (app_learn_js_program_step_call_is(kind)) {
+        let value13 = property_get(options, "call");
+        choose_add(value13);
+        let call_words = app_learn_js_program_step_call_words();
+        let value14 = property_get(call_words, kind);
+        choose_add(value14);
+      } else {
+        let value2 = property_get(options, kind);
+        choose_add(value2);
+      }
       k = k + 1;
       if (equal(kind, "evaluate")) {
         value_add(action);

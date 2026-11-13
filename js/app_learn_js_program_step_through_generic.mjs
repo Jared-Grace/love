@@ -4,6 +4,7 @@ import { app_learn_js_program_step_trace } from "./app_learn_js_program_step_tra
 import { app_learn_js_program_step_noun } from "./app_learn_js_program_step_noun.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
+import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_learn_js_flex_gap } from "./app_learn_js_flex_gap.mjs";
@@ -130,9 +131,11 @@ import { properties_get } from "./properties_get.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
+import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { app_learn_js_program_step_order_words } from "./app_learn_js_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_program_step_solved_already_words } from "./app_learn_js_program_step_solved_already_words.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 export function app_learn_js_program_step_through_generic(
   parent,
@@ -167,7 +170,7 @@ export function app_learn_js_program_step_through_generic(
       if (equal(left13, "reset")) {
         resets = true;
       }
-      if (equal(left13, "push")) {
+      if (app_learn_js_program_step_call_is(left13)) {
         pushes = true;
       }
     }
@@ -1270,6 +1273,76 @@ export function app_learn_js_program_step_through_generic(
       await action_piece_send(line_index, action, hidden5, duration4);
       return;
     }
+    if (equal(kind, "pop")) {
+      ("2026-11-13, at the human's asking, for Taking an item off: the last item in the note above the line that declared the array fades out, the items before it staying in place, and the note is then written holding the shorter array - the opposite of a push. A pop standing inside a line, as console.log(a.pop()) does, then sends a copy of the item from the note into the line in place of a.pop(), since that is what it gives back. Not picked: fading the whole array and writing a new one, as an assign does, which would say the whole array was replaced when only one item went");
+      let name6 = property_get(action, "name");
+      let after2 = property_get(action, "after");
+      let held4 = property_get(state, "held");
+      let before3 = property_get(state, "held_before");
+      let b21 = property_exists(before3, name6);
+      if (not(b21)) {
+        property_set(before3, name6, []);
+      }
+      let list4 = property_get(before3, name6);
+      let item4 = property_get(held4, name6);
+      list_add(list4, item4);
+      property_set(held4, name6, after2);
+      let note_line4 = property_path_get_2(state, "declared", name6);
+      let value15 = property_get(action, "value");
+      let item_text2 = js_value_code(value15);
+      let code3 = js_value_code(item4);
+      let duration6 = app_shared_animation_duration();
+      let last_spans = comment_draw(
+        note_line4,
+        name6,
+        code3,
+        "last",
+        item_text2,
+      );
+      for (let span2 of last_spans) {
+        html_visibility_visible(span2);
+      }
+      if (property_get_or(action, "into", false)) {
+        ("the item flies down from the note into the line while it still stands there, then fades with the rest of the old note");
+        let line_from5 = list_get(starts, line_index);
+        let left24 = property_get(action, "from");
+        let from5 = subtract(left24, line_from5);
+        let left25 = property_get(action, "to");
+        let to5 = subtract(left25, line_from5);
+        let from_now2 = position_now(line_index, from5);
+        let to_now2 = position_now(line_index, to5);
+        let done3 = list_get(replaced, line_index);
+        let done_after2 = app_learn_js_line_pieces_add(
+          done3,
+          from5,
+          to5,
+          item_text2,
+        );
+        let line3 = list_get(bases, line_index);
+        let to6 = text_size(line3);
+        let popped_line = app_learn_js_line_pieces_text(
+          line3,
+          done_after2,
+          0,
+          to6,
+        );
+        let source3 = list_first(last_spans);
+        await piece_arrive(line_index, from_now2, to_now2, item_text2, source3);
+        row_text_set(line_index, popped_line);
+        list_set(replaced, line_index, done_after2);
+        rows_pieces_draw();
+      }
+      for (let span3 of last_spans) {
+        html_opacity_transition(span3, "0", duration6);
+      }
+      await sleep(duration6);
+      let code4 = js_value_code(after2);
+      let shown_spans = comment_draw(note_line4, name6, code4, "value", "");
+      for (let span4 of shown_spans) {
+        html_visibility_visible(span4);
+      }
+      return;
+    }
     if (equal(kind, "log")) {
       ("2026-10-14, at the human's asking: what is logged comes in as the guide's words do - the room grows, and the words show once it has arrived - by the same function, so the two cannot come to move differently. Only what is new is hidden while it grows, so what was logged before stays readable");
       ("2026-10-14, at the human's asking: every line logged goes into the one box, under the one label, as the output of a program is drawn everywhere else in this course; the first log brings the label and the box, and each one after it adds a line to the box. Not picked: a box for each log, done first, which drew one output as several");
@@ -1338,19 +1411,28 @@ export function app_learn_js_program_step_through_generic(
       }
       options = list_filter(options, reset_not_is);
     }
-    ("2026-11-13: Add an item to an array is offered only in a program that pushes, the way Reset the block is, so every lesson before it keeps the choices it had");
+    ("2026-11-13: Call a function is offered only in a program that calls one, as push and pop are called, the way Reset the block is, so every lesson before it keeps the choices it had");
     if (not(pushes)) {
       function push_not_is(offered) {
         let left23 = list_get(offered, 0);
-        let r = equal_not(left23, "push");
+        let r = equal_not(left23, "call");
         return r;
       }
       options = list_filter(options, push_not_is);
     }
+    let call_is = app_learn_js_program_step_call_is(kind);
+    function option_right_is(offered_kind) {
+      "whether the option is the right one: the step's own kind, or Call a function for a function called";
+      if (equal(offered_kind, kind)) {
+        return true;
+      }
+      let r32 = equal(offered_kind, "call") && call_is;
+      return r32;
+    }
     let right_words = null;
     for (let option of options) {
       let left11 = list_get(option, 0);
-      if (equal(left11, kind)) {
+      if (option_right_is(left11)) {
         right_words = list_get(option, 1);
       }
     }
@@ -1405,6 +1487,61 @@ export function app_learn_js_program_step_through_generic(
       }
       actions_ask(next);
     }
+    async function on_call_right() {
+      "2026-11-13, at the human's asking, when pop came as the second array function: Call a function chosen rightly asks which function, in place of the question before, and the right one then does what the step does, as any right choice does. A wrong function says which one the line calls";
+      on_step();
+      let element3 = property_get(holder, "button");
+      app_shared_glow_clear(element3);
+      html_clear(ask);
+      let call_words = app_learn_js_program_step_call_words();
+      let call_right_words = property_get(call_words, kind);
+      let call_name = property_get(action, "name");
+      guide_say(
+        [
+          ["It calls ", call_right_words, " on the array named ", call_name],
+          ["So choose: " + call_right_words],
+        ],
+        {
+          words: call_right_words,
+          button: true,
+          target_get: action_get,
+        },
+      );
+      app_learn_js_div_cycle_code(ask, [
+        "Which function does this " + noun + " call?",
+      ]);
+      let call_choices = html_div(ask);
+      let call_reason_box = html_div(ask);
+      let call_answered = {
+        answered: false,
+      };
+      for (let call_kind of properties_get(call_words)) {
+        let call_option_words = property_get(call_words, call_kind);
+        let call_right = equal(call_kind, kind);
+        function call_soft_take() {
+          html_clear(call_reason_box);
+          app_learn_js_cycle_code(call_reason_box, [
+            "This " + noun + " calls ",
+            call_right_words,
+            ", not ",
+            call_option_words,
+          ]);
+          return false;
+        }
+        let b20 = app_learn_js_quiz_choice_button_answer_generic({
+          parent: call_choices,
+          text: call_option_words,
+          right: call_right,
+          state: call_answered,
+          on_success: on_right,
+          on_wrong,
+          soft_take: call_soft_take,
+        });
+        if (call_right) {
+          property_set(holder, "button", b20);
+        }
+      }
+    }
     ("2026-10-21, at the human's asking: two fair guesses are soft misses, like a press on a brace line - the first time grey and not counted, after that a real miss. Choosing Solve before Declare on a let line, and choosing Solve when the value is already one value");
     ("2026-10-23, at the human's asking: each wrong press says its own reason, in place of the one before, and a press with no reason takes the old one away, so the words on screen are always about the last press. Not picked: saying only the first reason, as it was, which left the reason for one choice standing under another");
     let reason_box = html_div(ask);
@@ -1418,7 +1555,7 @@ export function app_learn_js_program_step_through_generic(
     for (let option of options) {
       let option_kind = list_get(option, 0);
       let words = list_get(option, 1);
-      let right2 = equal(option_kind, kind);
+      let right2 = option_right_is(option_kind);
       let reason = null;
       let reason_words = null;
       ("a step this line does at another time - later, or already - is said first, since it is the truer reason; only a step the line never does falls to the reasons below");
@@ -1450,6 +1587,14 @@ export function app_learn_js_program_step_through_generic(
             said_text,
             valued,
           );
+        } else if (equal(kind, "pop")) {
+          ("2026-11-13: a pop is handed nothing in its ( ), so there is nothing to solve before it");
+          reason = "solved_already";
+          reason_words = [
+            "",
+            ".pop()",
+            " has nothing inside its ( ), so there is nothing to solve",
+          ];
         } else if (equal(kind, "complete") && equal(b7, 0)) {
           reason = "solved_already";
           reason_words = [
@@ -1472,12 +1617,20 @@ export function app_learn_js_program_step_through_generic(
               valued2 = item2;
             }
           }
+          let list5 = list_map_property(actions, "kind");
           if (null_not_is(valued2)) {
             reason = "solved_already";
             reason_words = app_learn_js_program_step_solved_already_words(
               said_text,
               valued2,
             );
+          } else if (list_includes(list5, "pop")) {
+            reason = "solved_already";
+            reason_words = [
+              "",
+              ".pop()",
+              " has nothing inside its ( ), so there was nothing to solve",
+            ];
           }
         }
       }
@@ -1496,7 +1649,7 @@ export function app_learn_js_program_step_through_generic(
         text: words,
         right: right2,
         state: answered,
-        on_success: on_right,
+        on_success: equal(option_kind, "call") ? on_call_right : on_right,
         on_wrong,
         soft_take,
       });

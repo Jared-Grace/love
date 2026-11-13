@@ -75,9 +75,12 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   }
   let action = list_get(actions, k);
   let kind = property_get(action, "kind");
+  ("2026-11-13: a pop just before gave back the item it took off, so what it stood in is solved, as an evaluate leaves it");
+  let index = subtract(k, 1);
+  let object = list_get(actions, index);
+  let kind_before = greater_than(k, 0) ? property_get(object, "kind") : null;
   let solved_before =
-    greater_than(k, 0) &&
-    equal(property_get(list_get(actions, subtract(k, 1)), "kind"), "evaluate");
+    equal(kind_before, "evaluate") || equal(kind_before, "pop");
   ("2026-10-15, at the human's asking: a line giving a name a new value, as a = 5; does, assigns without declaring, so the first time it is asked about it says so in the let line's words for its assign. Not picked: saying nothing of what kind of line it is, as the other kinds each say");
   let assigns_only =
     list_includes(kinds, "assign") && not(list_includes(kinds, "declare"));
@@ -190,7 +193,33 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     "This adds an item to the end of the array named ",
     push_name,
   ];
-  let push_choose = ["So choose: Add an item to an array"];
+  let push_choose = ["So choose: Call a function"];
+  if (equal(kind, "pop")) {
+    ("2026-11-13, at the human's asking, for Taking an item off: a pop says what it does, in the words of the lesson teaching it. Standing inside a line, as console.log(a.pop()) does, it also says it runs first, since what it gives back is what the line uses");
+    let pop_name = property_get(action, "name");
+    let pop_code = pop_name + ".pop()";
+    let takes = [
+      "This takes the last item off the end of the array named ",
+      pop_name,
+    ];
+    if (property_get_or(action, "into", false)) {
+      let pop_lead = list_includes(kinds, "log") ? [logs] : [];
+      let r29 = [
+        ...pop_lead,
+        [
+          "The value is ",
+          pop_code,
+          ", which takes the last item off ",
+          pop_name,
+          " and gives it back, so it runs first",
+        ],
+        push_choose,
+      ];
+      return r29;
+    }
+    let r30 = [takes, push_choose];
+    return r30;
+  }
   if (equal(kind, "push")) {
     if (solved_before) {
       let r24 = [["The item is solved"], push_choose];
