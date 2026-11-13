@@ -31,6 +31,14 @@ export function app_learn_js_lesson_array_for_total() {
       ["", "+=", " adds what is on its right to a name"],
     );
     let box_numbers = app_learn_js_container_light_blue(root);
+    ("2026-11-13, the human's writing: the array of words remembered first, so the numbers have something to differ from");
+    app_learn_js_div_cycle_code(box_numbers, [
+      "Remember, arrays can hold strings:",
+    ]);
+    app_learn_js_div_cycle_code(box_numbers, [
+      "",
+      'let a = ["love", "joy", "peace"];',
+    ]);
     app_learn_js_div_cycle_code(box_numbers, [
       "An array can hold numbers too, not only words: ",
       "let a = [2, 5, 3];",
