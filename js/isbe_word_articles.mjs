@@ -4,7 +4,6 @@ export function isbe_word_articles() {
     fn_name("isbe_word_articles_write"),
     ".");
   let v = [
-    ["a", "A", "a.html"],
     ["Aalar", "Aalar", "aalar.html"],
     ["Aaron", "Aaron", "aaron.html"],
     ["Aaronites", "Aaronites", "aaronites.html"],
@@ -795,7 +794,6 @@ export function isbe_word_articles() {
     ["Apostate", "Apostasy; Apostate", "apostasy-apostate.html"],
     ["apostle", "Apostle", "apostle.html"],
     ["Apostles' Creed", "Apostles' Creed; The", "apostles-creed-the.html"],
-    ["the", "Apostles' Creed; The", "apostles-creed-the.html"],
     [
       "Gospel of the Twelve Apostles",
       "Apostles, Gospel Of The Twelve",
@@ -4625,7 +4623,6 @@ export function isbe_word_articles() {
     ["foot", "Foot", "foot.html"],
     ["Footman", "Footman", "footman.html"],
     ["footstool", "Footstool", "footstool.html"],
-    ["for", "For", "for.html"],
     ["Foray", "Foray", "foray.html"],
     ["forbear", "Forbear", "forbear.html"],
     ["forbearance", "Forbearance", "forbearance.html"],
@@ -5523,7 +5520,6 @@ export function isbe_word_articles() {
     ["Hazor Hadattah", "Hazor-Hadattah", "hazor-hadattah.html"],
     ["Hazor", "Hazor", "hazor.html"],
     ["Hazzelelponi", "Hazzelelponi", "hazzelelponi.html"],
-    ["he", "He", "he.html"],
     ["head", "Head", "head.html"],
     ["Headband", "Headband", "headband.html"],
     ["headdress", "Headdress", "headdress.html"],
@@ -5737,7 +5733,6 @@ export function isbe_word_articles() {
     ["Hircanus", "Hircanus", "hircanus.html"],
     ["hire", "Hire", "hire.html"],
     ["hireling", "Hireling", "hireling.html"],
-    ["his", "His", "his.html"],
     ["hiss", "Hiss", "hiss.html"],
     ["Hitherto", "Hitherto", "hitherto.html"],
     ["Hittites", "Hittites", "hittites.html"],
@@ -5978,7 +5973,6 @@ export function isbe_word_articles() {
     ["Imrah", "Imrah", "imrah.html"],
     ["Imri", "Imri", "imri.html"],
     ["in the Lord", "In The Lord", "in-the-lord.html"],
-    ["in", "In", "in.html"],
     ["Incantation", "Incantation", "incantation.html"],
     ["Incarnation", "Incarnation", "incarnation.html"],
     ["incense", "Incense", "incense.html"],
@@ -8386,7 +8380,6 @@ export function isbe_word_articles() {
     ["Odollam", "Odollam", "odollam.html"],
     ["Odomera", "Odomera", "odomera.html"],
     ["odor", "Odor", "odor.html"],
-    ["of", "Of", "of.html"],
     ["offence", "Offence; Offend", "offence-offend.html"],
     ["offend", "Offence; Offend", "offence-offend.html"],
     ["offer", "Offer; Offering", "offer-offering.html"],
@@ -11944,7 +11937,6 @@ export function isbe_word_articles() {
     ["wilderness", "Wilderness", "wilderness.html"],
     ["Volition Will", "Will, Volition", "will-volition.html"],
     ["Will Worship", "Will-Worship", "will-worship.html"],
-    ["will", "Will", "will.html"],
     ["Willow Tree", "Willow Tree", "willow-tree.html"],
     [
       "the Brook of the Willows",
