@@ -2,18 +2,18 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_count } from "./app_learn_js_lesson_array_for_count.mjs";
-import { app_learn_js_lesson_string_includes_e } from "./app_learn_js_lesson_string_includes_e.mjs";
+import { app_learn_js_lesson_array_for_includes_e } from "./app_learn_js_lesson_array_for_includes_e.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_array_for_generic } from "./app_learn_js_lesson_array_for_generic.mjs";
 export function app_learn_js_lesson_array_for_count_e() {
   arguments_assert(arguments, 0);
   ('how many words of an array hold a letter: let count = 0; for (let i = 0; i < a.length; i++) { if (a[i].includes("e")) { count++; } } console.log(count); writes out how many of the words have an e');
-  ("2026-11-13, at the human's asking: the last step of the string lessons, where .includes is used inside the array loop. The one new fact is that the if can ask a question of the item itself, where How many joys? compared the item with a word. The shape is How many joys?'s, so the wrong answers are its own: count starting at 1, count = 1 in place of count++, and writing count out inside the loop.");
-  ("The words are a pool of their own, five with e and four without, since all but one of the fruits of the Spirit has an e and nearly every count would be the array's size. Not stepped through: the step tracer cannot step through .includes yet.");
+  ("2026-11-13, at the human's asking: the last step of the string lessons, where .includes is used inside the array loop. Nothing in it is new: Which have e? put .includes in the if, and How many joys? counted. The shape is How many joys?'s, so the wrong answers are its own: count starting at 1, count = 1 in place of count++, and writing count out inside the loop.");
+  ("The words are a pool of their own, five with e and four without, since all but one of the fruits of the Spirit has an e and nearly every count would be the array's size.");
   let example_items = ["love", "joy", "peace", "kind"];
   function above(root, context, example, example_by_hand, walk) {
-    "counting joy remembered, .includes remembered, then counting the words with e";
+    "counting joy remembered, the words with e remembered, then counting the words with e";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
@@ -37,8 +37,13 @@ export function app_learn_js_lesson_array_for_count_e() {
     app_learn_js_remember_from_lesson(
       box_two,
       context,
-      app_learn_js_lesson_string_includes_e,
-      ["", 's.includes("e")', " is ", "true", " if ", "s", " has ", '"e"'],
+      app_learn_js_lesson_array_for_includes_e,
+      [
+        "",
+        'if (a[i].includes("e"))',
+        " lets through only the words with ",
+        '"e"',
+      ],
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
