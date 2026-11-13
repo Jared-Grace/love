@@ -4418,7 +4418,22 @@ export function reply_proposals() {
   let combined116 = text_combine_multiple([
     "+  let asks = ",
     fn_name("reply_sequence"),
-    "([o_intros, o_told, items, o_told]);",
+    "([o_intros, o_told, items, o_rest]);",
+  ]);
+  let combined117 = text_combine_multiple([
+    "+  let either = ",
+    fn_name("reply_choice"),
+    "([told, items]);",
+  ]);
+  let combined118 = text_combine_multiple([
+    "+  let rest = ",
+    fn_name("reply_once_or_more"),
+    "(either);",
+  ]);
+  let combined119 = text_combine_multiple([
+    "+  let o_rest = ",
+    fn_name("reply_optional"),
+    "(rest);",
   ]);
   let appeal_lines = [
     combined90,
@@ -4447,6 +4462,9 @@ export function reply_proposals() {
     combined113,
     combined114,
     combined115,
+    combined117,
+    combined118,
+    combined119,
     combined116,
     "   return asks;",
   ];
