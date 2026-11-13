@@ -1496,9 +1496,16 @@ export function app_learn_js_program_step_through_generic(
       let call_words = app_learn_js_program_step_call_words();
       let call_right_words = property_get(call_words, kind);
       let call_name = property_get(action, "name");
+      let call_code = "." + kind;
       guide_say(
         [
-          ["It calls ", call_right_words, " on the array named ", call_name],
+          [
+            "It calls ",
+            call_code,
+            " on the array named ",
+            call_name,
+            ". " + call_right_words,
+          ],
           ["So choose: " + call_right_words],
         ],
         {
@@ -1508,7 +1515,7 @@ export function app_learn_js_program_step_through_generic(
         },
       );
       app_learn_js_div_cycle_code(ask, [
-        "Which function does this " + noun + " call?",
+        "What does the function this " + noun + " calls do?",
       ]);
       let call_choices = html_div(ask);
       let call_reason_box = html_div(ask);
@@ -1522,9 +1529,8 @@ export function app_learn_js_program_step_through_generic(
           html_clear(call_reason_box);
           app_learn_js_cycle_code(call_reason_box, [
             "This " + noun + " calls ",
-            call_right_words,
-            ", not ",
-            call_option_words,
+            call_code,
+            ". That function does not do this: " + call_option_words,
           ]);
           return false;
         }
