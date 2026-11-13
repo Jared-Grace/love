@@ -2862,6 +2862,7 @@ export function permission_grant_names() {
     fn_name("app_sandbox_previews_load_new"),
     fn_name("app_learn_js_lessons_steps_turn_on"),
     fn_name("app_index_cards_unserved"),
+    fn_name("app_index_cards_unserved_gate_run"),
   ];
   return names;
 }

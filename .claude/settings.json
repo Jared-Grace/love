@@ -2986,6 +2986,7 @@
       "Bash(node scripts/ai.mjs app_sandbox_previews_load_new:*)",
       "Bash(node scripts/ai.mjs app_learn_js_lessons_steps_turn_on:*)",
       "Bash(node scripts/ai.mjs app_index_cards_unserved:*)",
+      "Bash(node scripts/ai.mjs app_index_cards_unserved_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5837,7 +5838,8 @@
       "Bash(node scripts/aig.mjs g_sermon_sweep_review:*)",
       "Bash(node scripts/aig.mjs app_sandbox_previews_load_new:*)",
       "Bash(node scripts/aig.mjs app_learn_js_lessons_steps_turn_on:*)",
-      "Bash(node scripts/aig.mjs app_index_cards_unserved:*)"
+      "Bash(node scripts/aig.mjs app_index_cards_unserved:*)",
+      "Bash(node scripts/aig.mjs app_index_cards_unserved_gate_run:*)"
     ],
     "defaultMode": "acceptEdits"
   },
