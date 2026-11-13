@@ -1,5 +1,5 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { equal } from "./equal.mjs";
 import { calendar_openings_free } from "./calendar_openings_free.mjs";
 export async function calendar_db_host_free(db, slug, now_iso) {
   arguments_assert(arguments, 3);
@@ -19,7 +19,13 @@ export async function calendar_db_host_free(db, slug, now_iso) {
   }
   let openings_read = await db
     .prepare(
-      "SELECT weekday, start_minute, end_minute FROM openings WHERE host_uid = ?",
+      "SELECT from_day, weekday, start_minute, end_minute FROM openings WHERE host_uid = ?",
+    )
+    .bind(host.uid)
+    .all();
+  let dated_read = await db
+    .prepare(
+      "SELECT day, start_minute, end_minute, open FROM openings_dated WHERE host_uid = ?",
     )
     .bind(host.uid)
     .all();
@@ -32,6 +38,7 @@ export async function calendar_db_host_free(db, slug, now_iso) {
   let slots = calendar_openings_free(
     host,
     openings_read.results,
+    dated_read.results,
     meetings_read.results,
     now_iso,
   );

@@ -6,6 +6,8 @@ export function calendar_db_schema() {
   ("★ A TAKEN HOUR IS REFUSED BY THE DATABASE ITSELF, NOT BY A CHECK BEFORE THE WRITE. Two people pressing book on the same hour at the same moment both pass any check made first; a unique index lets exactly one of them in.");
   ("Times are kept as the host's own date and minute of the day, in the host's time zone written on the meeting, because the host's day is what fills up and what their alarms ring on. Each guest sees them turned into their own time zone. The minute rather than the hour, so that moving to 30 minute blocks later changes no table.");
   ("A weekly meeting is one row holding its first day; the second index keeps two weekly meetings off the same host, weekday and minute. A one-time meeting landing on a weekly one's later week is refused where it is written, since an index sees only one row at a time.");
+  ("★ A WEEKLY SCHEDULE STARTS ON A DATE AND IS NEVER EDITED IN PLACE. All the openings rows sharing a from_day are one schedule; a day keeps the schedule with the latest from_day not after it. Changing the weeks from some date on adds a schedule from that date, so the days before it keep the hours they had.");
+  ("A host's free hours are their weekly openings changed on single dates: an openings_dated row with open 0 takes a stretch of that day away (an appointment), with open 1 adds one (an extra free morning).");
   ("Nothing is deleted: a cancelled meeting keeps its row with the time it was cancelled, and leaves both indexes, so the hour opens again.");
   let sql = `CREATE TABLE IF NOT EXISTS people (
   uid TEXT PRIMARY KEY,
@@ -23,11 +25,21 @@ CREATE TABLE IF NOT EXISTS hosts (
 );
 CREATE TABLE IF NOT EXISTS openings (
   host_uid TEXT NOT NULL REFERENCES hosts(uid),
+  from_day TEXT NOT NULL,
   weekday INTEGER NOT NULL CHECK (weekday BETWEEN 0 AND 6),
   start_minute INTEGER NOT NULL CHECK (start_minute BETWEEN 0 AND 1439),
   end_minute INTEGER NOT NULL CHECK (end_minute BETWEEN 1 AND 1440),
   CHECK (end_minute > start_minute),
-  PRIMARY KEY (host_uid, weekday, start_minute)
+  PRIMARY KEY (host_uid, from_day, weekday, start_minute)
+);
+CREATE TABLE IF NOT EXISTS openings_dated (
+  host_uid TEXT NOT NULL REFERENCES hosts(uid),
+  day TEXT NOT NULL,
+  start_minute INTEGER NOT NULL CHECK (start_minute BETWEEN 0 AND 1439),
+  end_minute INTEGER NOT NULL CHECK (end_minute BETWEEN 1 AND 1440),
+  open INTEGER NOT NULL CHECK (open IN (0, 1)),
+  CHECK (end_minute > start_minute),
+  PRIMARY KEY (host_uid, day, start_minute)
 );
 CREATE TABLE IF NOT EXISTS meetings (
   id TEXT PRIMARY KEY,
