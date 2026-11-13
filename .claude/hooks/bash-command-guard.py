@@ -2715,6 +2715,10 @@ def sandbox_read_path_near_miss(words):
         return None
     if words[0:6] != ["unshare", "--net", "--map-root-user", "--", "node", "--permission"]:
         return None
+    # The read flag left out entirely: the template with it added is the fix,
+    # so this comes back too. "" stands for the missing path.
+    if words[6] == "-e":
+        return ""
     if not words[6].startswith("--allow-fs-read="):
         return None
     if is_safe_sandboxed_node_eval(words) or is_safe_sandboxed_node_script(words):

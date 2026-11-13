@@ -34,6 +34,8 @@
     { "command": "find /x/a /x/b -type f -exec sh -c 'echo \"== $1\"; head -c 400 \"$1\"; echo' _ {} \\; ; ls /tmp", "decision": "deny", "reason_includes": "exec head -c 400 {} +", "why": "a shell under find -exec runs a script no rule reads; head prints its own per-file header, so the agent is sent back to that approved form" },
     { "command": "find /x -type f -exec head -c 400 {} +", "decision": "allow", "why": "the twin the find -exec sh refusal names" },
     { "command": "find /x -type f -exec rm {} \\; ; ls /tmp", "decision": "ask", "why": "a deleting find has no approved twin, so it still reaches the human" },
+    { "command": "node scripts/ai.mjs function_read_multiple a 2>&1 | unshare --net --map-root-user -- node --permission -e 'let s=\"\";process.stdin.on(\"data\",d=>s+=d).on(\"end\",()=>console.log(s.slice(10)))'", "decision": "deny", "reason_includes": "--allow-fs-read=", "why": "the sandbox with its read flag left out: the template with the flag is the approved form, so the agent is sent back instead of the human asked" },
+    { "command": "unshare --net --map-root-user -- node -e 'console.log(1)'", "decision": "silent", "why": "no --permission at all is a weaker sandbox, not a slip, so it is not sent back" },
     { "command": "systemctl --user list-timers --all | grep -a -i qa", "decision": "allow", "why": "a systemctl list subcommand only prints" },
     { "command": "systemctl list-units --no-pager", "decision": "allow", "why": "the system-wide list, a display flag" },
     { "command": "systemctl --user stop qa.timer", "decision": "silent", "why": "stop changes things; not a list subcommand" },
