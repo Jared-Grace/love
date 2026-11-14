@@ -1,14 +1,14 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { playwright_happy_answer_selector } from "./playwright_happy_answer_selector.mjs";
+import { html_document_root } from "./html_document_root.mjs";
+import { html_component_element_get } from "./html_component_element_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { playwright_happy_answer_selector } from "./playwright_happy_answer_selector.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
-import { html_document_root } from "./html_document_root.mjs";
 import { sleep } from "./sleep.mjs";
-import { html_click } from "./html_click.mjs";
 import { html_component_wrap } from "./html_component_wrap.mjs";
+import { html_click } from "./html_click.mjs";
 export async function html_happy_answers_press(count) {
   arguments_assert(arguments, 1);
   ("Press, inside the page itself, this many of the controls the page marks as the right answer, one after another, each once it is up - the same walk a headless test takes, so a person can open a link already deep inside a step-through.");
@@ -24,11 +24,15 @@ export async function html_happy_answers_press(count) {
     let waited = 0;
     let found = null;
     while (equal(found, null) && less_than(waited, wait_most_ms)) {
-      let e = root.querySelector(selector);
-      let fresh =
-        not_equal(e, null) && (not_equal(e, last) || not(last.isConnected));
-      if (fresh) {
-        found = e;
+      let v = root.querySelectorAll(selector);
+      let marked = Array.from(v);
+      function others(e) {
+        let r = not_equal(e, last) || not(last.isConnected);
+        return r;
+      }
+      let fresh = marked.filter(others);
+      if (less_than(0, fresh.length)) {
+        found = fresh[0];
       } else {
         await sleep(poll_ms);
         waited = waited + poll_ms;
