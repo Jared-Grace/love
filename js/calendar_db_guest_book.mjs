@@ -40,12 +40,12 @@ export async function calendar_db_guest_book(
     now_iso,
   );
   if (held.full) {
-    let r2 = {
+    let r = {
       ok: false,
       reason: "limit",
       start_utc: null,
     };
-    return r2;
+    return r;
   }
   let before = await db
     .prepare("SELECT whatsapp FROM people WHERE uid = ?1")

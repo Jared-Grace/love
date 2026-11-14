@@ -11,7 +11,7 @@ export async function calendar_db_settings(db, uid) {
     .first();
   let host = await db
     .prepare(
-      "SELECT slug, block_minutes, meeting_minutes, messenger, max_per_day FROM hosts WHERE uid = ?1",
+      "SELECT slug, block_minutes, meeting_minutes, messenger, max_per_day, max_per_guest FROM hosts WHERE uid = ?1",
     )
     .bind(uid)
     .first();

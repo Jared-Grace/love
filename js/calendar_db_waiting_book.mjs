@@ -76,6 +76,7 @@ export async function calendar_db_waiting_book(
     now_iso,
     id,
     via,
+    profile_url,
   );
   if (not(booked.ok)) {
     let r = {
