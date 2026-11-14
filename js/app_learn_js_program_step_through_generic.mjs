@@ -1549,7 +1549,12 @@ export function app_learn_js_program_step_through_generic(
           target_get: given_button_get,
         },
       );
-      app_learn_js_div_cycle_code(ask, ["What does ", given_code, " come to?"]);
+      ("2026-11-14, at the human's asking: solve to, not come to, the word the expression lessons ask with");
+      app_learn_js_div_cycle_code(ask, [
+        "What does ",
+        given_code,
+        " solve to?",
+      ]);
       ("the wrong values offered are the array's other items and the whole array, the two mistakes most likely: taking the wrong end, or reading the array itself");
       let held5 = property_get(state, "held");
       let items = property_get(held5, given_name);
