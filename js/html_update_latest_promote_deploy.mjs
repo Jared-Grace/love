@@ -2,6 +2,7 @@ import { qa_app_commit_gate_run_reuse } from "./qa_app_commit_gate_run_reuse.mjs
 import { property_get } from "./property_get.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { app_shared_build } from "./app_shared_build.mjs";
+import { app_release_walk_run } from "./app_release_walk_run.mjs";
 import { html_public_from_latest } from "./html_public_from_latest.mjs";
 import { firebase_deploy_promote_generic } from "./firebase_deploy_promote_generic.mjs";
 import { cloudflare_pages_deploy } from "./cloudflare_pages_deploy.mjs";
@@ -15,6 +16,8 @@ export async function html_update_latest_promote_deploy(search) {
   let deployable = property_get(judged, "deployable");
   true_is_assert_json(deployable, judged);
   await app_shared_build(search);
+  ("An app with a browser walk must pass it before anything is copied or sent, and the walk runs here because the build just above has made the dev bundle from the same source about to ship - a walk run earlier would be checking the previous build.");
+  await app_release_walk_run(search);
   async function promote() {
     let copied = await html_public_from_latest(search);
     return copied;
