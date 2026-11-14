@@ -55,6 +55,15 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   ];
   let solve = ["So choose: Solve an expression"];
   if (equal(k, size)) {
+    if (property_get_or(entry, "break", false)) {
+      ("2026-11-14, at the human's asking, for the break lesson: a break line has nothing to solve, so it is said what it does, and then that the line is complete");
+      let r31 = [
+        ["This is a ", "break", " statement"],
+        ["It ends the loop it is in, at once; there is nothing to solve"],
+        complete,
+      ];
+      return r31;
+    }
     if (equal(size, 0)) {
       let r = [
         if_is,

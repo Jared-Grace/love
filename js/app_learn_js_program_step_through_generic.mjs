@@ -1758,6 +1758,13 @@ export function app_learn_js_program_step_through_generic(
             said_text,
             valued,
           );
+        } else if (
+          equal(kind, "complete") &&
+          equal(b7, 0) &&
+          property_get_or(entry, "break", false)
+        ) {
+          reason = "solved_already";
+          reason_words = ["", "break", " has nothing to solve"];
         } else if (equal(kind, "complete") && equal(b7, 0)) {
           reason = "solved_already";
           reason_words = [

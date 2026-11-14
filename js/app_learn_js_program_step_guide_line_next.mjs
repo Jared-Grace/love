@@ -55,6 +55,19 @@ export function app_learn_js_program_step_guide_line_next(lines, trace, index) {
   }
   let index2 = subtract(index, 1);
   let before = list_get(trace, index2);
+  if (property_get_or(before, "break", false)) {
+    ("2026-11-14, at the human's asking, for the break lesson: after a break, the loop is over, so the next line is the one below the loop's }, not the next one down nor the loop's own line");
+    let r20 = [
+      [
+        "The ",
+        "break",
+        " ended the loop, so the computer goes on below the loop's ",
+        "}",
+      ],
+      choose,
+    ];
+    return r20;
+  }
   if (property_exists(before, "condition")) {
     let value = property_get(before, "condition");
     let said = text_to(value);
