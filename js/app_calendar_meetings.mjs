@@ -9,11 +9,12 @@ import { app_shared_container } from "./app_shared_container.mjs";
 import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
+import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
+import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
-import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { app_shared_button_red } from "./app_shared_button_red.mjs";
 export async function app_calendar_meetings(box, key) {
   arguments_assert(arguments, 2);
@@ -52,13 +53,24 @@ export async function app_calendar_meetings(box, key) {
         "Waiting for code " + meeting.code + " on " + app_name,
       );
       if (meeting.hosting && messenger) {
+        ("The guest typed their own profile link when booking; it is shown to open and filled in below, so the host confirms as it is when the code came from that profile, or pastes the real sender's link when it did not.");
+        if (meeting.profile_url) {
+          html_a_href_text_new_tab(
+            card,
+            meeting.profile_url,
+            "Open the profile they gave",
+          );
+        }
         let profile_hint = html_div_text(
           card,
-          "When the code arrives, paste the link to the profile of whoever sent it:",
+          "When the code arrives, check the link below is the profile that sent it, then Confirm:",
         );
         app_shared_text_deemphasized(profile_hint);
         let profile = html_input_text(card, "facebook.com/their.name");
         app_shared_input_style(profile);
+        if (meeting.profile_url) {
+          html_value_set(profile, meeting.profile_url);
+        }
         async function profile_confirm() {
           let sent = await calendar_api_call(
             "POST",

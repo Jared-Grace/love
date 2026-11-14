@@ -134,6 +134,7 @@ export async function calendar_api_handle(
     let weekly2 = equal(body.weekly, true);
     let id2 = outside.uid_new();
     let via2 = String(body.via);
+    let profile_typed = String(body.profile);
     let booked = await calendar_db_waiting_book(
       db,
       guest_uid,
@@ -147,6 +148,7 @@ export async function calendar_api_handle(
       now_iso,
       id2,
       via2,
+      profile_typed,
     );
     if (not(booked.ok)) {
       let r8 = reply(409, booked);

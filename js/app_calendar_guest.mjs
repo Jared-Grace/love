@@ -6,10 +6,10 @@ import { equal } from "./equal.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { html_div } from "./html_div.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
@@ -17,6 +17,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
+import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -26,7 +27,6 @@ import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export async function app_calendar_guest(parent, slug, key, on_key) {
   arguments_assert(arguments, 4);
   ("The booking screen a guest reaches from a host's link (#host=<slug>): the host's open hours in the guest's own clock, a short form, and after booking the code to send on WhatsApp.");
@@ -62,6 +62,8 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       zone,
   );
   app_shared_text_deemphasized(zone_line);
+  ('The app choice comes first and big (human: "They should have a big choice: Facebook Messenger meeting or WhatsApp meeting"); what is asked for below follows it - a WhatsApp number, or a Facebook profile link.');
+  let via_area = html_div(card);
   let slots = free.body.slots;
   if (equal(slots.length, 0)) {
     html_div_text(card, "No open hours in the next two weeks.");
@@ -189,35 +191,57 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   html_div_text(card, "Your name");
   let name = html_input_text(card, "Your name");
   app_shared_input_style(name);
-  let via = "whatsapp";
-  let number_box = null;
-  if (host.messenger) {
-    let via_line = html_div_text(card, "Meet on: WhatsApp");
-    let via_row = html_div(card);
-    let via_pick = function lambda3(picked) {
-      via = picked;
-      let messenger = equal(picked, "messenger");
-      html_text_content_set(
-        via_line,
-        "Meet on: " + (messenger ? "Messenger" : "WhatsApp"),
-      );
-      html_component_element_get(number_box).style.display = messenger
-        ? "none"
-        : "";
-    };
-    function lambda4() {
-      via_pick("whatsapp");
-    }
-    app_shared_button_uncolored(via_row, "WhatsApp", lambda4);
-    function lambda5() {
-      via_pick("messenger");
-    }
-    app_shared_button_uncolored(via_row, "Messenger", lambda5);
-  }
-  number_box = html_div(card);
+  let number_box = html_div(card);
   html_div_text(number_box, "Your WhatsApp number");
   let whatsapp = html_input_text(number_box, "+1 555 123 4567");
   app_shared_input_style(whatsapp);
+  let profile_box = html_div(card);
+  html_div_text(profile_box, "Your Facebook profile link");
+  let profile = html_input_text(profile_box, "facebook.com/your.name");
+  app_shared_input_style(profile);
+  let profile_hint = html_div_text(
+    profile_box,
+    "On Facebook, open your profile, then copy the link from the address bar or from Share.",
+  );
+  app_shared_text_deemphasized(profile_hint);
+  ("A host with no Messenger name takes WhatsApp only, so there is no choice to make; otherwise nothing is picked until the guest picks.");
+  let via = host.messenger ? null : "whatsapp";
+  function via_draw() {
+    html_clear(via_area);
+    if (not(host.messenger)) {
+      return;
+    }
+    html_div_text(via_area, "How do you want to meet?");
+    let choices = [
+      ["whatsapp", "WhatsApp meeting"],
+      ["messenger", "Facebook Messenger meeting"],
+    ];
+    for (let [value, words] of choices) {
+      function choice_pick() {
+        via = value;
+        via_draw();
+      }
+      if (equal(via, value)) {
+        app_shared_button_green(via_area, "✓ " + words, choice_pick);
+      } else {
+        app_shared_button_uncolored(via_area, words, choice_pick);
+      }
+    }
+    html_component_element_get(number_box).style.display = equal(
+      via,
+      "whatsapp",
+    )
+      ? ""
+      : "none";
+    html_component_element_get(profile_box).style.display = equal(
+      via,
+      "messenger",
+    )
+      ? ""
+      : "none";
+  }
+  html_component_element_get(profile_box).style.display = "none";
+  via_draw();
   let weekly_row = html_div(card);
   let weekly = html_input_type(weekly_row, "checkbox");
   let weekly_element = html_component_element_get(weekly);
@@ -232,6 +256,10 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   async function lambda2() {
     if (equal(chosen, null)) {
       html_text_content_set(status, "Pick a time first.");
+      return;
+    }
+    if (equal(via, null)) {
+      html_text_content_set(status, "Pick WhatsApp or Messenger first.");
       return;
     }
     let name_text = html_value_get(name).trim();
@@ -253,6 +281,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
         host: slug,
         name: name_text,
         whatsapp: html_value_get(whatsapp),
+        profile: html_value_get(profile),
         timezone: zone,
         day: chosen.day,
         start_minute: chosen.start_minute,
@@ -265,6 +294,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     if (not(booked.body.ok)) {
       let words = {
         whatsapp: "That WhatsApp number does not look right.",
+        profile: "Paste the link to your Facebook profile.",
         messenger:
           "This host does not take Messenger calls now. Pick WhatsApp.",
         taken: "Someone just booked that time. Pick another.",
