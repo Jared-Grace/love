@@ -31,8 +31,9 @@ export async function app_calendar(context) {
     storage_local_set(app_calendar, "guest_key", hash.key);
   }
   let host_key = storage_local_get(app_calendar, "host_key");
-  let guest_area = html_div(root);
+  ("The guest's meetings sit above the booking screen, so a guest who has booked sees it first and cannot miss it (human: \"if booked, show the meetings at the top, not bottom? so they can't miss it?\").");
   let meetings_area = html_div(root);
+  let guest_area = html_div(root);
   let host_area = html_div(root);
   function lambda2(k) {
     guest_key = k;
