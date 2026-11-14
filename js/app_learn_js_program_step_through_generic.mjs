@@ -134,6 +134,7 @@ import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
+import { app_learn_js_program_step_call_code } from "./app_learn_js_program_step_call_code.mjs";
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { app_learn_js_program_step_order_words } from "./app_learn_js_program_step_order_words.mjs";
 import { app_learn_js_program_step_solved_already_words } from "./app_learn_js_program_step_solved_already_words.mjs";
@@ -1528,7 +1529,7 @@ export function app_learn_js_program_step_through_generic(
       let given_name = property_get(action, "name");
       let given = property_get(action, "value");
       let given_said = js_value_code(given);
-      let given_code = given_name + "." + kind + "()";
+      let given_code = app_learn_js_program_step_call_code(action);
       let value_holder2 = {
         button: null,
       };
@@ -1572,7 +1573,64 @@ export function app_learn_js_program_step_through_generic(
       await on_right();
     }
     async function on_call_right() {
-      "2026-11-13, at the human's asking: a function called is solved as an expression is, so Solve an expression chosen rightly on it asks what the function does, by what it does rather than by its name, so the choice tests knowing it rather than matching the word in the line. The right one then does what the step does, as any right choice does. A wrong one says which function the line calls";
+      "2026-11-14, at the human's asking: a function called inside another call, as r.push(k.pop()) calls one, runs first, since the outer call needs what it gives back - so which runs first is chosen before what it does, as an expression lesson chooses which operator goes first. A call alone on its line has nothing to choose between";
+      let into2 = property_get_or(action, "into", false);
+      if (not(into2)) {
+        await call_does_ask();
+        return;
+      }
+      on_step();
+      let element5 = property_get(holder, "button");
+      app_shared_glow_clear(element5);
+      html_clear(ask);
+      let inner_code = app_learn_js_program_step_call_code(action);
+      let message2 = list_get(bases, line_index);
+      let outer_code = text_trim(message2);
+      if (outer_code.endsWith(";")) {
+        outer_code = outer_code.slice(0, -1);
+      }
+      let order_holder = {
+        button: null,
+      };
+      function order_button_get() {
+        let button3 = property_get(order_holder, "button");
+        return button3;
+      }
+      guide_say(
+        [
+          [
+            "",
+            outer_code,
+            " needs what ",
+            inner_code,
+            " gives back before it can run",
+          ],
+          ["So choose: ", inner_code],
+        ],
+        {
+          words: inner_code,
+          button: true,
+          target_get: order_button_get,
+        },
+      );
+      app_learn_js_div_cycle_code(ask, ["Which runs first?"]);
+      function code_same(code_text) {
+        return code_text;
+      }
+      let asked3 = app_learn_js_expression_value_choose_buttons_generic(
+        ask,
+        inner_code,
+        [outer_code],
+        on_wrong,
+        code_same,
+      );
+      property_set(order_holder, "button", asked3.right);
+      await asked3.pressed;
+      property_set(holder, "button", asked3.right);
+      await call_does_ask();
+    }
+    async function call_does_ask() {
+      "2026-11-13, at the human's asking: a function called is solved as an expression is, so Solve an expression chosen rightly on it asks what the function does, by what it does rather than by its name, so the choice tests knowing it rather than matching the word in the line. The right one then does what the step does, as any right choice does. A wrong one says which function the line calls. 2026-11-14: the question names the call itself, since a line may call two";
       on_step();
       let element3 = property_get(holder, "button");
       app_shared_glow_clear(element3);
@@ -1598,9 +1656,8 @@ export function app_learn_js_program_step_through_generic(
           target_get: action_get,
         },
       );
-      app_learn_js_div_cycle_code(ask, [
-        "What does the function this " + noun + " calls do?",
-      ]);
+      let r22 = app_learn_js_program_step_call_code(action);
+      app_learn_js_div_cycle_code(ask, ["What does ", r22, " do?"]);
       let call_choices = html_div(ask);
       let call_reason_box = html_div(ask);
       let call_answered = {

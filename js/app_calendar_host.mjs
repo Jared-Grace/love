@@ -14,6 +14,10 @@ import { equal } from "./equal.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { html_text_get } from "./html_text_get.mjs";
+import { app_shared_toast } from "./app_shared_toast.mjs";
+import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
 import { date_week_sunday } from "./date_week_sunday.mjs";
 import { week_dates } from "./week_dates.mjs";
@@ -91,6 +95,16 @@ export async function app_calendar_host(parent, key) {
     );
   };
   show_link(host ? host.slug : "");
+  async function link_copy() {
+    let link = html_text_get(link_line);
+    if (equal(link, "")) {
+      app_shared_toast("Save your link name first.");
+      return;
+    }
+    await clipboard_copy_browser(link);
+    app_shared_toast("✅ Copied link");
+  }
+  app_shared_button(link_card, "Copy link", link_copy);
   async function lambda3() {
     await app_shared_toast_saving(link_save);
   }

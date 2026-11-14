@@ -103,23 +103,22 @@ export function app_learn_js_program_step_clicks(code) {
         let call_code = app_learn_js_program_step_call_code(action);
         ("2026-11-14, at the human's asking: a call inside another call runs first, so which runs first is chosen before what it does");
         if (into) {
-          list_add(clicks, [
-            words("Choose "),
-            button(call_code),
-            words(" to run first"),
-          ]);
+          let v13 = words("Choose ");
+          let v14 = button(call_code);
+          let v15 = words(" to run first");
+          list_add(clicks, [v13, v14, v15]);
         }
         let call_words = app_learn_js_program_step_call_words();
         let value14 = property_get(call_words, kind);
         choose_add(value14);
         if (into) {
-          let said2 = js_value_code(property_get(action, "value"));
-          list_add(clicks, [
-            words("Choose "),
-            button(said2),
-            words(" for "),
-            code_piece(call_code),
-          ]);
+          let value3 = property_get(action, "value");
+          let said2 = js_value_code(value3);
+          let v16 = words("Choose ");
+          let v17 = button(said2);
+          let v18 = words(" for ");
+          let v19 = code_piece(call_code);
+          list_add(clicks, [v16, v17, v18, v19]);
         }
       } else {
         let value2 = property_get(options, kind);
