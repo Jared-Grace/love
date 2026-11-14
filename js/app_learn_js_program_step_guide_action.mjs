@@ -12,10 +12,11 @@ import { subtract } from "./subtract.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_last_property } from "./list_last_property.mjs";
+import { list_last } from "./list_last.mjs";
+import { property_exists } from "./property_exists.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_exists } from "./property_exists.mjs";
 export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   arguments_assert(arguments, 4);
   ("2026-11-01: lines, the program's lines, is handed in so a loop line is called by the word it starts with, while or for");
@@ -99,6 +100,7 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   let intro = [];
   if (assigns_only && equal(k, start)) {
     let name3 = list_last_property(actions, "name");
+    let assigned = list_last(actions);
     intro = [
       ["This is an assign (", "=", ") statement, with no ", "let"],
       [
@@ -108,6 +110,22 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
       ],
       ["It will be given a value of whatever is to the right of the ", "="],
     ];
+    ("2026-11-14, at the human's asking, for Setting an item: a[1] = x; gives one item of the array a new value, in the words of the lesson teaching it, the rest of the array staying as it was");
+    if (property_exists(assigned, "index")) {
+      let index2 = property_get(assigned, "index");
+      let code4 = js_value_code(index2);
+      intro = [
+        ["This is an assign (", "=", ") statement, with no ", "let"],
+        [
+          "It puts a new item at index ",
+          code4,
+          " of the array named ",
+          name3,
+          ", in place of the item there",
+        ],
+        ["The new item is whatever is to the right of the ", "="],
+      ];
+    }
   }
   if (equal(kind, "reset")) {
     ("2026-10-28, at the human's asking: a line run again still shows the values solved into it the last time it ran, and those values may no longer be true, so it is put back the way it is written first");
@@ -170,6 +188,9 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
       return r4;
     }
     let value = property_get(action, "value");
+    if (property_exists(action, "index")) {
+      value = property_get(action, "item");
+    }
     let code = js_value_code(value);
     let r5 = [
       ["", code, " is already a solved value, so no solving is needed"],
