@@ -8,12 +8,11 @@ import { js_code_for_start_condition_update_lines } from "./js_code_for_start_co
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { less_than } from "./less_than.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -38,7 +37,7 @@ export function app_learn_js_lesson_array_copy() {
   arguments_assert(arguments, 0);
   ('copying an array: let a = ["joy", "peace", "love"]; let b = []; for (let i = 0; i < a.length; i++) { b.push(a[i]); } and a for loop writing out each item of b writes out joy, peace and love');
   ("2026-11-14, at the human's asking: copy every item of an array into a new one, after A loop that pushes and before Reversing an array, since copying keeps the order and so is the easier of the two. The one new fact is that the loop pushes a[i] rather than i. A for loop writes out every item of b, as in Reversing an array, since writing out one item shows only one place of the order.");
-  ("A set is six questions, arrays of two and three items three times each, shuffled. Each question names its two arrays with letters of their own; the examples keep a and b.");
+  ("A set is six questions, arrays of two and three items three times each, shuffled. 2026-11-14, at the human's asking: every question names its arrays a and b, a always the one copied and b always the copy, so a letter never swaps jobs between questions.");
   ("Reading forwards, the wrong answers are the items the other way round, the first item alone, and b missing a's last item. Reading backwards, the wrong programs are the copy loop starting at 1, and stopping at a.length - 1.");
   ("The writing is a first draft by Claude 2026-11-14.");
   let sizes = [2, 2, 2, 3, 3, 3];
@@ -70,18 +69,14 @@ export function app_learn_js_lesson_array_copy() {
     return code;
   }
   function batch_get() {
-    "six programs, arrays of two and three items three times each, shuffled, each with two letters of its own";
-    let letters = app_learn_js_name_letters(["i"]);
+    "six programs, arrays of two and three items three times each, shuffled, each copying a into b";
     let count = list_size(sizes);
-    let names = list_shuffle_take(letters, count + count);
     let codes = [];
     for (let k = 0; less_than(k, count); k++) {
       let list = fruits_of_the_spirit();
       let count3 = list_get(sizes, k);
       let items = list_shuffle_take(list, count3);
-      let name = list_get(names, k + k);
-      let other = list_get(names, k + k + 1);
-      let code = program_of(name, other, items);
+      let code = program_of("a", "b", items);
       codes.push(code);
     }
     list_shuffle(codes);
