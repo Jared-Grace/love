@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
+import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
@@ -20,12 +21,16 @@ export function app_learn_js_program_trace_pop(
   property_exists_assert(values, name);
   let args = property_get(expression, "arguments");
   list_size_assert(args, 0);
+  ("2026-11-14, at the human's asking, for Taking off the front: a.shift() is the same kind of step as a.pop(), taking the first item rather than the last; method says which was called, so the words and the note can say which end");
   let before = property_get(values, name);
-  let value = before[subtract(before.length, 1)];
-  let after = before.slice(0, -1);
   let property = property_get(callee, "property");
+  let method = property_get(property, "name");
+  let front = equal(method, "shift");
+  let value = front ? before[0] : before[subtract(before.length, 1)];
+  let after = front ? before.slice(1) : before.slice(0, -1);
   list_add(actions, {
     kind: "pop",
+    method,
     name,
     value,
     after,

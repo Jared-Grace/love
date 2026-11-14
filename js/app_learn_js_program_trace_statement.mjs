@@ -39,7 +39,10 @@ export function app_learn_js_program_trace_statement(
       app_learn_js_program_trace_update(expression, actions, code, values);
     } else if (app_learn_js_program_trace_push_is(expression)) {
       app_learn_js_program_trace_push(expression, actions, code, values);
-    } else if (app_learn_js_program_trace_method_is(expression, "pop")) {
+    } else if (
+      app_learn_js_program_trace_method_is(expression, "pop") ||
+      app_learn_js_program_trace_method_is(expression, "shift")
+    ) {
       app_learn_js_program_trace_pop(expression, actions, code, values);
     } else {
       app_learn_js_program_trace_log(expression, actions, code, values);

@@ -4,6 +4,7 @@ import { property_exists_assert } from "./property_exists_assert.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_program_trace_value } from "./app_learn_js_program_trace_value.mjs";
+import { equal } from "./equal.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
@@ -24,10 +25,17 @@ export function app_learn_js_program_trace_push(
   list_size_assert(args, 1);
   let arg = list_get(args, 0);
   let value = app_learn_js_program_trace_value(arg, actions, code, values);
+  ("2026-11-14, at the human's asking, for Adding to the front: a.unshift(x) is the same kind of step as a.push(x), the item going in first rather than last; method says which was called, so the words and the note can say which end");
   let before = property_get(values, name);
-  let after = list_concat(before, [value]);
+  let property = property_get(callee, "property");
+  let method = property_get(property, "name");
+  let front = equal(method, "unshift");
+  let after = front
+    ? list_concat([value], before)
+    : list_concat(before, [value]);
   list_add(actions, {
     kind: "push",
+    method,
     name,
     value,
     after,
