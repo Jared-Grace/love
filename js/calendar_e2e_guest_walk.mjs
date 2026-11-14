@@ -3,9 +3,10 @@ import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
+import { playwright_test_blank_device } from "./playwright_test_blank_device.mjs";
 export async function calendar_e2e_guest_walk(url) {
   "$plain url";
-  "Walks the calendar booking page at url (a host's link, #host=<name>) as guests do, in a fresh browser each time: books on WhatsApp and books on Messenger, checks the numbered steps after booking, opens the private link, cancels, and checks the freed day can be picked again; then checks Host sign in clears the booking screen. Answers {ok, failures, flows}.";
+  "Walks the calendar booking page at url (a host's link, #host=<name>) as guests do, in a fresh browser each time: books on WhatsApp on a desktop (first checking a mistyped number is refused plainly), on Messenger as an iPhone and on WhatsApp as an Android phone; checks the numbered steps after booking, opens the private link, cancels, and checks the freed day can be picked again; then checks Host sign in clears the booking screen. Answers {ok, failures, flows}.";
   "Meant for before a release (human: \"this site will need E2E testing to confirm everything still works when releasing new versions\"). It needs a page whose spam check passes in a headless browser - the dev build and the test Worker do; a real Turnstile key will not.";
   "Each booking is real and is cancelled at once, so it leaves only a cancelled row. A walk stopped part way leaves a booking waiting for its code, which the server drops after 24 hours; it is named E2E Test so the host can tell.";
   "It picks the first open weekday, date and time rather than naming them, because which ones are open changes every day.";
@@ -20,9 +21,10 @@ export async function calendar_e2e_guest_walk(url) {
     "Friday",
     "Saturday",
   ];
-  async function book_walk(via) {
+  async function book_walk(via, device_name) {
+    "device_name is a phone from Playwright's device list, walked in the engine that phone runs, or \"desktop\" for a plain desktop Chromium. Guests mostly open the link from a chat on a phone, so phones are walked too (human: \"goal with testing is no issue for other people\").";
     let flow = {
-      via,
+      via: via + " on " + device_name,
       reached: "start",
       code: null,
     };
@@ -104,6 +106,47 @@ export async function calendar_e2e_guest_walk(url) {
               .fill("+1 904 555 0100");
           }
         }
+        async function lambda_bad_number() {
+          "A guest who mistypes their number must be told so plainly and must not end up booked. Book is pressed again while the spam check is still finishing, as for a real booking.";
+          await page.getByPlaceholder("Your name").fill("E2E Test");
+          await page.getByPlaceholder("+1 555 123 4567").first().fill("12");
+          for (let tries = 0; less_than(tries, 20); tries++) {
+            await page
+              .getByRole("button", {
+                name: "Book",
+                exact: true,
+              })
+              .click({
+                timeout: 10000,
+              });
+            try {
+              await page
+                .getByText("That WhatsApp number does not look right.")
+                .waitFor({
+                  timeout: 3000,
+                });
+              return;
+            } catch (err) {
+              let shown_now = await page.innerText("body");
+              if (shown_now.includes("Next steps:")) {
+                failures.push(
+                  flow.via + ": a two digit WhatsApp number was booked",
+                );
+                throw err;
+              }
+              let waiting = shown_now.includes(
+                "Wait for the check above to finish.",
+              );
+              if (not(waiting)) {
+                throw err;
+              }
+            }
+          }
+          throw new Error("the bad number message never showed");
+        }
+        if (equal(via, "whatsapp") && equal(device_name, "desktop")) {
+          await step("bad number", lambda_bad_number);
+        }
         await step("form", lambda5);
         async function lambda6() {
           "The spam check takes a few seconds to pass after the page opens, and Book pressed before it only says to wait - so Book is pressed again while that is all it says, and any other answer stops the walk.";
@@ -152,14 +195,18 @@ export async function calendar_e2e_guest_walk(url) {
           for (let words of wanted) {
             let b = shown.includes(words);
             if (not(b)) {
-              failures.push(via + ': after booking, missing "' + words + '"');
+              failures.push(
+                flow.via + ': after booking, missing "' + words + '"',
+              );
             }
           }
           if (equal(code, null)) {
-            failures.push(via + ": after booking, no PRAY- code");
+            failures.push(flow.via + ": after booking, no PRAY- code");
           }
           if (shown.includes("Book a meeting with")) {
-            failures.push(via + ": the booking form still shows after booking");
+            failures.push(
+              flow.via + ": the booking form still shows after booking",
+            );
           }
         }
         await step("steps screen", lambda7);
@@ -210,7 +257,7 @@ export async function calendar_e2e_guest_walk(url) {
         }
         let shown = await page.innerText("body").catch(lambda11);
         failures.push(
-          via +
+          flow.via +
             ": stopped at " +
             flow.reached +
             " - " +
@@ -220,10 +267,15 @@ export async function calendar_e2e_guest_walk(url) {
         );
       }
     }
-    await playwright_test_blank(on_page);
+    if (equal(device_name, "desktop")) {
+      await playwright_test_blank(on_page);
+    } else {
+      await playwright_test_blank_device(device_name, on_page);
+    }
   }
-  await book_walk("whatsapp");
-  await book_walk("messenger");
+  await book_walk("whatsapp", "desktop");
+  await book_walk("messenger", "iPhone 13");
+  await book_walk("whatsapp", "Pixel 7");
   async function host_walk(page) {
     let flow = {
       via: "host sign in",
