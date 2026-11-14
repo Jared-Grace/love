@@ -13,6 +13,7 @@ import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
@@ -87,7 +88,16 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
           days: weekday.days,
         });
       }
-      app_shared_button_uncolored(list, weekday.label, weekday_pick);
+      ("Weekday buttons are as wide as their word and sit side by side (human: thin, not wide), so all seven fit in a line or two.");
+      let weekday_button = app_shared_button_uncolored(
+        list,
+        weekday.label,
+        weekday_pick,
+      );
+      html_style_assign(weekday_button, {
+        width: "auto",
+        "margin-right": "0.3em",
+      });
     }
     if (greater_than(months.length, 1)) {
       html_div_text(list, "Or pick a month:");
