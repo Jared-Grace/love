@@ -1,13 +1,15 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { calendar_openings_free } from "./calendar_openings_free.mjs";
+import { calendar_slots_day_limit } from "./calendar_slots_day_limit.mjs";
 export async function calendar_db_host_free(db, slug, now_iso, hours_ahead) {
   arguments_assert(arguments, 4);
   ("hours_ahead is how soon after now_iso the first hour may start: 24 for the page, 23 for a booking, so an hour shown when the page opened can still be booked a while later.");
   ("The host whose booking link is slug, and the hours a guest may still book with them; host is null when no host has that link. The page showing the hours and the booking that takes one both ask here, so they cannot disagree about what is open.");
+  ("A day already holding the host's max_per_day meetings offers no hours at all.");
   let host = await db
     .prepare(
-      "SELECT hosts.uid, hosts.block_minutes, hosts.meeting_minutes, people.timezone, people.name FROM hosts JOIN people ON people.uid = hosts.uid WHERE hosts.slug = ?",
+      "SELECT hosts.uid, hosts.block_minutes, hosts.meeting_minutes, hosts.messenger, hosts.max_per_day, people.timezone, people.name FROM hosts JOIN people ON people.uid = hosts.uid WHERE hosts.slug = ?",
     )
     .bind(slug)
     .first();
@@ -36,13 +38,18 @@ export async function calendar_db_host_free(db, slug, now_iso, hours_ahead) {
     )
     .bind(host.uid)
     .all();
-  let slots = calendar_openings_free(
+  let open = calendar_openings_free(
     host,
     openings_read.results,
     dated_read.results,
     meetings_read.results,
     now_iso,
     hours_ahead,
+  );
+  let slots = calendar_slots_day_limit(
+    open,
+    meetings_read.results,
+    host.max_per_day,
   );
   let r2 = {
     host,

@@ -13,7 +13,9 @@ import { calendar_db_upcoming } from "./calendar_db_upcoming.mjs";
 import { calendar_db_cancel } from "./calendar_db_cancel.mjs";
 import { calendar_db_person_delete } from "./calendar_db_person_delete.mjs";
 import { calendar_db_settings } from "./calendar_db_settings.mjs";
+import { calendar_db_confirm_messenger } from "./calendar_db_confirm_messenger.mjs";
 import { calendar_db_confirm } from "./calendar_db_confirm.mjs";
+import { calendar_db_host_rules_save } from "./calendar_db_host_rules_save.mjs";
 import { calendar_db_person_save } from "./calendar_db_person_save.mjs";
 import { calendar_db_host_save } from "./calendar_db_host_save.mjs";
 import { calendar_db_schedule_save } from "./calendar_db_schedule_save.mjs";
@@ -38,6 +40,7 @@ export async function calendar_api_handle(
     fn_name("owner_email"),
     ", so another Firebase account cannot host. To move off Firebase, replace login_firebase; nothing else here depends on it.");
   ("★ A BOOKING WAITS FOR ITS CODE. book answers a code and a link that opens WhatsApp to the host with it typed; the host, seeing it arrive, sends confirm with the code and the number it came from. Every request first cancels bookings left waiting 24 hours, so no answer counts an hour nobody proved.");
+  ("A host who has set a Messenger name also takes Messenger bookings (via messenger): the code is sent from Messenger, and confirm then takes the sender's profile link in place of a number.");
   let reply = function lambda(status, value) {
     let r = {
       status,
@@ -54,6 +57,7 @@ export async function calendar_api_handle(
     "delete_me",
     "person_save",
     "host_save",
+    "host_rules_save",
     "schedule_save",
     "dated_save",
     "dated_delete",
@@ -93,6 +97,7 @@ export async function calendar_api_handle(
       name: free.host.name,
       timezone: free.host.timezone,
       meeting_minutes: free.host.meeting_minutes,
+      messenger: not_equal(free.host.messenger, ""),
     };
     let r5 = reply(200, {
       ok: true,
@@ -128,6 +133,7 @@ export async function calendar_api_handle(
     let start_minute2 = Number(body.start_minute);
     let weekly2 = equal(body.weekly, true);
     let id2 = outside.uid_new();
+    let via2 = String(body.via);
     let booked = await calendar_db_waiting_book(
       db,
       guest_uid,
@@ -140,6 +146,7 @@ export async function calendar_api_handle(
       weekly2,
       now_iso,
       id2,
+      via2,
     );
     if (not(booked.ok)) {
       let r8 = reply(409, booked);
@@ -237,8 +244,29 @@ export async function calendar_api_handle(
   let saved = null;
   if (equal(route, "confirm")) {
     let code2 = String(body.code);
-    let whatsapp4 = String(body.whatsapp);
-    saved = await calendar_db_confirm(db, uid, code2, whatsapp4, now_iso);
+    if (equal(body.via, "messenger")) {
+      let profile = String(body.profile);
+      saved = await calendar_db_confirm_messenger(
+        db,
+        uid,
+        code2,
+        profile,
+        now_iso,
+      );
+    } else {
+      let whatsapp4 = String(body.whatsapp);
+      saved = await calendar_db_confirm(db, uid, code2, whatsapp4, now_iso);
+    }
+  }
+  if (equal(route, "host_rules_save")) {
+    let messenger_typed = String(body.messenger);
+    let max_typed = String(body.max);
+    saved = await calendar_db_host_rules_save(
+      db,
+      uid,
+      messenger_typed,
+      max_typed,
+    );
   }
   if (equal(route, "person_save")) {
     let name3 = String(body.name);

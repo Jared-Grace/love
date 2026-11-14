@@ -32,6 +32,7 @@ import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
 export async function app_calendar_host(parent, key) {
   arguments_assert(arguments, 2);
   ("The host's screen, for a signed-in host's session key: who they are (name, WhatsApp, time zone), their booking link, their weekly free hours on the grid, and every upcoming meeting with the ones waiting for a code on top of what to do.");
+  ("Booking rules: a Messenger name lets guests choose Messenger, and the most meetings in one day caps each day; blank means unlimited, and the page says so.");
   ("Answers false when the key is no longer a host session, so the page can sign in again; true once drawn.");
   ("A change on the grid saves at once as the schedule in force from today; days before today keep the hours they had, since a schedule only ever starts on a date.");
   let read = await calendar_api_call("GET", "settings", {}, key);
@@ -134,6 +135,67 @@ export async function app_calendar_host(parent, key) {
     let told = words[saved.body.reason] ?? "Could not save. Try again.";
     return told;
   }
+  let rules_card = app_shared_container(parent);
+  html_div_text(rules_card, "Booking rules");
+  html_div_text(
+    rules_card,
+    "Your Messenger name - leave blank to take WhatsApp calls only",
+  );
+  let messenger = html_input_text(rules_card, "m.me/your.name");
+  app_shared_input_style(messenger);
+  html_div_text(
+    rules_card,
+    "Most meetings in one day - leave blank for unlimited",
+  );
+  let max = html_input_text(rules_card, "Unlimited");
+  app_shared_input_style(max);
+  let max_line = html_div_text(rules_card, "");
+  app_shared_text_deemphasized(max_line);
+  let max_show = function lambda7(saved_max) {
+    html_text_content_set(
+      max_line,
+      equal(saved_max, null)
+        ? "Now: unlimited meetings a day"
+        : "Now: at most " + saved_max + " meetings a day",
+    );
+  };
+  if (host) {
+    html_value_set(messenger, host.messenger);
+    html_value_set(
+      max,
+      equal(host.max_per_day, null) ? "" : String(host.max_per_day),
+    );
+  }
+  max_show(host ? host.max_per_day : null);
+  async function rules_save() {
+    let max_text = html_value_get(max).trim();
+    let saved = await calendar_api_call(
+      "POST",
+      "host_rules_save",
+      {
+        messenger: html_value_get(messenger),
+        max: max_text,
+      },
+      key,
+    );
+    if (saved.body.ok) {
+      max_show(equal(max_text, "") ? null : Number(max_text));
+      let r3 = "Saved.";
+      return r3;
+    }
+    let words = {
+      messenger:
+        "That Messenger name does not look right. Use the part after m.me/.",
+      max: "Type a number from 1 to 24, or leave it blank for unlimited.",
+      no_host: "Save your booking link above first.",
+    };
+    let r4 = words[saved.body.reason] ?? "Could not save. Try again.";
+    return r4;
+  }
+  async function lambda8() {
+    await app_shared_toast_saving(rules_save);
+  }
+  app_shared_button_green(rules_card, "Save rules", lambda8);
   let hours_card = app_shared_container(parent);
   html_div_text(hours_card, "Your weekly free hours");
   let today = date_today_iso();

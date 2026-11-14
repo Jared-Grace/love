@@ -27,6 +27,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   arguments_assert(arguments, 4);
   ("The booking screen a guest reaches from a host's link (#host=<slug>): the host's open hours in the guest's own clock, a short form, and after booking the code to send on WhatsApp.");
   ("key is the guest's session key from an earlier booking, or null. A first booking answers a new key, handed to on_key so the page keeps it; the guest never signs in.");
+  ("A host who has set a Messenger name lets the guest pick WhatsApp or Messenger; a Messenger guest gives no number, and sends the code from Messenger instead.");
   ("Hours are drawn in the guest's own time zone, read from the browser; the booking sends that zone so the host's page can say it.");
   let card = app_shared_container(parent);
   let free = await calendar_api_call(
@@ -50,7 +51,10 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   let zone_line = html_div_text_content(
     card,
     host.meeting_minutes +
-      " minutes, on WhatsApp. Times are in your time zone: " +
+      (host.messenger
+        ? " minutes, on WhatsApp or Messenger."
+        : " minutes, on WhatsApp.") +
+      " Times are in your time zone: " +
       zone,
   );
   app_shared_text_deemphasized(zone_line);
@@ -76,8 +80,34 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   html_div_text(card, "Your name");
   let name = html_input_text(card, "Your name");
   app_shared_input_style(name);
-  html_div_text(card, "Your WhatsApp number");
-  let whatsapp = html_input_text(card, "+1 555 123 4567");
+  let via = "whatsapp";
+  let number_box = null;
+  if (host.messenger) {
+    let via_line = html_div_text(card, "Meet on: WhatsApp");
+    let via_row = html_div(card);
+    let via_pick = function lambda3(picked) {
+      via = picked;
+      let messenger = equal(picked, "messenger");
+      html_text_content_set(
+        via_line,
+        "Meet on: " + (messenger ? "Messenger" : "WhatsApp"),
+      );
+      html_component_element_get(number_box).style.display = messenger
+        ? "none"
+        : "";
+    };
+    function lambda4() {
+      via_pick("whatsapp");
+    }
+    app_shared_button_uncolored(via_row, "WhatsApp", lambda4);
+    function lambda5() {
+      via_pick("messenger");
+    }
+    app_shared_button_uncolored(via_row, "Messenger", lambda5);
+  }
+  number_box = html_div(card);
+  html_div_text(number_box, "Your WhatsApp number");
+  let whatsapp = html_input_text(number_box, "+1 555 123 4567");
   app_shared_input_style(whatsapp);
   let weekly_row = html_div(card);
   let weekly = html_input_type(weekly_row, "checkbox");
@@ -118,6 +148,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
         day: chosen.day,
         start_minute: chosen.start_minute,
         weekly: weekly_element.checked,
+        via,
       },
       key,
     );
@@ -125,6 +156,8 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     if (not(booked.body.ok)) {
       let words = {
         whatsapp: "That WhatsApp number does not look right.",
+        messenger:
+          "This host does not take Messenger calls now. Pick WhatsApp.",
         taken: "Someone just booked that time. Pick another.",
         not_open: "That time is no longer open. Pick another.",
         limit: "You already have 2 upcoming meetings with this host.",
@@ -148,9 +181,10 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       done,
       "Booked: " + calendar_time_local_text(booked.body.start_utc),
     );
+    let app_name = equal(via, "messenger") ? "Messenger" : "WhatsApp";
     html_div_text(
       done,
-      "One more step: send this code to the host on WhatsApp.",
+      "One more step: send this code to the host on " + app_name + ".",
     );
     html_div_text_content(done, booked.body.code);
     async function code_copy() {
@@ -158,7 +192,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       app_shared_toast("✅ Copied code");
     }
     app_shared_button_uncolored(done, "Copy code", code_copy);
-    html_a_href_text_new_tab(done, booked.body.send_url, "Open WhatsApp");
+    html_a_href_text_new_tab(done, booked.body.send_url, "Open " + app_name);
     let expires = html_div_text_content(
       done,
       "If the code has not arrived by " +

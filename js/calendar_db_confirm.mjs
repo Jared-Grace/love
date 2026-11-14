@@ -11,12 +11,13 @@ export async function calendar_db_confirm(
   arguments_assert(arguments, 5);
   ("The host saw code arrive in their WhatsApp from the number whatsapp: confirms host_uid's waiting meetings holding that code and booked with that number; answers {ok, reason, confirmed}. Reasons: no_code (nothing waiting holds it), number (it is waiting, but was booked with another number).");
   ("★ A CODE CONFIRMS ONLY TOGETHER WITH THE NUMBER IT CAME FROM. The code is no secret - the guest's page shows it - so a code sent from some other phone proves nothing; numbers are compared by digits alone, as when booking.");
+  ("Only a WhatsApp meeting is confirmed here; a Messenger one is confirmed with the sender's profile link instead.");
   let wanted = calendar_confirm_code_read(code);
   let digits = String(whatsapp).replace(/[^0-9]/g, "");
   let read = await db
     .prepare(
       `SELECT m.id, p.whatsapp FROM meetings m JOIN people p ON p.uid = m.guest_uid
-WHERE m.host_uid = ?1 AND m.code = ?2 AND m.confirmed_at IS NULL AND m.cancelled_at IS NULL`,
+WHERE m.host_uid = ?1 AND m.code = ?2 AND m.via = 'whatsapp' AND m.confirmed_at IS NULL AND m.cancelled_at IS NULL`,
     )
     .bind(host_uid, wanted)
     .all();
