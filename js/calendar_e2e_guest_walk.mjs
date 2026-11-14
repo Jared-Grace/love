@@ -174,7 +174,10 @@ export async function calendar_e2e_guest_walk(url) {
         }
         await step("private link", lambda8);
         async function lambda9() {
+          "The private link differs from the booking page only after the #, and going to such a link never reloads the page - so it is reloaded, or the walk waits on a page that never changed.";
+          flow.link = link;
           await page.goto(link);
+          await page.reload();
           await page
             .getByRole("button", {
               name: "Cancel",
