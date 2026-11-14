@@ -37,7 +37,12 @@ export async function playwright_url_steps_console(url, steps) {
     }
     page.on("requestfailed", failed_each);
     await page.goto(url);
-    await page.waitForLoadState("networkidle");
+    ("A page that never goes quiet - Cloudflare's are-you-a-person check keeps asking in Chromium - is walked anyway once the wait runs out, rather than thrown away: the steps after it wait for what they need themselves.");
+    try {
+      await page.waitForLoadState("networkidle");
+    } catch (err) {
+      list_add(lines, "never quiet  walking anyway");
+    }
     let wait_prefix = "wait=";
     let fill_prefix = "fill=";
     for (let step of text_split_comma(steps)) {

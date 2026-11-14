@@ -1468,6 +1468,15 @@ export function app_learn_js_program_step_through_generic(
     let holder = {
       button: null,
     };
+    ("2026-11-14, at the human's asking: Solve an expression stays chosen until the line is solved whole, as it does for an expression with several operators, so once a call inside a call has given back its value, the call it gave it to is asked about straight on rather than chosen again");
+    let solving_on =
+      less_than(0, k) &&
+      property_get_or(list_get(actions, subtract(k, 1)), "into", false) &&
+      call_is;
+    if (solving_on) {
+      call_does_ask();
+      return;
+    }
     let r10 = app_learn_js_program_step_guide_action(lines, entry, k, noun);
     function action_get() {
       let button = property_get(holder, "button");
@@ -1639,7 +1648,9 @@ export function app_learn_js_program_step_through_generic(
       "2026-11-13, at the human's asking: a function called is solved as an expression is, so Solve an expression chosen rightly on it asks what the function does, by what it does rather than by its name, so the choice tests knowing it rather than matching the word in the line. The right one then does what the step does, as any right choice does. A wrong one says which function the line calls. 2026-11-14: the question names the call itself, since a line may call two";
       on_step();
       let element3 = property_get(holder, "button");
-      app_shared_glow_clear(element3);
+      if (null_not_is(element3)) {
+        app_shared_glow_clear(element3);
+      }
       html_clear(ask);
       let call_words = app_learn_js_program_step_call_words();
       let call_right_words = property_get(call_words, kind);

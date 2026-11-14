@@ -15,6 +15,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
+import { not } from "./not.mjs";
 import { app_learn_js_program_step_call_code } from "./app_learn_js_program_step_call_code.mjs";
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { equal } from "./equal.mjs";
@@ -97,8 +98,14 @@ export function app_learn_js_program_step_clicks(code) {
       let kind = property_get(action, "kind");
       ("2026-11-13, at the human's asking: a function called is solved, as an expression is - Solve an expression, then what the function does, and then, where it stands inside a line, what it comes to - as the step-through asks it");
       if (app_learn_js_program_step_call_is(kind)) {
-        let value13 = property_get(options, "evaluate");
-        choose_add(value13);
+        ("2026-11-14, at the human's asking: Solve an expression stays chosen until the line is solved whole, so the call a call inside it hands its value to is not chosen again");
+        let solving_on =
+          less_than(0, k) &&
+          property_get_or(list_get(actions, subtract(k, 1)), "into", false);
+        if (not(solving_on)) {
+          let value13 = property_get(options, "evaluate");
+          choose_add(value13);
+        }
         let into = property_get_or(action, "into", false);
         let call_code = app_learn_js_program_step_call_code(action);
         ("2026-11-14, at the human's asking: a call inside another call runs first, so which runs first is chosen before what it does");
