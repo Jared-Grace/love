@@ -6131,6 +6131,21 @@ def awk_text_tool_deny_reason(program):
 DAEMON_UNIT_PREFIX = "love_"
 
 
+def pid_daemon_unit(pid):
+    """The systemd unit a running process belongs to, read from
+    /proc/<pid>/cgroup, or None. `journalctl _PID=N` on one of this repo's
+    daemons is the same read as `-u love_<name>`, spelled by process; this
+    lets it get the same pointer. A process that is gone, or one outside any
+    unit, gives None, and the command is left as it was."""
+    try:
+        with open(f"/proc/{pid}/cgroup", encoding="utf-8") as f:
+            text = f.read()
+    except OSError:
+        return None
+    m = re.search(r"/([A-Za-z0-9_.@-]+)\.service\s*$", text, re.M)
+    return m.group(1) if m else None
+
+
 def find_journalctl_daemon_unit(command):
     """If any statement/pipe segment in `command` reads the journal of one of
     THIS repo's daemons (`journalctl ... -u love_<name>`), return that unit name
@@ -6161,6 +6176,8 @@ def find_journalctl_daemon_unit(command):
                 unit = word[len("--unit="):]
             elif word.startswith("-u") and len(word) > 2:
                 unit = word[2:]
+            elif word.startswith("_PID=") and word[5:].isdigit():
+                unit = pid_daemon_unit(word[5:])
             if unit is not None and unit.startswith(DAEMON_UNIT_PREFIX):
                 return unit
     return None
