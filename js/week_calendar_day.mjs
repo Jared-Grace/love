@@ -4,8 +4,9 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
 import { each } from "./each.mjs";
+import { week_calendar_header_cell_weekly } from "./week_calendar_header_cell_weekly.mjs";
 import { week_calendar_header_cell } from "./week_calendar_header_cell.mjs";
-export function week_calendar_day({ parent, days }) {
+export function week_calendar_day({ parent, days, weekly }) {
   arguments_assert(arguments, 1);
   let records = [];
   let root = app_shared_container_blue(parent);
@@ -28,13 +29,16 @@ export function week_calendar_day({ parent, days }) {
   html_div_text(grid, "");
   each(days, header_cell);
   function header_cell(day) {
-    let r = week_calendar_header_cell(day, grid);
-    return r;
+    if (weekly) {
+      week_calendar_header_cell_weekly(day, grid);
+    } else {
+      week_calendar_header_cell(day, grid);
+    }
   }
-  let r2 = {
+  let r = {
     records,
     summary,
     grid,
   };
-  return r2;
+  return r;
 }

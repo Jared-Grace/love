@@ -158,7 +158,7 @@ export async function app_calendar_host(parent, key) {
     }
     await app_shared_toast_saving(hours_save);
   }
-  week_calendar(hours_card, dates, initial, lambda6);
+  week_calendar(hours_card, dates, initial, lambda6, true);
   let box = html_div(parent);
   await app_calendar_meetings(box, key);
   return true;

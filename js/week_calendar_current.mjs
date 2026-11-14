@@ -16,5 +16,5 @@ export function week_calendar_current(parent, initial, on_ranges) {
   let iso = date_today_iso();
   let sunday = date_week_sunday(iso);
   let dates = week_dates(sunday);
-  week_calendar(parent, dates, initial, on_ranges);
+  week_calendar(parent, dates, initial, on_ranges, true);
 }

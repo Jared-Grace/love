@@ -7,6 +7,7 @@ import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { week_range_label } from "./week_range_label.mjs";
+import { week_range_label_weekly } from "./week_range_label_weekly.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { math_min } from "./math_min.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -17,7 +18,14 @@ import { week_calendar_far_anchor_set } from "./week_calendar_far_anchor_set.mjs
 import { not_equal } from "./not_equal.mjs";
 import { week_calendar_anchor_click } from "./week_calendar_anchor_click.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
-export function week_calendar(parent, dates, initial_ranges, on_ranges) {
+export function week_calendar(
+  parent,
+  dates,
+  initial_ranges,
+  on_ranges,
+  weekly,
+) {
+  "weekly is true when the hours come back every week: headings and the list then name only the weekday ('Sundays'), no date. False for one dated week.";
   "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; a chosen-windows list sits on top, then the grid; click a piece to start a range then click another piece to select every piece between them - on another day, the same hours on every day between, so a block of days is chosen in two clicks; click a selected piece to back up a step — the range collapses to a fresh anchor on its far end, ready to re-draw — then click that anchor again to clear it; reports the sorted windows to on_ranges after each change";
   let slots = numbers_up_to(48);
   let ranges = initial_ranges;
@@ -25,6 +33,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   let r = week_calendar_day({
     parent,
     days: dates,
+    weekly,
   });
   let grid = property_get(r, "grid");
   let summary = property_get(r, "summary");
@@ -42,6 +51,9 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   }
   function summary_line(span) {
     let text = week_range_label(span);
+    if (weekly) {
+      text = week_range_label_weekly(span);
+    }
     app_shared_text_body(summary, text);
   }
   function range_add(day_a, day_b, a, b) {
