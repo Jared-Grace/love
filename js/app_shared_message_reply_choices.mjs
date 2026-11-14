@@ -1,3 +1,6 @@
+import { reply_wished_well_thanked } from "./reply_wished_well_thanked.mjs";
+import { reply_appeal_christmas } from "./reply_appeal_christmas.mjs";
+import { reply_hope_glorified } from "./reply_hope_glorified.mjs";
 import { reply_great_day_thanked } from "./reply_great_day_thanked.mjs";
 import { reply_pieces_counted } from "./reply_pieces_counted.mjs";
 import { reply_cheapest_per_position_fewest_pieces } from "./reply_cheapest_per_position_fewest_pieces.mjs";
@@ -81,6 +84,9 @@ export function app_shared_message_reply_choices() {
   let tiktok = reply_tiktok_link();
   let great_day = reply_great_day_thanked();
   let friend_list = reply_friend_list_full();
+  let wished_well = reply_wished_well_thanked();
+  let christmas_appeal = reply_appeal_christmas();
+  let hope_glorified = reply_hope_glorified();
   let choices_main = reply_choice([
     hru,
     greeting,
@@ -104,6 +110,9 @@ export function app_shared_message_reply_choices() {
     tiktok,
     great_day,
     friend_list,
+    wished_well,
+    christmas_appeal,
+    hope_glorified,
   ]);
   let counted = reply_pieces_counted(choices_main);
   let choices_cheapest = reply_cheapest_per_position_fewest_pieces(counted);
