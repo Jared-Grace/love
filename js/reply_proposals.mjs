@@ -4639,7 +4639,7 @@ export function reply_proposals() {
     title:
       "answer greetings, and a greeting that ends with my name, Jared, however it is spelled",
     fn: fn_name("app_shared_message_reply_greeting"),
-    whole: [fn_name("reply_name_jared")],
+    whole: [fn_name("reply_name_jared"), fn_name("reply_once_or_twice")],
     diff: [
       greetings_named_hi_removed,
       greetings_named_hi_added,
