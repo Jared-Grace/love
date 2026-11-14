@@ -15,9 +15,10 @@ export async function calendar_db_book(
 ) {
   arguments_assert(arguments, 8);
   ("Books guest_uid with the host whose booking link is slug, on the host's own day and minute, once or every week from then on; answers {ok, reason, start_utc}. db is a Cloudflare D1 database, or anything answering the same prepare, bind, first, all and run.");
-  ("The hour must be one the host still offers - inside their openings, 24 hours to 14 days ahead, not held - which is asked of the same list the guest was shown, so the page and the booking cannot disagree about what is open.");
+  ("The hour must be one the host still offers - inside their openings, 23 hours to 14 days ahead, not held - which is asked of the same list the guest was shown, so the page and the booking cannot disagree about what is open.");
   ("★ THE CLASH CHECK AND THE WRITE ARE ONE STATEMENT. Checking first and writing after lets two guests both pass the check; an INSERT that only writes when no clashing meeting exists cannot be split, and the unique indexes back it up. The clashes: the same day, an earlier weekly meeting reaching this day, or - for a weekly booking - any meeting on this weekday at or after its first day.");
-  let free = await calendar_db_host_free(db, slug, now_iso);
+  ("★ A BOOKING ACCEPTS AN HOUR 23 HOURS AHEAD, THOUGH THE PAGE SHOWS ONLY 24. A guest who opens the page, takes a while to choose, then presses Book would otherwise be told the hour they were shown is gone. The hour of grace is the time to choose; 23.5 was rejected as too little for someone slow or on a weak connection, and anything under about 20 starts letting a guest book closer than the host was promised.");
+  let free = await calendar_db_host_free(db, slug, now_iso, 23);
   let host_row = free.host;
   if (equal(host_row, null)) {
     let r = {

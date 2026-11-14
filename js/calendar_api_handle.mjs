@@ -81,7 +81,7 @@ export async function calendar_api_handle(
   }
   if (equal(route, "free")) {
     let slug2 = String(body.host);
-    let free = await calendar_db_host_free(db, slug2, now_iso);
+    let free = await calendar_db_host_free(db, slug2, now_iso, 24);
     if (equal(free.host, null)) {
       let r4 = reply(404, {
         ok: false,

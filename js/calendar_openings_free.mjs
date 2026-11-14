@@ -1,9 +1,9 @@
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { date_time_zone_from_iso } from "./date_time_zone_from_iso.mjs";
 import { equal } from "./equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { modulo } from "./modulo.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { divide } from "./divide.mjs";
 import { floor } from "./floor.mjs";
 import { multiply } from "./multiply.mjs";
@@ -16,9 +16,10 @@ export function calendar_openings_free(
   openings_dated,
   meetings,
   now_iso,
+  hours_ahead,
 ) {
-  arguments_assert(arguments, 5);
-  ("The hours a guest may still book with this host: every block inside the host's weekly openings, or inside a stretch added on that date, that starts at least 24 hours after now_iso and less than 14 days after it, less the ones a meeting already holds.");
+  arguments_assert(arguments, 6);
+  ("The hours a guest may still book with this host: every block inside the host's weekly openings, or inside a stretch added on that date, that starts at least hours_ahead hours after now_iso and less than 14 days after it, less the ones a meeting already holds.");
   ("Each day takes its weekly openings from the one schedule in force on it: the rows with the latest from_day not after that day.");
   ("★ A BUSY STRETCH REMOVES EVERY MEETING IT TOUCHES, NOT ONLY THE ONES STARTING INSIDE IT. A doctor's visit from 10:15 to 11:00 takes away the 10:00 meeting too, since that meeting would still be running at 10:15.");
   ("Each block is counted in the host's own zone and day, the way the host's openings and meetings are written, and comes back with the moment it starts in UTC so every guest can show it in their own zone.");
@@ -29,7 +30,7 @@ export function calendar_openings_free(
   let minutes_meeting = host.meeting_minutes;
   let moment_now = date_time_zone_from_iso(now_iso);
   let moment_earliest = moment_now.plus({
-    hours: 24,
+    hours: hours_ahead,
   });
   let moment_latest = moment_now.plus({
     days: 14,

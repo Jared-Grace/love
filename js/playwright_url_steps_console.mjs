@@ -1,14 +1,14 @@
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
-import { equal } from "./equal.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
+import { equal } from "./equal.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function playwright_url_steps_console(url, steps) {
   "$plain url";
   "$plain steps";
-  "Opens a page and walks steps, one comma-joined word: a step reading offline cuts the network, a step beginning wait= waits up to ten minutes for the rest of it to show, and any other step is text to press. Hands back every error, console line and failed request, with the text the page showed after each press.";
+  "Opens a page and walks steps, one comma-joined word: a step reading offline cuts the network, a step beginning wait= waits up to ten minutes for the rest of it to show, a step beginning fill= types into a box - fill=<hint>=<words>, the box found by its hint text - and any other step is text to press. Hands back every error, console line and failed request, with the text the page showed after each press.";
   "The walk with one wait before the network is cut could not say 'save, wait, free it, save again, wait' - and that is the order a person actually tried it in.";
   "A press or a wait that finds nothing is written down and the walk stops there, rather than throwing, because how far the walk got is itself the answer.";
   let lines = [];
@@ -39,10 +39,26 @@ export async function playwright_url_steps_console(url, steps) {
     await page.goto(url);
     await page.waitForLoadState("networkidle");
     let wait_prefix = "wait=";
+    let fill_prefix = "fill=";
     for (let step of text_split_comma(steps)) {
       let item = text_combine_multiple(["step  ", step]);
       list_add(lines, item);
-      if (equal(step, "offline")) {
+      if (text_starts_with(step, fill_prefix)) {
+        let rest = text_prefix_without(step, fill_prefix);
+        let at = rest.indexOf("=");
+        let hint = rest.slice(0, at);
+        let words = rest.slice(at + 1);
+        try {
+          await page.getByPlaceholder(hint).first().fill(words, {
+            timeout: 10000,
+          });
+        } catch (err) {
+          let item4 = text_combine_multiple(["not found  ", step]);
+          list_add(lines, item4);
+          await shown_add(page);
+          return;
+        }
+      } else if (equal(step, "offline")) {
         await page.context().setOffline(true);
       } else if (text_starts_with(step, wait_prefix)) {
         let text = text_prefix_without(step, wait_prefix);
