@@ -1,9 +1,10 @@
 import { facebook_page_open } from "./facebook_page_open.mjs";
 import { sleep_human_pace } from "./sleep_human_pace.mjs";
 import { facebook_messenger_row_open } from "./facebook_messenger_row_open.mjs";
-import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
+import { messenger_messages_merge } from "./messenger_messages_merge.mjs";
 import { facebook_messenger_messages } from "./facebook_messenger_messages.mjs";
 import { messenger_since_mine } from "./messenger_since_mine.mjs";
 export async function facebook_messenger_since_mine_read(url) {
@@ -55,12 +56,19 @@ export async function facebook_messenger_since_mine_read(url) {
     let messages = [];
     let same = 0;
     let top = false;
+    let gap = false;
     for (let step = 0; step < 80; step++) {
       let text = await page.evaluate(
         "(function(){var m=document.querySelector('[role=main]');return (m||document.body).innerText})()",
       );
       let before = messages.length;
-      messages = facebook_messenger_messages(text);
+      ("★ EACH READING IS JOINED TO THE LAST, never put in its place: the page drops the newest messages as it scrolls up, so the reading at the top alone lost everything after an old message of yours (2026-11-14).");
+      let older = facebook_messenger_messages(text);
+      let merged = messenger_messages_merge(older, messages);
+      if (before > 0 && merged.overlap === 0) {
+        gap = true;
+      }
+      messages = merged.messages;
       function lambda(m) {
         let r3 = m.from === "You";
         return r3;
@@ -93,6 +101,7 @@ export async function facebook_messenger_since_mine_read(url) {
       loaded: messages.length > 0,
       mine_seen,
       top,
+      gap,
       messages: messenger_since_mine(messages),
     };
     return r;
