@@ -162,7 +162,7 @@ export function app_learn_js_lesson_array_pop_while() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Pop until empty",
-    "while (a.length > 0) { console.log(a.pop()); }",
+    "while (a.length > 0)",
   );
   let lesson = app_learn_js_lesson_code_logged({
     above,
