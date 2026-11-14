@@ -10,7 +10,8 @@ import { app_learn_js_hash_review_restore } from "./app_learn_js_hash_review_res
 import { app_learn_js_hash_milestone_restore } from "./app_learn_js_hash_milestone_restore.mjs";
 import { app_learn_js_hash_complete_restore } from "./app_learn_js_hash_complete_restore.mjs";
 import { app_learn_js_hash_questions_restore } from "./app_learn_js_hash_questions_restore.mjs";
-export function app_learn_js_hash_restore(context) {
+import { app_learn_js_hash_step_restore } from "./app_learn_js_hash_step_restore.mjs";
+export async function app_learn_js_hash_restore(context) {
   "if the URL carries a shared hash, seed the lesson, screen, and quiz position into storage BEFORE the first render, so the link opens right where it was shared from";
   "It reads the address as the object every other page reads it as, rather than taking the text and cutting it up itself. Its own parsing named these three fields in a shape no reading of the repo could see, so all three sat unanswered while the gate that counts unanswered words reported nothing about this page at all - and the parsing itself was a second, quietly different copy of what one shared reader already does.";
   let hash = html_hash_object_get();
@@ -36,4 +37,5 @@ export function app_learn_js_hash_restore(context) {
   app_learn_js_hash_milestone_restore(context, hash);
   app_learn_js_hash_complete_restore(context, hash);
   app_learn_js_hash_questions_restore(context, hash);
+  await app_learn_js_hash_step_restore(context, hash);
 }
