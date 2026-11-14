@@ -4605,6 +4605,103 @@ export function reply_proposals() {
       "only the prayer that closes a reply changes. Prayers written elsewhere with the same Amen, such as the daily verse prayers, are left as they are.",
     ],
   };
+  let greetings_named_hi_removed = text_combine_multiple([
+    "-  let hi_word = ",
+    fn_name("reply_choice"),
+    '(["hi", hello, "hey"]);',
+  ]);
+  let greetings_named_hi_added = text_combine_multiple([
+    "+  let hi_word = ",
+    fn_name("reply_choice"),
+    '(["hi", hello, "hey", "greetings"]);',
+  ]);
+  let greetings_named_brother_kept = text_combine_multiple([
+    "   let my_dear_brother = ",
+    fn_name("reply_phrase_my_dear_brother"),
+    "();",
+  ]);
+  let greetings_named_name_added = text_combine_multiple([
+    "+  let name = ",
+    fn_name("reply_name_jared"),
+    "();",
+  ]);
+  let greetings_named_optional_added = text_combine_multiple([
+    "+  let jared = ",
+    fn_name("reply_optional"),
+    "(name);",
+  ]);
+  let greetings_named_rule_kept = text_combine_multiple([
+    "   let greeting = ",
+    fn_name("reply_sequence_output"),
+    "(",
+  ]);
+  let greetings_named = {
+    title:
+      "answer greetings, and a greeting that ends with my name, Jared, however it is spelled",
+    fn: fn_name("app_shared_message_reply_greeting"),
+    whole: [fn_name("reply_name_jared")],
+    diff: [
+      greetings_named_hi_removed,
+      greetings_named_hi_added,
+      greetings_named_brother_kept,
+      greetings_named_name_added,
+      greetings_named_optional_added,
+      greetings_named_rule_kept,
+      "-    [hi_word, my_dear_brother],",
+      "+    [hi_word, my_dear_brother, jared],",
+      "     greeting_response,",
+      "   );",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "Greetings brother Jared",
+        answered: true,
+        outputs: said,
+      },
+      {
+        from: "",
+        message: "Greetings brother jarred",
+        answered: true,
+        outputs: said,
+      },
+      {
+        from: "",
+        message: "Greetings!",
+        answered: true,
+        outputs: said,
+      },
+      {
+        from: "",
+        message: "Hello brother Jared",
+        answered: true,
+        outputs: said,
+      },
+      {
+        from: "",
+        message: "Greetings my friend in Christ",
+        answered: true,
+        outputs: friend_said,
+      },
+      {
+        from: "",
+        message: "Jared",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "Good morning brother jered",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "one person sent Greetings brother Jared six times between August and November, spelled jared, jered and jarred, and none got an answer. These are the wordings measured here, not his messages.",
+      "greetings joins hi, hello and hey, so it also opens the friend in Christ greeting.",
+      "good morning brother jered still gets no answer: the good morning rule is shared with good afternoon and good evening, so adding the name there would be its own change. Should it be?",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -4662,6 +4759,7 @@ export function reply_proposals() {
     great_day_thanked,
     appeal_merged,
     prayer_lined,
+    greetings_named,
   ];
   return proposals;
 }

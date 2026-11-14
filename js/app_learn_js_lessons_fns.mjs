@@ -360,6 +360,9 @@ import { app_learn_js_lesson_array_empty } from "./app_learn_js_lesson_array_emp
 import { app_learn_js_lesson_array_empty_push } from "./app_learn_js_lesson_array_empty_push.mjs";
 import { app_learn_js_lesson_array_pop } from "./app_learn_js_lesson_array_pop.mjs";
 import { app_learn_js_lesson_array_pop_value } from "./app_learn_js_lesson_array_pop_value.mjs";
+import { app_learn_js_lesson_array_unshift } from "./app_learn_js_lesson_array_unshift.mjs";
+import { app_learn_js_lesson_array_shift } from "./app_learn_js_lesson_array_shift.mjs";
+import { app_learn_js_lesson_array_shift_value } from "./app_learn_js_lesson_array_shift_value.mjs";
 import { app_learn_js_lesson_array_pop_while } from "./app_learn_js_lesson_array_pop_while.mjs";
 import { app_learn_js_lesson_array_index_name } from "./app_learn_js_lesson_array_index_name.mjs";
 import { app_learn_js_lesson_array_index_step } from "./app_learn_js_lesson_array_index_step.mjs";
@@ -773,6 +776,9 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_empty_push,
     app_learn_js_lesson_array_pop,
     app_learn_js_lesson_array_pop_value,
+    app_learn_js_lesson_array_unshift,
+    app_learn_js_lesson_array_shift,
+    app_learn_js_lesson_array_shift_value,
     app_learn_js_lesson_array_pop_while,
     app_learn_js_lesson_array_index_name,
     app_learn_js_lesson_array_index_step,
