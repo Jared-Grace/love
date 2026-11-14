@@ -991,13 +991,21 @@ export function app_learn_js_program_step_through_generic(
       value_write,
       duration4,
     );
+    function piece_settle() {
+      "2026-11-14, at the human's asking: once the value has arrived, it may wrap again like the rest of the line. Kept on one line, a value wider than a phone's screen, such as a long array in a note, ran past the program's edge and was cut off. Not picked: keeping it on one line and scrolling the program sideways, which hides the end just the same until the learner thinks to scroll";
+      html_style_white_space(piece, "");
+      html_style_set(piece, "display", "");
+      html_style_set(piece, "overflow", "");
+    }
     if (null_is(source)) {
       await html_opacity_animate(piece, "1", duration4);
+      piece_settle();
       return;
     }
     let rect = html_bounding_client_rect(piece);
     await html_copy_fly_text_rect(source, rect, duration4);
     html_style_opacity(piece, "1");
+    piece_settle();
   }
   async function action_do(action, line_index) {
     "what the right answer to what this line does then does";
