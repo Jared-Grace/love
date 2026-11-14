@@ -47,7 +47,7 @@ export async function app_calendar(context) {
   }
   let show_meetings = async function lambda() {
     if (guest_key) {
-      await app_calendar_meetings(meetings_area, guest_key, guest_show);
+      await app_calendar_meetings(meetings_area, guest_key, guest_show, false);
     }
   };
   await guest_show();

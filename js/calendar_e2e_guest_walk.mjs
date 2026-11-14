@@ -234,9 +234,15 @@ export async function calendar_e2e_guest_walk(url) {
             .click({
               timeout: 30000,
             });
-          await page.getByText("None yet.").waitFor({
-            timeout: 30000,
-          });
+          ("A guest left with no meetings sees no list at all, so the cancel is done when the list's heading has gone.");
+          await page
+            .getByText("Your meetings", {
+              exact: true,
+            })
+            .waitFor({
+              state: "detached",
+              timeout: 30000,
+            });
         }
         await step("cancel", lambda9);
         async function lambda10() {

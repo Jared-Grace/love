@@ -40,7 +40,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     {
       host: slug,
     },
-    null,
+    key,
   );
   if (not(free.body.ok)) {
     let words = equal(free.body.reason, "no_host")
@@ -62,6 +62,20 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       zone,
   );
   app_shared_text_deemphasized(zone_line);
+  ('A guest already holding the most meetings this host allows sees no hours, only how to free one: their meetings are drawn above, each with a Cancel, and a cancel draws this screen again (human: "so that you only see existing meeting, and you can cancel to schedule a new one").');
+  let guest = free.body.guest;
+  if (guest && guest.full) {
+    html_div_text(
+      card,
+      "You have " +
+        guest.held +
+        (equal(guest.held, 1) ? " upcoming meeting" : " upcoming meetings") +
+        " with " +
+        host.name +
+        ", the most allowed. To book another time, cancel one first.",
+    );
+    return;
+  }
   ('The app choice comes first and big (human: "They should have a big choice: Facebook Messenger meeting or WhatsApp meeting"); what is asked for below follows it - a WhatsApp number, or a Facebook profile link.');
   let via_area = html_div(card);
   let slots = free.body.slots;
@@ -306,7 +320,8 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
           "This host does not take Messenger calls now. Pick WhatsApp.",
         taken: "Someone just booked that time. Pick another.",
         not_open: "That time is no longer open. Pick another.",
-        limit: "You already have 2 upcoming meetings with this host.",
+        limit:
+          "You already have the most upcoming meetings this host allows. To book another time, cancel one first.",
         rate: "Too many tries. Wait a minute and try again.",
         turnstile: "The check failed. Try again.",
         network: "No connection. Try again.",

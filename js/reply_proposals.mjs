@@ -4667,6 +4667,18 @@ export function reply_proposals() {
       },
       {
         from: "",
+        message: "Hello brother Jarrod",
+        answered: true,
+        outputs: said,
+      },
+      {
+        from: "",
+        message: "Hi brother Jerad",
+        answered: true,
+        outputs: said,
+      },
+      {
+        from: "",
         message: "Greetings!",
         answered: true,
         outputs: said,
