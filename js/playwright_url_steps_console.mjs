@@ -79,8 +79,17 @@ export async function playwright_url_steps_console(url, steps) {
         }
         await shown_add(page);
       } else {
+        ("Text to press is matched whole first, and only when nothing reads exactly that is it matched as a part: pressing Book under a heading that says 'Book a prayer call' must press the button, not the heading.");
         try {
-          await page.getByText(step).first().click({
+          let exact = page.getByText(step, {
+            exact: true,
+          });
+          let target = exact;
+          let left = await exact.count();
+          if (equal(left, 0)) {
+            target = page.getByText(step);
+          }
+          await target.first().click({
             timeout: 10000,
           });
         } catch (err) {
