@@ -15,6 +15,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
+import { app_learn_js_program_step_call_code } from "./app_learn_js_program_step_call_code.mjs";
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
@@ -98,11 +99,27 @@ export function app_learn_js_program_step_clicks(code) {
       if (app_learn_js_program_step_call_is(kind)) {
         let value13 = property_get(options, "evaluate");
         choose_add(value13);
+        let into = property_get_or(action, "into", false);
+        let call_code = app_learn_js_program_step_call_code(action);
+        ("2026-11-14, at the human's asking: a call inside another call runs first, so which runs first is chosen before what it does");
+        if (into) {
+          list_add(clicks, [
+            words("Choose "),
+            button(call_code),
+            words(" to run first"),
+          ]);
+        }
         let call_words = app_learn_js_program_step_call_words();
         let value14 = property_get(call_words, kind);
         choose_add(value14);
-        if (property_get_or(action, "into", false)) {
-          value_add(action);
+        if (into) {
+          let said2 = js_value_code(property_get(action, "value"));
+          list_add(clicks, [
+            words("Choose "),
+            button(said2),
+            words(" for "),
+            code_piece(call_code),
+          ]);
         }
       } else {
         let value2 = property_get(options, kind);
