@@ -500,6 +500,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_last: text_frozen("array_last"),
     app_learn_js_lesson_array_set: text_frozen("array_set"),
     app_learn_js_lesson_array_copy: text_frozen("array_copy"),
+    app_learn_js_lesson_array_set_for: text_frozen("array_set_for"),
     app_learn_js_lesson_step_while: text_frozen("step_while"),
     app_learn_js_lesson_step_while_log: text_frozen("step_while_log"),
     app_learn_js_lesson_step_while_down: text_frozen("step_while_down"),
