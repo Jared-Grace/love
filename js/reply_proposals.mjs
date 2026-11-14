@@ -4667,15 +4667,15 @@ export function reply_proposals() {
       },
       {
         from: "",
-        message: "Hello brother Jarrod",
+        message: "Hello brother Jerod",
         answered: true,
         outputs: said,
       },
       {
         from: "",
-        message: "Hi brother Jerad",
-        answered: true,
-        outputs: said,
+        message: "Hi brother Jarrod",
+        answered: false,
+        outputs: [],
       },
       {
         from: "",
@@ -4839,6 +4839,78 @@ export function reply_proposals() {
       "Blessings on its own now gets thank you for the blessing and the blessing for you, your family, your church and your country, wherever it is said.",
     ],
   };
+  let brother_named_removed = text_combine_multiple([
+    "-  let my_dear_brother = ",
+    fn_name("reply_choice_optional"),
+    "(choices);",
+  ]);
+  let brother_phrase_added = text_combine_multiple([
+    "+  let brother_phrase = ",
+    fn_name("reply_choice_optional"),
+    "(choices);",
+  ]);
+  let brother_name_added = text_combine_multiple([
+    "+  let name = ",
+    fn_name("reply_name_jared"),
+    "();",
+  ]);
+  let brother_jared_added = text_combine_multiple([
+    "+  let jared = ",
+    fn_name("reply_optional"),
+    "(name);",
+  ]);
+  let brother_sequence_added = text_combine_multiple([
+    "+  let my_dear_brother = ",
+    fn_name("reply_sequence"),
+    "([brother_phrase, jared]);",
+  ]);
+  let brother_morning = reply_response_good_morning();
+  let brother_how = reply_response_how_r_u();
+  let brother_named = {
+    title:
+      "hear my name after brother wherever brother is heard, so good morning brother Jered is answered",
+    fn: fn_name("reply_phrase_my_dear_brother"),
+    whole: [],
+    diff: [
+      brother_named_removed,
+      brother_phrase_added,
+      brother_name_added,
+      brother_jared_added,
+      brother_sequence_added,
+      "   return my_dear_brother;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "Good morning brother jered",
+        answered: true,
+        outputs: [brother_morning],
+      },
+      {
+        from: "",
+        message: "Good morning Jared",
+        answered: true,
+        outputs: [brother_morning],
+      },
+      {
+        from: "",
+        message: "How are you brother Jerod",
+        answered: true,
+        outputs: [brother_how],
+      },
+      {
+        from: "",
+        message: "Greetings brother Jared",
+        answered: true,
+        outputs: [greeting],
+      },
+    ],
+    decide: [
+      "the name comes from one real message, Good morning brother jered (2026-11-14). It is put in the one piece every my dear brother goes through, so good morning, good afternoon, good evening, how are you and please pray for me all hear it, not only good morning.",
+      "the name may follow nothing at all, so Good morning Jared is answered too, without brother.",
+      "the greeting rule already hears the name after brother on its own; once this is in, that copy says the same thing twice and comes out in a change of its own that answers nothing differently.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -4898,6 +4970,7 @@ export function reply_proposals() {
     prayer_lined,
     greetings_named,
     christmas_appeal_said,
+    brother_named,
   ];
   return proposals;
 }
