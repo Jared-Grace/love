@@ -2,8 +2,8 @@ import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter
 import { app_shared_bible_chapters_before } from "./app_shared_bible_chapters_before.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
-import { app_shared_bible_verses_question_text } from "./app_shared_bible_verses_question_text.mjs";
-import { app_shared_bible_picker_card } from "./app_shared_bible_picker_card.mjs";
+import { app_shared_bible_verses_question_parts } from "./app_shared_bible_verses_question_parts.mjs";
+import { app_shared_bible_picker_card_parts_bold } from "./app_shared_bible_picker_card_parts_bold.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
 import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
@@ -32,8 +32,9 @@ export async function app_shared_bible_verses(context) {
   let chapter_code = property_get(r, "chapter_code");
   let chapter_name = ebible_chapter_code_to_name(chapter_code);
   ("the card is headed by one question naming both the book and the chapter, rather than the book over a bare chapter number, so the reader is told what this screen asks of them");
-  let question = app_shared_bible_verses_question_text(book_name, chapter_name);
-  let card = app_shared_bible_picker_card(content, question);
+  ("the book's name and the chapter's name are drawn bold inside the question, so where the reader is choosing from stands out from the words asking about it");
+  let parts = app_shared_bible_verses_question_parts(book_name, chapter_name);
+  let card = app_shared_bible_picker_card_parts_bold(content, parts);
   ("the way into the whole chapter goes above the verse numbers rather than below them, so a long chapter does not bury it - it is for the reader who wants to skip picking a verse at all. only an app with a whole-chapter reader says so on the context, and the button itself draws nothing for the others");
   let chapter_reader_is = property_exists(context, "chapter_reader_is");
   let app_fn = property_get(context, "app_fn");
