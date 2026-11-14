@@ -593,6 +593,7 @@ export function app_learn_js_lesson_ids_short() {
     ),
     app_learn_js_lesson_array_pop: text_frozen("array_pop"),
     app_learn_js_lesson_array_pop_value: text_frozen("array_pop_value"),
+    app_learn_js_lesson_array_pop_while: text_frozen("array_pop_while"),
   };
   return short;
 }

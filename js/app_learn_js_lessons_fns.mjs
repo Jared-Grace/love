@@ -1,13 +1,3 @@
-import { app_learn_js_lesson_array_pop_value } from "./app_learn_js_lesson_array_pop_value.mjs";
-import { app_learn_js_lesson_array_pop } from "./app_learn_js_lesson_array_pop.mjs";
-import { app_learn_js_lesson_array_empty_for_push_step_two } from "./app_learn_js_lesson_array_empty_for_push_step_two.mjs";
-import { app_learn_js_lesson_array_empty_for_push_last } from "./app_learn_js_lesson_array_empty_for_push_last.mjs";
-import { app_learn_js_lesson_array_empty_for_push } from "./app_learn_js_lesson_array_empty_for_push.mjs";
-import { app_learn_js_lesson_array_empty_push } from "./app_learn_js_lesson_array_empty_push.mjs";
-import { app_learn_js_lesson_array_empty } from "./app_learn_js_lesson_array_empty.mjs";
-import { app_learn_js_lesson_array_for_pushed } from "./app_learn_js_lesson_array_for_pushed.mjs";
-import { app_learn_js_lesson_array_push_last } from "./app_learn_js_lesson_array_push_last.mjs";
-import { app_learn_js_lesson_array_push } from "./app_learn_js_lesson_array_push.mjs";
 import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_lesson_symbols_digits_numbered.mjs";
 import { app_learn_js_lesson_symbols_digit_number } from "./app_learn_js_lesson_symbols_digit_number.mjs";
 import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
@@ -364,14 +354,25 @@ import { app_learn_js_lesson_array_any } from "./app_learn_js_lesson_array_any.m
 import { app_learn_js_lesson_array_length } from "./app_learn_js_lesson_array_length.mjs";
 import { app_learn_js_lesson_array_last_index } from "./app_learn_js_lesson_array_last_index.mjs";
 import { app_learn_js_lesson_array_last } from "./app_learn_js_lesson_array_last.mjs";
+import { app_learn_js_lesson_array_push } from "./app_learn_js_lesson_array_push.mjs";
+import { app_learn_js_lesson_array_push_last } from "./app_learn_js_lesson_array_push_last.mjs";
+import { app_learn_js_lesson_array_empty } from "./app_learn_js_lesson_array_empty.mjs";
+import { app_learn_js_lesson_array_empty_push } from "./app_learn_js_lesson_array_empty_push.mjs";
+import { app_learn_js_lesson_array_pop } from "./app_learn_js_lesson_array_pop.mjs";
+import { app_learn_js_lesson_array_pop_value } from "./app_learn_js_lesson_array_pop_value.mjs";
+import { app_learn_js_lesson_array_pop_while } from "./app_learn_js_lesson_array_pop_while.mjs";
 import { app_learn_js_lesson_array_index_name } from "./app_learn_js_lesson_array_index_name.mjs";
 import { app_learn_js_lesson_array_index_step } from "./app_learn_js_lesson_array_index_step.mjs";
 import { app_learn_js_lesson_array_index_steps_two } from "./app_learn_js_lesson_array_index_steps_two.mjs";
 import { app_learn_js_lesson_array_for } from "./app_learn_js_lesson_array_for.mjs";
 import { app_learn_js_lesson_array_for_length } from "./app_learn_js_lesson_array_for_length.mjs";
+import { app_learn_js_lesson_array_for_pushed } from "./app_learn_js_lesson_array_for_pushed.mjs";
+import { app_learn_js_lesson_array_empty_for_push } from "./app_learn_js_lesson_array_empty_for_push.mjs";
+import { app_learn_js_lesson_array_empty_for_push_last } from "./app_learn_js_lesson_array_empty_for_push_last.mjs";
 import { app_learn_js_lesson_array_for_inner } from "./app_learn_js_lesson_array_for_inner.mjs";
 import { app_learn_js_lesson_array_for_start_two } from "./app_learn_js_lesson_array_for_start_two.mjs";
 import { app_learn_js_lesson_array_for_step_two } from "./app_learn_js_lesson_array_for_step_two.mjs";
+import { app_learn_js_lesson_array_empty_for_push_step_two } from "./app_learn_js_lesson_array_empty_for_push_step_two.mjs";
 import { app_learn_js_lesson_array_for_step_two_odd } from "./app_learn_js_lesson_array_for_step_two_odd.mjs";
 import { app_learn_js_lesson_array_for_backwards } from "./app_learn_js_lesson_array_for_backwards.mjs";
 import { app_learn_js_lesson_array_for_backwards_step_two } from "./app_learn_js_lesson_array_for_backwards_step_two.mjs";
@@ -763,6 +764,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_empty_push,
     app_learn_js_lesson_array_pop,
     app_learn_js_lesson_array_pop_value,
+    app_learn_js_lesson_array_pop_while,
     app_learn_js_lesson_array_index_name,
     app_learn_js_lesson_array_index_step,
     app_learn_js_lesson_array_index_steps_two,
