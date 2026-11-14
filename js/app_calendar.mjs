@@ -89,7 +89,7 @@ export async function app_calendar(context) {
     if (not(slug) && not(guest_key)) {
       let hint = html_div_text(
         guest_area,
-        "To book a prayer call, open the booking link you were sent.",
+        "To book a meeting, open the booking link you were sent.",
       );
       app_shared_text_deemphasized(hint);
     }

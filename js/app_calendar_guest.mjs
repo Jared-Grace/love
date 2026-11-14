@@ -1,4 +1,3 @@
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
@@ -14,6 +13,7 @@ import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_input_type } from "./html_input_type.mjs";
@@ -49,7 +49,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     return;
   }
   let host = free.body.host;
-  html_div_text_content(card, "Book a prayer call with " + host.name);
+  html_div_text_content(card, "Book a meeting with " + host.name);
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   let zone_line = html_div_text_content(
     card,

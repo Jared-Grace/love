@@ -570,6 +570,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_at_last: text_frozen("array_at_last"),
     app_learn_js_lesson_array_for_at_first: text_frozen("array_at_first"),
     app_learn_js_lesson_array_index_of: text_frozen("array_index_of"),
+    app_learn_js_lesson_array_index_of_first: text_frozen("array_index_first"),
     app_learn_js_lesson_array_for_count: text_frozen("array_count"),
     app_learn_js_lesson_array_for_total: text_frozen("array_total"),
     app_learn_js_lesson_array_for_biggest: text_frozen("array_biggest"),
