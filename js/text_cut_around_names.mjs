@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_index_of_try } from "./text_index_of_try.mjs";
 import { text_take } from "./text_take.mjs";
@@ -8,10 +9,10 @@ export function text_cut_around_names(text, names) {
   ("A name found nowhere is left alone, and the text keeps its words; a heading drawn without its stress is still the right heading.");
   let parts = [text];
   for (let name of names) {
-    for (let index = 0; index < parts.length; index += 2) {
+    for (let index = 0; less_than(index, parts.length); index += 2) {
       let part = parts[index];
       let at = text_index_of_try(part, name);
-      if (at < 0) {
+      if (less_than(at, 0)) {
         continue;
       }
       let before = text_take(part, at);
