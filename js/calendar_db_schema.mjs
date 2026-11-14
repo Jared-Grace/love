@@ -10,7 +10,7 @@ export function calendar_db_schema() {
   ("A host's free hours are their weekly openings changed on single dates: an openings_dated row with open 0 takes a stretch of that day away (an appointment), with open 1 adds one (an extra free morning).");
   ("★ A SESSION STORES ONLY THE KEY'S HASH. A guest's private link and a host's Facebook sign-in both end in a random key held by the person; the table keeps its SHA-256, so a copy of the database opens nobody's meetings. It names no person row on purpose: a host signed in with Facebook has a session before they have given a WhatsApp number.");
   ("★ A BOOKING WAITS UNTIL ITS CODE ARRIVES. code is what the guest sends the host from their WhatsApp; confirmed_at is stamped when the host sees it come from the number booked with. A meeting with no confirmed_at is waiting, and is cancelled 24 hours after created_at.");
-  ("A meeting is held on WhatsApp or Messenger (via). A Messenger guest gives no number - their people row holds empty text - and the host keeps the profile link of whoever sent the code (profile_url). A host offers Messenger once their messenger name is set, and max_per_day, when set, is the most meetings they take in one of their days.");
+  ("A meeting is held on WhatsApp or Messenger (via). A Messenger guest gives no number - their people row holds empty text - and the host keeps the profile link of whoever sent the code (profile_url). A host offers Messenger once their messenger name is set, and max_per_day, when set, is the most meetings they take in one of their days. max_per_guest, when set, is the most upcoming meetings one guest may hold with them, a weekly meeting counting once; it starts at 2, the limit every host had before it could be set.");
   ("Nothing is deleted: a cancelled meeting keeps its row with the time it was cancelled, and leaves both indexes, so the hour opens again.");
   let sql = `CREATE TABLE IF NOT EXISTS people (
   uid TEXT PRIMARY KEY,
@@ -26,7 +26,8 @@ CREATE TABLE IF NOT EXISTS hosts (
   meeting_minutes INTEGER NOT NULL CHECK (meeting_minutes BETWEEN 5 AND 60),
   created_at TEXT NOT NULL,
   messenger TEXT NOT NULL DEFAULT '',
-  max_per_day INTEGER CHECK (max_per_day IS NULL OR max_per_day BETWEEN 1 AND 24)
+  max_per_day INTEGER CHECK (max_per_day IS NULL OR max_per_day BETWEEN 1 AND 24),
+  max_per_guest INTEGER DEFAULT 2 CHECK (max_per_guest IS NULL OR max_per_guest BETWEEN 1 AND 24)
 );
 CREATE TABLE IF NOT EXISTS openings (
   host_uid TEXT NOT NULL REFERENCES hosts(uid),

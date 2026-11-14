@@ -5,6 +5,7 @@ import { calendar_db_session_uid } from "./calendar_db_session_uid.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
+import { calendar_db_guest_limit_read } from "./calendar_db_guest_limit_read.mjs";
 import { not } from "./not.mjs";
 import { calendar_db_waiting_book } from "./calendar_db_waiting_book.mjs";
 import { calendar_db_session_create } from "./calendar_db_session_create.mjs";
@@ -99,10 +100,28 @@ export async function calendar_api_handle(
       meeting_minutes: free.host.meeting_minutes,
       messenger: not_equal(free.host.messenger, ""),
     };
+    ('A guest who sends their key is told how many meetings they hold with this host and the most allowed (guest), so a guest already at the limit sees their meetings rather than hours they cannot book (human: "so that you only see existing meeting, and you can cancel to schedule a new one"). Without a key, guest is null.');
+    let me = equal(uid, null)
+      ? null
+      : await db
+          .prepare("SELECT whatsapp FROM people WHERE uid = ?1")
+          .bind(uid)
+          .first();
+    let guest = equal(uid, null)
+      ? null
+      : await calendar_db_guest_limit_read(
+          db,
+          slug2,
+          uid,
+          equal(me, null) ? "" : me.whatsapp,
+          null,
+          now_iso,
+        );
     let r5 = reply(200, {
       ok: true,
       host,
       slots: free.slots,
+      guest,
     });
     return r5;
   }
@@ -263,11 +282,14 @@ export async function calendar_api_handle(
   if (equal(route, "host_rules_save")) {
     let messenger_typed = String(body.messenger);
     let max_typed = String(body.max);
+    ('A page from before max_guest sends none, and "undefined" is refused rather than read as blank, so an old page cannot silently lift the limit.');
+    let max_guest_typed = String(body.max_guest);
     saved = await calendar_db_host_rules_save(
       db,
       uid,
       messenger_typed,
       max_typed,
+      max_guest_typed,
     );
   }
   if (equal(route, "person_save")) {
