@@ -1621,9 +1621,16 @@ export function app_learn_js_program_step_through_generic(
         let button2 = property_get(value_holder2, "button");
         return button2;
       }
+      ("2026-11-15: a shift takes off the first item, where a pop takes off the last");
+      let given_method = property_get_or(action, "method", "pop");
+      let given_which = equal(given_method, "shift") ? "first" : "last";
       guide_say(
         [
-          ["", given_code, " gives back the item it took off: the last item"],
+          [
+            "",
+            given_code,
+            " gives back the item it took off: the " + given_which + " item",
+          ],
           ["So choose: ", given_said],
         ],
         {
