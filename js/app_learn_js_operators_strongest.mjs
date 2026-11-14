@@ -4,7 +4,7 @@ import { app_learn_js_operators_called } from "./app_learn_js_operators_called.m
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_operator_index_symbol } from "./app_learn_js_operator_index_symbol.mjs";
 import { list_concat_single_right } from "./list_concat_single_right.mjs";
-import { app_learn_js_operator_includes_symbol } from "./app_learn_js_operator_includes_symbol.mjs";
+import { app_learn_js_operators_method } from "./app_learn_js_operators_method.mjs";
 export function app_learn_js_operators_strongest() {
   arguments_assert(arguments, 0);
   ("the operators a code lesson solves before every other one, by their symbols: ! and Math.floor");
@@ -17,7 +17,8 @@ export function app_learn_js_operators_strongest() {
   let index_symbol = app_learn_js_operator_index_symbol();
   let with_index = list_concat_single_right(with_called, index_symbol);
   ('2026-11-13: s.includes("e") ranks here too, as JavaScript ranks a call among its strongest; its brackets gather the piece, so its rank only says that nothing outside goes first');
-  let includes_symbol = app_learn_js_operator_includes_symbol();
-  let symbols = list_concat_single_right(with_index, includes_symbol);
+  ('2026-11-14: a.indexOf("joy") ranks there with it');
+  let methods = app_learn_js_operators_method();
+  let symbols = list_concat(with_index, methods);
   return symbols;
 }

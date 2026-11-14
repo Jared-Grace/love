@@ -16,8 +16,9 @@ import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_button_red } from "./app_shared_button_red.mjs";
-export async function app_calendar_meetings(box, key) {
-  arguments_assert(arguments, 2);
+export async function app_calendar_meetings(box, key, on_change) {
+  arguments_assert(arguments, 3);
+  ("on_change runs after a cancel, so whatever else the page shows can catch up - the guest's open hours above, where the freed time must show again (a cancel left a weekday saying it was unavailable until the page was reloaded).");
   ("Draws, inside box, every upcoming meeting the session key belongs to - the ones it booked and the ones it hosts - soonest first, and draws them again after any change.");
   ("A meeting still waiting says so. The guest sees the code and a button that opens WhatsApp to the host with it typed, to send again. The host sees who booked and a place to type the number the code came from, then confirm. Both may cancel.");
   ("A Messenger meeting is confirmed with the link to the sender's profile instead of a number, and once confirmed the host can open that profile.");
@@ -93,7 +94,7 @@ export async function app_calendar_meetings(box, key) {
             );
             return;
           }
-          await app_calendar_meetings(box, key);
+          await app_calendar_meetings(box, key, on_change);
         }
         app_shared_button_green(card, "Confirm", profile_confirm);
       } else if (meeting.hosting) {
@@ -125,7 +126,7 @@ export async function app_calendar_meetings(box, key) {
             );
             return;
           }
-          await app_calendar_meetings(box, key);
+          await app_calendar_meetings(box, key, on_change);
         }
         app_shared_button_green(card, "Confirm", lambda);
       } else {
@@ -164,7 +165,8 @@ export async function app_calendar_meetings(box, key) {
         html_text_content_set(status, "Could not cancel. Try again.");
         return;
       }
-      await app_calendar_meetings(box, key);
+      await app_calendar_meetings(box, key, on_change);
+      await on_change();
     }
     app_shared_button_red(card, "Cancel", lambda2);
   }

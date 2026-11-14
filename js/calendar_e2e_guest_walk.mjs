@@ -1,5 +1,6 @@
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function calendar_e2e_guest_walk(url) {
@@ -105,15 +106,32 @@ export async function calendar_e2e_guest_walk(url) {
         }
         await step("form", lambda5);
         async function lambda6() {
-          await page
-            .getByRole("button", {
-              name: "Book",
-              exact: true,
-            })
-            .click();
-          await page.getByText("Next steps:").waitFor({
-            timeout: 60000,
-          });
+          "The spam check takes a few seconds to pass after the page opens, and Book pressed before it only says to wait - so Book is pressed again while that is all it says, and any other answer stops the walk.";
+          for (let tries = 0; less_than(tries, 20); tries++) {
+            await page
+              .getByRole("button", {
+                name: "Book",
+                exact: true,
+              })
+              .click({
+                timeout: 10000,
+              });
+            try {
+              await page.getByText("Next steps:").waitFor({
+                timeout: 5000,
+              });
+              return;
+            } catch (err) {
+              let shown_now = await page.innerText("body");
+              let b2 = shown_now.includes(
+                "Wait for the check above to finish.",
+              );
+              if (not(b2)) {
+                throw err;
+              }
+            }
+          }
+          throw new Error("the spam check never passed");
         }
         await step("book", lambda6);
         let app_name = equal(via, "messenger") ? "Messenger" : "WhatsApp";

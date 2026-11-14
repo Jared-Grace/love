@@ -5,10 +5,10 @@ import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
-import { app_calendar_guest } from "./app_calendar_guest.mjs";
-import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { app_calendar_guest } from "./app_calendar_guest.mjs";
+import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
+import { each } from "./each.mjs";
 import { app_calendar_host } from "./app_calendar_host.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
@@ -34,18 +34,22 @@ export async function app_calendar(context) {
   let guest_area = html_div(root);
   let meetings_area = html_div(root);
   let host_area = html_div(root);
+  function lambda2(k) {
+    guest_key = k;
+    storage_local_set(app_calendar, "guest_key", k);
+  }
+  async function guest_show() {
+    if (slug) {
+      html_clear(guest_area);
+      await app_calendar_guest(guest_area, slug, guest_key, lambda2);
+    }
+  }
   let show_meetings = async function lambda() {
     if (guest_key) {
-      await app_calendar_meetings(meetings_area, guest_key);
+      await app_calendar_meetings(meetings_area, guest_key, guest_show);
     }
   };
-  if (slug) {
-    function lambda2(k) {
-      guest_key = k;
-      storage_local_set(app_calendar, "guest_key", k);
-    }
-    await app_calendar_guest(guest_area, slug, guest_key, lambda2);
-  }
+  await guest_show();
   await show_meetings();
   let host_open = async function lambda3() {
     "Signing in as host clears the booking screen and the guest's meetings above (human: the button \"doesn't remove top\"), so the host page stands alone.";

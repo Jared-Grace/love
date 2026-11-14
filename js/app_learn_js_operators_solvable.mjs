@@ -10,6 +10,8 @@ import { math_max } from "./math_max.mjs";
 import { math_min } from "./math_min.mjs";
 import { app_learn_js_operator_includes_symbol } from "./app_learn_js_operator_includes_symbol.mjs";
 import { list_or_text_includes } from "./list_or_text_includes.mjs";
+import { app_learn_js_operator_index_of_symbol } from "./app_learn_js_operator_index_of_symbol.mjs";
+import { list_or_text_index_of_or_minus_one } from "./list_or_text_index_of_or_minus_one.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function app_learn_js_operators_solvable() {
   "every operator a code lesson may put between two things and then work out, each carrying the function that works it out";
@@ -46,6 +48,11 @@ export function app_learn_js_operators_solvable() {
     fn: list_or_text_includes,
   };
   ('2026-11-14, at the human\'s asking: a.includes("joy") on an array is stepped through the same way, so the one operator works out either kind');
-  let all = list_concat(with_index, [larger, smaller, including]);
+  ('2026-11-14, at the human\'s asking: a.indexOf("joy") gives where the item first sits, or -1, so the indexOf lessons can be stepped through');
+  let indexing_of = {
+    operator: app_learn_js_operator_index_of_symbol(),
+    fn: list_or_text_index_of_or_minus_one,
+  };
+  let all = list_concat(with_index, [larger, smaller, including, indexing_of]);
   return all;
 }

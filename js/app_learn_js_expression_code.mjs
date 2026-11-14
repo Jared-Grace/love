@@ -12,10 +12,9 @@ import { js_code_called } from "./js_code_called.mjs";
 import { app_learn_js_operator_rank } from "./app_learn_js_operator_rank.mjs";
 import { app_learn_js_expression_side_code } from "./app_learn_js_expression_side_code.mjs";
 import { app_learn_js_operator_code_before } from "./app_learn_js_operator_code_before.mjs";
-import { app_learn_js_operator_includes_symbol } from "./app_learn_js_operator_includes_symbol.mjs";
-import { equal } from "./equal.mjs";
-import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
+import { app_learn_js_operators_method } from "./app_learn_js_operators_method.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
 import { app_learn_js_operator_rank_least_left } from "./app_learn_js_operator_rank_least_left.mjs";
 import { app_learn_js_operator_rank_least_right } from "./app_learn_js_operator_rank_least_right.mjs";
 import { app_learn_js_operator_code } from "./app_learn_js_operator_code.mjs";
@@ -59,8 +58,9 @@ export function app_learn_js_expression_code(item) {
     return code_before;
   }
   ("each side asks for the strength it has to reach, and the two sides do not ask for the same one: the side an operator works out LAST has to be gathered when it holds an operator of equal strength, because otherwise a reader takes the line the other way round. 8 / 4 / 2 is not 8 / (4 / 2), while nothing on the left of a divide ever needs that - and a power is the other way round, so (2 ** 3) ** 2 keeps its marks and 2 ** 3 ** 2 needs none.");
-  let includes_symbol = app_learn_js_operator_includes_symbol();
-  if (equal(symbol, includes_symbol)) {
+  ('2026-11-14: a.indexOf("joy") is written the same way');
+  let methods = app_learn_js_operators_method();
+  if (list_includes(methods, symbol)) {
     ('2026-11-13: "obey".includes("e"): the string, gathered only if something weaker stands there, then .includes, then the piece whole in its brackets');
     let rank_includes = app_learn_js_operator_rank(symbol);
     let held = property_get(item, "left");

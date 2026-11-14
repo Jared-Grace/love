@@ -236,6 +236,9 @@ export async function app_calendar_host(parent, key) {
   }
   week_calendar(hours_card, dates, initial, lambda6, true);
   let box = html_div(parent);
-  await app_calendar_meetings(box, key);
+  async function cancelled() {
+    "The host page draws its hours as openings, not as the times left free, so a cancel changes nothing else on it.";
+  }
+  await app_calendar_meetings(box, key, cancelled);
   return true;
 }
