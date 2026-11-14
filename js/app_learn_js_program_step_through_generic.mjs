@@ -528,7 +528,8 @@ export function app_learn_js_program_step_through_generic(
     if (equal(part, "item")) {
       let value_at = subtract(size, right3);
       from = add(value_at, item_from);
-      to = add(from, text_size(last_text));
+      let right8 = text_size(last_text);
+      to = add(from, right8);
       gap_from = from;
       gap_to = from;
     }
@@ -1326,17 +1327,18 @@ export function app_learn_js_program_step_through_generic(
         let index4 = property_get(action, "index");
         let before_items = list_slice(value2, 0, index4);
         let before_code = js_value_code(before_items);
-        item_from = subtract(text_size(before_code), 1);
+        let left26 = text_size(before_code);
+        item_from = subtract(left26, 1);
         if (greater_than(index4, 0)) {
           item_from = add(item_from, 2);
         }
-        let held_before_list = property_get(
-          property_get(state, "held_before"),
-          name2,
-        );
+        let object6 = property_get(state, "held_before");
+        let held_before_list = property_get(object6, name2);
         let old_array = list_last(held_before_list);
-        old_item = js_value_code(list_get(old_array, index4));
-        new_item = js_value_code(property_get(action, "item"));
+        let value13 = list_get(old_array, index4);
+        old_item = js_value_code(value13);
+        let value14 = property_get(action, "item");
+        new_item = js_value_code(value14);
       }
       let old_spans = comment_draw(
         note_line,
