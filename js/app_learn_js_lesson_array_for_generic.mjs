@@ -27,10 +27,11 @@ import { js_code_statement } from "./js_code_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { js_code_remainder_2_equal } from "./js_code_remainder_2_equal.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
+import { list_is } from "./list_is.mjs";
+import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { js_code_if_else_lines } from "./js_code_if_else_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
-import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -282,9 +283,11 @@ export function app_learn_js_lesson_array_for_generic(options) {
       let found_line = js_code_let_statement(found_name, found_json);
       let set_true = property_get(way, "keep_set");
       ("2026-11-13: a way with no condition runs keep_set every run, with no if around it, as total += a[i];");
-      let found_if = [set_true];
+      ("2026-11-14, for the break lesson: keep_set may also be a list of lines, run in turn, as at = i; then break;");
+      let set_lines = list_is(set_true) ? set_true : [set_true];
+      let found_if = set_lines;
       if (not_equal(condition3, null)) {
-        found_if = js_code_if_lines(condition3, set_true);
+        found_if = js_code_if_lines_multiple(condition3, set_lines);
       }
       let set_false = property_get(way, "keep_else");
       if (not_equal(set_false, null)) {
