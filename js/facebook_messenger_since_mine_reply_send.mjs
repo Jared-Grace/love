@@ -1,5 +1,6 @@
 import { messenger_since_mine_file } from "./messenger_since_mine_file.mjs";
 import { file_read_json } from "./file_read_json.mjs";
+import { text_line_breaks_doubled } from "./text_line_breaks_doubled.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
@@ -19,8 +20,8 @@ export async function facebook_messenger_since_mine_reply_send(id) {
   "★ WHY A REPLY AND NOT A PLAIN MESSAGE: if they write again before reading it, the quote above it shows which message it answered.";
   let file = messenger_since_mine_file(id);
   let saved = await file_read_json(file);
-  let text = saved.reply;
-  if (typeof text !== "string" || text.trim() === "") {
+  let finalized = saved.reply;
+  if (typeof finalized !== "string" || finalized.trim() === "") {
     let r = {
       id,
       sent: false,
@@ -28,6 +29,8 @@ export async function facebook_messenger_since_mine_reply_send(id) {
     };
     return r;
   }
+  ("★ IT GOES OUT DOUBLE SPACED: an empty line between every line, so each answer and each line of the prayer stands apart on a phone. The rules and the finalized reply keep single line breaks; the spacing is added here, as it is sent.");
+  let text = text_line_breaks_doubled(finalized);
   if (saved.sent_at) {
     let r2 = {
       id,
