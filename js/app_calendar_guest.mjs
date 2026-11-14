@@ -7,14 +7,14 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { greater_than } from "./greater_than.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_input_type } from "./html_input_type.mjs";
@@ -69,7 +69,22 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   }
   ("A time is picked in steps: first a day of the week or, when the open hours reach into more than one month, a month; then a date; then a time. Each step has a Back button to the one before.");
   ("Rejected: month only (a guest free only on Saturdays must open every date to find them); weekday only (a guest planning a set week thinks in dates); a first screen asking which way to browse (one more press for everyone).");
-  let months = calendar_slots_by_month(slots);
+  ("A weekday, month or date with no open hour - closed, or fully booked - shows as text saying it is unavailable, never as a button (human: \"Instead of a button, text should say 'x is unavailable'\").");
+  let now_iso = new Date().toISOString();
+  let months = calendar_slots_by_month(slots, now_iso);
+  function days_open(days) {
+    function lambda(d) {
+      let g = greater_than(d.times.length, 0);
+      return g;
+    }
+    let r = days.some(lambda);
+    return r;
+  }
+  function unavailable_show(words, tail) {
+    let line = html_div_text(list, words + " unavailable" + tail);
+    app_shared_text_deemphasized(line);
+    return line;
+  }
   let weekdays = calendar_days_by_weekday(months);
   let chosen = null;
   let chosen_line = html_div_text(card, "");
@@ -82,6 +97,19 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     html_clear(list);
     html_text_content_set(chosen_line, "Pick a day of the week:");
     for (let weekday of weekdays) {
+      let b = days_open(weekday.days);
+      if (not(b)) {
+        ('"right now" because a weekday comes again: it is only full or closed inside the next two weeks.');
+        let closed_line = unavailable_show(
+          weekday.label + "s are",
+          " right now",
+        );
+        html_style_assign(closed_line, {
+          display: "inline-block",
+          "margin-right": "0.6em",
+        });
+        continue;
+      }
       function weekday_pick() {
         days_show({
           label: weekday.label + "s",
@@ -102,6 +130,11 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     if (greater_than(months.length, 1)) {
       html_div_text(list, "Or pick a month:");
       for (let month of months) {
+        let b2 = days_open(month.days);
+        if (not(b2)) {
+          unavailable_show(month.label + " is", "");
+          continue;
+        }
         function month_pick() {
           days_show({
             label: "in " + month.label,
@@ -118,6 +151,10 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     html_text_content_set(chosen_line, "Pick a date - " + group.label + ":");
     app_shared_button_uncolored(list, "← Back", first_show);
     for (let day of group.days) {
+      if (equal(day.times.length, 0)) {
+        unavailable_show(day.label + " is", "");
+        continue;
+      }
       function day_pick() {
         times_show(group, day);
       }
