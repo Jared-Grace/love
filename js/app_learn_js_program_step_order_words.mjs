@@ -112,6 +112,19 @@ export function app_learn_js_program_step_order_words(
     }
     return joined;
   }
+  function line_of(more) {
+    "the words naming the // line of name, followed by more, which starts with words";
+    let joined = ["The ", "//", " line of ", name];
+    for (let piece of more) {
+      joined.push(piece);
+    }
+    return joined;
+  }
+  function line_end(shows, after) {
+    "the // line of name, saying whether it shows value at the end the step works on";
+    let r32 = line_of([shows, value, " at its " + end_word + after]);
+    return r32;
+  }
   function sign_not_yet(step_kind) {
     "what on the screen shows a step has not happened yet";
     if (equal(step_kind, "declare")) {
@@ -132,24 +145,16 @@ export function app_learn_js_program_step_order_words(
     }
     if (equal(step_kind, "assign")) {
       if (declared) {
-        let r9 = [
-          "The ",
-          "//",
-          " line of ",
-          name,
+        let r9 = line_of([
           " still has ",
           "undefined",
           " as its value, so it has not been assigned yet",
-        ];
+        ]);
         return r9;
       }
-      let r10 = [
-        "The ",
-        "//",
-        " line of ",
-        name,
+      let r10 = line_of([
         " still has its old value, so it has not been assigned yet",
-      ];
+      ]);
       return r10;
     }
     if (equal(step_kind, "log")) {
@@ -161,27 +166,11 @@ export function app_learn_js_program_step_order_words(
       return r11;
     }
     if (equal(step_kind, "push")) {
-      let r25 = [
-        "The ",
-        "//",
-        " line of ",
-        name,
-        " does not show ",
-        value,
-        " at its " + end_word + " yet, so it has not been added",
-      ];
+      let r25 = line_end(" does not show ", " yet, so it has not been added");
       return r25;
     }
     if (equal(step_kind, "pop")) {
-      let r30 = [
-        "The ",
-        "//",
-        " line of ",
-        name,
-        " still shows ",
-        value,
-        " at its " + end_word + ", so it has not been taken off",
-      ];
+      let r30 = line_end(" still shows ", ", so it has not been taken off");
       return r30;
     }
     if (equal(step_kind, "reset")) {
@@ -214,15 +203,11 @@ export function app_learn_js_program_step_order_words(
       return r14;
     }
     if (equal(step_kind, "assign")) {
-      let r15 = [
-        "The ",
-        "//",
-        " line of ",
-        name,
+      let r15 = line_of([
         " already has ",
         value,
         " as its value, so it has already been assigned",
-      ];
+      ]);
       return r15;
     }
     if (equal(step_kind, "log")) {
@@ -234,27 +219,14 @@ export function app_learn_js_program_step_order_words(
       return r16;
     }
     if (equal(step_kind, "push")) {
-      let r26 = [
-        "The ",
-        "//",
-        " line of ",
-        name,
-        " already shows ",
-        value,
-        " at its " + end_word + ", so it has already been added",
-      ];
+      let r26 = line_end(" already shows ", ", so it has already been added");
       return r26;
     }
     if (equal(step_kind, "pop")) {
-      let r31 = [
-        "The ",
-        "//",
-        " line of ",
-        name,
+      let r31 = line_end(
         " no longer shows ",
-        value,
-        " at its " + end_word + ", so it has already been taken off",
-      ];
+        ", so it has already been taken off",
+      );
       return r31;
     }
     if (equal(step_kind, "reset")) {
