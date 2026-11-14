@@ -21,11 +21,11 @@ import { app_learn_js_program_trace_record } from "./app_learn_js_program_trace_
 import { app_learn_js_operators_called } from "./app_learn_js_operators_called.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
+import { app_learn_js_operators_method } from "./app_learn_js_operators_method.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_expression_node_index } from "./app_learn_js_expression_node_index.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_learn_js_operator_includes_symbol } from "./app_learn_js_operator_includes_symbol.mjs";
 import { list_second } from "./list_second.mjs";
 import { error } from "./error.mjs";
 import { app_learn_js_program_trace_piece_solved } from "./app_learn_js_program_trace_piece_solved.mjs";
@@ -192,12 +192,13 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
       "MemberExpression",
     ) &&
     not(property_get(property_get(piece, "callee"), "computed")) &&
-    equal(
-      property_get(
-        property_get(property_get(piece, "callee"), "property"),
-        "name",
-      ),
-      "includes",
+    list_includes(
+      app_learn_js_operators_method(),
+      "." +
+        property_get(
+          property_get(property_get(piece, "callee"), "property"),
+          "name",
+        ),
     ) &&
     equal(list_size(property_get(piece, "arguments")), 1);
   if (equal(type, "BinaryExpression") || equal(type, "LogicalExpression")) {
@@ -232,8 +233,11 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     let list2 = property_get(piece, "arguments");
     let piece_part = list_first(list2);
     let part = app_learn_js_program_trace_piece(state, piece_part, true);
-    let includes_symbol = app_learn_js_operator_includes_symbol();
-    expression = app_learn_js_expression_node(held, includes_symbol, part);
+    ("2026-11-14, at the human's asking: a.indexOf(\"joy\") is read the same way, so the mark is the dot and the action's own name");
+    let object4 = property_get(callee_includes, "property");
+    let method_name = property_get(object4, "name");
+    let method_symbol = "." + method_name;
+    expression = app_learn_js_expression_node(held, method_symbol, part);
   } else if (called_is) {
     ("2026-11-12, at the human's asking, so the Statements lessons that round or measure can be stepped through: Math.floor(n / 10) reads what is in its brackets first, then rounds it, in one evaluate - one press for the call, as the expression lessons press Math.floor. Not picked: reading Math and then floor as names, which asks the learner about a part of the spelling rather than about what happens");
     let callee_piece = property_get(piece, "callee");
