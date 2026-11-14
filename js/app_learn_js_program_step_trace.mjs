@@ -13,6 +13,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_add } from "./list_add.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
 export function app_learn_js_program_step_trace(code) {
   arguments_assert(arguments, 1);
@@ -65,10 +66,13 @@ export function app_learn_js_program_step_trace(code) {
     let for_start_is =
       update_is &&
       property_get(property_get(traced_entry, "piece"), "for_start");
+    ("2026-11-14, at the human's asking: a call solved into its line, as x.pop() in e.push(x.pop()), changes the line too, so a while run again puts it back with the rest of its block");
     for (let action of grouped) {
       let kind = property_get(action, "kind");
       if (
-        (equal(kind, "evaluate") || equal(kind, "expand")) &&
+        (equal(kind, "evaluate") ||
+          equal(kind, "expand") ||
+          property_get_or(action, "into", false)) &&
         not(for_start_is)
       ) {
         list_add(changed, line);
