@@ -3,6 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { text_to } from "./text_to.mjs";
+import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 export function js_value_code(value) {
   arguments_assert(arguments, 1);
@@ -20,7 +21,7 @@ export function js_value_code(value) {
   }
   ('2026-11-13, at the human\'s asking: a list is written with a comma and a space between its items, as a lesson\'s own code writes it, so the note beside `let x = ["a", "b"];` reads the same and does not look as if assigning took the spaces out');
   if (Array.isArray(value)) {
-    let items = value.map(js_value_code);
+    let items = list_map(value, js_value_code);
     let list_code = "[" + items.join(", ") + "]";
     return list_code;
   }
