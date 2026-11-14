@@ -4757,7 +4757,9 @@ export function reply_proposals() {
   let christmas_blessing = prayer_blessing_line(
     "you, your family, your church and your country",
   );
+  let christmas_will_done = reply_prayer_will_done();
   let christmas_appeal_prayer = reply_prayer_closing([
+    christmas_will_done,
     christmas_provide,
     christmas_prayed_for,
     christmas_hope,
@@ -4766,6 +4768,7 @@ export function reply_proposals() {
   ]);
   let christmas_blessing_prayer = reply_prayer_closing([christmas_blessing]);
   let christmas_hope_prayer = reply_prayer_closing([
+    christmas_will_done,
     christmas_hope,
     christmas_glorified,
   ]);
