@@ -51,6 +51,9 @@ import { app_learn_js_note_name_mark } from "./app_learn_js_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_note_runs } from "./app_learn_js_note_runs.mjs";
 import { app_learn_js_note_runs_cut } from "./app_learn_js_note_runs_cut.mjs";
+import { add } from "./add.mjs";
+import { html_display_inline_block } from "./html_display_inline_block.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { app_learn_js_note_name_colors } from "./app_learn_js_note_name_colors.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_shared_color_code_font } from "./app_shared_color_code_font.mjs";
@@ -95,8 +98,6 @@ import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { app_learn_js_quiz_choice_button_answer_generic } from "./app_learn_js_quiz_choice_button_answer_generic.mjs";
 import { each } from "./each.mjs";
-import { html_display_inline_block } from "./html_display_inline_block.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_size_change_animate } from "./html_size_change_animate.mjs";
@@ -118,6 +119,8 @@ import { app_learn_js_line_pieces_add } from "./app_learn_js_line_pieces_add.mjs
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
+import { html_size } from "./html_size.mjs";
+import { html_size_animate } from "./html_size_animate.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { app_learn_js_value_logged_output } from "./app_learn_js_value_logged_output.mjs";
 import { app_learn_js_label_of_code } from "./app_learn_js_label_of_code.mjs";
@@ -133,7 +136,6 @@ import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_c
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { app_learn_js_program_step_order_words } from "./app_learn_js_program_step_order_words.mjs";
-import { add } from "./add.mjs";
 import { app_learn_js_program_step_solved_already_words } from "./app_learn_js_program_step_solved_already_words.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 export function app_learn_js_program_step_through_generic(
@@ -479,18 +481,49 @@ export function app_learn_js_program_step_through_generic(
     let from = equal(part, "name") ? name_from : subtract(size, right3);
     let to = equal(part, "name") ? name_from + text_size(name) : size;
     ("2026-11-13, at the human's asking, for Adding to an array: part last hides only the array's last item, the one a push brings, so the items already there stay where they were and only the new one arrives. value_text is then the array as code, ending in the item and the ]");
+    ("2026-11-14, at the human's asking: part last also puts the item, and the comma and space before it when items stand before it, in a room of their own, so a push can open that room before the item flies in and a pop can close it after the item fades, and the ] slides rather than jumps. Not picked: sliding the item itself, which would leave the comma appearing or vanishing at once");
+    let gap_from = from;
+    let gap_to = from;
+    let gap = null;
     if (equal(part, "last")) {
       let item_size = text_size(last_text);
       to = subtract(size, 1);
       from = subtract(to, item_size);
+      gap_from = from;
+      gap_to = to;
+      let from2 = subtract(from, 1);
+      let before_item = text_slice(note, from2, from);
+      let b24 = equal(before_item, "[");
+      if (not(b24)) {
+        gap_from = subtract(from, 2);
+      }
     }
+    property_set(state, "note_gap", null);
     html_clear(comment);
     let runs = app_learn_js_note_runs(note);
-    let cut = app_learn_js_note_runs_cut(runs, from, to);
+    let cut_gap = app_learn_js_note_runs_cut(runs, gap_from, gap_to);
+    let cut = app_learn_js_note_runs_cut(cut_gap, from, to);
     let hidden = [];
+    let position = 0;
     for (let run of cut) {
       let text2 = list_get(run, 0);
-      let span = span_text(comment, text2);
+      let parent = comment;
+      let b25 = less_than(position, gap_from);
+      let in_gap = not(b25) && less_than(position, gap_to);
+      let right7 = text_size(text2);
+      position = add(position, right7);
+      if (in_gap) {
+        if (null_is(gap)) {
+          gap = span_text(comment, "");
+          html_display_inline_block(gap);
+          html_style_set(gap, "vertical-align", "top");
+          html_style_white_space(gap, "nowrap");
+          html_style_overflow_hidden(gap);
+          property_set(state, "note_gap", gap);
+        }
+        parent = gap;
+      }
+      let span = span_text(parent, text2);
       let color = list_get(run, 1);
       ("2026-10-15, at the human's asking: the name in a note is drawn in the code's own colour, never a name colour. Here the lines are drawn plain, so a coloured name in the note matches nothing in the code, and the first name colour is a red standing beside lines that turn red when pressed wrongly. Not picked: changing the red in the colours every lesson shares, which elsewhere pairs a name in a note with the same name in the code");
       let list = app_learn_js_note_name_colors();
@@ -1265,6 +1298,10 @@ export function app_learn_js_program_step_through_generic(
       let code2 = js_value_code(after);
       let hidden5 = comment_draw(note_line3, name5, code2, "last", item_text);
       let duration4 = app_shared_animation_duration();
+      ("the room the item will stand in opens first, sliding the ] along, and the item then flies into it");
+      let gap2 = property_get(state, "note_gap");
+      let gap_width = html_size(gap2, "width");
+      await html_size_animate(gap2, "width", 0, gap_width, duration4);
       await action_piece_send(line_index, action, hidden5, duration4);
       return;
     }
@@ -1331,6 +1368,10 @@ export function app_learn_js_program_step_through_generic(
         html_opacity_transition(span3, "0", duration6);
       }
       await sleep(duration6);
+      ("the room the item stood in then closes, sliding the ] back, before the note is written holding the shorter array");
+      let gap3 = property_get(state, "note_gap");
+      let gap_width2 = html_size(gap3, "width");
+      await html_size_animate(gap3, "width", gap_width2, 0, duration6);
       let code4 = js_value_code(after2);
       let shown_spans = comment_draw(note_line4, name6, code4, "value", "");
       for (let span4 of shown_spans) {
