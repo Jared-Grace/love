@@ -49,6 +49,13 @@ export function app_learn_js_program_trace_statement(
     };
     return r2;
   }
+  if (equal(type, "BreakStatement")) {
+    ("2026-11-14, at the human's asking, for the break lesson: a break line works nothing out and runs nothing after it; ending the loop it stands in is the trace's to do, since only the trace knows which lines were still to run");
+    let r4 = {
+      next: [],
+    };
+    return r4;
+  }
   if (equal(type, "IfStatement")) {
     let run = app_learn_js_program_trace_if(node, actions, code, values);
     return run;

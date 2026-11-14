@@ -13,6 +13,9 @@ import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { text_slice } from "./text_slice.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { list_last_or_null } from "./list_last_or_null.mjs";
+import { list_pop } from "./list_pop.mjs";
 export function app_learn_js_program_trace(code) {
   arguments_assert(arguments, 1);
   ("every line of a program in the order the computer runs it, each with what running it does, in order: a name declared, an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
@@ -21,8 +24,14 @@ export function app_learn_js_program_trace(code) {
   let ast = js_parse(code);
   let values = {};
   let trace = [];
+  ("2026-11-14, at the human's asking, for the break lesson: a loop goes round by running itself again as the last of the lines its { ... } hands on, so one loop is many runs, each inside the one before. A break stops every run still going until it reaches the first run of the loop it stands in, and the program goes on from there. loops holds the loops running now, innermost last; breaking says a break is on its way out");
+  let loops = [];
+  let breaking = false;
   function statements_run(statements) {
     for (let statement of statements) {
+      if (breaking) {
+        return;
+      }
       statement_run(statement);
     }
   }
@@ -73,8 +82,22 @@ export function app_learn_js_program_trace(code) {
       let condition_text = text_slice(code, test_from, test_to);
       property_set(entry, "condition_text", condition_text);
     }
+    if (equal(type, "BreakStatement")) {
+      property_set(entry, "break", true);
+      breaking = true;
+      return;
+    }
+    let loop_is = equal(type, "WhileStatement") || equal(type, "ForStatement");
+    let loop_first = loop_is && not_equal(list_last_or_null(loops), node);
+    if (loop_first) {
+      list_add(loops, node);
+    }
     let next = property_get(run, "next");
     statements_run(next);
+    if (loop_first) {
+      list_pop(loops);
+      breaking = false;
+    }
   }
   let value7 = property_get(ast, "body");
   statements_run(value7);

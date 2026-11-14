@@ -10,10 +10,10 @@ import { html_div } from "./html_div.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { html_component_element_get } from "./html_component_element_get.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
@@ -21,7 +21,7 @@ import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
 import { html_value_get } from "./html_value_get.mjs";
-import { each } from "./each.mjs";
+import { html_loading } from "./html_loading.mjs";
 import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
@@ -90,6 +90,14 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   let weekdays = calendar_days_by_weekday(months);
   let chosen = null;
   let chosen_line = html_div_text(card, "");
+  ('The picked date and time stand out larger than the prompts before it (human: "choosen date/time should be larger font").');
+  function chosen_line_set(words, big) {
+    html_text_content_set(chosen_line, words);
+    html_style_assign(chosen_line, {
+      "font-size": big ? "1.3em" : "",
+      "font-weight": big ? "bold" : "",
+    });
+  }
   let list = html_div(card);
   let element = html_component_element_get(list);
   element.style.maxHeight = "40vh";
@@ -97,7 +105,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   function first_show() {
     chosen = null;
     html_clear(list);
-    html_text_content_set(chosen_line, "Pick a day of the week:");
+    chosen_line_set("Pick a day of the week:", false);
     for (let weekday of weekdays) {
       let b = days_open(weekday.days);
       if (not(b)) {
@@ -150,7 +158,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   function days_show(group) {
     chosen = null;
     html_clear(list);
-    html_text_content_set(chosen_line, "Pick a date - " + group.label + ":");
+    chosen_line_set("Pick a date - " + group.label + ":", false);
     app_shared_button_uncolored(list, "← Back", first_show);
     for (let day of group.days) {
       if (equal(day.times.length, 0)) {
@@ -166,7 +174,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   function times_show(group, day) {
     chosen = null;
     html_clear(list);
-    html_text_content_set(chosen_line, "Pick a time on " + day.label + ":");
+    chosen_line_set("Pick a time on " + day.label + ":", false);
     function day_back() {
       days_show(group);
     }
@@ -175,10 +183,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       function time_pick() {
         chosen = time.slot;
         html_clear(list);
-        html_text_content_set(
-          chosen_line,
-          "Chosen: " + day.label + ", " + time.label,
-        );
+        chosen_line_set("Chosen: " + day.label + ", " + time.label, true);
         function time_back() {
           times_show(group, day);
         }
@@ -273,23 +278,25 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       return;
     }
     html_text_content_set(status, "Booking...");
-    let booked = await calendar_api_call(
-      "POST",
-      "book",
-      {
-        turnstile: token,
-        host: slug,
-        name: name_text,
-        whatsapp: html_value_get(whatsapp),
-        profile: html_value_get(profile),
-        timezone: zone,
-        day: chosen.day,
-        start_minute: chosen.start_minute,
-        weekly: weekly_element.checked,
-        via,
-      },
-      key,
-    );
+    ('The shared loading cover sits over the page while the booking goes through (human: "maybe while booking show loading?"), so a second press can\'t send it twice.');
+    async function book_send() {
+      let r = await calendar_api_call("POST", "book", book_body, key);
+      return r;
+    }
+    let book_body = {
+      turnstile: token,
+      host: slug,
+      name: name_text,
+      whatsapp: html_value_get(whatsapp),
+      profile: html_value_get(profile),
+      timezone: zone,
+      day: chosen.day,
+      start_minute: chosen.start_minute,
+      weekly: weekly_element.checked,
+      via,
+    };
+    let booked = await html_loading(book_send);
+    html_text_content_set(status, "");
     check.reset();
     if (not(booked.body.ok)) {
       let words = {
@@ -314,24 +321,39 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       key = booked.body.key;
       on_key(key);
     }
-    each([card, after], html_clear);
+    ('The emptied booking card is hidden, not just cleared - cleared, it stayed on screen as a small empty green box above the result (human: "a little green container at the top").');
+    html_clear(card);
+    html_component_element_get(card).style.display = "none";
+    html_clear(after);
     let done = app_shared_container(after);
-    html_div_text_content(
+    let booked_line = html_div_text_content(
       done,
       "Booked: " + calendar_time_local_text(booked.body.start_utc),
     );
+    html_style_assign(booked_line, {
+      "font-size": "1.3em",
+      "font-weight": "bold",
+    });
+    ("The steps are the human's own wording, numbered; the host speaks as \"me\" because the page is the host's own booking link.");
     let app_name = equal(via, "messenger") ? "Messenger" : "WhatsApp";
-    html_div_text(
-      done,
-      "One more step: send this code to the host on " + app_name + ".",
-    );
+    html_div_text(done, "Next steps:");
+    html_div_text(done, "1. Copy this code:");
     html_div_text_content(done, booked.body.code);
     async function code_copy() {
       await clipboard_copy_browser(booked.body.code);
       app_shared_toast("✅ Copied code");
     }
     app_shared_button_uncolored(done, "Copy code", code_copy);
+    html_div_text(done, "2. Send this code to me on " + app_name + ":");
     html_a_href_text_new_tab(done, booked.body.send_url, "Open " + app_name);
+    html_div_text(done, "3. I will send you a confirmation message.");
+    let final_hint = html_div_text(
+      done,
+      "The meeting is not final until you get a confirmation message from me on " +
+        app_name +
+        ".",
+    );
+    app_shared_text_deemphasized(final_hint);
     let expires = html_div_text_content(
       done,
       "If the code has not arrived by " +
@@ -339,13 +361,19 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
         ", the booking is cancelled.",
     );
     app_shared_text_deemphasized(expires);
-    let link_hint = html_div_text(
+    html_div_text(
       done,
-      "To see or cancel your meetings later, open this page again on this device, or keep this private link:",
+      "4. To change or cancel this meeting, or to book another, use this link. Please save it:",
     );
-    app_shared_text_deemphasized(link_hint);
     let link = html_url_without_hash() + "#host=" + slug + ",key=" + key;
-    html_div_text_content(done, link);
+    ("The link opens in a new tab, so this page with the code to send stays open behind it.");
+    let link_line = html_div(done);
+    html_a_href_text_new_tab(link_line, link, link);
+    async function link_copy() {
+      await clipboard_copy_browser(link);
+      app_shared_toast("✅ Copied link");
+    }
+    app_shared_button_uncolored(done, "Copy link", link_copy);
   }
   app_shared_button_green(card, "Book", lambda2);
 }
