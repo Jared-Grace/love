@@ -32,7 +32,13 @@ export function app_learn_js_program_step_solved_already_words(
     }
   }
   if (equal(left, "push")) {
-    line_sum = property_get(action, "name") + ".push(" + sum + ");";
+    line_sum =
+      property_get(action, "name") +
+      "." +
+      property_get(action, "method") +
+      "(" +
+      sum +
+      ");";
   }
   parts = [
     "",

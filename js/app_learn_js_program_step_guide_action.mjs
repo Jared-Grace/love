@@ -201,8 +201,13 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   let push_name = list_includes(kinds, "push")
     ? list_last_property(actions, "name")
     : null;
+  ("2026-11-14, at the human's asking, for Adding to the front and Taking off the front: an unshift and a shift say the front where a push and a pop say the end, each in the words of the lesson teaching it");
+  let push_method = list_includes(kinds, "push")
+    ? list_last_property(actions, "method")
+    : "push";
+  let push_end = equal(push_method, "unshift") ? "front" : "end";
   let pushes_to = [
-    "This adds an item to the end of the array named ",
+    "This adds an item to the " + push_end + " of the array named ",
     push_name,
   ];
   ("2026-11-13, at the human's asking: a function called is solved as an expression is, so it is chosen as Solve an expression. Not picked: a choice of its own, Call a function, built first, which made the list of choices grow and set calls apart from Math.floor( ), already solved as an expression");
@@ -212,9 +217,17 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   if (equal(kind, "pop")) {
     ("2026-11-13, at the human's asking, for Taking an item off: a pop says what it does, in the words of the lesson teaching it. Standing inside a line, as console.log(a.pop()) does, it also says it runs first, since what it gives back is what the line uses");
     let pop_name = property_get(action, "name");
-    let pop_code = pop_name + ".pop()";
+    let pop_method = property_get(action, "method");
+    let pop_code = pop_name + "." + pop_method + "()";
+    let shift_is = equal(pop_method, "shift");
+    let pop_which = shift_is ? "first" : "last";
+    let pop_end = shift_is ? "front" : "end";
     let takes = [
-      "This takes the last item off the end of the array named ",
+      "This takes the " +
+        pop_which +
+        " item off the " +
+        pop_end +
+        " of the array named ",
       pop_name,
     ];
     if (property_get_or(action, "into", false)) {
@@ -224,7 +237,7 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
         [
           "The value is ",
           pop_code,
-          ", which takes the last item off ",
+          ", which takes the " + pop_which + " item off ",
           pop_name,
           " and gives it back, so it runs first",
         ],
@@ -238,7 +251,7 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   if (equal(kind, "push")) {
     if (solved_before) {
       let r24 = [
-        ["The item is solved, so the push itself is next"],
+        ["The item is solved, so the " + push_method + " itself is next"],
         push_choose,
       ];
       return r24;
@@ -247,7 +260,11 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     let code3 = js_value_code(value3);
     let r25 = [
       pushes_to,
-      ["", code3, " is already a solved value, so the push itself is next"],
+      [
+        "",
+        code3,
+        " is already a solved value, so the " + push_method + " itself is next",
+      ],
       push_choose,
     ];
     return r25;

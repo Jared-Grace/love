@@ -49,9 +49,9 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { app_learn_js_note_name_mark_open } from "./app_learn_js_note_name_mark_open.mjs";
 import { app_learn_js_note_name_mark } from "./app_learn_js_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { add } from "./add.mjs";
 import { app_learn_js_note_runs } from "./app_learn_js_note_runs.mjs";
 import { app_learn_js_note_runs_cut } from "./app_learn_js_note_runs_cut.mjs";
-import { add } from "./add.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_learn_js_note_name_colors } from "./app_learn_js_note_name_colors.mjs";
@@ -498,6 +498,20 @@ export function app_learn_js_program_step_through_generic(
       let b24 = equal(before_item, "[");
       if (not(b24)) {
         gap_from = subtract(from, 2);
+      }
+    }
+    ("2026-11-14, at the human's asking, for Adding to the front and Taking off the front: part first is part last at the other end - the array's first item, and the comma and space after it when items stand after it, in a room of their own, so an unshift opens it and a shift closes it, and the items after slide rather than jump");
+    if (equal(part, "first")) {
+      let item_size2 = text_size(last_text);
+      let open_at = subtract(size, right3);
+      from = add(open_at, 1);
+      to = add(from, item_size2);
+      gap_from = from;
+      gap_to = to;
+      let after_item = text_slice(note, to, add(to, 1));
+      let b26 = equal(after_item, "]");
+      if (not(b26)) {
+        gap_to = add(to, 2);
       }
     }
     property_set(state, "note_gap", null);
@@ -1306,7 +1320,9 @@ export function app_learn_js_program_step_through_generic(
       let value11 = property_get(action, "value");
       let item_text = js_value_code(value11);
       let code2 = js_value_code(after);
-      let hidden5 = comment_draw(note_line3, name5, code2, "last", item_text);
+      let method2 = property_get(action, "method");
+      let part2 = equal(method2, "unshift") ? "first" : "last";
+      let hidden5 = comment_draw(note_line3, name5, code2, part2, item_text);
       let duration4 = app_shared_animation_duration();
       ("the room the item will stand in opens first, sliding the ] along, and the item then flies into it");
       let gap2 = property_get(state, "note_gap");
@@ -1334,11 +1350,13 @@ export function app_learn_js_program_step_through_generic(
       let item_text2 = js_value_code(value15);
       let code3 = js_value_code(item4);
       let duration6 = app_shared_animation_duration();
+      let method3 = property_get(action, "method");
+      let part3 = equal(method3, "shift") ? "first" : "last";
       let last_spans = comment_draw(
         note_line4,
         name6,
         code3,
-        "last",
+        part3,
         item_text2,
       );
       for (let span2 of last_spans) {

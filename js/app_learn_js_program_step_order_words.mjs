@@ -48,6 +48,8 @@ export function app_learn_js_program_step_order_words(
   let assigned = false;
   let logged = false;
   let pushed = false;
+  ("2026-11-14: an unshift or a shift works at the start of the array, where a push or a pop works at its end");
+  let end_word = "end";
   for (let item of actions) {
     let left = property_get(item, "kind");
     if (option_matches(left) && equal(at, -1)) {
@@ -78,6 +80,9 @@ export function app_learn_js_program_step_order_words(
     }
     if (equal(left, "push") || equal(left, "pop")) {
       name = property_get(item, "name");
+      let method = property_get(item, "method");
+      let front = equal(method, "unshift") || equal(method, "shift");
+      end_word = front ? "start" : "end";
       let value5 = property_get(item, "value");
       value = js_value_code(value5);
     }
@@ -163,7 +168,7 @@ export function app_learn_js_program_step_order_words(
         name,
         " does not show ",
         value,
-        " at its end yet, so it has not been added",
+        " at its " + end_word + " yet, so it has not been added",
       ];
       return r25;
     }
@@ -175,7 +180,7 @@ export function app_learn_js_program_step_order_words(
         name,
         " still shows ",
         value,
-        " at its end, so it has not been taken off",
+        " at its " + end_word + ", so it has not been taken off",
       ];
       return r30;
     }
@@ -236,7 +241,7 @@ export function app_learn_js_program_step_order_words(
         name,
         " already shows ",
         value,
-        " at its end, so it has already been added",
+        " at its " + end_word + ", so it has already been added",
       ];
       return r26;
     }
@@ -248,7 +253,7 @@ export function app_learn_js_program_step_order_words(
         name,
         " no longer shows ",
         value,
-        " at its end, so it has already been taken off",
+        " at its " + end_word + ", so it has already been taken off",
       ];
       return r31;
     }
