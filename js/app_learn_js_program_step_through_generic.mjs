@@ -24,17 +24,18 @@ import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { not } from "./not.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { property_initialize_list_add } from "./property_initialize_list_add.mjs";
+import { property_set } from "./property_set.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_values } from "./object_values.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
 import { app_learn_js_decoys_near_add } from "./app_learn_js_decoys_near_add.mjs";
 import { app_learn_js_expression_chosen_background_color } from "./app_learn_js_expression_chosen_background_color.mjs";
 import { app_learn_js_lesson_quiz_wrong_code_background_color } from "./app_learn_js_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
-import { property_set } from "./property_set.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -281,6 +282,16 @@ export function app_learn_js_program_step_through_generic(
   ("held_before: the values each name held before it was given the one it holds now, by name, so a name asked about after a new value can be offered its old one as a wrong choice");
   ("declared: the line each name was declared on, by name, so a name given a new value on a later line has the value written into the note it already has");
   ("held: the value each name holds so far, by name, so a name asked about can be offered the values the other names hold as the wrong choices");
+  function held_value_set(name, value) {
+    "a name given a new value by an assign, a push or a pop: the value it held is kept in held_before, then it holds the new one";
+    let held_now = property_get(state, "held");
+    if (property_exists(held_now, name)) {
+      let before_all = property_get(state, "held_before");
+      let value_old = property_get(held_now, name);
+      property_initialize_list_add(before_all, name, value_old);
+    }
+    property_set(held_now, name, value);
+  }
   function name_decoys(name, value) {
     "2026-10-15, at the human's asking: a name may hold a string or a number as well as true or false. Wrong choices for true are false and for false true, as before; for anything else they are the name written as a string, the mix-up of a name with its own spelling, and each value another name holds, the mix-up of one name with another. Not picked: made-up values, which no step of the program could have led to";
     let decoys = [];
@@ -1300,18 +1311,7 @@ export function app_learn_js_program_step_through_generic(
       let name2 = property_get(action, "name");
       let value2 = property_get(action, "value");
       let t = js_value_code(value2);
-      let held2 = property_get(state, "held");
-      if (property_exists(held2, name2)) {
-        let before = property_get(state, "held_before");
-        let b9 = property_exists(before, name2);
-        if (not(b9)) {
-          property_set(before, name2, []);
-        }
-        let list2 = property_get(before, name2);
-        let value7 = property_get(held2, name2);
-        list_add(list2, value7);
-      }
-      property_set(held2, name2, value2);
+      held_value_set(name2, value2);
       ("2026-10-14, at the human's asking: the value in the note goes, and a copy of what is right of the = goes up into its place. What is right of the = is found from its two ends: it starts where it was written, and what follows it is untouched, so it ends that far from the end of the line as it now stands - which holds whether or not a name there was evaluated into a value");
       ("2026-10-14, at the human's asking: the value the note said before fades out first, so it is seen going rather than vanishing as the new one sets off. Not picked: hiding it at once and pausing before the new one sets off, offered by the human as the other way; a fade is how this note already comes in, so it goes the same way");
       ("2026-10-15, at the human's asking: a name given a new value on a later line, as a = 5; does, has it written into the note above the line that declared it, the one note saying what that name holds, so the guide pointing there stays true. Not picked: a second note above the later line, which would leave the first one saying a value the name no longer holds");
@@ -1369,16 +1369,7 @@ export function app_learn_js_program_step_through_generic(
       ("2026-11-13, at the human's asking, for Adding to an array: the note above the line that declared the array is written again holding the longer array, the items already there staying in place and unfaded, and a copy of what is inside .push( ) goes up into the end of it. Not picked: fading the whole old array and sending a new one, as an assign does, which would say the whole array was replaced when only one item arrived");
       let name5 = property_get(action, "name");
       let after = property_get(action, "after");
-      let held3 = property_get(state, "held");
-      let before2 = property_get(state, "held_before");
-      let b13 = property_exists(before2, name5);
-      if (not(b13)) {
-        property_set(before2, name5, []);
-      }
-      let list3 = property_get(before2, name5);
-      let item3 = property_get(held3, name5);
-      list_add(list3, item3);
-      property_set(held3, name5, after);
+      held_value_set(name5, after);
       let note_line3 = property_path_get_2(state, "declared", name5);
       let value11 = property_get(action, "value");
       let item_text = js_value_code(value11);
@@ -1399,15 +1390,8 @@ export function app_learn_js_program_step_through_generic(
       let name6 = property_get(action, "name");
       let after2 = property_get(action, "after");
       let held4 = property_get(state, "held");
-      let before3 = property_get(state, "held_before");
-      let b21 = property_exists(before3, name6);
-      if (not(b21)) {
-        property_set(before3, name6, []);
-      }
-      let list4 = property_get(before3, name6);
       let item4 = property_get(held4, name6);
-      list_add(list4, item4);
-      property_set(held4, name6, after2);
+      held_value_set(name6, after2);
       let note_line4 = property_path_get_2(state, "declared", name6);
       let value15 = property_get(action, "value");
       let item_text2 = js_value_code(value15);
