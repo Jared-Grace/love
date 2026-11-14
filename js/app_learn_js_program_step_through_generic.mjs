@@ -508,7 +508,8 @@ export function app_learn_js_program_step_through_generic(
       to = add(from, item_size2);
       gap_from = from;
       gap_to = to;
-      let after_item = text_slice(note, to, add(to, 1));
+      let to3 = add(to, 1);
+      let after_item = text_slice(note, to, to3);
       let b26 = equal(after_item, "]");
       if (not(b26)) {
         gap_to = add(to, 2);
@@ -1320,8 +1321,8 @@ export function app_learn_js_program_step_through_generic(
       let value11 = property_get(action, "value");
       let item_text = js_value_code(value11);
       let code2 = js_value_code(after);
-      let method2 = property_get(action, "method");
-      let part2 = equal(method2, "unshift") ? "first" : "last";
+      let method = property_get(action, "method");
+      let part2 = equal(method, "unshift") ? "first" : "last";
       let hidden5 = comment_draw(note_line3, name5, code2, part2, item_text);
       let duration4 = app_shared_animation_duration();
       ("the room the item will stand in opens first, sliding the ] along, and the item then flies into it");

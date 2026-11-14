@@ -39,7 +39,6 @@ export function app_learn_js_lesson_array_unshift() {
   ("2026-11-14, at the human's asking: unshift, the twin of push at the other end, right after the pop lessons. Writing out a[0] is what shows the new item went to the front; writing out the length would read the same as push and teach nothing new.");
   ("A set is six questions, arrays of one, two and three items twice each, shuffled. Each question names its array with its own letter; the examples keep a.");
   ("Reading forwards, the wrong answers are the item that was first before, the last item, and the length. Reading backwards, the wrong programs push the item instead, and unshift an item already in the array.");
-  ("Not stepped yet: stepping knows push and pop as the only array functions that change an array.");
   ("The writing is a first draft by Claude 2026-11-14.");
   let sizes = [1, 1, 2, 2, 3, 3];
   let example_items = ["joy", "peace"];
@@ -171,7 +170,7 @@ export function app_learn_js_lesson_array_unshift() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps: false,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

@@ -1,0 +1,1 @@
+{"f_name":"app_shared_message_reply_greeting_3fdd47fd15c472c6","text":"-  let hi_word = reply_choice([\"hi\", hello, \"hey\"]);\n+  let hi_word = reply_choice([\"hi\", hello, \"hey\", \"greetings\"]);\n+ let name = reply_name_jared();\n+ let jared = reply_optional(name);\n-    [hi_word, my_dear_brother],\n+    [hi_word, my_dear_brother, jared],"}
