@@ -103,9 +103,12 @@ export function app_learn_js_program_step_clicks(code) {
         let call_code = app_learn_js_program_step_call_code(action);
         ("2026-11-14, at the human's asking: a call inside another call runs first, so which runs first is chosen before what it does");
         if (into) {
-          let v13 = words("Choose ");
-          let v14 = button(call_code);
-          let v15 = words(" to run first");
+          let v13 = words("Press ");
+          let operator_code = call_code.slice(
+            property_get(action, "name").length,
+          );
+          let v14 = button(operator_code);
+          let v15 = words(" to run it first");
           list_add(clicks, [v13, v14, v15]);
         }
         let call_words = app_learn_js_program_step_call_words();

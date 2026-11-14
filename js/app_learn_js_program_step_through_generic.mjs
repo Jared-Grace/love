@@ -135,6 +135,7 @@ import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
 import { app_learn_js_program_step_call_code } from "./app_learn_js_program_step_call_code.mjs";
+import { app_learn_js_call_order_line } from "./app_learn_js_call_order_line.mjs";
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { app_learn_js_program_step_order_words } from "./app_learn_js_program_step_order_words.mjs";
 import { app_learn_js_program_step_solved_already_words } from "./app_learn_js_program_step_solved_already_words.mjs";
@@ -1596,6 +1597,8 @@ export function app_learn_js_program_step_through_generic(
         let button3 = property_get(order_holder, "button");
         return button3;
       }
+      let inner_name = property_get(action, "name");
+      let inner_operator_code = inner_code.slice(inner_name.length);
       guide_say(
         [
           [
@@ -1605,28 +1608,26 @@ export function app_learn_js_program_step_through_generic(
             inner_code,
             " gives back before it can run",
           ],
-          ["So choose: ", inner_code],
+          ["So press: ", inner_operator_code],
         ],
         {
-          words: inner_code,
+          words: inner_operator_code,
           button: true,
           target_get: order_button_get,
         },
       );
-      app_learn_js_div_cycle_code(ask, ["Which runs first?"]);
-      function code_same(code_text) {
-        return code_text;
-      }
-      let asked3 = app_learn_js_expression_value_choose_buttons_generic(
+      app_learn_js_div_cycle_code(ask, ["Which function runs first? Press it"]);
+      let asked3 = app_learn_js_call_order_line(
         ask,
+        outer_code,
         inner_code,
-        [outer_code],
+        inner_name,
         on_wrong,
-        code_same,
       );
       property_set(order_holder, "button", asked3.right);
       await asked3.pressed;
       property_set(holder, "button", asked3.right);
+      await sleep_success_color();
       await call_does_ask();
     }
     async function call_does_ask() {
