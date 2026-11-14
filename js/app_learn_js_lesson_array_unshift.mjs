@@ -135,13 +135,13 @@ export function app_learn_js_lesson_array_unshift() {
       box_one,
       context,
       app_learn_js_lesson_array_push,
-      ["", "a.push()", " adds an item to the end"],
+      ["", "a.push()", " adds an item to the end of an array"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "",
       "a.unshift()",
-      " adds an item to the front:",
+      " adds an item to the front of an array:",
     ]);
     let code2 = program_of("a", example_items, example_added, "unshift");
     let lines2 = text_split_newline(code2);

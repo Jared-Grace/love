@@ -125,13 +125,13 @@ export function app_learn_js_lesson_array_shift() {
       box_one,
       context,
       app_learn_js_lesson_array_pop,
-      ["", "a.pop()", " removes the last item"],
+      ["", "a.pop()", " removes the last item of an array"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "",
       "a.shift()",
-      " removes the first item:",
+      " removes the first item of an array:",
     ]);
     let code2 = program_of("a", example_items, "shift");
     let lines2 = text_split_newline(code2);
