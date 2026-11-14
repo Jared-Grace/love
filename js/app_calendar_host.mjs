@@ -37,7 +37,6 @@ export async function app_calendar_host(parent, key) {
   let settings = read.body.settings;
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   let me = app_shared_container(parent);
-  html_div_text(me, "You");
   html_div_text(me, "Your name");
   let name = html_input_text(me, "Your name");
   app_shared_input_style(name);
