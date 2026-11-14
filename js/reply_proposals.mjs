@@ -4714,6 +4714,128 @@ export function reply_proposals() {
       "good morning brother jered still gets no answer: the good morning rule is shared with good afternoon and good evening, so adding the name there would be its own change. Should it be?",
     ],
   };
+  let christmas_friend_list_kept = text_combine_multiple([
+    "   let friend_list = ",
+    fn_name("reply_friend_list_full"),
+    "();",
+  ]);
+  let christmas_wished_well_added = text_combine_multiple([
+    "+  let wished_well = ",
+    fn_name("reply_wished_well_thanked"),
+    "();",
+  ]);
+  let christmas_appeal_added = text_combine_multiple([
+    "+  let christmas_appeal = ",
+    fn_name("reply_appeal_christmas"),
+    "();",
+  ]);
+  let christmas_hope_added = text_combine_multiple([
+    "+  let hope_glorified = ",
+    fn_name("reply_hope_glorified"),
+    "();",
+  ]);
+  let christmas_appeal_message = [
+    "Greetings!",
+    "I hope you and your family are doing well.As you know, every year we distribute Christmas gift boxes to children and door to door families This year, we are planning a bigger ",
+    "Our theme: Let’s Celebrate Christmas with us",
+    "2,000 Christmas gift boxes ",
+    "Grocery packages for 300 widows.",
+    "Christmas shopping for 300 orphan children.",
+    "We are currently raising funds for this project, and I would sincerely appreciate your prayers and financial support.Please share it with your friends and family and help us raise donations.",
+    "Together, we can bring hope to many lives and glorify the name of our Lord Jesus Christ.",
+    "",
+    "Blessings",
+  ].join("\n");
+  let christmas_thanks = reply_response_blessing_thanks();
+  let christmas_nothing = reply_response_nothing_to_give();
+  let christmas_provide = text_may_the_lord_exclamation(
+    "provide for the children and families",
+  );
+  let christmas_prayed_for = reply_prayer_abundance_of_prayer();
+  let christmas_hope = "May everyone have hope!";
+  let christmas_glorified = "May the name of Jesus be glorified!";
+  let christmas_blessing = prayer_blessing_line(
+    "you, your family, your church and your country",
+  );
+  let christmas_appeal_prayer = reply_prayer_closing([
+    christmas_provide,
+    christmas_prayed_for,
+    christmas_hope,
+    christmas_glorified,
+    christmas_blessing,
+  ]);
+  let christmas_blessing_prayer = reply_prayer_closing([christmas_blessing]);
+  let christmas_hope_prayer = reply_prayer_closing([
+    christmas_hope,
+    christmas_glorified,
+  ]);
+  let christmas_appeal_outputs = [
+    greeting,
+    christmas_thanks,
+    christmas_nothing,
+    christmas_appeal_prayer,
+  ];
+  let christmas_thanked_outputs = [christmas_thanks, christmas_blessing_prayer];
+  let christmas_hope_outputs = [christmas_hope_prayer];
+  let christmas_appeal_said = {
+    title:
+      "answer an appeal for a Christmas outreach, a wish that I and my family are well, Blessings, and bringing hope and glorifying the name of Jesus",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [
+      fn_name("reply_wished_well_thanked"),
+      fn_name("reply_appeal_christmas"),
+      fn_name("reply_hope_glorified"),
+    ],
+    diff: [
+      christmas_friend_list_kept,
+      christmas_wished_well_added,
+      christmas_appeal_added,
+      christmas_hope_added,
+      "     friend_list,",
+      "+    wished_well,",
+      "+    christmas_appeal,",
+      "+    hope_glorified,",
+      "   ]);",
+    ],
+    cases: [
+      {
+        from: "",
+        message: christmas_appeal_message,
+        answered: true,
+        outputs: christmas_appeal_outputs,
+      },
+      {
+        from: "",
+        message: "Blessings",
+        answered: true,
+        outputs: christmas_thanked_outputs,
+      },
+      {
+        from: "",
+        message: "I hope you and your family are doing well",
+        answered: true,
+        outputs: christmas_thanked_outputs,
+      },
+      {
+        from: "",
+        message:
+          "Together, we can bring hope to many lives and glorify the name of our Lord Jesus Christ.",
+        answered: true,
+        outputs: christmas_hope_outputs,
+      },
+      {
+        from: "",
+        message: "Please share it with your friends and family",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "every line comes from one real appeal, sent 2026-11-06, and every answer is the one you asked for. The plans (this year a bigger one, the theme, 2,000 boxes, groceries for 300 widows, shopping for 300 orphans) and please share it are read and answered with nothing.",
+      "the numbers are matched exactly as written, 2,000 and 300. The same appeal with other numbers would go unanswered. Should any number be read there instead?",
+      "Blessings on its own now gets thank you for the blessing and the blessing for you, your family, your church and your country, wherever it is said.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -4772,6 +4894,7 @@ export function reply_proposals() {
     appeal_merged,
     prayer_lined,
     greetings_named,
+    christmas_appeal_said,
   ];
   return proposals;
 }
