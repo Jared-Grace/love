@@ -1,18 +1,18 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { error } from "./error.mjs";
-import { property_exists_assert } from "./property_exists_assert.mjs";
-import { text_size } from "./text_size.mjs";
-import { subtract } from "./subtract.mjs";
-import { text_slice } from "./text_slice.mjs";
 import { equal } from "./equal.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
-import { app_learn_js_program_trace_long_way } from "./app_learn_js_program_trace_long_way.mjs";
+import { property_exists_assert } from "./property_exists_assert.mjs";
 import { app_learn_js_program_trace_value } from "./app_learn_js_program_trace_value.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { error } from "./error.mjs";
+import { text_size } from "./text_size.mjs";
+import { subtract } from "./subtract.mjs";
+import { text_slice } from "./text_slice.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
+import { app_learn_js_program_trace_long_way } from "./app_learn_js_program_trace_long_way.mjs";
 export function app_learn_js_program_trace_assign(
   expression,
   actions,
@@ -24,6 +24,37 @@ export function app_learn_js_program_trace_assign(
   let operator2 = property_get(expression, "operator");
   let target = property_get(expression, "left");
   let target_type = property_get(target, "type");
+  ("2026-11-14, at the human's asking, for Setting an item: a[1] = x; is an assign of one item, the index written out as a number, as every lesson setting an item writes it. value is the whole array after, so the name still holds its value as for any assign; item and index say which item changed, so the note changes only that item. The array is copied rather than changed, so a value handed out earlier still says what it said then. Not picked: an index needing solving, which no lesson writes yet");
+  let item_set =
+    equal(target_type, "MemberExpression") &&
+    property_get(target, "computed") &&
+    equal(property_get(property_get(target, "object"), "type"), "Identifier") &&
+    equal(property_get(property_get(target, "property"), "type"), "Literal") &&
+    equal(operator2, "=");
+  if (item_set) {
+    let object = property_get(target, "object");
+    let array_name = property_get(object, "name");
+    property_exists_assert(values, array_name);
+    let object2 = property_get(target, "property");
+    let index = property_get(object2, "value");
+    let right2 = property_get(expression, "right");
+    let item = app_learn_js_program_trace_value(right2, actions, code, values);
+    let before = property_get(values, array_name);
+    let after = before.slice();
+    after[index] = item;
+    list_add(actions, {
+      kind: "assign",
+      name: array_name,
+      value: after,
+      item,
+      index,
+      from: property_get(right2, "start"),
+      to: property_get(right2, "end"),
+      long: null,
+    });
+    property_set(values, array_name, after);
+    return;
+  }
   if (not_equal(target_type, "Identifier")) {
     error({
       message: "only a name can be assigned here",
