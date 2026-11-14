@@ -1,5 +1,6 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { not } from "./not.mjs";
+import { calendar_db_person_write } from "./calendar_db_person_write.mjs";
 export async function calendar_db_person_save(
   db,
   uid,
@@ -20,28 +21,13 @@ export async function calendar_db_person_save(
     };
     return r;
   }
-  try {
-    new Intl.DateTimeFormat("en", {
-      timeZone: timezone,
-    });
-  } catch {
-    let r2 = {
-      ok: false,
-      reason: "timezone",
-    };
-    return r2;
-  }
-  let v = String(name).trim();
-  await db
-    .prepare(
-      `INSERT INTO people (uid, name, whatsapp, timezone, created_at) VALUES (?1, ?2, ?3, ?4, ?5)
-ON CONFLICT (uid) DO UPDATE SET name = excluded.name, whatsapp = excluded.whatsapp, timezone = excluded.timezone`,
-    )
-    .bind(uid, v, whatsapp_trimmed, timezone, now_iso)
-    .run();
-  let r3 = {
-    ok: true,
-    reason: null,
-  };
-  return r3;
+  let written = await calendar_db_person_write(
+    db,
+    uid,
+    name,
+    whatsapp_trimmed,
+    timezone,
+    now_iso,
+  );
+  return written;
 }
