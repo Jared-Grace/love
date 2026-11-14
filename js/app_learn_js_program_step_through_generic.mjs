@@ -117,6 +117,8 @@ import { app_learn_js_program_step_operator_decoys } from "./app_learn_js_progra
 import { app_learn_js_expression_value_choose_buttons_generic } from "./app_learn_js_expression_value_choose_buttons_generic.mjs";
 import { app_learn_js_line_pieces_add } from "./app_learn_js_line_pieces_add.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { list_slice } from "./list_slice.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
 import { html_size } from "./html_size.mjs";
@@ -468,7 +470,15 @@ export function app_learn_js_program_step_through_generic(
     span_text(row, text10);
     return piece;
   }
-  function comment_draw(line_index, name, value_text, part, last_text) {
+  function comment_draw(
+    line_index,
+    name,
+    value_text,
+    part,
+    last_text,
+    item_from,
+  ) {
+    "2026-11-14, for Setting an item: part item hides one item inside the array, last_text being that item as code and item_from where it starts in value_text; the other parts ignore item_from";
     "the note above a declared name saying what it holds, drawn as every other note in this app is; part is name, value or last (last_text being the last item as code, and empty for the other two), and the spans that part is drawn in are handed back hidden, for a copy to arrive into";
     let comment = list_get(comments, line_index);
     ("the name is marked as every note in this course marks one, at the human's asking 2026-10-14");
@@ -514,6 +524,13 @@ export function app_learn_js_program_step_through_generic(
       if (not(b26)) {
         gap_to = add(to, 2);
       }
+    }
+    if (equal(part, "item")) {
+      let value_at = subtract(size, right3);
+      from = add(value_at, item_from);
+      to = add(from, text_size(last_text));
+      gap_from = from;
+      gap_to = from;
     }
     property_set(state, "note_gap", null);
     html_clear(comment);
@@ -975,7 +992,7 @@ export function app_learn_js_program_step_through_generic(
     }
     let note_line2 = property_get(declared3, name);
     let value_text2 = list_get(noted, note_line2);
-    let spans = comment_draw(note_line2, name, value_text2, "value", "");
+    let spans = comment_draw(note_line2, name, value_text2, "value", "", 0);
     each(spans, html_visibility_visible);
     let first = list_first(spans);
     return first;
@@ -1257,7 +1274,14 @@ export function app_learn_js_program_step_through_generic(
         hidden: [],
       };
       function note_write() {
-        let hidden2 = comment_draw(line_index, name4, "undefined", "name", "");
+        let hidden2 = comment_draw(
+          line_index,
+          name4,
+          "undefined",
+          "name",
+          "",
+          0,
+        );
         property_set(box, "hidden", hidden2);
       }
       await html_height_change_animate(slot, comment2, note_write, duration);
@@ -1292,14 +1316,50 @@ export function app_learn_js_program_step_through_generic(
       ("2026-10-15, at the human's asking: a name given a new value on a later line, as a = 5; does, has it written into the note above the line that declared it, the one note saying what that name holds, so the guide pointing there stays true. Not picked: a second note above the later line, which would leave the first one saying a value the name no longer holds");
       let note_line = property_path_get_2(state, "declared", name2);
       let old = list_get(noted, note_line);
-      let old_spans = comment_draw(note_line, name2, old, "value", "");
+      ("2026-11-14, at the human's asking, for Setting an item: a[1] = x; changes one item, so only that item fades and the new one goes up into its place, the rest of the array staying unfaded, as a push leaves the items already there. The items before it are the same before and after, so the item starts at the same place in both");
+      let part4 = "value";
+      let old_item = "";
+      let new_item = "";
+      let item_from = 0;
+      if (property_exists(action, "index")) {
+        part4 = "item";
+        let index4 = property_get(action, "index");
+        let before_items = list_slice(value2, 0, index4);
+        let before_code = js_value_code(before_items);
+        item_from = subtract(text_size(before_code), 1);
+        if (greater_than(index4, 0)) {
+          item_from = add(item_from, 2);
+        }
+        let held_before_list = property_get(
+          property_get(state, "held_before"),
+          name2,
+        );
+        let old_array = list_last(held_before_list);
+        old_item = js_value_code(list_get(old_array, index4));
+        new_item = js_value_code(property_get(action, "item"));
+      }
+      let old_spans = comment_draw(
+        note_line,
+        name2,
+        old,
+        part4,
+        old_item,
+        item_from,
+      );
       let duration2 = app_shared_animation_duration();
       for (let span of old_spans) {
         html_visibility_visible(span);
         html_opacity_transition(span, "0", duration2);
       }
       await sleep(duration2);
-      let hidden3 = comment_draw(note_line, name2, t, "value", "");
+      let hidden3 = comment_draw(
+        note_line,
+        name2,
+        t,
+        part4,
+        new_item,
+        item_from,
+      );
       await action_piece_send(line_index, action, hidden3, duration2);
       return;
     }
@@ -1323,7 +1383,7 @@ export function app_learn_js_program_step_through_generic(
       let code2 = js_value_code(after);
       let method = property_get(action, "method");
       let part2 = equal(method, "unshift") ? "first" : "last";
-      let hidden5 = comment_draw(note_line3, name5, code2, part2, item_text);
+      let hidden5 = comment_draw(note_line3, name5, code2, part2, item_text, 0);
       let duration4 = app_shared_animation_duration();
       ("the room the item will stand in opens first, sliding the ] along, and the item then flies into it");
       let gap2 = property_get(state, "note_gap");
@@ -1359,6 +1419,7 @@ export function app_learn_js_program_step_through_generic(
         code3,
         part3,
         item_text2,
+        0,
       );
       for (let span2 of last_spans) {
         html_visibility_visible(span2);
@@ -1402,7 +1463,7 @@ export function app_learn_js_program_step_through_generic(
       let gap_width2 = html_size(gap3, "width");
       await html_size_animate(gap3, "width", gap_width2, 0, duration6);
       let code4 = js_value_code(after2);
-      let shown_spans = comment_draw(note_line4, name6, code4, "value", "");
+      let shown_spans = comment_draw(note_line4, name6, code4, "value", "", 0);
       for (let span4 of shown_spans) {
         html_visibility_visible(span4);
       }

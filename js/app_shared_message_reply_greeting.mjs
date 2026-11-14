@@ -1,3 +1,5 @@
+import { reply_name_jared } from "./reply_name_jared.mjs";
+import { reply_optional } from "./reply_optional.mjs";
 import { reply_phrase_my_friend_in_christ } from "./reply_phrase_my_friend_in_christ.mjs";
 import { reply_response_greetings_friend } from "./reply_response_greetings_friend.mjs";
 import { reply_response_good_morning } from "./reply_response_good_morning.mjs";
@@ -12,10 +14,12 @@ import { reply_response_greetings } from "./reply_response_greetings.mjs";
 export function app_shared_message_reply_greeting() {
   let greeting_response = reply_response_greetings();
   let hello = reply_word_hello();
-  let hi_word = reply_choice(["hi", hello, "hey"]);
+  let hi_word = reply_choice(["hi", hello, "hey", "greetings"]);
   let my_dear_brother = reply_phrase_my_dear_brother();
+  let name = reply_name_jared();
+  let jared = reply_optional(name);
   let greeting = reply_sequence_output(
-    [hi_word, my_dear_brother],
+    [hi_word, my_dear_brother, jared],
     greeting_response,
   );
   let friend_phrase = reply_phrase_my_friend_in_christ();
