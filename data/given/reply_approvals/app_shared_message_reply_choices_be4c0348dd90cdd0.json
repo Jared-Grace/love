@@ -1,0 +1,1 @@
+{"f_name":"app_shared_message_reply_choices_be4c0348dd90cdd0","text":"+ let wished_well = reply_wished_well_thanked();\n+ let christmas_appeal = reply_appeal_christmas();\n+ let hope_glorified = reply_hope_glorified();\n+   wished_well,\n+   christmas_appeal,\n+   hope_glorified,"}
