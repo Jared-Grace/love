@@ -41,7 +41,6 @@ export function app_learn_js_lesson_array_set() {
   ("2026-11-14, at the human's asking: putting a new item at an index, right after reading one at any index. The index written out is the one set, so the one new fact is that a[i] = ... puts a new item there in place of the old one.");
   ("A set is six questions, arrays of three items, each index set twice, shuffled. Each question names its array with its own letter; the examples keep a.");
   ("Reading forwards, the wrong answers are the item that was there before, the item one index along, and the index itself. Reading backwards, the wrong programs set the item one index along, and set it at the same index but write out a different one.");
-  ("Not stepped yet: stepping does not know setting an item at an index.");
   ("The writing is a first draft by Claude 2026-11-14.");
   let indexes = [0, 0, 1, 1, 2, 2];
   let example_items = ["love", "joy", "peace"];
@@ -205,7 +204,7 @@ export function app_learn_js_lesson_array_set() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps: false,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

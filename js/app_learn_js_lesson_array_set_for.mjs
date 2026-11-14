@@ -42,7 +42,6 @@ export function app_learn_js_lesson_array_set_for() {
   ("2026-11-14, at the human's asking: after Setting an item, set one item and then loop over all three and write each out, so the student sees that only the item set changes and the others stay where they were. It stands after Every item, of any array, since it needs the loop over a.length.");
   ("A set is six questions, arrays of three items, each index set twice, shuffled. Every question names its array a, as the loops over an array do.");
   ("Reading forwards, the wrong answers are the array as it was before, the new item pushed in at the index with the others moved along (four items), and the new item alone. Reading backwards, the wrong programs set the item one index along, and loop starting at 1.");
-  ("Not stepped yet: stepping does not know setting an item at an index.");
   ("The writing is a first draft by Claude 2026-11-14.");
   let indexes = [0, 0, 1, 1, 2, 2];
   let example_items = ["love", "joy", "peace"];
@@ -202,7 +201,7 @@ export function app_learn_js_lesson_array_set_for() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps: false,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,
