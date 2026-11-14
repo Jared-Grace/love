@@ -1727,9 +1727,10 @@ export function app_learn_js_program_step_through_generic(
       }
       html_clear(ask);
       let call_words = app_learn_js_program_step_call_words();
-      let call_right_words = property_get(call_words, kind);
+      let call_method = property_get_or(action, "method", kind);
+      let call_right_words = property_get(call_words, call_method);
       let call_name = property_get(action, "name");
-      let call_code = "." + kind;
+      let call_code = "." + call_method;
       guide_say(
         [
           [
@@ -1756,7 +1757,7 @@ export function app_learn_js_program_step_through_generic(
       };
       for (let call_kind of properties_get(call_words)) {
         let call_option_words = property_get(call_words, call_kind);
-        let call_right = equal(call_kind, kind);
+        let call_right = equal(call_kind, call_method);
         function call_soft_take() {
           html_clear(call_reason_box);
           app_learn_js_cycle_code(call_reason_box, [

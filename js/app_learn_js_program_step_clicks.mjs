@@ -15,11 +15,11 @@ import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
+import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_program_step_call_code } from "./app_learn_js_program_step_call_code.mjs";
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export function app_learn_js_program_step_clicks(code) {
   arguments_assert(arguments, 1);
@@ -119,7 +119,8 @@ export function app_learn_js_program_step_clicks(code) {
           list_add(clicks, [v13, v14, v15]);
         }
         let call_words = app_learn_js_program_step_call_words();
-        let value14 = property_get(call_words, kind);
+        let call_method = property_get_or(action, "method", kind);
+        let value14 = property_get(call_words, call_method);
         choose_add(value14);
         if (into) {
           let value3 = property_get(action, "value");
