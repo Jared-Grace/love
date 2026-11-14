@@ -1,26 +1,28 @@
-import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_value_get } from "./html_value_get.mjs";
+import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
+import { app_shared_toast } from "./app_shared_toast.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export async function app_calendar_guest(parent, slug, key, on_key) {
   arguments_assert(arguments, 4);
   ("The booking screen a guest reaches from a host's link (#host=<slug>): the host's open hours in the guest's own clock, a short form, and after booking the code to send on WhatsApp.");
@@ -151,6 +153,11 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       "One more step: send this code to the host on WhatsApp.",
     );
     html_div_text_content(done, booked.body.code);
+    async function code_copy() {
+      await clipboard_copy_browser(booked.body.code);
+      app_shared_toast("✅ Copied code");
+    }
+    app_shared_button_uncolored(done, "Copy code", code_copy);
     html_a_href_text_new_tab(done, booked.body.send_url, "Open WhatsApp");
     let expires = html_div_text_content(
       done,
