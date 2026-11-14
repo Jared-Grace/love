@@ -149,7 +149,10 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     );
     return value4;
   }
-  if (app_learn_js_program_trace_method_is(piece, "pop")) {
+  if (
+    app_learn_js_program_trace_method_is(piece, "pop") ||
+    app_learn_js_program_trace_method_is(piece, "shift")
+  ) {
     ("2026-11-13, at the human's asking, so console.log(a.pop()) can be stepped through: a.pop() takes the last item off first, one step, as a line of its own does, and the item it gives back is written into the line in its place, as a name solved is");
     let actions_held = property_get(state, "actions");
     let value_popped = app_learn_js_program_trace_pop(
