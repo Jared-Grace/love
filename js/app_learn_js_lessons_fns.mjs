@@ -384,6 +384,7 @@ import { app_learn_js_lesson_array_for_flag } from "./app_learn_js_lesson_array_
 import { app_learn_js_lesson_array_for_flag_false } from "./app_learn_js_lesson_array_for_flag_false.mjs";
 import { app_learn_js_lesson_array_for_if_third } from "./app_learn_js_lesson_array_for_if_third.mjs";
 import { app_learn_js_lesson_array_for_found } from "./app_learn_js_lesson_array_for_found.mjs";
+import { app_learn_js_lesson_array_includes } from "./app_learn_js_lesson_array_includes.mjs";
 import { app_learn_js_lesson_array_for_count } from "./app_learn_js_lesson_array_for_count.mjs";
 import { app_learn_js_lesson_array_for_total } from "./app_learn_js_lesson_array_for_total.mjs";
 import { app_learn_js_lesson_array_for_biggest } from "./app_learn_js_lesson_array_for_biggest.mjs";
@@ -789,6 +790,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_flag_false,
     app_learn_js_lesson_array_for_if_third,
     app_learn_js_lesson_array_for_found,
+    app_learn_js_lesson_array_includes,
     app_learn_js_lesson_array_for_count,
     app_learn_js_lesson_array_for_total,
     app_learn_js_lesson_array_for_biggest,

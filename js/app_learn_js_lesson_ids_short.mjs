@@ -565,6 +565,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_flag_false: text_frozen("array_flag_false"),
     app_learn_js_lesson_array_for_if_third: text_frozen("array_for_third"),
     app_learn_js_lesson_array_for_found: text_frozen("array_found"),
+    app_learn_js_lesson_array_includes: text_frozen("array_includes"),
     app_learn_js_lesson_array_for_count: text_frozen("array_count"),
     app_learn_js_lesson_array_for_total: text_frozen("array_total"),
     app_learn_js_lesson_array_for_biggest: text_frozen("array_biggest"),
