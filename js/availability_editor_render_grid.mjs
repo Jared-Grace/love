@@ -13,6 +13,6 @@ export function availability_editor_render_grid(
   arguments_assert(arguments, 5);
   html_clear(grid_holder);
   let dates = week_dates(week_start);
-  week_calendar(grid_holder, dates, ranges, on_grid_ranges);
+  week_calendar(grid_holder, dates, ranges, on_grid_ranges, false);
   availability_editor_update_week_label(dates, week_label);
 }
