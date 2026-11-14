@@ -1,4 +1,3 @@
-import { less_than_equal } from "./less_than_equal.mjs";
 import { numbers_up_to } from "./numbers_up_to.mjs";
 import { week_calendar_day } from "./week_calendar_day.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,11 +9,12 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { week_range_label } from "./week_range_label.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { math_min } from "./math_min.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { math_max } from "./math_max.mjs";
 import { week_calendar_range_add } from "./week_calendar_range_add.mjs";
 import { week_calendar_endpoint_back_up } from "./week_calendar_endpoint_back_up.mjs";
 import { week_calendar_far_anchor_set } from "./week_calendar_far_anchor_set.mjs";
-import { week_calendar_cell_pressed } from "./week_calendar_cell_pressed.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { week_calendar_anchor_click } from "./week_calendar_anchor_click.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 export function week_calendar(parent, dates, initial_ranges, on_ranges) {
@@ -75,17 +75,13 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     anchor = property_get(week_calendar_far_anchor_set_answer, "anchor");
   }
   function cell_pressed(day, slot) {
-    let r3 = week_calendar_cell_pressed(day, slot, {
-      anchor,
-      anchor_click,
-      free_click,
-      records,
-      paint_record,
-      summary,
-      ranges,
-      summary_line,
-    });
-    return r3;
+    "the list is repainted HERE, after the click has rebuilt it. Handing the windows to a helper before the click handed it the list from before: the grid repaints through paint_record, which reads the live list, but the 'Selected times' lines were written from the old one and named only some of the days just chosen.";
+    if (not_equal(anchor, null)) {
+      anchor_click(day, slot);
+    } else {
+      free_click(day, slot);
+    }
+    week_calendar_paint(records, paint_record, summary, ranges, summary_line);
   }
   function anchor_click(day, slot) {
     let week_calendar_anchor_click_answer = week_calendar_anchor_click(
