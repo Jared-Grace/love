@@ -17,7 +17,7 @@ import { html_url_without_hash } from "./html_url_without_hash.mjs";
 import { html_text_get } from "./html_text_get.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
 import { date_week_sunday } from "./date_week_sunday.mjs";
 import { week_dates } from "./week_dates.mjs";
@@ -87,6 +87,7 @@ export async function app_calendar_host(parent, key) {
   if (host) {
     html_value_set(slug, host.slug);
   }
+  app_shared_button_green(link_card, "Save link", lambda3);
   let link_line = html_div_text(link_card, "");
   let show_link = function lambda2(s) {
     html_text_content_set(
@@ -104,7 +105,7 @@ export async function app_calendar_host(parent, key) {
     await clipboard_copy_browser(link);
     app_shared_toast("✅ Copied link");
   }
-  app_shared_button(link_card, "Copy link", link_copy);
+  app_shared_button_uncolored(link_card, "Copy link", link_copy);
   async function lambda3() {
     await app_shared_toast_saving(link_save);
   }
@@ -133,7 +134,6 @@ export async function app_calendar_host(parent, key) {
     let told = words[saved.body.reason] ?? "Could not save. Try again.";
     return told;
   }
-  app_shared_button_green(link_card, "Save link", lambda3);
   let hours_card = app_shared_container(parent);
   html_div_text(hours_card, "Your weekly free hours");
   let today = date_today_iso();
