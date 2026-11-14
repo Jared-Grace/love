@@ -20,7 +20,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_at } from "./app_learn_js_lesson_array_for_at.mjs";
-import { app_learn_js_lesson_array_includes } from "./app_learn_js_lesson_array_includes.mjs";
+import { app_learn_js_lesson_array_index_of_found } from "./app_learn_js_lesson_array_index_of_found.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_array_index_of() {
   arguments_assert(arguments, 0);
   ('where an item is, in one line: let a = ["love", "joy", "peace"]; console.log(a.indexOf("joy")); writes out 1, and -1 when joy is not there');
   ("2026-11-14, at the human's asking: the loop that starts at at -1 and sets it to i when joy is seen, done by one call, right after that loop and after .includes, so the student has written the long way and met an array's action that gives true or false before one that gives a number");
-  ("Every set holds two arrays with joy once and two without, so -1 and an index are both answers. 2026-11-14, at the human's asking: joy twice is its own lesson, Index of the first joy, so this one stays joy once and comes right after the loop that finds it. Not stepped through: the step tracer knows .includes but not .indexOf. The writing is a first draft by Claude 2026-11-14");
+  ("Every set holds two arrays with joy once and two without, so -1 and an index are both answers. 2026-11-14, at the human's asking: joy twice is its own lesson, Index of the first joy, so this one stays joy once. Later the same day, at the human's asking: Where is joy? comes first with joy always there, so this lesson's one new idea is the -1. The writing is a first draft by Claude 2026-11-14");
   let name = "a";
   let item = "joy";
   let pool = ["love", "peace", "patience", "kindness", "goodness"];
@@ -126,22 +126,22 @@ export function app_learn_js_lesson_array_index_of() {
     app_learn_js_remember_from_lesson(
       box_two,
       context,
-      app_learn_js_lesson_array_includes,
-      ["", 'a.includes("joy")', " does a whole loop in one line"],
+      app_learn_js_lesson_array_index_of_found,
+      ["", 'a.indexOf("joy")', " gives the index where ", '"joy"', " is"],
     );
     app_learn_js_div_cycle_code(box_two, [
-      "",
-      'a.indexOf("joy")',
-      " does the loop that finds where ",
-      '"joy"',
-      " is in one line. It gives the index of ",
-      '"joy"',
-      ", or ",
-      "-1",
-      " if ",
+      "If ",
       "a",
       " has no ",
       '"joy"',
+      ", ",
+      'a.indexOf("joy")',
+      " gives ",
+      "-1",
+      ", as the loop's ",
+      "at",
+      " stays ",
+      "-1",
       ".",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
