@@ -22,6 +22,7 @@ import { html_input_type } from "./html_input_type.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_loading } from "./html_loading.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
@@ -328,7 +329,11 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       };
       html_text_content_set(
         status,
-        words[booked.body.reason] ?? "Could not book. Try again.",
+        property_get_or(
+          words,
+          booked.body.reason,
+          "Could not book. Try again.",
+        ),
       );
       return;
     }

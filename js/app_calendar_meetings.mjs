@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { equal } from "./equal.mjs";
@@ -14,6 +14,7 @@ import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_button_red } from "./app_shared_button_red.mjs";
 export async function app_calendar_meetings(box, key, on_change, empty_shown) {
@@ -24,8 +25,9 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
   ("A meeting still waiting says so. The guest sees the code and a button that opens WhatsApp to the host with it typed, to send again. The host sees who booked and a place to type the number the code came from, then confirm. Both may cancel.");
   ("A Messenger meeting is confirmed with the link to the sender's profile instead of a number, and once confirmed the host can open that profile.");
   ("Everything a guest typed is drawn as plain text, never markup, because the host's page shows it.");
-  html_clear(box);
+  ("The box is emptied only once the answer is in, so the meetings already drawn stay on screen through the wait instead of leaving a blank that reads as nothing happening.");
   let answer = await calendar_api_call("GET", "upcoming", {}, key);
+  html_clear(box);
   if (not(answer.body.ok)) {
     html_div_text(box, "Could not load your meetings. Try again later.");
     return;
@@ -93,10 +95,12 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
               profile: "Paste a Facebook or Messenger profile link.",
               no_code: "That code is not waiting any more.",
             };
-            html_text_content_set(
-              status,
-              words[sent.body.reason] ?? "Could not confirm. Try again.",
+            let text = property_get_or(
+              words,
+              sent.body.reason,
+              "Could not confirm. Try again.",
             );
+            html_text_content_set(status, text);
             return;
           }
           await app_calendar_meetings(box, key, on_change, empty_shown);
@@ -125,10 +129,12 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
               number: "That number did not book this meeting.",
               no_code: "That code is not waiting any more.",
             };
-            html_text_content_set(
-              status,
-              words[sent.body.reason] ?? "Could not confirm. Try again.",
+            let text2 = property_get_or(
+              words,
+              sent.body.reason,
+              "Could not confirm. Try again.",
             );
+            html_text_content_set(status, text2);
             return;
           }
           await app_calendar_meetings(box, key, on_change, empty_shown);
