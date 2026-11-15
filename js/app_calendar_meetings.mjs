@@ -5,8 +5,9 @@ import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
+import { html_centered } from "./html_centered.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { app_shared_container } from "./app_shared_container.mjs";
+import { app_shared_container_centered } from "./app_shared_container_centered.mjs";
 import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
@@ -38,14 +39,15 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
   if (empty && not(empty_shown)) {
     return;
   }
-  app_shared_heading(box, "Your meetings");
+  let heading = app_shared_heading(box, "Your meetings");
+  html_centered(heading);
   if (empty) {
     let none = html_div_text(box, "None yet.");
     app_shared_text_deemphasized(none);
     return;
   }
   for (let meeting of meetings) {
-    let card = app_shared_container(box);
+    let card = app_shared_container_centered(box);
     let when = calendar_time_local_text(meeting.next_utc);
     let repeat = meeting.weekly ? " (every week)" : "";
     html_div_text_content(card, when + repeat);
@@ -182,6 +184,6 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
       await app_calendar_meetings(box, key, on_change, empty_shown);
       await on_change();
     }
-    app_shared_button_red(card, "Cancel", lambda2);
+    app_shared_button_red(card, "Cancel my meeting", lambda2);
   }
 }

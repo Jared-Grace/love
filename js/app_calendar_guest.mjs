@@ -5,24 +5,30 @@ import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
+import { app_shared_heading } from "./app_shared_heading.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { html_div } from "./html_div.mjs";
+import { app_shared_field } from "./app_shared_field.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { html_div } from "./html_div.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
+import { storage_local_get } from "./storage_local_get.mjs";
+import { app_calendar } from "./app_calendar.mjs";
+import { html_value_set } from "./html_value_set.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { storage_local_set } from "./storage_local_set.mjs";
 import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
@@ -53,12 +59,11 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   let host = free.body.host;
   html_div_text_content(card, "Book a meeting with " + host.name);
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  ('The length stands out on its own line, as big as a heading (human: "What about making the 25 minutes stand out more visually?").');
+  app_shared_heading(card, host.meeting_minutes + " minutes");
   let zone_line = html_div_text_content(
     card,
-    host.meeting_minutes +
-      (host.messenger
-        ? " minutes, on WhatsApp or Messenger."
-        : " minutes, on WhatsApp.") +
+    (host.messenger ? "On WhatsApp or Messenger." : "On WhatsApp.") +
       " Times are in your time zone: " +
       zone,
   );
@@ -78,7 +83,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     return;
   }
   ('The app choice comes first and big (human: "They should have a big choice: Facebook Messenger meeting or WhatsApp meeting"); what is asked for below follows it - a WhatsApp number, or a Facebook profile link.');
-  let via_area = html_div(card);
+  let via_area = app_shared_field(card);
   let slots = free.body.slots;
   if (equal(slots.length, 0)) {
     html_div_text(card, "No open hours in the next two weeks.");
@@ -104,7 +109,9 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   }
   let weekdays = calendar_days_by_weekday(months);
   let chosen = null;
-  let chosen_line = html_div_text(card, "");
+  ('The prompt and its buttons sit in one field, spaced off from what follows like the host\'s fields (human: "Pick a day of the week and its buttons should look like a group").');
+  let pick_field = app_shared_field(card);
+  let chosen_line = html_div_text(pick_field, "");
   ('The picked date and time stand out larger than the prompts before it (human: "choosen date/time should be larger font").');
   function chosen_line_set(words, big) {
     html_text_content_set(chosen_line, words);
@@ -113,7 +120,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       "font-weight": big ? "bold" : "",
     });
   }
-  let list = html_div(card);
+  let list = html_div(pick_field);
   let element = html_component_element_get(list);
   element.style.maxHeight = "40vh";
   element.style.overflowY = "auto";
@@ -208,15 +215,17 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     }
   }
   first_show();
-  html_div_text(card, "Your name");
-  let name = html_input_text(card, "Your name");
+  let name_field = app_shared_field(card);
+  html_div_text(name_field, "Your name on Facebook");
+  let name = html_input_text(name_field, "Your name");
   app_shared_input_style(name);
-  let number_box = html_div(card);
-  html_div_text(number_box, "Your WhatsApp number");
+  ('Both fields show whenever the host takes Messenger; the one the chosen app needs says "required", the other "optional" (human: "fields for both Facebook Profile URL and WhatsApp number, but which one is required depends on which one you select").');
+  let number_box = app_shared_field(card);
+  let number_label = html_div_text(number_box, "");
   let whatsapp = html_input_text(number_box, "+1 555 123 4567");
   app_shared_input_style(whatsapp);
-  let profile_box = html_div(card);
-  html_div_text(profile_box, "Your Facebook profile link");
+  let profile_box = app_shared_field(card);
+  let profile_label = html_div_text(profile_box, "");
   let profile = html_input_text(profile_box, "facebook.com/your.name");
   app_shared_input_style(profile);
   let profile_hint = html_div_text(
@@ -226,9 +235,32 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   app_shared_text_deemphasized(profile_hint);
   ("A host with no Messenger name takes WhatsApp only, so there is no choice to make; otherwise nothing is picked until the guest picks.");
   let via = host.messenger ? null : "whatsapp";
+  ('What the guest typed last time on this device fills the form again, so a cancel and a fresh booking asks for nothing twice (human: "if they cancel and re-book their previous choices for name,url,and phone number are pre-populated").');
+  ("Rejected: keeping them on the server with the guest's key (a Worker change and a new place a person's name sits on the cloud, for a convenience the device already gives).");
+  let last = storage_local_get(app_calendar, "guest_details");
+  if (last) {
+    html_value_set(name, last.name);
+    html_value_set(whatsapp, last.whatsapp);
+    html_value_set(profile, last.profile);
+    if (host.messenger) {
+      via = last.via;
+    }
+  }
+  function field_label_set(label, words, value) {
+    let need = equal(via, null)
+      ? ""
+      : equal(via, value)
+        ? " (required)"
+        : " (optional)";
+    html_text_content_set(label, words + need);
+  }
   function via_draw() {
     html_clear(via_area);
+    field_label_set(number_label, "Your WhatsApp number", "whatsapp");
+    field_label_set(profile_label, "Your Facebook profile link", "messenger");
     if (not(host.messenger)) {
+      html_text_content_set(number_label, "Your WhatsApp number");
+      html_component_element_get(profile_box).style.display = "none";
       return;
     }
     html_div_text(via_area, "How do you want to meet?");
@@ -247,22 +279,9 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
         app_shared_button_uncolored(via_area, words, choice_pick);
       }
     }
-    html_component_element_get(number_box).style.display = equal(
-      via,
-      "whatsapp",
-    )
-      ? ""
-      : "none";
-    html_component_element_get(profile_box).style.display = equal(
-      via,
-      "messenger",
-    )
-      ? ""
-      : "none";
   }
-  html_component_element_get(profile_box).style.display = "none";
   via_draw();
-  let weekly_row = html_div(card);
+  let weekly_row = app_shared_field(card);
   let weekly = html_input_type(weekly_row, "checkbox");
   let weekly_element = html_component_element_get(weekly);
   let weekly_label = html_div_text(
@@ -335,6 +354,12 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       html_text_content_set(status, text);
       return;
     }
+    storage_local_set(app_calendar, "guest_details", {
+      name: name_text,
+      whatsapp: html_value_get(whatsapp),
+      profile: html_value_get(profile),
+      via,
+    });
     if (booked.body.key) {
       key = booked.body.key;
       on_key(key);
