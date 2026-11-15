@@ -1,7 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_learn_js_object_people_renamed } from "./app_learn_js_object_people_renamed.mjs";
 import { list_first } from "./list_first.mjs";
-import { json_to } from "./json_to.mjs";
+import { app_learn_js_object_code } from "./app_learn_js_object_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { json_to } from "./json_to.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -39,37 +41,10 @@ export function app_learn_js_lesson_object_property_set() {
   ("No stepping: the tracer cannot yet read an object.");
   ("The writing is a first draft by Claude 2026-11-15.");
   let name = "p";
-  let people = [
-    {
-      name: "Abram",
-      renamed: "Abraham",
-      town: "Ur",
-    },
-    {
-      name: "Sarai",
-      renamed: "Sarah",
-      town: "Ur",
-    },
-    {
-      name: "Simon",
-      renamed: "Peter",
-      town: "Bethsaida",
-    },
-    {
-      name: "Saul",
-      renamed: "Paul",
-      town: "Tarsus",
-    },
-  ];
+  let people = app_learn_js_object_people_renamed();
   let example_person = list_first(people);
   function object_code(person) {
-    "the object written with bare property names: { name: \"Abram\", town: \"Ur\" }";
-    let code =
-      "{ name: " +
-      json_to(person.name) +
-      ", town: " +
-      json_to(person.town) +
-      " }";
+    let code = app_learn_js_object_code(person, ["name", "town"]);
     return code;
   }
   function program_with(person, set, key) {
