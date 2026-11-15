@@ -1757,6 +1757,31 @@ def is_safe_systemctl_list(words):
     return all(w in SYSTEMCTL_LIST_FLAGS for w in rest[1:])
 
 
+def is_safe_gzip_stdout(words):
+    """True iff `words` is `gzip` writing to standard output only: -c (or
+    --stdout / --to-stdout) is required, so no file is created or replaced,
+    and only level, decompress and no-name flags may join it. At least one
+    file must be named. Any other flag (-r, -f, -k, -S …) is refused rather
+    than weighed; a redirect is judged on its own elsewhere."""
+    if words[:1] != ["gzip"]:
+        return False
+    stdout = False
+    files = 0
+    for w in words[1:]:
+        if w in ("--stdout", "--to-stdout"):
+            stdout = True
+        elif w in ("--best", "--fast", "--decompress", "--no-name"):
+            pass
+        elif re.fullmatch(r"-[cdn1-9]+", w):
+            if "c" in w:
+                stdout = True
+        elif w.startswith("-"):
+            return False
+        else:
+            files += 1
+    return stdout and files > 0
+
+
 def is_safe_lslocks(words):
     """True iff `words` is `lslocks` with only display flags, or `-p PID`.
     It prints the table of file locks the kernel keeps (what `cat
@@ -2921,6 +2946,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_lslocks(words)
             and not is_safe_loginctl_list(words)
             and not is_safe_systemctl_list(words)
+            and not is_safe_gzip_stdout(words)
             and not is_safe_colon_noop(words)
             and not is_safe_fuser_list(words)
             # `unwrapped`, like the sandboxed-node templates and unlike the
