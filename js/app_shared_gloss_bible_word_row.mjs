@@ -1,4 +1,3 @@
-import { app_shared_gloss_bible_word_translit } from "./app_shared_gloss_bible_word_translit.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hr } from "./html_hr.mjs";
 import { html_div } from "./html_div.mjs";
@@ -11,8 +10,10 @@ import { html_attribute_set } from "./html_attribute_set.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_on_click_when } from "./html_on_click_when.mjs";
+import { app_shared_gloss_bible_word_translit } from "./app_shared_gloss_bible_word_translit.mjs";
 import { html_span_colon_2 } from "./html_span_colon_2.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
+import { app_shared_gloss_bible_word_strong } from "./app_shared_gloss_bible_word_strong.mjs";
 export function app_shared_gloss_bible_word_row(
   e,
   p,
@@ -59,4 +60,5 @@ export function app_shared_gloss_bible_word_row(
   let span3 = html_span_text(div, explain);
   html_attribute_set(span3, "dir", "auto");
   html_font_color_set(span3, "#a21cafff");
+  app_shared_gloss_bible_word_strong(e, div);
 }
