@@ -60,7 +60,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   html_div_text_content(card, "Book a meeting with " + host.name);
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   ('The length stands out on its own line, as big as a heading (human: "What about making the 25 minutes stand out more visually?").');
-  app_shared_heading(card, host.meeting_minutes + " minutes");
+  app_shared_heading(card, host.meeting_minutes + " minutes (or less)");
   let zone_line = html_div_text_content(
     card,
     (host.messenger ? "On WhatsApp or Messenger." : "On WhatsApp.") +
