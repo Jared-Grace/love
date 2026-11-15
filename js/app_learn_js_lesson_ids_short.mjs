@@ -627,6 +627,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_object_property: text_frozen("object_property"),
     app_learn_js_lesson_array_for_push_if_e: text_frozen("array_for_push_if_e"),
     app_learn_js_lesson_object_property_set: text_frozen("object_property_set"),
+    app_learn_js_lesson_array_log: text_frozen("array_log"),
   };
   return short;
 }
