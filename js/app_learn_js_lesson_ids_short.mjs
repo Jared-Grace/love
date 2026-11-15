@@ -623,6 +623,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_index_past_end: text_frozen(
       "array_index_past_end",
     ),
+    app_learn_js_lesson_array_for_set_all: text_frozen("array_for_set_all"),
   };
   return short;
 }
