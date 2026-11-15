@@ -1,8 +1,9 @@
+import { reply_betting_ad_unanswered } from "./reply_betting_ad_unanswered.mjs";
+import { reply_whole_english_otherwise_skipping } from "./reply_whole_english_otherwise_skipping.mjs";
 import { reply_wished_well_thanked } from "./reply_wished_well_thanked.mjs";
 import { reply_appeal_christmas } from "./reply_appeal_christmas.mjs";
 import { reply_hope_glorified } from "./reply_hope_glorified.mjs";
 import { reply_great_day_thanked } from "./reply_great_day_thanked.mjs";
-import { reply_pieces_counted } from "./reply_pieces_counted.mjs";
 import { reply_cheapest_per_position_fewest_pieces } from "./reply_cheapest_per_position_fewest_pieces.mjs";
 import { reply_friend_list_full } from "./reply_friend_list_full.mjs";
 import { reply_god_bless_you_thanked } from "./reply_god_bless_you_thanked.mjs";
@@ -39,8 +40,6 @@ import { reply_phrase_you } from "./reply_phrase_you.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_choice_output } from "./reply_choice_output.mjs";
 import { reply_choice } from "./reply_choice.mjs";
-import { reply_once_or_more } from "./reply_once_or_more.mjs";
-import { reply_last } from "./reply_last.mjs";
 export function app_shared_message_reply_choices() {
   let greeting = app_shared_message_reply_greeting();
   let hru = app_shared_message_reply_how_r_u();
@@ -87,6 +86,7 @@ export function app_shared_message_reply_choices() {
   let wished_well = reply_wished_well_thanked();
   let christmas_appeal = reply_appeal_christmas();
   let hope_glorified = reply_hope_glorified();
+  let betting_ad = reply_betting_ad_unanswered();
   let choices_main = reply_choice([
     hru,
     greeting,
@@ -113,12 +113,9 @@ export function app_shared_message_reply_choices() {
     wished_well,
     christmas_appeal,
     hope_glorified,
+    betting_ad,
   ]);
-  let counted = reply_pieces_counted(choices_main);
-  let choices_cheapest = reply_cheapest_per_position_fewest_pieces(counted);
-  let room = reply_once_or_more(choices_cheapest);
-  let last = reply_last();
-  let read_whole = reply_sequence([room, last]);
+  let read_whole = reply_whole_english_otherwise_skipping(choices_main);
   let with_repeats = reply_cheapest_per_position_fewest_pieces(read_whole);
   let said_once = reply_outputs_mapped(with_repeats, list_unique);
   let prayed = reply_prayers_closed(said_once);
