@@ -618,6 +618,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_second_last: text_frozen(
       "array_for_second_last",
     ),
+    app_learn_js_lesson_array_for_next: text_frozen("array_for_next"),
   };
   return short;
 }
