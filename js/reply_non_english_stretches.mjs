@@ -13,6 +13,7 @@ export function reply_non_english_stretches(message, lookup) {
   "★ A SIDE WITH NO NEIGHBOUR IS NO EVIDENCE EITHER WAY. A word at the start or end of a message, or with a comma, a full stop or an emoji beside it, has nothing there to join or to fail against. Two other readings were rejected. Counting an empty side as failing made every one-word message foreign. Counting it as joining let one emoji rescue a word: in entry lo 🔥 main khud, lo and main each had an emoji on one side, and both came out English while every neighbour they did have failed.";
   "A name beside a word is no evidence either, for the same reason: Samuel from Kenya is English, and a name standing next to from says nothing about whether from is. Measured over the approved samples, counting a name as a failing side made from and in foreign in every sample that named a place.";
   "A stretch is a run of foreign words and names together, and it needs at least one word that is not a name: names may sit inside another language, but my name is Jared is English. Numbers are never foreign, because no dictionary lists 2000 and every language writes it.";
+  "Every word of a link counts as a word no dictionary holds, whatever it spells: in https://j4.oui8889.com/s/..., com and s are dictionary words and j4 is a number, and read as words they kept the link out of the stretch beside it. A link is an address, so a rule that reads one - such as the TikTok link - is still cheaper than skipping it.";
   let words = reply_message_words_placed(message);
   let unparsable = {};
   for (let pair of reply_pairs_unparsable()) {
@@ -35,6 +36,10 @@ export function reply_non_english_stretches(message, lookup) {
     return unknown;
   }
   function word_kind(placed) {
+    if (placed.link) {
+      let unknown2 = "unknown";
+      return unknown2;
+    }
     let kind = kind_of(placed.word);
     return kind;
   }
