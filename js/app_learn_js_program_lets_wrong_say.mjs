@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -19,7 +20,6 @@ import { text_index_of_last } from "./text_index_of_last.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { js_value_code } from "./js_value_code.mjs";
-import { list_first } from "./list_first.mjs";
 import { text_index_of_try } from "./text_index_of_try.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
@@ -83,11 +83,16 @@ export function app_learn_js_program_lets_wrong_say(question, answer, choice) {
       if (
         list_size_1(args) &&
         list_includes_not(names, inside) &&
-        not(equal(inside, js_value_code(list_first(args))))
+        not(equal(inside, js_value_code(args[0])))
       ) {
         code_add(inside);
         words = words + " is ";
-        let value2 = list_first(args);
+        ("the logged value may be undefined, which ",
+          fn_name("list_first"),
+          " refuses; ",
+          fn_name("js_value_code"),
+          " writes it by its name");
+        let value2 = args[0];
         let code2 = js_value_code(value2);
         code_add(code2);
         words = words + ", so ";
