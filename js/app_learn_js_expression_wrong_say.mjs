@@ -1,4 +1,3 @@
-import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_flat_tree_of_code } from "./app_learn_js_expression_flat_tree_of_code.mjs";
 import { app_learn_js_expression_press_steps } from "./app_learn_js_expression_press_steps.mjs";
@@ -6,8 +5,10 @@ import { list_map } from "./list_map.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { text_to } from "./text_to.mjs";
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { list_last } from "./list_last.mjs";
+import { text_to } from "./text_to.mjs";
+import { app_learn_js_expression_value_code } from "./app_learn_js_expression_value_code.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -33,7 +34,9 @@ export function app_learn_js_expression_wrong_say(question, answer, choice) {
   let input = list_last(codes);
   let last = text_to(input);
   let right = text_to(answer);
-  let lands = equal(last, right);
+  ("2026-11-15: the working ends as code, so a string ends in its quote marks while its answer is the value without them; the answer written as code is accepted too, or every string line stayed silent");
+  let right_code = app_learn_js_expression_value_code(answer);
+  let lands = equal(last, right) || equal(last, right_code);
   if (not(lands)) {
     return null;
   }
