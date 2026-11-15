@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -20,6 +19,7 @@ import { text_index_of_last } from "./text_index_of_last.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { js_value_code } from "./js_value_code.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { text_index_of_try } from "./text_index_of_try.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
@@ -55,7 +55,12 @@ export function app_learn_js_program_lets_wrong_say(question, answer, choice) {
     return logs;
   }
   function written(args) {
-    let list = list_map(args, text_to);
+    ("String, not ",
+      fn_name("text_to"),
+      ": console.log writes undefined and null by their names, which ",
+      fn_name("text_to"),
+      " throws on; every other value comes out the same");
+    let list = list_map(args, String);
     let w = list_join_newline(list);
     return w;
   }
