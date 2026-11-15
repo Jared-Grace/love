@@ -112,6 +112,8 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   }
   let weekdays = calendar_days_by_weekday(months);
   let chosen = null;
+  ("marked is the problem now ringed in red, or null. It is declared here, above every button, because a press can land while the spam check below is still loading, and a name declared after that wait does not exist yet - picking an app then threw and drew nothing.");
+  let marked = null;
   ('The prompt and its buttons sit in one field, spaced off from what follows like the host\'s fields (human: "Pick a day of the week and its buttons should look like a group").');
   let pick_field = app_shared_field(card);
   let chosen_line = html_div_text(pick_field, "");
@@ -339,7 +341,6 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     }
     return null;
   }
-  let marked = null;
   function problem_show(problem) {
     problem_clear();
     marked = problem;
