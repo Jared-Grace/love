@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_shift } from "./app_learn_js_lesson_array_for_shift.mjs";
 import { app_learn_js_lesson_array_for_next } from "./app_learn_js_lesson_array_for_next.mjs";
 import { app_learn_js_lesson_array_for_second_last } from "./app_learn_js_lesson_array_for_second_last.mjs";
 import { app_learn_js_lesson_array_for_temp } from "./app_learn_js_lesson_array_for_temp.mjs";
@@ -806,6 +807,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_swap,
     app_learn_js_lesson_array_for_second_last,
     app_learn_js_lesson_array_for_next,
+    app_learn_js_lesson_array_for_shift,
     app_learn_js_lesson_array_for_pushed,
     app_learn_js_lesson_array_empty_for_push,
     app_learn_js_lesson_array_empty_for_push_last,
