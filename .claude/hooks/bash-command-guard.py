@@ -2921,7 +2921,6 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_lslocks(words)
             and not is_safe_loginctl_list(words)
             and not is_safe_systemctl_list(words)
-            and not is_safe_gzip_stdout(words)
             and not is_safe_colon_noop(words)
             and not is_safe_fuser_list(words)
             # `unwrapped`, like the sandboxed-node templates and unlike the
