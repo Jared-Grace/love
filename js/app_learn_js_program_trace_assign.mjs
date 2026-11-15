@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
 import { app_learn_js_program_trace_value } from "./app_learn_js_program_trace_value.mjs";
 import { list_add } from "./list_add.mjs";
@@ -10,7 +11,6 @@ import { error } from "./error.mjs";
 import { text_size } from "./text_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_program_trace_long_way } from "./app_learn_js_program_trace_long_way.mjs";
 export function app_learn_js_program_trace_assign(
@@ -29,7 +29,10 @@ export function app_learn_js_program_trace_assign(
     equal(target_type, "MemberExpression") &&
     property_get(target, "computed") &&
     equal(property_get(property_get(target, "object"), "type"), "Identifier") &&
-    equal(property_get(property_get(target, "property"), "type"), "Literal") &&
+    list_includes(
+      ["Literal", "Identifier"],
+      property_get(property_get(target, "property"), "type"),
+    ) &&
     equal(operator2, "=");
   if (item_set) {
     let object = property_get(target, "object");
@@ -37,6 +40,13 @@ export function app_learn_js_program_trace_assign(
     property_exists_assert(values, array_name);
     let object2 = property_get(target, "property");
     let index = property_get(object2, "value");
+    ("2026-11-15, for Setting at a name and Changing every item: the index may be a name, a[i] = x;, and is then the value the name holds. It is read without a step of its own, as the value of i already shows on its // line. Not picked: a step solving i first, which writes a second value into the line and is not needed to see which item changed");
+    let left2 = property_get(object2, "type");
+    if (equal(left2, "Identifier")) {
+      let index_name = property_get(object2, "name");
+      property_exists_assert(values, index_name);
+      index = property_get(values, index_name);
+    }
     let right2 = property_get(expression, "right");
     let item = app_learn_js_program_trace_value(right2, actions, code, values);
     let before = property_get(values, array_name);
