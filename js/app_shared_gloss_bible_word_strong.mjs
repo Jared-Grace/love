@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { gloss_entry_strong_key } from "./gloss_entry_strong_key.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { gloss_entry_root_key } from "./gloss_entry_root_key.mjs";
 import { html_span_colon_2 } from "./html_span_colon_2.mjs";
@@ -8,8 +8,9 @@ import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { biblehub_strong_lettered_url } from "./biblehub_strong_lettered_url.mjs";
 import { window_open } from "./window_open.mjs";
-import { list_join_space } from "./list_join_space.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
+import { app_shared_button_notext } from "./app_shared_button_notext.mjs";
+import { app_shared_gloss_bible_word_span } from "./app_shared_gloss_bible_word_span.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 export function app_shared_gloss_bible_word_strong(e, div) {
   arguments_assert(arguments, 2);
   ("At the end of a word's row, after its explanation: a separator, then a button naming the word's root word and its Strong's number, which opens that root word on BibleHub in a new tab - and nothing at all where the word has no number stored.");
@@ -33,7 +34,9 @@ export function app_shared_gloss_bible_word_strong(e, div) {
   function open() {
     window_open(url);
   }
-  let label = list_join_space([root, strong]);
-  let button = app_shared_button(div, label, open);
+  ("the root word is drawn the way the row draws the word itself, so the two read as one word in two forms; the number after it stays plain.");
+  let button = app_shared_button_notext(div, open);
+  app_shared_gloss_bible_word_span(button, root);
+  html_span_text(button, " " + strong);
   return button;
 }

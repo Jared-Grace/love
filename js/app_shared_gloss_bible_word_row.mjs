@@ -4,15 +4,14 @@ import { html_div } from "./html_div.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_text_direction_set } from "./html_text_direction_set.mjs";
 import { app_shared_gloss_bible_word_sound } from "./app_shared_gloss_bible_word_sound.mjs";
-import { html_span_text } from "./html_span_text.mjs";
-import { html_bold_mild } from "./html_bold_mild.mjs";
-import { html_attribute_set } from "./html_attribute_set.mjs";
-import { app_shared_color_red } from "./app_shared_color_red.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_shared_gloss_bible_word_span } from "./app_shared_gloss_bible_word_span.mjs";
 import { html_on_click_when } from "./html_on_click_when.mjs";
 import { app_shared_gloss_bible_word_translit } from "./app_shared_gloss_bible_word_translit.mjs";
 import { html_span_colon_2 } from "./html_span_colon_2.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
 import { app_shared_gloss_bible_word_strong } from "./app_shared_gloss_bible_word_strong.mjs";
 export function app_shared_gloss_bible_word_row(
   e,
@@ -39,12 +38,7 @@ export function app_shared_gloss_bible_word_row(
     sound_url_get,
     slow_url_get,
   );
-  let span = html_span_text(div, word);
-  html_bold_mild(span);
-  ("each piece is held in its own run, detected from itself, so an english word inside an urdu row reads forwards and does not turn the row around it");
-  html_attribute_set(span, "dir", "auto");
-  let color3 = app_shared_color_red();
-  html_font_color_set(span, color3);
+  let span = app_shared_gloss_bible_word_span(div, word);
   ("the word answers a press too, and gets nothing to answer with on a page that has no recordings - so it is offered the saying rather than told to listen, and a wordless page leaves it as plain text.");
   html_on_click_when(span, play);
   app_shared_gloss_bible_word_translit(e, div, play);
