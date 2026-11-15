@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_double } from "./app_learn_js_lesson_array_for_double.mjs";
 import { app_learn_js_lesson_array_set_name } from "./app_learn_js_lesson_array_set_name.mjs";
 import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_lesson_symbols_digits_numbered.mjs";
 import { app_learn_js_lesson_symbols_digit_number } from "./app_learn_js_lesson_symbols_digit_number.mjs";
@@ -792,6 +793,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for,
     app_learn_js_lesson_array_for_length,
     app_learn_js_lesson_array_set_for,
+    app_learn_js_lesson_array_for_double,
     app_learn_js_lesson_array_for_pushed,
     app_learn_js_lesson_array_empty_for_push,
     app_learn_js_lesson_array_empty_for_push_last,
