@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_object_property_increment } from "./app_learn_js_lesson_object_property_increment.mjs";
 import { app_learn_js_lesson_object_property_keys_for } from "./app_learn_js_lesson_object_property_keys_for.mjs";
 import { app_learn_js_lesson_array_swap_name } from "./app_learn_js_lesson_array_swap_name.mjs";
 import { app_learn_js_lesson_array_for_swap_if_bigger } from "./app_learn_js_lesson_array_for_swap_if_bigger.mjs";
@@ -873,6 +874,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_object_property_key,
     app_learn_js_lesson_object_property_bracket_set,
     app_learn_js_lesson_object_property_keys_for,
+    app_learn_js_lesson_object_property_increment,
   ];
   return fns;
 }
