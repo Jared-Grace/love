@@ -632,6 +632,9 @@ export function app_learn_js_lesson_ids_short() {
       "object_property_bracket",
     ),
     app_learn_js_lesson_object_property_key: text_frozen("object_property_key"),
+    app_learn_js_lesson_object_property_bracket_set: text_frozen(
+      "object_property_bracket_set",
+    ),
   };
   return short;
 }
