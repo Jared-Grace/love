@@ -18,6 +18,7 @@ import { html_text_get } from "./html_text_get.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
 import { date_week_sunday } from "./date_week_sunday.mjs";
 import { week_dates } from "./week_dates.mjs";
@@ -132,7 +133,11 @@ export async function app_calendar_host(parent, key) {
       slug_taken: "Another host has that name. Pick another.",
       no_person: "Save your name and number above first.",
     };
-    let told = words[saved.body.reason] ?? "Could not save. Try again.";
+    let told = property_get_or(
+      words,
+      saved.body.reason,
+      "Could not save. Try again.",
+    );
     return told;
   }
   let rules_card = app_shared_container(parent);
@@ -215,7 +220,11 @@ export async function app_calendar_host(parent, key) {
         "Type a number from 1 to 24 for meetings per guest, or leave it blank for unlimited.",
       no_host: "Save your booking link above first.",
     };
-    let r4 = words[saved.body.reason] ?? "Could not save. Try again.";
+    let r4 = property_get_or(
+      words,
+      saved.body.reason,
+      "Could not save. Try again.",
+    );
     return r4;
   }
   async function lambda8() {

@@ -327,14 +327,12 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
         turnstile: "The check failed. Try again.",
         network: "No connection. Try again.",
       };
-      html_text_content_set(
-        status,
-        property_get_or(
-          words,
-          booked.body.reason,
-          "Could not book. Try again.",
-        ),
+      let text = property_get_or(
+        words,
+        booked.body.reason,
+        "Could not book. Try again.",
       );
+      html_text_content_set(status, text);
       return;
     }
     if (booked.body.key) {
