@@ -115,9 +115,8 @@ export function app_learn_js_lesson_array_empty_for_push_step_two() {
     let for_line = list_get(lines, 1);
     let between = text_between(for_line, "let i = ", ";");
     let start = Number(between);
-    ("the condition is looked for as the program wrote it - by the same builder, with no end yet - because that builder joins it with non-breaking spaces, and a search typed with plain spaces finds nothing");
-    let condition_start = js_code_binary_spaced_nb(index_name, "<", "");
-    let between2 = text_between(for_line, condition_start, ";");
+    ("2026-11-15: the end is read from the < to the ; and the spaces around it are left to Number, which drops plain and non-breaking spaces alike. The happy walk threw in the lesson before this one when the line came with plain spaces and the search, built with non-breaking ones, found nothing");
+    let between2 = text_between(for_line, "<", ";");
     let end = Number(between2);
     let r = {
       start,
