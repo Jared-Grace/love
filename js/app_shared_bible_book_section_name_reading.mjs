@@ -1,37 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
+import { app_shared_bible_testament_name_reading } from "./app_shared_bible_testament_name_reading.mjs";
 export function app_shared_bible_book_section_name_reading(name) {
   "What a group of books is called in the book picker - a testament or a section of one - in the language the reader of this app reads.";
   "The groups keep their English names everywhere else, because a group is matched by that one spelling. Only the words drawn on the screen change, here, at the last step.";
   "A name not listed here is handed back as it is, so a group added later still shows, in English, rather than leaving a blank.";
   arguments_assert(arguments, 1);
-  if (equal(name, "Old Testament")) {
-    let texts = {
-      en: "Old Testament",
-      ur: "پرانا عہد نامہ",
-      tgl: "Lumang Tipan",
-      translated_from: {
-        ur: "Old Testament",
-        tgl: "Old Testament",
-      },
-    };
-    let r = app_shared_text_reader_language(texts);
-    return r;
-  }
-  if (equal(name, "New Testament")) {
-    let texts = {
-      en: "New Testament",
-      ur: "نیا عہد نامہ",
-      tgl: "Bagong Tipan",
-      translated_from: {
-        ur: "New Testament",
-        tgl: "New Testament",
-      },
-    };
-    let r2 = app_shared_text_reader_language(texts);
-    return r2;
-  }
   if (equal(name, "Law")) {
     let texts = {
       en: "Law",
@@ -42,8 +17,8 @@ export function app_shared_bible_book_section_name_reading(name) {
         tgl: "Law",
       },
     };
-    let r3 = app_shared_text_reader_language(texts);
-    return r3;
+    let r = app_shared_text_reader_language(texts);
+    return r;
   }
   if (equal(name, "History")) {
     let texts = {
@@ -149,5 +124,7 @@ export function app_shared_bible_book_section_name_reading(name) {
     let r11 = app_shared_text_reader_language(texts);
     return r11;
   }
-  return name;
+  ("a testament, or a group nobody has named here yet, which the testaments hand back as it is");
+  let testament = app_shared_bible_testament_name_reading(name);
+  return testament;
 }
