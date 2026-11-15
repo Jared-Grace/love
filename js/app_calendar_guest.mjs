@@ -479,9 +479,10 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     html_component_element_get(card).style.display = "none";
     html_clear(after);
     let done = app_shared_container(after);
+    ('The time is a request until the host confirms the code, so the line says so (human: "Instead of saying booked, say: Unconfirmed request:").');
     let booked_line = html_div_text_content(
       done,
-      "Booked: " +
+      "Unconfirmed request: " +
         calendar_time_range_local_text(
           booked.body.start_utc,
           host.meeting_minutes,
