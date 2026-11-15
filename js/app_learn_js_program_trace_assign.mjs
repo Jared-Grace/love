@@ -30,7 +30,7 @@ export function app_learn_js_program_trace_assign(
     property_get(target, "computed") &&
     equal(property_get(property_get(target, "object"), "type"), "Identifier") &&
     list_includes(
-      ["Literal", "Identifier"],
+      ["Literal", "Identifier", "BinaryExpression"],
       property_get(property_get(target, "property"), "type"),
     ) &&
     equal(operator2, "=");
@@ -39,7 +39,7 @@ export function app_learn_js_program_trace_assign(
     let array_name = property_get(object, "name");
     property_exists_assert(values, array_name);
     let object2 = property_get(target, "property");
-    let index = null;
+    let index = app_learn_js_program_trace_value(object2, [], code, values);
     let left3 = property_get(object2, "type");
     if (equal(left3, "Literal")) {
       index = property_get(object2, "value");

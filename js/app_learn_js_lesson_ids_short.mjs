@@ -636,6 +636,10 @@ export function app_learn_js_lesson_ids_short() {
       "object_property_bracket_set",
     ),
     app_learn_js_lesson_object_log: text_frozen("object_log"),
+    app_learn_js_lesson_array_for_swap: text_frozen("array_for_swap"),
+    app_learn_js_lesson_array_for_swap_if_bigger: text_frozen(
+      "array_for_swap_if_bigger",
+    ),
   };
   return short;
 }

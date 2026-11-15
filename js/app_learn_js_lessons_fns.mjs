@@ -1,3 +1,5 @@
+import { app_learn_js_lesson_array_for_swap_if_bigger } from "./app_learn_js_lesson_array_for_swap_if_bigger.mjs";
+import { app_learn_js_lesson_array_for_swap } from "./app_learn_js_lesson_array_for_swap.mjs";
 import { app_learn_js_lesson_object_log } from "./app_learn_js_lesson_object_log.mjs";
 import { app_learn_js_lesson_object_property_bracket_set } from "./app_learn_js_lesson_object_property_bracket_set.mjs";
 import { app_learn_js_lesson_object_property_key } from "./app_learn_js_lesson_object_property_key.mjs";
@@ -820,6 +822,8 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_second_last,
     app_learn_js_lesson_array_for_next,
     app_learn_js_lesson_array_for_shift,
+    app_learn_js_lesson_array_for_swap,
+    app_learn_js_lesson_array_for_swap_if_bigger,
     app_learn_js_lesson_array_for_pushed,
     app_learn_js_lesson_array_empty_for_push,
     app_learn_js_lesson_array_empty_for_push_last,
