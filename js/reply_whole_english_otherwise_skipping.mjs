@@ -5,6 +5,8 @@ import { reply_last } from "./reply_last.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_non_english_skipped } from "./reply_non_english_skipped.mjs";
 import { reply_choice } from "./reply_choice.mjs";
+import { reply_response_unrecognized } from "./reply_response_unrecognized.mjs";
+import { reply_on_said_output_add } from "./reply_on_said_output_add.mjs";
 import { reply_otherwise } from "./reply_otherwise.mjs";
 export function reply_whole_english_otherwise_skipping(choices) {
   "A whole message read as one or more pieces, each piece one of the given choices - and only when that reads nothing, read again with stretches of another language allowed as pieces too.";
@@ -21,7 +23,10 @@ export function reply_whole_english_otherwise_skipping(choices) {
   let english = reading(choices);
   let skipped = reply_non_english_skipped();
   let with_skipped = reply_choice([choices, skipped]);
-  let skipping = reading(with_skipped);
+  let skipping_bare = reading(with_skipped);
+  ("★ A REPLY READ BY SKIPPING SAYS SO, AND ONLY A REPLY THAT SAYS SOMETHING. The second reading only runs once the first read nothing, so anything it reads passed something over; the person is told part of what they wrote was not recognized. A reading that answers with nothing - an advert, a message wholly in another language - stays silent rather than being told so.");
+  let unrecognized = reply_response_unrecognized();
+  let skipping = reply_on_said_output_add(skipping_bare, unrecognized);
   let read = reply_otherwise(english, skipping);
   return read;
 }
