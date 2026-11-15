@@ -1,3 +1,5 @@
+import { app_learn_js_lesson_object_count_words_empty } from "./app_learn_js_lesson_object_count_words_empty.mjs";
+import { app_learn_js_lesson_object_property_missing } from "./app_learn_js_lesson_object_property_missing.mjs";
 import { app_learn_js_lesson_object_count_words_for } from "./app_learn_js_lesson_object_count_words_for.mjs";
 import { app_learn_js_lesson_object_property_key_increment } from "./app_learn_js_lesson_object_property_key_increment.mjs";
 import { app_learn_js_lesson_object_property_increment } from "./app_learn_js_lesson_object_property_increment.mjs";
@@ -879,6 +881,8 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_object_property_increment,
     app_learn_js_lesson_object_property_key_increment,
     app_learn_js_lesson_object_count_words_for,
+    app_learn_js_lesson_object_property_missing,
+    app_learn_js_lesson_object_count_words_empty,
   ];
   return fns;
 }

@@ -653,6 +653,12 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_object_count_words_for: text_frozen(
       "object_count_words_for",
     ),
+    app_learn_js_lesson_object_property_missing: text_frozen(
+      "object_property_missing",
+    ),
+    app_learn_js_lesson_object_count_words_empty: text_frozen(
+      "object_count_words_empty",
+    ),
   };
   return short;
 }
