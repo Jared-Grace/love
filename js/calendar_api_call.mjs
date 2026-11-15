@@ -1,8 +1,9 @@
-import { json_to } from "./json_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { calendar_api_base } from "./calendar_api_base.mjs";
 import { equal } from "./equal.mjs";
+import { json_to } from "./json_to.mjs";
+import { html_loading } from "./html_loading.mjs";
 export async function calendar_api_call(method, route, body, key) {
   arguments_assert(arguments, 4);
   ("One question from the calendar page to the calendar Worker, answered as {status, body} - the same shape ",
@@ -28,7 +29,10 @@ export async function calendar_api_call(method, route, body, key) {
     headers["content-type"] = "application/json";
     options.body = json_to(body);
   }
-  try {
+  ("2026-11-15: the wait shows the shared loading spinner, the way every other request in the repo does through ",
+    fn_name("http_generic"),
+    '; the host\'s sign-in sat blank white without it (human: "what about loader screen like HTTP requests?").');
+  async function ask() {
     let answer = await fetch(url, options);
     let read = await answer.json();
     let r = {
@@ -36,6 +40,10 @@ export async function calendar_api_call(method, route, body, key) {
       body: read,
     };
     return r;
+  }
+  try {
+    let asked = await html_loading(ask);
+    return asked;
   } catch {
     let r2 = {
       status: 0,
