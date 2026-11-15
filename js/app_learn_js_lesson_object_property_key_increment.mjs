@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -49,7 +50,8 @@ export function app_learn_js_lesson_object_property_key_increment() {
     let codes = [];
     for (let word of ["love", "love", "joy", "joy"]) {
       let drawn = list_shuffle_take(numbers, 2);
-      codes.push(program_of(drawn[0], drawn[1], word));
+      let v = program_of(drawn[0], drawn[1], word);
+      codes.push(v);
     }
     list_shuffle(codes);
     return codes;
@@ -77,17 +79,23 @@ export function app_learn_js_lesson_object_property_key_increment() {
   function decoys(question, answer) {
     "both unchanged, the other counted up, both counted up; each once, never the answer";
     let p = parts_of(question);
-    let unchanged = list_join_newline([String(p.love), String(p.joy)]);
+    let v4 = String(p.love);
+    let v5 = String(p.joy);
+    let unchanged = list_join_newline([v4, v5]);
     let other = other_of(p.word);
     let love_after = p.love;
     let joy_after = p.joy;
-    if (other === "love") {
+    if (equal(other, "love")) {
       love_after = love_after + 1;
     } else {
       joy_after = joy_after + 1;
     }
-    let other_up = list_join_newline([String(love_after), String(joy_after)]);
-    let both = list_join_newline([String(p.love + 1), String(p.joy + 1)]);
+    let v6 = String(love_after);
+    let v7 = String(joy_after);
+    let other_up = list_join_newline([v6, v7]);
+    let v8 = String(p.love + 1);
+    let v9 = String(p.joy + 1);
+    let both = list_join_newline([v8, v9]);
     let candidates = [unchanged, other_up, both];
     let found = list_without(candidates, answer);
     let once = list_unique(found);
