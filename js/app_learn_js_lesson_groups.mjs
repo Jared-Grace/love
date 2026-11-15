@@ -15,6 +15,7 @@ import { app_learn_js_lesson_while } from "./app_learn_js_lesson_while.mjs";
 import { app_learn_js_lesson_for } from "./app_learn_js_lesson_for.mjs";
 import { app_learn_js_lesson_while_two_names } from "./app_learn_js_lesson_while_two_names.mjs";
 import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_first.mjs";
+import { app_learn_js_lesson_object_property } from "./app_learn_js_lesson_object_property.mjs";
 export function app_learn_js_lesson_groups() {
   arguments_assert(arguments, 0);
   ("the groups the home list folds its lessons into, each named and starting at the lesson given, and running until the next one starts - the last runs to the end of the list");
@@ -28,6 +29,7 @@ export function app_learn_js_lesson_groups() {
   ("2026-11-04: Looping: for starts at For, at the human's asking. More looping: while starts at the while lessons that follow For, so those are not filed under for. Not picked: leaving them in the for group, which would name them wrongly; moving For after them, since For comes first for the easiest learning curve, the human's stated goal.");
   ("2026-11-06: Arrays starts at The first item of an array, at the human's asking, a group of its own after the for+if lessons. Named by the one word, since an array has no keyword to show as code. Not picked: Arrays: followed by square brackets as code, which reads as an empty array rather than as the topic.");
   ("2026-11-12: More looping names for as well as while, at the human's asking, since half its lessons are for lessons");
+  ("2026-11-15: Objects starts at Reading a property, the first object lesson, named by Claude with the CS 1 plan's word for the topic, since the lesson had fallen under Arrays. Named by the one word for the reason Arrays is.");
   let groups = [
     {
       parts: ["Identifiers"],
@@ -120,6 +122,10 @@ export function app_learn_js_lesson_groups() {
     {
       parts: ["Arrays"],
       lesson: app_learn_js_lesson_array_first,
+    },
+    {
+      parts: ["Objects"],
+      lesson: app_learn_js_lesson_object_property,
     },
   ];
   return groups;
