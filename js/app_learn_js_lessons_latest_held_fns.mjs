@@ -1,3 +1,15 @@
+import { app_learn_js_lesson_object_property } from "./app_learn_js_lesson_object_property.mjs";
+import { app_learn_js_lesson_object_property_set } from "./app_learn_js_lesson_object_property_set.mjs";
+import { app_learn_js_lesson_object_log } from "./app_learn_js_lesson_object_log.mjs";
+import { app_learn_js_lesson_object_property_bracket } from "./app_learn_js_lesson_object_property_bracket.mjs";
+import { app_learn_js_lesson_object_property_key } from "./app_learn_js_lesson_object_property_key.mjs";
+import { app_learn_js_lesson_object_property_bracket_set } from "./app_learn_js_lesson_object_property_bracket_set.mjs";
+import { app_learn_js_lesson_object_property_keys_for } from "./app_learn_js_lesson_object_property_keys_for.mjs";
+import { app_learn_js_lesson_object_property_increment } from "./app_learn_js_lesson_object_property_increment.mjs";
+import { app_learn_js_lesson_object_property_key_increment } from "./app_learn_js_lesson_object_property_key_increment.mjs";
+import { app_learn_js_lesson_object_count_words_for } from "./app_learn_js_lesson_object_count_words_for.mjs";
+import { app_learn_js_lesson_object_property_missing } from "./app_learn_js_lesson_object_property_missing.mjs";
+import { app_learn_js_lesson_object_count_words_empty } from "./app_learn_js_lesson_object_count_words_empty.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function app_learn_js_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
@@ -118,6 +130,19 @@ export function app_learn_js_lessons_latest_held_fns() {
   ("2026-11-01: hold A running product, new at the human's asking straight after A running total of squares, and While asking &&, straight after Two numbers meeting, until the human has read their first drafts");
   ("2026-11-02: latest runs through Inside and outside and stops there, at the human's asking: While asking !== and A running product released, and Two names held along with everything after it");
   ("2026-11-04: latest runs through the for lessons and stops there, at the human's asking: For and its next lesson released, and Two names held along with everything after it");
-  let fns = [];
+  let fns = [
+    app_learn_js_lesson_object_property,
+    app_learn_js_lesson_object_property_set,
+    app_learn_js_lesson_object_log,
+    app_learn_js_lesson_object_property_bracket,
+    app_learn_js_lesson_object_property_key,
+    app_learn_js_lesson_object_property_bracket_set,
+    app_learn_js_lesson_object_property_keys_for,
+    app_learn_js_lesson_object_property_increment,
+    app_learn_js_lesson_object_property_key_increment,
+    app_learn_js_lesson_object_count_words_for,
+    app_learn_js_lesson_object_property_missing,
+    app_learn_js_lesson_object_count_words_empty,
+  ];
   return fns;
 }
