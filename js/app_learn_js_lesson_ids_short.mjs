@@ -624,6 +624,7 @@ export function app_learn_js_lesson_ids_short() {
       "array_index_past_end",
     ),
     app_learn_js_lesson_array_for_set_all: text_frozen("array_for_set_all"),
+    app_learn_js_lesson_object_property: text_frozen("object_property"),
   };
   return short;
 }
