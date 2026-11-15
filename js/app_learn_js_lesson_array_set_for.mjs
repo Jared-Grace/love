@@ -9,7 +9,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
-import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
+import { fruits_of_the_spirit_short } from "./fruits_of_the_spirit_short.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { list_last } from "./list_last.mjs";
@@ -69,7 +69,7 @@ export function app_learn_js_lesson_array_set_for() {
     "six programs, arrays of three items, each index set twice with an item not yet in the array, shuffled";
     let codes = [];
     for (let k = 0; less_than(k, list_size(indexes)); k++) {
-      let list = fruits_of_the_spirit();
+      let list = fruits_of_the_spirit_short();
       let taken = list_shuffle_take(list, 4);
       let items = list_take_less_1(taken);
       let added = list_last(taken);
