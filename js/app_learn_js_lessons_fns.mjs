@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_push_if_e } from "./app_learn_js_lesson_array_for_push_if_e.mjs";
 import { app_learn_js_lesson_object_property } from "./app_learn_js_lesson_object_property.mjs";
 import { app_learn_js_lesson_array_for_set_all } from "./app_learn_js_lesson_array_for_set_all.mjs";
 import { app_learn_js_lesson_array_index_past_end } from "./app_learn_js_lesson_array_index_past_end.mjs";
@@ -850,6 +851,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_string_includes_e,
     app_learn_js_lesson_array_for_includes_e,
     app_learn_js_lesson_array_for_count_e,
+    app_learn_js_lesson_array_for_push_if_e,
     app_learn_js_lesson_object_property,
   ];
   return fns;
