@@ -4,8 +4,8 @@ import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
-import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_sort_number } from "./list_sort_number.mjs";
@@ -26,7 +26,7 @@ import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_for_if } from "./app_learn_js_lesson_for_if.mjs";
+import { app_learn_js_lesson_array_for_biggest } from "./app_learn_js_lesson_array_for_biggest.mjs";
 import { app_learn_js_lesson_array_for_swap } from "./app_learn_js_lesson_array_for_swap.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -38,6 +38,7 @@ export function app_learn_js_lesson_array_for_swap_if_bigger() {
   arguments_assert(arguments, 0);
   ("swapping a pair only when the first is bigger: let a = [2, 3, 1]; for (let i = 0; i < a.length - 1; i++) { if (a[i] > a[i + 1]) { let temp = a[i]; a[i] = a[i + 1]; a[i + 1] = temp; } } and a for loop writing out each item of a writes out 2, 1 and 3");
   ("2026-11-15, at the human's asking, whose words were: do the arrays have the lesson of swap if i is greater than i+1, and then: a[i] > a[i+1]. After Swapping every pair, which carries the first item to the end, the one new fact is the if around the swap: a pair is swapped only when its first item is bigger, so the biggest number is carried along to the end, and the smaller ones it passes move one place to the left. The others are not sorted yet; one pass only puts the biggest last.");
+  ("2026-11-16, at the human's asking: moved from straight after Swapping every pair to straight after The biggest item, since until then no lesson had put an if inside a loop over an array, nor compared an item with >, and this lesson would have asked for both at once beside the swap. Its first Remember box points to The biggest item, now the nearer lesson, in place of An if inside a for.");
   ("A set is six questions, arrays of three and four different numbers from 1 to 9 three times each, shuffled. An array already in order is drawn again, so every question swaps at least once. Every question names its array a, as the loops over an array do.");
   ("Reading forwards, the wrong answers are the numbers as they were, every pair swapped (the previous lesson's answer), and the numbers all in order. Reading backwards, the wrong programs ask < instead of >, leave out temp, and stop two early; each is kept only if it writes out something other than the answer.");
   ("The writing is a first draft by Claude 2026-11-15.");
@@ -157,13 +158,17 @@ export function app_learn_js_lesson_array_for_swap_if_bigger() {
     return kept;
   }
   function above(root, context) {
-    "an if inside a for and swapping every pair remembered, then swapping only when the first is bigger";
+    "the biggest item and swapping every pair remembered, then swapping only when the first is bigger";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_for_if,
-      ["An ", "if", " inside a ", "for", " is asked again every time round"],
+      app_learn_js_lesson_array_for_biggest,
+      [
+        "",
+        "if (a[i] > big) { big = a[i]; }",
+        " keeps the biggest number seen so far",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(

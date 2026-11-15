@@ -1,3 +1,6 @@
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { modulo } from "./modulo.mjs";
+import { multiply } from "./multiply.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
@@ -21,6 +24,14 @@ export async function calendar_e2e_guest_walk(url) {
     "Friday",
     "Saturday",
   ];
+  ("Each run books under its own number and profile link: a stopped run leaves its bookings waiting a day for their code, and those hold its contacts at the host's limit per guest, so a later run reusing them is refused at Book. The numbers stay within 555-0100 to 555-0199, which are set aside for fiction.");
+  let left = date_now_milliseconds();
+  let run_pair = modulo(left, 50);
+  let p = multiply(run_pair, 2);
+  let run_number_book = "+1 904 555 01" + String(p).padStart(2, "0");
+  let run_number_limit =
+    "+1 904 555 01" + String(multiply(run_pair, 2) + 1).padStart(2, "0");
+  let run_profile = "facebook.com/e2e.test." + run_pair;
   async function step_run(flow, name, run) {
     flow.reached = name;
     await run();
@@ -137,7 +148,9 @@ export async function calendar_e2e_guest_walk(url) {
         " - " +
         err.message.split("\n")[0] +
         " | page: " +
-        shown.slice(0, 300),
+        shown.slice(0, 300) +
+        " ... " +
+        shown.slice(-300),
     );
   }
   async function book_walk(via, device_name) {
@@ -148,9 +161,7 @@ export async function calendar_e2e_guest_walk(url) {
       code: null,
     };
     flows.push(flow);
-    let contact = equal(via, "messenger")
-      ? "facebook.com/e2e.test"
-      : "+1 904 555 0100";
+    let contact = equal(via, "messenger") ? run_profile : run_number_book;
     async function on_page(page) {
       try {
         await page.goto(url);
@@ -287,7 +298,7 @@ export async function calendar_e2e_guest_walk(url) {
       code: null,
     };
     flows.push(flow);
-    let contact = "+1 904 555 0101";
+    let contact = run_number_limit;
     let full_words =
       "the most allowed. To book another time, cancel one first.";
     try {
@@ -342,7 +353,9 @@ export async function calendar_e2e_guest_walk(url) {
               ": the same number from a new browser was not refused - " +
               err.message.split("\n")[0] +
               " | page: " +
-              shown.slice(0, 300),
+              shown.slice(0, 300) +
+              " ... " +
+              shown.slice(-300),
           );
         }
       }
