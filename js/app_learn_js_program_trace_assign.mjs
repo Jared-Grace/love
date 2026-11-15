@@ -39,7 +39,11 @@ export function app_learn_js_program_trace_assign(
     let array_name = property_get(object, "name");
     property_exists_assert(values, array_name);
     let object2 = property_get(target, "property");
-    let index = property_get(object2, "value");
+    let index = null;
+    let left3 = property_get(object2, "type");
+    if (equal(left3, "Literal")) {
+      index = property_get(object2, "value");
+    }
     ("2026-11-15, for Setting at a name and Changing every item: the index may be a name, a[i] = x;, and is then the value the name holds. It is read without a step of its own, as the value of i already shows on its // line. Not picked: a step solving i first, which writes a second value into the line and is not needed to see which item changed");
     let left2 = property_get(object2, "type");
     if (equal(left2, "Identifier")) {
