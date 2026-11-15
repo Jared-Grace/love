@@ -13,6 +13,7 @@ import { math_min } from "./math_min.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { math_max } from "./math_max.mjs";
 import { week_calendar_range_add } from "./week_calendar_range_add.mjs";
+import { list_get_or } from "./list_get_or.mjs";
 import { week_calendar_endpoint_back_up } from "./week_calendar_endpoint_back_up.mjs";
 import { week_calendar_far_anchor_set } from "./week_calendar_far_anchor_set.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -60,8 +61,9 @@ export function week_calendar(
     let i = dates.indexOf(day_a);
     let j = dates.indexOf(day_b);
     for (let k = math_min(i, j); less_than_equal(k, math_max(i, j)); k++) {
+      let day2 = list_get_or(dates, k, undefined);
       let week_calendar_range_add_answer = week_calendar_range_add(
-        dates[k],
+        day2,
         a,
         b,
         ranges,

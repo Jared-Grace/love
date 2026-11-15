@@ -1,7 +1,7 @@
-import { less_than_equal } from "./less_than_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
 export function calendar_slots_day_limit(slots, meetings, max_per_day) {
   arguments_assert(arguments, 3);
@@ -10,9 +10,10 @@ export function calendar_slots_day_limit(slots, meetings, max_per_day) {
   if (equal(max_per_day, null)) {
     return slots;
   }
-  let counts = {};
+  let counts = new Map();
   function count(day) {
-    if (not(day in counts)) {
+    let b = counts.has(day);
+    if (not(b)) {
       let weekday = new Date(day + "T00:00:00Z").getUTCDay();
       function lambda(m) {
         let r =
@@ -22,9 +23,9 @@ export function calendar_slots_day_limit(slots, meetings, max_per_day) {
             less_than_equal(m.day, day));
         return r;
       }
-      counts[day] = meetings.filter(lambda).length;
+      counts.set(day, meetings.filter(lambda).length);
     }
-    let r2 = counts[day];
+    let r2 = counts.get(day);
     return r2;
   }
   function lambda2(s) {
