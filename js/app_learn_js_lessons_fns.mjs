@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_swap_name } from "./app_learn_js_lesson_array_swap_name.mjs";
 import { app_learn_js_lesson_array_for_swap_if_bigger } from "./app_learn_js_lesson_array_for_swap_if_bigger.mjs";
 import { app_learn_js_lesson_array_for_swap } from "./app_learn_js_lesson_array_for_swap.mjs";
 import { app_learn_js_lesson_object_log } from "./app_learn_js_lesson_object_log.mjs";
@@ -819,6 +820,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_index_next,
     app_learn_js_lesson_array_temp_keep,
     app_learn_js_lesson_array_swap,
+    app_learn_js_lesson_array_swap_name,
     app_learn_js_lesson_array_for_second_last,
     app_learn_js_lesson_array_for_next,
     app_learn_js_lesson_array_for_shift,

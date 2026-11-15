@@ -1,9 +1,9 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_object_people_renamed } from "./app_learn_js_object_people_renamed.mjs";
 import { list_first } from "./list_first.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_learn_js_object_code } from "./app_learn_js_object_code.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -164,7 +164,7 @@ export function app_learn_js_lesson_object_log() {
     let value = eval_console_log_lines(plain);
     app_learn_js_code_lines_writes_out(box_three, lines2, value);
     app_learn_js_div_cycle_code(box_three, [
-      "It is written the way it was made, so after a property is set, the new value shows:",
+      "Its current value is written out, not the values it had before:",
     ]);
     let changed = program_of(example_person, true);
     let lines3 = text_split_newline(changed);
