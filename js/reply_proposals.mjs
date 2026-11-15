@@ -35,6 +35,7 @@ import { prayer_blessing_line } from "./prayer_blessing_line.mjs";
 import { reply_prayer_abundance_of_prayer } from "./reply_prayer_abundance_of_prayer.mjs";
 import { reply_response_how_r_u } from "./reply_response_how_r_u.mjs";
 import { reply_response_blessing_thanks } from "./reply_response_blessing_thanks.mjs";
+import { reply_response_unrecognized } from "./reply_response_unrecognized.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -4958,6 +4959,7 @@ export function reply_proposals() {
   ]);
   let foreign_betting_message =
     "💰 Abhi entry lo 🔥😎 main khud jeet raha hoon 🎰 high odds + instant withdrawal 🎁 start me advantage milta hai! https://j4.oui8889.com/s/GYGtJgotVqpIiCizgAo";
+  let unrecognized_said = reply_response_unrecognized();
   let non_english_skipped = {
     title:
       "read stretches of another language and a betting advert with no answer, only when nothing else reads the message",
@@ -4966,6 +4968,8 @@ export function reply_proposals() {
       fn_name("reply_betting_ad_unanswered"),
       fn_name("reply_whole_english_otherwise_skipping"),
       fn_name("reply_otherwise"),
+      fn_name("reply_on_said_output_add"),
+      fn_name("reply_response_unrecognized"),
       fn_name("reply_non_english_skipped"),
       fn_name("reply_non_english_stretches"),
       fn_name("reply_message_words_placed"),
@@ -5004,7 +5008,7 @@ export function reply_proposals() {
         from: "",
         message: "Greetings brother Jared, kya aap kaise ho",
         answered: true,
-        outputs: [greeting],
+        outputs: [greeting, unrecognized_said],
       },
       {
         from: "",
@@ -5022,8 +5026,8 @@ export function reply_proposals() {
     decide: [
       "the advert's English comes from one real message (2026-07-28) and answering it with nothing was asked for. The Roman Urdu around it and the link after it are not written into any rule: they are found as stretches of words no dictionary holds, or dictionary words that join up with neither neighbour.",
       "the rules read every message exactly as before first. Only a message they cannot read is read again with those stretches skipped, at a hundred a word, so any English reading - typos and all - still wins. On a page, that second reading is the only thing that downloads the word list, about a megabyte, once.",
-      "★ A MESSAGE WHOLLY IN ANOTHER LANGUAGE IS NOW READ AND ANSWERED WITH NOTHING, and no longer sent on for a person to read. That is what was asked - no human review for it - but it includes a real person writing in Urdu or Tagalog. Should it get a reply asking them to write in English instead?",
-      "a message partly English and partly another language gets the English part answered and the rest passed over, as Greetings brother Jared, kya aap kaise ho does here.",
+      "★ A MESSAGE WHOLLY IN ANOTHER LANGUAGE IS NOW READ AND ANSWERED WITH NOTHING, and no longer sent on for a person to read. That is what was asked - no human review for it - but it includes a real person writing in Urdu or Tagalog. Asked 2026-11-15, and left silent: anything said to it would also be said to spam, and tells the sender the account is read.",
+      "a message partly English and partly another language gets the English part answered, the rest passed over, and one more line saying so - I didn't recognize everything you said - as Greetings brother Jared, kya aap kaise ho does here. The line is added only to a reply that already says something, so the advert and the wholly foreign message stay silent. Chosen 2026-11-15 over saying it was not English, because misspellings and place names are passed over too and would be told they were not English.",
       "English that no rule reads, like Please share it with your friends and family, still goes to a person, because every word in it is a dictionary word that joins its neighbours.",
     ],
   };
