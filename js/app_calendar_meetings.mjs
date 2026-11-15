@@ -156,6 +156,8 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
           meeting.profile_url,
           "Open their profile",
         );
+        let profile_line = html_div_text_content(card, meeting.profile_url);
+        app_shared_text_deemphasized(profile_line);
       } else if (meeting.hosting && not(messenger)) {
         html_a_href_text_new_tab(
           card,

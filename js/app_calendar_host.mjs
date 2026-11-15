@@ -3,6 +3,7 @@ import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
+import { app_shared_field } from "./app_shared_field.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
@@ -47,11 +48,16 @@ export async function app_calendar_host(parent, key) {
   let settings = read.body.settings;
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   let me = app_shared_container(parent);
-  html_div_text(me, "Your name");
-  let name = html_input_text(me, "Your name");
+  let name_field = app_shared_field(me);
+  html_div_text(name_field, "Your name");
+  let name = html_input_text(name_field, "Your name");
   app_shared_input_style(name);
-  html_div_text(me, "Your WhatsApp number - guests send their code here");
-  let whatsapp = html_input_text(me, "+1 555 123 4567");
+  let whatsapp_field = app_shared_field(me);
+  html_div_text(
+    whatsapp_field,
+    "Your WhatsApp number - guests send their code here",
+  );
+  let whatsapp = html_input_text(whatsapp_field, "+1 555 123 4567");
   app_shared_input_style(whatsapp);
   let person = settings.person;
   if (person) {
@@ -83,11 +89,12 @@ export async function app_calendar_host(parent, key) {
   }
   app_shared_button_green(me, "Save", lambda);
   let link_card = app_shared_container(parent);
+  let slug_field = app_shared_field(link_card);
   html_div_text(
-    link_card,
+    slug_field,
     "Your booking link name (lowercase letters, digits, _)",
   );
-  let slug = html_input_text(link_card, "your_name");
+  let slug = html_input_text(slug_field, "your_name");
   app_shared_input_style(slug);
   let host = settings.host;
   if (host) {
@@ -147,24 +154,23 @@ export async function app_calendar_host(parent, key) {
   let rules_card = app_shared_container(parent);
   app_shared_heading(rules_card, "Booking rules");
   ('2026-11-15: asks for the link, since that is what a host has to hand and the reader takes a whole link (human: "It says messenger name - but the field shows URL - does it want just the /... part or the whole url?").');
+  let messenger_field = app_shared_field(rules_card);
   html_div_text(
-    rules_card,
+    messenger_field,
     "Your Facebook profile link - leave blank to take WhatsApp calls only",
   );
-  let messenger = html_input_text(rules_card, "facebook.com/your.name");
+  let messenger = html_input_text(messenger_field, "facebook.com/your.name");
   let messenger_hint = html_div_text(
-    rules_card,
+    messenger_field,
     "On Facebook, open your profile, then copy the link from the address bar or from Share.",
   );
   app_shared_text_deemphasized(messenger_hint);
   app_shared_input_style(messenger);
-  html_div_text(
-    rules_card,
-    "Most meetings in one day - leave blank for unlimited",
-  );
-  let max = html_input_text(rules_card, "Unlimited");
+  let max_field = app_shared_field(rules_card);
+  html_div_text(max_field, "Max meetings per day - leave blank for unlimited");
+  let max = html_input_text(max_field, "Unlimited");
   app_shared_input_style(max);
-  let max_line = html_div_text(rules_card, "");
+  let max_line = html_div_text(max_field, "");
   app_shared_text_deemphasized(max_line);
   let max_show = function lambda7(saved_max) {
     html_text_content_set(
@@ -174,13 +180,14 @@ export async function app_calendar_host(parent, key) {
         : "Now: at most " + saved_max + " meetings a day",
     );
   };
+  let max_guest_field = app_shared_field(rules_card);
   html_div_text(
-    rules_card,
-    "Most upcoming meetings one guest may hold - a weekly meeting counts as 1; leave blank for unlimited",
+    max_guest_field,
+    "Max upcoming meetings per guest - a weekly meeting counts as 1; leave blank for unlimited",
   );
-  let max_guest = html_input_text(rules_card, "Unlimited");
+  let max_guest = html_input_text(max_guest_field, "Unlimited");
   app_shared_input_style(max_guest);
-  let max_guest_line = html_div_text(rules_card, "");
+  let max_guest_line = html_div_text(max_guest_field, "");
   app_shared_text_deemphasized(max_guest_line);
   let max_guest_show = function lambda9(saved_max) {
     html_text_content_set(
