@@ -10,7 +10,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
-import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
+import { fruits_of_the_spirit_short } from "./fruits_of_the_spirit_short.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -73,7 +73,7 @@ export function app_learn_js_lesson_array_copy() {
     let count = list_size(sizes);
     let codes = [];
     for (let k = 0; less_than(k, count); k++) {
-      let list = fruits_of_the_spirit();
+      let list = fruits_of_the_spirit_short();
       let count3 = list_get(sizes, k);
       let items = list_shuffle_take(list, count3);
       let code = program_of("a", "b", items);
