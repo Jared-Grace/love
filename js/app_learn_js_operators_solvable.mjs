@@ -5,7 +5,7 @@ import { list_concat_single_right } from "./list_concat_single_right.mjs";
 import { js_operator_and } from "./js_operator_and.mjs";
 import { js_operator_or } from "./js_operator_or.mjs";
 import { app_learn_js_operator_index_symbol } from "./app_learn_js_operator_index_symbol.mjs";
-import { list_get } from "./list_get.mjs";
+import { list_index_read } from "./list_index_read.mjs";
 import { math_max } from "./math_max.mjs";
 import { math_min } from "./math_min.mjs";
 import { app_learn_js_operator_includes_symbol } from "./app_learn_js_operator_includes_symbol.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_operators_solvable() {
   let index_symbol = app_learn_js_operator_index_symbol();
   let indexing = {
     operator: index_symbol,
-    fn: list_get,
+    fn: list_index_read,
   };
   let with_index = list_concat_single_right(with_or, indexing);
   ("2026-11-12, at the human's asking: Math.max and Math.min act on two things and are worked out as the operators between two things are, so the Statements lessons that keep a value inside its edges can be stepped through");
