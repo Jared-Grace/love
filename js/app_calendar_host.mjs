@@ -20,6 +20,7 @@ import { app_shared_toast } from "./app_shared_toast.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { app_shared_heading } from "./app_shared_heading.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
 import { date_week_sunday } from "./date_week_sunday.mjs";
 import { week_dates } from "./week_dates.mjs";
@@ -144,12 +145,18 @@ export async function app_calendar_host(parent, key) {
     return told;
   }
   let rules_card = app_shared_container(parent);
-  html_div_text(rules_card, "Booking rules");
+  app_shared_heading(rules_card, "Booking rules");
+  ('2026-11-15: asks for the link, since that is what a host has to hand and the reader takes a whole link (human: "It says messenger name - but the field shows URL - does it want just the /... part or the whole url?").');
   html_div_text(
     rules_card,
-    "Your Messenger name - leave blank to take WhatsApp calls only",
+    "Your Facebook profile link - leave blank to take WhatsApp calls only",
   );
-  let messenger = html_input_text(rules_card, "m.me/your.name");
+  let messenger = html_input_text(rules_card, "facebook.com/your.name");
+  let messenger_hint = html_div_text(
+    rules_card,
+    "On Facebook, open your profile, then copy the link from the address bar or from Share.",
+  );
+  app_shared_text_deemphasized(messenger_hint);
   app_shared_input_style(messenger);
   html_div_text(
     rules_card,
@@ -217,7 +224,7 @@ export async function app_calendar_host(parent, key) {
     }
     let words = {
       messenger:
-        "That Messenger name does not look right. Use the part after m.me/.",
+        "That link does not look right. Paste the link to your own Facebook profile.",
       max: "Type a number from 1 to 24, or leave it blank for unlimited.",
       max_guest:
         "Type a number from 1 to 24 for meetings per guest, or leave it blank for unlimited.",
@@ -235,7 +242,7 @@ export async function app_calendar_host(parent, key) {
   }
   app_shared_button_green(rules_card, "Save rules", lambda8);
   let hours_card = app_shared_container(parent);
-  html_div_text(hours_card, "Your weekly free hours");
+  app_shared_heading(hours_card, "Your weekly free hours");
   let today = date_today_iso();
   let sunday_iso = date_week_sunday(today);
   let dates = week_dates(sunday_iso);

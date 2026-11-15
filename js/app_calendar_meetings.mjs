@@ -4,6 +4,7 @@ import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { equal } from "./equal.mjs";
+import { app_shared_heading } from "./app_shared_heading.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
@@ -37,7 +38,7 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
   if (empty && not(empty_shown)) {
     return;
   }
-  html_div_text(box, "Your meetings");
+  app_shared_heading(box, "Your meetings");
   if (empty) {
     let none = html_div_text(box, "None yet.");
     app_shared_text_deemphasized(none);
