@@ -609,6 +609,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_shift: text_frozen("array_shift"),
     app_learn_js_lesson_array_shift_value: text_frozen("array_shift_value"),
     app_learn_js_lesson_array_reverse: text_frozen("array_reverse"),
+    app_learn_js_lesson_array_set_name: text_frozen("array_set_name"),
   };
   return short;
 }
