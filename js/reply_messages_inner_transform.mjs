@@ -1,28 +1,8 @@
-import { text_apostrophe_straightened } from "./text_apostrophe_straightened.mjs";
-import { text_includes_curried_right_get } from "./text_includes_curried_right_get.mjs";
-import { list_any } from "./list_any.mjs";
-import { text_letters_is } from "./text_letters_is.mjs";
+import { reply_message_characters } from "./reply_message_characters.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { text_split_empty } from "./text_split_empty.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { digits_text } from "./digits_text.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { reply_character_kept } from "./reply_character_kept.mjs";
 export function reply_messages_inner_transform(message) {
-  let straight = text_apostrophe_straightened(message);
-  let lower = text_lower_to(straight);
-  let tokens = text_split_empty(lower);
-  let right = digits_text();
-  let input = text_combine("'", right);
-  let string_includes_curry_right = text_includes_curried_right_get(input);
-  let choices = [text_letters_is, string_includes_curry_right];
-  function lambda(item) {
-    function lambda2(fn) {
-      let v = fn(item);
-      return v;
-    }
-    let any = list_any(choices, lambda2);
-    return any;
-  }
-  let filtered = list_filter(tokens, lambda);
+  let characters = reply_message_characters(message);
+  let filtered = list_filter(characters, reply_character_kept);
   return filtered;
 }

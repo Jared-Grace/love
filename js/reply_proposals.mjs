@@ -4911,6 +4911,122 @@ export function reply_proposals() {
       "the greeting rule already hears the name after brother on its own; once this is in, that copy says the same thing twice and comes out in a change of its own that answers nothing differently.",
     ],
   };
+  let foreign_hope_kept = text_combine_multiple([
+    "   let hope_glorified = ",
+    fn_name("reply_hope_glorified"),
+    "();",
+  ]);
+  let foreign_betting_added = text_combine_multiple([
+    "+  let betting_ad = ",
+    fn_name("reply_betting_ad_unanswered"),
+    "();",
+  ]);
+  let foreign_counted_removed = text_combine_multiple([
+    "-  let counted = ",
+    fn_name("reply_pieces_counted"),
+    "(choices_main);",
+  ]);
+  let foreign_cheapest_removed = text_combine_multiple([
+    "-  let choices_cheapest = ",
+    fn_name("reply_cheapest_per_position_fewest_pieces"),
+    "(counted);",
+  ]);
+  let foreign_room_removed = text_combine_multiple([
+    "-  let room = ",
+    fn_name("reply_once_or_more"),
+    "(choices_cheapest);",
+  ]);
+  let foreign_last_removed = text_combine_multiple([
+    "-  let last = ",
+    fn_name("reply_last"),
+    "();",
+  ]);
+  let foreign_whole_removed = text_combine_multiple([
+    "-  let read_whole = ",
+    fn_name("reply_sequence"),
+    "([room, last]);",
+  ]);
+  let foreign_whole_added = text_combine_multiple([
+    "+  let read_whole = ",
+    fn_name("reply_whole_english_otherwise_skipping"),
+    "(choices_main);",
+  ]);
+  let foreign_repeats_kept = text_combine_multiple([
+    "   let with_repeats = ",
+    fn_name("reply_cheapest_per_position_fewest_pieces"),
+    "(read_whole);",
+  ]);
+  let foreign_betting_message =
+    "💰 Abhi entry lo 🔥😎 main khud jeet raha hoon 🎰 high odds + instant withdrawal 🎁 start me advantage milta hai! https://j4.oui8889.com/s/GYGtJgotVqpIiCizgAo";
+  let non_english_skipped = {
+    title:
+      "read stretches of another language and a betting advert with no answer, only when nothing else reads the message",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [
+      fn_name("reply_betting_ad_unanswered"),
+      fn_name("reply_whole_english_otherwise_skipping"),
+      fn_name("reply_otherwise"),
+      fn_name("reply_non_english_skipped"),
+      fn_name("reply_non_english_stretches"),
+      fn_name("reply_message_words_placed"),
+      fn_name("reply_pairs_unparsable"),
+      fn_name("english_words_lookup"),
+      fn_name("english_words_lookup_from_lines"),
+    ],
+    diff: [
+      foreign_hope_kept,
+      foreign_betting_added,
+      "     hope_glorified,",
+      "+    betting_ad,",
+      "   ]);",
+      foreign_counted_removed,
+      foreign_cheapest_removed,
+      foreign_room_removed,
+      foreign_last_removed,
+      foreign_whole_removed,
+      foreign_whole_added,
+      foreign_repeats_kept,
+    ],
+    cases: [
+      {
+        from: "",
+        message: foreign_betting_message,
+        answered: true,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "high odds instant withdrawal start me advantage",
+        answered: true,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "Greetings brother Jared, kya aap kaise ho",
+        answered: true,
+        outputs: [greeting],
+      },
+      {
+        from: "",
+        message: "kya aap kaise ho bhai, mujhe paisa chahiye",
+        answered: true,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "Please share it with your friends and family",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "the advert's English comes from one real message (2026-07-28) and answering it with nothing was asked for. The Roman Urdu around it and the link after it are not written into any rule: they are found as stretches of words no dictionary holds, or dictionary words that join up with neither neighbour.",
+      "the rules read every message exactly as before first. Only a message they cannot read is read again with those stretches skipped, at a hundred a word, so any English reading - typos and all - still wins. On a page, that second reading is the only thing that downloads the word list, about a megabyte, once.",
+      "★ A MESSAGE WHOLLY IN ANOTHER LANGUAGE IS NOW READ AND ANSWERED WITH NOTHING, and no longer sent on for a person to read. That is what was asked - no human review for it - but it includes a real person writing in Urdu or Tagalog. Should it get a reply asking them to write in English instead?",
+      "a message partly English and partly another language gets the English part answered and the rest passed over, as Greetings brother Jared, kya aap kaise ho does here.",
+      "English that no rule reads, like Please share it with your friends and family, still goes to a person, because every word in it is a dictionary word that joins its neighbours.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -4971,6 +5087,7 @@ export function reply_proposals() {
     greetings_named,
     christmas_appeal_said,
     brother_named,
+    non_english_skipped,
   ];
   return proposals;
 }
