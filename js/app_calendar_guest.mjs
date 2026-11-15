@@ -10,6 +10,7 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { app_shared_field } from "./app_shared_field.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { app_shared_unavailable_box } from "./app_shared_unavailable_box.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -26,13 +27,16 @@ import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
 import { html_value_get } from "./html_value_get.mjs";
+import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
+import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
-import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
+import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
+import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
 export async function app_calendar_guest(parent, slug, key, on_key) {
   arguments_assert(arguments, 4);
@@ -103,8 +107,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     return r;
   }
   function unavailable_show(words, tail) {
-    let line = html_div_text(list, words + " unavailable" + tail);
-    app_shared_text_deemphasized(line);
+    let line = app_shared_unavailable_box(list, words + " unavailable" + tail);
     return line;
   }
   let weekdays = calendar_days_by_weekday(months);
@@ -138,7 +141,8 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
         );
         html_style_assign(closed_line, {
           display: "inline-block",
-          "margin-right": "0.6em",
+          width: "auto",
+          "margin-right": "0.3em",
         });
         continue;
       }
@@ -204,6 +208,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     for (let time of day.times) {
       function time_pick() {
         chosen = time.slot;
+        problems_recheck();
         html_clear(list);
         chosen_line_set("Chosen: " + day.label + ", " + time.label, true);
         function time_back() {
@@ -271,6 +276,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     for (let [value, words] of choices) {
       function choice_pick() {
         via = value;
+        problems_recheck();
         via_draw();
       }
       if (equal(via, value)) {
@@ -292,26 +298,111 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   let check = await calendar_turnstile_widget(card);
   let status = html_div_text(card, "");
   let after = html_div(parent);
-  async function lambda2() {
+  ('A press of Book with something missing scrolls to the part that needs it and rings it in red, says what is missing in red, and gives Book a thick red edge; all of it comes off as soon as that part is filled in (human: "should it scroll up to the offending field and circle it in red until satsifies check?").');
+  ("Rejected: a red box around the whole form (it says something is wrong without saying where); greying Book until the form is complete (a guest pressing a grey button learns nothing about why).");
+  function form_problem() {
     if (equal(chosen, null)) {
-      html_text_content_set(status, "Pick a time first.");
-      return;
+      let r2 = {
+        field: pick_field,
+        words: "Pick a time first.",
+      };
+      return r2;
     }
     if (equal(via, null)) {
-      html_text_content_set(status, "Pick WhatsApp or Messenger first.");
+      let r3 = {
+        field: via_area,
+        words: "Pick WhatsApp or Messenger first.",
+      };
+      return r3;
+    }
+    let left = html_value_get(name).trim();
+    if (equal(left, "")) {
+      let r4 = {
+        field: name_field,
+        words: "Type your name.",
+      };
+      return r4;
+    }
+    if (equal(via, "whatsapp") && equal(html_value_get(whatsapp).trim(), "")) {
+      let r5 = {
+        field: number_box,
+        words: "Type your WhatsApp number.",
+      };
+      return r5;
+    }
+    if (equal(via, "messenger") && equal(html_value_get(profile).trim(), "")) {
+      let r6 = {
+        field: profile_box,
+        words: "Paste the link to your Facebook profile.",
+      };
+      return r6;
+    }
+    return null;
+  }
+  let marked = null;
+  function problem_show(problem) {
+    problem_clear();
+    marked = problem;
+    app_shared_problem_mark(problem.field, true);
+    html_text_content_set(status, problem.words);
+    html_style_assign(status, {
+      color: app_shared_color_red(),
+    });
+    html_style_assign(book_button, {
+      border: "4px solid " + app_shared_color_red(),
+    });
+    html_component_element_get(problem.field).scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }
+  function problem_clear() {
+    if (equal(marked, null)) {
       return;
     }
+    app_shared_problem_mark(marked.field, false);
+    marked = null;
+    html_text_content_set(status, "");
+    html_style_assign(status, {
+      color: "",
+    });
+    html_style_assign(book_button, {
+      border: "",
+    });
+  }
+  function problems_recheck() {
+    if (equal(marked, null)) {
+      return;
+    }
+    let problem = form_problem();
+    if (equal(problem, null) || not(equal(problem.words, marked.words))) {
+      problem_clear();
+    }
+  }
+  for (let input of [name, whatsapp, profile]) {
+    html_component_element_get(input).addEventListener(
+      "input",
+      problems_recheck,
+    );
+  }
+  async function lambda2() {
+    let problem = form_problem();
+    let b3 = equal(problem, null);
+    if (not(b3)) {
+      problem_show(problem);
+      return;
+    }
+    problem_clear();
     let name_text = html_value_get(name).trim();
-    if (equal(name_text, "")) {
-      html_text_content_set(status, "Type your name.");
-      return;
-    }
     let token = check.token();
     if (equal(token, "")) {
       html_text_content_set(status, "Wait for the check above to finish.");
       return;
     }
     html_text_content_set(status, "Booking...");
+    html_style_assign(status, {
+      color: "",
+    });
     ('The shared loading cover sits over the page while the booking goes through (human: "maybe while booking show loading?"), so a second press can\'t send it twice.');
     async function book_send() {
       let r = await calendar_api_call("POST", "book", book_body, key);
@@ -351,7 +442,26 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
         booked.body.reason,
         "Could not book. Try again.",
       );
+      ("A refusal that names a part of the form rings that part the same way; the rest are said in red with nothing ringed.");
+      let fields = {
+        whatsapp: number_box,
+        profile: profile_box,
+        taken: pick_field,
+        not_open: pick_field,
+      };
+      let field = property_get_or(fields, booked.body.reason, null);
+      let b4 = equal(field, null);
+      if (not(b4)) {
+        problem_show({
+          field,
+          words: text,
+        });
+        return;
+      }
       html_text_content_set(status, text);
+      html_style_assign(status, {
+        color: app_shared_color_red(),
+      });
       return;
     }
     storage_local_set(app_calendar, "guest_details", {
@@ -371,7 +481,11 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     let done = app_shared_container(after);
     let booked_line = html_div_text_content(
       done,
-      "Booked: " + calendar_time_local_text(booked.body.start_utc),
+      "Booked: " +
+        calendar_time_range_local_text(
+          booked.body.start_utc,
+          host.meeting_minutes,
+        ),
     );
     html_style_assign(booked_line, {
       "font-size": "1.3em",
@@ -418,5 +532,5 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     }
     app_shared_button_uncolored(done, "Copy link", link_copy);
   }
-  app_shared_button_green(card, "Book", lambda2);
+  let book_button = app_shared_button_green(card, "Book", lambda2);
 }

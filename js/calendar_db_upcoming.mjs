@@ -13,7 +13,7 @@ export async function calendar_db_upcoming(db, uid, now_iso) {
     .prepare(
       `SELECT meetings.id, meetings.host_uid, meetings.guest_uid, meetings.host_timezone, meetings.day, meetings.weekday, meetings.start_minute, meetings.weekly, meetings.code, meetings.confirmed_at, meetings.via, meetings.profile_url,
   other.uid AS other_uid, other.name AS other_name, other.whatsapp AS other_whatsapp, other.timezone AS other_timezone,
-  h.messenger AS host_messenger, hp.whatsapp AS host_whatsapp
+  h.messenger AS host_messenger, h.meeting_minutes AS meeting_minutes, hp.whatsapp AS host_whatsapp
 FROM meetings JOIN people AS other
   ON other.uid = CASE WHEN meetings.host_uid = ?1 THEN meetings.guest_uid ELSE meetings.host_uid END
 LEFT JOIN hosts AS h ON h.uid = meetings.host_uid
@@ -43,6 +43,7 @@ WHERE meetings.cancelled_at IS NULL AND (meetings.host_uid = ?1 OR meetings.gues
               meeting.code,
             ),
         next_utc,
+        meeting_minutes: meeting.meeting_minutes,
         other: {
           uid: meeting.other_uid,
           name: meeting.other_name,
