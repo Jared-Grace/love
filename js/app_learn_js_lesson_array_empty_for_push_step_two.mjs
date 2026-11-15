@@ -1,6 +1,3 @@
-import { ceil } from "./ceil.mjs";
-import { divide } from "./divide.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { json_to } from "./json_to.mjs";
@@ -14,22 +11,25 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_size } from "./list_size.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
-import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_between } from "./text_between.mjs";
+import { divide } from "./divide.mjs";
+import { ceil } from "./ceil.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { json_equal } from "./json_equal.mjs";
+import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -115,7 +115,9 @@ export function app_learn_js_lesson_array_empty_for_push_step_two() {
     let for_line = list_get(lines, 1);
     let between = text_between(for_line, "let i = ", ";");
     let start = Number(between);
-    let between2 = text_between(for_line, "i < ", ";");
+    ("the condition is looked for as the program wrote it - by the same builder, with no end yet - because that builder joins it with non-breaking spaces, and a search typed with plain spaces finds nothing");
+    let condition_start = js_code_binary_spaced_nb(index_name, "<", "");
+    let between2 = text_between(for_line, condition_start, ";");
     let end = Number(between2);
     let r = {
       start,

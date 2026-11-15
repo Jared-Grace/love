@@ -11,12 +11,12 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_size } from "./list_size.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
-import { add } from "./add.mjs";
 import { list_random_item } from "./list_random_item.mjs";
+import { add } from "./add.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -101,7 +101,9 @@ export function app_learn_js_lesson_array_empty_for_push_last() {
     let for_line = list_get(lines, 1);
     let between = text_between(for_line, "let i = ", ";");
     let start = Number(between);
-    let between2 = text_between(for_line, "i < ", ";");
+    ("the condition is looked for as the program wrote it - by the same builder, with no end yet - because that builder joins it with non-breaking spaces, and a search typed with plain spaces finds nothing");
+    let condition_start = js_code_binary_spaced_nb(index_name, "<", "");
+    let between2 = text_between(for_line, condition_start, ";");
     let end = Number(between2);
     let r = {
       start,
