@@ -1,3 +1,4 @@
+import { reply_name_jared } from "./reply_name_jared.mjs";
 import { reply_choice_optional } from "./reply_choice_optional.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_either_both } from "./reply_either_both.mjs";
@@ -18,6 +19,9 @@ export function reply_phrase_my_dear_brother() {
   let oh = reply_optional("oh");
   let fn16 = reply_sequence([oh, my, db, in_christ]);
   let choices = [fn16, my];
-  let my_dear_brother = reply_choice_optional(choices);
+  let brother_phrase = reply_choice_optional(choices);
+  let name = reply_name_jared();
+  let jared = reply_optional(name);
+  let my_dear_brother = reply_sequence([brother_phrase, jared]);
   return my_dear_brother;
 }
