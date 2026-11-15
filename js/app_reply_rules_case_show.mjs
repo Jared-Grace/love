@@ -3,9 +3,12 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_contact_message_display } from "./app_shared_contact_message_display.mjs";
 import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_shared_absence_paint } from "./app_shared_absence_paint.mjs";
+import { app_reply_rules_real_show } from "./app_reply_rules_real_show.mjs";
 import { text_line_breaks_doubled } from "./text_line_breaks_doubled.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_reply_rules_real_show } from "./app_reply_rules_real_show.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -24,6 +27,13 @@ export function app_reply_rules_case_show(root, one) {
   if (answered) {
     ("★ THE REPLY IS DRAWN DOUBLE SPACED, THE WAY IT IS SENT: each answer and each line of the prayer with an empty line between, so what is approved here is what the person will see.");
     let outputs = property_get(one, "outputs");
+    if (list_empty_is(outputs)) {
+      ("A case answered with no lines - read, and deliberately left without a reply - says so in brackets, in the same mark the learning app gives a program that wrote out nothing, because it is the same thing: an output that is empty. Asked for by the human 2026-11-15. Not picked: (no response lines), longer for no gain; the unanswered wording below, which means the opposite - this message was read.");
+      let empty = html_div(mine);
+      app_shared_absence_paint(empty, "(no response)");
+      app_reply_rules_real_show(root, one);
+      return mine;
+    }
     let joined = outputs.join("\n");
     let reply_sent = text_line_breaks_doubled(joined);
     html_div_text(mine, reply_sent);
