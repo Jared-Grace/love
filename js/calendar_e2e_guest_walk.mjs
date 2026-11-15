@@ -235,7 +235,7 @@ export async function calendar_e2e_guest_walk(url) {
           await page.reload();
           await page
             .getByRole("button", {
-              name: "Cancel",
+              name: "Cancel my meeting",
               exact: true,
             })
             .first()
@@ -351,7 +351,7 @@ export async function calendar_e2e_guest_walk(url) {
       async function lambda15() {
         "Every meeting this guest holds is cancelled, one at a time; each cancel draws the list again.";
         let cancel = page.getByRole("button", {
-          name: "Cancel",
+          name: "Cancel my meeting",
           exact: true,
         });
         for (let tries = 0; less_than(tries, 5); tries++) {
