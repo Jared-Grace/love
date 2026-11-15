@@ -641,6 +641,9 @@ export function app_learn_js_lesson_ids_short() {
       "array_for_swap_if_bigger",
     ),
     app_learn_js_lesson_array_swap_name: text_frozen("array_swap_name"),
+    app_learn_js_lesson_object_property_keys_for: text_frozen(
+      "object_property_keys_for",
+    ),
   };
   return short;
 }

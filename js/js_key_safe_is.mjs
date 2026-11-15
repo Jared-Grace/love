@@ -23,6 +23,9 @@ export function js_key_safe_is(key, facts) {
   ) {
     return true;
   }
-  let number = js_key_number_is(key, facts, 0);
+  let number =
+    (equal(key.type, "Identifier") &&
+      property_get(facts, "listed").has(key.name)) ||
+    js_key_number_is(key, facts, 0);
   return number;
 }

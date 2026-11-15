@@ -1,3 +1,4 @@
+import { js_key_names_from_fixed_lists } from "./js_key_names_from_fixed_lists.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { js_visit } from "./js_visit.mjs";
@@ -111,6 +112,7 @@ export function js_key_facts(ast) {
     reassigned,
     guarded,
     integers,
+    listed: js_key_names_from_fixed_lists(ast, reassigned),
     visiting: new Set(),
   };
   return facts;
