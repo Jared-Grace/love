@@ -496,18 +496,6 @@
    ]
   },
   {
-   "name": "bible_glyph_chapters_seat_split_redraw",
-   "keys": [
-    "entry.chapter_code",
-    "entry.verse_number",
-    "entry.glyph",
-    "name",
-    "seen[name] ?? 0",
-    "chapter_code",
-    "glyph"
-   ]
-  },
-  {
    "name": "bible_glyph_drawn_for_english",
    "keys": [
     "key"
@@ -1310,12 +1298,6 @@
    ]
   },
   {
-   "name": "list_tally_ranked",
-   "keys": [
-    "value"
-   ]
-  },
-  {
    "name": "list_words_missing",
    "keys": [
     "word"
@@ -1833,12 +1815,6 @@
    ]
   },
   {
-   "name": "qa_commit_at_generic",
-   "keys": [
-    "named"
-   ]
-  },
-  {
    "name": "qa_commit_beside_heads",
    "keys": [
     "name"
@@ -2027,12 +2003,6 @@
    "name": "storage_local_enabling_test",
    "keys": [
     "storage_key_get(app_fn, key)"
-   ]
-  },
-  {
-   "name": "strongs_greek_definition",
-   "keys": [
-    "\"G\" + strong_number"
    ]
   },
   {
