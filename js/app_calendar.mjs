@@ -9,11 +9,11 @@ import { html_clear } from "./html_clear.mjs";
 import { app_calendar_guest } from "./app_calendar_guest.mjs";
 import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
 import { each } from "./each.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { app_calendar_host } from "./app_calendar_host.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
@@ -55,6 +55,8 @@ export async function app_calendar(context) {
   let host_open = async function lambda3() {
     "Signing in as host clears the booking screen and the guest's meetings above (human: the button \"doesn't remove top\"), so the host page stands alone.";
     each([host_area, guest_area, meetings_area], html_clear);
+    ('2026-11-15: a line says it is loading while the host\'s settings and the sign-in are fetched; the page sat blank white meanwhile (human: "host sign in just blank white for a while - maybe should show loading?"). The host screen clears it once its settings arrive.');
+    html_div_text(host_area, "Loading...");
     if (host_key) {
       let drawn = await app_calendar_host(host_area, host_key);
       if (drawn) {
@@ -62,9 +64,11 @@ export async function app_calendar(context) {
       }
       host_key = null;
       storage_local_set(app_calendar, "host_key", null);
-      html_clear(host_area);
     }
+    html_clear(host_area);
     let user = await firebase_auth_ensure(host_area);
+    html_clear(host_area);
+    html_div_text(host_area, "Loading...");
     let id_token = await user.getIdToken();
     let login = await calendar_api_call(
       "POST",
@@ -75,6 +79,7 @@ export async function app_calendar(context) {
       null,
     );
     if (not(login.body.ok)) {
+      html_clear(host_area);
       html_div_text(
         host_area,
         equal(login.body.reason, "host_only")

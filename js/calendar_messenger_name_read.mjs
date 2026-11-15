@@ -19,6 +19,12 @@ export function calendar_messenger_name_read(typed) {
     .replace(/^(www\.|m\.|web\.)/i, "")
     .replace(/^(m\.me\/|facebook\.com\/|fb\.com\/|messenger\.com\/t\/)/i, "")
     .replace(/[/?#].*$/, "");
+  ("2026-11-15: a word Facebook keeps for itself is not anybody's name. facebook.com/me is whoever is signed in, so a host who pasted it sent every guest to m.me/me, a chat with the guest's own self; share and profile.php are parts of a link, not the person.");
+  let kept = ["me", "share", "profile.php", "people", "messages", "t"];
+  let v = name.toLowerCase();
+  if (kept.includes(v)) {
+    return null;
+  }
   if (/^[A-Za-z0-9.]{1,50}$/.test(name)) {
     return name;
   }

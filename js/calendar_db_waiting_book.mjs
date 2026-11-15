@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
+import { calendar_messenger_name_usable } from "./calendar_messenger_name_usable.mjs";
 import { calendar_profile_url_read } from "./calendar_profile_url_read.mjs";
 import { calendar_db_guest_book } from "./calendar_db_guest_book.mjs";
 import { calendar_confirm_code } from "./calendar_confirm_code.mjs";
@@ -40,7 +41,11 @@ export async function calendar_db_waiting_book(
   if (not(messenger) && not(equal(via, "whatsapp"))) {
     via = "whatsapp";
   }
-  if (messenger && not(equal(host, null)) && equal(host.messenger, "")) {
+  if (
+    messenger &&
+    not(equal(host, null)) &&
+    not(calendar_messenger_name_usable(host.messenger))
+  ) {
     let r0 = {
       ok: false,
       reason: "messenger",

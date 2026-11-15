@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_input_text } from "./html_input_text.mjs";
@@ -40,6 +41,8 @@ export async function app_calendar_host(parent, key) {
   if (not(read.body.ok)) {
     return false;
   }
+  ("Whatever stood in parent while the settings were fetched - the page's loading line - goes once they arrive.");
+  html_clear(parent);
   let settings = read.body.settings;
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   let me = app_shared_container(parent);

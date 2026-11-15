@@ -5,6 +5,7 @@ import { calendar_db_session_uid } from "./calendar_db_session_uid.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
+import { calendar_messenger_name_usable } from "./calendar_messenger_name_usable.mjs";
 import { calendar_db_guest_limit_read } from "./calendar_db_guest_limit_read.mjs";
 import { not } from "./not.mjs";
 import { calendar_db_waiting_book } from "./calendar_db_waiting_book.mjs";
@@ -98,7 +99,7 @@ export async function calendar_api_handle(
       name: free.host.name,
       timezone: free.host.timezone,
       meeting_minutes: free.host.meeting_minutes,
-      messenger: not_equal(free.host.messenger, ""),
+      messenger: calendar_messenger_name_usable(free.host.messenger),
     };
     ('A guest who sends their key is told how many meetings they hold with this host and the most allowed (guest), so a guest already at the limit sees their meetings rather than hours they cannot book (human: "so that you only see existing meeting, and you can cancel to schedule a new one"). Without a key, guest is null.');
     let me = equal(uid, null)
