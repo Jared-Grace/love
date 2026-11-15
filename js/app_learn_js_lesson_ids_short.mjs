@@ -647,6 +647,12 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_object_property_increment: text_frozen(
       "object_property_increment",
     ),
+    app_learn_js_lesson_object_property_key_increment: text_frozen(
+      "object_property_key_increment",
+    ),
+    app_learn_js_lesson_object_count_words_for: text_frozen(
+      "object_count_words_for",
+    ),
   };
   return short;
 }
