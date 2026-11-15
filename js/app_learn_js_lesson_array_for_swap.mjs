@@ -3,8 +3,8 @@ import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
@@ -25,7 +25,7 @@ import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_array_swap } from "./app_learn_js_lesson_array_swap.mjs";
+import { app_learn_js_lesson_array_swap_name } from "./app_learn_js_lesson_array_swap_name.mjs";
 import { app_learn_js_lesson_array_for_shift } from "./app_learn_js_lesson_array_for_shift.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -130,19 +130,20 @@ export function app_learn_js_lesson_array_for_swap() {
     return kept;
   }
   function above(root, context) {
-    "swapping two items and shifting every item remembered, then swapping every pair";
+    "swapping at a name and shifting every item remembered, then swapping every pair";
+    "2026-11-16, at the human's asking: the first box points to Swapping at a name, which swaps a[i] and a[i + 1] with no loop, in place of Swapping two items, which swaps a[0] and a[1]; it is the nearer lesson, and its swap is the very lines this loop runs, so the loop is the one new thing";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_array_swap,
+      app_learn_js_lesson_array_swap_name,
       [
         "",
-        "let temp = a[0]; a[0] = a[1]; a[1] = temp;",
+        "let temp = a[i]; a[i] = a[i + 1]; a[i + 1] = temp;",
         " swaps ",
-        "a[0]",
+        "a[i]",
         " and ",
-        "a[1]",
+        "a[i + 1]",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
