@@ -24,6 +24,14 @@ export function js_code_confined_cases() {
     "let s = Symbol; s",
     "with (console) { log(1) }",
     "this",
+    "Object.prototype.x = 1",
+    "let o = Object; o.prototype.x = 1",
+    'Object.defineProperty({}, "a", {})',
+    'Object["hasOwn"]({}, "a")',
+    'let h = Object.hasOwn; h({}, "a")',
+    'Object.hasOwn.call(null, {}, "a")',
+    'Object.hasOwn(Object.prototype, "x")',
+    'Object.hasOwn.constructor("x")',
   ];
   let lessons = [
     "let a = 1; let b = a + 2; console.log(b);",
