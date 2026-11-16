@@ -1,8 +1,8 @@
+import { js_parse } from "./js_parse.mjs";
+import { not } from "./not.mjs";
+import { property_name_internal_names } from "./property_name_internal_names.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
-import { js_parse } from "./js_parse.mjs";
-import { property_name_internal_names } from "./property_name_internal_names.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { js_keys_unproven } from "./js_keys_unproven.mjs";
 import { js_identifiers_referenced_nodes } from "./js_identifiers_referenced_nodes.mjs";
@@ -13,6 +13,7 @@ export function js_code_confined_refusals(code) {
   "this, new.target, import() and with are refused because each hands over an outside value without naming it: in a function body made from text, this is the global object.";
   "The short list of banned names is a second fence, not the first. It only matters if the scope reading ever calls a name bound when the runtime would find it outside, and it costs nothing, because no lesson needs any of them.";
   "Measured 2026-10-10 over every program the course runs, thirty rounds of every lesson: 3998 programs, none refused.";
+  "2026-11-16, for the lessons that check whether an object has a property: Object is let through in exactly one place, as the Object of a call written Object.hasOwn(...) with a dot. That call only reads whether a property is the object's own and hands back true or false, so it reaches nothing. Every other Object is still refused - Object.prototype, Object.defineProperty, Object handed on bare, Object[...] - because those are the roads to the language's machinery that the ban was there for.";
   let ast = null;
   try {
     ast = js_parse(code);
@@ -49,9 +50,10 @@ export function js_code_confined_refusals(code) {
     "require",
     "arguments",
     "Reflect",
-    "Object",
     "constructor",
   ];
+  let objects = [];
+  let objects_has_own = new Set();
   let internal = property_name_internal_names();
   function key_name(key) {
     if (equal(key.type, "Identifier")) {
@@ -72,6 +74,22 @@ export function js_code_confined_refusals(code) {
     if (equal(n.type, "Identifier") && banned_names.includes(n.name)) {
       refuse("the name " + n.name);
     }
+    if (equal(n.type, "Identifier") && equal(n.name, "Object")) {
+      objects.push(n);
+    }
+    if (equal(n.type, "CallExpression")) {
+      let callee = n.callee;
+      if (
+        equal(callee.type, "MemberExpression") &&
+        not(callee.computed) &&
+        equal(callee.object.type, "Identifier") &&
+        equal(callee.object.name, "Object") &&
+        equal(callee.property.type, "Identifier") &&
+        equal(callee.property.name, "hasOwn")
+      ) {
+        objects_has_own.add(callee.object);
+      }
+    }
     let named = null;
     if (equal(n.type, "MemberExpression") && not(n.computed)) {
       named = n.property;
@@ -88,6 +106,12 @@ export function js_code_confined_refusals(code) {
     }
   }
   js_visit(ast, node_read);
+  for (let o of objects) {
+    let has_own = objects_has_own.has(o);
+    if (not(has_own)) {
+      refuse("the name Object");
+    }
+  }
   let keys = js_keys_unproven(ast);
   for (let key of keys) {
     refuse("the bracketed key " + key);
@@ -105,6 +129,7 @@ export function js_code_confined_refusals(code) {
     "String",
     "Number",
     "Boolean",
+    "Object",
   ];
   let referenced2 = js_identifiers_referenced_nodes(ast);
   let referenced = new Set(referenced2);
