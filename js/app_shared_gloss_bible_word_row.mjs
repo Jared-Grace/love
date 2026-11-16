@@ -1,3 +1,4 @@
+import { app_shared_gloss_bible_explain_span } from "./app_shared_gloss_bible_explain_span.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hr } from "./html_hr.mjs";
 import { html_div } from "./html_div.mjs";
@@ -51,7 +52,7 @@ export function app_shared_gloss_bible_word_row(
   let c2 = html_span_colon_2(div);
   let color2 = app_shared_color_gray();
   html_font_color_set(c2, color2);
-  let span3 = html_span_text(div, explain);
+  let span3 = app_shared_gloss_bible_explain_span(div, explain);
   html_attribute_set(span3, "dir", "auto");
   html_font_color_set(span3, "#a21cafff");
   app_shared_gloss_bible_word_strong(e, div);
