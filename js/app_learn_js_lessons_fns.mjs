@@ -1,3 +1,7 @@
+import { app_learn_js_lesson_object_list_people_for } from "./app_learn_js_lesson_object_list_people_for.mjs";
+import { app_learn_js_lesson_object_list_properties_for } from "./app_learn_js_lesson_object_list_properties_for.mjs";
+import { app_learn_js_lesson_object_properties_add } from "./app_learn_js_lesson_object_properties_add.mjs";
+import { app_learn_js_lesson_object_property_add } from "./app_learn_js_lesson_object_property_add.mjs";
 import { app_learn_js_lesson_object_count_words_empty } from "./app_learn_js_lesson_object_count_words_empty.mjs";
 import { app_learn_js_lesson_object_property_missing } from "./app_learn_js_lesson_object_property_missing.mjs";
 import { app_learn_js_lesson_object_count_words_for } from "./app_learn_js_lesson_object_count_words_for.mjs";
@@ -882,7 +886,11 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_object_property_key_increment,
     app_learn_js_lesson_object_count_words_for,
     app_learn_js_lesson_object_property_missing,
+    app_learn_js_lesson_object_property_add,
+    app_learn_js_lesson_object_properties_add,
     app_learn_js_lesson_object_count_words_empty,
+    app_learn_js_lesson_object_list_properties_for,
+    app_learn_js_lesson_object_list_people_for,
   ];
   return fns;
 }

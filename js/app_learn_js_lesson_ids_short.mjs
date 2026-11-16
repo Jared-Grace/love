@@ -659,6 +659,16 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_object_count_words_empty: text_frozen(
       "object_count_words_empty",
     ),
+    app_learn_js_lesson_object_property_add: text_frozen("object_property_add"),
+    app_learn_js_lesson_object_properties_add: text_frozen(
+      "object_properties_add",
+    ),
+    app_learn_js_lesson_object_list_properties_for: text_frozen(
+      "object_list_properties_for",
+    ),
+    app_learn_js_lesson_object_list_people_for: text_frozen(
+      "object_list_people_for",
+    ),
   };
   return short;
 }
