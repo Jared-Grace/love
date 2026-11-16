@@ -669,6 +669,8 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_object_list_people_for: text_frozen(
       "object_list_people_for",
     ),
+    app_learn_js_lesson_object_has_own: text_frozen("object_has_own"),
+    app_learn_js_lesson_object_has_own_set: text_frozen("object_has_own_set"),
   };
   return short;
 }

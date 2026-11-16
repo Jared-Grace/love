@@ -1,3 +1,5 @@
+import { app_learn_js_lesson_object_has_own_set } from "./app_learn_js_lesson_object_has_own_set.mjs";
+import { app_learn_js_lesson_object_has_own } from "./app_learn_js_lesson_object_has_own.mjs";
 import { app_learn_js_lesson_object_list_people_for } from "./app_learn_js_lesson_object_list_people_for.mjs";
 import { app_learn_js_lesson_object_list_properties_for } from "./app_learn_js_lesson_object_list_properties_for.mjs";
 import { app_learn_js_lesson_object_properties_add } from "./app_learn_js_lesson_object_properties_add.mjs";
@@ -148,6 +150,8 @@ export function app_learn_js_lessons_latest_held_fns() {
     app_learn_js_lesson_object_property_missing,
     app_learn_js_lesson_object_property_add,
     app_learn_js_lesson_object_properties_add,
+    app_learn_js_lesson_object_has_own,
+    app_learn_js_lesson_object_has_own_set,
     app_learn_js_lesson_object_count_words_empty,
     app_learn_js_lesson_object_list_properties_for,
     app_learn_js_lesson_object_list_people_for,

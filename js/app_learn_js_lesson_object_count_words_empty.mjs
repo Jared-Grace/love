@@ -1,12 +1,12 @@
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -18,7 +18,7 @@ import { not_equal } from "./not_equal.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_object_count_words_for } from "./app_learn_js_lesson_object_count_words_for.mjs";
-import { app_learn_js_lesson_object_property_missing } from "./app_learn_js_lesson_object_property_missing.mjs";
+import { app_learn_js_lesson_object_has_own_set } from "./app_learn_js_lesson_object_has_own_set.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
@@ -27,10 +27,10 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_object_count_words_empty() {
   arguments_assert(arguments, 0);
-  ('counting words from an empty object: let counts = {}; a for loop over ["joy", "love", "joy"] that sets counts[w] to 0 when it is undefined, then does counts[w]++; console.log(counts); writes out { joy: 2, love: 1 }');
-  ("2026-11-16, at the human's asking, the last of the counting run: the loop of Counting words with a loop, started from {} so no word has to be known before it is counted. A word's first time, its property is undefined, as No property there showed, so it is set to 0 first. The whole object is written out, as in Writing out a whole object.");
+  ('counting words from an empty object: let counts = {}; a for loop over ["joy", "love", "joy"] that sets counts[w] to 0 when !Object.hasOwn(counts, w), then does counts[w]++; console.log(counts); writes out { joy: 2, love: 1 }');
+  ("2026-11-16, at the human's asking, the last of the counting run: the loop of Counting words with a loop, started from {} so no word has to be known before it is counted. A word's first time, counts has no property for it, as Setting a property only if it is missing showed, so it is set to 0 first. Since 2026-11-16 the check is !Object.hasOwn(counts, w) in place of counts[w] === undefined, at the human's asking - teach Object.hasOwn from the start: a word such as constructor reads as something on every object, so === undefined counts it as NaN. The whole object is written out, as in Writing out a whole object.");
   ("A set is four questions, each three to five words drawn from love and joy, both in it and never as many of one as of the other. The properties are made in the order the words first come, which is the order they are written out in.");
-  ("Reading forwards, the wrong answers are the counts swapped, the properties the other way round, and NaN for both, which is what counting up undefined gives. Reading backwards, the wrong programs leave out the check, set a new word to 1 before counting it up, and check with !== in place of ===; each is kept only if it writes out something other than the answer.");
+  ("Reading forwards, the wrong answers are the counts swapped, the properties the other way round, and NaN for both, which is what counting up undefined gives. Reading backwards, the wrong programs leave out the check, set a new word to 1 before counting it up, and leave out the !; each is kept only if it writes out something other than the answer.");
   ("No stepping: the tracer cannot yet read an object.");
   ("The writing is a first draft by Claude 2026-11-16.");
   function program_with(words, check_lines) {
@@ -46,16 +46,16 @@ export function app_learn_js_lesson_object_count_words_empty() {
     let code = list_join_newline(lines);
     return code;
   }
-  function check_of(compare, start) {
+  function check_of(not_text, start) {
     let lines = [
-      "  if (counts[w] " + compare + " undefined) {",
+      "  if (" + not_text + "Object.hasOwn(counts, w)) {",
       "    counts[w] = " + start + ";",
       "  }",
     ];
     return lines;
   }
   function program_of(words) {
-    let v = check_of("===", "0");
+    let v = check_of("!", "0");
     let code = program_with(words, v);
     return code;
   }
@@ -137,12 +137,12 @@ export function app_learn_js_lesson_object_count_words_empty() {
     return once;
   }
   function backwards_decoys(question, answer) {
-    "no check, a new word set to 1, !== in place of ===; kept only when they write out something else";
+    "no check, a new word set to 1, no !; kept only when they write out something else";
     let words = words_of(answer);
     let v1 = program_with(words, []);
-    let v12 = check_of("===", "1");
+    let v12 = check_of("!", "1");
     let v2 = program_with(words, v12);
-    let v13 = check_of("!==", "0");
+    let v13 = check_of("", "0");
     let v3 = program_with(words, v13);
     let programs = [v1, v2, v3];
     let out_answer = eval_console_log_lines(answer);
@@ -167,16 +167,22 @@ export function app_learn_js_lesson_object_count_words_empty() {
     app_learn_js_remember_from_lesson(
       box_two,
       context,
-      app_learn_js_lesson_object_property_missing,
-      ["A property never set is ", "undefined"],
+      app_learn_js_lesson_object_has_own_set,
+      [
+        "",
+        '!Object.hasOwn(counts, "love")',
+        " sets ",
+        "love",
+        " only if it is not there yet",
+      ],
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "Starting from ",
       "{}",
-      ", a word's first time its property is ",
-      "undefined",
-      ", so it is set to ",
+      ", a word's first time ",
+      "counts",
+      " has no property for it, so it is set to ",
       "0",
       " before it is counted up:",
     ]);
@@ -200,7 +206,7 @@ export function app_learn_js_lesson_object_count_words_empty() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Counting from an empty object",
-    "if (counts[w] === undefined) {",
+    "!Object.hasOwn(counts, w)",
   );
   let lesson = app_learn_js_lesson_code_logged({
     above,
