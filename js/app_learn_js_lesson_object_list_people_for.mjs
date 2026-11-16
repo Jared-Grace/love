@@ -170,7 +170,7 @@ export function app_learn_js_lesson_object_list_people_for() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Writing out a list of people",
-    'people[i].first + " " + people[i].last',
+    "people[i].first",
   );
   let lesson = app_learn_js_lesson_code_logged({
     above,
