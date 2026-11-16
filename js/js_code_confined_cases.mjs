@@ -39,6 +39,7 @@ export function js_code_confined_cases() {
     "function add(a, b) { return a + b; } console.log(add(1, 2));",
     "let n = 10; while (n > 0) { n = n - 3; } console.log(n, Math.max(n, 0));",
     'let t = "a" + 1; if (t === "a1") { console.log(String(t).length); } else { console.log(parseInt("4")); }',
+    'let counts = { joy: 2 }; if (!Object.hasOwn(counts, "love")) { counts.love = 0; } console.log(counts);',
   ];
   let cases = [];
   for (let code of escapes) {
