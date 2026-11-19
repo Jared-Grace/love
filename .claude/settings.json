@@ -5949,7 +5949,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd /home/j/a/repos/love; node scripts/ai.mjs ai_git 2>&1 | tail -8",
+            "command": "cd /home/j/a/repos/love; node scripts/ai.mjs ai_git > gitignore/stop_hook_ai_git.log 2>&1",
             "timeout": 90,
             "statusMessage": "Auto-committing"
           },
