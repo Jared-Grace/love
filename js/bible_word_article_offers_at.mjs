@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { bible_word_articles_spellings_add } from "./bible_word_articles_spellings_add.mjs";
 import { bible_word_articles_matching } from "./bible_word_articles_matching.mjs";
 import { bible_word_articles_placed } from "./bible_word_articles_placed.mjs";
@@ -10,9 +11,17 @@ export async function bible_word_article_offers_at(
 ) {
   "Every article any site has about the tapped word, placed for this verse, each with the site that holds it. Sites are asked in their usual order, so the offers keep that order.";
   "THE SITES ARE HANDED IN, because the caller has already fetched their list and asking again would fetch it twice for one tap.";
+  "EVERY SITE'S TABLE IS ASKED FOR AT ONCE, not one after another: on a word's first tap they are separate downloads near a megabyte together, and waiting for each in turn held the card back for seconds.";
+  function table_load(site) {
+    let loading = site.table();
+    return loading;
+  }
+  let v = sites.map(table_load);
+  let tables = await Promise.all(v);
   let offers = [];
-  for (let site of sites) {
-    let table2 = await site.table();
+  for (let i = 0; less_than(i, sites.length); i++) {
+    let site = sites[i];
+    let table2 = tables[i];
     ("A NAME THE BIBLES SPELL TWO WAYS ANSWERS TO BOTH, so a reader whose bible prints Nazirite still reaches the article a site files under Nazarite.");
     let table = bible_word_articles_spellings_add(table2);
     let matched = bible_word_articles_matching(table, words, index);

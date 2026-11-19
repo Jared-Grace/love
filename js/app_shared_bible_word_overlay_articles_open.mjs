@@ -23,7 +23,7 @@ import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible
 import { app_shared_bible_word_ask_llms_draw } from "./app_shared_bible_word_ask_llms_draw.mjs";
 export async function app_shared_bible_word_overlay_articles_open(
   word,
-  strong_url,
+  strong_url_loading,
   words,
   index,
   chapter_code,
@@ -45,8 +45,8 @@ export async function app_shared_bible_word_overlay_articles_open(
   ("EVERY SITE IN ",
     fn_name("bible_word_article_sites"),
     " IS ASKED, so another site's articles appear here once it is added there.");
-  ("$plain strong_url");
-  ("the address is BibleHub's page for the tapped word's Strong's number, or null when the word has none that could be found. It is opened and nothing here runs it.");
+  ("$plain strong_url_loading");
+  ("the pending answer to BibleHub's page for the tapped word's Strong's number, which settles to the address or to null when the word has none that could be found. It is awaited beside the articles so neither download waits for the other; the address is opened and nothing here runs it.");
   ("A HEBREW OR GREEK WORD WITH A NUMBER IS OFFERED ON BIBLEHUB FIRST, asked for by the human, by ",
     fn_name("app_shared_biblehub_word_button"),
     " - the same button the picture Bible's card draws. It comes first because it is the one choice about this word in this verse rather than about any word spelled the same.");
@@ -66,6 +66,7 @@ export async function app_shared_bible_word_overlay_articles_open(
     chapter_code,
     verse_number,
   );
+  let strong_url = await strong_url_loading;
   let overlay = app_shared_overlay_card_closable();
   let card = property_get(overlay, "body");
   let big = property_get(overlay, "title");

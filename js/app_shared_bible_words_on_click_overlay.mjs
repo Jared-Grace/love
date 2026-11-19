@@ -42,14 +42,15 @@ export function app_shared_bible_words_on_click_overlay(
       let index = words.length;
       words.push(bare);
       async function open() {
-        let strong_url = await bible_word_strong_url_or_null(
+        "THE STRONG'S LOOKUP RUNS WHILE THE ARTICLES ARE FETCHED: the card is handed the pending answer, because awaited here first, a Hebrew or Greek tap paid for a whole chapter download before the articles were even asked for.";
+        let strong_url_loading = await bible_word_strong_url_or_null(
           chapter_code,
           verse_number,
           bare,
         );
         await app_shared_bible_word_overlay_articles_open(
           bare,
-          strong_url,
+          strong_url_loading,
           words,
           index,
           chapter_code,

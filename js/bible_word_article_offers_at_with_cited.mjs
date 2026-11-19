@@ -1,7 +1,7 @@
-import { bible_word_article_sites_published } from "./bible_word_article_sites_published.mjs";
-import { bible_word_article_offers_at } from "./bible_word_article_offers_at.mjs";
 import { list_get } from "./list_get.mjs";
 import { bible_word_article_cited_at } from "./bible_word_article_cited_at.mjs";
+import { bible_word_article_sites_published } from "./bible_word_article_sites_published.mjs";
+import { bible_word_article_offers_at } from "./bible_word_article_offers_at.mjs";
 import { equal } from "./equal.mjs";
 import { bible_word_articles_with_cited } from "./bible_word_articles_with_cited.mjs";
 import { bible_word_articles_same_name_cited } from "./bible_word_articles_same_name_cited.mjs";
@@ -18,6 +18,13 @@ export async function bible_word_article_offers_at_with_cited(
   "$plain verse_number";
   "the words are the bare words of the tapped verse and the index says which was tapped; the code and number say where the verse stands. They are looked up, and nothing in them runs.";
   "THE LIST OF CITATIONS IS ASKED FOR ONCE, here, rather than once per site; so is the list of sites, which is fetched so a site added later needs no rebuild.";
+  "THE LIST OF CITATIONS IS FETCHED WHILE THE SITES AND THEIR TABLES ARE, since neither needs the other; asked in turn, each waited out the other's round trip before the card could open.";
+  let word = list_get(words, index);
+  let cited_loading = await bible_word_article_cited_at(
+    word,
+    chapter_code,
+    verse_number,
+  );
   let sites = await bible_word_article_sites_published();
   let offers = await bible_word_article_offers_at(
     words,
@@ -26,12 +33,7 @@ export async function bible_word_article_offers_at_with_cited(
     verse_number,
     sites,
   );
-  let word = list_get(words, index);
-  let cited = await bible_word_article_cited_at(
-    word,
-    chapter_code,
-    verse_number,
-  );
+  let cited = await cited_loading;
   let r = [];
   for (let site of sites) {
     function own(offer) {
