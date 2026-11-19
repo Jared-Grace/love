@@ -1,6 +1,6 @@
 var CACHE_NAME = 'love-cache-v4';
 var SHELL_TIMEOUT_MS = 4000;
-var PWA_APPS = ['verses','search','bible'];
+var PWA_APPS = ['verses','bible_search','bible'];
 self.addEventListener('install', function () {
   self.skipWaiting();
 });
@@ -24,7 +24,7 @@ function pwa_asset_is(pathname) {
   }
   for (var i = 0; i < PWA_APPS.length; i++) {
     var app = PWA_APPS[i];
-    if (name.indexOf(app) === 0) {
+    if (name.split('.')[0] === app) {
       return true;
     }
     if (name.indexOf('.' + app + '.js') !== -1) {
