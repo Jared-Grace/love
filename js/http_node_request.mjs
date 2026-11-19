@@ -52,7 +52,7 @@ export function http_node_request({
     port: urlObj.port || (swHttps ? 443 : 80),
     path: text_combine(urlObj.pathname, urlObj.search),
     method,
-    family: 4,
+    
     agent: false,
     headers: {
       ...(options.headers || {}),
