@@ -1,6 +1,6 @@
-import { apps_service_worker } from "./apps_service_worker.mjs";
 import { firebase_storage_host } from "./firebase_storage_host.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { apps_service_worker } from "./apps_service_worker.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -8,6 +8,7 @@ export function pwa_service_worker_code() {
   "the service worker source (a plain browser-JS string, runs in the SW context). Strategy: SHELL (html/js/etc) = network-first so online stays fresh (the code bundle is deliberately no-cache) and offline falls back to the cached copy; DATA = stale-while-revalidate so it loads instantly, refreshes in the background, and works offline — this covers both same-origin /bible/ paths and firebase storage downloads (firebasestorage.googleapis.com), which is where the bulk bible text now lives, so the verse packages stay available offline even though they are cross-origin. One versioned cache, old versions cleaned on activate. Bump CACHE_NAME to invalidate everything. The shell fetch is bounded by SHELL_TIMEOUT_MS because a captive portal or flaky signal leaves fetch pending rather than failing, which would hang the page instead of falling back to the cached copy.";
   "v3, measured 2026-09-02: the fallback had been handing a phone one build's page and another build's bundle. A code bundle is 823 KB and is sent no-store, so it is downloaded whole on every load and a phone regularly misses the four seconds; the cached copy that answered instead was the PREVIOUS build, which asked for chunk files that the newest sending had already taken away. So the reader met a page that could not start, and when it did start it was judged by rules that had been corrected hours earlier. Bumping the name is the remedy this file names for itself, and it is only the immediate one - what falls back has to become a copy that belongs to the build asking for it.";
   "v4, same day: bumping the name only cleaned the devices that already existed, and the reader was still being answered from a build nobody had shipped for hours. The reason is that this file is served from the site root, so its scope is the whole site and its fetch handler was answering for EVERY app - including every app that never asked for a service worker and has no offline story at all. One app opting in to being installable was quietly deciding how thirty-odd other apps are allowed to receive a fix. So the handler now answers only for the apps that opted in, and lets everything else go straight to the network, where a no-store file is always the newest one. A fix that has been sent reaches the person it was sent for; that is worth more than an app that was never installed being readable on a train.";
+  "AN APP IS ITS WHOLE NAME, NEVER THE START OF ONE. Measured 2026-11-19, the test asked whether a file name began with an opted-in app, so 'bible' claimed bible_emoji, bible_search and bible_sermons, none of which opted in. A phone that missed the four seconds was handed bible_emoji's previous build: a blank wait, then a page with no loading screen whose verses ran off the right edge. So the name is cut at its first dot and compared whole - bible, bible.html, bible.js and bible.webmanifest stay the app's own, and its numbered pieces are still caught by the rule after. The cache name is not bumped: the changed file installs itself and stops answering for those pages, without deleting the chapters a reader saved to read offline.";
   let r2 = firebase_storage_host();
   let combined = text_combine_multiple([
     "  if (url.hostname === '",
@@ -53,7 +54,7 @@ export function pwa_service_worker_code() {
     "  }",
     "  for (var i = 0; i < PWA_APPS.length; i++) {",
     "    var app = PWA_APPS[i];",
-    "    if (name.indexOf(app) === 0) {",
+    "    if (name.split('.')[0] === app) {",
     "      return true;",
     "    }",
     "    if (name.indexOf('.' + app + '.js') !== -1) {",

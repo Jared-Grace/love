@@ -7,7 +7,9 @@ import { html_span_text } from "./html_span_text.mjs";
 import { text_punctuation_apostrophe_kept_removed } from "./text_punctuation_apostrophe_kept_removed.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { bible_word_strong_url_or_null } from "./bible_word_strong_url_or_null.mjs";
+import { promise_start_unawait } from "./promise_start_unawait.mjs";
 import { app_shared_bible_word_overlay_articles_open } from "./app_shared_bible_word_overlay_articles_open.mjs";
+import { html_loading_immediate } from "./html_loading_immediate.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { each } from "./each.mjs";
 export function app_shared_bible_words_on_click_overlay(
@@ -43,11 +45,18 @@ export function app_shared_bible_words_on_click_overlay(
       words.push(bare);
       async function open() {
         "THE STRONG'S LOOKUP RUNS WHILE THE ARTICLES ARE FETCHED: the card is handed the pending answer, because awaited here first, a Hebrew or Greek tap paid for a whole chapter download before the articles were even asked for.";
-        let strong_url_loading = await bible_word_strong_url_or_null(
-          chapter_code,
-          verse_number,
-          bare,
-        );
+        async function strong_start() {
+          let loading = await bible_word_strong_url_or_null(
+            chapter_code,
+            verse_number,
+            bare,
+          );
+          return loading;
+        }
+        ("STARTED THROUGH ",
+          fn_name("promise_start_unawait"),
+          " because the auto pass writes a wait into a bare call, which put the Strong's lookup back in front of the articles.");
+        let strong_url_loading = promise_start_unawait(strong_start);
         await app_shared_bible_word_overlay_articles_open(
           bare,
           strong_url_loading,
@@ -57,7 +66,11 @@ export function app_shared_bible_words_on_click_overlay(
           verse_number,
         );
       }
-      html_on_click(span, open);
+      ("A TAP SHOWS THE LOADING COVER UNTIL THE CARD IS UP, asked about by the human 2026-11-19: the card waits on downloads that can take seconds, and with nothing on screen a reader tapped again and opened a second card. The cover fills the screen, so a tap made while waiting lands on it rather than on another word; a card served from memory hides it at once, so a quick tap shows no flash.");
+      async function open_covered() {
+        await html_loading_immediate(open);
+      }
+      html_on_click(span, open_covered);
     }
     each(pieces, piece_draw);
   }
