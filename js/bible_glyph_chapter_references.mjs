@@ -145,6 +145,10 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 33",
     },
     {
+      chapter_code: "GEN34",
+      reference: "Genesis 34",
+    },
+    {
       chapter_code: "GEN35",
       reference: "Genesis 35",
     },
