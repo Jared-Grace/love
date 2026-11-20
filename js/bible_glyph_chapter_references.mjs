@@ -2301,6 +2301,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Timothy 3",
     },
     {
+      chapter_code: "2TI04",
+      reference: "2 Timothy 4",
+    },
+    {
       chapter_code: "1JN01",
       reference: "1 John 1",
     },
