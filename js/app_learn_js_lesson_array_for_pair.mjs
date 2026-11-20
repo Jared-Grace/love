@@ -3,7 +3,6 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for } from "./app_learn_js_lesson_array_for.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_array_pair_generic } from "./app_learn_js_lesson_array_pair_generic.mjs";
 export function app_learn_js_lesson_array_for_pair() {
@@ -32,19 +31,14 @@ export function app_learn_js_lesson_array_for_pair() {
       " adds them in pairs:",
     ]);
     example(box_two, [1, 2, 3], [4, 5, 6]);
-    app_learn_js_div_cycle_output(box_two, [
+    app_learn_js_div_cycle_code(box_two, [
+      "",
       "1 + 4",
       ", then ",
       "2 + 5",
       ", then ",
       "3 + 6",
-      ", so ",
-      "5",
-      ", ",
-      "7",
-      " and ",
-      "9",
-      " are written out",
+      " are worked out, and each answer is written out",
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
