@@ -59,12 +59,13 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
       return t;
     }
     let best = mm[2][0];
-    let a2 = punct_rank(c);
-    let b3 = punct_rank(best);
-    for (let c of mm[2])
+    for (let c of mm[2]) {
+      let a2 = punct_rank(c);
+      let b3 = punct_rank(best);
       if (greater_than(a2, b3)) {
         best = c;
       }
+    }
     let r = mm[1] + best;
     return r;
   }
