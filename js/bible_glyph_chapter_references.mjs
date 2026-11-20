@@ -2349,6 +2349,10 @@ export function bible_glyph_chapter_references() {
       reference: "Hebrews 7",
     },
     {
+      chapter_code: "HEB08",
+      reference: "Hebrews 8",
+    },
+    {
       chapter_code: "1JN01",
       reference: "1 John 1",
     },
