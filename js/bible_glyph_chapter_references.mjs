@@ -1981,6 +1981,10 @@ export function bible_glyph_chapter_references() {
       reference: "Romans 2",
     },
     {
+      chapter_code: "ROM03",
+      reference: "Romans 3",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
