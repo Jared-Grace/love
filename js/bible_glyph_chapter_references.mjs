@@ -1793,6 +1793,18 @@ export function bible_glyph_chapter_references() {
       reference: "John 4",
     },
     {
+      chapter_code: "JHN05",
+      reference: "John 5",
+    },
+    {
+      chapter_code: "JHN06",
+      reference: "John 6",
+    },
+    {
+      chapter_code: "JHN07",
+      reference: "John 7",
+    },
+    {
       chapter_code: "JHN09",
       reference: "John 9",
     },
