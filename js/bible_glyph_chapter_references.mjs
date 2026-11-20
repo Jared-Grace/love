@@ -2209,6 +2209,10 @@ export function bible_glyph_chapter_references() {
       reference: "Philippians 2",
     },
     {
+      chapter_code: "PHP03",
+      reference: "Philippians 3",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
