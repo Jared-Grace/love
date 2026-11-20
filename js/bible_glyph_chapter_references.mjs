@@ -2021,6 +2021,10 @@ export function bible_glyph_chapter_references() {
       reference: "Romans 12",
     },
     {
+      chapter_code: "ROM13",
+      reference: "Romans 13",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
