@@ -2532,6 +2532,10 @@ export function bible_glyph_chapter_references() {
       chapter_code: "REV19",
       reference: "Revelation 19",
     },
+    {
+      chapter_code: "REV20",
+      reference: "Revelation 20",
+    },
   ];
   return references;
 }
