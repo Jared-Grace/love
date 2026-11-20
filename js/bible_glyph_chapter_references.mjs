@@ -1649,6 +1649,10 @@ export function bible_glyph_chapter_references() {
       reference: "Mark 8",
     },
     {
+      chapter_code: "MRK09",
+      reference: "Mark 9",
+    },
+    {
       chapter_code: "MRK10",
       reference: "Mark 10",
     },
