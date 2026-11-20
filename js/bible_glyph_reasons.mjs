@@ -216,6 +216,10 @@ export function bible_glyph_reasons() {
     input_numbers:
       "Number keys: a number, counting. With all, it is a hundred.",
     ship: "A ship: ships, and sailing the sea.",
+    canoe:
+      "A small boat: the ship's boat, the lifeboat towed behind a ship (Acts 27:16).",
+    envelope:
+      "A sealed letter: a letter, an epistle, written and carried to its readers.",
     axe: "An axe: to cut, to hew, to cut down. Gideon's name means hewer.",
     four: "The number four: four, fourth, fourfold.",
     ten: "The number ten: ten. With all, it is a thousand; multiplied, it is ten thousand.",
