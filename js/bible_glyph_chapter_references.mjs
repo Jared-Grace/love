@@ -1513,6 +1513,10 @@ export function bible_glyph_chapter_references() {
       reference: "Matthew 3",
     },
     {
+      chapter_code: "MAT04",
+      reference: "Matthew 4",
+    },
+    {
       chapter_code: "MAT05",
       reference: "Matthew 5",
     },
