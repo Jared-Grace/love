@@ -1,4 +1,3 @@
-import { property_set } from "./property_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { browser_online_is } from "./browser_online_is.mjs";
 import { not } from "./not.mjs";
@@ -10,10 +9,12 @@ import { app_receipts_purchases_store } from "./app_receipts_purchases_store.mjs
 import { indexeddb_get_all_backend } from "./indexeddb_get_all_backend.mjs";
 import { app_receipts_purchases_database } from "./app_receipts_purchases_database.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
 import { app_shared_unsent_all } from "./app_shared_unsent_all.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { object_property_names } from "./object_property_names.mjs";
+import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { app_receipts_purchase_path } from "./app_receipts_purchase_path.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { firebase_storage_url_metadata } from "./firebase_storage_url_metadata.mjs";
@@ -50,11 +51,14 @@ export async function app_receipts_purchases_pull(folder_code) {
   let unsent = await app_shared_unsent_all();
   let waiting = list_map_property(unsent, "key");
   let project_url = firebase_storage_url_project_jg();
-  for (let id of object_property_names(remote)) {
+  ("EIGHT PURCHASES ARE ASKED ABOUT AT ONCE, not one after another: each costs a round trip to storage and nothing else, and the opening cover waits for every one, so a folder of two hundred was two hundred waits in a row. Each purchase reads only what was gathered above and writes only its own key, so the order they land in changes nothing.");
+  let ids = object_property_names(remote);
+  await list_map_limited_async(ids, pull_one, 8);
+  async function pull_one(id) {
     let entry = property_get(remote, id);
     let b = property_get(entry, "details");
     if (not(b)) {
-      continue;
+      return;
     }
     let details_path = app_receipts_purchase_path(
       folder_code,
@@ -62,7 +66,7 @@ export async function app_receipts_purchases_pull(folder_code) {
       details_name,
     );
     if (list_includes(waiting, details_path)) {
-      continue;
+      return;
     }
     let url = firebase_storage_url_metadata(details_path, project_url);
     let about = await http_json_browser_quiet(url);
