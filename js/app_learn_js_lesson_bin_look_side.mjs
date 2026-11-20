@@ -1,19 +1,19 @@
-import { floor } from "./floor.mjs";
-import { equal } from "./equal.mjs";
-import { divide } from "./divide.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { equal } from "./equal.mjs";
 import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { divide } from "./divide.mjs";
+import { floor } from "./floor.mjs";
 import { app_learn_js_bin_items } from "./app_learn_js_bin_items.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -25,10 +25,10 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_second_generic } from "./app_learn_js_lesson_second_generic.mjs";
 export function app_learn_js_lesson_bin_look_side() {
   arguments_assert(arguments, 0);
-  ("one step of a binary search, looking right or left: let a = [2, 5, 8, 12, 16, 23, 38]; let want = 23; let low = 0; let high = 6; let sum = low + high; let middle = Math.floor(sum / 2); if (a[middle] < want) { low = middle + 1; } else { high = middle - 1; } console.log(low); console.log(high); writes out 4 then 6");
-  ("2026-11-20, approved by the human: the first of five binary search lessons. Middle of two names already finds the middle; the one new fact is that in a list in order, the middle item says which half want is in, and the + 1 or - 1 leaves out the middle item, which has just been looked at.");
-  ("A set is six questions over seven items in order, low and high marking a part of the list of three, five or seven items, want inside that part but never the middle item itself, to the right three times and to the left three times.");
-  ("The wrong programs are low = middle and high = middle (the middle item kept in), and > in place of < (the wrong half). A wrong program is offered only when it writes out something else: low = middle changes nothing when want is on the left, so it is offered only on the right, and high = middle only on the left. The extra wrong answer is low and high unchanged.");
+  ("one step of a binary search, looking right or left: let a = [2, 5, 8, 12, 16, 23, 38]; let goal = 23; let low = 0; let high = 6; let sum = low + high; let middle = Math.floor(sum / 2); if (a[middle] < goal) { low = middle + 1; } else { high = middle - 1; } console.log(low); console.log(high); writes out 4 then 6");
+  ("2026-11-20, approved by the human: the first of five binary search lessons. Middle of two names already finds the middle; the one new fact is that in a list in order, the middle item says which half goal is in, and the + 1 or - 1 leaves out the middle item, which has just been looked at.");
+  ("A set is six questions over seven items in order, low and high marking a part of the list of three, five or seven items, goal inside that part but never the middle item itself, to the right three times and to the left three times.");
+  ("The wrong programs are low = middle and high = middle (the middle item kept in), and > in place of < (the wrong half). A wrong program is offered only when it writes out something else: low = middle changes nothing when goal is on the left, so it is offered only on the right, and high = middle only on the left. The extra wrong answer is low and high unchanged.");
   ("The writing is a first draft by Claude 2026-11-20.");
   let windows = [
     [0, 6],
@@ -43,8 +43,8 @@ export function app_learn_js_lesson_bin_look_side() {
     let codes = list_map(input.items, json_to);
     let right = js_code_array(codes);
     let code2 = js_code_let_statement("a", right);
-    let right2 = json_to(input.want);
-    let code3 = js_code_let_statement("want", right2);
+    let right2 = json_to(input.goal);
+    let code3 = js_code_let_statement("goal", right2);
     let right3 = json_to(input.low);
     let code4 = js_code_let_statement("low", right3);
     let right4 = json_to(input.high);
@@ -53,8 +53,8 @@ export function app_learn_js_lesson_bin_look_side() {
     let code7 = js_code_let_statement("middle", "Math.floor(sum / 2)");
     let lets = [code2, code3, code4, code5, code6, code7];
     let test = equal(way, "wrong_side")
-      ? "a[middle] > want"
-      : "a[middle] < want";
+      ? "a[middle] > goal"
+      : "a[middle] < goal";
     let move_low = equal(way, "low_middle")
       ? "low = middle;"
       : "low = middle + 1;";
@@ -70,7 +70,7 @@ export function app_learn_js_lesson_bin_look_side() {
     return code;
   }
   function input_draw(window, side) {
-    "seven items in order, and want inside low to high on the side asked for, never the middle item";
+    "seven items in order, and the goal inside low to high on the side asked for, never the middle item";
     let low = window[0];
     let high = window[1];
     let p = divide(low + high, 2);
@@ -90,7 +90,7 @@ export function app_learn_js_lesson_bin_look_side() {
     let at = list_shuffle_take(at_all, 1)[0];
     let input = {
       items,
-      want: items[at],
+      goal: items[at],
       low,
       high,
     };
@@ -144,7 +144,7 @@ export function app_learn_js_lesson_bin_look_side() {
     let box_four = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_four, [
       "To find ",
-      "want",
+      "goal",
       " quickly in a list in order, ",
       "low",
       " and ",
@@ -155,9 +155,9 @@ export function app_learn_js_lesson_bin_look_side() {
       "If ",
       "a[middle]",
       " is smaller than ",
-      "want",
+      "goal",
       ", then ",
-      "want",
+      "goal",
       " is to its right, so ",
       "low = middle + 1;",
       ". The ",
@@ -166,20 +166,20 @@ export function app_learn_js_lesson_bin_look_side() {
     ]);
     example(box_four, {
       items: [2, 5, 8, 12, 16, 23, 38],
-      want: 23,
+      goal: 23,
       low: 0,
       high: 6,
     });
     app_learn_js_div_cycle_code(box_four, [
       "Otherwise ",
-      "want",
+      "goal",
       " is to its left, so ",
       "high = middle - 1;",
       ":",
     ]);
     example(box_four, {
       items: [2, 5, 8, 12, 16, 23, 38],
-      want: 5,
+      goal: 5,
       low: 0,
       high: 6,
     });

@@ -1,22 +1,22 @@
-import { floor } from "./floor.mjs";
-import { equal } from "./equal.mjs";
-import { divide } from "./divide.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { equal } from "./equal.mjs";
 import { js_code_if_else_if_with_else_lines_multiple } from "./js_code_if_else_if_with_else_lines_multiple.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { js_code_if_else_if_lines_multiple } from "./js_code_if_else_if_lines_multiple.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { divide } from "./divide.mjs";
+import { floor } from "./floor.mjs";
 import { app_learn_js_bin_items } from "./app_learn_js_bin_items.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -27,10 +27,10 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_second_generic } from "./app_learn_js_lesson_second_generic.mjs";
 export function app_learn_js_lesson_bin_step() {
   arguments_assert(arguments, 0);
-  ("one whole step of a binary search: Look right or left with one more case first, the middle item being want itself, which sets found = true. let a = [2, 5, 8, 12, 16, 23, 38]; let want = 12; let low = 0; let high = 6; let found = false; ... if (a[middle] === want) { found = true; } else if (a[middle] < want) { low = middle + 1; } else { high = middle - 1; } writes out true, 0, 6");
-  ("2026-11-20, approved by the human: the second of five binary search lessons. The plan wrote out found alone; this writes out found, low and high, so a question where want is not the middle item still has an answer that shows which way the step went.");
-  ("A set is six questions over seven items in order: want is the middle item twice, to its right twice and to its left twice, and low and high are not always 0 and 6.");
-  ("The wrong programs are two ifs in place of if and else if (when found, the second if still moves high, so the found case changes high too), > in place of < (the wrong half), and the last else left off (when want is to the left, nothing moves). A wrong program is offered only when it writes out something else.");
+  ("one whole step of a binary search: Look right or left with one more case first, the middle item being goal itself, which sets found = true. let a = [2, 5, 8, 12, 16, 23, 38]; let goal = 12; let low = 0; let high = 6; let found = false; ... if (a[middle] === goal) { found = true; } else if (a[middle] < goal) { low = middle + 1; } else { high = middle - 1; } writes out true, 0, 6");
+  ("2026-11-20, approved by the human: the second of five binary search lessons. The plan wrote out found alone; this writes out found, low and high, so a question where goal is not the middle item still has an answer that shows which way the step went.");
+  ("A set is six questions over seven items in order: goal is the middle item twice, to its right twice and to its left twice, and low and high are not always 0 and 6.");
+  ("The wrong programs are two ifs in place of if and else if (when found, the second if still moves high, so the found case changes high too), > in place of < (the wrong half), and the last else left off (when goal is to the left, nothing moves). A wrong program is offered only when it writes out something else.");
   ("The writing is a first draft by Claude 2026-11-20.");
   let windows = [
     [0, 6],
@@ -45,8 +45,8 @@ export function app_learn_js_lesson_bin_step() {
     let codes = list_map(input.items, json_to);
     let right = js_code_array(codes);
     let code2 = js_code_let_statement("a", right);
-    let right2 = json_to(input.want);
-    let code3 = js_code_let_statement("want", right2);
+    let right2 = json_to(input.goal);
+    let code3 = js_code_let_statement("goal", right2);
     let right3 = json_to(input.low);
     let code4 = js_code_let_statement("low", right3);
     let right4 = json_to(input.high);
@@ -55,10 +55,10 @@ export function app_learn_js_lesson_bin_step() {
     let code7 = js_code_let_statement("sum", "low + high");
     let code8 = js_code_let_statement("middle", "Math.floor(sum / 2)");
     let lets = [code2, code3, code4, code5, code6, code7, code8];
-    let same = "a[middle] === want";
+    let same = "a[middle] === goal";
     let test = equal(way, "wrong_side")
-      ? "a[middle] > want"
-      : "a[middle] < want";
+      ? "a[middle] > goal"
+      : "a[middle] < goal";
     let yes = ["found = true;"];
     let move_low = ["low = middle + 1;"];
     let move_high = ["high = middle - 1;"];
@@ -86,7 +86,7 @@ export function app_learn_js_lesson_bin_step() {
     return code;
   }
   function input_draw(window, side) {
-    "seven items in order, and want inside low to high: the middle item, or on the side asked for";
+    "seven items in order, and the goal inside low to high: the middle item, or on the side asked for";
     let low = window[0];
     let high = window[1];
     let p = divide(low + high, 2);
@@ -94,25 +94,25 @@ export function app_learn_js_lesson_bin_step() {
     let items = app_learn_js_bin_items();
     let at_all = [];
     for (let k = low; less_than_equal(k, high); k++) {
-      let wanted =
+      let chosen =
         (equal(side, "middle") && equal(k, middle)) ||
         (equal(side, "right") && greater_than(k, middle)) ||
         (equal(side, "left") && less_than(k, middle));
-      if (wanted) {
+      if (chosen) {
         at_all.push(k);
       }
     }
     let at = list_shuffle_take(at_all, 1)[0];
     let input = {
       items,
-      want: items[at],
+      goal: items[at],
       low,
       high,
     };
     return input;
   }
   function inputs_get() {
-    "six questions: want the middle item twice, to its right twice, to its left twice";
+    "six questions: goal the middle item twice, to its right twice, to its left twice";
     let inputs = [];
     for (let k = 0; less_than(k, windows.length); k++) {
       let v = input_draw(windows[k], sides[k]);
@@ -152,7 +152,7 @@ export function app_learn_js_lesson_bin_step() {
         "if ",
         "a[middle]",
         " is smaller than ",
-        "want",
+        "goal",
         ", ",
         "low = middle + 1;",
         ", otherwise ",
@@ -162,7 +162,7 @@ export function app_learn_js_lesson_bin_step() {
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "The middle item may be ",
-      "want",
+      "goal",
       " itself. Then we found it, so ",
       "found = true;",
       " and ",
@@ -173,7 +173,7 @@ export function app_learn_js_lesson_bin_step() {
     ]);
     example(box_three, {
       items: [2, 5, 8, 12, 16, 23, 38],
-      want: 12,
+      goal: 12,
       low: 0,
       high: 6,
     });
@@ -186,14 +186,14 @@ export function app_learn_js_lesson_bin_step() {
     ]);
     example(box_three, {
       items: [2, 5, 8, 12, 16, 23, 38],
-      want: 23,
+      goal: 23,
       low: 0,
       high: 6,
     });
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "One step of a search",
-    "if (a[middle] === want)",
+    "if (a[middle] === goal)",
   );
   let lesson = app_learn_js_lesson_second_generic({
     name_id,
