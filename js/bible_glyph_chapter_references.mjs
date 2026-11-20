@@ -1933,6 +1933,18 @@ export function bible_glyph_chapter_references() {
       reference: "Acts 18",
     },
     {
+      chapter_code: "ACT19",
+      reference: "Acts 19",
+    },
+    {
+      chapter_code: "ACT20",
+      reference: "Acts 20",
+    },
+    {
+      chapter_code: "ACT21",
+      reference: "Acts 21",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
