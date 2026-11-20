@@ -1861,6 +1861,18 @@ export function bible_glyph_chapter_references() {
       reference: "John 21",
     },
     {
+      chapter_code: "ACT01",
+      reference: "Acts 1",
+    },
+    {
+      chapter_code: "ACT02",
+      reference: "Acts 2",
+    },
+    {
+      chapter_code: "ACT03",
+      reference: "Acts 3",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
