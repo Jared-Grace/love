@@ -691,6 +691,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_luhn_nine: text_frozen("luhn_nine"),
     app_learn_js_lesson_array_for_luhn_total: text_frozen("luhn_total"),
     app_learn_js_lesson_array_for_luhn_whole: text_frozen("luhn_whole"),
+    app_learn_js_lesson_bin_look_side: text_frozen("bin_look_side"),
   };
   return short;
 }

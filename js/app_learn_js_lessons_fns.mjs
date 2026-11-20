@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_bin_look_side } from "./app_learn_js_lesson_bin_look_side.mjs";
 import { app_learn_js_lesson_array_for_luhn_whole } from "./app_learn_js_lesson_array_for_luhn_whole.mjs";
 import { app_learn_js_lesson_array_for_luhn_total } from "./app_learn_js_lesson_array_for_luhn_total.mjs";
 import { app_learn_js_lesson_array_for_luhn_nine } from "./app_learn_js_lesson_array_for_luhn_nine.mjs";
@@ -917,6 +918,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_luhn_nine,
     app_learn_js_lesson_array_for_luhn_total,
     app_learn_js_lesson_array_for_luhn_whole,
+    app_learn_js_lesson_bin_look_side,
     app_learn_js_lesson_object_property,
     app_learn_js_lesson_object_property_set,
     app_learn_js_lesson_object_log,
