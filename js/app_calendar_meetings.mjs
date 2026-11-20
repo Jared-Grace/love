@@ -41,12 +41,8 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
   async function redraw() {
     await app_calendar_meetings(box, key, on_change, empty_shown);
   }
-  app_calendar_proofs_waiting(
-    box,
-    property_get_or(answer.body, "proofs", []),
-    key,
-    redraw,
-  );
+  let proofs = property_get_or(answer.body, "proofs", []);
+  app_calendar_proofs_waiting(box, proofs, key, redraw);
   let empty = equal(meetings.length, 0);
   if (empty && not(empty_shown)) {
     return;
