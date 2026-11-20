@@ -120,7 +120,7 @@ export function app_learn_js_lesson_if_take_away_nine() {
       context,
       app_learn_js_lesson_if_change,
       [
-        "The line inside an ",
+        "the line inside an ",
         "if",
         " changes a name only when the check is ",
         "true",
