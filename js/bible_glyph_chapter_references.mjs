@@ -2461,6 +2461,10 @@ export function bible_glyph_chapter_references() {
       reference: "Revelation 1",
     },
     {
+      chapter_code: "REV02",
+      reference: "Revelation 2",
+    },
+    {
       chapter_code: "REV10",
       reference: "Revelation 10",
     },
