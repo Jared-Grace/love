@@ -2081,6 +2081,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Corinthians 11",
     },
     {
+      chapter_code: "1CO12",
+      reference: "1 Corinthians 12",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
