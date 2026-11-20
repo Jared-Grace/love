@@ -593,6 +593,10 @@ export function bible_glyph_chapter_references() {
       reference: "Numbers 28",
     },
     {
+      chapter_code: "NUM29",
+      reference: "Numbers 29",
+    },
+    {
       chapter_code: "NUM30",
       reference: "Numbers 30",
     },
