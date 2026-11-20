@@ -2405,6 +2405,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Peter 3",
     },
     {
+      chapter_code: "1PE04",
+      reference: "1 Peter 4",
+    },
+    {
       chapter_code: "1JN01",
       reference: "1 John 1",
     },
