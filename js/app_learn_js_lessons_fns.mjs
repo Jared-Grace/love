@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_push_double } from "./app_learn_js_lesson_array_for_push_double.mjs";
 import { app_learn_js_lesson_array_for_total_over } from "./app_learn_js_lesson_array_for_total_over.mjs";
 import { app_learn_js_lesson_array_for_average } from "./app_learn_js_lesson_array_for_average.mjs";
 import { app_learn_js_lesson_array_for_smallest } from "./app_learn_js_lesson_array_for_smallest.mjs";
@@ -873,6 +874,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_smallest,
     app_learn_js_lesson_array_for_average,
     app_learn_js_lesson_array_for_total_over,
+    app_learn_js_lesson_array_for_push_double,
     app_learn_js_lesson_array_for_swap_if_bigger,
     app_learn_js_lesson_string_letter,
     app_learn_js_lesson_string_for,
