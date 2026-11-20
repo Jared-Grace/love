@@ -2325,6 +2325,10 @@ export function bible_glyph_chapter_references() {
       reference: "Hebrews 1",
     },
     {
+      chapter_code: "HEB02",
+      reference: "Hebrews 2",
+    },
+    {
       chapter_code: "1JN01",
       reference: "1 John 1",
     },
