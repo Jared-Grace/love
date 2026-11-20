@@ -4,6 +4,7 @@ import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
 import { app_learn_js_program_trace_value } from "./app_learn_js_program_trace_value.mjs";
+import { property_name_internal_not_assert } from "./property_name_internal_not_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -55,7 +56,9 @@ export function app_learn_js_program_trace_assign(
     let item = app_learn_js_program_trace_value(right2, actions, code, values);
     let before = property_get(values, array_name);
     let after = before.slice();
-    after[index] = item;
+    let index_checked = index;
+    property_name_internal_not_assert(index_checked);
+    after[index_checked] = item;
     list_add(actions, {
       kind: "assign",
       name: array_name,
