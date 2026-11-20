@@ -132,6 +132,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
     ("2026-11-13, next: found generalized to any value kept across runs - keep_name is its name, keep_start what it starts as, keep_set the line the if runs, as found = true; or count++;, keep_else the line an else runs or null for no else, and keep_log where console.log of it stands - so a loop can count as well as say whether");
     let keep_name = property_get_or(start_fewer, "keep_name", null);
     let keep_start = property_get_or(start_fewer, "keep_start", null);
+    ("2026-11-20, for starting at the first item: keep_start_code, when not null, is the code the kept name starts as, as a[0], written as it stands rather than as a value");
+    let keep_start_code = property_get_or(start_fewer, "keep_start_code", null);
     let keep_set = property_get_or(start_fewer, "keep_set", null);
     let keep_else = property_get_or(start_fewer, "keep_else", null);
     let keep_log = property_get_or(start_fewer, "keep_log", "after");
@@ -163,6 +165,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
       flip,
       keep_name,
       keep_start,
+      keep_start_code,
       keep_set,
       keep_else,
       keep_log,
@@ -296,6 +299,10 @@ export function app_learn_js_lesson_array_for_generic(options) {
     if (not_equal(found_name, null)) {
       let found_start = property_get(way, "keep_start");
       let found_json = json_to(found_start);
+      let found_start_code = property_get(way, "keep_start_code");
+      if (not_equal(found_start_code, null)) {
+        found_json = found_start_code;
+      }
       let found_line = js_code_let_statement(found_name, found_json);
       let set_true = property_get(way, "keep_set");
       ("2026-11-13: a way with no condition runs keep_set every run, with no if around it, as total += a[i];");
