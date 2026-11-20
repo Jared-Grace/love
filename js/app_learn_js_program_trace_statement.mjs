@@ -43,7 +43,7 @@ export function app_learn_js_program_trace_statement(
       app_learn_js_program_trace_method_is(expression, "pop") ||
       app_learn_js_program_trace_method_is(expression, "shift")
     ) {
-      app_learn_js_program_trace_pop(expression, actions, code, values);
+      app_learn_js_program_trace_pop(expression, actions, values);
     } else {
       app_learn_js_program_trace_log(expression, actions, code, values);
     }

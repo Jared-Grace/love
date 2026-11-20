@@ -6,13 +6,8 @@ import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_learn_js_program_trace_pop(
-  expression,
-  actions,
-  code,
-  values,
-) {
-  arguments_assert(arguments, 4);
+export function app_learn_js_program_trace_pop(expression, actions, values) {
+  arguments_assert(arguments, 3);
   ("an a.pop() run: the last item of the array the name holds taken off, added to actions, the name given the shorter array in values, and the item taken off answered, since a.pop() gives it back");
   ("2026-11-13, at the human's asking, for Taking an item off: the pop is its own kind of step, as the push is, since only the last item goes and the rest of the array stays as it was. The array is copied rather than changed, so a value handed out earlier still says what it said then. from and to are where a.pop() is written, so a line logging it can show the item in its place");
   let callee = property_get(expression, "callee");

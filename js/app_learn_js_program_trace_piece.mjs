@@ -158,7 +158,6 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     let value_popped = app_learn_js_program_trace_pop(
       piece,
       actions_held,
-      code,
       values_held,
     );
     let popped = list_last(actions_held);
