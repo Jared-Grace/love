@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_second_moves } from "./app_learn_js_lesson_second_moves.mjs";
 import { app_learn_js_lesson_array_second_two_loops } from "./app_learn_js_lesson_array_second_two_loops.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
 import { app_learn_js_lesson_array_for_in_order } from "./app_learn_js_lesson_array_for_in_order.mjs";
@@ -884,6 +885,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_smallest,
     app_learn_js_lesson_array_for_small_at,
     app_learn_js_lesson_array_second_two_loops,
+    app_learn_js_lesson_second_moves,
     app_learn_js_lesson_array_for_average,
     app_learn_js_lesson_array_for_total_over,
     app_learn_js_lesson_array_for_total_even,
