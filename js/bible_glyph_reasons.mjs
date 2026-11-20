@@ -435,6 +435,72 @@ export function bible_glyph_reasons() {
     laughing:
       "A face laughing to tears: laughter. Isaac means he laughs, so Sarah's laugh and her son's name wear one picture (Genesis 21:6).",
     camp: "A tent pitched out in the open: a camp.",
+    radio_button:
+      "A radio button, a dot in the middle of a ring: the midst, the middle, among, between.",
+    hands_praying: "Hands folded in prayer: to pray, prayer.",
+    bridge:
+      "A bridge, the crossing itself: to cross over, to pass over, and the far side, beyond.",
+    five: "The number five: five, fifth. With zero, it is fifty.",
+    inheritance:
+      "A red envelope, the gift elders hand down to the young: an inheritance, the portion handed down in a family.",
+    ark: "A chest with a lid: the ark, the chest the covenant was kept in, and the ark Noah built.",
+    cup_with_straw: "A cup with a straw: to drink.",
+    mother: "A woman feeding her baby: a mother.",
+    incense:
+      "Steam rising: incense, whose sweet smoke goes up. Let my prayer be set before You as incense (Psalm 141:2).",
+    newspaper:
+      "A rolled-up newspaper, a report told: to tell, to declare, to announce.",
+    cyclone:
+      "A whirlwind twisting round: iniquity, wrongdoing that bends and twists what should be straight. In Greek, a whirlwind.",
+    gate: "A tall gateway: a gate, and the gate of a city.",
+    grain_offering:
+      "A stack of flat cakes: the grain offering, made of fine flour and often baked as cakes (Leviticus 2:4).",
+    globe:
+      "A globe with lines around it: the world, the whole inhabited earth.",
+    raised_back_of_hand:
+      "A raised hand: to swear an oath, sworn with the hand lifted. Abram said, I have raised my hand to the LORD (Genesis 14:22).",
+    foreigner:
+      "A customs desk, where a person from another land shows who they are: a foreigner, a stranger.",
+    information:
+      "The information sign, which means here is the explanation: for, because. For God so loved the world (John 3:16).",
+    learner: "A graduation cap: a learner, a disciple, one who is taught.",
+    church:
+      "A church building: an assembly, the people of God called together.",
+    bull: "A cow: a bull, a young bull.",
+    paw_prints:
+      "Paw prints, an animal without saying which: a beast, livestock, a living creature.",
+    bronze: "A brown circle, the colour of bronze: bronze.",
+    donkey: "A donkey: a donkey, a young donkey.",
+    new_moon:
+      "A new moon: a month, which began at each new moon, and the feast held then.",
+    party_popper: "A party popper: a feast, a celebration.",
+    ram: "A ram: a ram, a male sheep.",
+    sabbath:
+      "A person resting in bed: the Sabbath, the day of rest. Remember the Sabbath day, to keep it holy (Exodus 20:8).",
+    curving_up:
+      "An arrow that turns sharply away from the line it was on: but, instead, rather. Not this, but that.",
+    second_place: "A silver medal beside the gold: second.",
+    six: "The number six: six, sixth. With zero, it is sixty.",
+    dotted_line_face:
+      "A face drawn only in dots, a face that is not there: there is no, nothing, without, to vanish.",
+    lamb: "A woolly llama stands in for a lamb: a lamb. Behold, the Lamb of God, who takes away the sin of the world (John 1:29).",
+    enemy: "An ogre: an enemy, the one who is hostile.",
+    horn: "A horn: an animal's horn, the horns of the altar, and a horn blown, as at the jubilee.",
+    bacon: "Bacon, rich with fat: fat, fatness.",
+    blossom: "A blossom: a flower.",
+    wisdom: "An owl, long a picture of being wise: wisdom.",
+    hugging_face:
+      "A hugging face: compassion, tender mercy. In Hebrew the word comes from the word for the womb, the love of a mother for her child.",
+    national_park:
+      "A valley with water running through it: a stream, a brook, a river valley.",
+    throne: "A chair, the seat a king sits on: a throne.",
+    closed_book: "A book: a book, a written record.",
+    beaming: "A beaming face: joy, to rejoice.",
+    famine: "An empty nest, nothing left to eat: famine, hunger.",
+    face_steam:
+      "A face with steam from the nose: jealousy, zeal, burning eagerness.",
+    military_medal:
+      "A military medal, worn by a man of rank: a commander, an official, a prince, a leader.",
   };
   return r;
 }
