@@ -1845,8 +1845,20 @@ export function bible_glyph_chapter_references() {
       reference: "John 17",
     },
     {
+      chapter_code: "JHN18",
+      reference: "John 18",
+    },
+    {
+      chapter_code: "JHN19",
+      reference: "John 19",
+    },
+    {
       chapter_code: "JHN20",
       reference: "John 20",
+    },
+    {
+      chapter_code: "JHN21",
+      reference: "John 21",
     },
     {
       chapter_code: "1TH01",
