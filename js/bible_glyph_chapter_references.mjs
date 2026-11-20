@@ -2029,6 +2029,10 @@ export function bible_glyph_chapter_references() {
       reference: "Romans 14",
     },
     {
+      chapter_code: "ROM15",
+      reference: "Romans 15",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
