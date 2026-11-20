@@ -952,6 +952,8 @@ export function bible_glyph_reasons() {
       "A finger pointing at you: to rebuke, to show a person their fault so they cannot miss it.",
     bus_stop:
       "A stop by the road: until, as far as. The way goes on up to this point.",
+    mechanical_leg:
+      "A leg fitted to a body: a member, one part of the body. The body is one and has many members (Romans 12:4; 1 Corinthians 12:12).",
   };
   return r;
 }
