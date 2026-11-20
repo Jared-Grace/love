@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { bible_glyph_word_pair_separator } from "./bible_glyph_word_pair_separator.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
+import { html_wbr } from "./html_wbr.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { html_span } from "./html_span.mjs";
@@ -23,6 +24,7 @@ export function bible_glyph_verse_originals_draw_html(
   ("HOW THE WORD IS SAID GOES ON THE SAME SPAN, beside its spelling, so the overlay can show the word as it is said in this verse and not only the dictionary form of its root. A chapter built before sounds were kept has none, and its span carries the spelling alone.");
   ("THE WORD'S NUMBER GOES ON THE SAME SPAN, so a tap can tell whether the word is a name. The pictures cannot tell it: a name may be drawn exactly like the common word it means.");
   ("A verse with no originals, such as one written by hand, hands in null and every word is drawn bare.");
+  ("EVERY GAP BETWEEN WORDS IS FOLLOWED BY A PLACE THE LINE MAY BREAK. Measured 2026-11-20, Firefox will not break a line at an em space that has a picture on both sides, though it breaks at a plain space there and at an em space between letters; Chrome breaks at all of them. So a verse in Firefox was one unbroken row that ran off the right edge of a phone. A zero width space after the gap did not help; this element did.");
   let word_before = null;
   let first = true;
   let index = 0;
@@ -30,6 +32,7 @@ export function bible_glyph_verse_originals_draw_html(
     if (not(first)) {
       let text = bible_glyph_word_pair_separator(word_before, word, lookup);
       html_span_text_content(parent, text);
+      html_wbr(parent);
     }
     first = false;
     word_before = word;
