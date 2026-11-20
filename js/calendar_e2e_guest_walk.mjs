@@ -15,9 +15,10 @@ export async function calendar_e2e_guest_walk(url) {
   let failures = [];
   let flows = [];
   ("Each run uses its own number and profile link, within 555-0100 to 555-0199, which are set aside for fiction.");
-  let run_pair = modulo(date_now_milliseconds(), 50);
-  let run_number =
-    "+1 904 555 01" + String(multiply(run_pair, 2)).padStart(2, "0");
+  let left = date_now_milliseconds();
+  let run_pair = modulo(left, 50);
+  let p = multiply(run_pair, 2);
+  let run_number = "+1 904 555 01" + String(p).padStart(2, "0");
   let run_profile = "facebook.com/e2e.test." + run_pair;
   let api_base = url.includes("christarose.org/")
     ? new URL(url).origin + "/calendar/api/"
@@ -86,7 +87,8 @@ export async function calendar_e2e_guest_walk(url) {
         return;
       } catch (err) {
         let shown_now = await page.innerText("body");
-        if (not(shown_now.includes("Wait for the check above to finish."))) {
+        let b = shown_now.includes("Wait for the check above to finish.");
+        if (not(b)) {
           throw err;
         }
       }
@@ -103,7 +105,8 @@ export async function calendar_e2e_guest_walk(url) {
       body: "{}",
     });
     let read = await answer.json();
-    return read.ok;
+    let r3 = read.ok;
+    return r3;
   }
   async function prove_walk(via, device_name) {
     "device_name is a phone from Playwright's device list, walked in the engine that phone runs, or \"desktop\" for a plain desktop Chromium. Guests mostly open the link from a chat on a phone, so phones are walked too (human: \"goal with testing is no issue for other people\").";
@@ -160,7 +163,8 @@ export async function calendar_e2e_guest_walk(url) {
             "Copy link",
           ];
           for (let words of wanted) {
-            if (not(shown.includes(words))) {
+            let b2 = shown.includes(words);
+            if (not(b2)) {
               failures.push(flow.via + ': code screen missing "' + words + '"');
             }
           }
@@ -188,9 +192,8 @@ export async function calendar_e2e_guest_walk(url) {
             .getAttribute("href", {
               timeout: 10000,
             });
-          key = new URLSearchParams(
-            link.split("#")[1].replaceAll(",", "&"),
-          ).get("key");
+          let v = link.split("#")[1].replaceAll(",", "&");
+          key = new URLSearchParams(v).get("key");
         }
         await step_run(flow, "private link", lambda_link);
         async function lambda_back() {
@@ -242,7 +245,10 @@ export async function calendar_e2e_guest_walk(url) {
       await playwright_test_blank_device(device_name, on_page);
     }
     if (key) {
-      let deleted = await guest_delete(key).catch(() => false);
+      function lambda() {
+        return false;
+      }
+      let deleted = await guest_delete(key).catch(lambda);
       if (not(deleted)) {
         failures.push(
           flow.via +
