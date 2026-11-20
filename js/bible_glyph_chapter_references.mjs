@@ -1897,6 +1897,18 @@ export function bible_glyph_chapter_references() {
       reference: "Acts 9",
     },
     {
+      chapter_code: "ACT10",
+      reference: "Acts 10",
+    },
+    {
+      chapter_code: "ACT11",
+      reference: "Acts 11",
+    },
+    {
+      chapter_code: "ACT12",
+      reference: "Acts 12",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
