@@ -1745,6 +1745,10 @@ export function bible_glyph_chapter_references() {
       reference: "Luke 16",
     },
     {
+      chapter_code: "LUK17",
+      reference: "Luke 17",
+    },
+    {
       chapter_code: "LUK24",
       reference: "Luke 24",
     },
