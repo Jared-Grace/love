@@ -407,6 +407,13 @@ SAFE_SCRATCHPAD_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
 # Same character allowlist as the scratchpad case, applied to the
 # relative script path accepted by is_safe_sandboxed_node_script.
 SAFE_TEMP_SCRIPT_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
+# A sandboxed script's argument may also read a plain variable (`gitignore/$f`
+# in a `while read f` loop): whatever it expands to lands after the script
+# path, so node hands it to the script, and argv cannot escalate there. Only
+# `$name` / `${name}` - never `$(...)`, which would run a command.
+SAFE_TEMP_SCRIPT_ARG_RE = re.compile(
+    r"^(?:[A-Za-z0-9_./-]|\$[A-Za-z_][A-Za-z0-9_]*|\$\{[A-Za-z_][A-Za-z0-9_]*\})+$"
+)
 SCRIPTS_TEMP_PREFIX = "scripts/temp/"
 # The same throwaway directory spelled from the root, so a redirect target
 # written either way is recognized. Derived from REPO_ROOT for the same
@@ -2718,7 +2725,7 @@ def is_safe_sandboxed_node_script(words):
     # variable is quoted (see for_loop_spaced_readings).
     for argument in words[8:]:
         for piece in argument.split(" "):
-            if not SAFE_TEMP_SCRIPT_PATH_RE.match(piece):
+            if not SAFE_TEMP_SCRIPT_ARG_RE.match(piece):
                 return False
     if words[0:5] != ["unshare", "--net", "--map-root-user", "--", "node"]:
         return False

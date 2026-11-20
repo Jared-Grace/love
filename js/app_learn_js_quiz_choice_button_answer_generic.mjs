@@ -20,11 +20,11 @@ import { null_not_is } from "./null_not_is.mjs";
 import { html_style_background_color_get } from "./html_style_background_color_get.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { equal } from "./equal.mjs";
-import { app_learn_js_lesson_quiz_wrong_code_newest_background_color } from "./app_learn_js_lesson_quiz_wrong_code_newest_background_color.mjs";
-import { app_learn_js_lesson_quiz_wrong_code_newest_letters_color } from "./app_learn_js_lesson_quiz_wrong_code_newest_letters_color.mjs";
+import { app_shared_color_red_pale } from "./app_shared_color_red_pale.mjs";
+import { app_shared_color_red_dark } from "./app_shared_color_red_dark.mjs";
 import { html_font_color_set_inside } from "./html_font_color_set_inside.mjs";
 import { app_learn_js_lesson_quiz_wrong_set } from "./app_learn_js_lesson_quiz_wrong_set.mjs";
-import { app_learn_js_lesson_quiz_wrong_code_letters_color } from "./app_learn_js_lesson_quiz_wrong_code_letters_color.mjs";
+import { app_shared_color_red_soft } from "./app_shared_color_red_soft.mjs";
 export function app_learn_js_quiz_choice_button_answer_generic({
   parent,
   text,
@@ -104,9 +104,8 @@ export function app_learn_js_quiz_choice_button_answer_generic({
     }
     let coded = list_empty_not_is(surfaces);
     if (coded) {
-      let fill = app_learn_js_lesson_quiz_wrong_code_newest_background_color();
-      let letters_newest =
-        app_learn_js_lesson_quiz_wrong_code_newest_letters_color();
+      let fill = app_shared_color_red_pale();
+      let letters_newest = app_shared_color_red_dark();
       for (let surface of surfaces) {
         html_style_background_color_set(surface, fill);
         html_font_color_set_inside(surface, letters_newest);
@@ -120,7 +119,7 @@ export function app_learn_js_quiz_choice_button_answer_generic({
       restore2();
       html_style_set(b, "pointer-events", "none");
       if (coded) {
-        let letters = app_learn_js_lesson_quiz_wrong_code_letters_color();
+        let letters = app_shared_color_red_soft();
         for (let surface of surfaces) {
           html_font_color_set_inside(surface, letters);
         }

@@ -6,7 +6,7 @@ import { html_clear } from "./html_clear.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-import { app_learn_js_lesson_quiz_wrong_code_newest_background_color } from "./app_learn_js_lesson_quiz_wrong_code_newest_background_color.mjs";
+import { app_shared_color_red_pale } from "./app_shared_color_red_pale.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_scroll_nearest } from "./html_scroll_nearest.mjs";
@@ -61,7 +61,7 @@ export function app_learn_js_lesson_quiz_multiple_choice(
     }
     ("2026-11-12, at the human's asking: the reminder is filled with the same light red as the newest wrong press, so the eye pairs the two while the reminder stays put under the choices. Not picked: the reminder moved under its own choice, which would push the choices below it down between presses. Left unfilled when nothing is said, so no empty red box shows");
     if (said) {
-      let fill = app_learn_js_lesson_quiz_wrong_code_newest_background_color();
+      let fill = app_shared_color_red_pale();
       html_style_background_color_set(note, fill);
       html_style_set(note, "padding", "0.3em 0.5em");
       html_style_set(note, "border-radius", "0.5em");
