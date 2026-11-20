@@ -369,6 +369,72 @@ export function bible_glyph_reasons() {
     woozy_face: "A woozy face: drunk, drunkenness.",
     cup: "A cup: a cup, and giving drink.",
     yarn: "Yarn: wool, fleece.",
+    fishing_pole:
+      "A fishing pole draws something up out of the water. Moses means drawn out, because Pharaoh's daughter said, I drew him out of the water (Exodus 2:10).",
+    me: "A person with no face, the picture every screen uses for whoever is looking at it: I, me, my.",
+    traffic_light:
+      "A traffic light: if. What comes next only goes when the condition is met, as a car only goes on green.",
+    you: "A finger pointing straight out of the picture at the reader: you.",
+    priest:
+      "Prayer beads: a priest, the one who prays and serves before God on behalf of the people.",
+    name_tag: "A name tag, the tag a name is written on: a name.",
+    two_hearts:
+      "Two hearts: love between two, beloved. David is spelled with the same letters as the word for beloved.",
+    person_other:
+      "A person: a soul, a life, a self. A soul is the whole living person; man became a living soul (Genesis 2:7).",
+    finish:
+      "The chequered flag waves where a race ends: until, as far as, up to.",
+    sky: "A sky full of stars: the heavens, the sky.",
+    altar:
+      "A sign for a place of worship: an altar, where offerings were made to God.",
+    girl: "A girl: a girl, a young woman, a daughter.",
+    hands_raised:
+      "Hands thrown up: to give thanks, to praise. The Hebrew word first means to throw out the hand, so the picture is the gesture itself.",
+    seven: "The number seven: seven, seventh. With zero, it is seventy.",
+    blood: "A drop of blood: blood.",
+    year: "A calendar: a year.",
+    silver:
+      "A silver spoon: silver, and the money made of it, since silver was weighed out to pay.",
+    shuffle:
+      "The shuffle arrows, two paths crossing where one is to be taken: or.",
+    megaphone:
+      "A megaphone calls a message out loud for all to hear: a prophet, who speaks out the word God gave him.",
+    watch: "A watch on the wrist shows the time it is right now: now.",
+    cross:
+      "The cross: Jesus, who was crucified for us. With wood, it is the cross itself.",
+    covenant:
+      "A rainbow: a covenant, a binding promise. God set His bow in the cloud as the sign of His covenant with the earth (Genesis 9:13).",
+    person_gesturing_ok:
+      "A person with arms joined over the head: the head, and the one at the head.",
+    magnet:
+      "A magnet draws things to itself: near, to draw near, to bring an offering near.",
+    angel:
+      "An angel: a messenger, one sent with a message. With a thumb up, it is the good message, the gospel.",
+    alarm_clock:
+      "An alarm clock rings at a time set beforehand: an appointed time, an appointed meeting, a feast.",
+    wilderness: "A desert: the wilderness, a deserted place.",
+    night: "A city at night: night.",
+    morning: "The sun rising: morning.",
+    microphone:
+      "A studio microphone puts a statement on the record: a declaration, as in declares the LORD, and speaking boldly.",
+    pleading:
+      "A pleading face, the asking look that softens a request: please, I pray.",
+    bowing: "A person bowing low at the waist: to bow down, to worship.",
+    sacrifice:
+      "A pan of cooked meat: a sacrifice, an animal offered to God and then eaten as a meal before Him (Deuteronomy 12:7).",
+    curving_right:
+      "An arrow that keeps going and bends a little to one side: but, and, now, a soft turn in the story. As doing, it is to turn.",
+    burnt_offering:
+      "Fireworks going up in flames: the burnt offering, where the whole animal was burned and went up to God.",
+    compass:
+      "A compass shows the right way to go: the conscience. With an arrow, it is a direction: north, south, east.",
+    face_with_open_mouth:
+      "A face with its mouth open: the mouth, to open wide.",
+    white_cane:
+      "A walking stick: a staff, a rod. As doing, it is to stretch out.",
+    laughing:
+      "A face laughing to tears: laughter. Isaac means he laughs, so Sarah's laugh and her son's name wear one picture (Genesis 21:6).",
+    camp: "A tent pitched out in the open: a camp.",
   };
   return r;
 }
