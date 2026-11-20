@@ -1805,12 +1805,24 @@ export function bible_glyph_chapter_references() {
       reference: "John 7",
     },
     {
+      chapter_code: "JHN08",
+      reference: "John 8",
+    },
+    {
       chapter_code: "JHN09",
       reference: "John 9",
     },
     {
       chapter_code: "JHN10",
       reference: "John 10",
+    },
+    {
+      chapter_code: "JHN11",
+      reference: "John 11",
+    },
+    {
+      chapter_code: "JHN12",
+      reference: "John 12",
     },
     {
       chapter_code: "JHN14",
