@@ -1505,6 +1505,10 @@ export function bible_glyph_chapter_references() {
       reference: "Malachi 4",
     },
     {
+      chapter_code: "MAT02",
+      reference: "Matthew 2",
+    },
+    {
       chapter_code: "MAT05",
       reference: "Matthew 5",
     },
