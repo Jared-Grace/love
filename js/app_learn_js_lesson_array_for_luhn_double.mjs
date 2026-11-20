@@ -1,13 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map } from "./list_map.mjs";
-import { json_to } from "./json_to.mjs";
-import { js_code_array } from "./js_code_array.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { equal } from "./equal.mjs";
-import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
+import { app_learn_js_luhn_program } from "./app_learn_js_luhn_program.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -46,19 +38,7 @@ export function app_learn_js_lesson_array_for_luhn_double() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let example_items = [7, 2, 6, 5];
   function program_with(items, start_back, step, body) {
-    let codes = list_map(items, json_to);
-    let array = js_code_array(codes);
-    let head = js_code_let_statement("a", array);
-    let update = equal(step, 1) ? "i--;" : "i -= " + step + ";";
-    let change_lines = js_code_for_start_condition_update_lines(
-      "let i = a.length - " + start_back + ";",
-      "i >= 0",
-      [body, update],
-    );
-    let log_line = js_code_console_log_statement("a");
-    let a = list_concat([head], change_lines);
-    let lines = list_concat(a, [log_line]);
-    let code = list_join_newline(lines);
+    let code = app_learn_js_luhn_program(items, start_back, step, [body]);
     return code;
   }
   function program_of(items) {
@@ -72,8 +52,8 @@ export function app_learn_js_lesson_array_for_luhn_double() {
       greater_than_equal(i, 0);
       i -= 2
     ) {
-      let a2 = list_get(items, i);
-      if (greater_than_equal(a2, 5)) {
+      let a = list_get(items, i);
+      if (greater_than_equal(a, 5)) {
         return true;
       }
     }
