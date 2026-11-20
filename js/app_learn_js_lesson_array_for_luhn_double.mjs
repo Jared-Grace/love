@@ -1,20 +1,20 @@
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { equal } from "./equal.mjs";
 import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_size } from "./list_size.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { not } from "./not.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -209,7 +209,7 @@ export function app_learn_js_lesson_array_for_luhn_double() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Double every second digit from the right",
-    "i = a.length - 2; i >= 0; i -= 2",
+    "i = a.length - 2; i -= 2",
   );
   let lesson = app_learn_js_lesson_code_logged({
     above,
