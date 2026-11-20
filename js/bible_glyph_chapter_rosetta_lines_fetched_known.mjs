@@ -3791,6 +3791,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_rev18();
   }
+  if (equal(chapter_code, "REV19")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_rev19.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_rev19();
+  }
   let known = not_equal(found, null);
   let r = {
     found,
