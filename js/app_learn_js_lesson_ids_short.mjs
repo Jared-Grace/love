@@ -674,7 +674,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_smallest: text_frozen("array_smallest"),
     app_learn_js_lesson_array_for_average: text_frozen("array_average"),
     app_learn_js_lesson_array_for_total_over: text_frozen("array_total_over"),
-    app_learn_js_lesson_array_for_push_double: text_frozen("array_push_double"),
+    app_learn_js_lesson_array_for_push_double: text_frozen("array_doubled"),
   };
   return short;
 }
