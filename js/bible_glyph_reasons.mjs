@@ -501,6 +501,74 @@ export function bible_glyph_reasons() {
       "A face with steam from the nose: jealousy, zeal, burning eagerness.",
     military_medal:
       "A military medal, worn by a man of rank: a commander, an official, a prince, a leader.",
+    dove: "A dove: a dove, a pigeon, and the turtledove.",
+    balloon:
+      "A balloon let go from an open hand, floating away: to let go, to leave, and to forgive, since forgiving here is letting a debt go.",
+    old_man: "An old man: old, and an elder, the older men who led the people.",
+    barley:
+      "A bowl of cooked grain stands in for the grain in the field: barley, grain.",
+    up_down_arrow:
+      "An arrow pointing up and down: moving back and forth, to shake, to wave, to wander.",
+    clapping_hands:
+      "Clapping hands: to praise. It is the word inside hallelujah, praise the LORD.",
+    coffin: "A coffin: a dead body, the dead.",
+    basket: "A basket: a basket, and what is gathered into one.",
+    sun_behind_small_cloud:
+      "The open sky out of doors: outside, the outer part.",
+    dream: "A thought bubble, what is seen in sleep: a dream, to dream.",
+    bathtub: "A bathtub: to wash, to bathe.",
+    drum: "A drum struck in a beat: a stroke, a step, a time, as in this time or three times.",
+    placard: "A sign held up for people to see: a sign.",
+    sewing_needle: "A sewing needle: a needle, to sew, to pierce.",
+    coat: "A coat: a cloak, a garment, and to cover.",
+    sun_with_face: "The sun: the sun.",
+    person_with_white_cane:
+      "A person walking with a white cane, the thing a blind man carries: blind.",
+    third_place:
+      "A bronze medal beside the gold and silver: third, the order word, not the count.",
+    blue_circle: "A blue circle: blue.",
+    tomb: "A headstone: a tomb, a grave, the place of burial.",
+    houses:
+      "A group of houses: a clan, the households of one family, and a village.",
+    takeout_box:
+      "A box of leftovers: what is left over, the rest, the remainder.",
+    butterfly:
+      "A butterfly, a thing turning into what it was not: to become, to happen, to come to be. In Hebrew, a moth.",
+    luggage:
+      "Luggage, packed for the road: to stay as a guest in a land not your own, to go into exile, and to make ready.",
+    statute: "A written page: a statute, a rule laid down to be kept.",
+    kiss_mark: "Lips: the lips.",
+    valley: "A railway running down between the mountains: a valley.",
+    bomb: "A bomb: to destroy, destruction, ruin.",
+    flour: "A bowl of flour: flour, fine flour.",
+    chariot:
+      "A fast racing car stands in for the fast war cart of old: a chariot.",
+    sister: "Two women side by side: a sister.",
+    toolbox:
+      "A toolbox, which holds any made thing to be carried and used: a vessel, a tool, a weapon, goods.",
+    lamp: "A small oil lamp, the kind used in Bible times: a lamp.",
+    candle: "A tall candle standing upright: a pillar.",
+    vineyard: "Green leaves stand in for the vine: a vineyard, a vine.",
+    pot_of_food: "A pot of food: a pot, a dish, and to cook.",
+    double_exclamation:
+      "A double exclamation mark, the same thing said with more force: very, greatly, exceedingly.",
+    saluting_face:
+      "A salute, a sign of respect and loyalty: to greet, and a vow made to God.",
+    hug: "A hug: to comfort, and the one called alongside to help. I will ask the Father, and He will give you another Helper (John 14:16).",
+    broom: "A broom: to sweep away, to blot out, and a maidservant who sweeps.",
+    purple_circle: "A purple circle: purple.",
+    safety_vest:
+      "A vest worn over the other clothes stands in for the ephod, the vest the high priest wore.",
+    dress: "A dress: a garment, a tunic, a robe.",
+    milk: "A glass of milk: milk.",
+    boxing_glove: "A boxing glove: violence, fighting, a quarrel.",
+    worm: "A worm: a worm. In Hebrew the same word is scarlet, the red dye made from a worm.",
+    dna: "The strand that passes life from parents to children: a generation, one's kin.",
+    astonished: "An astonished face: to marvel, to be amazed.",
+    mechanical_arm:
+      "A strong metal arm: strength, might, the arm, and hard or stiff.",
+    pregnant_woman:
+      "A pregnant woman: to conceive, to be with child, to give birth.",
   };
   return r;
 }
