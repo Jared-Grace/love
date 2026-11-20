@@ -1,9 +1,7 @@
 import { app_learn_en_gloss_tagalog_generate } from "./app_learn_en_gloss_tagalog_generate.mjs";
 import { app_learn_en_gloss_tagalog_generate_upload_path } from "./app_learn_en_gloss_tagalog_generate_upload_path.mjs";
 import { g_generate_upload_filter } from "./g_generate_upload_filter.mjs";
-export async function app_learn_en_gloss_tagalog_chapter_upload_stored(
-  chapter_code,
-) {
+export async function app_learn_en_gloss_chapter_upload_stored(chapter_code) {
   "Publish one chapter of English words explained in Tagalog exactly as it already stands, generating nothing.";
   "The explanations are written by hand rather than asked of a model, so publishing and writing are separate steps on purpose: this one only carries up what is already in the store.";
   "$plain chapter_code";
