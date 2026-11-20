@@ -7,14 +7,18 @@ import { not_equal } from "./not_equal.mjs";
 import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
 import { calendar_messenger_name_usable } from "./calendar_messenger_name_usable.mjs";
 import { calendar_db_guest_limit_read } from "./calendar_db_guest_limit_read.mjs";
+import { calendar_db_proof_read } from "./calendar_db_proof_read.mjs";
 import { not } from "./not.mjs";
-import { calendar_db_waiting_book } from "./calendar_db_waiting_book.mjs";
+import { calendar_db_proof_start } from "./calendar_db_proof_start.mjs";
 import { calendar_db_session_create } from "./calendar_db_session_create.mjs";
+import { calendar_db_proven_book } from "./calendar_db_proven_book.mjs";
 import { owner_email } from "./owner_email.mjs";
 import { calendar_db_upcoming } from "./calendar_db_upcoming.mjs";
+import { calendar_db_proofs_waiting } from "./calendar_db_proofs_waiting.mjs";
 import { calendar_db_cancel } from "./calendar_db_cancel.mjs";
 import { calendar_db_person_delete } from "./calendar_db_person_delete.mjs";
 import { calendar_db_settings } from "./calendar_db_settings.mjs";
+import { calendar_db_proof_confirm } from "./calendar_db_proof_confirm.mjs";
 import { calendar_db_confirm_messenger } from "./calendar_db_confirm_messenger.mjs";
 import { calendar_db_confirm } from "./calendar_db_confirm.mjs";
 import { calendar_db_host_rules_save } from "./calendar_db_host_rules_save.mjs";
@@ -41,7 +45,8 @@ export async function calendar_api_handle(
   ("★ ONLY A SIGNED-IN HOST MAY HOST: a session whose uid starts fb_ or firebase_. A guest key never reaches the host routes. firebase_ sessions are made only for ",
     fn_name("owner_email"),
     ", so another Firebase account cannot host. To move off Firebase, replace login_firebase; nothing else here depends on it.");
-  ("★ A BOOKING WAITS FOR ITS CODE. book answers a code and a link that opens WhatsApp to the host with it typed; the host, seeing it arrive, sends confirm with the code and the number it came from. Every request first cancels bookings left waiting 24 hours, so no answer counts an hour nobody proved.");
+  ("★ A GUEST IS PROVEN BEFORE THEY BOOK (human, 2026-11-20). prove takes who the guest is and answers a code and a link that opens WhatsApp to the host with it typed; the host, seeing it arrive, sends confirm with the code and the number it came from. Only then does book take a time, and the meeting it writes is confirmed at once - so no guest ever holds a booking that is only a request.");
+  ("Meetings booked before proofs still wait for their own code: confirm falls back to them when no proof holds the code, and every request first cancels those left waiting 24 hours.");
   ("A host who has set a Messenger name also takes Messenger bookings (via messenger): the code is sent from Messenger, and confirm then takes the sender's profile link in place of a number.");
   let reply = function lambda(status, value) {
     let r = {
@@ -53,6 +58,7 @@ export async function calendar_api_handle(
   await calendar_db_waiting_expire(db, now_iso);
   let uid = key ? await calendar_db_session_uid(db, key) : null;
   let wanted_post = [
+    "prove",
     "book",
     "confirm",
     "cancel",
@@ -118,15 +124,20 @@ export async function calendar_api_handle(
           null,
           now_iso,
         );
+    ("proof says where a guest who sends their key stands: null (never asked), waiting for their code, or proven.");
+    let proof = equal(uid, null)
+      ? null
+      : await calendar_db_proof_read(db, slug2, uid);
     let r5 = reply(200, {
       ok: true,
       host,
       slots: free.slots,
       guest,
+      proof,
     });
     return r5;
   }
-  if (equal(route, "book")) {
+  if (equal(route, "prove") || equal(route, "book")) {
     let b = await outside.rate_ok();
     if (not(b)) {
       let r6 = reply(429, {
@@ -135,6 +146,9 @@ export async function calendar_api_handle(
       });
       return r6;
     }
+  }
+  if (equal(route, "prove")) {
+    ("A stranger's first request, so the are-you-a-person check guards it. A later book needs none: only a guest the host has proven can book, and the rate limit still holds.");
     let v = String(body.turnstile);
     let b2 = await outside.turnstile_ok(v);
     if (not(b2)) {
@@ -149,44 +163,62 @@ export async function calendar_api_handle(
     let name2 = String(body.name);
     let whatsapp2 = String(body.whatsapp);
     let timezone2 = String(body.timezone);
-    let day2 = String(body.day);
-    let start_minute2 = Number(body.start_minute);
-    let weekly2 = equal(body.weekly, true);
-    let id2 = outside.uid_new();
     let via2 = String(body.via);
     let profile_typed = String(body.profile);
-    let booked = await calendar_db_waiting_book(
+    let id2 = outside.uid_new();
+    let started = await calendar_db_proof_start(
       db,
       guest_uid,
       slug3,
       name2,
       whatsapp2,
       timezone2,
-      day2,
-      start_minute2,
-      weekly2,
-      now_iso,
-      id2,
       via2,
       profile_typed,
+      now_iso,
+      id2,
     );
-    if (not(booked.ok)) {
-      let r8 = reply(409, booked);
+    if (not(started.ok)) {
+      let r8 = reply(400, started);
       return r8;
     }
     let key_given = equal(uid, null)
       ? await calendar_db_session_create(db, guest_uid, now_iso)
       : null;
     let r9 = reply(200, {
-      ok: true,
-      reason: null,
-      start_utc: booked.start_utc,
-      code: booked.code,
-      send_url: booked.send_url,
-      expires_utc: booked.expires_utc,
+      ...started,
       key: key_given,
     });
     return r9;
+  }
+  if (equal(route, "book")) {
+    if (equal(uid, null)) {
+      let r_unproven = reply(403, {
+        ok: false,
+        reason: "unproven",
+        start_utc: null,
+      });
+      return r_unproven;
+    }
+    let slug5 = String(body.host);
+    let timezone5 = String(body.timezone);
+    let day2 = String(body.day);
+    let start_minute2 = Number(body.start_minute);
+    let weekly2 = equal(body.weekly, true);
+    let id5 = outside.uid_new();
+    let booked = await calendar_db_proven_book(
+      db,
+      uid,
+      slug5,
+      timezone5,
+      day2,
+      start_minute2,
+      weekly2,
+      now_iso,
+      id5,
+    );
+    let r_booked = reply(booked.ok ? 200 : 409, booked);
+    return r_booked;
   }
   if (equal(route, "login_firebase")) {
     let v2 = String(body.id_token);
@@ -226,9 +258,12 @@ export async function calendar_api_handle(
   }
   if (equal(route, "upcoming")) {
     let meetings = await calendar_db_upcoming(db, uid, now_iso);
+    ("proofs are the guests waiting for this person, as a host, to see their code arrive; a guest hosts nobody, so theirs is empty.");
+    let proofs = await calendar_db_proofs_waiting(db, uid, now_iso);
     let r11 = reply(200, {
       ok: true,
       meetings,
+      proofs,
     });
     return r11;
   }
@@ -265,6 +300,21 @@ export async function calendar_api_handle(
   }
   let saved = null;
   if (equal(route, "confirm")) {
+    let code2 = String(body.code);
+    let via3 = equal(body.via, "messenger") ? "messenger" : "whatsapp";
+    let sender = equal(via3, "messenger")
+      ? String(body.profile)
+      : String(body.whatsapp);
+    saved = await calendar_db_proof_confirm(
+      db,
+      uid,
+      via3,
+      code2,
+      sender,
+      now_iso,
+    );
+  }
+  if (equal(route, "confirm") && equal(saved.reason, "no_code")) {
     let code2 = String(body.code);
     if (equal(body.via, "messenger")) {
       let profile = String(body.profile);

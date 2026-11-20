@@ -9,6 +9,10 @@ export async function calendar_db_person_delete(db, uid) {
   let v = db
     .prepare("DELETE FROM meetings WHERE guest_uid = ?1 OR host_uid = ?1")
     .bind(uid);
+  ("Proofs too - each holds the number or profile link this person was proven by, on either side.");
+  let v_proofs = db
+    .prepare("DELETE FROM proofs WHERE guest_uid = ?1 OR host_uid = ?1")
+    .bind(uid);
   let v2 = db
     .prepare("DELETE FROM openings_dated WHERE host_uid = ?1")
     .bind(uid);
@@ -16,7 +20,7 @@ export async function calendar_db_person_delete(db, uid) {
   let v4 = db.prepare("DELETE FROM hosts WHERE uid = ?1").bind(uid);
   let v5 = db.prepare("DELETE FROM people WHERE uid = ?1").bind(uid);
   let v6 = db.prepare("DELETE FROM sessions WHERE uid = ?1").bind(uid);
-  let statements = [v6, v, v2, v3, v4, v5];
+  let statements = [v6, v, v_proofs, v2, v3, v4, v5];
   let results = await db.batch(statements);
   let person_result = results[subtract(results.length, 1)];
   let eq = equal(person_result.meta.changes, 1);

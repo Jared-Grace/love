@@ -2718,6 +2718,38 @@ def is_safe_sandboxed_node_script(words):
     return is_safe_temp_script_path(words[7])
 
 
+XARGS_PLACE_FLAGS = (["xargs", "-I{}"], ["xargs", "-I", "{}"])
+
+
+def is_safe_xargs_sandboxed_node_script(words):
+    """`xargs -I{}` in front of the sandboxed scripts/temp template, with
+    `{}` standing only as whole words after the script path. -I hands the
+    script one input line per run, at exactly the places `{}` is written,
+    and those places are all script arguments - which is_safe_sandboxed_node_
+    script already accepts whatever they hold, because the sandbox blocks
+    write, child_process and network regardless of argv. A `{}` anywhere in
+    front of the script path (a node flag, the read path, the script itself)
+    or inside a longer word is refused, since there the input would decide
+    what runs rather than what the script reads. Every other xargs flag stays
+    unread, as before."""
+    for prefix in XARGS_PLACE_FLAGS:
+        if words[: len(prefix)] == prefix:
+            rest = words[len(prefix):]
+            break
+    else:
+        return False
+    script_at = next((i for i, w in enumerate(rest) if w.startswith(SCRIPTS_TEMP_PREFIX)), None)
+    if script_at is None:
+        return False
+    if any("{}" in w for w in rest[: script_at + 1]):
+        return False
+    if any("{}" in w and w != "{}" for w in rest):
+        return False
+    if "{}" not in rest:
+        return False
+    return is_safe_sandboxed_node_script(["x" if w == "{}" else w for w in rest])
+
+
 def sandbox_read_path_near_miss(words):
     """A command that clearly ATTEMPTS the sandboxed-node throwaway - it opens
     with the exact `unshare --net --map-root-user -- node --permission
@@ -2930,6 +2962,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             verb_of(words) not in safe_verbs
             and not is_safe_sandboxed_node_eval(unwrapped)
             and not is_safe_sandboxed_node_script(unwrapped)
+            and not is_safe_xargs_sandboxed_node_script(words)
             and not is_safe_sed(words)
             and not is_safe_file_read(words)
             and not is_safe_bare_mount(words)

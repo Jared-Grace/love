@@ -3,6 +3,8 @@ import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { app_calendar_proofs_waiting } from "./app_calendar_proofs_waiting.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
 import { html_centered } from "./html_centered.mjs";
@@ -17,7 +19,6 @@ import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_button_red } from "./app_shared_button_red.mjs";
 export async function app_calendar_meetings(box, key, on_change, empty_shown) {
@@ -36,6 +37,16 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
     return;
   }
   let meetings = answer.body.meetings;
+  ("A host sees first the guests waiting for them to see a code arrive, since each is waiting on the host before they can pick a time. A guest's answer holds none.");
+  async function redraw() {
+    await app_calendar_meetings(box, key, on_change, empty_shown);
+  }
+  app_calendar_proofs_waiting(
+    box,
+    property_get_or(answer.body, "proofs", []),
+    key,
+    redraw,
+  );
   let empty = equal(meetings.length, 0);
   if (empty && not(empty_shown)) {
     return;

@@ -7,41 +7,34 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { app_shared_field } from "./app_shared_field.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_component_element_get } from "./html_component_element_get.mjs";
+import { app_calendar_guest_proof_form } from "./app_calendar_guest_proof_form.mjs";
+import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_shared_unavailable_box } from "./app_shared_unavailable_box.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
+import { app_shared_field } from "./app_shared_field.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
-import { html_input_text } from "./html_input_text.mjs";
-import { app_shared_input_style } from "./app_shared_input_style.mjs";
-import { storage_local_get } from "./storage_local_get.mjs";
-import { app_calendar } from "./app_calendar.mjs";
-import { html_value_set } from "./html_value_set.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_input_type } from "./html_input_type.mjs";
-import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
-import { html_value_get } from "./html_value_get.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { storage_local_set } from "./storage_local_set.mjs";
 import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
+import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
-import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
-import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
-import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export async function app_calendar_guest(parent, slug, key, on_key) {
   arguments_assert(arguments, 4);
-  ("The booking screen a guest reaches from a host's link (#host=<slug>): the host's open hours in the guest's own clock, a short form, and after booking the code to send on WhatsApp.");
-  ("key is the guest's session key from an earlier booking, or null. A first booking answers a new key, handed to on_key so the page keeps it; the guest never signs in.");
+  ("The booking screen a guest reaches from a host's link (#host=<slug>): first how to reach them and a code to send the host, then - once the host has seen the code arrive - the host's open hours in the guest's own clock and a Book that is final at once.");
+  ("key is the guest's session key, or null. The first code answers a new key, handed to on_key so the page keeps it; the guest never signs in.");
   ("A host who has set a Messenger name lets the guest pick WhatsApp or Messenger; a Messenger guest gives no number, and sends the code from Messenger instead.");
   ("Hours are drawn in the guest's own time zone, read from the browser; the booking sends that zone so the host's page can say it.");
   let card = app_shared_container(parent);
@@ -86,8 +79,43 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     );
     return;
   }
-  ('The app choice comes first and big (human: "They should have a big choice: Facebook Messenger meeting or WhatsApp meeting"); what is asked for below follows it - a WhatsApp number, or a Facebook profile link.');
-  let via_area = app_shared_field(card);
+  ("★ PROVE FIRST, THEN BOOK (human, 2026-11-20). A guest the host has not yet proven sees no times at all: first the form asking how to reach them, then the code to send. Only a proven guest sees the times, and their Book is final at once - no booking is only a request.");
+  async function redraw() {
+    html_clear(parent);
+    let r3 = await app_calendar_guest(parent, slug, key, on_key);
+    return r3;
+  }
+  function key_keep(k) {
+    key = k;
+    on_key(k);
+  }
+  let proof = free.body.proof;
+  let step = html_div(card);
+  async function form_show() {
+    html_clear(step);
+    ("Asked from the proven screen, the times below the form are hidden: a new number needs a new code before any time can be booked.");
+    let below = html_component_element_get(step).nextElementSibling;
+    while (below) {
+      below.style.display = "none";
+      below = below.nextElementSibling;
+    }
+    await app_calendar_guest_proof_form(
+      step,
+      slug,
+      host,
+      key,
+      key_keep,
+      redraw,
+    );
+  }
+  if (equal(proof, null)) {
+    await form_show();
+    return;
+  }
+  if (not(proof.proven)) {
+    app_calendar_guest_proof_waiting(step, slug, key, proof, form_show, redraw);
+    return;
+  }
   let slots = free.body.slots;
   if (equal(slots.length, 0)) {
     html_div_text(card, "No open hours in the next two weeks.");
@@ -222,73 +250,21 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     }
   }
   first_show();
-  let name_field = app_shared_field(card);
-  html_div_text(name_field, "Your name on Facebook");
-  let name = html_input_text(name_field, "Your name");
-  app_shared_input_style(name);
-  ('Both fields show whenever the host takes Messenger; the one the chosen app needs says "required", the other "optional" (human: "fields for both Facebook Profile URL and WhatsApp number, but which one is required depends on which one you select").');
-  let number_box = app_shared_field(card);
-  let number_label = html_div_text(number_box, "");
-  let whatsapp = html_input_text(number_box, "+1 555 123 4567");
-  app_shared_input_style(whatsapp);
-  let profile_box = app_shared_field(card);
-  let profile_label = html_div_text(profile_box, "");
-  let profile = html_input_text(profile_box, "facebook.com/your.name");
-  app_shared_input_style(profile);
-  let profile_hint = html_div_text(
-    profile_box,
-    "On Facebook, open your profile, then copy the link from the address bar or from Share.",
+  ("The proven guest is told where the meeting will be, in the number or link the host proved, so a wrong one is seen before booking; changing it means a new code.");
+  let app_name = equal(proof.via, "messenger") ? "Messenger" : "WhatsApp";
+  let who_field = app_shared_field(card);
+  html_div_text(
+    who_field,
+    "✅ " +
+      (equal(proof.via, "messenger")
+        ? "We meet on Facebook Messenger"
+        : "We meet on WhatsApp: " + proof.whatsapp),
   );
-  app_shared_text_deemphasized(profile_hint);
-  ("A host with no Messenger name takes WhatsApp only, so there is no choice to make; otherwise nothing is picked until the guest picks.");
-  let via = host.messenger ? null : "whatsapp";
-  ('What the guest typed last time on this device fills the form again, so a cancel and a fresh booking asks for nothing twice (human: "if they cancel and re-book their previous choices for name,url,and phone number are pre-populated").');
-  ("Rejected: keeping them on the server with the guest's key (a Worker change and a new place a person's name sits on the cloud, for a convenience the device already gives).");
-  let last = storage_local_get(app_calendar, "guest_details");
-  if (last) {
-    html_value_set(name, last.name);
-    html_value_set(whatsapp, last.whatsapp);
-    html_value_set(profile, last.profile);
-    if (host.messenger) {
-      via = last.via;
-    }
-  }
-  function field_label_set(label, words, value) {
-    let need = equal(via, null)
-      ? ""
-      : equal(via, value)
-        ? " (required)"
-        : " (optional)";
-    html_text_content_set(label, words + need);
-  }
-  function via_draw() {
-    html_clear(via_area);
-    field_label_set(number_label, "Your WhatsApp number", "whatsapp");
-    field_label_set(profile_label, "Your Facebook profile link", "messenger");
-    if (not(host.messenger)) {
-      html_text_content_set(number_label, "Your WhatsApp number");
-      html_component_element_get(profile_box).style.display = "none";
-      return;
-    }
-    html_div_text(via_area, "How do you want to meet?");
-    let choices = [
-      ["whatsapp", "WhatsApp meeting"],
-      ["messenger", "Facebook Messenger meeting"],
-    ];
-    for (let [value, words] of choices) {
-      function choice_pick() {
-        via = value;
-        problems_recheck();
-        via_draw();
-      }
-      if (equal(via, value)) {
-        app_shared_button_green(via_area, "✓ " + words, choice_pick);
-      } else {
-        app_shared_button_uncolored(via_area, words, choice_pick);
-      }
-    }
-  }
-  via_draw();
+  app_shared_button_uncolored(
+    who_field,
+    equal(proof.via, "messenger") ? "Change my Facebook" : "Change my number",
+    form_show,
+  );
   let weekly_row = app_shared_field(card);
   let weekly = html_input_type(weekly_row, "checkbox");
   let weekly_element = html_component_element_get(weekly);
@@ -297,7 +273,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     "Repeat every week at this time",
   );
   html_component_element_get(weekly_label).style.display = "inline";
-  let check = await calendar_turnstile_widget(card);
+  ("No spam check here: only a guest the host has proven can book, and the server refuses everyone else.");
   let status = html_div_text(card, "");
   let after = html_div(parent);
   ('A press of Book with something missing scrolls to the part that needs it and rings it in red, says what is missing in red, and gives Book a thick red edge; all of it comes off as soon as that part is filled in (human: "should it scroll up to the offending field and circle it in red until satsifies check?").');
@@ -309,35 +285,6 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
         words: "Pick a time first.",
       };
       return r2;
-    }
-    if (equal(via, null)) {
-      let r3 = {
-        field: via_area,
-        words: "Pick WhatsApp or Messenger first.",
-      };
-      return r3;
-    }
-    let left = html_value_get(name).trim();
-    if (equal(left, "")) {
-      let r4 = {
-        field: name_field,
-        words: "Type your name.",
-      };
-      return r4;
-    }
-    if (equal(via, "whatsapp") && equal(html_value_get(whatsapp).trim(), "")) {
-      let r5 = {
-        field: number_box,
-        words: "Type your WhatsApp number.",
-      };
-      return r5;
-    }
-    if (equal(via, "messenger") && equal(html_value_get(profile).trim(), "")) {
-      let r6 = {
-        field: profile_box,
-        words: "Paste the link to your Facebook profile.",
-      };
-      return r6;
     }
     return null;
   }
@@ -380,12 +327,6 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       problem_clear();
     }
   }
-  for (let input of [name, whatsapp, profile]) {
-    html_component_element_get(input).addEventListener(
-      "input",
-      problems_recheck,
-    );
-  }
   async function lambda2() {
     let problem = form_problem();
     let b3 = equal(problem, null);
@@ -394,12 +335,6 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       return;
     }
     problem_clear();
-    let name_text = html_value_get(name).trim();
-    let token = check.token();
-    if (equal(token, "")) {
-      html_text_content_set(status, "Wait for the check above to finish.");
-      return;
-    }
     html_text_content_set(status, "Booking...");
     html_style_assign(status, {
       color: "",
@@ -410,32 +345,23 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       return r;
     }
     let book_body = {
-      turnstile: token,
       host: slug,
-      name: name_text,
-      whatsapp: html_value_get(whatsapp),
-      profile: html_value_get(profile),
       timezone: zone,
       day: chosen.day,
       start_minute: chosen.start_minute,
       weekly: weekly_element.checked,
-      via,
     };
     let booked = await html_loading(book_send);
     html_text_content_set(status, "");
-    check.reset();
     if (not(booked.body.ok)) {
       let words = {
-        whatsapp: "That WhatsApp number does not look right.",
-        profile: "Paste the link to your Facebook profile.",
-        messenger:
-          "This host does not take Messenger calls now. Pick WhatsApp.",
+        unproven:
+          "I have not seen your code yet. Open this page again to send it.",
         taken: "Someone just booked that time. Pick another.",
         not_open: "That time is no longer open. Pick another.",
         limit:
           "You already have the most upcoming meetings this host allows. To book another time, cancel one first.",
         rate: "Too many tries. Wait a minute and try again.",
-        turnstile: "The check failed. Try again.",
         network: "No connection. Try again.",
       };
       let text = property_get_or(
@@ -445,8 +371,6 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       );
       ("A refusal that names a part of the form rings that part the same way; the rest are said in red with nothing ringed.");
       let fields = {
-        whatsapp: number_box,
-        profile: profile_box,
         taken: pick_field,
         not_open: pick_field,
       };
@@ -465,25 +389,15 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       });
       return;
     }
-    storage_local_set(app_calendar, "guest_details", {
-      name: name_text,
-      whatsapp: html_value_get(whatsapp),
-      profile: html_value_get(profile),
-      via,
-    });
-    if (booked.body.key) {
-      key = booked.body.key;
-      on_key(key);
-    }
     ('The emptied booking card is hidden, not just cleared - cleared, it stayed on screen as a small empty green box above the result (human: "a little green container at the top").');
     html_clear(card);
     html_component_element_get(card).style.display = "none";
     html_clear(after);
     let done = app_shared_container(after);
-    ('The time is a request until the host confirms the code, so the line says so (human: "Instead of saying booked, say: Unconfirmed request:").');
+    ("The guest was proven before booking, so the meeting is final the moment it is written, and the page says so plainly: booked.");
     let booked_line = html_div_text_content(
       done,
-      "Unconfirmed request: " +
+      "✅ Booked: " +
         calendar_time_range_local_text(
           booked.body.start_utc,
           host.meeting_minutes,
@@ -493,39 +407,19 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       "font-size": "1.3em",
       "font-weight": "bold",
     });
-    ("The steps are the human's own wording, numbered; the host speaks as \"me\" because the page is the host's own booking link.");
-    let app_name = equal(via, "messenger") ? "Messenger" : "WhatsApp";
-    html_div_text(done, "Next steps:");
-    html_div_text(done, "1. Copy this code:");
-    html_div_text_content(done, booked.body.code);
-    async function code_copy() {
-      await clipboard_copy_browser(booked.body.code);
-      app_shared_toast("✅ Copied code");
-    }
-    app_shared_button_uncolored(done, "Copy code", code_copy);
-    html_div_text(done, "2. Send this code to me on " + app_name + ":");
-    html_a_href_text_new_tab(done, booked.body.send_url, "Open " + app_name);
-    html_div_text(done, "3. I will send you a confirmation message.");
-    let final_hint = html_div_text(
-      done,
-      "The meeting is not final until you get a confirmation message from me on " +
-        app_name +
-        ".",
-    );
-    app_shared_text_deemphasized(final_hint);
-    let expires = html_div_text_content(
-      done,
-      "If the code has not arrived by " +
-        calendar_time_local_text(booked.body.expires_utc) +
-        ", the booking is cancelled.",
-    );
-    app_shared_text_deemphasized(expires);
     html_div_text(
       done,
-      "4. To change or cancel this meeting, or to book another, use this link. Please save it:",
+      "I will meet you on " +
+        app_name +
+        (weekly_element.checked
+          ? " at this time every week."
+          : " at this time."),
+    );
+    html_div_text(
+      done,
+      "To change or cancel this meeting, or to book another, use this link. Please save it:",
     );
     let link = html_url_without_hash() + "#host=" + slug + ",key=" + key;
-    ("The link opens in a new tab, so this page with the code to send stays open behind it.");
     let link_line = html_div(done);
     html_a_href_text_new_tab(link_line, link, link);
     async function link_copy() {
