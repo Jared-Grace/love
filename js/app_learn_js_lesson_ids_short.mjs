@@ -680,6 +680,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_start_first: text_frozen("array_first_item"),
     app_learn_js_lesson_array_for_total_even: text_frozen("array_total_even"),
     app_learn_js_lesson_array_for_small_at: text_frozen("array_small_at"),
+    app_learn_js_lesson_array_for_reverse: text_frozen("array_rev_for"),
   };
   return short;
 }

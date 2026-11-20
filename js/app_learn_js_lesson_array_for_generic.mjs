@@ -42,6 +42,8 @@ import { list_sum } from "./list_sum.mjs";
 import { not } from "./not.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { add } from "./add.mjs";
+import { list_sort_number } from "./list_sort_number.mjs";
 import { divide } from "./divide.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
@@ -99,6 +101,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let smallest_middle = property_get_or(options, "smallest_middle", false);
   ("2026-11-20, for adding only the even numbers: a lesson may ask for even_and_odd, and each array then holds at least one even and one odd number, and its odd numbers never add up to what its even numbers add up to, so a loop with no if, or one that adds the odd numbers, never gives the right answer by luck");
   let even_and_odd = property_get_or(options, "even_and_odd", false);
+  ("2026-11-20, for whether an array is in order: a lesson may ask for in_order_sometimes, and every other array is then in order, smallest first, while the rest are not; an array out of order always ends with its last two items in order, so a loop that sets its answer back to true in an else, which only the last pair decides, never gives the right answer by luck");
+  let in_order_sometimes = property_get_or(
+    options,
+    "in_order_sometimes",
+    false,
+  );
   ("2026-11-13, at the human's asking, so a loop can run over the letters of a string: a lesson may hand in words, and each question is then one of them named s, let s = \"joy\";, its letters the items looped over. Everything else reads the letters as it reads an array's items, since s[i] and s.length read a string as a[i] and a.length read an array. Not picked: a builder of its own for strings, which would repeat every wrong loop and the walk");
   let words = property_get_or(options, "words", null);
   ("2026-11-13, next: a lesson may also hand in words_without, words that lack what the loop looks for, and then every other question takes one of them, as item_sometimes puts its item in every other array, so a set always holds both answers");
@@ -468,6 +476,36 @@ export function app_learn_js_lesson_array_for_generic(options) {
           )
         ) {
           items3 = list_shuffle_take(fruits, item_count);
+        }
+      }
+      if (in_order_sometimes) {
+        function items_ascending(items5) {
+          for (let p = 0; less_than(p, subtract(list_size(items5), 1)); p++) {
+            let a = list_get(items5, p);
+            let index5 = add(p, 1);
+            let b2 = list_get(items5, index5);
+            if (greater_than(a, b2)) {
+              return false;
+            }
+          }
+          return true;
+        }
+        function last_rises(items6) {
+          let count7 = list_size(items6);
+          let index6 = subtract(count7, 2);
+          let a2 = list_get(items6, index6);
+          let index7 = subtract(count7, 1);
+          let b3 = list_get(items6, index7);
+          let rises = less_than(a2, b3);
+          return rises;
+        }
+        let left12 = modulo(k, 2);
+        if (equal(left12, 0)) {
+          list_sort_number(items3);
+        } else {
+          while (items_ascending(items3) || not(last_rises(items3))) {
+            items3 = list_shuffle_take(fruits, item_count);
+          }
         }
       }
       if (not_equal(words, null)) {

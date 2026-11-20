@@ -11,9 +11,9 @@ import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_placeholder } from "./html_placeholder.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
@@ -74,8 +74,6 @@ export function app_calendar_invite_form(parent, key) {
   let status = html_div_text(card, "");
   let result = html_div(card);
   async function link_make() {
-    html_clear(result);
-    html_text_content_set(status, "");
     let typed = html_value_get(contact).trim();
     let sent = await calendar_api_call(
       "POST",
@@ -87,6 +85,9 @@ export function app_calendar_invite_form(parent, key) {
       },
       key,
     );
+    ("The last link and message stay on screen until the answer is in, so the wait never shows a blank.");
+    html_clear(result);
+    html_text_content_set(status, "");
     if (not(sent.body.ok)) {
       let words = {
         whatsapp: "That WhatsApp number does not look right.",
