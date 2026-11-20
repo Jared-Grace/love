@@ -1957,6 +1957,22 @@ export function bible_glyph_chapter_references() {
       reference: "Acts 24",
     },
     {
+      chapter_code: "ACT25",
+      reference: "Acts 25",
+    },
+    {
+      chapter_code: "ACT26",
+      reference: "Acts 26",
+    },
+    {
+      chapter_code: "ACT27",
+      reference: "Acts 27",
+    },
+    {
+      chapter_code: "ACT28",
+      reference: "Acts 28",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
