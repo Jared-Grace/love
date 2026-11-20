@@ -2285,6 +2285,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Timothy 5",
     },
     {
+      chapter_code: "1TI06",
+      reference: "1 Timothy 6",
+    },
+    {
       chapter_code: "1JN01",
       reference: "1 John 1",
     },
