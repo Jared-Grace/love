@@ -3,10 +3,11 @@ import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { bible_glyph_marks_group_misread_accepted } from "./bible_glyph_marks_group_misread_accepted.mjs";
 import { list_add } from "./list_add.mjs";
-import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export function bible_glyph_marks_group_misread_gate_run() {
   "Checks that no two neighbouring words in the written picture Bible put a group's opening picture and its closing picture either side of the gap between them.";
   "IT SHUTS A DOOR RATHER THAN WORKING A QUEUE. Every written chapter was clean the day this was written, so it passes at nought and always should; there is no baseline to ratchet and none is wanted. A gate that starts at nought is the only kind that can honestly refuse the first offender, and the first offender here is a verse that says something the text does not say.";
@@ -54,9 +55,17 @@ export function bible_glyph_marks_group_misread_gate_run() {
       "these listed joins are no longer found - take them out of " +
       fn_name("bible_glyph_marks_group_misread_accepted"),
   });
-  let none = list_empty_is(misread);
-  assert_json(none, {
-    misread,
+  ("Each misreading is written down with the chapter it sits in, so the sorting that decides a deployment reads that and nothing else. Read the ordinary way, the group a join spells is an English word - multiply, bless - and a word that is also a function's name held out every app shipping that function over a verse it does not carry.");
+  let marked = [];
+  for (let item of misread) {
+    let code = property_get(item, "chapter_code");
+    let at_fault = "bible_glyph_chapter_" + code.toLowerCase();
+    list_add(marked, {
+      item,
+      at_fault,
+    });
+  }
+  list_empty_is_assert_json(marked, {
     hint:
       "the last picture of one word and the first of the next spell a group the tables give a meaning to, so a reader who reads the gap between them as narrow reads a word nobody wrote - either reword one of the two words, or seat that group on a different pair of pictures. Read the verses first with " +
       fn_name("bible_glyph_chapters_marks_group_misread_lines") +
