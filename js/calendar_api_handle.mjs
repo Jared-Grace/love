@@ -17,6 +17,7 @@ import { calendar_db_upcoming } from "./calendar_db_upcoming.mjs";
 import { calendar_db_proofs_waiting } from "./calendar_db_proofs_waiting.mjs";
 import { calendar_db_cancel } from "./calendar_db_cancel.mjs";
 import { calendar_db_person_delete } from "./calendar_db_person_delete.mjs";
+import { calendar_db_invite } from "./calendar_db_invite.mjs";
 import { calendar_db_settings } from "./calendar_db_settings.mjs";
 import { calendar_db_proof_confirm } from "./calendar_db_proof_confirm.mjs";
 import { calendar_db_confirm_messenger } from "./calendar_db_confirm_messenger.mjs";
@@ -69,6 +70,7 @@ export async function calendar_api_handle(
     "schedule_save",
     "dated_save",
     "dated_delete",
+    "invite",
     "login_firebase",
   ];
   let wanted_get = ["free", "upcoming", "settings"];
@@ -289,6 +291,32 @@ export async function calendar_api_handle(
       reason: "host_only",
     });
     return r14;
+  }
+  if (equal(route, "invite")) {
+    ("The host makes a link for one chat, the person in it already proven (see ",
+      fn_name("calendar_db_invite"),
+      "); answers {ok, reason, slug, key}, the key going after the # of the link sent.");
+    let guest_uid2 = outside.uid_new();
+    let name4 = String(body.name);
+    let via4 = String(body.via);
+    let contact2 = String(body.contact);
+    let invited = await calendar_db_invite(
+      db,
+      uid,
+      guest_uid2,
+      name4,
+      via4,
+      contact2,
+      now_iso,
+    );
+    let key_invited = invited.ok
+      ? await calendar_db_session_create(db, guest_uid2, now_iso)
+      : null;
+    let r_invite = reply(invited.ok ? 200 : 400, {
+      ...invited,
+      key: key_invited,
+    });
+    return r_invite;
   }
   if (equal(route, "settings")) {
     let settings = await calendar_db_settings(db, uid);

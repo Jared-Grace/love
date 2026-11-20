@@ -41,14 +41,15 @@ import { modulo } from "./modulo.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { not } from "./not.mjs";
 import { list_any } from "./list_any.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { divide } from "./divide.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_max } from "./list_max.mjs";
 import { list_min } from "./list_min.mjs";
+import { list_index_of } from "./list_index_of.mjs";
 import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { js_code_identifier_rename_text } from "./js_code_identifier_rename_text.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_between } from "./text_between.mjs";
@@ -94,6 +95,10 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let average_whole = property_get_or(options, "average_whole", false);
   ("2026-11-20, for adding only the numbers over 5: a lesson may hand in split_at, a number, and each array then holds at least one number above it and at least one not above it, so a loop with no if, or with its if turned around, never gives the right answer by luck");
   let split_at = property_get_or(options, "split_at", null);
+  ("2026-11-20, for where the smallest is: a lesson may ask that the smallest number is neither first nor last, and that it is not the same number as its own index, so a loop that never keeps the index (0), keeps it every run (the last index), or writes out the number itself never gives the right answer by luck");
+  let smallest_middle = property_get_or(options, "smallest_middle", false);
+  ("2026-11-20, for adding only the even numbers: a lesson may ask for even_and_odd, and each array then holds at least one even and one odd number, and its odd numbers never add up to what its even numbers add up to, so a loop with no if, or one that adds the odd numbers, never gives the right answer by luck");
+  let even_and_odd = property_get_or(options, "even_and_odd", false);
   ("2026-11-13, at the human's asking, so a loop can run over the letters of a string: a lesson may hand in words, and each question is then one of them named s, let s = \"joy\";, its letters the items looped over. Everything else reads the letters as it reads an array's items, since s[i] and s.length read a string as a[i] and a.length read an array. Not picked: a builder of its own for strings, which would repeat every wrong loop and the walk");
   let words = property_get_or(options, "words", null);
   ("2026-11-13, next: a lesson may also hand in words_without, words that lack what the loop looks for, and then every other question takes one of them, as item_sometimes puts its item in every other array, so a set always holds both answers");
@@ -143,6 +148,11 @@ export function app_learn_js_lesson_array_for_generic(options) {
       "keep_log_value",
       keep_name,
     );
+    ("2026-11-20, for where the smallest is: keep_also_name, when not null, is a second value kept across runs, its let line written after the first, starting as keep_also_start, as let at = 0;");
+    let keep_also_name = property_get_or(start_fewer, "keep_also_name", null);
+    let keep_also_start = property_get_or(start_fewer, "keep_also_start", null);
+    ("2026-11-20, next: keep_after is the lines the loop runs after its if, every run, as at = i; set outside the if - so that mistake can be offered");
+    let keep_after = property_get_or(start_fewer, "keep_after", []);
     let end2 = bound;
     if (fewer) {
       end2 = bound_fewer;
@@ -170,6 +180,9 @@ export function app_learn_js_lesson_array_for_generic(options) {
       keep_else,
       keep_log,
       keep_log_value,
+      keep_also_name,
+      keep_also_start,
+      keep_after,
     };
     return r2;
   }
@@ -318,6 +331,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
       }
       let found_value = property_get(way, "keep_log_value");
       let found_logged = js_code_console_log_statement(found_value);
+      let after_if = property_get(way, "keep_after");
+      found_if = list_concat(found_if, after_if);
       let found_body = list_concat(found_if, [stepped]);
       let found_after = [found_logged];
       let left4 = property_get(way, "keep_log");
@@ -330,7 +345,15 @@ export function app_learn_js_lesson_array_for_generic(options) {
         condition,
         found_body,
       );
-      let found_lines = list_concat([found_line], lines7);
+      let found_lets = [found_line];
+      let also_name = property_get(way, "keep_also_name");
+      if (not_equal(also_name, null)) {
+        let also_start = property_get(way, "keep_also_start");
+        let also_json = json_to(also_start);
+        let also_line = js_code_let_statement(also_name, also_json);
+        found_lets = [found_line, also_line];
+      }
+      let found_lines = list_concat(found_lets, lines7);
       let r15 = list_concat(found_lines, found_after);
       return r15;
     }
@@ -425,6 +448,28 @@ export function app_learn_js_lesson_array_for_generic(options) {
           items3 = list_shuffle_take(fruits, item_count);
         }
       }
+      if (even_and_odd) {
+        function item_even(item3) {
+          let left9 = modulo(item3, 2);
+          let even = equal(left9, 0);
+          return even;
+        }
+        function item_odd(item4) {
+          let left10 = modulo(item4, 2);
+          let odd = equal(left10, 1);
+          return odd;
+        }
+        while (
+          not(list_any(items3, item_even)) ||
+          not(list_any(items3, item_odd)) ||
+          equal(
+            list_sum(list_filter(items3, item_even)),
+            list_sum(list_filter(items3, item_odd)),
+          )
+        ) {
+          items3 = list_shuffle_take(fruits, item_count);
+        }
+      }
       if (not_equal(words, null)) {
         let right5 = list_size(words_shuffled);
         let index3 = modulo(k, right5);
@@ -493,6 +538,22 @@ export function app_learn_js_lesson_array_for_generic(options) {
         if (equal(left8, smallest)) {
           items3.pop();
           items3.unshift(smallest);
+        }
+      }
+      if (smallest_middle) {
+        function smallest_misplaced(items4) {
+          let least = list_min(items4);
+          let least_at = list_index_of(items4, least);
+          let left11 = list_size(items4);
+          let last_at = subtract(left11, 1);
+          let misplaced =
+            equal(least_at, 0) ||
+            equal(least_at, last_at) ||
+            equal(least_at, least);
+          return misplaced;
+        }
+        while (smallest_misplaced(items3)) {
+          items3 = list_shuffle_take(fruits, item_count);
         }
       }
       let code3 = program_of(items3, right);

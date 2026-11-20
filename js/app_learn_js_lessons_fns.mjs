@@ -1,3 +1,5 @@
+import { app_learn_js_lesson_array_for_small_at } from "./app_learn_js_lesson_array_for_small_at.mjs";
+import { app_learn_js_lesson_array_for_total_even } from "./app_learn_js_lesson_array_for_total_even.mjs";
 import { app_learn_js_lesson_array_for_start_first } from "./app_learn_js_lesson_array_for_start_first.mjs";
 import { app_learn_js_lesson_array_for_pair_push } from "./app_learn_js_lesson_array_for_pair_push.mjs";
 import { app_learn_js_lesson_array_for_pair } from "./app_learn_js_lesson_array_for_pair.mjs";
@@ -875,8 +877,10 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_total,
     app_learn_js_lesson_array_for_biggest,
     app_learn_js_lesson_array_for_smallest,
+    app_learn_js_lesson_array_for_small_at,
     app_learn_js_lesson_array_for_average,
     app_learn_js_lesson_array_for_total_over,
+    app_learn_js_lesson_array_for_total_even,
     app_learn_js_lesson_array_for_push_double,
     app_learn_js_lesson_array_for_pair,
     app_learn_js_lesson_array_for_pair_push,

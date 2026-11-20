@@ -20,6 +20,7 @@ import { html_text_get } from "./html_text_get.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { app_calendar_invite_form } from "./app_calendar_invite_form.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
@@ -119,6 +120,7 @@ export async function app_calendar_host(parent, key) {
     app_shared_toast("✅ Copied link");
   }
   app_shared_button_uncolored(link_card, "Copy link", link_copy);
+  app_calendar_invite_form(parent, key);
   async function lambda3() {
     await app_shared_toast_saving(link_save);
   }
