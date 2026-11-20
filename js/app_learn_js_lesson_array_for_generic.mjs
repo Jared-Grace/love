@@ -39,13 +39,14 @@ import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { modulo } from "./modulo.mjs";
 import { list_sum } from "./list_sum.mjs";
+import { not } from "./not.mjs";
+import { list_any } from "./list_any.mjs";
 import { divide } from "./divide.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_max } from "./list_max.mjs";
 import { list_min } from "./list_min.mjs";
-import { not } from "./not.mjs";
 import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_code_identifier_rename_text } from "./js_code_identifier_rename_text.mjs";
@@ -91,6 +92,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let smallest_not_last = property_get_or(options, "smallest_not_last", false);
   ("2026-11-20, for the average lesson: a lesson may ask that the numbers of each array add up to a multiple of how many there are, so the average is a whole number a learner can work out by hand, never 4.333333333333333");
   let average_whole = property_get_or(options, "average_whole", false);
+  ("2026-11-20, for adding only the numbers over 5: a lesson may hand in split_at, a number, and each array then holds at least one number above it and at least one not above it, so a loop with no if, or with its if turned around, never gives the right answer by luck");
+  let split_at = property_get_or(options, "split_at", null);
   ("2026-11-13, at the human's asking, so a loop can run over the letters of a string: a lesson may hand in words, and each question is then one of them named s, let s = \"joy\";, its letters the items looped over. Everything else reads the letters as it reads an array's items, since s[i] and s.length read a string as a[i] and a.length read an array. Not picked: a builder of its own for strings, which would repeat every wrong loop and the walk");
   let words = property_get_or(options, "words", null);
   ("2026-11-13, next: a lesson may also hand in words_without, words that lack what the loop looks for, and then every other question takes one of them, as item_sometimes puts its item in every other array, so a set always holds both answers");
@@ -396,6 +399,22 @@ export function app_learn_js_lesson_array_for_generic(options) {
       let items3 = list_shuffle_take(fruits, item_count);
       if (average_whole) {
         while (not_equal(modulo(list_sum(items3), item_count), 0)) {
+          items3 = list_shuffle_take(fruits, item_count);
+        }
+      }
+      if (not_equal(split_at, null)) {
+        function above_split(item) {
+          let above2 = greater_than(item, split_at);
+          return above2;
+        }
+        function below_split(item2) {
+          let below = less_than_equal(item2, split_at);
+          return below;
+        }
+        while (
+          not(list_any(items3, above_split)) ||
+          not(list_any(items3, below_split))
+        ) {
           items3 = list_shuffle_take(fruits, item_count);
         }
       }
