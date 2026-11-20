@@ -1,3 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_bin_search_program } from "./app_learn_js_bin_search_program.mjs";
 import { app_learn_js_bin_items } from "./app_learn_js_bin_items.mjs";
@@ -24,8 +27,9 @@ export function app_learn_js_lesson_bin_not_there() {
     "seven items in order, and want a number from 0 to 41 that is not one of them";
     let items = app_learn_js_bin_items();
     let outside = [];
-    for (let n = 0; n <= 41; n++) {
-      if (!items.includes(n)) {
+    for (let n = 0; less_than_equal(n, 41); n++) {
+      let b = items.includes(n);
+      if (not(b)) {
         outside.push(n);
       }
     }
@@ -48,16 +52,21 @@ export function app_learn_js_lesson_bin_not_there() {
   function inputs_get() {
     "three not there, three found where low and high meet, in a shuffled order";
     let indexes = list_shuffle_take([0, 2, 4, 6], 3);
-    let inputs = [input_absent(), input_absent(), input_absent()];
+    let v = input_absent();
+    let v2 = input_absent();
+    let v3 = input_absent();
+    let inputs = [v, v2, v3];
     for (let index of indexes) {
-      inputs.push(input_last(index));
+      let v4 = input_last(index);
+      inputs.push(v4);
     }
     let shuffled = list_shuffle_take(inputs, 6);
     return shuffled;
   }
   function extra_answers(input2) {
     "found";
-    return ["true"];
+    let r = ["true"];
+    return r;
   }
   function above(root, context, example) {
     "the search and <= remembered, then a want that is not there, then why <=";
@@ -127,7 +136,7 @@ export function app_learn_js_lesson_bin_not_there() {
     above,
     inputs_get,
     program_of,
-    ways: ["right", "less_than", "wrong_side", "start_true"],
+    ways: ["right", fn_name("less_than"), "wrong_side", "start_true"],
     extra_answers,
   });
   return lesson;

@@ -694,6 +694,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_bin_look_side: text_frozen("bin_look_side"),
     app_learn_js_lesson_bin_step: text_frozen("bin_step"),
     app_learn_js_lesson_bin_search: text_frozen("bin_search"),
+    app_learn_js_lesson_bin_not_there: text_frozen("bin_not_there"),
   };
   return short;
 }

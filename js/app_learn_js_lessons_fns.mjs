@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_bin_not_there } from "./app_learn_js_lesson_bin_not_there.mjs";
 import { app_learn_js_lesson_bin_search } from "./app_learn_js_lesson_bin_search.mjs";
 import { app_learn_js_lesson_bin_step } from "./app_learn_js_lesson_bin_step.mjs";
 import { app_learn_js_lesson_bin_look_side } from "./app_learn_js_lesson_bin_look_side.mjs";
@@ -923,6 +924,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_bin_look_side,
     app_learn_js_lesson_bin_step,
     app_learn_js_lesson_bin_search,
+    app_learn_js_lesson_bin_not_there,
     app_learn_js_lesson_object_property,
     app_learn_js_lesson_object_property_set,
     app_learn_js_lesson_object_log,
