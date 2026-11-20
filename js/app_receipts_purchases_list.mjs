@@ -1,11 +1,17 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { text_frozen } from "./text_frozen.mjs";
+import { html_hash_object_get } from "./html_hash_object_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { equal } from "./equal.mjs";
+import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
+import { property_set } from "./property_set.mjs";
+import { html_hash_transform } from "./html_hash_transform.mjs";
 import { app_receipts_php_per_usd_months_fill } from "./app_receipts_php_per_usd_months_fill.mjs";
+import { not } from "./not.mjs";
 import { app_receipts_purchases_of } from "./app_receipts_purchases_of.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { list_size } from "./list_size.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -26,7 +32,20 @@ export function app_receipts_purchases_list(
   "Hands back show, which redraws whichever is showing; open, which opens the purchase with the key it is given, or goes back to the list when given null; and list_refresh, which redraws only while the list is showing, so a purchase being looked at is never redrawn under a finger.";
   arguments_assert(arguments, 4);
   ("open_key names the opened purchase, or is null while the list shows.");
-  let open_key = null;
+  ("THE OPENED PURCHASE IS WRITTEN AFTER THE # OF THE ADDRESS, asked for by the human 2026-11-20: so the address in the bar names that one purchase, and can be copied and sent to say which purchase is meant. An address that names one opens straight onto it; one naming a purchase this folder does not hold opens the list, and the word is taken back out.");
+  let hash_key = text_frozen("purchase");
+  let hash = html_hash_object_get();
+  let open_key = property_get_or(hash, hash_key, null);
+  function hash_write(key) {
+    function transform(h) {
+      if (equal(key, null)) {
+        property_delete_if_exists(h, hash_key);
+        return;
+      }
+      property_set(h, hash_key, key);
+    }
+    html_hash_transform(transform);
+  }
   ("dollars_set puts the latest rates on whatever is showing now.");
   let dollars_set = null;
   let rates_filling = false;
@@ -63,6 +82,7 @@ export function app_receipts_purchases_list(
         }
       }
       open_key = null;
+      hash_write(null);
     }
     let count = list_size(purchases);
     if (equal(count, 0)) {
@@ -72,6 +92,7 @@ export function app_receipts_purchases_list(
   }
   async function open(key) {
     open_key = key;
+    hash_write(key);
     await show();
   }
   async function list_refresh() {
