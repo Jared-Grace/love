@@ -2317,6 +2317,10 @@ export function bible_glyph_chapter_references() {
       reference: "Titus 3",
     },
     {
+      chapter_code: "PHM01",
+      reference: "Philemon 1",
+    },
+    {
       chapter_code: "1JN01",
       reference: "1 John 1",
     },
