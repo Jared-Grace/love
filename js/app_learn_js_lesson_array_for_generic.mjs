@@ -425,13 +425,13 @@ export function app_learn_js_lesson_array_for_generic(options) {
         if (not_equal(words_without, null)) {
           let left8 = modulo(k, 2);
           let top = subtract(k, left8);
-          let half = divide(top, 2);
+          let half_count = divide(top, 2);
           let pool = words_shuffled;
           if (equal(left8, 1)) {
             pool = words_without_shuffled;
           }
           let right6 = list_size(pool);
-          let index4 = modulo(half, right6);
+          let index4 = modulo(half_count, right6);
           word2 = list_get(pool, index4);
         }
         items3 = text_split_empty(word2);
