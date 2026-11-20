@@ -2013,6 +2013,10 @@ export function bible_glyph_chapter_references() {
       reference: "Romans 10",
     },
     {
+      chapter_code: "ROM11",
+      reference: "Romans 11",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
