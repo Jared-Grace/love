@@ -2048,7 +2048,23 @@ def is_safe_claude_temp_mv(words):
         paths.append(word)
     if len(paths) < 2:
         return False
+    if all(is_safe_claude_temp_path(p) for p in paths[:-1]) and is_safe_scripts_temp_mv_target(paths[-1]):
+        return True
     return all(is_safe_claude_temp_path(p) for p in paths)
+
+
+def is_safe_scripts_temp_mv_target(path):
+    """A scratchpad file moved into scripts/temp: that folder is gitignored
+    and Write/Edit on it are already allow-listed, so a file landing there
+    is one Claude could have written anyway. Only a direct child, spelled
+    relative and plain, and never one that already is a folder or a link -
+    `mv` into either would carry the file wherever it points."""
+    if not SAFE_TEMP_SCRIPT_PATH_RE.match(path) or os.path.normpath(path) != path:
+        return False
+    if not path.startswith(SCRIPTS_TEMP_PREFIX) or "/" in path[len(SCRIPTS_TEMP_PREFIX):]:
+        return False
+    full = os.path.join(REPO_ROOT, path)
+    return not os.path.islink(full) and not os.path.isdir(full)
 
 
 GLOSS_WRITE_FILE_RE = re.compile(
