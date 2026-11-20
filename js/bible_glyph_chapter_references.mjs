@@ -705,6 +705,10 @@ export function bible_glyph_chapter_references() {
       reference: "Deuteronomy 20",
     },
     {
+      chapter_code: "DEU21",
+      reference: "Deuteronomy 21",
+    },
+    {
       chapter_code: "DEU26",
       reference: "Deuteronomy 26",
     },
