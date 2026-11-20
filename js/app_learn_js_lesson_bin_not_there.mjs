@@ -1,9 +1,8 @@
-import { fn_name } from "./fn_name.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_bin_search_program } from "./app_learn_js_bin_search_program.mjs";
 import { app_learn_js_bin_items } from "./app_learn_js_bin_items.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { not } from "./not.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -12,19 +11,20 @@ import { app_learn_js_lesson_while_less_equal } from "./app_learn_js_lesson_whil
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_second_generic } from "./app_learn_js_lesson_second_generic.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function app_learn_js_lesson_bin_not_there() {
   arguments_assert(arguments, 0);
-  ("binary search when want is not in the list: low and high cross, low <= high turns false, the loop ends, and found is still the false it started as. let a = [2, 5, 8, 12, 16, 23, 38]; let want = 20; ... writes out false");
-  ("2026-11-20, approved by the human: the fourth of five binary search lessons. It also shows why the loop asks <= and not <: a want found only where low and high meet would be missed.");
-  ("A set is six questions over seven items in order: three wants not in the list, and three found only on the last step, where low and high are the same.");
-  ("The wrong programs are low < high in place of low <= high (misses the last item), > in place of < (the wrong half), and found starting at true (added to the plan: when want is not there no other wrong program writes out anything but false, so without it those questions would have no wrong program to offer). The extra wrong answer is true.");
+  ("binary search when goal is not in the list: low and high cross, low <= high turns false, the loop ends, and found is still the false it started as. let a = [2, 5, 8, 12, 16, 23, 38]; let goal = 20; ... writes out false");
+  ("2026-11-20, approved by the human: the fourth of five binary search lessons. It also shows why the loop asks <= and not <: a goal found only where low and high meet would be missed.");
+  ("A set is six questions over seven items in order: three goals not in the list, and three found only on the last step, where low and high are the same.");
+  ("The wrong programs are low < high in place of low <= high (misses the last item), > in place of < (the wrong half), and found starting at true (added to the plan: when goal is not there no other wrong program writes out anything but false, so without it those questions would have no wrong program to offer). The extra wrong answer is true.");
   ("The writing is a first draft by Claude 2026-11-20.");
   function program_of(input, way) {
     let code = app_learn_js_bin_search_program(input, way);
     return code;
   }
   function input_absent() {
-    "seven items in order, and want a number from 0 to 41 that is not one of them";
+    "seven items in order, and the goal a number from 0 to 41 that is not one of them";
     let items = app_learn_js_bin_items();
     let outside = [];
     for (let n = 0; less_than_equal(n, 41); n++) {
@@ -33,19 +33,19 @@ export function app_learn_js_lesson_bin_not_there() {
         outside.push(n);
       }
     }
-    let want = list_shuffle_take(outside, 1)[0];
+    let goal = list_shuffle_take(outside, 1)[0];
     let input = {
       items,
-      want,
+      goal,
     };
     return input;
   }
   function input_last(index) {
-    "seven items in order, and want the item at an index found only on the third step";
+    "seven items in order, and the goal the item at an index found only on the third step";
     let items = app_learn_js_bin_items();
     let input = {
       items,
-      want: items[index],
+      goal: items[index],
     };
     return input;
   }
@@ -69,7 +69,7 @@ export function app_learn_js_lesson_bin_not_there() {
     return r;
   }
   function above(root, context, example) {
-    "the search and <= remembered, then a want that is not there, then why <=";
+    "the search and <= remembered, then a goal that is not there, then why <=";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
@@ -81,7 +81,7 @@ export function app_learn_js_lesson_bin_not_there() {
         " and stops with ",
         "break;",
         " when it finds ",
-        "want",
+        "goal",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
@@ -94,7 +94,7 @@ export function app_learn_js_lesson_bin_not_there() {
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "When ",
-      "want",
+      "goal",
       " is not in the list, each step leaves less to look at, until ",
       "low",
       " is past ",
@@ -109,11 +109,11 @@ export function app_learn_js_lesson_bin_not_there() {
     ]);
     example(box_three, {
       items: [2, 5, 8, 12, 16, 23, 38],
-      want: 20,
+      goal: 20,
     });
     app_learn_js_div_cycle_code(box_three, [
       "Here ",
-      "want",
+      "goal",
       " is found on the last step, when ",
       "low",
       " and ",
@@ -124,7 +124,7 @@ export function app_learn_js_lesson_bin_not_there() {
     ]);
     example(box_three, {
       items: [2, 5, 8, 12, 16, 23, 38],
-      want: 16,
+      goal: 16,
     });
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
