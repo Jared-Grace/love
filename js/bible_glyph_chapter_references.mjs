@@ -505,6 +505,10 @@ export function bible_glyph_chapter_references() {
       reference: "Numbers 6",
     },
     {
+      chapter_code: "NUM07",
+      reference: "Numbers 7",
+    },
+    {
       chapter_code: "NUM08",
       reference: "Numbers 8",
     },
