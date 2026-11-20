@@ -1693,6 +1693,10 @@ export function bible_glyph_chapter_references() {
       reference: "Luke 3",
     },
     {
+      chapter_code: "LUK04",
+      reference: "Luke 4",
+    },
+    {
       chapter_code: "LUK07",
       reference: "Luke 7",
     },
