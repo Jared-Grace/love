@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_luhn_total } from "./app_learn_js_lesson_array_for_luhn_total.mjs";
 import { app_learn_js_lesson_array_for_luhn_nine } from "./app_learn_js_lesson_array_for_luhn_nine.mjs";
 import { app_learn_js_lesson_array_second_loop } from "./app_learn_js_lesson_array_second_loop.mjs";
 import { app_learn_js_lesson_second_else_if } from "./app_learn_js_lesson_second_else_if.mjs";
@@ -913,6 +914,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_luhn_double,
     app_learn_js_lesson_if_take_away_nine,
     app_learn_js_lesson_array_for_luhn_nine,
+    app_learn_js_lesson_array_for_luhn_total,
     app_learn_js_lesson_object_property,
     app_learn_js_lesson_object_property_set,
     app_learn_js_lesson_object_log,
