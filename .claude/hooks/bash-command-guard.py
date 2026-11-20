@@ -410,9 +410,11 @@ SAFE_TEMP_SCRIPT_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
 # A sandboxed script's argument may also read a plain variable (`gitignore/$f`
 # in a `while read f` loop): whatever it expands to lands after the script
 # path, so node hands it to the script, and argv cannot escalate there. Only
-# `$name` / `${name}` - never `$(...)`, which would run a command.
+# `$name` / `${name}`, and a `$(...)` only once tokenize has validated its
+# inner command and collapsed it to SUBSTITUTION_PLACEHOLDER (\x00): running
+# that command is already trusted, and the text it prints is only argv here.
 SAFE_TEMP_SCRIPT_ARG_RE = re.compile(
-    r"^(?:[A-Za-z0-9_./-]|\$[A-Za-z_][A-Za-z0-9_]*|\$\{[A-Za-z_][A-Za-z0-9_]*\})+$"
+    r"^(?:[A-Za-z0-9_./\x00-]|\$[A-Za-z_][A-Za-z0-9_]*|\$\{[A-Za-z_][A-Za-z0-9_]*\})+$"
 )
 SCRIPTS_TEMP_PREFIX = "scripts/temp/"
 # The same throwaway directory spelled from the root, so a redirect target
