@@ -569,6 +569,91 @@ export function bible_glyph_reasons() {
       "A strong metal arm: strength, might, the arm, and hard or stiff.",
     pregnant_woman:
       "A pregnant woman: to conceive, to be with child, to give birth.",
+    garden: "A growing plant: a garden, planted ground.",
+    harvest:
+      "An ear of corn ready to pick: the harvest, reaping and what is reaped.",
+    menorah:
+      "The menorah, the lampstand of the temple and the sign of Israel: a Jew, Jewish, of Judah.",
+    pizza: "A slice cut from the whole: a portion, a share, a part.",
+    pause_button:
+      "A pause button: to stop and be still, to rest, and Selah, the pause in the Psalms.",
+    honey: "A pot of honey: honey, and to be sweet.",
+    pleading_face: "A pleading face: please, to beg, to have pity.",
+    iron: "A nut and bolt made of iron: iron.",
+    hatching_chick:
+      "A chick hatching, a life coming out into the world: to beget, to give birth, to be born, and a young bird.",
+    joker:
+      "A joker, the card that can stand for any card: someone, anyone, such a one. In Hebrew, folly.",
+    ice: "Ice: hail, frost, and what freezes hard.",
+    satellite: "A satellite far up in the sky: far, far away.",
+    widow:
+      "An old woman stands in for a woman whose husband has died: a widow.",
+    snow_capped_mountain: "A high mountain: a high place, a height.",
+    passport_control:
+      "Passport control, where one land ends and another begins: a border, a territory.",
+    cloak: "A coat worn over everything else: a robe, a cloak, and to wrap.",
+    dew: "Drops of water: dew, the drops that fall in the night.",
+    face_spiral:
+      "A dizzy face with spiral eyes: Babel, Babylon, because there the LORD confused the language (Genesis 11:9).",
+    flatbread:
+      "Flat bread made without yeast: unleavened bread, and cakes and wafers.",
+    receipt:
+      "A receipt, what is owed and paid: a price, wages, a debt, to owe.",
+    song: "Musical notes: a song, to sing.",
+    smiling_face_with_horns:
+      "A smiling face with horns: Satan, the enemy, and evil, the wicked.",
+    hiking_boot:
+      "A boot on the road: to tread, to step, to walk, and to stumble.",
+    stop_sign: "A stop sign: the end, to stop, to forbid, to hold back.",
+    sponge:
+      "A sponge that wipes clean: to forgive, sins wiped away, and to wipe out.",
+    briefs:
+      "The cloth worn around the waist: a loincloth, the waist, and to gird, to tie up one's clothes.",
+    persevering_face:
+      "A face holding on through pain: hardship, affliction, and hardly, with great effort.",
+    sackcloth:
+      "A bag stands in for a sack: sackcloth, the rough cloth of sacks, worn in mourning.",
+    chart_increasing:
+      "A chart going up: to prosper, to grow, to increase, to profit.",
+    vomiting:
+      "A face vomiting, a thing that turns the stomach: an abomination, a detestable thing, to abhor.",
+    imp: "An angry face with horns: a demon, an evil spirit.",
+    locked_with_pen:
+      "A lock with a pen, a thing written and sealed so it stands: a statute, a decree.",
+    leftwards_pushing_hand:
+      "A hand pushing away: to drive out, to banish, to push away.",
+    triangular_flag:
+      "A flag planted in the ground, claiming the land: to take possession, to inherit, to drive out. Lifted high, a banner.",
+    cave: "A dark hole in the rock: a cave, a den.",
+    smiling_face_with_hearts:
+      "A face full of love and delight: pleasure, delight, kindness.",
+    vine: "A climbing green pod stands in for the vine: a vine.",
+    vs_button:
+      "The vs sign, two sides facing each other: in front of, opposite, against, and other.",
+    framed_picture:
+      "A framed picture: an image, a likeness, a form. In Greek, a parable, a story that pictures something.",
+    ribbon:
+      "A ribbon, a beautiful thing tied on: glory, beauty, a sash, a band tied around.",
+    clapper_board:
+      "A clapper board, the snap that starts a scene: to begin. In Hebrew, a deed, a thing done.",
+    trumpet: "A trumpet: a trumpet, the ram's horn blown, to blow.",
+    well: "A tap of water to drink: a well, dug down to water.",
+    see_no_evil_monkey:
+      "A monkey covering its eyes: hidden, secret, to hide. Turned away, to reveal.",
+    full_moon:
+      "The full moon, round and complete: full, whole, complete, and integrity.",
+    detective:
+      "A detective looking closely: to search out, and foreign, a stranger not known.",
+    white_flower: "A white flower: a lily.",
+    person_gesturing_no:
+      "A person crossing their arms, no: to refuse, far be it.",
+    x_ray: "An x-ray of the bones: the body, the rib, the side.",
+    calf: "A young bison stands in for a calf: a calf.",
+    eight: "The number eight: eight, eighth. With zero, it is eighty.",
+    tornado: "A tornado: a storm, a whirlwind, and to rage.",
+    hut: "A hut, a simple shelter: a refuge, a booth, and to spend the night. In Greek, the temple, the house where God dwells.",
+    window: "A window: a window, a lattice.",
+    ashes: "An urn that holds ashes: ashes.",
   };
   return r;
 }
