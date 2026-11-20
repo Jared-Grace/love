@@ -29,7 +29,6 @@ export function app_learn_js_lesson_expression_choose_order_three() {
     "the front page, with the same wrong values the quiz offers";
     app_learn_js_lesson_expression_choose_order_solve_example(
       parent,
-      card,
       tree,
       app_learn_js_expression_value_decoys,
     );

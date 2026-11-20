@@ -110,7 +110,6 @@ export function app_learn_js_lesson_expression_choose_order_twin_array_generic(
     app_learn_js_div_cycle_code(parent, ["", head_shown]);
     app_learn_js_lesson_expression_choose_order_solve_example(
       parent,
-      card,
       tree,
       decoys,
     );
