@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_bin_search_program } from "./app_learn_js_bin_search_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -36,7 +37,8 @@ export function app_learn_js_lesson_bin_search() {
   }
   function extra_answers(input2) {
     "not found";
-    return ["false"];
+    let r = ["false"];
+    return r;
   }
   function above(root, context, example) {
     "the step, break and a while whose two names meet remembered, then the step in a loop";
@@ -103,7 +105,7 @@ export function app_learn_js_lesson_bin_search() {
     above,
     inputs_get,
     program_of,
-    ways: ["right", "wrong_side", "less_than"],
+    ways: ["right", "wrong_side", fn_name("less_than")],
     extra_answers,
   });
   return lesson;
