@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_smallest } from "./app_learn_js_lesson_array_for_smallest.mjs";
 import { app_learn_js_lesson_object_has_own_set } from "./app_learn_js_lesson_object_has_own_set.mjs";
 import { app_learn_js_lesson_object_has_own } from "./app_learn_js_lesson_object_has_own.mjs";
 import { app_learn_js_lesson_object_list_people_for } from "./app_learn_js_lesson_object_list_people_for.mjs";
@@ -867,6 +868,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_count,
     app_learn_js_lesson_array_for_total,
     app_learn_js_lesson_array_for_biggest,
+    app_learn_js_lesson_array_for_smallest,
     app_learn_js_lesson_array_for_swap_if_bigger,
     app_learn_js_lesson_string_letter,
     app_learn_js_lesson_string_for,
