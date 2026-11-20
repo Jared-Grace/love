@@ -935,6 +935,17 @@ export function bible_glyph_reasons() {
     person_cartwheeling: "A person leaping and tumbling: to leap.",
     water_buffalo:
       "A water buffalo: the wild ox, and Behemoth, the great beast of the water.",
+    leftwards_hand:
+      "A hand held out to one side: on the one hand, indeed. The Greek word sets down one side of a thought and leaves room for the other side to follow.",
+    place_of_worship:
+      "A place of worship: the service given to God in worship, and to serve Him that way.",
+    repeat_button:
+      "The repeat button: again and again. With the hammer it is a practice, a deed done over and over until it is a way of life.",
+    statue_of_liberty: "A statue of liberty: free, and to set free.",
+    index_pointing_at_the_viewer:
+      "A finger pointing at you: to rebuke, to show a person their fault so they cannot miss it.",
+    bus_stop:
+      "A stop by the road: until, as far as. The way goes on up to this point.",
   };
   return r;
 }
