@@ -359,6 +359,8 @@ export function bible_glyph_reasons() {
       "Someone lifting a weight: to lift up, to carry, a burden, and one lifted up as a leader.",
     witness: "A hand raised to speak: a witness, testimony, to testify.",
     fish: "A fish: a fish, a fisherman, and Dagon the fish god.",
+    alembic:
+      "An alembic: the vessel a refiner heats to melt, blend and purify, so it draws refining, as in Zarephath, whose name means refinement, and blending together.",
     goat: "A goat: a goat, a young goat, a male goat.",
     bucket: "A bucket: to draw water, and a dry measure like an ephah.",
     t_shirt:
