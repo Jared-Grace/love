@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_second_loop } from "./app_learn_js_lesson_array_second_loop.mjs";
 import { app_learn_js_lesson_second_else_if } from "./app_learn_js_lesson_second_else_if.mjs";
 import { app_learn_js_lesson_if_take_away_nine } from "./app_learn_js_lesson_if_take_away_nine.mjs";
 import { app_learn_js_lesson_second_moves } from "./app_learn_js_lesson_second_moves.mjs";
@@ -889,6 +890,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_second_two_loops,
     app_learn_js_lesson_second_moves,
     app_learn_js_lesson_second_else_if,
+    app_learn_js_lesson_array_second_loop,
     app_learn_js_lesson_array_for_average,
     app_learn_js_lesson_array_for_total_over,
     app_learn_js_lesson_array_for_total_even,

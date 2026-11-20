@@ -1,24 +1,22 @@
-import { math_min } from "./math_min.mjs";
-import { math_max } from "./math_max.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { json_to } from "./json_to.mjs";
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { berean_book_chapters_verses } from "./berean_book_chapters_verses.mjs";
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { math_min } from "./math_min.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { math_max } from "./math_max.mjs";
 import { bible_glyph_reasons } from "./bible_glyph_reasons.mjs";
-import { path_join } from "./path_join.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { json_to } from "./json_to.mjs";
 export async function bible_glyph_chapter_draft_nt(chapter_code) {
   arguments_assert(arguments, 1);
-  ("Drafts one New Testament picture-Bible chapter: the BSB text of each verse with every word the root table seats replaced by its mark, written to scripts/temp/<CODE>draft.txt; returns the path, the marks by frequency line, and the pieces that still have no reason.");
+  ("Drafts one New Testament picture-Bible chapter: the BSB text of each verse with every word the root table seats replaced by its mark, returned as text. It only reads, so it runs in the read-only sandbox, and the text is kept as scripts/temp/<CODE>draft.txt, which the module builder and the tally audit read.");
   ("The draft file holds, per verse, the BSB line and the drawn line with what English was supplied and what gloss had no BSB word; then a === marks by frequency line, which the tally audit checks the hand-finished chapter against; then the pieces without a reason; then === JSON, the verses the chapter file is built from.");
   ("Words are aligned to the BSB by longest common subsequence over the interlinear glosses. A negation whose gloss is empty takes the not that English writes elsewhere in the verse, so the English not is never drawn twice.");
   let book = chapter_code.slice(0, 3);
@@ -342,12 +340,5 @@ export async function bible_glyph_chapter_draft_nt(chapter_code) {
     "=== JSON",
     json,
   ].join("\n");
-  let path = path_join(["scripts", "temp", chapter_code + "draft.txt"]);
-  await file_overwrite(path, text_all + "\n");
-  let r16 = {
-    path,
-    freq_line,
-    unreasoned,
-  };
-  return r16;
+  return text_all;
 }

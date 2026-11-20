@@ -1,13 +1,12 @@
-import { json_from } from "./json_from.mjs";
-import { json_to } from "./json_to.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { file_read } from "./file_read.mjs";
 import { path_join } from "./path_join.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
+import { file_read } from "./file_read.mjs";
+import { json_from } from "./json_from.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { json_to } from "./json_to.mjs";
 export async function bible_glyph_chapter_module_nt(chapter_code) {
   arguments_assert(arguments, 1);
-  ("Builds the chapter file scripts/temp/bible_glyph_chapter_<code>.mjs out of the verses in scripts/temp/<CODE>draft.txt and the prose in scripts/temp/<CODE>prose.txt, and returns the path it wrote.");
+  ("Builds the chapter file scripts/temp/bible_glyph_chapter_<code>.mjs out of the verses in scripts/temp/<CODE>draft.txt and the prose in scripts/temp/<CODE>prose.txt, returned as text. It only reads, so it runs in the read-only sandbox, and the text is kept as scripts/temp/bible_glyph_chapter_<code>.mjs.");
   ("The prose file holds one paragraph per line, the first line being the one-sentence description. The verses are copied from the draft as they are, so the tally audit afterwards checks only what was edited by hand in between.");
   let books = {
     MAT: "Matthew",
@@ -61,7 +60,6 @@ export async function bible_glyph_chapter_module_nt(chapter_code) {
   lines.push("  };");
   lines.push("  return chapter;");
   lines.push("}");
-  let out_path = path_join(["scripts", "temp", fn + ".mjs"]);
-  await file_overwrite(out_path, lines.join("\n") + "\n");
-  return out_path;
+  let module_text = lines.join("\n");
+  return module_text;
 }

@@ -687,6 +687,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_second_moves: text_frozen("second_moves"),
     app_learn_js_lesson_if_take_away_nine: text_frozen("take_away_nine"),
     app_learn_js_lesson_second_else_if: text_frozen("second_else_if"),
+    app_learn_js_lesson_array_second_loop: text_frozen("second_loop"),
   };
   return short;
 }
