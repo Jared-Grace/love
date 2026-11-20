@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
 import { app_learn_js_lesson_array_for_in_order } from "./app_learn_js_lesson_array_for_in_order.mjs";
 import { app_learn_js_lesson_array_for_reverse } from "./app_learn_js_lesson_array_for_reverse.mjs";
 import { app_learn_js_lesson_array_for_small_at } from "./app_learn_js_lesson_array_for_small_at.mjs";
@@ -899,6 +900,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_count_e,
     app_learn_js_lesson_array_for_push_if_e,
     app_learn_js_lesson_array_log,
+    app_learn_js_lesson_array_for_luhn_double,
     app_learn_js_lesson_object_property,
     app_learn_js_lesson_object_property_set,
     app_learn_js_lesson_object_log,
