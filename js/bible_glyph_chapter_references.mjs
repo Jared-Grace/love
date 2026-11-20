@@ -1529,6 +1529,10 @@ export function bible_glyph_chapter_references() {
       reference: "Matthew 7",
     },
     {
+      chapter_code: "MAT08",
+      reference: "Matthew 8",
+    },
+    {
       chapter_code: "MRK04",
       reference: "Mark 4",
     },
