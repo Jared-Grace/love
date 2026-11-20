@@ -43,6 +43,7 @@ import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_max } from "./list_max.mjs";
+import { list_min } from "./list_min.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_name_letters } from "./app_learn_js_name_letters.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -85,6 +86,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let item_pool = property_get_or(options, "item_pool", null);
   ("2026-11-13, next: a lesson may ask that the biggest number is never last, since a loop that keeps every item, with no if, is right exactly when it is, so that mistake would hide and its wrong answer would never be offered");
   let biggest_not_last = property_get_or(options, "biggest_not_last", false);
+  ("2026-11-20, next: or that the smallest number is never last, for the loop that keeps the smallest, for the same reason");
+  let smallest_not_last = property_get_or(options, "smallest_not_last", false);
   ("2026-11-13, at the human's asking, so a loop can run over the letters of a string: a lesson may hand in words, and each question is then one of them named s, let s = \"joy\";, its letters the items looped over. Everything else reads the letters as it reads an array's items, since s[i] and s.length read a string as a[i] and a.length read an array. Not picked: a builder of its own for strings, which would repeat every wrong loop and the walk");
   let words = property_get_or(options, "words", null);
   ("2026-11-13, next: a lesson may also hand in words_without, words that lack what the loop looks for, and then every other question takes one of them, as item_sometimes puts its item in every other array, so a set always holds both answers");
@@ -440,6 +443,14 @@ export function app_learn_js_lesson_array_for_generic(options) {
         if (equal(left7, biggest)) {
           items3.pop();
           items3.unshift(biggest);
+        }
+      }
+      if (smallest_not_last) {
+        let smallest = list_min(items3);
+        let left8 = list_last(items3);
+        if (equal(left8, smallest)) {
+          items3.pop();
+          items3.unshift(smallest);
         }
       }
       let code3 = program_of(items3, right);
