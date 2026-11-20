@@ -441,6 +441,10 @@ export function bible_glyph_chapter_references() {
       reference: "Leviticus 17",
     },
     {
+      chapter_code: "LEV18",
+      reference: "Leviticus 18",
+    },
+    {
       chapter_code: "LEV19",
       reference: "Leviticus 19",
     },
