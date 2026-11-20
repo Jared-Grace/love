@@ -837,6 +837,104 @@ export function bible_glyph_reasons() {
       "A person climbing a rock: a crag, a cliff, to rise up. In Greek, to endure, holding on and keeping going.",
     smiling_face_with_halo:
       "A face with a halo: innocent, to acquit, to hold guiltless.",
+    rooster:
+      "A rooster, which wakes people at dawn: to awake. In Greek, a bird, a hen.",
+    card_index_dividers:
+      "Cards sorted into sections: to arrange, to set in order, a kind, a sort.",
+    beard: "A face with a big beard: a beard.",
+    cherry_blossom: "A blossom opening: to blossom, to bud.",
+    hourglass_done:
+      "An hourglass whose sand has run out: already, past, and old.",
+    repeat_single_button:
+      "A button that plays the same thing again: still, yet. With no, no longer.",
+    beginner: "The sign for a beginner: young, youth, new, and to train up.",
+    raven:
+      "A black bird: a raven. In Greek, to cry out loudly, as a raven caws.",
+    confounded_face:
+      "A face screwed up in distress: to suffer, and to be dismayed.",
+    clown_face: "A clown: a fool, folly.",
+    shower: "Water sprinkled from a shower: to sprinkle.",
+    whale:
+      "A whale: a huge fish, and to swallow. As Jonah was three days and three nights in the belly of the huge fish (Matthew 12:40).",
+    palm_tree: "A palm tree: a palm tree, a palm branch.",
+    hammer_and_wrench:
+      "Tools for making things: a craftsman, a smith, craftwork.",
+    cold_face: "A cold, shivering face: cold, and cool.",
+    disappointed_face:
+      "A disappointed face: sad, disgrace, to despair, to lose heart.",
+    couch_and_lamp: "A couch to rest on: a couch, rest, to be at ease.",
+    soon: "The soon arrow: about to, going to. With no, not yet.",
+    airplane_arrival:
+      "A plane coming in to land: to come, to arrive, to reach.",
+    man_dancing: "A man dancing: a dance, to dance, to skip about.",
+    red_apple: "A red apple: an apple. In Greek, healthy, sound.",
+    worried_face: "A worried face: to worry, anxiety, sorrow.",
+    counterclockwise_arrows_button:
+      "Arrows going round: a turning wheel, and to overturn.",
+    winking_face:
+      "A wink, over in an instant: a moment, in the twinkling of an eye (1 Corinthians 15:52).",
+    artist:
+      "An artist shaping a work: to form, to shape, and a potter. The LORD God formed man of dust from the ground (Genesis 2:7).",
+    black_heart: "A black heart: to be dark, and to mourn.",
+    meat_on_bone: "Meat on a bone: meat, and to slaughter.",
+    deaf_person: "A person who cannot hear: deaf.",
+    ghost:
+      "A ghost: a ghost, the spirits of the dead, and a medium who calls them up.",
+    mule: "A horse's head stands in for the mule: a mule.",
+    heavy_dollar_sign: "A money sign: value, honor, precious, and worthless.",
+    stopwatch: "A stopwatch: a moment, now, for a moment.",
+    television: "A television, which shows things: to show, proof.",
+    timer_clock:
+      "A timer counting time: time, a span of time. With the heart, patience, a long time before anger.",
+    dollar_banknote: "A banknote: wages, pay, to spend, a bribe.",
+    synagogue: "A synagogue: a synagogue, and its leader.",
+    baby_bottle: "A baby's bottle: an infant, a baby, to nurse.",
+    bell: "A bell: a bell, a sound, and to warn.",
+    head_shaking_vertically: "A head nodding yes: yes, to agree, to consent.",
+    person_in_lotus_position:
+      "A person sitting calm and still: at rest, relief, gentle.",
+    furnace:
+      "A mountain full of fire stands in for the furnace: a furnace, a kiln.",
+    face_savoring_food: "A face enjoying its food: to taste, to be satisfied.",
+    candy: "A candy: sweet, and pleasing.",
+    fly: "A fly: a swarm of flies.",
+    older_person: "An older person with gray hair: old, gray hair, old age.",
+    mosquito: "A mosquito stands in for the gnat: a gnat, a flea.",
+    mouse: "A mouse: a mouse.",
+    squinting_face_with_tongue:
+      "A face sticking out its tongue: to mock, to scoff, to deceive.",
+    exploding_head: "A mind blown with amazement: a wonder, to gaze in wonder.",
+    flute: "A flute: a flute, a pipe.",
+    dragon: "A dragon: a dragon, a sea monster.",
+    muted_speaker: "A speaker turned off: silence, quiet, to be silent.",
+    crab: "A crab gripping with its claws: to seize, to grab hold.",
+    grimacing_face: "A face with clenched teeth: gnashing, to gnash the teeth.",
+    snowman: "A snowman: winter.",
+    people_hugging: "People hugging: to embrace, comfort, to console.",
+    fox: "A fox: a fox, a jackal, and craftiness.",
+    tambourine:
+      "A hand drum stands in for the tambourine: the tambourine struck with the hand, to drum.",
+    leopard: "A leopard: a leopard.",
+    egg: "An egg: an egg.",
+    farmer: "A farmer: a farmer, a ploughman.",
+    cinema: "A cinema, where people sit and watch: to behold, to look upon.",
+    zany_face: "A wild, silly face: a fool, and to be out of one's mind.",
+    camera: "A camera, which makes a picture: an image, a likeness.",
+    love_hotel:
+      "A hotel for love outside marriage: sexual sin, and a prostitute.",
+    person_rowing_boat:
+      "A rower pulling an oar under orders: an attendant, a servant. The Greek word is built from under and rower.",
+    chart_increasing_with_yen: "A money chart going up: gain, profit.",
+    person_in_tuxedo: "A man dressed for his wedding: a bridegroom.",
+    scorpion: "A scorpion: a scorpion, and its sting.",
+    old_key: "An old key: a key.",
+    most: "A double arrow going up: great, greater, greatly, especially.",
+    crossed_flags: "Flags: a banner, and to raise a banner.",
+    magic_wand: "A magic wand: a sorcerer, sorcery, and the magi.",
+    cook: "A cook: a cook.",
+    person_cartwheeling: "A person leaping and tumbling: to leap.",
+    water_buffalo:
+      "A water buffalo: the wild ox, and Behemoth, the great beast of the water.",
   };
   return r;
 }
