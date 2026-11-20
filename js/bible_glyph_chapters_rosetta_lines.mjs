@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_rosetta_lines_num01 } from "./bible_glyph_chapter_rosetta_lines_num01.mjs";
 import { bible_glyph_chapter_rosetta_lines_lev20 } from "./bible_glyph_chapter_rosetta_lines_lev20.mjs";
 import { bible_glyph_chapter_rosetta_lines_lev18 } from "./bible_glyph_chapter_rosetta_lines_lev18.mjs";
 import { bible_glyph_chapter_rosetta_lines_gen38 } from "./bible_glyph_chapter_rosetta_lines_gen38.mjs";
@@ -1927,6 +1928,7 @@ export function bible_glyph_chapters_rosetta_lines() {
     chapter638,
     chapter639,
     chapter640,
+    bible_glyph_chapter_rosetta_lines_num01(),
   ];
   return chapters;
 }
