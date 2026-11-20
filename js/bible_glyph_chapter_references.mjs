@@ -49,6 +49,10 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 9",
     },
     {
+      chapter_code: "GEN10",
+      reference: "Genesis 10",
+    },
+    {
       chapter_code: "GEN11",
       reference: "Genesis 11",
     },
