@@ -2265,6 +2265,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Thessalonians 3",
     },
     {
+      chapter_code: "1TI01",
+      reference: "1 Timothy 1",
+    },
+    {
       chapter_code: "1JN01",
       reference: "1 John 1",
     },
