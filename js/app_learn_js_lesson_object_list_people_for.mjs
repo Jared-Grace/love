@@ -7,9 +7,9 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -28,6 +28,7 @@ export function app_learn_js_lesson_object_list_people_for() {
   ("A set is four questions, each two or three people drawn and shuffled.");
   ("Reading forwards, the wrong answers are the names with no space, last name first, and first names only. Reading backwards, the wrong programs leave out the space, write last before first, and write first alone; each is kept only if it writes out something other than the answer.");
   ("No stepping: the tracer cannot yet read an object.");
+  ("Each person's line starts at the left edge, not two spaces in. The put-the-lines-in-order quiz indents only for a { still open, and a [ does not count, so an indented line came out of the quiz unlike the lesson. Writing out a list of objects, the lesson before this, already writes them that way.");
   ("The writing is a first draft by Claude 2026-11-16.");
   let people = [
     ["Simon", "Peter"],
@@ -40,7 +41,7 @@ export function app_learn_js_lesson_object_list_people_for() {
   function program_with(drawn, line) {
     function object_line(person) {
       let codes = list_map(person, json_to);
-      let text = "  { first: " + codes[0] + ", last: " + codes[1] + " },";
+      let text = "{ first: " + codes[0] + ", last: " + codes[1] + " },";
       return text;
     }
     let mapped = list_map(drawn, object_line);
