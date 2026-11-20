@@ -2113,6 +2113,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Corinthians 3",
     },
     {
+      chapter_code: "2CO04",
+      reference: "2 Corinthians 4",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
