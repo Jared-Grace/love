@@ -2173,6 +2173,10 @@ export function bible_glyph_chapter_references() {
       reference: "Galatians 5",
     },
     {
+      chapter_code: "GAL06",
+      reference: "Galatians 6",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
