@@ -683,6 +683,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_reverse: text_frozen("array_rev_for"),
     app_learn_js_lesson_array_for_in_order: text_frozen("array_in_order"),
     app_learn_js_lesson_array_for_luhn_double: text_frozen("luhn_double"),
+    app_learn_js_lesson_array_second_two_loops: text_frozen("second_two_loops"),
   };
   return short;
 }
