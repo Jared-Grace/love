@@ -12,6 +12,7 @@ import { property_set } from "./property_set.mjs";
 import { html_hash_transform } from "./html_hash_transform.mjs";
 import { window_reload } from "./window_reload.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
+import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 export function app_shared_bible_language_choose_one_render(
   container,
   languages,
@@ -30,7 +31,8 @@ export function app_shared_bible_language_choose_one_render(
     let code = property_get(language, property_name);
     let name = property_get(language, "name");
     let label = name;
-    if (list_includes(codes_chosen, code)) {
+    let chosen = list_includes(codes_chosen, code);
+    if (chosen) {
       label = "✅ " + name;
     }
     function on_click() {
@@ -42,6 +44,8 @@ export function app_shared_bible_language_choose_one_render(
       html_hash_transform(transform);
       window_reload();
     }
-    app_shared_button_wide(card, label, on_click);
+    let button = app_shared_button_wide(card, label, on_click);
+    ("THE CHOSEN LANGUAGE IS COLOURED AS WELL AS TICKED, asked for by the human 2026-11-20: a tick at the start of one line among many is easy to read past, and the colour is the one every other row of choices in these apps already marks its choice with. The tick stays, so the choice still reads where colour does not.");
+    app_shared_button_toggle_style(chosen, button);
   }
 }
