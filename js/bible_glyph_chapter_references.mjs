@@ -2001,6 +2001,10 @@ export function bible_glyph_chapter_references() {
       reference: "Romans 7",
     },
     {
+      chapter_code: "ROM08",
+      reference: "Romans 8",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
