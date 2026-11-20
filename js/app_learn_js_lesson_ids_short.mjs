@@ -676,6 +676,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_total_over: text_frozen("array_total_over"),
     app_learn_js_lesson_array_for_push_double: text_frozen("array_doubled"),
     app_learn_js_lesson_array_for_pair: text_frozen("array_pair"),
+    app_learn_js_lesson_array_for_pair_push: text_frozen("array_pair_push"),
   };
   return short;
 }

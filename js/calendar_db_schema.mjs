@@ -11,6 +11,7 @@ export function calendar_db_schema() {
   ("★ A SESSION STORES ONLY THE KEY'S HASH. A guest's private link and a host's Facebook sign-in both end in a random key held by the person; the table keeps its SHA-256, so a copy of the database opens nobody's meetings. It names no person row on purpose: a host signed in with Facebook has a session before they have given a WhatsApp number.");
   ("★ A BOOKING WAITS UNTIL ITS CODE ARRIVES. code is what the guest sends the host from their WhatsApp; confirmed_at is stamped when the host sees it come from the number booked with. A meeting with no confirmed_at is waiting, and is cancelled 24 hours after created_at.");
   ("A meeting is held on WhatsApp or Messenger (via). A Messenger guest gives no number - their people row holds empty text - and the host keeps the profile link of whoever sent the code (profile_url). A host offers Messenger once their messenger name is set, and max_per_day, when set, is the most meetings they take in one of their days. max_per_guest, when set, is the most upcoming meetings one guest may hold with them, a weekly meeting counting once; it starts at 2, the limit every host had before it could be set.");
+  ("★ A GUEST IS PROVEN BEFORE THEY BOOK (human, 2026-11-20). A proofs row is one guest with one host: the app (via), the number or the profile link they gave (profile_given), and the code they send. confirmed_at is stamped when the host sees the code arrive from that number or profile - on Messenger, profile_url is the sender's profile the host confirmed from. Only a proven guest books, and their meetings are confirmed as they are written. Meetings with a code and no confirmed_at are from before proofs, and still expire after 24 hours.");
   ("Nothing is deleted: a cancelled meeting keeps its row with the time it was cancelled, and leaves both indexes, so the hour opens again.");
   let sql = `CREATE TABLE IF NOT EXISTS people (
   uid TEXT PRIMARY KEY,
@@ -75,6 +76,19 @@ CREATE TABLE IF NOT EXISTS sessions (
   created_at TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS sessions_uid ON sessions (uid);
+CREATE TABLE IF NOT EXISTS proofs (
+  host_uid TEXT NOT NULL REFERENCES hosts(uid),
+  guest_uid TEXT NOT NULL REFERENCES people(uid),
+  via TEXT NOT NULL CHECK (via IN ('whatsapp', 'messenger')),
+  whatsapp TEXT NOT NULL,
+  profile_given TEXT,
+  profile_url TEXT,
+  code TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  confirmed_at TEXT,
+  PRIMARY KEY (host_uid, guest_uid)
+);
+CREATE INDEX IF NOT EXISTS proofs_code ON proofs (host_uid, code);
 `;
   return sql;
 }
