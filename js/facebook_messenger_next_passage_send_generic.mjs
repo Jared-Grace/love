@@ -3,6 +3,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { facebook_page_open } from "./facebook_page_open.mjs";
 import { sleep } from "./sleep.mjs";
+import { facebook_messenger_page_text_loaded } from "./facebook_messenger_page_text_loaded.mjs";
 import { facebook_messenger_next_passage_plan_text_generic } from "./facebook_messenger_next_passage_plan_text_generic.mjs";
 import { facebook_messenger_box_type_send } from "./facebook_messenger_box_type_send.mjs";
 import { facebook_messenger_messages } from "./facebook_messenger_messages.mjs";
@@ -29,7 +30,15 @@ export async function facebook_messenger_next_passage_send_generic(
   let page = o.page;
   try {
     await sleep(10000);
-    let before = await page.evaluate(main);
+    let before = await facebook_messenger_page_text_loaded(page, picture);
+    if (before === null) {
+      let empty = {
+        loaded: false,
+        send: false,
+        picture,
+      };
+      return empty;
+    }
     let r = await facebook_messenger_next_passage_plan_text_generic(
       before,
       ready,
