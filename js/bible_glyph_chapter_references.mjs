@@ -1973,6 +1973,10 @@ export function bible_glyph_chapter_references() {
       reference: "Acts 28",
     },
     {
+      chapter_code: "ROM01",
+      reference: "Romans 1",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
