@@ -37,5 +37,5 @@ export async function app_learn_js_hash_restore(context) {
   app_learn_js_hash_milestone_restore(context, hash);
   app_learn_js_hash_complete_restore(context, hash);
   app_learn_js_hash_questions_restore(context, hash);
-  await app_learn_js_hash_step_restore(context, hash);
+  await app_learn_js_hash_step_restore(hash);
 }
