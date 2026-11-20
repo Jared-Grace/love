@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_in_order } from "./app_learn_js_lesson_array_for_in_order.mjs";
 import { app_learn_js_lesson_array_for_reverse } from "./app_learn_js_lesson_array_for_reverse.mjs";
 import { app_learn_js_lesson_array_for_small_at } from "./app_learn_js_lesson_array_for_small_at.mjs";
 import { app_learn_js_lesson_array_for_total_even } from "./app_learn_js_lesson_array_for_total_even.mjs";
@@ -887,6 +888,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_pair,
     app_learn_js_lesson_array_for_pair_push,
     app_learn_js_lesson_array_for_start_first,
+    app_learn_js_lesson_array_for_in_order,
     app_learn_js_lesson_array_for_swap_if_bigger,
     app_learn_js_lesson_string_letter,
     app_learn_js_lesson_string_for,
