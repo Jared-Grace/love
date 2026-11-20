@@ -300,6 +300,54 @@ import { app_learn_js_lesson_else_if_twice } from "./app_learn_js_lesson_else_if
 import { app_learn_js_lesson_else_if_order } from "./app_learn_js_lesson_else_if_order.mjs";
 import { app_learn_js_lesson_braces_run_thrice } from "./app_learn_js_lesson_braces_run_thrice.mjs";
 import { app_learn_js_lesson_if_thrice } from "./app_learn_js_lesson_if_thrice.mjs";
+import { app_learn_js_lesson_statement_name_not_itself } from "./app_learn_js_lesson_statement_name_not_itself.mjs";
+import { app_learn_js_lesson_while } from "./app_learn_js_lesson_while.mjs";
+import { app_learn_js_lesson_while_log } from "./app_learn_js_lesson_while_log.mjs";
+import { app_learn_js_lesson_while_log_after_change } from "./app_learn_js_lesson_while_log_after_change.mjs";
+import { app_learn_js_lesson_while_log_skipped } from "./app_learn_js_lesson_while_log_skipped.mjs";
+import { app_learn_js_lesson_while_down } from "./app_learn_js_lesson_while_down.mjs";
+import { app_learn_js_lesson_while_less_equal } from "./app_learn_js_lesson_while_less_equal.mjs";
+import { app_learn_js_lesson_while_greater_equal } from "./app_learn_js_lesson_while_greater_equal.mjs";
+import { app_learn_js_lesson_while_not_equal } from "./app_learn_js_lesson_while_not_equal.mjs";
+import { app_learn_js_lesson_while_halve } from "./app_learn_js_lesson_while_halve.mjs";
+import { app_learn_js_lesson_while_double } from "./app_learn_js_lesson_while_double.mjs";
+import { app_learn_js_lesson_while_count } from "./app_learn_js_lesson_while_count.mjs";
+import { app_learn_js_lesson_while_total } from "./app_learn_js_lesson_while_total.mjs";
+import { app_learn_js_lesson_while_total_step } from "./app_learn_js_lesson_while_total_step.mjs";
+import { app_learn_js_lesson_while_total_squares } from "./app_learn_js_lesson_while_total_squares.mjs";
+import { app_learn_js_lesson_while_product } from "./app_learn_js_lesson_while_product.mjs";
+import { app_learn_js_lesson_while_increment } from "./app_learn_js_lesson_while_increment.mjs";
+import { app_learn_js_lesson_while_up_to } from "./app_learn_js_lesson_while_up_to.mjs";
+import { app_learn_js_lesson_while_log_double } from "./app_learn_js_lesson_while_log_double.mjs";
+import { app_learn_js_lesson_while_decrement } from "./app_learn_js_lesson_while_decrement.mjs";
+import { app_learn_js_lesson_while_countdown } from "./app_learn_js_lesson_while_countdown.mjs";
+import { app_learn_js_lesson_while_repeat_word } from "./app_learn_js_lesson_while_repeat_word.mjs";
+import { app_learn_js_lesson_while_repeat_word_down } from "./app_learn_js_lesson_while_repeat_word_down.mjs";
+import { app_learn_js_lesson_while_start_end } from "./app_learn_js_lesson_while_start_end.mjs";
+import { app_learn_js_lesson_while_two_lines } from "./app_learn_js_lesson_while_two_lines.mjs";
+import { app_learn_js_lesson_for } from "./app_learn_js_lesson_for.mjs";
+import { app_learn_js_lesson_for_change } from "./app_learn_js_lesson_for_change.mjs";
+import { app_learn_js_lesson_for_start } from "./app_learn_js_lesson_for_start.mjs";
+import { app_learn_js_lesson_for_increment } from "./app_learn_js_lesson_for_increment.mjs";
+import { app_learn_js_lesson_for_decrement } from "./app_learn_js_lesson_for_decrement.mjs";
+import { app_learn_js_lesson_for_repeat_word } from "./app_learn_js_lesson_for_repeat_word.mjs";
+import { app_learn_js_lesson_for_total } from "./app_learn_js_lesson_for_total.mjs";
+import { app_learn_js_lesson_for_up_to } from "./app_learn_js_lesson_for_up_to.mjs";
+import { app_learn_js_lesson_for_total_step } from "./app_learn_js_lesson_for_total_step.mjs";
+import { app_learn_js_lesson_for_count } from "./app_learn_js_lesson_for_count.mjs";
+import { app_learn_js_lesson_for_after_change } from "./app_learn_js_lesson_for_after_change.mjs";
+import { app_learn_js_lesson_for_log_double } from "./app_learn_js_lesson_for_log_double.mjs";
+import { app_learn_js_lesson_for_down_to } from "./app_learn_js_lesson_for_down_to.mjs";
+import { app_learn_js_lesson_while_two_names } from "./app_learn_js_lesson_while_two_names.mjs";
+import { app_learn_js_lesson_for_two_names } from "./app_learn_js_lesson_for_two_names.mjs";
+import { app_learn_js_lesson_while_two_meet } from "./app_learn_js_lesson_while_two_meet.mjs";
+import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
+import { app_learn_js_lesson_while_if } from "./app_learn_js_lesson_while_if.mjs";
+import { app_learn_js_lesson_for_if } from "./app_learn_js_lesson_for_if.mjs";
+import { app_learn_js_lesson_for_count_if } from "./app_learn_js_lesson_for_count_if.mjs";
+import { app_learn_js_lesson_for_total_if } from "./app_learn_js_lesson_for_total_if.mjs";
+import { app_learn_js_lesson_for_if_even } from "./app_learn_js_lesson_for_if_even.mjs";
+import { app_learn_js_lesson_for_if_else } from "./app_learn_js_lesson_for_if_else.mjs";
 export function app_learn_js_lessons_released_fns() {
   "the lessons handed to a learner on either page they are ever sent to - the built site, and latest; every other lesson is still built and still opens on the working copies";
   "A LIST, NOT A CUT. The release used to be every lesson up to one named lesson. That holds only while lessons are added after it, and on 2026-09-17 twenty-six had been put in between released ones - so a rebuild of latest would have handed the learner twenty-six lessons nobody had read through, spread all through a run they were already part way along. A list names each lesson, so a lesson put in anywhere stays out until it is named here.";
@@ -310,6 +358,7 @@ export function app_learn_js_lessons_released_fns() {
   "2026-10-31, at the human's asking - step by step is just one quiz type: the seventeen step lessons of the branching stages taken out of the course and so out of here, each if lesson beside them ending in a step-by-step quiz instead. The built site's bundle had no if lesson when this was done, so only latest's one person could have finished one.";
   "2026-11-01, asked next: thirteen step lessons of the naming stage taken out the same way. Three - step_name_value, step_name_two and step_name_copy_single - were in the built site's bundle, so a learner there may have finished one; it leaves their list, and the lesson it stood after now ends in the same stepping.";
   "2026-11-01, asked next: the six step lessons that came before their lesson taken out too, that lesson now opening with the same stepping as its first quiz.";
+  "2026-11-20, at the human's asking - deploy through More looping, lesson 350: every lesson up to and including For with else released, which is the while and for lessons and Not itself, added among the released Statements lessons on 2026-11-12.";
   let fns = [
     app_learn_js_lesson_symbols_digits_numbered,
     app_learn_js_lesson_symbols_digit_number,
@@ -613,6 +662,54 @@ export function app_learn_js_lessons_released_fns() {
     app_learn_js_lesson_else_if_order,
     app_learn_js_lesson_braces_run_thrice,
     app_learn_js_lesson_if_thrice,
+    app_learn_js_lesson_statement_name_not_itself,
+    app_learn_js_lesson_while,
+    app_learn_js_lesson_while_log,
+    app_learn_js_lesson_while_log_after_change,
+    app_learn_js_lesson_while_log_skipped,
+    app_learn_js_lesson_while_down,
+    app_learn_js_lesson_while_less_equal,
+    app_learn_js_lesson_while_greater_equal,
+    app_learn_js_lesson_while_not_equal,
+    app_learn_js_lesson_while_halve,
+    app_learn_js_lesson_while_double,
+    app_learn_js_lesson_while_count,
+    app_learn_js_lesson_while_total,
+    app_learn_js_lesson_while_total_step,
+    app_learn_js_lesson_while_total_squares,
+    app_learn_js_lesson_while_product,
+    app_learn_js_lesson_while_increment,
+    app_learn_js_lesson_while_up_to,
+    app_learn_js_lesson_while_log_double,
+    app_learn_js_lesson_while_decrement,
+    app_learn_js_lesson_while_countdown,
+    app_learn_js_lesson_while_repeat_word,
+    app_learn_js_lesson_while_repeat_word_down,
+    app_learn_js_lesson_while_start_end,
+    app_learn_js_lesson_while_two_lines,
+    app_learn_js_lesson_for,
+    app_learn_js_lesson_for_change,
+    app_learn_js_lesson_for_start,
+    app_learn_js_lesson_for_increment,
+    app_learn_js_lesson_for_decrement,
+    app_learn_js_lesson_for_repeat_word,
+    app_learn_js_lesson_for_total,
+    app_learn_js_lesson_for_up_to,
+    app_learn_js_lesson_for_total_step,
+    app_learn_js_lesson_for_count,
+    app_learn_js_lesson_for_after_change,
+    app_learn_js_lesson_for_log_double,
+    app_learn_js_lesson_for_down_to,
+    app_learn_js_lesson_while_two_names,
+    app_learn_js_lesson_for_two_names,
+    app_learn_js_lesson_while_two_meet,
+    app_learn_js_lesson_while_and,
+    app_learn_js_lesson_while_if,
+    app_learn_js_lesson_for_if,
+    app_learn_js_lesson_for_count_if,
+    app_learn_js_lesson_for_total_if,
+    app_learn_js_lesson_for_if_even,
+    app_learn_js_lesson_for_if_else,
   ];
   return fns;
 }
