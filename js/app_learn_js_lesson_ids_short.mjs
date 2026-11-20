@@ -673,6 +673,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_object_has_own_set: text_frozen("object_has_own_set"),
     app_learn_js_lesson_array_for_smallest: text_frozen("array_smallest"),
     app_learn_js_lesson_array_for_average: text_frozen("array_average"),
+    app_learn_js_lesson_array_for_total_over: text_frozen("array_total_over"),
   };
   return short;
 }
