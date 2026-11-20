@@ -654,6 +654,89 @@ export function bible_glyph_reasons() {
     hut: "A hut, a simple shelter: a refuge, a booth, and to spend the night. In Greek, the temple, the house where God dwells.",
     window: "A window: a window, a lattice.",
     ashes: "An urn that holds ashes: ashes.",
+    cherub:
+      "A face with a halo, a heavenly being: a cherub, one of the cherubim who guard the presence of God.",
+    face_with_monocle: "A face peering through a monocle: to look, to gaze.",
+    man_in_tuxedo:
+      "A man dressed for his wedding: a bridegroom, and the family he marries into, the in-laws.",
+    crocodile:
+      "A crocodile, which lives in the Nile: the Nile, and Leviathan, the great sea creature.",
+    gear: "A gear turning, a thing at work: to do, to make, and the way something is done, how.",
+    yoke: "Wooden bars stand in for the yoke: a yoke, the bar laid on an animal's neck, and to join together.",
+    camel: "A camel: a camel.",
+    olive: "An olive: an olive, the olive tree, and its oil.",
+    wing: "A wing: a wing, a feather, and to cover, as a bird covers its young.",
+    person_tipping_hand: "A person offering help: counsel, advice, to advise.",
+    woman_dancing: "A woman dancing for joy: to rejoice.",
+    shushing_face:
+      "A finger to the lips: be still, keep quiet, secretly, a secret.",
+    flying_disc:
+      "A round disc: a talent, a round weight of silver or gold, and a round platter.",
+    dizzy:
+      "A dizzy head spinning: to writhe in pain, and to be led astray, to deceive, error.",
+    test_tube: "A test tube: to test, to try, to tempt.",
+    shooting_star:
+      "A shooting star, a wonder in the sky that people wish on: a wonder, and to want, to wish.",
+    wolf: "A wolf: a wolf, and to tear prey.",
+    snow: "A snowflake: snow, and winter.",
+    poor: "Money flying away: poor, the poor, the one in need, poverty.",
+    index_pointing_up: "A pointing finger: a finger, to touch.",
+    locusts: "A cricket stands in for a locust: locusts.",
+    dog: "A dog: a dog.",
+    joystick:
+      "A joystick, which controls what moves: to rule, to have control over.",
+    clipboard:
+      "A clipboard, used to count and check: to visit, to count, to appoint, to give orders.",
+    right_anger_bubble:
+      "An angry speech bubble: to rebuke, to provoke to anger, to insult.",
+    flushed: "A red, flushed face: to be ashamed, shame, to blush.",
+    bellhop_bell:
+      "A bell that calls someone to serve: to serve, to minister, a servant.",
+    person_shrugging:
+      "A person shrugging their shoulders: the shoulder, and perhaps.",
+    salt: "A salt shaker: salt.",
+    bouquet:
+      "A bouquet, as a bride carries: a bride, and a bunch, a cluster, a bundle.",
+    spoon: "A spoon for stirring: to mix.",
+    person_wearing_turban: "A person wearing a turban: a turban, a headband.",
+    diving_mask:
+      "A diving mask, for going under the water: to dip, to immerse, to baptize, which is what the word says.",
+    ginger_root: "A root: a root, and to take root.",
+    ring_buoy:
+      "A life ring thrown to save someone: to rescue, a survivor, a refuge.",
+    breast_feeding: "A mother nursing her baby: the breast, to nurse.",
+    paperclip: "A paperclip holding things together: to cling, to join.",
+    folding_hand_fan: "A fan opening out: to spread, to spread out.",
+    lizard: "A lizard: a creeping thing, a reptile, and to creep.",
+    arrow: "An arrow: an arrow.",
+    face_with_head_bandage:
+      "A face with a bandaged head: a wound, a blow, a plague, pain.",
+    confetti_ball:
+      "Confetti flying everywhere: to scatter, and to rejoice, a festival.",
+    moon: "The moon: the moon, and a month.",
+    pick: "A pick: to dig, to hew stone, a digging tool.",
+    face_with_medical_mask:
+      "A face wearing a mask against sickness: plague, disease.",
+    peacock: "A peacock showing off its feathers: pride, to boast.",
+    gesturing_no:
+      "A person crossing their arms, no: to deny, to disown, to reject, by no means.",
+    shaking_face: "A shaking face: to tremble, to totter, to stray, trouble.",
+    hook: "A hook: a hook, and to draw or drag.",
+    adhesive_bandage: "A bandage on a wound: to bind up, healing, a cure.",
+    smiling_face_with_smiling_eyes:
+      "A warm, pleased smile: to accept, to be pleasing.",
+    razor: "A razor: a razor, to shave.",
+    scarf: "A scarf worn around the neck: the neck, and a shawl.",
+    grinning_face: "A grinning face: joy, cheerful.",
+    ear_with_hearing_aid:
+      "An ear with a hearing aid, straining to hear: to listen closely, to pay attention.",
+    cedar: "A tall evergreen tree: a cedar.",
+    people_with_bunny_ears:
+      "Two people dressed exactly alike: like, the same as. With speech, to say the same thing, to confess.",
+    face_with_symbols_on_mouth:
+      "A face swearing in anger: to hate, to insult, to blaspheme, reproach.",
+    sos_button: "An SOS sign: need, to cry for help.",
+    cloud_with_lightning: "A cloud with lightning: lightning, and to thunder.",
   };
   return r;
 }
