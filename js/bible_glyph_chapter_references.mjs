@@ -2229,6 +2229,10 @@ export function bible_glyph_chapter_references() {
       reference: "Colossians 3",
     },
     {
+      chapter_code: "COL04",
+      reference: "Colossians 4",
+    },
+    {
       chapter_code: "1TH01",
       reference: "1 Thessalonians 1",
     },
