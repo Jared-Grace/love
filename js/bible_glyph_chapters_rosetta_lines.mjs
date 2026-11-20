@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_rosetta_lines_luk08 } from "./bible_glyph_chapter_rosetta_lines_luk08.mjs";
 import { bible_glyph_chapter_rosetta_lines_luk06 } from "./bible_glyph_chapter_rosetta_lines_luk06.mjs";
 import { bible_glyph_chapter_rosetta_lines_luk05 } from "./bible_glyph_chapter_rosetta_lines_luk05.mjs";
 import { bible_glyph_chapter_rosetta_lines_luk04 } from "./bible_glyph_chapter_rosetta_lines_luk04.mjs";
@@ -900,6 +901,7 @@ export function bible_glyph_chapters_rosetta_lines() {
   let chapter445 = bible_glyph_chapter_rosetta_lines_luk04();
   let chapter446 = bible_glyph_chapter_rosetta_lines_luk05();
   let chapter447 = bible_glyph_chapter_rosetta_lines_luk06();
+  let chapter448 = bible_glyph_chapter_rosetta_lines_luk08();
   let chapters = [
     chapter,
     chapter2,
@@ -1348,6 +1350,7 @@ export function bible_glyph_chapters_rosetta_lines() {
     chapter445,
     chapter446,
     chapter447,
+    chapter448,
   ];
   return chapters;
 }
