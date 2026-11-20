@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_if_take_away_nine } from "./app_learn_js_lesson_if_take_away_nine.mjs";
 import { app_learn_js_lesson_second_moves } from "./app_learn_js_lesson_second_moves.mjs";
 import { app_learn_js_lesson_array_second_two_loops } from "./app_learn_js_lesson_array_second_two_loops.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
@@ -905,6 +906,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_push_if_e,
     app_learn_js_lesson_array_log,
     app_learn_js_lesson_array_for_luhn_double,
+    app_learn_js_lesson_if_take_away_nine,
     app_learn_js_lesson_object_property,
     app_learn_js_lesson_object_property_set,
     app_learn_js_lesson_object_log,
