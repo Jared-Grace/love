@@ -2389,6 +2389,10 @@ export function bible_glyph_chapter_references() {
       reference: "James 4",
     },
     {
+      chapter_code: "JAS05",
+      reference: "James 5",
+    },
+    {
       chapter_code: "1JN01",
       reference: "1 John 1",
     },
