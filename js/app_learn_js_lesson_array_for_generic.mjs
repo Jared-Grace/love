@@ -38,6 +38,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { modulo } from "./modulo.mjs";
+import { list_sum } from "./list_sum.mjs";
 import { divide } from "./divide.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { list_without } from "./list_without.mjs";
@@ -88,6 +89,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
   let biggest_not_last = property_get_or(options, "biggest_not_last", false);
   ("2026-11-20, next: or that the smallest number is never last, for the loop that keeps the smallest, for the same reason");
   let smallest_not_last = property_get_or(options, "smallest_not_last", false);
+  ("2026-11-20, for the average lesson: a lesson may ask that the numbers of each array add up to a multiple of how many there are, so the average is a whole number a learner can work out by hand, never 4.333333333333333");
+  let average_whole = property_get_or(options, "average_whole", false);
   ("2026-11-13, at the human's asking, so a loop can run over the letters of a string: a lesson may hand in words, and each question is then one of them named s, let s = \"joy\";, its letters the items looped over. Everything else reads the letters as it reads an array's items, since s[i] and s.length read a string as a[i] and a.length read an array. Not picked: a builder of its own for strings, which would repeat every wrong loop and the walk");
   let words = property_get_or(options, "words", null);
   ("2026-11-13, next: a lesson may also hand in words_without, words that lack what the loop looks for, and then every other question takes one of them, as item_sometimes puts its item in every other array, so a set always holds both answers");
@@ -129,6 +132,12 @@ export function app_learn_js_lesson_array_for_generic(options) {
     let keep_set = property_get_or(start_fewer, "keep_set", null);
     let keep_else = property_get_or(start_fewer, "keep_else", null);
     let keep_log = property_get_or(start_fewer, "keep_log", "after");
+    ("2026-11-20, for the average lesson: keep_log_value is what console.log writes out, as total / a.length, in place of the kept name itself");
+    let keep_log_value = property_get_or(
+      start_fewer,
+      "keep_log_value",
+      keep_name,
+    );
     let end2 = bound;
     if (fewer) {
       end2 = bound_fewer;
@@ -154,6 +163,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
       keep_set,
       keep_else,
       keep_log,
+      keep_log_value,
     };
     return r2;
   }
@@ -296,7 +306,8 @@ export function app_learn_js_lesson_array_for_generic(options) {
       if (not_equal(set_false, null)) {
         found_if = js_code_if_else_lines(condition3, set_true, set_false);
       }
-      let found_logged = js_code_console_log_statement(found_name);
+      let found_value = property_get(way, "keep_log_value");
+      let found_logged = js_code_console_log_statement(found_value);
       let found_body = list_concat(found_if, [stepped]);
       let found_after = [found_logged];
       let left4 = property_get(way, "keep_log");
@@ -383,6 +394,11 @@ export function app_learn_js_lesson_array_for_generic(options) {
         item_count = list_get(item_counts, k);
       }
       let items3 = list_shuffle_take(fruits, item_count);
+      if (average_whole) {
+        while (not_equal(modulo(list_sum(items3), item_count), 0)) {
+          items3 = list_shuffle_take(fruits, item_count);
+        }
+      }
       if (not_equal(words, null)) {
         let right5 = list_size(words_shuffled);
         let index3 = modulo(k, right5);
