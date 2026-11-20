@@ -51,9 +51,9 @@ export async function app_receipts_purchases_pull(folder_code) {
   let unsent = await app_shared_unsent_all();
   let waiting = list_map_property(unsent, "key");
   let project_url = firebase_storage_url_project_jg();
-  ("EIGHT PURCHASES ARE ASKED ABOUT AT ONCE, not one after another: each costs a round trip to storage and nothing else, and the opening cover waits for every one, so a folder of two hundred was two hundred waits in a row. Each purchase reads only what was gathered above and writes only its own key, so the order they land in changes nothing.");
+  ("THIRTY-TWO PURCHASES ARE ASKED ABOUT AT ONCE, not one after another: each costs a round trip to storage and nothing else, and the opening cover waits for every one, so a folder of two hundred was two hundred waits in a row. Measured 2026-11-20: one question took 0.6 to 0.8 seconds, and a folder of 61 asked eight at a time still sat behind the cover for eight rounds; storage answers many questions over one connection, so thirty-two cost hardly more than one. Each purchase reads only what was gathered above and writes only its own key, so the order they land in changes nothing.");
   let ids = object_property_names(remote);
-  await list_map_limited_async(ids, pull_one, 8);
+  await list_map_limited_async(ids, pull_one, 32);
   async function pull_one(id) {
     let entry = property_get(remote, id);
     let b = property_get(entry, "details");
