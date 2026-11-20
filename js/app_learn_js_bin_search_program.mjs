@@ -1,7 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
@@ -15,7 +15,7 @@ export function app_learn_js_bin_search_program(input, way) {
   arguments_assert(arguments, 2);
   ("the whole binary search over input.items for input.want, writing out found. way is right; wrong_side, which moves low when the middle item is bigger than want and so looks in the wrong half; ",
     fn_name("less_than"),
-    ", which asks low < high and so never looks at a last item where low and high meet; or sorted, the right program over the items put in order first");
+    ", which asks low < high and so never looks at a last item where low and high meet; start_true, which starts found at true and so writes out true when want is not there; or sorted, the right program over the items put in order first");
   ("2026-11-20, approved by the human: sum and middle are the two lines of Middle of two names, so nothing in the step is spelled a new way");
   let items = input.items;
   if (equal(way, "sorted")) {
@@ -32,7 +32,8 @@ export function app_learn_js_bin_search_program(input, way) {
   let code3 = js_code_let_statement("want", right2);
   let code4 = js_code_let_statement("low", "0");
   let code5 = js_code_let_statement("high", "a.length - 1");
-  let code6 = js_code_let_statement("found", "false");
+  let found_first = equal(way, "start_true") ? "true" : "false";
+  let code6 = js_code_let_statement("found", found_first);
   let lets = [code2, code3, code4, code5, code6];
   let test = equal(way, "wrong_side") ? "a[middle] > want" : "a[middle] < want";
   let step = js_code_if_else_if_with_else_lines_multiple(
