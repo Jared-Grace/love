@@ -1,3 +1,4 @@
+import { app_learn_js_lesson_array_for_start_first } from "./app_learn_js_lesson_array_for_start_first.mjs";
 import { app_learn_js_lesson_array_for_pair_push } from "./app_learn_js_lesson_array_for_pair_push.mjs";
 import { app_learn_js_lesson_array_for_pair } from "./app_learn_js_lesson_array_for_pair.mjs";
 import { app_learn_js_lesson_array_for_push_double } from "./app_learn_js_lesson_array_for_push_double.mjs";
@@ -879,6 +880,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_push_double,
     app_learn_js_lesson_array_for_pair,
     app_learn_js_lesson_array_for_pair_push,
+    app_learn_js_lesson_array_for_start_first,
     app_learn_js_lesson_array_for_swap_if_bigger,
     app_learn_js_lesson_string_letter,
     app_learn_js_lesson_string_for,
