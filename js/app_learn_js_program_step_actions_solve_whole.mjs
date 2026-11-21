@@ -1,5 +1,5 @@
-import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { property_equals } from "./property_equals.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
@@ -30,7 +30,8 @@ export function app_learn_js_program_step_actions_solve_whole(code, actions) {
   ("the actions of one line of a program's trace, as a learner stepping through it is asked them: an expression holding more than one operator is solved whole, as the expression lessons solve a line - one action carrying the expression's shape, whose names and operators the learner presses in the order JavaScript takes them, choosing what each comes to. code is the whole program, since the trace places every action in it");
   ("Asked for by the human 2026-10-17: when solving an expression, as in let a = ..., the entire expression should be solved step by step, like the existing expression solver - you choose the next operator to solve, and you choose the solved value.");
   ("2026-10-17, at the human's asking: a name is read when JavaScript reaches it and not before, so the names stand in the pressed line as names, each one pressed in its turn among the operators. In a * b + c, c is read after the * is worked out. Reading every name first would teach an order JavaScript does not keep, and one that gives the wrong value once a line changes what it reads, as ++s * s does.");
-  ("Not picked: every name first, then the operators, which is how this was first built. Not picked: each name just before the operator that uses it, which reads s + ++s as 6 where JavaScript gets 5. Not picked: an expression with one operator, which is still asked for by its value, as the step lessons built on it were shown and kept; pressing the only operator there is would be a press that cannot be wrong.");
+  ("Not picked: every name first, then the operators, which is how this was first built. Not picked: each name just before the operator that uses it, which reads s + ++s as 6 where JavaScript gets 5.");
+  ("2026-11-21, at the human's asking: an expression is solved whole whenever it holds an operator and at least two presses, names and operators counted together, so a + b, with three presses, is pressed in order by the learner rather than asked a, then b, then the sum in the order the computer takes; the learner is then the one learning the order. An expression with one press, as 2 + 3 or a name alone, is still asked for by its value, since its only press cannot be wrong. This replaces: an expression with one operator still asked for by its value, as the step lessons built on it were shown and kept, which held only when the expression had no names.");
   ("An expression is left as the trace gives it, one operator after another, wherever its shape cannot be read whole: a line written the short way, as a += b * 2, whose operator has no place of its own in the line; a value that is a string, which the pressed line would write without its quotes; or a shape that works out to anything but what the trace says, which would mean the two read the line by different rules.");
   let result = [];
   let run = [];
@@ -52,7 +53,11 @@ export function app_learn_js_program_step_actions_solve_whole(code, actions) {
   function run_whole() {
     let operators = list_filter(run, operator_is);
     let a = list_size(operators);
-    if (less_than(a, 2)) {
+    if (less_than(a, 1)) {
+      return false;
+    }
+    let presses = list_size(run);
+    if (less_than(presses, 2)) {
       return false;
     }
     let root = list_last(operators);
