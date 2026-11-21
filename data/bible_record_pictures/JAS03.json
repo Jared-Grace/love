@@ -56,46 +56,107 @@
  },
  {
   "ref": "7,8",
-  "query": "Jan Brueghel the Elder The Entry of the Animals into Noah's Ark Getty"
+  "query": "Jan Brueghel the Elder The Entry of the Animals into Noah's Ark Getty",
+  "title": "The Entry of the Animals into Noah's Ark by Jan Brueghel the Elder.jpg",
+  "artist": "Jan Brueghel the Elder",
+  "licence": "Public domain",
+  "width": 9814,
+  "height": 6131,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Entry_of_the_Animals_into_Noah%27s_Ark_by_Jan_Brueghel_the_Elder.jpg"
  },
  {
   "ref": "9",
-  "query": "Rembrandt Self-Portrait 1669 National Gallery"
+  "query": "Rembrandt Self-Portrait 1669 National Gallery",
+  "title": "Rembrandt van Rijn - Self-Portrait - O 1063 - Slovak National Gallery.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3998,
+  "height": 5000,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_O_1063_-_Slovak_National_Gallery.jpg"
  },
  {
   "ref": "10",
-  "query": "Adriaen Brouwer The Bitter Draught Städel"
+  "query": "Adriaen Brouwer The Bitter Draught Städel",
+  "title": "The Drinker - The Bitter Draught, c. 1635-1638.png",
+  "artist": "Adriaen Brouwer",
+  "licence": "Public domain",
+  "width": 6536,
+  "height": 8342,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Drinker_-_The_Bitter_Draught,_c._1635-1638.png"
  },
  {
   "ref": "11",
-  "query": "Gustave Courbet The Source of the Loue"
+  "query": "Gustave Courbet The Source of the Loue",
+  "title": "Gustave Courbet - La source de la Loue (The Source of the Loue) - 1959-1 - Albright–Knox Art Gallery.tiff",
+  "artist": "Gustave Courbet",
+  "licence": "Public domain",
+  "width": 5232,
+  "height": 3973,
+  "page": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_La_source_de_la_Loue_(The_Source_of_the_Loue)_-_1959-1_-_Albright%E2%80%93Knox_Art_Gallery.tiff"
  },
  {
   "ref": "12",
-  "query": "Vincent van Gogh The Red Vineyard Pushkin Museum"
+  "query": "Vincent van Gogh The Red Vineyard Pushkin Museum",
+  "title": "Vincent van Gogh - Red Vineyard at Arles (1888).jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 11406,
+  "height": 9092,
+  "page": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Red_Vineyard_at_Arles_(1888).jpg"
  },
  {
   "ref": "13",
-  "query": "Rembrandt Aristotle with a Bust of Homer"
+  "query": "Rembrandt Aristotle with a Bust of Homer",
+  "title": "Rembrandt Harmensz. van Rijn 013.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 5775,
+  "height": 6081,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_013.jpg"
  },
  {
   "ref": "14",
-  "query": "Rembrandt Saul and David Mauritshuis"
+  "query": "Rembrandt Saul and David Mauritshuis",
+  "title": "Rembrandt van Rijn - Saul and David - 621 - Mauritshuis.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 4738,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Saul_and_David_-_621_-_Mauritshuis.jpg"
  },
  {
   "ref": "15",
-  "query": "Pieter Bruegel the Elder Dulle Griet"
+  "query": "Pieter Bruegel the Elder Dulle Griet",
+  "title": "Dulle Griet, by Pieter Brueghel (I).jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 4334,
+  "page": "https://commons.wikimedia.org/wiki/File:Dulle_Griet,_by_Pieter_Brueghel_(I).jpg"
  },
  {
   "ref": "16",
-  "query": "Jan Steen The Effects of Intemperance National Gallery"
+  "query": "Jan Steen The Effects of Intemperance National Gallery",
+  "title": null
  },
  {
   "ref": "17",
-  "query": "Giovanni Bellini Sacred Allegory Uffizi"
+  "query": "Giovanni Bellini Sacred Allegory Uffizi",
+  "title": "Giovanni Bellini, Job and St Sebastian of Holy Allegory, 1490s, Uffizi.jpg",
+  "artist": "Armin Kleiner",
+  "licence": "Public domain",
+  "width": 3538,
+  "height": 5751,
+  "page": "https://commons.wikimedia.org/wiki/File:Giovanni_Bellini,_Job_and_St_Sebastian_of_Holy_Allegory,_1490s,_Uffizi.jpg"
  },
  {
   "ref": "18",
-  "query": "Pieter Bruegel the Elder Landscape with the Parable of the Sower Timken"
+  "query": "Pieter Bruegel the Elder Landscape with the Parable of the Sower Timken",
+  "title": "Pieter Bruegel de Oude - Gelijkenis van de zaaier, 1557, Timken Museum of Art.jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 2000,
+  "height": 1430,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_de_Oude_-_Gelijkenis_van_de_zaaier,_1557,_Timken_Museum_of_Art.jpg"
  }
 ]
