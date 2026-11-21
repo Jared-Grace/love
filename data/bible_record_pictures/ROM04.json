@@ -1,0 +1,112 @@
+[
+ {
+  "ref": "1",
+  "query": "Molnár József Ábrahám kivándorlása",
+  "title": null
+ },
+ {
+  "ref": "2",
+  "query": "Rembrandt The Parable of the Rich Fool Berlin",
+  "title": "Rembrandt - The Parable of the Rich Fool.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 2998,
+  "height": 2228,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_The_Parable_of_the_Rich_Fool.jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Van Gogh Starry Night Over the Rhone",
+  "title": "Starry Night Over the Rhone.jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 5407,
+  "height": 4191,
+  "page": "https://commons.wikimedia.org/wiki/File:Starry_Night_Over_the_Rhone.jpg"
+ },
+ {
+  "ref": "4",
+  "query": "Millet The Gleaners Orsay",
+  "title": "Jean-François Millet - Des glaneuses.jpg",
+  "artist": "Jean-François Millet",
+  "licence": "Public domain",
+  "width": 5356,
+  "height": 4008,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_Des_glaneuses.jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Titian Christ and the Good Thief Bologna",
+  "title": null
+ },
+ {
+  "ref": "6,7",
+  "query": "Gerard van Honthorst King David Playing the Harp",
+  "title": "Gerard van Honthorst - King David Playing the Harp - Google Art Project.jpg",
+  "artist": "Gerard van Honthorst",
+  "licence": "Public domain",
+  "width": 3054,
+  "height": 3814,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerard_van_Honthorst_-_King_David_Playing_the_Harp_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "8",
+  "query": "El Greco The Tears of Saint Peter Bowes Museum"
+ },
+ {
+  "ref": "9",
+  "query": "Rubens The Meeting of Abraham and Melchizedek National Gallery of Art"
+ },
+ {
+  "ref": "10",
+  "query": "Pieter Lastman Abraham on the Road to Canaan"
+ },
+ {
+  "ref": "11",
+  "query": "Jacopo Bassano The Departure of Abraham Berlin"
+ },
+ {
+  "ref": "12",
+  "query": "Van Gogh First Steps after Millet"
+ },
+ {
+  "ref": "13",
+  "query": "Frederic Edwin Church Heart of the Andes"
+ },
+ {
+  "ref": "14,15",
+  "query": "Gérôme Moses on Mount Sinai"
+ },
+ {
+  "ref": "16",
+  "query": "Fra Angelico The Annunciation Prado"
+ },
+ {
+  "ref": "17",
+  "query": "Aivazovsky Chaos The Creation"
+ },
+ {
+  "ref": "18",
+  "query": "Caspar David Friedrich Two Men Contemplating the Moon"
+ },
+ {
+  "ref": "19",
+  "query": "Rembrandt Old Woman Reading Rijksmuseum"
+ },
+ {
+  "ref": "20,21",
+  "query": "Caravaggio The Sacrifice of Isaac Uffizi"
+ },
+ {
+  "ref": "22",
+  "query": "Tiepolo Abraham and the Three Angels Prado"
+ },
+ {
+  "ref": "23,24",
+  "query": "Rembrandt The Evangelist Matthew Inspired by an Angel"
+ },
+ {
+  "ref": "25",
+  "query": "Piero della Francesca The Resurrection Sansepolcro"
+ }
+]
