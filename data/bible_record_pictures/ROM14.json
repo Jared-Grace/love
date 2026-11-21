@@ -1,23 +1,106 @@
-[{"ref":"1","query":"Hendrick ter Brugghen The Incredulity of Saint Thomas Rijksmuseum"},
-{"ref":"2","query":"Juan Sánchez Cotán Quince Cabbage Melon and Cucumber"},
-{"ref":"3","query":"Annibale Carracci The Bean Eater"},
-{"ref":"4","query":"Domenico Fetti The Parable of the Mote and the Beam"},
-{"ref":"5","query":"Jules Breton The Blessing of the Wheat in Artois"},
-{"ref":"6","query":"Jan Steen The Prayer Before the Meal"},
-{"ref":"7","query":"Pieter Bruegel the Elder The Hunters in the Snow"},
-{"ref":"8","query":"Rembrandt Simeon's Song of Praise Mauritshuis"},
-{"ref":"9","query":"Annibale Carracci The Holy Women at Christ's Tomb Hermitage"},
-{"ref":"10","query":"Hieronymus Bosch The Seven Deadly Sins and the Four Last Things"},
-{"ref":"11","query":"Fra Angelico Christ Glorified in the Court of Heaven National Gallery"},
-{"ref":"12","query":"Johannes Vermeer Woman Holding a Balance"},
-{"ref":"13","query":"Hendrick Avercamp Winter Landscape with Ice Skaters Rijksmuseum"},
-{"ref":"14","query":"Pieter Aertsen Butcher's Stall with the Flight into Egypt"},
-{"ref":"15","query":"Diego Velázquez Joseph's Bloody Coat Brought to Jacob"},
-{"ref":"16","query":"Gerard van Honthorst Christ before the High Priest National Gallery"},
-{"ref":"17","query":"Thomas Cole The Pastoral State Course of Empire"},
-{"ref":"18","query":"Frans Hals Regents of the St Elizabeth Hospital Haarlem"},
-{"ref":"19","query":"Gerard ter Borch The Ratification of the Treaty of Münster"},
-{"ref":"20","query":"Jean-Siméon Chardin Le Bénédicité Louvre"},
-{"ref":"21","query":"Frans Hals The Merry Drinker Rijksmuseum"},
-{"ref":"22","query":"Antonello da Messina Saint Jerome in his Study National Gallery"},
-{"ref":"23","query":"Rembrandt The Storm on the Sea of Galilee"}]
+[
+ {
+  "ref": "1",
+  "query": "Hendrick ter Brugghen The Incredulity of Saint Thomas Rijksmuseum",
+  "title": "De ongelovige Thomas Rijksmuseum SK-A-3908.jpeg",
+  "artist": "Hendrick ter Brugghen",
+  "licence": "Public domain",
+  "width": 5754,
+  "height": 4544,
+  "page": "https://commons.wikimedia.org/wiki/File:De_ongelovige_Thomas_Rijksmuseum_SK-A-3908.jpeg"
+ },
+ {
+  "ref": "2",
+  "query": "Juan Sánchez Cotán Quince Cabbage Melon and Cucumber",
+  "title": "Sánchez Cotán (Bodegón con membrillo, repollo, melón y pepino).jpg",
+  "artist": "Juan Sánchez Cotán",
+  "licence": "Public domain",
+  "width": 5467,
+  "height": 4418,
+  "page": "https://commons.wikimedia.org/wiki/File:S%C3%A1nchez_Cot%C3%A1n_(Bodeg%C3%B3n_con_membrillo,_repollo,_mel%C3%B3n_y_pepino).jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Annibale Carracci The Bean Eater"
+ },
+ {
+  "ref": "4",
+  "query": "Domenico Fetti The Parable of the Mote and the Beam"
+ },
+ {
+  "ref": "5",
+  "query": "Jules Breton The Blessing of the Wheat in Artois"
+ },
+ {
+  "ref": "6",
+  "query": "Jan Steen The Prayer Before the Meal"
+ },
+ {
+  "ref": "7",
+  "query": "Pieter Bruegel the Elder The Hunters in the Snow"
+ },
+ {
+  "ref": "8",
+  "query": "Rembrandt Simeon's Song of Praise Mauritshuis"
+ },
+ {
+  "ref": "9",
+  "query": "Annibale Carracci The Holy Women at Christ's Tomb Hermitage"
+ },
+ {
+  "ref": "10",
+  "query": "Hieronymus Bosch The Seven Deadly Sins and the Four Last Things"
+ },
+ {
+  "ref": "11",
+  "query": "Fra Angelico Christ Glorified in the Court of Heaven National Gallery"
+ },
+ {
+  "ref": "12",
+  "query": "Johannes Vermeer Woman Holding a Balance"
+ },
+ {
+  "ref": "13",
+  "query": "Hendrick Avercamp Winter Landscape with Ice Skaters Rijksmuseum"
+ },
+ {
+  "ref": "14",
+  "query": "Pieter Aertsen Butcher's Stall with the Flight into Egypt"
+ },
+ {
+  "ref": "15",
+  "query": "Diego Velázquez Joseph's Bloody Coat Brought to Jacob"
+ },
+ {
+  "ref": "16",
+  "query": "Gerard van Honthorst Christ before the High Priest National Gallery"
+ },
+ {
+  "ref": "17",
+  "query": "Thomas Cole The Pastoral State Course of Empire"
+ },
+ {
+  "ref": "18",
+  "query": "Frans Hals Regents of the St Elizabeth Hospital Haarlem"
+ },
+ {
+  "ref": "19",
+  "query": "Gerard ter Borch The Ratification of the Treaty of Münster"
+ },
+ {
+  "ref": "20",
+  "query": "Jean-Siméon Chardin Le Bénédicité Louvre"
+ },
+ {
+  "ref": "21",
+  "query": "Frans Hals The Merry Drinker Rijksmuseum"
+ },
+ {
+  "ref": "22",
+  "query": "Antonello da Messina Saint Jerome in his Study National Gallery"
+ },
+ {
+  "ref": "23",
+  "query": "Rembrandt The Storm on the Sea of Galilee"
+ }
+]
