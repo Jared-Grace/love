@@ -11,11 +11,23 @@
  },
  {
   "ref": "2",
-  "query": "Jan van Eyck Arnolfini Portrait"
+  "query": "Jan van Eyck Arnolfini Portrait",
+  "title": "Jan van Eyck - Arnolfini Portrait - Macrophotography.jpg",
+  "artist": "Jan van Eyck",
+  "licence": "Public domain",
+  "width": 25311,
+  "height": 34005,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_Arnolfini_Portrait_-_Macrophotography.jpg"
  },
  {
   "ref": "3",
-  "query": "Lucas Cranach the Elder Christ and the Woman Taken in Adultery"
+  "query": "Lucas Cranach the Elder Christ and the Woman Taken in Adultery",
+  "title": "Lucas Cranach d.Ä. - Christus und die Ehebrecherin (Fränkische Galerie).jpg",
+  "artist": "Lucas Cranach the Elder",
+  "licence": "Public domain",
+  "width": 6199,
+  "height": 4676,
+  "page": "https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d.%C3%84._-_Christus_und_die_Ehebrecherin_(Fr%C3%A4nkische_Galerie).jpg"
  },
  {
   "ref": "4",

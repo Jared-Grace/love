@@ -696,6 +696,16 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_bin_search: text_frozen("bin_search"),
     app_learn_js_lesson_bin_not_there: text_frozen("bin_not_there"),
     app_learn_js_lesson_bin_unsorted: text_frozen("bin_unsorted"),
+    app_learn_js_lesson_string_copy: text_frozen("string_copy"),
+    app_learn_js_lesson_string_double: text_frozen("string_double"),
+    app_learn_js_lesson_string_reverse: text_frozen("string_reverse"),
+    app_learn_js_lesson_for_divisors: text_frozen("for_divisors"),
+    app_learn_js_lesson_for_perfect: text_frozen("for_perfect"),
+    app_learn_js_lesson_for_prime: text_frozen("for_prime"),
+    app_learn_js_lesson_for_fibonacci: text_frozen("for_fibonacci"),
+    app_learn_js_lesson_while_digits: text_frozen("while_digits"),
+    app_learn_js_lesson_while_digit_total: text_frozen("while_digit_total"),
+    app_learn_js_lesson_while_collatz: text_frozen("while_collatz"),
   };
   return short;
 }
