@@ -2565,6 +2565,10 @@ export function bible_glyph_chapter_references() {
       reference: "Joel 3",
     },
     {
+      chapter_code: "AMO01",
+      reference: "Amos 1",
+    },
+    {
       chapter_code: "AMO05",
       reference: "Amos 5",
     },
