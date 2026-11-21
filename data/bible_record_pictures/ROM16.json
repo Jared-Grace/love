@@ -131,19 +131,43 @@
  },
  {
   "ref": "15",
-  "query": "Giovanni Bellini San Zaccaria Altarpiece"
+  "query": "Giovanni Bellini San Zaccaria Altarpiece",
+  "title": "Giovanni Bellini Sacra Conversatione.jpg",
+  "artist": "Giovanni Bellini",
+  "licence": "Public domain",
+  "width": 3008,
+  "height": 2255,
+  "page": "https://commons.wikimedia.org/wiki/File:Giovanni_Bellini_Sacra_Conversatione.jpg"
  },
  {
   "ref": "16",
-  "query": "Giotto Meeting at the Golden Gate Scrovegni"
+  "query": "Giotto Meeting at the Golden Gate Scrovegni",
+  "title": "Giotto (1905) (14753424646).jpg",
+  "artist": "Internet Archive Book Images",
+  "licence": "No restrictions",
+  "width": 2442,
+  "height": 2240,
+  "page": "https://commons.wikimedia.org/wiki/File:Giotto_(1905)_(14753424646).jpg"
  },
  {
   "ref": "17",
-  "query": "Paolo Uccello The Battle of San Romano National Gallery"
+  "query": "Paolo Uccello The Battle of San Romano National Gallery",
+  "title": "San Romano Battle (Paolo Uccello, London) 01.jpg",
+  "artist": "Paolo Uccello",
+  "licence": "Public domain",
+  "width": 6074,
+  "height": 3435,
+  "page": "https://commons.wikimedia.org/wiki/File:San_Romano_Battle_(Paolo_Uccello,_London)_01.jpg"
  },
  {
   "ref": "18",
-  "query": "Georges de La Tour The Fortune Teller Metropolitan Museum"
+  "query": "Georges de La Tour The Fortune Teller Metropolitan Museum",
+  "title": "The Fortune-Teller MET DT36.jpg",
+  "artist": "Georges de La Tour",
+  "licence": "CC0",
+  "width": 3805,
+  "height": 3147,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Fortune-Teller_MET_DT36.jpg"
  },
  {
   "ref": "19",
