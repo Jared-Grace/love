@@ -21,8 +21,11 @@ export function app_shared_bible_verse_line(
   color,
   chapter_code,
   verse_number,
+  language_code,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 7);
+  ("$plain language_code");
+  ("the language code says which language the text is in, such as en, or is null where the caller does not know; it is handed on so a tapped English word's card can offer to say the word.");
   ("the chapter code and verse number say which verse this line is, so a tapped original word can be found by its number; the code is null where the caller does not know.");
   ("a verse the translation printed no words for arrives here carrying the token that says so, and the token is not words: the sentence that says so takes its place before anything measures or draws it, the reading direction included, which would otherwise be worked out from a mark belonging to no language at all");
   let words_none = bible_verse_words_none_token_is(text);
@@ -57,6 +60,7 @@ export function app_shared_bible_verse_line(
     shown,
     chapter_code,
     verse_number,
+    language_code,
   );
   return line;
 }

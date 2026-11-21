@@ -17,8 +17,11 @@ export function app_shared_bible_words_on_click_overlay(
   text,
   chapter_code,
   verse_number,
+  language_code,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
+  ("$plain language_code");
+  ("the language code says which language the text is in, or is null where the caller does not know; it is handed on to the card, which offers to say a word only when it knows the word is English.");
   ("$plain chapter_code");
   ("$plain verse_number");
   ("the code and number say which verse the text is, or the code is null where the caller does not know; both are data handed on to find a tapped word's Strong's number.");
@@ -64,6 +67,7 @@ export function app_shared_bible_words_on_click_overlay(
           index,
           chapter_code,
           verse_number,
+          language_code,
         );
       }
       ("A TAP SHOWS THE LOADING COVER UNTIL THE CARD IS UP, asked about by the human 2026-11-19: the card waits on downloads that can take seconds, and with nothing on screen a reader tapped again and opened a second card. The cover fills the screen, so a tap made while waiting lands on it rather than on another word; a card served from memory hides it at once, so a quick tap shows no flash.");

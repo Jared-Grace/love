@@ -7,6 +7,9 @@ import { html_text_set } from "./html_text_set.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
+import { equal } from "./equal.mjs";
+import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
+import { app_shared_bible_word_sound_buttons } from "./app_shared_bible_word_sound_buttons.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_biblehub_word_button } from "./app_shared_biblehub_word_button.mjs";
@@ -28,8 +31,13 @@ export async function app_shared_bible_word_overlay_articles_open(
   index,
   chapter_code,
   verse_number,
+  language_code,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 7);
+  ("$plain language_code");
+  ("★ AN ENGLISH WORD COMES FIRST WITH A WAY TO HEAR IT, said and said slowly, by ",
+    fn_name("app_shared_bible_word_sound_buttons"),
+    ". It is offered only when the verse is known to be English, because the recordings are of English words, and a Spanish or Cebuano word spelled like an English one would be said wrongly rather than not at all.");
   ("$plain chapter_code");
   ("$plain verse_number");
   ("the code is a chapter's name, like JHN04, and the number counts the tapped verse within it; they say where the verse stands, and nothing in them runs.");
@@ -83,6 +91,9 @@ export async function app_shared_bible_word_overlay_articles_open(
     "flex-direction": "column",
     gap: "0.5em",
   });
+  if (equal(language_code, ebible_language_en_code())) {
+    app_shared_bible_word_sound_buttons(choices, word);
+  }
   let b = null_is(strong_url);
   if (not(b)) {
     app_shared_biblehub_word_button(choices, strong_url);
