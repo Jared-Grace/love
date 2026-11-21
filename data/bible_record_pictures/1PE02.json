@@ -31,13 +31,13 @@
  },
  {
   "ref": "6",
-  "query": "Ferdinand Bol Jacob's Dream Dresden",
-  "title": "Gemäldegalerie Alte Meister (Dresden) Galeriewerk Lücke 077.jpg",
+  "query": "Ferdinand Bol Jakobs Traum Gemäldegalerie Alte Meister",
   "artist": "Ferdinand Bol",
   "licence": "Public domain",
   "width": 4587,
   "height": 6067,
-  "page": "https://commons.wikimedia.org/wiki/File:Gem%C3%A4ldegalerie_Alte_Meister_(Dresden)_Galeriewerk_L%C3%BCcke_077.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Gem%C3%A4ldegalerie_Alte_Meister_(Dresden)_Galeriewerk_L%C3%BCcke_077.jpg",
+  "title": "Gemäldegalerie Alte Meister (Dresden) Galeriewerk Lücke 077.jpg"
  },
  {
   "ref": "7,8",
@@ -81,13 +81,13 @@
  },
  {
   "ref": "12",
-  "query": "Frans Hals Regentesses of the Old Men's Almshouse Haarlem",
-  "title": "Kopie van de Regentessen van het Oudemannenhuis, naar Frans Hals, Edouard Manet, 1872.jpg",
-  "artist": "After Frans Hals / Édouard Manet",
+  "query": "Frans Hals Regentesses of the Old Men's Almshouse Frans Hals Museum",
+  "artist": "John Singer Sargent / After Frans Hals",
   "licence": "Public domain",
-  "width": 2000,
-  "height": 1381,
-  "page": "https://commons.wikimedia.org/wiki/File:Kopie_van_de_Regentessen_van_het_Oudemannenhuis,_naar_Frans_Hals,_Edouard_Manet,_1872.jpg"
+  "width": 1069,
+  "height": 2400,
+  "page": "https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_-_copy_of_right_portion_of_Hals_portrait_of_The_Regentesses_of_the_Old_Men%27s_Almshouse_Haarlem_-_Birmingham_Museum_of_Art.jpg",
+  "title": "John Singer Sargent - copy of right portion of Hals portrait of The Regentesses of the Old Men's Almshouse Haarlem - Birmingham Museum of Art.jpg"
  },
  {
   "ref": "13,14",
@@ -111,13 +111,13 @@
  },
  {
   "ref": "16",
-  "query": "Diego Velázquez Juan de Pareja Metropolitan Museum",
-  "title": "Diego Velázquez - Juan de Pareja (Metropolitan Museum of Art de Nueva York, 1649-50), detalle.jpg",
-  "artist": "Diego Velázquez",
-  "licence": "Public domain",
-  "width": 2353,
-  "height": 2863,
-  "page": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_-_Juan_de_Pareja_(Metropolitan_Museum_of_Art_de_Nueva_York,_1649-50),_detalle.jpg"
+  "query": "Juan de Pareja by Diego Velázquez",
+  "artist": "Tulip Hysteria / Go to albums",
+  "licence": "PDM-owner",
+  "width": 3378,
+  "height": 3932,
+  "page": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_(1599%E2%80%931660),_Juan_de_Pareja_(1606%E2%80%931670),_1650.jpg",
+  "title": "Diego Velázquez (1599–1660), Juan de Pareja (1606–1670), 1650.jpg"
  },
  {
   "ref": "17",
@@ -161,8 +161,13 @@
  },
  {
   "ref": "21,22",
-  "query": "Simone Martini The Road to Calvary Louvre",
-  "title": null
+  "query": "Lorenzo Lotto Christ Carrying the Cross Louvre",
+  "title": "Lotto-lorenzo Keresztet cipelő Krisztus (1526).jpg",
+  "artist": "Lorenzo Lotto",
+  "licence": "Public domain",
+  "width": 1669,
+  "height": 1860,
+  "page": "https://commons.wikimedia.org/wiki/File:Lotto-lorenzo_Keresztet_cipel%C5%91_Krisztus_(1526).jpg"
  },
  {
   "ref": "23",
