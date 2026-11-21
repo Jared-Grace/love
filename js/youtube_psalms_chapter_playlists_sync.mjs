@@ -1,3 +1,9 @@
+import { object_property_names } from "./object_property_names.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { youtube_channel_uploads_all } from "./youtube_channel_uploads_all.mjs";
@@ -23,14 +29,14 @@ export async function youtube_psalms_chapter_playlists_sync(channel_id) {
   let uploads = await youtube_channel_uploads_all(channel_id);
   let chapters = {};
   for (let video of uploads) {
-    if (video.privacy !== "public") {
+    if (not_equal(video.privacy, "public")) {
       continue;
     }
     let passage = psalms_lyric_video_title_passage(video.title);
-    if (passage === null) {
+    if (equal(passage, null)) {
       continue;
     }
-    if (chapters[passage.chapter] === undefined) {
+    if (equal(chapters[passage.chapter], undefined)) {
       chapters[passage.chapter] = [];
     }
     chapters[passage.chapter].push({
@@ -41,36 +47,44 @@ export async function youtube_psalms_chapter_playlists_sync(channel_id) {
     });
   }
   ("A title naming no verses is the whole chapter, which the title reader hands over as ending on verse 1000. Here it is given the last verse any other song of that chapter ends on, so the first upload of Psalm 150, titled without verses, sits with the 1-6 songs as song 1 instead of after them all. It is the last verse seen rather than the chapter's real last verse, because no verse count is at hand without going to the network; the two differ only if no part of the chapter reaches its end.");
-  for (let chapter of Object.keys(chapters)) {
+  for (let chapter of object_property_names(chapters)) {
     let songs = chapters[chapter];
     let seen = 0;
     for (let song of songs) {
-      if (song.verse_last !== 1000 && song.verse_last > seen) {
+      if (
+        not_equal(song.verse_last, 1000) &&
+        greater_than(song.verse_last, seen)
+      ) {
         seen = song.verse_last;
       }
     }
-    if (seen === 0) {
+    if (equal(seen, 0)) {
       continue;
     }
     for (let song of songs) {
-      if (song.verse_last === 1000) {
+      if (equal(song.verse_last, 1000)) {
         song.verse_last = seen;
       }
     }
   }
   function order(one, other) {
-    if (one.verse_first !== other.verse_first) {
-      return one.verse_first - other.verse_first;
+    if (not_equal(one.verse_first, other.verse_first)) {
+      let difference = subtract(one.verse_first, other.verse_first);
+      return difference;
     }
-    if (one.verse_last !== other.verse_last) {
-      return one.verse_last - other.verse_last;
+    if (not_equal(one.verse_last, other.verse_last)) {
+      let difference2 = subtract(one.verse_last, other.verse_last);
+      return difference2;
     }
-    return one.song - other.song;
+    let difference3 = subtract(one.song, other.song);
+    return difference3;
   }
-  let numbers = Object.keys(chapters).map(Number);
-  numbers.sort(function lambda(a, b) {
-    return b - a;
-  });
+  let numbers = object_property_names(chapters).map(Number);
+  function lambda(a, b) {
+    let difference4 = subtract(b, a);
+    return difference4;
+  }
+  numbers.sort(lambda);
   let playlists = await youtube_playlists_mine();
   let listed = {};
   for (let playlist of playlists) {
@@ -80,12 +94,14 @@ export async function youtube_psalms_chapter_playlists_sync(channel_id) {
   for (let chapter of numbers) {
     let songs = chapters[chapter];
     songs.sort(order);
-    let wanted = songs.map(function lambda2(song) {
-      return song.video_id;
-    });
+    function lambda2(song) {
+      let r2 = song.video_id;
+      return r2;
+    }
+    let wanted = songs.map(lambda2);
     let title = "Psalms " + chapter;
     let playlist_id = record[chapter];
-    if (playlist_id === undefined) {
+    if (equal(playlist_id, undefined)) {
       playlist_id = listed[title];
     }
     let created = false;
@@ -94,23 +110,27 @@ export async function youtube_psalms_chapter_playlists_sync(channel_id) {
     let failed = null;
     try {
       let items = [];
-      if (playlist_id === undefined) {
+      if (equal(playlist_id, undefined)) {
         playlist_id = await youtube_playlist_insert_public(title);
         created = true;
       } else {
         items = await youtube_playlist_items(playlist_id);
-        items.sort(function lambda3(one, other) {
-          return one.position - other.position;
-        });
+        function lambda3(one, other) {
+          let difference5 = subtract(one.position, other.position);
+          return difference5;
+        }
+        items.sort(lambda3);
       }
-      if (record[chapter] !== playlist_id) {
+      if (not_equal(record[chapter], playlist_id)) {
         record[chapter] = playlist_id;
         await file_overwrite_json(record_path, record);
       }
       for (let video_id of wanted) {
-        let held = items.some(function lambda4(item) {
-          return item.video_id === video_id;
-        });
+        function lambda4(item) {
+          let eq = equal(item.video_id, video_id);
+          return eq;
+        }
+        let held = items.some(lambda4);
         if (held) {
           continue;
         }
@@ -118,12 +138,14 @@ export async function youtube_psalms_chapter_playlists_sync(channel_id) {
         items.push(item);
         added = added + 1;
       }
-      for (let k = 0; k < wanted.length; k++) {
+      for (let k = 0; less_than(k, wanted.length); k++) {
         let video_id = wanted[k];
-        let at = items.findIndex(function lambda5(item) {
-          return item.video_id === video_id;
-        });
-        if (at === k || at === -1) {
+        function lambda5(item) {
+          let eq2 = equal(item.video_id, video_id);
+          return eq2;
+        }
+        let at = items.findIndex(lambda5);
+        if (equal(at, k) || equal(at, -1)) {
           continue;
         }
         let item = items[at];
