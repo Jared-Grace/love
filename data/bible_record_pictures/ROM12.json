@@ -1,18 +1,122 @@
-[{"ref":"1","query":"Francisco de Zurbarán Saint Francis in Meditation National Gallery"},
-{"ref":"2","query":"Giovanni Bellini Transfiguration Capodimonte"},
-{"ref":"3","query":"Johannes Vermeer The Geographer Städel"},
-{"ref":"4,5","query":"Rembrandt The Night Watch Rijksmuseum"},
-{"ref":"6,7,8","query":"Johannes Vermeer The Lacemaker Louvre"},
-{"ref":"9","query":"Murillo La Sagrada Familia del pajarito Prado"},
-{"ref":"10","query":"Rembrandt David and Jonathan Hermitage"},
-{"ref":"11","query":"Caravaggio Saint Jerome Writing Borghese"},
-{"ref":"12","query":"Jean-François Millet L'Angélus Orsay"},
-{"ref":"13","query":"Murillo San Diego dando de comer a los pobres"},
-{"ref":"14","query":"Rembrandt The Stoning of Saint Stephen Lyon"},
-{"ref":"15","query":"Pieter Bruegel the Elder The Peasant Wedding"},
-{"ref":"16","query":"Louis Le Nain Peasant Family in an Interior Louvre"},
-{"ref":"17","query":"Peter Paul Rubens The Reconciliation of Jacob and Esau"},
-{"ref":"18","query":"Benjamin West Penn's Treaty with the Indians"},
-{"ref":"19","query":"John Martin The Great Day of His Wrath"},
-{"ref":"20","query":"Jacopo Bassano The Good Samaritan National Gallery"},
-{"ref":"21","query":"Guido Reni Archangel Michael Santa Maria della Concezione"}]
+[
+ {
+  "ref": "1",
+  "query": "Francisco de Zurbarán Saint Francis in Meditation National Gallery",
+  "title": "Hans Johan Frederik Berg, copy after Francisco de Zurbarán - Saint Francis in Meditation - NG.K&H.A.K.1176 - National Museum of Art, Architecture and Design.jpg",
+  "artist": "Hans Johan Frederik Berg / After Francisco de Zurbarán",
+  "licence": "Public domain",
+  "width": 2303,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:Hans_Johan_Frederik_Berg,_copy_after_Francisco_de_Zurbar%C3%A1n_-_Saint_Francis_in_Meditation_-_NG.K%26H.A.K.1176_-_National_Museum_of_Art,_Architecture_and_Design.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Giovanni Bellini Transfiguration Capodimonte",
+  "title": "Paris 1er - Musée du Louvre - Exposition Naples à Paris - La Transfiguration (Giovanni Bellini).jpg",
+  "artist": "Romainbehar",
+  "licence": "Public domain",
+  "width": 3500,
+  "height": 2656,
+  "page": "https://commons.wikimedia.org/wiki/File:Paris_1er_-_Mus%C3%A9e_du_Louvre_-_Exposition_Naples_%C3%A0_Paris_-_La_Transfiguration_(Giovanni_Bellini).jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Johannes Vermeer The Geographer Städel",
+  "title": "J. VERMEER - El geógrafo (Museo Städel, Fráncfort del Meno, 1669).jpg",
+  "artist": "Johannes Vermeer",
+  "licence": "Public domain",
+  "width": 2090,
+  "height": 2395,
+  "page": "https://commons.wikimedia.org/wiki/File:J._VERMEER_-_El_ge%C3%B3grafo_(Museo_St%C3%A4del,_Fr%C3%A1ncfort_del_Meno,_1669).jpg"
+ },
+ {
+  "ref": "4,5",
+  "query": "Rembrandt The Night Watch Rijksmuseum",
+  "title": "The Nightwatch by Rembrandt - Rijksmuseum.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 14168,
+  "height": 11528,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg"
+ },
+ {
+  "ref": "6,7,8",
+  "query": "Johannes Vermeer The Lacemaker Louvre",
+  "title": "La Dentellière, Johannes Vermeer, 1669-1670.jpg",
+  "artist": "Johannes Vermeer",
+  "licence": "Public domain",
+  "width": 1587,
+  "height": 1877,
+  "page": "https://commons.wikimedia.org/wiki/File:La_Dentelli%C3%A8re,_Johannes_Vermeer,_1669-1670.jpg"
+ },
+ {
+  "ref": "9",
+  "query": "Murillo La Sagrada Familia del pajarito Prado",
+  "title": "Bartolomé Esteban Perez Murillo 008.jpg",
+  "artist": "Bartolomé Esteban Murillo",
+  "licence": "Public domain",
+  "width": 3051,
+  "height": 2288,
+  "page": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Perez_Murillo_008.jpg"
+ },
+ {
+  "ref": "10",
+  "query": "Rembrandt David and Jonathan Hermitage",
+  "title": "Rembrandt Harmensz. van Rijn 031.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3612,
+  "height": 4326,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_031.jpg"
+ },
+ {
+  "ref": "11",
+  "query": "Caravaggio Saint Jerome Writing Borghese",
+  "title": "Saint Jerome Writing-Caravaggio (1605-6).jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 8708,
+  "height": 6212,
+  "page": "https://commons.wikimedia.org/wiki/File:Saint_Jerome_Writing-Caravaggio_(1605-6).jpg"
+ },
+ {
+  "ref": "12",
+  "query": "Jean-François Millet L'Angélus Orsay"
+ },
+ {
+  "ref": "13",
+  "query": "Murillo San Diego dando de comer a los pobres"
+ },
+ {
+  "ref": "14",
+  "query": "Rembrandt The Stoning of Saint Stephen Lyon"
+ },
+ {
+  "ref": "15",
+  "query": "Pieter Bruegel the Elder The Peasant Wedding"
+ },
+ {
+  "ref": "16",
+  "query": "Louis Le Nain Peasant Family in an Interior Louvre"
+ },
+ {
+  "ref": "17",
+  "query": "Peter Paul Rubens The Reconciliation of Jacob and Esau"
+ },
+ {
+  "ref": "18",
+  "query": "Benjamin West Penn's Treaty with the Indians"
+ },
+ {
+  "ref": "19",
+  "query": "John Martin The Great Day of His Wrath"
+ },
+ {
+  "ref": "20",
+  "query": "Jacopo Bassano The Good Samaritan National Gallery"
+ },
+ {
+  "ref": "21",
+  "query": "Guido Reni Archangel Michael Santa Maria della Concezione"
+ }
+]
