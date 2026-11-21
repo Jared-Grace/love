@@ -107,11 +107,12 @@
  {
   "ref": "13",
   "query": "Michelangelo The Last Judgment Sistine Chapel",
-  "artist": "Hieronymus Bosch or follower",
+  "artist": "Michelangelo",
   "licence": "Public domain",
-  "width": 2863,
-  "height": 2441,
-  "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch-_The_Seven_Deadly_Sins_and_the_Four_Last_Things.JPG"
+  "width": 3991,
+  "height": 4395,
+  "page": "https://commons.wikimedia.org/wiki/File:Last_Judgement_(Michelangelo).jpg",
+  "title": "Last Judgement (Michelangelo).jpg"
  },
  {
   "ref": "14",
@@ -135,6 +136,12 @@
  },
  {
   "ref": "16",
-  "query": "Hans Memling Christ Giving His Blessing Norton Simon"
+  "query": "Hans Memling Christ Giving His Blessing Norton Simon",
+  "title": "Christ Giving His Blessing.jpg",
+  "artist": "Hans Memling",
+  "licence": "Public domain",
+  "width": 2052,
+  "height": 2820,
+  "page": "https://commons.wikimedia.org/wiki/File:Christ_Giving_His_Blessing.jpg"
  }
 ]
