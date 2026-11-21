@@ -1,28 +1,120 @@
-[{"ref":"1","query":"Albrecht Dürer Christ among the Doctors Thyssen"},
-{"ref":"2","query":"Diego Velázquez Christ Crucified Prado"},
-{"ref":"3","query":"Guido Reni Moses with the Tables of the Law Borghese"},
-{"ref":"4","query":"Quentin Matsys The Moneylender and his Wife Louvre"},
-{"ref":"5,6","query":"Duccio Maestà Christ Washing the Feet of the Apostles"},
-{"ref":"7","query":"Raphael Moses Receiving the Tablets of the Law Vatican Loggia"},
-{"ref":"8","query":"Caspar David Friedrich Morning Landscape Hannover"},
-{"ref":"9","query":"Georges de La Tour Saint Joseph the Carpenter Louvre"},
-{"ref":"10","query":"Rembrandt The Visitation Detroit Institute of Arts"},
-{"ref":"11","query":"Pieter Bruegel the Elder The Blind Leading the Blind Naples"},
-{"ref":"12","query":"Leonello Spada The Return of the Prodigal Son Louvre"},
-{"ref":"13","query":"Rembrandt Portrait of an Old Man in Red Hermitage"},
-{"ref":"14","query":"Lucas Cranach Saint George and the Dragon"},
-{"ref":"15","query":"Titian Venus and Adonis Prado"},
-{"ref":"16","query":"Paolo Veronese The Wedding at Cana Louvre"},
-{"ref":"17","query":"Philippe de Champaigne Vanitas Still Life with a Tulip Skull and Hour-Glass"},
-{"ref":"18","query":"Luca Signorelli Sermon and Deeds of the Antichrist Orvieto"},
-{"ref":"19","query":"Giotto The Kiss of Judas Scrovegni"},
-{"ref":"20","query":"Paolo Veronese Samuel Anointing David Vienna"},
-{"ref":"21","query":"Ambrogio Lorenzetti Allegory of Good Government Siena"},
-{"ref":"22","query":"Mihály Munkácsy Christ before Pilate Debrecen"},
-{"ref":"23","query":"Caravaggio The Conversion of Saint Paul Santa Maria del Popolo"},
-{"ref":"24","query":"Johannes Vermeer The Little Street Rijksmuseum"},
-{"ref":"25","query":"Fra Angelico The Last Judgment San Marco Florence"},
-{"ref":"26","query":"Pieter Bruegel the Elder The Netherlandish Proverbs"},
-{"ref":"27","query":"Raphael The Transfiguration Vatican"},
-{"ref":"28","query":"Fra Angelico Coronation of the Virgin Louvre"},
-{"ref":"29","query":"Hans Memling The Donne Triptych National Gallery"}]
+[
+ {
+  "ref": "1",
+  "query": "Albrecht Dürer Christ among the Doctors Thyssen",
+  "title": "Albrecht Dürer, Christ among the Doctors, c. 1503-1504, NGA 6708.jpg",
+  "artist": "Albrecht Dürer",
+  "licence": "CC0",
+  "width": 2860,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer,_Christ_among_the_Doctors,_c._1503-1504,_NGA_6708.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Diego Velázquez Christ Crucified Prado"
+ },
+ {
+  "ref": "3",
+  "query": "Guido Reni Moses with the Tables of the Law Borghese"
+ },
+ {
+  "ref": "4",
+  "query": "Quentin Matsys The Moneylender and his Wife Louvre"
+ },
+ {
+  "ref": "5,6",
+  "query": "Duccio Maestà Christ Washing the Feet of the Apostles"
+ },
+ {
+  "ref": "7",
+  "query": "Raphael Moses Receiving the Tablets of the Law Vatican Loggia"
+ },
+ {
+  "ref": "8",
+  "query": "Caspar David Friedrich Morning Landscape Hannover"
+ },
+ {
+  "ref": "9",
+  "query": "Georges de La Tour Saint Joseph the Carpenter Louvre"
+ },
+ {
+  "ref": "10",
+  "query": "Rembrandt The Visitation Detroit Institute of Arts"
+ },
+ {
+  "ref": "11",
+  "query": "Pieter Bruegel the Elder The Blind Leading the Blind Naples"
+ },
+ {
+  "ref": "12",
+  "query": "Leonello Spada The Return of the Prodigal Son Louvre"
+ },
+ {
+  "ref": "13",
+  "query": "Rembrandt Portrait of an Old Man in Red Hermitage"
+ },
+ {
+  "ref": "14",
+  "query": "Lucas Cranach Saint George and the Dragon"
+ },
+ {
+  "ref": "15",
+  "query": "Titian Venus and Adonis Prado"
+ },
+ {
+  "ref": "16",
+  "query": "Paolo Veronese The Wedding at Cana Louvre"
+ },
+ {
+  "ref": "17",
+  "query": "Philippe de Champaigne Vanitas Still Life with a Tulip Skull and Hour-Glass"
+ },
+ {
+  "ref": "18",
+  "query": "Luca Signorelli Sermon and Deeds of the Antichrist Orvieto"
+ },
+ {
+  "ref": "19",
+  "query": "Giotto The Kiss of Judas Scrovegni"
+ },
+ {
+  "ref": "20",
+  "query": "Paolo Veronese Samuel Anointing David Vienna"
+ },
+ {
+  "ref": "21",
+  "query": "Ambrogio Lorenzetti Allegory of Good Government Siena"
+ },
+ {
+  "ref": "22",
+  "query": "Mihály Munkácsy Christ before Pilate Debrecen"
+ },
+ {
+  "ref": "23",
+  "query": "Caravaggio The Conversion of Saint Paul Santa Maria del Popolo"
+ },
+ {
+  "ref": "24",
+  "query": "Johannes Vermeer The Little Street Rijksmuseum"
+ },
+ {
+  "ref": "25",
+  "query": "Fra Angelico The Last Judgment San Marco Florence"
+ },
+ {
+  "ref": "26",
+  "query": "Pieter Bruegel the Elder The Netherlandish Proverbs"
+ },
+ {
+  "ref": "27",
+  "query": "Raphael The Transfiguration Vatican"
+ },
+ {
+  "ref": "28",
+  "query": "Fra Angelico Coronation of the Virgin Louvre"
+ },
+ {
+  "ref": "29",
+  "query": "Hans Memling The Donne Triptych National Gallery"
+ }
+]
