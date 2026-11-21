@@ -136,23 +136,48 @@
  },
  {
   "ref": "16",
-  "query": "Caravaggio The Cardsharps Kimbell"
+  "query": "Caravaggio The Cardsharps Kimbell",
+  "title": "Caravaggio - The Cardsharps (1596-97) Kimbell Art Museum.jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 10113,
+  "height": 7269,
+  "page": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_The_Cardsharps_(1596-97)_Kimbell_Art_Museum.jpg"
  },
  {
   "ref": "17",
-  "query": "Vincent van Gogh The Starry Night MoMA"
+  "query": "Vincent van Gogh The Starry Night MoMA",
+  "title": "Van Gogh - Starry Night - Google Art Project.jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 44567,
+  "height": 35291,
+  "page": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
  },
  {
   "ref": "18",
-  "query": "Jules Breton The Recall of the Gleaners Orsay"
+  "query": "Jules Breton The Recall of the Gleaners Orsay",
+  "title": null
  },
  {
   "ref": "19,20",
-  "query": "Johannes Vermeer Christ in the House of Martha and Mary Edinburgh"
+  "query": "Johannes Vermeer Christ in the House of Martha and Mary Edinburgh",
+  "title": "Johannes (Jan) Vermeer - Christ in the House of Martha and Mary - Google Art Project.jpg",
+  "artist": "Johannes Vermeer",
+  "licence": "Public domain",
+  "width": 3459,
+  "height": 4001,
+  "page": "https://commons.wikimedia.org/wiki/File:Johannes_(Jan)_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project.jpg"
  },
  {
   "ref": "21",
-  "query": "Jean-François Millet The Sower Museum of Fine Arts Boston"
+  "query": "Jean-François Millet The Sower Museum of Fine Arts Boston",
+  "title": "The Sower- Jean-François Millet.jpg",
+  "artist": "Jean-François Millet",
+  "licence": "Public domain",
+  "width": 4841,
+  "height": 6169,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Sower-_Jean-Fran%C3%A7ois_Millet.jpg"
  },
  {
   "ref": "22",
