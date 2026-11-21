@@ -33,7 +33,8 @@ export async function apps_published_sources_changed_since_build() {
     }
     let deps = property_get(ad, "deps");
     let paths = list_map(deps, function_name_to_path_relative);
-    let bundle = path_join([folder, file_name_js(a_name)]);
+    let r2 = file_name_js(a_name);
+    let bundle = path_join([folder, r2]);
     let built = await git_here_run_text([
       "log",
       "-1",
@@ -58,7 +59,8 @@ export async function apps_published_sources_changed_since_build() {
       list_add(current, a_name);
       continue;
     }
-    let changed = list_map(text_split_newline(changed_text), path_name);
+    let list = text_split_newline(changed_text);
+    let changed = list_map(list, path_name);
     list_add(behind, {
       a_name,
       built_on,

@@ -76,47 +76,103 @@
  },
  {
   "ref": "9",
-  "query": "Hugo van der Goes Portinari Altarpiece Uffizi"
+  "query": "Hugo van der Goes Portinari Altarpiece Uffizi",
+  "title": "Hugo van der Goes 004.jpg",
+  "artist": "Hugo van der Goes",
+  "licence": "Public domain",
+  "width": 4096,
+  "height": 1745,
+  "page": "https://commons.wikimedia.org/wiki/File:Hugo_van_der_Goes_004.jpg"
  },
  {
   "ref": "10",
-  "query": "Pieter Bruegel the Elder Fall of the Rebel Angels"
+  "query": "Pieter Bruegel the Elder Fall of the Rebel Angels",
+  "title": "Pieter Bruegel the Elder - The Fall of the Rebel Angels - Google Art Project.jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 30000,
+  "height": 21654,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Fall_of_the_Rebel_Angels_-_Google_Art_Project.jpg"
  },
  {
   "ref": "11",
-  "query": "Domenico Ghirlandaio An Old Man and his Grandson Louvre"
+  "query": "Domenico Ghirlandaio An Old Man and his Grandson Louvre",
+  "title": "An Old Man and his Grandson - Domenico Ghirlandaio (1449-1494) and Paris musée du LouvreFXD.jpg",
+  "artist": "Domenico Ghirlandaio",
+  "licence": "Public domain",
+  "width": 2949,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:An_Old_Man_and_his_Grandson_-_Domenico_Ghirlandaio_(1449-1494)_and_Paris_mus%C3%A9e_du_LouvreFXD.jpg"
  },
  {
   "ref": "12",
-  "query": "Peter Paul Rubens Cain Slaying Abel Courtauld"
+  "query": "Peter Paul Rubens Cain Slaying Abel Courtauld",
+  "title": "Peter Paul Rubens - Cain slaying Abel (Courtauld Institute).jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 7045,
+  "height": 9694,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Cain_slaying_Abel_(Courtauld_Institute).jpg"
  },
  {
   "ref": "13",
-  "query": "Jean-Léon Gérôme The Christian Martyrs' Last Prayer Walters"
+  "query": "Jean-Léon Gérôme The Christian Martyrs' Last Prayer Walters",
+  "title": "Jean-Léon Gérôme - The Christian Martyrs' Last Prayer - Walters 37113.jpg",
+  "artist": "Jean-Léon Gérôme",
+  "licence": "Public domain",
+  "width": 1800,
+  "height": 1050,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_The_Christian_Martyrs%27_Last_Prayer_-_Walters_37113.jpg"
  },
  {
   "ref": "14",
-  "query": "Giotto The Raising of Lazarus Scrovegni"
+  "query": "Giotto The Raising of Lazarus Scrovegni",
+  "title": "Giotto di Bondone 021.jpg",
+  "artist": "Giotto",
+  "licence": "Public domain",
+  "width": 2024,
+  "height": 1879,
+  "page": "https://commons.wikimedia.org/wiki/File:Giotto_di_Bondone_021.jpg"
  },
  {
   "ref": "15",
-  "query": "Jacopo Tintoretto Cain and Abel Accademia"
+  "query": "Jacopo Tintoretto Cain and Abel Accademia",
+  "title": null
  },
  {
   "ref": "16",
-  "query": "Andrea Mantegna Crucifixion Louvre"
+  "query": "Andrea Mantegna Crucifixion Louvre",
+  "title": "Crucifixion - Andrea Mantegna - Louvre INV 368.jpg",
+  "artist": "Wilfredor",
+  "licence": "Public domain",
+  "width": 7222,
+  "height": 5162,
+  "page": "https://commons.wikimedia.org/wiki/File:Crucifixion_-_Andrea_Mantegna_-_Louvre_INV_368.jpg"
  },
  {
   "ref": "17",
-  "query": "Domenico Ghirlandaio Saint Francis Renounces All Worldly Goods Sassetti"
+  "query": "Domenico Ghirlandaio Saint Francis Renounces All Worldly Goods Sassetti",
+  "title": null
  },
  {
   "ref": "18",
-  "query": "Master of Alkmaar The Seven Works of Mercy Rijksmuseum"
+  "query": "Master of Alkmaar The Seven Works of Mercy Rijksmuseum",
+  "title": "De zeven werken van barmhartigheid Rijksmuseum SK-A-2815.jpeg",
+  "artist": "Master of Alkmaar",
+  "licence": "Public domain",
+  "width": 8368,
+  "height": 2126,
+  "page": "https://commons.wikimedia.org/wiki/File:De_zeven_werken_van_barmhartigheid_Rijksmuseum_SK-A-2815.jpeg"
  },
  {
   "ref": "19,20",
-  "query": "Rembrandt The Prodigal Son in the Tavern Dresden"
+  "query": "Rembrandt The Prodigal Son in the Tavern Dresden",
+  "title": "Rembrandt - Rembrandt and Saskia in the Scene of the Prodigal Son - Google Art Project.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3020,
+  "height": 3827,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Rembrandt_and_Saskia_in_the_Scene_of_the_Prodigal_Son_-_Google_Art_Project.jpg"
  },
  {
   "ref": "21,22",
