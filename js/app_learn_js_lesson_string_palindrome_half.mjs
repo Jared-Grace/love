@@ -24,25 +24,43 @@ export function app_learn_js_lesson_string_palindrome_half() {
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
+    ("the human's words 2026-11-21");
+    app_learn_js_div_cycle_code(box_two, ["Suppose our word is ", '"level"']);
     app_learn_js_div_cycle_code(box_two, [
-      "In ",
-      '"level"',
-      ", index ",
+      "When we checked to see if our word is a palindrome, we compared index ",
       "0",
-      " is compared with ",
+      " with index ",
       "4",
-      ", and later index ",
-      "4",
-      " is compared with ",
-      "0",
-      ". Over every letter, each pair is checked twice.",
     ]);
     app_learn_js_div_cycle_code(box_two, [
-      "So the loop can stop at the middle: ",
+      "But then later we compared index ",
+      "4",
+      " with index ",
+      "0",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "When we loop from the first to the last letter, each pair is checked twice",
+    ]);
+    let box_three = app_learn_js_container_light_blue(root);
+    app_learn_js_div_cycle_code(box_three, [
+      "How can we check each pair once?",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "We can stop the loop at the middle",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "Then we check each earlier index with its later mirror pair index",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "For the code, we change ",
+      "i < w.length",
+      " to ",
       "i < w.length / 2",
-      " checks each pair once and gives the same answer:",
     ]);
-    return box_two;
+    app_learn_js_div_cycle_code(box_three, [
+      "This checks each pair once and gives the same answer:",
+    ]);
+    return box_three;
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Only half",
