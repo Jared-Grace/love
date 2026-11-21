@@ -1,10 +1,84 @@
-[{"ref":"1","query":"Caravaggio The Incredulity of Saint Thomas Sanssouci"},
-{"ref":"2","query":"Hans Memling Saint John Altarpiece Bruges"},
-{"ref":"3","query":"Leonardo da Vinci The Last Supper Santa Maria delle Grazie"},
-{"ref":"4","query":"Pieter Bruegel the Elder The Wedding Dance Detroit"},
-{"ref":"5","query":"Gerard van Honthorst Adoration of the Shepherds Wallraf-Richartz"},
-{"ref":"6","query":"Gerrit van Honthorst The Denial of Saint Peter Minneapolis"},
-{"ref":"7","query":"Hubert van Eyck Adoration of the Mystic Lamb Ghent"},
-{"ref":"8","query":"Lucas Cranach the Elder The Fall of Man Courtauld"},
-{"ref":"9","query":"Pompeo Batoni The Return of the Prodigal Son Kunsthistorisches"},
-{"ref":"10","query":"Hans Memling Last Judgment Gdańsk"}]
+[
+ {
+  "ref": "1",
+  "query": "Caravaggio The Incredulity of Saint Thomas Sanssouci",
+  "title": "Caravaggio incredulity.jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 42558,
+  "height": 31589,
+  "page": "https://commons.wikimedia.org/wiki/File:Caravaggio_incredulity.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Hans Memling Saint John Altarpiece Bruges",
+  "title": "Hans Memling - Saint John the Evangelist.jpg",
+  "artist": "Hans Memling",
+  "licence": "Public domain",
+  "width": 1897,
+  "height": 3919,
+  "page": "https://commons.wikimedia.org/wiki/File:Hans_Memling_-_Saint_John_the_Evangelist.jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Leonardo da Vinci (1452-1519) - The Last Supper (1495-1498)"
+ },
+ {
+  "ref": "4",
+  "query": "Pieter Bruegel the Elder The Wedding Dance Detroit",
+  "title": "Pieter Bruegel (I) - The Wedding Dance (Detroit).jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 2000,
+  "height": 1539,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_(I)_-_The_Wedding_Dance_(Detroit).jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Gerard van Honthorst Adoration of the Shepherds Wallraf-Richartz",
+  "title": "Adoration of the shepherds, by Gerard van Honthorst.jpg",
+  "artist": "Gerard van Honthorst",
+  "licence": "Public domain",
+  "width": 3948,
+  "height": 3328,
+  "page": "https://commons.wikimedia.org/wiki/File:Adoration_of_the_shepherds,_by_Gerard_van_Honthorst.jpg"
+ },
+ {
+  "ref": "6",
+  "query": "Gerrit van Honthorst The Denial of Saint Peter Minneapolis",
+  "title": "Gerrit van Honthorst - The Denial of St. Peter - 71.78 - Minneapolis Institute of Arts.jpg",
+  "artist": "Gerard van Honthorst",
+  "licence": "Public domain",
+  "width": 9106,
+  "height": 6918,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerrit_van_Honthorst_-_The_Denial_of_St._Peter_-_71.78_-_Minneapolis_Institute_of_Arts.jpg"
+ },
+ {
+  "ref": "7",
+  "query": "Hubert van Eyck Adoration of the Mystic Lamb Ghent",
+  "title": "Ghent altarpiece, middle panel, by Hubert van Eyck.jpg",
+  "artist": "Jan van Eyck / Hubert van Eyck",
+  "licence": "Public domain",
+  "width": 2735,
+  "height": 1564,
+  "page": "https://commons.wikimedia.org/wiki/File:Ghent_altarpiece,_middle_panel,_by_Hubert_van_Eyck.jpg"
+ },
+ {
+  "ref": "8",
+  "query": "Caravaggio The Fortune Teller Louvre"
+ },
+ {
+  "ref": "9",
+  "query": "Pompeo Batoni The Return of the Prodigal Son Kunsthistorisches",
+  "title": "Pompeo Batoni, , Kunsthistorisches Museum Wien, Gemäldegalerie - Gleichnis vom verlorenen Sohn - GG 148 - Kunsthistorisches Museum.jpg",
+  "artist": "Pompeo Batoni",
+  "licence": "Public domain",
+  "width": 1062,
+  "height": 1471,
+  "page": "https://commons.wikimedia.org/wiki/File:Pompeo_Batoni,_,_Kunsthistorisches_Museum_Wien,_Gem%C3%A4ldegalerie_-_Gleichnis_vom_verlorenen_Sohn_-_GG_148_-_Kunsthistorisches_Museum.jpg"
+ },
+ {
+  "ref": "10",
+  "query": "Jusepe de Ribera The Repentant Saint Peter"
+ }
+]
