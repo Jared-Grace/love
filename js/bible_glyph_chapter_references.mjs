@@ -1313,6 +1313,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Kings 13",
     },
     {
+      chapter_code: "2KI14",
+      reference: "2 Kings 14",
+    },
+    {
       chapter_code: "2KI17",
       reference: "2 Kings 17",
     },
