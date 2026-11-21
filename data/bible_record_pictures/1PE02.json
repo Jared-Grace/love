@@ -31,11 +31,18 @@
  },
  {
   "ref": "6",
-  "query": "Rembrandt Jacob's Dream at Bethel"
+  "query": "Rembrandt Jacob's Dream at Bethel",
+  "title": null
  },
  {
   "ref": "7,8",
-  "query": "Pieter Bruegel the Elder The Procession to Calvary"
+  "query": "Pieter Bruegel the Elder The Procession to Calvary",
+  "title": "The Procession to Calvary (Bruegel).jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 44547,
+  "height": 32374,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Procession_to_Calvary_(Bruegel).jpg"
  },
  {
   "ref": "9",
