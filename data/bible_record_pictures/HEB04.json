@@ -102,11 +102,12 @@
  {
   "ref": "12",
   "query": "Vincent van Gogh Still Life with Bible Van Gogh Museum",
-  "artist": "Rembrandt",
+  "artist": "Vincent van Gogh",
   "licence": "Public domain",
-  "width": 4000,
-  "height": 4765,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Zelfportret_als_de_apostel_Paulus_-_Google_Art_Project.jpg"
+  "width": 6811,
+  "height": 5642,
+  "page": "https://commons.wikimedia.org/wiki/File:Stilleven_met_bijbel_-_s0008V1962_-_Van_Gogh_Museum.jpg",
+  "title": "Stilleven met bijbel - s0008V1962 - Van Gogh Museum.jpg"
  },
  {
   "ref": "13",
