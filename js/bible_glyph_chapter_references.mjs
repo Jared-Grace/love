@@ -937,6 +937,10 @@ export function bible_glyph_chapter_references() {
       reference: "Judges 20",
     },
     {
+      chapter_code: "JDG21",
+      reference: "Judges 21",
+    },
+    {
       chapter_code: "RUT01",
       reference: "Ruth 1",
     },
