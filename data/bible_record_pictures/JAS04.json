@@ -56,46 +56,107 @@
  },
  {
   "ref": "7",
-  "query": "Giotto Exorcism of the Demons at Arezzo"
+  "query": "Giotto Exorcism of the Demons at Arezzo",
+  "title": null
  },
  {
   "ref": "8",
-  "query": "William Holman Hunt The Light of the World Keble College"
+  "query": "William Holman Hunt The Light of the World Keble College",
+  "title": "Hunt-light-of-the-world.jpeg",
+  "artist": "William Holman Hunt",
+  "licence": "Public domain",
+  "width": 2937,
+  "height": 5828,
+  "page": "https://commons.wikimedia.org/wiki/File:Hunt-light-of-the-world.jpeg"
  },
  {
   "ref": "9",
-  "query": "Rogier van der Weyden The Descent from the Cross Prado"
+  "query": "Rogier van der Weyden The Descent from the Cross Prado",
+  "title": "El Descendimiento, by Rogier van der Weyden, from Prado in Google Earth.jpg",
+  "artist": "Rogier van der Weyden",
+  "licence": "Public domain",
+  "width": 30000,
+  "height": 23277,
+  "page": "https://commons.wikimedia.org/wiki/File:El_Descendimiento,_by_Rogier_van_der_Weyden,_from_Prado_in_Google_Earth.jpg"
  },
  {
   "ref": "10",
-  "query": "Ivan Kramskoi Christ in the Desert"
+  "query": "Ivan Kramskoi Christ in the Desert",
+  "title": "Ivan Kramskoy - Христос в пустыне - Google Art Project.jpg",
+  "artist": "Ivan Kramskoi",
+  "licence": "Public domain",
+  "width": 4000,
+  "height": 3507,
+  "page": "https://commons.wikimedia.org/wiki/File:Ivan_Kramskoy_-_%D0%A5%D1%80%D0%B8%D1%81%D1%82%D0%BE%D1%81_%D0%B2_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D0%B5_-_Google_Art_Project.jpg"
  },
  {
   "ref": "11",
-  "query": "Sandro Botticelli Calumny of Apelles"
+  "query": "Sandro Botticelli Calumny of Apelles",
+  "title": "Sandro Botticelli La calumnia de Apeles.jpg",
+  "artist": "Sandro Botticelli",
+  "licence": "Public domain",
+  "width": 3000,
+  "height": 2009,
+  "page": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_La_calumnia_de_Apeles.jpg"
  },
  {
   "ref": "12",
-  "query": "Andrei Rublev Saviour Zvenigorod"
+  "query": "Andrei Rublev Saviour Zvenigorod",
+  "title": "Rublev's saviour.jpg",
+  "artist": "Andrei Rublev",
+  "licence": "Public domain",
+  "width": 972,
+  "height": 1635,
+  "page": "https://commons.wikimedia.org/wiki/File:Rublev%27s_saviour.jpg"
  },
  {
   "ref": "13",
-  "query": "Hans Holbein the Younger Portrait of Georg Gisze"
+  "query": "Hans Holbein the Younger Portrait of Georg Gisze",
+  "title": "Portrait of Georg Gisze, by Hans Holbein the Younger.jpg",
+  "artist": "Hans Holbein the Younger",
+  "licence": "Public domain",
+  "width": 2514,
+  "height": 3012,
+  "page": "https://commons.wikimedia.org/wiki/File:Portrait_of_Georg_Gisze,_by_Hans_Holbein_the_Younger.jpg"
  },
  {
   "ref": "14",
-  "query": "Caspar David Friedrich Morning Mist in the Mountains"
+  "query": "Caspar David Friedrich Morning Mist in the Mountains",
+  "title": "Friedrich - Morning mist in the mountains.jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 5857,
+  "height": 3949,
+  "page": "https://commons.wikimedia.org/wiki/File:Friedrich_-_Morning_mist_in_the_mountains.jpg"
  },
  {
   "ref": "15",
-  "query": "Thomas Cole The Voyage of Life Childhood National Gallery of Art"
+  "query": "Thomas Cole The Voyage of Life Childhood National Gallery of Art",
+  "title": "Thomas Cole - The Voyage of Life Childhood, 1842 (National Gallery of Art).jpg",
+  "artist": "Thomas Cole",
+  "licence": "Public domain",
+  "width": 5121,
+  "height": 3459,
+  "page": "https://commons.wikimedia.org/wiki/File:Thomas_Cole_-_The_Voyage_of_Life_Childhood,_1842_(National_Gallery_of_Art).jpg"
  },
  {
   "ref": "16",
-  "query": "Jacques-Louis David Napoleon Crossing the Alps"
+  "query": "Jacques-Louis David Napoleon Crossing the Alps",
+  "title": "Napoleon at the Great St. Bernard - Jacques-Louis David - Google Cultural Institute.jpg",
+  "artist": "Jacques-Louis David",
+  "licence": "Public domain",
+  "width": 4897,
+  "height": 5850,
+  "page": "https://commons.wikimedia.org/wiki/File:Napoleon_at_the_Great_St._Bernard_-_Jacques-Louis_David_-_Google_Cultural_Institute.jpg"
  },
  {
   "ref": "17",
-  "query": "Pieter Lastman Jonah and the Whale Düsseldorf"
+  "query": "Pieter Lastman Jonah and the Whale Düsseldorf",
+  "title": "Pieter Lastman (1583-1633) - Jonas en de walvis (1621) - Düsseldorf Museum Kunstpalast 15-08-2012 15-01-08.JPG",
+  "artist": "Pieter Lastman",
+  "licence": "Public domain",
+  "width": 1832,
+  "height": 1235,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Lastman_(1583-1633)_-_Jonas_en_de_walvis_(1621)_-_D%C3%BCsseldorf_Museum_Kunstpalast_15-08-2012_15-01-08.JPG"
  }
 ]
