@@ -1,14 +1,12 @@
 [
  {
   "ref": "1",
-  "query": "Michelangelo The Prophet Zechariah Sistine Chapel",
+  "query": "Fra Bartolomeo The Prophet Isaiah Galleria dell'Accademia",
   "artist": "Michelangelo",
   "licence": "Public domain",
   "width": 1589,
   "height": 570,
-  "page": "https://commons.wikimedia.org/wiki/File:Michelangelo,_pennacchi.jpg",
-  "title": "Michelangelo, pennacchi.jpg"
- },
+  "page": "https://commons.wikimedia.org/wiki/File:Michelangelo,_pennacchi.jpg" },
  {
   "ref": "2",
   "query": "Jan van Eyck God the Father Ghent Altarpiece",
