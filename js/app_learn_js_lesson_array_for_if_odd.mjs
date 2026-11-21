@@ -54,7 +54,9 @@ export function app_learn_js_lesson_array_for_if_odd() {
       "1",
       ", so ",
       "i % 2 === 1",
-      " is true only at the odd indexes, and only those items are written out:",
+      " is ",
+      "true",
+      " only at the odd indexes, and only those items are written out:",
     ]);
     example(box_three, items);
     let box_four = app_learn_js_container_light_blue(root);

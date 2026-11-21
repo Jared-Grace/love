@@ -1,23 +1,106 @@
-[{"ref":"1","query":"Johannes Vermeer Woman in Blue Reading a Letter Rijksmuseum"},
-{"ref":"2","query":"Pieter de Hooch The Courtyard of a House in Delft National Gallery"},
-{"ref":"3,4","query":"Rembrandt The Shipbuilder and his Wife Royal Collection"},
-{"ref":"5","query":"Rembrandt The Supper at Emmaus Louvre"},
-{"ref":"6","query":"Diego Velázquez Christ in the House of Martha and Mary National Gallery"},
-{"ref":"7","query":"Rembrandt Saint Peter in Prison Israel Museum"},
-{"ref":"8","query":"Rembrandt Portrait of Jan Six"},
-{"ref":"9","query":"Pieter Bruegel the Elder The Harvesters Metropolitan Museum"},
-{"ref":"10","query":"Frans Hals Family Group in a Landscape National Gallery"},
-{"ref":"11","query":"Pieter de Hooch Interior with Women beside a Linen Chest Rijksmuseum"},
-{"ref":"12","query":"Diego Velázquez Las Hilanderas Prado"},
-{"ref":"13","query":"James McNeill Whistler Arrangement in Grey and Black No. 1"},
-{"ref":"14","query":"Bartholomeus van der Helst Banquet of the Amsterdam Civic Guard Rijksmuseum"},
-{"ref":"15","query":"Giovanni Bellini San Zaccaria Altarpiece"},
-{"ref":"16","query":"Giotto Meeting at the Golden Gate Scrovegni"},
-{"ref":"17","query":"Paolo Uccello The Battle of San Romano National Gallery"},
-{"ref":"18","query":"Georges de La Tour The Fortune Teller Metropolitan Museum"},
-{"ref":"19","query":"Johannes Vermeer Girl with a Pearl Earring Mauritshuis"},
-{"ref":"20","query":"Caravaggio Madonna dei Palafrenieri Borghese"},
-{"ref":"21","query":"Rembrandt Timothy and his Grandmother Lois"},
-{"ref":"22","query":"Gabriël Metsu Man Writing a Letter National Gallery of Ireland"},
-{"ref":"23","query":"Jan Gossaert Portrait of a Merchant National Gallery of Art"},
-{"ref":"25,26,27","query":"Giovanni Battista Gaulli Triumph of the Name of Jesus Gesù"}]
+[
+ {
+  "ref": "1",
+  "query": "Johannes Vermeer Woman in Blue Reading a Letter Rijksmuseum",
+  "title": "Vermeer, Johannes - Woman reading a letter - ca. 1662-1663.jpg",
+  "artist": "Johannes Vermeer",
+  "licence": "Public domain",
+  "width": 4457,
+  "height": 5341,
+  "page": "https://commons.wikimedia.org/wiki/File:Vermeer,_Johannes_-_Woman_reading_a_letter_-_ca._1662-1663.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Pieter de Hooch The Courtyard of a House in Delft National Gallery",
+  "title": "The Courtyard of a House in Delft.jpg",
+  "artist": "Pieter de Hooch",
+  "licence": "Public domain",
+  "width": 5094,
+  "height": 6261,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Courtyard_of_a_House_in_Delft.jpg"
+ },
+ {
+  "ref": "3,4",
+  "query": "Rembrandt The Shipbuilder and his Wife Royal Collection"
+ },
+ {
+  "ref": "5",
+  "query": "Rembrandt The Supper at Emmaus Louvre"
+ },
+ {
+  "ref": "6",
+  "query": "Diego Velázquez Christ in the House of Martha and Mary National Gallery"
+ },
+ {
+  "ref": "7",
+  "query": "Rembrandt Saint Peter in Prison Israel Museum"
+ },
+ {
+  "ref": "8",
+  "query": "Rembrandt Portrait of Jan Six"
+ },
+ {
+  "ref": "9",
+  "query": "Pieter Bruegel the Elder The Harvesters Metropolitan Museum"
+ },
+ {
+  "ref": "10",
+  "query": "Frans Hals Family Group in a Landscape National Gallery"
+ },
+ {
+  "ref": "11",
+  "query": "Pieter de Hooch Interior with Women beside a Linen Chest Rijksmuseum"
+ },
+ {
+  "ref": "12",
+  "query": "Diego Velázquez Las Hilanderas Prado"
+ },
+ {
+  "ref": "13",
+  "query": "James McNeill Whistler Arrangement in Grey and Black No. 1"
+ },
+ {
+  "ref": "14",
+  "query": "Bartholomeus van der Helst Banquet of the Amsterdam Civic Guard Rijksmuseum"
+ },
+ {
+  "ref": "15",
+  "query": "Giovanni Bellini San Zaccaria Altarpiece"
+ },
+ {
+  "ref": "16",
+  "query": "Giotto Meeting at the Golden Gate Scrovegni"
+ },
+ {
+  "ref": "17",
+  "query": "Paolo Uccello The Battle of San Romano National Gallery"
+ },
+ {
+  "ref": "18",
+  "query": "Georges de La Tour The Fortune Teller Metropolitan Museum"
+ },
+ {
+  "ref": "19",
+  "query": "Johannes Vermeer Girl with a Pearl Earring Mauritshuis"
+ },
+ {
+  "ref": "20",
+  "query": "Caravaggio Madonna dei Palafrenieri Borghese"
+ },
+ {
+  "ref": "21",
+  "query": "Rembrandt Timothy and his Grandmother Lois"
+ },
+ {
+  "ref": "22",
+  "query": "Gabriël Metsu Man Writing a Letter National Gallery of Ireland"
+ },
+ {
+  "ref": "23",
+  "query": "Jan Gossaert Portrait of a Merchant National Gallery of Art"
+ },
+ {
+  "ref": "25,26,27",
+  "query": "Giovanni Battista Gaulli Triumph of the Name of Jesus Gesù"
+ }
+]
