@@ -166,14 +166,32 @@
  },
  {
   "ref": "22",
-  "query": "Tiepolo Abraham and the Three Angels Prado"
+  "query": "Tiepolo Abraham and the Three Angels Prado",
+  "title": "Abraham y los tres ángeles.jpg",
+  "artist": "Giovanni Battista Tiepolo",
+  "licence": "Public domain",
+  "width": 2331,
+  "height": 3051,
+  "page": "https://commons.wikimedia.org/wiki/File:Abraham_y_los_tres_%C3%A1ngeles.jpg"
  },
  {
   "ref": "23,24",
-  "query": "Rembrandt The Evangelist Matthew Inspired by an Angel"
+  "query": "Rembrandt The Evangelist Matthew Inspired by an Angel",
+  "title": "The Evangelist Matthew Inspired by an Angel.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1210,
+  "height": 1545,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Evangelist_Matthew_Inspired_by_an_Angel.jpg"
  },
  {
   "ref": "25",
-  "query": "Piero della Francesca The Resurrection Sansepolcro"
+  "query": "Piero della Francesca The Resurrection Sansepolcro",
+  "title": "Piero della Francesca - Resurrection - WGA17609.jpg",
+  "artist": "Piero della Francesca",
+  "licence": "Public domain",
+  "width": 1130,
+  "height": 1200,
+  "page": "https://commons.wikimedia.org/wiki/File:Piero_della_Francesca_-_Resurrection_-_WGA17609.jpg"
  }
 ]
