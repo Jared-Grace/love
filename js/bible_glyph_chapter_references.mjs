@@ -2097,6 +2097,10 @@ export function bible_glyph_chapter_references() {
       reference: "Proverbs 4",
     },
     {
+      chapter_code: "PRO05",
+      reference: "Proverbs 5",
+    },
+    {
       chapter_code: "PRO08",
       reference: "Proverbs 8",
     },
