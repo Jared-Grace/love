@@ -1,3 +1,5 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { json_to } from "./json_to.mjs";
@@ -10,6 +12,9 @@ import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_
 import { app_learn_js_lesson_array_last_index } from "./app_learn_js_lesson_array_last_index.mjs";
 import { app_learn_js_lesson_string_for } from "./app_learn_js_lesson_string_for.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_braces_colors } from "./app_learn_js_braces_colors.mjs";
+import { math_min } from "./math_min.mjs";
+import { app_learn_js_div_braces_painted } from "./app_learn_js_div_braces_painted.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -22,7 +27,7 @@ export function app_learn_js_lesson_string_mirror_index() {
   ("A set is six questions, each a word and an index from 1 to its last index; index 0 is left out because there a.length - 1 is also the right answer.");
   ("Reading forwards, the wrong answers are what the wrong programs write out: a.length - i (one past the mirror), a.length - 1 + i (counting forwards from the end), and a.length - 1 (always the last index). Reading backwards, the wrong programs are those three, where each writes out something other than the answer.");
   ("The writing is a first draft by Claude 2026-11-21.");
-  let example_input = ["level", 1];
+  let example_input = ["loves", 1];
   function program_with(input, mirror) {
     "let a = word; let i = index; console.log(i); console.log(mirror);";
     let word = list_get(input, 0);
@@ -88,23 +93,67 @@ export function app_learn_js_lesson_string_mirror_index() {
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);
+    ("the human's words 2026-11-21: seven indices, each pair drawn in one colour, the colours the brace pairs wear");
     app_learn_js_div_cycle_code(box_three, [
-      "The mirror of an index is the index just as far from the end. The mirror of ",
-      "0",
-      " is the last index, ",
-      "a.length - 1",
-      ".",
+      "Suppose we have an array with 7 items",
     ]);
     app_learn_js_div_cycle_code(box_three, [
-      "Each step forward from the start is a step back from the end, so the mirror of ",
-      "i",
+      "Then its indices are: 0, 1, 2, 3, 4, 5, 6",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "We can pair the first and last together",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "We can pair the second and second to last together",
+    ]);
+    app_learn_js_div_cycle_code(box_three, ["And so on"]);
+    app_learn_js_div_cycle_code(box_three, ["Like this:"]);
+    let colors = app_learn_js_braces_colors();
+    let count = 7;
+    let pieces = [];
+    for (let i = 0; less_than(i, count); i++) {
+      let left = subtract(count, 1);
+      let mirror = subtract(left, i);
+      let pair = math_min(i, mirror);
+      list_add_multiple(pieces, [
+        {
+          brace: "" + i,
+          color: list_get(colors, pair),
+        },
+        [" "],
+      ]);
+    }
+    app_learn_js_div_braces_painted(box_three, pieces);
+    app_learn_js_div_cycle_code(box_three, [
+      "Because ",
+      "3",
+      " is in the middle, ",
+      "3",
+      " is paired with itself",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "If we have the first number, how do we calculate its pair?",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "Here is the formula: ",
+      "a.length - 1 - i",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "Suppose we have the string ",
+      '"loves"',
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "Then its indices are 0, 1, 2, 3, 4",
+    ]);
+    app_learn_js_div_cycle_code(box_three, ["", '"o"', " is at index ", "1"]);
+    app_learn_js_div_cycle_code(box_three, [
+      "The pair for ",
+      '"o"',
       " is ",
       "a.length - 1 - i",
-      ". In ",
-      '"level"',
-      ", the mirror of ",
-      "1",
-      " is ",
+      " which is ",
+      "5 - 1 - 1",
+      " which is ",
       "3",
       ":",
     ]);
