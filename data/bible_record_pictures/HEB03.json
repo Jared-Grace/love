@@ -2,11 +2,12 @@
  {
   "ref": "1",
   "query": "Raphael Christ's Charge to Peter cartoon Victoria and Albert",
-  "artist": "Duccio di Buoninsegna",
-  "licence": "CC0",
-  "width": 4000,
-  "height": 3752,
-  "page": "https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna,_The_Calling_of_the_Apostles_Peter_and_Andrew,_1308-1311,_NGA_282.jpg"
+  "artist": "After: Raphael\n\nPrint made by: George Foggo\nPublished by: Godefroy Engelmann I\nPrinted by: Godefroy Engelmann I",
+  "licence": "Public domain",
+  "width": 2500,
+  "height": 1973,
+  "page": "https://commons.wikimedia.org/wiki/File:Christ%27s_charge_to_Peter_(BM_1842,0319.6).jpg",
+  "title": "Christ's charge to Peter (BM 1842,0319.6).jpg"
  },
  {
   "ref": "2",
@@ -70,7 +71,8 @@
  },
  {
   "ref": "10",
-  "query": "Tintoretto The Adoration of the Golden Calf Madonna dell'Orto"
+  "query": "Tintoretto The Adoration of the Golden Calf Madonna dell'Orto",
+  "title": null
  },
  {
   "ref": "11",
