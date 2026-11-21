@@ -1,27 +1,135 @@
-[{"ref":"1","query":"Rembrandt Saint Paul at his Writing Desk Nuremberg"},
-{"ref":"2","query":"Eduard Bendemann The Mourning Jews in Exile"},
-{"ref":"3,4","query":"Rembrandt Jeremiah Lamenting the Destruction of Jerusalem"},
-{"ref":"5","query":"Jusepe de Ribera Jacob's Dream Prado"},
-{"ref":"6","query":"Nicolas Poussin The Israelites Gathering Manna"},
-{"ref":"7","query":"Govert Flinck Isaac Blessing Jacob"},
-{"ref":"8","query":"Rembrandt The Holy Family Hermitage"},
-{"ref":"9","query":"Tiepolo The Angel Appearing to Sarah"},
-{"ref":"10","query":"Murillo Rebecca and Eliezer Prado"},
-{"ref":"11,12","query":"Hendrick ter Brugghen Esau Selling His Birthright"},
-{"ref":"13","query":"William Blake Jacob's Ladder"},
-{"ref":"14","query":"Léon Bonnat Job"},
-{"ref":"15","query":"Domenico Fetti Moses before the Burning Bush"},
-{"ref":"16","query":"Rubens Daniel in the Lions' Den"},
-{"ref":"17","query":"Alma-Tadema The Death of the Pharaoh's Firstborn Son"},
-{"ref":"18","query":"Francis Danby The Delivery of Israel out of Egypt"},
-{"ref":"19","query":"Rembrandt Balaam and the Ass"},
-{"ref":"20","query":"Georges de La Tour Job Mocked by his Wife"},
-{"ref":"21","query":"Velázquez The Water Seller of Seville"},
-{"ref":"22","query":"Jacopo Bassano The Animals Entering the Ark Prado"},
-{"ref":"23,24","query":"Veronese The Wedding at Cana"},
-{"ref":"25,26","query":"Pieter Bruegel the Elder The Sermon of Saint John the Baptist"},
-{"ref":"27","query":"Aivazovsky Crossing of the Red Sea"},
-{"ref":"28","query":"John Martin The Destruction of Pompeii and Herculaneum"},
-{"ref":"29","query":"Camille Corot Destruction of Sodom"},
-{"ref":"30,31","query":"Andrea Mantegna Adoration of the Magi Getty"},
-{"ref":"32,33","query":"Jacob van Ruisdael The Jewish Cemetery"}]
+[
+ {
+  "ref": "1",
+  "query": "Rembrandt Saint Paul at his Writing Desk Nuremberg",
+  "title": null
+ },
+ {
+  "ref": "2",
+  "query": "Eduard Bendemann The Mourning Jews in Exile",
+  "title": "Jews Mourning in Exile - Eduard Bendemann - Wallraf-Richartz-Museum & Fondation Corboud-6071 (without frame).jpg",
+  "artist": "Eduard Bendemann",
+  "licence": "Public domain",
+  "width": 4578,
+  "height": 2979,
+  "page": "https://commons.wikimedia.org/wiki/File:Jews_Mourning_in_Exile_-_Eduard_Bendemann_-_Wallraf-Richartz-Museum_%26_Fondation_Corboud-6071_(without_frame).jpg"
+ },
+ {
+  "ref": "3,4",
+  "query": "Rembrandt Jeremiah Lamenting the Destruction of Jerusalem",
+  "title": "Rembrandt Harmensz. van Rijn - Jeremia treurend over de verwoesting van Jeruzalem - Google Art Project.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3857,
+  "height": 4902,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Jeremia_treurend_over_de_verwoesting_van_Jeruzalem_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Jusepe de Ribera Jacob's Dream Prado",
+  "title": "El sueño de Jacob, by José de Ribera, from Prado in Google Earth.jpg",
+  "artist": "Jusepe de Ribera",
+  "licence": "Public domain",
+  "width": 30000,
+  "height": 22691,
+  "page": "https://commons.wikimedia.org/wiki/File:El_sue%C3%B1o_de_Jacob,_by_Jos%C3%A9_de_Ribera,_from_Prado_in_Google_Earth.jpg"
+ },
+ {
+  "ref": "6",
+  "query": "Nicolas Poussin The Israelites Gathering Manna",
+  "title": "La Manne - Nicolas Poussin - Musée du Louvre Peintures INV 7275.jpg",
+  "artist": "Nicolas Poussin",
+  "licence": "Public domain",
+  "width": 2878,
+  "height": 2104,
+  "page": "https://commons.wikimedia.org/wiki/File:La_Manne_-_Nicolas_Poussin_-_Mus%C3%A9e_du_Louvre_Peintures_INV_7275.jpg"
+ },
+ {
+  "ref": "7",
+  "query": "Govert Flinck Isaac Blessing Jacob"
+ },
+ {
+  "ref": "8",
+  "query": "Rembrandt The Holy Family Hermitage"
+ },
+ {
+  "ref": "9",
+  "query": "Tiepolo The Angel Appearing to Sarah"
+ },
+ {
+  "ref": "10",
+  "query": "Murillo Rebecca and Eliezer Prado"
+ },
+ {
+  "ref": "11,12",
+  "query": "Hendrick ter Brugghen Esau Selling His Birthright"
+ },
+ {
+  "ref": "13",
+  "query": "William Blake Jacob's Ladder"
+ },
+ {
+  "ref": "14",
+  "query": "Léon Bonnat Job"
+ },
+ {
+  "ref": "15",
+  "query": "Domenico Fetti Moses before the Burning Bush"
+ },
+ {
+  "ref": "16",
+  "query": "Rubens Daniel in the Lions' Den"
+ },
+ {
+  "ref": "17",
+  "query": "Alma-Tadema The Death of the Pharaoh's Firstborn Son"
+ },
+ {
+  "ref": "18",
+  "query": "Francis Danby The Delivery of Israel out of Egypt"
+ },
+ {
+  "ref": "19",
+  "query": "Rembrandt Balaam and the Ass"
+ },
+ {
+  "ref": "20",
+  "query": "Georges de La Tour Job Mocked by his Wife"
+ },
+ {
+  "ref": "21",
+  "query": "Velázquez The Water Seller of Seville"
+ },
+ {
+  "ref": "22",
+  "query": "Jacopo Bassano The Animals Entering the Ark Prado"
+ },
+ {
+  "ref": "23,24",
+  "query": "Veronese The Wedding at Cana"
+ },
+ {
+  "ref": "25,26",
+  "query": "Pieter Bruegel the Elder The Sermon of Saint John the Baptist"
+ },
+ {
+  "ref": "27",
+  "query": "Aivazovsky Crossing of the Red Sea"
+ },
+ {
+  "ref": "28",
+  "query": "John Martin The Destruction of Pompeii and Herculaneum"
+ },
+ {
+  "ref": "29",
+  "query": "Camille Corot Destruction of Sodom"
+ },
+ {
+  "ref": "30,31",
+  "query": "Andrea Mantegna Adoration of the Magi Getty"
+ },
+ {
+  "ref": "32,33",
+  "query": "Jacob van Ruisdael The Jewish Cemetery"
+ }
+]
