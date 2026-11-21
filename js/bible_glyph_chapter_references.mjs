@@ -989,6 +989,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Samuel 8",
     },
     {
+      chapter_code: "1SA09",
+      reference: "1 Samuel 9",
+    },
+    {
       chapter_code: "1SA15",
       reference: "1 Samuel 15",
     },
