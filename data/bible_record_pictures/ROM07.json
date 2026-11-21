@@ -111,8 +111,13 @@
  },
  {
   "ref": "12",
-  "query": "Guido Reni Moses with the Tables of the Law Galleria Borghese",
-  "title": null
+  "query": "Guido Reni Moses Tables of the Law",
+  "title": "Moses Breaking the Tablets of the Law, by Guido Reni.jpg",
+  "artist": "Guido Reni",
+  "licence": "Public domain",
+  "width": 3046,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:Moses_Breaking_the_Tablets_of_the_Law,_by_Guido_Reni.jpg"
  },
  {
   "ref": "13",
@@ -136,13 +141,8 @@
  },
  {
   "ref": "15",
-  "query": "Domenico Fetti Melancholy Louvre",
-  "title": "Henri simon thomassin-melancolía-met.jpg",
-  "artist": "Henri Simon Thomassin según Domenico Fetti",
-  "licence": "Public domain",
-  "width": 2289,
-  "height": 3637,
-  "page": "https://commons.wikimedia.org/wiki/File:Henri_simon_thomassin-melancol%C3%ADa-met.jpg"
+  "query": "Domenico Fetti Melancholia Accademia",
+  "title": null
  },
  {
   "ref": "16",
