@@ -11,8 +11,13 @@
  },
  {
   "ref": "2",
-  "query": "Titian Cain and Abel Santa Maria della Salute",
-  "title": null
+  "query": "Albrecht Altdorfer The Battle of Alexander at Issus",
+  "title": "Albrecht Altdorfer - Schlacht bei Issus (Alte Pinakothek, München) - Google Art Project.jpg",
+  "artist": "Albrecht Altdorfer",
+  "licence": "Public domain",
+  "width": 4592,
+  "height": 6000,
+  "page": "https://commons.wikimedia.org/wiki/File:Albrecht_Altdorfer_-_Schlacht_bei_Issus_(Alte_Pinakothek,_M%C3%BCnchen)_-_Google_Art_Project.jpg"
  },
  {
   "ref": "3",
@@ -56,7 +61,7 @@
  },
  {
   "ref": "7",
-  "query": "Giotto Exorcism of the Demons at Arezzo",
+  "query": "Giotto Legend of St Francis Exorcism of the Demons at Arezzo",
   "title": null
  },
  {
@@ -91,13 +96,13 @@
  },
  {
   "ref": "11",
-  "query": "Sandro Botticelli Calumny of Apelles",
-  "title": "Sandro Botticelli La calumnia de Apeles.jpg",
-  "artist": "Sandro Botticelli",
+  "query": "Pieter Bruegel the Elder The Misanthrope Naples",
+  "title": "Pieter Bruegel d. Ä. 035-2.jpg",
+  "artist": "Pieter Bruegel the Elder",
   "licence": "Public domain",
-  "width": 3000,
-  "height": 2009,
-  "page": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_La_calumnia_de_Apeles.jpg"
+  "width": 2558,
+  "height": 2558,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_d._%C3%84._035-2.jpg"
  },
  {
   "ref": "12",
