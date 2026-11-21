@@ -271,7 +271,13 @@
  },
  {
   "ref": "31",
-  "query": "Caravaggio David vencedor de Goliat Prado"
+  "query": "Caravaggio David vencedor de Goliat Prado",
+  "title": "David con la cabeza de Goliat (Caravaggio).jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 2427,
+  "height": 2953,
+  "page": "https://commons.wikimedia.org/wiki/File:David_con_la_cabeza_de_Goliat_(Caravaggio).jpg"
  },
  {
   "ref": "32",
@@ -335,6 +341,12 @@
  },
  {
   "ref": "38,39",
-  "query": "Murillo The Good Shepherd Prado"
+  "query": "Murillo The Good Shepherd Prado",
+  "title": "El Buen Pastor.jpg",
+  "artist": "Bartolomé Esteban Murillo",
+  "licence": "Public domain",
+  "width": 2362,
+  "height": 2901,
+  "page": "https://commons.wikimedia.org/wiki/File:El_Buen_Pastor.jpg"
  }
 ]
