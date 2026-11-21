@@ -36,46 +36,107 @@
  },
  {
   "ref": "8",
-  "query": "Jan Steen The Feast of Saint Nicholas Rijksmuseum"
+  "query": "Jan Steen The Feast of Saint Nicholas Rijksmuseum",
+  "title": "The art of the Netherland galleries - being a history of the Dutch school of painting illuminated and demonstrated by critical descriptions of the great paintings in the many galleries (1908) (14587224110).jpg",
+  "artist": "Jan Steen",
+  "licence": "No restrictions",
+  "width": 2424,
+  "height": 2848,
+  "page": "https://commons.wikimedia.org/wiki/File:The_art_of_the_Netherland_galleries_-_being_a_history_of_the_Dutch_school_of_painting_illuminated_and_demonstrated_by_critical_descriptions_of_the_great_paintings_in_the_many_galleries_(1908)_(14587224110).jpg"
  },
  {
   "ref": "9",
-  "query": "Peter Paul Rubens Abraham and Melchizedek National Gallery of Art"
+  "query": "Peter Paul Rubens Abraham and Melchizedek National Gallery of Art",
+  "title": "Peter Paul Rubens - The Meeting of Abraham and Melchizedek - WGA20435.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 16208,
+  "height": 12937,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Meeting_of_Abraham_and_Melchizedek_-_WGA20435.jpg"
  },
  {
   "ref": "10",
-  "query": "Gerard ter Borch Woman Writing a Letter Mauritshuis"
+  "query": "Gerard ter Borch Woman Writing a Letter Mauritshuis",
+  "title": "Gerard ter Borch - Woman Writing a Letter - 797 - Mauritshuis.jpg",
+  "artist": "Gerard ter Borch",
+  "licence": "Public domain",
+  "width": 4384,
+  "height": 6000,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerard_ter_Borch_-_Woman_Writing_a_Letter_-_797_-_Mauritshuis.jpg"
  },
  {
   "ref": "11",
-  "query": "Edward Hicks Peaceable Kingdom"
+  "query": "Edward Hicks Peaceable Kingdom",
+  "title": "Edward Hicks - Peaceable Kingdom - Google Art Project.jpg",
+  "artist": "Edward Hicks",
+  "licence": "Public domain",
+  "width": 7810,
+  "height": 5976,
+  "page": "https://commons.wikimedia.org/wiki/File:Edward_Hicks_-_Peaceable_Kingdom_-_Google_Art_Project.jpg"
  },
  {
   "ref": "12",
-  "query": "Nicolaes Maes Old Woman Dozing over a Book"
+  "query": "Nicolaes Maes Old Woman Dozing over a Book",
+  "title": "An Old Woman Dozing over a Book A25381.jpg",
+  "artist": "Nicolaes Maes",
+  "licence": "Public domain",
+  "width": 8010,
+  "height": 9871,
+  "page": "https://commons.wikimedia.org/wiki/File:An_Old_Woman_Dozing_over_a_Book_A25381.jpg"
  },
  {
   "ref": "13",
-  "query": "Rembrandt Daniel and Cyrus before the Idol Bel Getty"
+  "query": "Rembrandt Daniel and Cyrus before the Idol Bel Getty",
+  "title": "Rembrandt Harmensz. van Rijn (Dutch - Daniel and Cyrus before the Idol Bel - Google Art Project.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 7232,
+  "height": 5530,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_(Dutch_-_Daniel_and_Cyrus_before_the_Idol_Bel_-_Google_Art_Project.jpg"
  },
  {
   "ref": "14",
-  "query": "Eugène Delacroix Christ on the Sea of Galilee Walters"
+  "query": "Eugène Delacroix Christ on the Sea of Galilee Walters",
+  "title": "Eugène Delacroix - Christ on the Sea of Galilee - Walters 37186.jpg",
+  "artist": "Eugène Delacroix",
+  "licence": "Public domain",
+  "width": 1799,
+  "height": 1464,
+  "page": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Christ_on_the_Sea_of_Galilee_-_Walters_37186.jpg"
  },
  {
   "ref": "15,16",
-  "query": "Vittore Carpaccio Saint Stephen Preaching Louvre"
+  "query": "Vittore Carpaccio Saint Stephen Preaching Louvre",
+  "title": null
  },
  {
   "ref": "17",
-  "query": "Hendrick ter Brugghen Saint Sebastian Tended by Irene Oberlin"
+  "query": "Hendrick ter Brugghen Saint Sebastian Tended by Irene Oberlin",
+  "title": "Terbrugghen Sebastian.jpg",
+  "artist": "Hendrick ter Brugghen",
+  "licence": "Public domain",
+  "width": 1826,
+  "height": 2314,
+  "page": "https://commons.wikimedia.org/wiki/File:Terbrugghen_Sebastian.jpg"
  },
  {
   "ref": "18,19,20",
-  "query": "Michelangelo The Deluge Sistine Chapel"
+  "query": "Michelangelo The Deluge Sistine Chapel",
+  "title": "El Diluvio.jpg",
+  "artist": "Michelangelo",
+  "licence": "Public domain",
+  "width": 4328,
+  "height": 2887,
+  "page": "https://commons.wikimedia.org/wiki/File:El_Diluvio.jpg"
  },
  {
   "ref": "21,22",
-  "query": "Juan Fernández de Navarrete Baptism of Christ Prado"
+  "query": "Juan Fernández de Navarrete Baptism of Christ Prado",
+  "title": "Bautismo de Cristo de Navarrete el Mudo.jpg",
+  "artist": "Juan Fernández Navarrete",
+  "licence": "Public domain",
+  "width": 2061,
+  "height": 2717,
+  "page": "https://commons.wikimedia.org/wiki/File:Bautismo_de_Cristo_de_Navarrete_el_Mudo.jpg"
  }
 ]
