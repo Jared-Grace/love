@@ -21,11 +21,13 @@ list and ends.
 """
 
 import json
+import os
 import sys
 
 from text_to_speech import (
     COMPRESSION_LEVEL,
     SPEED,
+    VOICE,
     engine_ready,
     line_samples,
     said_text,
@@ -45,7 +47,9 @@ def choice_spoken(engine, folder, choice):
     written = {}
     for side in ("was", "now"):
         g2p.lexicon.golds[word] = choice[side]
-        samples, rate = line_samples(g2p, engine["kokoro"], sentence, SPEED)
+        samples, rate = line_samples(
+            g2p, engine["kokoro"], sentence, SPEED, False, VOICE
+        )
         path = folder + "/" + word + "_" + side + ".mp3"
         write_mp3(path, samples, rate, COMPRESSION_LEVEL)
         written[side] = path
@@ -56,6 +60,7 @@ def main(args_path):
     with open(args_path, encoding="utf-8") as fh:
         args = json.load(fh)
     folder = args["folder"]
+    os.makedirs(folder, exist_ok=True)
     engine = engine_ready(args["threads"])
     written = {}
     for choice in args["choices"]:
