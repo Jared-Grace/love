@@ -1,8 +1,7 @@
 [
  {
   "ref": "1",
-  "query": "Michelangelo Isaiah Sistine Chapel",
-  "title": "Sistine Chapel fresco of an Ignudo right of Isaiah - Michelangelo.jpg",
+  "query": "Michelangelo The Prophet Jeremiah Sistine Chapel ceiling",
   "artist": "Michelangelo",
   "licence": "Public domain",
   "width": 2097,
@@ -21,13 +20,11 @@
  },
  {
   "ref": "3",
-  "query": "Titian The Transfiguration San Salvador Venice",
-  "title": null
+  "query": "Tiziano Trasfigurazione San Salvador"
  },
  {
   "ref": "4",
-  "query": "Hans Memling Christ Surrounded by Musician Angels Antwerp",
-  "title": "Hans Memling - Christ with Singing and Music-Making Angels - KMSKA 778-780.jpg",
+  "query": "Fra Angelico Christ Glorified in the Court of Heaven National Gallery",
   "artist": "Hans Memling",
   "licence": "Public domain",
   "width": 4812,
@@ -36,8 +33,7 @@
  },
  {
   "ref": "5",
-  "query": "Gentile da Fabriano Adoration of the Magi Uffizi",
-  "title": "Gentile da Fabriano - Adorazione dei Magi - Google Art Project.jpg",
+  "query": "Hugo van der Goes Portinari Altarpiece Uffizi",
   "artist": "Gentile da Fabriano",
   "licence": "Public domain",
   "width": 3356,
@@ -56,8 +52,7 @@
  },
  {
   "ref": "7",
-  "query": "Albert Bierstadt Storm in the Rocky Mountains Mount Rosalie",
-  "title": null
+  "query": "Albert Bierstadt A Storm in the Rocky Mountains Mt. Rosalie"
  },
  {
   "ref": "8",
@@ -91,8 +86,7 @@
  },
  {
   "ref": "11",
-  "query": "Jacob van Ruisdael The Jewish Cemetery Detroit",
-  "title": "Jacob Isaackszoon van Ruisdael - The Jewish Cemetery (1654 or 1655).jpg",
+  "query": "Caspar David Friedrich Abbey among Oak Trees",
   "artist": "Jacob van Ruisdael",
   "licence": "Public domain",
   "width": 2700,
@@ -121,7 +115,6 @@
  },
  {
   "ref": "14",
-  "query": "Guercino The Angel Appears to Hagar and Ishmael",
-  "title": null
+  "query": "Giovanni Lanfranco Hagar in the Wilderness"
  }
 ]

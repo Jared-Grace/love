@@ -11,8 +11,7 @@
  },
  {
   "ref": "2,3,4",
-  "query": "Raphael The Miraculous Draught of Fishes V&A cartoon",
-  "title": "Raphael - The Miraculous Draft of Fishes c.1515-6.jpg",
+  "query": "Konrad Witz The Miraculous Draught of Fishes",
   "artist": "Raphael",
   "licence": "Public domain",
   "width": 2000,
@@ -21,13 +20,11 @@
  },
  {
   "ref": "5",
-  "query": "Fra Angelico Paradise Last Judgment San Marco detail",
-  "title": null
+  "query": "Giovanni di Paolo Paradise Metropolitan Museum"
  },
  {
   "ref": "6",
-  "query": "Caspar David Friedrich Wanderer above the Sea of Fog",
-  "title": "Caspar David Friedrich - Wanderer above the Sea of Fog.jpeg",
+  "query": "Caspar David Friedrich Two Men Contemplating the Moon Dresden",
   "artist": "Caspar David Friedrich",
   "licence": "Public domain",
   "width": 5256,
@@ -36,8 +33,7 @@
  },
  {
   "ref": "7,8",
-  "query": "Jan Brueghel the Elder The Garden of Eden with the Fall of Man Mauritshuis",
-  "title": "Jan Brueghel de Oude en Peter Paul Rubens - Het aards paradijs met de zondeval van Adam en Eva.jpg",
+  "query": "Jan Brueghel the Elder The Entry of the Animals into Noah's Ark Getty",
   "artist": "Peter Paul Rubens / Jan Brueghel the Elder",
   "licence": "Public domain",
   "width": 6000,
@@ -46,8 +42,7 @@
  },
  {
   "ref": "9",
-  "query": "Titian Entombment of Christ Louvre",
-  "title": "Le Transport du Christ vers le tombeau - Titien - Musée du Louvre Peintures INV 749 ; MR 516.jpg",
+  "query": "Caravaggio The Entombment of Christ Vatican Pinacoteca",
   "artist": "Titian",
   "licence": "Public domain",
   "width": 11257,
@@ -66,8 +61,7 @@
  },
  {
   "ref": "11",
-  "query": "Rembrandt The Holy Family with Angels Hermitage",
-  "title": "Rembrandt Harmensz. van Rijn - The Holy Family.jpg",
+  "query": "Rembrandt Holy Family with a Curtain Kassel",
   "artist": "Rembrandt",
   "licence": "Public domain",
   "width": 8464,
@@ -76,8 +70,7 @@
  },
  {
   "ref": "12",
-  "query": "Fra Angelico Linaioli Tabernacle Musician Angel",
-  "title": null
+  "query": "Melozzo da Forlì Angel Musician Vatican"
  },
  {
   "ref": "13",
@@ -101,8 +94,7 @@
  },
  {
   "ref": "16",
-  "query": "Claude Lorrain Landscape with Abraham Expelling Hagar and Ishmael Munich",
-  "title": null
+  "query": "Claude Lorrain Landscape with Hagar and the Angel National Gallery"
  },
  {
   "ref": "17",
@@ -116,7 +108,6 @@
  },
  {
   "ref": "18",
-  "query": "El Greco Christ in the Garden of Olives Toledo Museum of Art",
-  "title": null
+  "query": "El Greco The Agony in the Garden Toledo Ohio"
  }
 ]
