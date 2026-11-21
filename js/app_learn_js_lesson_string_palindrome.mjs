@@ -22,7 +22,7 @@ export function app_learn_js_lesson_string_palindrome() {
       box_one,
       context,
       app_learn_js_lesson_string_mirror_index,
-      ["The mirror of index ", "i", " is ", "a.length - 1 - i"],
+      ["the mirror of index", "i", " is ", "a.length - 1 - i"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_string_palindrome() {
       context,
       app_learn_js_lesson_array_for_found,
       [
-        "A value set inside a loop one way, and never set back, says after the loop whether something was ever seen",
+        "a value set inside a loop one way, and never set back, says after the loop whether something was ever seen",
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);

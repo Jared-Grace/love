@@ -1,9 +1,9 @@
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -81,7 +81,7 @@ export function app_learn_js_lesson_string_mirror_index() {
       context,
       app_learn_js_lesson_string_for,
       [
-        "A string is like an array of its letters, so ",
+        "a string is like an array of its letters, so ",
         "a[i]",
         " is the letter at index ",
         "i",
