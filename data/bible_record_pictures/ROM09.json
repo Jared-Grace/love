@@ -61,39 +61,83 @@
  },
  {
   "ref": "9",
-  "query": "Tiepolo The Angel Appearing to Sarah"
+  "query": "Tiepolo The Angel Appearing to Sarah",
+  "title": null
  },
  {
   "ref": "10",
-  "query": "Murillo Rebecca and Eliezer Prado"
+  "query": "Murillo Rebecca and Eliezer Prado",
+  "title": "Bartolomé Esteban Perez Murillo 022.jpg",
+  "artist": "Bartolomé Esteban Murillo",
+  "licence": "Public domain",
+  "width": 2717,
+  "height": 1931,
+  "page": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Perez_Murillo_022.jpg"
  },
  {
   "ref": "11,12",
-  "query": "Hendrick ter Brugghen Esau Selling His Birthright"
+  "query": "Hendrick ter Brugghen Esau Selling His Birthright",
+  "title": "Hendrick Ter Brugghen Esau selling his birthright ca 1627.jpg",
+  "artist": "Hendrick Ter Brugghen (Dutch, 1588-1629)",
+  "licence": "Public domain",
+  "width": 1262,
+  "height": 977,
+  "page": "https://commons.wikimedia.org/wiki/File:Hendrick_Ter_Brugghen_Esau_selling_his_birthright_ca_1627.jpg"
  },
  {
   "ref": "13",
-  "query": "William Blake Jacob's Ladder"
+  "query": "William Blake Jacob's Ladder",
+  "title": "Blake jacobsladder.jpg",
+  "artist": "William Blake",
+  "licence": "Public domain",
+  "width": 3564,
+  "height": 4536,
+  "page": "https://commons.wikimedia.org/wiki/File:Blake_jacobsladder.jpg"
  },
  {
   "ref": "14",
-  "query": "Léon Bonnat Job"
+  "query": "Léon Bonnat Job",
+  "title": "Léon Bonnat - Job.jpg",
+  "artist": "Léon Bonnat",
+  "licence": "Public domain",
+  "width": 1766,
+  "height": 2000,
+  "page": "https://commons.wikimedia.org/wiki/File:L%C3%A9on_Bonnat_-_Job.jpg"
  },
  {
   "ref": "15",
-  "query": "Domenico Fetti Moses before the Burning Bush"
+  "query": "Domenico Fetti Moses before the Burning Bush",
+  "title": "Domenico Fetti and workshop - Moses before the Burning Bush.jpg",
+  "artist": "Domenico Fetti and workshop",
+  "licence": "Public domain",
+  "width": 4590,
+  "height": 6208,
+  "page": "https://commons.wikimedia.org/wiki/File:Domenico_Fetti_and_workshop_-_Moses_before_the_Burning_Bush.jpg"
  },
  {
   "ref": "16",
-  "query": "Rubens Daniel in the Lions' Den"
+  "query": "Rubens Daniel in the Lions' Den",
+  "title": "Sir Peter Paul Rubens - Daniel in the Lions' Den - Google Art Project.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 7633,
+  "height": 5165,
+  "page": "https://commons.wikimedia.org/wiki/File:Sir_Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg"
  },
  {
   "ref": "17",
-  "query": "Alma-Tadema The Death of the Pharaoh's Firstborn Son"
+  "query": "Alma-Tadema The Death of the Pharaoh's Firstborn Son",
+  "title": "1872 Lawrence Alma-Tadema - Death of the Pharaoh Firstborn son.jpg",
+  "artist": "Lawrence Alma-Tadema",
+  "licence": "Public domain",
+  "width": 6098,
+  "height": 3748,
+  "page": "https://commons.wikimedia.org/wiki/File:1872_Lawrence_Alma-Tadema_-_Death_of_the_Pharaoh_Firstborn_son.jpg"
  },
  {
   "ref": "18",
-  "query": "Francis Danby The Delivery of Israel out of Egypt"
+  "query": "Francis Danby The Delivery of Israel out of Egypt",
+  "title": null
  },
  {
   "ref": "19",
