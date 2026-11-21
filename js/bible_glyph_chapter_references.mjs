@@ -2577,6 +2577,10 @@ export function bible_glyph_chapter_references() {
       reference: "Jeremiah 7",
     },
     {
+      chapter_code: "JER08",
+      reference: "Jeremiah 8",
+    },
+    {
       chapter_code: "JER17",
       reference: "Jeremiah 17",
     },
