@@ -1,11 +1,11 @@
-import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
-import { list_index_of_property } from "./list_index_of_property.mjs";
+import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
+import { list_index_of } from "./list_index_of.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_incomplete_next } from "./app_learn_js_lesson_incomplete_next.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_first_id } from "./app_learn_js_lesson_first_id.mjs";
 import { storage_session_transform_context } from "./storage_session_transform_context.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
@@ -16,13 +16,12 @@ export async function app_learn_js_lesson_next(context) {
   "Where there is no lesson after this one it asks for an unfinished lesson further on, which never goes round the top of the list, so on the last lesson it stays put and the screens show that the course is done. It used to wrap round to an early unfinished lesson; that was rejected because a button saying Next must never carry a learner backwards.";
   "Where there is neither, the lesson stays where it is. Nothing else is reachable, and the screens that draw this way on ask separately whether there is anywhere to go and put up the end-of-course note instead - so this is the answer for a press that should never have been offered rather than a destination.";
   function lesson_id_transform(value) {
-    let lessons = app_learn_js_lessons();
-    let index = list_index_of_property(lessons, "id", value);
+    let ids = app_learn_js_lesson_ids();
+    let index = list_index_of(ids, value);
     let index_next = add_1(index);
-    let in_order = list_get_or_null(lessons, index_next);
-    let ended = null_is(in_order);
+    let id_in_order = list_get_or_null(ids, index_next);
+    let ended = null_is(id_in_order);
     if (not(ended)) {
-      let id_in_order = property_get(in_order, "id");
       return id_in_order;
     }
     let lesson = app_learn_js_lesson_incomplete_next(

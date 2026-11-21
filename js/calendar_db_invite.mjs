@@ -3,6 +3,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { calendar_messenger_name_usable } from "./calendar_messenger_name_usable.mjs";
 import { calendar_profile_url_read } from "./calendar_profile_url_read.mjs";
+import { calendar_db_invite_guest_find } from "./calendar_db_invite_guest_find.mjs";
 import { calendar_db_person_write } from "./calendar_db_person_write.mjs";
 import { calendar_db_person_save } from "./calendar_db_person_save.mjs";
 import { calendar_confirm_code } from "./calendar_confirm_code.mjs";
@@ -16,7 +17,7 @@ export async function calendar_db_invite(
   now_iso,
 ) {
   arguments_assert(arguments, 7);
-  ("The host at host_uid is about to send a booking link into one chat: writes the person in that chat as guest_uid, already proven on that app, and answers {ok, reason, slug}. via is whatsapp or messenger; contact is the WhatsApp number the chat is with, or the link to the Messenger chat or profile. Reasons: no_host, messenger, profile, whatsapp.");
+  ("The host at host_uid is about to send a booking link into one chat: writes the person in that chat as guest_uid, already proven on that app, and answers {ok, reason, slug, uid} - uid being the guest the link is for, which is guest_uid unless this chat was proven before. via is whatsapp or messenger; contact is the WhatsApp number the chat is with, or the link to the Messenger chat or profile. Reasons: no_host, messenger, profile, whatsapp.");
   ('★ THE HOST SENDING THE LINK IS THE PROOF (human, 2026-11-20: \"Could this link already be attached to their phone number or messenger conversation url/FB profile url ... so that it\'s already verified\"). A code proves a number belongs to the guest by the guest sending from it; the host sending the link into that very chat proves the same thing from the other side. So nothing is typed by the guest, and nothing can be typed wrong.');
   ("The link is then the proof: whoever opens it books as this guest. The guest's page names the number or chat the meeting is on, so a stranger handed it can see it is not theirs.");
   ("The time zone starts as the host's, and the guest's page sends its own with every booking.");
@@ -25,6 +26,7 @@ export async function calendar_db_invite(
       ok: false,
       reason,
       slug: null,
+      uid: null,
     };
     return r;
   }
@@ -47,6 +49,24 @@ export async function calendar_db_invite(
   if (messenger && equal(profile, null)) {
     let r4 = refused("profile");
     return r4;
+  }
+  ('★ THE SAME CHAT GETS THE SAME GUEST (human, 2026-11-21: "make a link should reuse link for same whatsapp number? likewise if possible facebook conversation/profile url?"). A proof this host already holds for that number or that link names the guest, so their meetings stay one list. The link itself cannot be the same one: only a hash of each key is kept, so a new key is made for that guest, and the links sent before keep working.');
+  ("REJECTED: keeping each key itself, to hand the same link back - the table would then hold keys that work, and anyone reading it could book as every guest.");
+  let before = await calendar_db_invite_guest_find(
+    db,
+    host_uid,
+    messenger,
+    messenger ? profile : contact,
+  );
+  let b = equal(before, null);
+  if (not(b)) {
+    let r_before = {
+      ok: true,
+      reason: null,
+      slug: host.slug,
+      uid: before,
+    };
+    return r_before;
   }
   let saved = messenger
     ? await calendar_db_person_write(
@@ -94,6 +114,7 @@ VALUES (?1, ?2, ?3, ?4, ?5, ?5, ?6, ?7, ?7)`,
     ok: true,
     reason: null,
     slug: host.slug,
+    uid: guest_uid,
   };
   return r;
 }

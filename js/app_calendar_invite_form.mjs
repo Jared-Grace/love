@@ -16,12 +16,12 @@ import { html_value_get } from "./html_value_get.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { cloudflare_site_url } from "./cloudflare_site_url.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
-import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
+import { window_open } from "./window_open.mjs";
 export function app_calendar_invite_form(parent, key) {
   arguments_assert(arguments, 2);
   ("Draws, on the host's page, a card that makes a booking link for one person: their name, the app their chat is on, and the WhatsApp number or Messenger chat link. The link it hands back opens the times at once, so the host pastes it into that chat with the message shown.");
@@ -106,9 +106,10 @@ export function app_calendar_invite_form(parent, key) {
       html_text_content_set(status, text);
       return;
     }
+    ("THE PUBLIC ADDRESS, NEVER THE ONE THIS PAGE IS ON (human, 2026-11-21: \"i sent the link over whatsapp - it says this site can't be reached\"). A link made on a dev copy or an http:// page named an address the guest's phone cannot open.");
     let link =
-      html_url_without_hash() +
-      "#host=" +
+      cloudflare_site_url() +
+      "/calendar#host=" +
       sent.body.slug +
       ",key=" +
       sent.body.key;
@@ -126,7 +127,11 @@ export function app_calendar_invite_form(parent, key) {
         typed.replace(/\D/g, "") +
         "?text=" +
         encodeURIComponent(message);
-    html_a_href_text_new_tab(result, chat, "Open the chat");
+    ('A BUTTON, LIKE COPY BESIDE IT (human, 2026-11-21: "open the chat should be a button?").');
+    function chat_open() {
+      window_open(chat);
+    }
+    app_shared_button_green(result, "Open the chat", chat_open);
   }
   app_shared_button_green(card, "Make link", link_make);
 }

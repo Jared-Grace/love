@@ -328,7 +328,7 @@ export async function calendar_api_handle(
       now_iso,
     );
     let key_invited = invited.ok
-      ? await calendar_db_session_create(db, guest_uid2, now_iso)
+      ? await calendar_db_session_create(db, invited.uid, now_iso)
       : null;
     let r_invite = reply(invited.ok ? 200 : 400, {
       ...invited,
