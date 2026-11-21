@@ -21,8 +21,13 @@
  },
  {
   "ref": "4",
-  "query": "Dieric Bouts Elijah in the Desert",
-  "title": null
+  "query": "Giuseppe Angeli Elijah Taken Up in a Chariot of Fire National Gallery of Art",
+  "title": "Elijah Taken Up in a Chariot of Fire E11219.jpg",
+  "artist": "Giuseppe Angeli",
+  "licence": "Public domain",
+  "width": 3269,
+  "height": 2138,
+  "page": "https://commons.wikimedia.org/wiki/File:Elijah_Taken_Up_in_a_Chariot_of_Fire_E11219.jpg"
  },
  {
   "ref": "5",
@@ -236,8 +241,13 @@
  },
  {
   "ref": "29",
-  "query": "V&A Raphael Christ's Charge to Peter 1515",
-  "title": null
+  "query": "Rembrandt Jacob Blessing the Sons of Joseph Kassel",
+  "title": "Rembrandt van Rijn - Jacob blessing Ephraim and Manasseh (Gemäldegalerie Alte Meister Kassel).jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 7000,
+  "height": 5931,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Jacob_blessing_Ephraim_and_Manasseh_(Gem%C3%A4ldegalerie_Alte_Meister_Kassel).jpg"
  },
  {
   "ref": "30,31",
@@ -281,8 +291,7 @@
  },
  {
   "ref": "35",
-  "query": "James Tissot Le denier de la veuve",
-  "title": null
+  "query": "Murillo Saint Thomas of Villanueva Giving Alms Seville"
  },
  {
   "ref": "36",
