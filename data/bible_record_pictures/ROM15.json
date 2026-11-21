@@ -181,34 +181,67 @@
  },
  {
   "ref": "25",
-  "query": "David Roberts Jerusalem from the Mount of Olives"
+  "query": "David Roberts Jerusalem from the Mount of Olives",
+  "title": "David Roberts - Jerusalem from the Mount of Olives - 1927.124 - Cleveland Museum of Art.tif",
+  "artist": "David Roberts",
+  "licence": "CC0",
+  "width": 6180,
+  "height": 4125,
+  "page": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Jerusalem_from_the_Mount_of_Olives_-_1927.124_-_Cleveland_Museum_of_Art.tif"
  },
  {
   "ref": "26",
-  "query": "Bernardo Strozzi Saint Lawrence Distributing the Riches of the Church"
+  "query": "Bernardo Strozzi Saint Lawrence Distributing the Riches of the Church",
+  "title": "Bernardo Strozzi, Italian, 1581–1644 - St. Lawrence Distributing the Riches of the Church - 37-1944 - Saint Louis Art Museum.jpg",
+  "artist": "Bernardo Strozzi",
+  "licence": "Public domain",
+  "width": 8000,
+  "height": 5884,
+  "page": "https://commons.wikimedia.org/wiki/File:Bernardo_Strozzi,_Italian,_1581%E2%80%931644_-_St._Lawrence_Distributing_the_Riches_of_the_Church_-_37-1944_-_Saint_Louis_Art_Museum.jpg"
  },
  {
   "ref": "27",
-  "query": "Murillo Saint Thomas of Villanueva Distributing Alms Seville"
+  "query": "Murillo Saint Thomas of Villanueva Distributing Alms Seville",
+  "title": null
  },
  {
   "ref": "28",
-  "query": "Claude Lorrain Seaport with the Embarkation of Saint Paula"
+  "query": "Claude Lorrain Seaport with the Embarkation of Saint Paula",
+  "title": null
  },
  {
   "ref": "29",
-  "query": "Antonello da Messina Salvator Mundi National Gallery"
+  "query": "Antonello da Messina Salvator Mundi National Gallery",
+  "title": null
  },
  {
   "ref": "30",
-  "query": "Andrea Mantegna The Agony in the Garden National Gallery"
+  "query": "Andrea Mantegna The Agony in the Garden National Gallery",
+  "title": "Mantegna, Andrea - Agony in the Garden - National Gallery, London.jpg",
+  "artist": "Andrea Mantegna",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 4647,
+  "page": "https://commons.wikimedia.org/wiki/File:Mantegna,_Andrea_-_Agony_in_the_Garden_-_National_Gallery,_London.jpg"
  },
  {
   "ref": "31,32",
-  "query": "Tintoretto Saint Mark Freeing the Slave Accademia"
+  "query": "Tintoretto Saint Mark Freeing the Slave Accademia",
+  "title": "Accademia - Miracle of the Slave by Tintoretto.jpg",
+  "artist": "Didier Descouens",
+  "licence": "Public domain",
+  "width": 6423,
+  "height": 4912,
+  "page": "https://commons.wikimedia.org/wiki/File:Accademia_-_Miracle_of_the_Slave_by_Tintoretto.jpg"
  },
  {
   "ref": "33",
-  "query": "Meindert Hobbema The Avenue at Middelharnis"
+  "query": "Meindert Hobbema The Avenue at Middelharnis",
+  "title": "Meindert Hobbema 001.jpg",
+  "artist": "Meindert Hobbema",
+  "licence": "Public domain",
+  "width": 5707,
+  "height": 4226,
+  "page": "https://commons.wikimedia.org/wiki/File:Meindert_Hobbema_001.jpg"
  }
 ]
