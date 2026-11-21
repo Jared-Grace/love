@@ -32,11 +32,13 @@
  {
   "ref": "6",
   "query": "Domenico Fetti Jacob's Dream Kunsthistorisches Museum",
-  "artist": "Ferdinand Bol",
+  "artist": "Domenico Fetti",
   "licence": "Public domain",
-  "width": 4587,
-  "height": 6067,
-  "page": "https://commons.wikimedia.org/wiki/File:Gem%C3%A4ldegalerie_Alte_Meister_(Dresden)_Galeriewerk_L%C3%BCcke_077.jpg" },
+  "width": 2120,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:Domenico_Fetti,_Kunsthistorisches_Museum_Wien,_Gem%C3%A4ldegalerie_-_Jakobs_Traum_von_der_Himmelsleiter_-_GG_3819_-_Kunsthistorisches_Museum.jpg",
+  "title": "Domenico Fetti, Kunsthistorisches Museum Wien, Gemäldegalerie - Jakobs Traum von der Himmelsleiter - GG 3819 - Kunsthistorisches Museum.jpg"
+ },
  {
   "ref": "7,8",
   "query": "Pieter Bruegel the Elder The Procession to Calvary",
@@ -84,7 +86,8 @@
   "licence": "Public domain",
   "width": 1069,
   "height": 2400,
-  "page": "https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_-_copy_of_right_portion_of_Hals_portrait_of_The_Regentesses_of_the_Old_Men%27s_Almshouse_Haarlem_-_Birmingham_Museum_of_Art.jpg" },
+  "page": "https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_-_copy_of_right_portion_of_Hals_portrait_of_The_Regentesses_of_the_Old_Men%27s_Almshouse_Haarlem_-_Birmingham_Museum_of_Art.jpg"
+ },
  {
   "ref": "13,14",
   "query": "Peter Paul Rubens The Tribute Money San Francisco",
