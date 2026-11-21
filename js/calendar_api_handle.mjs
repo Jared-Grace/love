@@ -96,7 +96,8 @@ export async function calendar_api_handle(
   }
   if (equal(route, "alarms")) {
     ("Public, like free: times only, for the host's phone to ring by. No key is asked, so no secret has to live on the phone.");
-    let alarms = await calendar_db_host_alarms(db, String(body.host), now_iso);
+    let slug6 = String(body.host);
+    let alarms = await calendar_db_host_alarms(db, slug6, now_iso);
     if (equal(alarms, null)) {
       let r_alarms_none = reply(404, {
         ok: false,
