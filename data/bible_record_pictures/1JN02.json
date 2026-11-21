@@ -141,8 +141,13 @@
  },
  {
   "ref": "16",
-  "query": "Jan Steen The Effects of Intemperance National Gallery",
-  "title": null
+  "query": "Jan Steen The Drunken Couple Rijksmuseum",
+  "title": "Het dronken paar Rijksmuseum SK-C-232.jpeg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 5626,
+  "height": 4590,
+  "page": "https://commons.wikimedia.org/wiki/File:Het_dronken_paar_Rijksmuseum_SK-C-232.jpeg"
  },
  {
   "ref": "17",
@@ -186,8 +191,13 @@
  },
  {
   "ref": "21",
-  "query": "Anthony van Dyck The Tribute Money Palazzo Bianco Genoa",
-  "title": null
+  "query": "Anthony van Dyck Tribute Money",
+  "title": "The Tribute Money by Anthony van Dyck, Sotheby's.jpg",
+  "artist": "Anthony van Dyck",
+  "licence": "Public domain",
+  "width": 1801,
+  "height": 2000,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Tribute_Money_by_Anthony_van_Dyck,_Sotheby%27s.jpg"
  },
  {
   "ref": "22",
@@ -201,8 +211,13 @@
  },
  {
   "ref": "23",
-  "query": "Michelangelo The Conversion of Saul Pauline Chapel",
-  "title": null
+  "query": "Michelangelo Conversion of Saint Paul Cappella Paolina",
+  "title": "Conversion of Saint Paul (Michelangelo Buonarroti).jpg",
+  "artist": "Michelangelo",
+  "licence": "Public domain",
+  "width": 2592,
+  "height": 2400,
+  "page": "https://commons.wikimedia.org/wiki/File:Conversion_of_Saint_Paul_(Michelangelo_Buonarroti).jpg"
  },
  {
   "ref": "24",
