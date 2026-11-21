@@ -2121,6 +2121,10 @@ export function bible_glyph_chapter_references() {
       reference: "Proverbs 10",
     },
     {
+      chapter_code: "PRO11",
+      reference: "Proverbs 11",
+    },
+    {
       chapter_code: "PRO16",
       reference: "Proverbs 16",
     },
