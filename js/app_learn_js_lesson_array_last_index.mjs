@@ -213,7 +213,7 @@ export function app_learn_js_lesson_array_last_index() {
     let rows = list_map_index(example_items, row_of);
     app_learn_js_rows_aligned(box_two, rows);
     app_learn_js_div_cycle_code(box_two, [
-      "Because the list has ",
+      "Because the array has ",
       "3",
       ' items, then the last item is "3."',
     ]);

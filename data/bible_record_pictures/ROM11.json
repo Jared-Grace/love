@@ -11,15 +11,28 @@
  },
  {
   "ref": "2,3",
-  "query": "Washington Allston Elijah in the Desert"
+  "query": "Washington Allston Elijah in the Desert",
+  "title": "Washington Allston - Elijah in the Desert - Google Art Project.jpg",
+  "artist": "Washington Allston",
+  "licence": "Public domain",
+  "width": 4945,
+  "height": 3319,
+  "page": "https://commons.wikimedia.org/wiki/File:Washington_Allston_-_Elijah_in_the_Desert_-_Google_Art_Project.jpg"
  },
  {
   "ref": "4",
-  "query": "Guercino Elijah Fed by Ravens National Gallery"
+  "query": "Guercino Elijah Fed by Ravens National Gallery",
+  "title": null
  },
  {
   "ref": "5",
-  "query": "Edward Hicks Noah's Ark Philadelphia Museum of Art"
+  "query": "Edward Hicks Noah's Ark Philadelphia Museum of Art",
+  "title": "Noah's Ark by Edward Hicks, 1846 (Philadelphia museum of art).jpg",
+  "artist": "Edward Hicks, American, 1780 - 1849  Jacquemart de Hesdin",
+  "licence": "CC0",
+  "width": 4096,
+  "height": 3538,
+  "page": "https://commons.wikimedia.org/wiki/File:Noah%27s_Ark_by_Edward_Hicks,_1846_(Philadelphia_museum_of_art).jpg"
  },
  {
   "ref": "6",
