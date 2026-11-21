@@ -1,3 +1,5 @@
+import { greater_than } from "./greater_than.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
@@ -68,8 +70,8 @@ export async function app_bible_record_camera(chapter_code, verse_numbers) {
         await html_request_animation_frame();
         let width = video_element.videoWidth;
         let height = video_element.videoHeight;
-        if (width > 0) {
-          if (canvas_element.width !== width) {
+        if (greater_than(width, 0)) {
+          if (not_equal(canvas_element.width, width)) {
             canvas_element.width = width;
             canvas_element.height = height;
           }
