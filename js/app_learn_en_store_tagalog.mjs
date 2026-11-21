@@ -8,6 +8,7 @@ export function app_learn_en_store_tagalog() {
     language: ebible_language_tagalog(),
     name_own: "Tagalog",
     language_choose: "Piliin ang wikang ginagamit mo",
+    title: "Matuto ng Ingles",
     download: app_learn_en_gloss_tagalog_generate_download,
     chapters_uploaded: app_learn_en_gloss_tagalog_chapters_uploaded,
   };

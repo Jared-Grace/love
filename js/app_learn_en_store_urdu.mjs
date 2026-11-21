@@ -8,6 +8,7 @@ export function app_learn_en_store_urdu() {
     language: ebible_language_urdu(),
     name_own: "اردو",
     language_choose: "اپنی زبان منتخب کریں",
+    title: "انگریزی سیکھیں",
     download: app_learn_en_gloss_urdu_generate_download,
     chapters_uploaded: app_learn_en_gloss_urdu_chapters_uploaded,
   };
