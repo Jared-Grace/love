@@ -1,13 +1,13 @@
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
+import { subtract } from "./subtract.mjs";
+import { multiply } from "./multiply.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -157,13 +157,13 @@ export function app_learn_js_lesson_object_list_properties_for() {
       box_two,
       context,
       app_learn_js_lesson_object_count_words_for,
-      ["In a loop, ", "words[i]", " is one item of the list at a time"],
+      ["In a loop, ", "words[i]", " is one item of the array at a time"],
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "",
       "[{}, {}, {}]",
-      " is a list of three empty objects. ",
+      " is an array of three empty objects. ",
       "items[i]",
       " is one of them, so ",
       "items[i].n = i + 1;",

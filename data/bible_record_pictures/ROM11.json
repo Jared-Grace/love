@@ -56,43 +56,98 @@
  },
  {
   "ref": "9",
-  "query": "Rembrandt Belshazzar's Feast National Gallery"
+  "query": "Rembrandt Belshazzar's Feast National Gallery",
+  "title": "Rembrandt-Belsazar.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 5308,
+  "height": 4226,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt-Belsazar.jpg"
  },
  {
   "ref": "10",
-  "query": "Jean-François Millet Man with a Hoe Getty"
+  "query": "Jean-François Millet Man with a Hoe Getty",
+  "title": "Jean-François Millet - L'Homme à la houe (1860-62).jpg",
+  "artist": "Jean-François Millet",
+  "licence": "Public domain",
+  "width": 8479,
+  "height": 6884,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_L%27Homme_%C3%A0_la_houe_(1860-62).jpg"
  },
  {
   "ref": "11",
-  "query": "Ivan Aivazovsky Walking on Water"
+  "query": "Ivan Aivazovsky Walking on Water",
+  "title": "Po vodam 1888.jpg",
+  "artist": "Ivan Aivazovsky",
+  "licence": "Public domain",
+  "width": 1200,
+  "height": 2011,
+  "page": "https://commons.wikimedia.org/wiki/File:Po_vodam_1888.jpg"
  },
  {
   "ref": "12",
-  "query": "Frans Snyders Fruit Stall Hermitage"
+  "query": "Frans Snyders Fruit Stall Hermitage",
+  "title": "Frans Snyders - Fruit Stall - WGA21520.jpg",
+  "artist": "Frans Snyders / Jan Wildens",
+  "licence": "Public domain",
+  "width": 3840,
+  "height": 2333,
+  "page": "https://commons.wikimedia.org/wiki/File:Frans_Snyders_-_Fruit_Stall_-_WGA21520.jpg"
  },
  {
   "ref": "13,14",
-  "query": "Raphael The Sacrifice at Lystra cartoon"
+  "query": "Raphael The Sacrifice at Lystra cartoon",
+  "title": "V&A - Raphael, The Sacrifice at Lystra (1515).jpg",
+  "artist": "Raphael",
+  "licence": "Public domain",
+  "width": 2000,
+  "height": 1270,
+  "page": "https://commons.wikimedia.org/wiki/File:V%26A_-_Raphael,_The_Sacrifice_at_Lystra_(1515).jpg"
  },
  {
   "ref": "15",
-  "query": "Matthias Grünewald Resurrection Isenheim Altarpiece"
+  "query": "Matthias Grünewald Resurrection Isenheim Altarpiece",
+  "title": "Grunewald Resurrection Isenheim.jpg",
+  "artist": "Matthias Grünewald",
+  "licence": "Public domain",
+  "width": 2024,
+  "height": 3336,
+  "page": "https://commons.wikimedia.org/wiki/File:Grunewald_Resurrection_Isenheim.jpg"
  },
  {
   "ref": "16",
-  "query": "Jean-François Millet La Cuisson du pain Kröller-Müller"
+  "query": "Jean-François Millet La Cuisson du pain Kröller-Müller",
+  "title": null
  },
  {
   "ref": "17,18",
-  "query": "Vincent van Gogh Olive Trees Minneapolis Institute of Art"
+  "query": "Vincent van Gogh Olive Trees Minneapolis Institute of Art",
+  "title": "Vincent van Gogh - Olive Trees - Google Art Project (Minneapolis Institute of Arts).jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 4751,
+  "height": 3794,
+  "page": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Olive_Trees_-_Google_Art_Project_(Minneapolis_Institute_of_Arts).jpg"
  },
  {
   "ref": "19",
-  "query": "Vincent van Gogh Women Picking Olives Metropolitan Museum"
+  "query": "Vincent van Gogh Women Picking Olives Metropolitan Museum",
+  "title": "1889 van Gogh Women picking olives anagoria.JPG",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 5853,
+  "height": 4656,
+  "page": "https://commons.wikimedia.org/wiki/File:1889_van_Gogh_Women_picking_olives_anagoria.JPG"
  },
  {
   "ref": "20",
-  "query": "Peter Paul Rubens The Fall of Phaeton National Gallery of Art"
+  "query": "Peter Paul Rubens The Fall of Phaeton National Gallery of Art",
+  "title": "Peter Paul Rubens - The Fall of Phaeton (National Gallery of Art).jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 10520,
+  "height": 7849,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Fall_of_Phaeton_(National_Gallery_of_Art).jpg"
  },
  {
   "ref": "21",
