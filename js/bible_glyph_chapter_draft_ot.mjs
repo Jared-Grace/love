@@ -19,6 +19,7 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
   ("Drafts one Old Testament picture-Bible chapter: the BSB text of each verse with every word the Hebrew root table seats replaced by its mark, returned as text. It only reads, so it runs in the read-only sandbox, and the text is kept as scripts/temp/<CODE>draft.txt, which the module builder and the tally audit read.");
   ("The draft file has the same shape as the New Testament twin's: per verse the BSB line and the drawn line with what English was supplied and what gloss had no BSB word; then a === marks by frequency line, which the tally audit checks the hand-finished chapter against; then the pieces without a reason; then === JSON, the verses the chapter file is built from.");
   ("Three things the New Testament drafts left to the hand are done here. A long dash joining two BSB words splits them before aligning, so the word on either side can still take its mark. A run of punctuation left where a word was dropped keeps only its strongest sign. Marks that land after a verse's closing punctuation take that punctuation along to the end of the verse.");
+  ("Punctuation stays at the end of what one mark draws. A comma inside a gloss that one mark draws whole is dropped, and a stronger sign there moves on to that mark, so it no longer sticks to the small word before it. A word whose gloss is only . . . takes the punctuation of the word before it when the Hebrew joins the two, by a maqaf or a joining accent on the first of them, so the sign follows the last of the marks one English word became. A gloss word in square brackets was supplied by the translator, so it stays in letters beside the mark instead of folding into it; only a gloss bracketed whole is drawn by the mark.");
   let book = chapter_code.slice(0, 3);
   let v2 = chapter_code.slice(3);
   let chapter_number = Number(v2);
@@ -93,6 +94,15 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
     moved[subtract(moved.length, 1)] += tail;
     return moved;
   }
+  function hebrew_joined(original) {
+    let r = /־$/.test(original) || not(/[֑-֮֡׀׃]/.test(original));
+    return r;
+  }
+  function phrase_joined(x, y) {
+    let first = less_than(x.k, y.k) ? x : y;
+    let r = equal(Math.abs(subtract(x.k, y.k)), 1) && first.joined;
+    return r;
+  }
   let tally = {};
   let out = [];
   let report = [];
@@ -104,6 +114,8 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
       let r2 = {
         ...w,
         sort: iw[k].gloss_sort,
+        k,
+        joined: hebrew_joined(iw[k].original || ""),
       };
       return r2;
     }
@@ -148,6 +160,7 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
             mark,
             emit: mark,
             gloss,
+            word: w,
           });
         }
         continue;
@@ -158,18 +171,41 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
             n: norm(t),
             mark: null,
             emit: "TEXT",
+            word: w,
           });
         continue;
       }
-      let lead = 0;
+      let bracketed = [];
+      let depth = 0;
+      for (let t of toks) {
+        let inside = greater_than(depth, 0) || t.includes("[");
+        depth += (t.match(/\[/g) || []).length;
+        depth -= (t.match(/\]/g) || []).length;
+        if (less_than(depth, 0)) depth = 0;
+        bracketed.push(inside);
+      }
+      let unbracketed = [];
+      for (let k = 0; less_than(k, toks.length); k++)
+        if (not(bracketed[k])) unbracketed.push(k);
+      let all_bracketed = equal(unbracketed.length, 0);
+      if (all_bracketed)
+        for (let k = 0; less_than(k, toks.length); k++) unbracketed.push(k);
+      let lead_u = 0;
       while (
-        less_than(lead, subtract(toks.length, 1)) &&
-        small.has(norm(toks[lead]))
+        less_than(lead_u, subtract(unbracketed.length, 1)) &&
+        small.has(norm(toks[unbracketed[lead_u]]))
       )
-        lead++;
+        lead_u++;
+      let lead = unbracketed[lead_u];
+      let b2 = unbracketed[subtract(unbracketed.length, 1)];
       for (let k = 0; less_than(k, toks.length); k++) {
-        let b2 = subtract(toks.length, 1);
-        if (
+        if (not(all_bracketed) && bracketed[k]) {
+          G.push({
+            n: norm(toks[k]),
+            mark: null,
+            emit: "TEXT",
+          });
+        } else if (
           less_than(k, lead) &&
           greater_than(neg_silent, 0) &&
           equal(norm(toks[k]), "not")
@@ -197,6 +233,7 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
             n: norm(toks[k]),
             mark,
             emit: mark,
+            word: w,
           });
       }
     }
@@ -269,6 +306,8 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
         pre,
         body,
         post,
+        span_inner: not_equal(g, null) && g.mark && equal(g.emit, ""),
+        word: g && g.word,
       });
     }
     while (less_than(a, n) || less_than(b, m)) {
@@ -288,12 +327,26 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
       ) {
         let g = G[a];
         if (g.mark && g.emit) {
-          pieces.push({
+          let piece = {
             pre: "",
             body: g.emit,
             post: "",
             unmatched: true,
-          });
+            word: g.word,
+          };
+          let prev = pieces[subtract(pieces.length, 1)];
+          if (
+            equal(g.n, null) &&
+            /^\.\s*\.\s*\.$/.test(g.gloss) &&
+            prev &&
+            prev.word &&
+            phrase_joined(g.word, prev.word) &&
+            /[.,;:!?—]/.test(prev.post)
+          ) {
+            piece.post = prev.post;
+            prev.post = "";
+          }
+          pieces.push(piece);
         } else if (not(g.mark && equal(g.emit, ""))) {
           dropped.push(g.n);
         }
@@ -323,16 +376,23 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
       }
     let toks = [];
     let carry = "";
+    let pending = "";
     for (let p of pieces) {
       if (equal(p.body, "")) {
-        if (toks.length) {
+        if (p.span_inner) {
+          pending += p.post.replace(/[,—]/g, "");
+        } else if (toks.length) {
           toks[subtract(toks.length, 1)] += p.post;
         }
         carry += p.pre;
         continue;
       }
-      toks.push(carry + p.pre + p.body + p.post);
+      toks.push(carry + p.pre + p.body + pending + p.post);
       carry = "";
+      pending = "";
+    }
+    if (pending && toks.length) {
+      toks[subtract(toks.length, 1)] += pending;
     }
     function lambda14(t) {
       function lambda13(c) {
