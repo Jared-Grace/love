@@ -3023,6 +3023,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_ecc04();
   }
+  if (equal(chapter_code, "ECC05")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_ecc05.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_ecc05();
+  }
   if (equal(chapter_code, "ECC12")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_ecc12.mjs"
