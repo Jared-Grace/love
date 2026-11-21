@@ -2433,6 +2433,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezekiel 5",
     },
     {
+      chapter_code: "EZK06",
+      reference: "Ezekiel 6",
+    },
+    {
       chapter_code: "EZK11",
       reference: "Ezekiel 11",
     },
