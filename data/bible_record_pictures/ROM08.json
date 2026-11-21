@@ -86,27 +86,63 @@
  },
  {
   "ref": "12",
-  "query": "Jules Breton The Song of the Lark"
+  "query": "Jules Breton The Song of the Lark",
+  "title": "Jules Breton, le chant de l'alouette.1884.jpg",
+  "artist": "Jules Breton",
+  "licence": "Public domain",
+  "width": 2548,
+  "height": 3300,
+  "page": "https://commons.wikimedia.org/wiki/File:Jules_Breton,_le_chant_de_l%27alouette.1884.jpg"
  },
  {
   "ref": "13",
-  "query": "Raphael Saint Michael Vanquishing Satan Louvre"
+  "query": "Raphael Saint Michael Vanquishing Satan Louvre",
+  "title": "Saint Michel et le Dragon - Raphaël - Musée du Louvre Peintures INV 608 ; MR 439.jpg",
+  "artist": "Raphael",
+  "licence": "Public domain",
+  "width": 5123,
+  "height": 5897,
+  "page": "https://commons.wikimedia.org/wiki/File:Saint_Michel_et_le_Dragon_-_Rapha%C3%ABl_-_Mus%C3%A9e_du_Louvre_Peintures_INV_608_;_MR_439.jpg"
  },
  {
   "ref": "14",
-  "query": "Bernhard Plockhorst The Good Shepherd"
+  "query": "Bernhard Plockhorst The Good Shepherd",
+  "title": "The Lord is my Good Shepherd.jpg",
+  "artist": "Bernhard Plockhorst",
+  "licence": "Public domain",
+  "width": 3938,
+  "height": 5501,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Lord_is_my_Good_Shepherd.jpg"
  },
  {
   "ref": "15",
-  "query": "Murillo The Heavenly and Earthly Trinities"
+  "query": "Murillo The Heavenly and Earthly Trinities",
+  "title": "Bartolomé Esteban Murillo - The Heavenly and Earthly Trinities - 1681-82.jpg",
+  "artist": "Bartolomé Esteban Murillo",
+  "licence": "Public domain",
+  "width": 3538,
+  "height": 5135,
+  "page": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Murillo_-_The_Heavenly_and_Earthly_Trinities_-_1681-82.jpg"
  },
  {
   "ref": "16",
-  "query": "Lucas Cranach the Elder Christ Blessing the Children"
+  "query": "Lucas Cranach the Elder Christ Blessing the Children",
+  "title": "Lucas Cranach - Christus segnet die Kinder (Nationalgalerie in Prag).jpg",
+  "artist": "Workshop of Lucas Cranach the Elder / Lucas Cranach the Younger",
+  "licence": "Public domain",
+  "width": 9237,
+  "height": 6491,
+  "page": "https://commons.wikimedia.org/wiki/File:Lucas_Cranach_-_Christus_segnet_die_Kinder_(Nationalgalerie_in_Prag).jpg"
  },
  {
   "ref": "17",
-  "query": "El Greco Christ Carrying the Cross Metropolitan Museum"
+  "query": "El Greco Christ Carrying the Cross Metropolitan Museum",
+  "title": "Christ Carrying the Cross MET DT714.jpg",
+  "artist": "El Greco",
+  "licence": "CC0",
+  "width": 2688,
+  "height": 3722,
+  "page": "https://commons.wikimedia.org/wiki/File:Christ_Carrying_the_Cross_MET_DT714.jpg"
  },
  {
   "ref": "18",
