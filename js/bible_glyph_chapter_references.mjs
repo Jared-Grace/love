@@ -2589,6 +2589,10 @@ export function bible_glyph_chapter_references() {
       reference: "Amos 6",
     },
     {
+      chapter_code: "AMO07",
+      reference: "Amos 7",
+    },
+    {
       chapter_code: "AMO09",
       reference: "Amos 9",
     },
