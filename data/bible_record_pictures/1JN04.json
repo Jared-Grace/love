@@ -96,42 +96,102 @@
  },
  {
   "ref": "12",
-  "query": "Michelangelo The Creation of Adam"
+  "query": "Michelangelo The Creation of Adam",
+  "title": "Sistine Chapel ceiling, Creation of Adam.jpg",
+  "artist": "Michelangelo",
+  "licence": "Public domain",
+  "width": 6720,
+  "height": 4480,
+  "page": "https://commons.wikimedia.org/wiki/File:Sistine_Chapel_ceiling,_Creation_of_Adam.jpg"
  },
  {
   "ref": "13",
-  "query": "Jean Restout Pentecost Louvre"
+  "query": "Jean Restout Pentecost Louvre",
+  "title": "Jean II Restout - Pentecost - WGA19318.jpg",
+  "artist": "Jean Restout",
+  "licence": "Public domain",
+  "width": 1240,
+  "height": 730,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean_II_Restout_-_Pentecost_-_WGA19318.jpg"
  },
  {
   "ref": "14",
-  "query": "Titian Christ Carrying the Cross Prado"
+  "query": "Titian Christ Carrying the Cross Prado",
+  "title": "Titian, Christ Carrying the Cross. Oil on canvas, 67 x 77 cm, c. 1565. Madrid, Museo Nacional del Prado.jpg",
+  "artist": "Titian",
+  "licence": "Public domain",
+  "width": 3051,
+  "height": 2635,
+  "page": "https://commons.wikimedia.org/wiki/File:Titian,_Christ_Carrying_the_Cross._Oil_on_canvas,_67_x_77_cm,_c._1565._Madrid,_Museo_Nacional_del_Prado.jpg"
  },
  {
   "ref": "15",
-  "query": "Pietro Perugino Delivery of the Keys Sistine Chapel"
+  "query": "Pietro Perugino Delivery of the Keys Sistine Chapel",
+  "title": "Perugino Keys.jpg",
+  "artist": "Pietro Perugino",
+  "licence": "Public domain",
+  "width": 1249,
+  "height": 751,
+  "page": "https://commons.wikimedia.org/wiki/File:Perugino_Keys.jpg"
  },
  {
   "ref": "16",
-  "query": "Rembrandt The Jewish Bride"
+  "query": "Rembrandt The Jewish Bride",
+  "title": "Rembrandt Harmensz. van Rijn - Het Joodse bruidje.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 7470,
+  "height": 5430,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Het_Joodse_bruidje.jpg"
  },
  {
   "ref": "17",
-  "query": "Hans Memling The Last Judgment triptych Gdansk"
+  "query": "Hans Memling The Last Judgment triptych Gdansk",
+  "title": "Gdansk National Museum 2019 P01 Hans Memling The Last Judgment.jpg",
+  "artist": "Hans Memling",
+  "licence": "Public domain",
+  "width": 5184,
+  "height": 3456,
+  "page": "https://commons.wikimedia.org/wiki/File:Gdansk_National_Museum_2019_P01_Hans_Memling_The_Last_Judgment.jpg"
  },
  {
   "ref": "18",
-  "query": "Gerard ter Borch Mother Combing Her Child's Hair"
+  "query": "Gerard ter Borch Mother Combing Her Child's Hair",
+  "title": "Gerard ter Borch - Mother Combing Her Child's Hair, known as 'Hunting for Lice' - 744 - Mauritshuis.jpg",
+  "artist": "Gerard ter Borch",
+  "licence": "Public domain",
+  "width": 5213,
+  "height": 6000,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerard_ter_Borch_-_Mother_Combing_Her_Child%27s_Hair,_known_as_%27Hunting_for_Lice%27_-_744_-_Mauritshuis.jpg"
  },
  {
   "ref": "19",
-  "query": "Mary Cassatt The Child's Bath Art Institute of Chicago"
+  "query": "Mary Cassatt The Child's Bath Art Institute of Chicago",
+  "title": "Art Institute of Chicago-0984.jpg",
+  "artist": "Mary Cassatt",
+  "licence": "Public domain",
+  "width": 3522,
+  "height": 4799,
+  "page": "https://commons.wikimedia.org/wiki/File:Art_Institute_of_Chicago-0984.jpg"
  },
  {
   "ref": "20",
-  "query": "Peter Paul Rubens The Meeting of Esau and Jacob"
+  "query": "Peter Paul Rubens The Meeting of Esau and Jacob",
+  "title": "Peter Paul Rubens (1577-1640) (after) - The Meeting of Esau and Jacob - OP158 - Wolverhampton Art Gallery.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 898,
+  "height": 1200,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_(1577-1640)_(after)_-_The_Meeting_of_Esau_and_Jacob_-_OP158_-_Wolverhampton_Art_Gallery.jpg"
  },
  {
   "ref": "21",
-  "query": "Francesco Hayez The Kiss Brera"
+  "query": "Francesco Hayez The Kiss Brera",
+  "title": "El Beso (Pinacoteca de Brera, Milán, 1859).jpg",
+  "artist": "Francesco Hayez",
+  "licence": "Public domain",
+  "width": 6329,
+  "height": 7885,
+  "page": "https://commons.wikimedia.org/wiki/File:El_Beso_(Pinacoteca_de_Brera,_Mil%C3%A1n,_1859).jpg"
  }
 ]
