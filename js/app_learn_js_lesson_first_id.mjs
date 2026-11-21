@@ -1,7 +1,7 @@
-import { list_first_property } from "./list_first_property.mjs";
-import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
+import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
+import { list_first } from "./list_first.mjs";
 export function app_learn_js_lesson_first_id() {
-  let lessons = app_learn_js_lessons();
-  let value = list_first_property(lessons, "id");
+  let ids = app_learn_js_lesson_ids();
+  let value = list_first(ids);
   return value;
 }
