@@ -11,67 +11,148 @@
  },
  {
   "ref": "2",
-  "query": "Diego Velázquez Christ Crucified Prado"
+  "query": "Diego Velázquez Christ Crucified Prado",
+  "title": "Cristo crucificado.jpg",
+  "artist": "Diego Velázquez",
+  "licence": "Public domain",
+  "width": 2046,
+  "height": 3051,
+  "page": "https://commons.wikimedia.org/wiki/File:Cristo_crucificado.jpg"
  },
  {
   "ref": "3",
-  "query": "Guido Reni Moses with the Tables of the Law Borghese"
+  "query": "Guido Reni Moses with the Tables of the Law Borghese",
+  "title": null
  },
  {
   "ref": "4",
-  "query": "Quentin Matsys The Moneylender and his Wife Louvre"
+  "query": "Quentin Matsys The Moneylender and his Wife Louvre",
+  "title": "Le prêteur et sa femme - Quentin Metsys - Musée du Louvre Peintures INV 1444 ; MR 821.jpg",
+  "artist": "Quinten Metsys",
+  "licence": "Public domain",
+  "width": 5786,
+  "height": 6090,
+  "page": "https://commons.wikimedia.org/wiki/File:Le_pr%C3%AAteur_et_sa_femme_-_Quentin_Metsys_-_Mus%C3%A9e_du_Louvre_Peintures_INV_1444_;_MR_821.jpg"
  },
  {
   "ref": "5,6",
-  "query": "Duccio Maestà Christ Washing the Feet of the Apostles"
+  "query": "Duccio Maestà Christ Washing the Feet of the Apostles",
+  "title": "Duccio di Buoninsegna 029.jpg",
+  "artist": "Duccio di Buoninsegna",
+  "licence": "Public domain",
+  "width": 1256,
+  "height": 2369,
+  "page": "https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna_029.jpg"
  },
  {
   "ref": "7",
-  "query": "Raphael Moses Receiving the Tablets of the Law Vatican Loggia"
+  "query": "Raphael Moses Receiving the Tablets of the Law Vatican Loggia",
+  "title": null
  },
  {
   "ref": "8",
-  "query": "Caspar David Friedrich Morning Landscape Hannover"
+  "query": "Caspar David Friedrich Morning Landscape Hannover",
+  "title": "CD Friedrich Morgen 02.jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 4004,
+  "height": 2892,
+  "page": "https://commons.wikimedia.org/wiki/File:CD_Friedrich_Morgen_02.jpg"
  },
  {
   "ref": "9",
-  "query": "Georges de La Tour Saint Joseph the Carpenter Louvre"
+  "query": "Georges de La Tour Saint Joseph the Carpenter Louvre",
+  "title": "Georges de La Tour. St. Joseph, the Carpenter.JPG",
+  "artist": "Georges de La Tour",
+  "licence": "Public domain",
+  "width": 2024,
+  "height": 2794,
+  "page": "https://commons.wikimedia.org/wiki/File:Georges_de_La_Tour._St._Joseph,_the_Carpenter.JPG"
  },
  {
   "ref": "10",
-  "query": "Rembrandt The Visitation Detroit Institute of Arts"
+  "query": "Rembrandt The Visitation Detroit Institute of Arts",
+  "title": "Rembrandt van Rijn 190.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1355,
+  "height": 1600,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_190.jpg"
  },
  {
   "ref": "11",
-  "query": "Pieter Bruegel the Elder The Blind Leading the Blind Naples"
+  "query": "Pieter Bruegel the Elder The Blind Leading the Blind Naples",
+  "title": "Bruegel, Pieter (I) - Blind leading the blind Google Art Project.jpeg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 3663,
+  "height": 2058,
+  "page": "https://commons.wikimedia.org/wiki/File:Bruegel,_Pieter_(I)_-_Blind_leading_the_blind_Google_Art_Project.jpeg"
  },
  {
   "ref": "12",
-  "query": "Leonello Spada The Return of the Prodigal Son Louvre"
+  "query": "Leonello Spada The Return of the Prodigal Son Louvre",
+  "title": "Rembrandt Harmensz van Rijn - Return of the Prodigal Son - Google Art Project.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 22991,
+  "height": 30000,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz_van_Rijn_-_Return_of_the_Prodigal_Son_-_Google_Art_Project.jpg"
  },
  {
   "ref": "13",
-  "query": "Rembrandt Portrait of an Old Man in Red Hermitage"
+  "query": "Rembrandt Portrait of an Old Man in Red Hermitage",
+  "title": "Rembrandt Harmensz. van Rijn - Portrait of an Old Man in Red.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 6346,
+  "height": 8280,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Portrait_of_an_Old_Man_in_Red.jpg"
  },
  {
   "ref": "14",
-  "query": "Lucas Cranach Saint George and the Dragon"
+  "query": "Lucas Cranach Saint George and the Dragon",
+  "title": "1512 Meister des Döbelner Hochaltars Hl. Georg zu Pferde anagoria.JPG",
+  "artist": "Lucas Cranach the Elder / Master of the Döbeln Altarpiece",
+  "licence": "Public domain",
+  "width": 3707,
+  "height": 4752,
+  "page": "https://commons.wikimedia.org/wiki/File:1512_Meister_des_D%C3%B6belner_Hochaltars_Hl._Georg_zu_Pferde_anagoria.JPG"
  },
  {
   "ref": "15",
-  "query": "Titian Venus and Adonis Prado"
+  "query": "Titian Venus and Adonis Prado",
+  "title": "Venus prado.jpg",
+  "artist": "Titian",
+  "licence": "Public domain",
+  "width": 3051,
+  "height": 2775,
+  "page": "https://commons.wikimedia.org/wiki/File:Venus_prado.jpg"
  },
  {
   "ref": "16",
-  "query": "Paolo Veronese The Wedding at Cana Louvre"
+  "query": "Paolo Veronese The Wedding at Cana Louvre",
+  "title": "Les Noces de Cana - Paolo Veronese - Musée du Louvre Peintures INV 142 ; MR 384.jpg",
+  "artist": "Paolo Veronese",
+  "licence": "Public domain",
+  "width": 10068,
+  "height": 6742,
+  "page": "https://commons.wikimedia.org/wiki/File:Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_;_MR_384.jpg"
  },
  {
   "ref": "17",
-  "query": "Philippe de Champaigne Vanitas Still Life with a Tulip Skull and Hour-Glass"
+  "query": "Philippe de Champaigne Vanitas Still Life with a Tulip Skull and Hour-Glass",
+  "title": null
  },
  {
   "ref": "18",
-  "query": "Luca Signorelli Sermon and Deeds of the Antichrist Orvieto"
+  "query": "Luca Signorelli Sermon and Deeds of the Antichrist Orvieto",
+  "title": "Federico Zuccaro (after Luca Signorelli) - The Sermons and Deeds of the Antichrist, 1570 - NGA 2022.40.34.jpg",
+  "artist": "Federico Zuccari",
+  "licence": "Public domain",
+  "width": 3186,
+  "height": 4096,
+  "page": "https://commons.wikimedia.org/wiki/File:Federico_Zuccaro_(after_Luca_Signorelli)_-_The_Sermons_and_Deeds_of_the_Antichrist,_1570_-_NGA_2022.40.34.jpg"
  },
  {
   "ref": "19",
