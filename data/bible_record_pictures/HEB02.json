@@ -21,13 +21,13 @@
  },
  {
   "ref": "5",
-  "query": "Giovanni di Paolo Paradise Metropolitan Museum",
-  "title": "Creation-and-the-expulsion-from-the-paradise-11291.jpg",
+  "query": "Giovanni di Paolo Paradise 1445 Google Art Project",
   "artist": "Giovanni di Paolo",
-  "licence": "Public domain",
+  "licence": "CC0",
   "width": 3791,
   "height": 3353,
-  "page": "https://commons.wikimedia.org/wiki/File:Creation-and-the-expulsion-from-the-paradise-11291.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Giovanni_di_Paolo_(Giovanni_di_Paolo_di_Grazia)_(Italian,_Udine_1487%E2%80%931564_Rome)_-_The_Creation_of_the_World_and_the_Expulsion_from_Paradise_-_Google_Art_Project_digitally_repaired.jpg",
+  "title": "Giovanni di Paolo (Giovanni di Paolo di Grazia) (Italian, Udine 1487–1564 Rome) - The Creation of the World and the Expulsion from Paradise - Google Art Project digitally repaired.jpg"
  },
  {
   "ref": "6",
@@ -71,17 +71,12 @@
  },
  {
   "ref": "11",
-  "query": "Rembrandt Holy Family with a Curtain Kassel",
-  "artist": "Rembrandt",
-  "licence": "Public domain",
-  "width": 8464,
-  "height": 10880,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_The_Holy_Family.jpg",
+  "query": "Rembrandt Holy Family with Painted Frame and Curtain",
   "title": null
  },
  {
   "ref": "12",
-  "query": "Melozzo da Forlì Angel Musician Vatican",
+  "query": "Melozzo da Forlì angelo musicante",
   "title": null
  },
  {
@@ -126,6 +121,12 @@
  },
  {
   "ref": "18",
-  "query": "El Greco The Agony in the Garden Toledo Ohio"
+  "query": "El Greco Agony in the Garden Toledo Museum of Art Google Art Project",
+  "artist": "El Greco",
+  "licence": "Public domain",
+  "width": 32015,
+  "height": 47508,
+  "page": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_en_el_Huerto_de_los_Olivos_-_El_Greco_-_Google_Arts_%26_Culture.jpg",
+  "title": "Jesús en el Huerto de los Olivos - El Greco - Google Arts & Culture.jpg"
  }
 ]

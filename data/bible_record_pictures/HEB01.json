@@ -1,13 +1,13 @@
 [
  {
   "ref": "1",
-  "query": "Michelangelo The Prophet Jeremiah Sistine Chapel ceiling",
+  "query": "Michelangelo Profeta Geremia Cappella Sistina",
+  "title": "Michelangelo - Sistine Chapel ceiling - 1st bay.jpg",
   "artist": "Michelangelo",
   "licence": "Public domain",
   "width": 1726,
   "height": 510,
-  "page": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_Sistine_Chapel_ceiling_-_1st_bay.jpg",
-  "title": "Michelangelo - Sistine Chapel ceiling - 1st bay.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_Sistine_Chapel_ceiling_-_1st_bay.jpg"
  },
  {
   "ref": "2",
@@ -21,28 +21,28 @@
  },
  {
   "ref": "3",
-  "query": "Tiziano Trasfigurazione San Salvador",
-  "title": null
+  "query": "Pietro Perugino Transfiguration Collegio del Cambio Perugia",
+  "title": "Perugino, trasfigurazione, collegio del cambio.jpg",
+  "artist": "Pietro Perugino",
+  "licence": "Public domain",
+  "width": 1464,
+  "height": 1691,
+  "page": "https://commons.wikimedia.org/wiki/File:Perugino,_trasfigurazione,_collegio_del_cambio.jpg"
  },
  {
   "ref": "4",
-  "query": "Fra Angelico Christ Glorified in the Court of Heaven National Gallery",
-  "artist": "Fra Angelico",
+  "query": "Francesco Botticini The Assumption of the Virgin National Gallery",
+  "title": "Francesco Botticini - The Assumption of the Virgin.jpg",
+  "artist": "Francesco Botticini",
   "licence": "Public domain",
-  "width": 2263,
-  "height": 990,
-  "page": "https://commons.wikimedia.org/wiki/File:Schottm%C3%BCller,_Frida_-_Angelico_-_Pala_Fiesole_Predella_Mitte.jpg",
-  "title": "Schottmüller, Frida - Angelico - Pala Fiesole Predella Mitte.jpg"
+  "width": 6000,
+  "height": 3643,
+  "page": "https://commons.wikimedia.org/wiki/File:Francesco_Botticini_-_The_Assumption_of_the_Virgin.jpg"
  },
  {
   "ref": "5",
-  "query": "Rogier van der Weyden Saint Columba Altarpiece Alte Pinakothek",
-  "artist": "Rogier van der Weyden",
-  "licence": "Public domain",
-  "width": 700,
-  "height": 1385,
-  "page": "https://commons.wikimedia.org/wiki/File:Rogier_van_der_Weyden_-_St_Columba_Altarpiece_(left_panel)_-_WGA25657.jpg",
-  "title": "Rogier van der Weyden - St Columba Altarpiece (left panel) - WGA25657.jpg"
+  "query": "Rogier van der Weyden Columba Altarpiece Adoration of the Magi Google Art Project",
+  "title": null
  },
  {
   "ref": "6",
@@ -126,7 +126,7 @@
  },
  {
   "ref": "14",
-  "query": "Giovanni Lanfranco Hagar in the Wilderness",
+  "query": "Giovanni Battista Tiepolo Hagar and Ishmael in the Wilderness Scuola Grande di San Rocco",
   "title": null
  }
 ]
