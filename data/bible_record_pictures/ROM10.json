@@ -21,27 +21,63 @@
  },
  {
   "ref": "3",
-  "query": "Peter Paul Rubens Feast in the House of Simon the Pharisee Hermitage"
+  "query": "Peter Paul Rubens Feast in the House of Simon the Pharisee Hermitage",
+  "title": "Rubens-Feast of Simon the Pharisee2.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 1241,
+  "height": 931,
+  "page": "https://commons.wikimedia.org/wiki/File:Rubens-Feast_of_Simon_the_Pharisee2.jpg"
  },
  {
   "ref": "4",
-  "query": "Rembrandt Christ on the Cross Le Mas d'Agenais"
+  "query": "Rembrandt Christ on the Cross Le Mas d'Agenais",
+  "title": "Crucifixion by Rembrandt (1631, S.Vincent du Mas-d'Agenais).jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1218,
+  "height": 1710,
+  "page": "https://commons.wikimedia.org/wiki/File:Crucifixion_by_Rembrandt_(1631,_S.Vincent_du_Mas-d%27Agenais).jpg"
  },
  {
   "ref": "5",
-  "query": "Philippe de Champaigne Moses with the Ten Commandments"
+  "query": "Philippe de Champaigne Moses with the Ten Commandments",
+  "title": "Philippe de Champaigne - Moses with the Ten Commandments - WGA04717.jpg",
+  "artist": "Philippe de Champaigne",
+  "licence": "Public domain",
+  "width": 1540,
+  "height": 1920,
+  "page": "https://commons.wikimedia.org/wiki/File:Philippe_de_Champaigne_-_Moses_with_the_Ten_Commandments_-_WGA04717.jpg"
  },
  {
   "ref": "6,7",
-  "query": "Hieronymus Bosch Ascent of the Blessed"
+  "query": "Hieronymus Bosch Ascent of the Blessed",
+  "title": "Visions of the Hereafter - Ascent of the Blessed.jpg",
+  "artist": "Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 8876,
+  "height": 19735,
+  "page": "https://commons.wikimedia.org/wiki/File:Visions_of_the_Hereafter_-_Ascent_of_the_Blessed.jpg"
  },
  {
   "ref": "8,9",
-  "query": "Valentin de Boulogne Saint Paul Writing His Epistles"
+  "query": "Valentin de Boulogne Saint Paul Writing His Epistles",
+  "title": "Valentin de Boulogne - Saint Paul Writing His Epistles - BF.1991.4 - Museum of Fine Arts.jpg",
+  "artist": "Valentin de Boulogne",
+  "licence": "Public domain",
+  "width": 3200,
+  "height": 2354,
+  "page": "https://commons.wikimedia.org/wiki/File:Valentin_de_Boulogne_-_Saint_Paul_Writing_His_Epistles_-_BF.1991.4_-_Museum_of_Fine_Arts.jpg"
  },
  {
   "ref": "10",
-  "query": "Caravaggio The Calling of Saint Matthew"
+  "query": "Caravaggio The Calling of Saint Matthew",
+  "title": "The Calling of Saint Matthew-Caravaggo (1599-1600).jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 9770,
+  "height": 10039,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Calling_of_Saint_Matthew-Caravaggo_(1599-1600).jpg"
  },
  {
   "ref": "11",
