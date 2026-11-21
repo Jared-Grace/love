@@ -81,7 +81,8 @@
  },
  {
   "ref": "11",
-  "query": "Carl Heinrich Bloch Christ Healing at the Pool of Bethesda"
+  "query": "Carl Heinrich Bloch Christ Healing at the Pool of Bethesda",
+  "title": null
  },
  {
   "ref": "12,13",
@@ -95,7 +96,13 @@
  },
  {
   "ref": "14",
-  "query": "Eustache Le Sueur La Prédication de saint Paul à Éphèse"
+  "query": "Eustache Le Sueur La Prédication de saint Paul à Éphèse",
+  "title": "Géricault - La Prédication de saint Paul à Ephèse, 03030001608.jpg",
+  "artist": "Théodore Géricault",
+  "licence": "Public domain",
+  "width": 972,
+  "height": 1200,
+  "page": "https://commons.wikimedia.org/wiki/File:G%C3%A9ricault_-_La_Pr%C3%A9dication_de_saint_Paul_%C3%A0_Eph%C3%A8se,_03030001608.jpg"
  },
  {
   "ref": "15",
