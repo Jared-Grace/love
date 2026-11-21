@@ -805,6 +805,10 @@ export function bible_glyph_chapter_references() {
       reference: "Joshua 11",
     },
     {
+      chapter_code: "JOS12",
+      reference: "Joshua 12",
+    },
+    {
       chapter_code: "JOS24",
       reference: "Joshua 24",
     },
