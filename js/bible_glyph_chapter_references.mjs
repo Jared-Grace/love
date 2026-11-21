@@ -1333,6 +1333,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Kings 18",
     },
     {
+      chapter_code: "2KI19",
+      reference: "2 Kings 19",
+    },
+    {
       chapter_code: "2KI22",
       reference: "2 Kings 22",
     },
