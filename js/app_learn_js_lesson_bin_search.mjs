@@ -90,7 +90,13 @@ export function app_learn_js_lesson_bin_search() {
       box_six,
       context,
       app_learn_js_lesson_array_last_index,
-      ["", "a.length - 1", " is the index of the last item."],
+      [
+        "array indexes start at ",
+        "0",
+        ", so ",
+        "a.length - 1",
+        " is the index of the last item",
+      ],
     );
     let box_four = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_four, [
