@@ -1,7 +1,7 @@
 [
  {
   "ref": "1",
-  "query": "Molnár József The Exodus of Abraham Hungarian National Gallery",
+  "query": "Guercino Abraham Casting Out Hagar and Ishmael",
   "title": null
  },
  {
@@ -36,13 +36,7 @@
  },
  {
   "ref": "5",
-  "query": "Rubens Christ and the Penitent Sinners",
-  "title": "RubensSimonCyreneCarriesCross.jpg",
-  "artist": "Peter Paul Rubens",
-  "licence": "Public domain",
-  "width": 2670,
-  "height": 3000,
-  "page": "https://commons.wikimedia.org/wiki/File:RubensSimonCyreneCarriesCross.jpg"
+  "query": "Caravaggio The Conversion of Saint Paul Santa Maria del Popolo"
  },
  {
   "ref": "6,7",
@@ -86,8 +80,7 @@
  },
  {
   "ref": "11",
-  "query": "Jacopo Bassano The Journey of Abraham",
-  "title": null
+  "query": "Rembrandt The Circumcision National Gallery of Art"
  },
  {
   "ref": "12",
