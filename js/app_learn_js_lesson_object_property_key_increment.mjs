@@ -1,4 +1,3 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -7,6 +6,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_without } from "./list_without.mjs";
+import { equal } from "./equal.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -125,7 +125,7 @@ export function app_learn_js_lesson_object_property_key_increment() {
       box_one,
       context,
       app_learn_js_lesson_object_property_key,
-      ["If ", "k", " is ", '"town"', ", then ", "p[k]", " means ", "p.town"],
+      ["if ", "k", " is ", '"town"', ", then ", "p[k]", " means ", "p.town"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
