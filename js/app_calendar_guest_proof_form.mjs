@@ -13,8 +13,7 @@ import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
@@ -23,6 +22,7 @@ import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
+import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export async function app_calendar_guest_proof_form(
   card,
   slug,
@@ -92,23 +92,29 @@ export async function app_calendar_guest_proof_form(
       html_component_element_get(profile_box).style.display = "none";
       return;
     }
-    html_div_text(via_area, "How do you want to meet?");
+    ('MARKED THE SHARED WAY (human, 2026-11-21: "DRY with buttons that are like radio buttons?"): the host\'s invite card asks the same question, so both draw it with one row.');
     let choices = [
-      ["whatsapp", "WhatsApp meeting"],
-      ["messenger", "Facebook Messenger meeting"],
+      {
+        key: "whatsapp",
+        text: "WhatsApp meeting",
+      },
+      {
+        key: "messenger",
+        text: "Facebook Messenger meeting",
+      },
     ];
-    for (let [value, words] of choices) {
-      function choice_pick() {
-        via = value;
-        problems_recheck();
-        via_draw();
-      }
-      if (equal(via, value)) {
-        app_shared_button_green(via_area, "✓ " + words, choice_pick);
-      } else {
-        app_shared_button_uncolored(via_area, words, choice_pick);
-      }
-    }
+    app_shared_choice_row(
+      via_area,
+      "How do you want to meet?",
+      choices,
+      via,
+      choice_pick,
+    );
+  }
+  function choice_pick(value) {
+    via = value;
+    problems_recheck();
+    via_draw();
   }
   via_draw();
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;

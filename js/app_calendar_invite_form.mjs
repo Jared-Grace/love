@@ -3,17 +3,17 @@ import { app_shared_container } from "./app_shared_container.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { html_div } from "./html_div.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { equal } from "./equal.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_placeholder } from "./html_placeholder.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
@@ -34,7 +34,8 @@ export function app_calendar_invite_form(parent, key) {
   );
   app_shared_text_deemphasized(intro);
   let via = "whatsapp";
-  let via_line = html_div_text(card, "");
+  ('THE APP COMES FIRST, AND THE ONE CHOSEN SHOWS (human, 2026-11-21: "messenger/whatsapp buttons should be before the input? and it should show which one is chosen?"): the choice decides what the box below asks for, so it is made before the box is reached.');
+  let via_area = html_div(card);
   let name_field = app_shared_field(card);
   html_div_text(name_field, "Their name");
   let name = html_input_text(name_field, "Their name");
@@ -45,10 +46,18 @@ export function app_calendar_invite_form(parent, key) {
   app_shared_input_style(contact);
   function via_show() {
     let messenger = equal(via, "messenger");
-    html_text_content_set(
-      via_line,
-      "Their chat is on: " + (messenger ? "Messenger" : "WhatsApp"),
-    );
+    html_clear(via_area);
+    let choices = [
+      {
+        key: "whatsapp",
+        text: "WhatsApp",
+      },
+      {
+        key: "messenger",
+        text: "Messenger",
+      },
+    ];
+    app_shared_choice_row(via_area, "Their chat is on", choices, via, via_pick);
     html_text_content_set(
       contact_label,
       messenger
@@ -60,17 +69,11 @@ export function app_calendar_invite_form(parent, key) {
       messenger ? "facebook.com/messages/t/..." : "+1 555 123 4567",
     );
   }
+  function via_pick(value) {
+    via = value;
+    via_show();
+  }
   via_show();
-  function whatsapp_pick() {
-    via = "whatsapp";
-    via_show();
-  }
-  function messenger_pick() {
-    via = "messenger";
-    via_show();
-  }
-  app_shared_button_uncolored(card, "WhatsApp", whatsapp_pick);
-  app_shared_button_uncolored(card, "Messenger", messenger_pick);
   let status = html_div_text(card, "");
   let result = html_div(card);
   async function link_make() {
