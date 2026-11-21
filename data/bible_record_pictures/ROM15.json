@@ -31,11 +31,23 @@
  },
  {
   "ref": "4",
-  "query": "Rembrandt Two Old Men Disputing National Gallery of Victoria"
+  "query": "Rembrandt Two Old Men Disputing National Gallery of Victoria",
+  "title": "Rembrandt van Rijn 185.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 962,
+  "height": 1237,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_185.jpg"
  },
  {
   "ref": "5,6",
-  "query": "Hans Memling Christ Surrounded by Musician Angels"
+  "query": "Hans Memling Christ Surrounded by Musician Angels",
+  "title": "Hans Memling - Christ with Singing and Music-Making Angels - KMSKA 778-780.jpg",
+  "artist": "Hans Memling",
+  "licence": "Public domain",
+  "width": 4812,
+  "height": 1200,
+  "page": "https://commons.wikimedia.org/wiki/File:Hans_Memling_-_Christ_with_Singing_and_Music-Making_Angels_-_KMSKA_778-780.jpg"
  },
  {
   "ref": "7",
