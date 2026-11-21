@@ -2597,6 +2597,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezekiel 47",
     },
     {
+      chapter_code: "EZK48",
+      reference: "Ezekiel 48",
+    },
+    {
       chapter_code: "DAN01",
       reference: "Daniel 1",
     },
