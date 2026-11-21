@@ -2313,6 +2313,10 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 7",
     },
     {
+      chapter_code: "ISA08",
+      reference: "Isaiah 8",
+    },
+    {
       chapter_code: "ISA09",
       reference: "Isaiah 9",
     },
