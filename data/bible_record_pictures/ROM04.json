@@ -61,43 +61,98 @@
  },
  {
   "ref": "9",
-  "query": "Rubens The Meeting of Abraham and Melchizedek National Gallery of Art"
+  "query": "Rubens The Meeting of Abraham and Melchizedek National Gallery of Art",
+  "title": "Peter Paul Rubens - The Meeting of Abraham and Melchizedek - WGA20435.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 16208,
+  "height": 12937,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Meeting_of_Abraham_and_Melchizedek_-_WGA20435.jpg"
  },
  {
   "ref": "10",
-  "query": "Pieter Lastman Abraham on the Road to Canaan"
+  "query": "Pieter Lastman Abraham on the Road to Canaan",
+  "title": "Lastman, Pieter - Abraham's Journey to Canaan - 1614.jpg",
+  "artist": "Pieter Lastman",
+  "licence": "Public domain",
+  "width": 2460,
+  "height": 1575,
+  "page": "https://commons.wikimedia.org/wiki/File:Lastman,_Pieter_-_Abraham%27s_Journey_to_Canaan_-_1614.jpg"
  },
  {
   "ref": "11",
-  "query": "Jacopo Bassano The Departure of Abraham Berlin"
+  "query": "Jacopo Bassano The Departure of Abraham Berlin",
+  "title": null
  },
  {
   "ref": "12",
-  "query": "Van Gogh First Steps after Millet"
+  "query": "Van Gogh First Steps after Millet",
+  "title": "Vincent van Gogh - First Steps.jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 5712,
+  "height": 4530,
+  "page": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_First_Steps.jpg"
  },
  {
   "ref": "13",
-  "query": "Frederic Edwin Church Heart of the Andes"
+  "query": "Frederic Edwin Church Heart of the Andes",
+  "title": "Church Heart of the Andes.jpg",
+  "artist": "Frederic Edwin Church",
+  "licence": "Public domain",
+  "width": 6400,
+  "height": 3503,
+  "page": "https://commons.wikimedia.org/wiki/File:Church_Heart_of_the_Andes.jpg"
  },
  {
   "ref": "14,15",
-  "query": "Gérôme Moses on Mount Sinai"
+  "query": "Gérôme Moses on Mount Sinai",
+  "title": "Gérôme, Jean-Léon - Moses on Mount Sinai Jean-Léon Gérôme -1895-1900.jpg",
+  "artist": "Jean-Léon Gérôme",
+  "licence": "Public domain",
+  "width": 1979,
+  "height": 1148,
+  "page": "https://commons.wikimedia.org/wiki/File:G%C3%A9r%C3%B4me,_Jean-L%C3%A9on_-_Moses_on_Mount_Sinai_Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-1895-1900.jpg"
  },
  {
   "ref": "16",
-  "query": "Fra Angelico The Annunciation Prado"
+  "query": "Fra Angelico The Annunciation Prado",
+  "title": "La Anunciación, by Fra Angelico, from Prado in Google Earth.jpg",
+  "artist": "Fra Angelico",
+  "licence": "Public domain",
+  "width": 30000,
+  "height": 29605,
+  "page": "https://commons.wikimedia.org/wiki/File:La_Anunciaci%C3%B3n,_by_Fra_Angelico,_from_Prado_in_Google_Earth.jpg"
  },
  {
   "ref": "17",
-  "query": "Aivazovsky Chaos The Creation"
+  "query": "Aivazovsky Chaos The Creation",
+  "title": "Three physico-theological discourses - concerning- I. The primitive chaos and creation of the world; II. The general deluge, its causes and effects; III. The dissolution of the world and future (14776059695).jpg",
+  "artist": "Internet Archive Book Images",
+  "licence": "No restrictions",
+  "width": 1612,
+  "height": 2562,
+  "page": "https://commons.wikimedia.org/wiki/File:Three_physico-theological_discourses_-_concerning-_I._The_primitive_chaos_and_creation_of_the_world;_II._The_general_deluge,_its_causes_and_effects;_III._The_dissolution_of_the_world_and_future_(14776059695).jpg"
  },
  {
   "ref": "18",
-  "query": "Caspar David Friedrich Two Men Contemplating the Moon"
+  "query": "Caspar David Friedrich Two Men Contemplating the Moon",
+  "title": "Friedrich-CF 2maenner-in-betrachtung-des-mondes.jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 6291,
+  "height": 5088,
+  "page": "https://commons.wikimedia.org/wiki/File:Friedrich-CF_2maenner-in-betrachtung-des-mondes.jpg"
  },
  {
   "ref": "19",
-  "query": "Rembrandt Old Woman Reading Rijksmuseum"
+  "query": "Rembrandt Old Woman Reading Rijksmuseum",
+  "title": "Oude lezende vrouw, waarschijnlijk de profetes Hanna Rijksmuseum SK-A-3066.jpeg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 6338,
+  "height": 7948,
+  "page": "https://commons.wikimedia.org/wiki/File:Oude_lezende_vrouw,_waarschijnlijk_de_profetes_Hanna_Rijksmuseum_SK-A-3066.jpeg"
  },
  {
   "ref": "20,21",
