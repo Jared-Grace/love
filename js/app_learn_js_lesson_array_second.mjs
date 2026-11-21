@@ -23,13 +23,13 @@ export function app_learn_js_lesson_array_second() {
     app_learn_js_div_cycle_code(box_two, [
       "Someone might think that ",
       "a[2]",
-      " would return the second item in the list, because the number ",
+      " would return the second item in the array, because the number ",
       "2",
       ' can be "second". However in JS, we use ',
       "1",
       " (and not ",
       "2",
-      ") to refer to the second item in a list:",
+      ") to refer to the second item in an array:",
     ]);
     example(box_two);
     walk(box_two);

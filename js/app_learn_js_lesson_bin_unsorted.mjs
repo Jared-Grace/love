@@ -95,13 +95,13 @@ export function app_learn_js_lesson_bin_unsorted() {
       box_two,
       context,
       app_learn_js_lesson_array_for_in_order,
-      ["a list is in order when each item is smaller than the one after it"],
+      ["an array is in order when each item is smaller than the one after it"],
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
-      "Looking only to the right is safe only when the list is in order. Here ",
+      "Looking only to the right is safe only when the array is in order. Here",
       "12",
-      " is in the list, but the first middle item is ",
+      " is in the array, but the first middle item is ",
       "5",
       ", so the search looks right of it, and ",
       "12",
@@ -114,7 +114,7 @@ export function app_learn_js_lesson_bin_unsorted() {
     app_learn_js_div_cycle_code(box_three, [
       "The same numbers in order, and the search finds ",
       "12",
-      ". A binary search needs a list in order:",
+      ". A binary search needs an array in order:",
     ]);
     example(box_three, {
       items: [2, 5, 8, 12, 16, 23, 38],
@@ -122,7 +122,7 @@ export function app_learn_js_lesson_bin_unsorted() {
     });
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Search a list out of order",
+    "Search an array out of order",
     "a[middle] < goal",
   );
   let lesson = app_learn_js_lesson_second_generic({

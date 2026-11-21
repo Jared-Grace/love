@@ -18,5 +18,5 @@ export function app_learn_en_reader_language_set() {
   let bible_folder = property_get(language, "bible_folder");
   app_shared_bible_folder_interface_set(bible_folder);
   app_learn_en_language_code_save(language_code);
-  app_learn_en_title_set(language);
+  app_learn_en_title_set(store);
 }

@@ -8,6 +8,7 @@ export function app_learn_en_store_spanish() {
     language: ebible_language_spanish(),
     name_own: "Español",
     language_choose: "Elige el idioma que hablas",
+    title: "Aprende inglés",
     download: app_learn_en_gloss_spanish_generate_download,
     chapters_uploaded: app_learn_en_gloss_spanish_chapters_uploaded,
   };

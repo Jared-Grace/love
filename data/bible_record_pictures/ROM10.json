@@ -11,13 +11,13 @@
  },
  {
   "ref": "2",
-  "query": "Nicolas Poussin L'Adoration du veau d'or",
-  "title": "Le Veau d'Or - L'Adoration du Veau d'or - btv1b104884568.jpg",
-  "artist": "Baudet, Étienne (1638-1711). Graveur\nPoussin, Nicolas (1594-1665). Dessinateur\n\nMonier, Pierre (1641-1703). Graphiste",
+  "query": "Pieter Bruegel the Elder The Conversion of Paul",
+  "title": "Conversion of Paul (Bruegel).jpg",
+  "artist": "Pieter Bruegel the Elder",
   "licence": "Public domain",
-  "width": 9248,
-  "height": 7440,
-  "page": "https://commons.wikimedia.org/wiki/File:Le_Veau_d%27Or_-_L%27Adoration_du_Veau_d%27or_-_btv1b104884568.jpg"
+  "width": 39255,
+  "height": 27482,
+  "page": "https://commons.wikimedia.org/wiki/File:Conversion_of_Paul_(Bruegel).jpg"
  },
  {
   "ref": "3",
@@ -81,8 +81,13 @@
  },
  {
   "ref": "11",
-  "query": "Carl Heinrich Bloch Christ Healing at the Pool of Bethesda",
-  "title": null
+  "query": "Paolo Veronese Jesús y el centurión Prado",
+  "title": "Jesús y el centurión (El Veronés).jpg",
+  "artist": "Paolo Veronese",
+  "licence": "Public domain",
+  "width": 3051,
+  "height": 1955,
+  "page": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_y_el_centuri%C3%B3n_(El_Veron%C3%A9s).jpg"
  },
  {
   "ref": "12,13",
