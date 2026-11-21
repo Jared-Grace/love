@@ -81,19 +81,38 @@
  },
  {
   "ref": "11",
-  "query": "Carl Bloch Christ Healing the Sick at Bethesda"
+  "query": "Carl Bloch Christ Healing the Sick at Bethesda",
+  "title": null
  },
  {
   "ref": "12,13",
-  "query": "Raphael Saint Paul Preaching in Athens cartoon"
+  "query": "Raphael Saint Paul Preaching in Athens cartoon",
+  "title": "V&A - Raphael, St Paul Preaching in Athens (1515).jpg",
+  "artist": "Raphael",
+  "licence": "Public domain",
+  "width": 1536,
+  "height": 1182,
+  "page": "https://commons.wikimedia.org/wiki/File:V%26A_-_Raphael,_St_Paul_Preaching_in_Athens_(1515).jpg"
  },
  {
   "ref": "14",
-  "query": "Eustache Le Sueur Saint Paul Preaching at Ephesus Louvre"
+  "query": "Eustache Le Sueur Saint Paul Preaching at Ephesus Louvre",
+  "title": "Géricault - La Prédication de saint Paul à Ephèse, 03030001608.jpg",
+  "artist": "Théodore Géricault",
+  "licence": "Public domain",
+  "width": 972,
+  "height": 1200,
+  "page": "https://commons.wikimedia.org/wiki/File:G%C3%A9ricault_-_La_Pr%C3%A9dication_de_saint_Paul_%C3%A0_Eph%C3%A8se,_03030001608.jpg"
  },
  {
   "ref": "15",
-  "query": "Albert Bierstadt Among the Sierra Nevada California"
+  "query": "Albert Bierstadt Among the Sierra Nevada California",
+  "title": "Bierstadt - Among the Sierra Nevada Mountains - 1868.jpg",
+  "artist": "Albert Bierstadt",
+  "licence": "Public domain",
+  "width": 10500,
+  "height": 6298,
+  "page": "https://commons.wikimedia.org/wiki/File:Bierstadt_-_Among_the_Sierra_Nevada_Mountains_-_1868.jpg"
  },
  {
   "ref": "16",
