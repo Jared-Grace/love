@@ -101,7 +101,8 @@
  },
  {
   "ref": "11",
-  "query": "Fra Angelico Christ Glorified in the Court of Heaven NG663 Google Art Project"
+  "query": "Fra Angelico Christ Glorified in the Court of Heaven NG663 Google Art Project",
+  "title": null
  },
  {
   "ref": "12",
@@ -195,7 +196,13 @@
  },
  {
   "ref": "21",
-  "query": "De vrolijke drinker Rijksmuseum SK-A-135"
+  "query": "De vrolijke drinker Rijksmuseum SK-A-135",
+  "title": "Een schutter die een berkenmeier vasthoudt, bekend als ‘De vrolijke drinker’, SK-A-135.jpg",
+  "artist": "Frans Hals",
+  "licence": "CC0",
+  "width": 4626,
+  "height": 5430,
+  "page": "https://commons.wikimedia.org/wiki/File:Een_schutter_die_een_berkenmeier_vasthoudt,_bekend_als_%E2%80%98De_vrolijke_drinker%E2%80%99,_SK-A-135.jpg"
  },
  {
   "ref": "22",

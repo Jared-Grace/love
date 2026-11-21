@@ -83,7 +83,7 @@ export function app_learn_js_lesson_bin_search() {
       box_five,
       context,
       app_learn_js_lesson_statement_name_not,
-      ["", "!found", " is true when ", "found", " is false"],
+      ["", "!found", " is ", "true", " when ", "found", " is ", "false"],
     );
     let box_six = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
@@ -100,7 +100,7 @@ export function app_learn_js_lesson_bin_search() {
     );
     let box_four = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_four, [
-      "At first the goal can be anywhere in the list, so ",
+      "At first the goal can be anywhere in the array, so ",
       "low",
       " starts at the first index, ",
       "0",
@@ -113,7 +113,7 @@ export function app_learn_js_lesson_bin_search() {
     app_learn_js_div_cycle_code(box_four, [
       "Repeat the step while ",
       "low <= high",
-      ", that is, while some part of the list is left to look at, and while ",
+      ", that is, while some part of the array is left to look at, and while ",
       "!found",
       ". When the middle item is ",
       "goal",
