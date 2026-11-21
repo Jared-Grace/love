@@ -1463,6 +1463,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_1sa05();
   }
+  if (equal(chapter_code, "1SA06")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_1sa06.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_1sa06();
+  }
   if (equal(chapter_code, "1SA07")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_1sa07.mjs"
