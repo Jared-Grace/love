@@ -1,20 +1,94 @@
-[{"ref":"1","query":"Giotto Envy Scrovegni Chapel"},
-{"ref":"2,3","query":"Jean-François Millet The First Steps"},
-{"ref":"4,5","query":"Caspar David Friedrich Vision of the Christian Church"},
-{"ref":"6","query":"Rembrandt Jacob's Dream at Bethel"},
-{"ref":"7,8","query":"Pieter Bruegel the Elder The Procession to Calvary"},
-{"ref":"9","query":"Jan van Eyck Ghent Altarpiece Pilgrims and Hermits"},
-{"ref":"10","query":"Peter Paul Rubens The Prodigal Son Antwerp"},
-{"ref":"11","query":"Caspar David Friedrich The Stages of Life"},
-{"ref":"12","query":"Fra Angelico Saint Stephen Preaching Niccoline Chapel"},
-{"ref":"13,14","query":"Peter Paul Rubens The Tribute Money San Francisco"},
-{"ref":"15","query":"Rembrandt Saint Paul in Prison Stuttgart"},
-{"ref":"16","query":"Fra Angelico Saint Lawrence Distributing Alms Niccoline"},
-{"ref":"17","query":"Anthony van Dyck Charles I at the Hunt Louvre"},
-{"ref":"18","query":"Jean-François Millet The Woodsawyers"},
-{"ref":"19","query":"Gerard van Honthorst Saint Sebastian National Gallery"},
-{"ref":"20","query":"Caravaggio The Crucifixion of Saint Peter"},
-{"ref":"21,22","query":"El Greco Christ Carrying the Cross Thyssen"},
-{"ref":"23","query":"Caravaggio The Taking of Christ Dublin"},
-{"ref":"24","query":"Peter Paul Rubens The Elevation of the Cross Antwerp"},
-{"ref":"25","query":"Bernhard Plockhorst The Good Shepherd"}]
+[
+ {
+  "ref": "1",
+  "query": "Giotto Envy Scrovegni Chapel",
+  "title": "Padova - Cappella degli Scrovegni - 2023-09-27 22-56-26 006.jpg",
+  "artist": "Giotto",
+  "licence": "Public domain",
+  "width": 3840,
+  "height": 5120,
+  "page": "https://commons.wikimedia.org/wiki/File:Padova_-_Cappella_degli_Scrovegni_-_2023-09-27_22-56-26_006.jpg"
+ },
+ {
+  "ref": "2,3",
+  "query": "Jean-François Millet The First Steps",
+  "title": "Millet by Romain Rolland - The First Steps.jpg",
+  "artist": "Jean-François Millet",
+  "licence": "Public domain",
+  "width": 1285,
+  "height": 848,
+  "page": "https://commons.wikimedia.org/wiki/File:Millet_by_Romain_Rolland_-_The_First_Steps.jpg"
+ },
+ {
+  "ref": "4,5",
+  "query": "Caspar David Friedrich Vision of the Christian Church"
+ },
+ {
+  "ref": "6",
+  "query": "Rembrandt Jacob's Dream at Bethel"
+ },
+ {
+  "ref": "7,8",
+  "query": "Pieter Bruegel the Elder The Procession to Calvary"
+ },
+ {
+  "ref": "9",
+  "query": "Jan van Eyck Ghent Altarpiece Pilgrims and Hermits"
+ },
+ {
+  "ref": "10",
+  "query": "Peter Paul Rubens The Prodigal Son Antwerp"
+ },
+ {
+  "ref": "11",
+  "query": "Caspar David Friedrich The Stages of Life"
+ },
+ {
+  "ref": "12",
+  "query": "Fra Angelico Saint Stephen Preaching Niccoline Chapel"
+ },
+ {
+  "ref": "13,14",
+  "query": "Peter Paul Rubens The Tribute Money San Francisco"
+ },
+ {
+  "ref": "15",
+  "query": "Rembrandt Saint Paul in Prison Stuttgart"
+ },
+ {
+  "ref": "16",
+  "query": "Fra Angelico Saint Lawrence Distributing Alms Niccoline"
+ },
+ {
+  "ref": "17",
+  "query": "Anthony van Dyck Charles I at the Hunt Louvre"
+ },
+ {
+  "ref": "18",
+  "query": "Jean-François Millet The Woodsawyers"
+ },
+ {
+  "ref": "19",
+  "query": "Gerard van Honthorst Saint Sebastian National Gallery"
+ },
+ {
+  "ref": "20",
+  "query": "Caravaggio The Crucifixion of Saint Peter"
+ },
+ {
+  "ref": "21,22",
+  "query": "El Greco Christ Carrying the Cross Thyssen"
+ },
+ {
+  "ref": "23",
+  "query": "Caravaggio The Taking of Christ Dublin"
+ },
+ {
+  "ref": "24",
+  "query": "Peter Paul Rubens The Elevation of the Cross Antwerp"
+ },
+ {
+  "ref": "25",
+  "query": "Bernhard Plockhorst The Good Shepherd"
+ }
+]

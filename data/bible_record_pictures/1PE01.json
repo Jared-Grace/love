@@ -31,54 +31,132 @@
  },
  {
   "ref": "8,9",
-  "query": "Rembrandt The Incredulity of Saint Thomas Pushkin Museum"
+  "query": "Rembrandt The Incredulity of Saint Thomas Pushkin Museum",
+  "title": "Rembrandt Harmensz. van Rijn 040.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 2024,
+  "height": 2088,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_040.jpg"
  },
  {
   "ref": "10,11",
-  "query": "Michelangelo Daniel Sistine Chapel"
+  "query": "Michelangelo Daniel Sistine Chapel",
+  "title": "Sistine Chapel Daniel beforandafter.jpg",
+  "artist": "Michelangelo",
+  "licence": "Public domain",
+  "width": 1754,
+  "height": 930,
+  "page": "https://commons.wikimedia.org/wiki/File:Sistine_Chapel_Daniel_beforandafter.jpg"
  },
  {
   "ref": "12",
-  "query": "Fra Angelico Annunciation Prado"
+  "query": "Fra Angelico Annunciation Prado",
+  "title": "La Anunciación, by Fra Angelico, from Prado in Google Earth.jpg",
+  "artist": "Fra Angelico",
+  "licence": "Public domain",
+  "width": 30000,
+  "height": 29605,
+  "page": "https://commons.wikimedia.org/wiki/File:La_Anunciaci%C3%B3n,_by_Fra_Angelico,_from_Prado_in_Google_Earth.jpg"
  },
  {
   "ref": "13",
-  "query": "Georges de La Tour Magdalene with the Smoking Flame LACMA"
+  "query": "Georges de La Tour Magdalene with the Smoking Flame LACMA",
+  "title": "Georges de La Tour - The Magdalen with the Smoking Flame - Google Art Project.jpg",
+  "artist": "Georges de La Tour",
+  "licence": "Public domain",
+  "width": 4017,
+  "height": 5121,
+  "page": "https://commons.wikimedia.org/wiki/File:Georges_de_La_Tour_-_The_Magdalen_with_the_Smoking_Flame_-_Google_Art_Project.jpg"
  },
  {
   "ref": "14",
-  "query": "Jan Steen The Merry Family Rijksmuseum"
+  "query": "Jan Steen The Merry Family Rijksmuseum",
+  "title": "Jan Steen Vrolijke huisgezin.jpg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 5814,
+  "height": 4508,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Steen_Vrolijke_huisgezin.jpg"
  },
  {
   "ref": "15,16",
-  "query": "Francisco de Zurbarán The Young Virgin Metropolitan Museum"
+  "query": "Francisco de Zurbarán The Young Virgin Metropolitan Museum",
+  "title": "The Young Virgin MET LC-27 137-1.jpg",
+  "artist": "Francisco de Zurbarán",
+  "licence": "CC0",
+  "width": 3107,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Young_Virgin_MET_LC-27_137-1.jpg"
  },
  {
   "ref": "17",
-  "query": "Rogier van der Weyden Beaune Altarpiece Last Judgment"
+  "query": "Rogier van der Weyden Beaune Altarpiece Last Judgment",
+  "title": "Rogier van der Weyden - Beaune Altarpiece (1443).jpg",
+  "artist": "Rogier van der Weyden",
+  "licence": "Public domain",
+  "width": 31766,
+  "height": 13123,
+  "page": "https://commons.wikimedia.org/wiki/File:Rogier_van_der_Weyden_-_Beaune_Altarpiece_(1443).jpg"
  },
  {
   "ref": "18,19",
-  "query": "Francisco de Zurbarán The Lamb of God San Diego Museum"
+  "query": "Francisco de Zurbarán The Lamb of God San Diego Museum",
+  "title": "Agnus Dei (The Lamb of God), by Francisco de Zurbaran, c. 1635-1640 - San Diego Museum of Art - DSC06627.JPG",
+  "artist": "Francisco de Zurbarán",
+  "licence": "Public domain",
+  "width": 3977,
+  "height": 2675,
+  "page": "https://commons.wikimedia.org/wiki/File:Agnus_Dei_(The_Lamb_of_God),_by_Francisco_de_Zurbaran,_c._1635-1640_-_San_Diego_Museum_of_Art_-_DSC06627.JPG"
  },
  {
   "ref": "20",
-  "query": "Michelangelo Creation of the Sun Moon and Plants Sistine"
+  "query": "Michelangelo Creation of the Sun Moon and Plants Sistine",
+  "title": "Michelangelo Buonarroti 018.jpg",
+  "artist": "Michelangelo",
+  "licence": "Public domain",
+  "width": 4096,
+  "height": 1963,
+  "page": "https://commons.wikimedia.org/wiki/File:Michelangelo_Buonarroti_018.jpg"
  },
  {
   "ref": "21",
-  "query": "Caravaggio Supper at Emmaus National Gallery London"
+  "query": "Caravaggio Supper at Emmaus National Gallery London",
+  "title": "1602-3 Caravaggio,Supper at Emmaus National Gallery, London.jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 5946,
+  "height": 4226,
+  "page": "https://commons.wikimedia.org/wiki/File:1602-3_Caravaggio,Supper_at_Emmaus_National_Gallery,_London.jpg"
  },
  {
   "ref": "22",
-  "query": "Fra Angelico Deposition from the Cross San Marco"
+  "query": "Fra Angelico Deposition from the Cross San Marco",
+  "title": "FraAngelicoLevételAkeresztrőlMuseo di San Marco, FlorenceKJ.jpg",
+  "artist": "Fra Angelico",
+  "licence": "Public domain",
+  "width": 850,
+  "height": 1353,
+  "page": "https://commons.wikimedia.org/wiki/File:FraAngelicoLev%C3%A9telAkeresztr%C5%91lMuseo_di_San_Marco,_FlorenceKJ.jpg"
  },
  {
   "ref": "23",
-  "query": "Vincent van Gogh The Sower 1888 Kröller-Müller"
+  "query": "Vincent van Gogh The Sower 1888 Kröller-Müller",
+  "title": "1888 van Gogh De zaaier anagoria.JPG",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 3648,
+  "height": 2736,
+  "page": "https://commons.wikimedia.org/wiki/File:1888_van_Gogh_De_zaaier_anagoria.JPG"
  },
  {
   "ref": "24,25",
-  "query": "Vincent van Gogh Field with Poppies Bremen"
+  "query": "Vincent van Gogh Field with Poppies Bremen",
+  "title": "Vincent van Gogh - Field with Poppies (June 1889).jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 4500,
+  "height": 3550,
+  "page": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Field_with_Poppies_(June_1889).jpg"
  }
 ]
