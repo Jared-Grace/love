@@ -1,23 +1,167 @@
-[{"ref":"1","query":"Jan Steen The Effects of Intemperance"},
-{"ref":"2","query":"Caravaggio The Entombment of Christ Vatican"},
-{"ref":"3","query":"Piero della Francesca The Baptism of Christ National Gallery"},
-{"ref":"4","query":"Carl Bloch The Resurrection"},
-{"ref":"5","query":"Rembrandt The Risen Christ Appearing to Mary Magdalen"},
-{"ref":"6","query":"Zurbarán Christ on the Cross Art Institute of Chicago"},
-{"ref":"7","query":"Raphael The Liberation of Saint Peter"},
-{"ref":"8","query":"Caravaggio Supper at Emmaus National Gallery"},
-{"ref":"9","query":"Rembrandt The Raising of Lazarus LACMA"},
-{"ref":"10","query":"John Singleton Copley The Ascension"},
-{"ref":"11","query":"Thomas Cole The Voyage of Life Youth National Gallery of Art"},
-{"ref":"12","query":"Bosch The Temptation of Saint Anthony Lisbon"},
-{"ref":"13","query":"Vermeer The Milkmaid"},
-{"ref":"14","query":"Raphael The Miraculous Draught of Fishes"},
-{"ref":"15","query":"Pieter Bruegel the Elder The Land of Cockaigne"},
-{"ref":"16","query":"Edward Poynter Israel in Egypt"},
-{"ref":"17","query":"Rembrandt Simeon's Song of Praise Mauritshuis"},
-{"ref":"18","query":"David Roberts The Israelites Leaving Egypt"},
-{"ref":"19","query":"Millet The Sower Museum of Fine Arts Boston"},
-{"ref":"20","query":"Adriaen Brouwer Tavern Scene"},
-{"ref":"21","query":"Philippe de Champaigne Vanitas"},
-{"ref":"22","query":"Caravaggio Basket of Fruit Ambrosiana"},
-{"ref":"23","query":"Giovanni di Paolo Paradise Metropolitan Museum"}]
+[
+ {
+  "ref": "1",
+  "query": "Jan Steen The Effects of Intemperance",
+  "title": null
+ },
+ {
+  "ref": "2",
+  "query": "Caravaggio The Entombment of Christ Vatican",
+  "title": "The Entombment of Christ-Caravaggio (c.1602-3).jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 8810,
+  "height": 13086,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Entombment_of_Christ-Caravaggio_(c.1602-3).jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Piero della Francesca The Baptism of Christ National Gallery",
+  "title": "Piero della Francesca - Battesimo di Cristo (National Gallery, London).jpg",
+  "artist": "Piero della Francesca",
+  "licence": "Public domain",
+  "width": 4147,
+  "height": 5958,
+  "page": "https://commons.wikimedia.org/wiki/File:Piero_della_Francesca_-_Battesimo_di_Cristo_(National_Gallery,_London).jpg"
+ },
+ {
+  "ref": "4",
+  "query": "Carl Bloch The Resurrection",
+  "title": "Carl Heinrich Bloch - The Resurrection.jpg",
+  "artist": "Carl Heinrich Bloch",
+  "licence": "Public domain",
+  "width": 1000,
+  "height": 1400,
+  "page": "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_The_Resurrection.jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Rembrandt The Risen Christ Appearing to Mary Magdalen",
+  "title": "John 20 14.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1249,
+  "height": 1500,
+  "page": "https://commons.wikimedia.org/wiki/File:John_20_14.jpg"
+ },
+ {
+  "ref": "6",
+  "query": "Zurbarán Christ on the Cross Art Institute of Chicago",
+  "title": "Francisco de Zurbarán - Crucifixion - The Art Institute of Chicago.jpg",
+  "artist": "Francisco de Zurbarán",
+  "licence": "Public domain",
+  "width": 1576,
+  "height": 2809,
+  "page": "https://commons.wikimedia.org/wiki/File:Francisco_de_Zurbar%C3%A1n_-_Crucifixion_-_The_Art_Institute_of_Chicago.jpg"
+ },
+ {
+  "ref": "7",
+  "query": "Raphael The Liberation of Saint Peter",
+  "title": "Giuseppe Cades (1750-1799) - The Liberation of Saint Peter (copy after Raphael) - 03-450 - Royal Academy of Arts.jpg",
+  "artist": "Giuseppe Cades",
+  "licence": "Public domain",
+  "width": 1200,
+  "height": 852,
+  "page": "https://commons.wikimedia.org/wiki/File:Giuseppe_Cades_(1750-1799)_-_The_Liberation_of_Saint_Peter_(copy_after_Raphael)_-_03-450_-_Royal_Academy_of_Arts.jpg"
+ },
+ {
+  "ref": "8",
+  "query": "Caravaggio Supper at Emmaus National Gallery",
+  "title": "1602-3 Caravaggio,Supper at Emmaus National Gallery, London.jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 5946,
+  "height": 4226,
+  "page": "https://commons.wikimedia.org/wiki/File:1602-3_Caravaggio,Supper_at_Emmaus_National_Gallery,_London.jpg"
+ },
+ {
+  "ref": "9",
+  "query": "Rembrandt The Raising of Lazarus LACMA",
+  "title": "The Raising of Lazarus LACMA 19.4.31.jpg",
+  "artist": "Rembrandt Harmensz. van Rijn (Holland, Amsterdam, 1606-1669)",
+  "licence": "Public domain",
+  "width": 1620,
+  "height": 2100,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Raising_of_Lazarus_LACMA_19.4.31.jpg"
+ },
+ {
+  "ref": "10",
+  "query": "John Singleton Copley The Ascension",
+  "title": "Study for \"The Ascension\" MET DT228979.jpg",
+  "artist": "John Singleton Copley",
+  "licence": "CC0",
+  "width": 3811,
+  "height": 2840,
+  "page": "https://commons.wikimedia.org/wiki/File:Study_for_%22The_Ascension%22_MET_DT228979.jpg"
+ },
+ {
+  "ref": "11",
+  "query": "Thomas Cole The Voyage of Life Youth National Gallery of Art",
+  "title": "Thomas Cole - The Voyage of Life Youth, 1842 (National Gallery of Art).jpg",
+  "artist": "Thomas Cole",
+  "licence": "Public domain",
+  "width": 5117,
+  "height": 3501,
+  "page": "https://commons.wikimedia.org/wiki/File:Thomas_Cole_-_The_Voyage_of_Life_Youth,_1842_(National_Gallery_of_Art).jpg"
+ },
+ {
+  "ref": "12",
+  "query": "Bosch The Temptation of Saint Anthony Lisbon",
+  "title": "Temptation of Saint AnthonyFXD.jpg",
+  "artist": "Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 7800,
+  "height": 4042,
+  "page": "https://commons.wikimedia.org/wiki/File:Temptation_of_Saint_AnthonyFXD.jpg"
+ },
+ {
+  "ref": "13",
+  "query": "Vermeer The Milkmaid",
+  "title": "Johannes Vermeer - Het melkmeisje - Google Art Project.png",
+  "artist": "Johannes Vermeer",
+  "licence": "Public domain",
+  "width": 9839,
+  "height": 11058,
+  "page": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.png"
+ },
+ {
+  "ref": "14",
+  "query": "Raphael The Miraculous Draught of Fishes"
+ },
+ {
+  "ref": "15",
+  "query": "Pieter Bruegel the Elder The Land of Cockaigne"
+ },
+ {
+  "ref": "16",
+  "query": "Edward Poynter Israel in Egypt"
+ },
+ {
+  "ref": "17",
+  "query": "Rembrandt Simeon's Song of Praise Mauritshuis"
+ },
+ {
+  "ref": "18",
+  "query": "David Roberts The Israelites Leaving Egypt"
+ },
+ {
+  "ref": "19",
+  "query": "Millet The Sower Museum of Fine Arts Boston"
+ },
+ {
+  "ref": "20",
+  "query": "Adriaen Brouwer Tavern Scene"
+ },
+ {
+  "ref": "21",
+  "query": "Philippe de Champaigne Vanitas"
+ },
+ {
+  "ref": "22",
+  "query": "Caravaggio Basket of Fruit Ambrosiana"
+ },
+ {
+  "ref": "23",
+  "query": "Giovanni di Paolo Paradise Metropolitan Museum"
+ }
+]
