@@ -11,8 +11,13 @@
  },
  {
   "ref": "2",
-  "query": "Gerard David Virgin and Child with the Milk Soup Brussels",
-  "title": null
+  "query": "Gerard David Madonna with the Milk Soup",
+  "title": "Gerard David - Madonna and Child with the Milk Soup - Google Art Project.jpg",
+  "artist": "Gerard David",
+  "licence": "Public domain",
+  "width": 2013,
+  "height": 2553,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerard_David_-_Madonna_and_Child_with_the_Milk_Soup_-_Google_Art_Project.jpg"
  },
  {
   "ref": "3,4",
@@ -36,13 +41,8 @@
  },
  {
   "ref": "6",
-  "query": "Giovanni Bellini Baptism of Christ Santa Corona Vicenza",
-  "title": "Plain-towns of Italy - the cities of old Venetia (1911) (14768310952).jpg",
-  "artist": "Internet Archive Book Images",
-  "licence": "No restrictions",
-  "width": 1394,
-  "height": 2114,
-  "page": "https://commons.wikimedia.org/wiki/File:Plain-towns_of_Italy_-_the_cities_of_old_Venetia_(1911)_(14768310952).jpg"
+  "query": "Giovanni Bellini Battesimo di Cristo Vicenza",
+  "title": null
  },
  {
   "ref": "7,8",
@@ -116,8 +116,13 @@
  },
  {
   "ref": "15",
-  "query": "Nicolaes Maes Christ Blessing the Children National Gallery",
-  "title": null
+  "query": "Nicolaes Maes Christ blessing the Children",
+  "title": "Nicolaes Maes - Christ blessing little children, 1972,U.674.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 2179,
+  "height": 2500,
+  "page": "https://commons.wikimedia.org/wiki/File:Nicolaes_Maes_-_Christ_blessing_little_children,_1972,U.674.jpg"
  },
  {
   "ref": "16",
@@ -131,8 +136,13 @@
  },
  {
   "ref": "17",
-  "query": "Domenico Fetti La dramma perduta Palazzo Pitti",
-  "title": null
+  "query": "Domenico Fetti Parable of the Lost Coin",
+  "title": "The parable of the lost piece of silver 1585 print by Ambrosius Francken I, S.I 1061, Prints Department, Royal Library of Belgium.jpg",
+  "artist": "Ambrosius Francken I / Jan Collaert (I)",
+  "licence": "Public domain",
+  "width": 6660,
+  "height": 4983,
+  "page": "https://commons.wikimedia.org/wiki/File:The_parable_of_the_lost_piece_of_silver_1585_print_by_Ambrosius_Francken_I,_S.I_1061,_Prints_Department,_Royal_Library_of_Belgium.jpg"
  },
  {
   "ref": "18",
@@ -156,8 +166,13 @@
  },
  {
   "ref": "20",
-  "query": "Antonello da Messina Salvator Mundi National Gallery",
-  "title": null
+  "query": "Antonello da Messina Salvator Mundi",
+  "title": "(Venice) Salvator Mundi - Quentin Metsys - Museo Correr.jpg",
+  "artist": "Didier Descouens",
+  "licence": "Public domain",
+  "width": 4365,
+  "height": 5956,
+  "page": "https://commons.wikimedia.org/wiki/File:(Venice)_Salvator_Mundi_-_Quentin_Metsys_-_Museo_Correr.jpg"
  },
  {
   "ref": "21",
