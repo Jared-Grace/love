@@ -2021,6 +2021,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ecclesiastes 5",
     },
     {
+      chapter_code: "ECC06",
+      reference: "Ecclesiastes 6",
+    },
+    {
       chapter_code: "ECC12",
       reference: "Ecclesiastes 12",
     },
