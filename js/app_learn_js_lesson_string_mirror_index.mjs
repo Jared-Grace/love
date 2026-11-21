@@ -184,9 +184,7 @@ export function app_learn_js_lesson_string_mirror_index() {
       "Suppose we have the string ",
       '"loves"',
     ]);
-    app_learn_js_div_cycle_code(box_three, [
-      "Then its indices are 0, 1, 2, 3, 4",
-    ]);
+    indices_line("Then its indices are ", 5);
     app_learn_js_div_cycle_code(box_three, ["", '"o"', " is at index ", "1"]);
     app_learn_js_div_cycle_code(box_three, [
       "The pair for ",
