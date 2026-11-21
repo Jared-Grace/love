@@ -17,6 +17,7 @@ import { subtract } from "./subtract.mjs";
 import { math_min } from "./math_min.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { html_centered } from "./html_centered.mjs";
+import { app_learn_js_lesson_bold_term } from "./app_learn_js_lesson_bold_term.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -171,10 +172,15 @@ export function app_learn_js_lesson_string_mirror_index() {
       },
       [" is paired with itself"],
     ]);
+    app_learn_js_lesson_bold_term(
+      box_three,
+      "If we have an index, the other index in the pair is called its ",
+      "mirror",
+    );
     app_learn_js_div_cycle_code(box_three, [
       "If we have the first number ",
       "i",
-      ", how do we calculate its pair?",
+      ", how do we calculate its mirror?",
     ]);
     app_learn_js_div_cycle_code(box_three, [
       "Here is the formula: ",
