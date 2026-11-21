@@ -1509,6 +1509,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Chronicles 8",
     },
     {
+      chapter_code: "2CH09",
+      reference: "2 Chronicles 9",
+    },
+    {
       chapter_code: "2CH20",
       reference: "2 Chronicles 20",
     },
