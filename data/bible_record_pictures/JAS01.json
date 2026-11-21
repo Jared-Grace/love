@@ -121,11 +121,18 @@
  },
  {
   "ref": "14",
-  "query": "Hieronymus Bosch The Haywain Triptych Prado"
+  "query": "Hieronymus Bosch The Haywain Triptych Prado",
+  "title": "Jheronimus Bosch - De hooiwagen (c.1516, Prado).jpg",
+  "artist": "Hieronymus Bosch or workshop",
+  "licence": "Public domain",
+  "width": 2918,
+  "height": 2065,
+  "page": "https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_-_De_hooiwagen_(c.1516,_Prado).jpg"
  },
  {
   "ref": "15",
-  "query": "Thomas Cole The Course of Empire Destruction"
+  "query": "Thomas Cole The Course of Empire Destruction",
+  "title": null
  },
  {
   "ref": "16",

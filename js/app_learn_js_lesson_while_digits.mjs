@@ -92,7 +92,7 @@ export function app_learn_js_lesson_while_digits() {
       "n",
       " on the right is the old number; after the line, ",
       "n",
-      " holds it without its last digit. ",
+      " holds itself without its last digit. ",
       "472",
       " becomes ",
       "47",
