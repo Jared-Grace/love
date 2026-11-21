@@ -26,11 +26,23 @@
  },
  {
   "ref": "5",
-  "query": "Georges de La Tour The Repentant Magdalene National Gallery of Art"
+  "query": "Georges de La Tour The Repentant Magdalene National Gallery of Art",
+  "title": "Georges de La Tour - The Repentant Magdalen - Google Art Project.jpg",
+  "artist": "Georges de La Tour",
+  "licence": "Public domain",
+  "width": 3679,
+  "height": 4352,
+  "page": "https://commons.wikimedia.org/wiki/File:Georges_de_La_Tour_-_The_Repentant_Magdalen_-_Google_Art_Project.jpg"
  },
  {
   "ref": "6,7",
-  "query": "John Constable The Hay Wain"
+  "query": "John Constable The Hay Wain",
+  "title": "John Constable - The Hay Wain (1821).jpg",
+  "artist": "John Constable",
+  "licence": "Public domain",
+  "width": 6128,
+  "height": 4226,
+  "page": "https://commons.wikimedia.org/wiki/File:John_Constable_-_The_Hay_Wain_(1821).jpg"
  },
  {
   "ref": "8",
