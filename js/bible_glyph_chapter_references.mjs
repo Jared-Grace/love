@@ -2497,6 +2497,10 @@ export function bible_glyph_chapter_references() {
       reference: "Daniel 12",
     },
     {
+      chapter_code: "HOS01",
+      reference: "Hosea 1",
+    },
+    {
       chapter_code: "HOS02",
       reference: "Hosea 2",
     },
