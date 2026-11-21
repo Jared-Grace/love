@@ -156,31 +156,73 @@
  },
  {
   "ref": "19",
-  "query": "Caspar David Friedrich Wanderer above the Sea of Fog"
+  "query": "Caspar David Friedrich Wanderer above the Sea of Fog",
+  "title": "Caspar David Friedrich - Wanderer above the Sea of Fog.jpeg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 5256,
+  "height": 6742,
+  "page": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg"
  },
  {
   "ref": "20,21",
-  "query": "Caspar David Friedrich The Sea of Ice"
+  "query": "Caspar David Friedrich The Sea of Ice",
+  "title": "Das Eismeer (Caspar David Friedrich)-WUS03283.jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 5209,
+  "height": 3473,
+  "page": "https://commons.wikimedia.org/wiki/File:Das_Eismeer_(Caspar_David_Friedrich)-WUS03283.jpg"
  },
  {
   "ref": "22",
-  "query": "Turner The Shipwreck Tate"
+  "query": "Turner The Shipwreck Tate",
+  "title": "Joseph Mallord William Turner 076.jpg",
+  "artist": "J. M. W. Turner",
+  "licence": "Public domain",
+  "width": 3200,
+  "height": 2232,
+  "page": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_076.jpg"
  },
  {
   "ref": "23",
-  "query": "Rembrandt Jacob Blessing the Sons of Joseph Kassel"
+  "query": "Rembrandt Jacob Blessing the Sons of Joseph Kassel",
+  "title": "Rembrandt van Rijn - Jacob blessing Ephraim and Manasseh (Gemäldegalerie Alte Meister Kassel).jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 7000,
+  "height": 5931,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Jacob_blessing_Ephraim_and_Manasseh_(Gem%C3%A4ldegalerie_Alte_Meister_Kassel).jpg"
  },
  {
   "ref": "24",
-  "query": "George Frederic Watts Hope"
+  "query": "George Frederic Watts Hope",
+  "title": "George Frederick Watts - Hope - B2011.32 - Yale Center for British Art.jpg",
+  "artist": "George Frederic Watts",
+  "licence": "Public domain",
+  "width": 5616,
+  "height": 6996,
+  "page": "https://commons.wikimedia.org/wiki/File:George_Frederick_Watts_-_Hope_-_B2011.32_-_Yale_Center_for_British_Art.jpg"
  },
  {
   "ref": "25",
-  "query": "Caspar David Friedrich Woman at a Window"
+  "query": "Caspar David Friedrich Woman at a Window",
+  "title": "Caspar David Friedrich - Frau am Fenster - Google Art Project.jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 3072,
+  "height": 4345,
+  "page": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Frau_am_Fenster_-_Google_Art_Project.jpg"
  },
  {
   "ref": "26",
-  "query": "Albrecht Dürer Praying Hands"
+  "query": "Albrecht Dürer Praying Hands",
+  "title": "Albrecht Dürer - Praying Hands, 1508 - Google Art Project.jpg",
+  "artist": "Albrecht Dürer",
+  "licence": "Public domain",
+  "width": 2680,
+  "height": 3900,
+  "page": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Praying_Hands,_1508_-_Google_Art_Project.jpg"
  },
  {
   "ref": "27",
