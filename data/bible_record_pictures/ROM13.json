@@ -71,8 +71,13 @@
  },
  {
   "ref": "8",
-  "query": "Rembrandt Die Heilige Familie mit dem Vorhang Kassel",
-  "title": null
+  "query": "Fritz von Uhde Lasset die Kindlein zu mir kommen Leipzig",
+  "title": "Fritz von Uhde - Lasset die Kinderlein zu mir kommen, 1884 (Leipzig).jpg",
+  "artist": "Fritz von Uhde",
+  "licence": "Public domain",
+  "width": 1750,
+  "height": 1134,
+  "page": "https://commons.wikimedia.org/wiki/File:Fritz_von_Uhde_-_Lasset_die_Kinderlein_zu_mir_kommen,_1884_(Leipzig).jpg"
  },
  {
   "ref": "9",
@@ -126,6 +131,12 @@
  },
  {
   "ref": "14",
-  "query": "El Greco Saint Martin and the Beggar 1597 Widener Collection"
+  "query": "El Greco Saint Martin and the Beggar 1597 Widener Collection",
+  "title": "El Greco (Domenikos Theotokopoulos), Saint Martin and the Beggar, 1597-1599, NGA 1164.jpg",
+  "artist": "El Greco (Domenikos Theotokopoulos)",
+  "licence": "CC0",
+  "width": 2159,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:El_Greco_(Domenikos_Theotokopoulos),_Saint_Martin_and_the_Beggar,_1597-1599,_NGA_1164.jpg"
  }
 ]
