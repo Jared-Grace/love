@@ -7,6 +7,6 @@ export function app_learn_en_gloss_urdu_words_sound_slow_version() {
   ("It is a date, so that reading it says when the slow readings were last sent up. Bump it in the same commit as the upload - bumped without an upload, phones fetch new addresses for files that never changed; uploaded without a bump, the new readings sit in storage and no phone that has been here before will ever ask for them.");
   ("A letter follows the date when they go up twice in one day, which is the usual case rather than a rare one: the reason to make them again is almost always that somebody has just heard something wrong, and hearing it, saying so and fixing it all happen the same afternoon.");
   arguments_assert(arguments, 0);
-  let stamp = "20260906";
+  let stamp = "20261121";
   return stamp;
 }
