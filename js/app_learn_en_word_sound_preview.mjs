@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_word_sound_url_cycling } from "./gloss_word_sound_url_cycling.mjs";
-import { english_word_sound_url } from "./app_learn_en_gloss_urdu_words_sound_url.mjs";
-import { english_word_sound_slow_url } from "./app_learn_en_gloss_urdu_words_sound_slow_url.mjs";
+import { english_word_sound_url } from "./english_word_sound_url.mjs";
+import { english_word_sound_slow_url } from "./english_word_sound_slow_url.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
