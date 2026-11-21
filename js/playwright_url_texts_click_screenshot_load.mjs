@@ -10,6 +10,7 @@ export async function playwright_url_texts_click_screenshot_load(
   width,
   height,
 ) {
+  "$plain f_path";
   "open a page, press the first thing showing each of the texts in turn, and save a picture of the whole page";
   "waits for the page's load event, never for the network to go quiet: a page holding a spam check widget (Cloudflare Turnstile) keeps asking the network, so a wait for quiet times out on a page that is already showing. Each press waits for its own text to appear, which covers what the page draws after loading";
   url_opened_unasked_assert(url);
