@@ -8,7 +8,7 @@ import { equal } from "./equal.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
-export function app_receipts_choice_row(
+export function app_shared_choice_row(
   parent,
   title,
   choices,

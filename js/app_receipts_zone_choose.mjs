@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_receipts_zone_countries } from "./app_receipts_zone_countries.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_receipts_choice_row } from "./app_receipts_choice_row.mjs";
+import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
 export function app_receipts_zone_choose(parent, zone, on_choose) {
   "$plain parent";
   "$plain zone";
@@ -15,7 +15,7 @@ export function app_receipts_zone_choose(parent, zone, on_choose) {
       text: property_get(country, "flag") + " " + property_get(country, "name"),
     });
   }
-  app_receipts_choice_row(
+  app_shared_choice_row(
     parent,
     "Show dates and times in",
     choices,

@@ -24,7 +24,7 @@ import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_receipts_payment_get } from "./app_receipts_payment_get.mjs";
-import { app_receipts_choice_row } from "./app_receipts_choice_row.mjs";
+import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
 import { app_receipts_photos_draw } from "./app_receipts_photos_draw.mjs";
 import { app_receipts_purchase_photo_add } from "./app_receipts_purchase_photo_add.mjs";
 import { app_shared_button_wide_camera } from "./app_shared_button_wide_camera.mjs";
@@ -132,7 +132,7 @@ export function app_receipts_purchase_card(parent, purchase, on_saved) {
         text: "💳 Credit",
       },
     ];
-    app_receipts_choice_row(
+    app_shared_choice_row(
       payment_row,
       "Paid with",
       choices,
