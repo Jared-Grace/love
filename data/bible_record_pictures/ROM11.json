@@ -36,11 +36,23 @@
  },
  {
   "ref": "6",
-  "query": "Murillo The Return of the Prodigal Son National Gallery of Art"
+  "query": "Murillo The Return of the Prodigal Son National Gallery of Art",
+  "title": "Bartolomé Esteban Murillo, The Return of the Prodigal Son, 1667-1670, NGA 34956.jpg",
+  "artist": "Bartolomé Esteban Murillo",
+  "licence": "CC0",
+  "width": 4000,
+  "height": 3658,
+  "page": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Murillo,_The_Return_of_the_Prodigal_Son,_1667-1670,_NGA_34956.jpg"
  },
  {
   "ref": "7,8",
-  "query": "Pieter Bruegel the Elder The Land of Cockaigne"
+  "query": "Pieter Bruegel the Elder The Land of Cockaigne",
+  "title": "The Land of Cockaigne MET MM7863.jpg",
+  "artist": "Pieter Bruegel the Elder / Pieter van der Heyden",
+  "licence": "CC0",
+  "width": 3805,
+  "height": 2914,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Land_of_Cockaigne_MET_MM7863.jpg"
  },
  {
   "ref": "9",

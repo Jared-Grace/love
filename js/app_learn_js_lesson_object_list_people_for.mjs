@@ -139,7 +139,7 @@ export function app_learn_js_lesson_object_list_people_for() {
       box_one,
       context,
       app_learn_js_lesson_object_list_properties_for,
-      ["", "items[i]", " is one object of the list at a time"],
+      ["", "items[i]", " is one object of the array at a time"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
@@ -170,7 +170,7 @@ export function app_learn_js_lesson_object_list_people_for() {
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Writing out a list of people",
+    "Writing out an array of people",
     "people[i].first",
   );
   let lesson = app_learn_js_lesson_code_logged({
