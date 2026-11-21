@@ -87,11 +87,13 @@ export function app_learn_js_lesson_array_for_push_total() {
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
-      "Here each total so far is pushed into ",
+      "Instead of logging out each total, here we push each total into array ",
       "b",
-      " in place of being written out, so after the loop ",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "After the loop runs, ",
       "b",
-      " holds every total:",
+      " holds each total:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
