@@ -161,10 +161,22 @@
  },
  {
   "ref": "19",
-  "query": "Heinrich Hofmann Christ in Gethsemane"
+  "query": "Heinrich Hofmann Christ in Gethsemane",
+  "title": "Christ in Gethsemane.jpg",
+  "artist": "Heinrich Hofmann",
+  "licence": "Public domain",
+  "width": 1141,
+  "height": 1600,
+  "page": "https://commons.wikimedia.org/wiki/File:Christ_in_Gethsemane.jpg"
  },
  {
   "ref": "20,21",
-  "query": "Frederic Edwin Church Niagara"
+  "query": "Frederic Edwin Church Niagara",
+  "title": "Frederic Edwin Church - Niagara Falls - WGA04867.jpg",
+  "artist": "Frederic Edwin Church",
+  "licence": "Public domain",
+  "width": 27911,
+  "height": 12955,
+  "page": "https://commons.wikimedia.org/wiki/File:Frederic_Edwin_Church_-_Niagara_Falls_-_WGA04867.jpg"
  }
 ]
