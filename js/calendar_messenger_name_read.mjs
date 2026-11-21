@@ -16,10 +16,11 @@ export function calendar_messenger_name_read(typed) {
   }
   let name = text
     .replace(/^https?:\/\//i, "")
-    .replace(/^(www\.|m\.|web\.)/i, "")
+    .replace(/^(www\.|m\.(?!me\/)|web\.)/i, "")
     .replace(/^(m\.me\/|facebook\.com\/|fb\.com\/|messenger\.com\/t\/)/i, "")
     .replace(/[/?#].*$/, "");
   ("2026-11-15: a word Facebook keeps for itself is not anybody's name. facebook.com/me is whoever is signed in, so a host who pasted it sent every guest to m.me/me, a chat with the guest's own self; share and profile.php are parts of a link, not the person.");
+  ("2026-11-21: the m. of a phone address is dropped only when it is not the m. of m.me itself - dropped there, https://m.me/x read as me/x, came out as me and was refused, so the shortest link a host has to their own chat could never be saved.");
   let kept = ["me", "share", "profile.php", "people", "messages", "t"];
   let v = name.toLowerCase();
   if (kept.includes(v)) {

@@ -1,6 +1,6 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 export async function calendar_db_invite_guest_find(
   db,
@@ -10,14 +10,18 @@ export async function calendar_db_invite_guest_find(
 ) {
   arguments_assert(arguments, 4);
   ("The guest this host has already proven on that chat, or null: messenger says which app, contact is the WhatsApp number as typed or the Facebook link as checked.");
-  ("A number matches on its digits alone, so +63 917 and 63917 are one number. A link matches with its letters lowered and a closing slash dropped. Fewer than six digits matches nothing, so a proof holding no number never matches.");
+  ("A number matches on its digits alone, so +63 917 and 63917 are one number. A link matches with its letters lowered, and with http(s)://, a leading www., m. or web. and a closing slash dropped - so a phone's address and a computer's for one profile are one guest. Fewer than six digits matches nothing, so a proof holding no number never matches.");
   ("Only a confirmed proof counts - a code nobody sent yet proves nothing - and the newest wins, should one chat somehow name two guests.");
   function digits(text) {
     let d = String(text).replace(/\D/g, "");
     return d;
   }
   function link(text) {
-    let l = String(text).toLowerCase().replace(/\/+$/, "");
+    let l = String(text)
+      .toLowerCase()
+      .replace(/^https?:\/\//, "")
+      .replace(/^(www\.|m\.(?!me\/)|web\.)/, "")
+      .replace(/\/+$/, "");
     return l;
   }
   let wanted = messenger ? link(contact) : digits(contact);
