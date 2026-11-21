@@ -27,8 +27,10 @@ export function app_learn_js_lesson_for_divisors() {
   let example_n = 6;
   function program_with(n, condition, asked) {
     "let n = n; for (let i = 1; condition; i++) { if (asked) { console.log(i); } }";
-    let head = js_code_let_statement("n", json_to(n));
-    let inside = js_code_if_lines(asked, js_code_console_log_statement("i"));
+    let right = json_to(n);
+    let head = js_code_let_statement("n", right);
+    let statement = js_code_console_log_statement("i");
+    let inside = js_code_if_lines(asked, statement);
     let statements = list_concat(inside, ["i++;"]);
     let loop = js_code_for_start_condition_update_lines(
       "let i = 1;",
@@ -44,14 +46,15 @@ export function app_learn_js_lesson_for_divisors() {
     return code2;
   }
   function wrong_programs_of(n3) {
-    let v1 = program_with(n3, "i < n", "n % i === 0");
+    let v = program_with(n3, "i < n", "n % i === 0");
     let v2 = program_with(n3, "i <= n", "n % i !== 0");
     let v3 = program_with(n3, "i <= n", "i % n === 0");
-    let programs = [v1, v2, v3];
+    let programs = [v, v2, v3];
     return programs;
   }
   function wrong_outputs_of(n4) {
-    return [];
+    let r = [];
+    return r;
   }
   function inputs_get() {
     "six numbers from 2 to 8, none twice, shuffled";
