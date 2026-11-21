@@ -1,16 +1,84 @@
-[{"ref":"1,2","query":"Peter Paul Rubens Saint Peter Prado Apostolado"},
-{"ref":"3,4,5","query":"Piero della Francesca The Resurrection Sansepolcro"},
-{"ref":"6,7","query":"Joseph Wright of Derby An Iron Forge Tate"},
-{"ref":"8,9","query":"Rembrandt The Incredulity of Saint Thomas Pushkin Museum"},
-{"ref":"10,11","query":"Michelangelo Daniel Sistine Chapel"},
-{"ref":"12","query":"Fra Angelico Annunciation Prado"},
-{"ref":"13","query":"Georges de La Tour Magdalene with the Smoking Flame LACMA"},
-{"ref":"14","query":"Jan Steen The Merry Family Rijksmuseum"},
-{"ref":"15,16","query":"Francisco de Zurbarán The Young Virgin Metropolitan Museum"},
-{"ref":"17","query":"Rogier van der Weyden Beaune Altarpiece Last Judgment"},
-{"ref":"18,19","query":"Francisco de Zurbarán The Lamb of God San Diego Museum"},
-{"ref":"20","query":"Michelangelo Creation of the Sun Moon and Plants Sistine"},
-{"ref":"21","query":"Caravaggio Supper at Emmaus National Gallery London"},
-{"ref":"22","query":"Fra Angelico Deposition from the Cross San Marco"},
-{"ref":"23","query":"Vincent van Gogh The Sower 1888 Kröller-Müller"},
-{"ref":"24,25","query":"Vincent van Gogh Field with Poppies Bremen"}]
+[
+ {
+  "ref": "1,2",
+  "query": "Peter Paul Rubens Saint Peter Prado Apostolado",
+  "title": "Saint Paul, by Peter Paul Rubens (Museo del Prado).jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 2240,
+  "height": 2953,
+  "page": "https://commons.wikimedia.org/wiki/File:Saint_Paul,_by_Peter_Paul_Rubens_(Museo_del_Prado).jpg"
+ },
+ {
+  "ref": "3,4,5",
+  "query": "Piero della Francesca The Resurrection Sansepolcro",
+  "title": "Piero della Francesca - Resurrection - WGA17609.jpg",
+  "artist": "Piero della Francesca",
+  "licence": "Public domain",
+  "width": 1130,
+  "height": 1200,
+  "page": "https://commons.wikimedia.org/wiki/File:Piero_della_Francesca_-_Resurrection_-_WGA17609.jpg"
+ },
+ {
+  "ref": "6,7",
+  "query": "Joseph Wright of Derby An Iron Forge Tate",
+  "title": "Joseph Wright of Derby (1734-1797) - An Iron Forge - T06670 - Tate.jpg",
+  "artist": "Joseph Wright of Derby",
+  "licence": "Public domain",
+  "width": 1200,
+  "height": 1102,
+  "page": "https://commons.wikimedia.org/wiki/File:Joseph_Wright_of_Derby_(1734-1797)_-_An_Iron_Forge_-_T06670_-_Tate.jpg"
+ },
+ {
+  "ref": "8,9",
+  "query": "Rembrandt The Incredulity of Saint Thomas Pushkin Museum"
+ },
+ {
+  "ref": "10,11",
+  "query": "Michelangelo Daniel Sistine Chapel"
+ },
+ {
+  "ref": "12",
+  "query": "Fra Angelico Annunciation Prado"
+ },
+ {
+  "ref": "13",
+  "query": "Georges de La Tour Magdalene with the Smoking Flame LACMA"
+ },
+ {
+  "ref": "14",
+  "query": "Jan Steen The Merry Family Rijksmuseum"
+ },
+ {
+  "ref": "15,16",
+  "query": "Francisco de Zurbarán The Young Virgin Metropolitan Museum"
+ },
+ {
+  "ref": "17",
+  "query": "Rogier van der Weyden Beaune Altarpiece Last Judgment"
+ },
+ {
+  "ref": "18,19",
+  "query": "Francisco de Zurbarán The Lamb of God San Diego Museum"
+ },
+ {
+  "ref": "20",
+  "query": "Michelangelo Creation of the Sun Moon and Plants Sistine"
+ },
+ {
+  "ref": "21",
+  "query": "Caravaggio Supper at Emmaus National Gallery London"
+ },
+ {
+  "ref": "22",
+  "query": "Fra Angelico Deposition from the Cross San Marco"
+ },
+ {
+  "ref": "23",
+  "query": "Vincent van Gogh The Sower 1888 Kröller-Müller"
+ },
+ {
+  "ref": "24,25",
+  "query": "Vincent van Gogh Field with Poppies Bremen"
+ }
+]
