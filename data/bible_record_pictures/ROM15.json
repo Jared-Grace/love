@@ -31,13 +31,8 @@
  },
  {
   "ref": "4",
-  "query": "Rembrandt Two Old Men Disputing National Gallery of Victoria",
-  "title": "Rembrandt van Rijn 185.jpg",
-  "artist": "Rembrandt",
-  "licence": "Public domain",
-  "width": 962,
-  "height": 1237,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_185.jpg"
+  "query": "Rembrandt Two Old Men Disputing Peter and Paul Melbourne Google Art Project",
+  "title": null
  },
  {
   "ref": "5,6",
@@ -51,13 +46,13 @@
  },
  {
   "ref": "7",
-  "query": "Fritz von Uhde Lasset die Kindlein zu mir kommen Leipzig",
-  "title": "Fritz von Uhde - Lasset die Kinderlein zu mir kommen, 1884 (Leipzig).jpg",
-  "artist": "Fritz von Uhde",
+  "query": "Domenico Ghirlandaio Visitation Louvre",
+  "title": "La Visitation avec Marie-Jacobie et Marie-Salomé - Domenico Ghirlandaio - Musée du Louvre Peintures INV 297 ; MR 240 - avec cadre.jpg",
+  "artist": "Domenico Ghirlandaio",
   "licence": "Public domain",
-  "width": 1750,
-  "height": 1134,
-  "page": "https://commons.wikimedia.org/wiki/File:Fritz_von_Uhde_-_Lasset_die_Kinderlein_zu_mir_kommen,_1884_(Leipzig).jpg"
+  "width": 7749,
+  "height": 8388,
+  "page": "https://commons.wikimedia.org/wiki/File:La_Visitation_avec_Marie-Jacobie_et_Marie-Salom%C3%A9_-_Domenico_Ghirlandaio_-_Mus%C3%A9e_du_Louvre_Peintures_INV_297_;_MR_240_-_avec_cadre.jpg"
  },
  {
   "ref": "8,9",
@@ -101,33 +96,21 @@
  },
  {
   "ref": "13",
-  "query": "Caspar David Friedrich Kreidefelsen auf Rügen",
-  "title": "Kreidefelsen auf Rügen at Caspar David Friedrich exhibition Alte Nationalgalerie 2024-07-25 01.jpg",
-  "artist": "Leonhard Lenz",
-  "licence": "CC0",
-  "width": 8368,
-  "height": 5584,
-  "page": "https://commons.wikimedia.org/wiki/File:Kreidefelsen_auf_R%C3%BCgen_at_Caspar_David_Friedrich_exhibition_Alte_Nationalgalerie_2024-07-25_01.jpg"
+  "query": "Caspar David Friedrich Chalk Cliffs on Rügen Museum Oskar Reinhart",
+  "title": "Caspar David Friedrich - Kreidefelsen auf Rügen (Museum Oskar Reinhart).jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 1391,
+  "height": 1800,
+  "page": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Kreidefelsen_auf_R%C3%BCgen_(Museum_Oskar_Reinhart).jpg"
  },
  {
   "ref": "14",
-  "query": "Rembrandt The Anatomy Lesson of Dr Nicolaes Tulp",
-  "title": "Rembrandt - The Anatomy Lesson of Dr Nicolaes Tulp.jpg",
-  "artist": "Rembrandt",
-  "licence": "Public domain",
-  "width": 6000,
-  "height": 4520,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg"
+  "query": "Rembrandt The Syndics of the Drapers' Guild Rijksmuseum"
  },
  {
   "ref": "15,16",
-  "query": "Rembrandt The Apostle Paul National Gallery of Art Washington",
-  "title": "Rembrandt Harmensz. van Rijn - Zelfportret als de apostel Paulus - Google Art Project.jpg",
-  "artist": "Rembrandt",
-  "licence": "Public domain",
-  "width": 4000,
-  "height": 4765,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Zelfportret_als_de_apostel_Paulus_-_Google_Art_Project.jpg"
+  "query": "Valentin de Boulogne Saint Paul Writing his Epistles Houston"
  },
  {
   "ref": "17",
@@ -161,13 +144,11 @@
  },
  {
   "ref": "21",
-  "query": "Duccio The Healing of the Man Born Blind National Gallery",
-  "title": null
+  "query": "Duccio di Buoninsegna The Healing of the Man Born Blind Google Art Project"
  },
  {
   "ref": "22",
-  "query": "Adam Elsheimer The Shipwreck of Saint Paul on Malta National Gallery",
-  "title": null
+  "query": "Aelbert Cuyp The Maas at Dordrecht National Gallery of Art"
  },
  {
   "ref": "23,24",
@@ -201,18 +182,15 @@
  },
  {
   "ref": "27",
-  "query": "Murillo Saint Thomas of Villanueva Distributing Alms Seville",
-  "title": null
+  "query": "Lorenzo Lotto L'elemosina di sant'Antonino Venezia"
  },
  {
   "ref": "28",
-  "query": "Claude Lorrain Seaport with the Embarkation of Saint Paula",
-  "title": null
+  "query": "Claude Lorrain Seaport with the Embarkation of Saint Ursula National Gallery"
  },
  {
   "ref": "29",
-  "query": "Antonello da Messina Salvator Mundi National Gallery",
-  "title": null
+  "query": "Rembrandt Head of Christ Detroit Institute of Arts"
  },
  {
   "ref": "30",
