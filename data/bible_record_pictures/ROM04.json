@@ -1,7 +1,7 @@
 [
  {
   "ref": "1",
-  "query": "Molnár József Ábrahám kivándorlása",
+  "query": "Molnár József The Exodus of Abraham Hungarian National Gallery",
   "title": null
  },
  {
@@ -36,8 +36,13 @@
  },
  {
   "ref": "5",
-  "query": "Titian Christ and the Good Thief Bologna",
-  "title": null
+  "query": "Rubens Christ and the Penitent Sinners",
+  "title": "RubensSimonCyreneCarriesCross.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 2670,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:RubensSimonCyreneCarriesCross.jpg"
  },
  {
   "ref": "6,7",
@@ -81,7 +86,7 @@
  },
  {
   "ref": "11",
-  "query": "Jacopo Bassano The Departure of Abraham Berlin",
+  "query": "Jacopo Bassano The Journey of Abraham",
   "title": null
  },
  {
@@ -126,13 +131,13 @@
  },
  {
   "ref": "17",
-  "query": "Aivazovsky Chaos The Creation",
-  "title": "Three physico-theological discourses - concerning- I. The primitive chaos and creation of the world; II. The general deluge, its causes and effects; III. The dissolution of the world and future (14776059695).jpg",
-  "artist": "Internet Archive Book Images",
-  "licence": "No restrictions",
-  "width": 1612,
-  "height": 2562,
-  "page": "https://commons.wikimedia.org/wiki/File:Three_physico-theological_discourses_-_concerning-_I._The_primitive_chaos_and_creation_of_the_world;_II._The_general_deluge,_its_causes_and_effects;_III._The_dissolution_of_the_world_and_future_(14776059695).jpg"
+  "query": "Thomas Cole The Garden of Eden Amon Carter",
+  "title": "Thomas Cole The Garden of Eden Amon Carter Museum.jpg",
+  "artist": "User:FA2010",
+  "licence": "Public domain",
+  "width": 1855,
+  "height": 1331,
+  "page": "https://commons.wikimedia.org/wiki/File:Thomas_Cole_The_Garden_of_Eden_Amon_Carter_Museum.jpg"
  },
  {
   "ref": "18",
