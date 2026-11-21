@@ -1,19 +1,162 @@
-[{"ref":"1","query":"Jan Provoost Death and the Miser Groeningemuseum"},
-{"ref":"2","query":"Harmen Steenwijck An Allegory of the Vanities of Human Life"},
-{"ref":"3","query":"Antonio de Pereda The Knight's Dream"},
-{"ref":"4","query":"Léon Lhermitte La Paye des moissonneurs"},
-{"ref":"5","query":"Joachim Beuckelaer Kitchen Scene Rijksmuseum"},
-{"ref":"6","query":"Caravaggio The Martyrdom of Saint Matthew"},
-{"ref":"7","query":"Jean-François Millet Spring Le Printemps Orsay"},
-{"ref":"8","query":"Caspar David Friedrich Frau vor der untergehenden Sonne"},
-{"ref":"9","query":"Giotto Last Judgment Scrovegni Chapel"},
-{"ref":"10","query":"Michelangelo Jeremiah Sistine Chapel"},
-{"ref":"11","query":"Albrecht Dürer Job and his Wife Jabach Altarpiece Städel"},
-{"ref":"12","query":"Jacques-Louis David Oath of the Horatii"},
-{"ref":"13","query":"Jules Breton The Communicants"},
-{"ref":"14","query":"Rogier van der Weyden Seven Sacraments Altarpiece Antwerp"},
-{"ref":"15","query":"Luke Fildes The Doctor Tate"},
-{"ref":"16","query":"Giuseppe Maria Crespi The Confession Dresden"},
-{"ref":"17","query":"Frederic Leighton Elijah in the Wilderness"},
-{"ref":"18","query":"Frederic Edwin Church Rainy Season in the Tropics"},
-{"ref":"19,20","query":"Alfred Soord The Lost Sheep"}]
+[
+ {
+  "ref": "1",
+  "query": "Jan Provoost Death and the Miser Groeningemuseum",
+  "title": "Jan Provoost - Death and the Miser - WGA18447.jpg",
+  "artist": "Jan Provoost",
+  "licence": "Public domain",
+  "width": 3508,
+  "height": 2512,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Provoost_-_Death_and_the_Miser_-_WGA18447.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Harmen Steenwijck An Allegory of the Vanities of Human Life",
+  "title": "Harmen Steenwijck - Vanitas Still-Life - WGA21768.jpg",
+  "artist": "Harmen Steenwijck",
+  "licence": "Public domain",
+  "width": 3000,
+  "height": 2357,
+  "page": "https://commons.wikimedia.org/wiki/File:Harmen_Steenwijck_-_Vanitas_Still-Life_-_WGA21768.jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Antonio de Pereda The Knight's Dream",
+  "title": "Antonio de Pereda - El sueño del caballero - Google Art Project.jpg",
+  "artist": "Antonio de Pereda",
+  "licence": "Public domain",
+  "width": 3535,
+  "height": 2501,
+  "page": "https://commons.wikimedia.org/wiki/File:Antonio_de_Pereda_-_El_sue%C3%B1o_del_caballero_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "4",
+  "query": "Léon Lhermitte La Paye des moissonneurs",
+  "title": "Léon-Augustin Lhermitte. La paye des moissonneurs, GD002491.jpg",
+  "artist": "Lhermitte, Léon-Augustin (French painter and printmaker, 1844-1925) (artist)",
+  "licence": "Public domain",
+  "width": 3769,
+  "height": 3216,
+  "page": "https://commons.wikimedia.org/wiki/File:L%C3%A9on-Augustin_Lhermitte._La_paye_des_moissonneurs,_GD002491.jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Joachim Beuckelaer Kitchen Scene Rijksmuseum",
+  "title": "Keukenstuk, met op de achtergrond Jezus bij Martha en Maria Rijksmuseum SK-A-2251.jpeg",
+  "artist": "After Joachim Beuckelaer",
+  "licence": "Public domain",
+  "width": 7234,
+  "height": 5552,
+  "page": "https://commons.wikimedia.org/wiki/File:Keukenstuk,_met_op_de_achtergrond_Jezus_bij_Martha_en_Maria_Rijksmuseum_SK-A-2251.jpeg"
+ },
+ {
+  "ref": "6",
+  "query": "Antonio Ciseri Ecce Homo"
+ },
+ {
+  "ref": "7",
+  "query": "Jean-François Millet Spring Le Printemps Orsay",
+  "title": "Jean-François Millet (II) 006.jpg",
+  "artist": "Jean-François Millet",
+  "licence": "Public domain",
+  "width": 2536,
+  "height": 1922,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_(II)_006.jpg"
+ },
+ {
+  "ref": "8",
+  "query": "Caspar David Friedrich Frau vor der untergehenden Sonne",
+  "title": "Caspar David Friedrich - Frau vor untergehender Sonne.jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 2362,
+  "height": 1699,
+  "page": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Frau_vor_untergehender_Sonne.jpg"
+ },
+ {
+  "ref": "9",
+  "query": "Giotto Last Judgment Scrovegni Chapel",
+  "title": "Last-judgment-scrovegni-chapel-giotto-1306.jpg",
+  "artist": "Giotto",
+  "licence": "Public domain",
+  "width": 2500,
+  "height": 2327,
+  "page": "https://commons.wikimedia.org/wiki/File:Last-judgment-scrovegni-chapel-giotto-1306.jpg"
+ },
+ {
+  "ref": "10",
+  "query": "Michelangelo prophet Jeremiah"
+ },
+ {
+  "ref": "11",
+  "query": "Albrecht Dürer Job and his Wife Jabach Altarpiece Städel",
+  "title": "Dürer - Job and his Wife (with frame) - 2008-07-31 Städel 04.jpg",
+  "artist": "Albrecht Dürer",
+  "licence": "Public domain",
+  "width": 1942,
+  "height": 3177,
+  "page": "https://commons.wikimedia.org/wiki/File:D%C3%BCrer_-_Job_and_his_Wife_(with_frame)_-_2008-07-31_St%C3%A4del_04.jpg"
+ },
+ {
+  "ref": "12",
+  "query": "Jacques-Louis David Oath of the Horatii",
+  "title": "Le Serment des Horaces - Jacques-Louis David - Musée du Louvre Peintures INV 3692 ; MR 1432.jpg",
+  "artist": "Jacques-Louis David",
+  "licence": "Public domain",
+  "width": 10051,
+  "height": 7794,
+  "page": "https://commons.wikimedia.org/wiki/File:Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_;_MR_1432.jpg"
+ },
+ {
+  "ref": "13",
+  "query": "Ghent Altarpiece singing angels"
+ },
+ {
+  "ref": "14",
+  "query": "Rogier van der Weyden Seven Sacraments Altarpiece Antwerp",
+  "title": "Seven Sacraments Rogier.jpg",
+  "artist": "Rogier van der Weyden",
+  "licence": "Public domain",
+  "width": 6059,
+  "height": 5296,
+  "page": "https://commons.wikimedia.org/wiki/File:Seven_Sacraments_Rogier.jpg"
+ },
+ {
+  "ref": "15",
+  "query": "Luke Fildes The Doctor 1891"
+ },
+ {
+  "ref": "16",
+  "query": "Giuseppe Maria Crespi The Confession Dresden",
+  "title": "Giuseppe Maria Crespi - Confession - WGA05764.jpg",
+  "artist": "Giuseppe Maria Crespi",
+  "licence": "Public domain",
+  "width": 900,
+  "height": 1211,
+  "page": "https://commons.wikimedia.org/wiki/File:Giuseppe_Maria_Crespi_-_Confession_-_WGA05764.jpg"
+ },
+ {
+  "ref": "17",
+  "query": "Frederic Leighton Elijah in the Wilderness",
+  "title": "Frederic, Lord Leighton - Elijah in the Wilderness - Google Art Project.jpg",
+  "artist": "Frederic Leighton",
+  "licence": "Public domain",
+  "width": 3202,
+  "height": 3555,
+  "page": "https://commons.wikimedia.org/wiki/File:Frederic,_Lord_Leighton_-_Elijah_in_the_Wilderness_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "18",
+  "query": "Frederic Edwin Church Rainy Season in the Tropics",
+  "title": "Frederic Edwin Church - Rainy Season in the Tropics - Google Art Project.jpg",
+  "artist": "Frederic Edwin Church",
+  "licence": "Public domain",
+  "width": 9777,
+  "height": 6482,
+  "page": "https://commons.wikimedia.org/wiki/File:Frederic_Edwin_Church_-_Rainy_Season_in_the_Tropics_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "19,20",
+  "query": "Bernhard Plockhorst The Good Shepherd"
+ }
+]

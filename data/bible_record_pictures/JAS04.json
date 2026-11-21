@@ -61,8 +61,13 @@
  },
  {
   "ref": "7",
-  "query": "Giotto Legend of St Francis Exorcism of the Demons at Arezzo",
-  "title": null
+  "query": "Rubens Wunder des Hl. Ignatius von Loyola Kunsthistorisches",
+  "title": "Peter Paul Rubens, , Kunsthistorisches Museum Wien, Gemäldegalerie - Wunder des Hl. Ignatius von Loyola - GG 517 - Kunsthistorisches Museum.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 1139,
+  "height": 1539,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens,_,_Kunsthistorisches_Museum_Wien,_Gem%C3%A4ldegalerie_-_Wunder_des_Hl._Ignatius_von_Loyola_-_GG_517_-_Kunsthistorisches_Museum.jpg"
  },
  {
   "ref": "8",
@@ -156,12 +161,12 @@
  },
  {
   "ref": "17",
-  "query": "Pieter Lastman Jonah and the Whale Düsseldorf",
-  "title": "Pieter Lastman (1583-1633) - Jonas en de walvis (1621) - Düsseldorf Museum Kunstpalast 15-08-2012 15-01-08.JPG",
-  "artist": "Pieter Lastman",
+  "query": "Rembrandt The Parable of the Rich Fool Gemäldegalerie Berlin",
+  "title": "Rembrandt - The Parable of the Rich Fool.jpg",
+  "artist": "Rembrandt",
   "licence": "Public domain",
-  "width": 1832,
-  "height": 1235,
-  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Lastman_(1583-1633)_-_Jonas_en_de_walvis_(1621)_-_D%C3%BCsseldorf_Museum_Kunstpalast_15-08-2012_15-01-08.JPG"
+  "width": 2998,
+  "height": 2228,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_The_Parable_of_the_Rich_Fool.jpg"
  }
 ]
