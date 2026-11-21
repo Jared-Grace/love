@@ -11,8 +11,7 @@
  },
  {
   "ref": "3,4,5",
-  "query": "Piero della Francesca The Resurrection Sansepolcro",
-  "title": "Piero della Francesca - Resurrection - WGA17609.jpg",
+  "query": "Annibale Carracci The Resurrection of Christ Louvre",
   "artist": "Piero della Francesca",
   "licence": "Public domain",
   "width": 1130,
@@ -21,8 +20,7 @@
  },
  {
   "ref": "6,7",
-  "query": "Joseph Wright of Derby An Iron Forge Tate",
-  "title": "Joseph Wright of Derby (1734-1797) - An Iron Forge - T06670 - Tate.jpg",
+  "query": "Joseph Wright of Derby A Blacksmith's Shop Yale Center for British Art",
   "artist": "Joseph Wright of Derby",
   "licence": "Public domain",
   "width": 1200,
@@ -41,8 +39,7 @@
  },
  {
   "ref": "10,11",
-  "query": "Michelangelo Daniel Sistine Chapel",
-  "title": "Sistine Chapel Daniel beforandafter.jpg",
+  "query": "Rembrandt Simeon in the Temple Nationalmuseum Stockholm",
   "artist": "Michelangelo",
   "licence": "Public domain",
   "width": 1754,
@@ -51,8 +48,7 @@
  },
  {
   "ref": "12",
-  "query": "Fra Angelico Annunciation Prado",
-  "title": "La Anunciación, by Fra Angelico, from Prado in Google Earth.jpg",
+  "query": "Leonardo da Vinci Annunciation Uffizi",
   "artist": "Fra Angelico",
   "licence": "Public domain",
   "width": 30000,
@@ -101,8 +97,7 @@
  },
  {
   "ref": "18,19",
-  "query": "Francisco de Zurbarán The Lamb of God San Diego Museum",
-  "title": "Agnus Dei (The Lamb of God), by Francisco de Zurbaran, c. 1635-1640 - San Diego Museum of Art - DSC06627.JPG",
+  "query": "Josefa de Óbidos Agnus Dei Walters Art Museum",
   "artist": "Francisco de Zurbarán",
   "licence": "Public domain",
   "width": 3977,
