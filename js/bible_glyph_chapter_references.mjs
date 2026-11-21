@@ -1025,6 +1025,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Samuel 17",
     },
     {
+      chapter_code: "1SA18",
+      reference: "1 Samuel 18",
+    },
+    {
       chapter_code: "1SA20",
       reference: "1 Samuel 20",
     },
