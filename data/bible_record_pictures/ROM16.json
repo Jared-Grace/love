@@ -141,13 +141,7 @@
  },
  {
   "ref": "16",
-  "query": "Giotto Meeting at the Golden Gate Scrovegni",
-  "title": "Giotto (1905) (14753424646).jpg",
-  "artist": "Internet Archive Book Images",
-  "licence": "No restrictions",
-  "width": 2442,
-  "height": 2240,
-  "page": "https://commons.wikimedia.org/wiki/File:Giotto_(1905)_(14753424646).jpg"
+  "query": "Giotto Scrovegni 11 Meeting at the Golden Gate"
  },
  {
   "ref": "17",
@@ -171,26 +165,62 @@
  },
  {
   "ref": "19",
-  "query": "Johannes Vermeer Girl with a Pearl Earring Mauritshuis"
+  "query": "Johannes Vermeer Girl with a Pearl Earring Mauritshuis",
+  "title": "Johannes Vermeer - Girl with a Pearl Earring - 670 - Mauritshuis.jpg",
+  "artist": "Johannes Vermeer",
+  "licence": "Public domain",
+  "width": 5068,
+  "height": 6000,
+  "page": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Girl_with_a_Pearl_Earring_-_670_-_Mauritshuis.jpg"
  },
  {
   "ref": "20",
-  "query": "Caravaggio Madonna dei Palafrenieri Borghese"
+  "query": "Caravaggio Madonna dei Palafrenieri Borghese",
+  "title": "Caravaggio. Madonna dei Palafrenieri, GD016832.jpg",
+  "artist": "Caravaggio (Italian painter, draughtsman, 1571-1610) (artist)",
+  "licence": "Public domain",
+  "width": 3753,
+  "height": 3199,
+  "page": "https://commons.wikimedia.org/wiki/File:Caravaggio._Madonna_dei_Palafrenieri,_GD016832.jpg"
  },
  {
   "ref": "21",
-  "query": "Rembrandt Timothy and his Grandmother Lois"
+  "query": "Rembrandt Timothy and his Grandmother Lois",
+  "title": "Timothy-and-Lois.jpg",
+  "artist": "Willem Drost",
+  "licence": "Public domain",
+  "width": 1524,
+  "height": 1920,
+  "page": "https://commons.wikimedia.org/wiki/File:Timothy-and-Lois.jpg"
  },
  {
   "ref": "22",
-  "query": "Gabriël Metsu Man Writing a Letter National Gallery of Ireland"
+  "query": "Gabriël Metsu Man Writing a Letter National Gallery of Ireland",
+  "title": "Man Writing a Letter by Gabriël Metsu.jpg",
+  "artist": "Gabriel Metsu",
+  "licence": "Public domain",
+  "width": 3689,
+  "height": 4740,
+  "page": "https://commons.wikimedia.org/wiki/File:Man_Writing_a_Letter_by_Gabri%C3%ABl_Metsu.jpg"
  },
  {
   "ref": "23",
-  "query": "Jan Gossaert Portrait of a Merchant National Gallery of Art"
+  "query": "Jan Gossaert Portrait of a Merchant National Gallery of Art",
+  "title": "Jan Gossaert - Portrait of a Merchant - Google Art Project.jpg",
+  "artist": "Jan Gossaert",
+  "licence": "Public domain",
+  "width": 4607,
+  "height": 6216,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Gossaert_-_Portrait_of_a_Merchant_-_Google_Art_Project.jpg"
  },
  {
   "ref": "25,26,27",
-  "query": "Giovanni Battista Gaulli Triumph of the Name of Jesus Gesù"
+  "query": "Giovanni Battista Gaulli Triumph of the Name of Jesus Gesù",
+  "title": "The Triumph of the Name of Jesus, by Il Baciccio (Giovanni Battista Gaulli), 1676-1679, oil on paper, study for ceiling of Il Gesu in Rome - Princeton University Art Museum - DSC06514.jpg",
+  "artist": "Daderot",
+  "licence": "Public domain",
+  "width": 3148,
+  "height": 4571,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Triumph_of_the_Name_of_Jesus,_by_Il_Baciccio_(Giovanni_Battista_Gaulli),_1676-1679,_oil_on_paper,_study_for_ceiling_of_Il_Gesu_in_Rome_-_Princeton_University_Art_Museum_-_DSC06514.jpg"
  }
 ]

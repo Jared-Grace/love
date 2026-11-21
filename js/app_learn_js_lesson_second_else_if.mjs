@@ -1,6 +1,6 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { equal } from "./equal.mjs";
 import { js_code_if_else_if_lines_multiple } from "./js_code_if_else_if_lines_multiple.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
@@ -77,7 +77,18 @@ export function app_learn_js_lesson_second_else_if() {
       box_one,
       context,
       app_learn_js_lesson_else_if,
-      ["", "else if (b) { ... }", " runs when a is false and b is true"],
+      [
+        "",
+        "else if (b) { ... }",
+        " runs when ",
+        "a",
+        " is ",
+        "false",
+        " and ",
+        "b",
+        " is ",
+        "true",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
@@ -112,7 +123,9 @@ export function app_learn_js_lesson_second_else_if() {
       "second",
       ": a new second, and the top stays. ",
       "else if (n > second)",
-      " asks this only when the first test was false:",
+      " asks this only when the first test was ",
+      "false",
+      ":",
     ]);
     example(box_three, {
       big: 8,
