@@ -61,7 +61,13 @@
  },
  {
   "ref": "8",
-  "query": "Bartolomé Esteban Murillo The Heavenly and Earthly Trinities National Gallery"
+  "query": "Bartolomé Esteban Murillo The Heavenly and Earthly Trinities National Gallery",
+  "title": "Bartolomé Esteban Murillo - The Heavenly and Earthly Trinities - 1681-82.jpg",
+  "artist": "Bartolomé Esteban Murillo",
+  "licence": "Public domain",
+  "width": 3538,
+  "height": 5135,
+  "page": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Murillo_-_The_Heavenly_and_Earthly_Trinities_-_1681-82.jpg"
  },
  {
   "ref": "9",
@@ -75,11 +81,23 @@
  },
  {
   "ref": "10",
-  "query": "Antonello da Messina Crucifixion Antwerp"
+  "query": "Antonello da Messina Crucifixion Antwerp",
+  "title": "Calvarieberg, Antonello da Messina, 1475, Koninlijk Museum voor Schone Kunsten Antwerpen, 4.jpg",
+  "artist": "Antonello da Messina",
+  "licence": "CC0",
+  "width": 5238,
+  "height": 7247,
+  "page": "https://commons.wikimedia.org/wiki/File:Calvarieberg,_Antonello_da_Messina,_1475,_Koninlijk_Museum_voor_Schone_Kunsten_Antwerpen,_4.jpg"
  },
  {
   "ref": "11",
-  "query": "Aimé Morot The Good Samaritan Petit Palais"
+  "query": "Aimé Morot The Good Samaritan Petit Palais",
+  "title": "Aimé Morot - Le Bon Samaritain - PPP4857 - Musée des Beaux-Arts de la ville de Paris.jpg",
+  "artist": "Aimé Morot",
+  "licence": "Public domain",
+  "width": 5310,
+  "height": 7178,
+  "page": "https://commons.wikimedia.org/wiki/File:Aim%C3%A9_Morot_-_Le_Bon_Samaritain_-_PPP4857_-_Mus%C3%A9e_des_Beaux-Arts_de_la_ville_de_Paris.jpg"
  },
  {
   "ref": "12",
@@ -93,7 +111,13 @@
  },
  {
   "ref": "13",
-  "query": "Titian Pentecost Santa Maria della Salute"
+  "query": "Titian Pentecost Santa Maria della Salute",
+  "title": "Santa Maria della Salute (Venice) - Discesa dello Spirito Santo di Tiziano (1555).jpg",
+  "artist": "Didier Descouens",
+  "licence": "Public domain",
+  "width": 3943,
+  "height": 6222,
+  "page": "https://commons.wikimedia.org/wiki/File:Santa_Maria_della_Salute_(Venice)_-_Discesa_dello_Spirito_Santo_di_Tiziano_(1555).jpg"
  },
  {
   "ref": "14",
@@ -117,7 +141,13 @@
  },
  {
   "ref": "16",
-  "query": "Raphael The Holy Family of Francis I Louvre"
+  "query": "Raphael The Holy Family of Francis I Louvre",
+  "title": "La Sainte Famille - Raphaël - Musée du Louvre Peintures INV 604.jpg",
+  "artist": "Raphael",
+  "licence": "Public domain",
+  "width": 2447,
+  "height": 3597,
+  "page": "https://commons.wikimedia.org/wiki/File:La_Sainte_Famille_-_Rapha%C3%ABl_-_Mus%C3%A9e_du_Louvre_Peintures_INV_604.jpg"
  },
  {
   "ref": "17",
