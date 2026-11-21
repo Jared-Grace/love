@@ -111,8 +111,13 @@
  },
  {
   "ref": "12",
-  "query": "Gerrit Dou Old Woman Reading a Lectionary",
-  "title": null
+  "query": "Rembrandt Moses with the Ten Commandments Gemäldegalerie",
+  "title": "Rembrandt - Moses with the Ten Commandments - Google Art Project.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 4000,
+  "height": 4990,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Moses_with_the_Ten_Commandments_-_Google_Art_Project.jpg"
  },
  {
   "ref": "13",
@@ -126,18 +131,18 @@
  },
  {
   "ref": "14",
-  "query": "Konstantin Flavitsky Joseph Sold into Slavery by His Brothers",
+  "query": "Friedrich Overbeck Der Verkauf Josephs",
   "title": null
  },
  {
   "ref": "15",
-  "query": "Domenico Fetti Melancholy Louvre",
-  "title": "Henri simon thomassin-melancolía-met.jpg",
-  "artist": "Henri Simon Thomassin según Domenico Fetti",
+  "query": "Rembrandt Philosophe en méditation Louvre",
+  "title": "Rembrandt Harmensz. van Rijn 038.jpg",
+  "artist": "Rembrandt",
   "licence": "Public domain",
-  "width": 2289,
-  "height": 3637,
-  "page": "https://commons.wikimedia.org/wiki/File:Henri_simon_thomassin-melancol%C3%ADa-met.jpg"
+  "width": 2024,
+  "height": 1735,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_038.jpg"
  },
  {
   "ref": "16",
@@ -171,13 +176,13 @@
  },
  {
   "ref": "19",
-  "query": "Pieter Bruegel the Elder The Misanthrope",
-  "title": "Hieronymus Wierix after Pieter Bruegel the Elder, The Misanthrope Robbed by the World, NGA 47640.jpg",
-  "artist": "Hieronymus Wierix after Pieter Bruegel the Elder",
-  "licence": "CC0",
-  "width": 3491,
-  "height": 3552,
-  "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Wierix_after_Pieter_Bruegel_the_Elder,_The_Misanthrope_Robbed_by_the_World,_NGA_47640.jpg"
+  "query": "Pieter Bruegel il Vecchio Misantropo Capodimonte",
+  "title": "Pieter Bruegel d. Ä. 035.jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 2536,
+  "height": 2505,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_d._%C3%84._035.jpg"
  },
  {
   "ref": "20",

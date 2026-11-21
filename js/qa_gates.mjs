@@ -646,6 +646,7 @@ import { app_learn_js_program_step_presses_gate_run } from "./app_learn_js_progr
 import { bible_glyph_chapters_note_glyph_gate_run } from "./bible_glyph_chapters_note_glyph_gate_run.mjs";
 import { functions_outside_direct_gate_run } from "./functions_outside_direct_gate_run.mjs";
 import { app_learn_en_gloss_urdu_bible_quotes_absent_gate_run } from "./app_learn_en_gloss_urdu_bible_quotes_absent_gate_run.mjs";
+import { app_learn_en_stores_fields_gate_run } from "./app_learn_en_stores_fields_gate_run.mjs";
 import { files_root_gate_run } from "./files_root_gate_run.mjs";
 import { app_index_cards_unserved_gate_run } from "./app_index_cards_unserved_gate_run.mjs";
 export function qa_gates() {
@@ -1299,6 +1300,7 @@ export function qa_gates() {
     bible_glyph_chapters_note_glyph_gate_run,
     functions_outside_direct_gate_run,
     app_learn_en_gloss_urdu_bible_quotes_absent_gate_run,
+    app_learn_en_stores_fields_gate_run,
     files_root_gate_run,
     app_index_cards_unserved_gate_run,
   ];

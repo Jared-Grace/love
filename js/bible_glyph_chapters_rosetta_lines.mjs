@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_rosetta_lines_2sa03 } from "./bible_glyph_chapter_rosetta_lines_2sa03.mjs";
 import { bible_glyph_chapter_rosetta_lines_2sa02 } from "./bible_glyph_chapter_rosetta_lines_2sa02.mjs";
 import { bible_glyph_chapter_rosetta_lines_2sa01 } from "./bible_glyph_chapter_rosetta_lines_2sa01.mjs";
 import { bible_glyph_chapter_rosetta_lines_1sa31 } from "./bible_glyph_chapter_rosetta_lines_1sa31.mjs";
@@ -1430,6 +1431,17 @@ export function bible_glyph_chapters_rosetta_lines() {
   let chapter705 = bible_glyph_chapter_rosetta_lines_1sa18();
   let chapter706 = bible_glyph_chapter_rosetta_lines_1sa19();
   let chapter707 = bible_glyph_chapter_rosetta_lines_1sa21();
+  let chapter708 = bible_glyph_chapter_rosetta_lines_1sa22();
+  let chapter709 = bible_glyph_chapter_rosetta_lines_1sa23();
+  let chapter710 = bible_glyph_chapter_rosetta_lines_1sa26();
+  let chapter711 = bible_glyph_chapter_rosetta_lines_1sa27();
+  let chapter712 = bible_glyph_chapter_rosetta_lines_1sa28();
+  let chapter713 = bible_glyph_chapter_rosetta_lines_1sa29();
+  let chapter714 = bible_glyph_chapter_rosetta_lines_1sa30();
+  let chapter715 = bible_glyph_chapter_rosetta_lines_1sa31();
+  let chapter716 = bible_glyph_chapter_rosetta_lines_2sa01();
+  let chapter717 = bible_glyph_chapter_rosetta_lines_2sa02();
+  let chapter718 = bible_glyph_chapter_rosetta_lines_2sa03();
   let chapters = [
     chapter,
     chapter2,
@@ -2138,16 +2150,17 @@ export function bible_glyph_chapters_rosetta_lines() {
     chapter705,
     chapter706,
     chapter707,
-    bible_glyph_chapter_rosetta_lines_1sa22(),
-    bible_glyph_chapter_rosetta_lines_1sa23(),
-    bible_glyph_chapter_rosetta_lines_1sa26(),
-    bible_glyph_chapter_rosetta_lines_1sa27(),
-    bible_glyph_chapter_rosetta_lines_1sa28(),
-    bible_glyph_chapter_rosetta_lines_1sa29(),
-    bible_glyph_chapter_rosetta_lines_1sa30(),
-    bible_glyph_chapter_rosetta_lines_1sa31(),
-    bible_glyph_chapter_rosetta_lines_2sa01(),
-    bible_glyph_chapter_rosetta_lines_2sa02(),
+    chapter708,
+    chapter709,
+    chapter710,
+    chapter711,
+    chapter712,
+    chapter713,
+    chapter714,
+    chapter715,
+    chapter716,
+    chapter717,
+    chapter718,
   ];
   return chapters;
 }

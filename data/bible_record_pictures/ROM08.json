@@ -1,8 +1,13 @@
 [
  {
   "ref": "1",
-  "query": "Vasily Polenov Christ and the Sinner",
-  "title": null
+  "query": "Rembrandt The Woman Taken in Adultery National Gallery",
+  "title": "Rembrandt - The Woman taken in Adultery (1644).jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 5087,
+  "height": 6556,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_The_Woman_taken_in_Adultery_(1644).jpg"
  },
  {
   "ref": "2",
@@ -146,13 +151,13 @@
  },
  {
   "ref": "18",
-  "query": "John Martin The Plains of Heaven",
-  "title": "Charles Mottram after John Martin, The Plains of Heaven, 1857, NGA 123463.jpg",
-  "artist": "Charles Mottram after John Martin",
-  "licence": "CC0",
-  "width": 4000,
-  "height": 2712,
-  "page": "https://commons.wikimedia.org/wiki/File:Charles_Mottram_after_John_Martin,_The_Plains_of_Heaven,_1857,_NGA_123463.jpg"
+  "query": "Thomas Cole The Voyage of Life Old Age National Gallery of Art",
+  "title": "Thomas Cole - The Voyage of Life Old Age, 1842 (National Gallery of Art).jpg",
+  "artist": "Thomas Cole",
+  "licence": "Public domain",
+  "width": 5100,
+  "height": 3431,
+  "page": "https://commons.wikimedia.org/wiki/File:Thomas_Cole_-_The_Voyage_of_Life_Old_Age,_1842_(National_Gallery_of_Art).jpg"
  },
  {
   "ref": "19",
@@ -236,8 +241,13 @@
  },
  {
   "ref": "28",
-  "query": "Peter von Cornelius Joseph Recognized by His Brothers",
-  "title": null
+  "query": "Pontormo Joseph in Egypt National Gallery",
+  "title": "Jacopo Pontormo 035.jpg",
+  "artist": "Pontormo",
+  "licence": "Public domain",
+  "width": 2024,
+  "height": 2470,
+  "page": "https://commons.wikimedia.org/wiki/File:Jacopo_Pontormo_035.jpg"
  },
  {
   "ref": "29",
@@ -261,8 +271,7 @@
  },
  {
   "ref": "31",
-  "query": "Caravaggio David with the Head of Goliath Prado",
-  "title": null
+  "query": "Caravaggio David vencedor de Goliat Prado"
  },
  {
   "ref": "32",
