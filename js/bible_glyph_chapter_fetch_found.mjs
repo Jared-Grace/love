@@ -2017,6 +2017,10 @@ export async function bible_glyph_chapter_fetch_found(chapter_code) {
     let chapter_module = await import("./bible_glyph_chapter_ecc03.mjs");
     stored = chapter_module.bible_glyph_chapter_ecc03();
   }
+  if (equal(chapter_code, "ECC04")) {
+    let chapter_module = await import("./bible_glyph_chapter_ecc04.mjs");
+    stored = chapter_module.bible_glyph_chapter_ecc04();
+  }
   if (equal(chapter_code, "ECC12")) {
     let chapter_module = await import("./bible_glyph_chapter_ecc12.mjs");
     stored = chapter_module.bible_glyph_chapter_ecc12();
