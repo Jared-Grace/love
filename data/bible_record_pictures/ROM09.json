@@ -161,19 +161,43 @@
  },
  {
   "ref": "21",
-  "query": "Velázquez The Water Seller of Seville"
+  "query": "Velázquez The Water Seller of Seville",
+  "title": "Diego Velazquez - The Waterseller of Seville.jpg",
+  "artist": "Diego Velázquez",
+  "licence": "Public domain",
+  "width": 2371,
+  "height": 3200,
+  "page": "https://commons.wikimedia.org/wiki/File:Diego_Velazquez_-_The_Waterseller_of_Seville.jpg"
  },
  {
   "ref": "22",
-  "query": "Jacopo Bassano The Animals Entering the Ark Prado"
+  "query": "Jacopo Bassano The Animals Entering the Ark Prado",
+  "title": "The Animals Entering Noah's Ark 1570s Jacopo Bassano.jpg",
+  "artist": "Jacopo Bassano",
+  "licence": "Public domain",
+  "width": 1920,
+  "height": 1490,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Animals_Entering_Noah%27s_Ark_1570s_Jacopo_Bassano.jpg"
  },
  {
   "ref": "23,24",
-  "query": "Veronese The Wedding at Cana"
+  "query": "Veronese The Wedding at Cana",
+  "title": "Les Noces de Cana - Paolo Veronese - Musée du Louvre Peintures INV 142 ; MR 384.jpg",
+  "artist": "Paolo Veronese",
+  "licence": "Public domain",
+  "width": 10068,
+  "height": 6742,
+  "page": "https://commons.wikimedia.org/wiki/File:Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_;_MR_384.jpg"
  },
  {
   "ref": "25,26",
-  "query": "Pieter Bruegel the Elder The Sermon of Saint John the Baptist"
+  "query": "Pieter Bruegel the Elder The Sermon of Saint John the Baptist",
+  "title": "Pieter Bruegel the Elder - The Sermon of Saint John the Baptist (1566) - Szépművészeti Múzeum.jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 12124,
+  "height": 7063,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Sermon_of_Saint_John_the_Baptist_(1566)_-_Sz%C3%A9pm%C5%B1v%C3%A9szeti_M%C3%BAzeum.jpg"
  },
  {
   "ref": "27",
