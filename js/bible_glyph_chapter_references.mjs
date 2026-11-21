@@ -2713,6 +2713,10 @@ export function bible_glyph_chapter_references() {
       reference: "Zechariah 5",
     },
     {
+      chapter_code: "ZEC06",
+      reference: "Zechariah 6",
+    },
+    {
       chapter_code: "ZEC08",
       reference: "Zechariah 8",
     },
