@@ -10,6 +10,8 @@ import { app_shared_screen_stored_set_context } from "./app_shared_screen_stored
 import { null_not_is } from "./null_not_is.mjs";
 import { app_shared_refresh } from "./app_shared_refresh.mjs";
 import { html_on_pop_state } from "./html_on_pop_state.mjs";
+import { window_reload } from "./window_reload.mjs";
+import { html_on_hash_change } from "./html_on_hash_change.mjs";
 export function app_shared_history_listen(context) {
   arguments_assert(arguments, 1);
   ("draw again the screen filed on whichever step the back or forward button lands on. Listened for once per page: an app drawn again into the same context - a bible reader swapped over in place - is the same page, and a second listener would draw every step twice");
@@ -48,4 +50,13 @@ export function app_shared_history_listen(context) {
     await app_shared_refresh(context);
   }
   html_on_pop_state(on_pop);
+  function on_hash() {
+    "A CHANGED ADDRESS OPENS WHAT IT NAMES, found by the human 2026-11-21 in learn_js: editing the lesson after the # in the bar left the page on the old lesson, because the browser does not load a page again for a change after the # and an app reads its address only as it opens. So such a change loads the page again, and the page reads the new address.";
+    "Only a step with nothing filed on it does. Every step this page makes is filed by the drawing of it, and moving back or forward onto one changes the address too - that is drawn again above, in place, and loading the page again there would throw away where the reader was for nothing. A step with nothing filed was made by the browser: an address typed into the bar, or a link to this same page.";
+    let state = html_history_state_get();
+    if (null_is(state)) {
+      window_reload();
+    }
+  }
+  html_on_hash_change(on_hash);
 }
