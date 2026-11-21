@@ -8,6 +8,7 @@ import { app_learn_js_lesson_bin_step } from "./app_learn_js_lesson_bin_step.mjs
 import { app_learn_js_lesson_while_two_meet } from "./app_learn_js_lesson_while_two_meet.mjs";
 import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
 import { app_learn_js_lesson_statement_name_not } from "./app_learn_js_lesson_statement_name_not.mjs";
+import { app_learn_js_lesson_array_last_index } from "./app_learn_js_lesson_array_last_index.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_second_generic } from "./app_learn_js_lesson_second_generic.mjs";
@@ -42,7 +43,7 @@ export function app_learn_js_lesson_bin_search() {
     return r;
   }
   function above(root, context, example) {
-    "the step, a while whose two names meet, && in a while and ! remembered, then the step in a loop";
+    "the step, a while whose two names meet, && in a while, ! and the last index remembered, then where low and high start, then the step in a loop";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
@@ -84,7 +85,25 @@ export function app_learn_js_lesson_bin_search() {
       app_learn_js_lesson_statement_name_not,
       ["", "!found", " is true when ", "found", " is false"],
     );
+    let box_six = app_learn_js_container_light_blue(root);
+    app_learn_js_remember_from_lesson(
+      box_six,
+      context,
+      app_learn_js_lesson_array_last_index,
+      ["", "a.length - 1", " is the index of the last item."],
+    );
     let box_four = app_learn_js_container_light_blue(root);
+    app_learn_js_div_cycle_code(box_four, [
+      "At first the goal can be anywhere in the list, so ",
+      "low",
+      " starts at the first index, ",
+      "0",
+      ", and ",
+      "high",
+      " at the last index, ",
+      "a.length - 1",
+      ".",
+    ]);
     app_learn_js_div_cycle_code(box_four, [
       "Repeat the step while ",
       "low <= high",
