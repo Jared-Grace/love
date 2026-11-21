@@ -2065,6 +2065,10 @@ export function bible_glyph_chapter_references() {
       reference: "Song of Songs 4",
     },
     {
+      chapter_code: "SNG05",
+      reference: "Song of Songs 5",
+    },
+    {
       chapter_code: "SNG08",
       reference: "Song of Songs 8",
     },
