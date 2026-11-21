@@ -31,27 +31,63 @@
  },
  {
   "ref": "4",
-  "query": "Van Gogh The Harvest Van Gogh Museum"
+  "query": "Van Gogh The Harvest Van Gogh Museum",
+  "title": "De oogst - s0030V1962 - Van Gogh Museum.jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 6944,
+  "height": 5507,
+  "page": "https://commons.wikimedia.org/wiki/File:De_oogst_-_s0030V1962_-_Van_Gogh_Museum.jpg"
  },
  {
   "ref": "5",
-  "query": "Jan Steen As the Old Sing So Pipe the Young"
+  "query": "Jan Steen As the Old Sing So Pipe the Young",
+  "title": "Jan Steen - 'As the Old Sing, So Pipe the Young' - 742 - Mauritshuis.jpg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 4918,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Steen_-_%27As_the_Old_Sing,_So_Pipe_the_Young%27_-_742_-_Mauritshuis.jpg"
  },
  {
   "ref": "6",
-  "query": "Ford Madox Brown Jesus Washing Peter's Feet"
+  "query": "Ford Madox Brown Jesus Washing Peter's Feet",
+  "title": "Jesus washing Peter's feet.jpg",
+  "artist": "Ford Madox Brown",
+  "licence": "Public domain",
+  "width": 1800,
+  "height": 1588,
+  "page": "https://commons.wikimedia.org/wiki/File:Jesus_washing_Peter%27s_feet.jpg"
  },
  {
   "ref": "7",
-  "query": "Quentin Matsys The Moneylender and his Wife"
+  "query": "Quentin Matsys The Moneylender and his Wife",
+  "title": "Le prêteur et sa femme - Quentin Metsys - Musée du Louvre Peintures INV 1444 ; MR 821.jpg",
+  "artist": "Quinten Metsys",
+  "licence": "Public domain",
+  "width": 5786,
+  "height": 6090,
+  "page": "https://commons.wikimedia.org/wiki/File:Le_pr%C3%AAteur_et_sa_femme_-_Quentin_Metsys_-_Mus%C3%A9e_du_Louvre_Peintures_INV_1444_;_MR_821.jpg"
  },
  {
   "ref": "8",
-  "query": "Marinus van Reymerswaele The Tax Collectors"
+  "query": "Marinus van Reymerswaele The Tax Collectors",
+  "title": "Marinus van Reymerswale - The Tax Collectors - WGA19330.jpg",
+  "artist": "Marinus van Reymerswaele",
+  "licence": "Public domain",
+  "width": 1536,
+  "height": 1904,
+  "page": "https://commons.wikimedia.org/wiki/File:Marinus_van_Reymerswale_-_The_Tax_Collectors_-_WGA19330.jpg"
  },
  {
   "ref": "9",
-  "query": "Arnold Böcklin The Plague"
+  "query": "Arnold Böcklin The Plague",
+  "title": "Arnold Böcklin - Die Pest.jpg",
+  "artist": "Arnold Böcklin",
+  "licence": "Public domain",
+  "width": 4720,
+  "height": 6771,
+  "page": "https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_-_Die_Pest.jpg"
  },
  {
   "ref": "10",
