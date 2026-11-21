@@ -46,62 +46,132 @@
  },
  {
   "ref": "9",
-  "query": "Jan van Eyck Ghent Altarpiece Pilgrims and Hermits"
+  "query": "Jan van Eyck Ghent Altarpiece Pilgrims and Hermits",
+  "title": "Michiel Coxie (1499-1592) Kopie van twee luiken (heremieten en pelgrims 1557-58) van de Aanbidding van het Lam Gods door Hubert en Jan van Eyck - MSK Gent 3-02-2020.JPG",
+  "artist": "Michiel Coxie",
+  "licence": "Public domain",
+  "width": 3552,
+  "height": 3816,
+  "page": "https://commons.wikimedia.org/wiki/File:Michiel_Coxie_(1499-1592)_Kopie_van_twee_luiken_(heremieten_en_pelgrims_1557-58)_van_de_Aanbidding_van_het_Lam_Gods_door_Hubert_en_Jan_van_Eyck_-_MSK_Gent_3-02-2020.JPG"
  },
  {
   "ref": "10",
-  "query": "Peter Paul Rubens The Prodigal Son Antwerp"
+  "query": "Peter Paul Rubens The Prodigal Son Antwerp",
+  "title": "De verloren zoon - Peter Paul Rubens - Koninklijk Museum voor Schone Kunsten Antwerpen - 1.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 2000,
+  "height": 1390,
+  "page": "https://commons.wikimedia.org/wiki/File:De_verloren_zoon_-_Peter_Paul_Rubens_-_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen_-_1.jpg"
  },
  {
   "ref": "11",
-  "query": "Caspar David Friedrich The Stages of Life"
+  "query": "Caspar David Friedrich The Stages of Life",
+  "title": "Wikipedianische KulTour-Alte Nationalgalerie-CDF-Unendliche Landschaften-WUS03263.jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 5723,
+  "height": 3815,
+  "page": "https://commons.wikimedia.org/wiki/File:Wikipedianische_KulTour-Alte_Nationalgalerie-CDF-Unendliche_Landschaften-WUS03263.jpg"
  },
  {
   "ref": "12",
-  "query": "Fra Angelico Saint Stephen Preaching Niccoline Chapel"
+  "query": "Fra Angelico Saint Stephen Preaching Niccoline Chapel",
+  "title": null
  },
  {
   "ref": "13,14",
-  "query": "Peter Paul Rubens The Tribute Money San Francisco"
+  "query": "Peter Paul Rubens The Tribute Money San Francisco",
+  "title": "Rubens tribute money.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 2834,
+  "height": 2120,
+  "page": "https://commons.wikimedia.org/wiki/File:Rubens_tribute_money.jpg"
  },
  {
   "ref": "15",
-  "query": "Rembrandt Saint Paul in Prison Stuttgart"
+  "query": "Rembrandt Saint Paul in Prison Stuttgart",
+  "title": "1627 Rembrandt Paulus im Gefängnis Staatsgalerie Stuttgart anagoria.JPG",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3168,
+  "height": 3727,
+  "page": "https://commons.wikimedia.org/wiki/File:1627_Rembrandt_Paulus_im_Gef%C3%A4ngnis_Staatsgalerie_Stuttgart_anagoria.JPG"
  },
  {
   "ref": "16",
-  "query": "Fra Angelico Saint Lawrence Distributing Alms Niccoline"
+  "query": "Fra Angelico Saint Lawrence Distributing Alms Niccoline",
+  "title": null
  },
  {
   "ref": "17",
-  "query": "Anthony van Dyck Charles I at the Hunt Louvre"
+  "query": "Anthony van Dyck Charles I at the Hunt Louvre",
+  "title": "Charles I of England.jpg",
+  "artist": "Anthony van Dyck",
+  "licence": "Public domain",
+  "width": 3233,
+  "height": 4214,
+  "page": "https://commons.wikimedia.org/wiki/File:Charles_I_of_England.jpg"
  },
  {
   "ref": "18",
-  "query": "Jean-François Millet The Woodsawyers"
+  "query": "Jean-François Millet The Woodsawyers",
+  "title": null
  },
  {
   "ref": "19",
-  "query": "Gerard van Honthorst Saint Sebastian National Gallery"
+  "query": "Gerard van Honthorst Saint Sebastian National Gallery",
+  "title": "Gerrit van honthorst 1623 national gallery.jpg",
+  "artist": "Gerard van Honthorst",
+  "licence": "Public domain",
+  "width": 1200,
+  "height": 1045,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerrit_van_honthorst_1623_national_gallery.jpg"
  },
  {
   "ref": "20",
-  "query": "Caravaggio The Crucifixion of Saint Peter"
+  "query": "Caravaggio The Crucifixion of Saint Peter",
+  "title": "Crucifixion of Saint Peter-Caravaggio (c.1600).jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 8180,
+  "height": 10537,
+  "page": "https://commons.wikimedia.org/wiki/File:Crucifixion_of_Saint_Peter-Caravaggio_(c.1600).jpg"
  },
  {
   "ref": "21,22",
-  "query": "El Greco Christ Carrying the Cross Thyssen"
+  "query": "El Greco Christ Carrying the Cross Thyssen",
+  "title": null
  },
  {
   "ref": "23",
-  "query": "Caravaggio The Taking of Christ Dublin"
+  "query": "Caravaggio The Taking of Christ Dublin",
+  "title": "Caravaggio, cattura di cristo, 1602, dalla casa gesuitica di leeson street a dublino 03 mani.jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 4836,
+  "height": 3276,
+  "page": "https://commons.wikimedia.org/wiki/File:Caravaggio,_cattura_di_cristo,_1602,_dalla_casa_gesuitica_di_leeson_street_a_dublino_03_mani.jpg"
  },
  {
   "ref": "24",
-  "query": "Peter Paul Rubens The Elevation of the Cross Antwerp"
+  "query": "Peter Paul Rubens The Elevation of the Cross Antwerp",
+  "title": "Peter Paul Rubens - The Raising of the Cross (Antwerp Cathedral).jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 2886,
+  "height": 2112,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Raising_of_the_Cross_(Antwerp_Cathedral).jpg"
  },
  {
   "ref": "25",
-  "query": "Bernhard Plockhorst The Good Shepherd"
+  "query": "Bernhard Plockhorst The Good Shepherd",
+  "title": "The Lord is my Good Shepherd.jpg",
+  "artist": "Bernhard Plockhorst",
+  "licence": "Public domain",
+  "width": 3938,
+  "height": 5501,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Lord_is_my_Good_Shepherd.jpg"
  }
 ]
