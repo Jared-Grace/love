@@ -32,7 +32,7 @@ export async function playwright_url_press_timed(url, text, count) {
     await page.waitForLoadState("networkidle");
     await page.waitForTimeout(2000);
     let watch =
-      "window.__changed = performance.now(); window.__busy = 0; new MutationObserver(function () { window.__changed = performance.now(); }).observe(document.body, { subtree: true, childList: true, characterData: true, attributes: true }); new PerformanceObserver(function (list) { for (let e of list.getEntries()) { window.__busy += e.duration; } }).observe({ type: 'longtask', buffered: false });";
+      "(function () { window.__changed = performance.now(); window.__busy = 0; if (window.__watching) { return; } window.__watching = true; new MutationObserver(function () { window.__changed = performance.now(); }).observe(document.body, { subtree: true, childList: true, characterData: true, attributes: true }); new PerformanceObserver(function (list) { for (let e of list.getEntries()) { window.__busy += e.duration; } }).observe({ type: 'longtask', buffered: false }); })();";
     let press =
       "(function (wanted) { let found = Array.from(document.querySelectorAll('button')).filter(function (b) { return b.offsetParent !== null && b.innerText.trim().endsWith(wanted); }); if (found.length === 0) { return false; } window.__busy = 0; window.__pressed = performance.now(); window.__changed = performance.now(); found[0].click(); return true; })";
     let index = 0;
