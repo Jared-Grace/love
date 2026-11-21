@@ -108,8 +108,22 @@ export function app_learn_js_lesson_array_for_push_if_not() {
       ["", "!==", " is ", "true", " when the two sides are not the same"],
     );
     let box_three = app_learn_js_container_light_blue(root);
+    ("the human's words 2026-11-21");
+    app_learn_js_div_cycle_code(box_three, ["Suppose we have an array"]);
     app_learn_js_div_cycle_code(box_three, [
-      "Here the ",
+      "And suppose we want to make a new array",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "And this new array includes everything in the first array - except one item",
+    ]);
+    app_learn_js_div_cycle_code(box_three, ["How do we do this?"]);
+    app_learn_js_div_cycle_code(box_three, [
+      "Suppose we have an array of numbers and we want the second array to not have any ",
+      "3",
+      "s",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "Below the ",
       "if",
       " asks ",
       "a[i] !== 3",
