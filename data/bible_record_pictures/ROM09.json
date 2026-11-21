@@ -1,8 +1,13 @@
 [
  {
   "ref": "1",
-  "query": "Rembrandt Saint Paul at his Writing Desk Nuremberg",
-  "title": null
+  "query": "Rembrandt Apostel Paulus am Schreibpult",
+  "title": "Rembrandt, Harmensz. van Rijn - Apostel Paulus am Schreibpult, Gm392.tif",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 5200,
+  "height": 6660,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt,_Harmensz._van_Rijn_-_Apostel_Paulus_am_Schreibpult,_Gm392.tif"
  },
  {
   "ref": "2",
@@ -56,13 +61,23 @@
  },
  {
   "ref": "8",
-  "query": "Rembrandt The Holy Family Hermitage",
-  "title": null
+  "query": "Rembrandt The Holy Family with Angels Hermitage",
+  "title": "Rembrandt Harmensz. van Rijn - The Holy Family.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 8464,
+  "height": 10880,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_The_Holy_Family.jpg"
  },
  {
   "ref": "9",
-  "query": "Tiepolo The Angel Appearing to Sarah",
-  "title": null
+  "query": "Jan Provoost Abraham Sarah and the Angel Louvre",
+  "title": "Provost, Jan - L'Ange annonçant à Abraham la naissance d'un fils, RF 1989 35.jpg",
+  "artist": "Jan Provoost",
+  "licence": "Public domain",
+  "width": 1135,
+  "height": 1500,
+  "page": "https://commons.wikimedia.org/wiki/File:Provost,_Jan_-_L%27Ange_annon%C3%A7ant_%C3%A0_Abraham_la_naissance_d%27un_fils,_RF_1989_35.jpg"
  },
  {
   "ref": "10",
@@ -136,8 +151,13 @@
  },
  {
   "ref": "18",
-  "query": "Francis Danby The Delivery of Israel out of Egypt",
-  "title": null
+  "query": "John Martin The Seventh Plague of Egypt",
+  "title": "Martin, John - The Seventh Plague - 1823.jpg",
+  "artist": "John Martin",
+  "licence": "Public domain",
+  "width": 1600,
+  "height": 1074,
+  "page": "https://commons.wikimedia.org/wiki/File:Martin,_John_-_The_Seventh_Plague_-_1823.jpg"
  },
  {
   "ref": "19",
@@ -201,13 +221,13 @@
  },
  {
   "ref": "27",
-  "query": "Aivazovsky Crossing of the Red Sea",
-  "title": "Живописное обозрение 1891, № 01-26 (6 янв. - 30 июня); № 27-52 (7 июля - 29 дек.) Page 0166.jpg",
-  "artist": "Журнал «Живописное обозрѣнiе странъ свѣта» (1872—1900,1902—1905) / Живописное обозрение стран света [Zhivopisnoye obozreniye stran sveta (Foreign Lands' Pictorial Review)]; Российская национальная библиотека (РНБ); kmv20120",
+  "query": "Adriaen van de Velde The Beach at Scheveningen",
+  "title": "The beach near Scheveningen, by Adriaen van de Velde (II).jpg",
+  "artist": "Adriaen van de Velde",
   "licence": "Public domain",
-  "width": 4150,
-  "height": 3100,
-  "page": "https://commons.wikimedia.org/wiki/File:%D0%96%D0%B8%D0%B2%D0%BE%D0%BF%D0%B8%D1%81%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%BE%D0%B7%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_1891,_%E2%84%96_01-26_(6_%D1%8F%D0%BD%D0%B2._-_30_%D0%B8%D1%8E%D0%BD%D1%8F);_%E2%84%96_27-52_(7_%D0%B8%D1%8E%D0%BB%D1%8F_-_29_%D0%B4%D0%B5%D0%BA.)_Page_0166.jpg"
+  "width": 5299,
+  "height": 4161,
+  "page": "https://commons.wikimedia.org/wiki/File:The_beach_near_Scheveningen,_by_Adriaen_van_de_Velde_(II).jpg"
  },
  {
   "ref": "28",

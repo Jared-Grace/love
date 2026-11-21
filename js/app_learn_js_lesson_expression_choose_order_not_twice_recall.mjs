@@ -1,11 +1,11 @@
-import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_expression_not } from "./app_learn_js_lesson_expression_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
+import { app_learn_js_lesson_expression_not } from "./app_learn_js_lesson_expression_not.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { app_learn_js_operator_code_before } from "./app_learn_js_operator_code_before.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_twice_recall(
   root,
   context,
@@ -23,5 +23,5 @@ export function app_learn_js_lesson_expression_choose_order_not_twice_recall(
   );
   let word_true = js_keyword_true();
   let not_true = app_learn_js_operator_code_before(symbol, word_true);
-  app_learn_js_div_cycle_code(recall_card, ["So ", not_true, " is false"]);
+  app_learn_js_div_cycle_code(recall_card, ["So ", not_true, " is ", "false"]);
 }
