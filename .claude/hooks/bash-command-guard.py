@@ -475,6 +475,8 @@ SAFE_BUILTINS = {"break", "continue", "true", "false"}
 # adding a block shape. It keeps falling through to a real prompt.
 BLOCK_OPENERS = {"for", "while", "until", "if"}
 BLOCK_CLOSERS = {"done", "fi"}
+# Words after which the next word is again the first word of a command.
+BLOCK_BODY_STARTERS = {"do", "then", "else"}
 
 DANGEROUS_CHARS = set("`<{}()")
 
@@ -1198,7 +1200,13 @@ def split_blocks(tokens):
         if t in BLOCK_OPENERS and not current:
             depth, j, closed = 0, i, False
             while j < n:
-                if tokens[j] in BLOCK_OPENERS:
+                # A keyword only opens or closes a block where bash reads it as
+                # one: first word of a command. `echo $c done` prints the word
+                # and ends nothing - counting it closed the loop early.
+                at_command = j == i or tokens[j - 1] in SEPARATORS or tokens[j - 1] in BLOCK_BODY_STARTERS
+                if not at_command:
+                    pass
+                elif tokens[j] in BLOCK_OPENERS:
                     depth += 1
                 elif tokens[j] in BLOCK_CLOSERS:
                     depth -= 1
