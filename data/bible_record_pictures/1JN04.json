@@ -31,13 +31,13 @@
  },
  {
   "ref": "5",
-  "query": "Jan Steen De kwakzalver Rijksmuseum",
-  "title": "Fotoreproducties van Het Sint-Nicolaasfeest door Jan Steen en De kwakzalver door Jan Steen Jan Steen - Het Sint-Nicolaasfeest (titel op object) Jan Steen - De kwakzalver (titel op object), RP-F-2001-7-1476-18.jpg",
-  "artist": "Rijksmuseum",
-  "licence": "CC0",
-  "width": 4752,
-  "height": 5856,
-  "page": "https://commons.wikimedia.org/wiki/File:Fotoreproducties_van_Het_Sint-Nicolaasfeest_door_Jan_Steen_en_De_kwakzalver_door_Jan_Steen_Jan_Steen_-_Het_Sint-Nicolaasfeest_(titel_op_object)_Jan_Steen_-_De_kwakzalver_(titel_op_object),_RP-F-2001-7-1476-18.jpg"
+  "query": "Pietro Longhi The Charlatan Ca' Rezzonico",
+  "title": "Bemberg Fondation Toulouse - Le Charlatan - Pietro Longhi - Inv 1029.jpg",
+  "artist": "Didier Descouens",
+  "licence": "Public domain",
+  "width": 4765,
+  "height": 5935,
+  "page": "https://commons.wikimedia.org/wiki/File:Bemberg_Fondation_Toulouse_-_Le_Charlatan_-_Pietro_Longhi_-_Inv_1029.jpg"
  },
  {
   "ref": "6",
@@ -151,7 +151,13 @@
  },
  {
   "ref": "17",
-  "query": "Hans Memling Das Jüngste Gericht Danzig"
+  "query": "Jan Provoost The Last Judgment Groeningemuseum",
+  "title": "Jan Provoost Last Judgement Groeningemuseum 01052015 1.jpg",
+  "artist": "Jan Provoost",
+  "licence": "Public domain",
+  "width": 3443,
+  "height": 2934,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Provoost_Last_Judgement_Groeningemuseum_01052015_1.jpg"
  },
  {
   "ref": "18",
@@ -175,7 +181,13 @@
  },
  {
   "ref": "20",
-  "query": "Rembrandt The Reconciliation of David and Absalom Hermitage"
+  "query": "Francesco Hayez The Meeting of Jacob and Esau Brescia",
+  "title": "Francesco Hayez 062.jpg",
+  "artist": "Francesco Hayez",
+  "licence": "Public domain",
+  "width": 2024,
+  "height": 2456,
+  "page": "https://commons.wikimedia.org/wiki/File:Francesco_Hayez_062.jpg"
  },
  {
   "ref": "21",
