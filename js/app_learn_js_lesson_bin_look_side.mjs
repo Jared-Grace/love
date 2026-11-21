@@ -17,6 +17,7 @@ import { less_than } from "./less_than.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
+import { app_learn_js_lesson_string_found_e } from "./app_learn_js_lesson_string_found_e.mjs";
 import { app_learn_js_lesson_statement_name_middle } from "./app_learn_js_lesson_statement_name_middle.mjs";
 import { app_learn_js_lesson_array_index_name } from "./app_learn_js_lesson_array_index_name.mjs";
 import { app_learn_js_lesson_array_for_in_order } from "./app_learn_js_lesson_array_for_in_order.mjs";
@@ -112,7 +113,14 @@ export function app_learn_js_lesson_bin_look_side() {
     return r;
   }
   function above(root, context, example) {
-    "the middle, an index held in a name and a list in order remembered, then the step right and the step left";
+    "looking at each one, the middle, an index held in a name and a list in order remembered, then why the middle item says which half, then the step right and the step left";
+    let box_five = app_learn_js_container_light_blue(root);
+    app_learn_js_remember_from_lesson(
+      box_five,
+      context,
+      app_learn_js_lesson_string_found_e,
+      ["one way to find something is to look at each one, first to last"],
+    );
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
@@ -143,26 +151,49 @@ export function app_learn_js_lesson_bin_look_side() {
     );
     let box_four = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_four, [
-      "To find ",
+      "Suppose the list is in order, smallest to largest. Then there is a faster way: look at the middle item first.",
+    ]);
+    app_learn_js_div_cycle_code(box_four, [
+      "Every item to its left is not larger than it. Every item to its right is not smaller than it.",
+    ]);
+    app_learn_js_div_cycle_code(box_four, [
+      "So if ",
+      "a[middle]",
+      " is smaller than ",
       "goal",
-      " quickly in a list in order, ",
+      ", then ",
+      "goal",
+      " can only be to its right. And if ",
+      "a[middle]",
+      " is larger than ",
+      "goal",
+      ", then ",
+      "goal",
+      " can only be to its left.",
+    ]);
+    app_learn_js_div_cycle_code(box_four, [
+      "",
       "low",
       " and ",
       "high",
-      " mark the part of the list where it can still be, and we look at the item in the middle",
+      " are the first and last index of the part where ",
+      "goal",
+      " can still be. ",
+      "middle",
+      " is the index halfway between them. ",
+      "Math.floor",
+      " makes it a whole number, because an index can't be 3.5.",
     ]);
     app_learn_js_div_cycle_code(box_four, [
       "If ",
       "a[middle]",
       " is smaller than ",
       "goal",
-      ", then ",
+      ", the middle item is not ",
       "goal",
-      " is to its right, so ",
+      ", and nothing to its left is either. So ",
       "low = middle + 1;",
-      ". The ",
-      "+ 1",
-      " leaves out the middle item, which we just looked at:",
+      ", the index just after the middle:",
     ]);
     example(box_four, {
       items: [2, 5, 8, 12, 16, 23, 38],
@@ -171,11 +202,9 @@ export function app_learn_js_lesson_bin_look_side() {
       high: 6,
     });
     app_learn_js_div_cycle_code(box_four, [
-      "Otherwise ",
-      "goal",
-      " is to its left, so ",
+      "Otherwise, ",
       "high = middle - 1;",
-      ":",
+      ", the index just before the middle:",
     ]);
     example(box_four, {
       items: [2, 5, 8, 12, 16, 23, 38],

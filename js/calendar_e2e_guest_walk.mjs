@@ -1,5 +1,5 @@
-import { modulo } from "./modulo.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { modulo } from "./modulo.mjs";
 import { multiply } from "./multiply.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
@@ -55,10 +55,10 @@ export async function calendar_e2e_guest_walk(url) {
       let words = equal(via, "messenger")
         ? "Facebook Messenger meeting"
         : "WhatsApp meeting";
+      ("Matched as part of the button's name, because the chosen app's button reads \"✓ \" before its words - a walk filling the form a second time looked for the bare words and found no such button.");
       await page
         .getByRole("button", {
           name: words,
-          exact: true,
         })
         .click();
     }
@@ -146,7 +146,8 @@ export async function calendar_e2e_guest_walk(url) {
         }
         async function lambda_code() {
           await form_fill(page, via, contact);
-          await code_press_until(page, "No meeting yet", 5000);
+          ("15 seconds, because a phone's browser on a slow answer drew the code screen after 5 had passed, and the walk read a page that was right as a failure.");
+          await code_press_until(page, "No meeting yet", 15000);
         }
         await step_run(flow, "get code", lambda_code);
         async function lambda_screen() {
