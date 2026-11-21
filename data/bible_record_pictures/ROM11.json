@@ -186,31 +186,73 @@
  },
  {
   "ref": "25",
-  "query": "Caspar David Friedrich Der Mönch am Meer"
+  "query": "Caspar David Friedrich Der Mönch am Meer",
+  "title": "Alte Nationalgalerie-Friedrich-Mönch am Meer DSC8240.jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 5305,
+  "height": 3664,
+  "page": "https://commons.wikimedia.org/wiki/File:Alte_Nationalgalerie-Friedrich-M%C3%B6nch_am_Meer_DSC8240.jpg"
  },
  {
   "ref": "26",
-  "query": "Thomas Seddon Jerusalem and the Valley of Jehoshaphat Tate"
+  "query": "Thomas Seddon Jerusalem and the Valley of Jehoshaphat Tate",
+  "title": "Seddon - Jerusalem and the Valley of Jehoshaphat - with frame.jpg",
+  "artist": "Thomas Seddon",
+  "licence": "Public domain",
+  "width": 2432,
+  "height": 2009,
+  "page": "https://commons.wikimedia.org/wiki/File:Seddon_-_Jerusalem_and_the_Valley_of_Jehoshaphat_-_with_frame.jpg"
  },
  {
   "ref": "27",
-  "query": "Joseph Anton Koch Dankopfer Noahs Städel"
+  "query": "Joseph Anton Koch Dankopfer Noahs Städel",
+  "title": "Landschaft mit dem Dankopfer Noahs (SM 256z).png",
+  "artist": "Joseph Anton Koch",
+  "licence": "PDM-owner",
+  "width": 7387,
+  "height": 5954,
+  "page": "https://commons.wikimedia.org/wiki/File:Landschaft_mit_dem_Dankopfer_Noahs_(SM_256z).png"
  },
  {
   "ref": "28",
-  "query": "Rembrandt The Sacrifice of Isaac Hermitage"
+  "query": "Rembrandt The Sacrifice of Isaac Hermitage",
+  "title": "Rembrandt Abraham's Sacrifice (Hermitage).jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 2471,
+  "height": 3633,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Abraham%27s_Sacrifice_(Hermitage).jpg"
  },
  {
   "ref": "29",
-  "query": "Raphael Christ's Charge to Peter cartoon"
+  "query": "Raphael Christ's Charge to Peter cartoon",
+  "title": "Christ's charge to Peter (BM 1842,0319.6).jpg",
+  "artist": "After: Raphael\n\nPrint made by: George Foggo\nPublished by: Godefroy Engelmann I\nPrinted by: Godefroy Engelmann I",
+  "licence": "Public domain",
+  "width": 2500,
+  "height": 1973,
+  "page": "https://commons.wikimedia.org/wiki/File:Christ%27s_charge_to_Peter_(BM_1842,0319.6).jpg"
  },
  {
   "ref": "30,31",
-  "query": "Rembrandt The Denial of Peter Rijksmuseum"
+  "query": "Rembrandt The Denial of Peter Rijksmuseum",
+  "title": "De verloochening van Petrus Rijksmuseum SK-A-3137.jpeg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 5052,
+  "height": 4622,
+  "page": "https://commons.wikimedia.org/wiki/File:De_verloochening_van_Petrus_Rijksmuseum_SK-A-3137.jpeg"
  },
  {
   "ref": "32",
-  "query": "Ary Scheffer Christus Consolator Dordrecht"
+  "query": "Ary Scheffer Christus Consolator Dordrecht",
+  "title": "Ary Scheffer - Christus Consolator - DM-S-55 - Dordrechts Museum.jpg",
+  "artist": "Ary Scheffer",
+  "licence": "Public domain",
+  "width": 2288,
+  "height": 1681,
+  "page": "https://commons.wikimedia.org/wiki/File:Ary_Scheffer_-_Christus_Consolator_-_DM-S-55_-_Dordrechts_Museum.jpg"
  },
  {
   "ref": "33",
