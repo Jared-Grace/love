@@ -3617,6 +3617,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_isa32();
   }
+  if (equal(chapter_code, "ISA33")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_isa33.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_isa33();
+  }
   if (equal(chapter_code, "ISA35")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_isa35.mjs"
