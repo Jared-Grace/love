@@ -82,13 +82,13 @@ export function app_learn_js_lesson_bin_not_there() {
       box_two,
       context,
       app_learn_js_lesson_while_less_equal,
-      ["", "<=", " is true when the two sides are the same too"],
+      ["", "<=", " is ", "true", " when the two sides are the same too"],
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "When ",
       "goal",
-      " is not in the list, each step leaves less to look at, until ",
+      " is not in the array, each step leaves less to look at, until ",
       "low",
       " is past ",
       "high",

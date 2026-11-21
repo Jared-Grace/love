@@ -1,27 +1,128 @@
-[{"ref":"1","query":"Murillo Santa Isabel de Hungría curando a los tiñosos"},
-{"ref":"2","query":"Ford Madox Brown Work Manchester Art Gallery"},
-{"ref":"3","query":"Hieronymus Bosch Christ Mocked The Crowning with Thorns National Gallery"},
-{"ref":"4","query":"Rembrandt Two Old Men Disputing National Gallery of Victoria"},
-{"ref":"5,6","query":"Hans Memling Christ Surrounded by Musician Angels"},
-{"ref":"7","query":"Fritz von Uhde Lasset die Kindlein zu mir kommen Leipzig"},
-{"ref":"8,9","query":"Andrea Mantegna Presentation at the Temple Berlin"},
-{"ref":"10","query":"Hans Memling Adoration of the Magi Prado"},
-{"ref":"11","query":"Tintoretto Paradise Doge's Palace"},
-{"ref":"12","query":"Geertgen tot Sint Jans Tree of Jesse Rijksmuseum"},
-{"ref":"13","query":"Caspar David Friedrich Kreidefelsen auf Rügen"},
-{"ref":"14","query":"Rembrandt The Anatomy Lesson of Dr Nicolaes Tulp"},
-{"ref":"15,16","query":"Rembrandt The Apostle Paul National Gallery of Art Washington"},
-{"ref":"17","query":"Raphael Saint Cecilia Bologna Pinacoteca"},
-{"ref":"18,19","query":"Raphael The Healing of the Lame Man cartoon"},
-{"ref":"20","query":"Peter Paul Rubens The Miracles of Saint Francis Xavier Kunsthistorisches"},
-{"ref":"21","query":"Duccio The Healing of the Man Born Blind National Gallery"},
-{"ref":"22","query":"Adam Elsheimer The Shipwreck of Saint Paul on Malta National Gallery"},
-{"ref":"23,24","query":"Giovanni Paolo Panini Interior of the Pantheon National Gallery of Art"},
-{"ref":"25","query":"David Roberts Jerusalem from the Mount of Olives"},
-{"ref":"26","query":"Bernardo Strozzi Saint Lawrence Distributing the Riches of the Church"},
-{"ref":"27","query":"Murillo Saint Thomas of Villanueva Distributing Alms Seville"},
-{"ref":"28","query":"Claude Lorrain Seaport with the Embarkation of Saint Paula"},
-{"ref":"29","query":"Antonello da Messina Salvator Mundi National Gallery"},
-{"ref":"30","query":"Andrea Mantegna The Agony in the Garden National Gallery"},
-{"ref":"31,32","query":"Tintoretto Saint Mark Freeing the Slave Accademia"},
-{"ref":"33","query":"Meindert Hobbema The Avenue at Middelharnis"}]
+[
+ {
+  "ref": "1",
+  "query": "Murillo Santa Isabel de Hungría curando a los tiñosos",
+  "title": "Santa Isabel de Hungría curando tiñosos..jpg",
+  "artist": "Bartolomé Esteban Murillo",
+  "licence": "Public domain",
+  "width": 892,
+  "height": 1200,
+  "page": "https://commons.wikimedia.org/wiki/File:Santa_Isabel_de_Hungr%C3%ADa_curando_ti%C3%B1osos..jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Ford Madox Brown Work Manchester Art Gallery",
+  "title": "Ford Madox Brown - Work - Google Art Project.jpg",
+  "artist": "Ford Madox Brown",
+  "licence": "Public domain",
+  "width": 7644,
+  "height": 5202,
+  "page": "https://commons.wikimedia.org/wiki/File:Ford_Madox_Brown_-_Work_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Hieronymus Bosch Christ Mocked The Crowning with Thorns National Gallery",
+  "title": "Hieronymus Bosch - Christ Mocked (The Crowning with Thorns) - Google Art Project.jpg",
+  "artist": "Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 2395,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_-_Christ_Mocked_(The_Crowning_with_Thorns)_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "4",
+  "query": "Rembrandt Two Old Men Disputing National Gallery of Victoria"
+ },
+ {
+  "ref": "5,6",
+  "query": "Hans Memling Christ Surrounded by Musician Angels"
+ },
+ {
+  "ref": "7",
+  "query": "Fritz von Uhde Lasset die Kindlein zu mir kommen Leipzig"
+ },
+ {
+  "ref": "8,9",
+  "query": "Andrea Mantegna Presentation at the Temple Berlin"
+ },
+ {
+  "ref": "10",
+  "query": "Hans Memling Adoration of the Magi Prado"
+ },
+ {
+  "ref": "11",
+  "query": "Tintoretto Paradise Doge's Palace"
+ },
+ {
+  "ref": "12",
+  "query": "Geertgen tot Sint Jans Tree of Jesse Rijksmuseum"
+ },
+ {
+  "ref": "13",
+  "query": "Caspar David Friedrich Kreidefelsen auf Rügen"
+ },
+ {
+  "ref": "14",
+  "query": "Rembrandt The Anatomy Lesson of Dr Nicolaes Tulp"
+ },
+ {
+  "ref": "15,16",
+  "query": "Rembrandt The Apostle Paul National Gallery of Art Washington"
+ },
+ {
+  "ref": "17",
+  "query": "Raphael Saint Cecilia Bologna Pinacoteca"
+ },
+ {
+  "ref": "18,19",
+  "query": "Raphael The Healing of the Lame Man cartoon"
+ },
+ {
+  "ref": "20",
+  "query": "Peter Paul Rubens The Miracles of Saint Francis Xavier Kunsthistorisches"
+ },
+ {
+  "ref": "21",
+  "query": "Duccio The Healing of the Man Born Blind National Gallery"
+ },
+ {
+  "ref": "22",
+  "query": "Adam Elsheimer The Shipwreck of Saint Paul on Malta National Gallery"
+ },
+ {
+  "ref": "23,24",
+  "query": "Giovanni Paolo Panini Interior of the Pantheon National Gallery of Art"
+ },
+ {
+  "ref": "25",
+  "query": "David Roberts Jerusalem from the Mount of Olives"
+ },
+ {
+  "ref": "26",
+  "query": "Bernardo Strozzi Saint Lawrence Distributing the Riches of the Church"
+ },
+ {
+  "ref": "27",
+  "query": "Murillo Saint Thomas of Villanueva Distributing Alms Seville"
+ },
+ {
+  "ref": "28",
+  "query": "Claude Lorrain Seaport with the Embarkation of Saint Paula"
+ },
+ {
+  "ref": "29",
+  "query": "Antonello da Messina Salvator Mundi National Gallery"
+ },
+ {
+  "ref": "30",
+  "query": "Andrea Mantegna The Agony in the Garden National Gallery"
+ },
+ {
+  "ref": "31,32",
+  "query": "Tintoretto Saint Mark Freeing the Slave Accademia"
+ },
+ {
+  "ref": "33",
+  "query": "Meindert Hobbema The Avenue at Middelharnis"
+ }
+]

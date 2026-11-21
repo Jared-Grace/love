@@ -147,11 +147,11 @@ export function app_learn_js_lesson_bin_look_side() {
       box_three,
       context,
       app_learn_js_lesson_array_for_in_order,
-      ["a list is in order when each item is smaller than the one after it"],
+      ["an array is in order when each item is smaller than the one after it"],
     );
     let box_four = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_four, [
-      "Suppose the list is in order, smallest to largest. Then there is a faster way: look at the middle item first.",
+      "Suppose the array is in order, smallest to largest. Then there is a faster way: look at the middle item first.",
     ]);
     app_learn_js_div_cycle_code(box_four, [
       "Every item to its left is not larger than it. Every item to its right is not smaller than it.",
