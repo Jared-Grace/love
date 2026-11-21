@@ -1,14 +1,70 @@
-[{"ref":"1","query":"Michelangelo Isaiah Sistine Chapel"},
-{"ref":"2","query":"Jan van Eyck God the Father Ghent Altarpiece"},
-{"ref":"3","query":"Titian The Transfiguration San Salvador Venice"},
-{"ref":"4","query":"Hans Memling Christ Surrounded by Musician Angels Antwerp"},
-{"ref":"5","query":"Gentile da Fabriano Adoration of the Magi Uffizi"},
-{"ref":"6","query":"Sandro Botticelli The Mystical Nativity National Gallery"},
-{"ref":"7","query":"Albert Bierstadt Storm in the Rocky Mountains Mount Rosalie"},
-{"ref":"8","query":"Jan van Eyck Madonna of Chancellor Rolin Louvre"},
-{"ref":"9","query":"Dirck van Baburen Christ Crowned with Thorns"},
-{"ref":"10","query":"Michelangelo Separation of Light from Darkness Sistine"},
-{"ref":"11","query":"Jacob van Ruisdael The Jewish Cemetery Detroit"},
-{"ref":"12","query":"Ivan Aivazovsky Rainbow 1873 Tretyakov"},
-{"ref":"13","query":"Jan Gossaert Christ on the Cold Stone"},
-{"ref":"14","query":"Guercino The Angel Appears to Hagar and Ishmael"}]
+[
+ {
+  "ref": "1",
+  "query": "Michelangelo Isaiah Sistine Chapel",
+  "title": "Sistine Chapel fresco of an Ignudo right of Isaiah - Michelangelo.jpg",
+  "artist": "Michelangelo",
+  "licence": "Public domain",
+  "width": 2097,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:Sistine_Chapel_fresco_of_an_Ignudo_right_of_Isaiah_-_Michelangelo.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Jan van Eyck God the Father Ghent Altarpiece",
+  "title": "Jan van Eyck - The Ghent Altarpiece - God Almighty - WGA07630.jpg",
+  "artist": "Jan van Eyck",
+  "licence": "Public domain",
+  "width": 455,
+  "height": 1250,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_God_Almighty_-_WGA07630.jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Titian The Transfiguration San Salvador Venice"
+ },
+ {
+  "ref": "4",
+  "query": "Hans Memling Christ Surrounded by Musician Angels Antwerp"
+ },
+ {
+  "ref": "5",
+  "query": "Gentile da Fabriano Adoration of the Magi Uffizi"
+ },
+ {
+  "ref": "6",
+  "query": "Sandro Botticelli The Mystical Nativity National Gallery"
+ },
+ {
+  "ref": "7",
+  "query": "Albert Bierstadt Storm in the Rocky Mountains Mount Rosalie"
+ },
+ {
+  "ref": "8",
+  "query": "Jan van Eyck Madonna of Chancellor Rolin Louvre"
+ },
+ {
+  "ref": "9",
+  "query": "Dirck van Baburen Christ Crowned with Thorns"
+ },
+ {
+  "ref": "10",
+  "query": "Michelangelo Separation of Light from Darkness Sistine"
+ },
+ {
+  "ref": "11",
+  "query": "Jacob van Ruisdael The Jewish Cemetery Detroit"
+ },
+ {
+  "ref": "12",
+  "query": "Ivan Aivazovsky Rainbow 1873 Tretyakov"
+ },
+ {
+  "ref": "13",
+  "query": "Jan Gossaert Christ on the Cold Stone"
+ },
+ {
+  "ref": "14",
+  "query": "Guercino The Angel Appears to Hagar and Ishmael"
+ }
+]
