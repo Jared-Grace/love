@@ -191,22 +191,52 @@
  },
  {
   "ref": "21",
-  "query": "Tintoretto The Temptation of Christ Scuola Grande di San Rocco"
+  "query": "Tintoretto The Temptation of Christ Scuola Grande di San Rocco",
+  "title": "Paintings by Tintoretto in Scuola Grande di San Rocco - Sala superiore - The Temptation of Christ.jpg",
+  "artist": "Didier Descouens",
+  "licence": "Public domain",
+  "width": 2790,
+  "height": 4303,
+  "page": "https://commons.wikimedia.org/wiki/File:Paintings_by_Tintoretto_in_Scuola_Grande_di_San_Rocco_-_Sala_superiore_-_The_Temptation_of_Christ.jpg"
  },
  {
   "ref": "22",
-  "query": "Rembrandt Titus at His Desk"
+  "query": "Rembrandt Titus at His Desk",
+  "title": "Rembrandt van Rijn - Titus at his Desk - Google Art Project.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3971,
+  "height": 4884,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Titus_at_his_Desk_-_Google_Art_Project.jpg"
  },
  {
   "ref": "23",
-  "query": "Delacroix Jacob Wrestling with the Angel Saint-Sulpice"
+  "query": "Delacroix Jacob Wrestling with the Angel Saint-Sulpice",
+  "title": "Jacob Angel Delacroix.jpg",
+  "artist": "Eugène Delacroix",
+  "licence": "Public domain",
+  "width": 1576,
+  "height": 2302,
+  "page": "https://commons.wikimedia.org/wiki/File:Jacob_Angel_Delacroix.jpg"
  },
  {
   "ref": "24",
-  "query": "Van Gogh At Eternity's Gate Sorrowing Old Man"
+  "query": "Van Gogh At Eternity's Gate Sorrowing Old Man",
+  "title": "Van Gogh - Trauernder alter Mann.jpeg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 3845,
+  "height": 5057,
+  "page": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Trauernder_alter_Mann.jpeg"
  },
  {
   "ref": "25",
-  "query": "Rembrandt Saint Paul in Prison Stuttgart"
+  "query": "Rembrandt Saint Paul in Prison Stuttgart",
+  "title": "1627 Rembrandt Paulus im Gefängnis Staatsgalerie Stuttgart anagoria.JPG",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3168,
+  "height": 3727,
+  "page": "https://commons.wikimedia.org/wiki/File:1627_Rembrandt_Paulus_im_Gef%C3%A4ngnis_Staatsgalerie_Stuttgart_anagoria.JPG"
  }
 ]

@@ -1,14 +1,13 @@
-import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { app_shared_screen_centered } from "./app_shared_screen_centered.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { app_learn_en_language_names_own } from "./app_learn_en_language_names_own.mjs";
 import { app_learn_en_stores } from "./app_learn_en_stores.mjs";
-import { language_code_key } from "./language_code_key.mjs";
 import { property_get } from "./property_get.mjs";
+import { language_code_key } from "./language_code_key.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_learn_en_language_code_save } from "./app_learn_en_language_code_save.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
@@ -24,14 +23,15 @@ export function app_learn_en_language_ask(context, on_chosen) {
   let column = app_shared_screen_centered(root);
   let card = app_shared_container_blue(column);
   app_shared_text_body(card, "Choose the language you speak");
-  app_shared_text_body(card, "اپنی زبان منتخب کریں");
-  app_shared_text_body(card, "Piliin ang wikang ginagamit mo");
-  let names = app_learn_en_language_names_own();
   let stores = app_learn_en_stores();
+  for (let store of stores) {
+    let language_choose = property_get(store, "language_choose");
+    app_shared_text_body(card, language_choose);
+  }
   let property_name = language_code_key();
   for (let store of stores) {
     let language_code = property_path_get_2(store, "language", property_name);
-    let name = property_get(names, language_code);
+    let name = property_get(store, "name_own");
     async function on_click() {
       app_learn_en_language_code_save(language_code);
       let key = app_shared_bible_language_hash_key();
