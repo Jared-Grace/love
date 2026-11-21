@@ -1,18 +1,80 @@
-[{"ref":"1","query":"Jean-Léon Gérôme The Wailing Wall"},
-{"ref":"2","query":"Nicolas Poussin The Adoration of the Golden Calf National Gallery"},
-{"ref":"3","query":"Peter Paul Rubens Feast in the House of Simon the Pharisee Hermitage"},
-{"ref":"4","query":"Rembrandt Christ on the Cross Le Mas d'Agenais"},
-{"ref":"5","query":"Philippe de Champaigne Moses with the Ten Commandments"},
-{"ref":"6,7","query":"Hieronymus Bosch Ascent of the Blessed"},
-{"ref":"8,9","query":"Valentin de Boulogne Saint Paul Writing His Epistles"},
-{"ref":"10","query":"Caravaggio The Calling of Saint Matthew"},
-{"ref":"11","query":"Carl Bloch Christ Healing the Sick at Bethesda"},
-{"ref":"12,13","query":"Raphael Saint Paul Preaching in Athens cartoon"},
-{"ref":"14","query":"Eustache Le Sueur Saint Paul Preaching at Ephesus Louvre"},
-{"ref":"15","query":"Albert Bierstadt Among the Sierra Nevada California"},
-{"ref":"16","query":"Ugolino di Nerio Isaiah National Gallery"},
-{"ref":"17","query":"Jean-Baptiste Greuze La Lecture de la Bible"},
-{"ref":"18","query":"Frederic Edwin Church Cotopaxi Detroit"},
-{"ref":"19","query":"Fra Angelico Filippo Lippi Adoration of the Magi National Gallery of Art"},
-{"ref":"20","query":"Rembrandt The Baptism of the Eunuch Catharijneconvent"},
-{"ref":"21","query":"Enrique Simonet Flevit super illam"}]
+[
+ {
+  "ref": "1",
+  "query": "Jean-Léon Gérôme The Wailing Wall",
+  "title": "Jean-Léon Gérôme - Le Mur de Salomon, 1867.jpg",
+  "artist": "Jean-Léon Gérôme",
+  "licence": "Public domain",
+  "width": 2702,
+  "height": 3366,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_Le_Mur_de_Salomon,_1867.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Nicolas Poussin The Adoration of the Golden Calf National Gallery"
+ },
+ {
+  "ref": "3",
+  "query": "Peter Paul Rubens Feast in the House of Simon the Pharisee Hermitage"
+ },
+ {
+  "ref": "4",
+  "query": "Rembrandt Christ on the Cross Le Mas d'Agenais"
+ },
+ {
+  "ref": "5",
+  "query": "Philippe de Champaigne Moses with the Ten Commandments"
+ },
+ {
+  "ref": "6,7",
+  "query": "Hieronymus Bosch Ascent of the Blessed"
+ },
+ {
+  "ref": "8,9",
+  "query": "Valentin de Boulogne Saint Paul Writing His Epistles"
+ },
+ {
+  "ref": "10",
+  "query": "Caravaggio The Calling of Saint Matthew"
+ },
+ {
+  "ref": "11",
+  "query": "Carl Bloch Christ Healing the Sick at Bethesda"
+ },
+ {
+  "ref": "12,13",
+  "query": "Raphael Saint Paul Preaching in Athens cartoon"
+ },
+ {
+  "ref": "14",
+  "query": "Eustache Le Sueur Saint Paul Preaching at Ephesus Louvre"
+ },
+ {
+  "ref": "15",
+  "query": "Albert Bierstadt Among the Sierra Nevada California"
+ },
+ {
+  "ref": "16",
+  "query": "Ugolino di Nerio Isaiah National Gallery"
+ },
+ {
+  "ref": "17",
+  "query": "Jean-Baptiste Greuze La Lecture de la Bible"
+ },
+ {
+  "ref": "18",
+  "query": "Frederic Edwin Church Cotopaxi Detroit"
+ },
+ {
+  "ref": "19",
+  "query": "Fra Angelico Filippo Lippi Adoration of the Magi National Gallery of Art"
+ },
+ {
+  "ref": "20",
+  "query": "Rembrandt The Baptism of the Eunuch Catharijneconvent"
+ },
+ {
+  "ref": "21",
+  "query": "Enrique Simonet Flevit super illam"
+ }
+]
