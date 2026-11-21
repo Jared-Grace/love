@@ -857,6 +857,10 @@ export function bible_glyph_chapter_references() {
       reference: "Joshua 24",
     },
     {
+      chapter_code: "JDG01",
+      reference: "Judges 1",
+    },
+    {
       chapter_code: "JDG02",
       reference: "Judges 2",
     },
