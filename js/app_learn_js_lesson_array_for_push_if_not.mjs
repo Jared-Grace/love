@@ -1,5 +1,3 @@
-import { subtract } from "./subtract.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_array } from "./js_code_array.mjs";
@@ -7,6 +5,8 @@ import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_without } from "./list_without.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -89,7 +89,7 @@ export function app_learn_js_lesson_array_for_push_if_not() {
       context,
       app_learn_js_lesson_array_for_push_if_e,
       [
-        "With ",
+        "with ",
         "b.push(a[i]);",
         " inside an ",
         "if",
