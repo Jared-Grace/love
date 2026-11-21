@@ -1,0 +1,166 @@
+export function bible_glyph_chapter_rosetta_lines_ezr06() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "EZR06",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "בֵּאדַ֛יִן דָּרְיָ֥וֶשׁ מַלְכָּ֖א שָׂ֣ם טְעֵ֑ם וּבַקַּ֣רוּ׀ בְּבֵ֣ית סִפְרַיָּ֗א דִּ֧י גִנְזַיָּ֛א מְהַחֲתִ֥ין תַּמָּ֖ה בְּבָבֶֽל׃",
+        english:
+          "Thus King Darius ordered a search of the archives stored in the treasury of Babylon",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וְהִשְׁתְּכַ֣ח בְּאַחְמְתָ֗א בְּבִֽירְתָ֛א דִּ֛י בְּמָדַ֥י מְדִינְתָּ֖ה מְגִלָּ֣ה חֲדָ֑ה וְכֵן־ כְּתִ֥יב בְּגַוַּ֖הּ דִּכְרוֹנָֽה׃פ",
+        english:
+          "And a scroll was found in the fortress of Ecbatana in the province of Media with the following written on it Memorandum",
+      },
+      {
+        verse_number: 3,
+        original:
+          "בִּשְׁנַ֨ת חֲדָ֜ה לְכ֣וֹרֶשׁ מַלְכָּ֗א כּ֣וֹרֶשׁ מַלְכָּא֮ שָׂ֣ם טְעֵם֒ בֵּית־ אֱלָהָ֤א בִֽירוּשְׁלֶם֙ בַּיְתָ֣א יִתְבְּנֵ֔א אֲתַר֙ דִּֽי־ דָבְחִ֣ין דִּבְחִ֔ין וְאֻשּׁ֖וֹהִי מְסֽוֹבְלִ֑ין רוּמֵהּ֙ אַמִּ֣ין שִׁתִּ֔ין פְּתָיֵ֖הּ אַמִּ֥ין שִׁתִּֽין׃",
+        english:
+          "In the first year of King Cyrus he issued a decree concerning the house of God in Jerusalem Let the house be rebuilt as a place for offering sacrifices and let its foundations be firmly laid It is to be sixty cubits high and sixty cubits wide",
+      },
+      {
+        verse_number: 4,
+        original:
+          "נִדְבָּכִ֞ין דִּי־ אֶ֤בֶן גְּלָל֙ תְּלָתָ֔א וְנִדְבָּ֖ךְ דִּי־ אָ֣ע חֲדַ֑ת וְנִ֨פְקְתָ֔א מִן־ בֵּ֥ית מַלְכָּ֖א תִּתְיְהִֽב׃",
+        english:
+          "with three layers of cut stones and one of timbers The costs are to be paid from the royal treasury",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְ֠אַף מָאנֵ֣י בֵית־ אֱלָהָא֮ דִּ֣י דַהֲבָ֣ה וְכַסְפָּא֒ דִּ֣י נְבֽוּכַדְנֶצַּ֗ר הַנְפֵּ֛ק מִן־ הֵיכְלָ֥א דִי־ בִירוּשְׁלֶ֖ם וְהֵיבֵ֣ל לְבָבֶ֑ל יַהֲתִיב֗וּן וִ֠יהָךְ לְהֵיכְלָ֤א דִי־ בִירֽוּשְׁלֶם֙ לְאַתְרֵ֔הּ וְתַחֵ֖ת בְּבֵ֥ית אֱלָהָֽא׃ס",
+        english:
+          "Furthermore the gold and silver articles of the house of God which Nebuchadnezzar took from the temple in Jerusalem and carried to Babylon must also be returned to the temple in Jerusalem and deposited in the house of God",
+      },
+      {
+        verse_number: 6,
+        original:
+          "כְּעַ֡ן תַּ֠תְּנַי פַּחַ֨ת עֲבַֽר־ נַהֲרָ֜ה שְׁתַ֤ר בּוֹזְנַי֙ וּכְנָוָ֣תְה֔וֹן אֲפַרְסְכָיֵ֔א דִּ֖י בַּעֲבַ֣ר נַהֲרָ֑ה רַחִיקִ֥ין הֲו֖וֹ מִן־ תַּמָּֽה׃",
+        english:
+          "Therefore Darius decreed To Tattenai governor of the region west of the Euphrates Shethar-bozenai and your associates and officials in the region You must stay away from that place",
+      },
+      {
+        verse_number: 7,
+        original:
+          "שְׁבֻ֕קוּ לַעֲבִידַ֖ת בֵּית־ אֱלָהָ֣א דֵ֑ךְ פַּחַ֤ת יְהוּדָיֵא֙ וּלְשָׂבֵ֣י יְהוּדָיֵ֔א בֵּית־ אֱלָהָ֥א דֵ֖ךְ יִבְנ֥וֹן עַל־ אַתְרֵֽהּ׃",
+        english:
+          "Leave this work on the house of God alone Let the governor and elders of the Jews rebuild this house of God on its original site",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וּמִנִּי֮ שִׂ֣ים טְעֵם֒ לְמָ֣א דִֽי־ תַֽעַבְד֗וּן עִם־ שָׂבֵ֤י יְהוּדָיֵא֙ אִלֵּ֔ךְ לְמִבְנֵ֖א בֵּית־ אֱלָהָ֣א דֵ֑ךְ וּמִנִּכְסֵ֣י מַלְכָּ֗א דִּ֚י מִדַּת֙ עֲבַ֣ר נַהֲרָ֔ה אָסְפַּ֗רְנָא נִפְקְתָ֛א תֶּהֱוֵ֧א מִֽתְיַהֲבָ֛א לְגֻבְרַיָּ֥א אִלֵּ֖ךְ דִּי־ לָ֥א לְבַטָּלָֽא׃",
+        english:
+          "I hereby decree what you must do for these elders of the Jews who are rebuilding this house of God The cost is to be paid in full to these men from the royal treasury out of the taxes of the provinces west of the Euphrates so that the work will not be hindered",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וּמָ֣ה חַשְׁחָ֡ן וּבְנֵ֣י תוֹרִ֣ין וְדִכְרִ֣ין וְאִמְּרִ֣ין׀ לַעֲלָוָ֣ן׀ לֶאֱלָ֪הּ שְׁמַיָּ֟א חִנְטִ֞ין מְלַ֣ח׀ חֲמַ֣ר וּמְשַׁ֗ח כְּמֵאמַ֨ר כָּהֲנַיָּ֤א דִי־ בִירֽוּשְׁלֶם֙ לֶהֱוֵ֨א מִתְיְהֵ֥ב לְהֹ֛ם י֥וֹם׀ בְּי֖וֹם דִּי־ לָ֥א שָׁלֽוּ׃",
+        english:
+          "Whatever is needed young bulls rams and lambs for burnt offerings to the God of heaven as well as wheat salt wine and oil as requested by the priests in Jerusalem must be given to them daily without fail",
+      },
+      {
+        verse_number: 10,
+        original:
+          "דִּֽי־ לֶהֱוֺ֧ן מְהַקְרְבִ֛ין נִיחוֹחִ֖ין לֶאֱלָ֣הּ שְׁמַיָּ֑א וּמְצַלַּ֕יִן לְחַיֵּ֥י מַלְכָּ֖א וּבְנֽוֹהִי׃",
+        english:
+          "Then they will be able to offer sacrifices of a sweet aroma to the God of heaven and to pray for the lives of the king and his sons",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וּמִנִּי֮ שִׂ֣ים טְעֵם֒ דִּ֣י כָל־ אֱנָ֗שׁ דִּ֤י יְהַשְׁנֵא֙ פִּתְגָמָ֣א דְנָ֔ה יִתְנְסַ֥ח אָע֙ מִן־ בַּיְתֵ֔הּ וּזְקִ֖יף יִתְמְחֵ֣א עֲלֹ֑הִי וּבַיְתֵ֛הּ נְוָל֥וּ יִתְעֲבֵ֖ד עַל־ דְּנָֽה׃",
+        english:
+          "I also decree that if any man interferes with this directive a beam is to be torn from his house and raised up and he is to be impaled on it And his own house shall be made a pile of rubble for this offense",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וֵֽאלָהָ֞א דִּ֣י שַׁכִּ֧ן שְׁמֵ֣הּ תַּמָּ֗ה יְמַגַּ֞ר כָּל־ מֶ֤לֶךְ וְעַם֙ דִּ֣י׀ יִשְׁלַ֣ח יְדֵ֗הּ לְהַשְׁנָיָ֛ה לְחַבָּלָ֛ה בֵּית־ אֱלָהָ֥א דֵ֖ךְ דִּ֣י בִירוּשְׁלֶ֑ם אֲנָ֤ה דָרְיָ֙וֶשׁ֙ שָׂ֣מֶת טְעֵ֔ם אָסְפַּ֖רְנָא יִתְעֲבִֽד׃פ",
+        english:
+          "May God who has caused His Name to dwell there overthrow any king or people who lifts a hand to alter this decree or to destroy this house of God in Jerusalem I Darius have issued the decree Let it be carried out with diligence",
+      },
+      {
+        verse_number: 13,
+        original:
+          "אֱ֠דַיִן תַּתְּנַ֞י פַּחַ֧ת עֲבַֽר־ נַהֲרָ֛ה שְׁתַ֥ר בּוֹזְנַ֖י וּכְנָוָתְה֑וֹן לָקֳבֵ֗ל דִּֽי־ שְׁלַ֞ח דָּרְיָ֧וֶשׁ מַלְכָּ֛א כְּנֵ֖מָא אָסְפַּ֥רְנָא עֲבַֽדוּ׃",
+        english:
+          "In response Tattenai the governor of the region west of the Euphrates Shethar-bozenai and their associates diligently carried out what King Darius had decreed",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְשָׂבֵ֤י יְהוּדָיֵא֙ בָּנַ֣יִן וּמַצְלְחִ֔ין בִּנְבוּאַת֙ חַגַּ֣י נְבִיאָה וּזְכַרְיָ֖ה בַּר־ עִדּ֑וֹא וּבְנ֣וֹ וְשַׁכְלִ֗לוּ מִן־ טַ֙עַם֙ אֱלָ֣הּ יִשְׂרָאֵ֔ל וּמִטְּעֵם֙ כּ֣וֹרֶשׁ וְדָרְיָ֔וֶשׁ וְאַרְתַּחְשַׁ֖שְׂתְּא מֶ֥לֶךְ פָּרָֽס׃",
+        english:
+          "So the Jewish elders built and prospered through the prophesying of Haggai the prophet and Zechariah son of Iddo They finished building according to the command of the God of Israel and the decrees of Cyrus Darius and Artaxerxes kings of Persia",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְשֵׁיצִיא֙ בַּיְתָ֣ה דְנָ֔ה עַ֛ד י֥וֹם תְּלָתָ֖ה לִירַ֣ח אֲדָ֑ר דִּי־ הִ֣יא שְׁנַת־ שֵׁ֔ת לְמַלְכ֖וּת דָּרְיָ֥וֶשׁ מַלְכָּֽא׃פ",
+        english:
+          "And this temple was completed on the third day of the month of Adar in the sixth year of the reign of King Darius",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַעֲבַ֣דוּ בְנֵֽי־ יִ֠שְׂרָאֵל כָּהֲנַיָּ֨א וְלֵוָיֵ֜א וּשְׁאָ֣ר בְּנֵי־ גָלוּתָ֗א חֲנֻכַּ֛ת בֵּית־ אֱלָהָ֥א דְנָ֖ה בְּחֶדְוָֽה׃",
+        english:
+          "Then the people of Israel the priests the Levites and the rest of the exiles celebrated the dedication of the house of God with joy",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְהַקְרִ֗בוּ לַחֲנֻכַּת֮ בֵּית־ אֱלָהָ֣א דְנָה֒ תּוֹרִ֣ין מְאָ֔ה דִּכְרִ֣ין מָאתַ֔יִן אִמְּרִ֖ין אַרְבַּ֣ע מְאָ֑ה וּצְפִירֵ֨י עִזִּ֜ין לְחַטָּיָא עַל־ כָּל־ יִשְׂרָאֵל֙ תְּרֵֽי־ עֲשַׂ֔ר לְמִנְיָ֖ן שִׁבְטֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "For the dedication of the house of God they offered a hundred bulls two hundred rams four hundred lambs and a sin offering for all Israel of twelve male goats one for each tribe of Israel",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וַהֲקִ֨ימוּ כָהֲנַיָּ֜א בִּפְלֻגָּתְה֗וֹן וְלֵוָיֵא֙ בְּמַחְלְקָ֣תְה֔וֹן עַל־ עֲבִידַ֥ת אֱלָהָ֖א דִּ֣י בִירוּשְׁלֶ֑ם כִּכְתָ֖ב סְפַ֥ר מֹשֶֽׁה׃פ",
+        english:
+          "They also appointed the priests by their divisions and the Levites by their groups to the service of God in Jerusalem according to what is written in the Book of Moses",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיַּעֲשׂ֥וּ בְנֵי־ הַגּוֹלָ֖ה אֶת־ הַפָּ֑סַח בְּאַרְבָּעָ֥ה עָשָׂ֖ר לַחֹ֥דֶשׁ הָרִאשֽׁוֹן׃",
+        english:
+          "On the fourteenth day of the first month the exiles kept the Passover",
+      },
+      {
+        verse_number: 20,
+        original:
+          "כִּ֣י הִֽטַּהֲר֞וּ הַכֹּהֲנִ֧ים וְהַלְוִיִּ֛ם כְּאֶחָ֖ד כֻּלָּ֣ם טְהוֹרִ֑ים וַיִּשְׁחֲט֤וּ הַפֶּ֙סַח֙ לְכָל־ בְּנֵ֣י הַגּוֹלָ֔ה וְלַאֲחֵיהֶ֥ם הַכֹּהֲנִ֖ים וְלָהֶֽם׃",
+        english:
+          "All the priests and Levites had purified themselves and were ceremonially clean And the Levites slaughtered the Passover lamb for all the exiles for their priestly brothers and for themselves",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיֹּאכְל֣וּ בְנֵֽי־ יִשְׂרָאֵ֗ל הַשָּׁבִים֙ מֵֽהַגּוֹלָ֔ה וְכֹ֗ל הַנִּבְדָּ֛ל מִטֻּמְאַ֥ת גּוֹיֵֽ־ הָאָ֖רֶץ אֲלֵהֶ֑ם לִדְרֹ֕שׁ לַֽיהוָ֖ה אֱלֹהֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "The Israelites who had returned from exile ate it together with all who had separated themselves from the uncleanness of the peoples of the land to seek the LORD the God of Israel",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיַּֽעֲשׂ֧וּ חַג־ מַצּ֛וֹת שִׁבְעַ֥ת יָמִ֖ים בְּשִׂמְחָ֑ה כִּ֣י׀ שִׂמְּחָ֣ם יְהוָ֗ה וְֽהֵסֵ֞ב לֵ֤ב מֶֽלֶךְ־ אַשּׁוּר֙ עֲלֵיהֶ֔ם לְחַזֵּ֣ק יְדֵיהֶ֔ם בִּמְלֶ֥אכֶת בֵּית־ הָאֱלֹהִ֖ים אֱלֹהֵ֥י יִשְׂרָאֵֽל׃פ",
+        english:
+          "For seven days they kept the Feast of Unleavened Bread with joy because the LORD had made them joyful and turned the heart of the king of Assyria toward them to strengthen their hands in the work on the house of the God of Israel",
+      },
+    ],
+  };
+  return chapter;
+}
