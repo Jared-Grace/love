@@ -1,11 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { json_to } from "./json_to.mjs";
-import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
+import { app_learn_js_for_divisors_program } from "./app_learn_js_for_divisors_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -27,18 +22,15 @@ export function app_learn_js_lesson_for_divisors() {
   let example_n = 6;
   function program_with(n, condition, asked) {
     "let n = n; for (let i = 1; condition; i++) { if (asked) { console.log(i); } }";
-    let right = json_to(n);
-    let head = js_code_let_statement("n", right);
     let statement = js_code_console_log_statement("i");
-    let inside = js_code_if_lines(asked, statement);
-    let statements = list_concat(inside, ["i++;"]);
-    let loop = js_code_for_start_condition_update_lines(
-      "let i = 1;",
+    let code = app_learn_js_for_divisors_program(
+      n,
+      [],
       condition,
-      statements,
+      asked,
+      statement,
+      [],
     );
-    let lines = list_concat([head], loop);
-    let code = list_join_newline(lines);
     return code;
   }
   function program_of(n2) {
@@ -112,9 +104,9 @@ export function app_learn_js_lesson_for_divisors() {
       ":",
     ]);
     let code3 = program_of(example_n);
-    let lines2 = text_split_newline(code3);
+    let lines = text_split_newline(code3);
     let value = eval_console_log_lines(code3);
-    app_learn_js_code_lines_writes_out(box_three, lines2, value);
+    app_learn_js_code_lines_writes_out(box_three, lines, value);
     app_learn_js_div_cycle_code(box_three, [
       "",
       "6 % 4",
