@@ -901,6 +901,10 @@ export function bible_glyph_chapter_references() {
       reference: "Judges 11",
     },
     {
+      chapter_code: "JDG12",
+      reference: "Judges 12",
+    },
+    {
       chapter_code: "JDG13",
       reference: "Judges 13",
     },
