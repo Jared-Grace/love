@@ -1,7 +1,13 @@
 [
  {
   "ref": "1",
-  "query": "Caravaggio Saint Francis in Prayer Cremona"
+  "query": "Caravaggio Saint Francis in Prayer Cremona",
+  "title": "Saint Francis in Prayer-Caravaggio (c.1606).jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 5787,
+  "height": 7736,
+  "page": "https://commons.wikimedia.org/wiki/File:Saint_Francis_in_Prayer-Caravaggio_(c.1606).jpg"
  },
  {
   "ref": "2",
@@ -85,7 +91,13 @@
  },
  {
   "ref": "13",
-  "query": "Murillo Abraham Receiving the Three Angels National Gallery of Canada"
+  "query": "Bartolomé Esteban Murillo Abraham and the Three Angels",
+  "title": "Abraham ontvangt de drie engelen Rijksmuseum SK-A-1577.jpeg",
+  "artist": "Ferdinand Bol",
+  "licence": "Public domain",
+  "width": 3864,
+  "height": 5662,
+  "page": "https://commons.wikimedia.org/wiki/File:Abraham_ontvangt_de_drie_engelen_Rijksmuseum_SK-A-1577.jpeg"
  },
  {
   "ref": "14",
