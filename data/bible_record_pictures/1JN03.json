@@ -1,22 +1,133 @@
-[{"ref":"1","query":"Carl Bloch Christ with Children"},
-{"ref":"2","query":"Pietro Perugino Ascension of Christ Lyon"},
-{"ref":"3","query":"Ilya Repin Baptism of Christ"},
-{"ref":"4","query":"Hieronymus Bosch Death and the Miser National Gallery of Art"},
-{"ref":"5","query":"Francisco de Zurbarán Agnus Dei Prado"},
-{"ref":"6","query":"Bernardo Strozzi The Calling of Saint Matthew Worcester"},
-{"ref":"7","query":"Jacob Jordaens The Satyr and the Peasant Kassel"},
-{"ref":"8","query":"Guido Reni Saint Michael Archangel Santa Maria della Concezione"},
-{"ref":"9","query":"Hugo van der Goes Portinari Altarpiece Uffizi"},
-{"ref":"10","query":"Pieter Bruegel the Elder Fall of the Rebel Angels"},
-{"ref":"11","query":"Domenico Ghirlandaio An Old Man and his Grandson Louvre"},
-{"ref":"12","query":"Peter Paul Rubens Cain Slaying Abel Courtauld"},
-{"ref":"13","query":"Jean-Léon Gérôme The Christian Martyrs' Last Prayer Walters"},
-{"ref":"14","query":"Giotto The Raising of Lazarus Scrovegni"},
-{"ref":"15","query":"Jacopo Tintoretto Cain and Abel Accademia"},
-{"ref":"16","query":"Andrea Mantegna Crucifixion Louvre"},
-{"ref":"17","query":"Domenico Ghirlandaio Saint Francis Renounces All Worldly Goods Sassetti"},
-{"ref":"18","query":"Master of Alkmaar The Seven Works of Mercy Rijksmuseum"},
-{"ref":"19,20","query":"Rembrandt The Prodigal Son in the Tavern Dresden"},
-{"ref":"21,22","query":"Nicolaes Maes Old Woman Saying Grace Rijksmuseum"},
-{"ref":"23","query":"Andrei Rublev Trinity"},
-{"ref":"24","query":"Rogier van der Weyden Pentecost"}]
+[
+ {
+  "ref": "1",
+  "query": "Carl Bloch Christ with Children",
+  "title": "Carl Heinrich Bloch - Suffer the Children.jpg",
+  "artist": "Carl Bloch",
+  "licence": "Public domain",
+  "width": 1000,
+  "height": 1400,
+  "page": "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_Suffer_the_Children.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Pietro Perugino Ascension of Christ Lyon",
+  "title": "AscensionPeruginMBALyon.jpg",
+  "artist": "Pietro Perugino",
+  "licence": "Public domain",
+  "width": 1621,
+  "height": 2500,
+  "page": "https://commons.wikimedia.org/wiki/File:AscensionPeruginMBALyon.jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Ilya Repin Baptism of Christ",
+  "title": null
+ },
+ {
+  "ref": "4",
+  "query": "Hieronymus Bosch Death and the Miser National Gallery of Art",
+  "title": "Jheronimus Bosch 050.jpg",
+  "artist": "Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 5901,
+  "height": 17766,
+  "page": "https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_050.jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Francisco de Zurbarán Agnus Dei Prado",
+  "title": "Agnus Dei Zurbarán.jpg",
+  "artist": "Francisco de Zurbarán",
+  "licence": "Public domain",
+  "width": 3050,
+  "height": 1822,
+  "page": "https://commons.wikimedia.org/wiki/File:Agnus_Dei_Zurbar%C3%A1n.jpg"
+ },
+ {
+  "ref": "6",
+  "query": "Bernardo Strozzi The Calling of Saint Matthew Worcester",
+  "title": "Bernardo Strozzi - Calling of St Matthew.jpg",
+  "artist": "Bernardo Strozzi",
+  "licence": "Public domain",
+  "width": 1200,
+  "height": 887,
+  "page": "https://commons.wikimedia.org/wiki/File:Bernardo_Strozzi_-_Calling_of_St_Matthew.jpg"
+ },
+ {
+  "ref": "7",
+  "query": "Jacob Jordaens The Satyr and the Peasant Kassel",
+  "title": "Jacob Jordaens - The Satyr and the Peasant Family.jpg",
+  "artist": "Jacob Jordaens",
+  "licence": "Public domain",
+  "width": 2873,
+  "height": 2207,
+  "page": "https://commons.wikimedia.org/wiki/File:Jacob_Jordaens_-_The_Satyr_and_the_Peasant_Family.jpg"
+ },
+ {
+  "ref": "8",
+  "query": "Guido Reni Saint Michael Archangel Santa Maria della Concezione",
+  "title": "GuidoReni MichaelDefeatsSatan.jpg",
+  "artist": "Guido Reni",
+  "licence": "Public domain",
+  "width": 1657,
+  "height": 2441,
+  "page": "https://commons.wikimedia.org/wiki/File:GuidoReni_MichaelDefeatsSatan.jpg"
+ },
+ {
+  "ref": "9",
+  "query": "Hugo van der Goes Portinari Altarpiece Uffizi"
+ },
+ {
+  "ref": "10",
+  "query": "Pieter Bruegel the Elder Fall of the Rebel Angels"
+ },
+ {
+  "ref": "11",
+  "query": "Domenico Ghirlandaio An Old Man and his Grandson Louvre"
+ },
+ {
+  "ref": "12",
+  "query": "Peter Paul Rubens Cain Slaying Abel Courtauld"
+ },
+ {
+  "ref": "13",
+  "query": "Jean-Léon Gérôme The Christian Martyrs' Last Prayer Walters"
+ },
+ {
+  "ref": "14",
+  "query": "Giotto The Raising of Lazarus Scrovegni"
+ },
+ {
+  "ref": "15",
+  "query": "Jacopo Tintoretto Cain and Abel Accademia"
+ },
+ {
+  "ref": "16",
+  "query": "Andrea Mantegna Crucifixion Louvre"
+ },
+ {
+  "ref": "17",
+  "query": "Domenico Ghirlandaio Saint Francis Renounces All Worldly Goods Sassetti"
+ },
+ {
+  "ref": "18",
+  "query": "Master of Alkmaar The Seven Works of Mercy Rijksmuseum"
+ },
+ {
+  "ref": "19,20",
+  "query": "Rembrandt The Prodigal Son in the Tavern Dresden"
+ },
+ {
+  "ref": "21,22",
+  "query": "Nicolaes Maes Old Woman Saying Grace Rijksmuseum"
+ },
+ {
+  "ref": "23",
+  "query": "Andrei Rublev Trinity"
+ },
+ {
+  "ref": "24",
+  "query": "Rogier van der Weyden Pentecost"
+ }
+]
