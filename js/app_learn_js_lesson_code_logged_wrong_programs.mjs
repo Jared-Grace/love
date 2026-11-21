@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -43,7 +44,7 @@ export function app_learn_js_lesson_code_logged_wrong_programs(params) {
     return input2;
   }
   function not_empty(text) {
-    let ne = text !== "";
+    let ne = not_equal(text, "");
     return ne;
   }
   function decoys(question, answer) {
@@ -65,7 +66,7 @@ export function app_learn_js_lesson_code_logged_wrong_programs(params) {
     let out_answer = eval_console_log_lines(answer);
     function differs(code3) {
       let out = eval_console_log_lines(code3);
-      let ne2 = out !== out_answer;
+      let ne2 = not_equal(out, out_answer);
       return ne2;
     }
     let kept = list_filter(programs2, differs);
