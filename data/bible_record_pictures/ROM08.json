@@ -46,19 +46,43 @@
  },
  {
   "ref": "8",
-  "query": "Jacob Jordaens The King Drinks"
+  "query": "Jacob Jordaens The King Drinks",
+  "title": "Jacob Jordaens - The King drinks.jpg",
+  "artist": "Jacob Jordaens",
+  "licence": "Public domain",
+  "width": 6942,
+  "height": 4572,
+  "page": "https://commons.wikimedia.org/wiki/File:Jacob_Jordaens_-_The_King_drinks.jpg"
  },
  {
   "ref": "9",
-  "query": "Jean Restout Pentecost Louvre"
+  "query": "Jean Restout Pentecost Louvre",
+  "title": "Jean II Restout - Pentecost - WGA19318.jpg",
+  "artist": "Jean Restout",
+  "licence": "Public domain",
+  "width": 1240,
+  "height": 730,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean_II_Restout_-_Pentecost_-_WGA19318.jpg"
  },
  {
   "ref": "10",
-  "query": "Rembrandt The Resurrection of Christ Alte Pinakothek"
+  "query": "Rembrandt The Resurrection of Christ Alte Pinakothek",
+  "title": "Rembrandt van Rijn 178.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3677,
+  "height": 5000,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_178.jpg"
  },
  {
   "ref": "11",
-  "query": "Juan de Flandes The Raising of Lazarus Prado"
+  "query": "Juan de Flandes The Raising of Lazarus Prado",
+  "title": "Juan de Flandes 001.jpg",
+  "artist": "Juan de Flandes",
+  "licence": "Public domain",
+  "width": 2147,
+  "height": 3051,
+  "page": "https://commons.wikimedia.org/wiki/File:Juan_de_Flandes_001.jpg"
  },
  {
   "ref": "12",
