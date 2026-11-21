@@ -21,47 +21,113 @@
  },
  {
   "ref": "3",
-  "query": "Annibale Carracci The Bean Eater"
+  "query": "Annibale Carracci The Bean Eater",
+  "title": "Carracci - Der Bohnenesser.jpeg",
+  "artist": "Annibale Carracci",
+  "licence": "Public domain",
+  "width": 3294,
+  "height": 2748,
+  "page": "https://commons.wikimedia.org/wiki/File:Carracci_-_Der_Bohnenesser.jpeg"
  },
  {
   "ref": "4",
-  "query": "Domenico Fetti The Parable of the Mote and the Beam"
+  "query": "Domenico Fetti The Parable of the Mote and the Beam",
+  "title": "The Parable of the Mote and the Beam MET 1991.153 3.jpg",
+  "artist": "Domenico Fetti",
+  "licence": "CC0",
+  "width": 3744,
+  "height": 5616,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Parable_of_the_Mote_and_the_Beam_MET_1991.153_3.jpg"
  },
  {
   "ref": "5",
-  "query": "Jules Breton The Blessing of the Wheat in Artois"
+  "query": "Jules Breton The Blessing of the Wheat in Artois",
+  "title": "Jules Breton - La Bénédiction des blés en Artois.jpg",
+  "artist": "Jules Breton",
+  "licence": "Public domain",
+  "width": 2953,
+  "height": 1201,
+  "page": "https://commons.wikimedia.org/wiki/File:Jules_Breton_-_La_B%C3%A9n%C3%A9diction_des_bl%C3%A9s_en_Artois.jpg"
  },
  {
   "ref": "6",
-  "query": "Jan Steen The Prayer Before the Meal"
+  "query": "Jan Steen The Prayer Before the Meal",
+  "title": "Jan Steen - Prayer Before the Meal - JS-116 - Leiden Collection.jpg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 2550,
+  "height": 2976,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Steen_-_Prayer_Before_the_Meal_-_JS-116_-_Leiden_Collection.jpg"
  },
  {
   "ref": "7",
-  "query": "Pieter Bruegel the Elder The Hunters in the Snow"
+  "query": "Pieter Bruegel the Elder The Hunters in the Snow",
+  "title": "Pieter Bruegel the Elder - Hunters in the Snow (Winter) - Google Art Project.jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 6819,
+  "height": 4853,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg"
  },
  {
   "ref": "8",
-  "query": "Rembrandt Simeon's Song of Praise Mauritshuis"
+  "query": "Rembrandt Simeon's Song of Praise Mauritshuis",
+  "title": "Rembrandt Harmensz. van Rijn 145.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 2366,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_145.jpg"
  },
  {
   "ref": "9",
-  "query": "Annibale Carracci The Holy Women at Christ's Tomb Hermitage"
+  "query": "Annibale Carracci The Holy Women at Christ's Tomb Hermitage",
+  "title": "Annibale Carracci - Holy Women at Christ' s Tomb - WGA4454.jpg",
+  "artist": "Annibale Carracci",
+  "licence": "Public domain",
+  "width": 3613,
+  "height": 2998,
+  "page": "https://commons.wikimedia.org/wiki/File:Annibale_Carracci_-_Holy_Women_at_Christ%27_s_Tomb_-_WGA4454.jpg"
  },
  {
   "ref": "10",
-  "query": "Hieronymus Bosch The Seven Deadly Sins and the Four Last Things"
+  "query": "Hieronymus Bosch The Seven Deadly Sins and the Four Last Things",
+  "title": "Hieronymus Bosch- The Seven Deadly Sins and the Four Last Things.JPG",
+  "artist": "Hieronymus Bosch or follower",
+  "licence": "Public domain",
+  "width": 2863,
+  "height": 2441,
+  "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch-_The_Seven_Deadly_Sins_and_the_Four_Last_Things.JPG"
  },
  {
   "ref": "11",
-  "query": "Fra Angelico Christ Glorified in the Court of Heaven National Gallery"
+  "query": "Fra Angelico Christ Glorified in the Court of Heaven National Gallery",
+  "title": "Schottmüller, Frida - Angelico - Pala Fiesole Predella Mitte.jpg",
+  "artist": "Fra Angelico",
+  "licence": "Public domain",
+  "width": 2263,
+  "height": 990,
+  "page": "https://commons.wikimedia.org/wiki/File:Schottm%C3%BCller,_Frida_-_Angelico_-_Pala_Fiesole_Predella_Mitte.jpg"
  },
  {
   "ref": "12",
-  "query": "Johannes Vermeer Woman Holding a Balance"
+  "query": "Johannes Vermeer Woman Holding a Balance",
+  "title": "Johannes Vermeer - Woman Holding a Balance - Google Art Project.jpg",
+  "artist": "Johannes Vermeer",
+  "licence": "Public domain",
+  "width": 7201,
+  "height": 8143,
+  "page": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg"
  },
  {
   "ref": "13",
-  "query": "Hendrick Avercamp Winter Landscape with Ice Skaters Rijksmuseum"
+  "query": "Hendrick Avercamp Winter Landscape with Ice Skaters Rijksmuseum",
+  "title": "IJsvermaak Rijksmuseum SK-A-3247.jpeg",
+  "artist": "Hendrick Avercamp",
+  "licence": "Public domain",
+  "width": 6326,
+  "height": 4196,
+  "page": "https://commons.wikimedia.org/wiki/File:IJsvermaak_Rijksmuseum_SK-A-3247.jpeg"
  },
  {
   "ref": "14",
