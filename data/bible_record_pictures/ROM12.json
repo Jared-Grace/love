@@ -96,34 +96,82 @@
  },
  {
   "ref": "14",
-  "query": "Rembrandt The Stoning of Saint Stephen Lyon"
+  "query": "Rembrandt The Stoning of Saint Stephen Lyon",
+  "title": "Rembrandt-Lapidation-Saint-Étienne-MBA-Lyon.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1500,
+  "height": 1079,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt-Lapidation-Saint-%C3%89tienne-MBA-Lyon.jpg"
  },
  {
   "ref": "15",
-  "query": "Pieter Bruegel the Elder The Peasant Wedding"
+  "query": "Pieter Bruegel the Elder The Peasant Wedding",
+  "title": "The Peasant Wedding (Bruegel).jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 43283,
+  "height": 29567,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Peasant_Wedding_(Bruegel).jpg"
  },
  {
   "ref": "16",
-  "query": "Louis Le Nain Peasant Family in an Interior Louvre"
+  "query": "Louis Le Nain Peasant Family in an Interior Louvre",
+  "title": "\"Famille de paysans\", Louis Le Nain, vers 1642. Musée du Louvre. (35366252844).jpg",
+  "artist": "Grégory Lejeune",
+  "licence": "CC0",
+  "width": 4397,
+  "height": 3038,
+  "page": "https://commons.wikimedia.org/wiki/File:%22Famille_de_paysans%22,_Louis_Le_Nain,_vers_1642._Mus%C3%A9e_du_Louvre._(35366252844).jpg"
  },
  {
   "ref": "17",
-  "query": "Peter Paul Rubens The Reconciliation of Jacob and Esau"
+  "query": "Peter Paul Rubens The Reconciliation of Jacob and Esau",
+  "title": "After Peter Paul Rubens 002.jpg",
+  "artist": "After Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 1926,
+  "height": 2616,
+  "page": "https://commons.wikimedia.org/wiki/File:After_Peter_Paul_Rubens_002.jpg"
  },
  {
   "ref": "18",
-  "query": "Benjamin West Penn's Treaty with the Indians"
+  "query": "Benjamin West Penn's Treaty with the Indians",
+  "title": "John Hall after Benjamin West, William Penn's Treaty with the Indians, 1775, NGA 10874.jpg",
+  "artist": "John Hall after Benjamin West",
+  "licence": "CC0",
+  "width": 4000,
+  "height": 3125,
+  "page": "https://commons.wikimedia.org/wiki/File:John_Hall_after_Benjamin_West,_William_Penn%27s_Treaty_with_the_Indians,_1775,_NGA_10874.jpg"
  },
  {
   "ref": "19",
-  "query": "John Martin The Great Day of His Wrath"
+  "query": "John Martin The Great Day of His Wrath",
+  "title": "John Martin - The Great Day of His Wrath - Google Art Project.jpg",
+  "artist": "John Martin",
+  "licence": "Public domain",
+  "width": 3136,
+  "height": 2023,
+  "page": "https://commons.wikimedia.org/wiki/File:John_Martin_-_The_Great_Day_of_His_Wrath_-_Google_Art_Project.jpg"
  },
  {
   "ref": "20",
-  "query": "Jacopo Bassano The Good Samaritan National Gallery"
+  "query": "Jacopo Bassano The Good Samaritan National Gallery",
+  "title": "Jacopo Bassano - The Good Samaritan - Google Art Project.jpg",
+  "artist": "Jacopo Bassano",
+  "licence": "Public domain",
+  "width": 2347,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:Jacopo_Bassano_-_The_Good_Samaritan_-_Google_Art_Project.jpg"
  },
  {
   "ref": "21",
-  "query": "Guido Reni Archangel Michael Santa Maria della Concezione"
+  "query": "Guido Reni Archangel Michael Santa Maria della Concezione",
+  "title": "GuidoReni MichaelDefeatsSatan.jpg",
+  "artist": "Guido Reni",
+  "licence": "Public domain",
+  "width": 1657,
+  "height": 2441,
+  "page": "https://commons.wikimedia.org/wiki/File:GuidoReni_MichaelDefeatsSatan.jpg"
  }
 ]
