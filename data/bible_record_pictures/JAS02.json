@@ -51,13 +51,23 @@
  },
  {
   "ref": "7",
-  "query": "Giotto Christ before Caiaphas Scrovegni Chapel",
-  "title": null
+  "query": "Giotto Scrovegni Christ before Caiaphas",
+  "title": "Lucas Cranach the Elder, Christ before Caiaphas, NGA 656.jpg",
+  "artist": "Lucas Cranach the Elder",
+  "licence": "CC0",
+  "width": 2781,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:Lucas_Cranach_the_Elder,_Christ_before_Caiaphas,_NGA_656.jpg"
  },
  {
   "ref": "8",
-  "query": "Murillo Saint John of God Carrying a Sick Man Seville",
-  "title": null
+  "query": "Murillo San Juan de Dios",
+  "title": "San Juan de Dios. Bartolomé Esteban Murillo.jpg",
+  "artist": "Bartolomé Esteban Murillo",
+  "licence": "Public domain",
+  "width": 2076,
+  "height": 2768,
+  "page": "https://commons.wikimedia.org/wiki/File:San_Juan_de_Dios._Bartolom%C3%A9_Esteban_Murillo.jpg"
  },
  {
   "ref": "9",
@@ -121,18 +131,11 @@
  },
  {
   "ref": "15",
-  "query": "Murillo Boys Eating Grapes and Melon Alte Pinakothek",
-  "title": "Bartolomé Esteban Murillo (1617-1682) (after) - Two Urchins Eating Melon and Grapes - 1257134 - Kingston Lacy.jpg",
-  "artist": "anonymous",
-  "licence": "Public domain",
-  "width": 898,
-  "height": 1200,
-  "page": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Murillo_(1617-1682)_(after)_-_Two_Urchins_Eating_Melon_and_Grapes_-_1257134_-_Kingston_Lacy.jpg"
+  "query": "Murillo Trauben- und Melonenesser Alte Pinakothek"
  },
  {
   "ref": "16",
-  "query": "Bonifazio Veronese Dives and Lazarus Accademia",
-  "title": null
+  "query": "Bonifazio de' Pitati Parable of the Rich Man and Lazarus"
  },
  {
   "ref": "17",
@@ -156,8 +159,7 @@
  },
  {
   "ref": "19",
-  "query": "Briton Rivière The Miracle of the Gadarene Swine",
-  "title": null
+  "query": "Hieronymus Bosch The Temptation of Saint Anthony Lisbon"
  },
  {
   "ref": "20",
@@ -221,12 +223,6 @@
  },
  {
   "ref": "26",
-  "query": "Hans Holbein the Younger The Body of the Dead Christ in the Tomb",
-  "title": "Hans Holbein- The Body of the Dead Christ in the Tomb.JPG",
-  "artist": "Hans Holbein the Younger",
-  "licence": "Public domain",
-  "width": 3226,
-  "height": 482,
-  "page": "https://commons.wikimedia.org/wiki/File:Hans_Holbein-_The_Body_of_the_Dead_Christ_in_the_Tomb.JPG"
+  "query": "Pieter Claesz Vanitas Still Life Mauritshuis"
  }
 ]
