@@ -51,35 +51,73 @@
  },
  {
   "ref": "7",
-  "query": "Giotto Christ before Caiaphas Scrovegni Chapel"
+  "query": "Giotto Christ before Caiaphas Scrovegni Chapel",
+  "title": null
  },
  {
   "ref": "8",
-  "query": "Murillo Saint John of God Carrying a Sick Man Seville"
+  "query": "Murillo Saint John of God Carrying a Sick Man Seville",
+  "title": null
  },
  {
   "ref": "9",
-  "query": "Rembrandt Joseph Telling His Dreams Rijksmuseum"
+  "query": "Rembrandt Joseph Telling His Dreams Rijksmuseum",
+  "title": "Jozef vertelt zijn dromen aan zijn ouders en zijn broers Rijksmuseum SK-A-3477.jpeg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 8338,
+  "height": 10880,
+  "page": "https://commons.wikimedia.org/wiki/File:Jozef_vertelt_zijn_dromen_aan_zijn_ouders_en_zijn_broers_Rijksmuseum_SK-A-3477.jpeg"
  },
  {
   "ref": "10",
-  "query": "Cosimo Rosselli Descent from Mount Sinai Sistine Chapel"
+  "query": "Cosimo Rosselli Descent from Mount Sinai Sistine Chapel",
+  "title": "Cosimo Rosselli le Tavole della Legge.jpg",
+  "artist": "Cosimo Rosselli",
+  "licence": "Public domain",
+  "width": 1295,
+  "height": 770,
+  "page": "https://commons.wikimedia.org/wiki/File:Cosimo_Rosselli_le_Tavole_della_Legge.jpg"
  },
  {
   "ref": "11",
-  "query": "Rembrandt David and Uriah Hermitage"
+  "query": "Rembrandt David and Uriah Hermitage",
+  "title": "Rembrandt, David and Uriah.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1792,
+  "height": 2000,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt,_David_and_Uriah.jpg"
  },
  {
   "ref": "12",
-  "query": "Dieric Bouts The Justice of Emperor Otto"
+  "query": "Dieric Bouts The Justice of Emperor Otto",
+  "title": "Dieric Bouts - The Ordeal by Fire.jpg",
+  "artist": "Dieric Bouts",
+  "licence": "Public domain",
+  "width": 4214,
+  "height": 7087,
+  "page": "https://commons.wikimedia.org/wiki/File:Dieric_Bouts_-_The_Ordeal_by_Fire.jpg"
  },
  {
   "ref": "13",
-  "query": "Peter Paul Rubens Christ and the Penitent Sinners Alte Pinakothek"
+  "query": "Peter Paul Rubens Christ and the Penitent Sinners Alte Pinakothek",
+  "title": "RubensSimonCyreneCarriesCross.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 2670,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:RubensSimonCyreneCarriesCross.jpg"
  },
  {
   "ref": "14",
-  "query": "Nicolaes Maes The Idle Servant National Gallery"
+  "query": "Nicolaes Maes The Idle Servant National Gallery",
+  "title": "The idle servant.jpg",
+  "artist": "Nicolaes Maes",
+  "licence": "Public domain",
+  "width": 3201,
+  "height": 4226,
+  "page": "https://commons.wikimedia.org/wiki/File:The_idle_servant.jpg"
  },
  {
   "ref": "15",
