@@ -885,6 +885,10 @@ export function bible_glyph_chapter_references() {
       reference: "Judges 7",
     },
     {
+      chapter_code: "JDG08",
+      reference: "Judges 8",
+    },
+    {
       chapter_code: "JDG11",
       reference: "Judges 11",
     },
