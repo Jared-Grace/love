@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_word_sound_url_cycling } from "./gloss_word_sound_url_cycling.mjs";
-import { app_learn_en_gloss_urdu_words_sound_url } from "./app_learn_en_gloss_urdu_words_sound_url.mjs";
-import { app_learn_en_gloss_urdu_words_sound_slow_url } from "./app_learn_en_gloss_urdu_words_sound_slow_url.mjs";
+import { english_word_sound_url } from "./app_learn_en_gloss_urdu_words_sound_url.mjs";
+import { english_word_sound_slow_url } from "./app_learn_en_gloss_urdu_words_sound_slow_url.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -24,8 +24,8 @@ export function app_learn_en_word_sound_preview() {
   "The word is typed rather than picked off a list. The list is thousands long and lives on the machine that records, not in the browser, and a person who came here came with a particular word in mind - the one they just heard go wrong.";
   arguments_assert(arguments, 0);
   let cycling = gloss_word_sound_url_cycling(
-    app_learn_en_gloss_urdu_words_sound_url,
-    app_learn_en_gloss_urdu_words_sound_slow_url,
+    english_word_sound_url,
+    english_word_sound_slow_url,
   );
   let sound_url_get = property_get(cycling, "sound");
   let slow_url_get = property_get(cycling, "slow");
