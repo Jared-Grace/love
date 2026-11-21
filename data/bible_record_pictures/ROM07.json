@@ -131,8 +131,13 @@
  },
  {
   "ref": "14",
-  "query": "Friedrich Overbeck Der Verkauf Josephs",
-  "title": null
+  "query": "Turner The Slave Ship Museum of Fine Arts Boston",
+  "title": "Slave-ship.jpg",
+  "artist": "J. M. W. Turner",
+  "licence": "Public domain",
+  "width": 2152,
+  "height": 1616,
+  "page": "https://commons.wikimedia.org/wiki/File:Slave-ship.jpg"
  },
  {
   "ref": "15",
