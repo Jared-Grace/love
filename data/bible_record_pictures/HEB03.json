@@ -61,15 +61,23 @@
  },
  {
   "ref": "7,8,9",
-  "query": "Francesco Bacchiacca Moses Striking Water from the Rock Edinburgh"
+  "query": "Francesco Bacchiacca Moses Striking Water from the Rock Edinburgh",
+  "title": null
  },
  {
   "ref": "10",
-  "query": "Ferdinand Bol Moses with the Tablets of the Law Amsterdam"
+  "query": "Ferdinand Bol Moses with the Tablets of the Law Amsterdam",
+  "title": null
  },
  {
   "ref": "11",
-  "query": "Giovanni Battista Tiepolo The Gathering of Manna Verolanuova"
+  "query": "Giovanni Battista Tiepolo The Gathering of Manna Verolanuova",
+  "title": "Giovanni Battista Tiepolo 021.jpg",
+  "artist": "Giovanni Battista Tiepolo",
+  "licence": "Public domain",
+  "width": 2024,
+  "height": 2463,
+  "page": "https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Tiepolo_021.jpg"
  },
  {
   "ref": "12",
