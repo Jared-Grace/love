@@ -16,6 +16,7 @@ export function app_learn_js_bin_search_program(input, way) {
   ("the whole binary search over input.items for input.goal, writing out found. way is right; wrong_side, which moves low when the middle item is bigger than goal and so looks in the wrong half; ",
     fn_name("less_than"),
     ", which asks low < high and so never looks at a last item where low and high meet; start_true, which starts found at true and so writes out true when goal is not there; or sorted, the right program over the items put in order first");
+  ("2026-11-21, chosen by the human: the loop stops through && !found in its condition, not through break, so the whole rule for stopping is in one line and the step is the same as in One step of a search");
   ("2026-11-20, approved by the human: sum and middle are the two lines of Middle of two names, so nothing in the step is spelled a new way");
   let items = input.items;
   if (equal(way, "sorted")) {
@@ -38,7 +39,7 @@ export function app_learn_js_bin_search_program(input, way) {
   let test = equal(way, "wrong_side") ? "a[middle] > goal" : "a[middle] < goal";
   let step = js_code_if_else_if_with_else_lines_multiple(
     "a[middle] === goal",
-    ["found = true;", "break;"],
+    ["found = true;"],
     test,
     ["low = middle + 1;"],
     ["high = middle - 1;"],
@@ -47,8 +48,8 @@ export function app_learn_js_bin_search_program(input, way) {
   let code8 = js_code_let_statement("middle", "Math.floor(sum / 2)");
   let body = list_concat_multiple([[code7, code8], step]);
   let condition = equal(way, fn_name("less_than"))
-    ? "low < high"
-    : "low <= high";
+    ? "low < high && !found"
+    : "low <= high && !found";
   let loop = js_code_while_lines_multiple(condition, body);
   let log_line = js_code_console_log_statement("found");
   let lines = list_concat_multiple([lets, loop, [log_line]]);

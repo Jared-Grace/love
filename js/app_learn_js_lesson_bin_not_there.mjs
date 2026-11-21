@@ -75,14 +75,7 @@ export function app_learn_js_lesson_bin_not_there() {
       box_one,
       context,
       app_learn_js_lesson_bin_search,
-      [
-        "the search repeats one step while ",
-        "low <= high",
-        " and stops with ",
-        "break;",
-        " when it finds ",
-        "goal",
-      ],
+      ["the search repeats one step while ", "low <= high && !found"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
@@ -101,7 +94,7 @@ export function app_learn_js_lesson_bin_not_there() {
       "high",
       ". Then ",
       "low <= high",
-      " is false, the loop ends, and ",
+      " is false, so the whole condition is false, the loop ends, and ",
       "found",
       " is still ",
       "false",
