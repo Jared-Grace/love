@@ -1601,6 +1601,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Chronicles 32",
     },
     {
+      chapter_code: "2CH33",
+      reference: "2 Chronicles 33",
+    },
+    {
       chapter_code: "2CH34",
       reference: "2 Chronicles 34",
     },
