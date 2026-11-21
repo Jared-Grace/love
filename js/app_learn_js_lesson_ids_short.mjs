@@ -663,6 +663,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_push_if_e: text_frozen("push_if_e"),
       app_learn_js_lesson_object_property_set: text_frozen("prop_set"),
       app_learn_js_lesson_array_log: text_frozen("array_log"),
+      app_learn_js_lesson_array_shift_push: text_frozen("shift_push"),
       app_learn_js_lesson_object_property_bracket: text_frozen("prop_bracket"),
       app_learn_js_lesson_object_property_key: text_frozen("prop_key"),
       app_learn_js_lesson_object_property_bracket_set:
