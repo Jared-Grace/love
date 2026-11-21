@@ -41,7 +41,11 @@ export function app_learn_js_lesson_array_for_same() {
       "same",
       " starts as ",
       "a.length === b.length",
-      ", so arrays of different lengths are never the same.",
+      ", so if the two arrays have different lengths then ",
+      "same",
+      " is ",
+      "false",
+      ".",
     ]);
     app_learn_js_div_cycle_code(box_three, [
       "Then the loop sets ",
