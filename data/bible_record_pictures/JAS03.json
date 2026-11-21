@@ -1,17 +1,100 @@
-[{"ref":"1","query":"Raphael The School of Athens"},
-{"ref":"2","query":"Jan Steen The Village School National Gallery of Ireland"},
-{"ref":"3","query":"Rosa Bonheur The Horse Fair Metropolitan Museum"},
-{"ref":"4","query":"Ludolf Bakhuizen Warships in a Heavy Storm Rijksmuseum"},
-{"ref":"5","query":"Turner The Burning of the Houses of Lords and Commons Philadelphia"},
-{"ref":"6","query":"Aert van der Neer A Fire at Night Rijksmuseum"},
-{"ref":"7,8","query":"Jan Brueghel the Elder The Entry of the Animals into Noah's Ark Getty"},
-{"ref":"9","query":"Rembrandt Self-Portrait 1669 National Gallery"},
-{"ref":"10","query":"Adriaen Brouwer The Bitter Draught Städel"},
-{"ref":"11","query":"Gustave Courbet The Source of the Loue"},
-{"ref":"12","query":"Vincent van Gogh The Red Vineyard Pushkin Museum"},
-{"ref":"13","query":"Rembrandt Aristotle with a Bust of Homer"},
-{"ref":"14","query":"Rembrandt Saul and David Mauritshuis"},
-{"ref":"15","query":"Pieter Bruegel the Elder Dulle Griet"},
-{"ref":"16","query":"Jan Steen The Effects of Intemperance National Gallery"},
-{"ref":"17","query":"Giovanni Bellini Sacred Allegory Uffizi"},
-{"ref":"18","query":"Pieter Bruegel the Elder Landscape with the Parable of the Sower Timken"}]
+[
+ {
+  "ref": "1",
+  "query": "Raphael The School of Athens",
+  "title": "The School of Athens by Raffaello Sanzio da Urbino.jpg",
+  "artist": "Raphael Sanzio",
+  "licence": "Public domain",
+  "width": 17402,
+  "height": 12132,
+  "page": "https://commons.wikimedia.org/wiki/File:The_School_of_Athens_by_Raffaello_Sanzio_da_Urbino.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Jan Steen The Village School National Gallery of Ireland",
+  "title": "Jan Steen - The Village School (National Gallery of Ireland).jpg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 2227,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Steen_-_The_Village_School_(National_Gallery_of_Ireland).jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Rosa Bonheur The Horse Fair Metropolitan Museum",
+  "title": "WLA metmuseum Rosa Bonheur The Horse Fair.jpg",
+  "artist": "Rosa Bonheur",
+  "licence": "Public domain",
+  "width": 2657,
+  "height": 1242,
+  "page": "https://commons.wikimedia.org/wiki/File:WLA_metmuseum_Rosa_Bonheur_The_Horse_Fair.jpg"
+ },
+ {
+  "ref": "4",
+  "query": "Ludolf Bakhuizen Warships in a Heavy Storm Rijksmuseum",
+  "title": "Oorlogsschepen tijdens een storm Rijksmuseum SK-A-4856.jpeg",
+  "artist": "Ludolf Bakhuizen",
+  "licence": "Public domain",
+  "width": 6156,
+  "height": 4056,
+  "page": "https://commons.wikimedia.org/wiki/File:Oorlogsschepen_tijdens_een_storm_Rijksmuseum_SK-A-4856.jpeg"
+ },
+ {
+  "ref": "5",
+  "query": "Turner The Burning of the Houses of Lords and Commons Philadelphia",
+  "title": "Joseph Mallord William Turner, English - The Burning of the Houses of Lords and Commons, October 16, 1834 - Google Art Project.jpg",
+  "artist": "J. M. W. Turner",
+  "licence": "Public domain",
+  "width": 5313,
+  "height": 3954,
+  "page": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner,_English_-_The_Burning_of_the_Houses_of_Lords_and_Commons,_October_16,_1834_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "6",
+  "query": "Aert van der Neer A Fire at Night Rijksmuseum"
+ },
+ {
+  "ref": "7,8",
+  "query": "Jan Brueghel the Elder The Entry of the Animals into Noah's Ark Getty"
+ },
+ {
+  "ref": "9",
+  "query": "Rembrandt Self-Portrait 1669 National Gallery"
+ },
+ {
+  "ref": "10",
+  "query": "Adriaen Brouwer The Bitter Draught Städel"
+ },
+ {
+  "ref": "11",
+  "query": "Gustave Courbet The Source of the Loue"
+ },
+ {
+  "ref": "12",
+  "query": "Vincent van Gogh The Red Vineyard Pushkin Museum"
+ },
+ {
+  "ref": "13",
+  "query": "Rembrandt Aristotle with a Bust of Homer"
+ },
+ {
+  "ref": "14",
+  "query": "Rembrandt Saul and David Mauritshuis"
+ },
+ {
+  "ref": "15",
+  "query": "Pieter Bruegel the Elder Dulle Griet"
+ },
+ {
+  "ref": "16",
+  "query": "Jan Steen The Effects of Intemperance National Gallery"
+ },
+ {
+  "ref": "17",
+  "query": "Giovanni Bellini Sacred Allegory Uffizi"
+ },
+ {
+  "ref": "18",
+  "query": "Pieter Bruegel the Elder Landscape with the Parable of the Sower Timken"
+ }
+]

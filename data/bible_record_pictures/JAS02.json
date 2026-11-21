@@ -141,8 +141,13 @@
  },
  {
   "ref": "16",
-  "query": "Bonifazio de' Pitati Parable of the Rich Man and Lazarus",
-  "title": null
+  "query": "Jacopo Bassano Lazarus and the Rich Man",
+  "title": "Jacopo Bassano - Lazarus and the Rich Man - 1939.68 - Cleveland Museum of Art.tif",
+  "artist": "Jacopo Bassano",
+  "licence": "CC0",
+  "width": 7494,
+  "height": 4924,
+  "page": "https://commons.wikimedia.org/wiki/File:Jacopo_Bassano_-_Lazarus_and_the_Rich_Man_-_1939.68_-_Cleveland_Museum_of_Art.tif"
  },
  {
   "ref": "17",
@@ -166,7 +171,13 @@
  },
  {
   "ref": "19",
-  "query": "Hieronymus Bosch The Temptation of Saint Anthony Lisbon"
+  "query": "Hieronymus Bosch The Temptation of Saint Anthony Lisbon",
+  "title": "Temptation of Saint AnthonyFXD.jpg",
+  "artist": "Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 7800,
+  "height": 4042,
+  "page": "https://commons.wikimedia.org/wiki/File:Temptation_of_Saint_AnthonyFXD.jpg"
  },
  {
   "ref": "20",
@@ -230,6 +241,12 @@
  },
  {
   "ref": "26",
-  "query": "Pieter Claesz Vanitas Still Life Mauritshuis"
+  "query": "Pieter Claesz Vanitas Still Life Mauritshuis",
+  "title": "Pieter Claesz - Vanitas Still Life - 943 - Mauritshuis.jpg",
+  "artist": "Pieter Claesz",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 4220,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Claesz_-_Vanitas_Still_Life_-_943_-_Mauritshuis.jpg"
  }
 ]
