@@ -1629,6 +1629,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezra 3",
     },
     {
+      chapter_code: "EZR04",
+      reference: "Ezra 4",
+    },
+    {
       chapter_code: "NEH01",
       reference: "Nehemiah 1",
     },
