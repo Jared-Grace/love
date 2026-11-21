@@ -156,15 +156,33 @@
  },
  {
   "ref": "22",
-  "query": "Rembrandt Parable of the Labourers in the Vineyard Hermitage"
+  "query": "Rembrandt Parable of the Labourers in the Vineyard Hermitage",
+  "title": "Rembrandt - Parable of the Laborers in the Vineyard.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1980,
+  "height": 1459,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Parable_of_the_Laborers_in_the_Vineyard.jpg"
  },
  {
   "ref": "23",
-  "query": "Vincent van Gogh Almond Blossoms Van Gogh Museum"
+  "query": "Vincent van Gogh Almond Blossoms Van Gogh Museum",
+  "title": "Amandelbloesem - s0176V1962 - Van Gogh Museum.jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 7149,
+  "height": 5649,
+  "page": "https://commons.wikimedia.org/wiki/File:Amandelbloesem_-_s0176V1962_-_Van_Gogh_Museum.jpg"
  },
  {
   "ref": "24",
-  "query": "Vincent van Gogh Olive Trees with the Alpilles in the Background MoMA"
+  "query": "Vincent van Gogh Olive Trees with the Alpilles in the Background MoMA",
+  "title": "Van Gogh The Olive Trees..jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 4500,
+  "height": 3580,
+  "page": "https://commons.wikimedia.org/wiki/File:Van_Gogh_The_Olive_Trees..jpg"
  },
  {
   "ref": "25",
