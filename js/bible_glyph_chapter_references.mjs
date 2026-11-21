@@ -1701,6 +1701,10 @@ export function bible_glyph_chapter_references() {
       reference: "Nehemiah 11",
     },
     {
+      chapter_code: "NEH12",
+      reference: "Nehemiah 12",
+    },
+    {
       chapter_code: "EST01",
       reference: "Esther 1",
     },
