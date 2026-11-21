@@ -46,11 +46,18 @@
  },
  {
   "ref": "7",
-  "query": "Govert Flinck Isaac Blessing Jacob"
+  "query": "Govert Flinck Isaac Blessing Jacob",
+  "title": "Isaak zegent Jakob Rijksmuseum SK-A-110.jpeg",
+  "artist": "Govert Flinck",
+  "licence": "Public domain",
+  "width": 5722,
+  "height": 4720,
+  "page": "https://commons.wikimedia.org/wiki/File:Isaak_zegent_Jakob_Rijksmuseum_SK-A-110.jpeg"
  },
  {
   "ref": "8",
-  "query": "Rembrandt The Holy Family Hermitage"
+  "query": "Rembrandt The Holy Family Hermitage",
+  "title": null
  },
  {
   "ref": "9",
