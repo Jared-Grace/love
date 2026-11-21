@@ -12,20 +12,22 @@
  {
   "ref": "3,4,5",
   "query": "Annibale Carracci The Resurrection of Christ Louvre",
-  "artist": "Piero della Francesca",
+  "artist": "Annibale Carracci",
   "licence": "Public domain",
-  "width": 1130,
-  "height": 1200,
-  "page": "https://commons.wikimedia.org/wiki/File:Piero_della_Francesca_-_Resurrection_-_WGA17609.jpg"
+  "width": 1241,
+  "height": 1700,
+  "page": "https://commons.wikimedia.org/wiki/File:Annibale_Carracci,_Resurrezione,_Louvre.jpg",
+  "title": "Annibale Carracci, Resurrezione, Louvre.jpg"
  },
  {
   "ref": "6,7",
   "query": "Joseph Wright of Derby A Blacksmith's Shop Yale Center for British Art",
   "artist": "Joseph Wright of Derby",
   "licence": "Public domain",
-  "width": 1200,
-  "height": 1102,
-  "page": "https://commons.wikimedia.org/wiki/File:Joseph_Wright_of_Derby_(1734-1797)_-_An_Iron_Forge_-_T06670_-_Tate.jpg"
+  "width": 4688,
+  "height": 5975,
+  "page": "https://commons.wikimedia.org/wiki/File:Joseph_Wright_of_Derby_-_The_Blacksmith%27s_Shop_-_Google_Art_Project.jpg",
+  "title": "Joseph Wright of Derby - The Blacksmith's Shop - Google Art Project.jpg"
  },
  {
   "ref": "8,9",
@@ -40,20 +42,22 @@
  {
   "ref": "10,11",
   "query": "Rembrandt Simeon in the Temple Nationalmuseum Stockholm",
-  "artist": "Michelangelo",
+  "artist": "Rembrandt",
   "licence": "Public domain",
-  "width": 1754,
-  "height": 930,
-  "page": "https://commons.wikimedia.org/wiki/File:Sistine_Chapel_Daniel_beforandafter.jpg"
+  "width": 3479,
+  "height": 4092,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Simeon_in_the_Temple_DSC6899.jpg",
+  "title": "Rembrandt - Simeon in the Temple DSC6899.jpg"
  },
  {
   "ref": "12",
   "query": "Leonardo da Vinci Annunciation Uffizi",
-  "artist": "Fra Angelico",
+  "artist": "Leonardo da Vinci",
   "licence": "Public domain",
-  "width": 30000,
-  "height": 29605,
-  "page": "https://commons.wikimedia.org/wiki/File:La_Anunciaci%C3%B3n,_by_Fra_Angelico,_from_Prado_in_Google_Earth.jpg"
+  "width": 5822,
+  "height": 2699,
+  "page": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci,_Annunciation,_c1472,_Uffizi.jpg",
+  "title": "Leonardo da Vinci, Annunciation, c1472, Uffizi.jpg"
  },
  {
   "ref": "13",
@@ -98,11 +102,12 @@
  {
   "ref": "18,19",
   "query": "Josefa de Óbidos Agnus Dei Walters Art Museum",
-  "artist": "Francisco de Zurbarán",
+  "artist": "Josefa de Óbidos",
   "licence": "Public domain",
-  "width": 3977,
-  "height": 2675,
-  "page": "https://commons.wikimedia.org/wiki/File:Agnus_Dei_(The_Lamb_of_God),_by_Francisco_de_Zurbaran,_c._1635-1640_-_San_Diego_Museum_of_Art_-_DSC06627.JPG"
+  "width": 1799,
+  "height": 1238,
+  "page": "https://commons.wikimedia.org/wiki/File:Josefa_de_Ayala_-_The_Sacrificial_Lamb_-_Walters_371193.jpg",
+  "title": "Josefa de Ayala - The Sacrificial Lamb - Walters 371193.jpg"
  },
  {
   "ref": "20",
@@ -116,13 +121,13 @@
  },
  {
   "ref": "21",
-  "query": "Caravaggio Supper at Emmaus National Gallery London",
-  "title": "1602-3 Caravaggio,Supper at Emmaus National Gallery, London.jpg",
-  "artist": "Caravaggio",
+  "query": "Peter Paul Rubens The Resurrection of Christ Antwerp Cathedral",
+  "artist": "Peter Paul Rubens",
   "licence": "Public domain",
-  "width": 5946,
-  "height": 4226,
-  "page": "https://commons.wikimedia.org/wiki/File:1602-3_Caravaggio,Supper_at_Emmaus_National_Gallery,_London.jpg"
+  "width": 2164,
+  "height": 2994,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Resurrection_of_Christ_triptych_(reverse_side).jpg",
+  "title": "Peter Paul Rubens - Resurrection of Christ triptych (reverse side).jpg"
  },
  {
   "ref": "22",
