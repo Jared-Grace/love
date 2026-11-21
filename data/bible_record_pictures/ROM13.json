@@ -31,13 +31,13 @@
  },
  {
   "ref": "4",
-  "query": "Gerard David The Judgement of Cambyses",
-  "title": "Gerard David - The Judgment of Cambyses, panel 2 - The shedding of the corrupt judge SisamnesFXD.jpg",
+  "query": "Gerard David The Judgment of Cambyses panel 1 The arrest of the corrupt judge Sisamnes",
+  "title": "Gerard David - The Judgment of Cambyses, panel 1 - The capture of the corrupt judge SisamnesFXD.jpg",
   "artist": "Gerard David",
   "licence": "Public domain",
-  "width": 5122,
-  "height": 5960,
-  "page": "https://commons.wikimedia.org/wiki/File:Gerard_David_-_The_Judgment_of_Cambyses,_panel_2_-_The_shedding_of_the_corrupt_judge_SisamnesFXD.jpg"
+  "width": 4982,
+  "height": 5766,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerard_David_-_The_Judgment_of_Cambyses,_panel_1_-_The_capture_of_the_corrupt_judge_SisamnesFXD.jpg"
  },
  {
   "ref": "5",
@@ -61,13 +61,17 @@
  },
  {
   "ref": "7",
-  "query": "Titian The Tribute Money Dresden",
-  "title": null
+  "query": "Tizian Der Zinsgroschen Gemäldegalerie Alte Meister Dresden",
+  "title": "The Tribute Money (1516) - Tizian (Gemäldegalerie Alte Meister, Dresden).jpg",
+  "artist": "Titian",
+  "licence": "Public domain",
+  "width": 1016,
+  "height": 1335,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Tribute_Money_(1516)_-_Tizian_(Gem%C3%A4ldegalerie_Alte_Meister,_Dresden).jpg"
  },
  {
   "ref": "8",
-  "query": "Rembrandt The Holy Family with a Curtain Kassel",
-  "title": null
+  "query": "Rembrandt Die Heilige Familie mit dem Vorhang Kassel"
  },
  {
   "ref": "9",
@@ -91,18 +95,36 @@
  },
  {
   "ref": "11",
-  "query": "Peter von Cornelius The Wise and Foolish Virgins"
+  "query": "Peter von Cornelius The Wise and Foolish Virgins",
+  "title": "Peter von Cornelius - The Parable of Wise and Foolish Virgins (unfinished) - Google Art Project.jpg",
+  "artist": "Peter von Cornelius",
+  "licence": "Public domain",
+  "width": 3466,
+  "height": 2573,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_von_Cornelius_-_The_Parable_of_Wise_and_Foolish_Virgins_(unfinished)_-_Google_Art_Project.jpg"
  },
  {
   "ref": "12",
-  "query": "Claude Monet Impression Sunrise"
+  "query": "Claude Monet Impression Sunrise",
+  "title": "Monet - Impression, Sunrise.jpg",
+  "artist": "Claude Monet",
+  "licence": "Public domain",
+  "width": 5773,
+  "height": 4478,
+  "page": "https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg"
  },
  {
   "ref": "13",
-  "query": "Jan Steen Beware of Luxury Kunsthistorisches"
+  "query": "Jan Steen Beware of Luxury Kunsthistorisches",
+  "title": "Jan Steen, Kunsthistorisches Museum Wien, Gemäldegalerie - \"Die verkehrte Welt\" - GG 791 - Kunsthistorisches Museum.jpg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 3000,
+  "height": 2147,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Steen,_Kunsthistorisches_Museum_Wien,_Gem%C3%A4ldegalerie_-_%22Die_verkehrte_Welt%22_-_GG_791_-_Kunsthistorisches_Museum.jpg"
  },
  {
   "ref": "14",
-  "query": "El Greco Saint Martin and the Beggar National Gallery of Art"
+  "query": "El Greco Saint Martin and the Beggar 1597 Widener Collection"
  }
 ]
