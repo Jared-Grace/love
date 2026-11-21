@@ -1,7 +1,13 @@
 [
  {
   "ref": "1",
-  "query": "Jan Steen The Dissolute Household"
+  "query": "Jan Steen The Dissolute Household",
+  "title": "Steen Dissolute Household.jpg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 1250,
+  "height": 1100,
+  "page": "https://commons.wikimedia.org/wiki/File:Steen_Dissolute_Household.jpg"
  },
  {
   "ref": "2",
@@ -135,7 +141,13 @@
  },
  {
   "ref": "15",
-  "query": "Pieter Bruegel the Elder The Land of Cockaigne Alte Pinakothek"
+  "query": "Pieter Bruegel the Elder The Land of Cockaigne Alte Pinakothek",
+  "title": "Pieter Bruegel d. Ä. 037-color.jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 3200,
+  "height": 2081,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_d._%C3%84._037-color.jpg"
  },
  {
   "ref": "16",
