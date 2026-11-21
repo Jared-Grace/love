@@ -41,39 +41,93 @@
  },
  {
   "ref": "6",
-  "query": "Diego Velázquez Christ in the House of Martha and Mary National Gallery"
+  "query": "Diego Velázquez Christ in the House of Martha and Mary National Gallery",
+  "title": "Cristo en casa de Marta y María, by Diego Velázquez.jpg",
+  "artist": "Diego Velázquez",
+  "licence": "Public domain",
+  "width": 7290,
+  "height": 4226,
+  "page": "https://commons.wikimedia.org/wiki/File:Cristo_en_casa_de_Marta_y_Mar%C3%ADa,_by_Diego_Vel%C3%A1zquez.jpg"
  },
  {
   "ref": "7",
-  "query": "Rembrandt Saint Peter in Prison Israel Museum"
+  "query": "Rembrandt Saint Peter in Prison Israel Museum",
+  "title": "Rembrandt van Rijn - St. Peter in Prison (The Apostle Peter Kneeling) - Google Art Project.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3664,
+  "height": 4501,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_St._Peter_in_Prison_(The_Apostle_Peter_Kneeling)_-_Google_Art_Project.jpg"
  },
  {
   "ref": "8",
-  "query": "Rembrandt Portrait of Jan Six"
+  "query": "Rembrandt Portrait of Jan Six",
+  "title": "Rembrandt van Rijn - Portrait of Jan Six - 1968.252 - Cleveland Museum of Art.tif",
+  "artist": "Rembrandt van Rijn",
+  "licence": "CC0",
+  "width": 3942,
+  "height": 5384,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Portrait_of_Jan_Six_-_1968.252_-_Cleveland_Museum_of_Art.tif"
  },
  {
   "ref": "9",
-  "query": "Pieter Bruegel the Elder The Harvesters Metropolitan Museum"
+  "query": "Pieter Bruegel the Elder The Harvesters Metropolitan Museum",
+  "title": "Pieter Bruegel the Elder- The Harvesters - Google Art Project.jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 30000,
+  "height": 21851,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg"
  },
  {
   "ref": "10",
-  "query": "Frans Hals Family Group in a Landscape National Gallery"
+  "query": "Frans Hals Family Group in a Landscape National Gallery",
+  "title": "Frans Hals 011.jpg",
+  "artist": "Frans Hals",
+  "licence": "Public domain",
+  "width": 2048,
+  "height": 1208,
+  "page": "https://commons.wikimedia.org/wiki/File:Frans_Hals_011.jpg"
  },
  {
   "ref": "11",
-  "query": "Pieter de Hooch Interior with Women beside a Linen Chest Rijksmuseum"
+  "query": "Pieter de Hooch Interior with Women beside a Linen Chest Rijksmuseum",
+  "title": "Pieter de Hooch - At the Linen Closet.jpg",
+  "artist": "Pieter de Hooch",
+  "licence": "Public domain",
+  "width": 2705,
+  "height": 2514,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_de_Hooch_-_At_the_Linen_Closet.jpg"
  },
  {
   "ref": "12",
-  "query": "Diego Velázquez Las Hilanderas Prado"
+  "query": "Diego Velázquez Las Hilanderas Prado",
+  "title": "Velázquez - La Fábula de Aracne o Las Hilanderas (Museo del Prado, 1657-58).jpg",
+  "artist": "Diego Velázquez",
+  "licence": "Public domain",
+  "width": 3051,
+  "height": 2349,
+  "page": "https://commons.wikimedia.org/wiki/File:Vel%C3%A1zquez_-_La_F%C3%A1bula_de_Aracne_o_Las_Hilanderas_(Museo_del_Prado,_1657-58).jpg"
  },
  {
   "ref": "13",
-  "query": "James McNeill Whistler Arrangement in Grey and Black No. 1"
+  "query": "James McNeill Whistler Arrangement in Grey and Black No. 1",
+  "title": "Whistlers Mother high res.jpg",
+  "artist": "James McNeill Whistler",
+  "licence": "Public domain",
+  "width": 5897,
+  "height": 5247,
+  "page": "https://commons.wikimedia.org/wiki/File:Whistlers_Mother_high_res.jpg"
  },
  {
   "ref": "14",
-  "query": "Bartholomeus van der Helst Banquet of the Amsterdam Civic Guard Rijksmuseum"
+  "query": "Bartholomeus van der Helst Banquet of the Amsterdam Civic Guard Rijksmuseum",
+  "title": "Bartholomeus van der Helst, Banquet of the Amsterdam Civic Guard in Celebration of the Peace of Münster.jpg",
+  "artist": "Bartholomeus van der Helst / Jan Vos",
+  "licence": "Public domain",
+  "width": 4025,
+  "height": 1705,
+  "page": "https://commons.wikimedia.org/wiki/File:Bartholomeus_van_der_Helst,_Banquet_of_the_Amsterdam_Civic_Guard_in_Celebration_of_the_Peace_of_M%C3%BCnster.jpg"
  },
  {
   "ref": "15",

@@ -25,7 +25,18 @@ export function app_learn_js_lesson_else_if() {
       box_one,
       context,
       app_learn_js_lesson_braces_run_else_if,
-      ["", "else if (b) { ... }", " runs when a is false and b is true"],
+      [
+        "",
+        "else if (b) { ... }",
+        " runs when ",
+        "a",
+        " is ",
+        "false",
+        " and ",
+        "b",
+        " is ",
+        "true",
+      ],
     );
     ("2026-10-12, at the human's asking: what the code writes out is explained back here, where it is first asked, the lesson before now walking through which sections run");
     app_learn_js_else_if_explain(root, context);
