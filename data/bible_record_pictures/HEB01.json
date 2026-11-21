@@ -1,14 +1,12 @@
 [
  {
   "ref": "1",
-  "query": "Rembrandt Old Woman Reading probably the Prophetess Anna Rijksmuseum",
+  "query": "Michelangelo The Prophet Zechariah Sistine Chapel",
   "artist": "Rembrandt",
   "licence": "Public domain",
   "width": 6338,
   "height": 7948,
-  "page": "https://commons.wikimedia.org/wiki/File:Oude_lezende_vrouw,_waarschijnlijk_de_profetes_Hanna_Rijksmuseum_SK-A-3066.jpeg",
-  "title": "Oude lezende vrouw, waarschijnlijk de profetes Hanna Rijksmuseum SK-A-3066.jpeg"
- },
+  "page": "https://commons.wikimedia.org/wiki/File:Oude_lezende_vrouw,_waarschijnlijk_de_profetes_Hanna_Rijksmuseum_SK-A-3066.jpeg" },
  {
   "ref": "2",
   "query": "Jan van Eyck God the Father Ghent Altarpiece",
@@ -101,14 +99,12 @@
  },
  {
   "ref": "11",
-  "query": "Caspar David Friedrich Abbey among Oak Trees",
+  "query": "Jacob van Ruisdael The Ruins of Egmond",
   "artist": "Caspar David Friedrich",
   "licence": "Public domain",
   "width": 2905,
   "height": 2000,
-  "page": "https://commons.wikimedia.org/wiki/File:CDFriedrich_Abtei_im_Eichwald.JPG",
-  "title": "CDFriedrich Abtei im Eichwald.JPG"
- },
+  "page": "https://commons.wikimedia.org/wiki/File:CDFriedrich_Abtei_im_Eichwald.JPG" },
  {
   "ref": "12",
   "query": "Ivan Aivazovsky Rainbow 1873 Tretyakov",

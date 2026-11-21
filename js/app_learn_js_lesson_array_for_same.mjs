@@ -54,7 +54,7 @@ export function app_learn_js_lesson_array_for_same() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "The same array?",
-    "let same = a.length === b.length;",
+    "a.length === b.length",
   );
   function relate(x) {
     return x;
