@@ -11,13 +11,13 @@
  },
  {
   "ref": "2",
-  "query": "Nicolas Poussin The Adoration of the Golden Calf National Gallery",
-  "title": "Andrea di Lione, copy after Nicholas Poussin - Adoration of the Golden Calf, 1626-29, K1876.jpg",
-  "artist": "Andrea di Lione after/or Nicolas Poussin",
+  "query": "Nicolas Poussin L'Adoration du veau d'or",
+  "title": "Le Veau d'Or - L'Adoration du Veau d'or - btv1b104884568.jpg",
+  "artist": "Baudet, Étienne (1638-1711). Graveur\nPoussin, Nicolas (1594-1665). Dessinateur\n\nMonier, Pierre (1641-1703). Graphiste",
   "licence": "Public domain",
-  "width": 6164,
-  "height": 4722,
-  "page": "https://commons.wikimedia.org/wiki/File:Andrea_di_Lione,_copy_after_Nicholas_Poussin_-_Adoration_of_the_Golden_Calf,_1626-29,_K1876.jpg"
+  "width": 9248,
+  "height": 7440,
+  "page": "https://commons.wikimedia.org/wiki/File:Le_Veau_d%27Or_-_L%27Adoration_du_Veau_d%27or_-_btv1b104884568.jpg"
  },
  {
   "ref": "3",
@@ -81,8 +81,7 @@
  },
  {
   "ref": "11",
-  "query": "Carl Bloch Christ Healing the Sick at Bethesda",
-  "title": null
+  "query": "Carl Heinrich Bloch Christ Healing at the Pool of Bethesda"
  },
  {
   "ref": "12,13",
@@ -96,13 +95,7 @@
  },
  {
   "ref": "14",
-  "query": "Eustache Le Sueur Saint Paul Preaching at Ephesus Louvre",
-  "title": "Géricault - La Prédication de saint Paul à Ephèse, 03030001608.jpg",
-  "artist": "Théodore Géricault",
-  "licence": "Public domain",
-  "width": 972,
-  "height": 1200,
-  "page": "https://commons.wikimedia.org/wiki/File:G%C3%A9ricault_-_La_Pr%C3%A9dication_de_saint_Paul_%C3%A0_Eph%C3%A8se,_03030001608.jpg"
+  "query": "Eustache Le Sueur La Prédication de saint Paul à Éphèse"
  },
  {
   "ref": "15",
@@ -126,22 +119,52 @@
  },
  {
   "ref": "17",
-  "query": "Jean-Baptiste Greuze La Lecture de la Bible"
+  "query": "Jean-Baptiste Greuze La Lecture de la Bible",
+  "title": "Jean-Baptiste Greuze - Reading the bible.jpg",
+  "artist": "Jean-Baptiste Greuze",
+  "licence": "Public domain",
+  "width": 1810,
+  "height": 1425,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Greuze_-_Reading_the_bible.jpg"
  },
  {
   "ref": "18",
-  "query": "Frederic Edwin Church Cotopaxi Detroit"
+  "query": "Frederic Edwin Church Cotopaxi Detroit",
+  "title": "Frederic Edwin Church - Cotopaxi - 76.89 - Detroit Institute of Arts.jpg",
+  "artist": "Frederic Edwin Church",
+  "licence": "Public domain",
+  "width": 2000,
+  "height": 1300,
+  "page": "https://commons.wikimedia.org/wiki/File:Frederic_Edwin_Church_-_Cotopaxi_-_76.89_-_Detroit_Institute_of_Arts.jpg"
  },
  {
   "ref": "19",
-  "query": "Fra Angelico Filippo Lippi Adoration of the Magi National Gallery of Art"
+  "query": "Fra Angelico Filippo Lippi Adoration of the Magi National Gallery of Art",
+  "title": "Fra Angelico and Fra Filippo Lippi - The Adoration of the Magi - Google Art Project.jpg",
+  "artist": "Fra Angelico",
+  "licence": "Public domain",
+  "width": 11480,
+  "height": 11480,
+  "page": "https://commons.wikimedia.org/wiki/File:Fra_Angelico_and_Fra_Filippo_Lippi_-_The_Adoration_of_the_Magi_-_Google_Art_Project.jpg"
  },
  {
   "ref": "20",
-  "query": "Rembrandt The Baptism of the Eunuch Catharijneconvent"
+  "query": "Rembrandt The Baptism of the Eunuch Catharijneconvent",
+  "title": "Rembrandt, The Baptism of the Eunuch, 1626, Museum Catharijneconvent, Utrecht.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 3401,
+  "height": 4495,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt,_The_Baptism_of_the_Eunuch,_1626,_Museum_Catharijneconvent,_Utrecht.jpg"
  },
  {
   "ref": "21",
-  "query": "Enrique Simonet Flevit super illam"
+  "query": "Enrique Simonet Flevit super illam",
+  "title": "Enrique Simonet - Flevit super illam - 1892.jpg",
+  "artist": "Enrique Simonet",
+  "licence": "Public domain",
+  "width": 4816,
+  "height": 2571,
+  "page": "https://commons.wikimedia.org/wiki/File:Enrique_Simonet_-_Flevit_super_illam_-_1892.jpg"
  }
 ]
