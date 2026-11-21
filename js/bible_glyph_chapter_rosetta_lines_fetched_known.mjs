@@ -4043,6 +4043,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_zec01();
   }
+  if (equal(chapter_code, "ZEC02")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_zec02.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_zec02();
+  }
   if (equal(chapter_code, "ZEC03")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_zec03.mjs"
