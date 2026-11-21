@@ -1,8 +1,7 @@
 [
  {
   "ref": "1",
-  "query": "Giotto Envy Scrovegni Chapel",
-  "title": "Padova - Cappella degli Scrovegni - 2023-09-27 22-56-26 006.jpg",
+  "query": "Jan Steen Argument over a Card Game Gemäldegalerie Berlin",
   "artist": "Giotto",
   "licence": "Public domain",
   "width": 3840,
@@ -11,8 +10,7 @@
  },
  {
   "ref": "2,3",
-  "query": "Jean-François Millet The First Steps",
-  "title": "Millet by Romain Rolland - The First Steps.jpg",
+  "query": "Pieter de Hooch Woman Nursing an Infant with a Child and a Dog San Francisco",
   "artist": "Jean-François Millet",
   "licence": "Public domain",
   "width": 1285,
@@ -21,8 +19,7 @@
  },
  {
   "ref": "4,5",
-  "query": "Caspar David Friedrich Vision of the Christian Church",
-  "title": "Caspar David Friedrich - Vision der christlichen Kirche (1920).jpg",
+  "query": "Jan van Eyck Madonna in the Church Berlin",
   "artist": "Caspar David Friedrich",
   "licence": "Public domain",
   "width": 1355,
@@ -31,8 +28,7 @@
  },
  {
   "ref": "6",
-  "query": "Rembrandt Jacob's Dream at Bethel",
-  "title": null
+  "query": "Ferdinand Bol Jacob's Dream Dresden"
  },
  {
   "ref": "7,8",
@@ -46,8 +42,7 @@
  },
  {
   "ref": "9",
-  "query": "Jan van Eyck Ghent Altarpiece Pilgrims and Hermits",
-  "title": "Michiel Coxie (1499-1592) Kopie van twee luiken (heremieten en pelgrims 1557-58) van de Aanbidding van het Lam Gods door Hubert en Jan van Eyck - MSK Gent 3-02-2020.JPG",
+  "query": "Ghent Altarpiece Knights of Christ panel van Eyck",
   "artist": "Michiel Coxie",
   "licence": "Public domain",
   "width": 3552,
@@ -66,8 +61,7 @@
  },
  {
   "ref": "11",
-  "query": "Caspar David Friedrich The Stages of Life",
-  "title": "Wikipedianische KulTour-Alte Nationalgalerie-CDF-Unendliche Landschaften-WUS03263.jpg",
+  "query": "Jan van Scorel Twelve Members of the Haarlem Brotherhood of Jerusalem Pilgrims",
   "artist": "Caspar David Friedrich",
   "licence": "Public domain",
   "width": 5723,
@@ -76,8 +70,7 @@
  },
  {
   "ref": "12",
-  "query": "Fra Angelico Saint Stephen Preaching Niccoline Chapel",
-  "title": null
+  "query": "Frans Hals Regentesses of the Old Men's Almshouse Haarlem"
  },
  {
   "ref": "13,14",
@@ -91,8 +84,7 @@
  },
  {
   "ref": "15",
-  "query": "Rembrandt Saint Paul in Prison Stuttgart",
-  "title": "1627 Rembrandt Paulus im Gefängnis Staatsgalerie Stuttgart anagoria.JPG",
+  "query": "Rembrandt Saint Paul at his Writing Desk Germanisches Nationalmuseum",
   "artist": "Rembrandt",
   "licence": "Public domain",
   "width": 3168,
@@ -101,8 +93,7 @@
  },
  {
   "ref": "16",
-  "query": "Fra Angelico Saint Lawrence Distributing Alms Niccoline",
-  "title": null
+  "query": "Diego Velázquez Juan de Pareja Metropolitan Museum"
  },
  {
   "ref": "17",
@@ -116,13 +107,11 @@
  },
  {
   "ref": "18",
-  "query": "Jean-François Millet The Woodsawyers",
-  "title": null
+  "query": "Jean-Siméon Chardin The Kitchen Maid National Gallery of Art"
  },
  {
   "ref": "19",
-  "query": "Gerard van Honthorst Saint Sebastian National Gallery",
-  "title": "Gerrit van honthorst 1623 national gallery.jpg",
+  "query": "Rembrandt Joseph Accused by Potiphar's Wife National Gallery of Art",
   "artist": "Gerard van Honthorst",
   "licence": "Public domain",
   "width": 1200,
@@ -131,8 +120,7 @@
  },
  {
   "ref": "20",
-  "query": "Caravaggio The Crucifixion of Saint Peter",
-  "title": "Crucifixion of Saint Peter-Caravaggio (c.1600).jpg",
+  "query": "Matthias Grünewald The Mocking of Christ Alte Pinakothek",
   "artist": "Caravaggio",
   "licence": "Public domain",
   "width": 8180,
@@ -141,13 +129,11 @@
  },
  {
   "ref": "21,22",
-  "query": "El Greco Christ Carrying the Cross Thyssen",
-  "title": null
+  "query": "Simone Martini The Road to Calvary Louvre"
  },
  {
   "ref": "23",
-  "query": "Caravaggio The Taking of Christ Dublin",
-  "title": "Caravaggio, cattura di cristo, 1602, dalla casa gesuitica di leeson street a dublino 03 mani.jpg",
+  "query": "The Taking of Christ Caravaggio c.1602",
   "artist": "Caravaggio",
   "licence": "Public domain",
   "width": 4836,
@@ -156,8 +142,7 @@
  },
  {
   "ref": "24",
-  "query": "Peter Paul Rubens The Elevation of the Cross Antwerp",
-  "title": "Peter Paul Rubens - The Raising of the Cross (Antwerp Cathedral).jpg",
+  "query": "Rembrandt The Raising of the Cross Alte Pinakothek",
   "artist": "Peter Paul Rubens",
   "licence": "Public domain",
   "width": 2886,
