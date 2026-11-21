@@ -1197,6 +1197,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Kings 5",
     },
     {
+      chapter_code: "1KI06",
+      reference: "1 Kings 6",
+    },
+    {
       chapter_code: "1KI08",
       reference: "1 Kings 8",
     },
