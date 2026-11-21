@@ -1810,6 +1810,27 @@ def is_safe_lslocks(words):
     return True
 
 
+PSTREE_FLAG_RE = re.compile(r"^-[aAcglnpsStuUZ]+$")
+
+
+def is_safe_pstree(words):
+    """True iff `words` is `pstree` with only display flags and at most one
+    process number. It prints the same process table `ps` (already allowed)
+    reads from /proc, drawn as a tree, and has no flag that writes or runs
+    anything. Flags taking a value (-C, -H, -N) stay unread."""
+    if words[:1] != ["pstree"]:
+        return False
+    pids = 0
+    for word in words[1:]:
+        if PSTREE_FLAG_RE.fullmatch(word):
+            continue
+        if word.isdigit() and word.isascii():
+            pids += 1
+            continue
+        return False
+    return pids <= 1
+
+
 def is_safe_fuser_list(words):
     """True iff `words` is `fuser` naming files, with only `-v`/`-u`/`-a`.
     That form only prints which processes have the files open. `-k` kills
@@ -3004,6 +3025,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_kill_probe(words)
             and not is_safe_crontab_list(words)
             and not is_safe_lslocks(words)
+            and not is_safe_pstree(words)
             and not is_safe_loginctl_list(words)
             and not is_safe_systemctl_list(words)
             and not is_safe_gzip_stdout(words)
