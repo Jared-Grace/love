@@ -2465,6 +2465,10 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 45",
     },
     {
+      chapter_code: "ISA46",
+      reference: "Isaiah 46",
+    },
+    {
       chapter_code: "ISA49",
       reference: "Isaiah 49",
     },
