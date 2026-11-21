@@ -1161,6 +1161,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Samuel 20",
     },
     {
+      chapter_code: "2SA21",
+      reference: "2 Samuel 21",
+    },
+    {
       chapter_code: "1KI01",
       reference: "1 Kings 1",
     },
