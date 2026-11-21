@@ -56,7 +56,9 @@
   "licence": "Public domain",
   "width": 3612,
   "height": 4326,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_031.jpg" },
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_031.jpg",
+  "title": null
+ },
  {
   "ref": "10",
   "query": "Gerard ter Borch Woman Writing a Letter Mauritshuis",
