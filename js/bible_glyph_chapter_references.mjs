@@ -2469,6 +2469,10 @@ export function bible_glyph_chapter_references() {
       reference: "Daniel 5",
     },
     {
+      chapter_code: "DAN06",
+      reference: "Daniel 6",
+    },
+    {
       chapter_code: "DAN09",
       reference: "Daniel 9",
     },
