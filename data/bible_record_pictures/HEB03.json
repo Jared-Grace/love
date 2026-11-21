@@ -71,7 +71,8 @@
  },
  {
   "ref": "10",
-  "query": "Guido Reni Moses with the Tablets of the Law Borghese"
+  "query": "Guido Reni Moses with the Tablets of the Law Borghese",
+  "title": null
  },
  {
   "ref": "11",
@@ -106,11 +107,12 @@
  {
   "ref": "14",
   "query": "Thomas Cole The Oxbow Metropolitan Museum",
-  "artist": "Frederic Edwin Church",
-  "licence": "Public domain",
-  "width": 6400,
-  "height": 3503,
-  "page": "https://commons.wikimedia.org/wiki/File:Church_Heart_of_the_Andes.jpg"
+  "artist": "Thomas Cole",
+  "licence": "CC0",
+  "width": 3033,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:View_from_Mount_Holyoke,_Northampton,_Massachusetts,_after_a_Thunderstorm%E2%80%94The_Oxbow_MET_DP-12550-005.jpg",
+  "title": "View from Mount Holyoke, Northampton, Massachusetts, after a Thunderstorm—The Oxbow MET DP-12550-005.jpg"
  },
  {
   "ref": "15",
