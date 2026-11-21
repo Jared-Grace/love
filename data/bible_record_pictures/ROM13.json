@@ -1,14 +1,76 @@
-[{"ref":"1","query":"Hyacinthe Rigaud Louis XIV Louvre"},
-{"ref":"2","query":"Botticelli Punishment of the Rebels Sistine Chapel"},
-{"ref":"3","query":"Ambrogio Lorenzetti Allegory of Good Government"},
-{"ref":"4","query":"Gerard David The Judgement of Cambyses"},
-{"ref":"5","query":"Hans Holbein the Younger Sir Thomas More Frick"},
-{"ref":"6","query":"Masaccio The Tribute Money Brancacci Chapel"},
-{"ref":"7","query":"Titian The Tribute Money Dresden"},
-{"ref":"8","query":"Rembrandt The Holy Family with a Curtain Kassel"},
-{"ref":"9","query":"Lucas Cranach the Elder Zehn Gebote Tafel"},
-{"ref":"10","query":"Vincent van Gogh The Good Samaritan after Delacroix Kröller-Müller"},
-{"ref":"11","query":"Peter von Cornelius The Wise and Foolish Virgins"},
-{"ref":"12","query":"Claude Monet Impression Sunrise"},
-{"ref":"13","query":"Jan Steen Beware of Luxury Kunsthistorisches"},
-{"ref":"14","query":"El Greco Saint Martin and the Beggar National Gallery of Art"}]
+[
+ {
+  "ref": "1",
+  "query": "Hyacinthe Rigaud Louis XIV Louvre",
+  "title": "Portrait of Louis XIV of France in Coronation Robes (by Hyacinthe Rigaud) - Louvre Museum.jpg",
+  "artist": "Hyacinthe Rigaud",
+  "licence": "Public domain",
+  "width": 2883,
+  "height": 4018,
+  "page": "https://commons.wikimedia.org/wiki/File:Portrait_of_Louis_XIV_of_France_in_Coronation_Robes_(by_Hyacinthe_Rigaud)_-_Louvre_Museum.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Botticelli Punishment of the Rebels Sistine Chapel",
+  "title": "Sandro Botticelli 031.jpg",
+  "artist": "Sandro Botticelli",
+  "licence": "Public domain",
+  "width": 2048,
+  "height": 1269,
+  "page": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_031.jpg"
+ },
+ {
+  "ref": "3",
+  "query": "Ambrogio Lorenzetti Allegory of Good Government",
+  "title": "Ambrogio Lorenzetti - Allegory of Good Government - Google Art Project.jpg",
+  "artist": "Ambrogio Lorenzetti",
+  "licence": "Public domain",
+  "width": 4673,
+  "height": 2527,
+  "page": "https://commons.wikimedia.org/wiki/File:Ambrogio_Lorenzetti_-_Allegory_of_Good_Government_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "4",
+  "query": "Gerard David The Judgement of Cambyses"
+ },
+ {
+  "ref": "5",
+  "query": "Hans Holbein the Younger Sir Thomas More Frick"
+ },
+ {
+  "ref": "6",
+  "query": "Masaccio The Tribute Money Brancacci Chapel"
+ },
+ {
+  "ref": "7",
+  "query": "Titian The Tribute Money Dresden"
+ },
+ {
+  "ref": "8",
+  "query": "Rembrandt The Holy Family with a Curtain Kassel"
+ },
+ {
+  "ref": "9",
+  "query": "Lucas Cranach the Elder Zehn Gebote Tafel"
+ },
+ {
+  "ref": "10",
+  "query": "Vincent van Gogh The Good Samaritan after Delacroix Kröller-Müller"
+ },
+ {
+  "ref": "11",
+  "query": "Peter von Cornelius The Wise and Foolish Virgins"
+ },
+ {
+  "ref": "12",
+  "query": "Claude Monet Impression Sunrise"
+ },
+ {
+  "ref": "13",
+  "query": "Jan Steen Beware of Luxury Kunsthistorisches"
+ },
+ {
+  "ref": "14",
+  "query": "El Greco Saint Martin and the Beggar National Gallery of Art"
+ }
+]
