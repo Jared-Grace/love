@@ -31,8 +31,13 @@
  },
  {
   "ref": "4",
-  "query": "Rembrandt Two Old Men Disputing Peter and Paul Melbourne Google Art Project",
-  "title": null
+  "query": "Jean-Baptiste Greuze La Lecture de la Bible",
+  "title": "Jean-Baptiste Greuze - Reading the bible.jpg",
+  "artist": "Jean-Baptiste Greuze",
+  "licence": "Public domain",
+  "width": 1810,
+  "height": 1425,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Greuze_-_Reading_the_bible.jpg"
  },
  {
   "ref": "5,6",
@@ -156,8 +161,13 @@
  },
  {
   "ref": "21",
-  "query": "Duccio di Buoninsegna The Healing of the Man Born Blind Google Art Project",
-  "title": null
+  "query": "El Greco Christ Healing the Blind Dresden",
+  "title": "Christ Healing the Blind MET DT407.jpg",
+  "artist": "El Greco",
+  "licence": "CC0",
+  "width": 3807,
+  "height": 3114,
+  "page": "https://commons.wikimedia.org/wiki/File:Christ_Healing_the_Blind_MET_DT407.jpg"
  },
  {
   "ref": "22",
@@ -201,8 +211,13 @@
  },
  {
   "ref": "27",
-  "query": "Lorenzo Lotto L'elemosina di sant'Antonino Venezia",
-  "title": null
+  "query": "Lorenzo Lotto The Alms of Saint Anthony",
+  "title": "Lotto, elemosina di sant'antonino 02.jpg",
+  "artist": "Lorenzo Lotto",
+  "licence": "Public domain",
+  "width": 2445,
+  "height": 2885,
+  "page": "https://commons.wikimedia.org/wiki/File:Lotto,_elemosina_di_sant%27antonino_02.jpg"
  },
  {
   "ref": "28",
@@ -216,7 +231,13 @@
  },
  {
   "ref": "29",
-  "query": "Rembrandt Head of Christ Detroit Institute of Arts"
+  "query": "Rembrandt Head of Christ Detroit Institute of Arts",
+  "title": "Rembrandt Harmensz van Rijn - Christ - 30.370 - Detroit Institute of Arts.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1668,
+  "height": 2000,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz_van_Rijn_-_Christ_-_30.370_-_Detroit_Institute_of_Arts.jpg"
  },
  {
   "ref": "30",

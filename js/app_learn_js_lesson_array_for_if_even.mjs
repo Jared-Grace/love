@@ -24,7 +24,9 @@ export function app_learn_js_lesson_array_for_if_even() {
       [
         "",
         "n % 2 === 0",
-        " is true only when ",
+        " is ",
+        "true",
+        " only when ",
         "n",
         " is even, so a ",
         "for",
