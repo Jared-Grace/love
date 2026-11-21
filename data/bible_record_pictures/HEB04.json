@@ -11,18 +11,17 @@
  },
  {
   "ref": "2",
-  "query": "L'Automne Nicolas Poussin Musée du Louvre Peintures INV 7306",
-  "artist": "Pesne, Jean (1623-1700). Graveur\n\nPoussin, Nicolas (1594-1665). Peintre du modèle",
+  "query": "Jan Brueghel the Elder The Sermon on the Mount Getty",
+  "artist": "Jan Brueghel the Elder",
   "licence": "Public domain",
-  "width": 7530,
-  "height": 5722,
-  "page": "https://commons.wikimedia.org/wiki/File:AUTUMNUS_-_(estampe)_(2e_%C3%A9tat,_avec_l%27adresse_de_St%C3%A9phane_Gantrel)_-_N._Poussin_invent._et_sculp._;_Joan._Pesne_Sculp._-_btv1b531286686.jpg",
-  "title": null
+  "width": 4366,
+  "height": 3205,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Brueghel_the_Elder_-_The_Sermon_on_the_Mount_-_Google_Art_Project.jpg",
+  "title": "Jan Brueghel the Elder - The Sermon on the Mount - Google Art Project.jpg"
  },
  {
   "ref": "3",
-  "query": "Le Printemps Nicolas Poussin Musée du Louvre Peintures INV 7303",
-  "title": null
+  "query": "Thomas Moran The Grand Canyon of the Yellowstone Smithsonian"
  },
  {
   "ref": "4",
@@ -96,13 +95,12 @@
  },
  {
   "ref": "12",
-  "query": "Rembrandt The Apostle Paul National Gallery of Art Washington",
+  "query": "Vincent van Gogh Still Life with Bible Van Gogh Museum",
   "artist": "Rembrandt",
   "licence": "Public domain",
   "width": 4000,
   "height": 4765,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Zelfportret_als_de_apostel_Paulus_-_Google_Art_Project.jpg",
-  "title": "Rembrandt Harmensz. van Rijn - Zelfportret als de apostel Paulus - Google Art Project.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Zelfportret_als_de_apostel_Paulus_-_Google_Art_Project.jpg"
  },
  {
   "ref": "13",
