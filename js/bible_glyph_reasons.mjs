@@ -189,6 +189,8 @@ export function bible_glyph_reasons() {
     dust: "Fog and dust: dust, dry loose ground. You are dust, and to dust you shall return (Genesis 3:19).",
     bread: "Bread: bread, food.",
     castle: "A castle: a royal court, a stronghold, high and safe.",
+    japanese_castle:
+      "A tall fortified keep: a citadel, the strong tower of a palace. The plain castle already means the kingdom, so the keep stands for the fortified building itself.",
     sword: "A sword: the sword, killing, war.",
     man_beard: "A man with a beard: a man, a husband.",
     lots: "Dice: casting lots, and the share the lot gives.",
