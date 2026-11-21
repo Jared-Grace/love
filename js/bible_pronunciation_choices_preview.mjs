@@ -12,8 +12,10 @@ import { html_text_set } from "./html_text_set.mjs";
 import { html_sound_url_play } from "./html_sound_url_play.mjs";
 import { html_button } from "./html_button.mjs";
 export async function bible_pronunciation_choices_preview() {
-  "The screen for deciding by ear how each name still in question is said, on the sandbox app at hash bible_pronunciation_choices: the same verse is played with each saying of the name, and tapping Choose keeps that answer on this machine at once.";
-  "A is the saying the recordings already use and B is the one the reading holds now; which side is which is said out loud, because the answer decides whether recordings are made again, and that cannot be weighed without knowing which side they are already on.";
+  ("The screen for deciding by ear how each name still in question is said, on the sandbox app at hash ",
+    fn_name("bible_pronunciation_choices"),
+    ": the same verse is played with each saying of the name, and tapping Choose keeps that answer on this machine at once.");
+  ("A is the saying the recordings already use and B is the one the reading holds now; which side is which is said out loud, because the answer decides whether recordings are made again, and that cannot be weighed without knowing which side they are already on.");
   arguments_assert(arguments, 0);
   let root = html_body_div();
   html_style_assign(root, {
