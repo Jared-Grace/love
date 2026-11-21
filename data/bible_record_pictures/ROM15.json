@@ -31,13 +31,13 @@
  },
  {
   "ref": "4",
-  "query": "Jean-Baptiste Greuze La Lecture de la Bible",
-  "title": "Jean-Baptiste Greuze - Reading the bible.jpg",
-  "artist": "Jean-Baptiste Greuze",
+  "query": "Rembrandt Two Old Men Disputing Melbourne",
+  "title": "Rembrandt van Rijn 185.jpg",
+  "artist": "Rembrandt",
   "licence": "Public domain",
-  "width": 1810,
-  "height": 1425,
-  "page": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Greuze_-_Reading_the_bible.jpg"
+  "width": 962,
+  "height": 1237,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_185.jpg"
  },
  {
   "ref": "5,6",
@@ -111,23 +111,18 @@
  },
  {
   "ref": "14",
-  "query": "Rembrandt The Syndics of the Drapers' Guild Rijksmuseum",
-  "title": "De waardijns van het Amsterdamse lakenbereidersgilde, bekend als ‘De staalmeesters’ Rijksmuseum SK-C-6.jpeg",
-  "artist": "Rembrandt",
+  "query": "Ferdinand Bol De regenten van het Leprozenhuis Rijksmuseum",
+  "title": "De regenten van het Leprozenhuis, objectnr SA 3029.tif",
+  "artist": "Ferdinand Bol (schilder)",
   "licence": "Public domain",
-  "width": 10888,
-  "height": 7168,
-  "page": "https://commons.wikimedia.org/wiki/File:De_waardijns_van_het_Amsterdamse_lakenbereidersgilde,_bekend_als_%E2%80%98De_staalmeesters%E2%80%99_Rijksmuseum_SK-C-6.jpeg"
+  "width": 3508,
+  "height": 2962,
+  "page": "https://commons.wikimedia.org/wiki/File:De_regenten_van_het_Leprozenhuis,_objectnr_SA_3029.tif"
  },
  {
   "ref": "15,16",
-  "query": "Valentin de Boulogne Saint Paul Writing his Epistles Houston",
-  "title": "Valentin de Boulogne - Saint Paul Writing His Epistles - BF.1991.4 - Museum of Fine Arts.jpg",
-  "artist": "Valentin de Boulogne",
-  "licence": "Public domain",
-  "width": 3200,
-  "height": 2354,
-  "page": "https://commons.wikimedia.org/wiki/File:Valentin_de_Boulogne_-_Saint_Paul_Writing_His_Epistles_-_BF.1991.4_-_Museum_of_Fine_Arts.jpg"
+  "query": "Rembrandt Saint Paul at his Writing Desk Nuremberg",
+  "title": null
  },
  {
   "ref": "17",

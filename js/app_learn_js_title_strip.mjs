@@ -7,7 +7,6 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_learn_js_column_cap } from "./app_learn_js_column_cap.mjs";
-import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_learn_js_home } from "./app_learn_js_home.mjs";
@@ -60,8 +59,8 @@ export function app_learn_js_title_strip(
   });
   ("capped to the same column as everything under it, so the home button starts where the cards start. Without it the strip is as wide as the window and the button sits out in the margin beside the reading column rather than at the head of it");
   app_learn_js_column_cap(strip);
-  let value = app_shared_spaced_gap();
-  html_style_margin_y(strip, value);
+  ("the small gap above and below, not the full one, so less of a phone's first screen goes to the bar and the lesson starts higher, at the human's request");
+  html_style_margin_y(strip, column_gap);
   async function go_home() {
     await app_shared_screen_set(context, app_learn_js_home);
   }
