@@ -122,11 +122,13 @@
  {
   "ref": "21",
   "query": "Dieric Bouts The Resurrection Norton Simon",
-  "artist": "Peter Paul Rubens",
+  "artist": "Daderot",
   "licence": "Public domain",
-  "width": 2164,
-  "height": 2994,
-  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Resurrection_of_Christ_triptych_(reverse_side).jpg" },
+  "width": 3335,
+  "height": 4060,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Resurrection_by_Dieric_Bouts,_c._1455,_distemper_on_linen_-_Norton_Simon_Museum_-_Pasadena,_CA_-_DSC03266.jpg",
+  "title": "The Resurrection by Dieric Bouts, c. 1455, distemper on linen - Norton Simon Museum - Pasadena, CA - DSC03266.jpg"
+ },
  {
   "ref": "22",
   "query": "Fra Angelico Deposition Santa Trinita Altarpiece Google Art Project",
@@ -134,7 +136,8 @@
   "licence": "Public domain",
   "width": 850,
   "height": 1353,
-  "page": "https://commons.wikimedia.org/wiki/File:FraAngelicoLev%C3%A9telAkeresztr%C5%91lMuseo_di_San_Marco,_FlorenceKJ.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:FraAngelicoLev%C3%A9telAkeresztr%C5%91lMuseo_di_San_Marco,_FlorenceKJ.jpg",
+  "title": null
  },
  {
   "ref": "23",
