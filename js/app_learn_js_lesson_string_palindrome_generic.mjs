@@ -13,29 +13,29 @@ export function app_learn_js_lesson_string_palindrome_generic(
   condition,
 ) {
   arguments_assert(arguments, 3);
-  ("a lesson asking whether a word is the same backwards: let same = true; for (let i = 0; condition; i++) { if (a[i] !== a[a.length - 1 - i]) { same = false; } } console.log(same);. Shared by the two palindrome lessons of 2026-11-21, every letter (i < a.length) and the first half (i < a.length / 2), which differ only in the loop's condition and the screen above. above draws the lesson's own boxes and hands back the box the example, level, goes in.");
+  ("a lesson asking whether a word is the same backwards: let same = true; for (let i = 0; condition; i++) { if (w[i] !== w[w.length - 1 - i]) { same = false; } } console.log(same);. Shared by the two palindrome lessons of 2026-11-21, every letter (i < w.length) and the first half (i < w.length / 2), which differ only in the loop's condition and the screen above. above draws the lesson's own boxes and hands back the box the example, level, goes in.");
   ("A set is six questions: three palindromes and three words that are not, shuffled.");
   ("The wrong programs are a[a.length - i] (one past the mirror, so a palindrome says false), let same = false; (always false), same = true; inside the if (never changes, always true), and === in place of !== (false at any pair that matches).");
   function program_with(word, start, other, test_op, set_to) {
-    "let a = word; let same = start; for (let i = 0; condition; i++) { if (a[i] test_op other) { same = set_to; } } console.log(same);";
+    "let w = word; let same = start; for (let i = 0; condition; i++) { if (w[i] test_op other) { same = set_to; } } console.log(same);";
     let head = [
-      "let a = " + json_to(word) + ";",
+      "let w = " + json_to(word) + ";",
       "let same = " + start + ";",
       "for (let i = 0; " + condition + "; i++) {",
-      "  if (a[i] " + test_op + " " + other + ") {",
+      "  if (w[i] " + test_op + " " + other + ") {",
       "    same = " + set_to + ";",
     ];
     let lines = list_concat(head, ["  }", "}", "console.log(same);"]);
     let code = list_join_newline(lines);
     return code;
   }
-  let mirror = "a[a.length - 1 - i]";
+  let mirror = "w[w.length - 1 - i]";
   function program_of(word2) {
     let code2 = program_with(word2, "true", mirror, "!==", "false");
     return code2;
   }
   function wrong_programs_of(word3) {
-    let v = program_with(word3, "true", "a[a.length - i]", "!==", "false");
+    let v = program_with(word3, "true", "w[w.length - i]", "!==", "false");
     let v2 = program_with(word3, "false", mirror, "!==", "false");
     let v3 = program_with(word3, "true", mirror, "!==", "true");
     let v4 = program_with(word3, "true", mirror, "===", "false");

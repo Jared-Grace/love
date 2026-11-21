@@ -102,7 +102,7 @@ export function app_learn_js_lesson_string_mirror_index() {
     ]);
     let colors = app_learn_js_braces_colors();
     let count = 7;
-    function indices_line(text, total) {
+    function indices_line(parent, text, total) {
       let parts = [text];
       for (let k = 0; less_than(k, total); k++) {
         if (less_than(0, k)) {
@@ -110,9 +110,9 @@ export function app_learn_js_lesson_string_mirror_index() {
         }
         list_add(parts, "" + k);
       }
-      app_learn_js_div_cycle_code(box_three, parts);
+      app_learn_js_div_cycle_code(parent, parts);
     }
-    indices_line("Then its indices are: ", count);
+    indices_line(box_three, "Then its indices are: ", count);
     let first_color = list_get(colors, 0);
     let second_color = list_get(colors, 1);
     let middle_color = list_get(colors, 3);
@@ -177,22 +177,23 @@ export function app_learn_js_lesson_string_mirror_index() {
       "If we have an index, the other index in the pair is called its ",
       "mirror",
     );
-    app_learn_js_div_cycle_code(box_three, [
+    let box_four = app_learn_js_container_light_blue(root);
+    app_learn_js_div_cycle_code(box_four, [
       "If we have the first number ",
       "i",
-      ", how do we calculate its mirror?",
+      ", how do we solve what its pair is?",
     ]);
-    app_learn_js_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_four, [
       "Here is the formula: ",
       "a.length - 1 - i",
     ]);
-    app_learn_js_div_cycle_code(box_three, [
+    app_learn_js_div_cycle_code(box_four, [
       "Suppose we have the string ",
       '"loves"',
     ]);
-    indices_line("Then its indices are ", 5);
-    app_learn_js_div_cycle_code(box_three, ["", '"o"', " is at index ", "1"]);
-    app_learn_js_div_cycle_code(box_three, [
+    indices_line(box_four, "Then its indices are ", 5);
+    app_learn_js_div_cycle_code(box_four, ["", '"o"', " is at index ", "1"]);
+    app_learn_js_div_cycle_code(box_four, [
       "The pair for ",
       '"o"',
       " is ",
@@ -208,7 +209,7 @@ export function app_learn_js_lesson_string_mirror_index() {
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
     let value = eval_console_log_lines(code3);
-    app_learn_js_code_lines_writes_out(box_three, lines2, value);
+    app_learn_js_code_lines_writes_out(box_four, lines2, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "The mirror index",

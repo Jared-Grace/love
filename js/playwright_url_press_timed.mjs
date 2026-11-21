@@ -12,18 +12,22 @@ export async function playwright_url_press_timed(url, text, count) {
   let presses = [];
   async function on_page(page) {
     let requests = [];
-    let loads = 0;
     function on_request(request) {
       let body = request.postData() || "";
       list_add(requests, request.url() + " " + body.slice(0, 120));
     }
-    function on_navigated(frame) {
-      if (frame === page.mainFrame()) {
-        loads = loads + 1;
+    page.on("request", on_request);
+    ("A page that loaded itself again has lost what was put on it before the press. The browser's own word for a navigation is no use here: it says the same for a page rewriting its address in place, which is most presses in these apps, and it said a reload for every one of them on the first run.");
+    async function reloaded_is() {
+      try {
+        let gone = await page.evaluate(
+          "typeof window.__changed === 'undefined'",
+        );
+        return gone;
+      } catch (e) {
+        return true;
       }
     }
-    page.on("request", on_request);
-    page.on("framenavigated", on_navigated);
     await page.goto(url);
     await page.waitForLoadState("networkidle");
     await page.waitForTimeout(2000);
@@ -35,7 +39,6 @@ export async function playwright_url_press_timed(url, text, count) {
     while (index < count) {
       await page.evaluate(watch);
       requests.length = 0;
-      let loads_before = loads;
       let pressed = await page.evaluate(
         press + "(" + JSON.stringify(text) + ")",
       );
@@ -50,7 +53,7 @@ export async function playwright_url_press_timed(url, text, count) {
       let reloaded = false;
       while (true) {
         await page.waitForTimeout(100);
-        reloaded = loads > loads_before;
+        reloaded = await reloaded_is();
         if (reloaded) {
           await page.waitForLoadState("networkidle");
           break;

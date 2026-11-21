@@ -7,7 +7,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_string_palindrome_generic } from "./app_learn_js_lesson_string_palindrome_generic.mjs";
 export function app_learn_js_lesson_string_palindrome_half() {
   arguments_assert(arguments, 0);
-  ('a palindrome checked over the first half only: let a = "level"; let same = true; for (let i = 0; i < a.length / 2; i++) { if (a[i] !== a[a.length - 1 - i]) { same = false; } } console.log(same); writes out true');
+  ('a palindrome checked over the first half only: let w = "level"; let same = true; for (let i = 0; i < w.length / 2; i++) { if (w[i] !== w[w.length - 1 - i]) { same = false; } } console.log(same); writes out true');
   ("2026-11-21, approved by the human: right after the palindrome over every letter. The loop over every letter compares each pair twice, once from each end, so stopping at the middle gives the same answer in half the runs. Stopping at the first pair that differs (break) was proposed too and skipped by the human, since it changes nothing a student sees written out.");
   ("The writing is a first draft by Claude 2026-11-21.");
   function above(root, context) {
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_string_palindrome_half() {
       app_learn_js_lesson_string_palindrome,
       [
         "",
-        "a[i] !== a[a.length - 1 - i]",
+        "w[i] !== w[w.length - 1 - i]",
         " compared each letter with its mirror, over every letter",
       ],
     );
@@ -39,19 +39,19 @@ export function app_learn_js_lesson_string_palindrome_half() {
     ]);
     app_learn_js_div_cycle_code(box_two, [
       "So the loop can stop at the middle: ",
-      "i < a.length / 2",
+      "i < w.length / 2",
       " checks each pair once and gives the same answer:",
     ]);
     return box_two;
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Only half",
-    "i < a.length / 2",
+    "i < w.length / 2",
   );
   let lesson = app_learn_js_lesson_string_palindrome_generic(
     name_id,
     above,
-    "i < a.length / 2",
+    "i < w.length / 2",
   );
   return lesson;
 }
