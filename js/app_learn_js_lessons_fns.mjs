@@ -348,6 +348,8 @@ import { app_learn_js_lesson_for_count_if } from "./app_learn_js_lesson_for_coun
 import { app_learn_js_lesson_for_total_if } from "./app_learn_js_lesson_for_total_if.mjs";
 import { app_learn_js_lesson_for_if_even } from "./app_learn_js_lesson_for_if_even.mjs";
 import { app_learn_js_lesson_for_if_else } from "./app_learn_js_lesson_for_if_else.mjs";
+import { app_learn_js_lesson_for_fizz_buzz_ifs } from "./app_learn_js_lesson_for_fizz_buzz_ifs.mjs";
+import { app_learn_js_lesson_for_fizz_buzz } from "./app_learn_js_lesson_for_fizz_buzz.mjs";
 import { app_learn_js_lesson_array_first } from "./app_learn_js_lesson_array_first.mjs";
 import { app_learn_js_lesson_array_second } from "./app_learn_js_lesson_array_second.mjs";
 import { app_learn_js_lesson_array_any } from "./app_learn_js_lesson_array_any.mjs";
@@ -404,6 +406,9 @@ import { app_learn_js_lesson_array_for_flag } from "./app_learn_js_lesson_array_
 import { app_learn_js_lesson_array_for_flag_false } from "./app_learn_js_lesson_array_for_flag_false.mjs";
 import { app_learn_js_lesson_array_for_if_third } from "./app_learn_js_lesson_array_for_if_third.mjs";
 import { app_learn_js_lesson_array_for_found } from "./app_learn_js_lesson_array_for_found.mjs";
+import { app_learn_js_lesson_array_for_same } from "./app_learn_js_lesson_array_for_same.mjs";
+import { app_learn_js_lesson_array_for_same_plus_one } from "./app_learn_js_lesson_array_for_same_plus_one.mjs";
+import { app_learn_js_lesson_array_for_same_double } from "./app_learn_js_lesson_array_for_same_double.mjs";
 import { app_learn_js_lesson_array_includes } from "./app_learn_js_lesson_array_includes.mjs";
 import { app_learn_js_lesson_array_for_at } from "./app_learn_js_lesson_array_for_at.mjs";
 import { app_learn_js_lesson_array_index_of_found } from "./app_learn_js_lesson_array_index_of_found.mjs";
@@ -414,6 +419,9 @@ import { app_learn_js_lesson_array_index_of_first } from "./app_learn_js_lesson_
 import { app_learn_js_lesson_array_for_break } from "./app_learn_js_lesson_array_for_break.mjs";
 import { app_learn_js_lesson_array_for_count } from "./app_learn_js_lesson_array_for_count.mjs";
 import { app_learn_js_lesson_array_for_total } from "./app_learn_js_lesson_array_for_total.mjs";
+import { app_learn_js_lesson_array_for_total_each } from "./app_learn_js_lesson_array_for_total_each.mjs";
+import { app_learn_js_lesson_array_for_push_total } from "./app_learn_js_lesson_array_for_push_total.mjs";
+import { app_learn_js_lesson_array_for_set_total } from "./app_learn_js_lesson_array_for_set_total.mjs";
 import { app_learn_js_lesson_array_for_biggest } from "./app_learn_js_lesson_array_for_biggest.mjs";
 import { app_learn_js_lesson_array_for_smallest } from "./app_learn_js_lesson_array_for_smallest.mjs";
 import { app_learn_js_lesson_array_for_small_at } from "./app_learn_js_lesson_array_for_small_at.mjs";
@@ -438,9 +446,13 @@ import { app_learn_js_lesson_string_includes_e } from "./app_learn_js_lesson_str
 import { app_learn_js_lesson_string_copy } from "./app_learn_js_lesson_string_copy.mjs";
 import { app_learn_js_lesson_string_double } from "./app_learn_js_lesson_string_double.mjs";
 import { app_learn_js_lesson_string_reverse } from "./app_learn_js_lesson_string_reverse.mjs";
+import { app_learn_js_lesson_string_mirror_index } from "./app_learn_js_lesson_string_mirror_index.mjs";
+import { app_learn_js_lesson_string_palindrome } from "./app_learn_js_lesson_string_palindrome.mjs";
+import { app_learn_js_lesson_string_palindrome_half } from "./app_learn_js_lesson_string_palindrome_half.mjs";
 import { app_learn_js_lesson_array_for_includes_e } from "./app_learn_js_lesson_array_for_includes_e.mjs";
 import { app_learn_js_lesson_array_for_count_e } from "./app_learn_js_lesson_array_for_count_e.mjs";
 import { app_learn_js_lesson_array_for_push_if_e } from "./app_learn_js_lesson_array_for_push_if_e.mjs";
+import { app_learn_js_lesson_array_for_push_if_not } from "./app_learn_js_lesson_array_for_push_if_not.mjs";
 import { app_learn_js_lesson_array_log } from "./app_learn_js_lesson_array_log.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
 import { app_learn_js_lesson_if_take_away_nine } from "./app_learn_js_lesson_if_take_away_nine.mjs";
@@ -836,6 +848,8 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_for_total_if,
     app_learn_js_lesson_for_if_even,
     app_learn_js_lesson_for_if_else,
+    app_learn_js_lesson_for_fizz_buzz_ifs,
+    app_learn_js_lesson_for_fizz_buzz,
     app_learn_js_lesson_array_first,
     app_learn_js_lesson_array_second,
     app_learn_js_lesson_array_any,
@@ -892,6 +906,9 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_flag_false,
     app_learn_js_lesson_array_for_if_third,
     app_learn_js_lesson_array_for_found,
+    app_learn_js_lesson_array_for_same,
+    app_learn_js_lesson_array_for_same_plus_one,
+    app_learn_js_lesson_array_for_same_double,
     app_learn_js_lesson_array_includes,
     app_learn_js_lesson_array_for_at,
     app_learn_js_lesson_array_index_of_found,
@@ -902,6 +919,9 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_break,
     app_learn_js_lesson_array_for_count,
     app_learn_js_lesson_array_for_total,
+    app_learn_js_lesson_array_for_total_each,
+    app_learn_js_lesson_array_for_push_total,
+    app_learn_js_lesson_array_for_set_total,
     app_learn_js_lesson_array_for_biggest,
     app_learn_js_lesson_array_for_smallest,
     app_learn_js_lesson_array_for_small_at,
@@ -926,9 +946,13 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_string_copy,
     app_learn_js_lesson_string_double,
     app_learn_js_lesson_string_reverse,
+    app_learn_js_lesson_string_mirror_index,
+    app_learn_js_lesson_string_palindrome,
+    app_learn_js_lesson_string_palindrome_half,
     app_learn_js_lesson_array_for_includes_e,
     app_learn_js_lesson_array_for_count_e,
     app_learn_js_lesson_array_for_push_if_e,
+    app_learn_js_lesson_array_for_push_if_not,
     app_learn_js_lesson_array_log,
     app_learn_js_lesson_array_for_luhn_double,
     app_learn_js_lesson_if_take_away_nine,

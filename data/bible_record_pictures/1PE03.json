@@ -2,15 +2,22 @@
  {
   "ref": "1,2",
   "query": "Pieter de Hooch A Woman Peeling Apples Wallace Collection",
-  "artist": "Johannes Vermeer",
+  "artist": "Pieter de Hooch",
   "licence": "Public domain",
-  "width": 4814,
-  "height": 5537,
-  "page": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Het_melkmeisje_-_rijksmuseum_-_001.jpg"
+  "width": 1100,
+  "height": 1345,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_de_Hooch_-_Woman_Peeling_Apples_-_WGA11704.jpg",
+  "title": "Pieter de Hooch - Woman Peeling Apples - WGA11704.jpg"
  },
  {
   "ref": "3,4",
-  "query": "Johannes Vermeer Young Woman with a Water Pitcher Metropolitan Museum"
+  "query": "Johannes Vermeer Young Woman with a Water Pitcher Metropolitan Museum",
+  "title": "Jan Vermeer van Delft 019.jpg",
+  "artist": "Johannes Vermeer",
+  "licence": "Public domain",
+  "width": 3299,
+  "height": 3722,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_019.jpg"
  },
  {
   "ref": "5,6",
@@ -25,20 +32,22 @@
  {
   "ref": "7",
   "query": "Frans Hals Marriage Portrait of Isaac Massa and Beatrix van der Laen",
-  "artist": "Jan van Eyck",
+  "artist": "After Frans Hals",
   "licence": "Public domain",
-  "width": 25311,
-  "height": 34005,
-  "page": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_Arnolfini_Portrait_-_Macrophotography.jpg"
+  "width": 1400,
+  "height": 1177,
+  "page": "https://commons.wikimedia.org/wiki/File:Frans_(I)_Hals_-_Huwelijksportret_van_Isaac_Abrahamsz_Massa_en_Beatrix_van_der_Laen_-_SA_4199_-_Amsterdam_Museum.jpg",
+  "title": "Frans (I) Hals - Huwelijksportret van Isaac Abrahamsz Massa en Beatrix van der Laen - SA 4199 - Amsterdam Museum.jpg"
  },
  {
   "ref": "8",
   "query": "Jan Steen Het Sint-Nicolaasfeest SK-A-385",
   "artist": "Jan Steen",
-  "licence": "No restrictions",
-  "width": 2424,
-  "height": 2848,
-  "page": "https://commons.wikimedia.org/wiki/File:The_art_of_the_Netherland_galleries_-_being_a_history_of_the_Dutch_school_of_painting_illuminated_and_demonstrated_by_critical_descriptions_of_the_great_paintings_in_the_many_galleries_(1908)_(14587224110).jpg"
+  "licence": "Public domain",
+  "width": 4610,
+  "height": 5382,
+  "page": "https://commons.wikimedia.org/wiki/File:Het_Sint-Nicolaasfeest_Rijksmuseum_SK-A-385.jpeg",
+  "title": "Het Sint-Nicolaasfeest Rijksmuseum SK-A-385.jpeg"
  },
  {
   "ref": "9",
@@ -47,7 +56,8 @@
   "licence": "Public domain",
   "width": 16208,
   "height": 12937,
-  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Meeting_of_Abraham_and_Melchizedek_-_WGA20435.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Meeting_of_Abraham_and_Melchizedek_-_WGA20435.jpg",
+  "title": null
  },
  {
   "ref": "10",
@@ -62,11 +72,12 @@
  {
   "ref": "11",
   "query": "Aelbert Cuyp River Landscape with Horseman and Peasants National Gallery London",
-  "artist": "Edward Hicks",
+  "artist": "Aelbert Cuyp",
   "licence": "Public domain",
-  "width": 7810,
-  "height": 5976,
-  "page": "https://commons.wikimedia.org/wiki/File:Edward_Hicks_-_Peaceable_Kingdom_-_Google_Art_Project.jpg"
+  "width": 6000,
+  "height": 3089,
+  "page": "https://commons.wikimedia.org/wiki/File:Aelbert_Cuyp_-_River_Landscape_with_Horseman_and_Peasants_(c._1858-60).jpg",
+  "title": "Aelbert Cuyp - River Landscape with Horseman and Peasants (c. 1858-60).jpg"
  },
  {
   "ref": "12",

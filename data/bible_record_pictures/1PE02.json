@@ -31,7 +31,13 @@
  },
  {
   "ref": "6",
-  "query": "Ferdinand Bol Jacob's Dream Dresden"
+  "query": "Ferdinand Bol Jacob's Dream Dresden",
+  "title": "Gemäldegalerie Alte Meister (Dresden) Galeriewerk Lücke 077.jpg",
+  "artist": "Ferdinand Bol",
+  "licence": "Public domain",
+  "width": 4587,
+  "height": 6067,
+  "page": "https://commons.wikimedia.org/wiki/File:Gem%C3%A4ldegalerie_Alte_Meister_(Dresden)_Galeriewerk_L%C3%BCcke_077.jpg"
  },
  {
   "ref": "7,8",
@@ -46,11 +52,12 @@
  {
   "ref": "9",
   "query": "Ghent Altarpiece Knights of Christ panel van Eyck",
-  "artist": "Michiel Coxie",
+  "artist": "Jan van Eyck",
   "licence": "Public domain",
-  "width": 3552,
-  "height": 3816,
-  "page": "https://commons.wikimedia.org/wiki/File:Michiel_Coxie_(1499-1592)_Kopie_van_twee_luiken_(heremieten_en_pelgrims_1557-58)_van_de_Aanbidding_van_het_Lam_Gods_door_Hubert_en_Jan_van_Eyck_-_MSK_Gent_3-02-2020.JPG"
+  "width": 1520,
+  "height": 4576,
+  "page": "https://commons.wikimedia.org/wiki/File:Ghent_Altarpiece_E_-_Knights_of_Christ.jpg",
+  "title": "Ghent Altarpiece E - Knights of Christ.jpg"
  },
  {
   "ref": "10",
@@ -65,15 +72,22 @@
  {
   "ref": "11",
   "query": "Jan van Scorel Twelve Members of the Haarlem Brotherhood of Jerusalem Pilgrims",
-  "artist": "Caspar David Friedrich",
+  "artist": "Jan van Scorel",
   "licence": "Public domain",
-  "width": 5723,
-  "height": 3815,
-  "page": "https://commons.wikimedia.org/wiki/File:Wikipedianische_KulTour-Alte_Nationalgalerie-CDF-Unendliche_Landschaften-WUS03263.jpg"
+  "width": 5472,
+  "height": 3648,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_van_scorel,_dodici_membri_della_confraternita_gerosolimitana_di_haarlem,_1527_ca._02.jpg",
+  "title": "Jan van scorel, dodici membri della confraternita gerosolimitana di haarlem, 1527 ca. 02.jpg"
  },
  {
   "ref": "12",
-  "query": "Frans Hals Regentesses of the Old Men's Almshouse Haarlem"
+  "query": "Frans Hals Regentesses of the Old Men's Almshouse Haarlem",
+  "title": "Kopie van de Regentessen van het Oudemannenhuis, naar Frans Hals, Edouard Manet, 1872.jpg",
+  "artist": "After Frans Hals / Édouard Manet",
+  "licence": "Public domain",
+  "width": 2000,
+  "height": 1381,
+  "page": "https://commons.wikimedia.org/wiki/File:Kopie_van_de_Regentessen_van_het_Oudemannenhuis,_naar_Frans_Hals,_Edouard_Manet,_1872.jpg"
  },
  {
   "ref": "13,14",
@@ -90,13 +104,20 @@
   "query": "Rembrandt Saint Paul at his Writing Desk Germanisches Nationalmuseum",
   "artist": "Rembrandt",
   "licence": "Public domain",
-  "width": 3168,
-  "height": 3727,
-  "page": "https://commons.wikimedia.org/wiki/File:1627_Rembrandt_Paulus_im_Gef%C3%A4ngnis_Staatsgalerie_Stuttgart_anagoria.JPG"
+  "width": 5200,
+  "height": 6660,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt,_Harmensz._van_Rijn_-_Apostel_Paulus_am_Schreibpult,_Gm392.tif",
+  "title": "Rembrandt, Harmensz. van Rijn - Apostel Paulus am Schreibpult, Gm392.tif"
  },
  {
   "ref": "16",
-  "query": "Diego Velázquez Juan de Pareja Metropolitan Museum"
+  "query": "Diego Velázquez Juan de Pareja Metropolitan Museum",
+  "title": "Diego Velázquez - Juan de Pareja (Metropolitan Museum of Art de Nueva York, 1649-50), detalle.jpg",
+  "artist": "Diego Velázquez",
+  "licence": "Public domain",
+  "width": 2353,
+  "height": 2863,
+  "page": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_-_Juan_de_Pareja_(Metropolitan_Museum_of_Art_de_Nueva_York,_1649-50),_detalle.jpg"
  },
  {
   "ref": "17",
@@ -110,55 +131,67 @@
  },
  {
   "ref": "18",
-  "query": "Jean-Siméon Chardin The Kitchen Maid National Gallery of Art"
+  "query": "Jean-Siméon Chardin The Kitchen Maid National Gallery of Art",
+  "title": "Jean Siméon Chardin, The Kitchen Maid, 1738, NGA 41650.jpg",
+  "artist": "Jean Siméon Chardin",
+  "licence": "CC0",
+  "width": 3198,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean_Sim%C3%A9on_Chardin,_The_Kitchen_Maid,_1738,_NGA_41650.jpg"
  },
  {
   "ref": "19",
   "query": "Rembrandt Joseph Accused by Potiphar's Wife National Gallery of Art",
-  "artist": "Gerard van Honthorst",
+  "artist": "Workshop of Rembrandt",
   "licence": "Public domain",
-  "width": 1200,
-  "height": 1045,
-  "page": "https://commons.wikimedia.org/wiki/File:Gerrit_van_honthorst_1623_national_gallery.jpg"
+  "width": 16063,
+  "height": 17480,
+  "page": "https://commons.wikimedia.org/wiki/File:Joseph_Accused_by_Potiphar%27s_Wife.jpg",
+  "title": "Joseph Accused by Potiphar's Wife.jpg"
  },
  {
   "ref": "20",
   "query": "Matthias Grünewald The Mocking of Christ Alte Pinakothek",
-  "artist": "Caravaggio",
+  "artist": "Matthias Grünewald",
   "licence": "Public domain",
-  "width": 8180,
-  "height": 10537,
-  "page": "https://commons.wikimedia.org/wiki/File:Crucifixion_of_Saint_Peter-Caravaggio_(c.1600).jpg"
+  "width": 2536,
+  "height": 3754,
+  "page": "https://commons.wikimedia.org/wiki/File:Mathis_Gothart_Gr%C3%BCnewald_062.jpg",
+  "title": "Mathis Gothart Grünewald 062.jpg"
  },
  {
   "ref": "21,22",
-  "query": "Simone Martini The Road to Calvary Louvre"
+  "query": "Simone Martini The Road to Calvary Louvre",
+  "title": null
  },
  {
   "ref": "23",
   "query": "The Taking of Christ Caravaggio c.1602",
   "artist": "Caravaggio",
   "licence": "Public domain",
-  "width": 4836,
-  "height": 3276,
-  "page": "https://commons.wikimedia.org/wiki/File:Caravaggio,_cattura_di_cristo,_1602,_dalla_casa_gesuitica_di_leeson_street_a_dublino_03_mani.jpg"
+  "width": 9893,
+  "height": 7666,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Taking_of_Christ-Caravaggio_(c.1602).jpg",
+  "title": "The Taking of Christ-Caravaggio (c.1602).jpg"
  },
  {
   "ref": "24",
   "query": "Rembrandt The Raising of the Cross Alte Pinakothek",
-  "artist": "Peter Paul Rubens",
+  "artist": "Rembrandt",
   "licence": "Public domain",
-  "width": 2886,
-  "height": 2112,
-  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Raising_of_the_Cross_(Antwerp_Cathedral).jpg"
+  "width": 2517,
+  "height": 3361,
+  "page": "https://commons.wikimedia.org/wiki/File:Raising_of_the_Cross,_by_Rembrandt_van_Rijn.jpg",
+  "title": "Raising of the Cross, by Rembrandt van Rijn.jpg"
  },
  {
   "ref": "25",
   "query": "Anton Mauve Changing Pasture Metropolitan Museum",
-  "artist": "Bernhard Plockhorst",
-  "licence": "Public domain",
-  "width": 3938,
-  "height": 5501,
-  "page": "https://commons.wikimedia.org/wiki/File:The_Lord_is_my_Good_Shepherd.jpg"
+  "artist": "Anton Mauve",
+  "licence": "CC0",
+  "width": 3811,
+  "height": 2330,
+  "page": "https://commons.wikimedia.org/wiki/File:Changing_Pasture_MET_DT1987.jpg",
+  "title": "Changing Pasture MET DT1987.jpg"
  }
 ]
