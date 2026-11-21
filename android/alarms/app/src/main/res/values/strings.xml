@@ -10,8 +10,8 @@
     <string name="exact_alarms_needed">Allow this app to set alarms on the screen that opened, then press again.</string>
     <string name="format_title">What the address must answer</string>
     <string name="format_intro">JSON like this (the calendar at christarose.org answers this):</string>
-    <string name="format_example">{\n  "ahead_minutes": [15, 5],\n  "meetings": [\n    {"start_utc": "2026-11-16T14:00:00.000Z",\n     "minutes": 25}\n  ]\n}</string>
-    <string name="format_fields">• start_utc: when a meeting starts, in UTC (the Z). The phone shows it in your own time.\n• ahead_minutes: how many minutes before each meeting to ring. Here: 15 minutes before, then 5 minutes before.\n• minutes: how long the meeting lasts.\nEach sync replaces all meeting alarms, so a cancelled meeting stops ringing.</string>
+    <string name="format_example">{\n  "meetings": [\n    {"start_utc": "2026-11-16T14:00:00.000Z",\n     "duration_minutes": 25,\n     "ahead_minutes": [15, 5]}\n  ]\n}</string>
+    <string name="format_fields">One entry per meeting:\n• start_utc: when it starts, in UTC (the Z). The phone shows it in your own time.\n• duration_minutes: how long it lasts.\n• ahead_minutes: how many minutes before it starts to ring, one alarm for each. Here: 15 minutes before, then 5 minutes before.\nEach sync replaces all meeting alarms, so a cancelled meeting stops ringing.</string>
     <string name="ring_label">Meeting at %1$s (in %2$d min)</string>
     <string name="ring_channel">Meeting alarms</string>
     <string name="ring_stop">Stop</string>

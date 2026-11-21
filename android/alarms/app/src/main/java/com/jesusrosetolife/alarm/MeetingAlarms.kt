@@ -49,17 +49,17 @@ fun meeting_alarms_fetch(url: String): String {
 
 /** Reads the alarms file (format: see the alarms_format string) into its warnings. */
 fun meeting_rings_from_json(json: String, now_ms: Long): Pair<List<MeetingRing>, Int> {
-    val root = JSONObject(json)
-    val ahead_json = root.getJSONArray("ahead_minutes")
-    val ahead = ArrayList<Int>()
-    for (index in 0 until ahead_json.length()) ahead.add(ahead_json.getInt(index))
-    val meetings_json = root.getJSONArray("meetings")
-    val starts = ArrayList<Long>()
+    val meetings_json = JSONObject(json).getJSONArray("meetings")
+    val meetings = ArrayList<MeetingWarnings>()
     for (index in 0 until meetings_json.length()) {
-        starts.add(utc_iso_to_ms(meetings_json.getJSONObject(index).getString("start_utc")))
+        val meeting = meetings_json.getJSONObject(index)
+        val ahead_json = meeting.getJSONArray("ahead_minutes")
+        val ahead = ArrayList<Int>()
+        for (ahead_index in 0 until ahead_json.length()) ahead.add(ahead_json.getInt(ahead_index))
+        meetings.add(MeetingWarnings(utc_iso_to_ms(meeting.getString("start_utc")), ahead))
     }
-    val upcoming = starts.count { it > now_ms }
-    return Pair(meeting_rings(starts, ahead, now_ms), upcoming)
+    val upcoming = meetings.count { it.start_ms > now_ms }
+    return Pair(meeting_rings(meetings, now_ms), upcoming)
 }
 
 fun ring_pending_intent(context: Context, index: Int, ring: MeetingRing?): PendingIntent {

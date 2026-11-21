@@ -18,16 +18,20 @@ fun utc_iso_to_ms(text: String): Long {
     return format.parse(text.substring(0, 19))!!.time
 }
 
+/** One meeting as the alarms file gives it: its start, and how many minutes before it to ring. */
+data class MeetingWarnings(val start_ms: Long, val ahead_minutes: List<Int>)
+
 /**
- * Pure: every warning for every meeting, soonest first. A warning whose time has already
- * passed is left out, so a sync just before a meeting still sets the warnings still to come.
+ * Pure: every warning for every meeting, soonest first. Each meeting carries its own
+ * warnings. A warning whose time has already passed is left out, so a sync just before
+ * a meeting still sets the warnings still to come.
  */
-fun meeting_rings(starts_ms: List<Long>, ahead_minutes: List<Int>, now_ms: Long): List<MeetingRing> {
+fun meeting_rings(meetings: List<MeetingWarnings>, now_ms: Long): List<MeetingRing> {
     val rings = ArrayList<MeetingRing>()
-    for (start in starts_ms) {
-        for (ahead in ahead_minutes) {
-            val at = start - ahead * 60_000L
-            if (at > now_ms) rings.add(MeetingRing(at, start, ahead))
+    for (meeting in meetings) {
+        for (ahead in meeting.ahead_minutes) {
+            val at = meeting.start_ms - ahead * 60_000L
+            if (at > now_ms) rings.add(MeetingRing(at, meeting.start_ms, ahead))
         }
     }
     rings.sortBy { it.ring_at_ms }

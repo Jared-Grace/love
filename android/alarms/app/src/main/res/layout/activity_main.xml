@@ -82,12 +82,24 @@
             android:layout_marginTop="24dp"
             android:text="@string/test_alarm_button" />
 
+        <TextView
+            android:id="@+id/test_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
         <Button
             android:id="@+id/update_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/update_button" />
+
+        <TextView
+            android:id="@+id/update_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBody1" />
 
     </LinearLayout>
 

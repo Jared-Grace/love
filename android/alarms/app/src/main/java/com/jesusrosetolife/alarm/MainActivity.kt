@@ -35,13 +35,15 @@ class MainActivity : AppCompatActivity() {
         val status = findViewById<TextView>(R.id.status_text)
         val url_box = findViewById<EditText>(R.id.url_box)
         url_box.setText(meeting_alarms_url(this))
+        val test_status = findViewById<TextView>(R.id.test_status_text)
+        val update_status = findViewById<TextView>(R.id.update_status_text)
         findViewById<Button>(R.id.test_alarm_button).setOnClickListener {
-            if (!exact_alarms_or_ask()) return@setOnClickListener
+            if (!exact_alarms_or_ask(test_status)) return@setOnClickListener
             alarm_ring_in_one_minute(this)
-            status.text = getString(R.string.test_alarm_result)
+            test_status.text = getString(R.string.test_alarm_result)
         }
         findViewById<Button>(R.id.sync_button).setOnClickListener {
-            if (!exact_alarms_or_ask()) return@setOnClickListener
+            if (!exact_alarms_or_ask(status)) return@setOnClickListener
             meeting_alarms_url_save(this, url_box.text.toString().trim())
             status.text = getString(R.string.sync_running)
             Thread {
@@ -51,17 +53,17 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.update_button).setOnClickListener {
             app_update_download_and_install(this)
-            status.text = getString(R.string.update_result)
+            update_status.text = getString(R.string.update_result)
         }
     }
 
-    /** True when exact alarms are allowed; otherwise opens the one settings screen that allows them. */
-    private fun exact_alarms_or_ask(): Boolean {
+    /** True when exact alarms are allowed; otherwise opens the one settings screen that allows them, and says so under the button pressed. */
+    private fun exact_alarms_or_ask(status: TextView): Boolean {
         if (meeting_alarms_exact_allowed(this)) return true
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             startActivity(Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM))
         }
-        findViewById<TextView>(R.id.status_text).text = getString(R.string.exact_alarms_needed)
+        status.text = getString(R.string.exact_alarms_needed)
         return false
     }
 
