@@ -1801,6 +1801,10 @@ export function bible_glyph_chapter_references() {
       reference: "Job 13",
     },
     {
+      chapter_code: "JOB14",
+      reference: "Job 14",
+    },
+    {
       chapter_code: "JOB19",
       reference: "Job 19",
     },
