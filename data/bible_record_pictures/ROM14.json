@@ -191,18 +191,42 @@
  },
  {
   "ref": "20",
-  "query": "Jean-Siméon Chardin Le Bénédicité Louvre"
+  "query": "Jean-Siméon Chardin Le Bénédicité Louvre",
+  "title": "Le Bénédicité de Jean Siméon Chardin (avec cadre).jpg",
+  "artist": "JackyM59",
+  "licence": "Public domain",
+  "width": 3838,
+  "height": 4539,
+  "page": "https://commons.wikimedia.org/wiki/File:Le_B%C3%A9n%C3%A9dicit%C3%A9_de_Jean_Sim%C3%A9on_Chardin_(avec_cadre).jpg"
  },
  {
   "ref": "21",
-  "query": "Frans Hals The Merry Drinker Rijksmuseum"
+  "query": "Frans Hals The Merry Drinker Rijksmuseum",
+  "title": "Amsterdam - Rijksmuseum 1885 - The Gallery of Honour (1st Floor) - The Merry Drinker 1628-30 by Frans Hals.jpg",
+  "artist": "Frans Hals",
+  "licence": "Public domain",
+  "width": 4000,
+  "height": 5400,
+  "page": "https://commons.wikimedia.org/wiki/File:Amsterdam_-_Rijksmuseum_1885_-_The_Gallery_of_Honour_(1st_Floor)_-_The_Merry_Drinker_1628-30_by_Frans_Hals.jpg"
  },
  {
   "ref": "22",
-  "query": "Antonello da Messina Saint Jerome in his Study National Gallery"
+  "query": "Antonello da Messina Saint Jerome in his Study National Gallery",
+  "title": "Antonello da Messina - St Jerome in his study - National Gallery London.jpg",
+  "artist": "Antonello da Messina",
+  "licence": "Public domain",
+  "width": 4731,
+  "height": 6000,
+  "page": "https://commons.wikimedia.org/wiki/File:Antonello_da_Messina_-_St_Jerome_in_his_study_-_National_Gallery_London.jpg"
  },
  {
   "ref": "23",
-  "query": "Rembrandt The Storm on the Sea of Galilee"
+  "query": "Rembrandt The Storm on the Sea of Galilee",
+  "title": "Rembrandt - Christ in the Storm on the Sea of Galilee.jpeg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 4274,
+  "height": 5315,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Christ_in_the_Storm_on_the_Sea_of_Galilee.jpeg"
  }
 ]
