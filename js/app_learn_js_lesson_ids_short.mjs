@@ -15,6 +15,7 @@ export function app_learn_js_lesson_ids_short() {
   ("2026-10-31, asked next: the seventeen step lessons of the branching stages taken out the same way. Their entries are kept for the same reason. They were released, but the built site's bundle had no if lesson at all when they were, so again only latest's one person can hold one.");
   ("2026-11-01, asked next: thirteen step lessons of the naming stage taken out the same way, the first, step_log_twice, kept as the lesson where stepping is taught. Their entries are kept for the same reason. Three of them - step_name_value, step_name_two and step_name_copy_single - were in the built site's bundle, so a learner there may hold one; a link naming one still resolves, because its entry stays.");
   ("2026-11-01, asked next: the six step lessons that came before their lesson taken out too; their entries are kept for the same reason.");
+  ("A fourth pass, 2026-11-21, at the human's asking: forty eight above the ceiling shortened, the twelve just added and thirty six older ones, none of them in the released list, so nobody held one. Each drops its group word - array_, object_, string_, while_ - or a word the rest already says, and property becomes prop. array_for_if_even keeps array, as array_if_even, because if_even alone would read as the for lesson's.");
   let short = {
     app_learn_js_lesson_symbols_digits_numbered: text_frozen("digits_numbered"),
     app_learn_js_lesson_symbols_digit_number: text_frozen("digits_in_number"),
@@ -540,28 +541,21 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_step_name_average_two: text_frozen("step_avg_two"),
     app_learn_js_lesson_step_name_grid_inside: text_frozen("step_grid_inside"),
     app_learn_js_lesson_step_name_average_three: text_frozen("step_avg_three"),
-    app_learn_js_lesson_array_last_index_solve: text_frozen(
-      "array_last_index_solve",
-    ),
+    app_learn_js_lesson_array_last_index_solve: text_frozen("last_index_solve"),
     app_learn_js_lesson_array_last_solve: text_frozen("array_last_solve"),
     app_learn_js_lesson_array_index_name: text_frozen("array_index_name"),
     app_learn_js_lesson_array_index_step: text_frozen("array_index_step"),
-    app_learn_js_lesson_array_index_steps_two: text_frozen(
-      "array_index_steps_two",
-    ),
+    app_learn_js_lesson_array_index_steps_two: text_frozen("index_steps_two"),
     app_learn_js_lesson_array_for: text_frozen("array_for"),
     app_learn_js_lesson_array_for_length: text_frozen("array_for_length"),
     app_learn_js_lesson_array_for_inner: text_frozen("array_for_inner"),
-    app_learn_js_lesson_array_for_start_two: text_frozen("array_for_start_two"),
-    app_learn_js_lesson_array_for_step_two: text_frozen("array_for_step_two"),
-    app_learn_js_lesson_array_for_step_two_odd: text_frozen(
-      "array_for_step_two_odd",
-    ),
-    app_learn_js_lesson_array_for_backwards: text_frozen("array_for_backwards"),
-    app_learn_js_lesson_array_for_backwards_step_two: text_frozen(
-      "array_backwards_step_two",
-    ),
-    app_learn_js_lesson_array_for_if_even: text_frozen("array_for_if_even"),
+    app_learn_js_lesson_array_for_start_two: text_frozen("for_start_two"),
+    app_learn_js_lesson_array_for_step_two: text_frozen("for_step_two"),
+    app_learn_js_lesson_array_for_step_two_odd: text_frozen("for_step_two_odd"),
+    app_learn_js_lesson_array_for_backwards: text_frozen("for_backwards"),
+    app_learn_js_lesson_array_for_backwards_step_two:
+      text_frozen("back_step_two"),
+    app_learn_js_lesson_array_for_if_even: text_frozen("array_if_even"),
     app_learn_js_lesson_array_for_if_odd: text_frozen("array_for_if_odd"),
     app_learn_js_lesson_array_for_find: text_frozen("array_for_find"),
     app_learn_js_lesson_array_for_flag: text_frozen("array_for_flag"),
@@ -572,9 +566,9 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_at: text_frozen("array_at"),
     app_learn_js_lesson_array_for_at_last: text_frozen("array_at_last"),
     app_learn_js_lesson_array_for_at_first: text_frozen("array_at_first"),
-    app_learn_js_lesson_array_index_of_found: text_frozen("array_index_found"),
+    app_learn_js_lesson_array_index_of_found: text_frozen("index_found"),
     app_learn_js_lesson_array_index_of: text_frozen("array_index_of"),
-    app_learn_js_lesson_array_index_of_first: text_frozen("array_index_first"),
+    app_learn_js_lesson_array_index_of_first: text_frozen("index_first"),
     app_learn_js_lesson_array_for_break: text_frozen("array_break"),
     app_learn_js_lesson_array_for_count: text_frozen("array_count"),
     app_learn_js_lesson_array_for_total: text_frozen("array_total"),
@@ -583,7 +577,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_string_for: text_frozen("string_for"),
     app_learn_js_lesson_string_index_e: text_frozen("string_index_e"),
     app_learn_js_lesson_string_found_e: text_frozen("string_found_e"),
-    app_learn_js_lesson_string_includes_e: text_frozen("string_includes_e"),
+    app_learn_js_lesson_string_includes_e: text_frozen("includes_e"),
     app_learn_js_lesson_array_for_includes_e: text_frozen("array_includes_e"),
     app_learn_js_lesson_array_for_count_e: text_frozen("array_count_e"),
     app_learn_js_lesson_statement_name_not_itself:
@@ -593,21 +587,17 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_for_pushed: text_frozen("array_for_pushed"),
     app_learn_js_lesson_array_empty: text_frozen("array_empty"),
     app_learn_js_lesson_array_empty_push: text_frozen("array_empty_push"),
-    app_learn_js_lesson_array_empty_for_push: text_frozen(
-      "array_empty_for_push",
-    ),
-    app_learn_js_lesson_array_empty_for_push_last: text_frozen(
-      "array_empty_for_push_last",
-    ),
-    app_learn_js_lesson_array_empty_for_push_step_two: text_frozen(
-      "array_empty_for_push_step_two",
-    ),
+    app_learn_js_lesson_array_empty_for_push: text_frozen("empty_push"),
+    app_learn_js_lesson_array_empty_for_push_last:
+      text_frozen("empty_push_last"),
+    app_learn_js_lesson_array_empty_for_push_step_two:
+      text_frozen("empty_push_two"),
     app_learn_js_lesson_array_pop: text_frozen("array_pop"),
     app_learn_js_lesson_array_pop_value: text_frozen("array_pop_value"),
     app_learn_js_lesson_array_pop_while: text_frozen("array_pop_while"),
     app_learn_js_lesson_array_unshift: text_frozen("array_unshift"),
     app_learn_js_lesson_array_shift: text_frozen("array_shift"),
-    app_learn_js_lesson_array_shift_value: text_frozen("array_shift_value"),
+    app_learn_js_lesson_array_shift_value: text_frozen("shift_value"),
     app_learn_js_lesson_array_reverse: text_frozen("array_reverse"),
     app_learn_js_lesson_array_set_name: text_frozen("array_set_name"),
     app_learn_js_lesson_array_for_double: text_frozen("array_for_double"),
@@ -615,62 +605,38 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_array_temp_keep: text_frozen("array_temp_keep"),
     app_learn_js_lesson_array_swap: text_frozen("array_swap"),
     app_learn_js_lesson_array_for_temp: text_frozen("array_for_temp"),
-    app_learn_js_lesson_array_for_second_last: text_frozen(
-      "array_for_second_last",
-    ),
+    app_learn_js_lesson_array_for_second_last: text_frozen("second_last"),
     app_learn_js_lesson_array_for_next: text_frozen("array_for_next"),
     app_learn_js_lesson_array_for_shift: text_frozen("array_for_shift"),
-    app_learn_js_lesson_array_index_past_end: text_frozen(
-      "array_index_past_end",
-    ),
-    app_learn_js_lesson_array_for_set_all: text_frozen("array_for_set_all"),
+    app_learn_js_lesson_array_index_past_end: text_frozen("index_past_end"),
+    app_learn_js_lesson_array_for_set_all: text_frozen("set_all"),
     app_learn_js_lesson_object_property: text_frozen("object_property"),
-    app_learn_js_lesson_array_for_push_if_e: text_frozen("array_for_push_if_e"),
-    app_learn_js_lesson_object_property_set: text_frozen("object_property_set"),
+    app_learn_js_lesson_array_for_push_if_e: text_frozen("push_if_e"),
+    app_learn_js_lesson_object_property_set: text_frozen("prop_set"),
     app_learn_js_lesson_array_log: text_frozen("array_log"),
-    app_learn_js_lesson_object_property_bracket: text_frozen(
-      "object_property_bracket",
-    ),
-    app_learn_js_lesson_object_property_key: text_frozen("object_property_key"),
-    app_learn_js_lesson_object_property_bracket_set: text_frozen(
-      "object_property_bracket_set",
-    ),
+    app_learn_js_lesson_object_property_bracket: text_frozen("prop_bracket"),
+    app_learn_js_lesson_object_property_key: text_frozen("prop_key"),
+    app_learn_js_lesson_object_property_bracket_set:
+      text_frozen("prop_bracket_set"),
     app_learn_js_lesson_object_log: text_frozen("object_log"),
     app_learn_js_lesson_array_for_swap: text_frozen("array_for_swap"),
-    app_learn_js_lesson_array_for_swap_if_bigger: text_frozen(
-      "array_for_swap_if_bigger",
-    ),
+    app_learn_js_lesson_array_for_swap_if_bigger: text_frozen("swap_if_bigger"),
     app_learn_js_lesson_array_swap_name: text_frozen("array_swap_name"),
-    app_learn_js_lesson_object_property_keys_for: text_frozen(
-      "object_property_keys_for",
-    ),
-    app_learn_js_lesson_object_property_increment: text_frozen(
-      "object_property_increment",
-    ),
-    app_learn_js_lesson_object_property_key_increment: text_frozen(
-      "object_property_key_increment",
-    ),
-    app_learn_js_lesson_object_count_words_for: text_frozen(
-      "object_count_words_for",
-    ),
-    app_learn_js_lesson_object_property_missing: text_frozen(
-      "object_property_missing",
-    ),
-    app_learn_js_lesson_object_count_words_empty: text_frozen(
-      "object_count_words_empty",
-    ),
-    app_learn_js_lesson_object_property_add: text_frozen("object_property_add"),
-    app_learn_js_lesson_object_properties_add: text_frozen(
-      "object_properties_add",
-    ),
-    app_learn_js_lesson_object_list_properties_for: text_frozen(
-      "object_list_properties_for",
-    ),
-    app_learn_js_lesson_object_list_people_for: text_frozen(
-      "object_list_people_for",
-    ),
+    app_learn_js_lesson_object_property_keys_for: text_frozen("prop_keys_for"),
+    app_learn_js_lesson_object_property_increment:
+      text_frozen("prop_increment"),
+    app_learn_js_lesson_object_property_key_increment:
+      text_frozen("prop_key_inc"),
+    app_learn_js_lesson_object_count_words_for: text_frozen("count_words"),
+    app_learn_js_lesson_object_property_missing: text_frozen("prop_missing"),
+    app_learn_js_lesson_object_count_words_empty: text_frozen("count_empty"),
+    app_learn_js_lesson_object_property_add: text_frozen("prop_add"),
+    app_learn_js_lesson_object_properties_add: text_frozen("props_add"),
+    app_learn_js_lesson_object_list_properties_for:
+      text_frozen("list_props_for"),
+    app_learn_js_lesson_object_list_people_for: text_frozen("list_people"),
     app_learn_js_lesson_object_has_own: text_frozen("object_has_own"),
-    app_learn_js_lesson_object_has_own_set: text_frozen("object_has_own_set"),
+    app_learn_js_lesson_object_has_own_set: text_frozen("has_own_set"),
     app_learn_js_lesson_array_for_smallest: text_frozen("array_smallest"),
     app_learn_js_lesson_array_for_average: text_frozen("array_average"),
     app_learn_js_lesson_array_for_total_over: text_frozen("array_total_over"),
@@ -704,7 +670,7 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_for_prime: text_frozen("for_prime"),
     app_learn_js_lesson_for_fibonacci: text_frozen("for_fibonacci"),
     app_learn_js_lesson_while_digits: text_frozen("while_digits"),
-    app_learn_js_lesson_while_digit_total: text_frozen("while_digit_total"),
+    app_learn_js_lesson_while_digit_total: text_frozen("digit_total"),
     app_learn_js_lesson_while_collatz: text_frozen("while_collatz"),
     app_learn_js_lesson_for_fizz_buzz_ifs: text_frozen("fizz_buzz_ifs"),
     app_learn_js_lesson_for_fizz_buzz: text_frozen("fizz_buzz"),
