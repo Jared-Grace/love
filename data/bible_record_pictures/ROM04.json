@@ -36,7 +36,13 @@
  },
  {
   "ref": "5",
-  "query": "Caravaggio The Conversion of Saint Paul Santa Maria del Popolo"
+  "query": "Caravaggio The Conversion of Saint Paul Santa Maria del Popolo",
+  "title": "Conversion on the Way to Damascus-Caravaggio (c.1600-1).jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 6711,
+  "height": 8817,
+  "page": "https://commons.wikimedia.org/wiki/File:Conversion_on_the_Way_to_Damascus-Caravaggio_(c.1600-1).jpg"
  },
  {
   "ref": "6,7",
@@ -80,7 +86,13 @@
  },
  {
   "ref": "11",
-  "query": "Rembrandt The Circumcision National Gallery of Art"
+  "query": "Rembrandt The Circumcision National Gallery of Art",
+  "title": "Rembrandt van Rijn - The Circumcision In the Stable - 1942.876 - Cleveland Museum of Art.tif",
+  "artist": "Rembrandt van Rijn",
+  "licence": "CC0",
+  "width": 4656,
+  "height": 3096,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_The_Circumcision_In_the_Stable_-_1942.876_-_Cleveland_Museum_of_Art.tif"
  },
  {
   "ref": "12",

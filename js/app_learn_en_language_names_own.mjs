@@ -4,6 +4,7 @@ export function app_learn_en_language_names_own() {
   let r = {
     ur: "اردو",
     tgl: "Tagalog",
+    es: "Español",
   };
   return r;
 }

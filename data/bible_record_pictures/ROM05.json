@@ -1,18 +1,92 @@
-[{"ref":"1,2","query":"Edward Hicks Peaceable Kingdom"},
-{"ref":"3,4","query":"Caravaggio The Crucifixion of Saint Peter"},
-{"ref":"5","query":"El Greco Pentecost Prado"},
-{"ref":"6","query":"Andrea Mantegna The Crucifixion Louvre"},
-{"ref":"7","query":"Jacques-Louis David The Death of Socrates"},
-{"ref":"8","query":"Rubens Christ on the Cross between the Two Thieves Coup de Lance"},
-{"ref":"9","query":"Van Eyck Adoration of the Mystic Lamb Ghent Altarpiece"},
-{"ref":"10","query":"Rubens The Reconciliation of Jacob and Esau"},
-{"ref":"11","query":"Fra Angelico Christ Glorified in the Court of Heaven"},
-{"ref":"12","query":"Jan Brueghel the Elder The Garden of Eden"},
-{"ref":"13","query":"Pieter Bruegel the Elder The Little Tower of Babel Rotterdam"},
-{"ref":"14","query":"Arnold Böcklin Self-Portrait with Death Playing the Fiddle"},
-{"ref":"15","query":"Gentile da Fabriano Adoration of the Magi Uffizi"},
-{"ref":"16","query":"Albrecht Dürer Adoration of the Trinity Landauer Altar"},
-{"ref":"17","query":"Raphael Disputation of the Holy Sacrament"},
-{"ref":"18","query":"Rubens The Elevation of the Cross Antwerp"},
-{"ref":"19","query":"Heinrich Hofmann Christ in Gethsemane"},
-{"ref":"20,21","query":"Frederic Edwin Church Niagara"}]
+[
+ {
+  "ref": "1,2",
+  "query": "Edward Hicks Peaceable Kingdom",
+  "title": "Edward Hicks - Peaceable Kingdom - Google Art Project.jpg",
+  "artist": "Edward Hicks",
+  "licence": "Public domain",
+  "width": 7810,
+  "height": 5976,
+  "page": "https://commons.wikimedia.org/wiki/File:Edward_Hicks_-_Peaceable_Kingdom_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "3,4",
+  "query": "Caravaggio The Crucifixion of Saint Peter",
+  "title": "Crucifixion of Saint Peter-Caravaggio (c.1600).jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 8180,
+  "height": 10537,
+  "page": "https://commons.wikimedia.org/wiki/File:Crucifixion_of_Saint_Peter-Caravaggio_(c.1600).jpg"
+ },
+ {
+  "ref": "5",
+  "query": "El Greco Pentecost Prado",
+  "title": "Pentecostés (El Greco, c. 1600) Prado.jpg",
+  "artist": "El Greco",
+  "licence": "Public domain",
+  "width": 1365,
+  "height": 2964,
+  "page": "https://commons.wikimedia.org/wiki/File:Pentecost%C3%A9s_(El_Greco,_c._1600)_Prado.jpg"
+ },
+ {
+  "ref": "6",
+  "query": "Andrea Mantegna The Crucifixion Louvre"
+ },
+ {
+  "ref": "7",
+  "query": "Jacques-Louis David The Death of Socrates"
+ },
+ {
+  "ref": "8",
+  "query": "Rubens Christ on the Cross between the Two Thieves Coup de Lance"
+ },
+ {
+  "ref": "9",
+  "query": "Van Eyck Adoration of the Mystic Lamb Ghent Altarpiece"
+ },
+ {
+  "ref": "10",
+  "query": "Rubens The Reconciliation of Jacob and Esau"
+ },
+ {
+  "ref": "11",
+  "query": "Fra Angelico Christ Glorified in the Court of Heaven"
+ },
+ {
+  "ref": "12",
+  "query": "Jan Brueghel the Elder The Garden of Eden"
+ },
+ {
+  "ref": "13",
+  "query": "Pieter Bruegel the Elder The Little Tower of Babel Rotterdam"
+ },
+ {
+  "ref": "14",
+  "query": "Arnold Böcklin Self-Portrait with Death Playing the Fiddle"
+ },
+ {
+  "ref": "15",
+  "query": "Gentile da Fabriano Adoration of the Magi Uffizi"
+ },
+ {
+  "ref": "16",
+  "query": "Albrecht Dürer Adoration of the Trinity Landauer Altar"
+ },
+ {
+  "ref": "17",
+  "query": "Raphael Disputation of the Holy Sacrament"
+ },
+ {
+  "ref": "18",
+  "query": "Rubens The Elevation of the Cross Antwerp"
+ },
+ {
+  "ref": "19",
+  "query": "Heinrich Hofmann Christ in Gethsemane"
+ },
+ {
+  "ref": "20,21",
+  "query": "Frederic Edwin Church Niagara"
+ }
+]
