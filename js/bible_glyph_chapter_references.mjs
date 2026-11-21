@@ -2545,6 +2545,10 @@ export function bible_glyph_chapter_references() {
       reference: "Hosea 12",
     },
     {
+      chapter_code: "HOS13",
+      reference: "Hosea 13",
+    },
+    {
       chapter_code: "HOS14",
       reference: "Hosea 14",
     },
