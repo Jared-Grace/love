@@ -1,13 +1,12 @@
 [
  {
   "ref": "1",
-  "query": "Federico Barocci The Calling of Saint Andrew Brussels",
+  "query": "Raphael Christ's Charge to Peter cartoon Victoria and Albert",
   "artist": "Duccio di Buoninsegna",
   "licence": "CC0",
   "width": 4000,
   "height": 3752,
-  "page": "https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna,_The_Calling_of_the_Apostles_Peter_and_Andrew,_1308-1311,_NGA_282.jpg",
-  "title": null
+  "page": "https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna,_The_Calling_of_the_Apostles_Peter_and_Andrew,_1308-1311,_NGA_282.jpg"
  },
  {
   "ref": "2",
@@ -71,8 +70,7 @@
  },
  {
   "ref": "10",
-  "query": "Guido Reni Moses with the Tablets of the Law Borghese",
-  "title": null
+  "query": "Tintoretto The Adoration of the Golden Calf Madonna dell'Orto"
  },
  {
   "ref": "11",
@@ -127,11 +125,12 @@
  {
   "ref": "16",
   "query": "Cosimo Rosselli Crossing of the Red Sea Sistine Chapel",
-  "artist": "David Roberts",
+  "artist": "Attributed to Domenico Ghirlandaio / Attributed to Biagio d'Antonio / Attributed to Cosimo Rosselli",
   "licence": "Public domain",
-  "width": 9447,
-  "height": 6825,
-  "page": "https://commons.wikimedia.org/wiki/File:David_Roberts-IsraelitesLeavingEgypt_1828.jpg"
+  "width": 1245,
+  "height": 770,
+  "page": "https://commons.wikimedia.org/wiki/File:Cosimo_Rosselli_Attraversamento_del_Mar_Rosso.jpg",
+  "title": "Cosimo Rosselli Attraversamento del Mar Rosso.jpg"
  },
  {
   "ref": "17",
@@ -145,7 +144,13 @@
  },
  {
   "ref": "18",
-  "query": "Peter Paul Rubens The Brazen Serpent National Gallery"
+  "query": "Peter Paul Rubens The Brazen Serpent National Gallery",
+  "title": "Peter Paul Rubens - The Brazen Serpent.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 4237,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Brazen_Serpent.jpg"
  },
  {
   "ref": "19",

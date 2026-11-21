@@ -11,13 +11,11 @@
  },
  {
   "ref": "2",
-  "query": "Nicolas Poussin Autumn The Spies with the Grapes of the Promised Land Louvre",
-  "title": null
+  "query": "Nicolas Poussin L'Automne ou la Grappe de la Terre promise"
  },
  {
   "ref": "3",
-  "query": "Nicolas Poussin Spring The Earthly Paradise Louvre",
-  "title": null
+  "query": "Nicolas Poussin Le Printemps ou le Paradis terrestre"
  },
  {
   "ref": "4",
@@ -31,8 +29,7 @@
  },
  {
   "ref": "5",
-  "query": "Thomas Cole Expulsion from the Garden of Eden Museum of Fine Arts Boston",
-  "title": "Thomas Cole - Expulsion from the Garden of Eden - Google Art Project.jpg",
+  "query": "John Constable The Cornfield National Gallery",
   "artist": "Thomas Cole",
   "licence": "Public domain",
   "width": 6001,
@@ -71,8 +68,7 @@
  },
  {
   "ref": "10",
-  "query": "Jules Breton Evening in the Hamlet of Finistère",
-  "title": null
+  "query": "Jules Breton The End of the Working Day Brooklyn Museum"
  },
  {
   "ref": "11",
@@ -86,8 +82,7 @@
  },
  {
   "ref": "12",
-  "query": "Rembrandt The Apostle Paul Kunsthistorisches Vienna",
-  "title": "Rembrandt Harmensz. van Rijn 163.jpg",
+  "query": "El Greco Saint Paul Toledo Cathedral",
   "artist": "Rembrandt",
   "licence": "Public domain",
   "width": 1197,
@@ -96,13 +91,11 @@
  },
  {
   "ref": "13",
-  "query": "Hieronymus Bosch Table of the Mortal Sins eye of God Prado",
-  "title": null
+  "query": "Hieronymus Bosch Mesa de los pecados capitales"
  },
  {
   "ref": "14",
-  "query": "Rembrandt The Ascension Alte Pinakothek",
-  "title": "Rembrandt The Ascension 1636 Oil on canvas Alte Pinakothek Munich Germany.jpg",
+  "query": "Andrea Mantegna Ascension Uffizi",
   "artist": "Rembrandt",
   "licence": "Public domain",
   "width": 2068,
@@ -111,12 +104,10 @@
  },
  {
   "ref": "15",
-  "query": "Jacopo Tintoretto Christ Tempted by Satan Scuola San Rocco",
-  "title": null
+  "query": "Juan de Flandes The Temptation of Christ National Gallery of Art"
  },
  {
   "ref": "16",
-  "query": "Jan van Eyck Deësis Ghent Altarpiece Christ enthroned",
-  "title": null
+  "query": "Robert Campin Trinity of the Broken Body Hermitage"
  }
 ]

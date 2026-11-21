@@ -21,7 +21,7 @@
  },
  {
   "ref": "5",
-  "query": "Nardo di Cione Paradise Strozzi Chapel Santa Maria Novella",
+  "query": "Giusto de' Menabuoi Paradise Padua Baptistery",
   "artist": "Giovanni di Paolo",
   "licence": "CC0",
   "width": 3791,
@@ -71,13 +71,17 @@
  },
  {
   "ref": "11",
-  "query": "Rembrandt Die Heilige Familie mit dem Vorhang Kassel",
-  "title": null
+  "query": "Rembrandt The Holy Family The Carpenter's Household Louvre",
+  "title": "The University Prints. Student series D. Art of the Netherlands and Germany; five hundred reproductions illustrating the Flemish, Dutch, and German schools of painting, from the early fifteenth to the (14779811881).jpg",
+  "artist": "Internet Archive Book Images",
+  "licence": "No restrictions",
+  "width": 1632,
+  "height": 2138,
+  "page": "https://commons.wikimedia.org/wiki/File:The_University_Prints._Student_series_D._Art_of_the_Netherlands_and_Germany;_five_hundred_reproductions_illustrating_the_Flemish,_Dutch,_and_German_schools_of_painting,_from_the_early_fifteenth_to_the_(14779811881).jpg"
  },
  {
   "ref": "12",
-  "query": "Rosso Fiorentino Musician Angel Uffizi",
-  "title": null
+  "query": "Pieter Saenredam Interior of the Sint-Bavokerk Haarlem Getty"
  },
  {
   "ref": "13",
