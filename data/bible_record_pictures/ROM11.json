@@ -256,11 +256,23 @@
  },
  {
   "ref": "33",
-  "query": "Ivan Aivazovsky The Ninth Wave"
+  "query": "Ivan Aivazovsky The Ninth Wave",
+  "title": "Aivazovsky, Ivan - The Ninth Wave.jpg",
+  "artist": "Ivan Aivazovsky",
+  "licence": "Public domain",
+  "width": 5815,
+  "height": 3840,
+  "page": "https://commons.wikimedia.org/wiki/File:Aivazovsky,_Ivan_-_The_Ninth_Wave.jpg"
  },
  {
   "ref": "34",
-  "query": "Caspar David Friedrich Morgen im Riesengebirge"
+  "query": "Caspar David Friedrich Morgen im Riesengebirge",
+  "title": "Caspar David Friedrich, Morgen im Riesengebirge.jpg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 3000,
+  "height": 1882,
+  "page": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich,_Morgen_im_Riesengebirge.jpg"
  },
  {
   "ref": "35",
