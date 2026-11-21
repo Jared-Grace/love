@@ -131,8 +131,13 @@
  },
  {
   "ref": "15",
-  "query": "Thomas Cole The Course of Empire Destruction",
-  "title": null
+  "query": "Cole Thomas The Course of Empire Destruction 1836",
+  "title": "Cole Thomas The Course of Empire Destruction 1836.jpg",
+  "artist": "Thomas Cole",
+  "licence": "Public domain",
+  "width": 8917,
+  "height": 5532,
+  "page": "https://commons.wikimedia.org/wiki/File:Cole_Thomas_The_Course_of_Empire_Destruction_1836.jpg"
  },
  {
   "ref": "16",
@@ -156,8 +161,13 @@
  },
  {
   "ref": "18",
-  "query": "Jules Breton The Recall of the Gleaners Orsay",
-  "title": null
+  "query": "Jules Breton Le Rappel des glaneuses",
+  "title": "Jules Breton-Le Rappel des glaneuses.jpg",
+  "artist": "Jules Breton",
+  "licence": "Public domain",
+  "width": 3454,
+  "height": 1723,
+  "page": "https://commons.wikimedia.org/wiki/File:Jules_Breton-Le_Rappel_des_glaneuses.jpg"
  },
  {
   "ref": "19,20",
@@ -211,10 +221,22 @@
  },
  {
   "ref": "26",
-  "query": "Jan Steen De kwakzalver Rijksmuseum"
+  "query": "Gerrit Dou The Quack Boijmans",
+  "title": "Gerard Dou - The Quack - Google Art Project.jpg",
+  "artist": "Gerrit Dou",
+  "licence": "Public domain",
+  "width": 4273,
+  "height": 5813,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerard_Dou_-_The_Quack_-_Google_Art_Project.jpg"
  },
  {
   "ref": "27",
-  "query": "Michael Sweerts Clothing the Naked Metropolitan Museum"
+  "query": "Michael Sweerts Clothing the Naked Metropolitan Museum",
+  "title": "Clothing the Naked MET LC-1984 459 1-2.jpg",
+  "artist": "Michiel Sweerts",
+  "licence": "CC0",
+  "width": 4000,
+  "height": 2667,
+  "page": "https://commons.wikimedia.org/wiki/File:Clothing_the_Naked_MET_LC-1984_459_1-2.jpg"
  }
 ]
