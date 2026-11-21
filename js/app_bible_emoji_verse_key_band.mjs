@@ -34,6 +34,7 @@ export function app_bible_emoji_verse_key_band(
     color,
     chapter_code,
     verse_number,
+    null,
   );
   if (equal(color, null)) {
     app_shared_text_deemphasized(band);

@@ -91,7 +91,8 @@ export async function app_shared_bible_word_overlay_articles_open(
     "flex-direction": "column",
     gap: "0.5em",
   });
-  if (equal(language_code, ebible_language_en_code())) {
+  let right = ebible_language_en_code();
+  if (equal(language_code, right)) {
     app_shared_bible_word_sound_buttons(choices, word);
   }
   let b = null_is(strong_url);

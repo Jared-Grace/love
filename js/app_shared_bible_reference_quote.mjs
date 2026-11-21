@@ -46,7 +46,15 @@ export function app_shared_bible_reference_quote(parent, reference) {
     if (null_is(text)) {
       return;
     }
-    app_shared_bible_verse_line(words, "", text, null, null, null);
+    app_shared_bible_verse_line(
+      words,
+      "",
+      text,
+      null,
+      null,
+      null,
+      language_code,
+    );
   }
   promise_later_catch_ignore(fill);
   return quote;
