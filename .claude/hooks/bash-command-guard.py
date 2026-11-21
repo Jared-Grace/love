@@ -476,7 +476,19 @@ SAFE_BUILTINS = {"break", "continue", "true", "false"}
 BLOCK_OPENERS = {"for", "while", "until", "if"}
 BLOCK_CLOSERS = {"done", "fi"}
 # Words after which the next word is again the first word of a command.
-BLOCK_BODY_STARTERS = {"do", "then", "else"}
+BLOCK_BODY_STARTERS = {"do", "then", "else", "elif", "if", "while", "until"}
+
+
+def block_keyword(tokens, j):
+    """tokens[j] when bash would read it as a keyword - the first word of a
+    command - and None otherwise. `echo $c done` prints the word and closes
+    nothing; every depth count over blocks asks through here, so none of
+    them can mistake an argument for a closer, opener or branch word."""
+    if j == 0 or tokens[j - 1] in SEPARATORS:
+        return tokens[j]
+    if block_keyword(tokens, j - 1) in BLOCK_BODY_STARTERS:
+        return tokens[j]
+    return None
 
 DANGEROUS_CHARS = set("`<{}()")
 
@@ -1200,15 +1212,10 @@ def split_blocks(tokens):
         if t in BLOCK_OPENERS and not current:
             depth, j, closed = 0, i, False
             while j < n:
-                # A keyword only opens or closes a block where bash reads it as
-                # one: first word of a command. `echo $c done` prints the word
-                # and ends nothing - counting it closed the loop early.
-                at_command = j == i or tokens[j - 1] in SEPARATORS or tokens[j - 1] in BLOCK_BODY_STARTERS
-                if not at_command:
-                    pass
-                elif tokens[j] in BLOCK_OPENERS:
+                keyword = block_keyword(tokens, j)
+                if keyword in BLOCK_OPENERS:
                     depth += 1
-                elif tokens[j] in BLOCK_CLOSERS:
+                elif keyword in BLOCK_CLOSERS:
                     depth -= 1
                     if depth == 0:
                         j += 1
@@ -3189,7 +3196,7 @@ def check_for_loop(tokens, safe_verbs, safe_exact_commands):
     body_start = i
     depth = 1  # the open 'for'
     while i < len(tokens):
-        t = tokens[i]
+        t = block_keyword(tokens, i)
         if t in BLOCK_OPENERS:
             depth += 1
         elif t in BLOCK_CLOSERS:
@@ -3226,7 +3233,7 @@ def check_while(tokens, safe_verbs, safe_exact_commands):
     depth = 1  # the open 'while'/'until'
     cond_start = i
     while i < len(tokens):
-        t = tokens[i]
+        t = block_keyword(tokens, i)
         if t in BLOCK_OPENERS:
             depth += 1
         elif t in BLOCK_CLOSERS:
@@ -3245,7 +3252,7 @@ def check_while(tokens, safe_verbs, safe_exact_commands):
     body_start = i
     depth = 1
     while i < len(tokens):
-        t = tokens[i]
+        t = block_keyword(tokens, i)
         if t in BLOCK_OPENERS:
             depth += 1
         elif t in BLOCK_CLOSERS:
@@ -3278,14 +3285,16 @@ def check_if(tokens, safe_verbs, safe_exact_commands):
         raise Unsupported("malformed if: missing 'if'/'fi'")
     segments = []  # (keyword, [tokens]) in source order
     current_kw, current, depth = "if", [], 0
-    for t in tokens[1:-1]:
-        if t in BLOCK_OPENERS:
+    for j in range(1, len(tokens) - 1):
+        t = tokens[j]
+        keyword = block_keyword(tokens, j)
+        if keyword in BLOCK_OPENERS:
             depth += 1
             current.append(t)
-        elif t in BLOCK_CLOSERS:
+        elif keyword in BLOCK_CLOSERS:
             depth -= 1
             current.append(t)
-        elif depth == 0 and t in ("then", "elif", "else"):
+        elif depth == 0 and keyword in ("then", "elif", "else"):
             segments.append((current_kw, current))
             current_kw, current = t, []
         else:
@@ -4955,12 +4964,14 @@ def block_inner_pieces(group):
         return [body]
     inner = []
     depth = 0
-    for token in group[1:-1]:
-        if token in BLOCK_OPENERS:
+    for j in range(1, len(group) - 1):
+        token = group[j]
+        keyword = block_keyword(group, j)
+        if keyword in BLOCK_OPENERS:
             depth += 1
-        elif token in BLOCK_CLOSERS:
+        elif keyword in BLOCK_CLOSERS:
             depth -= 1
-        if depth == 0 and token in ("then", "elif", "else", "do"):
+        if depth == 0 and keyword in ("then", "elif", "else", "do"):
             inner.append(SEP_SEMI)
             continue
         inner.append(token)

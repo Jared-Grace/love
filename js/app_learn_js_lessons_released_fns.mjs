@@ -348,6 +348,8 @@ import { app_learn_js_lesson_for_count_if } from "./app_learn_js_lesson_for_coun
 import { app_learn_js_lesson_for_total_if } from "./app_learn_js_lesson_for_total_if.mjs";
 import { app_learn_js_lesson_for_if_even } from "./app_learn_js_lesson_for_if_even.mjs";
 import { app_learn_js_lesson_for_if_else } from "./app_learn_js_lesson_for_if_else.mjs";
+import { app_learn_js_lesson_for_fizz_buzz_ifs } from "./app_learn_js_lesson_for_fizz_buzz_ifs.mjs";
+import { app_learn_js_lesson_for_fizz_buzz } from "./app_learn_js_lesson_for_fizz_buzz.mjs";
 export function app_learn_js_lessons_released_fns() {
   "the lessons handed to a learner on either page they are ever sent to - the built site, and latest; every other lesson is still built and still opens on the working copies";
   "A LIST, NOT A CUT. The release used to be every lesson up to one named lesson. That holds only while lessons are added after it, and on 2026-09-17 twenty-six had been put in between released ones - so a rebuild of latest would have handed the learner twenty-six lessons nobody had read through, spread all through a run they were already part way along. A list names each lesson, so a lesson put in anywhere stays out until it is named here.";
@@ -359,6 +361,7 @@ export function app_learn_js_lessons_released_fns() {
   "2026-11-01, asked next: thirteen step lessons of the naming stage taken out the same way. Three - step_name_value, step_name_two and step_name_copy_single - were in the built site's bundle, so a learner there may have finished one; it leaves their list, and the lesson it stood after now ends in the same stepping.";
   "2026-11-01, asked next: the six step lessons that came before their lesson taken out too, that lesson now opening with the same stepping as its first quiz.";
   "2026-11-20, at the human's asking - deploy through More looping, lesson 350: every lesson up to and including For with else released, which is the while and for lessons and Not itself, added among the released Statements lessons on 2026-11-12.";
+  "2026-11-21, at the human's asking: Fizz and Buzz and FizzBuzz, lessons 351 and 352, released after the human read them through. The other ten read through that day (409 to 411, 422 to 424, 449 to 451, 455) are held back, because they stand on array lessons from 353 on that are not released yet.";
   let fns = [
     app_learn_js_lesson_symbols_digits_numbered,
     app_learn_js_lesson_symbols_digit_number,
@@ -710,6 +713,8 @@ export function app_learn_js_lessons_released_fns() {
     app_learn_js_lesson_for_total_if,
     app_learn_js_lesson_for_if_even,
     app_learn_js_lesson_for_if_else,
+    app_learn_js_lesson_for_fizz_buzz_ifs,
+    app_learn_js_lesson_for_fizz_buzz,
   ];
   return fns;
 }
