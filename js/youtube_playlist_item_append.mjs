@@ -7,7 +7,7 @@ export async function youtube_playlist_item_append(playlist_id, video_id) {
   "Puts one video at the end of one playlist, and gives back the name of the place it now sits in.";
   ("No position is said, unlike ",
     fn_name("youtube_playlist_item_add"),
-    ". A playlist made a moment ago refused a stated position it should have accepted ('Invalid playlist item position'), and in another one two videos added at positions 2 and 3 came out the wrong way round: YouTube had not yet caught up with the videos just put in. Left to fall at the end, a video cannot name a place that does not exist yet.");
+    ". Left to fall at the end, a video cannot name a place the playlist does not have, so an add never fails on a position counted wrong; where it should finally sit is a move made afterwards.");
   arguments_assert(arguments, 2);
   let body = {
     snippet: {

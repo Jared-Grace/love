@@ -1,18 +1,18 @@
-import { object_property_names } from "./object_property_names.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { youtube_channel_uploads_all } from "./youtube_channel_uploads_all.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { psalms_lyric_video_title_passage } from "./psalms_lyric_video_title_passage.mjs";
+import { equal } from "./equal.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { youtube_playlists_mine } from "./youtube_playlists_mine.mjs";
 import { youtube_playlist_insert_public } from "./youtube_playlist_insert_public.mjs";
 import { youtube_playlist_items } from "./youtube_playlist_items.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { youtube_playlist_item_append } from "./youtube_playlist_item_append.mjs";
+import { less_than } from "./less_than.mjs";
 import { youtube_playlist_item_position_write } from "./youtube_playlist_item_position_write.mjs";
 export async function youtube_psalms_chapter_playlists_sync(channel_id) {
   "$plain channel_id";
@@ -20,7 +20,7 @@ export async function youtube_psalms_chapter_playlists_sync(channel_id) {
   "★ CHAPTERS GO FROM THE HIGHEST DOWN, SO THE PLAYLISTS ARE MADE 150, 149, 148 ... IN THAT ORDER. The human asked for it so the channel's list of playlists reads in order.";
   "★ IT FINDS ITS OWN WORK AND CAN BE RUN AGAIN AT ANY TIME. A playlist that exists is reused and a video already in one is moved only if it is out of place, so a run after an approval adds only the new video. That is also what makes it safe to stop: YouTube allows about 10000 units a day and each playlist made, video added or video moved costs 50, so a run over the whole channel stops on the quota and the next day's run carries on.";
   "★ EVERY PLAYLIST MADE IS WRITTEN DOWN BY CHAPTER THE MOMENT IT EXISTS, AND THAT RECORD IS ASKED BEFORE YOUTUBE'S OWN LIST. Psalms 145 was made, held its videos and answered by its id, yet the next day both the owner's list of playlists and the public channel page left it out. A command trusting the list alone made it a second time.";
-  "A missing video is put at the end and then moved to its place, rather than put straight in at a stated position. A playlist made a moment ago refused a stated position it should have taken, and in another two videos put at positions 2 and 3 came out the wrong way round. A playlist made by this run gets its videos in order already, so it needs no moves.";
+  "A missing video is put at the end and then moved to its place, rather than put straight in at a stated position. Putting each video at its end makes the order follow the asks one by one, so a position wrongly counted can no longer refuse an add. A playlist made by this run gets its videos in order already, so it needs no moves.";
   "A chapter that fails for any reason but the quota is noted with what YouTube said and the run goes on to the next, so one bad chapter does not leave all the lower ones undone. The quota stops the run, since every later ask would fail the same way.";
   "Only public videos go in. A private one is still waiting for review, and a public playlist holding it would show a stranger a gap.";
   arguments_assert(arguments, 1);
@@ -28,7 +28,13 @@ export async function youtube_psalms_chapter_playlists_sync(channel_id) {
   let record = await file_read_json(record_path);
   let uploads = await youtube_channel_uploads_all(channel_id);
   let chapters = {};
+  ("★ THE CHANNEL'S UPLOAD LIST CAN NAME ONE VIDEO TWICE. Psalm 145:13b-21 came back twice, so it was wanted at two places: its second move undid its first, and the next asked for position 4 in a playlist of 4 ('Invalid playlist item position'). So each video is counted once.");
+  let counted = [];
   for (let video of uploads) {
+    if (counted.includes(video.video_id)) {
+      continue;
+    }
+    counted.push(video.video_id);
     if (not_equal(video.privacy, "public")) {
       continue;
     }
