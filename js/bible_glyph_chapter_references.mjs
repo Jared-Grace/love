@@ -2497,6 +2497,10 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 53",
     },
     {
+      chapter_code: "ISA54",
+      reference: "Isaiah 54",
+    },
+    {
       chapter_code: "ISA55",
       reference: "Isaiah 55",
     },
