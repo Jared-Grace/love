@@ -1,12 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { function_read } from "./function_read.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { function_prose_lines } from "./function_prose_lines.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { list_size } from "./list_size.mjs";
-import { text_number_spelled } from "./text_number_spelled.mjs";
+import { text_number_spelled_thousands } from "./text_number_spelled_thousands.mjs";
 import { equal } from "./equal.mjs";
 export async function bible_glyph_chapters_count_stated() {
   arguments_assert(arguments, 0);
@@ -30,7 +30,7 @@ export async function bible_glyph_chapters_count_stated() {
   }
   let chapters = bible_glyph_chapters();
   let count = list_size(chapters);
-  let spelled = text_number_spelled(count);
+  let spelled = text_number_spelled_thousands(count);
   let agree_is = equal(said, spelled);
   let r = {
     said,

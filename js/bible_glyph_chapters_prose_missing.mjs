@@ -1,16 +1,16 @@
-import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { function_read } from "./function_read.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { function_prose_lines } from "./function_prose_lines.mjs";
-import { list_add } from "./list_add.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
+import { list_add } from "./list_add.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { list_size } from "./list_size.mjs";
-import { text_number_ordinal_spelled } from "./text_number_ordinal_spelled.mjs";
+import { less_than } from "./less_than.mjs";
+import { text_number_ordinal_spelled_thousands } from "./text_number_ordinal_spelled_thousands.mjs";
 import { text_combine_3 } from "./text_combine_3.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
+import { not } from "./not.mjs";
 export async function bible_glyph_chapters_prose_missing() {
   arguments_assert(arguments, 0);
   ("The picture Bible chapters the list holds without saying anything about, given as their chapter codes.");
@@ -29,7 +29,7 @@ export async function bible_glyph_chapters_prose_missing() {
   let count = list_size(chapters);
   let missing = [];
   for (let index = 0; less_than(index, count); index++) {
-    let ordinal = text_number_ordinal_spelled(index + 1);
+    let ordinal = text_number_ordinal_spelled_thousands(index + 1);
     let head = text_combine_3("the ", ordinal, " ");
     let head_carried = text_combine_3("and the ", ordinal, " ");
     let spoken_for = false;
