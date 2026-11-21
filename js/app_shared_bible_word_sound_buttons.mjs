@@ -8,7 +8,7 @@ import { app_shared_button } from "./app_shared_button.mjs";
 export function app_shared_bible_word_sound_buttons(parent, word) {
   "$plain word";
   "Two buttons on a tapped English word's card: one says the word, the other says it slowly.";
-  "★ THE RECORDINGS ARE THE ONES THE ENGLISH LEARNING APP ALREADY PLAYS, asked for by the word alone, so one recording serves every chapter and every app that shows English, and a name is said the way the name list says it.";
+  "★ THE RECORDINGS ARE THE ONES THE ENGLISH LEARNING APP ALREADY PLAYS, asked for by the word alone, so one recording serves every chapter and every app that shows English. Those were recorded from the word in small letters, and the Bible name list is filed under the capitalised spelling only, so a name here may not be said the way the name list says it.";
   "★ EACH PRESS TAKES THE NEXT VOICE IN THE CAST, slow and ordinary alike, the way the English learning app's speaker and turtle do, so a reader who presses twice hears two people.";
   "A word with no recording plays nothing, the same silence the English learning app gives; nothing on the card claims every word has one.";
   arguments_assert(arguments, 2);
