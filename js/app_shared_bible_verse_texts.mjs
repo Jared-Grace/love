@@ -16,6 +16,7 @@ export function app_shared_bible_verse_texts(parent, entries) {
     ("AN ENTRY MAY SAY WHICH VERSE IT IS, and only the chapter reader's entries do so far; an entry from a search result or a reading plan says nothing, and its words open the card without the BibleHub choice.");
     let chapter_code = property_get_or_null(entry, "chapter_code");
     let verse_number = property_get_or_null(entry, "verse_number");
+    let language_code = property_get_or_null(entry, "language_code");
     app_shared_bible_verse_line(
       parent,
       name,
@@ -23,6 +24,7 @@ export function app_shared_bible_verse_texts(parent, entries) {
       color,
       chapter_code,
       verse_number,
+      language_code,
     );
   }
   each_index(entries, render);

@@ -5,6 +5,7 @@ import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { bible_verse_words_none_token } from "./bible_verse_words_none_token.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { each } from "./each.mjs";
 export function app_shared_bible_verse_entries(
   languages_verses,
@@ -42,6 +43,7 @@ export function app_shared_bible_verse_entries(
       text: text_l,
       chapter_code,
       verse_number,
+      language_code: property_get_or_null(entry, "language_code"),
     });
   }
   each(languages_verses, collect_language);
