@@ -151,19 +151,33 @@
  },
  {
   "ref": "20",
-  "query": "Peter Paul Rubens The Miracles of Saint Francis Xavier Kunsthistorisches"
+  "query": "Peter Paul Rubens The Miracles of Saint Francis Xavier Kunsthistorisches",
+  "title": "Peter Paul Rubens, , Kunsthistorisches Museum Wien, Gemäldegalerie - Wunder des Hl. Franz Xaver - GG 519 - Kunsthistorisches Museum.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 2227,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens,_,_Kunsthistorisches_Museum_Wien,_Gem%C3%A4ldegalerie_-_Wunder_des_Hl._Franz_Xaver_-_GG_519_-_Kunsthistorisches_Museum.jpg"
  },
  {
   "ref": "21",
-  "query": "Duccio The Healing of the Man Born Blind National Gallery"
+  "query": "Duccio The Healing of the Man Born Blind National Gallery",
+  "title": null
  },
  {
   "ref": "22",
-  "query": "Adam Elsheimer The Shipwreck of Saint Paul on Malta National Gallery"
+  "query": "Adam Elsheimer The Shipwreck of Saint Paul on Malta National Gallery",
+  "title": null
  },
  {
   "ref": "23,24",
-  "query": "Giovanni Paolo Panini Interior of the Pantheon National Gallery of Art"
+  "query": "Giovanni Paolo Panini Interior of the Pantheon National Gallery of Art",
+  "title": "Giovanni Paolo Panini - Interior of the Pantheon, Rome - 1974.39 - Cleveland Museum of Art.tiff",
+  "artist": "Giovanni Paolo Panini",
+  "licence": "Public domain",
+  "width": 11302,
+  "height": 14458,
+  "page": "https://commons.wikimedia.org/wiki/File:Giovanni_Paolo_Panini_-_Interior_of_the_Pantheon,_Rome_-_1974.39_-_Cleveland_Museum_of_Art.tiff"
  },
  {
   "ref": "25",
