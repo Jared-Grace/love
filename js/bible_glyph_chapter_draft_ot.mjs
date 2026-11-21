@@ -1,3 +1,4 @@
+import { abs } from "./abs.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
@@ -100,7 +101,9 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
   }
   function phrase_joined(x, y) {
     let first = less_than(x.k, y.k) ? x : y;
-    let r = equal(Math.abs(subtract(x.k, y.k)), 1) && first.joined;
+    let n3 = subtract(x.k, y.k);
+    let left4 = abs(n3);
+    let r = equal(left4, 1) && first.joined;
     return r;
   }
   let tally = {};
@@ -181,15 +184,20 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
         let inside = greater_than(depth, 0) || t.includes("[");
         depth += (t.match(/\[/g) || []).length;
         depth -= (t.match(/\]/g) || []).length;
-        if (less_than(depth, 0)) depth = 0;
+        if (less_than(depth, 0)) {
+          depth = 0;
+        }
         bracketed.push(inside);
       }
       let unbracketed = [];
       for (let k = 0; less_than(k, toks.length); k++)
-        if (not(bracketed[k])) unbracketed.push(k);
+        if (not(bracketed[k])) {
+          unbracketed.push(k);
+        }
       let all_bracketed = equal(unbracketed.length, 0);
-      if (all_bracketed)
+      if (all_bracketed) {
         for (let k = 0; less_than(k, toks.length); k++) unbracketed.push(k);
+      }
       let lead_u = 0;
       while (
         less_than(lead_u, subtract(unbracketed.length, 1)) &&
