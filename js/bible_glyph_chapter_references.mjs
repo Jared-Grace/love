@@ -1321,6 +1321,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Kings 15",
     },
     {
+      chapter_code: "2KI16",
+      reference: "2 Kings 16",
+    },
+    {
       chapter_code: "2KI17",
       reference: "2 Kings 17",
     },
