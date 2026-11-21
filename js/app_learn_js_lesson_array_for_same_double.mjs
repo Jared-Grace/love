@@ -1,10 +1,10 @@
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_same_plus_one } from "./app_learn_js_lesson_array_for_same_plus_one.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
+import { multiply } from "./multiply.mjs";
 import { app_learn_js_lesson_array_for_same_generic } from "./app_learn_js_lesson_array_for_same_generic.mjs";
 export function app_learn_js_lesson_array_for_same_double() {
   arguments_assert(arguments, 0);
@@ -28,14 +28,12 @@ export function app_learn_js_lesson_array_for_same_double() {
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
+    app_learn_js_div_cycle_code(box_two, ["Suppose we have two arrays"]);
     app_learn_js_div_cycle_code(box_two, [
-      "With the test ",
-      "b[i] !== a[i] * 2",
-      ", the same loop asks whether each item of ",
-      "b",
-      " is double the same item of ",
-      "a",
-      ":",
+      "We could ask: is each pair of items the same?",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "However instead of that, we could ask: is the second item always double the first item?",
     ]);
     return box_two;
   }
