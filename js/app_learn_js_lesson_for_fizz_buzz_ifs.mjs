@@ -1,12 +1,13 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_for_if_even } from "./app_learn_js_lesson_for_if_even.mjs";
 import { app_learn_js_lesson_else_if } from "./app_learn_js_lesson_else_if.mjs";
+import { app_learn_js_lesson_number_text_join } from "./app_learn_js_lesson_number_text_join.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -18,7 +19,7 @@ export function app_learn_js_lesson_for_fizz_buzz_ifs() {
   ('two ifs one after the other inside a for: for (let i = 9; i <= 15; i++) { if (i % 3 === 0) { console.log("Fizz"); } if (i % 5 === 0) { console.log("Buzz"); } } writes out Fizz, Buzz, Fizz, Fizz, Buzz; at 15 both ifs run, so Fizz and Buzz are on two lines');
   ("2026-11-21, asked for by the human: the step before FizzBuzz, so a student sees that two ifs one after the other each ask on their own, where an else if asks only when the test before it was false. The human's words: so they can see when it's independent, and see that it outputs Fizz Buzz, just on different lines.");
   ("A set is six questions: three ranges that hold 15 or 30, where both ifs run on one number, and three that do not, shuffled. Every range ends on a number that divides by 3 or 5, so leaving out the last number changes what is written out.");
-  ("Reading forwards, the wrong answers are what the wrong programs write out: else if in place of the second if (at 15 only Fizz), Fizz and Buzz swapped, and i < in place of i <= (the last number left out). Reading backwards, the wrong programs are those three, where each writes out something other than the answer.");
+  ("Reading forwards, the wrong answers are what the wrong programs write out: else if in place of the second if (at 15 only Fizz), Fizz and Buzz swapped, i < in place of i <= (the last number left out), and the words written out without i (2026-11-21, the human: the output is easier to follow at a glance when i is in it, so each word is written after its number and leaving i out is a wrong program). Reading backwards, the wrong programs are those three, where each writes out something other than the answer.");
   ("The writing is a first draft by Claude 2026-11-21.");
   let example_input = [9, 15];
   function program_with(input, condition, three, five, second) {
@@ -41,8 +42,8 @@ export function app_learn_js_lesson_for_fizz_buzz_ifs() {
     let code2 = program_with(
       input2,
       "i <= " + end,
-      '"Fizz"',
-      '"Buzz"',
+      'i + " Fizz"',
+      'i + " Buzz"',
       "\n  if",
     );
     return code2;
@@ -52,13 +53,26 @@ export function app_learn_js_lesson_for_fizz_buzz_ifs() {
     let v = program_with(
       input3,
       "i <= " + end2,
-      '"Fizz"',
-      '"Buzz"',
+      'i + " Fizz"',
+      'i + " Buzz"',
       " else if",
     );
-    let v2 = program_with(input3, "i <= " + end2, '"Buzz"', '"Fizz"', "\n  if");
-    let v3 = program_with(input3, "i < " + end2, '"Fizz"', '"Buzz"', "\n  if");
-    let programs = [v, v2, v3];
+    let v2 = program_with(
+      input3,
+      "i <= " + end2,
+      'i + " Buzz"',
+      'i + " Fizz"',
+      "\n  if",
+    );
+    let v3 = program_with(
+      input3,
+      "i < " + end2,
+      'i + " Fizz"',
+      'i + " Buzz"',
+      "\n  if",
+    );
+    let v4 = program_with(input3, "i <= " + end2, '"Fizz"', '"Buzz"', "\n  if");
+    let programs = [v, v2, v3, v4];
     return programs;
   }
   function wrong_outputs_of(input4) {
@@ -118,6 +132,19 @@ export function app_learn_js_lesson_for_fizz_buzz_ifs() {
         "false",
       ],
     );
+    let box_join = app_learn_js_container_light_blue(root);
+    app_learn_js_remember_from_lesson(
+      box_join,
+      context,
+      app_learn_js_lesson_number_text_join,
+      [
+        "",
+        'n + " is a number"',
+        " joined the number ",
+        "n",
+        " holds to a string",
+      ],
+    );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "Here there is no ",
@@ -138,9 +165,9 @@ export function app_learn_js_lesson_for_fizz_buzz_ifs() {
       " both ",
       "if",
       " statements run: ",
-      '"Fizz"',
+      "15 Fizz",
       " is written out and then ",
-      '"Buzz"',
+      "15 Buzz",
       " on the next line:",
     ]);
     let code3 = program_of(example_input);

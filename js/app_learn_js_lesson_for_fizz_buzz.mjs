@@ -19,13 +19,16 @@ export function app_learn_js_lesson_for_fizz_buzz() {
   ('FizzBuzz: for (let i = 13; i <= 15; i++) { if (i % 3 === 0 && i % 5 === 0) { console.log("FizzBuzz"); } else if (i % 3 === 0) { console.log("Fizz"); } else if (i % 5 === 0) { console.log("Buzz"); } else { console.log(i); } } writes out 13, 14 and FizzBuzz');
   ("2026-11-21, approved by the human: FizzBuzz, the most asked interview warm-up, right after the lesson where two ifs each ask on their own. Here an else if chain answers once per number, so the test for both goes first. && is used, not i % 15, because && says both in words a student already knows.");
   ("A set is six questions: three ranges that hold 15 or 30 and three that do not, shuffled; each range is 3 or 4 numbers.");
-  ("Reading forwards, the wrong answers are what the wrong programs write out: the test for both put last, where it is never reached (15 writes out Fizz); || in place of && (every number dividing by 3 or by 5 writes out FizzBuzz); and no else (the other numbers are not written out). Reading backwards, the wrong programs are those three, where each writes out something other than the answer.");
+  ("Reading forwards, the wrong answers are what the wrong programs write out: the test for both put last, where it is never reached (15 writes out Fizz); || in place of && (every number dividing by 3 or by 5 writes out FizzBuzz); no else (the other numbers are not written out); and the words written out without i (2026-11-21, the human: the output is easier to follow at a glance when i is in it, so each word is written after its number). Reading backwards, the wrong programs are those three, where each writes out something other than the answer.");
   ("The writing is a first draft by Claude 2026-11-21.");
   let example_input = [13, 15];
-  let both = ["i % 3 === 0 && i % 5 === 0", '"FizzBuzz"'];
-  let either = ["i % 3 === 0 || i % 5 === 0", '"FizzBuzz"'];
-  let three = ["i % 3 === 0", '"Fizz"'];
-  let five = ["i % 5 === 0", '"Buzz"'];
+  let both = ["i % 3 === 0 && i % 5 === 0", 'i + " FizzBuzz"'];
+  let either = ["i % 3 === 0 || i % 5 === 0", 'i + " FizzBuzz"'];
+  let three = ["i % 3 === 0", 'i + " Fizz"'];
+  let five = ["i % 5 === 0", 'i + " Buzz"'];
+  let both_bare = ["i % 3 === 0 && i % 5 === 0", '"FizzBuzz"'];
+  let three_bare = ["i % 3 === 0", '"Fizz"'];
+  let five_bare = ["i % 5 === 0", '"Buzz"'];
   function program_with(input, tests, with_else) {
     "for (let i = start; i <= end; i++) { if (test) { console.log(word); } else if ... else { console.log(i); } }";
     let start = list_get(input, 0);
@@ -54,7 +57,8 @@ export function app_learn_js_lesson_for_fizz_buzz() {
     let v = program_with(input3, [three, five, both], true);
     let v2 = program_with(input3, [either, three, five], true);
     let v3 = program_with(input3, [both, three, five], false);
-    let programs = [v, v2, v3];
+    let v4 = program_with(input3, [both_bare, three_bare, five_bare], true);
+    let programs = [v, v2, v3, v4];
     return programs;
   }
   function wrong_outputs_of(input4) {
@@ -98,9 +102,9 @@ export function app_learn_js_lesson_for_fizz_buzz() {
         " statements, ",
         "15",
         " wrote out ",
-        '"Fizz"',
+        "15 Fizz",
         " and ",
-        '"Buzz"',
+        "15 Buzz",
         " on two lines",
       ],
     );
@@ -130,7 +134,9 @@ export function app_learn_js_lesson_for_fizz_buzz() {
       "5",
       ", ",
       '"FizzBuzz"',
-      " for one that divides by both, and the number itself otherwise.",
+      " for one that divides by both, and the number itself otherwise. Here each word comes after its number, as in ",
+      'i + " Fizz"',
+      ".",
     ]);
     app_learn_js_div_cycle_code(box_four, [
       "In an ",
@@ -140,7 +146,7 @@ export function app_learn_js_lesson_for_fizz_buzz() {
       " would answer first and ",
       "15",
       " would write out only ",
-      '"Fizz"',
+      "15 Fizz",
       ":",
     ]);
     let code3 = program_of(example_input);
