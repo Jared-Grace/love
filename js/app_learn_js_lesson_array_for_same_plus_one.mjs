@@ -26,14 +26,12 @@ export function app_learn_js_lesson_array_for_same_plus_one() {
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
+    app_learn_js_div_cycle_code(box_two, ["Suppose we have two arrays"]);
     app_learn_js_div_cycle_code(box_two, [
-      "The same loop can ask whether each item of ",
-      "b",
-      " is one more than the same item of ",
-      "a",
-      ". Only the test changes, to ",
-      "b[i] !== a[i] + 1",
-      ":",
+      "We could ask: is each pair of items the same?",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "However instead of that, we could ask: is the second item always one more than the first item?",
     ]);
     return box_two;
   }
