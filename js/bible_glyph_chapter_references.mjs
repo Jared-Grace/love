@@ -2513,6 +2513,10 @@ export function bible_glyph_chapter_references() {
       reference: "Hosea 4",
     },
     {
+      chapter_code: "HOS05",
+      reference: "Hosea 5",
+    },
+    {
       chapter_code: "HOS06",
       reference: "Hosea 6",
     },
