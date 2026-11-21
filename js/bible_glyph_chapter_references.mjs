@@ -1677,6 +1677,10 @@ export function bible_glyph_chapter_references() {
       reference: "Nehemiah 5",
     },
     {
+      chapter_code: "NEH06",
+      reference: "Nehemiah 6",
+    },
+    {
       chapter_code: "NEH08",
       reference: "Nehemiah 8",
     },
