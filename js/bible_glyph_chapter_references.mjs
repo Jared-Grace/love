@@ -2017,6 +2017,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ecclesiastes 4",
     },
     {
+      chapter_code: "ECC05",
+      reference: "Ecclesiastes 5",
+    },
+    {
       chapter_code: "ECC12",
       reference: "Ecclesiastes 12",
     },
