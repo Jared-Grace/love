@@ -106,11 +106,23 @@
  },
  {
   "ref": "14",
-  "query": "Rembrandt The Syndics of the Drapers' Guild Rijksmuseum"
+  "query": "Rembrandt The Syndics of the Drapers' Guild Rijksmuseum",
+  "title": "De waardijns van het Amsterdamse lakenbereidersgilde, bekend als ‘De staalmeesters’ Rijksmuseum SK-C-6.jpeg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 10888,
+  "height": 7168,
+  "page": "https://commons.wikimedia.org/wiki/File:De_waardijns_van_het_Amsterdamse_lakenbereidersgilde,_bekend_als_%E2%80%98De_staalmeesters%E2%80%99_Rijksmuseum_SK-C-6.jpeg"
  },
  {
   "ref": "15,16",
-  "query": "Valentin de Boulogne Saint Paul Writing his Epistles Houston"
+  "query": "Valentin de Boulogne Saint Paul Writing his Epistles Houston",
+  "title": "Valentin de Boulogne - Saint Paul Writing His Epistles - BF.1991.4 - Museum of Fine Arts.jpg",
+  "artist": "Valentin de Boulogne",
+  "licence": "Public domain",
+  "width": 3200,
+  "height": 2354,
+  "page": "https://commons.wikimedia.org/wiki/File:Valentin_de_Boulogne_-_Saint_Paul_Writing_His_Epistles_-_BF.1991.4_-_Museum_of_Fine_Arts.jpg"
  },
  {
   "ref": "17",
@@ -144,11 +156,18 @@
  },
  {
   "ref": "21",
-  "query": "Duccio di Buoninsegna The Healing of the Man Born Blind Google Art Project"
+  "query": "Duccio di Buoninsegna The Healing of the Man Born Blind Google Art Project",
+  "title": null
  },
  {
   "ref": "22",
-  "query": "Aelbert Cuyp The Maas at Dordrecht National Gallery of Art"
+  "query": "Aelbert Cuyp The Maas at Dordrecht National Gallery of Art",
+  "title": "Aelbert Cuyp - The Maas at Dordrecht - Google Art Project.jpg",
+  "artist": "Aelbert Cuyp",
+  "licence": "Public domain",
+  "width": 7276,
+  "height": 4895,
+  "page": "https://commons.wikimedia.org/wiki/File:Aelbert_Cuyp_-_The_Maas_at_Dordrecht_-_Google_Art_Project.jpg"
  },
  {
   "ref": "23,24",
@@ -182,11 +201,18 @@
  },
  {
   "ref": "27",
-  "query": "Lorenzo Lotto L'elemosina di sant'Antonino Venezia"
+  "query": "Lorenzo Lotto L'elemosina di sant'Antonino Venezia",
+  "title": null
  },
  {
   "ref": "28",
-  "query": "Claude Lorrain Seaport with the Embarkation of Saint Ursula National Gallery"
+  "query": "Claude Lorrain Seaport with the Embarkation of Saint Ursula National Gallery",
+  "title": "Claude Lorrain - Seaport with the Embarkation of Saint Ursula.jpg",
+  "artist": "Claude Lorrain",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 4536,
+  "page": "https://commons.wikimedia.org/wiki/File:Claude_Lorrain_-_Seaport_with_the_Embarkation_of_Saint_Ursula.jpg"
  },
  {
   "ref": "29",
