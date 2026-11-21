@@ -1,7 +1,13 @@
 [
  {
   "ref": "1",
-  "query": "Nicolas Poussin Christ and the Woman Taken in Adultery Louvre"
+  "query": "Nicolas Poussin Christ and the Woman Taken in Adultery Louvre",
+  "title": "Le Christ et la femme adultère - Nicolas Poussin - Louvre - INV 7282.jpg",
+  "artist": "Nicolas Poussin",
+  "licence": "Public domain",
+  "width": 3905,
+  "height": 2410,
+  "page": "https://commons.wikimedia.org/wiki/File:Le_Christ_et_la_femme_adult%C3%A8re_-_Nicolas_Poussin_-_Louvre_-_INV_7282.jpg"
  },
  {
   "ref": "2",
@@ -145,7 +151,8 @@
  },
  {
   "ref": "18",
-  "query": "Thomas Cole The Voyage of Life Old Age 1840 Munson-Williams-Proctor"
+  "query": "Thomas Cole The Voyage of Life Old Age 1840 Munson-Williams-Proctor",
+  "title": null
  },
  {
   "ref": "19",

@@ -41,7 +41,13 @@
  },
  {
   "ref": "6",
-  "query": "Lionello Spada The Return of the Prodigal Son Louvre"
+  "query": "Lionello Spada The Return of the Prodigal Son Louvre",
+  "title": "Rembrandt Harmensz van Rijn - Return of the Prodigal Son - Google Art Project.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 22991,
+  "height": 30000,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz_van_Rijn_-_Return_of_the_Prodigal_Son_-_Google_Art_Project.jpg"
  },
  {
   "ref": "7,8",
@@ -55,7 +61,13 @@
  },
  {
   "ref": "9",
-  "query": "John Martin Belshazzar's Feast Yale Center for British Art"
+  "query": "John Martin Belshazzar's Feast Yale Center for British Art",
+  "title": "John Martin - Belshazzar's Feast - Google Art Project.jpg",
+  "artist": "John Martin",
+  "licence": "Public domain",
+  "width": 7119,
+  "height": 4764,
+  "page": "https://commons.wikimedia.org/wiki/File:John_Martin_-_Belshazzar%27s_Feast_-_Google_Art_Project.jpg"
  },
  {
   "ref": "10",
@@ -149,7 +161,13 @@
  },
  {
   "ref": "21",
-  "query": "John Martin The Deluge Yale Center for British Art"
+  "query": "John Martin The Deluge Yale Center for British Art",
+  "title": "John Martin - The Deluge - B1977.14.11938 - Yale Center for British Art.jpg",
+  "artist": "John Martin",
+  "licence": "CC0",
+  "width": 1920,
+  "height": 1423,
+  "page": "https://commons.wikimedia.org/wiki/File:John_Martin_-_The_Deluge_-_B1977.14.11938_-_Yale_Center_for_British_Art.jpg"
  },
  {
   "ref": "22",
@@ -213,7 +231,13 @@
  },
  {
   "ref": "28",
-  "query": "Andrea del Sarto The Sacrifice of Isaac Dresden"
+  "query": "Andrea del Sarto The Sacrifice of Isaac Dresden",
+  "title": "Andrea del Sarto - Il sacrificio di Isacco (Dresden).jpg",
+  "artist": "Andrea del Sarto",
+  "licence": "Public domain",
+  "width": 2177,
+  "height": 2853,
+  "page": "https://commons.wikimedia.org/wiki/File:Andrea_del_Sarto_-_Il_sacrificio_di_Isacco_(Dresden).jpg"
  },
  {
   "ref": "29",

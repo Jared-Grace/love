@@ -41,7 +41,13 @@
  },
  {
   "ref": "5",
-  "query": "Jusepe de Ribera Moses Certosa di San Martino"
+  "query": "Jusepe de Ribera Moses Certosa di San Martino",
+  "title": "Moses041.jpg",
+  "artist": "Jusepe de Ribera",
+  "licence": "Public domain",
+  "width": 861,
+  "height": 1509,
+  "page": "https://commons.wikimedia.org/wiki/File:Moses041.jpg"
  },
  {
   "ref": "6,7",
@@ -55,7 +61,8 @@
  },
  {
   "ref": "8,9",
-  "query": "Jan Lievens The Apostle Paul at his Writing Desk"
+  "query": "Jan Lievens The Apostle Paul at his Writing Desk",
+  "title": null
  },
  {
   "ref": "10",
@@ -149,7 +156,8 @@
  },
  {
   "ref": "20",
-  "query": "Lambert Jacobsz The Baptism of the Eunuch"
+  "query": "Lambert Jacobsz The Baptism of the Eunuch",
+  "title": null
  },
  {
   "ref": "21",

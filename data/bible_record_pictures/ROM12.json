@@ -151,11 +151,18 @@
  },
  {
   "ref": "19",
-  "query": "Francis Danby The Opening of the Sixth Seal"
+  "query": "Francis Danby The Opening of the Sixth Seal",
+  "title": null
  },
  {
   "ref": "20",
-  "query": "Rembrandt The Good Samaritan Wallace Collection"
+  "query": "Rembrandt The Good Samaritan Wallace Collection",
+  "title": "Landscape with the Good Samaritan - Rembrandt.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 9484,
+  "height": 6675,
+  "page": "https://commons.wikimedia.org/wiki/File:Landscape_with_the_Good_Samaritan_-_Rembrandt.jpg"
  },
  {
   "ref": "21",

@@ -111,7 +111,8 @@
  },
  {
   "ref": "12",
-  "query": "Guido Reni Moses with the Tables of the Law Galleria Borghese"
+  "query": "Guido Reni Moses with the Tables of the Law Galleria Borghese",
+  "title": null
  },
  {
   "ref": "13",
@@ -135,7 +136,13 @@
  },
  {
   "ref": "15",
-  "query": "Domenico Fetti Melancholy Louvre"
+  "query": "Domenico Fetti Melancholy Louvre",
+  "title": "Henri simon thomassin-melancolía-met.jpg",
+  "artist": "Henri Simon Thomassin según Domenico Fetti",
+  "licence": "Public domain",
+  "width": 2289,
+  "height": 3637,
+  "page": "https://commons.wikimedia.org/wiki/File:Henri_simon_thomassin-melancol%C3%ADa-met.jpg"
  },
  {
   "ref": "16",
