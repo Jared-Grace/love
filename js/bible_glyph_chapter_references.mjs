@@ -2693,6 +2693,10 @@ export function bible_glyph_chapter_references() {
       reference: "Haggai 2",
     },
     {
+      chapter_code: "ZEC01",
+      reference: "Zechariah 1",
+    },
+    {
       chapter_code: "ZEC03",
       reference: "Zechariah 3",
     },
