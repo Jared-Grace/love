@@ -1,8 +1,7 @@
 [
  {
   "ref": "1,2",
-  "query": "Johannes Vermeer The Milkmaid Rijksmuseum",
-  "title": "Johannes Vermeer - Het melkmeisje - rijksmuseum - 001.jpg",
+  "query": "Pieter de Hooch A Woman Peeling Apples Wallace Collection",
   "artist": "Johannes Vermeer",
   "licence": "Public domain",
   "width": 4814,
@@ -11,8 +10,7 @@
  },
  {
   "ref": "3,4",
-  "query": "Johannes Vermeer Woman Reading a Letter at an Open Window Dresden",
-  "title": null
+  "query": "Johannes Vermeer Young Woman with a Water Pitcher Metropolitan Museum"
  },
  {
   "ref": "5,6",
@@ -26,8 +24,7 @@
  },
  {
   "ref": "7",
-  "query": "Jan van Eyck Arnolfini Portrait",
-  "title": "Jan van Eyck - Arnolfini Portrait - Macrophotography.jpg",
+  "query": "Frans Hals Marriage Portrait of Isaac Massa and Beatrix van der Laen",
   "artist": "Jan van Eyck",
   "licence": "Public domain",
   "width": 25311,
@@ -36,8 +33,7 @@
  },
  {
   "ref": "8",
-  "query": "Jan Steen The Feast of Saint Nicholas Rijksmuseum",
-  "title": "The art of the Netherland galleries - being a history of the Dutch school of painting illuminated and demonstrated by critical descriptions of the great paintings in the many galleries (1908) (14587224110).jpg",
+  "query": "Jan Steen Het Sint-Nicolaasfeest SK-A-385",
   "artist": "Jan Steen",
   "licence": "No restrictions",
   "width": 2424,
@@ -46,8 +42,7 @@
  },
  {
   "ref": "9",
-  "query": "Peter Paul Rubens Abraham and Melchizedek National Gallery of Art",
-  "title": "Peter Paul Rubens - The Meeting of Abraham and Melchizedek - WGA20435.jpg",
+  "query": "Rembrandt The Reconciliation of David and Absalom Hermitage",
   "artist": "Peter Paul Rubens",
   "licence": "Public domain",
   "width": 16208,
@@ -66,8 +61,7 @@
  },
  {
   "ref": "11",
-  "query": "Edward Hicks Peaceable Kingdom",
-  "title": "Edward Hicks - Peaceable Kingdom - Google Art Project.jpg",
+  "query": "Aelbert Cuyp River Landscape with Horseman and Peasants National Gallery London",
   "artist": "Edward Hicks",
   "licence": "Public domain",
   "width": 7810,
@@ -106,8 +100,7 @@
  },
  {
   "ref": "15,16",
-  "query": "Vittore Carpaccio Saint Stephen Preaching Louvre",
-  "title": null
+  "query": "Vittore Carpaccio predica di santo Stefano"
  },
  {
   "ref": "17",
