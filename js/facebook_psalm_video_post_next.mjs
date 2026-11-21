@@ -5,6 +5,7 @@ import { folder_user_downloads_path } from "./folder_user_downloads_path.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { not } from "./not.mjs";
 import { file_read } from "./file_read.mjs";
+import { file_exists } from "./file_exists.mjs";
 import { equal } from "./equal.mjs";
 import { facebook_psalm_youtube_public } from "./facebook_psalm_youtube_public.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -31,6 +32,11 @@ export async function facebook_psalm_video_post_next() {
     let text = await file_read(description_path);
     let title = text.split("\n")[0].trim();
     let film = description_path.slice(0, -".description.txt".length);
+    ("★ A DESCRIPTION WHOSE FILM IS GONE IS SKIPPED: from 2026-11-17 Psalm 134:1-3 song 2 kept only its text files, and every run threw on it, so nothing after it was ever posted. Skipped, its title lands in missing and the next one posts.");
+    let b2 = await file_exists(film);
+    if (not(b2)) {
+      continue;
+    }
     let held = by_title[title];
     if (equal(held, undefined) || name.includes(" cut)")) {
       by_title[title] = film;
