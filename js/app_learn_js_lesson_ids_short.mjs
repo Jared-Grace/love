@@ -706,6 +706,30 @@ export function app_learn_js_lesson_ids_short() {
     app_learn_js_lesson_while_digits: text_frozen("while_digits"),
     app_learn_js_lesson_while_digit_total: text_frozen("while_digit_total"),
     app_learn_js_lesson_while_collatz: text_frozen("while_collatz"),
+    app_learn_js_lesson_for_fizz_buzz_ifs: text_frozen("for_fizz_buzz_ifs"),
+    app_learn_js_lesson_for_fizz_buzz: text_frozen("for_fizz_buzz"),
+    app_learn_js_lesson_array_for_total_each: text_frozen(
+      "array_for_total_each",
+    ),
+    app_learn_js_lesson_array_for_push_total: text_frozen(
+      "array_for_push_total",
+    ),
+    app_learn_js_lesson_array_for_set_total: text_frozen("array_for_set_total"),
+    app_learn_js_lesson_array_for_push_if_not: text_frozen(
+      "array_for_push_if_not",
+    ),
+    app_learn_js_lesson_array_for_same: text_frozen("array_for_same"),
+    app_learn_js_lesson_array_for_same_plus_one: text_frozen(
+      "array_for_same_plus_one",
+    ),
+    app_learn_js_lesson_array_for_same_double: text_frozen(
+      "array_for_same_double",
+    ),
+    app_learn_js_lesson_string_mirror_index: text_frozen("string_mirror_index"),
+    app_learn_js_lesson_string_palindrome: text_frozen("string_palindrome"),
+    app_learn_js_lesson_string_palindrome_half: text_frozen(
+      "string_palindrome_half",
+    ),
   };
   return short;
 }

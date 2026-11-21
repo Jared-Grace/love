@@ -4,6 +4,7 @@ import { calendar_db_waiting_expire } from "./calendar_db_waiting_expire.mjs";
 import { calendar_db_session_uid } from "./calendar_db_session_uid.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { calendar_db_host_alarms } from "./calendar_db_host_alarms.mjs";
 import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
 import { calendar_messenger_name_usable } from "./calendar_messenger_name_usable.mjs";
 import { calendar_db_guest_limit_read } from "./calendar_db_guest_limit_read.mjs";
@@ -73,7 +74,7 @@ export async function calendar_api_handle(
     "invite",
     "login_firebase",
   ];
-  let wanted_get = ["free", "upcoming", "settings"];
+  let wanted_get = ["free", "upcoming", "settings", "alarms"];
   let known = wanted_post.includes(route)
     ? "POST"
     : wanted_get.includes(route)
@@ -92,6 +93,22 @@ export async function calendar_api_handle(
       reason: "method",
     });
     return r3;
+  }
+  if (equal(route, "alarms")) {
+    ("Public, like free: times only, for the host's phone to ring by. No key is asked, so no secret has to live on the phone.");
+    let alarms = await calendar_db_host_alarms(db, String(body.host), now_iso);
+    if (equal(alarms, null)) {
+      let r_alarms_none = reply(404, {
+        ok: false,
+        reason: "no_host",
+      });
+      return r_alarms_none;
+    }
+    let r_alarms = reply(200, {
+      ok: true,
+      ...alarms,
+    });
+    return r_alarms;
   }
   if (equal(route, "free")) {
     let slug2 = String(body.host);
