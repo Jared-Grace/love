@@ -12,42 +12,52 @@
  {
   "ref": "2,3,4",
   "query": "Konrad Witz The Miraculous Draught of Fishes",
-  "artist": "Raphael",
+  "artist": "Konrad Witz",
   "licence": "Public domain",
-  "width": 2000,
-  "height": 1587,
-  "page": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Miraculous_Draft_of_Fishes_c.1515-6.jpg"
+  "width": 2920,
+  "height": 2568,
+  "page": "https://commons.wikimedia.org/wiki/File:Konrad_Witz_-_Fischzug_Petri.jpeg",
+  "title": "Konrad Witz - Fischzug Petri.jpeg"
  },
  {
   "ref": "5",
-  "query": "Giovanni di Paolo Paradise Metropolitan Museum"
+  "query": "Giovanni di Paolo Paradise Metropolitan Museum",
+  "title": "Creation-and-the-expulsion-from-the-paradise-11291.jpg",
+  "artist": "Giovanni di Paolo",
+  "licence": "Public domain",
+  "width": 3791,
+  "height": 3353,
+  "page": "https://commons.wikimedia.org/wiki/File:Creation-and-the-expulsion-from-the-paradise-11291.jpg"
  },
  {
   "ref": "6",
-  "query": "Caspar David Friedrich Two Men Contemplating the Moon Dresden",
+  "query": "Caspar David Friedrich Moonrise over the Sea Berlin",
   "artist": "Caspar David Friedrich",
   "licence": "Public domain",
-  "width": 5256,
-  "height": 6742,
-  "page": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg"
+  "width": 6481,
+  "height": 5005,
+  "page": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Mondaufgang_am_Meer_(1822).jpg",
+  "title": "Caspar David Friedrich - Mondaufgang am Meer (1822).jpg"
  },
  {
   "ref": "7,8",
-  "query": "Jan Brueghel the Elder The Entry of the Animals into Noah's Ark Getty",
-  "artist": "Peter Paul Rubens / Jan Brueghel the Elder",
+  "query": "Roelant Savery Landscape with Birds Kunsthistorisches",
+  "artist": "Roelant Savery",
   "licence": "Public domain",
-  "width": 6000,
-  "height": 3875,
-  "page": "https://commons.wikimedia.org/wiki/File:Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg"
+  "width": 1513,
+  "height": 1067,
+  "page": "https://commons.wikimedia.org/wiki/File:Roelant_Savery,_,_Kunsthistorisches_Museum_Wien,_Gem%C3%A4ldegalerie_-_Landschaft_mit_V%C3%B6geln_-_GG_1082_-_Kunsthistorisches_Museum.jpg",
+  "title": "Roelant Savery, , Kunsthistorisches Museum Wien, Gemäldegalerie - Landschaft mit Vögeln - GG 1082 - Kunsthistorisches Museum.jpg"
  },
  {
   "ref": "9",
-  "query": "Caravaggio The Entombment of Christ Vatican Pinacoteca",
-  "artist": "Titian",
+  "query": "Raphael The Deposition Borghese",
+  "artist": "Raphael",
   "licence": "Public domain",
-  "width": 11257,
-  "height": 6959,
-  "page": "https://commons.wikimedia.org/wiki/File:Le_Transport_du_Christ_vers_le_tombeau_-_Titien_-_Mus%C3%A9e_du_Louvre_Peintures_INV_749_;_MR_516.jpg"
+  "width": 4691,
+  "height": 4869,
+  "page": "https://commons.wikimedia.org/wiki/File:Raffael-grablegung-christi.jpg",
+  "title": "Raffael-grablegung-christi.jpg"
  },
  {
   "ref": "10",

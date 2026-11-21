@@ -4,9 +4,10 @@
   "query": "Michelangelo The Prophet Jeremiah Sistine Chapel ceiling",
   "artist": "Michelangelo",
   "licence": "Public domain",
-  "width": 2097,
-  "height": 3000,
-  "page": "https://commons.wikimedia.org/wiki/File:Sistine_Chapel_fresco_of_an_Ignudo_right_of_Isaiah_-_Michelangelo.jpg"
+  "width": 1726,
+  "height": 510,
+  "page": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_Sistine_Chapel_ceiling_-_1st_bay.jpg",
+  "title": "Michelangelo - Sistine Chapel ceiling - 1st bay.jpg"
  },
  {
   "ref": "2",
@@ -20,25 +21,28 @@
  },
  {
   "ref": "3",
-  "query": "Tiziano Trasfigurazione San Salvador"
+  "query": "Tiziano Trasfigurazione San Salvador",
+  "title": null
  },
  {
   "ref": "4",
   "query": "Fra Angelico Christ Glorified in the Court of Heaven National Gallery",
-  "artist": "Hans Memling",
+  "artist": "Fra Angelico",
   "licence": "Public domain",
-  "width": 4812,
-  "height": 1200,
-  "page": "https://commons.wikimedia.org/wiki/File:Hans_Memling_-_Christ_with_Singing_and_Music-Making_Angels_-_KMSKA_778-780.jpg"
+  "width": 2263,
+  "height": 990,
+  "page": "https://commons.wikimedia.org/wiki/File:Schottm%C3%BCller,_Frida_-_Angelico_-_Pala_Fiesole_Predella_Mitte.jpg",
+  "title": "Schottmüller, Frida - Angelico - Pala Fiesole Predella Mitte.jpg"
  },
  {
   "ref": "5",
-  "query": "Hugo van der Goes Portinari Altarpiece Uffizi",
-  "artist": "Gentile da Fabriano",
+  "query": "Rogier van der Weyden Saint Columba Altarpiece Alte Pinakothek",
+  "artist": "Rogier van der Weyden",
   "licence": "Public domain",
-  "width": 3356,
-  "height": 3669,
-  "page": "https://commons.wikimedia.org/wiki/File:Gentile_da_Fabriano_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg"
+  "width": 700,
+  "height": 1385,
+  "page": "https://commons.wikimedia.org/wiki/File:Rogier_van_der_Weyden_-_St_Columba_Altarpiece_(left_panel)_-_WGA25657.jpg",
+  "title": "Rogier van der Weyden - St Columba Altarpiece (left panel) - WGA25657.jpg"
  },
  {
   "ref": "6",
@@ -52,7 +56,13 @@
  },
  {
   "ref": "7",
-  "query": "Albert Bierstadt A Storm in the Rocky Mountains Mt. Rosalie"
+  "query": "Albert Bierstadt A Storm in the Rocky Mountains Mt. Rosalie",
+  "title": "Albert Bierstadt - A Storm in the Rocky Mountains, Mt. Rosalie - Google Art Project.jpg",
+  "artist": "Albert Bierstadt",
+  "licence": "Public domain",
+  "width": 5736,
+  "height": 3319,
+  "page": "https://commons.wikimedia.org/wiki/File:Albert_Bierstadt_-_A_Storm_in_the_Rocky_Mountains,_Mt._Rosalie_-_Google_Art_Project.jpg"
  },
  {
   "ref": "8",
@@ -87,11 +97,12 @@
  {
   "ref": "11",
   "query": "Caspar David Friedrich Abbey among Oak Trees",
-  "artist": "Jacob van Ruisdael",
+  "artist": "Caspar David Friedrich",
   "licence": "Public domain",
-  "width": 2700,
-  "height": 2079,
-  "page": "https://commons.wikimedia.org/wiki/File:Jacob_Isaackszoon_van_Ruisdael_-_The_Jewish_Cemetery_(1654_or_1655).jpg"
+  "width": 2905,
+  "height": 2000,
+  "page": "https://commons.wikimedia.org/wiki/File:CDFriedrich_Abtei_im_Eichwald.JPG",
+  "title": "CDFriedrich Abtei im Eichwald.JPG"
  },
  {
   "ref": "12",
@@ -115,6 +126,7 @@
  },
  {
   "ref": "14",
-  "query": "Giovanni Lanfranco Hagar in the Wilderness"
+  "query": "Giovanni Lanfranco Hagar in the Wilderness",
+  "title": null
  }
 ]
