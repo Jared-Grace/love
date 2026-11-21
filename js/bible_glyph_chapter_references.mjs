@@ -1433,6 +1433,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Chronicles 18",
     },
     {
+      chapter_code: "1CH19",
+      reference: "1 Chronicles 19",
+    },
+    {
       chapter_code: "1CH29",
       reference: "1 Chronicles 29",
     },
