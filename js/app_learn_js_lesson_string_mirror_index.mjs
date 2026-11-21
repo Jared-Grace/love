@@ -1,5 +1,3 @@
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { json_to } from "./json_to.mjs";
@@ -13,8 +11,12 @@ import { app_learn_js_lesson_array_last_index } from "./app_learn_js_lesson_arra
 import { app_learn_js_lesson_string_for } from "./app_learn_js_lesson_string_for.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_colors } from "./app_learn_js_braces_colors.mjs";
-import { math_min } from "./math_min.mjs";
+import { list_add } from "./list_add.mjs";
 import { app_learn_js_div_braces_painted } from "./app_learn_js_div_braces_painted.mjs";
+import { subtract } from "./subtract.mjs";
+import { math_min } from "./math_min.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { html_centered } from "./html_centered.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -97,19 +99,50 @@ export function app_learn_js_lesson_string_mirror_index() {
     app_learn_js_div_cycle_code(box_three, [
       "Suppose we have an array with 7 items",
     ]);
-    app_learn_js_div_cycle_code(box_three, [
-      "Then its indices are: 0, 1, 2, 3, 4, 5, 6",
+    let colors = app_learn_js_braces_colors();
+    let count = 7;
+    function indices_line(text, total) {
+      let parts = [text];
+      for (let k = 0; less_than(k, total); k++) {
+        if (less_than(0, k)) {
+          list_add(parts, ", ");
+        }
+        list_add(parts, "" + k);
+      }
+      app_learn_js_div_cycle_code(box_three, parts);
+    }
+    indices_line("Then its indices are: ", count);
+    let first_color = list_get(colors, 0);
+    let second_color = list_get(colors, 1);
+    let middle_color = list_get(colors, 3);
+    app_learn_js_div_braces_painted(box_three, [
+      ["We can pair the "],
+      {
+        brace: "first",
+        color: first_color,
+      },
+      [" and "],
+      {
+        brace: "last",
+        color: first_color,
+      },
+      [" together"],
     ]);
-    app_learn_js_div_cycle_code(box_three, [
-      "We can pair the first and last together",
-    ]);
-    app_learn_js_div_cycle_code(box_three, [
-      "We can pair the second and second to last together",
+    app_learn_js_div_braces_painted(box_three, [
+      ["We can pair the "],
+      {
+        brace: "second",
+        color: second_color,
+      },
+      [" and "],
+      {
+        brace: "second to last",
+        color: second_color,
+      },
+      [" together"],
     ]);
     app_learn_js_div_cycle_code(box_three, ["And so on"]);
     app_learn_js_div_cycle_code(box_three, ["Like this:"]);
-    let colors = app_learn_js_braces_colors();
-    let count = 7;
     let pieces = [];
     for (let i = 0; less_than(i, count); i++) {
       let left = subtract(count, 1);
@@ -123,16 +156,25 @@ export function app_learn_js_lesson_string_mirror_index() {
         [" "],
       ]);
     }
-    app_learn_js_div_braces_painted(box_three, pieces);
-    app_learn_js_div_cycle_code(box_three, [
-      "Because ",
-      "3",
-      " is in the middle, ",
-      "3",
-      " is paired with itself",
+    let row = app_learn_js_div_braces_painted(box_three, pieces);
+    html_centered(row);
+    app_learn_js_div_braces_painted(box_three, [
+      ["Because "],
+      {
+        brace: "3",
+        color: middle_color,
+      },
+      [" is in the middle, "],
+      {
+        brace: "3",
+        color: middle_color,
+      },
+      [" is paired with itself"],
     ]);
     app_learn_js_div_cycle_code(box_three, [
-      "If we have the first number, how do we calculate its pair?",
+      "If we have the first number ",
+      "i",
+      ", how do we calculate its pair?",
     ]);
     app_learn_js_div_cycle_code(box_three, [
       "Here is the formula: ",
@@ -155,6 +197,8 @@ export function app_learn_js_lesson_string_mirror_index() {
       "5 - 1 - 1",
       " which is ",
       "3",
+      ", which is the index for ",
+      '"e"',
       ":",
     ]);
     let code3 = program_of(example_input);
