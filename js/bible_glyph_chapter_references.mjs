@@ -2425,6 +2425,10 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 35",
     },
     {
+      chapter_code: "ISA36",
+      reference: "Isaiah 36",
+    },
+    {
       chapter_code: "ISA40",
       reference: "Isaiah 40",
     },
