@@ -1873,6 +1873,10 @@ export function bible_glyph_chapter_references() {
       reference: "Job 31",
     },
     {
+      chapter_code: "JOB32",
+      reference: "Job 32",
+    },
+    {
       chapter_code: "JOB38",
       reference: "Job 38",
     },
