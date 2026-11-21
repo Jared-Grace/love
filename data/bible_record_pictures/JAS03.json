@@ -51,8 +51,13 @@
  },
  {
   "ref": "6",
-  "query": "Aert van der Neer A Fire at Night Rijksmuseum",
-  "title": null
+  "query": "Hubert Robert The Fire of Rome",
+  "title": "Robert, Hubert - Incendie à Rome -.jpg",
+  "artist": "Hubert Robert",
+  "licence": "Public domain",
+  "width": 3200,
+  "height": 2548,
+  "page": "https://commons.wikimedia.org/wiki/File:Robert,_Hubert_-_Incendie_%C3%A0_Rome_-.jpg"
  },
  {
   "ref": "7,8",
@@ -136,18 +141,23 @@
  },
  {
   "ref": "16",
-  "query": "Jan Steen The Effects of Intemperance National Gallery",
-  "title": null
+  "query": "Jan Steen In weelde siet toe Kunsthistorisches",
+  "title": "Jan Steen, Kunsthistorisches Museum Wien, Gemäldegalerie - \"Die verkehrte Welt\" - GG 791 - Kunsthistorisches Museum.jpg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 3000,
+  "height": 2147,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Steen,_Kunsthistorisches_Museum_Wien,_Gem%C3%A4ldegalerie_-_%22Die_verkehrte_Welt%22_-_GG_791_-_Kunsthistorisches_Museum.jpg"
  },
  {
   "ref": "17",
-  "query": "Giovanni Bellini Sacred Allegory Uffizi",
-  "title": "Giovanni Bellini, Job and St Sebastian of Holy Allegory, 1490s, Uffizi.jpg",
-  "artist": "Armin Kleiner",
+  "query": "Giovanni Bellini Allegoria sacra",
+  "title": "Giovanni Bellini o Giambellino - Allegoria sacra - Google Art Project.jpg",
+  "artist": "Giovanni Bellini",
   "licence": "Public domain",
-  "width": 3538,
-  "height": 5751,
-  "page": "https://commons.wikimedia.org/wiki/File:Giovanni_Bellini,_Job_and_St_Sebastian_of_Holy_Allegory,_1490s,_Uffizi.jpg"
+  "width": 3200,
+  "height": 1956,
+  "page": "https://commons.wikimedia.org/wiki/File:Giovanni_Bellini_o_Giambellino_-_Allegoria_sacra_-_Google_Art_Project.jpg"
  },
  {
   "ref": "18",
