@@ -21,8 +21,13 @@
  },
  {
   "ref": "3",
-  "query": "Ilya Repin Baptism of Christ",
-  "title": null
+  "query": "Andrea del Verrocchio The Baptism of Christ Uffizi",
+  "title": "Verrocchio and Leonardo, Baptism of Christ, c1470-75, Uffizi.jpg",
+  "artist": "Andrea del Verrocchio / Leonardo da Vinci",
+  "licence": "Public domain",
+  "width": 3760,
+  "height": 4520,
+  "page": "https://commons.wikimedia.org/wiki/File:Verrocchio_and_Leonardo,_Baptism_of_Christ,_c1470-75,_Uffizi.jpg"
  },
  {
   "ref": "4",
@@ -56,13 +61,13 @@
  },
  {
   "ref": "7",
-  "query": "Jacob Jordaens The Satyr and the Peasant Kassel",
-  "title": "Jacob Jordaens - The Satyr and the Peasant Family.jpg",
-  "artist": "Jacob Jordaens",
+  "query": "Rembrandt The Mennonite Preacher Anslo and his Wife Berlin",
+  "title": "Der Mennonitenprediger Cornelis Claesz Anslo (1592-1646) und seine Frau Aeltje Gerritsdr Schouten - Gemäldegalerie Berlin - 5132614.jpg",
+  "artist": "Rembrandt",
   "licence": "Public domain",
-  "width": 2873,
-  "height": 2207,
-  "page": "https://commons.wikimedia.org/wiki/File:Jacob_Jordaens_-_The_Satyr_and_the_Peasant_Family.jpg"
+  "width": 2034,
+  "height": 1700,
+  "page": "https://commons.wikimedia.org/wiki/File:Der_Mennonitenprediger_Cornelis_Claesz_Anslo_(1592-1646)_und_seine_Frau_Aeltje_Gerritsdr_Schouten_-_Gem%C3%A4ldegalerie_Berlin_-_5132614.jpg"
  },
  {
   "ref": "8",
@@ -106,13 +111,13 @@
  },
  {
   "ref": "12",
-  "query": "Peter Paul Rubens Cain Slaying Abel Courtauld",
-  "title": "Peter Paul Rubens - Cain slaying Abel (Courtauld Institute).jpg",
-  "artist": "Peter Paul Rubens",
+  "query": "James Tissot Cain Leadeth Abel to Death",
+  "title": "Cain leadeth abel to death tissot.jpg",
+  "artist": "James Tissot",
   "licence": "Public domain",
-  "width": 7045,
-  "height": 9694,
-  "page": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Cain_slaying_Abel_(Courtauld_Institute).jpg"
+  "width": 2345,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:Cain_leadeth_abel_to_death_tissot.jpg"
  },
  {
   "ref": "13",
@@ -136,8 +141,7 @@
  },
  {
   "ref": "15",
-  "query": "Jacopo Tintoretto Cain and Abel Accademia",
-  "title": null
+  "query": "Francisco Goya Fight with Cudgels Prado"
  },
  {
   "ref": "16",
@@ -151,8 +155,7 @@
  },
  {
   "ref": "17",
-  "query": "Domenico Ghirlandaio Saint Francis Renounces All Worldly Goods Sassetti",
-  "title": null
+  "query": "Luke Fildes Applicants for Admission to a Casual Ward"
  },
  {
   "ref": "18",
@@ -166,23 +169,11 @@
  },
  {
   "ref": "19,20",
-  "query": "Rembrandt The Prodigal Son in the Tavern Dresden",
-  "title": "Rembrandt - Rembrandt and Saskia in the Scene of the Prodigal Son - Google Art Project.jpg",
-  "artist": "Rembrandt",
-  "licence": "Public domain",
-  "width": 3020,
-  "height": 3827,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Rembrandt_and_Saskia_in_the_Scene_of_the_Prodigal_Son_-_Google_Art_Project.jpg"
+  "query": "Rembrandt Christ and the Woman of Samaria Gemäldegalerie Berlin"
  },
  {
   "ref": "21,22",
-  "query": "Nicolaes Maes Old Woman Saying Grace Rijksmuseum",
-  "title": "Oude vrouw in gebed, bekend als ‘Het gebed zonder end’ Rijksmuseum SK-C-535.jpeg",
-  "artist": "Nicolaes Maes",
-  "licence": "Public domain",
-  "width": 4138,
-  "height": 4914,
-  "page": "https://commons.wikimedia.org/wiki/File:Oude_vrouw_in_gebed,_bekend_als_%E2%80%98Het_gebed_zonder_end%E2%80%99_Rijksmuseum_SK-C-535.jpeg"
+  "query": "Pascal Dagnan-Bouveret Breton Women at a Pardon Gulbenkian"
  },
  {
   "ref": "23",
