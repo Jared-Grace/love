@@ -1,13 +1,13 @@
 [
  {
   "ref": "1",
-  "query": "Duccio Calling of Peter and Andrew National Gallery of Art",
-  "title": "Duccio di Buoninsegna, The Calling of the Apostles Peter and Andrew, 1308-1311, NGA 282.jpg",
+  "query": "Federico Barocci The Calling of Saint Andrew Brussels",
   "artist": "Duccio di Buoninsegna",
   "licence": "CC0",
   "width": 4000,
   "height": 3752,
-  "page": "https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna,_The_Calling_of_the_Apostles_Peter_and_Andrew,_1308-1311,_NGA_282.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna,_The_Calling_of_the_Apostles_Peter_and_Andrew,_1308-1311,_NGA_282.jpg",
+  "title": null
  },
  {
   "ref": "2",
@@ -31,13 +31,13 @@
  },
  {
   "ref": "4",
-  "query": "Pieter Bruegel the Elder The Little Tower of Babel Rotterdam",
-  "title": "Pieter Bruegel the Elder - The Tower of Babel (Rotterdam) - Google Art Project.jpg",
-  "artist": "Pieter Bruegel the Elder",
+  "query": "Jean Fouquet The Building of the Temple of Jerusalem",
+  "artist": "Jean Fouquet",
   "licence": "Public domain",
-  "width": 4945,
-  "height": 3973,
-  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Rotterdam)_-_Google_Art_Project.jpg"
+  "width": 2870,
+  "height": 3416,
+  "page": "https://commons.wikimedia.org/wiki/File:Construction_du_Temple_de_J%C3%A9rusalem.jpg",
+  "title": "Construction du Temple de Jérusalem.jpg"
  },
  {
   "ref": "5",
@@ -61,13 +61,17 @@
  },
  {
   "ref": "7,8,9",
-  "query": "Francesco Bacchiacca Moses Striking Water from the Rock Edinburgh",
-  "title": null
+  "query": "Joachim Wtewael Moses Striking the Rock National Gallery of Art",
+  "title": "Moses Striking the Rock.jpg",
+  "artist": "Joachim Wtewael",
+  "licence": "Public domain",
+  "width": 18081,
+  "height": 12034,
+  "page": "https://commons.wikimedia.org/wiki/File:Moses_Striking_the_Rock.jpg"
  },
  {
   "ref": "10",
-  "query": "Ferdinand Bol Moses with the Tablets of the Law Amsterdam",
-  "title": null
+  "query": "Guido Reni Moses with the Tablets of the Law Borghese"
  },
  {
   "ref": "11",
@@ -101,8 +105,7 @@
  },
  {
   "ref": "14",
-  "query": "Frederic Edwin Church Heart of the Andes",
-  "title": "Church Heart of the Andes.jpg",
+  "query": "Thomas Cole The Oxbow Metropolitan Museum",
   "artist": "Frederic Edwin Church",
   "licence": "Public domain",
   "width": 6400,
@@ -121,8 +124,7 @@
  },
  {
   "ref": "16",
-  "query": "David Roberts The Israelites Leaving Egypt Birmingham",
-  "title": "David Roberts-IsraelitesLeavingEgypt 1828.jpg",
+  "query": "Cosimo Rosselli Crossing of the Red Sea Sistine Chapel",
   "artist": "David Roberts",
   "licence": "Public domain",
   "width": 9447,
@@ -141,8 +143,7 @@
  },
  {
   "ref": "18",
-  "query": "Tintoretto Moses Drawing Water from the Rock Scuola Grande di San Rocco",
-  "title": null
+  "query": "Peter Paul Rubens The Brazen Serpent National Gallery"
  },
  {
   "ref": "19",

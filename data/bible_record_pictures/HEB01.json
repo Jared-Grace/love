@@ -1,13 +1,13 @@
 [
  {
   "ref": "1",
-  "query": "Michelangelo Profeta Geremia Cappella Sistina",
-  "title": "Michelangelo - Sistine Chapel ceiling - 1st bay.jpg",
-  "artist": "Michelangelo",
+  "query": "Rembrandt Old Woman Reading probably the Prophetess Anna Rijksmuseum",
+  "artist": "Rembrandt",
   "licence": "Public domain",
-  "width": 1726,
-  "height": 510,
-  "page": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_Sistine_Chapel_ceiling_-_1st_bay.jpg"
+  "width": 6338,
+  "height": 7948,
+  "page": "https://commons.wikimedia.org/wiki/File:Oude_lezende_vrouw,_waarschijnlijk_de_profetes_Hanna_Rijksmuseum_SK-A-3066.jpeg",
+  "title": "Oude lezende vrouw, waarschijnlijk de profetes Hanna Rijksmuseum SK-A-3066.jpeg"
  },
  {
   "ref": "2",
@@ -41,8 +41,13 @@
  },
  {
   "ref": "5",
-  "query": "Rogier van der Weyden Columba Altarpiece Adoration of the Magi Google Art Project",
-  "title": null
+  "query": "Hieronymus Bosch The Adoration of the Magi Prado",
+  "title": "Hieronymus Bosch - Adoration of the Magi - left panel - Prado.jpg",
+  "artist": "Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 776,
+  "height": 3391,
+  "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_-_Adoration_of_the_Magi_-_left_panel_-_Prado.jpg"
  },
  {
   "ref": "6",
@@ -126,7 +131,12 @@
  },
  {
   "ref": "14",
-  "query": "Giovanni Battista Tiepolo Hagar and Ishmael in the Wilderness Scuola Grande di San Rocco",
-  "title": null
+  "query": "Camille Corot Hagar in the Wilderness Metropolitan Museum",
+  "title": "1835 Corot Hagar in der Wildnis anagoria.JPG",
+  "artist": "Jean-Baptiste Camille Corot",
+  "licence": "Public domain",
+  "width": 3811,
+  "height": 2817,
+  "page": "https://commons.wikimedia.org/wiki/File:1835_Corot_Hagar_in_der_Wildnis_anagoria.JPG"
  }
 ]
