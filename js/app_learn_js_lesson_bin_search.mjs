@@ -75,7 +75,8 @@ export function app_learn_js_lesson_bin_search() {
         "while",
         " with ",
         "&&",
-        " repeats only while both sides are true",
+        " repeats only while both sides are ",
+        "true",
       ],
     );
     let box_five = app_learn_js_container_light_blue(root);
@@ -115,13 +116,17 @@ export function app_learn_js_lesson_bin_search() {
       "low <= high",
       ", that is, while some part of the array is left to look at, and while ",
       "!found",
-      ". When the middle item is ",
+      ". When the middle item (",
+      "a[middle]",
+      ") is ",
       "goal",
       ", ",
       "found = true;",
       ", so ",
       "low <= high && !found",
-      " is false and the search stops. Here it is found on the first step:",
+      " is ",
+      "false",
+      " and the search stops. Here it is found on the first step:",
     ]);
     example(box_four, {
       items: [2, 5, 8, 12, 16, 23, 38],

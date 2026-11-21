@@ -140,7 +140,8 @@ export function app_learn_js_lesson_bin_step() {
         "else if",
         ", an ",
         "else",
-        " runs when neither condition is true",
+        " runs when neither condition is ",
+        "true",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);

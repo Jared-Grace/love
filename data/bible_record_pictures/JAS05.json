@@ -91,13 +91,13 @@
  },
  {
   "ref": "10",
-  "query": "Michelangelo prophet Jeremiah",
-  "title": "Giorgio Ghisi after Michelangelo, The Prophet Jeremiah, early 1570s, NGA 66245.jpg",
-  "artist": "Giorgio Ghisi after Michelangelo",
-  "licence": "CC0",
-  "width": 3008,
-  "height": 4000,
-  "page": "https://commons.wikimedia.org/wiki/File:Giorgio_Ghisi_after_Michelangelo,_The_Prophet_Jeremiah,_early_1570s,_NGA_66245.jpg"
+  "query": "Giovanni Bellini Saint Jerome Reading in a Landscape National Gallery",
+  "title": "Bellini, Giovanni - Saint Jerome reading in a landscape - National Gallery.jpg",
+  "artist": "Giovanni Bellini",
+  "licence": "Public domain",
+  "width": 4281,
+  "height": 6000,
+  "page": "https://commons.wikimedia.org/wiki/File:Bellini,_Giovanni_-_Saint_Jerome_reading_in_a_landscape_-_National_Gallery.jpg"
  },
  {
   "ref": "11",
@@ -141,7 +141,13 @@
  },
  {
   "ref": "15",
-  "query": "Luke Fildes The Doctor 1891"
+  "query": "Jan Steen De zieke vrouw Rijksmuseum",
+  "title": "De zieke vrouw Rijksmuseum SK-C-230.jpeg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 4478,
+  "height": 5396,
+  "page": "https://commons.wikimedia.org/wiki/File:De_zieke_vrouw_Rijksmuseum_SK-C-230.jpeg"
  },
  {
   "ref": "16",
@@ -175,6 +181,12 @@
  },
  {
   "ref": "19,20",
-  "query": "Bernhard Plockhorst The Good Shepherd"
+  "query": "Bernhard Plockhorst The Good Shepherd",
+  "title": "The Lord is my Good Shepherd.jpg",
+  "artist": "Bernhard Plockhorst",
+  "licence": "Public domain",
+  "width": 3938,
+  "height": 5501,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Lord_is_my_Good_Shepherd.jpg"
  }
 ]
