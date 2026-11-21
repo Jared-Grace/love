@@ -2005,6 +2005,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ecclesiastes 1",
     },
     {
+      chapter_code: "ECC02",
+      reference: "Ecclesiastes 2",
+    },
+    {
       chapter_code: "ECC03",
       reference: "Ecclesiastes 3",
     },
