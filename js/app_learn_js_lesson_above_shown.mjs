@@ -1,17 +1,18 @@
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_index_by_id } from "./app_learn_js_lesson_index_by_id.mjs";
-import { app_learn_js_lessons } from "./app_learn_js_lessons.mjs";
+import { less_than } from "./less_than.mjs";
+import { app_learn_js_lessons_fns_kept } from "./app_learn_js_lessons_fns_kept.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_get } from "./list_get.mjs";
+import { app_learn_js_lesson_fn_id_set } from "./app_learn_js_lesson_fn_id_set.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
+import { equal } from "./equal.mjs";
 import { app_learn_js_lesson_ids_short } from "./app_learn_js_lesson_ids_short.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { app_learn_js_progress_read } from "./app_learn_js_progress_read.mjs";
 import { app_learn_js_lesson_complete_is } from "./app_learn_js_lesson_complete_is.mjs";
+import { not } from "./not.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_learn_js_lesson_above_shown(context, lesson) {
@@ -25,9 +26,10 @@ export function app_learn_js_lesson_above_shown(context, lesson) {
   if (less_than(index, 1)) {
     return above;
   }
-  let lessons = app_learn_js_lessons();
+  let fns = app_learn_js_lessons_fns_kept();
   let index2 = subtract(index, 1);
-  let before = list_get(lessons, index2);
+  let before_fn = list_get(fns, index2);
+  let before = app_learn_js_lesson_fn_id_set(before_fn);
   let taught_fn_name = property_get_or_null(before, "above_taught_fn_name");
   if (equal(taught_fn_name, null)) {
     return above;
