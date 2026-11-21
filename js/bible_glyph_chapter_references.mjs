@@ -2545,6 +2545,10 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 65",
     },
     {
+      chapter_code: "ISA66",
+      reference: "Isaiah 66",
+    },
+    {
       chapter_code: "JER01",
       reference: "Jeremiah 1",
     },
