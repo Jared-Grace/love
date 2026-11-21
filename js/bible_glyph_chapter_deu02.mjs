@@ -204,7 +204,7 @@ export function bible_glyph_chapter_deu02() {
           "to",
           "$toward,",
           "Do",
-          "$toward",
+          "$no_entry+exclamation",
           "$city+around+doing",
           "$pointing_down",
           "the",
