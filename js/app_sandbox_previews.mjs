@@ -2,6 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_sandbox_previews_lyric_timing_load } from "./app_sandbox_previews_lyric_timing_load.mjs";
+import { app_sandbox_previews_bible_pronunciation_choices_load } from "./app_sandbox_previews_bible_pronunciation_choices_load.mjs";
 import { app_sandbox_previews_song_image_brighter_load } from "./app_sandbox_previews_song_image_brighter_load.mjs";
 import { app_sandbox_previews_lyric_video_song_review_load } from "./app_sandbox_previews_lyric_video_song_review_load.mjs";
 import { app_sandbox_previews_lyric_video_song_swaps_load } from "./app_sandbox_previews_lyric_video_song_swaps_load.mjs";
@@ -69,6 +70,8 @@ export function app_sandbox_previews() {
     week_calendar: week_calendar_load,
     availability_editor: availability_editor_load,
     song_image_choose: song_image_choose_load,
+    bible_pronunciation_choices:
+      app_sandbox_previews_bible_pronunciation_choices_load,
     song_image_audit: song_image_audit_load,
     song_image_review: song_image_review_load,
     song_image_brighter: app_sandbox_previews_song_image_brighter_load,
