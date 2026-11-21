@@ -1,8 +1,7 @@
 [
  {
   "ref": "1",
-  "query": "Jan Steen The Effects of Intemperance",
-  "title": null
+  "query": "Jan Steen The Dissolute Household"
  },
  {
   "ref": "2",
@@ -136,13 +135,7 @@
  },
  {
   "ref": "15",
-  "query": "Pieter Bruegel the Elder The Land of Cockaigne",
-  "title": "The Land of Cockaigne MET MM7863.jpg",
-  "artist": "Pieter Bruegel the Elder / Pieter van der Heyden",
-  "licence": "CC0",
-  "width": 3805,
-  "height": 2914,
-  "page": "https://commons.wikimedia.org/wiki/File:The_Land_of_Cockaigne_MET_MM7863.jpg"
+  "query": "Pieter Bruegel the Elder The Land of Cockaigne Alte Pinakothek"
  },
  {
   "ref": "16",
@@ -206,10 +199,16 @@
  },
  {
   "ref": "22",
-  "query": "Caravaggio Basket of Fruit Ambrosiana"
+  "query": "Caravaggio Basket of Fruit Ambrosiana",
+  "title": "Caravaggio - Natura morta con frutta (collezione dell’Ambrosiana).jpg",
+  "artist": "Caravaggio",
+  "licence": "Public domain",
+  "width": 5056,
+  "height": 3881,
+  "page": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_Natura_morta_con_frutta_(collezione_dell%E2%80%99Ambrosiana).jpg"
  },
  {
   "ref": "23",
-  "query": "Giovanni di Paolo Paradise Metropolitan Museum"
+  "query": "Frederic Edwin Church Twilight in the Wilderness"
  }
 ]
