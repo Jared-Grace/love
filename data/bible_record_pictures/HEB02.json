@@ -11,54 +11,112 @@
  },
  {
   "ref": "2,3,4",
-  "query": "Raphael The Miraculous Draught of Fishes V&A cartoon"
+  "query": "Raphael The Miraculous Draught of Fishes V&A cartoon",
+  "title": "Raphael - The Miraculous Draft of Fishes c.1515-6.jpg",
+  "artist": "Raphael",
+  "licence": "Public domain",
+  "width": 2000,
+  "height": 1587,
+  "page": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Miraculous_Draft_of_Fishes_c.1515-6.jpg"
  },
  {
   "ref": "5",
-  "query": "Fra Angelico Paradise Last Judgment San Marco detail"
+  "query": "Fra Angelico Paradise Last Judgment San Marco detail",
+  "title": null
  },
  {
   "ref": "6",
-  "query": "Caspar David Friedrich Wanderer above the Sea of Fog"
+  "query": "Caspar David Friedrich Wanderer above the Sea of Fog",
+  "title": "Caspar David Friedrich - Wanderer above the Sea of Fog.jpeg",
+  "artist": "Caspar David Friedrich",
+  "licence": "Public domain",
+  "width": 5256,
+  "height": 6742,
+  "page": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg"
  },
  {
   "ref": "7,8",
-  "query": "Jan Brueghel the Elder The Garden of Eden with the Fall of Man Mauritshuis"
+  "query": "Jan Brueghel the Elder The Garden of Eden with the Fall of Man Mauritshuis",
+  "title": "Jan Brueghel de Oude en Peter Paul Rubens - Het aards paradijs met de zondeval van Adam en Eva.jpg",
+  "artist": "Peter Paul Rubens / Jan Brueghel the Elder",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 3875,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg"
  },
  {
   "ref": "9",
-  "query": "Titian Entombment of Christ Louvre"
+  "query": "Titian Entombment of Christ Louvre",
+  "title": "Le Transport du Christ vers le tombeau - Titien - Musée du Louvre Peintures INV 749 ; MR 516.jpg",
+  "artist": "Titian",
+  "licence": "Public domain",
+  "width": 11257,
+  "height": 6959,
+  "page": "https://commons.wikimedia.org/wiki/File:Le_Transport_du_Christ_vers_le_tombeau_-_Titien_-_Mus%C3%A9e_du_Louvre_Peintures_INV_749_;_MR_516.jpg"
  },
  {
   "ref": "10",
-  "query": "Rogier van der Weyden Braque Triptych Louvre"
+  "query": "Rogier van der Weyden Braque Triptych Louvre",
+  "title": "Rogier van der Weyden 006.jpg",
+  "artist": "Rogier van der Weyden",
+  "licence": "Public domain",
+  "width": 2024,
+  "height": 2558,
+  "page": "https://commons.wikimedia.org/wiki/File:Rogier_van_der_Weyden_006.jpg"
  },
  {
   "ref": "11",
-  "query": "Rembrandt The Holy Family with Angels Hermitage"
+  "query": "Rembrandt The Holy Family with Angels Hermitage",
+  "title": "Rembrandt Harmensz. van Rijn - The Holy Family.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 8464,
+  "height": 10880,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_The_Holy_Family.jpg"
  },
  {
   "ref": "12",
-  "query": "Fra Angelico Linaioli Tabernacle Musician Angel"
+  "query": "Fra Angelico Linaioli Tabernacle Musician Angel",
+  "title": null
  },
  {
   "ref": "13",
-  "query": "Gerard David Rest on the Flight into Egypt National Gallery of Art"
+  "query": "Gerard David Rest on the Flight into Egypt National Gallery of Art",
+  "title": "Gerard David - The rest on the flight into Egypt (National Gallery of Art).jpg",
+  "artist": "Gerard David",
+  "licence": "Public domain",
+  "width": 3944,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerard_David_-_The_rest_on_the_flight_into_Egypt_(National_Gallery_of_Art).jpg"
  },
  {
   "ref": "14,15",
-  "query": "Andrea Mantegna The Descent into Limbo"
+  "query": "Andrea Mantegna The Descent into Limbo",
+  "title": "1492 Mantegna Der Abstieg Christi in die Vorhölle Privatsammlung anagoria.jpg",
+  "artist": "Andrea Mantegna",
+  "licence": "Public domain",
+  "width": 4300,
+  "height": 3876,
+  "page": "https://commons.wikimedia.org/wiki/File:1492_Mantegna_Der_Abstieg_Christi_in_die_Vorh%C3%B6lle_Privatsammlung_anagoria.jpg"
  },
  {
   "ref": "16",
-  "query": "Claude Lorrain Landscape with Abraham Expelling Hagar and Ishmael Munich"
+  "query": "Claude Lorrain Landscape with Abraham Expelling Hagar and Ishmael Munich",
+  "title": null
  },
  {
   "ref": "17",
-  "query": "Jacopo Bassano The Purification of the Temple National Gallery"
+  "query": "Jacopo Bassano The Purification of the Temple National Gallery",
+  "title": "Jacopo Bassano and workshop - The Purification of the Temple - Google Art Project.jpg",
+  "artist": "Jacopo Bassano and workshop",
+  "licence": "Public domain",
+  "width": 3000,
+  "height": 1785,
+  "page": "https://commons.wikimedia.org/wiki/File:Jacopo_Bassano_and_workshop_-_The_Purification_of_the_Temple_-_Google_Art_Project.jpg"
  },
  {
   "ref": "18",
-  "query": "El Greco Christ in the Garden of Olives Toledo Museum of Art"
+  "query": "El Greco Christ in the Garden of Olives Toledo Museum of Art",
+  "title": null
  }
 ]

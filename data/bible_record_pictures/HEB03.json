@@ -1,17 +1,106 @@
-[{"ref":"1","query":"Duccio Calling of Peter and Andrew National Gallery of Art"},
-{"ref":"2","query":"Michelangelo Buonarroti Moses San Pietro in Vincoli"},
-{"ref":"3","query":"John Everett Millais Christ in the House of His Parents Tate"},
-{"ref":"4","query":"Pieter Bruegel the Elder The Little Tower of Babel Rotterdam"},
-{"ref":"5","query":"Sandro Botticelli Youth of Moses Sistine Chapel"},
-{"ref":"6","query":"Emanuel de Witte Interior of the Oude Kerk Delft"},
-{"ref":"7,8,9","query":"Francesco Bacchiacca Moses Striking Water from the Rock Edinburgh"},
-{"ref":"10","query":"Ferdinand Bol Moses with the Tablets of the Law Amsterdam"},
-{"ref":"11","query":"Giovanni Battista Tiepolo The Gathering of Manna Verolanuova"},
-{"ref":"12","query":"Lucas van Leyden The Dance around the Golden Calf Rijksmuseum"},
-{"ref":"13","query":"Jean-Baptiste Greuze The Father's Curse Louvre"},
-{"ref":"14","query":"Frederic Edwin Church Heart of the Andes"},
-{"ref":"15","query":"Rembrandt Moses Breaking the Tablets of the Law Berlin"},
-{"ref":"16","query":"David Roberts The Israelites Leaving Egypt Birmingham"},
-{"ref":"17","query":"William Holman Hunt The Scapegoat Lady Lever Art Gallery"},
-{"ref":"18","query":"Tintoretto Moses Drawing Water from the Rock Scuola Grande di San Rocco"},
-{"ref":"19","query":"Frederic Leighton Moses Views the Promised Land"}]
+[
+ {
+  "ref": "1",
+  "query": "Duccio Calling of Peter and Andrew National Gallery of Art",
+  "title": "Duccio di Buoninsegna, The Calling of the Apostles Peter and Andrew, 1308-1311, NGA 282.jpg",
+  "artist": "Duccio di Buoninsegna",
+  "licence": "CC0",
+  "width": 4000,
+  "height": 3752,
+  "page": "https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna,_The_Calling_of_the_Apostles_Peter_and_Andrew,_1308-1311,_NGA_282.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Michelangelo Buonarroti Moses San Pietro in Vincoli",
+  "title": "Michelangelo - Moses - San Pietro in Vincoli-10.jpg",
+  "artist": "Szilas",
+  "licence": "Public domain",
+  "width": 4752,
+  "height": 3168,
+  "page": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_Moses_-_San_Pietro_in_Vincoli-10.jpg"
+ },
+ {
+  "ref": "3",
+  "query": "John Everett Millais Christ in the House of His Parents Tate",
+  "title": "John Everett Millais - Christ in the House of his Parents (1849-50) (Tate Britain).jpg",
+  "artist": "Colin McLaughlin",
+  "licence": "CC0",
+  "width": 4000,
+  "height": 3000,
+  "page": "https://commons.wikimedia.org/wiki/File:John_Everett_Millais_-_Christ_in_the_House_of_his_Parents_(1849-50)_(Tate_Britain).jpg"
+ },
+ {
+  "ref": "4",
+  "query": "Pieter Bruegel the Elder The Little Tower of Babel Rotterdam",
+  "title": "Pieter Bruegel the Elder - The Tower of Babel (Rotterdam) - Google Art Project.jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 4945,
+  "height": 3973,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Rotterdam)_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Sandro Botticelli Youth of Moses Sistine Chapel",
+  "title": "Sandro Botticelli 032.jpg",
+  "artist": "Sandro Botticelli",
+  "licence": "Public domain",
+  "width": 2048,
+  "height": 1275,
+  "page": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_032.jpg"
+ },
+ {
+  "ref": "6",
+  "query": "Emanuel de Witte Interior of the Oude Kerk Delft",
+  "title": "Witte - Interior of the Old Church in Delft - with frame.jpg",
+  "artist": "Emanuel de Witte",
+  "licence": "Public domain",
+  "width": 2134,
+  "height": 2753,
+  "page": "https://commons.wikimedia.org/wiki/File:Witte_-_Interior_of_the_Old_Church_in_Delft_-_with_frame.jpg"
+ },
+ {
+  "ref": "7,8,9",
+  "query": "Francesco Bacchiacca Moses Striking Water from the Rock Edinburgh"
+ },
+ {
+  "ref": "10",
+  "query": "Ferdinand Bol Moses with the Tablets of the Law Amsterdam"
+ },
+ {
+  "ref": "11",
+  "query": "Giovanni Battista Tiepolo The Gathering of Manna Verolanuova"
+ },
+ {
+  "ref": "12",
+  "query": "Lucas van Leyden The Dance around the Golden Calf Rijksmuseum"
+ },
+ {
+  "ref": "13",
+  "query": "Jean-Baptiste Greuze The Father's Curse Louvre"
+ },
+ {
+  "ref": "14",
+  "query": "Frederic Edwin Church Heart of the Andes"
+ },
+ {
+  "ref": "15",
+  "query": "Rembrandt Moses Breaking the Tablets of the Law Berlin"
+ },
+ {
+  "ref": "16",
+  "query": "David Roberts The Israelites Leaving Egypt Birmingham"
+ },
+ {
+  "ref": "17",
+  "query": "William Holman Hunt The Scapegoat Lady Lever Art Gallery"
+ },
+ {
+  "ref": "18",
+  "query": "Tintoretto Moses Drawing Water from the Rock Scuola Grande di San Rocco"
+ },
+ {
+  "ref": "19",
+  "query": "Frederic Leighton Moses Views the Promised Land"
+ }
+]
