@@ -11,13 +11,13 @@
  },
  {
   "ref": "2",
-  "query": "Diego Velázquez Christ Crucified Prado",
-  "title": "Cristo crucificado.jpg",
-  "artist": "Diego Velázquez",
+  "query": "Francisco Goya Christ Crucified Prado",
+  "title": "Cristo en la cruz (Goya).jpg",
+  "artist": "Francisco Goya",
   "licence": "Public domain",
-  "width": 2046,
+  "width": 1813,
   "height": 3051,
-  "page": "https://commons.wikimedia.org/wiki/File:Cristo_crucificado.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Cristo_en_la_cruz_(Goya).jpg"
  },
  {
   "ref": "3",
@@ -31,13 +31,13 @@
  },
  {
   "ref": "4",
-  "query": "Quentin Matsys The Moneylender and his Wife Louvre",
-  "title": "Le prêteur et sa femme - Quentin Metsys - Musée du Louvre Peintures INV 1444 ; MR 821.jpg",
-  "artist": "Quinten Metsys",
+  "query": "Marinus van Reymerswaele The Moneychanger and his Wife Prado",
+  "title": "Marinus van Reymerswale-el cambista y su mujer-prado-p2567.jpg",
+  "artist": "Marinus van Reymerswaele",
   "licence": "Public domain",
-  "width": 5786,
-  "height": 6090,
-  "page": "https://commons.wikimedia.org/wiki/File:Le_pr%C3%AAteur_et_sa_femme_-_Quentin_Metsys_-_Mus%C3%A9e_du_Louvre_Peintures_INV_1444_;_MR_821.jpg"
+  "width": 2560,
+  "height": 2172,
+  "page": "https://commons.wikimedia.org/wiki/File:Marinus_van_Reymerswale-el_cambista_y_su_mujer-prado-p2567.jpg"
  },
  {
   "ref": "5,6",
@@ -141,23 +141,18 @@
  },
  {
   "ref": "16",
-  "query": "Paolo Veronese The Wedding at Cana Louvre",
-  "title": "Les Noces de Cana - Paolo Veronese - Musée du Louvre Peintures INV 142 ; MR 384.jpg",
-  "artist": "Paolo Veronese",
-  "licence": "Public domain",
-  "width": 10068,
-  "height": 6742,
-  "page": "https://commons.wikimedia.org/wiki/File:Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_;_MR_384.jpg"
+  "query": "Jan Steen The Effects of Intemperance National Gallery",
+  "title": null
  },
  {
   "ref": "17",
-  "query": "Thomas Cole The Course of Empire Desolation",
-  "title": "Cole Thomas The Course of Empire Desolation 1836.jpg",
-  "artist": "Thomas Cole",
+  "query": "Hubert Robert Imaginary View of the Grande Galerie in Ruins Louvre",
+  "title": "Hubert Robert - Imaginary View of the Grande Galerie in the Louvre in Ruins - WGA19589.jpg",
+  "artist": "Hubert Robert",
   "licence": "Public domain",
-  "width": 8881,
-  "height": 5526,
-  "page": "https://commons.wikimedia.org/wiki/File:Cole_Thomas_The_Course_of_Empire_Desolation_1836.jpg"
+  "width": 1224,
+  "height": 950,
+  "page": "https://commons.wikimedia.org/wiki/File:Hubert_Robert_-_Imaginary_View_of_the_Grande_Galerie_in_the_Louvre_in_Ruins_-_WGA19589.jpg"
  },
  {
   "ref": "18",
@@ -191,13 +186,8 @@
  },
  {
   "ref": "21",
-  "query": "Tizian Der Zinsgroschen Gemäldegalerie Alte Meister",
-  "title": "The Tribute Money (1516) - Tizian (Gemäldegalerie Alte Meister, Dresden).jpg",
-  "artist": "Titian",
-  "licence": "Public domain",
-  "width": 1016,
-  "height": 1335,
-  "page": "https://commons.wikimedia.org/wiki/File:The_Tribute_Money_(1516)_-_Tizian_(Gem%C3%A4ldegalerie_Alte_Meister,_Dresden).jpg"
+  "query": "Anthony van Dyck The Tribute Money Palazzo Bianco Genoa",
+  "title": null
  },
  {
   "ref": "22",
@@ -211,13 +201,8 @@
  },
  {
   "ref": "23",
-  "query": "Caravaggio The Conversion of Saint Paul Santa Maria del Popolo",
-  "title": "Conversion on the Way to Damascus-Caravaggio (c.1600-1).jpg",
-  "artist": "Caravaggio",
-  "licence": "Public domain",
-  "width": 6711,
-  "height": 8817,
-  "page": "https://commons.wikimedia.org/wiki/File:Conversion_on_the_Way_to_Damascus-Caravaggio_(c.1600-1).jpg"
+  "query": "Michelangelo The Conversion of Saul Pauline Chapel",
+  "title": null
  },
  {
   "ref": "24",
@@ -241,13 +226,7 @@
  },
  {
   "ref": "26",
-  "query": "Pieter Bruegel the Elder The Netherlandish Proverbs",
-  "title": "Pieter Bruegel the Elder Netherlandish Proverbs 1559 Gemäldegalerie Berlin 9358.jpg",
-  "artist": "Pieter Bruegel the Elder",
-  "licence": "Public domain",
-  "width": 6784,
-  "height": 4807,
-  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_Netherlandish_Proverbs_1559_Gem%C3%A4ldegalerie_Berlin_9358.jpg"
+  "query": "Lucas van Leyden The Card Players National Gallery of Art"
  },
  {
   "ref": "27",
