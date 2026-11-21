@@ -11,8 +11,7 @@
  },
  {
   "ref": "2",
-  "query": "Nicolas Poussin L'Automne ou la Grappe de la Terre promise",
-  "title": "AUTUMNUS - (estampe) (2e état, avec l'adresse de Stéphane Gantrel) - N. Poussin invent. et sculp. ; Joan. Pesne Sculp. - btv1b531286686.jpg",
+  "query": "L'Automne Nicolas Poussin Musée du Louvre Peintures INV 7306",
   "artist": "Pesne, Jean (1623-1700). Graveur\n\nPoussin, Nicolas (1594-1665). Peintre du modèle",
   "licence": "Public domain",
   "width": 7530,
@@ -21,8 +20,7 @@
  },
  {
   "ref": "3",
-  "query": "Nicolas Poussin Le Printemps ou le Paradis terrestre",
-  "title": null
+  "query": "Le Printemps Nicolas Poussin Musée du Louvre Peintures INV 7303"
  },
  {
   "ref": "4",
@@ -96,18 +94,16 @@
  },
  {
   "ref": "12",
-  "query": "El Greco Saint Paul Toledo Cathedral",
+  "query": "Rembrandt The Apostle Paul National Gallery of Art Washington",
   "artist": "Rembrandt",
   "licence": "Public domain",
   "width": 1197,
   "height": 1445,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_163.jpg",
-  "title": null
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_163.jpg"
  },
  {
   "ref": "13",
-  "query": "Hieronymus Bosch Mesa de los pecados capitales",
-  "title": "Hieronymus Bosch- The Seven Deadly Sins and the Four Last Things.JPG",
+  "query": "Michelangelo The Last Judgment Sistine Chapel",
   "artist": "Hieronymus Bosch or follower",
   "licence": "Public domain",
   "width": 2863,
@@ -136,7 +132,6 @@
  },
  {
   "ref": "16",
-  "query": "Robert Campin Trinity of the Broken Body Hermitage",
-  "title": null
+  "query": "Hans Memling Christ Giving His Blessing Norton Simon"
  }
 ]
