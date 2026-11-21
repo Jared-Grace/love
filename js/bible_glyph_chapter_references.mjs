@@ -1741,6 +1741,10 @@ export function bible_glyph_chapter_references() {
       reference: "Esther 8",
     },
     {
+      chapter_code: "EST09",
+      reference: "Esther 9",
+    },
+    {
       chapter_code: "JOB01",
       reference: "Job 1",
     },
