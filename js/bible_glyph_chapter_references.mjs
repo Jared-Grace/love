@@ -1621,6 +1621,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezra 1",
     },
     {
+      chapter_code: "EZR02",
+      reference: "Ezra 2",
+    },
+    {
       chapter_code: "EZR03",
       reference: "Ezra 3",
     },
