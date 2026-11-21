@@ -76,11 +76,13 @@
   "licence": "Public domain",
   "width": 8464,
   "height": 10880,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_The_Holy_Family.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_The_Holy_Family.jpg",
+  "title": null
  },
  {
   "ref": "12",
-  "query": "Melozzo da Forlì Angel Musician Vatican"
+  "query": "Melozzo da Forlì Angel Musician Vatican",
+  "title": null
  },
  {
   "ref": "13",
@@ -104,7 +106,13 @@
  },
  {
   "ref": "16",
-  "query": "Claude Lorrain Landscape with Hagar and the Angel National Gallery"
+  "query": "Claude Lorrain Landscape with Hagar and the Angel National Gallery",
+  "title": "Landscape with Hagar and the Angel, by Claude Lorrain, 1654, oil on canvas - Dunedin Public Art Gallery - Dunedin, NZ - DSC04714.jpg",
+  "artist": "Daderot",
+  "licence": "Public domain",
+  "width": 4687,
+  "height": 3358,
+  "page": "https://commons.wikimedia.org/wiki/File:Landscape_with_Hagar_and_the_Angel,_by_Claude_Lorrain,_1654,_oil_on_canvas_-_Dunedin_Public_Art_Gallery_-_Dunedin,_NZ_-_DSC04714.jpg"
  },
  {
   "ref": "17",
