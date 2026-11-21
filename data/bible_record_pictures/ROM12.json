@@ -1,13 +1,8 @@
 [
  {
   "ref": "1",
-  "query": "Francisco de Zurbarán Saint Francis in Meditation National Gallery",
-  "title": "Hans Johan Frederik Berg, copy after Francisco de Zurbarán - Saint Francis in Meditation - NG.K&H.A.K.1176 - National Museum of Art, Architecture and Design.jpg",
-  "artist": "Hans Johan Frederik Berg / After Francisco de Zurbarán",
-  "licence": "Public domain",
-  "width": 2303,
-  "height": 4000,
-  "page": "https://commons.wikimedia.org/wiki/File:Hans_Johan_Frederik_Berg,_copy_after_Francisco_de_Zurbar%C3%A1n_-_Saint_Francis_in_Meditation_-_NG.K%26H.A.K.1176_-_National_Museum_of_Art,_Architecture_and_Design.jpg"
+  "query": "Francisco de Zurbarán Saint Francis in Meditation Alte Pinakothek",
+  "title": null
  },
  {
   "ref": "2",
@@ -91,7 +86,7 @@
  },
  {
   "ref": "13",
-  "query": "Murillo San Diego dando de comer a los pobres",
+  "query": "Murillo Saint Diego of Alcalá Feeding the Poor",
   "title": null
  },
  {
@@ -126,23 +121,23 @@
  },
  {
   "ref": "17",
-  "query": "Peter Paul Rubens The Reconciliation of Jacob and Esau",
-  "title": "After Peter Paul Rubens 002.jpg",
-  "artist": "After Peter Paul Rubens",
+  "query": "Francesco Hayez The Meeting of Jacob and Esau Brescia",
+  "title": "Francesco Hayez 062.jpg",
+  "artist": "Francesco Hayez",
   "licence": "Public domain",
-  "width": 1926,
-  "height": 2616,
-  "page": "https://commons.wikimedia.org/wiki/File:After_Peter_Paul_Rubens_002.jpg"
+  "width": 2024,
+  "height": 2456,
+  "page": "https://commons.wikimedia.org/wiki/File:Francesco_Hayez_062.jpg"
  },
  {
   "ref": "18",
-  "query": "Benjamin West Penn's Treaty with the Indians",
-  "title": "John Hall after Benjamin West, William Penn's Treaty with the Indians, 1775, NGA 10874.jpg",
-  "artist": "John Hall after Benjamin West",
-  "licence": "CC0",
-  "width": 4000,
-  "height": 3125,
-  "page": "https://commons.wikimedia.org/wiki/File:John_Hall_after_Benjamin_West,_William_Penn%27s_Treaty_with_the_Indians,_1775,_NGA_10874.jpg"
+  "query": "Benjamin West Penn's Treaty with the Indians Pennsylvania Academy of the Fine Arts painting",
+  "title": "Benjamin West 003.jpg",
+  "artist": "Benjamin West",
+  "licence": "Public domain",
+  "width": 2536,
+  "height": 1874,
+  "page": "https://commons.wikimedia.org/wiki/File:Benjamin_West_003.jpg"
  },
  {
   "ref": "19",
