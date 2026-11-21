@@ -13,7 +13,7 @@ import { app_learn_js_lesson_string_build_generic } from "./app_learn_js_lesson_
 export function app_learn_js_lesson_string_reverse() {
   arguments_assert(arguments, 0);
   ('a string reversed: let a = "joy"; let b = ""; for (let i = a.length - 1; i >= 0; i--) { b = b + a[i]; } console.log(b); writes out yoj');
-  ("2026-11-21, at the human's asking: after Doubling each letter. Nothing in it is new: it is the copy loop of Copying a string with the loop running down, as in Last to first. Joining the letters last to first builds the word backwards.");
+  ("2026-11-21, at the human's asking: after Doubling each letter. Nothing in it is new: it is the copy loop of Copying a string with the loop running down, as in Backwards. Joining the letters last to first builds the word backwards.");
   ("The wrong loops are asking i > 0, which leaves off the first letter, and starting at a.length - 2, which leaves off the last. The extra wrong answer is the word unchanged, what the copy loop running up writes.");
   ("The writing is a first draft by Claude 2026-11-21.");
   let right = {
