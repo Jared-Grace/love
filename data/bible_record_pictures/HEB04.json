@@ -37,11 +37,12 @@
  {
   "ref": "5",
   "query": "John Constable The Cornfield National Gallery",
-  "artist": "Thomas Cole",
+  "artist": "John Constable",
   "licence": "Public domain",
-  "width": 6001,
-  "height": 4337,
-  "page": "https://commons.wikimedia.org/wiki/File:Thomas_Cole_-_Expulsion_from_the_Garden_of_Eden_-_Google_Art_Project.jpg"
+  "width": 5123,
+  "height": 6000,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Cornfield.png",
+  "title": "The Cornfield.png"
  },
  {
   "ref": "6,7",
@@ -75,7 +76,13 @@
  },
  {
   "ref": "10",
-  "query": "Jules Breton The End of the Working Day Brooklyn Museum"
+  "query": "Jules Breton The End of the Working Day Brooklyn Museum",
+  "title": "Brooklyn Museum - Fin du travail (The End of the Working Day) - Jules Breton.jpg",
+  "artist": "Jules Breton",
+  "licence": "Public domain",
+  "width": 1536,
+  "height": 1087,
+  "page": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Fin_du_travail_(The_End_of_the_Working_Day)_-_Jules_Breton.jpg"
  },
  {
   "ref": "11",
@@ -94,27 +101,42 @@
   "licence": "Public domain",
   "width": 1197,
   "height": 1445,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_163.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_163.jpg",
+  "title": null
  },
  {
   "ref": "13",
-  "query": "Hieronymus Bosch Mesa de los pecados capitales"
+  "query": "Hieronymus Bosch Mesa de los pecados capitales",
+  "title": "Hieronymus Bosch- The Seven Deadly Sins and the Four Last Things.JPG",
+  "artist": "Hieronymus Bosch or follower",
+  "licence": "Public domain",
+  "width": 2863,
+  "height": 2441,
+  "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch-_The_Seven_Deadly_Sins_and_the_Four_Last_Things.JPG"
  },
  {
   "ref": "14",
   "query": "Andrea Mantegna Ascension Uffizi",
-  "artist": "Rembrandt",
+  "artist": "Andrea Mantegna",
   "licence": "Public domain",
-  "width": 2068,
-  "height": 2806,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_The_Ascension_1636_Oil_on_canvas_Alte_Pinakothek_Munich_Germany.jpg"
+  "width": 1256,
+  "height": 2580,
+  "page": "https://commons.wikimedia.org/wiki/File:Andrea_Mantegna_012.jpg",
+  "title": "Andrea Mantegna 012.jpg"
  },
  {
   "ref": "15",
-  "query": "Juan de Flandes The Temptation of Christ National Gallery of Art"
+  "query": "Juan de Flandes The Temptation of Christ National Gallery of Art",
+  "title": "Temptation-of-Christ-in-the-Wilderness.jpg",
+  "artist": "Juan de Flandes",
+  "licence": "Public domain",
+  "width": 3484,
+  "height": 4623,
+  "page": "https://commons.wikimedia.org/wiki/File:Temptation-of-Christ-in-the-Wilderness.jpg"
  },
  {
   "ref": "16",
-  "query": "Robert Campin Trinity of the Broken Body Hermitage"
+  "query": "Robert Campin Trinity of the Broken Body Hermitage",
+  "title": null
  }
 ]
