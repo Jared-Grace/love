@@ -96,15 +96,23 @@
  },
  {
   "ref": "13",
-  "query": "Hieronymus Bosch Table of the Mortal Sins eye of God Prado"
+  "query": "Hieronymus Bosch Table of the Mortal Sins eye of God Prado",
+  "title": null
  },
  {
   "ref": "14",
-  "query": "Rembrandt The Ascension Alte Pinakothek"
+  "query": "Rembrandt The Ascension Alte Pinakothek",
+  "title": "Rembrandt The Ascension 1636 Oil on canvas Alte Pinakothek Munich Germany.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 2068,
+  "height": 2806,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_The_Ascension_1636_Oil_on_canvas_Alte_Pinakothek_Munich_Germany.jpg"
  },
  {
   "ref": "15",
-  "query": "Jacopo Tintoretto Christ Tempted by Satan Scuola San Rocco"
+  "query": "Jacopo Tintoretto Christ Tempted by Satan Scuola San Rocco",
+  "title": null
  },
  {
   "ref": "16",
