@@ -21,7 +21,8 @@
  },
  {
   "ref": "3",
-  "query": "Le Printemps Nicolas Poussin Musée du Louvre Peintures INV 7303"
+  "query": "Le Printemps Nicolas Poussin Musée du Louvre Peintures INV 7303",
+  "title": null
  },
  {
   "ref": "4",
@@ -98,9 +99,10 @@
   "query": "Rembrandt The Apostle Paul National Gallery of Art Washington",
   "artist": "Rembrandt",
   "licence": "Public domain",
-  "width": 1197,
-  "height": 1445,
-  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_163.jpg"
+  "width": 4000,
+  "height": 4765,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Zelfportret_als_de_apostel_Paulus_-_Google_Art_Project.jpg",
+  "title": "Rembrandt Harmensz. van Rijn - Zelfportret als de apostel Paulus - Google Art Project.jpg"
  },
  {
   "ref": "13",
