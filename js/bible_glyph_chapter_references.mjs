@@ -873,6 +873,10 @@ export function bible_glyph_chapter_references() {
       reference: "Judges 4",
     },
     {
+      chapter_code: "JDG05",
+      reference: "Judges 5",
+    },
+    {
       chapter_code: "JDG06",
       reference: "Judges 6",
     },
