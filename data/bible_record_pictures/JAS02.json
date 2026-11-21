@@ -211,10 +211,22 @@
  },
  {
   "ref": "25",
-  "query": "James Tissot The Harlot of Jericho and the Two Spies"
+  "query": "James Tissot The Harlot of Jericho and the Two Spies",
+  "title": "Tissot The Harlot of Jericho and the Two Spies.jpg",
+  "artist": "James Tissot",
+  "licence": "Public domain",
+  "width": 3000,
+  "height": 4058,
+  "page": "https://commons.wikimedia.org/wiki/File:Tissot_The_Harlot_of_Jericho_and_the_Two_Spies.jpg"
  },
  {
   "ref": "26",
-  "query": "Hans Holbein the Younger The Body of the Dead Christ in the Tomb"
+  "query": "Hans Holbein the Younger The Body of the Dead Christ in the Tomb",
+  "title": "Hans Holbein- The Body of the Dead Christ in the Tomb.JPG",
+  "artist": "Hans Holbein the Younger",
+  "licence": "Public domain",
+  "width": 3226,
+  "height": 482,
+  "page": "https://commons.wikimedia.org/wiki/File:Hans_Holbein-_The_Body_of_the_Dead_Christ_in_the_Tomb.JPG"
  }
 ]
