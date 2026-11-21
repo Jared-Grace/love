@@ -2041,6 +2041,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ecclesiastes 10",
     },
     {
+      chapter_code: "ECC11",
+      reference: "Ecclesiastes 11",
+    },
+    {
       chapter_code: "ECC12",
       reference: "Ecclesiastes 12",
     },
