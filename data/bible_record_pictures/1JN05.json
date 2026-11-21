@@ -86,42 +86,92 @@
  },
  {
   "ref": "12",
-  "query": "Fra Angelico Noli me tangere San Marco"
+  "query": "Fra Angelico Noli me tangere San Marco",
+  "title": "Fra Angelico. Noli me tangere, GD015651.jpg",
+  "artist": "Angelico, Fra (Italian painter, c. 1395-1455) (artist)",
+  "licence": "Public domain",
+  "width": 3741,
+  "height": 3198,
+  "page": "https://commons.wikimedia.org/wiki/File:Fra_Angelico._Noli_me_tangere,_GD015651.jpg"
  },
  {
   "ref": "13",
-  "query": "Gerard Dou Saint Jerome writing"
+  "query": "Gerard Dou Saint Jerome writing",
+  "title": null
  },
  {
   "ref": "14",
-  "query": "Jules Breton The Song of the Lark Art Institute of Chicago"
+  "query": "Jules Breton The Song of the Lark Art Institute of Chicago",
+  "title": "Jules Breton, le chant de l'alouette.1884.jpg",
+  "artist": "Jules Breton",
+  "licence": "Public domain",
+  "width": 2548,
+  "height": 3300,
+  "page": "https://commons.wikimedia.org/wiki/File:Jules_Breton,_le_chant_de_l%27alouette.1884.jpg"
  },
  {
   "ref": "15",
-  "query": "Bernhard Plockhorst Jesus Blessing the Children"
+  "query": "Bernhard Plockhorst Jesus Blessing the Children",
+  "title": "The analytical Holy Bible - self-pronouncing, self-interpreting, self-explanatory (1906) (14781897684).jpg",
+  "artist": "Roberts, Arthur, ed",
+  "licence": "No restrictions",
+  "width": 2640,
+  "height": 3348,
+  "page": "https://commons.wikimedia.org/wiki/File:The_analytical_Holy_Bible_-_self-pronouncing,_self-interpreting,_self-explanatory_(1906)_(14781897684).jpg"
  },
  {
   "ref": "16",
-  "query": "Lorenzo Lotto Saint Jerome in the Wilderness Louvre"
+  "query": "Lorenzo Lotto Saint Jerome in the Wilderness Louvre",
+  "title": "St Jerome in the Wilderness - Nationalmuseum - 17333.tif",
+  "artist": "School of Pier Francesco Mola",
+  "licence": "Public domain",
+  "width": 3038,
+  "height": 4219,
+  "page": "https://commons.wikimedia.org/wiki/File:St_Jerome_in_the_Wilderness_-_Nationalmuseum_-_17333.tif"
  },
  {
   "ref": "17",
-  "query": "Domenico Fetti The Parable of the Lost Drachma"
+  "query": "Domenico Fetti The Parable of the Lost Drachma",
+  "title": "The parable of the lost piece of silver 1585 print by Ambrosius Francken I, S.I 1061, Prints Department, Royal Library of Belgium.jpg",
+  "artist": "Ambrosius Francken I / Jan Collaert (I)",
+  "licence": "Public domain",
+  "width": 6660,
+  "height": 4983,
+  "page": "https://commons.wikimedia.org/wiki/File:The_parable_of_the_lost_piece_of_silver_1585_print_by_Ambrosius_Francken_I,_S.I_1061,_Prints_Department,_Royal_Library_of_Belgium.jpg"
  },
  {
   "ref": "18",
-  "query": "Fra Angelico Christ the Redeemer Blessing"
+  "query": "Fra Angelico Christ the Redeemer Blessing",
+  "title": "Workshop of Fra Angelico (c. 1400-1455) - Christ Blessing - RCIN 407616 - Royal Collection.jpg",
+  "artist": "Fra Angelico",
+  "licence": "Public domain",
+  "width": 1372,
+  "height": 1650,
+  "page": "https://commons.wikimedia.org/wiki/File:Workshop_of_Fra_Angelico_(c._1400-1455)_-_Christ_Blessing_-_RCIN_407616_-_Royal_Collection.jpg"
  },
  {
   "ref": "19",
-  "query": "Hieronymus Bosch The Garden of Earthly Delights Hell"
+  "query": "Hieronymus Bosch The Garden of Earthly Delights Hell",
+  "title": "Hieronymus Bosch - The Garden of Earthly Delights - Hell.jpg",
+  "artist": "Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 1778,
+  "height": 4324,
+  "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_-_The_Garden_of_Earthly_Delights_-_Hell.jpg"
  },
  {
   "ref": "20",
-  "query": "Hans Memling Christ Blessing Museum of Fine Arts Boston"
+  "query": "Hans Memling Christ Blessing Museum of Fine Arts Boston",
+  "title": null
  },
  {
   "ref": "21",
-  "query": "Nicolas Poussin The Adoration of the Golden Calf National Gallery London"
+  "query": "Nicolas Poussin The Adoration of the Golden Calf National Gallery London",
+  "title": "The Adoration of the Golden Calf – Nicolas Poussin.jpg",
+  "artist": "Nicolas Poussin",
+  "licence": "Public domain",
+  "width": 6014,
+  "height": 4238,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Adoration_of_the_Golden_Calf_%E2%80%93_Nicolas_Poussin.jpg"
  }
 ]
