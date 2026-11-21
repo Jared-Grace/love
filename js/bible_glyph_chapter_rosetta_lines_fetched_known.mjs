@@ -1997,6 +1997,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_2ki18();
   }
+  if (equal(chapter_code, "2KI19")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_2ki19.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_2ki19();
+  }
   if (equal(chapter_code, "2KI22")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_2ki22.mjs"
