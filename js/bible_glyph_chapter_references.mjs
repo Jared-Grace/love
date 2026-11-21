@@ -2573,6 +2573,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezekiel 40",
     },
     {
+      chapter_code: "EZK41",
+      reference: "Ezekiel 41",
+    },
+    {
       chapter_code: "EZK47",
       reference: "Ezekiel 47",
     },
