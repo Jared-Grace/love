@@ -131,11 +131,18 @@
  },
  {
   "ref": "15",
-  "query": "Murillo Trauben- und Melonenesser Alte Pinakothek"
+  "query": "Murillo Trauben- und Melonenesser Alte Pinakothek",
+  "title": "Bartolomé Esteban Perez Murillo - Grape and Melon Eaters.jpg",
+  "artist": "Bartolomé Esteban Murillo",
+  "licence": "Public domain",
+  "width": 3145,
+  "height": 4500,
+  "page": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Perez_Murillo_-_Grape_and_Melon_Eaters.jpg"
  },
  {
   "ref": "16",
-  "query": "Bonifazio de' Pitati Parable of the Rich Man and Lazarus"
+  "query": "Bonifazio de' Pitati Parable of the Rich Man and Lazarus",
+  "title": null
  },
  {
   "ref": "17",
