@@ -2049,6 +2049,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ecclesiastes 12",
     },
     {
+      chapter_code: "SNG01",
+      reference: "Song of Songs 1",
+    },
+    {
       chapter_code: "SNG02",
       reference: "Song of Songs 2",
     },
