@@ -31,19 +31,43 @@
  },
  {
   "ref": "6",
-  "query": "Andrea Mantegna The Crucifixion Louvre"
+  "query": "Andrea Mantegna The Crucifixion Louvre",
+  "title": "Crucifixion - Andrea Mantegna - Louvre INV 368.jpg",
+  "artist": "Wilfredor",
+  "licence": "Public domain",
+  "width": 7222,
+  "height": 5162,
+  "page": "https://commons.wikimedia.org/wiki/File:Crucifixion_-_Andrea_Mantegna_-_Louvre_INV_368.jpg"
  },
  {
   "ref": "7",
-  "query": "Jacques-Louis David The Death of Socrates"
+  "query": "Jacques-Louis David The Death of Socrates",
+  "title": "The Death of Socrates MET 31.45 1.jpg",
+  "artist": "Jacques-Louis David",
+  "licence": "CC0",
+  "width": 5304,
+  "height": 3608,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Death_of_Socrates_MET_31.45_1.jpg"
  },
  {
   "ref": "8",
-  "query": "Rubens Christ on the Cross between the Two Thieves Coup de Lance"
+  "query": "Rubens Christ on the Cross between the Two Thieves Coup de Lance",
+  "title": "Anthony van Dyck - Christ on the cross between the two criminals (oil sketch).jpg",
+  "artist": "Anthony van Dyck",
+  "licence": "Public domain",
+  "width": 2709,
+  "height": 3549,
+  "page": "https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Christ_on_the_cross_between_the_two_criminals_(oil_sketch).jpg"
  },
  {
   "ref": "9",
-  "query": "Van Eyck Adoration of the Mystic Lamb Ghent Altarpiece"
+  "query": "Van Eyck Adoration of the Mystic Lamb Ghent Altarpiece",
+  "title": "Michiel Coxcie - The Worship of the Mystic Lamb (Copy of the Ghent Altarpiece) - 524 - Gemäldegalerie.jpg",
+  "artist": "After Jan van Eyck / Michiel Coxie",
+  "licence": "Public domain",
+  "width": 3474,
+  "height": 1962,
+  "page": "https://commons.wikimedia.org/wiki/File:Michiel_Coxcie_-_The_Worship_of_the_Mystic_Lamb_(Copy_of_the_Ghent_Altarpiece)_-_524_-_Gem%C3%A4ldegalerie.jpg"
  },
  {
   "ref": "10",
