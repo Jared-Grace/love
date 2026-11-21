@@ -2521,6 +2521,10 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 59",
     },
     {
+      chapter_code: "ISA60",
+      reference: "Isaiah 60",
+    },
+    {
       chapter_code: "ISA61",
       reference: "Isaiah 61",
     },
