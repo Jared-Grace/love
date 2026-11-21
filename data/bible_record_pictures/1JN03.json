@@ -31,7 +31,13 @@
  },
  {
   "ref": "4",
-  "query": "Hieronymus Bosch The Wayfarer Boijmans"
+  "query": "Hieronymus Bosch The Wayfarer Boijmans",
+  "title": "Jheronimus Bosch - The Pedlar - Google Art Project.jpg",
+  "artist": "Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 5877,
+  "height": 5957,
+  "page": "https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_-_The_Pedlar_-_Google_Art_Project.jpg"
  },
  {
   "ref": "5",
@@ -65,7 +71,8 @@
  },
  {
   "ref": "8",
-  "query": "Luca Giordano Saint Michael Archangel Kunsthistorisches Museum"
+  "query": "Luca Giordano Saint Michael Archangel Kunsthistorisches Museum",
+  "title": null
  },
  {
   "ref": "9",
@@ -79,7 +86,13 @@
  },
  {
   "ref": "10",
-  "query": "Frans Floris The Fall of the Rebel Angels Antwerp"
+  "query": "Frans Floris The Fall of the Rebel Angels Antwerp",
+  "title": "Frans Floris I - The Fall of the Rebel Angels, 1554 (Antwerp).jpg",
+  "artist": "Frans Floris I",
+  "licence": "Public domain",
+  "width": 26884,
+  "height": 37087,
+  "page": "https://commons.wikimedia.org/wiki/File:Frans_Floris_I_-_The_Fall_of_the_Rebel_Angels,_1554_(Antwerp).jpg"
  },
  {
   "ref": "11",
