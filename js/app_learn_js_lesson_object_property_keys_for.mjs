@@ -160,7 +160,7 @@ export function app_learn_js_lesson_object_property_keys_for() {
       box_one,
       context,
       app_learn_js_lesson_object_property_key,
-      ["If ", "k", " is ", '"town"', ", then ", "p[k]", " means ", "p.town"],
+      ["if ", "k", " is ", '"town"', ", then ", "p[k]", " means ", "p.town"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
