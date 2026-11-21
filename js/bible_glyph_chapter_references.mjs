@@ -1613,6 +1613,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Chronicles 35",
     },
     {
+      chapter_code: "2CH36",
+      reference: "2 Chronicles 36",
+    },
+    {
       chapter_code: "EZR01",
       reference: "Ezra 1",
     },
