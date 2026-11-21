@@ -7,6 +7,9 @@ import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_
 import { app_learn_js_lesson_for_if_even } from "./app_learn_js_lesson_for_if_even.mjs";
 import { app_learn_js_lesson_for_up_to } from "./app_learn_js_lesson_for_up_to.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
+import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -89,19 +92,44 @@ export function app_learn_js_lesson_for_divisors() {
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
-      "Put the counted number on the right of ",
-      "%",
-      ": ",
+      "",
       "n % i === 0",
       " asks whether ",
-      "n",
-      " divides by ",
       "i",
-      " with nothing left over. Those ",
-      "i",
-      " are the divisors of ",
+      " evenly divides into ",
       "n",
-      ":",
+      " or not. ",
+      "=== 0",
+      " means the remainder is ",
+      "0",
+      ". In other words, after dividing, there's nothing left over.",
+    ]);
+    let divisor_line = html_div(box_three);
+    app_learn_js_cycle_code(divisor_line, [
+      "If ",
+      "i",
+      " evenly divides into ",
+      "n",
+      ", then we say that ",
+      "i",
+      " is a ",
+    ]);
+    app_learn_js_definition_term(divisor_line, "divisor");
+    app_learn_js_cycle_code(divisor_line, [" of ", "n", "."]);
+    app_learn_js_div_cycle_code(box_three, [
+      "We will loop from ",
+      "1",
+      " to ",
+      "n",
+      " using ",
+      "i",
+      ". For each value of ",
+      "i",
+      ", we will check if ",
+      "i",
+      " evenly divides into ",
+      "n",
+      " or not:",
     ]);
     let code3 = program_of(example_n);
     let lines = text_split_newline(code3);

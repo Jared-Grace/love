@@ -99,7 +99,7 @@ export function app_learn_js_lesson_bin_unsorted() {
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
-      "Looking only to the right is safe only when the array is in order. Here",
+      "Using binary search, checking the middle and then looking only to the right or left is safe only when the array is in order. Here",
       "12",
       " is in the array, but the first middle item is ",
       "5",

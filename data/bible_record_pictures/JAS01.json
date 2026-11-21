@@ -1,24 +1,140 @@
-[{"ref":"1","query":"Georges de La Tour Saint Jacques le Mineur Albi"},
-{"ref":"2,3","query":"Giovanni Bellini Saint Francis in the Desert Frick"},
-{"ref":"4","query":"Thomas Cole The Voyage of Life Manhood National Gallery of Art"},
-{"ref":"5","query":"Luca Giordano El sueño de Salomón Prado"},
-{"ref":"6","query":"Turner Snow Storm Steam-Boat off a Harbour's Mouth"},
-{"ref":"7","query":"Willem van de Velde de Jonge De Windstoot Rijksmuseum"},
-{"ref":"8","query":"Hieronymus Bosch The Ship of Fools Louvre"},
-{"ref":"9","query":"Diego Velázquez Old Woman Cooking Eggs"},
-{"ref":"10","query":"Claude Monet Poppy Field Argenteuil"},
-{"ref":"11","query":"Vincent van Gogh Wheat Field with Reaper and Sun Kröller-Müller"},
-{"ref":"12","query":"Francisco de Zurbarán Saint Serapion Wadsworth"},
-{"ref":"13","query":"Duccio The Temptation of Christ on the Mountain Frick"},
-{"ref":"14","query":"Hieronymus Bosch The Haywain Triptych Prado"},
-{"ref":"15","query":"Thomas Cole The Course of Empire Destruction"},
-{"ref":"16","query":"Caravaggio The Cardsharps Kimbell"},
-{"ref":"17","query":"Vincent van Gogh The Starry Night MoMA"},
-{"ref":"18","query":"Jules Breton The Recall of the Gleaners Orsay"},
-{"ref":"19,20","query":"Johannes Vermeer Christ in the House of Martha and Mary Edinburgh"},
-{"ref":"21","query":"Jean-François Millet The Sower Museum of Fine Arts Boston"},
-{"ref":"22","query":"Rembrandt Le Ménage du menuisier Louvre"},
-{"ref":"23,24","query":"Caravaggio Narcissus Barberini"},
-{"ref":"25","query":"Domenico Ghirlandaio Saint Jerome in his Study Ognissanti"},
-{"ref":"26","query":"Jan Steen De kwakzalver Rijksmuseum"},
-{"ref":"27","query":"Michael Sweerts Clothing the Naked Metropolitan Museum"}]
+[
+ {
+  "ref": "1",
+  "query": "Georges de La Tour Saint Jacques le Mineur Albi",
+  "title": "(Albi) Saint Jacques le Mineur 1620 - Georges de La Tour Inv.169.jpg",
+  "artist": "Didier Descouens",
+  "licence": "Public domain",
+  "width": 5454,
+  "height": 6799,
+  "page": "https://commons.wikimedia.org/wiki/File:(Albi)_Saint_Jacques_le_Mineur_1620_-_Georges_de_La_Tour_Inv.169.jpg"
+ },
+ {
+  "ref": "2,3",
+  "query": "Giovanni Bellini Saint Francis in the Desert Frick",
+  "title": "Giovanni Bellini - Saint Francis in the Desert - Google Art Project.jpg",
+  "artist": "Giovanni Bellini",
+  "licence": "Public domain",
+  "width": 30000,
+  "height": 26319,
+  "page": "https://commons.wikimedia.org/wiki/File:Giovanni_Bellini_-_Saint_Francis_in_the_Desert_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "4",
+  "query": "Thomas Cole The Voyage of Life Manhood National Gallery of Art",
+  "title": "Thomas Cole - The Voyage of Life Manhood, 1842 (National Gallery of Art).jpg",
+  "artist": "Thomas Cole",
+  "licence": "Public domain",
+  "width": 5272,
+  "height": 3468,
+  "page": "https://commons.wikimedia.org/wiki/File:Thomas_Cole_-_The_Voyage_of_Life_Manhood,_1842_(National_Gallery_of_Art).jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Luca Giordano El sueño de Salomón Prado",
+  "title": "Giordano Le Rêve de Salomon Prado.jpg",
+  "artist": "Luca Giordano",
+  "licence": "Public domain",
+  "width": 1280,
+  "height": 876,
+  "page": "https://commons.wikimedia.org/wiki/File:Giordano_Le_R%C3%AAve_de_Salomon_Prado.jpg"
+ },
+ {
+  "ref": "6",
+  "query": "Turner Snow Storm Steam-Boat off a Harbour's Mouth",
+  "title": "J.M.W. Turner – Snow Storm - Steam-Boat off a Harbour's Mouth.jpg",
+  "artist": "J. M. W. Turner",
+  "licence": "Public domain",
+  "width": 7247,
+  "height": 5448,
+  "page": "https://commons.wikimedia.org/wiki/File:J.M.W._Turner_%E2%80%93_Snow_Storm_-_Steam-Boat_off_a_Harbour%27s_Mouth.jpg"
+ },
+ {
+  "ref": "7",
+  "query": "Willem van de Velde de Jonge De Windstoot Rijksmuseum",
+  "title": "Een schip in volle zee bij vliegende storm, bekend als ‘De windstoot’ Rijksmuseum SK-A-1848.jpeg",
+  "artist": "Willem van de Velde the Younger",
+  "licence": "Public domain",
+  "width": 4422,
+  "height": 5416,
+  "page": "https://commons.wikimedia.org/wiki/File:Een_schip_in_volle_zee_bij_vliegende_storm,_bekend_als_%E2%80%98De_windstoot%E2%80%99_Rijksmuseum_SK-A-1848.jpeg"
+ },
+ {
+  "ref": "8",
+  "query": "Hieronymus Bosch The Ship of Fools Louvre",
+  "title": "La Nef des fous - Jérôme Bosch - Musée du Louvre Peintures RF 2218.jpg",
+  "artist": "Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 5367,
+  "height": 9963,
+  "page": "https://commons.wikimedia.org/wiki/File:La_Nef_des_fous_-_J%C3%A9r%C3%B4me_Bosch_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2218.jpg"
+ },
+ {
+  "ref": "9",
+  "query": "Diego Velázquez Old Woman Cooking Eggs"
+ },
+ {
+  "ref": "10",
+  "query": "Claude Monet Poppy Field Argenteuil"
+ },
+ {
+  "ref": "11",
+  "query": "Vincent van Gogh Wheat Field with Reaper and Sun Kröller-Müller"
+ },
+ {
+  "ref": "12",
+  "query": "Francisco de Zurbarán Saint Serapion Wadsworth"
+ },
+ {
+  "ref": "13",
+  "query": "Duccio The Temptation of Christ on the Mountain Frick"
+ },
+ {
+  "ref": "14",
+  "query": "Hieronymus Bosch The Haywain Triptych Prado"
+ },
+ {
+  "ref": "15",
+  "query": "Thomas Cole The Course of Empire Destruction"
+ },
+ {
+  "ref": "16",
+  "query": "Caravaggio The Cardsharps Kimbell"
+ },
+ {
+  "ref": "17",
+  "query": "Vincent van Gogh The Starry Night MoMA"
+ },
+ {
+  "ref": "18",
+  "query": "Jules Breton The Recall of the Gleaners Orsay"
+ },
+ {
+  "ref": "19,20",
+  "query": "Johannes Vermeer Christ in the House of Martha and Mary Edinburgh"
+ },
+ {
+  "ref": "21",
+  "query": "Jean-François Millet The Sower Museum of Fine Arts Boston"
+ },
+ {
+  "ref": "22",
+  "query": "Rembrandt Le Ménage du menuisier Louvre"
+ },
+ {
+  "ref": "23,24",
+  "query": "Caravaggio Narcissus Barberini"
+ },
+ {
+  "ref": "25",
+  "query": "Domenico Ghirlandaio Saint Jerome in his Study Ognissanti"
+ },
+ {
+  "ref": "26",
+  "query": "Jan Steen De kwakzalver Rijksmuseum"
+ },
+ {
+  "ref": "27",
+  "query": "Michael Sweerts Clothing the Naked Metropolitan Museum"
+ }
+]

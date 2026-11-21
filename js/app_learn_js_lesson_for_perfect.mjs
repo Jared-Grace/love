@@ -9,10 +9,14 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_for_divisors } from "./app_learn_js_lesson_for_divisors.mjs";
 import { app_learn_js_lesson_for_total_if } from "./app_learn_js_lesson_for_total_if.mjs";
-import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
+import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_for_perfect() {
@@ -97,8 +101,11 @@ export function app_learn_js_lesson_for_perfect() {
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);
-    app_learn_js_div_cycle_code(box_three, [
-      "A number is perfect when its divisors below it add up to it. ",
+    let perfect_line = html_div(box_three);
+    html_span_text(perfect_line, "A number is ");
+    app_learn_js_definition_term(perfect_line, "perfect");
+    app_learn_js_cycle_code(perfect_line, [
+      " when its divisors below it add up to it. ",
       "i < n",
       " leaves ",
       "n",
