@@ -1853,6 +1853,10 @@ export function bible_glyph_chapter_references() {
       reference: "Job 26",
     },
     {
+      chapter_code: "JOB27",
+      reference: "Job 27",
+    },
+    {
       chapter_code: "JOB28",
       reference: "Job 28",
     },
