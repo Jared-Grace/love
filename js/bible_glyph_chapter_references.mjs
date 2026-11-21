@@ -2549,6 +2549,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezekiel 34",
     },
     {
+      chapter_code: "EZK35",
+      reference: "Ezekiel 35",
+    },
+    {
       chapter_code: "EZK36",
       reference: "Ezekiel 36",
     },
