@@ -2365,6 +2365,10 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 20",
     },
     {
+      chapter_code: "ISA21",
+      reference: "Isaiah 21",
+    },
+    {
       chapter_code: "ISA26",
       reference: "Isaiah 26",
     },
