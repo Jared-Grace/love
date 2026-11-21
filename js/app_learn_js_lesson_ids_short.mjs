@@ -732,6 +732,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_push_total: text_frozen("push_total"),
       app_learn_js_lesson_array_for_set_total: text_frozen("set_total"),
       app_learn_js_lesson_array_for_push_if_not: text_frozen("push_if_not"),
+      app_learn_js_lesson_array_for_unique: text_frozen("unique"),
       app_learn_js_lesson_array_for_same: text_frozen("same"),
       app_learn_js_lesson_array_for_same_plus_one: text_frozen("same_plus_one"),
       app_learn_js_lesson_array_for_same_double: text_frozen("same_double"),
