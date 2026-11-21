@@ -176,14 +176,32 @@
  },
  {
   "ref": "21,22",
-  "query": "Nicolaes Maes Old Woman Saying Grace Rijksmuseum"
+  "query": "Nicolaes Maes Old Woman Saying Grace Rijksmuseum",
+  "title": "Oude vrouw in gebed, bekend als ‘Het gebed zonder end’ Rijksmuseum SK-C-535.jpeg",
+  "artist": "Nicolaes Maes",
+  "licence": "Public domain",
+  "width": 4138,
+  "height": 4914,
+  "page": "https://commons.wikimedia.org/wiki/File:Oude_vrouw_in_gebed,_bekend_als_%E2%80%98Het_gebed_zonder_end%E2%80%99_Rijksmuseum_SK-C-535.jpeg"
  },
  {
   "ref": "23",
-  "query": "Andrei Rublev Trinity"
+  "query": "Andrei Rublev Trinity",
+  "title": "Andrey Rublev - Св. Троица - Google Art Project.jpg",
+  "artist": "Andrei Rublev",
+  "licence": "Public domain",
+  "width": 3231,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:Andrey_Rublev_-_%D0%A1%D0%B2._%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%B0_-_Google_Art_Project.jpg"
  },
  {
   "ref": "24",
-  "query": "Rogier van der Weyden Pentecost"
+  "query": "Rogier van der Weyden Pentecost",
+  "title": "Vrancke van der Stockt - Pentecost, c1460 - Kupferstichkabinett Berlin.jpg",
+  "artist": "Vrancke van der Stockt",
+  "licence": "Public domain",
+  "width": 2551,
+  "height": 3856,
+  "page": "https://commons.wikimedia.org/wiki/File:Vrancke_van_der_Stockt_-_Pentecost,_c1460_-_Kupferstichkabinett_Berlin.jpg"
  }
 ]
