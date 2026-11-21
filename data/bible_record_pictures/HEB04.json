@@ -1,15 +1,113 @@
-[{"ref":"1","query":"Asher Brown Durand Kindred Spirits"},
-{"ref":"2","query":"Nicolas Poussin Autumn The Spies with the Grapes of the Promised Land Louvre"},
-{"ref":"3","query":"Nicolas Poussin Spring The Earthly Paradise Louvre"},
-{"ref":"4","query":"Jean-François Millet Noonday Rest Museum of Fine Arts Boston"},
-{"ref":"5","query":"Thomas Cole Expulsion from the Garden of Eden Museum of Fine Arts Boston"},
-{"ref":"6,7","query":"Jan Steen The Worship of the Golden Calf North Carolina Museum of Art"},
-{"ref":"8","query":"John Martin Joshua Commanding the Sun to Stand Still upon Gibeon"},
-{"ref":"9","query":"Vincent van Gogh The Siesta after Millet Orsay"},
-{"ref":"10","query":"Jules Breton Evening in the Hamlet of Finistère"},
-{"ref":"11","query":"Jean-Léon Gérôme Pollice Verso Phoenix"},
-{"ref":"12","query":"Rembrandt The Apostle Paul Kunsthistorisches Vienna"},
-{"ref":"13","query":"Hieronymus Bosch Table of the Mortal Sins eye of God Prado"},
-{"ref":"14","query":"Rembrandt The Ascension Alte Pinakothek"},
-{"ref":"15","query":"Jacopo Tintoretto Christ Tempted by Satan Scuola San Rocco"},
-{"ref":"16","query":"Jan van Eyck Deësis Ghent Altarpiece Christ enthroned"}]
+[
+ {
+  "ref": "1",
+  "query": "Asher Brown Durand Kindred Spirits",
+  "title": "Kindred Spirits by Asher Brown Durand, 1849.jpg",
+  "artist": "Wmpearl",
+  "licence": "CC0",
+  "width": 2736,
+  "height": 3345,
+  "page": "https://commons.wikimedia.org/wiki/File:Kindred_Spirits_by_Asher_Brown_Durand,_1849.jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Nicolas Poussin Autumn The Spies with the Grapes of the Promised Land Louvre",
+  "title": null
+ },
+ {
+  "ref": "3",
+  "query": "Nicolas Poussin Spring The Earthly Paradise Louvre",
+  "title": null
+ },
+ {
+  "ref": "4",
+  "query": "Jean-François Millet Noonday Rest Museum of Fine Arts Boston",
+  "title": "La Méridienne - Jean-François Millet - Museum of Fine Arts,Boston.jpg",
+  "artist": "Jean-François Millet",
+  "licence": "Public domain",
+  "width": 1600,
+  "height": 1126,
+  "page": "https://commons.wikimedia.org/wiki/File:La_M%C3%A9ridienne_-_Jean-Fran%C3%A7ois_Millet_-_Museum_of_Fine_Arts,Boston.jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Thomas Cole Expulsion from the Garden of Eden Museum of Fine Arts Boston",
+  "title": "Thomas Cole - Expulsion from the Garden of Eden - Google Art Project.jpg",
+  "artist": "Thomas Cole",
+  "licence": "Public domain",
+  "width": 6001,
+  "height": 4337,
+  "page": "https://commons.wikimedia.org/wiki/File:Thomas_Cole_-_Expulsion_from_the_Garden_of_Eden_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "6,7",
+  "query": "Jan Steen The Worship of the Golden Calf North Carolina Museum of Art",
+  "title": "The worship of the Golden Calf, by Jan Steen.jpg",
+  "artist": "Jan Steen",
+  "licence": "Public domain",
+  "width": 4668,
+  "height": 5364,
+  "page": "https://commons.wikimedia.org/wiki/File:The_worship_of_the_Golden_Calf,_by_Jan_Steen.jpg"
+ },
+ {
+  "ref": "8",
+  "query": "John Martin Joshua Commanding the Sun to Stand Still upon Gibeon",
+  "title": "Joshua Commanding the Sun to Stand Still upon Gibeon (1816) John Martin - NGA 2004.64.1.jpg",
+  "artist": "John Martin",
+  "licence": "Public domain",
+  "width": 5103,
+  "height": 3353,
+  "page": "https://commons.wikimedia.org/wiki/File:Joshua_Commanding_the_Sun_to_Stand_Still_upon_Gibeon_(1816)_John_Martin_-_NGA_2004.64.1.jpg"
+ },
+ {
+  "ref": "9",
+  "query": "Vincent van Gogh The Siesta after Millet Orsay",
+  "title": "Vincent van Gogh - The siesta (after Millet) - Google Art Project.jpg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 3877,
+  "height": 3056,
+  "page": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_siesta_(after_Millet)_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "10",
+  "query": "Jules Breton Evening in the Hamlet of Finistère",
+  "title": null
+ },
+ {
+  "ref": "11",
+  "query": "Jean-Léon Gérôme Pollice Verso Phoenix",
+  "title": "Jean-Leon Gerome Pollice Verso.jpg",
+  "artist": "Jean-Léon Gérôme",
+  "licence": "Public domain",
+  "width": 2425,
+  "height": 1630,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean-Leon_Gerome_Pollice_Verso.jpg"
+ },
+ {
+  "ref": "12",
+  "query": "Rembrandt The Apostle Paul Kunsthistorisches Vienna",
+  "title": "Rembrandt Harmensz. van Rijn 163.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1197,
+  "height": 1445,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_163.jpg"
+ },
+ {
+  "ref": "13",
+  "query": "Hieronymus Bosch Table of the Mortal Sins eye of God Prado"
+ },
+ {
+  "ref": "14",
+  "query": "Rembrandt The Ascension Alte Pinakothek"
+ },
+ {
+  "ref": "15",
+  "query": "Jacopo Tintoretto Christ Tempted by Satan Scuola San Rocco"
+ },
+ {
+  "ref": "16",
+  "query": "Jan van Eyck Deësis Ghent Altarpiece Christ enthroned"
+ }
+]

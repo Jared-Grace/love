@@ -81,34 +81,77 @@
  },
  {
   "ref": "12",
-  "query": "Lucas van Leyden The Dance around the Golden Calf Rijksmuseum"
+  "query": "Lucas van Leyden The Dance around the Golden Calf Rijksmuseum",
+  "title": "Lucas van Leyden 007 exterior 01.jpg",
+  "artist": "Lucas van Leyden",
+  "licence": "Public domain",
+  "width": 974,
+  "height": 1275,
+  "page": "https://commons.wikimedia.org/wiki/File:Lucas_van_Leyden_007_exterior_01.jpg"
  },
  {
   "ref": "13",
-  "query": "Jean-Baptiste Greuze The Father's Curse Louvre"
+  "query": "Jean-Baptiste Greuze The Father's Curse Louvre",
+  "title": "Jean-Baptiste Greuze - The Father’s Curse The Ungrateful Son.JPG",
+  "artist": "Jean-Baptiste Greuze",
+  "licence": "Public domain",
+  "width": 1471,
+  "height": 1169,
+  "page": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Greuze_-_The_Father%E2%80%99s_Curse_The_Ungrateful_Son.JPG"
  },
  {
   "ref": "14",
-  "query": "Frederic Edwin Church Heart of the Andes"
+  "query": "Frederic Edwin Church Heart of the Andes",
+  "title": "Church Heart of the Andes.jpg",
+  "artist": "Frederic Edwin Church",
+  "licence": "Public domain",
+  "width": 6400,
+  "height": 3503,
+  "page": "https://commons.wikimedia.org/wiki/File:Church_Heart_of_the_Andes.jpg"
  },
  {
   "ref": "15",
-  "query": "Rembrandt Moses Breaking the Tablets of the Law Berlin"
+  "query": "Rembrandt Moses Breaking the Tablets of the Law Berlin",
+  "title": "Moses mit den Gesetzestafeln, Moses zerschmettert die Gesetzestafeln - Gemäldegalerie Berlin - 5250004.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 1700,
+  "height": 2091,
+  "page": "https://commons.wikimedia.org/wiki/File:Moses_mit_den_Gesetzestafeln,_Moses_zerschmettert_die_Gesetzestafeln_-_Gem%C3%A4ldegalerie_Berlin_-_5250004.jpg"
  },
  {
   "ref": "16",
-  "query": "David Roberts The Israelites Leaving Egypt Birmingham"
+  "query": "David Roberts The Israelites Leaving Egypt Birmingham",
+  "title": "David Roberts-IsraelitesLeavingEgypt 1828.jpg",
+  "artist": "David Roberts",
+  "licence": "Public domain",
+  "width": 9447,
+  "height": 6825,
+  "page": "https://commons.wikimedia.org/wiki/File:David_Roberts-IsraelitesLeavingEgypt_1828.jpg"
  },
  {
   "ref": "17",
-  "query": "William Holman Hunt The Scapegoat Lady Lever Art Gallery"
+  "query": "William Holman Hunt The Scapegoat Lady Lever Art Gallery",
+  "title": "Holeman Hunt - Der Sündenbock.jpeg",
+  "artist": "William Holman Hunt",
+  "licence": "Public domain",
+  "width": 4686,
+  "height": 2904,
+  "page": "https://commons.wikimedia.org/wiki/File:Holeman_Hunt_-_Der_S%C3%BCndenbock.jpeg"
  },
  {
   "ref": "18",
-  "query": "Tintoretto Moses Drawing Water from the Rock Scuola Grande di San Rocco"
+  "query": "Tintoretto Moses Drawing Water from the Rock Scuola Grande di San Rocco",
+  "title": null
  },
  {
   "ref": "19",
-  "query": "Frederic Leighton Moses Views the Promised Land"
+  "query": "Frederic Leighton Moses Views the Promised Land",
+  "title": "Leighton Moses views the Promised Land.jpg",
+  "artist": "Frederic Leighton",
+  "licence": "Public domain",
+  "width": 1261,
+  "height": 2047,
+  "page": "https://commons.wikimedia.org/wiki/File:Leighton_Moses_views_the_Promised_Land.jpg"
  }
 ]
