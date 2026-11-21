@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_published_names } from "./apps_published_names.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { subtract } from "./subtract.mjs";
@@ -12,9 +13,10 @@ import { property_count_add } from "./property_count_add.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function app_shared_open_report(days) {
-  "how much each app was used over the last so many days, today included: how many different devices opened it, and how many device-days that came to";
-  "Devices is the one to read for reach - a device that comes back every day is still one device. Device-days is the one to read for habit - the same device on ten days counts ten.";
-  "Apps come out most-used first, so the answer to which apps matter is the top of the list.";
+  arguments_assert(arguments, 1);
+  ("how much each app was used over the last so many days, today included: how many different devices opened it, and how many device-days that came to");
+  ("Devices is the one to read for reach - a device that comes back every day is still one device. Device-days is the one to read for habit - the same device on ten days counts ten.");
+  ("Apps come out most-used first, so the answer to which apps matter is the top of the list.");
   let today = date_today_iso();
   let back = subtract(1, days);
   let from = date_add_days(today, back);
