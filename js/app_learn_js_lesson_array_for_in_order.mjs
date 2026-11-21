@@ -44,7 +44,8 @@ export function app_learn_js_lesson_array_for_in_order() {
         "found = true;",
         ", says after the loop whether the ",
         "if",
-        " was ever true",
+        " was ever ",
+        "true",
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);

@@ -21,11 +21,23 @@
  },
  {
   "ref": "3,4",
-  "query": "Rembrandt The Shipbuilder and his Wife Royal Collection"
+  "query": "Rembrandt The Shipbuilder and his Wife Royal Collection",
+  "title": "Rembrandt van Rijn (Leiden 1606-Amsterdam 1669) - \"The Shipbuilder and his Wife\", Jan Rijcksen (1560-2-1637) and his Wife, Griet Jans - RCIN 405533 - Royal Collection.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 2000,
+  "height": 1344,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_(Leiden_1606-Amsterdam_1669)_-_%22The_Shipbuilder_and_his_Wife%22,_Jan_Rijcksen_(1560-2-1637)_and_his_Wife,_Griet_Jans_-_RCIN_405533_-_Royal_Collection.jpg"
  },
  {
   "ref": "5",
-  "query": "Rembrandt The Supper at Emmaus Louvre"
+  "query": "Rembrandt The Supper at Emmaus Louvre",
+  "title": "Rembrandt Harmensz. van Rijn 023.jpg",
+  "artist": "Rembrandt",
+  "licence": "Public domain",
+  "width": 2536,
+  "height": 2646,
+  "page": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_023.jpg"
  },
  {
   "ref": "6",
