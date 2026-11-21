@@ -81,7 +81,13 @@
  },
  {
   "ref": "10",
-  "query": "Vincent van Gogh The Good Samaritan after Delacroix Kröller-Müller"
+  "query": "Vincent van Gogh The Good Samaritan after Delacroix Kröller-Müller",
+  "title": "Van Gogh - Der barmherzige Samariter.jpeg",
+  "artist": "Vincent van Gogh",
+  "licence": "Public domain",
+  "width": 3876,
+  "height": 5082,
+  "page": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Der_barmherzige_Samariter.jpeg"
  },
  {
   "ref": "11",
