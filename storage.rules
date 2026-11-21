@@ -17,6 +17,10 @@ service firebase.storage {
     match /function/g_verify_approval/uploads/{allPaths=**} {
       allow write: if request.auth != null && request.auth.token.email == "christrosetolife@gmail.com";
     }
+    // bible_record: the owner's recorded passages - each one becomes a video posted with nobody looking again, so only the owner may add one
+    match /bible_record/{allPaths=**} {
+      allow write: if request.auth != null && request.auth.token.email == "christrosetolife@gmail.com";
+    }
     match /bible/{allPaths=**} {
       allow read;
     }

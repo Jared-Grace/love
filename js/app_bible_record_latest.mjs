@@ -1,0 +1,10 @@
+import { firebase_project_name_jg } from "./firebase_project_name_jg.mjs";
+import { app_shared_main_latest } from "./app_shared_main_latest.mjs";
+import { fn_name } from "./fn_name.mjs";
+export async function app_bible_record_latest() {
+  let firebase_name_value = firebase_project_name_jg();
+  await app_shared_main_latest(
+    fn_name("app_bible_record"),
+    firebase_name_value,
+  );
+}

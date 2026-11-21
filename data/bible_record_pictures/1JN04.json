@@ -1,20 +1,130 @@
-[{"ref":"1","query":"Giovanni Bellini The Agony in the Garden National Gallery"},
-{"ref":"2,3","query":"Gerard David The Nativity Metropolitan Museum"},
-{"ref":"4","query":"Raphael Saint Michael Vanquishing Satan Louvre"},
-{"ref":"5","query":"Hieronymus Bosch The Conjurer Saint-Germain-en-Laye"},
-{"ref":"6","query":"Gerard Dou Old Woman Reading a Bible Rijksmuseum"},
-{"ref":"7","query":"Raphael Madonna della Seggiola Palazzo Pitti"},
-{"ref":"8","query":"Jacques-Louis David Death of Socrates Metropolitan"},
-{"ref":"9","query":"Correggio Holy Night Adoration of the Shepherds Dresden"},
-{"ref":"10","query":"Matthias Grünewald Crucifixion Isenheim Altarpiece"},
-{"ref":"11","query":"Jean-François Millet The Gleaners Orsay"},
-{"ref":"12","query":"Michelangelo The Creation of Adam"},
-{"ref":"13","query":"Jean Restout Pentecost Louvre"},
-{"ref":"14","query":"Titian Christ Carrying the Cross Prado"},
-{"ref":"15","query":"Pietro Perugino Delivery of the Keys Sistine Chapel"},
-{"ref":"16","query":"Rembrandt The Jewish Bride"},
-{"ref":"17","query":"Hans Memling The Last Judgment triptych Gdansk"},
-{"ref":"18","query":"Gerard ter Borch Mother Combing Her Child's Hair"},
-{"ref":"19","query":"Mary Cassatt The Child's Bath Art Institute of Chicago"},
-{"ref":"20","query":"Peter Paul Rubens The Meeting of Esau and Jacob"},
-{"ref":"21","query":"Francesco Hayez The Kiss Brera"}]
+[
+ {
+  "ref": "1",
+  "query": "Giovanni Bellini The Agony in the Garden National Gallery",
+  "title": "Bellini,Giovanni - Agony in the Garden - National Gallery.jpg",
+  "artist": "Giovanni Bellini",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 3785,
+  "page": "https://commons.wikimedia.org/wiki/File:Bellini,Giovanni_-_Agony_in_the_Garden_-_National_Gallery.jpg"
+ },
+ {
+  "ref": "2,3",
+  "query": "Gerard David The Nativity Metropolitan Museum",
+  "title": "The Nativity MET DT1477.jpg",
+  "artist": "Gerard David",
+  "licence": "CC0",
+  "width": 2826,
+  "height": 3722,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Nativity_MET_DT1477.jpg"
+ },
+ {
+  "ref": "4",
+  "query": "Raphael Saint Michael Vanquishing Satan Louvre",
+  "title": "Saint Michel et le Dragon - Raphaël - Musée du Louvre Peintures INV 608 ; MR 439.jpg",
+  "artist": "Raphael",
+  "licence": "Public domain",
+  "width": 5123,
+  "height": 5897,
+  "page": "https://commons.wikimedia.org/wiki/File:Saint_Michel_et_le_Dragon_-_Rapha%C3%ABl_-_Mus%C3%A9e_du_Louvre_Peintures_INV_608_;_MR_439.jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Hieronymus Bosch The Conjurer Saint-Germain-en-Laye",
+  "title": "Hieronymus Bosch (follower) - The Conjurer (Musée Saint-Germain-en-Laye).jpg",
+  "artist": "Hieronymus Bosch and workshop / Workshop of Hieronymus Bosch / After Hieronymus Bosch",
+  "licence": "Public domain",
+  "width": 7480,
+  "height": 6128,
+  "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_(follower)_-_The_Conjurer_(Mus%C3%A9e_Saint-Germain-en-Laye).jpg"
+ },
+ {
+  "ref": "6",
+  "query": "Gerard Dou Old Woman Reading a Bible Rijksmuseum",
+  "title": "Gerard Dou 005.jpg",
+  "artist": "Gerrit Dou",
+  "licence": "Public domain",
+  "width": 4536,
+  "height": 5868,
+  "page": "https://commons.wikimedia.org/wiki/File:Gerard_Dou_005.jpg"
+ },
+ {
+  "ref": "7",
+  "query": "Raphael Madonna della Seggiola Palazzo Pitti",
+  "title": "Raffael-madonna-sedia.jpg",
+  "artist": "Raphael",
+  "licence": "Public domain",
+  "width": 4963,
+  "height": 4991,
+  "page": "https://commons.wikimedia.org/wiki/File:Raffael-madonna-sedia.jpg"
+ },
+ {
+  "ref": "8",
+  "query": "Jacques-Louis David Death of Socrates Metropolitan",
+  "title": "The Death of Socrates MET 31.45 2.jpg",
+  "artist": "Jacques-Louis David",
+  "licence": "CC0",
+  "width": 5526,
+  "height": 3744,
+  "page": "https://commons.wikimedia.org/wiki/File:The_Death_of_Socrates_MET_31.45_2.jpg"
+ },
+ {
+  "ref": "9",
+  "query": "Correggio Holy Night Adoration of the Shepherds Dresden",
+  "title": "Correggio - The Holy Night - Google Art Project.jpg",
+  "artist": "Antonio da Correggio",
+  "licence": "Public domain",
+  "width": 3179,
+  "height": 4332,
+  "page": "https://commons.wikimedia.org/wiki/File:Correggio_-_The_Holy_Night_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "10",
+  "query": "Matthias Grünewald Crucifixion Isenheim Altarpiece"
+ },
+ {
+  "ref": "11",
+  "query": "Jean-François Millet The Gleaners Orsay"
+ },
+ {
+  "ref": "12",
+  "query": "Michelangelo The Creation of Adam"
+ },
+ {
+  "ref": "13",
+  "query": "Jean Restout Pentecost Louvre"
+ },
+ {
+  "ref": "14",
+  "query": "Titian Christ Carrying the Cross Prado"
+ },
+ {
+  "ref": "15",
+  "query": "Pietro Perugino Delivery of the Keys Sistine Chapel"
+ },
+ {
+  "ref": "16",
+  "query": "Rembrandt The Jewish Bride"
+ },
+ {
+  "ref": "17",
+  "query": "Hans Memling The Last Judgment triptych Gdansk"
+ },
+ {
+  "ref": "18",
+  "query": "Gerard ter Borch Mother Combing Her Child's Hair"
+ },
+ {
+  "ref": "19",
+  "query": "Mary Cassatt The Child's Bath Art Institute of Chicago"
+ },
+ {
+  "ref": "20",
+  "query": "Peter Paul Rubens The Meeting of Esau and Jacob"
+ },
+ {
+  "ref": "21",
+  "query": "Francesco Hayez The Kiss Brera"
+ }
+]

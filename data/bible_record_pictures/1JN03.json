@@ -141,7 +141,13 @@
  },
  {
   "ref": "15",
-  "query": "Francisco Goya Fight with Cudgels Prado"
+  "query": "Francisco Goya Fight with Cudgels Prado",
+  "title": "Duelo a garrotazos, por Goya.jpg",
+  "artist": "Francisco Goya",
+  "licence": "Public domain",
+  "width": 1873,
+  "height": 892,
+  "page": "https://commons.wikimedia.org/wiki/File:Duelo_a_garrotazos,_por_Goya.jpg"
  },
  {
   "ref": "16",
@@ -155,7 +161,13 @@
  },
  {
   "ref": "17",
-  "query": "Luke Fildes Applicants for Admission to a Casual Ward"
+  "query": "Luke Fildes Applicants for Admission to a Casual Ward",
+  "title": "Applicants for Admission to a Casual Ward.jpg",
+  "artist": "Luke Fildes",
+  "licence": "Public domain",
+  "width": 1536,
+  "height": 924,
+  "page": "https://commons.wikimedia.org/wiki/File:Applicants_for_Admission_to_a_Casual_Ward.jpg"
  },
  {
   "ref": "18",
@@ -169,11 +181,23 @@
  },
  {
   "ref": "19,20",
-  "query": "Rembrandt Christ and the Woman of Samaria Gemäldegalerie Berlin"
+  "query": "Rembrandt Christ and the Woman of Samaria Gemäldegalerie Berlin",
+  "title": "Christus und die Samariterin am Brunnen - Gemäldegalerie Berlin - 5250380.jpg",
+  "artist": "Workshop of Rembrandt",
+  "licence": "Public domain",
+  "width": 1700,
+  "height": 2009,
+  "page": "https://commons.wikimedia.org/wiki/File:Christus_und_die_Samariterin_am_Brunnen_-_Gem%C3%A4ldegalerie_Berlin_-_5250380.jpg"
  },
  {
   "ref": "21,22",
-  "query": "Pascal Dagnan-Bouveret Breton Women at a Pardon Gulbenkian"
+  "query": "Pascal Dagnan-Bouveret Breton Women at a Pardon Gulbenkian",
+  "title": "Pascal Dagnan-Bouveret - Breton Women at a Pardon.jpg",
+  "artist": "Pascal Dagnan-Bouveret",
+  "licence": "Public domain",
+  "width": 4223,
+  "height": 3735,
+  "page": "https://commons.wikimedia.org/wiki/File:Pascal_Dagnan-Bouveret_-_Breton_Women_at_a_Pardon.jpg"
  },
  {
   "ref": "23",
