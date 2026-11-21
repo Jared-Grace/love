@@ -95,6 +95,7 @@ export function literals_frozen_names() {
     fn_name("app_receipts_purchases_store"),
     fn_name("app_learn_js_course_hash_key"),
     fn_name("gloss_upload_namespace_en_learn_bible_tagalog"),
+    fn_name("gloss_upload_namespace_en_learn_bible_spanish"),
   ];
   return names;
 }
