@@ -21,7 +21,7 @@
  },
  {
   "ref": "4",
-  "query": "Guercino Elijah Fed by Ravens National Gallery",
+  "query": "Dieric Bouts Elijah in the Desert",
   "title": null
  },
  {
@@ -46,13 +46,13 @@
  },
  {
   "ref": "7,8",
-  "query": "Pieter Bruegel the Elder The Land of Cockaigne",
-  "title": "The Land of Cockaigne MET MM7863.jpg",
-  "artist": "Pieter Bruegel the Elder / Pieter van der Heyden",
-  "licence": "CC0",
-  "width": 3805,
-  "height": 2914,
-  "page": "https://commons.wikimedia.org/wiki/File:The_Land_of_Cockaigne_MET_MM7863.jpg"
+  "query": "Pieter Bruegel Das Schlaraffenland Alte Pinakothek",
+  "title": "Pieter Bruegel d. Ä. 037.jpg",
+  "artist": "Pieter Bruegel the Elder",
+  "licence": "Public domain",
+  "width": 3200,
+  "height": 2081,
+  "page": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_d._%C3%84._037.jpg"
  },
  {
   "ref": "9",
@@ -116,8 +116,7 @@
  },
  {
   "ref": "16",
-  "query": "Jean-François Millet La Cuisson du pain Kröller-Müller",
-  "title": null
+  "query": "Jean-François Millet Woman Baking Bread"
  },
  {
   "ref": "17,18",
@@ -151,8 +150,7 @@
  },
  {
   "ref": "21",
-  "query": "Francis Danby The Deluge Tate",
-  "title": null
+  "query": "Francis Danby The Deluge"
  },
  {
   "ref": "22",
@@ -206,13 +204,7 @@
  },
  {
   "ref": "27",
-  "query": "Joseph Anton Koch Dankopfer Noahs Städel",
-  "title": "Landschaft mit dem Dankopfer Noahs (SM 256z).png",
-  "artist": "Joseph Anton Koch",
-  "licence": "PDM-owner",
-  "width": 7387,
-  "height": 5954,
-  "page": "https://commons.wikimedia.org/wiki/File:Landschaft_mit_dem_Dankopfer_Noahs_(SM_256z).png"
+  "query": "Peter Paul Rubens The Rainbow Landscape Wallace Collection"
  },
  {
   "ref": "28",
@@ -226,13 +218,7 @@
  },
  {
   "ref": "29",
-  "query": "Raphael Christ's Charge to Peter cartoon",
-  "title": "Christ's charge to Peter (BM 1842,0319.6).jpg",
-  "artist": "After: Raphael\n\nPrint made by: George Foggo\nPublished by: Godefroy Engelmann I\nPrinted by: Godefroy Engelmann I",
-  "licence": "Public domain",
-  "width": 2500,
-  "height": 1973,
-  "page": "https://commons.wikimedia.org/wiki/File:Christ%27s_charge_to_Peter_(BM_1842,0319.6).jpg"
+  "query": "V&A Raphael Christ's Charge to Peter 1515"
  },
  {
   "ref": "30,31",
@@ -276,10 +262,16 @@
  },
  {
   "ref": "35",
-  "query": "James Tissot The Widow's Mite Brooklyn Museum"
+  "query": "James Tissot Le denier de la veuve"
  },
  {
   "ref": "36",
-  "query": "Raphael Disputation of the Holy Sacrament"
+  "query": "Raphael Disputation of the Holy Sacrament",
+  "title": "\"Disputation of the Holy Sacrament\" by Raphael, Raphael Rooms, Vatican Museum (48466326127).jpg",
+  "artist": "Gary Todd from Xinzheng, China",
+  "licence": "Public domain",
+  "width": 6000,
+  "height": 4000,
+  "page": "https://commons.wikimedia.org/wiki/File:%22Disputation_of_the_Holy_Sacrament%22_by_Raphael,_Raphael_Rooms,_Vatican_Museum_(48466326127).jpg"
  }
 ]
