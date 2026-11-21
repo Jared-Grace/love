@@ -1,19 +1,91 @@
-[{"ref":"1","query":"Piero della Francesca The Baptism of Christ National Gallery"},
-{"ref":"2","query":"Pieter de Hooch A Mother and Child with its Head in her Lap Rijksmuseum"},
-{"ref":"3,4","query":"Peter Paul Rubens Daniel in the Lions' Den National Gallery of Art"},
-{"ref":"5","query":"Eugène Delacroix Jacob Wrestling with the Angel Saint-Sulpice"},
-{"ref":"6","query":"Andrea del Verrocchio The Baptism of Christ Uffizi"},
-{"ref":"7,8","query":"Rogier van der Weyden Crucifixion Diptych Philadelphia"},
-{"ref":"9","query":"Joachim Patinir Landscape with Saint John the Baptist Preaching"},
-{"ref":"10","query":"Giovanni Battista Cima da Conegliano The Incredulity of Saint Thomas National Gallery"},
-{"ref":"11","query":"Albrecht Altdorfer Resurrection of Christ Kunsthistorisches"},
-{"ref":"12","query":"Fra Angelico Noli me tangere San Marco"},
-{"ref":"13","query":"Gerard Dou Saint Jerome writing"},
-{"ref":"14","query":"Jules Breton The Song of the Lark Art Institute of Chicago"},
-{"ref":"15","query":"Bernhard Plockhorst Jesus Blessing the Children"},
-{"ref":"16","query":"Lorenzo Lotto Saint Jerome in the Wilderness Louvre"},
-{"ref":"17","query":"Domenico Fetti The Parable of the Lost Drachma"},
-{"ref":"18","query":"Fra Angelico Christ the Redeemer Blessing"},
-{"ref":"19","query":"Hieronymus Bosch The Garden of Earthly Delights Hell"},
-{"ref":"20","query":"Hans Memling Christ Blessing Museum of Fine Arts Boston"},
-{"ref":"21","query":"Nicolas Poussin The Adoration of the Golden Calf National Gallery London"}]
+[
+ {
+  "ref": "1",
+  "query": "Piero della Francesca The Baptism of Christ National Gallery",
+  "title": "Piero della Francesca - Battesimo di Cristo (National Gallery, London).jpg",
+  "artist": "Piero della Francesca",
+  "licence": "Public domain",
+  "width": 4147,
+  "height": 5958,
+  "page": "https://commons.wikimedia.org/wiki/File:Piero_della_Francesca_-_Battesimo_di_Cristo_(National_Gallery,_London).jpg"
+ },
+ {
+  "ref": "2",
+  "query": "Pieter de Hooch A Mother and Child with its Head in her Lap Rijksmuseum",
+  "title": null
+ },
+ {
+  "ref": "3,4",
+  "query": "Peter Paul Rubens Daniel in the Lions' Den National Gallery of Art",
+  "title": "Sir Peter Paul Rubens - Daniel in the Lions' Den - Google Art Project.jpg",
+  "artist": "Peter Paul Rubens",
+  "licence": "Public domain",
+  "width": 7633,
+  "height": 5165,
+  "page": "https://commons.wikimedia.org/wiki/File:Sir_Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg"
+ },
+ {
+  "ref": "5",
+  "query": "Eugène Delacroix Jacob Wrestling with the Angel Saint-Sulpice"
+ },
+ {
+  "ref": "6",
+  "query": "Andrea del Verrocchio The Baptism of Christ Uffizi"
+ },
+ {
+  "ref": "7,8",
+  "query": "Rogier van der Weyden Crucifixion Diptych Philadelphia"
+ },
+ {
+  "ref": "9",
+  "query": "Joachim Patinir Landscape with Saint John the Baptist Preaching"
+ },
+ {
+  "ref": "10",
+  "query": "Giovanni Battista Cima da Conegliano The Incredulity of Saint Thomas National Gallery"
+ },
+ {
+  "ref": "11",
+  "query": "Albrecht Altdorfer Resurrection of Christ Kunsthistorisches"
+ },
+ {
+  "ref": "12",
+  "query": "Fra Angelico Noli me tangere San Marco"
+ },
+ {
+  "ref": "13",
+  "query": "Gerard Dou Saint Jerome writing"
+ },
+ {
+  "ref": "14",
+  "query": "Jules Breton The Song of the Lark Art Institute of Chicago"
+ },
+ {
+  "ref": "15",
+  "query": "Bernhard Plockhorst Jesus Blessing the Children"
+ },
+ {
+  "ref": "16",
+  "query": "Lorenzo Lotto Saint Jerome in the Wilderness Louvre"
+ },
+ {
+  "ref": "17",
+  "query": "Domenico Fetti The Parable of the Lost Drachma"
+ },
+ {
+  "ref": "18",
+  "query": "Fra Angelico Christ the Redeemer Blessing"
+ },
+ {
+  "ref": "19",
+  "query": "Hieronymus Bosch The Garden of Earthly Delights Hell"
+ },
+ {
+  "ref": "20",
+  "query": "Hans Memling Christ Blessing Museum of Fine Arts Boston"
+ },
+ {
+  "ref": "21",
+  "query": "Nicolas Poussin The Adoration of the Golden Calf National Gallery London"
+ }
+]
