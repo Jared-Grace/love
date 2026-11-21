@@ -16,11 +16,23 @@
  },
  {
   "ref": "5,6",
-  "query": "Jan Victors Abraham and Sarah"
+  "query": "Jan Victors Abraham and Sarah",
+  "title": "Jan Victors or Rembrandt Studio - Abraham and the 3 Angels.jpg",
+  "artist": "Jan Victors / Studio of Rembrandt",
+  "licence": "Public domain",
+  "width": 1920,
+  "height": 1437,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_Victors_or_Rembrandt_Studio_-_Abraham_and_the_3_Angels.jpg"
  },
  {
   "ref": "7",
-  "query": "Jan van Eyck Arnolfini Portrait"
+  "query": "Jan van Eyck Arnolfini Portrait",
+  "title": "Jan van Eyck - Arnolfini Portrait - Macrophotography.jpg",
+  "artist": "Jan van Eyck",
+  "licence": "Public domain",
+  "width": 25311,
+  "height": 34005,
+  "page": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_Arnolfini_Portrait_-_Macrophotography.jpg"
  },
  {
   "ref": "8",
