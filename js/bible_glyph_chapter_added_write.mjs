@@ -1,7 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal_assert_json } from "./equal_assert_json.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_includes_assert_json } from "./list_includes_assert_json.mjs";
@@ -14,6 +11,9 @@ import { function_call_commit } from "./function_call_commit.mjs";
 import { bible_glyph_chapters_count_stated_repair } from "./bible_glyph_chapters_count_stated_repair.mjs";
 import { bible_glyph_chapter_references_write } from "./bible_glyph_chapter_references_write.mjs";
 import { bible_glyph_chapter_chains_write } from "./bible_glyph_chapter_chains_write.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_size } from "./list_size.mjs";
+import { equal_assert_json } from "./equal_assert_json.mjs";
 import { bible_glyph_chapter_bands_write } from "./bible_glyph_chapter_bands_write.mjs";
 export async function bible_glyph_chapter_added_write(chapter_code) {
   arguments_assert(arguments, 1);
@@ -59,12 +59,18 @@ export async function bible_glyph_chapter_added_write(chapter_code) {
       chapter_code,
     ]);
   }
+  ("THE CHAINS ARE WRITTEN A SECOND TIME AFTER THE BAND, BECAUSE THE LINES CHAIN NAMES ONLY CHAPTERS WHOSE LINES FILE IS ALREADY ON DISK. The first run comes before the band step writes that file, so on its own it left every new chapter out of the lines chain until the next chapter was saved - and the last chapter of any run was left out for good. That was found on 2026-11-22, when Psalm one hundred and fifty was saved without its entry. The chains writer asks the disk rather than a loaded module, so a second run in this same process sees the new file, and over a chapter already named it writes nothing.");
+  let chains_after_bands = await function_call_commit(
+    bible_glyph_chapter_chains_write,
+    [],
+  );
   let r = {
     chapter_code,
     count,
     references,
     chains,
     bands,
+    chains_after_bands,
   };
   return r;
 }
