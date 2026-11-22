@@ -6,7 +6,11 @@ import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_join } from "./list_join.mjs";
+import { not } from "./not.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
+import { app_learn_js_operators_method } from "./app_learn_js_operators_method.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 export function app_learn_js_expression_parsed_meaning(node) {
@@ -54,8 +58,51 @@ export function app_learn_js_expression_parsed_meaning(node) {
     ]);
     return both_sides;
   }
+  ("2026-11-22: a name means itself, and an array its items by what each means, between square brackets with only a comma between them, as the shape writer spells one");
+  if (equal(type, "Identifier")) {
+    let name_written = js_unparse(node);
+    return name_written;
+  }
+  if (equal(type, "ArrayExpression")) {
+    let elements = property_get(node, "elements");
+    let element_meanings = list_map(
+      elements,
+      app_learn_js_expression_parsed_meaning,
+    );
+    let elements_joined = list_join(element_meanings, ",");
+    let array_meaning = text_combine_multiple(["[", elements_joined, "]"]);
+    return array_meaning;
+  }
   let call_is = equal(type, "CallExpression");
   if (call_is) {
+    ('2026-11-22: an action reached by a dot, as a.includes("joy"), means what it acts on by what that means, then the dot and the action, then what is in its brackets inside brackets of its own - so an array written out before the dot is read as an array, not spelled back as it stands');
+    let callee_node = property_get(node, "callee");
+    let handed_list = property_get(node, "arguments");
+    let dotted_is =
+      js_node_type_is(callee_node, "MemberExpression") &&
+      not(property_get(callee_node, "computed")) &&
+      list_size_equal(handed_list, 1);
+    if (dotted_is) {
+      let object = property_get(callee_node, "property");
+      let action_symbol = "." + property_get(object, "name");
+      let list = app_learn_js_operators_method();
+      let method_is = list_includes(list, action_symbol);
+      if (method_is) {
+        let acted_on_node = property_get(callee_node, "object");
+        let acted_meaning =
+          app_learn_js_expression_parsed_meaning(acted_on_node);
+        let node2 = list_get(handed_list, 0);
+        let handed_meaning = app_learn_js_expression_parsed_meaning(node2);
+        let acted = text_combine_multiple([
+          acted_meaning,
+          action_symbol,
+          "(",
+          handed_meaning,
+          ")",
+        ]);
+        return acted;
+      }
+    }
     let handed = property_get(node, "arguments");
     let one_is = list_size_equal(handed, 1);
     if (one_is) {

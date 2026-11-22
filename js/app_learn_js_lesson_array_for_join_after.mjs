@@ -3,11 +3,11 @@ import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_string_copy } from "./app_learn_js_lesson_string_copy.mjs";
+import { app_learn_js_lesson_array_for_join_words } from "./app_learn_js_lesson_array_for_join_words.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -17,7 +17,7 @@ import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_l
 export function app_learn_js_lesson_array_for_join_after() {
   arguments_assert(arguments, 0);
   ('the words of an array joined into one string, a comma after each: let a = ["love", "joy", "peace"]; let s = ""; for (let i = 0; i < a.length; i++) { s = s + a[i] + ", "; } console.log(s); writes out love, joy, peace, - with a comma after the last word too');
-  ("2026-11-22, at the human's asking: the simpler version first, the comma left after the last word. The next lesson leaves it out, and the one after that does it with join. Building a string with s = s + ... is taught in Copying a string (447).");
+  ("2026-11-22, at the human's asking: the simpler version first, the comma left after the last word. The next lesson leaves it out, and the one after that does it with join. Building a string with s = s + ... is taught in Copying a string (447). Later the same day, at the human's asking, Words together came before it, so this one only adds + \", \".");
   ("A set is six questions, three or four words from the fruits of the Spirit.");
   ('The wrong programs are: the comma before each word (a comma at the start instead of the end), no comma at all (the words run together), and s = a[i] + ", " without s + (only the last word is kept).');
   ("The writing is a first draft by Claude 2026-11-22.");
@@ -68,8 +68,8 @@ export function app_learn_js_lesson_array_for_join_after() {
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_string_copy,
-      ["", "b = b + a[i];", " in a loop added one letter at a time to ", "b"],
+      app_learn_js_lesson_array_for_join_words,
+      ["", "s = s + a[i];", " in a loop ran the words together"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
