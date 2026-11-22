@@ -2237,6 +2237,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 80",
     },
     {
+      chapter_code: "PSA081",
+      reference: "Psalm 81",
+    },
+    {
       chapter_code: "PSA084",
       reference: "Psalm 84",
     },
