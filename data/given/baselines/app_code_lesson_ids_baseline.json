@@ -418,6 +418,8 @@
   "array_at_last",
   "array_at_first",
   "index_first",
+  "at_from",
+  "index_of_from",
   "index_last",
   "array_break",
   "array_count",
