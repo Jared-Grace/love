@@ -489,6 +489,7 @@
   "split_sep",
   "split_space",
   "split_join",
+  "replace_hand",
   "replace",
   "replace_all",
   "luhn_double",
