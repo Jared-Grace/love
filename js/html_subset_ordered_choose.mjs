@@ -7,6 +7,11 @@ import { html_subset_toggle } from "./html_subset_toggle.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { app_shared_verses_order_prompt_text } from "./app_shared_verses_order_prompt_text.mjs";
 import { html_subset_ordered_selected } from "./html_subset_ordered_selected.mjs";
+import { list_size_1 } from "./list_size_1.mjs";
+import { app_shared_languages_selected_text } from "./app_shared_languages_selected_text.mjs";
+import { list_single } from "./list_single.mjs";
+import { property_get } from "./property_get.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 export function html_subset_ordered_choose({
   parent,
   options,
@@ -41,6 +46,14 @@ export function html_subset_ordered_choose({
       let order_label = app_shared_verses_order_prompt_text();
       html_div_text_bold(order_card, order_label);
       html_subset_ordered_selected(order_card, chosen, name_property, changed);
+    } else if (list_size_1(chosen)) {
+      ("a single one chosen is still named in the card below, so the reader sees what they have, but with no arrows and no cross: there is nothing to order, and the last one is never taken away from here");
+      let selected_card = card(container);
+      let selected_label = app_shared_languages_selected_text();
+      html_div_text_bold(selected_card, selected_label);
+      let only = list_single(chosen);
+      let name = property_get(only, name_property);
+      html_div_text(selected_card, name);
     }
   }
   function changed() {
