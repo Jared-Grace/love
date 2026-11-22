@@ -2417,6 +2417,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 125",
     },
     {
+      chapter_code: "PSA126",
+      reference: "Psalm 126",
+    },
+    {
       chapter_code: "PSA130",
       reference: "Psalm 130",
     },
