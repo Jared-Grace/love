@@ -2653,6 +2653,10 @@ export function bible_glyph_chapter_references() {
       reference: "Jeremiah 26",
     },
     {
+      chapter_code: "JER27",
+      reference: "Jeremiah 27",
+    },
+    {
       chapter_code: "JER29",
       reference: "Jeremiah 29",
     },
