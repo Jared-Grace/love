@@ -28,6 +28,7 @@ import { app_shared_contact_send } from "./app_shared_contact_send.mjs";
 import { app_shared_message_messages_get } from "./app_shared_message_messages_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
+import { app_shared_footer_parent } from "./app_shared_footer_parent.mjs";
 import { app_shared_footer_all_apps } from "./app_shared_footer_all_apps.mjs";
 export async function app_message(context) {
   "A place for somebody to write to the person who made these apps, and be answered.";
@@ -91,5 +92,6 @@ export async function app_message(context) {
     ("the newest message is the one just sent, so the page is taken down to it, just above the place it was written");
     html_scroll_bottom_set(page);
   }
-  app_shared_footer_all_apps(content);
+  let footer_parent = app_shared_footer_parent(root);
+  app_shared_footer_all_apps(footer_parent);
 }
