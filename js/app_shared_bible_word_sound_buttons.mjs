@@ -26,6 +26,7 @@ export function app_shared_bible_word_sound_buttons(parent, word) {
     let url = slow_get(word);
     await html_sound_url_play(url);
   }
-  app_shared_button(parent, "🔊 Say it", say);
-  app_shared_button(parent, "🐢 Slowly", say_slowly);
+  ("Each button is its picture alone, the speaker and the turtle the explained words already use, because this card is shown to readers of every language and a picture needs no translating.");
+  app_shared_button(parent, "🔊", say);
+  app_shared_button(parent, "🐢", say_slowly);
 }
