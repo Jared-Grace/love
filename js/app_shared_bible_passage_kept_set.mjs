@@ -1,7 +1,8 @@
-import { app_shared_bible_history_note } from "./app_shared_bible_history_note.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_passage_kept_key } from "./app_shared_bible_passage_kept_key.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
+import { app_shared_bible_history_step_is } from "./app_shared_bible_history_step_is.mjs";
+import { app_shared_bible_history_note } from "./app_shared_bible_history_note.mjs";
 export function app_shared_bible_passage_kept_set(
   context,
   chapter_code,
@@ -20,5 +21,10 @@ export function app_shared_bible_passage_kept_set(
     verse_numbers,
   };
   storage_session_set_context(context, key, kept);
+  let stepped = app_shared_bible_history_step_is(context);
+  if (stepped) {
+    ("A passage reached by the back or forward button is drawn but not written into the remembered readings, or the newest place this tab reached would be overwritten by an older one.");
+    return;
+  }
   app_shared_bible_history_note(context, chapter_code, verse_numbers);
 }

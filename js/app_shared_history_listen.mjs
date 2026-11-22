@@ -47,7 +47,13 @@ export function app_shared_history_listen(context) {
     if (null_not_is(hash_restore)) {
       hash_restore(context);
     }
-    await app_shared_refresh(context);
+    ("Said on the context while the step is drawn, so what the drawing would remember can tell it was reached by the back or forward button rather than chosen - the bible's remembered readings keep the newest place, not the one stepped back to.");
+    property_set(context, "history_stepping", true);
+    try {
+      await app_shared_refresh(context);
+    } finally {
+      property_set(context, "history_stepping", false);
+    }
   }
   html_on_pop_state(on_pop);
   function on_hash() {
