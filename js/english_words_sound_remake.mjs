@@ -16,8 +16,8 @@ import { file_read_buffer } from "./file_read_buffer.mjs";
 import { file_content_type } from "./file_content_type.mjs";
 import { cache_control_asset_value } from "./cache_control_asset_value.mjs";
 import { firebase_upload_settings } from "./firebase_upload_settings.mjs";
-import { app_learn_en_gloss_urdu_words_sound_upload_path } from "./app_learn_en_gloss_urdu_words_sound_upload_path.mjs";
-import { app_learn_en_gloss_urdu_words_sound_slow_upload_path } from "./app_learn_en_gloss_urdu_words_sound_slow_upload_path.mjs";
+import { english_word_sound_upload_path } from "./english_word_sound_upload_path.mjs";
+import { english_word_sound_slow_upload_path } from "./english_word_sound_slow_upload_path.mjs";
 export async function english_words_sound_remake(words) {
   "$plain words";
   "Says the English words named again, in every voice, at both speeds, and sends just those recordings up over the old ones - for when a word's saying has been changed after it was already recorded.";
@@ -73,16 +73,8 @@ export async function english_words_sound_remake(words) {
     list_add(sent, destination);
   }
   async function relative_send(relative) {
-    await send(
-      folder,
-      relative,
-      app_learn_en_gloss_urdu_words_sound_upload_path,
-    );
-    await send(
-      folder_slow,
-      relative,
-      app_learn_en_gloss_urdu_words_sound_slow_upload_path,
-    );
+    await send(folder, relative, english_word_sound_upload_path);
+    await send(folder_slow, relative, english_word_sound_slow_upload_path);
   }
   await each_async(relatives, relative_send);
   let r = {

@@ -1,9 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_word_sound_path } from "./gloss_word_sound_path.mjs";
-import { app_learn_en_gloss_urdu_words_sound_slow_upload_path } from "./app_learn_en_gloss_urdu_words_sound_slow_upload_path.mjs";
+import { english_word_sound_slow_upload_path } from "./english_word_sound_slow_upload_path.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { firebase_storage_url } from "./firebase_storage_url.mjs";
-import { app_learn_en_gloss_urdu_words_sound_slow_version } from "./app_learn_en_gloss_urdu_words_sound_slow_version.mjs";
+import { english_word_sound_slow_version } from "./english_word_sound_slow_version.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function english_word_sound_slow_url(word, voice) {
   "$plain word";
@@ -13,11 +13,10 @@ export function english_word_sound_slow_url(word, voice) {
   "It carries its own stamp rather than the ordinary recordings' one, so that changing the way words are slowed does not make every phone fetch every ordinary recording again.";
   arguments_assert(arguments, 2);
   let file_name = gloss_word_sound_path(word, voice);
-  let destination =
-    app_learn_en_gloss_urdu_words_sound_slow_upload_path(file_name);
+  let destination = english_word_sound_slow_upload_path(file_name);
   let project_url = firebase_storage_url_project_jg();
   let url = firebase_storage_url(destination, project_url);
-  let stamp = app_learn_en_gloss_urdu_words_sound_slow_version();
+  let stamp = english_word_sound_slow_version();
   let stamped = text_combine_multiple([url, "&v=", stamp]);
   return stamped;
 }
