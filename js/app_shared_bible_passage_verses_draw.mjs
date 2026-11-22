@@ -4,14 +4,15 @@ import { list_multiple_is } from "./list_multiple_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_map } from "./list_map.mjs";
+import { text_to } from "./text_to.mjs";
+import { text_size } from "./text_size.mjs";
+import { list_max } from "./list_max.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_grid } from "./html_display_grid.mjs";
-import { app_shared_bible_verse_number_gutter } from "./app_shared_bible_verse_number_gutter.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { html_centered } from "./html_centered.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_bible_verse_entries } from "./app_shared_bible_verse_entries.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
@@ -39,16 +40,24 @@ export function app_shared_bible_passage_verses_draw(
     return entry;
   }
   let languages = list_map(languages_available, with_code);
+  ("THE NUMBER COLUMN IS AS WIDE AS THIS PASSAGE'S LONGEST NUMBER AND NO WIDER (asked for by the human 2026-11-22: the numbers had a lot of space either side). The chapter reader's gutter is sized for a three-digit number inside a button with a border, and here the number is plain text, so borrowing it left a wide empty margin. Every row of one passage gets the same width, so 9 and 10 still line up; the number sits against the end of its column, next to the words it numbers.");
+  function digits(verse_number) {
+    let shown = text_to(verse_number);
+    let r = text_size(shown);
+    return r;
+  }
+  let list = list_map(verse_numbers, digits);
+  let widest = list_max(list);
+  let left = text_combine(widest, "ch");
   function draw_verse(verse_number) {
     let row = html_div(top);
     html_display_grid(row);
-    let left = app_shared_bible_verse_number_gutter();
     let columns = text_combine(left, " 1fr");
     html_style_set(row, "grid-template-columns", columns);
     let gap = app_shared_spaced_small_gap();
     html_style_set(row, "column-gap", gap);
     let number = html_div_text(row, verse_number);
-    html_centered(number);
+    html_style_set(number, "text-align", "end");
     ("the number steps back into the same grey every other quieted word in these apps uses, so the eye goes to the words of the verse and the number is there only for whoever looks for it.");
     app_shared_text_deemphasized(number);
     let text_cell = html_div(row);

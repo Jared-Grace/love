@@ -692,6 +692,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_splice_in: text_frozen("splice_in"),
       app_learn_js_lesson_array_splice_set: text_frozen("splice_set"),
       app_learn_js_lesson_array_split_join: text_frozen("split_join"),
+      app_learn_js_lesson_string_replace_hand: text_frozen("replace_hand"),
       app_learn_js_lesson_string_replace: text_frozen("replace"),
       app_learn_js_lesson_string_replace_all: text_frozen("replace_all"),
       app_learn_js_lesson_array_split_space: text_frozen("split_space"),
