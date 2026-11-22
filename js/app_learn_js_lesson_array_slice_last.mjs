@@ -87,9 +87,19 @@ export function app_learn_js_lesson_array_slice_last() {
       "a",
     ]);
     app_learn_js_div_cycle_code(box_two, [
-      "Then slice starts 2 before the end, at ",
-      "a.length - 2",
-      ":",
+      "",
+      "a.slice(a.length)",
+      " starts past the last item, so it includes no items",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "",
+      "a.slice(a.length - 1)",
+      " includes only the last item",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "So ",
+      "a.slice(a.length - 2)",
+      " includes only the last 2 items:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
