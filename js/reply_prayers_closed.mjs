@@ -7,6 +7,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_join_comma_space_and } from "./list_join_comma_space_and.mjs";
 import { prayer_blessing_line } from "./prayer_blessing_line.mjs";
 import { reply_prayer_closing } from "./reply_prayer_closing.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { reply_on_match } from "./reply_on_match.mjs";
 export function reply_prayers_closed(rule) {
@@ -29,7 +30,8 @@ export function reply_prayers_closed(rule) {
       }
       if (list_empty_not_is(lines)) {
         let prayer = reply_prayer_closing(lines);
-        list_add(possibility[name_outputs], prayer);
+        let outputs = property_get(possibility, name_outputs);
+        list_add(outputs, prayer);
       }
     }
   }
