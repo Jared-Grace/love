@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
@@ -11,11 +12,13 @@ import { add } from "./add.mjs";
 import { list_or_text_skip } from "./list_or_text_skip.mjs";
 import { json_equal_not } from "./json_equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { app_learn_js_operator_at_symbol } from "./app_learn_js_operator_at_symbol.mjs";
+import { list_or_text_at } from "./list_or_text_at.mjs";
+import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_operator_method_two_symbol } from "./app_learn_js_operator_method_two_symbol.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_or_text_index_of_or_minus_one } from "./list_or_text_index_of_or_minus_one.mjs";
 import { list_index_of_last_try } from "./list_index_of_last_try.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_replace_pair } from "./app_learn_js_replace_pair.mjs";
 import { app_learn_js_replace_all_pair } from "./app_learn_js_replace_all_pair.mjs";
 import { not } from "./not.mjs";
@@ -71,6 +74,21 @@ export function app_learn_js_expression_value_decoys(current, node) {
     }
     let slices_wrong = list_filter(slices, slice_wrong_is);
     return slices_wrong;
+  }
+  let symbol_at = app_learn_js_operator_at_symbol();
+  if (equal(symbol, symbol_at)) {
+    ("2026-11-22: a.at(-1) is offered the slips the At lesson's wrong programs teach against - the first item, and the item one further back");
+    let first_at = list_or_text_at(left, 0);
+    let back_index = subtract(right, 1);
+    let further_back = list_or_text_at(left, back_index);
+    let ats = [first_at, further_back];
+    function at_wrong_is(at_other) {
+      let differs6 = json_equal_not(at_other, value);
+      return differs6;
+    }
+    let ats_wrong = list_filter(ats, at_wrong_is);
+    let ats_once = list_unique(ats_wrong);
+    return ats_once;
   }
   let symbol_index_from = app_learn_js_operator_method_two_symbol("indexOf");
   if (equal(symbol, symbol_index_from)) {

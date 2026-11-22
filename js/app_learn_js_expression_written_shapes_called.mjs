@@ -13,6 +13,7 @@ import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slic
 import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
 import { app_learn_js_operator_last_index_of_symbol } from "./app_learn_js_operator_last_index_of_symbol.mjs";
 import { app_learn_js_operator_split_symbol } from "./app_learn_js_operator_split_symbol.mjs";
+import { app_learn_js_operator_at_symbol } from "./app_learn_js_operator_at_symbol.mjs";
 export function app_learn_js_expression_written_shapes_called() {
   arguments_assert(arguments, 0);
   ('lines built with the called operators other than Math.floor and with the actions reached by a dot, alone and inside other operators, so the sweep sees how each prints: Math.ceil(7 / 2) * 2, 1 + Math.abs(2 - 5), a.includes("joy"), a.indexOf("joy") + 1, a.concat(b), a.slice(1 + 1), a.join(", ")');
@@ -58,5 +59,9 @@ export function app_learn_js_expression_written_shapes_called() {
   let symbol7 = app_learn_js_operator_split_symbol();
   let split = app_learn_js_expression_node("love,joy", symbol7, ",");
   list_add(shapes, split);
+  ("2026-11-22: .at arrived with its lesson, held here so the gate sees it printed: a.at(-1)");
+  let symbol8 = app_learn_js_operator_at_symbol();
+  let read_at = app_learn_js_expression_node(words, symbol8, -1);
+  list_add(shapes, read_at);
   return shapes;
 }
