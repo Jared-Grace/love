@@ -1,15 +1,16 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_input_text } from "./html_input_text.mjs";
+import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_bible_record_project } from "./app_bible_record_project.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
+import { equal } from "./equal.mjs";
+import { text_frozen } from "./text_frozen.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { app_bible_record } from "./app_bible_record.mjs";
-import { text_frozen } from "./text_frozen.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 export function app_bible_record_project_choose(on_chosen) {
@@ -26,6 +27,8 @@ export function app_bible_record_project_choose(on_chosen) {
   });
   html_div_text(panel, "Name this recording project:");
   let input = html_input_text(panel, "for example romans_2026");
+  ("the same look as every other box a reader types into in these apps, which also stretches it across the screen, so a long project name is seen whole rather than scrolling inside a narrow box");
+  app_shared_input_style(input);
   let current = app_bible_record_project();
   if (current) {
     html_value_set(input, current);

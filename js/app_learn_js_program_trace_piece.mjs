@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -22,9 +23,11 @@ import { app_learn_js_operators_called } from "./app_learn_js_operators_called.m
 import { list_includes } from "./list_includes.mjs";
 import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
 import { app_learn_js_operators_method } from "./app_learn_js_operators_method.mjs";
+import { app_learn_js_operators_method_two } from "./app_learn_js_operators_method_two.mjs";
+import { list_any } from "./list_any.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
-import { app_learn_js_operator_slice_range_symbol } from "./app_learn_js_operator_slice_range_symbol.mjs";
+import { app_learn_js_operator_method_two_symbol } from "./app_learn_js_operator_method_two_symbol.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_program_trace_piece_solved } from "./app_learn_js_program_trace_piece_solved.mjs";
 import { app_learn_js_expression_node_index } from "./app_learn_js_expression_node_index.mjs";
@@ -204,11 +207,22 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
         ),
     ) &&
     equal(list_size(property_get(piece, "arguments")), 1);
+  let method_two_names = app_learn_js_operators_method_two();
+  function method_two_is(method_two_name) {
+    let called_two = app_learn_js_program_trace_method_is(
+      piece,
+      method_two_name,
+    );
+    return called_two;
+  }
   let slice_range_is =
-    app_learn_js_program_trace_method_is(piece, "slice") &&
+    list_any(method_two_names, method_two_is) &&
     equal(list_size(property_get(piece, "arguments")), 2);
   if (slice_range_is) {
     ("2026-11-22, so the Slice from and to lesson and the separator lesson can be stepped through: a.slice(1, 3) reads the array or string first - a name looked up as any name is - then the two numbers in its brackets left to right, then takes the piece in one evaluate");
+    ("The same day, with s.startsWith(sep, i): every action of two things in ",
+      fn_name("app_learn_js_operators_method_two"),
+      " is read this way, its mark the dot, its name and a comma in brackets");
     let callee_slice = property_get(piece, "callee");
     let piece_sliced = property_get(callee_slice, "object");
     let sliced_held = app_learn_js_program_trace_piece(
@@ -221,7 +235,9 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     let slice_from = app_learn_js_program_trace_piece(state, piece_from, true);
     let piece_to = list_second(pieces_bracket);
     let slice_to = app_learn_js_program_trace_piece(state, piece_to, true);
-    let symbol_range = app_learn_js_operator_slice_range_symbol();
+    let object5 = property_get(callee_slice, "property");
+    let callee_name = property_get(object5, "name");
+    let symbol_range = app_learn_js_operator_method_two_symbol(callee_name);
     let pair = [slice_from, slice_to];
     let expression_range = app_learn_js_expression_node(
       sliced_held,
