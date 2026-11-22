@@ -83,9 +83,15 @@ export function app_learn_js_lesson_string_replace_hand() {
       "put",
       ", find its index ",
       "i",
-      ", then join the part before it, ",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "Then join these three together: the part before ",
+      "search",
+      ", ",
       "put",
-      ", and the part after it:",
+      ", and the part after ",
+      "search",
+      ":",
     ]);
     let code3 = program_of(example_input);
     let lines = text_split_newline(code3);
