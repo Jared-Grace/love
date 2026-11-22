@@ -2285,6 +2285,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 92",
     },
     {
+      chapter_code: "PSA093",
+      reference: "Psalm 93",
+    },
+    {
       chapter_code: "PSA095",
       reference: "Psalm 95",
     },
