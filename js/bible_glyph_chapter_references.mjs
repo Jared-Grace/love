@@ -2729,6 +2729,10 @@ export function bible_glyph_chapter_references() {
       reference: "Jeremiah 45",
     },
     {
+      chapter_code: "JER46",
+      reference: "Jeremiah 46",
+    },
+    {
       chapter_code: "LAM01",
       reference: "Lamentations 1",
     },
