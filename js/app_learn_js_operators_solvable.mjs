@@ -18,6 +18,10 @@ import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slic
 import { list_skip } from "./list_skip.mjs";
 import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
 import { list_join } from "./list_join.mjs";
+import { app_learn_js_operator_last_index_of_symbol } from "./app_learn_js_operator_last_index_of_symbol.mjs";
+import { list_index_of_last_try } from "./list_index_of_last_try.mjs";
+import { app_learn_js_operator_split_symbol } from "./app_learn_js_operator_split_symbol.mjs";
+import { text_split } from "./text_split.mjs";
 export function app_learn_js_operators_solvable() {
   "every operator a code lesson may put between two things and then work out, each carrying the function that works it out";
   ("It is ",
@@ -72,7 +76,18 @@ export function app_learn_js_operators_solvable() {
     operator: app_learn_js_operator_join_symbol(),
     fn: list_join,
   };
+  ('2026-11-22, at the human\'s asking: a.lastIndexOf("joy") gives where the item last sits, or -1, and s.split(",") an array of the pieces of s between each comma, so the Last index of and Split lessons can be stepped through');
+  let indexing_last = {
+    operator: app_learn_js_operator_last_index_of_symbol(),
+    fn: list_index_of_last_try,
+  };
+  let splitting = {
+    operator: app_learn_js_operator_split_symbol(),
+    fn: text_split,
+  };
   let all = list_concat(with_index, [
+    indexing_last,
+    splitting,
     larger,
     smaller,
     including,

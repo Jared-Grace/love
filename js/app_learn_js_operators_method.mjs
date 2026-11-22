@@ -4,6 +4,8 @@ import { app_learn_js_operator_index_of_symbol } from "./app_learn_js_operator_i
 import { app_learn_js_operator_concat_symbol } from "./app_learn_js_operator_concat_symbol.mjs";
 import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slice_symbol.mjs";
 import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
+import { app_learn_js_operator_last_index_of_symbol } from "./app_learn_js_operator_last_index_of_symbol.mjs";
+import { app_learn_js_operator_split_symbol } from "./app_learn_js_operator_split_symbol.mjs";
 export function app_learn_js_operators_method() {
   arguments_assert(arguments, 0);
   ('the operators a code lesson writes as an action reached by a dot, the thing acted on to the left and one thing in brackets to the right: a.includes("joy") and a.indexOf("joy")');
@@ -12,6 +14,8 @@ export function app_learn_js_operators_method() {
   let r4 = app_learn_js_operator_concat_symbol();
   let r5 = app_learn_js_operator_slice_symbol();
   let r6 = app_learn_js_operator_join_symbol();
-  let r = [r2, r3, r4, r5, r6];
+  let r7 = app_learn_js_operator_last_index_of_symbol();
+  let r8 = app_learn_js_operator_split_symbol();
+  let r = [r2, r3, r4, r5, r6, r7, r8];
   return r;
 }
