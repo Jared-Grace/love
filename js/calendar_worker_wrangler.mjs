@@ -6,7 +6,8 @@ export function calendar_worker_wrangler(routes) {
   ("The calendar Worker's wrangler settings. routes is ",
     fn_name("calendar_worker_routes"),
     "() for the live site, or [] to reach it only at its workers.dev test address.");
-  ("The two are separate Workers - calendar-live on the routes, calendar on workers.dev - because each holds its own TURNSTILE_SECRET: the live one the real secret, the test one Cloudflare's always-pass secret the release walk needs. One Worker could hold only one of them. Both share the one database.");
+  ("The two are separate Workers - calendar-live on the routes, calendar on workers.dev - because each holds its own TURNSTILE_SECRET: the live one the real secret, the test one Cloudflare's always-pass secret the release walk needs. One Worker could hold only one of them.");
+  ('EACH HAS ITS OWN DATABASE (human, 2026-11-22: "want to test locally first - need to be able to keep prod unchanged while developing"). They used to share the one, so a guest or meeting made on the dev page was a real one; the test Worker now writes only to calendar_test.');
   ("Secrets are not here and never are: FACEBOOK_APP_SECRET and TURNSTILE_SECRET are entered by the human with wrangler secret put, once per Worker. The App ID is public.");
   ("RATE allows 10 calls a minute per address; Cloudflare only offers periods of 10 or 60 seconds.");
   let test = equal(routes.length, 0);
@@ -24,11 +25,17 @@ export function calendar_worker_wrangler(routes) {
       FACEBOOK_APP_ID: "29067273396256514",
     },
     d1_databases: [
-      {
-        binding: "DB",
-        database_name: "calendar",
-        database_id: "53cbd4b0-4f59-4a6d-959e-47a98d75b9c0",
-      },
+      test
+        ? {
+            binding: "DB",
+            database_name: "calendar_test",
+            database_id: "d023a5f9-d830-4f3f-aec3-816120e8de7d",
+          }
+        : {
+            binding: "DB",
+            database_name: "calendar",
+            database_id: "53cbd4b0-4f59-4a6d-959e-47a98d75b9c0",
+          },
     ],
     ratelimits: [
       {
