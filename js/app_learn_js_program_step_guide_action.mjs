@@ -231,6 +231,20 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     "This adds an item to the " + push_end + " of the array named ",
     push_name,
   ];
+  ("2026-11-22, for the splice lessons: a splice putting an item in says the index it goes in at, and when it takes the one there out, says so");
+  if (equal(push_method, "splice")) {
+    let spliced = list_last(actions);
+    let value4 = property_get(spliced, "index");
+    let at_code = js_value_code(value4);
+    let in_place = property_get_or(spliced, "replaces", false)
+      ? ", in place of the item there"
+      : "";
+    pushes_to = [
+      "This puts an item in at index " + at_code + " of the array named ",
+      push_name,
+      in_place,
+    ];
+  }
   ("2026-11-13, at the human's asking: a function called is solved as an expression is, so it is chosen as Solve an expression. Not picked: a choice of its own, Call a function, built first, which made the list of choices grow and set calls apart from Math.floor( ), already solved as an expression");
   let push_choose = [
     "A function called is solved as an expression is, so choose: Solve an expression",
@@ -251,6 +265,16 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
         " of the array named ",
       pop_name,
     ];
+    ("2026-11-22, for the splice lessons: a splice taking an item out says the index it takes it from");
+    if (equal(pop_method, "splice")) {
+      let value5 = property_get(action, "index");
+      takes = [
+        "This takes out the item at index " +
+          js_value_code(value5) +
+          " of the array named ",
+        pop_name,
+      ];
+    }
     if (property_get_or(action, "into", false)) {
       let pop_lead = list_includes(kinds, "log") ? [logs] : [];
       let r29 = [

@@ -83,6 +83,11 @@ export function app_learn_js_program_step_order_words(
       let method = property_get(item, "method");
       let front = equal(method, "unshift") || equal(method, "shift");
       end_word = front ? "start" : "end";
+      ("2026-11-22, for the splice lessons: a splice works at the index it names");
+      if (equal(method, "splice")) {
+        let value7 = property_get(item, "index");
+        end_word = "index " + js_value_code(value7);
+      }
       let value5 = property_get(item, "value");
       value = js_value_code(value5);
     }

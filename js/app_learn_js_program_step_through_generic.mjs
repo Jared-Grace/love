@@ -119,8 +119,7 @@ import { app_learn_js_program_step_operator_decoys } from "./app_learn_js_progra
 import { app_learn_js_expression_value_choose_buttons_generic } from "./app_learn_js_expression_value_choose_buttons_generic.mjs";
 import { app_learn_js_line_pieces_add } from "./app_learn_js_line_pieces_add.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { list_slice } from "./list_slice.mjs";
-import { greater_than } from "./greater_than.mjs";
+import { app_learn_js_array_code_item_from } from "./app_learn_js_array_code_item_from.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
 import { html_size } from "./html_size.mjs";
@@ -546,6 +545,26 @@ export function app_learn_js_program_step_through_generic(
       to = add(from, right8);
       gap_from = from;
       gap_to = from;
+    }
+    ("2026-11-22, for the splice lessons: part at is one item inside the array, as part item is, in a room of its own as part first and part last are - with the comma and space after it, or before it when it is the last of several - so a splice can open the room or close it and the items after slide");
+    if (equal(part, "at")) {
+      let at_value = subtract(size, right3);
+      from = add(at_value, item_from);
+      let at_size = text_size(last_text);
+      to = add(from, at_size);
+      gap_from = from;
+      gap_to = to;
+      let to7 = add(to, 1);
+      let at_after = text_slice(note, to, to7);
+      let from3 = subtract(from, 1);
+      let at_before = text_slice(note, from3, from);
+      let b9 = equal(at_after, "]");
+      let b13 = equal(at_before, "[");
+      if (not(b9)) {
+        gap_to = add(to, 2);
+      } else if (not(b13)) {
+        gap_from = subtract(from, 2);
+      }
     }
     property_set(state, "note_gap", null);
     html_clear(comment);
@@ -1334,13 +1353,7 @@ export function app_learn_js_program_step_through_generic(
       if (property_exists(action, "index")) {
         part4 = "item";
         let index4 = property_get(action, "index");
-        let before_items = list_slice(value2, 0, index4);
-        let before_code = js_value_code(before_items);
-        let left26 = text_size(before_code);
-        item_from = subtract(left26, 1);
-        if (greater_than(index4, 0)) {
-          item_from = add(item_from, 2);
-        }
+        item_from = app_learn_js_array_code_item_from(value2, index4);
         let object6 = property_get(state, "held_before");
         let held_before_list = property_get(object6, name2);
         let old_array = list_last(held_before_list);
@@ -1378,6 +1391,8 @@ export function app_learn_js_program_step_through_generic(
       ("2026-11-13, at the human's asking, for Adding to an array: the note above the line that declared the array is written again holding the longer array, the items already there staying in place and unfaded, and a copy of what is inside .push( ) goes up into the end of it. Not picked: fading the whole old array and sending a new one, as an assign does, which would say the whole array was replaced when only one item arrived");
       let name5 = property_get(action, "name");
       let after = property_get(action, "after");
+      let held5 = property_get(state, "held");
+      let array_before = property_get(held5, name5);
       held_value_set(name5, after);
       let note_line3 = property_path_get_2(state, "declared", name5);
       let value11 = property_get(action, "value");
@@ -1385,8 +1400,50 @@ export function app_learn_js_program_step_through_generic(
       let code2 = js_value_code(after);
       let method = property_get(action, "method");
       let part2 = equal(method, "unshift") ? "first" : "last";
-      let hidden5 = comment_draw(note_line3, name5, code2, part2, item_text, 0);
       let duration4 = app_shared_animation_duration();
+      ("2026-11-22, for the splice lessons: a splice putting an item in opens a room at its index, as a push opens one at the end. One putting it in place of the item there fades that item and sends the new one into its place, as a[1] = x; does, the rest of the array staying unfaded");
+      let splice_from = 0;
+      if (equal(method, "splice")) {
+        let splice_index = property_get(action, "index");
+        splice_from = app_learn_js_array_code_item_from(after, splice_index);
+        part2 = "at";
+        if (property_get_or(action, "replaces", false)) {
+          let old_code = js_value_code(array_before);
+          let value7 = list_get(array_before, splice_index);
+          let old_item2 = js_value_code(value7);
+          let old_spans2 = comment_draw(
+            note_line3,
+            name5,
+            old_code,
+            "item",
+            old_item2,
+            splice_from,
+          );
+          for (let span5 of old_spans2) {
+            html_visibility_visible(span5);
+            html_opacity_transition(span5, "0", duration4);
+          }
+          await sleep(duration4);
+          let hidden6 = comment_draw(
+            note_line3,
+            name5,
+            code2,
+            "item",
+            item_text,
+            splice_from,
+          );
+          await action_piece_send(line_index, action, hidden6, duration4);
+          return;
+        }
+      }
+      let hidden5 = comment_draw(
+        note_line3,
+        name5,
+        code2,
+        part2,
+        item_text,
+        splice_from,
+      );
       ("the room the item will stand in opens first, sliding the ] along, and the item then flies into it");
       let gap2 = property_get(state, "note_gap");
       let gap_width = html_size(gap2, "width");
@@ -1408,13 +1465,20 @@ export function app_learn_js_program_step_through_generic(
       let duration6 = app_shared_animation_duration();
       let method3 = property_get(action, "method");
       let part3 = equal(method3, "shift") ? "first" : "last";
+      ("2026-11-22, for the splice lessons: a splice taking an item out fades the item at its index and closes its room, as a pop does at the end");
+      let taken_from = 0;
+      if (equal(method3, "splice")) {
+        part3 = "at";
+        let index5 = property_get(action, "index");
+        taken_from = app_learn_js_array_code_item_from(item4, index5);
+      }
       let last_spans = comment_draw(
         note_line4,
         name6,
         code3,
         part3,
         item_text2,
-        0,
+        taken_from,
       );
       for (let span2 of last_spans) {
         html_visibility_visible(span2);

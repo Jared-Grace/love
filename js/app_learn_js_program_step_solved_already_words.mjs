@@ -1,11 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { equal } from "./equal.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { integer_is } from "./integer_is.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
-import { equal } from "./equal.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 export function app_learn_js_program_step_solved_already_words(
   line_text,
@@ -15,7 +15,10 @@ export function app_learn_js_program_step_solved_already_words(
   ("why a line's value needs no solving, said with the value itself, words and code taking turns: the value, then that it is already solved, then the same line written with a sum, which would need solving first. action is the one holding the value: an assign or a log. 2026-10-23, at the human's asking, whose words were: 9 is already a solved value so no solving is needed - if the line was let a = 8 + 1;, then we would need to solve 8 + 1 to 9 first. Not picked: This is already a single value, as it was, which made the learner work out what this was");
   let value = property_get(action, "value");
   ("2026-11-14, for Setting an item: an assign of one item, as a[1] = x; is, holds the whole array as its value, and the value on its line is the item");
-  let item_is = property_exists(action, "index");
+  ("2026-11-22: a splice step holds an index too, but its value is already the item");
+  let item_is =
+    property_exists(action, "index") &&
+    equal(property_get(action, "kind"), "assign");
   if (item_is) {
     value = property_get(action, "item");
   }
@@ -48,6 +51,21 @@ export function app_learn_js_program_step_solved_already_words(
       "(" +
       sum +
       ");";
+    ("2026-11-22, for the splice lessons: a splice line keeps its index and how many it takes out before the sum");
+    let left2 = property_get(action, "method");
+    if (equal(left2, "splice")) {
+      let count = property_get(action, "replaces") ? "1" : "0";
+      let value3 = property_get(action, "index");
+      line_sum =
+        property_get(action, "name") +
+        ".splice(" +
+        js_value_code(value3) +
+        ", " +
+        count +
+        ", " +
+        sum +
+        ");";
+    }
   }
   parts = [
     "",
