@@ -12,12 +12,8 @@ export function bible_glyph_marks_reserved() {
   "IT HAS TWO OBJECTIONS AND BOTH ARE REAL. This table ALREADY says God, with the fire, so a second divine mark is bought for its lack of edges rather than for what it means - and a reader who learned the fire in the first verse will want to know why the arrow is not the fire. And a reserved picture is never seen alone, so it can never be learned by pointing at the thing it draws, which is this Bible's whole method; the trays and the hands are learned without pointing, but they are learned in PAIRS, and a lone qualifier has no opposite to be told apart from.";
   "THE DOVE WAS TAKEN OFF THIS LIST (2026-09-17), so the paragraphs above that speak of two entries describe the list as it stood before. It was held for the Spirit's own verse, as the one picture naming a person of God directly, and that reason does not stand: the Spirit is already drawn from its own words, holy as the sparkle and spirit as the wind. The wind is the right picture because ruach and pneuma are one word for wind, breath and spirit, and the wind keeps that visible where a dove would hide it - the same argument that gives God and the gods one flame. The dove belongs to the Spirit through one scene, where the Spirit came down LIKE a dove, and that is a likeness in the text rather than a name. So the dove draws the bird, which is what the word under it says.";
   "A GROUP FOR THE SPIRIT WAS OFFERED AND TURNED DOWN AT THE SAME TIME. The fire and the dove side by side would read as God's dove, and it would free the bird too, but it draws a reading instead of the words, it can be spelled by accident wherever a word ending in the fire meets the bird, and it tangles with the Holy Spirit and fire, where the fire would then stand beside itself.";
+  "THE EQUALS SIGN WAS TAKEN OFF THIS LIST (2026-11-22), and what was ruled out stays ruled out. It had been held back because a symmetric mark says its two sides may be swapped, and God is love does not run backwards - so equals must never draw the word is. But the Hebrew roots for weighing out an equal measure drew it as the scales and the equals side by side, where it says what the words say, a measure that matches on both sides, and claims nothing about anyone. The human approved scales with equals for that sense, and with equals still on the list, three chapters (Second Chronicles twenty four, Ezekiel forty five and First Kings seven) could not be drawn at all.";
   arguments_assert(arguments, 0);
-  let reserved = [
-    {
-      name: "equals",
-      why: "ruled out, and not merely unspent. A symmetric mark says its two sides may be exchanged, and God is love does not run backwards; the mark put a claim into a sentence its writer had deliberately kept out. It is kept in the vocabulary as the record of that decision rather than as a picture waiting for a word.",
-    },
-  ];
+  let reserved = [];
   return reserved;
 }
