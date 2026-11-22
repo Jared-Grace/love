@@ -1,5 +1,3 @@
-import { greater_than } from "./greater_than.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
@@ -12,7 +10,10 @@ import { html_element } from "./html_element.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { app_bible_record_text_draw } from "./app_bible_record_text_draw.mjs";
+import { not } from "./not.mjs";
 import { html_div } from "./html_div.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
@@ -21,7 +22,7 @@ import { app_bible_record_take_draw } from "./app_bible_record_take_draw.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 export async function app_bible_record_camera(chapter_code, verse_numbers) {
   "$plain chapter_code";
-  "A screen over the whole page with the front camera on it and the passage laid across the bottom, a button to start and stop recording, and one to close.";
+  "A screen over the whole page with the front camera on it and the passage laid across the bottom, recording from the moment the first picture shows, with a button to stop and one to close.";
   "What is recorded is the canvas, not the camera: each frame is the camera's picture with the passage drawn over it, so the saved video carries the words exactly as they were shown. The microphone's sound is added to it.";
   "Closing stops the camera and the microphone, so the phone's recording light goes off the moment the screen does.";
   arguments_assert(arguments, 2);
@@ -65,6 +66,8 @@ export async function app_bible_record_camera(chapter_code, verse_numbers) {
     });
     let ctx = canvas_element.getContext("2d");
     let drawing = true;
+    ("RECORDING STARTS BY ITSELF, asked for by the human 2026-11-22: the button that opened this screen already said record, so asking a second time was a press that bought nothing. It waits for the first picture to be drawn, so the video does not open on black frames from before the camera woke.");
+    let started = false;
     async function frames() {
       while (drawing && open) {
         await html_request_animation_frame();
@@ -77,6 +80,10 @@ export async function app_bible_record_camera(chapter_code, verse_numbers) {
           }
           ctx.drawImage(video_element, 0, 0, width, height);
           app_bible_record_text_draw(ctx, width, height, reference, text);
+          if (not(started)) {
+            started = true;
+            toggle();
+          }
         }
       }
     }

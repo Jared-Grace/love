@@ -16,6 +16,8 @@ import { list_first } from "./list_first.mjs";
 import { list_or_text_index_of_or_minus_one } from "./list_or_text_index_of_or_minus_one.mjs";
 import { list_index_of_last_try } from "./list_index_of_last_try.mjs";
 import { list_unique } from "./list_unique.mjs";
+import { app_learn_js_replace_pair } from "./app_learn_js_replace_pair.mjs";
+import { app_learn_js_replace_all_pair } from "./app_learn_js_replace_all_pair.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_operator_slice_range_symbol } from "./app_learn_js_operator_slice_range_symbol.mjs";
 import { list_second } from "./list_second.mjs";
@@ -87,6 +89,22 @@ export function app_learn_js_expression_value_decoys(current, node) {
     let indexes_wrong = list_filter(indexes, index_wrong_is);
     let indexes_once = list_unique(indexes_wrong);
     return indexes_once;
+  }
+  let symbol_replace = app_learn_js_operator_method_two_symbol("replace");
+  let symbol_replace_all =
+    app_learn_js_operator_method_two_symbol("replaceAll");
+  if (equal(symbol, symbol_replace) || equal(symbol, symbol_replace_all)) {
+    ("2026-11-22: s.replace(a, b) and s.replaceAll(a, b) are each offered the other's answer - only the first changed, or every one - and s as it was, since neither changes s");
+    let replaced_first = app_learn_js_replace_pair(left, right);
+    let replaced_every = app_learn_js_replace_all_pair(left, right);
+    let replacings = [replaced_first, replaced_every, left];
+    function replacing_wrong_is(replacing) {
+      let differs5 = json_equal_not(replacing, value);
+      return differs5;
+    }
+    let replacings_wrong = list_filter(replacings, replacing_wrong_is);
+    let replacings_once = list_unique(replacings_wrong);
+    return replacings_once;
   }
   let symbol_starts = app_learn_js_operator_method_two_symbol("startsWith");
   if (equal(symbol, symbol_starts)) {

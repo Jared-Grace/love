@@ -1,4 +1,3 @@
-import express from "express";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { server_port } from "./server_port.mjs";
 import { server_static_options } from "./server_static_options.mjs";
@@ -18,6 +17,7 @@ import { server_url_api_ordered } from "./server_url_api_ordered.mjs";
 import { server_data_endpoints } from "./server_data_endpoints.mjs";
 import { server_url } from "./server_url.mjs";
 import { log_keep } from "./log_keep.mjs";
+import { server_listen_both } from "./server_listen_both.mjs";
 import { server_https_listen } from "./server_https_listen.mjs";
 export async function server() {
   arguments_assert(arguments, 0);
@@ -85,7 +85,8 @@ export async function server() {
     let message = text_combine("Static server running at: ", right);
     log_keep(server.name, message);
   }
-  app.listen(port, lambda);
+  ("the plain port answers https too, so a link written https://…:8080 - a copied address after a browser upgraded it - opens instead of failing");
+  await server_listen_both(app, port, lambda);
   ("the same app answers over https as well, on a port of its own, because a phone's browser hands the camera and microphone only to an https page - the plain port above stays exactly as it was");
   await server_https_listen(app);
 }
