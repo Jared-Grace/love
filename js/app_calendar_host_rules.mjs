@@ -58,16 +58,53 @@ export function app_calendar_host_rules(area, key, settings) {
         : "Now: at most " + saved_max + " upcoming meetings per guest",
     );
   }
+  ("How far ahead a guest may book is two whole numbers, never blank, so they start filled in with the window every host had before (24 hours, 14 days). The soonest hour is said as notice, the way a guest is warned, rather than as a minimum, which a host reads as a meeting length.");
+  let notice_field = app_shared_field(area);
+  html_div_text(
+    notice_field,
+    "Soonest booking - how many hours' notice you need before a meeting",
+  );
+  let notice = html_input_text(notice_field, "24");
+  app_shared_input_style(notice);
+  let notice_line = html_div_text(notice_field, "");
+  app_shared_text_deemphasized(notice_line);
+  function notice_show(saved_hours) {
+    html_text_content_set(
+      notice_line,
+      "Now: guests can book " + saved_hours + " hours or more ahead",
+    );
+  }
+  let days_ahead_field = app_shared_field(area);
+  html_div_text(
+    days_ahead_field,
+    "Furthest booking - how many days ahead guests can book",
+  );
+  let days_ahead = html_input_text(days_ahead_field, "14");
+  app_shared_input_style(days_ahead);
+  let days_ahead_line = html_div_text(days_ahead_field, "");
+  app_shared_text_deemphasized(days_ahead_line);
+  function days_ahead_show(saved_days) {
+    html_text_content_set(
+      days_ahead_line,
+      "Now: guests can book up to " + saved_days + " days ahead",
+    );
+  }
   let host = settings.host;
   if (host) {
     html_value_set(max, saved_rules.max);
     html_value_set(max_guest, saved_rules.max_guest);
   }
+  html_value_set(notice, saved_rules.notice);
+  html_value_set(days_ahead, saved_rules.days_ahead);
   max_show(host ? host.max_per_day : null);
   max_guest_show(host ? host.max_per_guest : 2);
+  notice_show(saved_rules.notice);
+  days_ahead_show(saved_rules.days_ahead);
   async function rules_save() {
     let max_text = html_value_get(max).trim();
     let max_guest_text = html_value_get(max_guest).trim();
+    let notice_text = html_value_get(notice).trim();
+    let days_ahead_text = html_value_get(days_ahead).trim();
     let saved = await calendar_api_call(
       "POST",
       "host_rules_save",
@@ -75,12 +112,18 @@ export function app_calendar_host_rules(area, key, settings) {
         messenger: saved_rules.messenger,
         max: max_text,
         max_guest: max_guest_text,
+        notice: notice_text,
+        days_ahead: days_ahead_text,
       },
       key,
     );
     if (saved.body.ok) {
       max_show(equal(max_text, "") ? null : Number(max_text));
       max_guest_show(equal(max_guest_text, "") ? null : Number(max_guest_text));
+      let v = Number(notice_text);
+      notice_show(v);
+      let v2 = Number(days_ahead_text);
+      days_ahead_show(v2);
       let done = "Saved.";
       return done;
     }
@@ -88,6 +131,12 @@ export function app_calendar_host_rules(area, key, settings) {
       max: "Type a number from 1 to 24, or leave it blank for unlimited.",
       max_guest:
         "Type a number from 1 to 24 for meetings per guest, or leave it blank for unlimited.",
+      notice:
+        "Type a whole number of hours from 1 to 168 for the soonest booking.",
+      days_ahead:
+        "Type a whole number of days from 1 to 60 for the furthest booking.",
+      window:
+        "The soonest booking must come before the furthest one. Use fewer hours or more days.",
       no_host: "Save your booking link name in About you first.",
     };
     let told = property_get_or(
