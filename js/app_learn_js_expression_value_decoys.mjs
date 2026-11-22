@@ -11,6 +11,10 @@ import { add } from "./add.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { json_equal_not } from "./json_equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { app_learn_js_operator_slice_range_symbol } from "./app_learn_js_operator_slice_range_symbol.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_second } from "./list_second.mjs";
+import { list_slice } from "./list_slice.mjs";
 import { app_learn_js_operator_concat_symbol } from "./app_learn_js_operator_concat_symbol.mjs";
 import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
 import { app_learn_js_operator_index_of_symbol } from "./app_learn_js_operator_index_of_symbol.mjs";
@@ -64,6 +68,24 @@ export function app_learn_js_expression_value_decoys(current, node) {
     }
     let slices_wrong = list_filter(slices, slice_wrong_is);
     return slices_wrong;
+  }
+  let symbol_range = app_learn_js_operator_slice_range_symbol();
+  if (equal(symbol, symbol_range)) {
+    ("2026-11-22: a.slice(1, 3) is offered the slips the Slice from and to lesson's wrong programs teach against - everything from the first number on, as if the second were not there, and one item past the second, as if it were included");
+    let slice_from = list_first(right);
+    let slice_to = list_second(right);
+    ("left may be a string, as s is in s.slice(i, i + sep.length), so its end is read off its length rather than off a list's size");
+    let end = left.length;
+    let to_end = list_slice(left, slice_from, end);
+    let index_b = add(slice_to, 1);
+    let one_more = list_slice(left, slice_from, index_b);
+    let ranges = [to_end, one_more];
+    function range_wrong_is(range) {
+      let differs3 = json_equal_not(range, value);
+      return differs3;
+    }
+    let ranges_wrong = list_filter(ranges, range_wrong_is);
+    return ranges_wrong;
   }
   ("2026-11-22, the same day: concat and join were offered only their own answer again, and so nothing once that was dropped. Concat is offered the two arrays the other way round, the mix-up of which comes first; join is offered the items joined with nothing between and with a comma and no space, the slips the Join lesson's wrong programs teach against");
   let right3 = app_learn_js_operator_concat_symbol();
