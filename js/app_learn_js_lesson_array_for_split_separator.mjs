@@ -8,7 +8,7 @@ import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_split } from "./app_learn_js_lesson_array_for_split.mjs";
-import { app_learn_js_lesson_array_slice_range } from "./app_learn_js_lesson_array_slice_range.mjs";
+import { app_learn_js_lesson_array_slice_separator } from "./app_learn_js_lesson_array_slice_separator.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -90,27 +90,21 @@ export function app_learn_js_lesson_array_for_split_separator() {
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_array_slice_range,
-      ["", "a.slice(1, 3)", " gave the items from index 1 up to 3"],
+      app_learn_js_lesson_array_slice_separator,
+      [
+        "",
+        "s.slice(i, i + sep.length) === sep",
+        " asked whether ",
+        "sep",
+        " is at ",
+        "i",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "Now the words have a comma and a space between them, kept in ",
       "sep",
-    ]);
-    app_learn_js_div_cycle_code(box_two, [
-      "",
-      "s.slice(i, i + sep.length)",
-      " is the letters from ",
-      "i",
-      " as long as ",
-      "sep",
-      ", so ",
-      "=== sep",
-      " asks whether ",
-      "sep",
-      " starts at ",
-      "i",
+      ", and that check goes in the loop",
     ]);
     app_learn_js_div_cycle_code(box_two, [
       "After a match, ",
@@ -128,7 +122,7 @@ export function app_learn_js_lesson_array_for_split_separator() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Words apart at a separator",
-    "s.slice(i, i + sep.length)",
+    "i = i + sep.length - 1",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
