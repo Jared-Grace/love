@@ -1,3 +1,4 @@
+import { date_weekday_year_month_day } from "./date_weekday_year_month_day.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { app_receipts_color_get } from "./app_receipts_color_get.mjs";
@@ -6,7 +7,6 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { country_philippines } from "./country_philippines.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { date_year_month_day } from "./date_year_month_day.mjs";
 import { time_12_label } from "./time_12_label.mjs";
 import { app_receipts_purchase_usa_text } from "./app_receipts_purchase_usa_text.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -38,7 +38,7 @@ export function app_receipts_purchase_card_view(parent, purchase) {
       card,
       property_get(philippines, "flag") +
         " " +
-        date_year_month_day(date) +
+        date_weekday_year_month_day(date) +
         " - " +
         time_12_label(time),
     );
