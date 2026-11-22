@@ -1,45 +1,25 @@
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_shared_container } from "./app_shared_container.mjs";
-import { app_shared_field } from "./app_shared_field.mjs";
-import { html_div_text } from "./html_div_text.mjs";
-import { html_input_text } from "./html_input_text.mjs";
-import { app_shared_input_style } from "./app_shared_input_style.mjs";
-import { html_value_set } from "./html_value_set.mjs";
-import { html_div_text_content } from "./html_div_text_content.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { app_shared_toast_saving } from "./app_shared_toast_saving.mjs";
-import { html_value_get } from "./html_value_get.mjs";
-import { equal } from "./equal.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
-import { html_text_content_set } from "./html_text_content_set.mjs";
-import { calendar_page_url } from "./calendar_page_url.mjs";
-import { html_text_get } from "./html_text_get.mjs";
-import { app_shared_toast } from "./app_shared_toast.mjs";
-import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
-import { app_calendar_invite_form } from "./app_calendar_invite_form.mjs";
-import { property_get_or } from "./property_get_or.mjs";
-import { app_shared_heading } from "./app_shared_heading.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
-import { date_week_sunday } from "./date_week_sunday.mjs";
-import { week_dates } from "./week_dates.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { calendar_openings_to_ranges } from "./calendar_openings_to_ranges.mjs";
-import { calendar_ranges_to_openings } from "./calendar_ranges_to_openings.mjs";
-import { week_calendar } from "./week_calendar.mjs";
-import { html_div } from "./html_div.mjs";
+import { calendar_host_openings_current } from "./calendar_host_openings_current.mjs";
+import { equal } from "./equal.mjs";
+import { calendar_page_url } from "./calendar_page_url.mjs";
+import { app_calendar_host_about } from "./app_calendar_host_about.mjs";
+import { app_calendar_host_hours } from "./app_calendar_host_hours.mjs";
+import { app_calendar_host_rules } from "./app_calendar_host_rules.mjs";
+import { app_calendar_host_share } from "./app_calendar_host_share.mjs";
 import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
+import { app_shared_steps } from "./app_shared_steps.mjs";
 export async function app_calendar_host(parent, key) {
   arguments_assert(arguments, 2);
-  ("The host's screen, for a signed-in host's session key: who they are (name, WhatsApp, time zone), their booking link, their weekly free hours on the grid, and every upcoming meeting with the ones waiting for a code on top of what to do.");
-  ("Booking rules: a Messenger name lets guests choose Messenger, the most meetings in one day caps each day, and the most per guest caps how many upcoming meetings one guest holds (a weekly one counting once); blank means unlimited, and the page says so.");
+  ("The host's page, for a signed-in host's session key, as screens in the order a host sets up: About you (name, WhatsApp, link name), Free hours, Rules, then Share. Home lists them all with what each holds, and shows every upcoming meeting below, the ones waiting for a code on top of what to do.");
+  ('SCREENS, NEXT, HOME (human, 2026-11-22: "each section is a button/screen", "a next button that goes to the next unfinished screen", "a link would be last?", "you can go home and see everything?", "and jump to any screen?"). About you is finished once the person and the link name are saved, Free hours once any hour is set; Rules are all optional and Share has nothing to finish, so neither is ever unfinished, and Next skips them until everything else is done, then goes to Share.');
   ("Answers false when the key is no longer a host session, so the page can sign in again; true once drawn.");
-  ("A change on the grid saves at once as the schedule in force from today; days before today keep the hours they had, since a schedule only ever starts on a date.");
   let read = await calendar_api_call("GET", "settings", {}, key);
   if (not(read.body.ok)) {
     return false;
@@ -47,252 +27,127 @@ export async function app_calendar_host(parent, key) {
   ("Whatever stood in parent while the settings were fetched - the page's loading line - goes once they arrive.");
   html_clear(parent);
   let settings = read.body.settings;
-  let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  let me = app_shared_container(parent);
-  let name_field = app_shared_field(me);
-  html_div_text(name_field, "Your name");
-  let name = html_input_text(name_field, "Your name");
-  app_shared_input_style(name);
-  let whatsapp_field = app_shared_field(me);
-  html_div_text(
-    whatsapp_field,
-    "Your WhatsApp number - guests send their code here",
-  );
-  let whatsapp = html_input_text(whatsapp_field, "+1 555 123 4567");
-  app_shared_input_style(whatsapp);
-  let person = settings.person;
-  if (person) {
-    html_value_set(name, person.name);
-    html_value_set(whatsapp, person.whatsapp);
-  }
-  let zone_line = html_div_text_content(me, "Time zone: " + zone);
-  app_shared_text_deemphasized(zone_line);
-  async function lambda() {
-    await app_shared_toast_saving(person_save);
-  }
-  async function person_save() {
-    let saved = await calendar_api_call(
-      "POST",
-      "person_save",
-      {
-        name: html_value_get(name).trim(),
-        whatsapp: html_value_get(whatsapp),
-        timezone: zone,
-      },
-      key,
-    );
-    let told = saved.body.ok
-      ? "Saved."
-      : equal(saved.body.reason, "whatsapp")
-        ? "That WhatsApp number does not look right."
-        : "Could not save. Try again.";
-    return told;
-  }
-  app_shared_button_green(me, "Save", lambda);
-  let link_card = app_shared_container(parent);
-  let slug_field = app_shared_field(link_card);
-  html_div_text(
-    slug_field,
-    "Your booking link name (lowercase letters, digits, _)",
-  );
-  let slug = html_input_text(slug_field, "your_name");
-  app_shared_input_style(slug);
-  let host = settings.host;
-  if (host) {
-    html_value_set(slug, host.slug);
-  }
-  app_shared_button_green(link_card, "Save link", lambda3);
-  let link_line = html_div_text(link_card, "");
-  let show_link = function lambda2(s) {
-    html_text_content_set(
-      link_line,
-      s ? calendar_page_url() + "#host=" + s : "",
-    );
-  };
-  show_link(host ? host.slug : "");
-  async function link_copy() {
-    let link = html_text_get(link_line);
-    if (equal(link, "")) {
-      app_shared_toast("Save your link name first.");
-      return;
-    }
-    await clipboard_copy_browser(link);
-    app_shared_toast("✅ Copied link");
-  }
-  app_shared_button_uncolored(link_card, "Copy link", link_copy);
-  app_calendar_invite_form(parent, key);
-  async function lambda3() {
-    await app_shared_toast_saving(link_save);
-  }
-  async function link_save() {
-    let s = html_value_get(slug).trim();
-    let saved = await calendar_api_call(
-      "POST",
-      "host_save",
-      {
-        slug: s,
-        block_minutes: 60,
-        meeting_minutes: 25,
-      },
-      key,
-    );
-    if (saved.body.ok) {
-      show_link(s);
-      let r2 = "Saved.";
-      return r2;
-    }
-    let words = {
-      slug: "Use 2 to 40 lowercase letters, digits or _.",
-      slug_taken: "Another host has that name. Pick another.",
-      no_person: "Save your name and number above first.",
-    };
-    let told = property_get_or(
-      words,
-      saved.body.reason,
-      "Could not save. Try again.",
-    );
-    return told;
-  }
-  let rules_card = app_shared_container(parent);
-  app_shared_heading(rules_card, "Booking rules");
-  ('2026-11-15: asks for the link, since that is what a host has to hand and the reader takes a whole link (human: "It says messenger name - but the field shows URL - does it want just the /... part or the whole url?").');
-  let messenger_field = app_shared_field(rules_card);
-  html_div_text(
-    messenger_field,
-    "Your Facebook profile link - leave blank to take WhatsApp calls only",
-  );
-  let messenger = html_input_text(messenger_field, "facebook.com/your.name");
-  let messenger_hint = html_div_text(
-    messenger_field,
-    "On Facebook, open your profile, then copy the link from the address bar or from Share.",
-  );
-  app_shared_text_deemphasized(messenger_hint);
-  app_shared_input_style(messenger);
-  let max_field = app_shared_field(rules_card);
-  html_div_text(max_field, "Max meetings per day - leave blank for unlimited");
-  let max = html_input_text(max_field, "Unlimited");
-  app_shared_input_style(max);
-  let max_line = html_div_text(max_field, "");
-  app_shared_text_deemphasized(max_line);
-  let max_show = function lambda7(saved_max) {
-    html_text_content_set(
-      max_line,
-      equal(saved_max, null)
-        ? "Now: unlimited meetings a day"
-        : "Now: at most " + saved_max + " meetings a day",
-    );
-  };
-  let max_guest_field = app_shared_field(rules_card);
-  html_div_text(
-    max_guest_field,
-    "Max upcoming meetings per guest - a weekly meeting counts as 1; leave blank for unlimited",
-  );
-  let max_guest = html_input_text(max_guest_field, "Unlimited");
-  app_shared_input_style(max_guest);
-  let max_guest_line = html_div_text(max_guest_field, "");
-  app_shared_text_deemphasized(max_guest_line);
-  let max_guest_show = function lambda9(saved_max) {
-    html_text_content_set(
-      max_guest_line,
-      equal(saved_max, null)
-        ? "Now: a guest may hold any number of meetings"
-        : "Now: at most " + saved_max + " upcoming meetings per guest",
-    );
-  };
-  if (host) {
-    html_value_set(messenger, host.messenger);
-    html_value_set(
-      max,
-      equal(host.max_per_day, null) ? "" : String(host.max_per_day),
-    );
-    html_value_set(
-      max_guest,
-      equal(host.max_per_guest, null) ? "" : String(host.max_per_guest),
-    );
-  }
-  max_show(host ? host.max_per_day : null);
-  max_guest_show(host ? host.max_per_guest : 2);
-  async function rules_save() {
-    let max_text = html_value_get(max).trim();
-    let max_guest_text = html_value_get(max_guest).trim();
-    let saved = await calendar_api_call(
-      "POST",
-      "host_rules_save",
-      {
-        messenger: html_value_get(messenger),
-        max: max_text,
-        max_guest: max_guest_text,
-      },
-      key,
-    );
-    if (saved.body.ok) {
-      max_show(equal(max_text, "") ? null : Number(max_text));
-      max_guest_show(equal(max_guest_text, "") ? null : Number(max_guest_text));
-      let r3 = "Saved.";
-      return r3;
-    }
-    let words = {
-      messenger:
-        "That link does not look right. Paste the link to your own Facebook profile.",
-      max: "Type a number from 1 to 24, or leave it blank for unlimited.",
-      max_guest:
-        "Type a number from 1 to 24 for meetings per guest, or leave it blank for unlimited.",
-      no_host: "Save your booking link above first.",
-    };
-    let r4 = property_get_or(
-      words,
-      saved.body.reason,
-      "Could not save. Try again.",
-    );
-    return r4;
-  }
-  async function lambda8() {
-    await app_shared_toast_saving(rules_save);
-  }
-  app_shared_button_green(rules_card, "Save rules", lambda8);
-  let hours_card = app_shared_container(parent);
-  app_shared_heading(hours_card, "Your weekly free hours");
   let today = date_today_iso();
-  let sunday_iso = date_week_sunday(today);
-  let dates = week_dates(sunday_iso);
-  function lambda4(s) {
-    let le = less_than_equal(s.from_day, today);
-    return le;
+  async function refresh() {
+    let again = await calendar_api_call("GET", "settings", {}, key);
+    if (again.body.ok) {
+      settings = again.body.settings;
+    }
   }
-  function lambda5(a, b) {
-    let r = less_than(a.from_day, b.from_day) ? -1 : 1;
+  function no_link_name() {
+    let r = "Save your booking link name in About you first";
     return r;
   }
-  let schedules = settings.schedules.filter(lambda4).sort(lambda5);
-  let current = schedules.length
-    ? schedules[subtract(schedules.length, 1)].openings
-    : [];
-  let initial = calendar_openings_to_ranges(current, dates);
-  async function lambda6(ranges) {
-    async function hours_save() {
-      let saved = await calendar_api_call(
-        "POST",
-        "schedule_save",
-        {
-          from_day: today,
-          openings: calendar_ranges_to_openings(ranges, dates),
-        },
-        key,
-      );
-      let told = saved.body.ok
-        ? "Saved."
-        : equal(saved.body.reason, "no_host")
-          ? "Save your booking link above first."
-          : "Could not save. Try again.";
-      return told;
-    }
-    await app_shared_toast_saving(hours_save);
+  function about_done() {
+    let r = Boolean(settings.person && settings.host);
+    return r;
   }
-  week_calendar(hours_card, dates, initial, lambda6, true);
-  let box = html_div(parent);
+  function about_summary() {
+    let person = settings.person;
+    if (not(person)) {
+      let r = "Not yet";
+      return r;
+    }
+    let host = settings.host;
+    let line = person.name + " · " + person.whatsapp;
+    if (host) {
+      line = line + " · link name " + host.slug;
+    }
+    return line;
+  }
+  function hours_done() {
+    let openings = calendar_host_openings_current(settings, today);
+    let r = greater_than(openings.length, 0);
+    return r;
+  }
+  function hours_summary() {
+    let openings = calendar_host_openings_current(settings, today);
+    let minutes = 0;
+    for (let opening of openings) {
+      minutes = subtract(minutes + opening.end_minute, opening.start_minute);
+    }
+    if (equal(minutes, 0)) {
+      let r = "No hours yet";
+      return r;
+    }
+    let hours = divide(minutes, 60);
+    let r2 = hours + (equal(hours, 1) ? " hour" : " hours") + " a week";
+    return r2;
+  }
+  function never_unfinished() {
+    return null;
+  }
+  function rules_summary() {
+    let host = settings.host;
+    if (not(host)) {
+      let r = no_link_name();
+      return r;
+    }
+    let parts = [
+      host.messenger ? "WhatsApp and Messenger" : "WhatsApp only",
+      equal(host.max_per_day, null)
+        ? "no daily limit"
+        : "at most " + host.max_per_day + " a day",
+      equal(host.max_per_guest, null)
+        ? "no limit per guest"
+        : "at most " + host.max_per_guest + " per guest",
+    ];
+    let r2 = parts.join(" · ");
+    return r2;
+  }
+  function share_summary() {
+    let host = settings.host;
+    let r = host ? calendar_page_url() + "#host=" + host.slug : no_link_name();
+    return r;
+  }
+  let steps = [
+    {
+      key: "about",
+      title: "About you",
+      done: about_done,
+      summary: about_summary,
+      draw: function lambda(area) {
+        let r3 = app_calendar_host_about(area, key, settings);
+        return r3;
+      },
+    },
+    {
+      key: "hours",
+      title: "Free hours",
+      done: hours_done,
+      summary: hours_summary,
+      draw: function lambda2(area) {
+        let r4 = app_calendar_host_hours(area, key, settings);
+        return r4;
+      },
+    },
+    {
+      key: "rules",
+      title: "Rules",
+      done: never_unfinished,
+      summary: rules_summary,
+      draw: function lambda3(area) {
+        let r5 = app_calendar_host_rules(area, key, settings);
+        return r5;
+      },
+    },
+    {
+      key: "share",
+      title: "Share",
+      done: never_unfinished,
+      summary: share_summary,
+      draw: function lambda4(area) {
+        let r6 = app_calendar_host_share(area, key, settings);
+        return r6;
+      },
+    },
+  ];
   async function cancelled() {
     "The host page draws its hours as openings, not as the times left free, so a cancel changes nothing else on it.";
   }
-  await app_calendar_meetings(box, key, cancelled, true);
+  async function meetings_draw(area) {
+    await app_calendar_meetings(area, key, cancelled, true);
+  }
+  await app_shared_steps(parent, steps, "share", refresh, meetings_draw);
   return true;
 }
