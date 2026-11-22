@@ -24,6 +24,7 @@ import { calendar_db_proof_confirm } from "./calendar_db_proof_confirm.mjs";
 import { calendar_db_confirm_messenger } from "./calendar_db_confirm_messenger.mjs";
 import { calendar_db_confirm } from "./calendar_db_confirm.mjs";
 import { calendar_db_host_rules_save } from "./calendar_db_host_rules_save.mjs";
+import { calendar_db_host_messenger_save } from "./calendar_db_host_messenger_save.mjs";
 import { calendar_db_person_save } from "./calendar_db_person_save.mjs";
 import { calendar_db_host_save } from "./calendar_db_host_save.mjs";
 import { calendar_db_schedule_save } from "./calendar_db_schedule_save.mjs";
@@ -68,6 +69,7 @@ export async function calendar_api_handle(
     "person_save",
     "host_save",
     "host_rules_save",
+    "host_messenger_save",
     "schedule_save",
     "dated_save",
     "dated_delete",
@@ -387,7 +389,12 @@ export async function calendar_api_handle(
       messenger_typed,
       max_typed,
       max_guest_typed,
+      now_iso,
     );
+  }
+  if (equal(route, "host_messenger_save")) {
+    let messenger_alone = String(body.messenger);
+    saved = await calendar_db_host_messenger_save(db, uid, messenger_alone);
   }
   if (equal(route, "person_save")) {
     let name3 = String(body.name);

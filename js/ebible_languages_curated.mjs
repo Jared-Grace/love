@@ -1,21 +1,22 @@
-import { ebible_folder_tagalog } from "./ebible_folder_tagalog.mjs";
-import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
-import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
-import { ebible_language_telugu } from "./ebible_language_telugu.mjs";
-import { ebible_language_kenya } from "./ebible_language_kenya.mjs";
-import { ebible_language_luganda } from "./ebible_language_luganda.mjs";
-import { ebible_language_punjabi } from "./ebible_language_punjabi.mjs";
-import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
-import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { ebible_language_original } from "./ebible_language_original.mjs";
-import { ebible_language_english } from "./ebible_language_english.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { ebible_language_english } from "./ebible_language_english.mjs";
+import { ebible_language_original } from "./ebible_language_original.mjs";
+import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
+import { ebible_language_punjabi } from "./ebible_language_punjabi.mjs";
+import { ebible_language_luganda } from "./ebible_language_luganda.mjs";
+import { ebible_language_kenya } from "./ebible_language_kenya.mjs";
+import { ebible_language_telugu } from "./ebible_language_telugu.mjs";
+import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
+import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
+import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
+import { ebible_folder_tagalog } from "./ebible_folder_tagalog.mjs";
 export function ebible_languages_curated() {
   "The languages chosen for this repo one at a time by hand, each carrying the one translation chosen with it - the list this app shipped before every language eBible gives away freely was added beside it.";
   "Kept apart from the generated list next door for one reason: the code each of these is stored under lives in readers' browsers already, so it may be corrected by nobody. A curated entry wins over a generated one naming the same language, which is what keeps a reader's chosen language where they left it.";
   "It is not sorted here. Both lists are sorted together once they are joined, because sorting a part of a list says nothing about where its entries land in the whole.";
   text_combine("to add an entry, run: ", fn_name("ebible_languages_add"));
+  ("EACH NAME IS WHAT ITS SPEAKERS CALL IT, THEN WHAT ENGLISH CALLS IT IN BRACKETS, the same shape every generated name already has: a reader looking for their own language finds it written the way they write it, and a reader who knows it only in English still finds it. A name with nothing to add - English, Luganda, Tagalog - stays one word rather than repeating itself in brackets. eBible's own spelling was the starting point and was corrected where it was off: Polskie is an adjective, Polski the language; the Hindi name carried an invisible mark.");
   let en = ebible_language_english();
   let o = ebible_language_original();
   let ur = ebible_language_urdu();
@@ -34,7 +35,7 @@ export function ebible_languages_curated() {
     bn,
     te,
     {
-      name: "Hindi",
+      name: "हिन्दी (Hindi)",
       bible_folder: "hin2017",
       language_code: "hin",
     },
@@ -50,27 +51,27 @@ export function ebible_languages_curated() {
       language_code: "tgl",
     },
     {
-      name: "Spanish",
+      name: "Español (Spanish)",
       bible_folder: "spablm",
       language_code: "es",
     },
     {
-      name: "French",
+      name: "Français (French)",
       bible_folder: "frasbl",
       language_code: "fr",
     },
     {
-      name: "Amharic",
+      name: "አማርኛ (Amharic)",
       bible_folder: "am_ulb",
       language_code: "am",
     },
     {
-      name: "Chinese (Simplified)",
+      name: "简体中文 (Simplified Chinese)",
       bible_folder: "cmn-cu89s",
       language_code: "zh",
     },
     {
-      name: "Dutch",
+      name: "Nederlands (Dutch)",
       bible_folder: "nldnbg",
       language_code: "nl",
     },
@@ -85,7 +86,7 @@ export function ebible_languages_curated() {
       language_code: "ha",
     },
     {
-      name: "Yoruba",
+      name: "Yorùbá (Yoruba)",
       bible_folder: "yor",
       language_code: "yor",
     },
@@ -96,42 +97,42 @@ export function ebible_languages_curated() {
       language_code: "ny",
     },
     {
-      name: "Portuguese",
+      name: "Português (Portuguese)",
       bible_folder: "porbrbsl",
       language_code: "pt",
     },
     {
-      name: "Gujarati",
+      name: "ગુજરાતી (Gujarati)",
       bible_folder: "guj2017",
       language_code: "gu",
     },
     {
-      name: "Afaan Oromoo",
+      name: "Afaan Oromoo (Oromo)",
       bible_folder: "gaz",
       language_code: "om",
     },
     {
-      name: "Persian",
+      name: "فارسی (Persian)",
       bible_folder: "pesopcb",
       language_code: "fas",
     },
     {
-      name: "Turkish",
+      name: "Türkçe (Turkish)",
       bible_folder: "turytc",
       language_code: "tr",
     },
     {
-      name: "Oriya",
+      name: "ଓଡ଼ିଆ (Oriya)",
       bible_folder: "ory",
       language_code: "or",
     },
     {
-      name: "Marathi",
+      name: "मराठी (Marathi)",
       bible_folder: "mar",
       language_code: "mr",
     },
     {
-      name: "Kannada",
+      name: "ಕನ್ನಡ (Kannada)",
       bible_folder: "kanirv",
       language_code: "kn",
     },
@@ -141,37 +142,37 @@ export function ebible_languages_curated() {
       language_code: "twi",
     },
     {
-      name: "eʋegbe",
+      name: "Eʋegbe (Ewe)",
       bible_folder: "ewe",
       language_code: "ewe",
     },
     {
-      name: "Tamil",
+      name: "தமிழ் (Tamil)",
       bible_folder: "tamtcv",
       language_code: "tam",
     },
     {
-      name: "Meitei",
+      name: "মৈতৈলোন্ (Meitei)",
       bible_folder: "mni",
       language_code: "mni",
     },
     {
-      name: "Italian",
+      name: "Italiano (Italian)",
       bible_folder: "ita1927",
       language_code: "ita",
     },
     {
-      name: "chiShona",
+      name: "chiShona (Shona)",
       bible_folder: "sna",
       language_code: "sna",
     },
     {
-      name: "Polish",
+      name: "Polski (Polish)",
       bible_folder: "polubg",
       language_code: "pol",
     },
     {
-      name: "Malay",
+      name: "Bahasa Melayu (Malay)",
       bible_folder: "zlmKSZI",
       language_code: "zlm",
     },

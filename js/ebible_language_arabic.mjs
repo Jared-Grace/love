@@ -1,6 +1,6 @@
 export function ebible_language_arabic() {
   let ar = {
-    name: "Arabic",
+    name: "العربية (Arabic)",
     bible_folder: "arbnav",
     language_code: "arb",
   };

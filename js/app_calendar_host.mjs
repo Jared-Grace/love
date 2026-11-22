@@ -19,7 +19,7 @@ import { app_shared_steps } from "./app_shared_steps.mjs";
 export async function app_calendar_host(parent, key, signed_out) {
   arguments_assert(arguments, 3);
   ("The host's page, for a signed-in host's session key, as screens in the order a host sets up: About you (name, WhatsApp, link name), Free hours, Rules, then Share. Home lists them all with what each holds, and shows every upcoming meeting below, the ones waiting for a code on top of what to do.");
-  ('SCREENS, NEXT, HOME (human, 2026-11-22: "each section is a button/screen", "a next button that goes to the next unfinished screen", "a link would be last?", "you can go home and see everything?", "and jump to any screen?"). About you is finished once the person and the link name are saved, Free hours once any hour is set; Rules are all optional and Share has nothing to finish, so neither is ever unfinished; Next goes to what is unfinished first, then on in order. signed_out() is called by the Sign out button at the foot of home.');
+  ('SCREENS, NEXT, HOME (human, 2026-11-22: "each section is a button/screen", "a next button that goes to the next unfinished screen", "a link would be last?", "you can go home and see everything?", "and jump to any screen?"). About you is finished once the person and the link name are saved, Free hours once any hour is set, Rules once saved even as they start (human, 2026-11-22: "Rules should also be configured? and initially be unconfigured?"); Share has nothing to finish, and stays locked until the other three are finished (human: "share button should be disabled until everything is configured"); Next goes to what is unfinished first, then on in order. signed_out() is called by the Sign out button at the foot of home.');
   ("Answers false when the key is no longer a host session, so the page can sign in again; true once drawn.");
   let read = await calendar_api_call("GET", "settings", {}, key);
   if (not(read.body.ok)) {
@@ -78,11 +78,27 @@ export async function app_calendar_host(parent, key, signed_out) {
   function never_unfinished() {
     return null;
   }
+  function rules_done() {
+    let host = settings.host;
+    let r = Boolean(host && host.rules_saved_at);
+    return r;
+  }
+  function never_locked() {
+    return false;
+  }
+  function share_locked() {
+    let r = not(about_done() && hours_done() && rules_done());
+    return r;
+  }
   function rules_summary() {
     let host = settings.host;
     if (not(host)) {
       let r = no_link_name();
       return r;
+    }
+    if (not(host.rules_saved_at)) {
+      let r3 = "Not yet - look them over and press Save rules";
+      return r3;
     }
     let parts = [
       host.messenger ? "WhatsApp and Messenger" : "WhatsApp only",
@@ -97,6 +113,10 @@ export async function app_calendar_host(parent, key, signed_out) {
     return r2;
   }
   function share_summary() {
+    if (share_locked()) {
+      let r2 = "Finish the screens above first";
+      return r2;
+    }
     let host = settings.host;
     let r = host ? calendar_page_url() + "#host=" + host.slug : no_link_name();
     return r;
@@ -106,6 +126,7 @@ export async function app_calendar_host(parent, key, signed_out) {
       key: "about",
       title: "About you",
       done: about_done,
+      locked: never_locked,
       summary: about_summary,
       draw: function lambda(area) {
         let r3 = app_calendar_host_about(area, key, settings);
@@ -116,6 +137,7 @@ export async function app_calendar_host(parent, key, signed_out) {
       key: "hours",
       title: "Free hours",
       done: hours_done,
+      locked: never_locked,
       summary: hours_summary,
       draw: function lambda2(area) {
         let r4 = app_calendar_host_hours(area, key, settings);
@@ -125,7 +147,8 @@ export async function app_calendar_host(parent, key, signed_out) {
     {
       key: "rules",
       title: "Rules",
-      done: never_unfinished,
+      done: rules_done,
+      locked: never_locked,
       summary: rules_summary,
       draw: function lambda3(area) {
         let r5 = app_calendar_host_rules(area, key, settings);
@@ -136,6 +159,7 @@ export async function app_calendar_host(parent, key, signed_out) {
       key: "share",
       title: "Share",
       done: never_unfinished,
+      locked: share_locked,
       summary: share_summary,
       draw: function lambda4(area) {
         let r6 = app_calendar_host_share(area, key, settings);

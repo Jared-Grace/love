@@ -1,8 +1,13 @@
-import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function calendar_db_tables() {
   arguments_assert(arguments, 0);
-  ("Every table the calendar database holds, each written once: its name, its columns (one line each, the column's name first) and any rules over several columns. The tables are made from this, and calendar_db_named_migrate adds to an existing database whatever column it lacks, so a new field is one line here and one migrate; what each table is for is in ",
+  (text_combine_multiple([
+    "Every table the calendar database holds, each written once: its name, its columns (one line each, the column's name first) and any rules over several columns. The tables are made from this, and ",
+    fn_name("calendar_db_named_migrate"),
+    " adds to an existing database whatever column it lacks, so a new field is one line here and one migrate; what each table is for is in ",
+  ]),
     fn_name("calendar_db_schema"),
     ".");
   ("A column added later is added to a table that already has rows, so SQLite refuses it unless it may be empty or has a DEFAULT, and refuses PRIMARY KEY and UNIQUE outright; the migrate stops before writing anything if a new line is one of those.");
@@ -29,6 +34,7 @@ export function calendar_db_tables() {
         "messenger TEXT NOT NULL DEFAULT ''",
         "max_per_day INTEGER CHECK (max_per_day IS NULL OR max_per_day BETWEEN 1 AND 24)",
         "max_per_guest INTEGER DEFAULT 2 CHECK (max_per_guest IS NULL OR max_per_guest BETWEEN 1 AND 24)",
+        "rules_saved_at TEXT",
       ],
       rules: [],
     },

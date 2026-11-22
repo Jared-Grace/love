@@ -10,8 +10,10 @@ export async function calendar_db_host_rules_save(
   messenger_typed,
   max_typed,
   max_guest_typed,
+  now_iso,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
+  ('A save stamps rules_saved_at with now_iso, so the host page can tell rules never saved from rules saved as the starting values, which leave the same row (human, 2026-11-22: "Rules should also be configured? and initially be unconfigured?").');
   ("Saves a host's booking rules as they typed them; answers {ok, reason}. messenger_typed is their Messenger name or link, blank for WhatsApp only. max_typed is the most meetings they take in one day, blank for no limit. max_guest_typed is the most upcoming meetings one guest may hold with them, a weekly one counting once, blank for no limit. Reasons: messenger, max and max_guest (1 to 24), no_host (save the booking link first).");
   let messenger = calendar_messenger_name_read(messenger_typed);
   if (equal(messenger, null)) {
@@ -52,9 +54,9 @@ export async function calendar_db_host_rules_save(
   }
   let written = await db
     .prepare(
-      "UPDATE hosts SET messenger = ?1, max_per_day = ?2, max_per_guest = ?4 WHERE uid = ?3",
+      "UPDATE hosts SET messenger = ?1, max_per_day = ?2, max_per_guest = ?4, rules_saved_at = ?5 WHERE uid = ?3",
     )
-    .bind(messenger, max_per_day, uid, max_per_guest)
+    .bind(messenger, max_per_day, uid, max_per_guest, now_iso)
     .run();
   if (equal(written.meta.changes, 0)) {
     let r3 = {
