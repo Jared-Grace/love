@@ -1,11 +1,14 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { list_copy } from "./list_copy.mjs";
 import { app_shared_bible_home_copy_button } from "./app_shared_bible_home_copy_button.mjs";
 import { app_shared_bible_home_share_button } from "./app_shared_bible_home_share_button.mjs";
 import { html_span } from "./html_span.mjs";
 import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
 import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { app_shared_bible_passage_verses_draw } from "./app_shared_bible_passage_verses_draw.mjs";
 import { app_shared_bible_home_verse_texts } from "./app_shared_bible_home_verse_texts.mjs";
 import { html_p } from "./html_p.mjs";
 export async function app_shared_bible_home_generic_lambda$a(
@@ -18,8 +21,18 @@ export async function app_shared_bible_home_generic_lambda$a(
   content,
   lambda$a,
   lines_copy_extra,
+  shown,
 ) {
-  arguments_assert(arguments, 9);
+  arguments_assert(arguments, 10);
+  let downloaded = property_get(shown, "downloaded");
+  let passage = property_get(shown, "passage");
+  let verse_numbers_shown = property_get(shown, "verse_numbers_shown");
+  let passage_is = null_not_is(passage);
+  ("Copy starts with every verse on the screen already picked when the screen shows a passage, so one press copies the whole passage. One verse on the screen starts with nothing picked, as it always did, and the press picks it.");
+  let verse_numbers_chosen = [];
+  if (passage_is) {
+    verse_numbers_chosen = list_copy(verse_numbers_shown);
+  }
   let p_verse = property_get(r, "p_verse");
   let top = property_get(r, "top");
   let verse_current = property_get(r, "verse_current");
@@ -38,12 +51,13 @@ export async function app_shared_bible_home_generic_lambda$a(
     languages_verses,
     p_verse,
     lines_copy_extra,
+    verse_numbers_chosen,
   );
   app_shared_bible_home_share_button(
     hash,
     book_name,
     chapter_name,
-    verse_number,
+    verse_numbers_shown,
     bottom,
   );
   ("The picture Bible is only known once the screen has answered, so its place is held here, between share and the biblehub buttons, and handed back for the app that has one to fill. An app without it leaves the place empty, which draws nothing.");
@@ -67,15 +81,25 @@ export async function app_shared_bible_home_generic_lambda$a(
     " and ",
     fn_name("app_g_bible"),
     ", so both single-verse views drop the duplicate together.");
-  app_shared_bible_home_verse_texts(text_languages, top);
+  if (passage_is) {
+    let verse_numbers = property_get(passage, "verse_numbers");
+    app_shared_bible_passage_verses_draw(
+      top,
+      languages_available,
+      chapter_code,
+      verse_numbers,
+    );
+  } else {
+    app_shared_bible_home_verse_texts(text_languages, top);
+  }
   let p = html_p(content);
   await lambda$a({
     p_verse,
     p,
     chapter_code,
     verse_number,
-    top,
-    languages_available,
+    downloaded,
+    passage,
   });
   let r2 = {
     verse_current,

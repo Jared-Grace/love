@@ -13,8 +13,10 @@ export async function app_shared_bible_home_generic_bottom(
   context,
   bar,
   content,
+  verse_label,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
+  ("The verse button in the bar says what is on the screen: one verse's number, or the run of a whole passage.");
   let verse_number_hash = app_shared_bible_hash_v_get(hash);
   let chapter_code = app_shared_bible_chapter_hash_get(hash);
   ("The passage is remembered for this tab here, so that going off to choose another one can be changed one's mind about. It is said by the screen that shows the passage rather than by the button that leaves it, because there is more than one way out of here and only one way in - and said here rather than in each app, because every app that draws a verse this way draws it through this.");
@@ -31,7 +33,7 @@ export async function app_shared_bible_home_generic_bottom(
     chapter_code,
     book_name_reading,
     chapter_name,
-    verse_number_hash,
+    verse_label,
   );
   let languages_verses = [];
   let r2 = await app_shared_bible_home_verse_current_languages(

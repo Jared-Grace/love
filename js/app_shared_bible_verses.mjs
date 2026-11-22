@@ -2,14 +2,19 @@ import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter
 import { app_shared_bible_chapters_before } from "./app_shared_bible_chapters_before.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
+import { app_shared_bible_passages_or_null } from "./app_shared_bible_passages_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { app_shared_bible_passages_question_text } from "./app_shared_bible_passages_question_text.mjs";
+import { text_cut_around_names } from "./text_cut_around_names.mjs";
 import { app_shared_bible_verses_question_parts } from "./app_shared_bible_verses_question_parts.mjs";
 import { app_shared_bible_picker_card_parts_bold } from "./app_shared_bible_picker_card_parts_bold.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
 import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
+import { verse_number_key } from "./verse_number_key.mjs";
+import { app_shared_bible_passages_pick } from "./app_shared_bible_passages_pick.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
-import { verse_number_key } from "./verse_number_key.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { app_shared_bible_verse_open_curried } from "./app_shared_bible_verse_open_curried.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
@@ -33,7 +38,19 @@ export async function app_shared_bible_verses(context) {
   let chapter_name = ebible_chapter_code_to_name(chapter_code);
   ("the card is headed by one question naming both the book and the chapter, rather than the book over a bare chapter number, so the reader is told what this screen asks of them");
   ("the book's name and the chapter's name are drawn bold inside the question, so where the reader is choosing from stands out from the words asking about it");
-  let parts = app_shared_bible_verses_question_parts(book_name, chapter_name);
+  ("AN APP THAT GOES PASSAGE BY PASSAGE IS OFFERED PASSAGES, each button saying its run of verses, and is asked which passage. A chapter with no passages yet, or an app with none, is offered its verses as before.");
+  let downloaded = await app_shared_bible_passages_or_null(
+    context,
+    chapter_code,
+  );
+  let passages_are = null_not_is(downloaded);
+  let parts = null;
+  if (passages_are) {
+    let text = app_shared_bible_passages_question_text(book_name, chapter_name);
+    parts = text_cut_around_names(text, [book_name, chapter_name]);
+  } else {
+    parts = app_shared_bible_verses_question_parts(book_name, chapter_name);
+  }
   let card = app_shared_bible_picker_card_parts_bold(content, parts);
   ("the way into the whole chapter goes above the verse numbers rather than below them, so a long chapter does not bury it - it is for the reader who wants to skip picking a verse at all. only an app with a whole-chapter reader says so on the context, and the button itself draws nothing for the others");
   let chapter_reader_is = property_exists(context, "chapter_reader_is");
@@ -45,17 +62,21 @@ export async function app_shared_bible_verses(context) {
     chapter_reader_is,
     chapter_row,
   );
-  let e = ebible_folder_english();
-  let verses = await ebible_verses_browser(e, chapter_code);
-  let property_name = verse_number_key();
-  let items = list_map_property(verses, property_name);
-  let oc = app_shared_bible_verse_open_curried(context);
-  let buttons = app_shared_button_list_centered(card, items, identity, oc);
-  app_shared_bible_picker_buttons_enlarge(buttons);
-  app_shared_bible_picker_buttons_equal_width(buttons, items, identity);
   let property_name2 = verse_number_key();
   let current = property_get(r, property_name2);
-  app_shared_buttons_mark_current(buttons, items, current);
+  if (passages_are) {
+    app_shared_bible_passages_pick(context, card, downloaded, current);
+  } else {
+    let e = ebible_folder_english();
+    let verses = await ebible_verses_browser(e, chapter_code);
+    let property_name = verse_number_key();
+    let items = list_map_property(verses, property_name);
+    let oc = app_shared_bible_verse_open_curried(context);
+    let buttons = app_shared_button_list_centered(card, items, identity, oc);
+    app_shared_bible_picker_buttons_enlarge(buttons);
+    app_shared_bible_picker_buttons_equal_width(buttons, items, identity);
+    app_shared_buttons_mark_current(buttons, items, current);
+  }
   app_shared_screen_set_button_back_to(
     bar,
     context,

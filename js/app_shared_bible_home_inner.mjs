@@ -1,85 +1,37 @@
-import { null_is } from "./null_is.mjs";
-import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_shared_bible_passage_arrows } from "./app_shared_bible_passage_arrows.mjs";
+import { app_shared_bible_passages_download_key } from "./app_shared_bible_passages_download_key.mjs";
+import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
-import { verse_number_key } from "./verse_number_key.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { app_shared_bible_passage_verses_draw } from "./app_shared_bible_passage_verses_draw.mjs";
+import { property_get } from "./property_get.mjs";
+import { null_is } from "./null_is.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_clear } from "./list_clear.mjs";
-import { each } from "./each.mjs";
 import { app_shared_bible_home_generic } from "./app_shared_bible_home_generic.mjs";
 import { noop } from "./noop.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 export async function app_shared_bible_home_inner(context, download, app_fn) {
+  "THE APP'S WAY OF FETCHING ITS PASSAGES IS WRITTEN ON THE CONTEXT, so the shared screen finds the passage before it draws anything and shows the whole of it, and the picker offers passages rather than verses.";
+  let key = app_shared_bible_passages_download_key();
+  property_set(context, key, download);
   let downloaded = null;
   let chapter_code = null;
   let verses = [];
   let r = null;
-  let passage_current = null;
-  ("THE WHOLE PASSAGE IS SHOWN, NOT ONE VERSE OF IT, and the way on goes by a passage. The explanation under the text is about the passage, so a reader shown one verse of it was reading an explanation of words mostly not on the screen. A chapter nobody has explained has no passages, so it keeps the one verse and the verse arrows.");
-  function arrows(context_arrows, chapter_code_arrows, verse_current, foot) {
-    if (null_is(passage_current)) {
-      app_shared_bible_verse_arrows(
-        context_arrows,
-        chapter_code_arrows,
-        verse_current,
-        foot,
-      );
-      return;
-    }
-    let passages_chapter = property_get(downloaded, "passages");
-    app_shared_bible_passage_arrows(
-      context_arrows,
-      chapter_code_arrows,
-      passages_chapter,
-      passage_current,
-      foot,
-    );
-  }
   async function lambda3(la) {
     async function lambda(a) {
       list_add(verses, a);
-      let property_name = verse_number_key();
-      let verse_number = property_get(a, property_name);
       chapter_code = property_get(a, "chapter_code");
-      async function download_chapter() {
-        let d = await download(chapter_code);
-        return d;
-      }
-      ("a chapter nobody has written explanations for yet has no file to fetch, and asking storage for one that is not there is an error rather than an empty answer. that error was let out of here, so it went past the verse text already on the screen and took the whole page down to a notice saying the page did not finish loading. three chapters of the bible have been written so far, so a reader opening any of the other eleven hundred was told the app was broken.");
-      ("the reader keeps their verse either way. an explanation is something laid on top of the text, so its absence is a page with less on it, never a page with nothing on it - which is already how a published chapter treats a verse inside it that nobody has explained. a reader with no connection at all now reads the same as a reader on a chapter nobody has reached yet, and that is the right way round: both of them can still read the bible.");
-      downloaded = await catch_null_async(download_chapter);
-      if (null_is(downloaded)) {
+      ("a chapter nobody has written explanations for yet has no passages, and the reader keeps the verse it was showing with nothing laid over it. an explanation is something laid on top of the text, so its absence is a page with less on it, never a page with nothing on it.");
+      downloaded = property_get(a, "downloaded");
+      let passage = property_get(a, "passage");
+      if (null_is(passage)) {
         return;
       }
-      let passages_downloaded = property_get(downloaded, "passages");
-      ("a passage is shown at every verse it covers, not only at its last one. these readers show one verse at a time, so asking whether the verse is the passage's LAST left a reader standing on any earlier verse of it with nothing at all on the screen - no original text, no explanations, and nothing saying the passage carries on. john 2 is authored as 1-2 and then 3, and opening the chapter lands on verse 1, so the first thing a reader saw of a chapter that IS written was a blank one.");
-      function lambda2(passage) {
-        let verse_numbers = property_get(passage, "verse_numbers");
-        if (list_includes(verse_numbers, verse_number)) {
-          if (null_is(passage_current)) {
-            passage_current = passage;
-            let top = property_get(a, "top");
-            let languages_available = property_get(a, "languages_available");
-            app_shared_bible_passage_verses_draw(
-              top,
-              languages_available,
-              chapter_code,
-              verse_numbers,
-            );
-          }
-          let copy = list_copy(verses);
-          la({
-            passage,
-            verses: copy,
-          });
-          list_clear(verses);
-        }
-      }
-      each(passages_downloaded, lambda2);
+      let copy = list_copy(verses);
+      la({
+        passage,
+        verses: copy,
+      });
+      list_clear(verses);
     }
     ("false at the end: every app that comes through here is verse-only. the gloss readers and the game's bible render no whole-chapter view at all, so there is nothing for a way-in button to reach. an app that grows one changes this word rather than adding a parameter nobody else would ever pass differently.");
     r = await app_shared_bible_home_generic(
@@ -88,7 +40,6 @@ export async function app_shared_bible_home_inner(context, download, app_fn) {
       noop,
       app_fn,
       false,
-      arrows,
     );
   }
   let passages = await list_adder_async(lambda3);

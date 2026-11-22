@@ -7,9 +7,10 @@ export function app_shared_bible_home_share_button(
   hash,
   book_name,
   chapter_name,
-  verse_number,
+  verse_numbers,
   bottom,
 ) {
+  "the verses shared are the ones on the screen - one verse, or a whole passage, which the link then names as its run.";
   arguments_assert(arguments, 5);
   ("a link to this one verse, the same button the whole-chapter reader has carried on the end of this row - a reader looking at a single verse is the reader most likely to want to hand it to somebody, and until now the only way to was to open the whole chapter first. the verse numbers are a list because the chapter reader can have several picked at once; here there is exactly one, so it goes in on its own.");
   ("the languages have to be read again rather than taken from the languages_chosen already standing here: that one holds whole language objects and the share link wants the codes that go in the hash, which is what the chapter reader's variable of the same name holds. two shapes, one word - so the shape is named here instead.");
@@ -18,7 +19,7 @@ export function app_shared_bible_home_share_button(
     await app_shared_bible_share(
       book_name,
       chapter_name,
-      [verse_number],
+      verse_numbers,
       language_codes,
     );
   }

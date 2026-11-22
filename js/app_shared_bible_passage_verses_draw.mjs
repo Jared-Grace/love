@@ -12,6 +12,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_centered } from "./html_centered.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_bible_verse_entries } from "./app_shared_bible_verse_entries.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { each } from "./each.mjs";
@@ -48,6 +49,8 @@ export function app_shared_bible_passage_verses_draw(
     html_style_set(row, "column-gap", gap);
     let number = html_div_text(row, verse_number);
     html_centered(number);
+    ("the number steps back into the same grey every other quieted word in these apps uses, so the eye goes to the words of the verse and the number is there only for whoever looks for it.");
+    app_shared_text_deemphasized(number);
     let text_cell = html_div(row);
     let entries = app_shared_bible_verse_entries(
       languages,
