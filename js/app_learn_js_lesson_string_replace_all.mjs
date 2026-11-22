@@ -11,7 +11,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { text_split_newline } from "./text_split_newline.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
-import { app_learn_js_fruits_three_four_inputs } from "./app_learn_js_fruits_three_four_inputs.mjs";
+import { app_learn_js_love_joy_peace_orders } from "./app_learn_js_love_joy_peace_orders.mjs";
 export function app_learn_js_lesson_string_replace_all() {
   arguments_assert(arguments, 0);
   ('every comma and space in a string changed to " and " in one call: let s = "love, joy, peace"; let t = s.replaceAll(", ", " and "); console.log(t); writes out love and joy and peace, as split then join does');
@@ -95,7 +95,7 @@ export function app_learn_js_lesson_string_replace_all() {
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
     above,
-    inputs_get: app_learn_js_fruits_three_four_inputs,
+    inputs_get: app_learn_js_love_joy_peace_orders,
     program_of,
     wrong_programs_of,
     wrong_outputs_of,

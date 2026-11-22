@@ -12,7 +12,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
-import { app_learn_js_fruits_three_four_inputs } from "./app_learn_js_fruits_three_four_inputs.mjs";
+import { app_learn_js_love_joy_peace_orders } from "./app_learn_js_love_joy_peace_orders.mjs";
 export function app_learn_js_lesson_array_split_join() {
   arguments_assert(arguments, 0);
   ('every comma and space in a string changed to " and ", by splitting it and joining the pieces: let s = "love, joy, peace"; let a = s.split(", "); let t = a.join(" and "); console.log(t); writes out love and joy and peace');
@@ -89,7 +89,7 @@ export function app_learn_js_lesson_array_split_join() {
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
     above,
-    inputs_get: app_learn_js_fruits_three_four_inputs,
+    inputs_get: app_learn_js_love_joy_peace_orders,
     program_of,
     wrong_programs_of,
     wrong_outputs_of,
