@@ -1965,6 +1965,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 12",
     },
     {
+      chapter_code: "PSA013",
+      reference: "Psalm 13",
+    },
+    {
       chapter_code: "PSA015",
       reference: "Psalm 15",
     },
