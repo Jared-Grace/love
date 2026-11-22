@@ -1,4 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { js_code_array } from "./js_code_array.mjs";
+import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -24,8 +26,9 @@ export function app_learn_js_lesson_array_index_of_from() {
   };
   function program_with(input, call) {
     "the array and from, then the call written out";
+    let codes = list_map(input.items, json_to);
     let lines = [
-      "let a = " + json_to(input.items) + ";",
+      "let a = " + js_code_array(codes) + ";",
       "let from = " + input.from + ";",
       "console.log(" + call + ");",
     ];
