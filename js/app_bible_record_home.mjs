@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
-import { app_bible_sermons_download } from "./app_bible_sermons_download.mjs";
+import { app_bible_record_passages_download } from "./app_bible_record_passages_download.mjs";
 import { app_bible_record } from "./app_bible_record.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_title_verse_set } from "./app_shared_bible_title_verse_set.mjs";
@@ -16,7 +16,7 @@ export async function app_bible_record_home(context) {
   arguments_assert(arguments, 1);
   let r = await app_shared_bible_home_inner(
     context,
-    app_bible_sermons_download,
+    app_bible_record_passages_download,
     app_bible_record,
   );
   let passages = property_get(r, "passages");

@@ -1,10 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_join } from "./list_join.mjs";
-import { json_to } from "./json_to.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
+import { app_learn_js_search_put_program } from "./app_learn_js_search_put_program.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_array_split_join } from "./app_learn_js_lesson_array_split_join.mjs";
+import { app_learn_js_lesson_string_replace_hand } from "./app_learn_js_lesson_string_replace_hand.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -14,31 +12,25 @@ import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_l
 import { app_learn_js_love_joy_peace_orders } from "./app_learn_js_love_joy_peace_orders.mjs";
 export function app_learn_js_lesson_string_replace() {
   arguments_assert(arguments, 0);
-  ('only the first comma and space in a string changed to " and ": let s = "love, joy, peace"; let t = s.replace(", ", " and "); console.log(t); writes out love and joy, peace');
-  ("2026-11-22, at the human's asking: after Split then join, which changes every one; replace changes only the first, and replaceAll comes next.");
-  ('The wrong programs are: s.replaceAll(", ", " and ") (every one changed), s.replace(",", " and ") (the space after the comma stays, so two spaces stand after and), and console.log(s) (s is not changed).');
-  ("Three or four words, so there are always at least two commas, and changing only the first shows.");
+  ('only the first search in a string changed to put: let s = "love, joy, peace"; let search = ", "; let put = " and "; let t = s.replace(search, put); console.log(t); writes out love and joy, peace');
+  ("2026-11-22, at the human's asking: after Replace by hand, which builds the same from indexOf, slice and +; replace does it in one call, and replaceAll comes next. search and put are named, as in Replace by hand.");
+  ('The wrong programs are: s.replaceAll(search, put) (every one changed), search = "," (the space after the comma stays, so two spaces stand after and), and console.log(s) (s is not changed).');
+  ("The words are always love, joy and peace, so there are always two commas, and changing only the first shows.");
   ("The writing is a first draft by Claude 2026-11-22.");
   let example_input = ["love", "joy", "peace"];
-  function program_with(words, call, logged) {
-    'let s = "..."; let t = s.call; console.log(logged);';
-    let text = list_join(words, ", ");
-    let lines = [
-      "let s = " + json_to(text) + ";",
-      "let t = s." + call + ";",
-      "console.log(" + logged + ");",
-    ];
-    let code = list_join_newline(lines);
+  function program_with(words, search, call, logged) {
+    let middle = ["let t = s." + call + "(search, put);"];
+    let code = app_learn_js_search_put_program(words, search, middle, logged);
     return code;
   }
   function program_of(words2) {
-    let code2 = program_with(words2, 'replace(", ", " and ")', "t");
+    let code2 = program_with(words2, ", ", "replace", "t");
     return code2;
   }
   function wrong_programs_of(words3) {
-    let v = program_with(words3, 'replaceAll(", ", " and ")', "t");
-    let v2 = program_with(words3, 'replace(",", " and ")', "t");
-    let v3 = program_with(words3, 'replace(", ", " and ")', "s");
+    let v = program_with(words3, ", ", "replaceAll", "t");
+    let v2 = program_with(words3, ",", "replace", "t");
+    let v3 = program_with(words3, ", ", "replace", "s");
     let programs = [v, v2, v3];
     return programs;
   }
@@ -47,22 +39,22 @@ export function app_learn_js_lesson_string_replace() {
     return r;
   }
   function above(root, context) {
-    "split then join remembered, then replace changing only the first";
+    "replacing by hand remembered, then replace doing it in one call";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_array_split_join,
-      ["split then join changed every ", '", "', " to ", '" and "'],
+      app_learn_js_lesson_string_replace_hand,
+      ["", "a + put + b", " changed the first ", "search", " to ", "put"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "",
-      's.replace(", ", " and ")',
-      " changes only the first ",
-      '", "',
+      "s.replace(search, put)",
+      " does the same in one line: it changes only the first ",
+      "search",
       " to ",
-      '" and "',
+      "put",
     ]);
     app_learn_js_div_cycle_code(box_two, [
       "",
@@ -72,13 +64,13 @@ export function app_learn_js_lesson_string_replace() {
       "; it gives a new string:",
     ]);
     let code3 = program_of(example_input);
-    let lines2 = text_split_newline(code3);
+    let lines = text_split_newline(code3);
     let value = eval_console_log_lines(code3);
-    app_learn_js_code_lines_writes_out(box_two, lines2, value);
+    app_learn_js_code_lines_writes_out(box_two, lines, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Replace the first",
-    's.replace(", ", " and ")',
+    "s.replace(search, put)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
