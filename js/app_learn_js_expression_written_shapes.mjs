@@ -3,6 +3,7 @@ import { app_learn_js_expression_written_shapes_numbers } from "./app_learn_js_e
 import { app_learn_js_expression_written_shapes_truths } from "./app_learn_js_expression_written_shapes_truths.mjs";
 import { app_learn_js_expression_written_shapes_unpressed } from "./app_learn_js_expression_written_shapes_unpressed.mjs";
 import { app_learn_js_expression_written_shapes_arrays } from "./app_learn_js_expression_written_shapes_arrays.mjs";
+import { app_learn_js_expression_written_shapes_called } from "./app_learn_js_expression_written_shapes_called.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 export function app_learn_js_expression_written_shapes() {
   arguments_assert(arguments, 0);
@@ -14,7 +15,8 @@ export function app_learn_js_expression_written_shapes() {
   let truths = app_learn_js_expression_written_shapes_truths();
   let unpressed = app_learn_js_expression_written_shapes_unpressed();
   let arrays = app_learn_js_expression_written_shapes_arrays();
-  let parts = [numbers, truths, unpressed, arrays];
+  let called = app_learn_js_expression_written_shapes_called();
+  let parts = [numbers, truths, unpressed, arrays, called];
   let shapes = list_concat_multiple(parts);
   return shapes;
 }

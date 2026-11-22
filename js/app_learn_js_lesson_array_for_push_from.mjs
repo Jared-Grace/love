@@ -92,22 +92,46 @@ export function app_learn_js_lesson_array_for_push_from() {
       ["", "c.push(a[i]);", " in a loop put items into a new array ", "c"],
     );
     let box_three = app_learn_js_container_light_blue(root);
+    ("2026-11-22, the human's wording: the three supposes one line each, then the loop; then a card of its own for skipping two");
+    app_learn_js_div_cycle_code(box_three, ["Suppose we have array ", "a"]);
     app_learn_js_div_cycle_code(box_three, [
-      "Suppose we want a new array with every item of ",
+      "Suppose we want to skip the first item in ",
       "a",
-      " except the first",
     ]);
     app_learn_js_div_cycle_code(box_three, [
-      "The loop starts at ",
-      "let i = 1",
-      " and pushes each item into ",
+      "Suppose for all other items in ",
+      "a",
+      ", we want them pushed into ",
       "c",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "Then we start a loop at ",
+      "let i = 1",
       ":",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
     let value = eval_console_log_lines(code3);
     app_learn_js_code_lines_writes_out(box_three, lines2, value);
+    let box_four = app_learn_js_container_light_blue(root);
+    app_learn_js_div_cycle_code(box_four, [
+      "However we can skip more than just the first item",
+    ]);
+    app_learn_js_div_cycle_code(box_four, [
+      "We could skip the first 2 items by starting at ",
+      "let i = 2",
+      " instead of ",
+      "let i = 1",
+      ":",
+    ]);
+    let example_two = {
+      items: example_input.items,
+      start: 2,
+    };
+    let code4 = program_of(example_two);
+    let lines4 = text_split_newline(code4);
+    let value2 = eval_console_log_lines(code4);
+    app_learn_js_code_lines_writes_out(box_four, lines4, value2);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "From an index on",
