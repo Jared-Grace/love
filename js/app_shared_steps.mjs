@@ -3,6 +3,7 @@ import { equal } from "./equal.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
@@ -17,7 +18,7 @@ export async function app_shared_steps(
   home_draw,
 ) {
   arguments_assert(arguments, 5);
-  ("A page cut into screens, one per step, with a home screen listing them all. Each step is {key, title, done, summary, draw}: done() answers true, false, or null for a step that is never unfinished (optional, or nothing to finish); summary() is the one line home shows under it; draw(area) fills the screen. refresh() is awaited before every move, so done and summary answer about what was just saved. home_draw(area) draws whatever else home shows below the list.");
+  ("A page cut into screens, one per step, with a home screen listing them all. Each step is {key, title, done, locked, summary, draw}: done() answers true, false, or null for a step that is never unfinished (optional, or nothing to finish); locked() answers true while home's button for it is switched off; summary() is the one line home shows under it; draw(area) fills the screen. refresh() is awaited before every move, so done and summary answer about what was just saved. home_draw(area) draws whatever else home shows below the list.");
   ('ASKED FOR (human, 2026-11-22: "each section is a button/screen", "a next button that goes to the next unfinished screen (possibly backwards such as the first screen)", "you can go home and see everything?", "and jump to any screen?"). Home lists every step as a button, so any screen is one press away; Next goes to the first step in order whose done() is false, even one before the screen it is pressed on.');
   ("WHEN NOTHING IS UNFINISHED, Next on a step goes to the step after it in order, and after the last, home; Next on home goes to the step named fallback_key, since from home the first step in order is already finished.");
   ('2026-11-22: in order, not straight to fallback_key, because a step that can never be unfinished was skipped and so never seen on a first setup (human: "using next skipped rules and went to share"). Rejected: counting such a step unfinished until visited, which needs a memory of visits the page does not keep.');
@@ -50,7 +51,13 @@ export async function app_shared_steps(
         async function open() {
           await go(each_step);
         }
-        app_shared_button_uncolored(card, mark + each_step.title, open);
+        let button = app_shared_button_uncolored(
+          card,
+          mark + each_step.title,
+          open,
+        );
+        let disabled = each_step.locked();
+        app_shared_button_disabled_set(button, disabled);
         let text = each_step.summary();
         let line = html_div_text(card, text);
         app_shared_text_deemphasized(line);

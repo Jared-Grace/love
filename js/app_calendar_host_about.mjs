@@ -10,7 +10,6 @@ import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
-import { calendar_host_rules_text } from "./calendar_host_rules_text.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { app_shared_toast_saving } from "./app_shared_toast_saving.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
@@ -92,12 +91,11 @@ export function app_calendar_host_about(area, key, settings) {
       key,
     );
     if (host_saved.body.ok) {
-      ("The limits go back as they were saved; host is as it stood when the screen was drawn, null for a host saved just now, whose new row holds the starting limits.");
+      ("The Facebook link is saved on its own, so the rules - and whether the host ever saved them - stay as they were.");
       let rules_saved = await calendar_api_call(
         "POST",
-        "host_rules_save",
+        "host_messenger_save",
         {
-          ...calendar_host_rules_text(host),
           messenger: html_value_get(messenger),
         },
         key,
