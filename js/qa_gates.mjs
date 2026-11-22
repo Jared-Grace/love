@@ -1,4 +1,5 @@
 import { guard_gate_run } from "./guard_gate_run.mjs";
+import { app_bible_sermons_copy_check } from "./app_bible_sermons_copy_check.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
 import { memory_pointer_gate_run } from "./memory_pointer_gate_run.mjs";
@@ -653,6 +654,7 @@ export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
     guard_gate_run,
+    app_bible_sermons_copy_check,
     memory_hook_gate_run,
     stop_next_steps_hook_gate_run,
     memory_pointer_gate_run,
