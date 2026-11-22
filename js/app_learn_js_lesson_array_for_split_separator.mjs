@@ -1,7 +1,7 @@
-import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join } from "./list_join.mjs";
 import { json_to } from "./json_to.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
@@ -128,7 +128,7 @@ export function app_learn_js_lesson_array_for_split_separator() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Words apart at a separator",
-    "s.slice(i, i + sep.length) === sep",
+    "s.slice(i, i + sep.length)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,

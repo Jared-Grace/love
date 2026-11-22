@@ -16,6 +16,8 @@ import { app_learn_js_operator_concat_symbol } from "./app_learn_js_operator_con
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slice_symbol.mjs";
 import { list_skip } from "./list_skip.mjs";
+import { app_learn_js_operator_slice_range_symbol } from "./app_learn_js_operator_slice_range_symbol.mjs";
+import { app_learn_js_slice_pair } from "./app_learn_js_slice_pair.mjs";
 import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
 import { list_join } from "./list_join.mjs";
 import { app_learn_js_operator_last_index_of_symbol } from "./app_learn_js_operator_last_index_of_symbol.mjs";
@@ -72,6 +74,11 @@ export function app_learn_js_operators_solvable() {
     operator: app_learn_js_operator_slice_symbol(),
     fn: list_skip,
   };
+  ("2026-11-22: a.slice(1, 3) has the array or string on its left and its two numbers, as a pair, on its right, so the Slice from and to lesson and the separator lesson can be stepped through");
+  let slicing_range = {
+    operator: app_learn_js_operator_slice_range_symbol(),
+    fn: app_learn_js_slice_pair,
+  };
   let joining_text = {
     operator: app_learn_js_operator_join_symbol(),
     fn: list_join,
@@ -95,6 +102,7 @@ export function app_learn_js_operators_solvable() {
     joining,
     slicing,
     joining_text,
+    slicing_range,
   ]);
   return all;
 }
