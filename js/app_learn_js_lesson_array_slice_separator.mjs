@@ -106,7 +106,9 @@ export function app_learn_js_lesson_array_slice_separator() {
       "=== sep",
       " asks whether ",
       "sep",
-      " is there:",
+      " is there at index ",
+      "i",
+      ":",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
