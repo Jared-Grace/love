@@ -476,6 +476,7 @@ import { app_learn_js_lesson_array_for_join_between } from "./app_learn_js_lesso
 import { app_learn_js_lesson_array_join } from "./app_learn_js_lesson_array_join.mjs";
 import { app_learn_js_lesson_array_for_split } from "./app_learn_js_lesson_array_for_split.mjs";
 import { app_learn_js_lesson_array_split } from "./app_learn_js_lesson_array_split.mjs";
+import { app_learn_js_lesson_array_slice_separator } from "./app_learn_js_lesson_array_slice_separator.mjs";
 import { app_learn_js_lesson_array_for_split_separator } from "./app_learn_js_lesson_array_for_split_separator.mjs";
 import { app_learn_js_lesson_array_split_space } from "./app_learn_js_lesson_array_split_space.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
@@ -1000,6 +1001,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_join,
     app_learn_js_lesson_array_for_split,
     app_learn_js_lesson_array_split,
+    app_learn_js_lesson_array_slice_separator,
     app_learn_js_lesson_array_for_split_separator,
     app_learn_js_lesson_array_split_space,
     app_learn_js_lesson_array_for_luhn_double,
