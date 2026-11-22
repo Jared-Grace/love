@@ -14,6 +14,10 @@ import { app_learn_js_operator_index_of_symbol } from "./app_learn_js_operator_i
 import { list_or_text_index_of_or_minus_one } from "./list_or_text_index_of_or_minus_one.mjs";
 import { app_learn_js_operator_concat_symbol } from "./app_learn_js_operator_concat_symbol.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slice_symbol.mjs";
+import { list_skip } from "./list_skip.mjs";
+import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
+import { list_join } from "./list_join.mjs";
 export function app_learn_js_operators_solvable() {
   "every operator a code lesson may put between two things and then work out, each carrying the function that works it out";
   ("It is ",
@@ -59,12 +63,23 @@ export function app_learn_js_operators_solvable() {
     operator: app_learn_js_operator_concat_symbol(),
     fn: list_concat,
   };
+  ("2026-11-22, at the human's asking: a.slice(1) gives a new array of a's items from that index on, and a.join(\", \") one string with that between the items, so the Slice and Join lessons can be stepped through");
+  let slicing = {
+    operator: app_learn_js_operator_slice_symbol(),
+    fn: list_skip,
+  };
+  let joining_text = {
+    operator: app_learn_js_operator_join_symbol(),
+    fn: list_join,
+  };
   let all = list_concat(with_index, [
     larger,
     smaller,
     including,
     indexing_of,
     joining,
+    slicing,
+    joining_text,
   ]);
   return all;
 }
