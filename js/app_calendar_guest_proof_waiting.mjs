@@ -11,7 +11,7 @@ import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { calendar_guest_link } from "./calendar_guest_link.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 export function app_calendar_guest_proof_waiting(
@@ -68,7 +68,7 @@ export function app_calendar_guest_proof_waiting(
     on_check,
   );
   html_div_text(card, "Your private link to this page. Please save it:");
-  let link = html_url_without_hash() + "#host=" + slug + ",key=" + key;
+  let link = calendar_guest_link(slug, key);
   let link_line = html_div(card);
   html_a_href_text_new_tab(link_line, link, link);
   async function link_copy() {

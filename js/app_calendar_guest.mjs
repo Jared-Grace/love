@@ -26,7 +26,7 @@ import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
-import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { calendar_guest_link } from "./calendar_guest_link.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
@@ -419,7 +419,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       done,
       "To change or cancel this meeting, or to book another, use this link. Please save it:",
     );
-    let link = html_url_without_hash() + "#host=" + slug + ",key=" + key;
+    let link = calendar_guest_link(slug, key);
     let link_line = html_div(done);
     html_a_href_text_new_tab(link_line, link, link);
     async function link_copy() {

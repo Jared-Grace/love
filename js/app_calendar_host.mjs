@@ -15,7 +15,7 @@ import { html_value_get } from "./html_value_get.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
-import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { calendar_page_url } from "./calendar_page_url.mjs";
 import { html_text_get } from "./html_text_get.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
@@ -106,7 +106,7 @@ export async function app_calendar_host(parent, key) {
   let show_link = function lambda2(s) {
     html_text_content_set(
       link_line,
-      s ? html_url_without_hash() + "#host=" + s : "",
+      s ? calendar_page_url() + "#host=" + s : "",
     );
   };
   show_link(host ? host.slug : "");

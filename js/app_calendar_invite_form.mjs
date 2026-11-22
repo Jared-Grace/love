@@ -16,7 +16,7 @@ import { html_value_get } from "./html_value_get.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { cloudflare_site_url } from "./cloudflare_site_url.mjs";
+import { calendar_guest_link } from "./calendar_guest_link.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
@@ -106,13 +106,7 @@ export function app_calendar_invite_form(parent, key) {
       html_text_content_set(status, text);
       return;
     }
-    ("THE PUBLIC ADDRESS, NEVER THE ONE THIS PAGE IS ON (human, 2026-11-21: \"i sent the link over whatsapp - it says this site can't be reached\"). A link made on a dev copy or an http:// page named an address the guest's phone cannot open.");
-    let link =
-      cloudflare_site_url() +
-      "/calendar#host=" +
-      sent.body.slug +
-      ",key=" +
-      sent.body.key;
+    let link = calendar_guest_link(sent.body.slug, sent.body.key);
     let message = "Pick a time for our call here: " + link;
     html_div_text(result, "Send this in their chat:");
     html_div_text_content(result, message);
