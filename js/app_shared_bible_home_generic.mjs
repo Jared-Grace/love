@@ -4,8 +4,18 @@ import { app_shared_bible_home_reference_shown_is } from "./app_shared_bible_hom
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { app_shared_bible_verse_set_default } from "./app_shared_bible_verse_set_default.mjs";
 import { app_shared_bible_home_generic_unknown_shown } from "./app_shared_bible_home_generic_unknown_shown.mjs";
+import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
+import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
+import { app_shared_bible_passages_or_null } from "./app_shared_bible_passages_or_null.mjs";
+import { app_shared_bible_passage_containing_or_null } from "./app_shared_bible_passage_containing_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { app_shared_bible_verse_numbers_range_text } from "./app_shared_bible_verse_numbers_range_text.mjs";
+import { app_shared_bible_verse_set } from "./app_shared_bible_verse_set.mjs";
 import { app_shared_bible_home_generic_bottom } from "./app_shared_bible_home_generic_bottom.mjs";
 import { app_shared_bible_home_generic_lambda$a } from "./app_shared_bible_home_generic_lambda$a.mjs";
+import { null_is } from "./null_is.mjs";
+import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
+import { app_shared_bible_passage_arrows } from "./app_shared_bible_passage_arrows.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_shared_bible_home_generic(
   context,
@@ -13,9 +23,7 @@ export async function app_shared_bible_home_generic(
   bar_extra,
   app_fn,
   chapter_reader_is,
-  arrows,
 ) {
-  "The ways on from what is shown are handed in, because a screen that shows a whole passage goes on by a passage and a screen that shows one verse goes on by a verse. They are drawn after the hook has run, so a hook that found the passage can already say which way on is meant.";
   let r4 = app_shared_bible_home_frame(context, bar_extra);
   let bar = property_get(r4, "bar");
   let content = property_get(r4, "content");
@@ -36,11 +44,37 @@ export async function app_shared_bible_home_generic(
   if (unknown_shown) {
     return null;
   }
+  ("THE PASSAGE IS FOUND BEFORE ANYTHING IS DRAWN, because nearly everything on the screen depends on it: the verse button in the bar says the passage's run, the text shows every verse of it, copy and share take all of it, and the ways on go by a passage. An app that has no passages, or a chapter nobody has written, finds none, and the screen is the one-verse screen it always was.");
+  ("A LINK NAMING ONE VERSE OF A PASSAGE IS TURNED INTO THE PASSAGE'S RUN in the address, without a step on the back button. Links naming one verse have already been shared, and they keep working: they open the passage holding that verse, and the address then says what is on the screen.");
+  let chapter_code_hash = app_shared_bible_chapter_hash_get(hash);
+  let verse_number_hash = app_shared_bible_hash_v_get(hash);
+  let downloaded = await app_shared_bible_passages_or_null(
+    context,
+    chapter_code_hash,
+  );
+  let passage = app_shared_bible_passage_containing_or_null(
+    downloaded,
+    verse_number_hash,
+  );
+  let verse_numbers_shown = [verse_number_hash];
+  let verse_label = verse_number_hash;
+  if (null_not_is(passage)) {
+    verse_numbers_shown = property_get(passage, "verse_numbers");
+    verse_label =
+      app_shared_bible_verse_numbers_range_text(verse_numbers_shown);
+    app_shared_bible_verse_set(verse_label);
+  }
+  let shown = {
+    downloaded,
+    passage,
+    verse_numbers_shown,
+  };
   let r = await app_shared_bible_home_generic_bottom(
     hash,
     context,
     bar,
     content,
+    verse_label,
   );
   let bottom = property_get(r, "bottom");
   ("An empty list is opened here and handed both ways: down to the copy button, which holds on to it and reads it when it is pressed, and back to whoever asked for this screen, who may put further lines in it at any time before that press. That is what lets a reading drawn after the button exists still reach the clipboard - the gloss readers draw theirs from a file they are still fetching when the button is made.");
@@ -55,6 +89,7 @@ export async function app_shared_bible_home_generic(
     content,
     lambda$a,
     lines_copy_extra,
+    shown,
   );
   let chapter_code = property_get(r2, "chapter_code");
   let languages_verses = property_get(r2, "languages_verses");
@@ -62,7 +97,18 @@ export async function app_shared_bible_home_generic(
   let verse_current = property_get(r2, "verse_current");
   let pictures_place = property_get(r2, "pictures_place");
   let verse_number = property_get(r2, "verse_number");
-  arrows(context, chapter_code, verse_current, foot);
+  if (null_is(passage)) {
+    app_shared_bible_verse_arrows(context, chapter_code, verse_current, foot);
+  } else {
+    let passages = property_get(downloaded, "passages");
+    app_shared_bible_passage_arrows(
+      context,
+      chapter_code,
+      passages,
+      passage,
+      foot,
+    );
+  }
   list_add_multiple(languages_verses, languages_available);
   let v = {
     bar,
