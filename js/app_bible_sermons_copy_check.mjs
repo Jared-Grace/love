@@ -1,3 +1,4 @@
+import { app_shared_dev_build } from "./app_shared_dev_build.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { playwright_url_buttons_press_copied } from "./playwright_url_buttons_press_copied.mjs";
 import { property_get } from "./property_get.mjs";
@@ -8,12 +9,14 @@ import { text_starts_with } from "./text_starts_with.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { error } from "./error.mjs";
 import { json_to } from "./json_to.mjs";
+import { error } from "./error.mjs";
 export async function app_bible_sermons_copy_check() {
   "Opens the sermons app on the dev server at a link naming one verse of a passage, presses every copy and share button, and throws if any of them copies the wrong thing. Answers what each one copied.";
   "What is checked is how the copies fit together, never the words of the sermon, so rewriting a sermon cannot break it: the link has to turn into the passage's run; the Bible copy has to open with the passage's reference; the sermon copy has to have no reference in it; the Bible-and-sermon copy has to be exactly the Bible copy with the sermon copy after it; and the shared link has to name the passage's run.";
   "Romans 1 is the chapter because it is written and approved, and its first passage runs 1-4, so a link to verse 4 is one verse inside a passage that does not start there.";
+  "THE PAGE IS BUILT FIRST, because the dev server serves whatever was last built, and nobody builds it on every commit. Unbuilt, this would judge the code as it stood at the last build, and could pass while the code under it was broken.";
+  await app_shared_dev_build("bible_sermons");
   let url = "http://omnibook5ml.local:8080/dev/bible_sermons.html#c=ROM01,v=4";
   let labels = [
     "📋 Copy",

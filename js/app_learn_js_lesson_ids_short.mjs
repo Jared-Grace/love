@@ -683,6 +683,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_split: text_frozen("split_loop"),
       app_learn_js_lesson_array_split: text_frozen("split"),
       app_learn_js_lesson_array_for_split_separator: text_frozen("split_sep"),
+      app_learn_js_lesson_array_slice_separator: text_frozen("sep_here"),
       app_learn_js_lesson_array_split_space: text_frozen("split_space"),
       app_learn_js_lesson_array_for_even_odd: text_frozen("even_odd"),
       app_learn_js_lesson_array_for_above_average: text_frozen("above_average"),
