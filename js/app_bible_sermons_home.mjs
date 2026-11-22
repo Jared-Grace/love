@@ -8,6 +8,7 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { app_shared_bible_sermon_copy_buttons } from "./app_shared_bible_sermon_copy_buttons.mjs";
 export async function app_bible_sermons_home(context) {
   "The verse being read, with the approved sermon on it shown beneath, to be read and not changed.";
   "The same sermons the game's own bible edits, drawn from the same place, but as plain text: nobody here signs in, so nobody here can save, and a box that takes typing would only lose what was typed.";
@@ -40,5 +41,7 @@ export async function app_bible_sermons_home(context) {
         "margin-top": "0.5em",
       });
     }
+    ("Under the sermon: copy it alone, or copy the passage with the sermon after it.");
+    app_shared_bible_sermon_copy_buttons(p, screen, lines);
   }
 }

@@ -117,6 +117,8 @@ export async function app_shared_bible_home_generic(
     chapter_code,
     verse_number,
     pictures_place,
+    languages_verses,
+    verse_numbers_shown,
   };
   return v;
 }

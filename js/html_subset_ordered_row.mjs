@@ -1,20 +1,23 @@
-import { list_size_less_1 } from "./list_size_less_1.mjs";
-import { html_text_align } from "./html_text_align.mjs";
-import { html_style_flex } from "./html_style_flex.mjs";
-import { equal } from "./equal.mjs";
 import { list_get_property } from "./list_get_property.mjs";
-import { subtract } from "./subtract.mjs";
-import { list_swap_at } from "./list_swap_at.mjs";
+import { list_size_less_1 } from "./list_size_less_1.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_width_full } from "./html_width_full.mjs";
+import { subtract } from "./subtract.mjs";
+import { list_swap_at } from "./list_swap_at.mjs";
+import { html_style_flex } from "./html_style_flex.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
-import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
-import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { equal } from "./equal.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
+import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
+import { html_text_align } from "./html_text_align.mjs";
+import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { list_remove_at } from "./list_remove_at.mjs";
+import { emoji_x_red } from "./emoji_x_red.mjs";
 export function html_subset_ordered_row(
   parent,
   chosen,
@@ -57,5 +60,15 @@ export function html_subset_ordered_row(
   let style_value = app_shared_spaced_small_gap();
   html_style_set(label, "padding-left", style_value);
   html_span_text(label, name);
+  ("a cross after the name takes that one out of the chosen, the same as unticking it above, so a reader ordering the list need not go back up to drop one. it is only offered while two or more are chosen, so the last one can never be taken away from here.");
+  let multiple = list_multiple_is(chosen);
+  if (multiple) {
+    function remove() {
+      list_remove_at(chosen, i);
+      changed();
+    }
+    let text3 = emoji_x_red();
+    app_shared_button(label, text3, remove);
+  }
   return row;
 }
