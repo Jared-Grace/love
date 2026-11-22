@@ -13,13 +13,13 @@ import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_l
 import { app_learn_js_array_splice_inputs } from "./app_learn_js_array_splice_inputs.mjs";
 export function app_learn_js_lesson_array_splice_out() {
   arguments_assert(arguments, 0);
-  ("one item taken out of an array at an index: let a = [5, 8, 2, 9]; a.splice(1, 1); console.log(a); writes out [5, 2, 9]");
+  ("one item taken out of an array at an index: let a = [5, 8, 3, 9]; a.splice(2, 1); console.log(a); writes out [5, 8, 9]. 2026-11-22, at the human's asking: the example uses 2 and 1 rather than 1 and 1, so the index and the count are told apart");
   ("2026-11-22, at the human's asking: after All but one, which builds the same array with a loop and a new array; splice changes a itself. The first number in its ( ) is the index, the second how many items to take out - only ever 1 here.");
   ("The wrong programs are: a.splice(index, 2) (two items out), a.splice(index + 1, 1) (counting from 1), and a.slice(index, index + 1) (the piece is made, but a is not changed).");
   ("The writing is a first draft by Claude 2026-11-22.");
   let example_input = {
-    items: [5, 8, 2, 9],
-    index: 1,
+    items: [5, 8, 3, 9],
+    index: 2,
     item: 7,
   };
   function program_with(items, call) {
@@ -67,15 +67,15 @@ export function app_learn_js_lesson_array_splice_out() {
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "",
-      "a.splice(1, 1)",
+      "a.splice(2, 1)",
       " takes the item out of ",
       "a",
       " itself, with no new array",
     ]);
     app_learn_js_div_cycle_code(box_two, [
-      "The first ",
-      "1",
-      " is the index; the second ",
+      "The ",
+      "2",
+      " is the index; the ",
       "1",
       " is how many items to take out:",
     ]);
@@ -86,7 +86,7 @@ export function app_learn_js_lesson_array_splice_out() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Take one out",
-    "a.splice(1, 1)",
+    "a.splice(2, 1)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
