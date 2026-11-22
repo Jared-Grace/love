@@ -68,12 +68,26 @@ export function app_learn_js_lesson_array_splice_out() {
     app_learn_js_div_cycle_code(box_two, [
       "",
       "a.splice(2, 1)",
-      " takes the item out of ",
+      " removes the item at index ",
+      "2",
+      " from ",
       "a",
-      " itself, with no new array",
+      " itself",
     ]);
     app_learn_js_div_cycle_code(box_two, [
-      "The ",
+      "However ",
+      "splice",
+      " does not create a new array",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "",
+      "splice",
+      " changes the existing array",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "For ",
+      "a.splice(2, 1)",
+      " the ",
       "2",
       " is the index; the ",
       "1",

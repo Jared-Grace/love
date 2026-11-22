@@ -2,6 +2,7 @@ import { server_url } from "./server_url.mjs";
 import { server_url_local } from "./server_url_local.mjs";
 import { firebase_project_url_jg } from "./firebase_project_url_jg.mjs";
 import { cloudflare_site_url } from "./cloudflare_site_url.mjs";
+import { server_url_local_https } from "./server_url_local_https.mjs";
 export function cors_origins() {
   "Every address a page of this repo's is really opened at, which is the list the file store is told may read from it.";
   "A browser will fetch a file from another place quite happily and then refuse to let the page read what came back, unless the store names the address the page came from. So a page opened at an address missing from here does not fail loudly - the fetch answers, the reading is refused, and the page paints nothing. That is what it looked like: the bible app showed a blank screen on a phone and the whole chapter on the machine it was built on.";
@@ -10,6 +11,8 @@ export function cors_origins() {
   let network = server_url_local();
   let published = firebase_project_url_jg();
   let site = cloudflare_site_url();
-  let r = [here, network, published, site];
+  ("the same server reached over https as well, because a page that records has to be opened there - a browser gives the camera only to an https page - and a page opened at an address missing from here reads nothing from the store");
+  let network_https = server_url_local_https();
+  let r = [here, network, network_https, published, site];
   return r;
 }
