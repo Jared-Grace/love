@@ -2685,6 +2685,10 @@ export function bible_glyph_chapter_references() {
       reference: "Jeremiah 34",
     },
     {
+      chapter_code: "JER35",
+      reference: "Jeremiah 35",
+    },
+    {
       chapter_code: "LAM01",
       reference: "Lamentations 1",
     },
