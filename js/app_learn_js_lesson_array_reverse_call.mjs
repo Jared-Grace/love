@@ -6,7 +6,7 @@ import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_array_reverse } from "./app_learn_js_lesson_array_reverse.mjs";
+import { app_learn_js_lesson_array_reverse_mirror } from "./app_learn_js_lesson_array_reverse_mirror.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -17,6 +17,7 @@ export function app_learn_js_lesson_array_reverse_call() {
   arguments_assert(arguments, 0);
   ("an array turned around with reverse: let a = [5, 8, 3, 9]; a.reverse(); console.log(a); writes out [9, 3, 8, 5]");
   ("2026-11-22, at the human's asking: a.reverse() as the short way to do what Reversing an array does with a loop, popping each item of a and pushing it onto b. Like splice, it changes a itself rather than making a new array, so the splice lessons' words are said again.");
+  ("2026-11-22, at the human's asking: it names Reversing in place, just before it, rather than Reversing an array; that one swaps each item with its mirror and so changes a itself too, the nearer pair.");
   ("Numbers rather than words, three to five of them, all different, so turning one around always changes it and five fit a phone's width.");
   ("The wrong programs are: a.pop() (only the last item goes), a.shift() (only the first item goes), and no line between (a as it was written).");
   ("The writing is a first draft by Claude 2026-11-22.");
@@ -63,15 +64,13 @@ export function app_learn_js_lesson_array_reverse_call() {
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_array_reverse,
+      app_learn_js_lesson_array_reverse_mirror,
       [
-        "",
-        "b.push(a.pop());",
-        " in a loop put the items of ",
+        "Swapping each item in the first half with its mirror, ",
+        "a[j] = temp;",
+        ", turns ",
         "a",
-        " into ",
-        "b",
-        " the other way round",
+        " around in place",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
