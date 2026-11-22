@@ -1,11 +1,10 @@
-import net from "net";
+import node_http from "http";
 import https from "https";
-import http from "http";
+import net from "net";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { http } from "./http.mjs";
 import { server_https_certificate_ensure } from "./server_https_certificate_ensure.mjs";
-import { log_keep } from "./log_keep.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { log_keep } from "./log_keep.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function server_listen_both(app, port, listening) {
@@ -14,7 +13,8 @@ export async function server_listen_both(app, port, listening) {
   ("★ A REDIRECT COULD NOT HAVE FIXED IT. An https request opens with a TLS handshake, which a plain server cannot read, so it never gets as far as sending a redirect; the connection just fails. So the port reads the first byte instead: a TLS handshake record always starts with 22, and no plain request does - every one starts with a method word in letters.");
   ("The bytes read to decide are put back before the chosen server sees the connection, so neither server can tell anyone looked.");
   ("No certificate - openssl missing, a file unreadable - leaves the port answering plain http exactly as before, told rather than thrown, so the pages never go down over the https half.");
-  let server_plain = http.createServer(app);
+  ("node's own module is named node_http, not http, because this repo has a function called http, and the canonicalizer adds an import for any bare name a repo function answers to - it added one, and the file then declared http twice and stopped every canonicalization in the repo");
+  let server_plain = node_http.createServer(app);
   let server_secure = null;
   try {
     let options = await server_https_certificate_ensure();
