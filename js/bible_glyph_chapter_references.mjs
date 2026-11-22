@@ -2013,6 +2013,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 24",
     },
     {
+      chapter_code: "PSA025",
+      reference: "Psalm 25",
+    },
+    {
       chapter_code: "PSA027",
       reference: "Psalm 27",
     },
