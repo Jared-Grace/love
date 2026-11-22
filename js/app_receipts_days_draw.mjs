@@ -1,10 +1,10 @@
+import { date_weekday_year_month_day } from "./date_weekday_year_month_day.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_receipts_zone_get } from "./app_receipts_zone_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_receipts_zone_choose } from "./app_receipts_zone_choose.mjs";
 import { app_receipts_purchase_when } from "./app_receipts_purchase_when.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { date_year_month_day } from "./date_year_month_day.mjs";
 import { app_receipts_day_card } from "./app_receipts_day_card.mjs";
 import { app_receipts_purchase_row } from "./app_receipts_purchase_row.mjs";
 import { app_receipts_purchase_row_text } from "./app_receipts_purchase_row_text.mjs";
@@ -29,7 +29,7 @@ export function app_receipts_days_draw(list, purchases, on_open, on_zone) {
     let when = app_receipts_purchase_when(purchase, zone);
     let day = property_get(when, "date");
     if (not_equal(day, day_before)) {
-      let text = date_year_month_day(day);
+      let text = date_weekday_year_month_day(day);
       day_card = app_receipts_day_card(list, text);
       day_before = day;
     }
