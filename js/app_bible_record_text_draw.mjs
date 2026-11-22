@@ -51,6 +51,26 @@ export function app_bible_record_text_draw(
     size = multiply(size, 0.9);
     wrap();
   }
+  ("EVERY WORD ALWAYS FITS (asked for by the human 2026-11-22). If the lower half and the reading floor above could not hold it, the passage may take the whole frame and the letters keep shrinking with no floor until it is all inside - a word cut off the video is worse than small letters, because the recording is of reading the whole passage aloud. Width is checked too: a single word wider than a line cannot be wrapped, only shrunk.");
+  function widest() {
+    function lambda(line) {
+      let r2 = ctx.measureText(line).width;
+      return r2;
+    }
+    let widths = lines.map(lambda);
+    let r = Math.max(...widths);
+    return r;
+  }
+  while (
+    greater_than(
+      multiply(multiply(lines.length, size), 1.25),
+      multiply(height, 0.85),
+    ) ||
+    greater_than(widest(), room)
+  ) {
+    size = multiply(size, 0.9);
+    wrap();
+  }
   let reference_size = multiply(size, 0.7);
   let line_height = multiply(size, 1.25);
   let band =
