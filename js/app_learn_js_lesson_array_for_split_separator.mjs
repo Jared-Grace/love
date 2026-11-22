@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join } from "./list_join.mjs";
 import { json_to } from "./json_to.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
@@ -20,29 +19,26 @@ export function app_learn_js_lesson_array_for_split_separator() {
   ('a string cut at each comma and space into an array of words, by a loop: let s = "joy, love"; let sep = ", "; ... writes out ["joy", "love"]');
   ("2026-11-22, at the human's asking: the separator is held in sep, and s.slice(i, i + sep.length) === sep asks whether it starts at i, so the one loop works for a separator of any length - still no loop inside a loop. After a match, i = i + sep.length - 1 jumps past the rest of it, the - 1 because i++ adds the last 1.");
   ("A set is six questions, two or three of love, joy and peace joined by a comma and a space.");
-  ("The wrong programs are: no jump (each word after the first keeps its space), i = i + sep.length (the jump goes one too far, so the next word loses its first letter), and s[i] === sep (one letter is never two, so nothing is cut).");
+  ("The wrong programs are: i = i + 1 after a match (only the comma is passed, so each word after the first keeps its space), i = i + sep.length + 1 (one too far, so the next word loses its first letter), and s[i] === sep (one letter is never two, so nothing is cut). Every one moves i forward on every pass, so each ends. Not picked: leaving out i++, which never ends.");
   ("The writing is a first draft by Claude 2026-11-22.");
   let example_input = ["joy", "love"];
   function program_with(words, test, jump) {
-    "the loop that builds each word letter by letter, pushing it where sep starts and jumping past sep; no jump line when jump is null";
+    "the loop that builds each word letter by letter, pushing it where sep starts and moving i by jump there, or by one letter otherwise";
     let text = list_join(words, ", ");
     let lines = [
       "let s = " + json_to(text) + ";",
       'let sep = ", ";',
       "let a = [];",
       'let word = "";',
-      "for (let i = 0; i < s.length; i++) {",
+      "let i = 0;",
+      "while (i < s.length) {",
       "  if (" + test + ") {",
       "    a.push(word);",
       '    word = "";',
-    ];
-    if (not_equal(jump, null)) {
-      lines = [...lines, "    i = " + jump + ";"];
-    }
-    lines = [
-      ...lines,
+      "    i = " + jump + ";",
       "  } else {",
       "    word = word + s[i];",
+      "    i++;",
       "  }",
       "}",
       "a.push(word);",
@@ -53,14 +49,15 @@ export function app_learn_js_lesson_array_for_split_separator() {
   }
   ("Later 2026-11-22, at the human's asking: the check is written s.startsWith(sep, i), taught in the lesson just before, so the loop line fits and the only new thing here is the jump.");
   let test_right = "s.startsWith(sep, i)";
-  let jump_right = "i + sep.length - 1";
+  ("Later again 2026-11-22, at the human's asking: a while loop, each branch moving i itself - past sep after a match, one letter otherwise - so there is no - 1 for i++ to make up. Not picked: a for loop with nothing in its third part, which no lesson writes and which reads like a slip.");
+  let jump_right = "i + sep.length";
   function program_of(words2) {
     let code2 = program_with(words2, test_right, jump_right);
     return code2;
   }
   function wrong_programs_of(words3) {
-    let v = program_with(words3, test_right, null);
-    let v2 = program_with(words3, test_right, "i + sep.length");
+    let v = program_with(words3, test_right, "i + 1");
+    let v2 = program_with(words3, test_right, "i + sep.length + 1");
     let v3 = program_with(words3, "s[i] === sep", jump_right);
     let programs = [v, v2, v3];
     return programs;
@@ -102,12 +99,12 @@ export function app_learn_js_lesson_array_for_split_separator() {
     ]);
     app_learn_js_div_cycle_code(box_two, [
       "After a match, ",
-      "i = i + sep.length - 1",
-      " jumps past it. The ",
-      "- 1",
-      " is because ",
+      "i = i + sep.length",
+      " jumps past ",
+      "sep",
+      "; otherwise ",
       "i++",
-      " adds the last 1:",
+      " moves on one letter:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
@@ -116,7 +113,7 @@ export function app_learn_js_lesson_array_for_split_separator() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Words apart at a separator",
-    "i = i + sep.length - 1",
+    "i = i + sep.length",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
