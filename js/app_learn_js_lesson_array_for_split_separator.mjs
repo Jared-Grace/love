@@ -8,7 +8,7 @@ import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_split } from "./app_learn_js_lesson_array_for_split.mjs";
-import { app_learn_js_lesson_array_slice_separator } from "./app_learn_js_lesson_array_slice_separator.mjs";
+import { app_learn_js_lesson_array_starts_with_at } from "./app_learn_js_lesson_array_starts_with_at.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -51,7 +51,8 @@ export function app_learn_js_lesson_array_for_split_separator() {
     let code = list_join_newline(lines);
     return code;
   }
-  let test_right = "s.slice(i, i + sep.length) === sep";
+  ("Later 2026-11-22, at the human's asking: the check is written s.startsWith(sep, i), taught in the lesson just before, so the loop line fits and the only new thing here is the jump.");
+  let test_right = "s.startsWith(sep, i)";
   let jump_right = "i + sep.length - 1";
   function program_of(words2) {
     let code2 = program_with(words2, test_right, jump_right);
@@ -90,15 +91,8 @@ export function app_learn_js_lesson_array_for_split_separator() {
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_array_slice_separator,
-      [
-        "",
-        "s.slice(i, i + sep.length) === sep",
-        " asked whether ",
-        "sep",
-        " is at ",
-        "i",
-      ],
+      app_learn_js_lesson_array_starts_with_at,
+      ["", "s.startsWith(sep, i)", " asked whether ", "sep", " is at ", "i"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
