@@ -464,6 +464,7 @@ import { app_learn_js_lesson_array_for_push_both } from "./app_learn_js_lesson_a
 import { app_learn_js_lesson_array_concat } from "./app_learn_js_lesson_array_concat.mjs";
 import { app_learn_js_lesson_array_for_push_from } from "./app_learn_js_lesson_array_for_push_from.mjs";
 import { app_learn_js_lesson_array_slice } from "./app_learn_js_lesson_array_slice.mjs";
+import { app_learn_js_lesson_array_for_join_words } from "./app_learn_js_lesson_array_for_join_words.mjs";
 import { app_learn_js_lesson_array_for_join_after } from "./app_learn_js_lesson_array_for_join_after.mjs";
 import { app_learn_js_lesson_array_for_join_between } from "./app_learn_js_lesson_array_for_join_between.mjs";
 import { app_learn_js_lesson_array_join } from "./app_learn_js_lesson_array_join.mjs";
@@ -977,6 +978,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_concat,
     app_learn_js_lesson_array_for_push_from,
     app_learn_js_lesson_array_slice,
+    app_learn_js_lesson_array_for_join_words,
     app_learn_js_lesson_array_for_join_after,
     app_learn_js_lesson_array_for_join_between,
     app_learn_js_lesson_array_join,
