@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_article_offers_at_with_cited } from "./bible_word_article_offers_at_with_cited.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { app_shared_bible_verse_reference_reading } from "./app_shared_bible_verse_reference_reading.mjs";
 import { app_shared_overlay_card_closable } from "./app_shared_overlay_card_closable.mjs";
 import { property_get } from "./property_get.mjs";
@@ -21,6 +22,8 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { bible_word_article_sites_recent } from "./bible_word_article_sites_recent.mjs";
 import { bible_word_article_offers_recent_split } from "./bible_word_article_offers_recent_split.mjs";
 import { app_shared_bible_word_offers_split_draw } from "./app_shared_bible_word_offers_split_draw.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { window_open_google_define } from "./window_open_google_define.mjs";
 import { app_shared_bible_word_google_question_text_get } from "./app_shared_bible_word_google_question_text_get.mjs";
 import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
 import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
@@ -69,7 +72,7 @@ export async function app_shared_bible_word_overlay_articles_open({
     ": each choice opens in a new tab, so a reader can open GotQuestions, then Easton's, then another, one after another. It closes by its X, its Close button, or a tap outside it. A tap anywhere used to close it, a choice included; changed at the human's asking 2026-11-01.");
   ("THE ARTICLES ARE FETCHED BEFORE THE CARD IS DRAWN. The table of articles is loaded only when a word is tapped, so a reader who never taps one never downloads it; waiting for it first means the buttons below never jump down when it arrives.");
   ("A name can mean more than one person - John is the Baptist and the apostle - so every article it names is offered, each saying who it is about.");
-  ("The Google search asks for the word as scripture uses it, the same search a tapped word made before this choice existed. The AI sites are asked the same thing as a plain question, because a chat answers a sentence better than a search phrase.");
+  ("The Google search asks what the word means in its own verse, handed the verse's words and reference; where the verse is not known it asks for the word as scripture uses it, the search a tapped word always made before. The AI sites are asked the same thing as a plain question, because a chat answers a sentence better than a search phrase.");
   let offers = await bible_word_article_offers_at_with_cited(
     words,
     index,
@@ -78,10 +81,14 @@ export async function app_shared_bible_word_overlay_articles_open({
   );
   let strong_url = await strong_url_loading;
   ("THE REFERENCE IS WRITTEN BEFORE THE CARD OPENS, not inside the Google button: a browser lets a tap open a new tab only while the tap is fresh, and a wait inside the button could spend that.");
-  let reference = await app_shared_bible_verse_reference_reading(
-    chapter_code,
-    verse_number,
-  );
+  let known = null_not_is(chapter_code);
+  let reference = null;
+  if (known) {
+    reference = await app_shared_bible_verse_reference_reading(
+      chapter_code,
+      verse_number,
+    );
+  }
   let overlay = app_shared_overlay_card_closable();
   let card = property_get(overlay, "body");
   let big = property_get(overlay, "title");
@@ -124,6 +131,11 @@ export async function app_shared_bible_word_overlay_articles_open({
   let split = bible_word_article_offers_recent_split(offers, recent_names);
   app_shared_bible_word_offers_split_draw(split, offer_draw, choices);
   function google() {
+    if (not(known)) {
+      let search_term = text_combine(word, " (Bible)");
+      window_open_google_define(search_term);
+      return;
+    }
     let question = app_shared_bible_word_google_question_text_get(
       word,
       reference,
