@@ -56,7 +56,7 @@ export function bible_glyph_chapter_zec09() {
           "and",
           "also",
           "against",
-          "$wall+proper_name,",
+          "$brick+shield+proper_name,",
           "which",
           "borders",
           "it,",
