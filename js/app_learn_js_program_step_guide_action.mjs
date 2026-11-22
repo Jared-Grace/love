@@ -293,6 +293,17 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     let r30 = [takes, push_choose];
     return r30;
   }
+  if (equal(kind, "reverse")) {
+    ("2026-11-22, at the human's asking, for the reverse lesson: a reverse says what it does, as a pop does");
+    let reverse_name = property_get(action, "name");
+    let turns = [
+      "This turns the array named ",
+      reverse_name,
+      " around: its last item comes first",
+    ];
+    let r35 = [turns, push_choose];
+    return r35;
+  }
   if (equal(kind, "push")) {
     if (solved_before) {
       let r24 = [

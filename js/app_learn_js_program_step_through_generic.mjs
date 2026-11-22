@@ -1335,6 +1335,18 @@ export function app_learn_js_program_step_through_generic(
       await piece_send(line_index, name_from, name_to, value5, duration);
       return;
     }
+    if (equal(kind, "reverse")) {
+      ("2026-11-22, at the human's asking, for the reverse lesson: every item moves, so the note is written again whole, as an assign writes it - the old array fading and a copy of a.reverse() going up into its place");
+      let reversed_action = {
+        kind: "assign",
+        name: property_get(action, "name"),
+        value: property_get(action, "after"),
+        from: property_get(action, "from"),
+        to: property_get(action, "to"),
+      };
+      await action_do(reversed_action, line_index);
+      return;
+    }
     if (equal(kind, "assign")) {
       let name2 = property_get(action, "name");
       let value2 = property_get(action, "value");

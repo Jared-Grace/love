@@ -91,6 +91,12 @@ export function app_learn_js_program_step_order_words(
       let value5 = property_get(item, "value");
       value = js_value_code(value5);
     }
+    if (equal(left, "reverse")) {
+      ("2026-11-22, for the reverse lesson: a reverse writes the whole array again, so the sign is the whole array turned around");
+      name = property_get(item, "name");
+      let value8 = property_get(item, "after");
+      value = js_value_code(value8);
+    }
     index = index + 1;
   }
   ("where the value is solved: inside the ( ) on a line that logs, right of the = on a line that assigns, and otherwise the condition of an if");
@@ -178,6 +184,14 @@ export function app_learn_js_program_step_order_words(
       let r30 = line_end(" still shows ", ", so it has not been taken off");
       return r30;
     }
+    if (equal(step_kind, "reverse")) {
+      let r33 = line_of([
+        " does not show ",
+        value,
+        " yet, so it has not been turned around",
+      ]);
+      return r33;
+    }
     if (equal(step_kind, "reset")) {
       let r22 = [
         "This block still shows the values solved into it the last time it ran, so it has not been reset",
@@ -233,6 +247,14 @@ export function app_learn_js_program_step_order_words(
         ", so it has already been taken off",
       );
       return r31;
+    }
+    if (equal(step_kind, "reverse")) {
+      let r34 = line_of([
+        " already shows ",
+        value,
+        ", so it has already been turned around",
+      ]);
+      return r34;
     }
     if (equal(step_kind, "reset")) {
       let r23 = [

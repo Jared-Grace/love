@@ -94,7 +94,7 @@ export function app_learn_js_program_trace_wrong_say(question, answer, choice) {
         list_add(assigned, name);
       }
       ("2026-11-13: a pop changes what its array holds the way a push does, so it is said the same way");
-      if (equal(kind, "push") || equal(kind, "pop")) {
+      if (equal(kind, "push") || equal(kind, "pop") || equal(kind, "reverse")) {
         let name6 = property_get(action, "name");
         then_add();
         code_add(name6);
