@@ -5,17 +5,18 @@ import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_camera_microphone_stream } from "./html_camera_microphone_stream.mjs";
 import { html_display_block } from "./html_display_block.mjs";
+import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { not_equal } from "./not_equal.mjs";
+import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
 import { app_bible_record_text_draw } from "./app_bible_record_text_draw.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
 import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
@@ -106,17 +107,26 @@ export function app_bible_record_inline(
     camera_element.srcObject = stream;
     camera_element.play();
     html_display_block(canvas);
+    ("every take is upright 9:16 whatever shape the camera sends, so it can go up as a YouTube Short, and the camera is cropped to fill it rather than squeezed");
+    let size = app_bible_record_frame_size();
+    let width = property_get(size, "width");
+    let height = property_get(size, "height");
+    canvas_element.width = width;
+    canvas_element.height = height;
     let ctx = canvas_element.getContext("2d");
     while (recording) {
       await html_request_animation_frame();
-      let width = camera_element.videoWidth;
-      let height = camera_element.videoHeight;
-      if (greater_than(width, 0)) {
-        if (not_equal(canvas_element.width, width)) {
-          canvas_element.width = width;
-          canvas_element.height = height;
-        }
-        ctx.drawImage(camera_element, 0, 0, width, height);
+      let camera_width = camera_element.videoWidth;
+      let camera_height = camera_element.videoHeight;
+      if (greater_than(camera_width, 0)) {
+        html_canvas_draw_cover(
+          ctx,
+          camera_element,
+          camera_width,
+          camera_height,
+          width,
+          height,
+        );
         app_bible_record_text_draw(ctx, width, height, reference, text);
         if (null_is(stop)) {
           let canvas_stream = canvas_element.captureStream(30);
