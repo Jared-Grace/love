@@ -13,7 +13,8 @@ export function reply_non_english_skipped() {
   "Positions count only the characters the rules read, so the words of a stretch sit end to end and each one starts where the one before it stops.";
   "The word list is read once, the first time any message reaches this step, and each message's stretches are found once however many possibilities ask. A page that cannot fetch the list - offline, say - skips nothing, and the message goes unread as it would have before this step existed.";
   let lookup = null;
-  let stretches_by_message = {};
+  ("THE STRETCHES ARE KEPT IN A MAP, keyed by the message a stranger typed: a record already holds toString and constructor, so a message that was only one of those words was taken as already found and the step threw.");
+  let stretches_by_message = new Map();
   let fn = async function reply_non_english_skipped_matches(possibilities) {
     if (equal(lookup, null)) {
       lookup = await english_words_lookup();
@@ -27,13 +28,12 @@ export function reply_non_english_skipped() {
         continue;
       }
       let message = possibility.message;
-      if (not(message in stretches_by_message)) {
-        stretches_by_message[message] = reply_non_english_stretches(
-          message,
-          lookup,
-        );
+      let b = stretches_by_message.has(message);
+      if (not(b)) {
+        let found = reply_non_english_stretches(message, lookup);
+        stretches_by_message.set(message, found);
       }
-      for (let stretch of stretches_by_message[message]) {
+      for (let stretch of stretches_by_message.get(message)) {
         let position = stretch.start;
         let remaining = stretch.words.length;
         for (let word of stretch.words) {

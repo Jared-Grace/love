@@ -9,7 +9,9 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { reply_bible_references_runs } from "./reply_bible_references_runs.mjs";
 import { null_is } from "./null_is.mjs";
 import { reply_bible_runs_line } from "./reply_bible_runs_line.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 export function reply_bible_references_closed(rule) {
   arguments_assert(arguments, 1);
@@ -36,10 +38,9 @@ export function reply_bible_references_closed(rule) {
           continue;
         }
         let line = reply_bible_runs_line(runs);
-        possibility[name_outputs] = list_concat(
-          [line],
-          possibility[name_outputs],
-        );
+        let outputs = property_get(possibility, name_outputs);
+        let opened = list_concat([line], outputs);
+        property_set(possibility, name_outputs, opened);
       }
       list_add(kept, possibility);
     }
