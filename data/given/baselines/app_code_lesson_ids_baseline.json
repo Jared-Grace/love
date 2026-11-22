@@ -466,6 +466,7 @@
   "concat",
   "push_from",
   "slice",
+  "join_words",
   "join_after",
   "join_between",
   "join",
