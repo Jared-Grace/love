@@ -5,6 +5,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
+import { app_shared_bible_languages_verses_first_text } from "./app_shared_bible_languages_verses_first_text.mjs";
 import { app_shared_bible_read_verse_row_grid } from "./app_shared_bible_read_verse_row_grid.mjs";
 import { app_shared_bible_toggle_update } from "./app_shared_bible_toggle_update.mjs";
 import { app_shared_bible_read_persist_selection } from "./app_shared_bible_read_persist_selection.mjs";
@@ -45,7 +46,11 @@ export async function app_shared_bible_read_verse_row(
   let verse_book_code = ebible_chapter_code_to_book(verse_chapter_code);
   let verse_book_name = ebible_book_code_to_name(books_en, verse_book_code);
   let verse_chapter_name = ebible_chapter_code_to_name(verse_chapter_code);
-  let p = app_shared_bible_read_verse_row_grid(content, v);
+  let first_text = app_shared_bible_languages_verses_first_text(
+    languages_verses,
+    verse_number_v,
+  );
+  let p = app_shared_bible_read_verse_row_grid(content, first_text);
   ("nothing follows the scripture when a whole chapter is being read. A copy taken here may run over many verses, and the only things the readers put after a verse - the words of it explained one at a time - belong to a screen showing a single verse, so there is nothing here that could be put after which one.");
   let lines_copy_extra = [];
   let r = app_shared_bible_toggle_update(
