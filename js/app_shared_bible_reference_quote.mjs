@@ -46,15 +46,15 @@ export function app_shared_bible_reference_quote(parent, reference) {
     if (null_is(text)) {
       return;
     }
-    app_shared_bible_verse_line(
-      words,
-      "",
+    app_shared_bible_verse_line({
+      parent: words,
+      name: "",
       text,
-      null,
-      null,
-      null,
+      color: null,
+      chapter_code: null,
+      verse_number: null,
       language_code,
-    );
+    });
   }
   promise_later_catch_ignore(fill);
   return quote;

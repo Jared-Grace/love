@@ -14,7 +14,7 @@ import { html_attribute_set } from "./html_attribute_set.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_style_italic } from "./html_style_italic.mjs";
 import { app_shared_bible_words_on_click_overlay } from "./app_shared_bible_words_on_click_overlay.mjs";
-export function app_shared_bible_verse_line(
+export function app_shared_bible_verse_line({
   parent,
   name,
   text,
@@ -22,8 +22,8 @@ export function app_shared_bible_verse_line(
   chapter_code,
   verse_number,
   language_code,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   ("$plain language_code");
   ("the language code says which language the text is in, such as en, or is null where the caller does not know; it is handed on so a tapped English word's card can offer to say the word.");
   ("the chapter code and verse number say which verse this line is, so a tapped original word can be found by its number; the code is null where the caller does not know.");

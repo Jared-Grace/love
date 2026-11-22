@@ -17,7 +17,7 @@ export function app_shared_bible_verse_texts(parent, entries) {
     let chapter_code = property_get_or_null(entry, "chapter_code");
     let verse_number = property_get_or_null(entry, "verse_number");
     let language_code = property_get_or_null(entry, "language_code");
-    app_shared_bible_verse_line(
+    app_shared_bible_verse_line({
       parent,
       name,
       text,
@@ -25,7 +25,7 @@ export function app_shared_bible_verse_texts(parent, entries) {
       chapter_code,
       verse_number,
       language_code,
-    );
+    });
   }
   each_index(entries, render);
 }
