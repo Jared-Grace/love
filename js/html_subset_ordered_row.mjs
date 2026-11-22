@@ -1,12 +1,10 @@
 import { list_get_property } from "./list_get_property.mjs";
 import { list_size_less_1 } from "./list_size_less_1.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_display_flex } from "./html_display_flex.mjs";
-import { html_width_full } from "./html_width_full.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_swap_at } from "./list_swap_at.mjs";
-import { html_style_flex } from "./html_style_flex.mjs";
+import { html_div } from "./html_div.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_display_flex } from "./html_display_flex.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { equal } from "./equal.mjs";
@@ -27,9 +25,7 @@ export function html_subset_ordered_row(
 ) {
   let name = list_get_property(chosen, i, name_property);
   let last = list_size_less_1(chosen);
-  let row = html_div(parent);
-  html_display_flex(row);
-  html_width_full(row);
+  ("the row's parts go straight into the list's grid, one cell each, so every row shares the same columns; the arrows are put in the first column, which starts each row on a line of its own");
   function up() {
     let index_b = subtract(i, 1);
     list_swap_at(chosen, i, index_b);
@@ -39,9 +35,8 @@ export function html_subset_ordered_row(
     list_swap_at(chosen, i, i + 1);
     changed();
   }
-  ("split each row at the card's horizontal center: the arrows fill the left half and hug the center, the name fills the right half and starts at the center, so adding a longer language name grows rightward and never shifts the arrows");
-  let arrows = html_div(row);
-  html_style_flex(arrows, "1 1 0");
+  let arrows = html_div(parent);
+  html_style_set(arrows, "grid-column", "1");
   html_display_flex(arrows);
   html_style_set(arrows, "justify-content", "flex-end");
   let text = emoji_arrow_up();
@@ -54,24 +49,22 @@ export function html_subset_ordered_row(
   if (equal(i, last)) {
     html_visibility_hidden(down_button);
   }
-  let label = html_div(row);
-  html_style_flex(label, "1 1 0");
+  let label = html_div(parent);
   html_text_align(label, "left");
   let style_value = app_shared_spaced_small_gap();
   html_style_set(label, "padding-left", style_value);
   html_span_text(label, name);
-  ("a cross takes that one out of the chosen, the same as unticking it above, so a reader ordering the list need not go back up to drop one. it is pushed to the card's right edge: the crosses stand in one column whatever length the names are, the name sits between a cross and the arrows so a thumb meant for an arrow does not take a language away, and the end of a row is where taking something away is looked for. it is only offered while two or more are chosen, so the last one can never be taken away from here.");
+  ("a cross takes that one out of the chosen, the same as unticking it above, so a reader ordering the list need not go back up to drop one. it sits in the column after the names: the crosses stand in one column just past the longest name, the name sits between a cross and the arrows so a thumb meant for an arrow does not take a language away, and the end of a row is where taking something away is looked for. it is only offered while two or more are chosen, so the last one can never be taken away from here.");
   let multiple = list_multiple_is(chosen);
   if (multiple) {
-    html_display_flex(label);
-    html_style_set(label, "align-items", "center");
     function remove() {
       list_remove_at(chosen, i);
       changed();
     }
     let text3 = emoji_x_red();
-    let remove_button = app_shared_button(label, text3, remove);
-    html_style_set(remove_button, "margin-left", "auto");
+    let remove_button = app_shared_button(parent, text3, remove);
+    html_style_set(remove_button, "margin-left", style_value);
+    html_style_set(remove_button, "justify-self", "start");
   }
-  return row;
+  return label;
 }

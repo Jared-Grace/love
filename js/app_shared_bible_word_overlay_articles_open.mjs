@@ -1,14 +1,15 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_article_offers_at_with_cited } from "./bible_word_article_offers_at_with_cited.mjs";
+import { app_shared_bible_verse_reference_reading } from "./app_shared_bible_verse_reference_reading.mjs";
 import { app_shared_overlay_card_closable } from "./app_shared_overlay_card_closable.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
-import { equal } from "./equal.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
+import { equal } from "./equal.mjs";
 import { app_shared_bible_word_sound_buttons } from "./app_shared_bible_word_sound_buttons.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
@@ -20,8 +21,8 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { bible_word_article_sites_recent } from "./bible_word_article_sites_recent.mjs";
 import { bible_word_article_offers_recent_split } from "./bible_word_article_offers_recent_split.mjs";
 import { app_shared_bible_word_offers_split_draw } from "./app_shared_bible_word_offers_split_draw.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { window_open_google_define } from "./window_open_google_define.mjs";
+import { app_shared_bible_word_google_question_text_get } from "./app_shared_bible_word_google_question_text_get.mjs";
+import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
 import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
 import { app_shared_bible_word_ask_llms_draw } from "./app_shared_bible_word_ask_llms_draw.mjs";
 export async function app_shared_bible_word_overlay_articles_open({
@@ -32,6 +33,7 @@ export async function app_shared_bible_word_overlay_articles_open({
   chapter_code,
   verse_number,
   language_code,
+  verse_text,
 }) {
   arguments_assert(arguments, 1);
   ("$plain language_code");
@@ -75,6 +77,11 @@ export async function app_shared_bible_word_overlay_articles_open({
     verse_number,
   );
   let strong_url = await strong_url_loading;
+  ("THE REFERENCE IS WRITTEN BEFORE THE CARD OPENS, not inside the Google button: a browser lets a tap open a new tab only while the tap is fresh, and a wait inside the button could spend that.");
+  let reference = await app_shared_bible_verse_reference_reading(
+    chapter_code,
+    verse_number,
+  );
   let overlay = app_shared_overlay_card_closable();
   let card = property_get(overlay, "body");
   let big = property_get(overlay, "title");
@@ -117,8 +124,12 @@ export async function app_shared_bible_word_overlay_articles_open({
   let split = bible_word_article_offers_recent_split(offers, recent_names);
   app_shared_bible_word_offers_split_draw(split, offer_draw, choices);
   function google() {
-    let search_term = text_combine(word, " (Bible)");
-    window_open_google_define(search_term);
+    let question = app_shared_bible_word_google_question_text_get(
+      word,
+      reference,
+      verse_text,
+    );
+    window_open_url_prefix_query("https://www.google.com/search?q=", question);
   }
   let text = app_shared_bible_word_search_google_text_get();
   app_shared_button(choices, text, google);

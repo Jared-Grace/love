@@ -68,6 +68,7 @@ export function app_shared_bible_words_on_click_overlay(
           chapter_code,
           verse_number,
           language_code,
+          verse_text: text,
         });
       }
       ("A TAP SHOWS THE LOADING COVER UNTIL THE CARD IS UP, asked about by the human 2026-11-19: the card waits on downloads that can take seconds, and with nothing on screen a reader tapped again and opened a second card. The cover fills the screen, so a tap made while waiting lands on it rather than on another word; a card served from memory hides it at once, so a quick tap shows no flash.");
