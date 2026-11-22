@@ -24,7 +24,7 @@ import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
 import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
 import { app_shared_bible_word_ask_llms_draw } from "./app_shared_bible_word_ask_llms_draw.mjs";
-export async function app_shared_bible_word_overlay_articles_open(
+export async function app_shared_bible_word_overlay_articles_open({
   word,
   strong_url_loading,
   words,
@@ -32,8 +32,8 @@ export async function app_shared_bible_word_overlay_articles_open(
   chapter_code,
   verse_number,
   language_code,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   ("$plain language_code");
   ("★ AN ENGLISH WORD COMES FIRST WITH A WAY TO HEAR IT, said and said slowly, by ",
     fn_name("app_shared_bible_word_sound_buttons"),

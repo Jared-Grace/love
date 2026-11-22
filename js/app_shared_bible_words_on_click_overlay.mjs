@@ -60,15 +60,15 @@ export function app_shared_bible_words_on_click_overlay(
           fn_name("promise_start_unawait"),
           " because the auto pass writes a wait into a bare call, which put the Strong's lookup back in front of the articles.");
         let strong_url_loading = promise_start_unawait(strong_start);
-        await app_shared_bible_word_overlay_articles_open(
-          bare,
+        await app_shared_bible_word_overlay_articles_open({
+          word: bare,
           strong_url_loading,
           words,
           index,
           chapter_code,
           verse_number,
           language_code,
-        );
+        });
       }
       ("A TAP SHOWS THE LOADING COVER UNTIL THE CARD IS UP, asked about by the human 2026-11-19: the card waits on downloads that can take seconds, and with nothing on screen a reader tapped again and opened a second card. The cover fills the screen, so a tap made while waiting lands on it rather than on another word; a card served from memory hides it at once, so a quick tap shows no flash.");
       async function open_covered() {
