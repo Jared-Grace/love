@@ -1,24 +1,25 @@
-import { greater_than } from "./greater_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
 import { calendar_host_openings_current } from "./calendar_host_openings_current.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
+import { divide } from "./divide.mjs";
 import { calendar_page_url } from "./calendar_page_url.mjs";
 import { app_calendar_host_about } from "./app_calendar_host_about.mjs";
 import { app_calendar_host_hours } from "./app_calendar_host_hours.mjs";
 import { app_calendar_host_rules } from "./app_calendar_host_rules.mjs";
 import { app_calendar_host_share } from "./app_calendar_host_share.mjs";
 import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_steps } from "./app_shared_steps.mjs";
-export async function app_calendar_host(parent, key) {
-  arguments_assert(arguments, 2);
+export async function app_calendar_host(parent, key, signed_out) {
+  arguments_assert(arguments, 3);
   ("The host's page, for a signed-in host's session key, as screens in the order a host sets up: About you (name, WhatsApp, link name), Free hours, Rules, then Share. Home lists them all with what each holds, and shows every upcoming meeting below, the ones waiting for a code on top of what to do.");
-  ('SCREENS, NEXT, HOME (human, 2026-11-22: "each section is a button/screen", "a next button that goes to the next unfinished screen", "a link would be last?", "you can go home and see everything?", "and jump to any screen?"). About you is finished once the person and the link name are saved, Free hours once any hour is set; Rules are all optional and Share has nothing to finish, so neither is ever unfinished, and Next skips them until everything else is done, then goes to Share.');
+  ('SCREENS, NEXT, HOME (human, 2026-11-22: "each section is a button/screen", "a next button that goes to the next unfinished screen", "a link would be last?", "you can go home and see everything?", "and jump to any screen?"). About you is finished once the person and the link name are saved, Free hours once any hour is set; Rules are all optional and Share has nothing to finish, so neither is ever unfinished; Next goes to what is unfinished first, then on in order. signed_out() is called by the Sign out button at the foot of home.');
   ("Answers false when the key is no longer a host session, so the page can sign in again; true once drawn.");
   let read = await calendar_api_call("GET", "settings", {}, key);
   if (not(read.body.ok)) {
@@ -147,6 +148,8 @@ export async function app_calendar_host(parent, key) {
   }
   async function meetings_draw(area) {
     await app_calendar_meetings(area, key, cancelled, true);
+    ('Sign out sits at the foot of home (human, 2026-11-22: "Sign out"); signed_out is the page\'s, since the host key is kept by the page.');
+    app_shared_button_uncolored(area, "Sign out", signed_out);
   }
   await app_shared_steps(parent, steps, "share", refresh, meetings_draw);
   return true;

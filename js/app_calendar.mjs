@@ -15,8 +15,10 @@ import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { firebase_sign_out } from "./firebase_sign_out.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { app_shared_toast } from "./app_shared_toast.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 export async function app_calendar(context) {
   "the /calendar page. A guest opening a host's link (#host=<name>) sees that host's open hours and books one without signing in; a guest who has booked on this device, or opens their private link (#key=), sees their meetings. A host signs in at the bottom and sees their hours, their booking link and who is waiting for a code.";
@@ -58,7 +60,7 @@ export async function app_calendar(context) {
     ('2026-11-15: a line says it is loading while the host\'s settings and the sign-in are fetched; the page sat blank white meanwhile (human: "host sign in just blank white for a while - maybe should show loading?"). The host screen clears it once its settings arrive.');
     html_div_text(host_area, "Loading...");
     if (host_key) {
-      let drawn = await app_calendar_host(host_area, host_key);
+      let drawn = await app_calendar_host(host_area, host_key, host_sign_out);
       if (drawn) {
         return;
       }
@@ -90,8 +92,17 @@ export async function app_calendar(context) {
     }
     host_key = login.body.key;
     storage_local_set(app_calendar, "host_key", host_key);
-    await app_calendar_host(host_area, host_key);
+    await app_calendar_host(host_area, host_key, host_sign_out);
   };
+  async function host_sign_out() {
+    "Signing out forgets the host key in this browser and signs it out of the site's account, then shows the sign-in button again. The session itself stays valid on the server until sessions can be ended there.";
+    host_key = null;
+    storage_local_set(app_calendar, "host_key", null);
+    await firebase_sign_out();
+    html_clear(host_area);
+    app_shared_button_uncolored(host_area, "Host sign in", host_open);
+    app_shared_toast("Signed out.");
+  }
   if (host_key && not(slug)) {
     await host_open();
   } else {
