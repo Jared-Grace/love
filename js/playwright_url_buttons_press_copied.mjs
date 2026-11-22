@@ -15,29 +15,27 @@ export async function playwright_url_buttons_press_copied(url, buttons) {
   async function on_page(page) {
     function catcher() {
       window.__copied = [];
-      document.addEventListener(
-        "copy",
-        function () {
-          let active = document.activeElement;
-          let text =
-            active && "value" in active
-              ? active.value
-              : String(document.getSelection());
-          window.__copied.push(text);
-        },
-        true,
-      );
+      function lambda() {
+        let active = document.activeElement;
+        let v = document.getSelection();
+        let text = active && "value" in active ? active.value : String(v);
+        window.__copied.push(text);
+      }
+      document.addEventListener("copy", lambda, true);
       let c = navigator.clipboard;
       if (c && c.writeText) {
         let write = c.writeText.bind(c);
-        c.writeText = function (text) {
+        c.writeText = function lambda3(text) {
           window.__copied.push(text);
-          return write(text).catch(function () {});
+          function lambda2() {}
+          let r = write(text).catch(lambda2);
+          return r;
         };
       }
-      navigator.share = function (data) {
+      navigator.share = function lambda4(data) {
         window.__copied.push(data.url || data.text || "");
-        return Promise.resolve();
+        let r2 = Promise.resolve();
+        return r2;
       };
     }
     await page.addInitScript(catcher);
@@ -54,13 +52,17 @@ export async function playwright_url_buttons_press_copied(url, buttons) {
     await first_button.waitFor({
       timeout: wait_ms,
     });
-    result.hash = await page.evaluate(function () {
-      return window.location.hash;
-    });
+    function lambda5() {
+      let r3 = window.location.hash;
+      return r3;
+    }
+    result.hash = await page.evaluate(lambda5);
     for (let name of list) {
-      let before = await page.evaluate(function () {
-        return window.__copied.length;
-      });
+      function lambda6() {
+        let r4 = window.__copied.length;
+        return r4;
+      }
+      let before = await page.evaluate(lambda6);
       await page
         .getByRole("button", {
           name,
@@ -68,18 +70,18 @@ export async function playwright_url_buttons_press_copied(url, buttons) {
         })
         .first()
         .click();
-      await page.waitForFunction(
-        function (n) {
-          return window.__copied.length > n;
-        },
-        before,
-        {
-          timeout: wait_ms,
-        },
-      );
-      let text = await page.evaluate(function (n) {
-        return window.__copied[n];
-      }, before);
+      function lambda7(n) {
+        let r5 = window.__copied.length > n;
+        return r5;
+      }
+      await page.waitForFunction(lambda7, before, {
+        timeout: wait_ms,
+      });
+      function lambda8(n) {
+        let r6 = window.__copied[n];
+        return r6;
+      }
+      let text = await page.evaluate(lambda8, before);
       result.copied.push(text);
     }
   }
