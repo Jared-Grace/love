@@ -12,6 +12,8 @@ import { not_equal } from "./not_equal.mjs";
 import { facebook_psalm_video_post } from "./facebook_psalm_video_post.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { facebook_posted_history_add } from "./facebook_posted_history_add.mjs";
+import { facebook_reel_comment } from "./facebook_reel_comment.mjs";
+import { youtube_video_address } from "./youtube_video_address.mjs";
 export async function facebook_psalm_video_post_next() {
   arguments_assert(arguments, 0);
   ("Posts to facebook the oldest psalm lyric video that is public on youtube and not posted to facebook yet, and records it - so one scheduled run is one post, and once facebook has caught up each run picks up whatever youtube gained since.");
@@ -69,6 +71,17 @@ export async function facebook_psalm_video_post_next() {
       file_path: film,
       url: r.reel_url ?? null,
     });
+    ("★ THE SAME SONG ON YOUTUBE IS A SECOND COMMENT, asked 2026-11-22, after the bible link. It comes after the record is written, so a comment that fails or hangs can never make the next run post the same film again; its failure is youtube_comment_error, for the log.");
+    let youtube_comment = null;
+    let youtube_comment_error = null;
+    if (not_equal(r.reel_url, undefined) && not_equal(v.video_id, undefined)) {
+      try {
+        let text2 = youtube_video_address(v.video_id);
+        youtube_comment = await facebook_reel_comment(r.reel_url, text2);
+      } catch (e) {
+        youtube_comment_error = e.message;
+      }
+    }
     let r4 = {
       history,
       posted: v.title,
@@ -79,6 +92,8 @@ export async function facebook_psalm_video_post_next() {
       cover_error: r.cover_error,
       comment: r.comment,
       comment_error: r.comment_error,
+      youtube_comment,
+      youtube_comment_error,
       youtube_error,
     };
     return r4;
