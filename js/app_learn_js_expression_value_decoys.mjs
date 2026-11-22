@@ -12,9 +12,12 @@ import { list_skip } from "./list_skip.mjs";
 import { json_equal_not } from "./json_equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_operator_method_two_symbol } from "./app_learn_js_operator_method_two_symbol.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_or_text_index_of_or_minus_one } from "./list_or_text_index_of_or_minus_one.mjs";
+import { list_index_of_last_try } from "./list_index_of_last_try.mjs";
+import { list_unique } from "./list_unique.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_operator_slice_range_symbol } from "./app_learn_js_operator_slice_range_symbol.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { app_learn_js_operator_concat_symbol } from "./app_learn_js_operator_concat_symbol.mjs";
@@ -24,8 +27,6 @@ import { app_learn_js_operator_last_index_of_symbol } from "./app_learn_js_opera
 import { app_learn_js_operator_split_symbol } from "./app_learn_js_operator_split_symbol.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join } from "./list_join.mjs";
-import { list_index_of_last_try } from "./list_index_of_last_try.mjs";
-import { list_or_text_index_of_or_minus_one } from "./list_or_text_index_of_or_minus_one.mjs";
 import { text_split } from "./text_split.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -34,7 +35,6 @@ import { app_learn_js_expression_value } from "./app_learn_js_expression_value.m
 import { text_is } from "./text_is.mjs";
 import { app_learn_js_text_join_decoys } from "./app_learn_js_text_join_decoys.mjs";
 import { number_nan_is } from "./number_nan_is.mjs";
-import { list_unique } from "./list_unique.mjs";
 export function app_learn_js_expression_value_decoys(current, node) {
   arguments_assert(arguments, 2);
   ("the wrong values to offer beside the right one when a learner is asked what the operator they just chose comes to: the value the OTHER operator would have given on the same two numbers, and the value the whole line comes to");
@@ -69,6 +69,24 @@ export function app_learn_js_expression_value_decoys(current, node) {
     }
     let slices_wrong = list_filter(slices, slice_wrong_is);
     return slices_wrong;
+  }
+  let symbol_index_from = app_learn_js_operator_method_two_symbol("indexOf");
+  if (equal(symbol, symbol_index_from)) {
+    ('2026-11-22: a.indexOf("joy", from) is offered the slips Index of from an index\'s wrong programs teach against - the first joy anywhere, from left out, and the last joy');
+    let searched_from = list_first(right);
+    let index_anywhere = list_or_text_index_of_or_minus_one(
+      left,
+      searched_from,
+    );
+    let index_last = list_index_of_last_try(left, searched_from);
+    let indexes = [index_anywhere, index_last];
+    function index_wrong_is(index_other) {
+      let differs4 = json_equal_not(index_other, value);
+      return differs4;
+    }
+    let indexes_wrong = list_filter(indexes, index_wrong_is);
+    let indexes_once = list_unique(indexes_wrong);
+    return indexes_once;
   }
   let symbol_starts = app_learn_js_operator_method_two_symbol("startsWith");
   if (equal(symbol, symbol_starts)) {
