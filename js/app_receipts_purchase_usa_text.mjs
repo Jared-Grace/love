@@ -1,10 +1,10 @@
+import { date_weekday_year_month_day } from "./date_weekday_year_month_day.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { country_philippines } from "./country_philippines.mjs";
 import { country_usa } from "./country_usa.mjs";
 import { property_get } from "./property_get.mjs";
 import { date_zone_moment } from "./date_zone_moment.mjs";
 import { date_zone_date_time } from "./date_zone_date_time.mjs";
-import { date_year_month_day } from "./date_year_month_day.mjs";
 import { time_12_label } from "./time_12_label.mjs";
 import { date_zone_abbreviation } from "./date_zone_abbreviation.mjs";
 export function app_receipts_purchase_usa_text(date, time) {
@@ -21,7 +21,7 @@ export function app_receipts_purchase_usa_text(date, time) {
   let text =
     property_get(usa, "flag") +
     " " +
-    date_year_month_day(wall.date) +
+    date_weekday_year_month_day(wall.date) +
     " - " +
     time_12_label(wall.time) +
     " " +
