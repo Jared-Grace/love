@@ -1,0 +1,122 @@
+export function bible_glyph_chapter_psa120() {
+  "Psalm 120, drawn in pictures. The first song of ascents: in distress the psalmist calls on the LORD to save him from lying lips, for he has dwelt too long among those who hate peace. Seven verses.";
+  "IN MY DISTRESS I CRIED TO THE LORD. Verse one: a song, drawn as the song, of ascents, drawn as walking and the pointing up finger. In my distress, drawn as the clamp, I cried, drawn as the waving hand, to the LORD, drawn as I AM, and He answered me, drawn as speech and the turn back arrow.";
+  "The marks come from the root table, not from this page. A word seated on a Hebrew root is drawn the same way everywhere in this Bible, and a word with no seat stays in plain letters until one is bought.";
+  let chapter = {
+    chapter_code: "PSA120",
+    reference: "Psalm 120",
+    verses: [
+      {
+        verse_number: 1,
+        words: [
+          "A",
+          "$song",
+          "of",
+          "$walking+pointing_up.",
+          "In",
+          "$clamp",
+          "$waving_hand",
+          "$toward",
+          "the",
+          "$i_am,",
+          "$speech+turn_back.",
+        ],
+      },
+      {
+        verse_number: 2,
+        words: [
+          "$hand+rescue",
+          "$person_other,",
+          "$i_am,",
+          "from",
+          "$lying_face",
+          "$kiss_mark",
+          "$lying_face+right_arrow+thing",
+          "$tongue.",
+        ],
+      },
+      {
+        verse_number: 3,
+        words: [
+          "$flashlight+question",
+          "will",
+          "$hands_giving",
+          "to",
+          "you,",
+          "$flashlight+question",
+          "will",
+          "be",
+          "$plus+doing",
+          "to",
+          "you,",
+          "$lying_face+right_arrow+thing",
+          "$tongue?",
+        ],
+      },
+      {
+        verse_number: 4,
+        words: [
+          "$kitchen_knife+pin+doing",
+          "$arrow",
+          "will",
+          "come",
+          "from",
+          "the",
+          "$might+person,",
+          "$linked_paperclips",
+          "$fire+black_circle",
+          "of",
+          "the",
+          "$tree+broom!",
+        ],
+      },
+      {
+        verse_number: 5,
+        words: [
+          "$weary_face",
+          "to",
+          "me",
+          "$pointing",
+          "$luggage",
+          "in",
+          "$magnet+map+proper_name,",
+          "$tent+doing",
+          "$linked_paperclips",
+          "the",
+          "$tent",
+          "of",
+          "$black_heart+proper_name!",
+        ],
+      },
+      {
+        verse_number: 6,
+        words: [
+          "$multiply",
+          "have",
+          "$person_other",
+          "$tent+doing",
+          "$linked_paperclips",
+          "$heart_red+thumbs_down",
+          "$peace.",
+        ],
+      },
+      {
+        verse_number: 7,
+        words: [
+          "$me",
+          "am",
+          "in",
+          "favor",
+          "of",
+          "$peace;",
+          "$pointing",
+          "$voice+doing,",
+          "$pointing_back",
+          "want",
+          "$crossed_swords.",
+        ],
+      },
+    ],
+  };
+  return chapter;
+}
