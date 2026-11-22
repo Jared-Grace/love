@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
+import { js_code_array } from "./js_code_array.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -31,8 +32,9 @@ export function app_learn_js_lesson_array_at_last() {
     return shuffled;
   }
   function program_with(numbers, index) {
+    let codes = list_map(numbers, json_to);
     let lines = [
-      "let a = " + json_to(numbers).replaceAll(",", ", ") + ";",
+      "let a = " + js_code_array(codes) + ";",
       "console.log(a.at(" + index + "));",
     ];
     let code = list_join_newline(lines);
