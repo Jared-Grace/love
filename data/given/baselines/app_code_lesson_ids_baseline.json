@@ -479,6 +479,7 @@
   "split_loop",
   "split",
   "sep_here",
+  "starts_with",
   "split_sep",
   "split_space",
   "luhn_double",
