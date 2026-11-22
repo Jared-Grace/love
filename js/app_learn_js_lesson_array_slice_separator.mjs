@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join } from "./list_join.mjs";
 import { json_to } from "./json_to.mjs";
@@ -16,22 +17,23 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_slice_separator() {
   arguments_assert(arguments, 0);
-  ('whether a separator of more than one letter starts at an index, with slice and no loop: let s = "joy, love"; let sep = ", "; let i = 3; logs s.slice(i, i + sep.length), which is ", ", then whether that === sep, which is true');
+  ('whether a separator of more than one letter starts at an index, with slice and no loop: let s = "love and joy"; let sep = "and"; let i = 5; logs s.slice(i, i + sep.length), which is and, then whether that === sep, which is true');
   ("2026-11-22, at the human's asking: the check of Words apart at a separator, taught on its own before it, so that lesson adds only the jump past the separator.");
-  ("A set is six questions, two of love, joy and peace joined by a comma and a space. Three put i where the separator starts; one each put it on the first word's last letter, and twice on the second word's first letter, so true and false both come up. i is always at least 2, so s.slice(i, sep.length) is always empty.");
+  ('Then, at the human\'s asking, sep is a word, "and", rather than ", ": a string is logged without quotes, so the space of ", " could not be seen and the piece read as a lone comma. A word has no space at either edge, and every piece logged starts on a letter.');
+  ("A set is six questions, two of love, joy and peace with and between them. Three put i where and starts; one at the start of the first word, and twice at the start of the last word, so true and false both come up. The last word is never joy there, since joy is three letters and s.slice(i) would then log the same as the right program.");
   ("The piece is logged before the check, so a wrong program that cuts the wrong piece logs something different even when the check is false either way.");
-  ("The wrong programs are: s.slice(i, sep.length) (the stop not counted from i), s[i] (one letter is never two), and s.slice(i) (everything to the end).");
+  ("The wrong programs are: s.slice(i, i + 2) (one letter short), s[i] (one letter is never three), and s.slice(i) (everything to the end). Not picked: s.slice(i, sep.length), which logs an empty line here, too hard to see.");
   ("The writing is a first draft by Claude 2026-11-22.");
   let example_input = {
-    words: ["joy", "love"],
-    i: 3,
+    words: ["love", "joy"],
+    i: 5,
   };
   function program_with(input, piece) {
     "the string, the separator and the index, then the piece and whether it is the separator";
-    let text = list_join(input.words, ", ");
+    let text = list_join(input.words, " and ");
     let lines = [
       "let s = " + json_to(text) + ";",
-      'let sep = ", ";',
+      'let sep = "and";',
       "let i = " + input.i + ";",
       "console.log(" + piece + ");",
       "console.log(" + piece + " === sep);",
@@ -44,7 +46,7 @@ export function app_learn_js_lesson_array_slice_separator() {
     return code2;
   }
   function wrong_programs_of(input3) {
-    let v = program_with(input3, "s.slice(i, sep.length)");
+    let v = program_with(input3, "s.slice(i, i + 2)");
     let v2 = program_with(input3, "s[i]");
     let v3 = program_with(input3, "s.slice(i)");
     let programs = [v, v2, v3];
@@ -54,23 +56,36 @@ export function app_learn_js_lesson_array_slice_separator() {
     let r = [];
     return r;
   }
-  function input_moved(moved) {
-    "moved is how far i sits from where the separator starts: 0 on it, -1 on the first word's last letter, 2 on the second word's first letter";
+  function input_at(at) {
+    "at says where i sits: on and, at the first word's start, or at the last word's start, where the last word is never joy";
     let words2 = list_shuffle_take(["love", "joy", "peace"], 2);
+    if (equal(at, "last") && equal(words2[1], "joy")) {
+      words2 = [words2[1], words2[0]];
+    }
+    let i = 0;
+    if (equal(at, "and")) {
+      i = words2[0].length + 1;
+    }
+    if (equal(at, "last")) {
+      i = words2[0].length + 5;
+    }
     let input5 = {
       words: words2,
-      i: words2[0].length + moved,
+      i,
     };
     return input5;
   }
   function inputs_get() {
     "six inputs, three on the separator";
-    let inputs = list_map([0, 0, 0, -1, 2, 2], input_moved);
+    let inputs = list_map(
+      ["and", "and", "and", "first", "last", "last"],
+      input_at,
+    );
     let shuffled = list_shuffle_take(inputs, 6);
     return shuffled;
   }
   function above(root, context) {
-    "slice from and to and the comma loop remembered, then the check for a separator of two letters";
+    "slice from and to and the comma loop remembered, then the check for a separator of more than one letter";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
