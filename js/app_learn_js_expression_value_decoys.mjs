@@ -8,7 +8,7 @@ import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slic
 import { equal } from "./equal.mjs";
 import { list_take } from "./list_take.mjs";
 import { add } from "./add.mjs";
-import { list_skip } from "./list_skip.mjs";
+import { list_or_text_skip } from "./list_or_text_skip.mjs";
 import { json_equal_not } from "./json_equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_operator_method_two_symbol } from "./app_learn_js_operator_method_two_symbol.mjs";
@@ -63,7 +63,7 @@ export function app_learn_js_expression_value_decoys(current, node) {
   if (equal(symbol, right2)) {
     let taken = list_take(left, right);
     let skip_count = add(right, 1);
-    let further = list_skip(left, skip_count);
+    let further = list_or_text_skip(left, skip_count);
     let slices = [taken, further];
     function slice_wrong_is(slice) {
       let differs2 = json_equal_not(slice, value);
