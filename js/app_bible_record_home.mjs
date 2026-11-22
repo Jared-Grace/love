@@ -9,9 +9,9 @@ import { html_text_set } from "./html_text_set.mjs";
 import { app_bible_record_project_choose } from "./app_bible_record_project_choose.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { list_last_property } from "./list_last_property.mjs";
-import { app_bible_record_camera } from "./app_bible_record_camera.mjs";
+import { app_bible_record_inline } from "./app_bible_record_inline.mjs";
 export async function app_bible_record_home(context) {
-  "The chapter chooser the sermons app uses, with a record button under each passage and, in the top bar, which project the recordings go into. Nothing is recorded until a project is chosen, so the first button asks for one and then opens the camera.";
+  "The chapter chooser the sermons app uses, with a recorder under each passage, in place rather than on a screen of its own, and, in the top bar, which project the recordings go into. Nothing is recorded until a project is chosen, so the first button asks for one and then opens the camera.";
   "Recording a passage again inside the same project replaces the earlier take, so the button stays under every passage whether or not it has been recorded.";
   arguments_assert(arguments, 1);
   let r = await app_shared_bible_home_inner(
@@ -42,17 +42,17 @@ export async function app_bible_record_home(context) {
     let verses = property_get(item, "verses");
     let p = list_last_property(verses, "p");
     let verse_numbers = property_get(passage, "verse_numbers");
-    async function camera() {
-      project_label();
-      await app_bible_record_camera(chapter_code, verse_numbers);
-    }
-    async function record() {
+    function project_ensure(then) {
+      function chosen() {
+        project_label();
+        then();
+      }
       if (app_bible_record_project()) {
-        await camera();
+        chosen();
         return;
       }
-      app_bible_record_project_choose(camera);
+      app_bible_record_project_choose(chosen);
     }
-    app_shared_button_wide(p, "Record this passage", record);
+    app_bible_record_inline(p, chapter_code, verse_numbers, project_ensure);
   }
 }
