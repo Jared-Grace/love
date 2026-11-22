@@ -63,11 +63,10 @@ export function app_learn_js_lesson_array_split_join() {
       ["", 'a.join(", ")', " put a comma and a space between the words"],
     );
     let box_two = app_learn_js_container_light_blue(root);
+    app_learn_js_div_cycle_code(box_two, ["Suppose we have a string ", "s"]);
     app_learn_js_div_cycle_code(box_two, [
       "To change every ",
       '", "',
-      " in ",
-      "s",
       " to ",
       '" and "',
       ", split ",
