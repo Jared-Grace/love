@@ -2505,6 +2505,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 147",
     },
     {
+      chapter_code: "PSA148",
+      reference: "Psalm 148",
+    },
+    {
       chapter_code: "PRO01",
       reference: "Proverbs 1",
     },
