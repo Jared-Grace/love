@@ -11,6 +11,8 @@ import { add } from "./add.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { json_equal_not } from "./json_equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { app_learn_js_operator_method_two_symbol } from "./app_learn_js_operator_method_two_symbol.mjs";
+import { not } from "./not.mjs";
 import { app_learn_js_operator_slice_range_symbol } from "./app_learn_js_operator_slice_range_symbol.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -32,7 +34,6 @@ import { app_learn_js_expression_value } from "./app_learn_js_expression_value.m
 import { text_is } from "./text_is.mjs";
 import { app_learn_js_text_join_decoys } from "./app_learn_js_text_join_decoys.mjs";
 import { number_nan_is } from "./number_nan_is.mjs";
-import { not } from "./not.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function app_learn_js_expression_value_decoys(current, node) {
   arguments_assert(arguments, 2);
@@ -68,6 +69,13 @@ export function app_learn_js_expression_value_decoys(current, node) {
     }
     let slices_wrong = list_filter(slices, slice_wrong_is);
     return slices_wrong;
+  }
+  let symbol_starts = app_learn_js_operator_method_two_symbol("startsWith");
+  if (equal(symbol, symbol_starts)) {
+    ("2026-11-22: s.startsWith(sep, i) is true or false, so it is offered the other one; no other operator's value fits a question of yes or no");
+    let opposite = not(value);
+    let r3 = [opposite];
+    return r3;
   }
   let symbol_range = app_learn_js_operator_slice_range_symbol();
   if (equal(symbol, symbol_range)) {
