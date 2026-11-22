@@ -4,18 +4,22 @@ import { app_learn_js_expression_node_before_is } from "./app_learn_js_expressio
 import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
 import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
+import { equal } from "./equal.mjs";
+import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slice_symbol.mjs";
+import { list_take } from "./list_take.mjs";
+import { list_skip } from "./list_skip.mjs";
+import { add } from "./add.mjs";
+import { json_equal_not } from "./json_equal_not.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { text_is } from "./text_is.mjs";
 import { app_learn_js_text_join_decoys } from "./app_learn_js_text_join_decoys.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { equal_not } from "./equal_not.mjs";
 import { number_nan_is } from "./number_nan_is.mjs";
 import { not } from "./not.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function app_learn_js_expression_value_decoys(current, node) {
   arguments_assert(arguments, 2);
@@ -38,6 +42,18 @@ export function app_learn_js_expression_value_decoys(current, node) {
   let left = property_get(node, "left");
   let right = property_get(node, "right");
   let value = app_learn_js_operator_solve(left, symbol, right);
+  ("2026-11-22, at the human's asking, seen on [4, 8, 7, 2].slice(2): slice was offered the whole line's value, which by the last step is the same array, so the two buttons both read [7, 2]. It is offered instead the items BEFORE the index, the mix-up of taking rather than skipping, and the slice one further on, the slip the Slice lesson's wrong programs teach against");
+  if (equal(symbol, app_learn_js_operator_slice_symbol())) {
+    let taken = list_take(left, right);
+    let further = list_skip(left, add(right, 1));
+    let slices = [taken, further];
+    function slice_wrong_is(slice) {
+      let differs2 = json_equal_not(slice, value);
+      return differs2;
+    }
+    let slices_wrong = list_filter(slices, slice_wrong_is);
+    return slices_wrong;
+  }
   let times = js_operator_asterisk_symbol();
   let plus = js_operator_plus_symbol();
   let times_is = equal(symbol, times);
@@ -59,7 +75,8 @@ export function app_learn_js_expression_value_decoys(current, node) {
   }
   function wrong_is(candidate) {
     "A misread symbol on two strings is not a value at all: \"a\" * \"b\" is NaN, which would show up as an answer nobody could have meant.";
-    let differs = equal_not(candidate, value);
+    "2026-11-22: compared by what is written out, not by being the same thing, so an array equal to the answer, as a whole line's [7, 2] is to its last step's, is dropped like an equal number";
+    let differs = json_equal_not(candidate, value);
     let b = number_nan_is(candidate);
     let number = not(b);
     let r = differs && number;
