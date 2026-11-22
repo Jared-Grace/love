@@ -4,20 +4,23 @@ import { app_learn_js_expression_node_before_is } from "./app_learn_js_expressio
 import { app_learn_js_operator_called_is } from "./app_learn_js_operator_called_is.mjs";
 import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
 import { app_learn_js_operator_solve } from "./app_learn_js_operator_solve.mjs";
-import { equal } from "./equal.mjs";
 import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slice_symbol.mjs";
+import { equal } from "./equal.mjs";
 import { list_take } from "./list_take.mjs";
-import { list_skip } from "./list_skip.mjs";
 import { add } from "./add.mjs";
+import { list_skip } from "./list_skip.mjs";
 import { json_equal_not } from "./json_equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { app_learn_js_operator_concat_symbol } from "./app_learn_js_operator_concat_symbol.mjs";
+import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { list_join } from "./list_join.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { text_is } from "./text_is.mjs";
 import { app_learn_js_text_join_decoys } from "./app_learn_js_text_join_decoys.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { number_nan_is } from "./number_nan_is.mjs";
 import { not } from "./not.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -43,9 +46,11 @@ export function app_learn_js_expression_value_decoys(current, node) {
   let right = property_get(node, "right");
   let value = app_learn_js_operator_solve(left, symbol, right);
   ("2026-11-22, at the human's asking, seen on [4, 8, 7, 2].slice(2): slice was offered the whole line's value, which by the last step is the same array, so the two buttons both read [7, 2]. It is offered instead the items BEFORE the index, the mix-up of taking rather than skipping, and the slice one further on, the slip the Slice lesson's wrong programs teach against");
-  if (equal(symbol, app_learn_js_operator_slice_symbol())) {
+  let right2 = app_learn_js_operator_slice_symbol();
+  if (equal(symbol, right2)) {
     let taken = list_take(left, right);
-    let further = list_skip(left, add(right, 1));
+    let skip_count = add(right, 1);
+    let further = list_skip(left, skip_count);
     let slices = [taken, further];
     function slice_wrong_is(slice) {
       let differs2 = json_equal_not(slice, value);
@@ -53,6 +58,28 @@ export function app_learn_js_expression_value_decoys(current, node) {
     }
     let slices_wrong = list_filter(slices, slice_wrong_is);
     return slices_wrong;
+  }
+  ("2026-11-22, the same day: concat and join were offered only their own answer again, and so nothing once that was dropped. Concat is offered the two arrays the other way round, the mix-up of which comes first; join is offered the items joined with nothing between and with a comma and no space, the slips the Join lesson's wrong programs teach against");
+  let right3 = app_learn_js_operator_concat_symbol();
+  let concat_is = equal(symbol, right3);
+  let right4 = app_learn_js_operator_join_symbol();
+  let join_is = equal(symbol, right4);
+  if (concat_is || join_is) {
+    let others = [];
+    if (concat_is) {
+      let concated = list_concat(right, left);
+      others = [concated];
+    } else {
+      let joined = list_join(left, "");
+      let joined2 = list_join(left, ",");
+      others = [joined, joined2];
+    }
+    function other_wrong_is(other2) {
+      let differs3 = json_equal_not(other2, value);
+      return differs3;
+    }
+    let others_wrong = list_filter(others, other_wrong_is);
+    return others_wrong;
   }
   let times = js_operator_asterisk_symbol();
   let plus = js_operator_plus_symbol();
