@@ -22,6 +22,8 @@ import { app_learn_js_operator_last_index_of_symbol } from "./app_learn_js_opera
 import { list_index_of_last_try } from "./list_index_of_last_try.mjs";
 import { app_learn_js_operator_split_symbol } from "./app_learn_js_operator_split_symbol.mjs";
 import { text_split } from "./text_split.mjs";
+import { app_learn_js_operator_at_symbol } from "./app_learn_js_operator_at_symbol.mjs";
+import { list_or_text_at } from "./list_or_text_at.mjs";
 import { app_learn_js_operators_solvable_method_two } from "./app_learn_js_operators_solvable_method_two.mjs";
 export function app_learn_js_operators_solvable() {
   "every operator a code lesson may put between two things and then work out, each carrying the function that works it out";
@@ -86,7 +88,13 @@ export function app_learn_js_operators_solvable() {
     operator: app_learn_js_operator_split_symbol(),
     fn: text_split,
   };
+  ("2026-11-22, at the human's asking: a.at(-1) gives the item at that index, a negative one counting back from the end, so the At lesson can be stepped through");
+  let reading_at = {
+    operator: app_learn_js_operator_at_symbol(),
+    fn: list_or_text_at,
+  };
   let all = list_concat(with_index, [
+    reading_at,
     indexing_last,
     splitting,
     larger,
