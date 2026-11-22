@@ -15,7 +15,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_for_split() {
   arguments_assert(arguments, 0);
-  ('a string cut at each comma into an array of words, by a loop: let s = "joy,love"; ... writes out ["joy", "love"]');
+  ('a string cut at each comma into an array of words, by a loop: let s = "joy,love"; let sep = ","; ... writes out ["joy", "love"]');
   ("2026-11-22, at the human's asking: the long way before .split, as with join, concat and slice. The separator is one letter, a comma, so one loop with an if and an else does it - no loop inside a loop. A separator of more than one letter is left to .split.");
   ("A set is six questions, two or three of love, joy and peace joined by commas.");
   ('The wrong programs are: no a.push(word) after the loop (the last word lost), no word = "" (each word keeps the ones before it), and no else (the comma kept at the start of the next word).');
@@ -26,10 +26,11 @@ export function app_learn_js_lesson_array_for_split() {
     let text = list_join(words, ",");
     let lines = [
       "let s = " + json_to(text) + ";",
+      'let sep = ",";',
       "let a = [];",
       'let word = "";',
       "for (let i = 0; i < s.length; i++) {",
-      '  if (s[i] === ",") {',
+      "  if (s[i] === sep) {",
       "    a.push(word);",
     ];
     if (reset) {
@@ -86,10 +87,14 @@ export function app_learn_js_lesson_array_for_split() {
     app_learn_js_div_cycle_code(box_two, [
       "Now the other way: ",
       "s",
-      " has words with a comma between them, and we want them in an array",
+      " has words with a comma between them, kept in ",
+      "sep",
+      ", and we want them in an array",
     ]);
     app_learn_js_div_cycle_code(box_two, [
-      "Each letter that is not a comma is added on to ",
+      "Each letter that is not ",
+      "sep",
+      " is added on to ",
       "word",
       ". At a comma, ",
       "word",
@@ -105,7 +110,7 @@ export function app_learn_js_lesson_array_for_split() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Words apart",
-    'if (s[i] === ",")',
+    "if (s[i] === sep)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,

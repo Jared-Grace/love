@@ -85,7 +85,7 @@ export function app_learn_js_lesson_array_for_split_separator() {
       box_one,
       context,
       app_learn_js_lesson_array_for_split,
-      ["", 'if (s[i] === ",")', " cut ", "s", " at each comma"],
+      ["", "if (s[i] === sep)", " cut ", "s", " at each comma"],
     );
     app_learn_js_remember_from_lesson(
       box_one,
