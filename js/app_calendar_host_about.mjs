@@ -26,16 +26,17 @@ export function app_calendar_host_about(area, key, settings) {
   let whatsapp_field = app_shared_field(area);
   html_div_text(
     whatsapp_field,
-    "Your WhatsApp number - guests send their code here",
+    "Your WhatsApp number - guests can send their code here",
   );
   let whatsapp = html_input_text(whatsapp_field, "+1 555 123 4567");
   app_shared_input_style(whatsapp);
   ('THE FACEBOOK LINK SITS BESIDE THE WHATSAPP NUMBER (human, 2026-11-22: "should whats app number and facebook url be configured in the same place?"): both are how guests reach the host. It used to be on Rules.');
+  ('The two labels say the same thing, since a guest may send their code to either (human, 2026-11-22: "should the descriptions of wa# and fb profile be similar?"). Rejected: "leave blank for Messenger only" - the WhatsApp number is required, and every place without a Messenger name falls back to WhatsApp, never the other way.');
   ('2026-11-15: asks for the link, since that is what a host has to hand and the reader takes a whole link (human: "It says messenger name - but the field shows URL - does it want just the /... part or the whole url?").');
   let messenger_field = app_shared_field(area);
   html_div_text(
     messenger_field,
-    "Your Facebook profile link - leave blank to take WhatsApp calls only",
+    "Your Facebook profile link - guests can send their code here too; leave blank for WhatsApp only",
   );
   let messenger = html_input_text(messenger_field, "facebook.com/your.name");
   let messenger_hint = html_div_text(
