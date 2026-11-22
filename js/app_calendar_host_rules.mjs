@@ -1,9 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { calendar_host_rules_text } from "./calendar_host_rules_text.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_input_text } from "./html_input_text.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { equal } from "./equal.mjs";
 import { html_value_set } from "./html_value_set.mjs";
@@ -14,20 +15,8 @@ import { app_shared_toast_saving } from "./app_shared_toast_saving.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export function app_calendar_host_rules(area, key, settings) {
   arguments_assert(arguments, 3);
-  ("Booking rules: a Messenger name lets guests choose Messenger, the most meetings in one day caps each day, and the most per guest caps how many upcoming meetings one guest holds (a weekly one counting once); blank means unlimited, and the screen says so.");
-  ('2026-11-15: asks for the link, since that is what a host has to hand and the reader takes a whole link (human: "It says messenger name - but the field shows URL - does it want just the /... part or the whole url?").');
-  let messenger_field = app_shared_field(area);
-  html_div_text(
-    messenger_field,
-    "Your Facebook profile link - leave blank to take WhatsApp calls only",
-  );
-  let messenger = html_input_text(messenger_field, "facebook.com/your.name");
-  let messenger_hint = html_div_text(
-    messenger_field,
-    "On Facebook, open your profile, then copy the link from the address bar or from Share.",
-  );
-  app_shared_text_deemphasized(messenger_hint);
-  app_shared_input_style(messenger);
+  ("Booking rules: the most meetings in one day caps each day, and the most per guest caps how many upcoming meetings one guest holds (a weekly one counting once); blank means unlimited, and the screen says so. The Facebook link that turns Messenger on is asked in About you, beside the WhatsApp number, and sent back here unchanged.");
+  let saved_rules = calendar_host_rules_text(settings.host);
   let max_field = app_shared_field(area);
   html_div_text(max_field, "Max meetings per day - leave blank for unlimited");
   let max = html_input_text(max_field, "Unlimited");
@@ -61,15 +50,8 @@ export function app_calendar_host_rules(area, key, settings) {
   }
   let host = settings.host;
   if (host) {
-    html_value_set(messenger, host.messenger);
-    html_value_set(
-      max,
-      equal(host.max_per_day, null) ? "" : String(host.max_per_day),
-    );
-    html_value_set(
-      max_guest,
-      equal(host.max_per_guest, null) ? "" : String(host.max_per_guest),
-    );
+    html_value_set(max, saved_rules.max);
+    html_value_set(max_guest, saved_rules.max_guest);
   }
   max_show(host ? host.max_per_day : null);
   max_guest_show(host ? host.max_per_guest : 2);
@@ -80,7 +62,7 @@ export function app_calendar_host_rules(area, key, settings) {
       "POST",
       "host_rules_save",
       {
-        messenger: html_value_get(messenger),
+        messenger: saved_rules.messenger,
         max: max_text,
         max_guest: max_guest_text,
       },
@@ -93,8 +75,6 @@ export function app_calendar_host_rules(area, key, settings) {
       return done;
     }
     let words = {
-      messenger:
-        "That link does not look right. Paste the link to your own Facebook profile.",
       max: "Type a number from 1 to 24, or leave it blank for unlimited.",
       max_guest:
         "Type a number from 1 to 24 for meetings per guest, or leave it blank for unlimited.",

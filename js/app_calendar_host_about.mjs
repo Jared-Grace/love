@@ -3,19 +3,20 @@ import { app_shared_field } from "./app_shared_field.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
+import { calendar_host_rules_text } from "./calendar_host_rules_text.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { app_shared_toast_saving } from "./app_shared_toast_saving.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export function app_calendar_host_about(area, key, settings) {
   arguments_assert(arguments, 3);
-  ("The host's first screen: their name, the WhatsApp number guests send codes to, and their booking link name, saved by one button. The time zone is this device's, shown and saved with them.");
+  ("The host's first screen: their name, the WhatsApp number guests send codes to, the Facebook link that lets guests choose Messenger, and their booking link name, saved by one button. The time zone is this device's, shown and saved with them.");
   ('THE LINK NAME IS HERE, NOT ON THE SHARE SCREEN (human, 2026-11-22: "a link would be last? Because you\'d create your hours first before a link?"). The server files hours and rules under the link name, so it has to exist before either can be saved; sharing the link is what comes last. Rejected: letting the server save hours before a link name exists - more change for the same screens.');
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   let name_field = app_shared_field(area);
@@ -29,6 +30,20 @@ export function app_calendar_host_about(area, key, settings) {
   );
   let whatsapp = html_input_text(whatsapp_field, "+1 555 123 4567");
   app_shared_input_style(whatsapp);
+  ('THE FACEBOOK LINK SITS BESIDE THE WHATSAPP NUMBER (human, 2026-11-22: "should whats app number and facebook url be configured in the same place?"): both are how guests reach the host. It used to be on Rules.');
+  ('2026-11-15: asks for the link, since that is what a host has to hand and the reader takes a whole link (human: "It says messenger name - but the field shows URL - does it want just the /... part or the whole url?").');
+  let messenger_field = app_shared_field(area);
+  html_div_text(
+    messenger_field,
+    "Your Facebook profile link - leave blank to take WhatsApp calls only",
+  );
+  let messenger = html_input_text(messenger_field, "facebook.com/your.name");
+  let messenger_hint = html_div_text(
+    messenger_field,
+    "On Facebook, open your profile, then copy the link from the address bar or from Share.",
+  );
+  app_shared_text_deemphasized(messenger_hint);
+  app_shared_input_style(messenger);
   let slug_field = app_shared_field(area);
   html_div_text(
     slug_field,
@@ -44,6 +59,7 @@ export function app_calendar_host_about(area, key, settings) {
   let host = settings.host;
   if (host) {
     html_value_set(slug, host.slug);
+    html_value_set(messenger, host.messenger);
   }
   let zone_line = html_div_text_content(area, "Time zone: " + zone);
   app_shared_text_deemphasized(zone_line);
@@ -75,8 +91,22 @@ export function app_calendar_host_about(area, key, settings) {
       key,
     );
     if (host_saved.body.ok) {
-      let done = "Saved.";
-      return done;
+      ("The limits go back as they were saved; host is as it stood when the screen was drawn, null for a host saved just now, whose new row holds the starting limits.");
+      let rules_saved = await calendar_api_call(
+        "POST",
+        "host_rules_save",
+        {
+          ...calendar_host_rules_text(host),
+          messenger: html_value_get(messenger),
+        },
+        key,
+      );
+      let rules_told = rules_saved.body.ok
+        ? "Saved."
+        : equal(rules_saved.body.reason, "messenger")
+          ? "That Facebook link does not look right. Paste the link to your own Facebook profile."
+          : "Could not save. Try again.";
+      return rules_told;
     }
     let words = {
       slug: "Use 2 to 40 lowercase letters, digits or _ for the link name.",

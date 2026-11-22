@@ -19,7 +19,9 @@ export async function app_shared_steps(
   arguments_assert(arguments, 5);
   ("A page cut into screens, one per step, with a home screen listing them all. Each step is {key, title, done, summary, draw}: done() answers true, false, or null for a step that is never unfinished (optional, or nothing to finish); summary() is the one line home shows under it; draw(area) fills the screen. refresh() is awaited before every move, so done and summary answer about what was just saved. home_draw(area) draws whatever else home shows below the list.");
   ('ASKED FOR (human, 2026-11-22: "each section is a button/screen", "a next button that goes to the next unfinished screen (possibly backwards such as the first screen)", "you can go home and see everything?", "and jump to any screen?"). Home lists every step as a button, so any screen is one press away; Next goes to the first step in order whose done() is false, even one before the screen it is pressed on.');
-  ("WHEN NOTHING IS UNFINISHED, Next goes to the step named fallback_key, and pressed there, home. Rejected: the step after the current one in order, which from home would open the first step - already finished - instead of the one a finished page is for.");
+  ("WHEN NOTHING IS UNFINISHED, Next on a step goes to the step after it in order, and after the last, home; Next on home goes to the step named fallback_key, since from home the first step in order is already finished.");
+  ('2026-11-22: in order, not straight to fallback_key, because a step that can never be unfinished was skipped and so never seen on a first setup (human: "using next skipped rules and went to share"). Rejected: counting such a step unfinished until visited, which needs a memory of visits the page does not keep.');
+  ('Not yet is a red ring rather than an empty box, which read as a shape rather than a mark (human: "just has a squareish shape - is that right?", "what about using some other emoji?").');
   ("ON A STILL-UNFINISHED SCREEN, Next pressed where the first unfinished step is that same screen says so instead of redrawing it, since the press would otherwise look like nothing happened.");
   function step_get(key) {
     for (let step of steps) {
@@ -44,7 +46,7 @@ export async function app_shared_steps(
       let card = app_shared_container(parent);
       for (let each_step of steps) {
         let done = each_step.done();
-        let mark = equal(done, true) ? "✅ " : equal(done, false) ? "⬜ " : "";
+        let mark = equal(done, true) ? "✅ " : equal(done, false) ? "⭕ " : "";
         async function open() {
           await go(each_step);
         }
@@ -71,8 +73,8 @@ export async function app_shared_steps(
         return;
       }
       if (equal(target, null)) {
-        let fallback = step_get(fallback_key);
-        target = equal(fallback, step) ? null : fallback;
+        let after = steps[steps.indexOf(step) + 1];
+        target = after ?? null;
       }
       await draw(target);
     }
