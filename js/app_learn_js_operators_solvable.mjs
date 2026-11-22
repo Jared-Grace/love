@@ -15,7 +15,7 @@ import { list_or_text_index_of_or_minus_one } from "./list_or_text_index_of_or_m
 import { app_learn_js_operator_concat_symbol } from "./app_learn_js_operator_concat_symbol.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slice_symbol.mjs";
-import { list_skip } from "./list_skip.mjs";
+import { list_or_text_skip } from "./list_or_text_skip.mjs";
 import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
 import { list_join } from "./list_join.mjs";
 import { app_learn_js_operator_last_index_of_symbol } from "./app_learn_js_operator_last_index_of_symbol.mjs";
@@ -71,7 +71,7 @@ export function app_learn_js_operators_solvable() {
   ("2026-11-22, at the human's asking: a.slice(1) gives a new array of a's items from that index on, and a.join(\", \") one string with that between the items, so the Slice and Join lessons can be stepped through");
   let slicing = {
     operator: app_learn_js_operator_slice_symbol(),
-    fn: list_skip,
+    fn: list_or_text_skip,
   };
   let joining_text = {
     operator: app_learn_js_operator_join_symbol(),
