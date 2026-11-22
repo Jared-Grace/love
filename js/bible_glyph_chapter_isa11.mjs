@@ -372,7 +372,7 @@ export function bible_glyph_chapter_isa11() {
           "from",
           "$proper_name$Shinar,",
           "from",
-          "$wall+proper_name,",
+          "$brick+shield+proper_name,",
           "and",
           "from",
           "the",

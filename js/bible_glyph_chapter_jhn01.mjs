@@ -45,7 +45,15 @@ export function bible_glyph_chapter_jhn01() {
       },
       {
         verse_number: 2,
-        words: ["He", "$link", "$tray_in", "the", "beginning", "$toward", "$heart_on_fire."],
+        words: [
+          "He",
+          "$link",
+          "$tray_in",
+          "the",
+          "beginning",
+          "$toward",
+          "$heart_on_fire.",
+        ],
       },
       {
         verse_number: 3,
@@ -526,7 +534,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "$crown,’”",
           "as",
-          "$rescue+i_am",
+          "$rescue+i_am+proper_name",
           "the",
           "$megaphone",
           "$speech.",
