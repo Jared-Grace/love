@@ -13,14 +13,16 @@ export async function server_https_certificate_ensure() {
   "It names both the name a phone reaches this machine by and localhost, because a browser checks the address it typed against the names written inside, and refuses a certificate whose names do not include it.";
   "Kept under the ignored folder: a key is a secret even when it guards nothing more than a page on a home network, and it is this machine's own, so it must never be committed for another machine to answer with.";
   arguments_assert(arguments, 0);
-  let key_path = folder_gitignore_join("https/key.pem");
-  let cert_path = folder_gitignore_join("https/cert.pem");
+  ("MARKED AS A SITE'S OWN CERTIFICATE, NOT AN AUTHORITY. openssl marks a self-made one as an authority unless told otherwise, and Firefox refuses an authority's certificate when a site answers with it - with no way to go on, so the warning never even offers the button. The first one made here was like that; the names below are new so that one is never read again.");
+  ("Kept to 825 days, the longest a browser accepts for a site's certificate.");
+  let key_path = folder_gitignore_join("https/site_key.pem");
+  let cert_path = folder_gitignore_join("https/site_cert.pem");
   let have = await file_exists(cert_path);
   if (not(have)) {
     await file_parent_exists_ensure(cert_path);
     let host = machine_name_local();
     let command = text_combine_multiple([
-      "openssl req -x509 -newkey rsa:2048 -nodes -days 3650 -keyout ",
+      "openssl req -x509 -newkey rsa:2048 -nodes -days 825 -addext basicConstraints=critical,CA:FALSE -addext keyUsage=critical,digitalSignature,keyEncipherment -addext extendedKeyUsage=serverAuth -keyout ",
       key_path,
       " -out ",
       cert_path,
