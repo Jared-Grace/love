@@ -54,6 +54,8 @@ export function bible_glyph_reasons() {
     heart_red: "A red heart: love, and the heart's will and desire.",
     eyes: "Two eyes looking: to see, to look.",
     scales: "Balance scales weigh things fairly: justice, judgment, a ruling.",
+    equals:
+      "An equals sign: both sides the same, so a fixed standard, the proper measure, the way a thing is laid down to be.",
     thumbs_up:
       "A thumb up: good, pleasing, well done. Its mirror, the thumb down, is bad.",
     coin: "A coin: a price, a payment, a wage, a reward, paying in full.",
