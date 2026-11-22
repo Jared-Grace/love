@@ -1,10 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_host_rules_text } from "./calendar_host_rules_text.mjs";
-import { app_shared_field } from "./app_shared_field.mjs";
+import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { app_shared_field } from "./app_shared_field.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { equal } from "./equal.mjs";
 import { html_value_set } from "./html_value_set.mjs";
@@ -17,6 +18,15 @@ export function app_calendar_host_rules(area, key, settings) {
   arguments_assert(arguments, 3);
   ("Booking rules: the most meetings in one day caps each day, and the most per guest caps how many upcoming meetings one guest holds (a weekly one counting once); blank means unlimited, and the screen says so. The Facebook link that turns Messenger on is asked in About you, beside the WhatsApp number, and sent back here unchanged.");
   let saved_rules = calendar_host_rules_text(settings.host);
+  ('Until the rules are first saved, a line says the starting values are fine and still need Save rules (human, 2026-11-22: "should it explain if you don\'t change any values you still have to choose save rules?"), since nothing else tells a host that a screen with nothing to change is unfinished. Once saved it goes, having nothing left to say.');
+  let host_first = settings.host;
+  if (not(host_first && host_first.rules_saved_at)) {
+    let first_line = html_div_text(
+      area,
+      "Keep these as they are or change them, then press Save rules - this screen is finished once you save it.",
+    );
+    app_shared_text_deemphasized(first_line);
+  }
   let max_field = app_shared_field(area);
   html_div_text(max_field, "Max meetings per day - leave blank for unlimited");
   let max = html_input_text(max_field, "Unlimited");
