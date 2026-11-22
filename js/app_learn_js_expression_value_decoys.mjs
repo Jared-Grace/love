@@ -13,8 +13,14 @@ import { json_equal_not } from "./json_equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_operator_concat_symbol } from "./app_learn_js_operator_concat_symbol.mjs";
 import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
+import { app_learn_js_operator_index_of_symbol } from "./app_learn_js_operator_index_of_symbol.mjs";
+import { app_learn_js_operator_last_index_of_symbol } from "./app_learn_js_operator_last_index_of_symbol.mjs";
+import { app_learn_js_operator_split_symbol } from "./app_learn_js_operator_split_symbol.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join } from "./list_join.mjs";
+import { list_index_of_last_try } from "./list_index_of_last_try.mjs";
+import { list_or_text_index_of_or_minus_one } from "./list_or_text_index_of_or_minus_one.mjs";
+import { text_split } from "./text_split.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { ternary } from "./ternary.mjs";
@@ -64,15 +70,35 @@ export function app_learn_js_expression_value_decoys(current, node) {
   let concat_is = equal(symbol, right3);
   let right4 = app_learn_js_operator_join_symbol();
   let join_is = equal(symbol, right4);
-  if (concat_is || join_is) {
+  ("2026-11-22, later the same day, with Last index of and Split: .indexOf is offered what .lastIndexOf gives and the other way round, the mix-up of first and last; .split is offered the whole string as one item, the mix-up of a separator the string never holds, and every letter apart, the split with nothing between");
+  let right5 = app_learn_js_operator_index_of_symbol();
+  let index_first_is = equal(symbol, right5);
+  let right6 = app_learn_js_operator_last_index_of_symbol();
+  let index_last_is = equal(symbol, right6);
+  let right7 = app_learn_js_operator_split_symbol();
+  let split_is = equal(symbol, right7);
+  if (concat_is || join_is || index_first_is || index_last_is || split_is) {
     let others = [];
     if (concat_is) {
       let concated = list_concat(right, left);
       others = [concated];
-    } else {
+    }
+    if (join_is) {
       let joined = list_join(left, "");
       let joined2 = list_join(left, ",");
       others = [joined, joined2];
+    }
+    if (index_first_is) {
+      let v = list_index_of_last_try(left, right);
+      others = [v];
+    }
+    if (index_last_is) {
+      let r2 = list_or_text_index_of_or_minus_one(left, right);
+      others = [r2];
+    }
+    if (split_is) {
+      let letters = text_split(left, "");
+      others = [[left], letters];
     }
     function other_wrong_is(other2) {
       let differs3 = json_equal_not(other2, value);

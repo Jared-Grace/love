@@ -11,6 +11,8 @@ import { app_learn_js_operator_index_of_symbol } from "./app_learn_js_operator_i
 import { app_learn_js_operator_concat_symbol } from "./app_learn_js_operator_concat_symbol.mjs";
 import { app_learn_js_operator_slice_symbol } from "./app_learn_js_operator_slice_symbol.mjs";
 import { app_learn_js_operator_join_symbol } from "./app_learn_js_operator_join_symbol.mjs";
+import { app_learn_js_operator_last_index_of_symbol } from "./app_learn_js_operator_last_index_of_symbol.mjs";
+import { app_learn_js_operator_split_symbol } from "./app_learn_js_operator_split_symbol.mjs";
 export function app_learn_js_expression_written_shapes_called() {
   arguments_assert(arguments, 0);
   ('lines built with the called operators other than Math.floor and with the actions reached by a dot, alone and inside other operators, so the sweep sees how each prints: Math.ceil(7 / 2) * 2, 1 + Math.abs(2 - 5), a.includes("joy"), a.indexOf("joy") + 1, a.concat(b), a.slice(1 + 1), a.join(", ")');
@@ -49,5 +51,12 @@ export function app_learn_js_expression_written_shapes_called() {
   let symbol5 = app_learn_js_operator_join_symbol();
   let joined = app_learn_js_expression_node(words, symbol5, ", ");
   list_add(shapes, joined);
+  ('2026-11-22: .lastIndexOf and .split arrived with their lessons, held here so the gate sees them printed: a.lastIndexOf("joy") and "love,joy".split(",")');
+  let symbol6 = app_learn_js_operator_last_index_of_symbol();
+  let found_last = app_learn_js_expression_node(words, symbol6, "joy");
+  list_add(shapes, found_last);
+  let symbol7 = app_learn_js_operator_split_symbol();
+  let split = app_learn_js_expression_node("love,joy", symbol7, ",");
+  list_add(shapes, split);
   return shapes;
 }
