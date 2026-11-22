@@ -88,6 +88,7 @@ import { app_shared_button_background } from "./app_shared_button_background.mjs
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
+import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_get_property } from "./list_get_property.mjs";
@@ -201,6 +202,8 @@ export function app_learn_js_program_step_through_generic(
   let bases = [];
   ("the value each line's note says right now, null until there is a note; kept, so the value can fade out of the note before a new one arrives");
   let noted = [];
+  ("2026-11-22: every span a note is drawn in, so the program turning green can turn its notes a deep green too; a note redrawn leaves its old spans here, out of the page, where colouring them does nothing");
+  let note_spans = [];
   function text_write(into, text) {
     "2026-11-12, at the human's asking: the lines and notes are written so a line never ends inside a run with a hyphen in it, as i--) or \"self-control\", which on a phone broke as i- then -)";
     html_text_hyphen_runs_write(into, text, html_span_text);
@@ -577,6 +580,7 @@ export function app_learn_js_program_step_through_generic(
         color = app_shared_color_code_font();
       }
       html_font_color_set(span, color);
+      list_add(note_spans, span);
       let value4 = list_get(run, 2);
       html_style_opacity(span, value4);
       if (list_get(run, 3)) {
@@ -815,6 +819,11 @@ export function app_learn_js_program_step_through_generic(
     let background = app_shared_button_background();
     html_style_background_color_set(program, background);
     html_font_color_set_white(program);
+    ("2026-11-22, at the human's asking: the notes, drawn gray, were pale on the green; they turn a deep green instead");
+    let note_green = app_shared_color_green_deep();
+    for (let note_span of note_spans) {
+      html_font_color_set(note_span, note_green);
+    }
     html_clear(ask);
     guide_say([], null);
     ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
