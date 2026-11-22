@@ -1985,6 +1985,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 17",
     },
     {
+      chapter_code: "PSA018",
+      reference: "Psalm 18",
+    },
+    {
       chapter_code: "PSA019",
       reference: "Psalm 19",
     },
