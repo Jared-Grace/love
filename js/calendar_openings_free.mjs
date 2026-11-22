@@ -17,9 +17,10 @@ export function calendar_openings_free(
   meetings,
   now_iso,
   hours_ahead,
+  days_ahead,
 ) {
-  arguments_assert(arguments, 6);
-  ("The hours a guest may still book with this host: every block inside the host's weekly openings, or inside a stretch added on that date, that starts at least hours_ahead hours after now_iso and less than 14 days after it, less the ones a meeting already holds.");
+  arguments_assert(arguments, 7);
+  ("The hours a guest may still book with this host: every block inside the host's weekly openings, or inside a stretch added on that date, that starts at least hours_ahead hours after now_iso and less than days_ahead days after it, less the ones a meeting already holds.");
   ("Each day takes its weekly openings from the one schedule in force on it: the rows with the latest from_day not after that day.");
   ("★ A BUSY STRETCH REMOVES EVERY MEETING IT TOUCHES, NOT ONLY THE ONES STARTING INSIDE IT. A doctor's visit from 10:15 to 11:00 takes away the 10:00 meeting too, since that meeting would still be running at 10:15.");
   ("Each block is counted in the host's own zone and day, the way the host's openings and meetings are written, and comes back with the moment it starts in UTC so every guest can show it in their own zone.");
@@ -33,7 +34,7 @@ export function calendar_openings_free(
     hours: hours_ahead,
   });
   let moment_latest = moment_now.plus({
-    days: 14,
+    days: days_ahead,
   });
   let midnight_first = moment_earliest.setZone(zone).startOf("day");
   function lambda(m) {
@@ -55,7 +56,7 @@ export function calendar_openings_free(
     return r2;
   }
   let slots = [];
-  for (let index = 0; less_than_equal(index, 14); index++) {
+  for (let index = 0; less_than_equal(index, days_ahead); index++) {
     let midnight = midnight_first.plus({
       days: index,
     });

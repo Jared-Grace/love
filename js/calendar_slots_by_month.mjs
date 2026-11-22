@@ -1,12 +1,17 @@
-import { multiply } from "./multiply.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-export function calendar_slots_by_month(slots, now_iso) {
-  arguments_assert(arguments, 2);
+import { multiply } from "./multiply.mjs";
+import { less_than } from "./less_than.mjs";
+export function calendar_slots_by_month(
+  slots,
+  now_iso,
+  notice_hours,
+  days_ahead,
+) {
+  arguments_assert(arguments, 4);
   ('The open hours grouped for picking in three steps - month, then date, then time - each said in the reader\'s own clock and language: [{label: "November 2026", days: [{label: "Sun, Nov 15", number: 0, weekday: "Sunday", times: [{label: "1:00 PM", slot}]}]}].');
   ("Grouped by the reader's own date, not the host's, since that is the day the reader will be on the call. slots come soonest first, so months, days and times keep that order.");
-  ("Every date the booking window touches is listed - from 24 hours after now_iso to 14 days after it, the window the server offers - even one with no open hour, whose times is empty, so the page can say that date is unavailable rather than leave it out.");
+  ("Every date the booking window touches is listed - from notice_hours after now_iso to days_ahead days after it, the host's window the server offers - even one with no open hour, whose times is empty, so the page can say that date is unavailable rather than leave it out.");
   let months = [];
   function day_get(at) {
     let month_label = at.toLocaleDateString(undefined, {
@@ -49,10 +54,10 @@ export function calendar_slots_by_month(slots, now_iso) {
     return day;
   }
   let now_ms = new Date(now_iso).getTime();
-  let left = multiply(24, 60);
+  let left = multiply(notice_hours, 60);
   let left2 = multiply(left, 60);
   let first = new Date(now_ms + multiply(left2, 1000));
-  let left3 = multiply(14, 24);
+  let left3 = multiply(days_ahead, 24);
   let left4 = multiply(left3, 60);
   let left5 = multiply(left4, 60);
   let end_ms = now_ms + multiply(left5, 1000);

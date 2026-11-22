@@ -4,15 +4,19 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { multiply } from "./multiply.mjs";
 export async function calendar_db_host_rules_save(
   db,
   uid,
   messenger_typed,
   max_typed,
   max_guest_typed,
+  notice_typed,
+  days_ahead_typed,
   now_iso,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 8);
+  ('notice_typed is how many hours ahead the soonest bookable hour starts, 1 to 168 (a week); days_ahead_typed is how many days ahead a guest may book, 1 to 60. Neither may be blank - there is no "unlimited" notice or reach - and the notice must end before the reach does, or no hour could ever be offered. Reasons: notice, days_ahead, window.');
   ('A save stamps rules_saved_at with now_iso, so the host page can tell rules never saved from rules saved as the starting values, which leave the same row (human, 2026-11-22: "Rules should also be configured? and initially be unconfigured?").');
   ("Saves a host's booking rules as they typed them; answers {ok, reason}. messenger_typed is their Messenger name or link, blank for WhatsApp only. max_typed is the most meetings they take in one day, blank for no limit. max_guest_typed is the most upcoming meetings one guest may hold with them, a weekly one counting once, blank for no limit. Reasons: messenger, max and max_guest (1 to 24), no_host (save the booking link first).");
   let messenger = calendar_messenger_name_read(messenger_typed);
@@ -52,11 +56,54 @@ export async function calendar_db_host_rules_save(
     };
     return r5;
   }
+  function whole_read(typed, most) {
+    "A whole number as typed from 1 to most, or null when it is blank or anything else.";
+    let text = String(typed).trim();
+    let n = Number(text);
+    let b = /^[0-9]+$/.test(text);
+    if (not(b) || less_than(n, 1) || greater_than(n, most)) {
+      return null;
+    }
+    return n;
+  }
+  let notice_hours = whole_read(notice_typed, 168);
+  if (equal(notice_hours, null)) {
+    let r6 = {
+      ok: false,
+      reason: "notice",
+    };
+    return r6;
+  }
+  let days_ahead = whole_read(days_ahead_typed, 60);
+  if (equal(days_ahead, null)) {
+    let r7 = {
+      ok: false,
+      reason: "days_ahead",
+    };
+    return r7;
+  }
+  let b2 = multiply(days_ahead, 24);
+  let b3 = less_than(notice_hours, b2);
+  if (not(b3)) {
+    let r8 = {
+      ok: false,
+      reason: "window",
+    };
+    return r8;
+  }
   let written = await db
     .prepare(
-      "UPDATE hosts SET messenger = ?1, max_per_day = ?2, max_per_guest = ?4, rules_saved_at = ?5 WHERE uid = ?3",
+      "UPDATE hosts SET messenger = ?1, max_per_day = ?2, max_per_guest = ?4, rules_saved_at = ?5, notice_hours = ?6, days_ahead = ?7 WHERE uid = ?3",
     )
-    .bind(messenger, max_per_day, uid, max_per_guest, now_iso)
+    .bind(
+      messenger,
+      max_per_day,
+      uid,
+      max_per_guest,
+      now_iso,
+      notice_hours,
+      days_ahead,
+    )
     .run();
   if (equal(written.meta.changes, 0)) {
     let r3 = {

@@ -7,6 +7,7 @@ import { not_equal } from "./not_equal.mjs";
 import { calendar_db_host_alarms } from "./calendar_db_host_alarms.mjs";
 import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
 import { calendar_messenger_name_usable } from "./calendar_messenger_name_usable.mjs";
+import { calendar_host_window } from "./calendar_host_window.mjs";
 import { calendar_db_guest_limit_read } from "./calendar_db_guest_limit_read.mjs";
 import { calendar_db_proof_read } from "./calendar_db_proof_read.mjs";
 import { not } from "./not.mjs";
@@ -115,7 +116,7 @@ export async function calendar_api_handle(
   }
   if (equal(route, "free")) {
     let slug2 = String(body.host);
-    let free = await calendar_db_host_free(db, slug2, now_iso, 24);
+    let free = await calendar_db_host_free(db, slug2, now_iso, 0);
     if (equal(free.host, null)) {
       let r4 = reply(404, {
         ok: false,
@@ -128,6 +129,7 @@ export async function calendar_api_handle(
       timezone: free.host.timezone,
       meeting_minutes: free.host.meeting_minutes,
       messenger: calendar_messenger_name_usable(free.host.messenger),
+      ...calendar_host_window(free.host),
     };
     ('A guest who sends their key is told how many meetings they hold with this host and the most allowed (guest), so a guest already at the limit sees their meetings rather than hours they cannot book (human: "so that you only see existing meeting, and you can cancel to schedule a new one"). Without a key, guest is null.');
     let me = equal(uid, null)
@@ -383,12 +385,16 @@ export async function calendar_api_handle(
     let max_typed = String(body.max);
     ('A page from before max_guest sends none, and "undefined" is refused rather than read as blank, so an old page cannot silently lift the limit.');
     let max_guest_typed = String(body.max_guest);
+    let notice_typed = String(body.notice);
+    let days_ahead_typed = String(body.days_ahead);
     saved = await calendar_db_host_rules_save(
       db,
       uid,
       messenger_typed,
       max_typed,
       max_guest_typed,
+      notice_typed,
+      days_ahead_typed,
       now_iso,
     );
   }

@@ -4,6 +4,7 @@ import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { calendar_host_window } from "./calendar_host_window.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
@@ -54,6 +55,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
     return;
   }
   let host = free.body.host;
+  let booking_window = calendar_host_window(host);
   html_div_text_content(card, "Book a meeting with " + host.name);
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   ('The length stands out on its own line, as big as a heading (human: "What about making the 25 minutes stand out more visually?").');
@@ -118,14 +120,22 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   }
   let slots = free.body.slots;
   if (equal(slots.length, 0)) {
-    html_div_text(card, "No open hours in the next two weeks.");
+    html_div_text(
+      card,
+      "No open hours in the next " + booking_window.days_ahead + " days.",
+    );
     return;
   }
   ("A time is picked in steps: first a day of the week or, when the open hours reach into more than one month, a month; then a date; then a time. Each step has a Back button to the one before.");
   ("Rejected: month only (a guest free only on Saturdays must open every date to find them); weekday only (a guest planning a set week thinks in dates); a first screen asking which way to browse (one more press for everyone).");
   ("A weekday, month or date with no open hour - closed, or fully booked - shows as text saying it is unavailable, never as a button (human: \"Instead of a button, text should say 'x is unavailable'\").");
   let now_iso = new Date().toISOString();
-  let months = calendar_slots_by_month(slots, now_iso);
+  let months = calendar_slots_by_month(
+    slots,
+    now_iso,
+    booking_window.notice_hours,
+    booking_window.days_ahead,
+  );
   function days_open(days) {
     function lambda(d) {
       let g = greater_than(d.times.length, 0);

@@ -1,5 +1,5 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function calendar_db_tables() {
   arguments_assert(arguments, 0);
@@ -35,6 +35,8 @@ export function calendar_db_tables() {
         "max_per_day INTEGER CHECK (max_per_day IS NULL OR max_per_day BETWEEN 1 AND 24)",
         "max_per_guest INTEGER DEFAULT 2 CHECK (max_per_guest IS NULL OR max_per_guest BETWEEN 1 AND 24)",
         "rules_saved_at TEXT",
+        "notice_hours INTEGER CHECK (notice_hours IS NULL OR notice_hours BETWEEN 1 AND 168)",
+        "days_ahead INTEGER CHECK (days_ahead IS NULL OR days_ahead BETWEEN 1 AND 60)",
       ],
       rules: [],
     },
