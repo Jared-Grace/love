@@ -9,6 +9,7 @@ import { app_learn_js_program_trace_push } from "./app_learn_js_program_trace_pu
 import { app_learn_js_program_trace_method_is } from "./app_learn_js_program_trace_method_is.mjs";
 import { app_learn_js_program_trace_pop } from "./app_learn_js_program_trace_pop.mjs";
 import { app_learn_js_program_trace_splice } from "./app_learn_js_program_trace_splice.mjs";
+import { app_learn_js_program_trace_reverse } from "./app_learn_js_program_trace_reverse.mjs";
 import { app_learn_js_program_trace_log } from "./app_learn_js_program_trace_log.mjs";
 import { app_learn_js_program_trace_if } from "./app_learn_js_program_trace_if.mjs";
 import { app_learn_js_program_trace_while } from "./app_learn_js_program_trace_while.mjs";
@@ -47,6 +48,8 @@ export function app_learn_js_program_trace_statement(
       app_learn_js_program_trace_pop(expression, actions, values);
     } else if (app_learn_js_program_trace_method_is(expression, "splice")) {
       app_learn_js_program_trace_splice(expression, actions, code, values);
+    } else if (app_learn_js_program_trace_method_is(expression, "reverse")) {
+      app_learn_js_program_trace_reverse(expression, actions, values);
     } else {
       app_learn_js_program_trace_log(expression, actions, code, values);
     }

@@ -491,6 +491,7 @@ import { app_learn_js_lesson_string_replace_hand } from "./app_learn_js_lesson_s
 import { app_learn_js_lesson_string_replace } from "./app_learn_js_lesson_string_replace.mjs";
 import { app_learn_js_lesson_string_replace_all } from "./app_learn_js_lesson_string_replace_all.mjs";
 import { app_learn_js_lesson_array_at_last } from "./app_learn_js_lesson_array_at_last.mjs";
+import { app_learn_js_lesson_array_reverse_call } from "./app_learn_js_lesson_array_reverse_call.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
 import { app_learn_js_lesson_if_take_away_nine } from "./app_learn_js_lesson_if_take_away_nine.mjs";
 import { app_learn_js_lesson_array_for_luhn_nine } from "./app_learn_js_lesson_array_for_luhn_nine.mjs";
@@ -1028,6 +1029,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_string_replace,
     app_learn_js_lesson_string_replace_all,
     app_learn_js_lesson_array_at_last,
+    app_learn_js_lesson_array_reverse_call,
     app_learn_js_lesson_array_for_luhn_double,
     app_learn_js_lesson_if_take_away_nine,
     app_learn_js_lesson_array_for_luhn_nine,
