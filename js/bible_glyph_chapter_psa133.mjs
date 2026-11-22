@@ -1,0 +1,81 @@
+export function bible_glyph_chapter_psa133() {
+  "Psalm 133, drawn in pictures. A song of ascents of David: brothers living in unity is like precious oil running down Aaron's beard and like the dew of Hermon on Zion, where the LORD commands the blessing of life. Three verses.";
+  "WHEN BROTHERS LIVE TOGETHER IN HARMONY. Verse one: a song, drawn as the song, of ascents, drawn as walking and the pointing up finger. Of David, drawn as the two hearts. Behold, drawn as the exclamation mark, how good, drawn as the thumbs up, and pleasant, drawn as the smile, it is when brothers, drawn as the brother, live, drawn as the person and the house, together in harmony, drawn as the linked paperclips!";
+  "The marks come from the root table, not from this page. A word seated on a Hebrew root is drawn the same way everywhere in this Bible, and a word with no seat stays in plain letters until one is bought.";
+  let chapter = {
+    chapter_code: "PSA133",
+    reference: "Psalm 133",
+    verses: [
+      {
+        verse_number: 1,
+        words: [
+          "A",
+          "$song",
+          "of",
+          "$walking+pointing_up.",
+          "Of",
+          "$two_hearts+proper_name.",
+          "$exclamation,",
+          "$flashlight+question",
+          "$thumbs_up",
+          "$flashlight+question",
+          "$smile+describing",
+          "$plus",
+          "$brother",
+          "$person+house",
+          "$linked_paperclips+manner!",
+        ],
+      },
+      {
+        verse_number: 2,
+        words: [
+          "$thumbs_up",
+          "$lotion_bottle",
+          "$pointing_up",
+          "the",
+          "$person_gesturing_ok,",
+          "$walking+pointing_down",
+          "$pointing_up",
+          "the",
+          "$beard,",
+          "$walking+pointing_down",
+          "$white_cane+blossom+proper_name",
+          "$beard",
+          "$pointing_up",
+          "the",
+          "$face_with_open_mouth",
+          "of",
+          "$triangular_ruler+thing.",
+        ],
+      },
+      {
+        verse_number: 3,
+        words: [
+          "$dew",
+          "of",
+          "$mountain+up_arrow+proper_name",
+          "$walking+pointing_down",
+          "$pointing_up",
+          "the",
+          "$mountain+top",
+          "of",
+          "$stone+up_arrow+pointing+proper_name.",
+          "$pointing",
+          "$telescope",
+          "the",
+          "$i_am",
+          "$pointing_down",
+          "has",
+          "$speech+scroll",
+          "the",
+          "$speech+thumbs_up",
+          "of",
+          "$sprout",
+          "$finish",
+          "$hourglass.",
+        ],
+      },
+    ],
+  };
+  return chapter;
+}
