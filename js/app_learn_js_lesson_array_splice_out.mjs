@@ -81,8 +81,9 @@ export function app_learn_js_lesson_array_splice_out() {
     ]);
     app_learn_js_div_cycle_code(box_two, [
       "",
-      "splice",
-      " changes the existing array",
+      "a.splice",
+      " changes the existing array ",
+      "a",
     ]);
     app_learn_js_div_cycle_code(box_two, [
       "For ",
