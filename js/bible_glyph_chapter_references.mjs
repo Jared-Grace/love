@@ -2477,6 +2477,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 140",
     },
     {
+      chapter_code: "PSA141",
+      reference: "Psalm 141",
+    },
+    {
       chapter_code: "PSA145",
       reference: "Psalm 145",
     },
