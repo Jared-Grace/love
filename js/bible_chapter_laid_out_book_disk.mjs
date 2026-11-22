@@ -8,7 +8,7 @@ import { file_exists } from "./file_exists.mjs";
 import { not } from "./not.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { global_function_property_set } from "./global_function_property_set.mjs";
-export async function app_chapter_group_laid_out_book_disk(book_code) {
+export async function bible_chapter_laid_out_book_disk(book_code) {
   "$plain book_code";
   arguments_assert(arguments, 1);
   ("One book of the English bible cut into verses with its layout, read off this machine's own copy of the assets folder, or nothing when that copy has no such file.");
@@ -16,12 +16,12 @@ export async function app_chapter_group_laid_out_book_disk(book_code) {
   ("★ ASKED FOR BY NAME BY ITS CALLER, NEVER IMPORTED, because the caller ships to browsers and a browser has no disk; a plain import would carry the file reader into every page that shows a chapter.");
   ("★ A BOOK IS READ ONCE AND THE SAME ONE HANDED BACK EVERY TIME AFTER, because callers find a verse by being the very same record they were handed before: reading the file afresh each time made a new copy of every verse, a verse from one chapter's reading was then not found in the next, and every Philippians 4:6-7 reply threw. Measured 2026-11-11. Kept only when it was found, like the fetch it stands in for.");
   let cached = global_function_property_exists(
-    app_chapter_group_laid_out_book_disk,
+    bible_chapter_laid_out_book_disk,
     book_code,
   );
   if (cached) {
     let already = global_function_property_get(
-      app_chapter_group_laid_out_book_disk,
+      bible_chapter_laid_out_book_disk,
       book_code,
     );
     return already;
@@ -35,7 +35,7 @@ export async function app_chapter_group_laid_out_book_disk(book_code) {
   }
   let chapters = await file_read_json(file_path);
   global_function_property_set(
-    app_chapter_group_laid_out_book_disk,
+    bible_chapter_laid_out_book_disk,
     book_code,
     chapters,
   );

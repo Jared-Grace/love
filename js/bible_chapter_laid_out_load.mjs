@@ -12,10 +12,7 @@ import { web_assets_url } from "./web_assets_url.mjs";
 import { http_json_memoized_on_success } from "./http_json_memoized_on_success.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-export async function app_chapter_group_laid_out_load(
-  bible_folder,
-  chapter_code,
-) {
+export async function bible_chapter_laid_out_load(bible_folder, chapter_code) {
   "$plain bible_folder";
   "$plain chapter_code";
   "The verses of one chapter with the layout the printing gives them - where a line breaks, how far it is stepped in, where a stanza ends - or nothing, when there is none to be had.";
@@ -32,7 +29,7 @@ export async function app_chapter_group_laid_out_load(
   if (not(b)) {
     ("★ ON THE MACHINE THE BOOK IS READ OFF ITS OWN DISK FIRST: the machine's fetch sleeps five to eight seconds before every ask, which was most of the time the reply-rule screen took to open. Measured 2026-11-11.");
     let disk = await function_import_relative(
-      fn_name("app_chapter_group_laid_out_book_disk"),
+      fn_name("bible_chapter_laid_out_book_disk"),
     );
     chapters = await disk(book_code);
   }
@@ -40,7 +37,7 @@ export async function app_chapter_group_laid_out_load(
     let path = web_assets_bible_laid_out_path("bsb", book_code);
     let url = web_assets_url(path);
     chapters = await http_json_memoized_on_success(
-      app_chapter_group_laid_out_load,
+      bible_chapter_laid_out_load,
       book_code,
       url,
     );

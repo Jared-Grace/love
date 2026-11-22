@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_bible_references_merged } from "./reply_bible_references_merged.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_chapter_group_laid_out_load } from "./app_chapter_group_laid_out_load.mjs";
+import { bible_chapter_laid_out_load } from "./bible_chapter_laid_out_load.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
@@ -24,7 +24,7 @@ export async function reply_bible_references_runs(references) {
     let quote = property_get(reference, "quote");
     let verse_number = property_get(reference, "verse_number");
     let chapter_code = property_get(reference, "chapter_code");
-    let verses = await app_chapter_group_laid_out_load(english, chapter_code);
+    let verses = await bible_chapter_laid_out_load(english, chapter_code);
     if (null_is(verses)) {
       return null;
     }

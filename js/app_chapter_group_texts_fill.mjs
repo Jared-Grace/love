@@ -9,7 +9,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-import { app_chapter_group_laid_out_load } from "./app_chapter_group_laid_out_load.mjs";
+import { bible_chapter_laid_out_load } from "./bible_chapter_laid_out_load.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 export async function app_chapter_group_texts_fill(texts, chapter_code) {
   "$plain texts";
@@ -33,10 +33,7 @@ export async function app_chapter_group_texts_fill(texts, chapter_code) {
     });
   }
   each(verses, plain_keep);
-  let laid_out = await app_chapter_group_laid_out_load(
-    bible_folder,
-    chapter_code,
-  );
+  let laid_out = await bible_chapter_laid_out_load(bible_folder, chapter_code);
   function laid_keep(piece) {
     let number = property_get(piece, "verse_number");
     property_set(texts, number, piece);
