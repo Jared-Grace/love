@@ -1,20 +1,44 @@
-import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_includes } from "./list_includes.mjs";
+import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_bible_passage_arrows } from "./app_shared_bible_passage_arrows.mjs";
+import { list_add } from "./list_add.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
-import { list_adder_async } from "./list_adder_async.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { app_shared_bible_passage_verses_draw } from "./app_shared_bible_passage_verses_draw.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_clear } from "./list_clear.mjs";
-import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
 import { app_shared_bible_home_generic } from "./app_shared_bible_home_generic.mjs";
 import { noop } from "./noop.mjs";
-import { each } from "./each.mjs";
-import { property_get } from "./property_get.mjs";
+import { list_adder_async } from "./list_adder_async.mjs";
 export async function app_shared_bible_home_inner(context, download, app_fn) {
   let downloaded = null;
   let chapter_code = null;
   let verses = [];
   let r = null;
+  let passage_current = null;
+  ("THE WHOLE PASSAGE IS SHOWN, NOT ONE VERSE OF IT, and the way on goes by a passage. The explanation under the text is about the passage, so a reader shown one verse of it was reading an explanation of words mostly not on the screen. A chapter nobody has explained has no passages, so it keeps the one verse and the verse arrows.");
+  function arrows(context_arrows, chapter_code_arrows, verse_current, foot) {
+    if (null_is(passage_current)) {
+      app_shared_bible_verse_arrows(
+        context_arrows,
+        chapter_code_arrows,
+        verse_current,
+        foot,
+      );
+      return;
+    }
+    let passages_chapter = property_get(downloaded, "passages");
+    app_shared_bible_passage_arrows(
+      context_arrows,
+      chapter_code_arrows,
+      passages_chapter,
+      passage_current,
+      foot,
+    );
+  }
   async function lambda3(la) {
     async function lambda(a) {
       list_add(verses, a);
@@ -36,6 +60,17 @@ export async function app_shared_bible_home_inner(context, download, app_fn) {
       function lambda2(passage) {
         let verse_numbers = property_get(passage, "verse_numbers");
         if (list_includes(verse_numbers, verse_number)) {
+          if (null_is(passage_current)) {
+            passage_current = passage;
+            let top = property_get(a, "top");
+            let languages_available = property_get(a, "languages_available");
+            app_shared_bible_passage_verses_draw(
+              top,
+              languages_available,
+              chapter_code,
+              verse_numbers,
+            );
+          }
           let copy = list_copy(verses);
           la({
             passage,
@@ -53,6 +88,7 @@ export async function app_shared_bible_home_inner(context, download, app_fn) {
       noop,
       app_fn,
       false,
+      arrows,
     );
   }
   let passages = await list_adder_async(lambda3);

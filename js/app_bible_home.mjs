@@ -1,6 +1,7 @@
 import { app_shared_bible_home_generic } from "./app_shared_bible_home_generic.mjs";
 import { noop } from "./noop.mjs";
 import { app_bible } from "./app_bible.mjs";
+import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
 import { app_bible_pictures_verse_button } from "./app_bible_pictures_verse_button.mjs";
 import { app_shared_bible_title_verse_set } from "./app_shared_bible_title_verse_set.mjs";
 export async function app_bible_home(context) {
@@ -13,6 +14,7 @@ export async function app_bible_home(context) {
     noop,
     app_bible,
     true,
+    app_shared_bible_verse_arrows,
   );
   app_bible_pictures_verse_button(v);
   await app_shared_bible_title_verse_set(v);

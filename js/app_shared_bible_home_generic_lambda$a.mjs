@@ -74,6 +74,8 @@ export async function app_shared_bible_home_generic_lambda$a(
     p,
     chapter_code,
     verse_number,
+    top,
+    languages_available,
   });
   let r2 = {
     verse_current,

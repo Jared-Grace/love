@@ -2,9 +2,12 @@ import { property_get } from "./property_get.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_shared_font_size_refresh } from "./app_shared_font_size_refresh.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
+import { html_bar_content_sticky } from "./html_bar_content_sticky.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_message_reply_choices } from "./app_shared_message_reply_choices.mjs";
 import { app_shared_message_refresh } from "./app_shared_message_refresh.mjs";
+import { html_document_root } from "./html_document_root.mjs";
+import { html_scroll_bottom_set } from "./html_scroll_bottom_set.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { app_shared_contact_local_note } from "./app_shared_contact_local_note.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -38,7 +41,11 @@ export async function app_message(context) {
   });
   app_shared_font_size_refresh(context);
   html_font_sans_serif_set_html();
-  let div_messages = html_div(root);
+  ("★ THE PLACE TO WRITE IS ALWAYS IN SIGHT, asked for by the human 2026-11-22: the messages go in the body of a page that scrolls the ordinary way, and the box with the send button is held against the bottom of the screen beneath them, the way every chat does it. The page does the scrolling rather than a box of its own, because a box that scrolls inside itself re-lays-out on Android Firefox the moment the keyboard opens and typing then reaches nothing.");
+  let frame = html_bar_content_sticky(root);
+  let content = property_get(frame, "content");
+  let foot = property_get(frame, "foot");
+  let div_messages = html_div(content);
   let start = app_shared_message_reply_choices();
   await app_shared_message_refresh(
     div_messages,
@@ -46,7 +53,9 @@ export async function app_message(context) {
     messages_property,
     start,
   );
-  let div = app_shared_container(root);
+  let page = html_document_root();
+  html_scroll_bottom_set(page);
+  let div = app_shared_container(foot);
   app_shared_contact_local_note(div);
   html_div_text(div, "Please enter your message for me:");
   let textarea = app_shared_textarea_reader_direction(div);
@@ -79,6 +88,8 @@ export async function app_message(context) {
       messages_property,
       start,
     );
+    ("the newest message is the one just sent, so the page is taken down to it, just above the place it was written");
+    html_scroll_bottom_set(page);
   }
-  app_shared_footer_all_apps(root);
+  app_shared_footer_all_apps(content);
 }

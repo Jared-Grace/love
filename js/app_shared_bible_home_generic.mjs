@@ -6,7 +6,6 @@ import { app_shared_bible_verse_set_default } from "./app_shared_bible_verse_set
 import { app_shared_bible_home_generic_unknown_shown } from "./app_shared_bible_home_generic_unknown_shown.mjs";
 import { app_shared_bible_home_generic_bottom } from "./app_shared_bible_home_generic_bottom.mjs";
 import { app_shared_bible_home_generic_lambda$a } from "./app_shared_bible_home_generic_lambda$a.mjs";
-import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_shared_bible_home_generic(
   context,
@@ -14,7 +13,9 @@ export async function app_shared_bible_home_generic(
   bar_extra,
   app_fn,
   chapter_reader_is,
+  arrows,
 ) {
+  "The ways on from what is shown are handed in, because a screen that shows a whole passage goes on by a passage and a screen that shows one verse goes on by a verse. They are drawn after the hook has run, so a hook that found the passage can already say which way on is meant.";
   let r4 = app_shared_bible_home_frame(context, bar_extra);
   let bar = property_get(r4, "bar");
   let content = property_get(r4, "content");
@@ -61,7 +62,7 @@ export async function app_shared_bible_home_generic(
   let verse_current = property_get(r2, "verse_current");
   let pictures_place = property_get(r2, "pictures_place");
   let verse_number = property_get(r2, "verse_number");
-  app_shared_bible_verse_arrows(context, chapter_code, verse_current, foot);
+  arrows(context, chapter_code, verse_current, foot);
   list_add_multiple(languages_verses, languages_available);
   let v = {
     bar,
