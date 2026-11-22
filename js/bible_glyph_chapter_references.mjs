@@ -2105,6 +2105,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 47",
     },
     {
+      chapter_code: "PSA048",
+      reference: "Psalm 48",
+    },
+    {
       chapter_code: "PSA051",
       reference: "Psalm 51",
     },
