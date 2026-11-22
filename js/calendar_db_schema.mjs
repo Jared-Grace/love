@@ -1,4 +1,10 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { sql_statements_join } from "./sql_statements_join.mjs";
+import { list_map } from "./list_map.mjs";
+import { calendar_db_tables } from "./calendar_db_tables.mjs";
+import { sql_table_create } from "./sql_table_create.mjs";
+import { calendar_db_indexes } from "./calendar_db_indexes.mjs";
 export function calendar_db_schema() {
   arguments_assert(arguments, 0);
   ("The tables the calendar keeps in its Cloudflare D1 database: the people who sign in, the ones among them who take bookings, the hours each of those is free, and the meetings booked with them.");
@@ -13,82 +19,15 @@ export function calendar_db_schema() {
   ("A meeting is held on WhatsApp or Messenger (via). A Messenger guest gives no number - their people row holds empty text - and the host keeps the profile link of whoever sent the code (profile_url). A host offers Messenger once their messenger name is set, and max_per_day, when set, is the most meetings they take in one of their days. max_per_guest, when set, is the most upcoming meetings one guest may hold with them, a weekly meeting counting once; it starts at 2, the limit every host had before it could be set.");
   ("★ A GUEST IS PROVEN BEFORE THEY BOOK (human, 2026-11-20). A proofs row is one guest with one host: the app (via), the number or the profile link they gave (profile_given), and the code they send. confirmed_at is stamped when the host sees the code arrive from that number or profile - on Messenger, profile_url is the sender's profile the host confirmed from. Only a proven guest books, and their meetings are confirmed as they are written. Meetings with a code and no confirmed_at are from before proofs, and still expire after 24 hours.");
   ("Nothing is deleted: a cancelled meeting keeps its row with the time it was cancelled, and leaves both indexes, so the hour opens again.");
-  let sql = `CREATE TABLE IF NOT EXISTS people (
-  uid TEXT PRIMARY KEY,
-  name TEXT NOT NULL,
-  whatsapp TEXT NOT NULL,
-  timezone TEXT NOT NULL,
-  created_at TEXT NOT NULL
-);
-CREATE TABLE IF NOT EXISTS hosts (
-  uid TEXT PRIMARY KEY REFERENCES people(uid),
-  slug TEXT NOT NULL UNIQUE,
-  block_minutes INTEGER NOT NULL CHECK (block_minutes IN (30, 60)),
-  meeting_minutes INTEGER NOT NULL CHECK (meeting_minutes BETWEEN 5 AND 60),
-  created_at TEXT NOT NULL,
-  messenger TEXT NOT NULL DEFAULT '',
-  max_per_day INTEGER CHECK (max_per_day IS NULL OR max_per_day BETWEEN 1 AND 24),
-  max_per_guest INTEGER DEFAULT 2 CHECK (max_per_guest IS NULL OR max_per_guest BETWEEN 1 AND 24)
-);
-CREATE TABLE IF NOT EXISTS openings (
-  host_uid TEXT NOT NULL REFERENCES hosts(uid),
-  from_day TEXT NOT NULL,
-  weekday INTEGER NOT NULL CHECK (weekday BETWEEN 0 AND 6),
-  start_minute INTEGER NOT NULL CHECK (start_minute BETWEEN 0 AND 1439),
-  end_minute INTEGER NOT NULL CHECK (end_minute BETWEEN 1 AND 1440),
-  CHECK (end_minute > start_minute),
-  PRIMARY KEY (host_uid, from_day, weekday, start_minute)
-);
-CREATE TABLE IF NOT EXISTS openings_dated (
-  host_uid TEXT NOT NULL REFERENCES hosts(uid),
-  day TEXT NOT NULL,
-  start_minute INTEGER NOT NULL CHECK (start_minute BETWEEN 0 AND 1439),
-  end_minute INTEGER NOT NULL CHECK (end_minute BETWEEN 1 AND 1440),
-  open INTEGER NOT NULL CHECK (open IN (0, 1)),
-  CHECK (end_minute > start_minute),
-  PRIMARY KEY (host_uid, day, start_minute)
-);
-CREATE TABLE IF NOT EXISTS meetings (
-  id TEXT PRIMARY KEY,
-  host_uid TEXT NOT NULL REFERENCES hosts(uid),
-  guest_uid TEXT NOT NULL REFERENCES people(uid),
-  host_timezone TEXT NOT NULL,
-  day TEXT NOT NULL,
-  weekday INTEGER NOT NULL CHECK (weekday BETWEEN 0 AND 6),
-  start_minute INTEGER NOT NULL CHECK (start_minute BETWEEN 0 AND 1439),
-  weekly INTEGER NOT NULL CHECK (weekly IN (0, 1)),
-  created_at TEXT NOT NULL,
-  cancelled_at TEXT,
-  code TEXT,
-  confirmed_at TEXT,
-  via TEXT NOT NULL DEFAULT 'whatsapp' CHECK (via IN ('whatsapp', 'messenger')),
-  profile_url TEXT
-);
-CREATE UNIQUE INDEX IF NOT EXISTS meetings_day_taken
-  ON meetings (host_uid, day, start_minute) WHERE cancelled_at IS NULL;
-CREATE UNIQUE INDEX IF NOT EXISTS meetings_weekly_taken
-  ON meetings (host_uid, weekday, start_minute) WHERE cancelled_at IS NULL AND weekly = 1;
-CREATE INDEX IF NOT EXISTS meetings_guest ON meetings (guest_uid);
-CREATE INDEX IF NOT EXISTS meetings_code ON meetings (host_uid, code);
-CREATE TABLE IF NOT EXISTS sessions (
-  key_hash TEXT PRIMARY KEY,
-  uid TEXT NOT NULL,
-  created_at TEXT NOT NULL
-);
-CREATE INDEX IF NOT EXISTS sessions_uid ON sessions (uid);
-CREATE TABLE IF NOT EXISTS proofs (
-  host_uid TEXT NOT NULL REFERENCES hosts(uid),
-  guest_uid TEXT NOT NULL REFERENCES people(uid),
-  via TEXT NOT NULL CHECK (via IN ('whatsapp', 'messenger')),
-  whatsapp TEXT NOT NULL,
-  profile_given TEXT,
-  profile_url TEXT,
-  code TEXT NOT NULL,
-  created_at TEXT NOT NULL,
-  confirmed_at TEXT,
-  PRIMARY KEY (host_uid, guest_uid)
-);
-CREATE INDEX IF NOT EXISTS proofs_code ON proofs (host_uid, code);
-`;
+  ("Built from ",
+    fn_name("calendar_db_tables"),
+    " and ",
+    fn_name("calendar_db_indexes"),
+    ", where each table, column and index is written once: every table, then every index, since an index names columns.");
+  let list = calendar_db_tables();
+  let sql = sql_statements_join([
+    ...list_map(list, sql_table_create),
+    ...calendar_db_indexes(),
+  ]);
   return sql;
 }
