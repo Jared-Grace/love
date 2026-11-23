@@ -54,7 +54,7 @@ export function app_reply_cards_handlers_draw(
     let label_refresh = property_get(languages_show_held, "label_refresh");
     label_refresh();
   }
-  let r3 = app_reply_visible_count(
+  let r3 = app_reply_visible_count({
     card,
     love,
     languages_chosen,
@@ -62,7 +62,7 @@ export function app_reply_cards_handlers_draw(
     root,
     update,
     languages_changed,
-  );
+  });
   let visible_count_held = {
     visible_count: property_get(r3, "visible_count"),
   };

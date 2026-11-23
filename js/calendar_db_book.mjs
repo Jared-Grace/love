@@ -12,15 +12,16 @@ export async function calendar_db_book(
   weekly,
   now_iso,
   id,
+  soon_minutes,
 ) {
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 9);
   ("Books guest_uid with the host whose booking link is slug, on the host's own day and minute, once or every week from then on; answers {ok, reason, start_utc}. db is a Cloudflare D1 database, or anything answering the same prepare, bind, first, all and run.");
   ("The hour must be one the host still offers - inside their openings, from an hour short of their notice to their days ahead, not held - which is asked of the same list the guest was shown, so the page and the booking cannot disagree about what is open.");
   ("★ THE CLASH CHECK AND THE WRITE ARE ONE STATEMENT. Checking first and writing after lets two guests both pass the check; an INSERT that only writes when no clashing meeting exists cannot be split, and the unique indexes back it up. The clashes: the same day, an earlier weekly meeting reaching this day, or - for a weekly booking - any meeting on this weekday at or after its first day.");
   ("★ A BOOKING ACCEPTS AN HOUR ONE HOUR SOONER THAN THE PAGE SHOWS - 23 hours ahead for a host asking 24 hours' notice. A guest who opens the page, takes a while to choose, then presses Book would otherwise be told the hour they were shown is gone. The hour of grace is the time to choose; 23.5 was rejected as too little for someone slow or on a weak connection, and anything under about 20 starts letting a guest book closer than the host was promised.");
   ("★ THE HOST'S max_per_day IS CHECKED IN THE SAME STATEMENT TOO, so two guests booking the last free place of a day at once cannot both get it; a full day answers taken. A weekly booking is counted on its first day only.");
   ('The grace stays one hour whatever notice the host sets: it is the guest\'s time to choose, not a choice of the host\'s (human, 2026-11-22, asking for both "minimum hours from now for being able to choose a time" and "for server accepting a time"; one setting with the hour worked out was picked, since two set far apart would only surprise guests).');
-  let free = await calendar_db_host_free(db, slug, now_iso, 1);
+  let free = await calendar_db_host_free(db, slug, now_iso, 1, soon_minutes);
   let host_row = free.host;
   if (equal(host_row, null)) {
     let r = {

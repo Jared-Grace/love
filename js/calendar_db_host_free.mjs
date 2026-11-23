@@ -1,11 +1,19 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { calendar_host_window } from "./calendar_host_window.mjs";
+import { subtract } from "./subtract.mjs";
 import { calendar_openings_free } from "./calendar_openings_free.mjs";
 import { calendar_slots_day_limit } from "./calendar_slots_day_limit.mjs";
-export async function calendar_db_host_free(db, slug, now_iso, hours_grace) {
-  arguments_assert(arguments, 4);
+import { calendar_soon_slots } from "./calendar_soon_slots.mjs";
+export async function calendar_db_host_free(
+  db,
+  slug,
+  now_iso,
+  hours_grace,
+  soon_minutes,
+) {
+  arguments_assert(arguments, 5);
+  ("soon_minutes is null, or on the test Worker how many minutes from now its extra test time starts; those times come first and skip the openings, the notice and the day limit, so a booking and its alarm can be tried in minutes.");
   ("The first hour may start the host's notice_hours after now_iso, less hours_grace: 0 for the page, 1 for a booking, so an hour shown when the page opened can still be booked a while later. The last starts before the host's days_ahead.");
   ("The host whose booking link is slug, and the hours a guest may still book with them; host is null when no host has that link. The page showing the hours and the booking that takes one both ask here, so they cannot disagree about what is open.");
   ("A day already holding the host's max_per_day meetings offers no hours at all.");
@@ -56,9 +64,16 @@ export async function calendar_db_host_free(db, slug, now_iso, hours_grace) {
     meetings_read.results,
     host.max_per_day,
   );
+  let soon = calendar_soon_slots(
+    host.timezone,
+    now_iso,
+    soon_minutes,
+    hours_grace,
+    meetings_read.results,
+  );
   let r2 = {
     host,
-    slots,
+    slots: soon.concat(slots),
   };
   return r2;
 }

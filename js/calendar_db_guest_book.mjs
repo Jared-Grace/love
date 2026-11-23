@@ -21,8 +21,9 @@ export async function calendar_db_guest_book(
   id,
   via,
   profile_url,
+  soon_minutes,
 ) {
-  arguments_assert(arguments, 13);
+  arguments_assert(arguments, 14);
   ("via is whatsapp or messenger. ★ A MESSENGER BOOKING TAKES NO NUMBER AND KEEPS ANY NUMBER ALREADY GIVEN: whatsapp is ignored, a new guest is written with empty text, and a returning guest's number stays as it was, since their WhatsApp meetings are confirmed by it. profile_url is the Messenger guest's profile link, read already, and null for WhatsApp.");
   ("★ THE HOST'S LIMIT PER GUEST REACHES BOTH APPS: a WhatsApp booking is counted with the meetings booked from its number, a Messenger booking with the ones from its profile link, and either with the ones made from the same private link (reason limit; see ",
     fn_name("calendar_db_guest_limit_read"),
@@ -78,6 +79,7 @@ export async function calendar_db_guest_book(
     weekly,
     now_iso,
     id,
+    soon_minutes,
   );
   if (not(booked.ok) && equal(before, null)) {
     await calendar_db_person_delete(db, uid);

@@ -10,7 +10,7 @@ import { multiply } from "./multiply.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_reply_lambda2 } from "./app_reply_lambda2.mjs";
 import { each } from "./each.mjs";
-export function app_reply_visible_count(
+export function app_reply_visible_count({
   card,
   love,
   languages_chosen,
@@ -18,8 +18,8 @@ export function app_reply_visible_count(
   root,
   update,
   languages_changed,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   app_shared_button(card, "❤️", love);
   let languages_chooser = app_reply_languages_chooser(
     languages_chosen,
