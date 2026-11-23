@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -19,12 +18,14 @@ import { app_learn_js_program_trace_pop } from "./app_learn_js_program_trace_pop
 import { list_last } from "./list_last.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_learn_js_program_trace_record } from "./app_learn_js_program_trace_record.mjs";
+import { app_learn_js_program_trace_reverse } from "./app_learn_js_program_trace_reverse.mjs";
 import { app_learn_js_operators_called } from "./app_learn_js_operators_called.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
 import { app_learn_js_operators_method } from "./app_learn_js_operators_method.mjs";
 import { app_learn_js_operators_method_two } from "./app_learn_js_operators_method_two.mjs";
 import { list_any } from "./list_any.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_learn_js_operator_method_two_symbol } from "./app_learn_js_operator_method_two_symbol.mjs";
@@ -170,6 +171,21 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     property_set(popped, "to", to);
     app_learn_js_program_trace_record(state, from, to, value_popped);
     return value_popped;
+  }
+  if (app_learn_js_program_trace_method_is(piece, "reverse")) {
+    ('2026-11-23, at the human\'s asking, so a.reverse().join("") can be stepped through: a.reverse() turns a around first, one step, as a line of its own does, and the array it gives back is written into the line in its place, as a.pop() writes its item');
+    let actions_reversed = property_get(state, "actions");
+    let value_reversed = app_learn_js_program_trace_reverse(
+      piece,
+      actions_reversed,
+      values_held,
+    );
+    let reversed = list_last(actions_reversed);
+    property_set(reversed, "into", true);
+    property_set(reversed, "from", from);
+    property_set(reversed, "to", to);
+    app_learn_js_program_trace_record(state, from, to, value_reversed);
+    return value_reversed;
   }
   let expression = null;
   let unary_is =
