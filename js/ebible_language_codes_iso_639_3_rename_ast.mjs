@@ -1,14 +1,15 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { equal } from "./equal.mjs";
 import { ebible_language_codes_iso_639_3_renamed } from "./ebible_language_codes_iso_639_3_renamed.mjs";
 import { ebible_language_codes } from "./ebible_language_codes.mjs";
 import { js_property_key_name_try } from "./js_property_key_name_try.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
+import { list_map } from "./list_map.mjs";
 import { not_equal } from "./not_equal.mjs";
 export function ebible_language_codes_iso_639_3_rename_ast(ast, f_name) {
   "Renames, inside one function's tree, every place a language is spelled by a code since renamed to ISO 639-3 - and hands back each place it renamed, plus each it would have renamed but refused - so one pass can both show the whole change before it is made and make it.";
@@ -90,7 +91,7 @@ export function ebible_language_codes_iso_639_3_rename_ast(ast, f_name) {
   js_visit_types(ast, ["ObjectExpression", "Property", "Literal"], lambda);
   let from_key = "translated_from";
   for (let object of objects) {
-    let names = object.properties.map(js_property_key_name_try);
+    let names = list_map(object.properties, js_property_key_name_try);
     let b = names.includes("en");
     if (not(b)) {
       continue;

@@ -1,5 +1,6 @@
 import { ebible_language_codes } from "./ebible_language_codes.mjs";
 import { ebible_language_code_current } from "./ebible_language_code_current.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_map } from "./list_map.mjs";
 import { not } from "./not.mjs";
@@ -39,7 +40,8 @@ export async function text_language_codes_guess(text) {
   let link_codes = ebible_language_codes();
   ("the table spells links as they were written before codes moved to ISO 639-3, so each is read as the code that names its language now - most then equal the detector's own");
   function link_of(code) {
-    let r = ebible_language_code_current(franc_to_link[code] || code);
+    let code2 = property_get_or(franc_to_link, code, code);
+    let r = ebible_language_code_current(code2);
     return r;
   }
   let only = [];

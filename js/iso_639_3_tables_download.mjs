@@ -14,7 +14,7 @@ export async function iso_639_3_tables_download() {
     let url = base + name;
     let bytes = await http(url);
     let text = buffer_text_to(bytes);
-    let file_path = "data/iso_639_3/" + name;
+    let file_path = "data/given/iso_639_3/" + name;
     await file_overwrite(file_path, text);
     r.push({
       file_path,
