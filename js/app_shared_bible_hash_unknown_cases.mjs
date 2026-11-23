@@ -24,7 +24,7 @@ export function app_shared_bible_hash_unknown_cases() {
         {
           name: "language",
           value: "ten",
-          suggestion: "en",
+          suggestion: "eng",
         },
       ],
       why: "the link this whole family was built for: two of the three languages misspelled, the real one between them left alone, and both said at once rather than one and then the other",
