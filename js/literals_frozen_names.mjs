@@ -96,7 +96,6 @@ export function literals_frozen_names() {
     fn_name("app_learn_js_course_hash_key"),
     fn_name("gloss_upload_namespace_en_learn_bible_tagalog"),
     fn_name("gloss_upload_namespace_en_learn_bible_spanish"),
-    fn_name("ebible_language_codes_iso_639_3_renamed"),
   ];
   return names;
 }
