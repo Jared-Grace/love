@@ -1,6 +1,6 @@
-import node_http from "http";
-import https from "https";
 import net from "net";
+import https from "https";
+import node_http from "http";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { server_https_certificate_ensure } from "./server_https_certificate_ensure.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -14,8 +14,22 @@ export async function server_listen_both(app, port, listening) {
   ("The bytes read to decide are put back before the chosen server sees the connection, so neither server can tell anyone looked.");
   ("No certificate - openssl missing, a file unreadable - leaves the port answering plain http exactly as before, told rather than thrown, so the pages never go down over the https half.");
   ("node's own module is named node_http, not http, because this repo has a function called http, and the canonicalizer adds an import for any bare name a repo function answers to - it added one, and the file then declared http twice and stopped every canonicalization in the repo");
-  let server_plain = node_http.createServer(app);
+  ('PLAIN HTTP FROM ANOTHER MACHINE IS SENT ON TO HTTPS (human, 2026-11-23: "can non-https forward to https if local?"), same address and port, since this port answers both. LOCALHOST STAYS PLAIN: the headless page checks fetch http://localhost:8080 and refuse the self-signed certificate. 307 keeps the method and body, and a browser does not remember it the way it remembers a 301, so turning this off later takes effect at once.');
   let server_secure = null;
+  function plain(request, response) {
+    let host = request.headers.host ?? "";
+    let name = host.replace(/:\d+$/, "");
+    let loopback = ["localhost", "127.0.0.1", "[::1]"].includes(name);
+    if (loopback || equal(server_secure, null)) {
+      app(request, response);
+      return;
+    }
+    response.writeHead(307, {
+      location: "https://" + host + request.url,
+    });
+    response.end();
+  }
+  let server_plain = node_http.createServer(plain);
   try {
     let options = await server_https_certificate_ensure();
     server_secure = https.createServer(options, app);
