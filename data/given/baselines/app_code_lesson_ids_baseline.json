@@ -511,6 +511,8 @@
   "last_word",
   "first_two_words",
   "longest_word",
+  "count_word",
+  "shortest_word",
   "luhn_double",
   "take_away_nine",
   "luhn_nine",
