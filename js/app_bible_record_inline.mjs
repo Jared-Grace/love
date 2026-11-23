@@ -10,13 +10,15 @@ import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
 import { html_text_set } from "./html_text_set.mjs";
+import { app_bible_record_take_sent_or_null } from "./app_bible_record_take_sent_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
+import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
-import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_native_open } from "./app_bible_record_native_open.mjs";
 import { html_camera_microphone_stream } from "./html_camera_microphone_stream.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
@@ -26,7 +28,6 @@ import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
 import { html_canvas_draw_contain_top } from "./html_canvas_draw_contain_top.mjs";
 import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_below.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
-import { null_is } from "./null_is.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
 import { firebase_upload_blob_browser } from "./firebase_upload_blob_browser.mjs";
@@ -106,6 +107,22 @@ export function app_bible_record_inline(
     html_text_set(send_button, sent ? "Sent" : "Send this recording");
   }
   refresh();
+  ("A TAKE ALREADY SENT IS SHOWN AGAIN (human 2026-11-23: a sent take was gone on coming back to its passage): it is looked for in storage, and shown ready to play back and marked Sent. A take recorded meanwhile wins, since it is newer than anything sent.");
+  async function sent_show() {
+    let found = await app_bible_record_take_sent_or_null(
+      chapter_code,
+      verse_numbers,
+    );
+    if (null_is(found) || null_not_is(blob) || camera_on) {
+      return;
+    }
+    blob = found;
+    sent = true;
+    html_media_source_file_set(playback, blob);
+    html_display_block(playback);
+    refresh();
+  }
+  sent_show();
   async function camera_show() {
     if (camera_on) {
       return;
