@@ -4,6 +4,7 @@ import { html_element } from "./html_element.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { html_p_text } from "./html_p_text.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
@@ -12,6 +13,7 @@ import { html_text_set } from "./html_text_set.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_camera_microphone_stream } from "./html_camera_microphone_stream.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
@@ -47,11 +49,12 @@ export function app_bible_record_inline(
   html_display_none(camera_video);
   let canvas = html_element(area, "canvas");
   let canvas_element = html_component_element_get(canvas);
+  ("the preview is drawn at the upright shape the video really has, centred, rather than stretched across the full width - a full-width box capped in height left the upright frame floating between thick black bars, so it did not look like what it records (human 2026-11-23)");
   html_style_assign(canvas, {
-    width: "100%",
-    "max-height": "60vh",
-    "object-fit": "contain",
-    background: "black",
+    height: "60vh",
+    width: "auto",
+    "max-width": "100%",
+    margin: "0 auto",
   });
   html_display_none(canvas);
   let playback = html_element(area, "video");
@@ -59,12 +62,14 @@ export function app_bible_record_inline(
   playback_element.controls = true;
   playback_element.playsInline = true;
   html_style_assign(playback, {
-    width: "100%",
-    "max-height": "60vh",
-    background: "black",
+    height: "60vh",
+    width: "auto",
+    "max-width": "100%",
+    margin: "0 auto",
   });
   html_display_none(playback);
   let buttons = html_div(parent);
+  let problem = html_p_text(parent, "");
   let camera_on = false;
   let stop = null;
   let stream = null;
@@ -106,7 +111,17 @@ export function app_bible_record_inline(
     let passage = await app_bible_record_passage(chapter_code, verse_numbers);
     let reference = property_get(passage, "reference");
     let text = property_get(passage, "text");
-    stream = await html_camera_microphone_stream();
+    ("A CAMERA THAT WILL NOT OPEN SAYS WHY, under the buttons, and Show camera comes back so it can be tried again (human 2026-11-23: the camera isn't working on computer - and nothing on the page said why). The usual reasons are all outside this page - an address that is not https, permission refused, no camera, or another program holding it - so the browser's own words are shown as they are.");
+    html_text_set(problem, "");
+    try {
+      stream = await html_camera_microphone_stream();
+    } catch (e) {
+      camera_on = false;
+      let said = text_combine("The camera did not open: ", e.message);
+      html_text_set(problem, said);
+      refresh();
+      return;
+    }
     camera_element.srcObject = stream;
     camera_element.play();
     html_display_block(canvas);

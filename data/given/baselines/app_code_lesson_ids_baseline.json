@@ -496,6 +496,7 @@
   "slice_minus",
   "reverse_mirror",
   "reverse_call",
+  "for_letters",
   "split_letters",
   "join_letters",
   "luhn_double",

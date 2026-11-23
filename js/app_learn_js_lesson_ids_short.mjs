@@ -699,6 +699,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_reverse_mirror: text_frozen("reverse_mirror"),
       app_learn_js_lesson_array_reverse_call: text_frozen("reverse_call"),
       app_learn_js_lesson_array_slice_minus: text_frozen("slice_minus"),
+      app_learn_js_lesson_array_for_letters: text_frozen("for_letters"),
       app_learn_js_lesson_array_split_letters: text_frozen("split_letters"),
       app_learn_js_lesson_array_join_letters: text_frozen("join_letters"),
       app_learn_js_lesson_array_split_space: text_frozen("split_space"),
