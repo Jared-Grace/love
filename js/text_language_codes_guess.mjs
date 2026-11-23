@@ -1,9 +1,11 @@
+import { ebible_language_codes } from "./ebible_language_codes.mjs";
+import { ebible_language_code_current } from "./ebible_language_code_current.mjs";
 import { object_property_names } from "./object_property_names.mjs";
+import { list_map } from "./list_map.mjs";
+import { not } from "./not.mjs";
+import { import_install } from "./import_install.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
-import { ebible_language_codes } from "./ebible_language_codes.mjs";
-import { import_install } from "./import_install.mjs";
 export async function text_language_codes_guess(text) {
   "$plain text";
   "The bible language codes text is most likely written in, as a next-passage link spells them - [] when it is too short to tell or looks like no language we have a bible in. Runs on this machine: only the codes leave, never the text.";
@@ -35,18 +37,20 @@ export async function text_language_codes_guess(text) {
     nya: "ny",
   };
   let link_codes = ebible_language_codes();
+  ("the table spells links as they were written before codes moved to ISO 639-3, so each is read as the code that names its language now - most then equal the detector's own");
   function link_of(code) {
-    let r = franc_to_link[code] || code;
+    let r = ebible_language_code_current(franc_to_link[code] || code);
     return r;
   }
   let only = [];
   for (let franc_code of object_property_names(franc_to_link)) {
-    if (link_codes.includes(franc_to_link[franc_code])) {
+    if (link_codes.includes(link_of(franc_code))) {
       only.push(franc_code);
     }
   }
+  let linked = list_map(object_property_names(franc_to_link), link_of);
   for (let code of link_codes) {
-    let b = Object.values(franc_to_link).includes(code);
+    let b = linked.includes(code);
     if (not(b)) {
       only.push(code);
     }

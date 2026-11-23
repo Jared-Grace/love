@@ -2,6 +2,8 @@ import { ebible_language_codes } from "./ebible_language_codes.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { facebook_messenger_next_link } from "./facebook_messenger_next_link.mjs";
 import { next_link_languages } from "./next_link_languages.mjs";
+import { list_map } from "./list_map.mjs";
+import { ebible_language_code_current } from "./ebible_language_code_current.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -48,7 +50,7 @@ export function facebook_messenger_languages_last(messages) {
     if (not_equal(link, null)) {
       let l = next_link_languages(link);
       if (not_equal(l, null)) {
-        found = l;
+        found = list_map(l, ebible_language_code_current);
       }
       continue;
     }
@@ -56,7 +58,8 @@ export function facebook_messenger_languages_last(messages) {
     let last = tokens[subtract(tokens.length, 1)] || "";
     let parts = last.split(",");
     function lambda(p) {
-      let r = codes.includes(p);
+      let code = ebible_language_code_current(p);
+      let r = codes.includes(code);
       return r;
     }
     if (equal(parts.length, 0) || not(parts.every(lambda))) {
@@ -65,14 +68,18 @@ export function facebook_messenger_languages_last(messages) {
     if (equal(parts.length, 1) && words.includes(parts[0])) {
       continue;
     }
-    let languages = parts.slice();
-    let b = languages.includes("en");
+    ("an ending was written in the codes of its day, so each is read as the code that names its language now");
+    let languages = list_map(parts, ebible_language_code_current);
+    let english = ebible_language_code_current("en");
+    let urdu = ebible_language_code_current("ur");
+    let punjabi = ebible_language_code_current("pa");
+    let b = languages.includes(english);
     if (not(b) && not(languages.includes("original"))) {
-      languages.push("en", "original");
+      languages.push(english, "original");
     }
-    let at_ur = languages.indexOf("ur");
-    if (not_equal(at_ur, -1) && not(languages.includes("pa"))) {
-      languages.splice(at_ur + 1, 0, "pa");
+    let at_ur = languages.indexOf(urdu);
+    if (not_equal(at_ur, -1) && not(languages.includes(punjabi))) {
+      languages.splice(at_ur + 1, 0, punjabi);
     }
     found = languages;
   }
