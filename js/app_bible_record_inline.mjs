@@ -18,6 +18,7 @@ import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_canvas_draw_contain } from "./html_canvas_draw_contain.mjs";
 import { app_bible_record_text_draw } from "./app_bible_record_text_draw.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
@@ -139,6 +140,14 @@ export function app_bible_record_inline(
       let camera_width = camera_element.videoWidth;
       let camera_height = camera_element.videoHeight;
       if (greater_than(camera_width, 0)) {
+        ("the shape the camera really sent is said under the buttons, in the line a failure uses, because whether a phone sends an upright or a wide picture decides how it can fill the frame - and that is known only on the phone itself");
+        let shape = text_combine_multiple([
+          "Camera picture: ",
+          camera_width,
+          " by ",
+          camera_height,
+        ]);
+        html_text_set(problem, shape);
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, width, height);
         html_canvas_draw_contain(
