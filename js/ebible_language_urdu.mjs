@@ -3,7 +3,7 @@ export function ebible_language_urdu() {
   let r = {
     name: "اردو (Urdu)",
     bible_folder: ebible_folder_urdu(),
-    language_code: "ur",
+    language_code: "urd",
   };
   return r;
 }

@@ -4,11 +4,11 @@ export function app_shared_bible_offline_try_again_text() {
   "What the button offering a download another go says, in the language the reader of this app reads.";
   "One language's row and the button that saves all of them both offer this, and they offer the same thing, so they say it in the same words.";
   let texts = {
-    en: " Try again",
-    ur: " دوبارہ کوشش کریں",
+    eng: " Try again",
+    urd: " دوبارہ کوشش کریں",
     tgl: " Subukang muli",
     translated_from: {
-      ur: " Try again",
+      urd: " Try again",
       tgl: " Try again",
     },
   };

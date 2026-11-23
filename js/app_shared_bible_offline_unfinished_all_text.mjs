@@ -5,11 +5,11 @@ export function app_shared_bible_offline_unfinished_all_text(names) {
   "The ones that did finish are not listed. What the reader needs is what is still missing, and a list of everything would bury it.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: "These did not finish: ",
       after: ". Would you like to check your connection and try them again?",
     },
-    ur: {
+    urd: {
       before: "یہ مکمل نہیں ہوئیں: ",
       after: "۔ کیا آپ اپنا کنکشن دیکھ کر انہیں دوبارہ آزمانا چاہیں گے؟",
     },
@@ -19,7 +19,7 @@ export function app_shared_bible_offline_unfinished_all_text(names) {
         ". Gusto mo bang suriin ang iyong koneksyon at subukan muli ang mga ito?",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: "These did not finish: ",
         after: ". Would you like to check your connection and try them again?",
       },

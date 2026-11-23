@@ -4,11 +4,11 @@ import { text_combine } from "./text_combine.mjs";
 export function html_button_copy_text() {
   "what the button that takes a copy of something says, in the language the reader of this app reads, with the little clipboard in front of it";
   let texts = {
-    en: " Copy",
-    ur: " کاپی کریں",
+    eng: " Copy",
+    urd: " کاپی کریں",
     tgl: " Kopyahin",
     translated_from: {
-      ur: " Copy",
+      urd: " Copy",
       tgl: " Copy",
     },
   };

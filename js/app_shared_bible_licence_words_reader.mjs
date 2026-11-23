@@ -16,11 +16,11 @@ export function app_shared_bible_licence_words_reader(licence) {
   let not_read = equal(words, unread);
   if (not_read) {
     let texts = {
-      en: "Terms not read",
-      ur: "شرائط پڑھی نہیں گئیں",
+      eng: "Terms not read",
+      urd: "شرائط پڑھی نہیں گئیں",
       tgl: "Hindi nabasa ang mga tuntunin",
       translated_from: {
-        ur: "Terms not read",
+        urd: "Terms not read",
         tgl: "Terms not read",
       },
     };

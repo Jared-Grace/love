@@ -6,11 +6,11 @@ export function app_shared_hash_fields_unknown_named_text(name) {
   "Asked for as what stands before the name of the field and what stands after it, because urdu does not put the naming where english does.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: "This link asks for a ",
       after: " we do not have",
     },
-    ur: {
+    urd: {
       before: "یہ لنک ایسا ",
       after: " مانگتا ہے جو ہمارے پاس نہیں ہے",
     },
@@ -19,7 +19,7 @@ export function app_shared_hash_fields_unknown_named_text(name) {
       after: " na wala sa amin",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: "This link asks for a ",
         after: " we do not have",
       },

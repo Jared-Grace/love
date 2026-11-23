@@ -4,14 +4,14 @@ export function app_shared_money_section_code_public() {
   "The part of what this app does with money that answers whether somebody else may take this and build it too.";
   "It belongs among the money answers rather than off on its own, because the one thing that would make the code worth keeping back is a wish to be paid for it.";
   let texts = {
-    en: {
+    eng: {
       title: "The source code is public",
       lines: [
         "Anyone may take the source code and use it, including to build the same thing somewhere else. The source code is at https://github.com/Jared-Grace/love",
         "Paul told the church not to drag one another before secular judges (1 Corinthians 6:1-8). We are not going to use a government's copyright to sue a brother for sharing the Bible. If there is something to settle, it is settled before the church, not a secular government.",
       ],
     },
-    ur: {
+    urd: {
       title: "سورس کوڈ سب کے لیے کھلا ہے",
       lines: [
         "کوئی بھی سورس کوڈ لے کر استعمال کر سکتا ہے، یہاں تک کہ کہیں اور یہی چیز بنانے کے لیے بھی۔ سورس کوڈ یہاں ہے: https://github.com/Jared-Grace/love",
@@ -26,7 +26,7 @@ export function app_shared_money_section_code_public() {
       ],
     },
     translated_from: {
-      ur: {
+      urd: {
         title: "The source code is public",
         lines: [
           "Anyone may take the source code and use it, including to build the same thing somewhere else. The source code is at https://github.com/Jared-Grace/love",

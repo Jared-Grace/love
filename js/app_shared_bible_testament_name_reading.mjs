@@ -7,11 +7,11 @@ export function app_shared_bible_testament_name_reading(name) {
   arguments_assert(arguments, 1);
   if (equal(name, "Old Testament")) {
     let texts = {
-      en: "Old Testament",
-      ur: "پرانا عہد نامہ",
+      eng: "Old Testament",
+      urd: "پرانا عہد نامہ",
       tgl: "Lumang Tipan",
       translated_from: {
-        ur: "Old Testament",
+        urd: "Old Testament",
         tgl: "Old Testament",
       },
     };
@@ -20,11 +20,11 @@ export function app_shared_bible_testament_name_reading(name) {
   }
   if (equal(name, "New Testament")) {
     let texts = {
-      en: "New Testament",
-      ur: "نیا عہد نامہ",
+      eng: "New Testament",
+      urd: "نیا عہد نامہ",
       tgl: "Bagong Tipan",
       translated_from: {
-        ur: "New Testament",
+        urd: "New Testament",
         tgl: "New Testament",
       },
     };

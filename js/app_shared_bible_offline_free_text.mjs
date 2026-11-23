@@ -4,11 +4,11 @@ export function app_shared_bible_offline_free_text(name) {
   "What the button that gives back the space one saved language is using says, in the language the reader of this app reads.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: "Free the space ",
       after: " uses",
     },
-    ur: {
+    urd: {
       before: "",
       after: " کی جگہ خالی کریں",
     },
@@ -17,7 +17,7 @@ export function app_shared_bible_offline_free_text(name) {
       after: "",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: "Free the space ",
         after: " uses",
       },

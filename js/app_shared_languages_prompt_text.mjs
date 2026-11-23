@@ -2,11 +2,11 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_languages_prompt_text() {
   "What the list of languages asks the reader, in the language the reader of this app reads.";
   let texts = {
-    en: "What language or languages you want the Bible verses to be translated into?",
-    ur: "آپ بائبل کی آیات کا ترجمہ کن زبان یا زبانوں میں چاہتے ہیں؟",
+    eng: "What language or languages you want the Bible verses to be translated into?",
+    urd: "آپ بائبل کی آیات کا ترجمہ کن زبان یا زبانوں میں چاہتے ہیں؟",
     tgl: "Sa anong wika o mga wika mo gustong maisalin ang mga talata ng Biblia?",
     translated_from: {
-      ur: "What language or languages you want the Bible verses to be translated into?",
+      urd: "What language or languages you want the Bible verses to be translated into?",
       tgl: "What language or languages you want the Bible verses to be translated into?",
     },
   };

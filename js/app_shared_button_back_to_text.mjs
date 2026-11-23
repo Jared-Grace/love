@@ -8,11 +8,11 @@ export function app_shared_button_back_to_text(destination) {
   "The arrow is not written out per language, because it is the same arrow the plain way out wears and it already faces the way back for whoever is reading. Only the words differ between languages; which way an arrow points differs by which way the reader reads, and the two are asked separately.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: " Back to ",
       after: "",
     },
-    ur: {
+    urd: {
       before: " ",
       after: " پر واپس",
     },
@@ -21,7 +21,7 @@ export function app_shared_button_back_to_text(destination) {
       after: "",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: " Back to ",
         after: "",
       },

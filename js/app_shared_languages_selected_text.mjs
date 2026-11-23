@@ -2,11 +2,11 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_languages_selected_text() {
   "what heads the list of chosen languages while there is only one, so there is nothing to put in order, in the language the reader of this app reads";
   let texts = {
-    en: "Selected languages:",
-    ur: "چنی ہوئی زبانیں:",
+    eng: "Selected languages:",
+    urd: "چنی ہوئی زبانیں:",
     tgl: "Mga napiling wika:",
     translated_from: {
-      ur: "Selected languages:",
+      urd: "Selected languages:",
       tgl: "Selected languages:",
     },
   };

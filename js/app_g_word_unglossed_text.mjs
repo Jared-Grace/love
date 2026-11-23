@@ -5,11 +5,11 @@ export function app_g_word_unglossed_text() {
   "SO IT IS THE LAST LINE THAT SHOULD STAY IN ENGLISH RATHER THAN THE FIRST. A reader whose language this is not gets it exactly when they are already stuck on a word, and reads a second thing they do not understand where an answer was promised.";
   "YET means yet. It is not written now and might be later, and that is true - the words worth writing about are found by watching which ones get tapped, so a reader tapping this one is the reason it will be written.";
   let texts = {
-    en: "There is nothing written for this word yet.",
-    ur: "اس لفظ کے بارے میں ابھی تک کچھ نہیں لکھا گیا۔",
+    eng: "There is nothing written for this word yet.",
+    urd: "اس لفظ کے بارے میں ابھی تک کچھ نہیں لکھا گیا۔",
     tgl: "Wala pang nakasulat para sa salitang ito.",
     translated_from: {
-      ur: "There is nothing written for this word yet.",
+      urd: "There is nothing written for this word yet.",
       tgl: "There is nothing written for this word yet.",
     },
   };

@@ -2,11 +2,11 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_bible_offline_reason_text() {
   "What keeping a bible on a device gets the reader, in the language the reader of this app reads, so the offer says why it is worth taking.";
   let texts = {
-    en: "A saved language opens with no internet, and it opens faster",
-    ur: "محفوظ کی گئی زبان انٹرنیٹ کے بغیر کھلتی ہے، اور جلدی کھلتی ہے",
+    eng: "A saved language opens with no internet, and it opens faster",
+    urd: "محفوظ کی گئی زبان انٹرنیٹ کے بغیر کھلتی ہے، اور جلدی کھلتی ہے",
     tgl: "Ang naka-save na wika ay nabubuksan kahit walang internet, at mas mabilis itong mabuksan",
     translated_from: {
-      ur: "A saved language opens with no internet, and it opens faster",
+      urd: "A saved language opens with no internet, and it opens faster",
       tgl: "A saved language opens with no internet, and it opens faster",
     },
   };

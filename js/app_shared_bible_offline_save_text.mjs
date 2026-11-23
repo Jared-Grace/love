@@ -5,11 +5,11 @@ export function app_shared_bible_offline_save_text(name) {
   "What the button that keeps one language on this device says, in the language the reader of this app reads.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: " Save ",
       after: "",
     },
-    ur: {
+    urd: {
       before: " ",
       after: " محفوظ کریں",
     },
@@ -18,7 +18,7 @@ export function app_shared_bible_offline_save_text(name) {
       after: "",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: " Save ",
         after: "",
       },

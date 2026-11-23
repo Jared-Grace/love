@@ -5,11 +5,11 @@ export function app_shared_bible_offline_starting_named_text(name) {
   "The name is said here and left out of the single-row wording, because there the row it sits in already says which language it belongs to. Several lines under one button do not, and a count with no name on it belongs to any of them.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: "Starting the download of ",
       after: "",
     },
-    ur: {
+    urd: {
       before: "",
       after: " کا ڈاؤن لوڈ شروع ہو رہا ہے",
     },
@@ -18,7 +18,7 @@ export function app_shared_bible_offline_starting_named_text(name) {
       after: "",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: "Starting the download of ",
         after: "",
       },

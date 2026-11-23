@@ -4,7 +4,7 @@ export function app_shared_money_section_free() {
   "The part of what this app does with money that answers whether anything here has to be paid for.";
   "It stands first because it is the only part a reader who gives nothing needs, and they are most of the people this was built for.";
   let texts = {
-    en: {
+    eng: {
       title: "Everything is free, and everything always will be",
       lines: [
         "Nothing requires payment.",
@@ -12,7 +12,7 @@ export function app_shared_money_section_free() {
         "If you have no money to give, you still have access to everything.",
       ],
     },
-    ur: {
+    urd: {
       title: "سب کچھ مفت ہے، اور ہمیشہ مفت ہی رہے گا",
       lines: [
         "کسی چیز کے لیے ادائیگی ضروری نہیں۔",
@@ -29,7 +29,7 @@ export function app_shared_money_section_free() {
       ],
     },
     translated_from: {
-      ur: {
+      urd: {
         title: "Everything is free, and everything always will be",
         lines: [
           "Nothing requires payment.",

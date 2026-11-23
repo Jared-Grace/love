@@ -6,11 +6,11 @@ export function app_shared_hash_fields_unknown_number_text(name) {
   "Asked for as what stands before the name of the field and what stands after it, because urdu does not put the naming where english does.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: "The ",
       after: " in this link is not a number",
     },
-    ur: {
+    urd: {
       before: "اس لنک میں دیا گیا ",
       after: " عدد نہیں ہے",
     },
@@ -19,7 +19,7 @@ export function app_shared_hash_fields_unknown_number_text(name) {
       after: " sa link na ito",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: "The ",
         after: " in this link is not a number",
       },

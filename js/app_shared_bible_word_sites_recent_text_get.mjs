@@ -2,11 +2,11 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_bible_word_sites_recent_text_get() {
   "What the quiet label above the articles on sites the reader has chosen before says, in the language the reader of this app reads.";
   let texts = {
-    en: "Recent:",
-    ur: "حالیہ:",
+    eng: "Recent:",
+    urd: "حالیہ:",
     tgl: "Kamakailan:",
     translated_from: {
-      ur: "Recent:",
+      urd: "Recent:",
       tgl: "Recent:",
     },
   };

@@ -53,37 +53,37 @@ export function ebible_languages_curated() {
     {
       name: "Español (Spanish)",
       bible_folder: "spablm",
-      language_code: "es",
+      language_code: "spa",
     },
     {
       name: "Français (French)",
       bible_folder: "frasbl",
-      language_code: "fr",
+      language_code: "fra",
     },
     {
       name: "አማርኛ (Amharic)",
       bible_folder: "am_ulb",
-      language_code: "am",
+      language_code: "amh",
     },
     {
       name: "简体中文 (Simplified Chinese)",
       bible_folder: "cmn-cu89s",
-      language_code: "zh",
+      language_code: "cmn",
     },
     {
       name: "Nederlands (Dutch)",
       bible_folder: "nldnbg",
-      language_code: "nl",
+      language_code: "nld",
     },
     {
       name: "Igbo",
       bible_folder: "ibo",
-      language_code: "ig",
+      language_code: "ibo",
     },
     {
       name: "Hausa",
       bible_folder: "hausa",
-      language_code: "ha",
+      language_code: "hau",
     },
     {
       name: "Yorùbá (Yoruba)",
@@ -94,47 +94,47 @@ export function ebible_languages_curated() {
     {
       name: "Chichewa",
       bible_folder: "nya",
-      language_code: "ny",
+      language_code: "nya",
     },
     {
       name: "Português (Portuguese)",
       bible_folder: "porbrbsl",
-      language_code: "pt",
+      language_code: "por",
     },
     {
       name: "ગુજરાતી (Gujarati)",
       bible_folder: "guj2017",
-      language_code: "gu",
+      language_code: "guj",
     },
     {
       name: "Afaan Oromoo (Oromo)",
       bible_folder: "gaz",
-      language_code: "om",
+      language_code: "gaz",
     },
     {
       name: "فارسی (Persian)",
       bible_folder: "pesopcb",
-      language_code: "fas",
+      language_code: "pes",
     },
     {
       name: "Türkçe (Turkish)",
       bible_folder: "turytc",
-      language_code: "tr",
+      language_code: "tur",
     },
     {
       name: "ଓଡ଼ିଆ (Oriya)",
       bible_folder: "ory",
-      language_code: "or",
+      language_code: "ory",
     },
     {
       name: "मराठी (Marathi)",
       bible_folder: "mar",
-      language_code: "mr",
+      language_code: "mar",
     },
     {
       name: "ಕನ್ನಡ (Kannada)",
       bible_folder: "kanirv",
-      language_code: "kn",
+      language_code: "kan",
     },
     {
       name: "Twi",

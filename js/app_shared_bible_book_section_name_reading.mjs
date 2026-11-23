@@ -9,11 +9,11 @@ export function app_shared_bible_book_section_name_reading(name) {
   arguments_assert(arguments, 1);
   if (equal(name, "Law")) {
     let texts = {
-      en: "Law",
-      ur: "شریعت",
+      eng: "Law",
+      urd: "شریعت",
       tgl: "Kautusan",
       translated_from: {
-        ur: "Law",
+        urd: "Law",
         tgl: "Law",
       },
     };
@@ -22,11 +22,11 @@ export function app_shared_bible_book_section_name_reading(name) {
   }
   if (equal(name, "History")) {
     let texts = {
-      en: "History",
-      ur: "تاریخ",
+      eng: "History",
+      urd: "تاریخ",
       tgl: "Kasaysayan",
       translated_from: {
-        ur: "History",
+        urd: "History",
         tgl: "History",
       },
     };
@@ -35,11 +35,11 @@ export function app_shared_bible_book_section_name_reading(name) {
   }
   if (equal(name, "Poetry")) {
     let texts = {
-      en: "Poetry",
-      ur: "شاعری",
+      eng: "Poetry",
+      urd: "شاعری",
       tgl: "Mga Tula",
       translated_from: {
-        ur: "Poetry",
+        urd: "Poetry",
         tgl: "Poetry",
       },
     };
@@ -48,11 +48,11 @@ export function app_shared_bible_book_section_name_reading(name) {
   }
   if (equal(name, "Prophets")) {
     let texts = {
-      en: "Prophets",
-      ur: "نبیوں کی کتابیں",
+      eng: "Prophets",
+      urd: "نبیوں کی کتابیں",
       tgl: "Mga Propeta",
       translated_from: {
-        ur: "Prophets",
+        urd: "Prophets",
         tgl: "Prophets",
       },
     };
@@ -61,11 +61,11 @@ export function app_shared_bible_book_section_name_reading(name) {
   }
   if (equal(name, "Gospels & Acts (history)")) {
     let texts = {
-      en: "Gospels & Acts (history)",
-      ur: "انجیل اور اعمال (تاریخ)",
+      eng: "Gospels & Acts (history)",
+      urd: "انجیل اور اعمال (تاریخ)",
       tgl: "Mga Ebanghelyo at Gawa (kasaysayan)",
       translated_from: {
-        ur: "Gospels & Acts (history)",
+        urd: "Gospels & Acts (history)",
         tgl: "Gospels & Acts (history)",
       },
     };
@@ -74,11 +74,11 @@ export function app_shared_bible_book_section_name_reading(name) {
   }
   if (equal(name, "Letters")) {
     let texts = {
-      en: "Letters",
-      ur: "خطوط",
+      eng: "Letters",
+      urd: "خطوط",
       tgl: "Mga Sulat",
       translated_from: {
-        ur: "Letters",
+        urd: "Letters",
         tgl: "Letters",
       },
     };
@@ -87,11 +87,11 @@ export function app_shared_bible_book_section_name_reading(name) {
   }
   if (equal(name, "Revelation")) {
     let texts = {
-      en: "Revelation",
-      ur: "مکاشفہ",
+      eng: "Revelation",
+      urd: "مکاشفہ",
       tgl: "Pahayag",
       translated_from: {
-        ur: "Revelation",
+        urd: "Revelation",
         tgl: "Revelation",
       },
     };
@@ -100,11 +100,11 @@ export function app_shared_bible_book_section_name_reading(name) {
   }
   if (equal(name, "Other")) {
     let texts = {
-      en: "Other",
-      ur: "دیگر",
+      eng: "Other",
+      urd: "دیگر",
       tgl: "Iba pa",
       translated_from: {
-        ur: "Other",
+        urd: "Other",
         tgl: "Other",
       },
     };
@@ -113,11 +113,11 @@ export function app_shared_bible_book_section_name_reading(name) {
   }
   if (equal(name, "Uncategorized")) {
     let texts = {
-      en: "Uncategorized",
-      ur: "دوسری کتابیں",
+      eng: "Uncategorized",
+      urd: "دوسری کتابیں",
       tgl: "Iba pang aklat",
       translated_from: {
-        ur: "Uncategorized",
+        urd: "Uncategorized",
         tgl: "Uncategorized",
       },
     };

@@ -4,11 +4,11 @@ import { text_combine } from "./text_combine.mjs";
 export function app_shared_bible_languages_text() {
   "inside settings the gear already belongs to settings itself, so the languages entry wears a globe instead";
   let texts = {
-    en: " Choose languages",
-    ur: " زبانیں منتخب کریں",
+    eng: " Choose languages",
+    urd: " زبانیں منتخب کریں",
     tgl: " Pumili ng mga wika",
     translated_from: {
-      ur: " Choose languages",
+      urd: " Choose languages",
       tgl: " Choose languages",
     },
   };

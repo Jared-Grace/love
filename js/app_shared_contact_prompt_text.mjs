@@ -6,11 +6,11 @@ export function app_shared_contact_prompt_text() {
   "The urdu says the one who made this rather than borrowing the english word for that trade. A reader learning english from this app is exactly the reader who would not yet know it.";
   arguments_assert(arguments, 0);
   let texts = {
-    en: "Is there anything you would like to tell the developer?",
-    ur: "کیا آپ اسے بنانے والے کو کچھ بتانا چاہیں گے؟",
+    eng: "Is there anything you would like to tell the developer?",
+    urd: "کیا آپ اسے بنانے والے کو کچھ بتانا چاہیں گے؟",
     tgl: "Mayroon ka bang gustong sabihin sa developer?",
     translated_from: {
-      ur: "Is there anything you would like to tell the developer?",
+      urd: "Is there anything you would like to tell the developer?",
       tgl: "Is there anything you would like to tell the developer?",
     },
   };

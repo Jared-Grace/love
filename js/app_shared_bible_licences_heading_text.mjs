@@ -2,11 +2,11 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_bible_licences_heading_text() {
   "What stands at the top of the credits, in the language the reader of this app reads.";
   let texts = {
-    en: "The Bibles in this app, and who gave them",
-    ur: "اس ایپ کی بائبلیں، اور کن لوگوں نے دیں",
+    eng: "The Bibles in this app, and who gave them",
+    urd: "اس ایپ کی بائبلیں، اور کن لوگوں نے دیں",
     tgl: "Ang mga Biblia sa app na ito, at kung sino ang nagbigay ng mga ito",
     translated_from: {
-      ur: "The Bibles in this app, and who gave them",
+      urd: "The Bibles in this app, and who gave them",
       tgl: "The Bibles in this app, and who gave them",
     },
   };

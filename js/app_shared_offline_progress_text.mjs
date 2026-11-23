@@ -11,11 +11,11 @@ export function app_shared_offline_progress_text(name, done, total) {
   ("IT IS WRITTEN ONCE BECAUSE TWO APPS SAVE CHAPTERS. The bible reader saves a language and the picture Bible saves itself, and a reader who meets both should see the same words counting.");
   ("IT IS SAID IN THE READER'S OWN LANGUAGE, each language writing the whole line with gaps where the name and the counts go, so the gate can read every language off the page. Urdu says the count out of the total the other way round, the total first, so a line built from English's pieces would count backwards. The Urdu puts the name before 'ko', which leaves the verb the same whether the name it is given is a masculine or a feminine word; the rejected reading was 'mehfooz ho rahi hai', which is right for a language and wrong for anything else saved.");
   let texts = {
-    en: "Saving {name}: {done} of {total} chapters",
-    ur: "{name} کو محفوظ کیا جا رہا ہے: {total} میں سے {done} ابواب",
+    eng: "Saving {name}: {done} of {total} chapters",
+    urd: "{name} کو محفوظ کیا جا رہا ہے: {total} میں سے {done} ابواب",
     tgl: "Sine-save ang {name}: {done} sa {total} kabanata",
     translated_from: {
-      ur: "Saving {name}: {done} of {total} chapters",
+      urd: "Saving {name}: {done} of {total} chapters",
       tgl: "Saving {name}: {done} of {total} chapters",
     },
   };

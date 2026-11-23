@@ -2,11 +2,11 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_all_apps_button_text() {
   "what the way back out to the page listing every app says, in the language the reader of this app reads. The little picture in front of it is chosen where the button is made, because a picture is the same in every language and these words are not.";
   let texts = {
-    en: " All apps",
-    ur: " تمام ایپس",
+    eng: " All apps",
+    urd: " تمام ایپس",
     tgl: " Lahat ng app",
     translated_from: {
-      ur: " All apps",
+      urd: " All apps",
       tgl: " All apps",
     },
   };

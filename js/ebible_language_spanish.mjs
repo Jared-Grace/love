@@ -5,7 +5,7 @@ export function ebible_language_spanish() {
   let r = {
     name: "Spanish",
     bible_folder: ebible_folder_spanish(),
-    language_code: "es",
+    language_code: "spa",
   };
   return r;
 }

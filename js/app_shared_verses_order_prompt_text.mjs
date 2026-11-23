@@ -5,11 +5,11 @@ export function app_shared_verses_order_prompt_text() {
   "The card only appears once two or more verses are chosen, so the question arrives at the moment there is something to answer it with, and it has to say which of the two things on the screen it is asking about.";
   arguments_assert(arguments, 0);
   let texts = {
-    en: "What order do you want the verses in?",
-    ur: "آپ آیات کو کس ترتیب میں چاہتے ہیں؟",
+    eng: "What order do you want the verses in?",
+    urd: "آپ آیات کو کس ترتیب میں چاہتے ہیں؟",
     tgl: "Sa anong pagkakasunod-sunod mo gusto ang mga talata?",
     translated_from: {
-      ur: "What order do you want the verses in?",
+      urd: "What order do you want the verses in?",
       tgl: "What order do you want the verses in?",
     },
   };

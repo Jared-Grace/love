@@ -10,11 +10,11 @@ export function app_shared_language_sort_action_text(mode) {
   let by_name = equal(mode, right);
   if (by_name) {
     let spoken = {
-      en: "Sort by most speakers",
-      ur: "سب سے زیادہ بولنے والوں کے مطابق ترتیب دیں",
+      eng: "Sort by most speakers",
+      urd: "سب سے زیادہ بولنے والوں کے مطابق ترتیب دیں",
       tgl: "Ayusin ayon sa pinakamaraming nagsasalita",
       translated_from: {
-        ur: "Sort by most speakers",
+        urd: "Sort by most speakers",
         tgl: "Sort by most speakers",
       },
     };
@@ -22,11 +22,11 @@ export function app_shared_language_sort_action_text(mode) {
     return s;
   }
   let alphabetical = {
-    en: "Sort A to Z",
-    ur: "حروفِ تہجی کے مطابق ترتیب دیں",
+    eng: "Sort A to Z",
+    urd: "حروفِ تہجی کے مطابق ترتیب دیں",
     tgl: "Ayusin mula A hanggang Z",
     translated_from: {
-      ur: "Sort A to Z",
+      urd: "Sort A to Z",
       tgl: "Sort A to Z",
     },
   };

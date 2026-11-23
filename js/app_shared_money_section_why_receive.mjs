@@ -3,7 +3,7 @@ import { property_set } from "./property_set.mjs";
 export function app_shared_money_section_why_receive() {
   "The part of what this app does with money that answers why anything is received at all, when everything here is free.";
   let texts = {
-    en: {
+    eng: {
       title: "Then why receive anything at all?",
       lines: [
         "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
@@ -11,7 +11,7 @@ export function app_shared_money_section_why_receive() {
         "Freely given gifts, never demanded ones, can provide for ministers of God.",
       ],
     },
-    ur: {
+    urd: {
       title: "تو پھر کچھ لیا ہی کیوں جاتا ہے؟",
       lines: [
         "دائیں چلتے ہوئے بیل کا منہ نہ باندھ (استثنا 25:4، اور پولوس یہی بات کام کرنے والوں کے بارے میں دوبارہ کہتا ہے، 1 تیمتھیس 5:18)۔",
@@ -28,7 +28,7 @@ export function app_shared_money_section_why_receive() {
       ],
     },
     translated_from: {
-      ur: {
+      urd: {
         title: "Then why receive anything at all?",
         lines: [
           "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",

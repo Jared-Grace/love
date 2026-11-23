@@ -4,11 +4,11 @@ import { text_combine } from "./text_combine.mjs";
 export function app_shared_money_text() {
   "What the way into the money page is called - said as the question a reader actually has, rather than as the word policy";
   let texts = {
-    en: " What happens with money here",
-    ur: " یہاں پیسے کا کیا ہوتا ہے",
+    eng: " What happens with money here",
+    urd: " یہاں پیسے کا کیا ہوتا ہے",
     tgl: " Ano ang nangyayari sa pera rito",
     translated_from: {
-      ur: " What happens with money here",
+      urd: " What happens with money here",
       tgl: " What happens with money here",
     },
   };

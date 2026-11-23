@@ -5,11 +5,11 @@ export function app_shared_scripture_reference_god_says(reference) {
   "said in the language the reader reads, and asked for as what stands before the address and what stands after it. english puts the naming of the speaker and the joining word both in front; urdu puts the speaking after the address, so a sentence with the joining word fixed in the middle would come out backwards with every word in it right.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: "God says in ",
       after: "",
     },
-    ur: {
+    urd: {
       before: "خدا ",
       after: " میں فرماتا ہے",
     },
@@ -18,7 +18,7 @@ export function app_shared_scripture_reference_god_says(reference) {
       after: "",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: "God says in ",
         after: "",
       },

@@ -3,11 +3,11 @@ export function app_shared_hash_fields_unknown_several_text() {
   "What the line at the top of a broken link's screen says when more than one kind of thing in the link is wrong, in the language the reader of this app reads.";
   "It names no kind, because two kinds wrong at once have no honest short name between them. The rows underneath name one each anyway, so nothing is lost by the heading staying general.";
   let texts = {
-    en: "This link asks for things we do not have",
-    ur: "یہ لنک ایسی چیزیں مانگتا ہے جو ہمارے پاس نہیں ہیں",
+    eng: "This link asks for things we do not have",
+    urd: "یہ لنک ایسی چیزیں مانگتا ہے جو ہمارے پاس نہیں ہیں",
     tgl: "Humihingi ang link na ito ng mga bagay na wala sa amin",
     translated_from: {
-      ur: "This link asks for things we do not have",
+      urd: "This link asks for things we do not have",
       tgl: "This link asks for things we do not have",
     },
   };

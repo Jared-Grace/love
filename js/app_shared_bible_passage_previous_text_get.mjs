@@ -2,11 +2,11 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_bible_passage_previous_text_get() {
   "What the button back to the passage before this one says, in the language the reader of this app reads.";
   let texts = {
-    en: "Previous passage",
-    ur: "پچھلا حصہ",
+    eng: "Previous passage",
+    urd: "پچھلا حصہ",
     tgl: "Nakaraang bahagi",
     translated_from: {
-      ur: "Previous passage",
+      urd: "Previous passage",
       tgl: "Previous passage",
     },
   };

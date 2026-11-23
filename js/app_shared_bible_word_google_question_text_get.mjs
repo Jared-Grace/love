@@ -13,11 +13,11 @@ export function app_shared_bible_word_google_question_text_get(
   "THE VERSE AND ITS REFERENCE GO WITH THE WORD because a word can mean different things in different verses, and the answer wanted is what it means in this one (asked for by the human 2026-11-22).";
   arguments_assert(arguments, 3);
   let texts = {
-    en: 'Explain what the word "{word}" means in this verse: {reference} "{verse}"',
-    ur: 'اس آیت میں لفظ "{word}" کا مطلب سمجھائیں: {reference} "{verse}"',
+    eng: 'Explain what the word "{word}" means in this verse: {reference} "{verse}"',
+    urd: 'اس آیت میں لفظ "{word}" کا مطلب سمجھائیں: {reference} "{verse}"',
     tgl: 'Ipaliwanag kung ano ang ibig sabihin ng salitang "{word}" sa talatang ito: {reference} "{verse}"',
     translated_from: {
-      ur: 'Explain what the word "{word}" means in this verse: {reference} "{verse}"',
+      urd: 'Explain what the word "{word}" means in this verse: {reference} "{verse}"',
       tgl: 'Explain what the word "{word}" means in this verse: {reference} "{verse}"',
     },
   };

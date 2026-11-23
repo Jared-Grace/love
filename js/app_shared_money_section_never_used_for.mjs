@@ -4,7 +4,7 @@ export function app_shared_money_section_never_used_for() {
   "The part of what this app does with money that answers what a gift will never go to, and what happens if more arrives than the work needs.";
   "The answer to too much is written down here rather than left to be decided when it happens, because that is the moment a promise is worth least if it was never made.";
   let texts = {
-    en: {
+    eng: {
       title: "What a gift is never used for",
       lines: [
         "Never profit.",
@@ -13,7 +13,7 @@ export function app_shared_money_section_never_used_for() {
         "If more comes in than the work needs, we stop receiving gifts, or we widen who is paid among the people contributing. We do not keep the difference, and we do not send your money somewhere you did not choose.",
       ],
     },
-    ur: {
+    urd: {
       title: "تحفہ کن کاموں میں کبھی نہیں لایا جاتا",
       lines: [
         "نفع کے لیے کبھی نہیں۔",
@@ -32,7 +32,7 @@ export function app_shared_money_section_never_used_for() {
       ],
     },
     translated_from: {
-      ur: {
+      urd: {
         title: "What a gift is never used for",
         lines: [
           "Never profit.",

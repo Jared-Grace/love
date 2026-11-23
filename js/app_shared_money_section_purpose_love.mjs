@@ -3,14 +3,14 @@ import { property_set } from "./property_set.mjs";
 export function app_shared_money_section_purpose_love() {
   "The part of what this app does with money that names what the work is for, rather than what the money is for.";
   let texts = {
-    en: {
+    eng: {
       title: "Our purpose is love, not profit",
       lines: [
         "Our purpose is sharing the word of God.",
         "The word of God has been freely given to us. So we freely give to you (Matthew 10:8).",
       ],
     },
-    ur: {
+    urd: {
       title: "ہمارا مقصد محبت ہے، نفع نہیں",
       lines: [
         "ہمارا مقصد خدا کا کلام بانٹنا ہے۔",
@@ -25,7 +25,7 @@ export function app_shared_money_section_purpose_love() {
       ],
     },
     translated_from: {
-      ur: {
+      urd: {
         title: "Our purpose is love, not profit",
         lines: [
           "Our purpose is sharing the word of God.",

@@ -5,11 +5,11 @@ export function app_shared_contact_placeholder_text() {
   "Faint writing inside a box is the one piece of a page that vanishes the moment somebody starts to use it, so a reader who could not read it has no way to ask again what it said.";
   arguments_assert(arguments, 0);
   let texts = {
-    en: "Please write your message here",
-    ur: "براہِ کرم اپنا پیغام یہاں لکھیں",
+    eng: "Please write your message here",
+    urd: "براہِ کرم اپنا پیغام یہاں لکھیں",
     tgl: "Pakisulat ang iyong mensahe rito",
     translated_from: {
-      ur: "Please write your message here",
+      urd: "Please write your message here",
       tgl: "Please write your message here",
     },
   };

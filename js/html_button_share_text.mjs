@@ -4,11 +4,11 @@ import { text_combine } from "./text_combine.mjs";
 export function html_button_share_text() {
   "what the button that hands something on to somebody else says, in the language the reader of this app reads, with the little chain link in front of it";
   let texts = {
-    en: " Share",
-    ur: " شیئر کریں",
+    eng: " Share",
+    urd: " شیئر کریں",
     tgl: " Ibahagi",
     translated_from: {
-      ur: " Share",
+      urd: " Share",
       tgl: " Share",
     },
   };

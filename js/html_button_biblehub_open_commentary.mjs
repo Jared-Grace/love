@@ -9,11 +9,11 @@ export function html_button_biblehub_open_commentary(
   "the way out to what the commentators said about the verse, named in the language the reader of this app reads";
   "its neighbour the interlinear says why the button is in the reader's language while the page it opens is in English";
   let texts = {
-    en: "Commentary",
-    ur: "تفسیر",
+    eng: "Commentary",
+    urd: "تفسیر",
     tgl: "Komentaryo",
     translated_from: {
-      ur: "Commentary",
+      urd: "Commentary",
       tgl: "Commentary",
     },
   };

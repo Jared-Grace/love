@@ -6,11 +6,11 @@ export function app_shared_bible_offline_save_all_text(size) {
   "The count is said rather than left out, because somebody who chose six is being told this one press covers all six.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: " Save all ",
       after: " of them",
     },
-    ur: {
+    urd: {
       before: " سبھی ",
       after: " محفوظ کریں",
     },
@@ -19,7 +19,7 @@ export function app_shared_bible_offline_save_all_text(size) {
       after: "",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: " Save all ",
         after: " of them",
       },

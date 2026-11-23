@@ -7,11 +7,11 @@ export function app_shared_bible_offline_saved_text(name) {
   "The tick is not written out per language. What it means - this one is done - is the same picture whichever way the page is read, so only the words are asked for here.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before: " ",
       after: " is saved on this device",
     },
-    ur: {
+    urd: {
       before: " ",
       after: " اس آلے پر محفوظ ہے",
     },
@@ -20,7 +20,7 @@ export function app_shared_bible_offline_saved_text(name) {
       after: " sa device na ito",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: " ",
         after: " is saved on this device",
       },

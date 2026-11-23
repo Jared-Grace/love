@@ -5,11 +5,11 @@ export function app_shared_contact_send_text() {
   "It begins with a space, because a little picture of an envelope stands in front of it and the gap between the two belongs to the words rather than to the picture. A language wanting no gap can say so by leaving it out.";
   arguments_assert(arguments, 0);
   let texts = {
-    en: " Send",
-    ur: " بھیجیں",
+    eng: " Send",
+    urd: " بھیجیں",
     tgl: " Ipadala",
     translated_from: {
-      ur: " Send",
+      urd: " Send",
       tgl: " Send",
     },
   };

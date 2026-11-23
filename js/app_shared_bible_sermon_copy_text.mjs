@@ -4,11 +4,11 @@ import { text_combine } from "./text_combine.mjs";
 export function app_shared_bible_sermon_copy_text() {
   "what the button that copies the sermon alone says, in the language the reader of this app reads, with the little clipboard in front of it";
   let texts = {
-    en: " Copy sermon",
-    ur: " واعظ کاپی کریں",
+    eng: " Copy sermon",
+    urd: " واعظ کاپی کریں",
     tgl: " Kopyahin ang sermon",
     translated_from: {
-      ur: " Copy sermon",
+      urd: " Copy sermon",
       tgl: " Copy sermon",
     },
   };

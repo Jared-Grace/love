@@ -4,11 +4,11 @@ import { text_combine } from "./text_combine.mjs";
 export function app_shared_about_text() {
   "What the way into what this app is standing on is called, in the language the reader of this app reads.";
   let texts = {
-    en: " About",
-    ur: " تعارف",
+    eng: " About",
+    urd: " تعارف",
     tgl: " Tungkol dito",
     translated_from: {
-      ur: " About",
+      urd: " About",
       tgl: " About",
     },
   };

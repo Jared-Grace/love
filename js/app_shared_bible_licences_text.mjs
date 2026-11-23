@@ -4,11 +4,11 @@ import { text_combine } from "./text_combine.mjs";
 export function app_shared_bible_licences_text() {
   "What the way into the credits is called - said as what the reader will find rather than as the word licences, which is the name of the paperwork and not of the people.";
   let texts = {
-    en: " The Bibles here, and who gave them",
-    ur: " یہاں کی بائبلیں، اور کن لوگوں نے دیں",
+    eng: " The Bibles here, and who gave them",
+    urd: " یہاں کی بائبلیں، اور کن لوگوں نے دیں",
     tgl: " Ang mga Biblia rito, at kung sino ang nagbigay ng mga ito",
     translated_from: {
-      ur: " The Bibles here, and who gave them",
+      urd: " The Bibles here, and who gave them",
       tgl: " The Bibles here, and who gave them",
     },
   };

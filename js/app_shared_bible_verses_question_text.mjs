@@ -8,11 +8,11 @@ export function app_shared_bible_verses_question_text(book_name, chapter_name) {
   ("What the verse picker asks above the verses of one chapter, in the language the reader of this app reads.");
   ("EACH LANGUAGE WRITES ITS WHOLE SENTENCE WITH NAMED GAPS, and the book and the chapter are filled in by name. English names the chapter before the book and Urdu names the book before the chapter, so gaps found by name rather than by position put each one where its own language wants it. Rejected: a before and after around one dropped-in book, which had to build the chapter into each half and so was a saying worked out rather than written.");
   let texts = {
-    en: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
-    ur: "آپ {book} کی کتاب کے باب {chapter} سے کون سی آیت چننا چاہتے ہیں؟",
+    eng: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
+    urd: "آپ {book} کی کتاب کے باب {chapter} سے کون سی آیت چننا چاہتے ہیں؟",
     tgl: "Anong talata mula sa kabanata {chapter} ng aklat ng {book} ang gusto mong piliin?",
     translated_from: {
-      ur: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
+      urd: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
       tgl: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
     },
   };

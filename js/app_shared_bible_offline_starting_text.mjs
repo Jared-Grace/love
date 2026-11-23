@@ -2,11 +2,11 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_bible_offline_starting_text() {
   "What one language's row says in the moment between the press and the first thing arriving, in the language the reader of this app reads.";
   let texts = {
-    en: "Starting the download",
-    ur: "ڈاؤن لوڈ شروع ہو رہا ہے",
+    eng: "Starting the download",
+    urd: "ڈاؤن لوڈ شروع ہو رہا ہے",
     tgl: "Sinisimulan ang pag-download",
     translated_from: {
-      ur: "Starting the download",
+      urd: "Starting the download",
       tgl: "Starting the download",
     },
   };

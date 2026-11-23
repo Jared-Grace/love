@@ -5,11 +5,11 @@ export function app_shared_bible_chapter_whole_text_get() {
   "What the button out of one verse into the whole chapter around it says, in the language the reader of this app reads.";
   "The whole saying per language, and the open book put in front of it afterwards. Urdu bends the word for whole to the thing it describes - a chapter takes one form and a verse takes another - so the pair of sayings here differ in both their words, which is exactly what a phrase assembled from a word for whole and a word for chapter could not do.";
   let texts = {
-    en: "Whole chapter",
-    ur: "پورا باب",
+    eng: "Whole chapter",
+    urd: "پورا باب",
     tgl: "Buong kabanata",
     translated_from: {
-      ur: "Whole chapter",
+      urd: "Whole chapter",
       tgl: "Whole chapter",
     },
   };

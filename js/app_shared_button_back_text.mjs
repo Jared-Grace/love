@@ -4,11 +4,11 @@ import { text_combine } from "./text_combine.mjs";
 export function app_shared_button_back_text() {
   "What the plain way out of a screen says, in the language the reader of this app reads, behind the arrow that already faces the way back for them.";
   let texts = {
-    en: " Back",
-    ur: " واپس",
+    eng: " Back",
+    urd: " واپس",
     tgl: " Bumalik",
     translated_from: {
-      ur: " Back",
+      urd: " Back",
       tgl: " Back",
     },
   };

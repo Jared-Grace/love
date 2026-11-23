@@ -7,11 +7,11 @@ export function app_shared_bible_chapters_question_text(book_name) {
   ("What the chapter picker asks above the chapters of one book, in the language the reader of this app reads.");
   ("IT NAMES THE BOOK INSIDE THE QUESTION, so the reader is told both what is being asked and which book they are in, in one line rather than a bare name over the numbers.");
   let parts = {
-    en: {
+    eng: {
       before: "Which chapter from the book of ",
       after: " do you want to choose?",
     },
-    ur: {
+    urd: {
       before: "آپ ",
       after: " کی کتاب سے کون سا باب چننا چاہتے ہیں؟",
     },
@@ -20,7 +20,7 @@ export function app_shared_bible_chapters_question_text(book_name) {
       after: " ang gusto mong piliin?",
     },
     translated_from: {
-      ur: {
+      urd: {
         before: "Which chapter from the book of ",
         after: " do you want to choose?",
       },

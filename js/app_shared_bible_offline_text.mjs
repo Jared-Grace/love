@@ -3,11 +3,11 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_bible_offline_text() {
   "What the way into keeping the bible on the device is called, in the language the reader of this app reads.";
   let texts = {
-    en: " Download for offline",
-    ur: " آف لائن کے لیے ڈاؤن لوڈ کریں",
+    eng: " Download for offline",
+    urd: " آف لائن کے لیے ڈاؤن لوڈ کریں",
     tgl: " I-download para magamit nang offline",
     translated_from: {
-      ur: " Download for offline",
+      urd: " Download for offline",
       tgl: " Download for offline",
     },
   };

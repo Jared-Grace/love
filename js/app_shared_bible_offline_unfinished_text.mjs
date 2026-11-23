@@ -5,12 +5,12 @@ export function app_shared_bible_offline_unfinished_text(name) {
   "It asks rather than blames. Nothing the reader did stopped it, and the one thing that would help - looking at the connection - is offered as a question so that saying no to it costs nothing.";
   arguments_assert(arguments, 1);
   let parts = {
-    en: {
+    eng: {
       before:
         "That download did not finish. Would you like to check your connection and try ",
       after: " again?",
     },
-    ur: {
+    urd: {
       before: "وہ ڈاؤن لوڈ مکمل نہیں ہوا۔ کیا آپ اپنا کنکشن دیکھ کر ",
       after: " دوبارہ آزمانا چاہیں گے؟",
     },
@@ -20,7 +20,7 @@ export function app_shared_bible_offline_unfinished_text(name) {
       after: "?",
     },
     translated_from: {
-      ur: {
+      urd: {
         before:
           "That download did not finish. Would you like to check your connection and try ",
         after: " again?",
