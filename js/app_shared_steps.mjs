@@ -10,6 +10,7 @@ import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
+import { list_next_try } from "./list_next_try.mjs";
 export async function app_shared_steps(
   parent,
   steps,
@@ -80,8 +81,7 @@ export async function app_shared_steps(
         return;
       }
       if (equal(target, null)) {
-        let after = steps[steps.indexOf(step) + 1];
-        target = after ?? null;
+        target = list_next_try(steps, step);
       }
       await draw(target);
     }
