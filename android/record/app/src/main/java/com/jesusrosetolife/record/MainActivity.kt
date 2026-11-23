@@ -58,7 +58,23 @@ class MainActivity : AppCompatActivity() {
         val root = FrameLayout(this)
         web = WebShell.create(this, DEV_HOST) { name -> if (name == TAKE && take.exists()) take else null }
         web.addJavascriptInterface(Bridge(), "love_record_native")
-        root.addView(web, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
+        // The page fills the screen above one quiet gray Update app bar, always there, so
+        // updating never means opening the camera first (human 2026-11-23). It sits below the
+        // page rather than over it, so it never covers a word or a button of the page.
+        val page_and_update = LinearLayout(this)
+        page_and_update.orientation = LinearLayout.VERTICAL
+        page_and_update.addView(web, LinearLayout.LayoutParams(MATCH_PARENT, 0, 1f))
+        val update_button = Button(this)
+        update_button.text = "Update app"
+        update_button.isAllCaps = false
+        update_button.textSize = 12f
+        update_button.setTextColor(Color.DKGRAY)
+        update_button.setBackgroundColor(Color.LTGRAY)
+        update_button.setOnClickListener {
+            app_update_download_and_install(this, "record", "JESUS rose to life Record")
+        }
+        page_and_update.addView(update_button, LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT))
+        root.addView(page_and_update, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
 
         camera_layer = FrameLayout(this)
         camera_layer.setBackgroundColor(Color.BLACK)
@@ -78,17 +94,8 @@ class MainActivity : AppCompatActivity() {
         val close_button = Button(this)
         close_button.text = "Close"
         close_button.setOnClickListener { camera_close() }
-        // The same self-update the alarms app has (android/shared AppUpdate.kt); it sits with
-        // the camera's buttons because everything else on screen is the web page.
-        val update_button = Button(this)
-        update_button.text = "Update app"
-        update_button.setOnClickListener {
-            camera_close()
-            app_update_download_and_install(this, "record", "JESUS rose to life Record")
-        }
         buttons.addView(record_button)
         buttons.addView(close_button)
-        buttons.addView(update_button)
         camera_layer.addView(buttons, FrameLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT, Gravity.TOP))
         root.addView(camera_layer, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
         setContentView(root)
