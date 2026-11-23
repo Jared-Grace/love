@@ -8,9 +8,11 @@ import { app_shared_bible_licences_text } from "./app_shared_bible_licences_text
 import { app_shared_money_text } from "./app_shared_money_text.mjs";
 import { app_shared_device_report_text } from "./app_shared_device_report_text.mjs";
 import { app_shared_device_report_send } from "./app_shared_device_report_send.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { emoji_check } from "./emoji_check.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { html_text_set } from "./html_text_set.mjs";
+import { app_shared_native_update_is } from "./app_shared_native_update_is.mjs";
+import { app_shared_native_update } from "./app_shared_native_update.mjs";
 export function app_shared_bible_settings_render({
   container,
   open_history,
@@ -49,4 +51,8 @@ export function app_shared_bible_settings_render({
     html_text_set(report_button, sent_text);
   }
   report_button = app_shared_button_wide(container, report_text, report_send);
+  ("Update app comes after everything else, and only inside one of our Android apps: a browser has nothing to update, so it is never offered there (human 2026-11-23: updating should not mean opening the camera first).");
+  if (app_shared_native_update_is()) {
+    app_shared_button_wide(container, "Update app", app_shared_native_update);
+  }
 }
