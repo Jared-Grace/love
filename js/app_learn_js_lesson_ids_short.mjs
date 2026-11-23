@@ -717,6 +717,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_count_word: text_frozen("count_word"),
       app_learn_js_lesson_array_for_shortest_word: text_frozen("shortest_word"),
       app_learn_js_lesson_array_for_count_long_words: text_frozen("long_words"),
+      app_learn_js_lesson_array_for_keep_long_words: text_frozen("keep_long"),
       app_learn_js_lesson_array_split_space: text_frozen("split_space"),
       app_learn_js_lesson_array_for_even_odd: text_frozen("even_odd"),
       app_learn_js_lesson_array_for_above_average: text_frozen("above_average"),
