@@ -79,7 +79,7 @@ export function app_learn_js_lesson_array_for_keep_long_words() {
         "",
         'if (a[i].includes("e")) { b.push(a[i]); }',
         " keeps the words with an ",
-        "e",
+        '"e"',
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
