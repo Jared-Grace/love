@@ -1,5 +1,7 @@
+import { html_camera_microphone_stream_wished } from "./html_camera_microphone_stream_wished.mjs";
 import { not } from "./not.mjs";
 import { error } from "./error.mjs";
+import { sleep } from "./sleep.mjs";
 export async function html_camera_microphone_stream() {
   "The front camera and the microphone together, as one live stream, asked of the browser - which asks the person first. Front, because the one recording is the one being filmed, reading.";
   "Portrait at 720 by 1280 is asked for rather than demanded, so a camera that cannot give it still gives what it can.";
@@ -9,20 +11,18 @@ export async function html_camera_microphone_stream() {
   if (not(devices)) {
     error("The camera only works on a secure page: open this page with https.");
   }
-  let stream = await navigator.mediaDevices.getUserMedia({
+  ("A CAMERA THAT REFUSES THE WISHES IS ASKED AGAIN WITH NONE (human 2026-11-23: Starting videoinput failed). Some phones fail outright rather than ignore a size they cannot give, or fail once while the camera is still waking or being let go; so after a short pause the front camera is asked for plainly, and only that failing is reported.");
+  try {
+    let wished = await html_camera_microphone_stream_wished();
+    return wished;
+  } catch (e) {
+    await sleep(500);
+  }
+  let plain = await navigator.mediaDevices.getUserMedia({
     video: {
       facingMode: "user",
-      width: {
-        ideal: 720,
-      },
-      height: {
-        ideal: 1280,
-      },
-      aspectRatio: {
-        ideal: 0.5625,
-      },
     },
     audio: true,
   });
-  return stream;
+  return plain;
 }

@@ -1,4 +1,3 @@
-import { math_max } from "./math_max.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_element } from "./html_element.mjs";
@@ -13,18 +12,18 @@ import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set
 import { html_text_set } from "./html_text_set.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_camera_microphone_stream_upright } from "./html_camera_microphone_stream_upright.mjs";
+import { html_camera_microphone_stream } from "./html_camera_microphone_stream.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
 import { app_bible_record_text_layout } from "./app_bible_record_text_layout.mjs";
-import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
+import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
+import { math_max } from "./math_max.mjs";
 import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_below.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
 import { null_is } from "./null_is.mjs";
@@ -119,11 +118,8 @@ export function app_bible_record_inline(
     let text = property_get(passage, "text");
     ("A CAMERA THAT WILL NOT OPEN SAYS WHY, under the buttons, and Show camera comes back so it can be tried again (human 2026-11-23: the camera isn't working on computer - and nothing on the page said why). The usual reasons are all outside this page - an address that is not https, permission refused, no camera, or another program holding it - so the browser's own words are shown as they are.");
     html_text_set(problem, "");
-    let tried = "";
     try {
-      let opened = await html_camera_microphone_stream_upright();
-      stream = property_get(opened, "stream");
-      tried = property_get(opened, "tried");
+      stream = await html_camera_microphone_stream();
     } catch (e) {
       camera_on = false;
       let said = text_combine("The camera did not open: ", e.message);
@@ -148,17 +144,6 @@ export function app_bible_record_inline(
       let camera_width = camera_element.videoWidth;
       let camera_height = camera_element.videoHeight;
       if (greater_than(camera_width, 0)) {
-        ("the shape the camera really sent is said under the buttons, in the line a failure uses, because whether a phone sends an upright or a wide picture decides how it can fill the frame - and that is known only on the phone itself");
-        let shape = text_combine_multiple([
-          "Camera picture: ",
-          camera_width,
-          " by ",
-          camera_height,
-          " (",
-          tried,
-          ")",
-        ]);
-        html_text_set(problem, shape);
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, width, height);
         ("an upright camera picture fills the frame, losing only a little at its sides; a wide one is fitted whole, because filling with it is the heavy zoom on a face");
