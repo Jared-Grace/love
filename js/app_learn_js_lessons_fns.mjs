@@ -507,6 +507,8 @@ import { app_learn_js_lesson_array_count_words } from "./app_learn_js_lesson_arr
 import { app_learn_js_lesson_array_includes_word } from "./app_learn_js_lesson_array_includes_word.mjs";
 import { app_learn_js_lesson_array_first_word } from "./app_learn_js_lesson_array_first_word.mjs";
 import { app_learn_js_lesson_array_last_word } from "./app_learn_js_lesson_array_last_word.mjs";
+import { app_learn_js_lesson_array_first_two_words } from "./app_learn_js_lesson_array_first_two_words.mjs";
+import { app_learn_js_lesson_array_for_longest_word } from "./app_learn_js_lesson_array_for_longest_word.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
 import { app_learn_js_lesson_if_take_away_nine } from "./app_learn_js_lesson_if_take_away_nine.mjs";
 import { app_learn_js_lesson_array_for_luhn_nine } from "./app_learn_js_lesson_array_for_luhn_nine.mjs";
@@ -1060,6 +1062,8 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_includes_word,
     app_learn_js_lesson_array_first_word,
     app_learn_js_lesson_array_last_word,
+    app_learn_js_lesson_array_first_two_words,
+    app_learn_js_lesson_array_for_longest_word,
     app_learn_js_lesson_array_for_luhn_double,
     app_learn_js_lesson_if_take_away_nine,
     app_learn_js_lesson_array_for_luhn_nine,
