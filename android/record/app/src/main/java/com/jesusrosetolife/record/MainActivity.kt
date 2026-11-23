@@ -25,6 +25,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.jesusrosetolife.shared.WebShell
 import com.jesusrosetolife.shared.app_update_bridge_add
+import com.jesusrosetolife.shared.web_url_remember
+import com.jesusrosetolife.shared.web_url_remembered_or_start
 import com.jesusrosetolife.shared_camera.CameraRecorder
 import org.json.JSONObject
 import java.io.File
@@ -103,7 +105,13 @@ class MainActivity : AppCompatActivity() {
                 else finish()
             }
         })
-        web.loadUrl(START_URL)
+        web.loadUrl(web_url_remembered_or_start(this, START_URL))
+    }
+
+    // Kept whenever the app leaves the screen, so reopening it opens the same passage.
+    override fun onPause() {
+        super.onPause()
+        web_url_remember(this, web)
     }
 
     inner class Bridge {
