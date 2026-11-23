@@ -61,7 +61,7 @@ export function app_learn_js_lesson_array_for_letters() {
       box_one,
       context,
       app_learn_js_lesson_string_for,
-      ["A loop to ", "i < s.length", " reads every letter ", "s[i]"],
+      ["a loop to ", "i < s.length", " reads every letter ", "s[i]"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
