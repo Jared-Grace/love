@@ -2996,6 +2996,9 @@
       "Bash(node scripts/ai.mjs facebook_psalm_video_post_next:*)",
       "Bash(node scripts/ai.mjs playwright_url_texts_click_screenshot_load:*)",
       "Bash(node scripts/ai.mjs english_word_sound_url:*)",
+      "Bash(node scripts/ai.mjs bible_record_pictures_chapter_search:*)",
+      "Bash(node scripts/ai.mjs app_shared_open_counts:*)",
+      "Bash(node scripts/ai.mjs app_learn_en_gloss_tagalog_chapters_uploaded:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5856,7 +5859,10 @@
       "Bash(node scripts/aig.mjs bible_glyph_chapter_verse_word_nth_entry_replace:*)",
       "Bash(node scripts/aig.mjs facebook_psalm_video_post_next:*)",
       "Bash(node scripts/aig.mjs playwright_url_texts_click_screenshot_load:*)",
-      "Bash(node scripts/aig.mjs english_word_sound_url:*)"
+      "Bash(node scripts/aig.mjs english_word_sound_url:*)",
+      "Bash(node scripts/aig.mjs bible_record_pictures_chapter_search:*)",
+      "Bash(node scripts/aig.mjs app_shared_open_counts:*)",
+      "Bash(node scripts/aig.mjs app_learn_en_gloss_tagalog_chapters_uploaded:*)"
     ],
     "defaultMode": "acceptEdits"
   },
