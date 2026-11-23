@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_marks_sibling_misplaced_gate_run } from "./bible_glyph_chapters_marks_sibling_misplaced_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { app_bible_sermons_copy_check } from "./app_bible_sermons_copy_check.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
@@ -1305,6 +1306,7 @@ export function qa_gates() {
     app_learn_en_stores_fields_gate_run,
     files_root_gate_run,
     app_index_cards_unserved_gate_run,
+    bible_glyph_chapters_marks_sibling_misplaced_gate_run,
   ];
   return gates;
 }
