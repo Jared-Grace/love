@@ -34,7 +34,8 @@ export function app_learn_js_lesson_array_for_range() {
     return shuffled;
   }
   function program_with(items, small_start, logged) {
-    let written = list_join_comma_space(list_map(items, json_to));
+    let list = list_map(items, json_to);
+    let written = list_join_comma_space(list);
     let lines = [
       "let a = [" + written + "];",
       "let big = 0;",
