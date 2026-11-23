@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
 import { equal } from "./equal.mjs";
@@ -20,6 +21,9 @@ export async function calendar_db_book(
   ("★ THE CLASH CHECK AND THE WRITE ARE ONE STATEMENT. Checking first and writing after lets two guests both pass the check; an INSERT that only writes when no clashing meeting exists cannot be split, and the unique indexes back it up. The clashes: the same day, an earlier weekly meeting reaching this day, or - for a weekly booking - any meeting on this weekday at or after its first day.");
   ("★ A BOOKING ACCEPTS AN HOUR ONE HOUR SOONER THAN THE PAGE SHOWS - 23 hours ahead for a host asking 24 hours' notice. A guest who opens the page, takes a while to choose, then presses Book would otherwise be told the hour they were shown is gone. The hour of grace is the time to choose; 23.5 was rejected as too little for someone slow or on a weak connection, and anything under about 20 starts letting a guest book closer than the host was promised.");
   ("★ THE HOST'S max_per_day IS CHECKED IN THE SAME STATEMENT TOO, so two guests booking the last free place of a day at once cannot both get it; a full day answers taken. A weekly booking is counted on its first day only.");
+  ("The test Worker's extra time (soon: true, from ",
+    fn_name("calendar_soon_slots"),
+    ') skips max_per_day here as it does in the list (human, 2026-11-23: "says someone booked that time / but it\'s me from a few minutes ago") - a test booked earlier that day had filled it, so the time was shown and then refused.');
   ('The grace stays one hour whatever notice the host sets: it is the guest\'s time to choose, not a choice of the host\'s (human, 2026-11-22, asking for both "minimum hours from now for being able to choose a time" and "for server accepting a time"; one setting with the hour worked out was picked, since two set far apart would only surprise guests).');
   let free = await calendar_db_host_free(db, slug, now_iso, 1, soon_minutes);
   let host_row = free.host;
@@ -75,7 +79,7 @@ WHERE NOT EXISTS (
         start_minute,
         weekly_number,
         now_iso,
-        host_row.max_per_day,
+        equal(chosen.soon, true) ? null : host_row.max_per_day,
       )
       .run();
   } catch (e) {

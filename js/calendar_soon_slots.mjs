@@ -1,10 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
+import { date_time_zone_from_iso } from "./date_time_zone_from_iso.mjs";
 import { multiply } from "./multiply.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { date_time_zone_from_iso } from "./date_time_zone_from_iso.mjs";
 export function calendar_soon_slots(
   zone,
   now_iso,
@@ -49,6 +49,7 @@ export function calendar_soon_slots(
       day,
       start_minute: minute,
       start_utc: moment_slot.toUTC().toISO(),
+      soon: true,
     });
   }
   return slots;
