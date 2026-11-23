@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read } from "./file_read.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_language_codes_iso_639_3_renamed } from "./ebible_language_codes_iso_639_3_renamed.mjs";
@@ -13,9 +13,9 @@ export async function iso_639_1_offered_matches() {
   "A two-letter code often names a family of languages - zh is all of Chinese - while what is offered here is one language of it: Mandarin, read from a Mandarin bible. So a code matches an offered language either directly or through the family it names, and the family's members come from the standard's own table rather than from anyone's judgement.";
   "Each offered language is counted by its stored code, put through the frozen table of codes renamed to ISO 639-3 - so this reads the same before and after the stored codes are changed, and an entry that is not a language (the original Hebrew and Greek) matches nothing, because the standard has no such code.";
   arguments_assert(arguments, 0);
-  let codes_text = await file_read("data/iso_639_3/iso-639-3.tab");
+  let codes_text = await file_read("data/given/iso_639_3/iso-639-3.tab");
   let families_text = await file_read(
-    "data/iso_639_3/iso-639-3-macrolanguages.tab",
+    "data/given/iso_639_3/iso-639-3-macrolanguages.tab",
   );
   let members = {};
   for (let line of families_text.split("\n").slice(1)) {
