@@ -710,6 +710,8 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_reverse_same: text_frozen("reverse_same"),
       app_learn_js_lesson_array_count_words: text_frozen("words_count"),
       app_learn_js_lesson_array_includes_word: text_frozen("includes_word"),
+      app_learn_js_lesson_array_first_word: text_frozen("first_word"),
+      app_learn_js_lesson_array_last_word: text_frozen("last_word"),
       app_learn_js_lesson_array_split_space: text_frozen("split_space"),
       app_learn_js_lesson_array_for_even_odd: text_frozen("even_odd"),
       app_learn_js_lesson_array_for_above_average: text_frozen("above_average"),
