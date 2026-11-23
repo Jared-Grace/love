@@ -9,7 +9,8 @@ android {
         version = release(36)
     }
     defaultConfig {
-        minSdk = 29
+        // The lowest any app using it supports (alarms: 21), so the library never forces one up.
+        minSdk = 21
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
