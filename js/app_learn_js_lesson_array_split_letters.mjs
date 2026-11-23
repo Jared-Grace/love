@@ -4,7 +4,7 @@ import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_array_split } from "./app_learn_js_lesson_array_split.mjs";
+import { app_learn_js_lesson_array_for_letters } from "./app_learn_js_lesson_array_for_letters.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -51,19 +51,27 @@ export function app_learn_js_lesson_array_split_letters() {
     return r;
   }
   function above(root, context) {
-    "split at a comma remembered, then split with nothing between the quotes";
+    "the loop pushing every letter remembered, then split doing it in one call";
+    "2026-11-23, at the human's asking: it names Letters into an array, just before it, rather than Split; that one is the loop this call replaces, the way Split names Words apart";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_array_split,
-      ["", 's.split(",")', " cuts ", "s", " at each comma"],
+      app_learn_js_lesson_array_for_letters,
+      [
+        "",
+        "a.push(s[i]);",
+        " in a loop puts every letter of ",
+        "s",
+        " into ",
+        "a",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
-      "With nothing between the quotes, ",
+      "",
       's.split("")',
-      " cuts between every letter:",
+      " does the same in one line. With nothing between the quotes, it cuts between every letter:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
