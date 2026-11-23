@@ -1,7 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_search_languages_prefix } from "./bible_search_languages_prefix.mjs";
-import { list_join_slash_forward } from "./list_join_slash_forward.mjs";
 import { file_name_json } from "./file_name_json.mjs";
+import { ebible_language_code_file } from "./ebible_language_code_file.mjs";
+import { list_join_slash_forward } from "./list_join_slash_forward.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 export function bible_search_language_word_path(language_code, word) {
   "$plain language_code";
@@ -10,7 +11,8 @@ export function bible_search_language_word_path(language_code, word) {
   arguments_assert(arguments, 2);
   let prefix = bible_search_languages_prefix();
   let file_name = file_name_json(word);
-  let rest = list_join_slash_forward([language_code, file_name]);
+  let code_file = ebible_language_code_file(language_code);
+  let rest = list_join_slash_forward([code_file, file_name]);
   let path = list_join_empty([prefix, rest]);
   return path;
 }
