@@ -393,7 +393,7 @@ export function bible_glyph_chapter_dan01() {
         verse_number: 13,
         words: [
           "Then",
-          "$eye",
+          "$eyes",
           "our",
           "appearances",
           "with",
@@ -413,7 +413,7 @@ export function bible_glyph_chapter_dan01() {
           "to",
           "what",
           "you",
-          "$eye,",
+          "$eyes,",
           "$hammer+doing",
           "with",
           "your",

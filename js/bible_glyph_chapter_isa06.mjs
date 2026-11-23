@@ -3,7 +3,7 @@ export function bible_glyph_chapter_isa06() {
   "HOLY IS SAID THREE TIMES AND THE PICTURE PUTS THE SAME MARK DOWN THREE TIMES. The third verse sets the sparkle, then again, then again, with nothing between them. Hebrew has no separate word for very, so it repeats a word instead, and three is as far as that goes. English prints holy, holy, holy and it reads like a chant. In pictures it is three identical marks stacked against a single word for everything else in the verse, so a reader who cannot read a syllable can see that one quality has been pushed as far as the language can push it.";
   "THE NINTH VERSE DOUBLES TWO VERBS AT ONCE, AND ENGLISH SPENDS THE WORD EVER TWICE TO SAY IT. Hearing you will hear and not understand, seeing you will see and not perceive - that is the Hebrew, with hear written twice and see written twice. English has no way to write a word twice for emphasis without sounding like a stammer, so it writes be ever hearing and be ever seeing and the doubling disappears. The pictures put it straight back: two ears side by side, then two eyes side by side, in one verse. The third chapter of Exodus, the fifty fifth of Isaiah and the fifteenth of Genesis each do this once; this is the page that does it twice in one line.";
   "THE EYE RUNS THROUGH THE WHOLE CHAPTER AND IT TURNS OVER HALFWAY. It opens with I saw the Lord in the first verse and I am ruined because my eyes have seen the King in the fifth - a man undone by what he has looked at. Then in the ninth and tenth verses the same mark is what the people are refused: seeing they will see and not perceive, close their eyes, otherwise they might see with their eyes. Five eyes on the page, and the first two are a gift and the last three are a shutting. English uses saw, seen, seeing and see and the reader has to follow the argument to notice; the marks make the reversal a shape.";
-  "THE EYE AND THE EYES ARE TWO DIFFERENT MARKS BECAUSE THEY ARE TWO DIFFERENT WORDS. The single eye is the verb to see, and the pair of eyes is the body part, and the fifth verse holds one of each: my eyes have seen. English hides this behind one root - eyes and seen sound related and are not. The tenth verse then puts both marks in the same sentence twice over, once for what is to be closed and once for what might still happen, so the difference between the organ and the act is visible without a grammar lesson.";
+  "THE EYE AND THE EYES ARE TWO DIFFERENT MARKS BECAUSE THEY ARE TWO DIFFERENT WORDS. The pair of eyes is the verb to see, and the single eye is the body part, and the fifth verse holds one of each: my eyes have seen. English hides this behind one root - eyes and seen sound related and are not. The tenth verse then puts both marks in the same sentence twice over, once for what is to be closed and once for what might still happen, so the difference between the organ and the act is visible without a grammar lesson.";
   "THE CHAPTER BEGINS AND ENDS ON THE SAME MARK, WITH EVERYTHING BURNT DOWN IN BETWEEN. The sparkle is on holy in the third verse and on the holy seed in the last, and there is nothing between them but a coal, a commission, and four verses of cities emptied and land left desolate. So the page looks in pictures like what it is in words: a promise stated at full strength, a long stretch of ruin, and the same promise left standing as a stump. The last verse is where the whole rest of the book gets its hope from, and the mark that carries it is the one the seraphim were shouting.";
   "The glyph a word gets is taken from the root table and never chosen here, so a word drawn one way in this chapter is drawn that way in every chapter.";
   let chapter = {
@@ -156,9 +156,9 @@ export function bible_glyph_chapter_isa06() {
           "$kiss_mark;",
           "for",
           "my",
-          "$eyes",
-          "have",
           "$eye",
+          "have",
+          "$eyes",
           "the",
           "$king,",
           "the",
@@ -302,14 +302,14 @@ export function bible_glyph_chapter_isa06() {
           "and",
           "close",
           "their",
-          "$eyes.",
+          "$eye.",
           "$no_entry+traffic_light",
           "they",
           "might",
-          "$eye",
+          "$eyes",
           "with",
           "their",
-          "$eyes,",
+          "$eye,",
           "$ear",
           "with",
           "their",
