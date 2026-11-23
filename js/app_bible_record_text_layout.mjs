@@ -1,4 +1,3 @@
-import { math_max } from "./math_max.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -6,6 +5,8 @@ import { divide } from "./divide.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { math_max } from "./math_max.mjs";
 export function app_bible_record_text_layout(ctx, width, height, text, below) {
   "$plain ctx width height text below";
   "How the passage's words will be laid out on a frame, worked out without drawing anything: the letter size, the lines they wrap into, and how tall the band holding them and the reference comes out. Kept apart from the drawing so the picture can be given exactly the room the words leave (human 2026-11-23: the words did not fill the space under the picture, and the picture was less than half the frame).";
@@ -39,6 +40,28 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
   }
   wrap();
   let under = subtract(height, below);
+  ("THE WORDS GROW TO FILL THE ROOM UNDER THE PICTURE (human 2026-11-23: text doesn't fill space below), a tenth at a time, and stop at the last size whose band still fits under it with every line inside the width - up to an eighth of the frame's width, past which a line holds too few words to read smoothly. A picture filling the whole frame leaves no room under it, so the first step already fails and the letters stay as they were.");
+  function tall() {
+    let left = multiply(size, 0.7);
+    let left2 = multiply(lines.length, size);
+    let r3 =
+      margin +
+      multiply(left, 1.4) +
+      multiply(left2, 1.25) +
+      multiply(margin, 0.5);
+    return r3;
+  }
+  while (less_than(size, divide(width, 8))) {
+    let before = size;
+    size = multiply(size, 1.1);
+    wrap();
+    let a2 = tall();
+    if (greater_than(a2, under) || greater_than(widest(), room)) {
+      size = before;
+      wrap();
+      break;
+    }
+  }
   let half = multiply(height, 0.45);
   let right2 = multiply(margin, 3);
   let a = subtract(under, right2);

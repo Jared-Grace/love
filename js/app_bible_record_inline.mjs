@@ -19,11 +19,7 @@ import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
-import { app_bible_record_text_layout } from "./app_bible_record_text_layout.mjs";
-import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
-import { subtract } from "./subtract.mjs";
-import { math_max } from "./math_max.mjs";
+import { html_canvas_draw_contain_top } from "./html_canvas_draw_contain_top.mjs";
 import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_below.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
 import { null_is } from "./null_is.mjs";
@@ -150,6 +146,10 @@ export function app_bible_record_inline(
         let upright = greater_than(camera_height, camera_width);
         ("a wide one sits against the top, so the black left over is all beneath it and the words fill that (human 2026-11-23) rather than leaving an empty strip above the face");
         let below = height;
+        ("THE PICTURE IS MIRRORED, like a mirror or a phone's selfie camera (human 2026-11-23: can it be mirrored?), so moving left moves left on the screen and the face is the one its owner knows. Only the picture is turned, never the words, and the recording keeps it mirrored too, because what is recorded is this canvas. REJECTED: mirroring only the screen and saving the camera's true view - the take would not match what was set up in the preview.");
+        ctx.save();
+        ctx.translate(width, 0);
+        ctx.scale(-1, 1);
         if (upright) {
           html_canvas_draw_cover(
             ctx,
@@ -160,28 +160,17 @@ export function app_bible_record_inline(
             height,
           );
         } else {
-          ("THE PICTURE TAKES ALL THE ROOM THE WORDS LEAVE (human 2026-11-23: the words did not fill the space under the picture, and the picture was less than half the frame). The words' band is measured first; the picture then fills everything above it, trimming the wide picture's sides as much as that needs - never less than its whole width shown, so a long passage that needs most of the frame gets the picture whole and small, never a sliver.");
-          let layout = app_bible_record_text_layout(
-            ctx,
-            width,
-            height,
-            text,
-            height,
-          );
-          let band = property_get(layout, "band");
-          let top = multiply(width, camera_height);
-          let whole = divide(top, camera_width);
-          let b = subtract(height, band);
-          below = math_max(whole, b);
-          html_canvas_draw_cover(
+          ("THE WHOLE WIDTH OF THE CAMERA PICTURE IS SHOWN, at the top, and the words grow to fill what is left beneath it (human 2026-11-23: camera zoomed in). REJECTED: the picture filling all the room above the words (what this replaced) - it trimmed the wide picture's sides, which is a zoom on the face, the complaint made twice now. The cost: a wide picture in an upright frame can only be a little under half its height, and the bigger words take the rest.");
+          below = html_canvas_draw_contain_top(
             ctx,
             camera_element,
             camera_width,
             camera_height,
             width,
-            below,
+            height,
           );
         }
+        ctx.restore();
         app_bible_record_text_draw_below(
           ctx,
           width,
