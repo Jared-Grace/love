@@ -513,6 +513,12 @@ import { app_learn_js_lesson_array_for_count_word } from "./app_learn_js_lesson_
 import { app_learn_js_lesson_array_for_shortest_word } from "./app_learn_js_lesson_array_for_shortest_word.mjs";
 import { app_learn_js_lesson_array_for_count_long_words } from "./app_learn_js_lesson_array_for_count_long_words.mjs";
 import { app_learn_js_lesson_array_for_keep_long_words } from "./app_learn_js_lesson_array_for_keep_long_words.mjs";
+import { app_learn_js_lesson_array_for_total_letters } from "./app_learn_js_lesson_array_for_total_letters.mjs";
+import { app_learn_js_lesson_array_for_first_letters } from "./app_learn_js_lesson_array_for_first_letters.mjs";
+import { app_learn_js_lesson_array_for_count_starts } from "./app_learn_js_lesson_array_for_count_starts.mjs";
+import { app_learn_js_lesson_array_for_longest_at } from "./app_learn_js_lesson_array_for_longest_at.mjs";
+import { app_learn_js_lesson_array_for_word_average } from "./app_learn_js_lesson_array_for_word_average.mjs";
+import { app_learn_js_lesson_array_for_reverse_each } from "./app_learn_js_lesson_array_for_reverse_each.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
 import { app_learn_js_lesson_if_take_away_nine } from "./app_learn_js_lesson_if_take_away_nine.mjs";
 import { app_learn_js_lesson_array_for_luhn_nine } from "./app_learn_js_lesson_array_for_luhn_nine.mjs";
@@ -1072,6 +1078,12 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_shortest_word,
     app_learn_js_lesson_array_for_count_long_words,
     app_learn_js_lesson_array_for_keep_long_words,
+    app_learn_js_lesson_array_for_total_letters,
+    app_learn_js_lesson_array_for_first_letters,
+    app_learn_js_lesson_array_for_count_starts,
+    app_learn_js_lesson_array_for_longest_at,
+    app_learn_js_lesson_array_for_word_average,
+    app_learn_js_lesson_array_for_reverse_each,
     app_learn_js_lesson_array_for_luhn_double,
     app_learn_js_lesson_if_take_away_nine,
     app_learn_js_lesson_array_for_luhn_nine,
