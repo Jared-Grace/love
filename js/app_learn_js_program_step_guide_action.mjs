@@ -16,6 +16,7 @@ import { list_last } from "./list_last.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { app_learn_js_program_step_string_call_is } from "./app_learn_js_program_step_string_call_is.mjs";
 import { null_is } from "./null_is.mjs";
 export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   arguments_assert(arguments, 4);
@@ -303,6 +304,22 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     ];
     let r35 = [turns, push_choose];
     return r35;
+  }
+  if (app_learn_js_program_step_string_call_is(kind)) {
+    ("2026-11-23, at the human's asking, for the toUpperCase lessons: a string function always stands inside a line and gives back a new string, so it runs first, as a pop inside a line does");
+    let cased_name = property_get(action, "name");
+    let cased_code = cased_name + "." + kind + "()";
+    let r36 = [
+      [
+        "The value is ",
+        cased_code,
+        ", which gives back a new string made from ",
+        cased_name,
+        ", so it runs first",
+      ],
+      push_choose,
+    ];
+    return r36;
   }
   if (equal(kind, "push")) {
     if (solved_before) {

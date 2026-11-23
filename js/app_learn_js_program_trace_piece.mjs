@@ -19,6 +19,7 @@ import { list_last } from "./list_last.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_learn_js_program_trace_record } from "./app_learn_js_program_trace_record.mjs";
 import { app_learn_js_program_trace_reverse } from "./app_learn_js_program_trace_reverse.mjs";
+import { app_learn_js_program_trace_case } from "./app_learn_js_program_trace_case.mjs";
 import { app_learn_js_operators_called } from "./app_learn_js_operators_called.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
@@ -186,6 +187,24 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     property_set(reversed, "to", to);
     app_learn_js_program_trace_record(state, from, to, value_reversed);
     return value_reversed;
+  }
+  if (
+    app_learn_js_program_trace_method_is(piece, "toUpperCase") ||
+    app_learn_js_program_trace_method_is(piece, "toLowerCase")
+  ) {
+    ("2026-11-23, at the human's asking, for the toUpperCase lessons: s.toUpperCase() gives back a new string, one step, and that string is written into the line in its place, as a.reverse() writes its array");
+    let actions_cased = property_get(state, "actions");
+    let value_cased = app_learn_js_program_trace_case(
+      piece,
+      actions_cased,
+      values_held,
+    );
+    let cased = list_last(actions_cased);
+    property_set(cased, "into", true);
+    property_set(cased, "from", from);
+    property_set(cased, "to", to);
+    app_learn_js_program_trace_record(state, from, to, value_cased);
+    return value_cased;
   }
   let expression = null;
   let unary_is =

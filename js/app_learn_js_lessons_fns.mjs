@@ -522,6 +522,9 @@ import { app_learn_js_lesson_array_for_reverse_each } from "./app_learn_js_lesso
 import { app_learn_js_lesson_array_for_doubled_word } from "./app_learn_js_lesson_array_for_doubled_word.mjs";
 import { app_learn_js_lesson_array_for_count_doubled } from "./app_learn_js_lesson_array_for_count_doubled.mjs";
 import { app_learn_js_lesson_array_for_range } from "./app_learn_js_lesson_array_for_range.mjs";
+import { app_learn_js_lesson_string_upper } from "./app_learn_js_lesson_string_upper.mjs";
+import { app_learn_js_lesson_string_capital_first } from "./app_learn_js_lesson_string_capital_first.mjs";
+import { app_learn_js_lesson_array_for_capital_words } from "./app_learn_js_lesson_array_for_capital_words.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
 import { app_learn_js_lesson_if_take_away_nine } from "./app_learn_js_lesson_if_take_away_nine.mjs";
 import { app_learn_js_lesson_array_for_luhn_nine } from "./app_learn_js_lesson_array_for_luhn_nine.mjs";
@@ -1090,6 +1093,9 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_doubled_word,
     app_learn_js_lesson_array_for_count_doubled,
     app_learn_js_lesson_array_for_range,
+    app_learn_js_lesson_string_upper,
+    app_learn_js_lesson_string_capital_first,
+    app_learn_js_lesson_array_for_capital_words,
     app_learn_js_lesson_array_for_luhn_double,
     app_learn_js_lesson_if_take_away_nine,
     app_learn_js_lesson_array_for_luhn_nine,

@@ -103,6 +103,7 @@ import { each } from "./each.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_size_change_animate } from "./html_size_change_animate.mjs";
+import { app_learn_js_line_pieces_add } from "./app_learn_js_line_pieces_add.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_learn_js_program_step_solve_decoys } from "./app_learn_js_program_step_solve_decoys.mjs";
@@ -117,7 +118,7 @@ import { promise_wrap } from "./promise_wrap.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_learn_js_program_step_operator_decoys } from "./app_learn_js_program_step_operator_decoys.mjs";
 import { app_learn_js_expression_value_choose_buttons_generic } from "./app_learn_js_expression_value_choose_buttons_generic.mjs";
-import { app_learn_js_line_pieces_add } from "./app_learn_js_line_pieces_add.mjs";
+import { app_learn_js_program_step_string_call_is } from "./app_learn_js_program_step_string_call_is.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_learn_js_array_code_item_from } from "./app_learn_js_array_code_item_from.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
@@ -138,6 +139,9 @@ import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
 import { app_learn_js_program_step_call_code } from "./app_learn_js_program_step_call_code.mjs";
+import { text_is } from "./text_is.mjs";
+import { text_upper_to } from "./text_upper_to.mjs";
+import { text_lower_to } from "./text_lower_to.mjs";
 import { app_learn_js_call_order_line } from "./app_learn_js_call_order_line.mjs";
 import { app_learn_js_program_step_call_types } from "./app_learn_js_program_step_call_types.mjs";
 import { app_learn_js_program_step_call_type } from "./app_learn_js_program_step_call_type.mjs";
@@ -1081,6 +1085,30 @@ export function app_learn_js_program_step_through_generic(
     html_style_opacity(piece, "1");
     piece_settle();
   }
+  async function call_value_into(called, called_line, written, source) {
+    "a function called inside a line, as console.log(a.pop()) calls one, has what it gives back, written as code, fly into the line in place of the call - from source when it comes from somewhere on the screen, else from nowhere - and the line then reads with it there. One body for every function that does this, pop, reverse and the string functions, so they cannot come to draw it differently";
+    let line_from = list_get(starts, called_line);
+    let left_from = property_get(called, "from");
+    let from_in = subtract(left_from, line_from);
+    let left_to = property_get(called, "to");
+    let to_in = subtract(left_to, line_from);
+    let from_now = position_now(called_line, from_in);
+    let to_now = position_now(called_line, to_in);
+    let done = list_get(replaced, called_line);
+    let done_after = app_learn_js_line_pieces_add(
+      done,
+      from_in,
+      to_in,
+      written,
+    );
+    let base = list_get(bases, called_line);
+    let to_end = text_size(base);
+    let line_now = app_learn_js_line_pieces_text(base, done_after, 0, to_end);
+    await piece_arrive(called_line, from_now, to_now, written, source);
+    row_text_set(called_line, line_now);
+    list_set(replaced, called_line, done_after);
+    rows_pieces_draw();
+  }
   async function action_do(action, line_index) {
     "what the right answer to what this line does then does";
     let kind = property_get(action, "kind");
@@ -1349,41 +1377,17 @@ export function app_learn_js_program_step_through_generic(
       await action_do(reversed_action, line_index);
       if (property_get_or(action, "into", false)) {
         ('2026-11-23, at the human\'s asking, for Reverse, then join: a reverse standing inside a line, as a.reverse().join("") does, then writes the turned array into the line in place of a.reverse(), since that is what it gives back, as a pop inside a line writes its item');
-        let reverse_line_from = list_get(starts, line_index);
-        let left26 = property_get(action, "from");
-        let reverse_from = subtract(left26, reverse_line_from);
-        let left27 = property_get(action, "to");
-        let reverse_to = subtract(left27, reverse_line_from);
-        let reverse_from_now = position_now(line_index, reverse_from);
-        let reverse_to_now = position_now(line_index, reverse_to);
         let value16 = property_get(action, "after");
         let reversed_code = js_value_code(value16);
-        let reverse_done = list_get(replaced, line_index);
-        let reverse_done_after = app_learn_js_line_pieces_add(
-          reverse_done,
-          reverse_from,
-          reverse_to,
-          reversed_code,
-        );
-        let reverse_base = list_get(bases, line_index);
-        let to8 = text_size(reverse_base);
-        let reversed_line = app_learn_js_line_pieces_text(
-          reverse_base,
-          reverse_done_after,
-          0,
-          to8,
-        );
-        await piece_arrive(
-          line_index,
-          reverse_from_now,
-          reverse_to_now,
-          reversed_code,
-          null,
-        );
-        row_text_set(line_index, reversed_line);
-        list_set(replaced, line_index, reverse_done_after);
-        rows_pieces_draw();
+        await call_value_into(action, line_index, reversed_code, null);
       }
+      return;
+    }
+    if (app_learn_js_program_step_string_call_is(kind)) {
+      ("2026-11-23, at the human's asking, for the toUpperCase lessons: a string function changes no name, so no note moves; the string it gives back is written into the line in place of the call, as a reverse inside a line writes its array");
+      let value_cased = property_get(action, "value");
+      let cased_code = js_value_code(value_cased);
+      await call_value_into(action, line_index, cased_code, null);
       return;
     }
     if (equal(kind, "assign")) {
@@ -1536,33 +1540,8 @@ export function app_learn_js_program_step_through_generic(
       }
       if (property_get_or(action, "into", false)) {
         ("the item flies down from the note into the line while it still stands there, then fades with the rest of the old note");
-        let line_from5 = list_get(starts, line_index);
-        let left24 = property_get(action, "from");
-        let from5 = subtract(left24, line_from5);
-        let left25 = property_get(action, "to");
-        let to5 = subtract(left25, line_from5);
-        let from_now2 = position_now(line_index, from5);
-        let to_now2 = position_now(line_index, to5);
-        let done3 = list_get(replaced, line_index);
-        let done_after2 = app_learn_js_line_pieces_add(
-          done3,
-          from5,
-          to5,
-          item_text2,
-        );
-        let line3 = list_get(bases, line_index);
-        let to6 = text_size(line3);
-        let popped_line = app_learn_js_line_pieces_text(
-          line3,
-          done_after2,
-          0,
-          to6,
-        );
         let source3 = list_first(last_spans);
-        await piece_arrive(line_index, from_now2, to_now2, item_text2, source3);
-        row_text_set(line_index, popped_line);
-        list_set(replaced, line_index, done_after2);
-        rows_pieces_draw();
+        await call_value_into(action, line_index, item_text2, source3);
       }
       for (let span3 of last_spans) {
         html_opacity_transition(span3, "0", duration6);
@@ -1773,7 +1752,24 @@ export function app_learn_js_program_step_through_generic(
       let held5 = property_get(state, "held");
       let items = property_get(held5, given_name);
       let given_decoys = [items];
-      for (let item5 of items) {
+      ("2026-11-23, for the toUpperCase lessons: a string function's wrong values are the string as it was, the mistake of thinking nothing happened, and, where it differs, the string with only its first letter changed, the mistake of thinking only one letter does");
+      let given_list = items;
+      if (text_is(items)) {
+        given_list = [];
+        let right9 = text_upper_to(items);
+        let s = items.slice(0, 1);
+        let s2 = items.slice(0, 1);
+        let first_changed = equal(given, right9)
+          ? text_upper_to(s) + items.slice(1)
+          : text_lower_to(s2) + items.slice(1);
+        if (
+          equal_not(first_changed, items) &&
+          equal_not(first_changed, given)
+        ) {
+          list_add(given_list, first_changed);
+        }
+      }
+      for (let item5 of given_list) {
         let left23 = js_value_code(item5);
         let b23 = equal(left23, given_said);
         if (not(b23)) {

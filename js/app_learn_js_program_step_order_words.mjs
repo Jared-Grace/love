@@ -6,6 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_call_is.mjs";
 import { js_value_code } from "./js_value_code.mjs";
+import { app_learn_js_program_step_string_call_is } from "./app_learn_js_program_step_string_call_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_program_step_assign_none_words } from "./app_learn_js_program_step_assign_none_words.mjs";
@@ -50,6 +51,8 @@ export function app_learn_js_program_step_order_words(
   let pushed = false;
   ("2026-11-14: an unshift or a shift works at the start of the array, where a push or a pop works at its end");
   let end_word = "end";
+  let cased_code = null;
+  let cased_value = null;
   for (let item of actions) {
     let left = property_get(item, "kind");
     if (option_matches(left) && equal(at, -1)) {
@@ -96,6 +99,12 @@ export function app_learn_js_program_step_order_words(
       name = property_get(item, "name");
       let value8 = property_get(item, "after");
       value = js_value_code(value8);
+    }
+    if (app_learn_js_program_step_string_call_is(left)) {
+      ("2026-11-23, for the toUpperCase lessons: a string function changes no name, so the sign is the line itself, still showing the call or the string it gave back. Kept apart from name and value, which the line's assign or log says");
+      cased_code = property_get(item, "name") + "." + left + "()";
+      let value9 = property_get(item, "value");
+      cased_value = js_value_code(value9);
     }
     index = index + 1;
   }
@@ -192,6 +201,14 @@ export function app_learn_js_program_step_order_words(
       ]);
       return r33;
     }
+    if (app_learn_js_program_step_string_call_is(step_kind)) {
+      let r35 = [
+        "This " + noun + " still shows ",
+        cased_code,
+        ", so it has not been called yet",
+      ];
+      return r35;
+    }
     if (equal(step_kind, "reset")) {
       let r22 = [
         "This block still shows the values solved into it the last time it ran, so it has not been reset",
@@ -255,6 +272,16 @@ export function app_learn_js_program_step_order_words(
         ", so it has already been turned around",
       ]);
       return r34;
+    }
+    if (app_learn_js_program_step_string_call_is(step_kind)) {
+      let r36 = [
+        "This " + noun + " already shows ",
+        cased_value,
+        " in place of ",
+        cased_code,
+        ", so it has already been called",
+      ];
+      return r36;
     }
     if (equal(step_kind, "reset")) {
       let r23 = [
