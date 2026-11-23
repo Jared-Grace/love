@@ -2731,7 +2731,11 @@ def is_safe_temp_script_path(path):
     strictly inside this project's scripts/temp/ directory, with a
     .mjs extension. Mirrors is_safe_scratchpad_target's checks (no
     shell metacharacters, no ../ traversal) applied to a different
-    target directory."""
+    target directory. The absolute spelling of this repo's own scripts/temp
+    names the same file and depends on no working directory, so it is
+    taken as its relative tail."""
+    if path.startswith(SCRIPTS_TEMP_PREFIX_ABSOLUTE):
+        path = SCRIPTS_TEMP_PREFIX + path[len(SCRIPTS_TEMP_PREFIX_ABSOLUTE):]
     if not SAFE_TEMP_SCRIPT_PATH_RE.match(path):
         return False
     if not path.startswith(SCRIPTS_TEMP_PREFIX):
