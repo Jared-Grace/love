@@ -72,7 +72,13 @@ class MainActivity : AppCompatActivity() {
         // near an edge is on the video but off the screen.
         preview_view.scaleType = PreviewView.ScaleType.FIT_CENTER
         preview_view.implementationMode = PreviewView.ImplementationMode.COMPATIBLE
-        camera_layer.addView(preview_view, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
+        // The picture above, the buttons below it rather than over it: at the bottom so your
+        // thumb on Record is not in front of the camera at the top (human 2026-11-23), and
+        // below the picture so they never cover the words painted along its bottom.
+        val picture_and_buttons = LinearLayout(this)
+        picture_and_buttons.orientation = LinearLayout.VERTICAL
+        picture_and_buttons.addView(preview_view, LinearLayout.LayoutParams(MATCH_PARENT, 0, 1f))
+        camera_layer.addView(picture_and_buttons, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
         val buttons = LinearLayout(this)
         buttons.orientation = LinearLayout.HORIZONTAL
         buttons.gravity = Gravity.CENTER
@@ -84,7 +90,7 @@ class MainActivity : AppCompatActivity() {
         close_button.setOnClickListener { camera_close() }
         buttons.addView(record_button)
         buttons.addView(close_button)
-        camera_layer.addView(buttons, FrameLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT, Gravity.TOP))
+        picture_and_buttons.addView(buttons, LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT))
         root.addView(camera_layer, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
         setContentView(root)
         // Android 15 draws every app under the status bar, the camera cutout and the system
