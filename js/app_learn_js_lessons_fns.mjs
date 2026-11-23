@@ -494,6 +494,7 @@ import { app_learn_js_lesson_array_at_last } from "./app_learn_js_lesson_array_a
 import { app_learn_js_lesson_array_slice_minus } from "./app_learn_js_lesson_array_slice_minus.mjs";
 import { app_learn_js_lesson_array_reverse_mirror } from "./app_learn_js_lesson_array_reverse_mirror.mjs";
 import { app_learn_js_lesson_array_reverse_call } from "./app_learn_js_lesson_array_reverse_call.mjs";
+import { app_learn_js_lesson_array_for_letters } from "./app_learn_js_lesson_array_for_letters.mjs";
 import { app_learn_js_lesson_array_split_letters } from "./app_learn_js_lesson_array_split_letters.mjs";
 import { app_learn_js_lesson_array_join_letters } from "./app_learn_js_lesson_array_join_letters.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
@@ -1036,6 +1037,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_slice_minus,
     app_learn_js_lesson_array_reverse_mirror,
     app_learn_js_lesson_array_reverse_call,
+    app_learn_js_lesson_array_for_letters,
     app_learn_js_lesson_array_split_letters,
     app_learn_js_lesson_array_join_letters,
     app_learn_js_lesson_array_for_luhn_double,
