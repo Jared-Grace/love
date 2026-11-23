@@ -18,12 +18,5 @@ android {
 }
 
 dependencies {
-    val camerax = "1.4.2"
     api("androidx.appcompat:appcompat:1.6.1")
-    api("androidx.camera:camera-core:$camerax")
-    api("androidx.camera:camera-camera2:$camerax")
-    api("androidx.camera:camera-lifecycle:$camerax")
-    api("androidx.camera:camera-video:$camerax")
-    api("androidx.camera:camera-view:$camerax")
-    api("androidx.camera:camera-effects:$camerax")
 }
