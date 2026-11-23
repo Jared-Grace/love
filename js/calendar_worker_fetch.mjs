@@ -1,6 +1,3 @@
-import { floor } from "./floor.mjs";
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
-import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { json_to } from "./json_to.mjs";
@@ -8,8 +5,11 @@ import { equal } from "./equal.mjs";
 import { calendar_facebook_login } from "./calendar_facebook_login.mjs";
 import { not } from "./not.mjs";
 import { firebase_id_token_keys } from "./firebase_id_token_keys.mjs";
-import { firebase_id_token_verify } from "./firebase_id_token_verify.mjs";
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { divide } from "./divide.mjs";
+import { floor } from "./floor.mjs";
 import { firebase_project_name_jg } from "./firebase_project_name_jg.mjs";
+import { firebase_id_token_verify } from "./firebase_id_token_verify.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { calendar_api_handle } from "./calendar_api_handle.mjs";
 export async function calendar_worker_fetch(request, env) {
@@ -90,6 +90,9 @@ export async function calendar_worker_fetch(request, env) {
       );
       return claims;
     },
+    soon_minutes: equal(env.SOON_MINUTES, undefined)
+      ? null
+      : Number(env.SOON_MINUTES),
   };
   let body = Object.fromEntries(url.searchParams);
   if (equal(request.method, "POST")) {

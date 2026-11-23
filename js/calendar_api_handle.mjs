@@ -42,7 +42,7 @@ export async function calendar_api_handle(
 ) {
   arguments_assert(arguments, 7);
   ("Answers one calendar request as {status, body}, with no web objects in it, so the whole of what the Worker decides can be run and checked in node. route is the part after /calendar/api/; body is the query (GET) or the JSON sent (POST); key is the session key the page holds, or null.");
-  ("outside holds what reaches past the database, so a test can stand in for it: rate_ok() (the Worker's rate limiter for this caller), turnstile_ok(token) (Cloudflare's are-you-a-person check), uid_new() (a fresh guest uid), firebase_claims(id_token) (a checked Firebase sign-in ticket's claims, or null).");
+  ("outside holds what reaches past the database, so a test can stand in for it: rate_ok() (the Worker's rate limiter for this caller), turnstile_ok(token) (Cloudflare's are-you-a-person check), uid_new() (a fresh guest uid), firebase_claims(id_token) (a checked Firebase sign-in ticket's claims, or null), and soon_minutes (null, or on the test Worker how many minutes from now its one extra test time starts).");
   ("★ GUESTS NEVER SIGN IN. A first booking makes the guest and answers a session key, which the page keeps and offers as a private link; a later booking or cancel sends that key. HOSTS sign in — with the site's Firebase account (login_firebase, owner only, for now) or with Facebook (",
     fn_name("calendar_facebook_login"),
     ", built for other hosts later) — and each sign-in ends in a key the same way, so there is one kind of session.");
@@ -116,7 +116,13 @@ export async function calendar_api_handle(
   }
   if (equal(route, "free")) {
     let slug2 = String(body.host);
-    let free = await calendar_db_host_free(db, slug2, now_iso, 0);
+    let free = await calendar_db_host_free(
+      db,
+      slug2,
+      now_iso,
+      0,
+      outside.soon_minutes,
+    );
     if (equal(free.host, null)) {
       let r4 = reply(404, {
         ok: false,
@@ -240,6 +246,7 @@ export async function calendar_api_handle(
       weekly2,
       now_iso,
       id5,
+      outside.soon_minutes,
     );
     let r_booked = reply(booked.ok ? 200 : 409, booked);
     return r_booked;

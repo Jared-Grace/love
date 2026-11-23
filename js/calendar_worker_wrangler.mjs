@@ -8,6 +8,7 @@ export function calendar_worker_wrangler(routes) {
     "() for the live site, or [] to reach it only at its workers.dev test address.");
   ("The two are separate Workers - calendar-live on the routes, calendar on workers.dev - because each holds its own TURNSTILE_SECRET: the live one the real secret, the test one Cloudflare's always-pass secret the release walk needs. One Worker could hold only one of them.");
   ('EACH HAS ITS OWN DATABASE (human, 2026-11-22: "want to test locally first - need to be able to keep prod unchanged while developing"). They used to share the one, so a guest or meeting made on the dev page was a real one; the test Worker now writes only to calendar_test.');
+  ('ONLY THE TEST WORKER HAS SOON_MINUTES (human, 2026-11-23: "since this is test db, can that be allowed? ... don\'t enforce minimum time away rule"): it offers one extra time that many minutes from now, outside the openings and the notice, so a booking and its alarm can be tried in minutes. The live Worker has no such variable, so nothing a guest sends can turn it on there.');
   ("Secrets are not here and never are: FACEBOOK_APP_SECRET and TURNSTILE_SECRET are entered by the human with wrangler secret put, once per Worker. The App ID is public.");
   ("RATE allows 10 calls a minute per address; Cloudflare only offers periods of 10 or 60 seconds.");
   let test = equal(routes.length, 0);
@@ -21,9 +22,14 @@ export function calendar_worker_wrangler(routes) {
     compatibility_date: "2026-10-23",
     workers_dev: test,
     routes,
-    vars: {
-      FACEBOOK_APP_ID: "29067273396256514",
-    },
+    vars: test
+      ? {
+          FACEBOOK_APP_ID: "29067273396256514",
+          SOON_MINUTES: "2",
+        }
+      : {
+          FACEBOOK_APP_ID: "29067273396256514",
+        },
     d1_databases: [
       test
         ? {

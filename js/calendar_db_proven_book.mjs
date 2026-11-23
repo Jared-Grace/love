@@ -12,8 +12,9 @@ export async function calendar_db_proven_book(
   weekly,
   now_iso,
   id,
+  soon_minutes,
 ) {
-  arguments_assert(arguments, 9);
+  arguments_assert(arguments, 10);
   ("A guest the host at slug has already proven books a time: answers {ok, reason, start_utc}. The meeting is confirmed the moment it is written, on the app and with the number or profile link the host proved - never ones typed now. Reasons: unproven (no proof, or one still waiting for its code), and the booking's own limit, no_host, not_open, taken, timezone.");
   ("★ NO BOOKING WAITS. A guest who is not yet proven cannot book at all, so there is no booking that is only a request - nothing a guest could mistake for a meeting that will happen.");
   let proof = await db
@@ -46,6 +47,7 @@ WHERE h.slug = ?1 AND pr.guest_uid = ?2`,
     id,
     proof.via,
     proof.profile_url,
+    soon_minutes,
   );
   if (not(booked.ok)) {
     return booked;
