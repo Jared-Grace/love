@@ -1,9 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { json_to } from "./json_to.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_learn_js_words_loop_program } from "./app_learn_js_words_loop_program.mjs";
+import { json_to } from "./json_to.mjs";
 import { list_first } from "./list_first.mjs";
+import { app_learn_js_words_loop_program } from "./app_learn_js_words_loop_program.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_count_e } from "./app_learn_js_lesson_array_for_count_e.mjs";
@@ -15,20 +15,21 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_for_count_starts() {
   arguments_assert(arguments, 0);
-  ('how many words of a sentence start with a letter: split at a space, then for each word w, if (w[0] === "o") { count++; }; writes out 1 for "pray for one another"');
+  ('how many words of a sentence start with a letter: split at a space, then for each word w, if (w[0] === "i") { count++; }; writes out 2 for "love is patient love is kind"');
   ("2026-11-23, at the human's asking: after First letters. The counting loop of for_count_e, asking about the first letter rather than any letter. Nothing in it is new.");
   ("Each question is a saying and a letter. In most of them the letter is also inside other words, so counting with includes gives a bigger number.");
+  ("2026-11-23, at the human's asking: answers above 1. The example went from pray for one another, which writes out 1, to love is patient love is kind, which writes out 2 where includes gives 4. The sayings now answer 2, 2, 2, 3 and 1, so the count is seen going up and a 1 still turns up.");
   ("The wrong programs are: the loop asking w.includes (the letter anywhere in the word), the loop asking s[0] (the first letter of the whole sentence, every time) and console.log(a.length) (how many words in all).");
   ("The writing is a first draft by Claude 2026-11-23.");
-  let example_input = ["pray for one another", "o"];
+  let example_input = ["love is patient love is kind", "i"];
   function inputs_get() {
     "five sayings each with a letter, shuffled";
     let pairs = [
-      ["pray for one another", "o"],
-      ["give thanks in everything", "t"],
       ["love is patient love is kind", "i"],
       ["let love be genuine", "l"],
-      ["do all things without grumbling", "t"],
+      ["the Lord is my shepherd I shall not want", "s"],
+      ["give thanks to the Lord", "t"],
+      ["pray for one another", "o"],
     ];
     let shuffled = list_shuffle_take(pairs, 5);
     return shuffled;
@@ -91,9 +92,9 @@ export function app_learn_js_lesson_array_for_count_starts() {
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "With ",
-      'w[0] === "o"',
+      'w[0] === "i"',
       " it counts only the words that start with ",
-      '"o"',
+      '"i"',
       ":",
     ]);
     let code3 = program_of(example_input);
@@ -103,7 +104,7 @@ export function app_learn_js_lesson_array_for_count_starts() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Count words starting with a letter",
-    'w[0] === "o"',
+    'w[0] === "i"',
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
