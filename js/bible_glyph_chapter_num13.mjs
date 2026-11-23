@@ -795,7 +795,7 @@ export function bible_glyph_chapter_num13() {
         words: [
           "We",
           "even",
-          "$eye",
+          "$eyes",
           "the",
           "Nephilim",
           "$telescope,",
@@ -815,7 +815,7 @@ export function bible_glyph_chapter_num13() {
           "in",
           "our",
           "own",
-          "$eyes,",
+          "$eye,",
           "and",
           "we",
           "must",

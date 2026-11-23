@@ -976,7 +976,7 @@ export function bible_glyph_chapter_lam03() {
         verse_number: 56,
         words: [
           "You",
-          "$ear",
+          "$ear+loudspeaker",
           "my",
           "$loudspeaker:",
           "$no_entry+exclamation",

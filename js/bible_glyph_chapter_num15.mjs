@@ -1085,7 +1085,7 @@ export function bible_glyph_chapter_num15() {
           "for",
           "you",
           "to",
-          "$eye,",
+          "$eyes,",
           "so",
           "that",
           "you",
@@ -1111,7 +1111,7 @@ export function bible_glyph_chapter_num15() {
           "and",
           "your",
           "own",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

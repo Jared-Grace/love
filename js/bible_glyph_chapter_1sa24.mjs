@@ -336,7 +336,7 @@ export function bible_glyph_chapter_1sa24() {
           "with",
           "your",
           "own",
-          "$eyes",
+          "$eye",
           "$back+flashlight",
           "the",
           "$i_am",

@@ -23,7 +23,7 @@ export function bible_glyph_chapter_gen27() {
           "$old_man+doing",
           "and",
           "his",
-          "$eyes",
+          "$eye",
           "were",
           "so",
           "weak",

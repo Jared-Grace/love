@@ -262,11 +262,11 @@ export function bible_glyph_chapter_zec09() {
           "$pointing",
           "$watch",
           "I",
-          "$eye",
+          "$eyes",
           "with",
           "My",
           "own",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

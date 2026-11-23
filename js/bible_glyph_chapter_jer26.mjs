@@ -415,7 +415,7 @@ export function bible_glyph_chapter_jer26() {
           "as",
           "you",
           "have",
-          "$ear",
+          "$ear+loudspeaker",
           "with",
           "your",
           "own",

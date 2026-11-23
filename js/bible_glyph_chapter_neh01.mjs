@@ -189,7 +189,7 @@ export function bible_glyph_chapter_neh01() {
           "ears",
           "$ear_with_hearing_aid+describing",
           "to",
-          "$ear",
+          "$ear+loudspeaker",
           "the",
           "$hands_praying+thing",
           "of",

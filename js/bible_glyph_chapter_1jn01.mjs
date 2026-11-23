@@ -29,7 +29,7 @@ export function bible_glyph_chapter_1jn01() {
           "which",
           "we",
           "have",
-          "$eye",
+          "$eyes",
           "with",
           "$me",
           "own",

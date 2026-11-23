@@ -140,7 +140,7 @@ export function bible_glyph_chapter_deu34() {
           "with",
           "your",
           "own",
-          "$eyes,",
+          "$eye,",
           "but",
           "you",
           "will",

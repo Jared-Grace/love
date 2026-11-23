@@ -339,8 +339,8 @@ export function bible_glyph_chapter_psa139() {
         verse_number: 16,
         words: [
           "Your",
-          "$eyes",
           "$eye",
+          "$eyes",
           "my",
           "unformed",
           "body;",

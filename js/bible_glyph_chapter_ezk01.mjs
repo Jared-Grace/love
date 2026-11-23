@@ -113,7 +113,7 @@ export function bible_glyph_chapter_ezk01() {
         verse_number: 4,
         words: [
           "I",
-          "$eye,",
+          "$eyes,",
           "and",
           "saw",
           "a",
@@ -142,7 +142,7 @@ export function bible_glyph_chapter_ezk01() {
           "center",
           "was",
           "a",
-          "$eyes",
+          "$eye",
           "like",
           "amber,",
           "out",

@@ -677,9 +677,9 @@ export function bible_glyph_chapter_deu10() {
           "wonders",
           "that",
           "your",
-          "$eyes",
+          "$eye",
           "have",
-          "$eye.",
+          "$eyes.",
         ],
       },
       {

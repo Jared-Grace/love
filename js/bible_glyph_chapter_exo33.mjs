@@ -410,7 +410,7 @@ export function bible_glyph_chapter_exo33() {
           "$toward",
           "the",
           "$i_am,",
-          "$eye,",
+          "$eyes,",
           "You",
           "have",
           "been",
@@ -449,7 +449,7 @@ export function bible_glyph_chapter_exo33() {
           "$heart_orange",
           "in",
           "My",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {
