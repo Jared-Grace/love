@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { ebible_language_codes_iso_639_3_renamed_baseline_path } from "./ebible_language_codes_iso_639_3_renamed_baseline_path.mjs";
 import { ebible_language_codes_iso_639_3_renamed } from "./ebible_language_codes_iso_639_3_renamed.mjs";
-import { ebible_language_codes_iso_639_3_renamed_moved } from "./ebible_language_codes_iso_639_3_renamed_moved.mjs";
+import { object_entries_moved } from "./object_entries_moved.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -17,7 +17,7 @@ export async function ebible_language_codes_iso_639_3_renamed_gate_run() {
   let file_path = ebible_language_codes_iso_639_3_renamed_baseline_path();
   let recorded = await file_read_json(file_path);
   let table = ebible_language_codes_iso_639_3_renamed();
-  let moved = ebible_language_codes_iso_639_3_renamed_moved(recorded, table);
+  let moved = object_entries_moved(recorded, table);
   list_empty_is_assert_json(moved, {
     hint:
       "an old language code now opens a different language, or none, so every link and saved choice spelling it breaks - put the entry back in " +

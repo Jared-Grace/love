@@ -3,7 +3,7 @@ import { ebible_language_codes_iso_639_3_renamed_baseline_path } from "./ebible_
 import { ebible_language_codes_iso_639_3_renamed } from "./ebible_language_codes_iso_639_3_renamed.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { ebible_language_codes_iso_639_3_renamed_moved } from "./ebible_language_codes_iso_639_3_renamed_moved.mjs";
+import { object_entries_moved } from "./object_entries_moved.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -16,7 +16,7 @@ export async function ebible_language_codes_iso_639_3_renamed_baseline_write() {
   if (await file_exists(path)) {
     recorded = await file_read_json(path);
   }
-  let moved = ebible_language_codes_iso_639_3_renamed_moved(recorded, table);
+  let moved = object_entries_moved(recorded, table);
   list_empty_is_assert_json(moved, {
     hint: "refusing to record: these old codes moved or were removed, and recording that would hide the break - put them back instead",
     moved,
