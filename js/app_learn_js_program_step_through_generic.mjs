@@ -1928,10 +1928,8 @@ export function app_learn_js_program_step_through_generic(
       let call_words = app_learn_js_program_step_call_words();
       let call_method = property_get_or(action, "method", kind);
       let call_type = app_learn_js_program_step_call_type(call_method);
-      let call_typed = property_get(
-        app_learn_js_program_step_call_types(),
-        call_type,
-      );
+      let object7 = app_learn_js_program_step_call_types();
+      let call_typed = property_get(object7, call_type);
       let call_right_words = property_get(call_words, call_method);
       let call_code = "." + call_method;
       guide_say(

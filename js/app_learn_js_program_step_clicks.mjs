@@ -19,6 +19,7 @@ import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_program_step_call_code } from "./app_learn_js_program_step_call_code.mjs";
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
+import { app_learn_js_program_step_call_type } from "./app_learn_js_program_step_call_type.mjs";
 import { equal } from "./equal.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export function app_learn_js_program_step_clicks(code) {
@@ -120,6 +121,9 @@ export function app_learn_js_program_step_clicks(code) {
         }
         let call_words = app_learn_js_program_step_call_words();
         let call_method = property_get_or(action, "method", kind);
+        ("2026-11-23, at the human's asking: what the function is called on, an array or a string, is chosen before what it does");
+        let call_type = app_learn_js_program_step_call_type(call_method);
+        choose_add(call_type);
         let value14 = property_get(call_words, call_method);
         choose_add(value14);
         if (into) {

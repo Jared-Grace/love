@@ -24,7 +24,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.jesusrosetolife.shared.WebShell
-import com.jesusrosetolife.shared.app_update_download_and_install
+import com.jesusrosetolife.shared.app_update_bridge_add
 import com.jesusrosetolife.shared_camera.CameraRecorder
 import org.json.JSONObject
 import java.io.File
@@ -58,23 +58,9 @@ class MainActivity : AppCompatActivity() {
         val root = FrameLayout(this)
         web = WebShell.create(this, DEV_HOST) { name -> if (name == TAKE && take.exists()) take else null }
         web.addJavascriptInterface(Bridge(), "love_record_native")
-        // The page fills the screen above one quiet gray Update app bar, always there, so
-        // updating never means opening the camera first (human 2026-11-23). It sits below the
-        // page rather than over it, so it never covers a word or a button of the page.
-        val page_and_update = LinearLayout(this)
-        page_and_update.orientation = LinearLayout.VERTICAL
-        page_and_update.addView(web, LinearLayout.LayoutParams(MATCH_PARENT, 0, 1f))
-        val update_button = Button(this)
-        update_button.text = "Update app"
-        update_button.isAllCaps = false
-        update_button.textSize = 12f
-        update_button.setTextColor(Color.DKGRAY)
-        update_button.setBackgroundColor(Color.LTGRAY)
-        update_button.setOnClickListener {
-            app_update_download_and_install(this, "record", "JESUS rose to life Record")
-        }
-        page_and_update.addView(update_button, LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT))
-        root.addView(page_and_update, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
+        // Update app is offered by the page, in its Settings (human 2026-11-23).
+        app_update_bridge_add(this, web, "record", "JESUS rose to life Record")
+        root.addView(web, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
 
         camera_layer = FrameLayout(this)
         camera_layer.setBackgroundColor(Color.BLACK)
