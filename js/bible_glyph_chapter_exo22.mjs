@@ -203,7 +203,7 @@ export function bible_glyph_chapter_exo22() {
           "who",
           "started",
           "the",
-          "$fire",
+          "$fire+wood+thing",
           "must",
           "make",
           "full",

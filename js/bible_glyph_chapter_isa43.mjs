@@ -395,7 +395,7 @@ export function bible_glyph_chapter_isa43() {
           "not",
           "some",
           "foreign",
-          "$moai",
+          "$alien",
           "among",
           "you.",
           "So",

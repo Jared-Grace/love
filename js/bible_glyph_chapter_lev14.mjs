@@ -13,7 +13,14 @@ export function bible_glyph_chapter_lev14() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech:"],
+        words: [
+          "Then",
+          "$i_am",
+          "$voice+doing",
+          "$toward",
+          "$fishing_pole+proper_name,",
+          "$speech:",
+        ],
       },
       {
         verse_number: 2,
@@ -1287,7 +1294,7 @@ export function bible_glyph_chapter_lev14() {
           "He",
           "is",
           "to",
-          "$eye",
+          "$eyes",
           "the",
           "$house,",
           "and",

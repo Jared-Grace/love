@@ -1217,7 +1217,7 @@ export function bible_glyph_chapter_jer32() {
           "$bridge",
           "through",
           "the",
-          "$fire",
+          "fire",
           "to",
           "$proper_name$Molech,",
           "$back+flashlight",

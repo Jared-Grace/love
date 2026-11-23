@@ -93,7 +93,7 @@ export function bible_glyph_chapter_exo03() {
           "go",
           "over",
           "and",
-          "$eye",
+          "$eyes",
           "$flashlight",
           "$top",
           "sight.",
