@@ -139,6 +139,8 @@ import { app_learn_js_program_step_call_is } from "./app_learn_js_program_step_c
 import { app_learn_js_program_step_guide_action } from "./app_learn_js_program_step_guide_action.mjs";
 import { app_learn_js_program_step_call_code } from "./app_learn_js_program_step_call_code.mjs";
 import { app_learn_js_call_order_line } from "./app_learn_js_call_order_line.mjs";
+import { app_learn_js_program_step_call_types } from "./app_learn_js_program_step_call_types.mjs";
+import { app_learn_js_program_step_call_type } from "./app_learn_js_program_step_call_type.mjs";
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { app_learn_js_program_step_order_words } from "./app_learn_js_program_step_order_words.mjs";
 import { app_learn_js_program_step_solved_already_words } from "./app_learn_js_program_step_solved_already_words.mjs";
@@ -1855,9 +1857,10 @@ export function app_learn_js_program_step_through_generic(
         app_shared_glow_clear(element3);
       }
       html_clear(ask);
-      let call_words = app_learn_js_program_step_call_words();
+      ("2026-11-23, at the human's asking: what the function is called on is asked first, an array or a string, and only that kind's functions are offered after it, so the list of functions does not grow past a screen. The guide no longer says the array named, since that would give the first answer away");
+      let call_types = app_learn_js_program_step_call_types();
       let call_method = property_get_or(action, "method", kind);
-      let call_right_words = property_get(call_words, call_method);
+      let call_type = app_learn_js_program_step_call_type(call_method);
       let call_name = property_get(action, "name");
       let call_code = "." + call_method;
       guide_say(
@@ -1865,10 +1868,75 @@ export function app_learn_js_program_step_through_generic(
           [
             "It calls ",
             call_code,
-            " on the array named ",
+            " on ",
             call_name,
-            ". " + call_right_words,
+            ". Look at what ",
+            call_name,
+            " holds",
           ],
+          ["So choose: " + call_type],
+        ],
+        {
+          words: call_type,
+          button: true,
+          target_get: action_get,
+        },
+      );
+      let r23 = app_learn_js_program_step_call_code(action);
+      app_learn_js_div_cycle_code(ask, ["What is ", r23, " called on?"]);
+      let type_choices = html_div(ask);
+      let type_reason_box = html_div(ask);
+      let type_answered = {
+        answered: false,
+      };
+      for (let type_offered of properties_get(call_types)) {
+        let type_right = equal(type_offered, call_type);
+        function type_soft_take() {
+          html_clear(type_reason_box);
+          app_learn_js_cycle_code(type_reason_box, [
+            "Look again at what ",
+            call_name,
+            " holds",
+          ]);
+          return false;
+        }
+        let b21 = app_learn_js_quiz_choice_button_answer_generic({
+          parent: type_choices,
+          text: type_offered,
+          right: type_right,
+          state: type_answered,
+          on_success: on_call_type_right,
+          on_wrong,
+          soft_take: type_soft_take,
+        });
+        if (type_right) {
+          property_set(holder, "button", b21);
+        }
+      }
+    }
+    async function on_call_type_right() {
+      await sleep_success_color();
+      call_does_choose();
+    }
+    function call_does_choose() {
+      on_step();
+      let element5 = property_get(holder, "button");
+      if (null_not_is(element5)) {
+        app_shared_glow_clear(element5);
+      }
+      html_clear(ask);
+      let call_words = app_learn_js_program_step_call_words();
+      let call_method = property_get_or(action, "method", kind);
+      let call_type = app_learn_js_program_step_call_type(call_method);
+      let call_typed = property_get(
+        app_learn_js_program_step_call_types(),
+        call_type,
+      );
+      let call_right_words = property_get(call_words, call_method);
+      let call_code = "." + call_method;
+      guide_say(
+        [
+          ["It calls ", call_code, ". " + call_right_words],
           ["So choose: " + call_right_words],
         ],
         {
@@ -1884,7 +1952,7 @@ export function app_learn_js_program_step_through_generic(
       let call_answered = {
         answered: false,
       };
-      for (let call_kind of properties_get(call_words)) {
+      for (let call_kind of call_typed) {
         let call_option_words = property_get(call_words, call_kind);
         let call_right = equal(call_kind, call_method);
         function call_soft_take() {
