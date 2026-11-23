@@ -18,8 +18,8 @@ const val EXTRA_START_MS = "start_ms"
 const val EXTRA_AHEAD_MINUTES = "ahead_minutes"
 const val SYNC_REQUEST_CODE = 900_000
 
-/** What a sync did: how many warnings and meetings it set, or why it read nothing new. */
-data class SyncResult(val fetched: Boolean, val error: String?, val rings: List<MeetingRing>, val meetings: Int)
+/** What a sync did: the warnings it set and when each upcoming meeting starts (soonest first), or why it read nothing new. */
+data class SyncResult(val fetched: Boolean, val error: String?, val rings: List<MeetingRing>, val meetings: List<Long>)
 
 /** PendingIntent flags: immutable where the phone knows the word (Android 6 and up). */
 fun pending_flags(): Int =
@@ -48,7 +48,7 @@ fun meeting_alarms_fetch(url: String): String {
 }
 
 /** Reads the alarms file (format: see the alarms_format string) into its warnings. */
-fun meeting_rings_from_json(json: String, now_ms: Long): Pair<List<MeetingRing>, Int> {
+fun meeting_rings_from_json(json: String, now_ms: Long): Pair<List<MeetingRing>, List<Long>> {
     val meetings_json = JSONObject(json).getJSONArray("meetings")
     val meetings = ArrayList<MeetingWarnings>()
     for (index in 0 until meetings_json.length()) {
@@ -58,7 +58,7 @@ fun meeting_rings_from_json(json: String, now_ms: Long): Pair<List<MeetingRing>,
         for (ahead_index in 0 until ahead_json.length()) ahead.add(ahead_json.getInt(ahead_index))
         meetings.add(MeetingWarnings(utc_iso_to_ms(meeting.getString("start_utc")), ahead))
     }
-    val upcoming = meetings.count { it.start_ms > now_ms }
+    val upcoming = meetings.map { it.start_ms }.filter { it > now_ms }.sorted()
     return Pair(meeting_rings(meetings, now_ms), upcoming)
 }
 
@@ -119,7 +119,7 @@ fun meeting_alarms_sync(context: Context): SyncResult {
     } catch (e: Exception) {
         error = e.message ?: e.javaClass.simpleName
     }
-    val used = json ?: prefs.getString(PREF_LAST_JSON, null) ?: return SyncResult(false, error, listOf(), 0)
+    val used = json ?: prefs.getString(PREF_LAST_JSON, null) ?: return SyncResult(false, error, listOf(), listOf())
     val (rings, meetings) = meeting_rings_from_json(used, System.currentTimeMillis())
     meeting_alarms_set(context, rings)
     meeting_alarms_hourly_set(context)

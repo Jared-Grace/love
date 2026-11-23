@@ -73,11 +73,15 @@ class MainActivity : AppCompatActivity() {
         val lines = ArrayList<String>()
         if (result.error != null) {
             lines.add(getString(R.string.sync_error, result.error))
-            if (!result.fetched && result.meetings == 0 && result.rings.isEmpty()) return lines.joinToString("\n")
+            if (!result.fetched && result.meetings.isEmpty() && result.rings.isEmpty()) return lines.joinToString("\n")
             lines.add(getString(R.string.sync_kept))
         }
-        lines.add(getString(R.string.sync_result, result.rings.size, result.meetings))
+        lines.add(getString(R.string.sync_result, result.rings.size, result.meetings.size))
         val format = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT)
+        // Human, 2026-11-23: "after choosing sync meetings then upcoming meeting date/times should be displayed".
+        if (result.meetings.isNotEmpty()) lines.add(getString(R.string.sync_meetings_heading))
+        for (start_ms in result.meetings) lines.add(format.format(Date(start_ms)))
+        if (result.rings.isNotEmpty()) lines.add(getString(R.string.sync_rings_heading))
         for (ring in result.rings) {
             lines.add(format.format(Date(ring.ring_at_ms)) + " — " + ring_label(this, ring.start_ms, ring.ahead_minutes))
         }

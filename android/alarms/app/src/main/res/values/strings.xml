@@ -6,6 +6,8 @@
     <string name="sync_running">Reading the address…</string>
     <string name="sync_result">Set %1$d alarms for %2$d upcoming meetings. Checks again every hour.</string>
     <string name="sync_error">Could not read the address: %1$s</string>
+    <string name="sync_meetings_heading">Upcoming meetings:</string>
+    <string name="sync_rings_heading">Alarms:</string>
     <string name="sync_kept">Using the meetings it read last time.</string>
     <string name="exact_alarms_needed">Allow this app to set alarms on the screen that opened, then press again.</string>
     <string name="format_title">What the address must answer</string>
