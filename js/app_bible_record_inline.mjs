@@ -12,9 +12,13 @@ import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set
 import { html_text_set } from "./html_text_set.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_camera_microphone_stream } from "./html_camera_microphone_stream.mjs";
+import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { html_display_block } from "./html_display_block.mjs";
+import { app_bible_record_native_open } from "./app_bible_record_native_open.mjs";
+import { html_camera_microphone_stream } from "./html_camera_microphone_stream.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -23,7 +27,6 @@ import { html_canvas_draw_contain_top } from "./html_canvas_draw_contain_top.mjs
 import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_below.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
 import { null_is } from "./null_is.mjs";
-import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
 import { firebase_upload_blob_browser } from "./firebase_upload_blob_browser.mjs";
@@ -112,6 +115,28 @@ export function app_bible_record_inline(
     let passage = await app_bible_record_passage(chapter_code, verse_numbers);
     let reference = property_get(passage, "reference");
     let text = property_get(passage, "text");
+    ("INSIDE THE ANDROID APP, THE APP FILMS (human 2026-11-23): a phone's browser only gave a wide, zoomed picture, and the app (android/record) opens the camera upright and whole. The app shows its own camera screen with these same words over it; this page gets the take back and plays and sends it as it would its own. A project is chosen first, because a take sent without one has nowhere to go.");
+    if (app_bible_record_native_is()) {
+      camera_on = false;
+      refresh();
+      function native_done(taken, error) {
+        if (text_empty_not_is(error)) {
+          let text2 = text_combine("Not recorded: ", error);
+          html_text_set(problem, text2);
+          return;
+        }
+        blob = taken;
+        sent = false;
+        html_media_source_file_set(playback, blob);
+        html_display_block(playback);
+        refresh();
+      }
+      function native_open() {
+        app_bible_record_native_open(reference, text, native_done);
+      }
+      project_ensure(native_open);
+      return;
+    }
     ("A CAMERA THAT WILL NOT OPEN SAYS WHY, under the buttons, and Show camera comes back so it can be tried again (human 2026-11-23: the camera isn't working on computer - and nothing on the page said why). The usual reasons are all outside this page - an address that is not https, permission refused, no camera, or another program holding it - so the browser's own words are shown as they are.");
     html_text_set(problem, "");
     try {
