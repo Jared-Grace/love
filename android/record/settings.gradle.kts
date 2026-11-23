@@ -23,3 +23,5 @@ rootProject.name = "JESUS rose to life Record"
 include(":app")
 include(":shared")
 project(":shared").projectDir = file("../shared")
+include(":shared_camera")
+project(":shared_camera").projectDir = file("../shared_camera")

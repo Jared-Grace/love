@@ -12,6 +12,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.jesusrosetolife.shared.app_update_download_and_install
 import java.text.DateFormat
 import java.util.Date
 
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             }.start()
         }
         findViewById<Button>(R.id.update_button).setOnClickListener {
-            app_update_download_and_install(this)
+            app_update_download_and_install(this, "alarms", "JESUS rose to life Alarms")
             update_status.text = getString(R.string.update_result)
         }
     }

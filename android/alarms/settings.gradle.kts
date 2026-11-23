@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "JESUS rose to life Alarms"
 include(":app")
+include(":shared")
+project(":shared").projectDir = file("../shared")

@@ -21,5 +21,5 @@ android {
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(project(":shared_camera"))
 }

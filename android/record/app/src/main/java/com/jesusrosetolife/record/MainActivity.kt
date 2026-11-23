@@ -22,8 +22,9 @@ import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.jesusrosetolife.shared.CameraRecorder
 import com.jesusrosetolife.shared.WebShell
+import com.jesusrosetolife.shared.app_update_download_and_install
+import com.jesusrosetolife.shared_camera.CameraRecorder
 import org.json.JSONObject
 import java.io.File
 
@@ -76,8 +77,17 @@ class MainActivity : AppCompatActivity() {
         val close_button = Button(this)
         close_button.text = "Close"
         close_button.setOnClickListener { camera_close() }
+        // The same self-update the alarms app has (android/shared AppUpdate.kt); it sits with
+        // the camera's buttons because everything else on screen is the web page.
+        val update_button = Button(this)
+        update_button.text = "Update app"
+        update_button.setOnClickListener {
+            camera_close()
+            app_update_download_and_install(this, "record", "JESUS rose to life Record")
+        }
         buttons.addView(record_button)
         buttons.addView(close_button)
+        buttons.addView(update_button)
         camera_layer.addView(buttons, FrameLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT, Gravity.TOP))
         root.addView(camera_layer, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
         setContentView(root)
