@@ -4548,7 +4548,7 @@ def sandbox_path_near_miss_deny_reason():
         "Sandboxed node: this opens like the throwaway sandbox but isn't the "
         "exact sanctioned shape, so the guard won't auto-approve it. The read "
         f"path must be exactly {REPO_ROOT} (not a parent or other dir), and a "
-        "script must be a RELATIVE scripts/temp/<name>.mjs path (not absolute), "
+        "script must be a scripts/temp/<name>.mjs path (relative, or absolute under this repo), "
         "run from the repo root. Rewrite as exactly one of:\n"
         f"  unshare --net --map-root-user -- node --permission --allow-fs-read={REPO_ROOT} -e '<script>'\n"
         f"  unshare --net --map-root-user -- node --permission --allow-fs-read={REPO_ROOT} scripts/temp/<name>.mjs\n"
