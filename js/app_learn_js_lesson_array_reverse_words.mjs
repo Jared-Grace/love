@@ -68,9 +68,11 @@ export function app_learn_js_lesson_array_reverse_words() {
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
-      "Cut and join at a space, ",
-      '" "',
-      ", and the words turn around instead, each word's letters staying as they were:",
+      "",
+      's.split(" ")',
+      " and ",
+      '.join(" ")',
+      " split and join at a space, so the words turn around instead, each word's letters staying as they were:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
