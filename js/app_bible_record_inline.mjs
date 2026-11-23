@@ -20,8 +20,8 @@ import { html_request_animation_frame } from "./html_request_animation_frame.mjs
 import { greater_than } from "./greater_than.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
-import { html_canvas_draw_contain } from "./html_canvas_draw_contain.mjs";
-import { app_bible_record_text_draw } from "./app_bible_record_text_draw.mjs";
+import { html_canvas_draw_contain_top } from "./html_canvas_draw_contain_top.mjs";
+import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_below.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
@@ -159,9 +159,35 @@ export function app_bible_record_inline(
         ctx.fillRect(0, 0, width, height);
         ("an upright camera picture fills the frame, losing only a little at its sides; a wide one is fitted whole, because filling with it is the heavy zoom on a face");
         let upright = greater_than(camera_height, camera_width);
-        let draw = upright ? html_canvas_draw_cover : html_canvas_draw_contain;
-        draw(ctx, camera_element, camera_width, camera_height, width, height);
-        app_bible_record_text_draw(ctx, width, height, reference, text);
+        ("a wide one sits against the top, so the black left over is all beneath it and the words fill that (human 2026-11-23) rather than leaving an empty strip above the face");
+        let below = height;
+        if (upright) {
+          html_canvas_draw_cover(
+            ctx,
+            camera_element,
+            camera_width,
+            camera_height,
+            width,
+            height,
+          );
+        } else {
+          below = html_canvas_draw_contain_top(
+            ctx,
+            camera_element,
+            camera_width,
+            camera_height,
+            width,
+            height,
+          );
+        }
+        app_bible_record_text_draw_below(
+          ctx,
+          width,
+          height,
+          reference,
+          text,
+          below,
+        );
       }
     }
   }
