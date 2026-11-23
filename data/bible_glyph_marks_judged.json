@@ -161,5 +161,6 @@
   { "chapter_code": "DEU29", "verse_number": 4, "was": ["eyes", "eye", "ear"], "now": ["eye", "eyes", "ear+loudspeaker"] },
   { "chapter_code": "2SA07", "verse_number": 22, "was": ["ear"], "now": ["ear+loudspeaker"] },
   { "chapter_code": "DAN09", "verse_number": 18, "was": ["ear", "eyes", "eye"], "now": ["ear+loudspeaker", "eye", "eyes"] },
-  { "chapter_code": "LAM03", "verse_number": 56, "was": ["ear"], "now": ["ear+loudspeaker"] }
+  { "chapter_code": "LAM03", "verse_number": 56, "was": ["ear"], "now": ["ear+loudspeaker"] },
+  { "chapter_code": "PSA115", "verse_number": 5, "was": ["eyes", "eye"], "now": ["eye", "eyes"] }
 ]
