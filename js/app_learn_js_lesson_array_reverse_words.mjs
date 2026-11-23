@@ -13,20 +13,20 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_reverse_words() {
   arguments_assert(arguments, 0);
-  ('the words of a sentence turned around: let s = "love one another"; let a = s.split(" "); let r = a.reverse().join(" "); console.log(r); writes out another one love');
+  ('the words of a sentence turned around: let s = "pray for one another"; let a = s.split(" "); let r = a.reverse().join(" "); console.log(r); writes out another one for pray');
   ("2026-11-23, at the human's asking: after Reverse, then join. The same three steps, cut and joined at a space instead of between letters, so the words move and each word's letters stay as they were.");
-  ("PICKED: short sayings from the New Testament letters - love one another, pray without ceasing, rejoice always, give thanks, be kind - each of two or three different words, so turning one around always changes it. Not picked: God is love, which turned around reads love is God, a different claim; nor any saying whose words turned around make a statement about God.");
+  ("PICKED, at the human's asking 2026-11-23: sayings of four different words each, from the New Testament letters - pray for one another, do not be anxious, let love be genuine, give thanks in everything, bear one another's burdens - so turning one around always changes it. Four, because with two words reversing is a swap, and with three the middle word stays put, so both read as swapping the first and last; with four every word moves and the pattern shows. Not picked: God is love, which turned around reads love is God, a different claim; nor any saying whose words turned around make a statement about God.");
   ('The wrong programs are: join(" ") with no reverse (the sentence as it was), reverse().join("") (the words run together with no spaces), and reverse() with no join (the words as an array).');
   ("The writing is a first draft by Claude 2026-11-23.");
-  let example_input = "love one another";
+  let example_input = "pray for one another";
   function inputs_get() {
-    "five short sayings, shuffled";
+    "five sayings of four words, shuffled";
     let sayings = [
-      "love one another",
-      "pray without ceasing",
-      "rejoice always",
-      "give thanks",
-      "be kind",
+      "pray for one another",
+      "do not be anxious",
+      "let love be genuine",
+      "give thanks in everything",
+      "bear one another's burdens",
     ];
     let shuffled = list_shuffle_take(sayings, 5);
     return shuffled;
@@ -72,7 +72,7 @@ export function app_learn_js_lesson_array_reverse_words() {
       's.split(" ")',
       " and ",
       '.join(" ")',
-      " split and join at a space, so the words turn around instead, each word's letters staying as they were:",
+      " split and join at a space, so the order of the words reverses instead, each word's letters staying as they were:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
