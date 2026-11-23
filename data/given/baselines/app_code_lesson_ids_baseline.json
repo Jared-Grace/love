@@ -503,6 +503,7 @@
   "join_letters",
   "reverse_word",
   "reverse_chain",
+  "reverse_words",
   "luhn_double",
   "take_away_nine",
   "luhn_nine",
