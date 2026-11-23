@@ -14,7 +14,14 @@ export function bible_glyph_chapter_num08() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech,"],
+        words: [
+          "Then",
+          "$i_am",
+          "$voice+doing",
+          "$toward",
+          "$fishing_pole+proper_name,",
+          "$speech,",
+        ],
       },
       {
         verse_number: 2,
@@ -102,13 +109,20 @@ export function bible_glyph_chapter_num08() {
           "pattern",
           "$i_am",
           "had",
-          "$eye",
+          "$eyes",
           "$fishing_pole+proper_name.",
         ],
       },
       {
         verse_number: 5,
-        words: ["Again", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech,"],
+        words: [
+          "Again",
+          "$i_am",
+          "$voice+doing",
+          "$toward",
+          "$fishing_pole+proper_name,",
+          "$speech,",
+        ],
       },
       {
         verse_number: 6,
@@ -668,7 +682,14 @@ export function bible_glyph_chapter_num08() {
       },
       {
         verse_number: 23,
-        words: ["And", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech,"],
+        words: [
+          "And",
+          "$i_am",
+          "$voice+doing",
+          "$toward",
+          "$fishing_pole+proper_name,",
+          "$speech,",
+        ],
       },
       {
         verse_number: 24,
