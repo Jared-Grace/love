@@ -496,6 +496,7 @@ import { app_learn_js_lesson_array_reverse_mirror } from "./app_learn_js_lesson_
 import { app_learn_js_lesson_array_reverse_call } from "./app_learn_js_lesson_array_reverse_call.mjs";
 import { app_learn_js_lesson_array_for_letters } from "./app_learn_js_lesson_array_for_letters.mjs";
 import { app_learn_js_lesson_array_split_letters } from "./app_learn_js_lesson_array_split_letters.mjs";
+import { app_learn_js_lesson_array_split_empty } from "./app_learn_js_lesson_array_split_empty.mjs";
 import { app_learn_js_lesson_array_split_reverse } from "./app_learn_js_lesson_array_split_reverse.mjs";
 import { app_learn_js_lesson_array_join_letters } from "./app_learn_js_lesson_array_join_letters.mjs";
 import { app_learn_js_lesson_array_reverse_word } from "./app_learn_js_lesson_array_reverse_word.mjs";
@@ -1042,6 +1043,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_reverse_call,
     app_learn_js_lesson_array_for_letters,
     app_learn_js_lesson_array_split_letters,
+    app_learn_js_lesson_array_split_empty,
     app_learn_js_lesson_array_split_reverse,
     app_learn_js_lesson_array_join_letters,
     app_learn_js_lesson_array_reverse_word,
