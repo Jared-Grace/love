@@ -12,13 +12,14 @@ import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set
 import { html_text_set } from "./html_text_set.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_camera_microphone_stream } from "./html_camera_microphone_stream.mjs";
+import { html_camera_microphone_stream_upright } from "./html_camera_microphone_stream_upright.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
 import { html_canvas_draw_contain } from "./html_canvas_draw_contain.mjs";
 import { app_bible_record_text_draw } from "./app_bible_record_text_draw.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
@@ -114,8 +115,11 @@ export function app_bible_record_inline(
     let text = property_get(passage, "text");
     ("A CAMERA THAT WILL NOT OPEN SAYS WHY, under the buttons, and Show camera comes back so it can be tried again (human 2026-11-23: the camera isn't working on computer - and nothing on the page said why). The usual reasons are all outside this page - an address that is not https, permission refused, no camera, or another program holding it - so the browser's own words are shown as they are.");
     html_text_set(problem, "");
+    let tried = "";
     try {
-      stream = await html_camera_microphone_stream();
+      let opened = await html_camera_microphone_stream_upright();
+      stream = property_get(opened, "stream");
+      tried = property_get(opened, "tried");
     } catch (e) {
       camera_on = false;
       let said = text_combine("The camera did not open: ", e.message);
@@ -146,18 +150,17 @@ export function app_bible_record_inline(
           camera_width,
           " by ",
           camera_height,
+          " (",
+          tried,
+          ")",
         ]);
         html_text_set(problem, shape);
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, width, height);
-        html_canvas_draw_contain(
-          ctx,
-          camera_element,
-          camera_width,
-          camera_height,
-          width,
-          height,
-        );
+        ("an upright camera picture fills the frame, losing only a little at its sides; a wide one is fitted whole, because filling with it is the heavy zoom on a face");
+        let upright = greater_than(camera_height, camera_width);
+        let draw = upright ? html_canvas_draw_cover : html_canvas_draw_contain;
+        draw(ctx, camera_element, camera_width, camera_height, width, height);
         app_bible_record_text_draw(ctx, width, height, reference, text);
       }
     }

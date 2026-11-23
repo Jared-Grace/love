@@ -79,7 +79,7 @@ export function app_learn_js_lesson_array_reverse_word() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Turn a word around",
-    "a.reverse();",
+    'let r = a.join("");',
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
