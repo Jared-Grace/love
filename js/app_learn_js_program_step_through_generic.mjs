@@ -1345,6 +1345,43 @@ export function app_learn_js_program_step_through_generic(
         to: property_get(action, "to"),
       };
       await action_do(reversed_action, line_index);
+      if (property_get_or(action, "into", false)) {
+        ('2026-11-23, at the human\'s asking, for Reverse, then join: a reverse standing inside a line, as a.reverse().join("") does, then writes the turned array into the line in place of a.reverse(), since that is what it gives back, as a pop inside a line writes its item');
+        let reverse_line_from = list_get(starts, line_index);
+        let left26 = property_get(action, "from");
+        let reverse_from = subtract(left26, reverse_line_from);
+        let left27 = property_get(action, "to");
+        let reverse_to = subtract(left27, reverse_line_from);
+        let reverse_from_now = position_now(line_index, reverse_from);
+        let reverse_to_now = position_now(line_index, reverse_to);
+        let value16 = property_get(action, "after");
+        let reversed_code = js_value_code(value16);
+        let reverse_done = list_get(replaced, line_index);
+        let reverse_done_after = app_learn_js_line_pieces_add(
+          reverse_done,
+          reverse_from,
+          reverse_to,
+          reversed_code,
+        );
+        let reverse_base = list_get(bases, line_index);
+        let to8 = text_size(reverse_base);
+        let reversed_line = app_learn_js_line_pieces_text(
+          reverse_base,
+          reverse_done_after,
+          0,
+          to8,
+        );
+        await piece_arrive(
+          line_index,
+          reverse_from_now,
+          reverse_to_now,
+          reversed_code,
+          null,
+        );
+        row_text_set(line_index, reversed_line);
+        list_set(replaced, line_index, reverse_done_after);
+        rows_pieces_draw();
+      }
       return;
     }
     if (equal(kind, "assign")) {
