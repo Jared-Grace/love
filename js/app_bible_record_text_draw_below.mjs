@@ -1,12 +1,9 @@
-import { math_max } from "./math_max.mjs";
 import { math_min } from "./math_min.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { multiply } from "./multiply.mjs";
+import { app_bible_record_text_layout } from "./app_bible_record_text_layout.mjs";
+import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not_equal } from "./not_equal.mjs";
+import { multiply } from "./multiply.mjs";
 export function app_bible_record_text_draw_below(
   ctx,
   width,
@@ -19,74 +16,14 @@ export function app_bible_record_text_draw_below(
   "The passage laid over one frame of the video: a dark band with the reference small at its top and the words beneath it in white, starting right under the picture - below is where the camera picture ends, counted down from the top of the frame.";
   "WHY IT STARTS UNDER THE PICTURE (asked for by the human 2026-11-23): a phone browser that only sends a wide camera picture leaves a tall frame with empty black under it; the picture is drawn at the top and the words fill that black straight beneath, so there is no empty strip and the words never cover the face. A picture that fills the whole frame passes below as the frame's height, and the band then sits at the bottom over the picture, as it always did.";
   "It is drawn into the frame itself rather than floated over the camera, because what is recorded is the canvas - text floated above it would show on this screen and be missing from the saved video.";
-  "A long passage shrinks its letters until it fits under the picture, or in the lower half if that is more; a short one stays large enough to read on a phone.";
   arguments_assert(arguments, 6);
-  let margin = multiply(width, 0.05);
-  let right = multiply(margin, 2);
-  let room = subtract(width, right);
-  let size = divide(width, 16);
-  let lines = [];
-  function wrap() {
-    ctx.font = size + "px sans-serif";
-    let words = text.split(" ");
-    lines = [];
-    let line = "";
-    for (let word of words) {
-      let tried = equal(line, "") ? word : line + " " + word;
-      if (
-        greater_than(ctx.measureText(tried).width, room) &&
-        not_equal(line, "")
-      ) {
-        lines.push(line);
-        line = word;
-      } else {
-        line = tried;
-      }
-    }
-    if (not_equal(line, "")) {
-      lines.push(line);
-    }
-  }
-  wrap();
-  let under = subtract(height, below);
-  let half = multiply(height, 0.45);
-  let right2 = multiply(margin, 3);
-  let a = subtract(under, right2);
-  let first_room = math_max(a, half);
-  while (
-    greater_than(multiply(multiply(lines.length, size), 1.25), first_room) &&
-    greater_than(size, divide(width, 40))
-  ) {
-    size = multiply(size, 0.9);
-    wrap();
-  }
-  ("EVERY WORD ALWAYS FITS (asked for by the human 2026-11-22). If the room under the picture and the reading floor above could not hold it, the passage may take the whole frame and the letters keep shrinking with no floor until it is all inside - a word cut off the video is worse than small letters, because the recording is of reading the whole passage aloud. Width is checked too: a single word wider than a line cannot be wrapped, only shrunk.");
-  function widest() {
-    function lambda(line) {
-      let r2 = ctx.measureText(line).width;
-      return r2;
-    }
-    let widths = lines.map(lambda);
-    let r = Math.max(...widths);
-    return r;
-  }
-  while (
-    greater_than(
-      multiply(multiply(lines.length, size), 1.25),
-      multiply(height, 0.85),
-    ) ||
-    greater_than(widest(), room)
-  ) {
-    size = multiply(size, 0.9);
-    wrap();
-  }
-  let reference_size = multiply(size, 0.7);
-  let line_height = multiply(size, 1.25);
-  let band =
-    margin +
-    multiply(reference_size, 1.4) +
-    multiply(lines.length, line_height) +
-    multiply(margin, 0.5);
+  let layout = app_bible_record_text_layout(ctx, width, height, text, below);
+  let margin = property_get(layout, "margin");
+  let size = property_get(layout, "size");
+  let lines = property_get(layout, "lines");
+  let reference_size = property_get(layout, "reference_size");
+  let line_height = property_get(layout, "line_height");
+  let band = property_get(layout, "band");
   let b = subtract(height, band);
   let top = math_min(below, b);
   ctx.fillStyle = "rgba(0, 0, 0, 0.55)";

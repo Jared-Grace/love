@@ -1,3 +1,4 @@
+import { math_max } from "./math_max.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_element } from "./html_element.mjs";
@@ -20,7 +21,10 @@ import { html_request_animation_frame } from "./html_request_animation_frame.mjs
 import { greater_than } from "./greater_than.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
-import { html_canvas_draw_contain_top } from "./html_canvas_draw_contain_top.mjs";
+import { app_bible_record_text_layout } from "./app_bible_record_text_layout.mjs";
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
 import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_below.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
 import { null_is } from "./null_is.mjs";
@@ -171,13 +175,26 @@ export function app_bible_record_inline(
             height,
           );
         } else {
-          below = html_canvas_draw_contain_top(
+          ("THE PICTURE TAKES ALL THE ROOM THE WORDS LEAVE (human 2026-11-23: the words did not fill the space under the picture, and the picture was less than half the frame). The words' band is measured first; the picture then fills everything above it, trimming the wide picture's sides as much as that needs - never less than its whole width shown, so a long passage that needs most of the frame gets the picture whole and small, never a sliver.");
+          let layout = app_bible_record_text_layout(
+            ctx,
+            width,
+            height,
+            text,
+            height,
+          );
+          let band = property_get(layout, "band");
+          let top = multiply(width, camera_height);
+          let whole = divide(top, camera_width);
+          let b = subtract(height, band);
+          below = math_max(whole, b);
+          html_canvas_draw_cover(
             ctx,
             camera_element,
             camera_width,
             camera_height,
             width,
-            height,
+            below,
           );
         }
         app_bible_record_text_draw_below(
