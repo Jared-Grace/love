@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.os.Bundle
+import android.util.Rational
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
@@ -100,7 +101,8 @@ class MainActivity : AppCompatActivity() {
             WindowInsetsCompat.CONSUMED
         }
 
-        recorder = CameraRecorder(this, preview_view) { canvas, w, h -> words_draw(canvas, w, h) }
+        // 9:16 upright: the shape of a YouTube Short.
+        recorder = CameraRecorder(this, preview_view, Rational(9, 16)) { canvas, w, h -> words_draw(canvas, w, h) }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 if (camera_layer.visibility == View.VISIBLE) camera_close()

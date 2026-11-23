@@ -8,12 +8,15 @@ import android.graphics.PorterDuff
 import android.graphics.RectF
 import android.os.Handler
 import android.os.Looper
+import android.util.Rational
+import android.view.Surface
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraEffect
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.MirrorMode
 import androidx.camera.core.Preview
 import androidx.camera.core.UseCaseGroup
+import androidx.camera.core.ViewPort
 import androidx.camera.effects.Frame
 import androidx.camera.effects.OverlayEffect
 import androidx.camera.lifecycle.ProcessCameraProvider
@@ -35,9 +38,14 @@ import java.io.File
 // `draw` is handed an upright canvas and its width and height: it never deals with how
 // the camera's sensor happens to be turned.
 // Its own library, apart from android/shared, so an app with no camera carries none of it.
+// `aspect` is the upright shape of the take (9:16 for a YouTube Short). The camera's picture
+// is wider than that, and the video keeps only its centre; the screen is made to keep the same
+// centre (a ViewPort), and `draw` is handed only that centre, so nothing painted falls in the
+// part the video cuts off (human 2026-11-23: the sent take lost each line's first and last letters).
 class CameraRecorder(
     private val activity: AppCompatActivity,
     private val preview_view: PreviewView,
+    private val aspect: Rational,
     private val draw: (Canvas, Float, Float) -> Unit,
 ) {
     private var provider: ProcessCameraProvider? = null
@@ -61,7 +69,9 @@ class CameraRecorder(
                 CameraEffect.PREVIEW or CameraEffect.VIDEO_CAPTURE, 0, Handler(Looper.getMainLooper()),
             ) { error -> failed(error.message ?: error.toString()) }
             effect.setOnDrawListener { frame -> paint(frame); true }
-            val group = UseCaseGroup.Builder().addUseCase(preview).addUseCase(v).addEffect(effect).build()
+            val port = ViewPort.Builder(aspect, Surface.ROTATION_0).build()
+            val group = UseCaseGroup.Builder().setViewPort(port)
+                .addUseCase(preview).addUseCase(v).addEffect(effect).build()
             p.unbindAll()
             p.bindToLifecycle(activity, CameraSelector.DEFAULT_FRONT_CAMERA, group)
         }, ContextCompat.getMainExecutor(activity))
@@ -106,9 +116,15 @@ class CameraRecorder(
         val box = RectF(0f, 0f, w, h)
         m.mapRect(box)
         m.postTranslate(-box.left, -box.top)
+        // The centre of the upright picture the take keeps: as tall as the picture and
+        // narrowed to `aspect`, or as wide and shortened, whichever fits inside it.
+        val want = aspect.toFloat()
+        val kept_w = if (w / h > want) h * want else w
+        val kept_h = if (w / h > want) h else w / want
         canvas.save()
         canvas.concat(m)
-        draw(canvas, w, h)
+        canvas.translate((w - kept_w) / 2f, (h - kept_h) / 2f)
+        draw(canvas, kept_w, kept_h)
         canvas.restore()
     }
 }
