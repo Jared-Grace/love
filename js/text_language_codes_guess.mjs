@@ -44,11 +44,13 @@ export async function text_language_codes_guess(text) {
   }
   let only = [];
   for (let franc_code of object_property_names(franc_to_link)) {
-    if (link_codes.includes(link_of(franc_code))) {
+    let v = link_of(franc_code);
+    if (link_codes.includes(v)) {
       only.push(franc_code);
     }
   }
-  let linked = list_map(object_property_names(franc_to_link), link_of);
+  let list = object_property_names(franc_to_link);
+  let linked = list_map(list, link_of);
   for (let code of link_codes) {
     let b = linked.includes(code);
     if (not(b)) {
