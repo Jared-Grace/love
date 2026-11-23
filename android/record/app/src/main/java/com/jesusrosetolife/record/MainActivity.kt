@@ -20,6 +20,8 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.jesusrosetolife.shared.CameraRecorder
 import com.jesusrosetolife.shared.WebShell
 import org.json.JSONObject
@@ -79,6 +81,14 @@ class MainActivity : AppCompatActivity() {
         camera_layer.addView(buttons, FrameLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT, Gravity.TOP))
         root.addView(camera_layer, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
         setContentView(root)
+        // Android 15 draws every app under the status bar, the camera cutout and the system
+        // buttons; the app is kept inside them, so nothing is hidden or untappable (human
+        // 2026-11-23: the top bar was behind the camera, so no project could be chosen).
+        ViewCompat.setOnApplyWindowInsetsListener(root) { view, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout())
+            view.setPadding(bars.left, bars.top, bars.right, bars.bottom)
+            WindowInsetsCompat.CONSUMED
+        }
 
         recorder = CameraRecorder(this, preview_view) { canvas, w, h -> words_draw(canvas, w, h) }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
