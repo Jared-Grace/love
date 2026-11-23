@@ -68,6 +68,9 @@ fun app_update_download(context: Context, folder: String, title: String) {
         .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
     val manager = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
     val download_id = manager.enqueue(request)
+    // Said at once, because the installer only opens when the download is done: a tap that
+    // shows nothing meanwhile reads as a button that does nothing (human 2026-11-23).
+    Toast.makeText(context, "Downloading the update - the installer opens when it is done", Toast.LENGTH_LONG).show()
     app_install_when_download_completes(context, download_id, target)
 }
 
