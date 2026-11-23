@@ -330,7 +330,7 @@ export function bible_glyph_chapter_sng02() {
           "cliff,",
           "let",
           "me",
-          "$eye",
+          "$eyes",
           "your",
           "face,",
           "let",

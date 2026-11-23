@@ -319,7 +319,15 @@ export function bible_glyph_chapter_gen29() {
       },
       {
         verse_number: 11,
-        words: ["Then", "$hand+foot", "$face_blowing_a_kiss", "$proper_name$Rachel", "and", "wept", "$lifting."],
+        words: [
+          "Then",
+          "$hand+foot",
+          "$face_blowing_a_kiss",
+          "$proper_name$Rachel",
+          "and",
+          "wept",
+          "$lifting.",
+        ],
       },
       {
         verse_number: 12,
@@ -832,7 +840,7 @@ export function bible_glyph_chapter_gen29() {
           "the",
           "$i_am",
           "has",
-          "$eye",
+          "$eyes",
           "my",
           "$persevering_face+thing.",
           "$watch",

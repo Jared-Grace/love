@@ -183,7 +183,13 @@ export function bible_glyph_chapter_luk24() {
       },
       {
         verse_number: 8,
-        words: ["$plus", "they", "remembered", "$pointing_back", "$speech+thing."],
+        words: [
+          "$plus",
+          "they",
+          "remembered",
+          "$pointing_back",
+          "$speech+thing.",
+        ],
       },
       {
         verse_number: 9,
@@ -557,7 +563,7 @@ export function bible_glyph_chapter_luk24() {
           "$speech",
           "they",
           "had",
-          "$eye",
+          "$eyes",
           "a",
           "vision",
           "of",
