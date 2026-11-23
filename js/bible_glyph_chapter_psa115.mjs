@@ -96,10 +96,10 @@ export function bible_glyph_chapter_psa115() {
           "$voice+doing;",
           "they",
           "have",
-          "$eyes,",
+          "$eye,",
           "but",
           "$no_entry",
-          "$eye.",
+          "$eyes.",
         ],
       },
       {
