@@ -24,4 +24,14 @@
         android:textSize="24sp"
         android:text="@string/ring_stop" />
 
+    <Button
+        android:id="@+id/ring_open_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:minWidth="200dp"
+        android:minHeight="64dp"
+        android:textSize="20sp"
+        android:text="@string/ring_open_meetings" />
+
 </LinearLayout>

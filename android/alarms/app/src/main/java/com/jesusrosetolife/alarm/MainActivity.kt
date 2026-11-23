@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         val status = findViewById<TextView>(R.id.status_text)
         val url_box = findViewById<EditText>(R.id.url_box)
         url_box.setText(meeting_alarms_url(this))
+        val page_url_box = findViewById<EditText>(R.id.page_url_box)
+        page_url_box.setText(meeting_page_url(this))
         val test_status = findViewById<TextView>(R.id.test_status_text)
         val update_status = findViewById<TextView>(R.id.update_status_text)
         findViewById<Button>(R.id.test_alarm_button).setOnClickListener {
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.sync_button).setOnClickListener {
             if (!exact_alarms_or_ask(status)) return@setOnClickListener
             meeting_alarms_url_save(this, url_box.text.toString().trim())
+            meeting_page_url_save(this, page_url_box.text.toString().trim())
             status.text = getString(R.string.sync_running)
             Thread {
                 val result = meeting_alarms_sync(this)

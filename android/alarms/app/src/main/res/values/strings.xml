@@ -17,6 +17,9 @@
     <string name="ring_label">Meeting at %1$s (in %2$d min)</string>
     <string name="ring_channel">Meeting alarms</string>
     <string name="ring_stop">Stop</string>
+    <string name="ring_open_meetings">Open meetings</string>
+    <string name="page_url_label">Meetings page (opened from a ringing alarm)</string>
+    <string name="page_url_hint">https://christarose.org/calendar</string>
     <string name="test_alarm_button">Test alarm (rings in 1 minute)</string>
     <string name="test_alarm_result">A test alarm rings in one minute, the same way a meeting alarm will.</string>
     <string name="update_button">Update app</string>

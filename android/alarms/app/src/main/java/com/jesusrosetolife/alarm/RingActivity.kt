@@ -1,5 +1,7 @@
 package com.jesusrosetolife.alarm
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
@@ -23,6 +25,12 @@ class RingActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.ring_text).text = intent.getStringExtra(EXTRA_LABEL) ?: ""
         findViewById<Button>(R.id.ring_stop_button).setOnClickListener {
             NotificationManagerCompat.from(this).cancel(RING_NOTIFICATION_ID)
+            finish()
+        }
+        // Open meetings stops the alarm too, then opens the meetings page in the browser (the phone asks to unlock first when locked).
+        findViewById<Button>(R.id.ring_open_button).setOnClickListener {
+            NotificationManagerCompat.from(this).cancel(RING_NOTIFICATION_ID)
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(meeting_page_url(this))))
             finish()
         }
     }

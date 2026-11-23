@@ -35,6 +35,21 @@
             android:importantForAutofill="no"
             android:inputType="textUri" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/page_url_label"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/page_url_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/page_url_hint"
+            android:importantForAutofill="no"
+            android:inputType="textUri" />
+
         <Button
             android:id="@+id/sync_button"
             android:layout_width="wrap_content"

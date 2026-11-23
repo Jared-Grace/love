@@ -33,6 +33,22 @@ fun meeting_alarms_url_save(context: Context, url: String) {
     context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).edit().putString(PREF_URL, url).apply()
 }
 
+/**
+ * The page a ringing alarm's "Open meetings" opens: the host's calendar, which lists every upcoming
+ * meeting with a button to each guest's WhatsApp or Messenger (human, 2026-11-23: "when an alarm goes off
+ * can it have a button to open a url ... link to all upcoming meetings"). Its own box, because the test
+ * server answers alarms but serves no page - testing points this at the dev page instead.
+ */
+const val PREF_PAGE_URL = "page_url"
+const val DEFAULT_PAGE_URL = "https://christarose.org/calendar"
+
+fun meeting_page_url(context: Context): String =
+    context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).getString(PREF_PAGE_URL, DEFAULT_PAGE_URL)!!
+
+fun meeting_page_url_save(context: Context, url: String) {
+    context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).edit().putString(PREF_PAGE_URL, url).apply()
+}
+
 /** Reads the address; throws on anything but a 200 answer. */
 fun meeting_alarms_fetch(url: String): String {
     val connection = URL(url).openConnection() as HttpURLConnection
