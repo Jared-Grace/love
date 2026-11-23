@@ -55,13 +55,16 @@ export function app_learn_js_lesson_array_for_shortest_word() {
     return body;
   }
   function program_of(saying2) {
-    let code2 = program_with(saying2, body_if("<"), "short");
+    let v4 = body_if("<");
+    let code2 = program_with(saying2, v4, "short");
     return code2;
   }
   function wrong_programs_of(saying3) {
-    let v = program_with(saying3, body_if(">"), "short");
+    let v5 = body_if(">");
+    let v = program_with(saying3, v5, "short");
     let v2 = program_with(saying3, ["  short = w;"], "short");
-    let v3 = program_with(saying3, body_if("<"), "short.length");
+    let v6 = body_if("<");
+    let v3 = program_with(saying3, v6, "short.length");
     let programs = [v, v2, v3];
     return programs;
   }
