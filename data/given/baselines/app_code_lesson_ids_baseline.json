@@ -504,6 +504,7 @@
   "reverse_word",
   "reverse_chain",
   "reverse_words",
+  "reverse_same",
   "luhn_double",
   "take_away_nine",
   "luhn_nine",
