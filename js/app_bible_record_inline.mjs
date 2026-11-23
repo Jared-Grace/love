@@ -74,6 +74,8 @@ export function app_bible_record_inline(
   html_display_none(playback);
   let buttons = html_div(parent);
   let problem = html_p_text(parent, "");
+  ("SIGNING IN GETS A PLACE OF ITS OWN: the sign-in empties the place it is shown in, both before and after, so shown where the buttons are it took them away for good (human 2026-11-23: after sending, the buttons were gone until another passage was opened).");
+  let sign_in = html_div(parent);
   let camera_on = false;
   let stop = null;
   let stream = null;
@@ -243,7 +245,7 @@ export function app_bible_record_inline(
     playback_element.play();
   }
   async function send() {
-    await firebase_auth_ensure(buttons);
+    await firebase_auth_ensure(sign_in);
     let path = app_bible_record_clip_path(chapter_code, verse_numbers, blob);
     await firebase_upload_blob_browser(path, blob);
     sent = true;
