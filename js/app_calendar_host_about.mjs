@@ -5,6 +5,9 @@ import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_value_set } from "./html_value_set.mjs";
+import { list_map } from "./list_map.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -61,6 +64,49 @@ export function app_calendar_host_about(area, key, settings) {
     html_value_set(slug, host.slug);
     html_value_set(messenger, host.messenger);
   }
+  ('MEETING LENGTH AND HOW OFTEN ONE CAN START ARE THE HOST\'S TO SET (human, 2026-11-24: "should there be a setting to adjust how often meetings are available?"; "skip 45 min for now since no one has asked for it yet"). They were fixed at 25 and 60. Every choice here has the meeting no longer than the time between starts, so meetings never overlap.');
+  let meeting_minutes = host ? host.meeting_minutes : 25;
+  let block_minutes = host ? host.block_minutes : 60;
+  let meeting_area = app_shared_field(area);
+  let block_area = app_shared_field(area);
+  function minutes_choices(list) {
+    function choice(m) {
+      let r7 = {
+        key: m,
+        text: m + " minutes",
+      };
+      return r7;
+    }
+    let r8 = list_map(list, choice);
+    return r8;
+  }
+  function minutes_draw() {
+    html_clear(meeting_area);
+    app_shared_choice_row(
+      meeting_area,
+      "Meeting length",
+      minutes_choices([25, 30]),
+      meeting_minutes,
+      meeting_pick,
+    );
+    html_clear(block_area);
+    app_shared_choice_row(
+      block_area,
+      "A meeting can start every",
+      minutes_choices([30, 60]),
+      block_minutes,
+      block_pick,
+    );
+  }
+  function meeting_pick(m) {
+    meeting_minutes = m;
+    minutes_draw();
+  }
+  function block_pick(m) {
+    block_minutes = m;
+    minutes_draw();
+  }
+  minutes_draw();
   let zone_line = html_div_text_content(area, "Time zone: " + zone);
   app_shared_text_deemphasized(zone_line);
   async function about_save() {
@@ -85,8 +131,8 @@ export function app_calendar_host_about(area, key, settings) {
       "host_save",
       {
         slug: html_value_get(slug).trim(),
-        block_minutes: 60,
-        meeting_minutes: 25,
+        block_minutes: block_minutes,
+        meeting_minutes: meeting_minutes,
       },
       key,
     );
