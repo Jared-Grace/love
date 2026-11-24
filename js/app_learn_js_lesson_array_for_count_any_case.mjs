@@ -1,9 +1,8 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_first } from "./list_first.mjs";
-import { json_to } from "./json_to.mjs";
 import { list_last } from "./list_last.mjs";
+import { json_to } from "./json_to.mjs";
 import { app_learn_js_words_loop_program } from "./app_learn_js_words_loop_program.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -16,10 +15,11 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_for_count_any_case() {
   arguments_assert(arguments, 0);
-  ('how many times a word is in a sentence, whatever its capitals: split at a space, then for each word w, let low = w.toLowerCase(); if (low === "god") { count++; }; writes out 2 for "God is love and love is of god"');
+  ('how many times a word is in a sentence, whatever its capitals: split at a space, then for each word w, let low = w.toLowerCase(); if (low === find) { count++; }; writes out 2 for "God is love and love is of god" with find = "god"');
+  ("2026-11-23, at the human's asking: the word looked for is a name, find, so the if reads as asking whether it is the word looked for, and the next lesson can make find small too.");
   ("2026-11-23, at the human's asking: after Same word, any capitals. The Count a word loop, with each word made small before it is compared. One loop, nothing inside another.");
   ("Each saying has the word once with a capital and once or more without, so counting with w === alone gives a smaller number than the right program.");
-  ("The wrong programs are: if (w === word) (the capitals still count, so the word with a capital is missed), console.log(a.length) (how many words in all) and console.log(low === word) (only whether the last word is it).");
+  ("The wrong programs are: if (w === find) (the capitals still count, so the word with a capital is missed), console.log(a.length) (how many words in all) and console.log(low === find) (only whether the last word is it).");
   ("The writing is a first draft by Claude 2026-11-23.");
   let example_input = ["God is love and love is of god", "god"];
   function inputs_get() {
@@ -41,14 +41,14 @@ export function app_learn_js_lesson_array_for_count_any_case() {
     let word = json_to(object);
     let code = app_learn_js_words_loop_program(
       saying,
-      ["let count = 0;"],
+      ["let find = " + word + ";", "let count = 0;"],
       [
         "  let low = w.toLowerCase();",
-        "  if (" + compared + " === " + word + ") {",
+        "  if (" + compared + " === find) {",
         "    count++;",
         "  }",
       ],
-      equal(logged, null) ? "low === " + word : logged,
+      logged,
     );
     return code;
   }
@@ -59,7 +59,7 @@ export function app_learn_js_lesson_array_for_count_any_case() {
   function wrong_programs_of(pair3) {
     let v = program_with(pair3, "w", "count");
     let v2 = program_with(pair3, "low", "a.length");
-    let v3 = program_with(pair3, "low", null);
+    let v3 = program_with(pair3, "low", "low === find");
     let programs = [v, v2, v3];
     return programs;
   }
@@ -96,7 +96,7 @@ export function app_learn_js_lesson_array_for_count_any_case() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Count a word, any capitals",
-    "let low = w.toLowerCase();",
+    "if (low === find)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,

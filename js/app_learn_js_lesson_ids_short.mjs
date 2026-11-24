@@ -736,6 +736,12 @@ export function app_learn_js_lesson_ids_short() {
         text_frozen("count_any_case"),
       app_learn_js_lesson_array_for_capitals_first:
         text_frozen("capitals_first"),
+      app_learn_js_lesson_array_for_count_find_capital:
+        text_frozen("find_capital"),
+      app_learn_js_lesson_string_starts_capital: text_frozen("starts_capital"),
+      app_learn_js_lesson_array_for_count_capitals:
+        text_frozen("count_capitals"),
+      app_learn_js_lesson_array_for_keep_capitals: text_frozen("keep_capitals"),
       app_learn_js_lesson_array_split_space: text_frozen("split_space"),
       app_learn_js_lesson_array_for_even_odd: text_frozen("even_odd"),
       app_learn_js_lesson_array_for_above_average: text_frozen("above_average"),
