@@ -13,6 +13,12 @@ import { app_shared_bible_folder_first } from "./app_shared_bible_folder_first.m
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { list_map } from "./list_map.mjs";
+import { html_p_text } from "./html_p_text.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_add } from "./list_add.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { app_bible_record_inline } from "./app_bible_record_inline.mjs";
@@ -70,6 +76,30 @@ export async function app_bible_record_home(context) {
     entries,
     refreshes: [],
   };
+  ("HOW MANY PASSAGES HAVE A VIDEO is said in the top bar, and kept up as takes come and go (human 2026-11-24: every passage of Psalm 1 had a video but no chapter download showed): the same count the chapter download is offered by, shown, so a count that is wrong can be seen rather than guessed at.");
+  let count_line = html_p_text(bar, "");
+  function count_show() {
+    function has(e) {
+      let value = property_get(e, "blob");
+      let nn = null_not_is(value);
+      return nn;
+    }
+    let taken = list_filter(entries, has);
+    let size = list_size(taken);
+    let v = String(size);
+    let size2 = list_size(entries);
+    let v2 = String(size2);
+    let label = text_combine_multiple([
+      v,
+      " of ",
+      v2,
+      " passages have a video",
+    ]);
+    html_text_set(count_line, label);
+  }
+  let list = property_get(chapter, "refreshes");
+  list_add(list, count_show);
+  count_show();
   for (let item of passages) {
     let passage = property_get(item, "passage");
     let verses = property_get(item, "verses");
