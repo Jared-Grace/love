@@ -6,9 +6,9 @@ import { app_shared_container_base } from "./app_shared_container_base.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_shared_button_wide_shape } from "./app_shared_button_wide_shape.mjs";
-import { app_shared_confirm_choices } from "./app_shared_confirm_choices.mjs";
 import { app_shared_button_red } from "./app_shared_button_red.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
+import { app_shared_confirm_choices } from "./app_shared_confirm_choices.mjs";
 export function app_shared_confirm_over_red(
   question,
   text_confirm,
@@ -53,7 +53,16 @@ export function app_shared_confirm_over_red(
     }
     return wide_inner;
   }
-  let button_confirm = wide(app_shared_button_red);
+  let red_wide = wide(app_shared_button_red);
+  function button_confirm(parent, text, lambda) {
+    'The yes stands apart, a wide gap above and below it, so a thumb aiming at the way out cannot land on it by mistake (human, 2026-11-24: "adding vertical spacing above and below red button - make sure they don\'t choose accidentally?").';
+    let b = red_wide(parent, text, lambda);
+    html_style_assign(b, {
+      "margin-top": "32px",
+      "margin-bottom": "32px",
+    });
+    return b;
+  }
   let button_back = wide(app_shared_button_green);
   app_shared_confirm_choices(
     box,
