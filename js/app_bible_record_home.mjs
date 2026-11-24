@@ -13,14 +13,20 @@ import { app_shared_bible_folder_first } from "./app_shared_bible_folder_first.m
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_join_comma } from "./list_join_comma.mjs";
+import { equal } from "./equal.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_first } from "./list_first.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_add } from "./list_add.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_bible_record_take_or_null } from "./app_bible_record_take_or_null.mjs";
+import { property_set } from "./property_set.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
 import { list_last_property } from "./list_last_property.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { app_bible_record_inline } from "./app_bible_record_inline.mjs";
 export async function app_bible_record_home(context) {
   "The chapter chooser the sermons app uses, with a recorder under each passage, in place rather than on a screen of its own, and, in the top bar, which project the recordings go into. Nothing is recorded until a project is chosen, so the first button asks for one and then opens the camera.";
@@ -61,8 +67,10 @@ export async function app_bible_record_home(context) {
     books,
     [],
   );
-  function lambda(item) {
-    let passage = property_get(item, "passage");
+  ("EVERY PASSAGE OF THE CHAPTER, NOT ONLY THE ONE ON SCREEN (human 2026-11-24: Psalm 2 said 1 of 1 though other passages had been recorded): the page draws only the passage picked, so the list is built from the chapter's whole split, and the takes of passages not drawn are looked up quietly here, while the drawn one's recorder looks up its own.");
+  let downloaded = await app_bible_record_passages_download(chapter_code);
+  let all_passages = property_get(downloaded, "passages");
+  function lambda(passage) {
     let verse_numbers = property_get(passage, "verse_numbers");
     let e = {
       verse_numbers,
@@ -70,7 +78,34 @@ export async function app_bible_record_home(context) {
     };
     return e;
   }
-  let entries = list_map(passages, lambda);
+  let entries = list_map(all_passages, lambda);
+  function entry_for(verse_numbers) {
+    let wanted = list_join_comma(verse_numbers);
+    function same(e) {
+      let list2 = property_get(e, "verse_numbers");
+      let joined = list_join_comma(list2);
+      let eq = equal(joined, wanted);
+      return eq;
+    }
+    let found = list_filter(entries, same);
+    if (list_empty_is(found)) {
+      let e = {
+        verse_numbers,
+        blob: null,
+      };
+      list_add(entries, e);
+      return e;
+    }
+    let first = list_first(found);
+    return first;
+  }
+  let drawn = [];
+  for (let item of passages) {
+    let passage = property_get(item, "passage");
+    let value2 = property_get(passage, "verse_numbers");
+    let item2 = entry_for(value2);
+    list_add(drawn, item2);
+  }
   let chapter = {
     reference,
     entries,
@@ -100,12 +135,31 @@ export async function app_bible_record_home(context) {
   let list = property_get(chapter, "refreshes");
   list_add(list, count_show);
   count_show();
+  async function take_load(e) {
+    let verse_numbers2 = property_get(e, "verse_numbers");
+    let found = await app_bible_record_take_or_null(
+      chapter_code,
+      verse_numbers2,
+    );
+    if (null_is(found)) {
+      return;
+    }
+    property_set(e, "blob", found);
+    for (let each_refresh of list) {
+      each_refresh();
+    }
+  }
+  for (let e of entries) {
+    if (list_includes_not(drawn, e)) {
+      take_load(e);
+    }
+  }
   for (let item of passages) {
     let passage = property_get(item, "passage");
     let verses = property_get(item, "verses");
     let p = list_last_property(verses, "p");
     let verse_numbers = property_get(passage, "verse_numbers");
-    let entry = list_find_property(entries, "verse_numbers", verse_numbers);
+    let entry = entry_for(verse_numbers);
     function project_ensure(then) {
       function chosen() {
         project_label();
