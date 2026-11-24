@@ -1,3 +1,4 @@
+import { reply_choice_optional } from "./reply_choice_optional.mjs";
 import { reply_word_god } from "./reply_word_god.mjs";
 import { reply_phrase_love_loved_for } from "./reply_phrase_love_loved_for.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
@@ -32,18 +33,15 @@ export function reply_bible_1jn_4_10() {
   let fn6 = reply_optional("had");
   let not_we = reply_sequence(["not", fn5, "we", fn6, love_loved, god]);
   let r7 = reply_words("hath first");
-  let item2 = reply_choice(["hath", r7, "did", "had"]);
-  let he_did = reply_optional(item2);
+  let he_did = reply_choice_optional(["hath", r7, "did", "had"]);
   let fn7 = reply_choice(["that", "because"]);
   let r8 = reply_word_us();
   let but_he = reply_sequence(["but", fn7, "he", he_did, love_loved, r8]);
   let r9 = reply_words("did send");
   let sent = reply_choice(["sent", r9]);
   let r10 = reply_words("to be");
-  let item3 = reply_choice([r10, "as"]);
-  let be = reply_optional(item3);
-  let item4 = reply_choice(["a", "an", "the"]);
-  let a = reply_optional(item4);
+  let be = reply_choice_optional([r10, "as"]);
+  let a = reply_choice_optional(["a", "an", "the"]);
   let fn8 = reply_optional("atoning");
   let sacrifice = reply_sequence([fn8, "sacrifice"]);
   let offering = reply_choice([
