@@ -1,3 +1,4 @@
+import { list_slice_include } from "./list_slice_include.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -139,8 +140,7 @@ export function app_learn_js_expression_value_decoys(current, node) {
     ("left may be a string, as s is in s.slice(i, i + sep.length), so its end is read off its length rather than off a list's size");
     let end = left.length;
     let to_end = list_slice(left, slice_from, end);
-    let index_b = add(slice_to, 1);
-    let one_more = list_slice(left, slice_from, index_b);
+    let one_more = list_slice_include(left, slice_from, slice_to);
     let ranges = [to_end, one_more];
     function range_wrong_is(range) {
       let differs3 = json_equal_not(range, value);
