@@ -35,6 +35,14 @@ export function app_shared_money_section_why_receive() {
         "Las ofrendas dadas libremente, nunca exigidas, pueden sostener a los ministros de Dios.",
       ],
     },
+    por: {
+      title: "Então por que receber alguma coisa?",
+      lines: [
+        "Não amordace o boi enquanto ele debulha o grão (Deuteronômio 25:4, e Paulo repete isso sobre os trabalhadores em 1 Timóteo 5:18).",
+        "O boi é alimentado para continuar produzindo para os outros.",
+        "Ofertas dadas livremente, nunca exigidas, podem sustentar os ministros de Deus.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Then why receive anything at all?",
@@ -53,6 +61,14 @@ export function app_shared_money_section_why_receive() {
         ],
       },
       spa: {
+        title: "Then why receive anything at all?",
+        lines: [
+          "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
+          "The ox is fed so it can keep producing for others.",
+          "Freely given gifts, never demanded ones, can provide for ministers of God.",
+        ],
+      },
+      por: {
         title: "Then why receive anything at all?",
         lines: [
           "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
