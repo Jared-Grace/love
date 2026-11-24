@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_bible_verses } from "./reply_bible_verses.mjs";
 import { reply_once_or_more } from "./reply_once_or_more.mjs";
@@ -6,7 +7,6 @@ import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_references_closed } from "./reply_bible_references_closed.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
 import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -48,8 +48,7 @@ export async function reply_bible_verses_cases_gate_run() {
   async function checked(item) {
     let [message, outputs] = item;
     let got = await reply_attempt(message, rule);
-    let a = list_size(outputs);
-    let answered = greater_than(a, 0);
+    let answered = list_size_greater_than(outputs, 0);
     let r2 = {
       message,
       ok: json_equal(got, {
