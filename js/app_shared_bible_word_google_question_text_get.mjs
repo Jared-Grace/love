@@ -17,10 +17,12 @@ export function app_shared_bible_word_google_question_text_get(
     urd: 'اس آیت میں لفظ "{word}" کا مطلب سمجھائیں: {reference} "{verse}"',
     tgl: 'Ipaliwanag kung ano ang ibig sabihin ng salitang "{word}" sa talatang ito: {reference} "{verse}"',
     spa: 'Explica qué significa la palabra "{word}" en este versículo: {reference} "{verse}"',
+    por: 'Explique o que a palavra "{word}" significa neste versículo: {reference} "{verse}"',
     translated_from: {
       urd: 'Explain what the word "{word}" means in this verse: {reference} "{verse}"',
       tgl: 'Explain what the word "{word}" means in this verse: {reference} "{verse}"',
       spa: 'Explain what the word "{word}" means in this verse: {reference} "{verse}"',
+      por: 'Explain what the word "{word}" means in this verse: {reference} "{verse}"',
     },
   };
   let v = app_shared_text_reader_language_filled(texts, {
