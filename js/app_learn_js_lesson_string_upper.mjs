@@ -67,7 +67,7 @@ export function app_learn_js_lesson_string_upper() {
     app_learn_js_div_cycle_code(box_two, [
       "",
       "s.toUpperCase()",
-      " gives back a new string with every letter a capital. ",
+      " gives back a new string with every letter uppercase. ",
       "s",
       " itself is not changed:",
     ]);
@@ -77,7 +77,7 @@ export function app_learn_js_lesson_string_upper() {
     app_learn_js_code_lines_writes_out(box_two, lines2, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Every letter a capital",
+    "Every letter uppercase",
     "s.toUpperCase()",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({

@@ -70,13 +70,13 @@ export function app_learn_js_lesson_array_for_capital_words() {
       box_one,
       context,
       app_learn_js_lesson_string_capital_first,
-      ["", "big + s.slice(1)", " gives a word a capital first letter"],
+      ["", "big + s.slice(1)", " gives a word an uppercase first letter"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "Done to each word ",
       "w",
-      " in a loop and pushed, every word gets a capital first letter:",
+      " in a loop and pushed, every word gets an uppercase first letter:",
     ]);
     let code3 = program_of(example_input);
     let lines = text_split_newline(code3);
@@ -84,7 +84,7 @@ export function app_learn_js_lesson_array_for_capital_words() {
     app_learn_js_code_lines_writes_out(box_two, lines, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "A capital on every word",
+    "Uppercase every first letter",
     "r.push(big + w.slice(1))",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({

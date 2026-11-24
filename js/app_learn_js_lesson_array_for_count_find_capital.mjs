@@ -80,7 +80,7 @@ export function app_learn_js_lesson_array_for_count_find_capital() {
       [
         "",
         "let low = w.toLowerCase();",
-        " makes each word small before it is compared with ",
+        " makes each word lowercase before it is compared with ",
         "find",
       ],
     );
@@ -88,9 +88,9 @@ export function app_learn_js_lesson_array_for_count_find_capital() {
     app_learn_js_div_cycle_code(box_two, [
       "With ",
       'find = "GOD"',
-      ", no small word is ever the same as it. So ",
+      ", no lowercase word is ever the same as it. So ",
       "find",
-      " is made small too, once, before the loop:",
+      " is made lowercase too, once, before the loop:",
     ]);
     let code3 = program_of(example_input);
     let lines = text_split_newline(code3);
@@ -98,7 +98,7 @@ export function app_learn_js_lesson_array_for_count_find_capital() {
     app_learn_js_code_lines_writes_out(box_two, lines, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Find a word in capitals",
+    "Find an uppercase word",
     "let f = find.toLowerCase();",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({

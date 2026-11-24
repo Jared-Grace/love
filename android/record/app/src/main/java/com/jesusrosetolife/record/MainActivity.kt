@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         web = WebShell.create(this, DEV_HOST) { name -> if (name == TAKE && take.exists()) take else null }
         web.addJavascriptInterface(Bridge(), "love_record_native")
         // Update app is offered by the page, in its Settings (human 2026-11-23).
-        app_update_bridge_add(this, web, "record", "JESUS rose to life Record")
+        app_update_bridge_add(this, web, "record", "Record Bible by ChristArose")
         root.addView(web, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
 
         camera_layer = FrameLayout(this)

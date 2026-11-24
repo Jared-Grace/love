@@ -69,7 +69,7 @@ export function app_learn_js_lesson_array_for_keep_capitals() {
       [
         "",
         "if (f === big) { count++; }",
-        " counts the words that start with a capital",
+        " counts the words that start uppercase",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
@@ -86,7 +86,7 @@ export function app_learn_js_lesson_array_for_keep_capitals() {
     app_learn_js_code_lines_writes_out(box_two, lines, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Keep the capital words",
+    "Keep the uppercase words",
     "names.push(w)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({

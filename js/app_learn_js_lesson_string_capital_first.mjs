@@ -60,14 +60,14 @@ export function app_learn_js_lesson_string_capital_first() {
       [
         "",
         "s.toUpperCase()",
-        " gives back the string with every letter a capital",
+        " gives back the string with every letter uppercase",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "Called on the first letter ",
       "s[0]",
-      ", only that letter is a capital. Then ",
+      ", only that letter is made uppercase. Then ",
       "s.slice(1)",
       " adds the rest of the word:",
     ]);
@@ -77,7 +77,7 @@ export function app_learn_js_lesson_string_capital_first() {
     app_learn_js_code_lines_writes_out(box_two, lines2, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "A capital first letter",
+    "Uppercase first letter",
     "big + s.slice(1)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({

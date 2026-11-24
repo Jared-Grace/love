@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JESUS rose to life Alarms</string>
+    <string name="app_name">Alarms by ChristArose</string>
     <string name="url_label">Meetings address</string>
     <string name="url_hint">https://christarose.org/calendar/api/alarms?host=…</string>
     <string name="sync_button">Sync meetings</string>

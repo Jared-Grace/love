@@ -57,7 +57,7 @@ export function app_learn_js_lesson_string_starts_capital() {
       box_one,
       context,
       app_learn_js_lesson_string_capital_first,
-      ["", "let big = f.toUpperCase();", " makes the first letter a capital"],
+      ["", "let big = f.toUpperCase();", " makes the first letter uppercase"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
@@ -85,7 +85,7 @@ export function app_learn_js_lesson_string_starts_capital() {
     app_learn_js_code_lines_writes_out(box_two, lines2, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Starts with a capital?",
+    "Starts uppercase?",
     "f === big",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({

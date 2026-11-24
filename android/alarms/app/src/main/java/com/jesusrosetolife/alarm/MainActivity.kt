@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             }.start()
         }
         findViewById<Button>(R.id.update_button).setOnClickListener {
-            app_update_download_and_install(this, "alarms", "JESUS rose to life Alarms")
+            app_update_download_and_install(this, "alarms", getString(R.string.app_name))
             update_status.text = getString(R.string.update_result)
         }
     }

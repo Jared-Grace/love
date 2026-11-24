@@ -77,7 +77,7 @@ export function app_learn_js_lesson_array_for_count_any_case() {
       [
         "",
         "x === y",
-        " after both are made small is true for ",
+        " after both are made lowercase is true for ",
         '"God"',
         " and ",
         '"god"',
@@ -87,7 +87,7 @@ export function app_learn_js_lesson_array_for_count_any_case() {
     app_learn_js_div_cycle_code(box_two, [
       "Each word ",
       "w",
-      " made small first, the loop counts the word with a capital too:",
+      " made lowercase first, the loop counts the word with an uppercase letter too:",
     ]);
     let code3 = program_of(example_input);
     let lines = text_split_newline(code3);
@@ -95,7 +95,7 @@ export function app_learn_js_lesson_array_for_count_any_case() {
     app_learn_js_code_lines_writes_out(box_two, lines, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Count a word, any capitals",
+    "Count a word, any case",
     "if (low === find)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({

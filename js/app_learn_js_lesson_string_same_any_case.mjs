@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { json_to } from "./json_to.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
+import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -70,13 +70,17 @@ export function app_learn_js_lesson_string_same_any_case() {
       box_one,
       context,
       app_learn_js_lesson_string_lower,
-      ["", "s.toLowerCase()", " gives back the string with every letter small"],
+      [
+        "",
+        "s.toLowerCase()",
+        " gives back the string with every letter lowercase",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "",
       '"God" === "god"',
-      " is false, since a capital is a different letter. Made small first, both are ",
+      " is false, since an uppercase letter is a different letter. Made lowercase first, both are ",
       '"god"',
       ", so they are the same:",
     ]);
@@ -86,7 +90,7 @@ export function app_learn_js_lesson_string_same_any_case() {
     app_learn_js_code_lines_writes_out(box_two, lines2, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Same word, any capitals",
+    "Same word, any case",
     "x === y",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({

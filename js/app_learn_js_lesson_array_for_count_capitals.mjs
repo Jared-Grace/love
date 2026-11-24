@@ -67,7 +67,7 @@ export function app_learn_js_lesson_array_for_count_capitals() {
       box_one,
       context,
       app_learn_js_lesson_string_starts_capital,
-      ["", "f === big", " is true when the word starts with a capital"],
+      ["", "f === big", " is true when the word starts uppercase"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
@@ -75,7 +75,7 @@ export function app_learn_js_lesson_array_for_count_capitals() {
       "w",
       " in a loop, ",
       "count++",
-      " counts the words that start with a capital:",
+      " counts the words that start uppercase:",
     ]);
     let code3 = program_of(example_input);
     let lines = text_split_newline(code3);
@@ -83,7 +83,7 @@ export function app_learn_js_lesson_array_for_count_capitals() {
     app_learn_js_code_lines_writes_out(box_two, lines, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Count the capital words",
+    "Count the uppercase words",
     "if (f === big)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
