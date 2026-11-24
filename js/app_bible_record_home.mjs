@@ -9,7 +9,7 @@ import { app_bible_record_project } from "./app_bible_record_project.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_bible_record_project_choose } from "./app_bible_record_project_choose.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { app_shared_bible_folder_first } from "./app_shared_bible_folder_first.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { list_map } from "./list_map.mjs";
@@ -48,7 +48,7 @@ export async function app_bible_record_home(context) {
   project_button = app_shared_button_wide(bar, "", project_change);
   project_label();
   ("ONE LIST OF TAKES FOR THE WHOLE CHAPTER, filled in before any recorder is drawn, so every recorder can tell from the first whether the chapter's takes are complete (human 2026-11-24: download the chapter's takes as one video).");
-  let bible_folder = ebible_folder_english();
+  let bible_folder = app_shared_bible_folder_first();
   let books = await ebible_version_books_browser(bible_folder);
   let reference = ebible_parts_chapter_code_to_reference(
     chapter_code,

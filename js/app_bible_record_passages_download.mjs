@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_bible_sermons_download } from "./app_bible_sermons_download.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { app_shared_bible_folder_first } from "./app_shared_bible_folder_first.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { property_get } from "./property_get.mjs";
@@ -12,7 +12,7 @@ export async function app_bible_record_passages_download(chapter_code) {
   "How one chapter is split into the passages bible_record puts a recorder under. Every chapter of the Bible can be recorded (asked for by the human 2026-11-22), not only the ones with a sermon.";
   "A chapter with an approved sermon keeps the sermon's passages, so a recording lines up with the sermon preached on it. Any other chapter is split one verse per passage: short takes are easy to redo, and a verse is the one split every chapter already has.";
   "REJECTED: the whole chapter as one passage - a long chapter becomes one long take, and one slip means recording all of it again.";
-  "The verse numbers are read from the English version, the same one the recording draws its words from, so every passage offered is one the recording can show.";
+  "The verse numbers are read from the first chosen language's bible, the same one the recording draws its words from, so every passage offered is one the recording can show.";
   arguments_assert(arguments, 1);
   async function sermon() {
     let d = await app_bible_sermons_download(chapter_code);
@@ -22,7 +22,7 @@ export async function app_bible_record_passages_download(chapter_code) {
   if (null_not_is(downloaded)) {
     return downloaded;
   }
-  let bible_folder = ebible_folder_english();
+  let bible_folder = app_shared_bible_folder_first();
   let verses = await ebible_verses_browser(bible_folder, chapter_code);
   let key = verse_number_key();
   function one(verse) {
