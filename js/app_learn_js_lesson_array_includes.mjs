@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_map } from "./list_map.mjs";
@@ -63,8 +64,7 @@ export function app_learn_js_lesson_array_includes() {
     let v4 = items_without();
     let arrays = [v, v2, v3, v4];
     let count = list_size(arrays);
-    let shuffled2 = list_shuffle_take(arrays, count);
-    let programs = list_map(shuffled2, program);
+    let programs = list_shuffle_take_map(arrays, count, program);
     return programs;
   }
   let batch = app_learn_js_batch_question_answer_fns(
