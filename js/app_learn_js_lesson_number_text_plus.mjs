@@ -1,3 +1,4 @@
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
@@ -94,8 +95,7 @@ export function app_learn_js_lesson_number_text_plus() {
     let trimmed = text_trim(ending);
     let no_space = line_get(number, trimmed);
     let plus_written = text_combine_multiple([number, " ", plus, ending]);
-    let one_string = app_learn_js_string_code(plus_written);
-    let all_quoted = js_code_console_log_statement(one_string);
+    let all_quoted = app_learn_js_word_console_log_statement(plus_written);
     let ending_code = app_learn_js_string_code(ending);
     let swapped = js_code_binary_spaced_nb(ending_code, plus, number);
     let string_first = js_code_console_log_statement(swapped);
@@ -141,7 +141,8 @@ export function app_learn_js_lesson_number_text_plus() {
     "A number plus a string",
     '5 + " is a number"',
   );
-  let lesson = app_learn_js_lesson_code_logged({steps: true,
+  let lesson = app_learn_js_lesson_code_logged({
+    steps: true,
     above,
     name_id,
     batch_get: batch,
