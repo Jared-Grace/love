@@ -17,7 +17,7 @@ export async function playwright_url_page_heights(url, width, height) {
     await page.setViewportSize(viewport);
     await page.goto(url);
     await page.waitForLoadState("networkidle");
-    heights = await page.evaluate(function measure() {
+    function measure() {
       let style = getComputedStyle(document.body);
       let measured = {
         page: document.documentElement.scrollHeight,
@@ -27,7 +27,8 @@ export async function playwright_url_page_heights(url, width, height) {
         margin_bottom: style.marginBottom,
       };
       return measured;
-    });
+    }
+    heights = await page.evaluate(measure);
   }
   await playwright_test_blank(on_page);
   return heights;
