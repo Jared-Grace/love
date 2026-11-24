@@ -371,6 +371,7 @@ export function app_bible_record_inline(
     app_shared_confirm_over_red(
       "Delete this video? It cannot be brought back.",
       "🗑️ Delete video",
+      "Keep video",
       take_delete_confirmed,
     );
   }

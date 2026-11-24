@@ -32,8 +32,9 @@ import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
-export async function app_calendar_guest(parent, slug, key, on_key) {
-  arguments_assert(arguments, 4);
+export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
+  arguments_assert(arguments, 5);
+  ("on_booked(draw) runs once a booking is written; draw(box) draws what was booked and the guest's link into box. The page draws it at its top and goes back to its home screen, the guest's meetings with the hours under them (human, 2026-11-24: \"when booked meeting should take back to home screen that says your meetings but the info should be at the top\").");
   ("The booking screen a guest reaches from a host's link (#host=<slug>): first how to reach them and a code to send the host, then - once the host has seen the code arrive - the host's open hours in the guest's own clock and a Book that is final at once.");
   ("key is the guest's session key, or null. The first code answers a new key, handed to on_key so the page keeps it; the guest never signs in.");
   ("A host who has set a Messenger name lets the guest pick WhatsApp or Messenger; a Messenger guest gives no number, and sends the code from Messenger instead.");
@@ -84,7 +85,7 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   ("★ PROVE FIRST, THEN BOOK (human, 2026-11-20). A guest the host has not yet proven sees no times at all: first the form asking how to reach them, then the code to send. Only a proven guest sees the times, and their Book is final at once - no booking is only a request.");
   async function redraw() {
     html_clear(parent);
-    let r3 = await app_calendar_guest(parent, slug, key, on_key);
+    let r3 = await app_calendar_guest(parent, slug, key, on_key, on_booked);
     return r3;
   }
   function key_keep(k) {
@@ -285,7 +286,6 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
   html_component_element_get(weekly_label).style.display = "inline";
   ("No spam check here: only a guest the host has proven can book, and the server refuses everyone else.");
   let status = html_div_text(card, "");
-  let after = html_div(parent);
   ('A press of Book with something missing scrolls to the part that needs it and rings it in red, says what is missing in red, and gives Book a thick red edge; all of it comes off as soon as that part is filled in (human: "should it scroll up to the offending field and circle it in red until satsifies check?").');
   ("Rejected: a red box around the whole form (it says something is wrong without saying where); greying Book until the form is complete (a guest pressing a grey button learns nothing about why).");
   function form_problem() {
@@ -399,44 +399,42 @@ export async function app_calendar_guest(parent, slug, key, on_key) {
       });
       return;
     }
-    ('The emptied booking card is hidden, not just cleared - cleared, it stayed on screen as a small empty green box above the result (human: "a little green container at the top").');
-    html_clear(card);
-    html_component_element_get(card).style.display = "none";
-    html_clear(after);
-    let done = app_shared_container(after);
-    ("The guest was proven before booking, so the meeting is final the moment it is written, and the page says so plainly: booked.");
-    let booked_line = html_div_text_content(
-      done,
-      "✅ Booked: " +
-        calendar_time_range_local_text(
-          booked.body.start_utc,
-          host.meeting_minutes,
-        ),
-    );
-    html_style_assign(booked_line, {
-      "font-size": "1.3em",
-      "font-weight": "bold",
-    });
-    html_div_text(
-      done,
-      "I will meet you on " +
-        app_name +
-        (weekly_element.checked
-          ? " at this time every week."
-          : " at this time."),
-    );
-    html_div_text(
-      done,
-      "To change or cancel this meeting, or to book another, use this link. Please save it:",
-    );
-    let link = calendar_guest_link(slug, key);
-    let link_line = html_div(done);
-    html_a_href_text_new_tab(link_line, link, link);
-    async function link_copy() {
-      await clipboard_copy_browser(link);
-      app_shared_toast("✅ Copied link");
+    let weekly_chosen = weekly_element.checked;
+    function draw_done(box) {
+      let done = app_shared_container(box);
+      ("The guest was proven before booking, so the meeting is final the moment it is written, and the page says so plainly: booked.");
+      let booked_line = html_div_text_content(
+        done,
+        "✅ Booked: " +
+          calendar_time_range_local_text(
+            booked.body.start_utc,
+            host.meeting_minutes,
+          ),
+      );
+      html_style_assign(booked_line, {
+        "font-size": "1.3em",
+        "font-weight": "bold",
+      });
+      html_div_text(
+        done,
+        "I will meet you on " +
+          app_name +
+          (weekly_chosen ? " at this time every week." : " at this time."),
+      );
+      html_div_text(
+        done,
+        "To change or cancel this meeting, or to book another, use this link. Please save it:",
+      );
+      let link = calendar_guest_link(slug, key);
+      let link_line = html_div(done);
+      html_a_href_text_new_tab(link_line, link, link);
+      async function link_copy() {
+        await clipboard_copy_browser(link);
+        app_shared_toast("✅ Copied link");
+      }
+      app_shared_button_uncolored(done, "Copy link", link_copy);
     }
-    app_shared_button_uncolored(done, "Copy link", link_copy);
+    await on_booked(draw_done);
   }
   let book_button = app_shared_button_green(card, "Book", lambda2);
 }

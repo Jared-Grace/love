@@ -34,6 +34,7 @@ export async function app_calendar(context) {
   }
   let host_key = storage_local_get(app_calendar, "host_key");
   ("The guest's meetings sit above the booking screen, so a guest who has booked sees it first and cannot miss it (human: \"if booked, show the meetings at the top, not bottom? so they can't miss it?\").");
+  let booked_area = html_div(root);
   let meetings_area = html_div(root);
   let guest_area = html_div(root);
   let host_area = html_div(root);
@@ -44,7 +45,7 @@ export async function app_calendar(context) {
   async function guest_show() {
     if (slug) {
       html_clear(guest_area);
-      await app_calendar_guest(guest_area, slug, guest_key, lambda2);
+      await app_calendar_guest(guest_area, slug, guest_key, lambda2, booked);
     }
   }
   let show_meetings = async function lambda() {
@@ -53,10 +54,18 @@ export async function app_calendar(context) {
     }
   };
   await guest_show();
+  async function booked(draw) {
+    'A booking goes back to the home screen - what was booked and the guest\'s link on top, then their meetings, then the hours - and scrolls to the top so the booked line is the first thing seen (human, 2026-11-24: "when booked meeting should take back to home screen that says your meetings but the info should be at the top").';
+    html_clear(booked_area);
+    draw(booked_area);
+    await show_meetings();
+    await guest_show();
+    window.scrollTo(0, 0);
+  }
   await show_meetings();
   let host_open = async function lambda3() {
     "Signing in as host clears the booking screen and the guest's meetings above (human: the button \"doesn't remove top\"), so the host page stands alone.";
-    each([host_area, guest_area, meetings_area], html_clear);
+    each([host_area, guest_area, meetings_area, booked_area], html_clear);
     ('2026-11-15: a line says it is loading while the host\'s settings and the sign-in are fetched; the page sat blank white meanwhile (human: "host sign in just blank white for a while - maybe should show loading?"). The host screen clears it once its settings arrive.');
     html_div_text(host_area, "Loading...");
     if (host_key) {
