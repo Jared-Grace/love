@@ -28,8 +28,9 @@ export function app_learn_js_lesson_array_for_run_last() {
   ("The arrays hold numbers 1 to 3, 4 to 6 long, each next the same as the one before half the time. An array is kept only when every wrong program writes out something other than the answer.");
   ("The wrong programs are: the loop stopping one early with i < a.length - 1 (the last item is never reached), && in place of || (only the last item) and === in place of !== (each item followed by the same one, then the last).");
   ("The writing is a first draft by Claude 2026-11-25.");
-  let example_input = [1, 1, 2, 3, 3];
-  let values = [1, 2, 3];
+  ("2026-11-25, at the human's asking, as in Each run once: letters rather than numbers, so an item is never mistaken for a count or an index");
+  let example_input = ["x", "x", "y", "z", "z"];
+  let values = ["x", "y", "z"];
   let last = "i === a.length - 1";
   function program_with(items, bound, joiner, compare) {
     let codes = list_map(items, json_to);
