@@ -16,12 +16,20 @@ export function app_shared_bible_offline_free_text(name) {
       before: "Bakantehin ang espasyong ginagamit ng ",
       after: "",
     },
+    spa: {
+      before: "Liberar el espacio que usa ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: "Free the space ",
         after: " uses",
       },
       tgl: {
+        before: "Free the space ",
+        after: " uses",
+      },
+      spa: {
         before: "Free the space ",
         after: " uses",
       },
