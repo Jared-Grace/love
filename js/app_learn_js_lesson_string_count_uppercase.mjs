@@ -92,7 +92,9 @@ export function app_learn_js_lesson_string_count_uppercase() {
       "s[i]",
       " in a loop, ",
       "count++",
-      " counts the uppercase letters:",
+      " counts the uppercase letters in string ",
+      "s",
+      ":",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);

@@ -86,14 +86,17 @@ export function app_learn_js_lesson_string_count_lowercase() {
       [
         "",
         "if (c !== low) { count++; }",
-        " in a loop counts the uppercase letters",
+        " in a loop counts the uppercase letters in string ",
+        "s",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "In the same way, ",
       "if (c !== big) { count++; }",
-      " in a loop counts the lowercase letters:",
+      " in a loop counts the lowercase letters in string ",
+      "s",
+      ":",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
