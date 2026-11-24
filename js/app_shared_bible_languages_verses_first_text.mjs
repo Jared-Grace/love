@@ -1,6 +1,5 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_first } from "./list_first.mjs";
-import { property_get } from "./property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -15,8 +14,7 @@ export function app_shared_bible_languages_verses_first_text(
   if (empty) {
     return text;
   }
-  let first = list_first(languages_verses);
-  let verses = property_get(first, "verses");
+  let verses = list_first_property(languages_verses, "verses");
   let property_name = verse_number_key();
   let verse = list_find_property_or_null(verses, property_name, verse_number);
   let nn = null_not_is(verse);
