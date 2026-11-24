@@ -1,3 +1,4 @@
+import { html_text_align } from "./html_text_align.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
@@ -57,7 +58,7 @@ export function app_shared_bible_passage_verses_draw(
     let gap = app_shared_spaced_small_gap();
     html_style_set(row, "column-gap", gap);
     let number = html_div_text(row, verse_number);
-    html_style_set(number, "text-align", "end");
+    html_text_align(number, "end");
     ("the number steps back into the same grey every other quieted word in these apps uses, so the eye goes to the words of the verse and the number is there only for whoever looks for it.");
     app_shared_text_deemphasized(number);
     let text_cell = html_div(row);

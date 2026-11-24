@@ -64,7 +64,7 @@ export function html_subset_ordered_row(
     let text3 = emoji_x_red();
     let remove_button = app_shared_button(parent, text3, remove);
     html_style_set(remove_button, "margin-left", style_value);
-    html_style_set(remove_button, "justify-self", "start");
+    html_style_justify_self(remove_button, "start");
   }
   return label;
 }
