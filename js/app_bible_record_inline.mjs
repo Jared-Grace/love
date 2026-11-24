@@ -7,7 +7,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_replace_space_to } from "./text_replace_space_to.mjs";
+import { bible_reference_unbroken } from "./bible_reference_unbroken.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -129,7 +129,7 @@ export function app_bible_record_inline(
   let refreshes = property_get(chapter, "refreshes");
   ("THE CHAPTER'S NAME NEVER BREAKS ACROSS TWO LINES (human 2026-11-24: book{nbsp}chapter): its spaces are the kind a line may not end on, so Psalm and 2 stay together on the count and the download buttons. Made so here, where it is only shown, and not where the name is worked out, which other pages read too.");
   let t = property_get(chapter, "reference");
-  let chapter_reference = text_replace_space_to(t, " ");
+  let chapter_reference = bible_reference_unbroken(t);
   list_add(refreshes, refresh);
   function changed() {
     property_set(entry, "blob", blob);

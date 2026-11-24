@@ -1,15 +1,17 @@
+import { app_shared_scripture_verse } from "./app_shared_scripture_verse.mjs";
 import { app_shared_scripture_reference_god_says } from "./app_shared_scripture_reference_god_says.mjs";
-import { app_shared_scripture_separator_font_size } from "./app_shared_scripture_separator_font_size.mjs";
+import { bible_reference_unbroken } from "./bible_reference_unbroken.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_shared_scripture_separator_font_size } from "./app_shared_scripture_separator_font_size.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_shared_scripture_verse } from "./app_shared_scripture_verse.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_shared_scripture(parent, reference, verse_text) {
   ("render displayed Scripture inline: reference (green) + 📖 (the written-word marker) + glowing gold verse (",
     app_shared_scripture_verse.name,
     "); attaches the reference/verse spans to `parent` so a discernment reveal can restyle them onto the gold surface (verse → dark inscribed, reference → dark green, kept NOT-gold)");
-  let said = app_shared_scripture_reference_god_says(reference);
+  let reference2 = bible_reference_unbroken(reference);
+  let said = app_shared_scripture_reference_god_says(reference2);
   let reference_span = html_span_text(parent, said);
   html_font_color_set(reference_span, "#a0eaa0");
   let separator = html_span_text(parent, "📖");

@@ -6,6 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { app_shared_button_back_to } from "./app_shared_button_back_to.mjs";
+import { bible_reference_unbroken } from "./bible_reference_unbroken.mjs";
 import { app_shared_bible_books_text } from "./app_shared_bible_books_text.mjs";
 import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
 import { app_shared_bible_books_choose } from "./app_shared_bible_books_choose.mjs";
@@ -43,7 +44,8 @@ export async function app_shared_bible_choose_chapter(
       books,
       verse_numbers,
     );
-    app_shared_button_back_to(bar, destination, back);
+    let destination2 = bible_reference_unbroken(destination);
+    app_shared_button_back_to(bar, destination2, back);
   }
   let books_text = app_shared_bible_books_text();
   app_shared_button_back_to(bar, books_text, on_book);
