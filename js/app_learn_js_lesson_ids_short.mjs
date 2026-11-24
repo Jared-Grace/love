@@ -750,6 +750,8 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_string_count_lowercase: text_frozen("count_lower"),
       app_learn_js_lesson_string_alternate_upper_first:
         text_frozen("alternate_upper"),
+      app_learn_js_lesson_string_alternate_lower_first:
+        text_frozen("alternate_lower"),
       app_learn_js_lesson_array_split_space: text_frozen("split_space"),
       app_learn_js_lesson_array_for_even_odd: text_frozen("even_odd"),
       app_learn_js_lesson_array_for_above_average: text_frozen("above_average"),
