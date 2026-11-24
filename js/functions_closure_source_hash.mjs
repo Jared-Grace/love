@@ -1,10 +1,9 @@
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_imports_sources_reached } from "./functions_imports_sources_reached.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join } from "./list_join.mjs";
 import { text_hash } from "./text_hash.mjs";
 export async function functions_closure_source_hash(f_names) {
   arguments_assert(arguments, 1);
@@ -18,8 +17,7 @@ export async function functions_closure_source_hash(f_names) {
     let named = name + "\n" + property_get(reached, name);
     return named;
   }
-  let sources = list_map(names, source_named);
-  let joined = list_join(sources, "\n");
+  let joined = list_map_join_separator(names, source_named, "\n");
   let hash = text_hash(joined);
   return hash;
 }
