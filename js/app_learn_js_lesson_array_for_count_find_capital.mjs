@@ -98,7 +98,7 @@ export function app_learn_js_lesson_array_for_count_find_capital() {
     app_learn_js_code_lines_writes_out(box_two, lines, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Look for a word with a capital",
+    "Find a word in capitals",
     "let f = find.toLowerCase();",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({

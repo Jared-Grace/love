@@ -5,7 +5,9 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_initialize_list_add_if_not_includes } from "./property_initialize_list_add_if_not_includes.mjs";
-import { js_identifier_rename_imports_fix } from "./js_identifier_rename_imports_fix.mjs";
+import { js_identifier_rename } from "./js_identifier_rename.mjs";
+import { js_imports_dedupe } from "./js_imports_dedupe.mjs";
+import { js_imports_paths_fix } from "./js_imports_paths_fix.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 export async function functions_identifiers_rename_map(renames, identifiers) {
@@ -34,10 +36,13 @@ export async function functions_identifiers_rename_map(renames, identifiers) {
   async function rewrite(now) {
     let names = property_get(groups, now);
     async function lambda(ast) {
+      "Every name is renamed before any import is repaired. The repair looks up the file of every import the file holds, so repairing after the first of several names found the others still spelled the old way, with no file left under that name - and threw, stopping an app rename partway with its functions moved and its callers not.";
       for (let before of names) {
         let after = property_get(renames, before);
-        await js_identifier_rename_imports_fix(ast, before, after);
+        js_identifier_rename(ast, before, after);
       }
+      js_imports_dedupe(ast);
+      await js_imports_paths_fix(ast);
     }
     await function_transform(now, lambda);
   }

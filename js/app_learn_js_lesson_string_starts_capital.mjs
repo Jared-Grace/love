@@ -14,7 +14,7 @@ import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_l
 export function app_learn_js_lesson_string_starts_capital() {
   arguments_assert(arguments, 0);
   ('whether a word starts with a capital: let w = "Jesus"; let f = w[0]; let big = f.toUpperCase(); console.log(f === big); writes out true, and false for "love"');
-  ("2026-11-23, at the human's asking: after Look for a word with a capital. A letter made a capital is the same letter only when it already was one, so comparing the first letter with its capital asks whether the word starts with one.");
+  ("2026-11-23, at the human's asking: after Find a word in capitals. A letter made a capital is the same letter only when it already was one, so comparing the first letter with its capital asks whether the word starts with one.");
   ("Half the words are names with a capital and half are not, so true and false both come up.");
   ("The wrong programs are: console.log(f !== big) (the opposite), console.log(w === big) (the whole word against one letter, always false) and big made with toLowerCase (true only when it starts small).");
   ("The writing is a first draft by Claude 2026-11-23.");
