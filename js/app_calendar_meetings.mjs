@@ -13,6 +13,7 @@ import { app_shared_container_centered } from "./app_shared_container_centered.m
 import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
 import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
+import { calendar_person_label } from "./calendar_person_label.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { html_input_text } from "./html_input_text.mjs";
@@ -68,7 +69,11 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
     html_div_text_content(card, when + repeat);
     let other = meeting.other;
     let with_whom = meeting.hosting ? "Booked by " : "With ";
-    html_div_text_content(card, with_whom + other.name);
+    html_div_text_content(
+      card,
+      with_whom +
+        calendar_person_label(other.name, other.whatsapp, meeting.profile_url),
+    );
     let digits = String(other.whatsapp).replace(/\D/g, "");
     let status = html_div_text(card, "");
     let messenger = equal(meeting.via, "messenger");

@@ -37,7 +37,7 @@ export async function app_calendar_guest_proof_form(
   arguments_assert(arguments, 8);
   ("via_fixed is the app this code is for, when the guest is already proven on an app and so has chosen already - asking to meet on the other one, or changing the number or link of this one; null asks which. With it set there is no choice to make, and the button says which code it gets and that a time comes after (human, 2026-11-24: \"Then there doesn't need to be a choice which to meet? or if they haven't confirmed anything then they need choice?\").");
   ("proven_vias lists the apps this guest is already proven on, whatsapp and/or messenger. The field for one of those is not asked again when the guest picks the other app: it is known and stays proven (human, 2026-11-24: \"if choose meet facebook messenger then they shouldn't be prompted to provide their whatsapp because that's already confirmed?\").");
-  ("The first thing a new guest sees on a host's link: how to reach them - WhatsApp or Messenger, their name, the number or profile link - and a Get my code button. No time is picked here; the code they get is sent to the host from that number or profile, and only once the host has seen it arrive can they pick a time.");
+  ("The first thing a new guest sees on a host's link: how to reach them - WhatsApp or Messenger, the number or profile link - and a Get my code button. No time is picked here; the code they get is sent to the host from that number or profile, and only once the host has seen it arrive can they pick a time.");
   ('★ PROVE FIRST, THEN BOOK (human, 2026-11-20: "100% knowing their FB url/wa# so they don\'t book, enter something wrong, expect me to show up"). Many guests do not read English well, so the words are short and the screen asks for one thing: the code.');
   ("key is the guest's session key, or null; a first code answers a new key, handed to on_key. on_started is called once the code is made, to draw the page again.");
   ("What the guest typed last time on this device fills the form again, so asking again asks for nothing twice.");
@@ -58,10 +58,7 @@ export async function app_calendar_guest_proof_form(
   ("marked is the problem now ringed in red, or null - declared above every button, since a press can land while the spam check below is still loading.");
   let marked = null;
   let via_area = app_shared_field(card);
-  let name_field = app_shared_field(card);
-  html_div_text(name_field, "Your name on Facebook");
-  let name = html_input_text(name_field, "Your name");
-  app_shared_input_style(name);
+  ('NO NAME IS ASKED (human, 2026-11-24: "FB name could be to find the profile by name - goal is collect less info to have less PIN or PII"): the number or profile link already reaches the guest, and the app shows their name when the code arrives, so a name would be personal data stored for nothing. The host\'s lists show the contact instead.');
   let number_box = app_shared_field(card);
   let number_label = html_div_text(number_box, "");
   let whatsapp = html_input_text(number_box, "+1 555 123 4567");
@@ -78,7 +75,6 @@ export async function app_calendar_guest_proof_form(
   let via = host.messenger ? null : "whatsapp";
   let last = storage_local_get(app_calendar, "guest_details");
   if (last) {
-    html_value_set(name, last.name);
     html_value_set(whatsapp, last.whatsapp);
     html_value_set(profile, last.profile);
     if (host.messenger) {
@@ -169,14 +165,6 @@ export async function app_calendar_guest_proof_form(
       };
       return r;
     }
-    let left = html_value_get(name).trim();
-    if (equal(left, "")) {
-      let r2 = {
-        field: name_field,
-        words: "Type your name.",
-      };
-      return r2;
-    }
     if (equal(via, "whatsapp") && equal(html_value_get(whatsapp).trim(), "")) {
       let r3 = {
         field: number_box,
@@ -232,7 +220,7 @@ export async function app_calendar_guest_proof_form(
       problem_clear();
     }
   }
-  for (let input of [name, whatsapp, profile]) {
+  for (let input of [whatsapp, profile]) {
     html_component_element_get(input).addEventListener(
       "input",
       problems_recheck,
@@ -251,11 +239,10 @@ export async function app_calendar_guest_proof_form(
       html_text_content_set(status, "Wait for the check above to finish.");
       return;
     }
-    let name_text = html_value_get(name).trim();
     let prove_body = {
       turnstile: token,
       host: slug,
-      name: name_text,
+      name: "",
       whatsapp: html_value_get(whatsapp),
       profile: html_value_get(profile),
       timezone: zone,
@@ -303,7 +290,6 @@ export async function app_calendar_guest_proof_form(
       return;
     }
     storage_local_set(app_calendar, "guest_details", {
-      name: name_text,
       whatsapp: html_value_get(whatsapp),
       profile: html_value_get(profile),
       via,
