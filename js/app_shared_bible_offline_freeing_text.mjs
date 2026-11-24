@@ -20,6 +20,10 @@ export function app_shared_bible_offline_freeing_text(name) {
       before: "Liberando el espacio que usa ",
       after: "",
     },
+    por: {
+      before: "Liberando o espaço que ",
+      after: " usa",
+    },
     translated_from: {
       urd: {
         before: "Freeing the space ",
@@ -30,6 +34,10 @@ export function app_shared_bible_offline_freeing_text(name) {
         after: " uses",
       },
       spa: {
+        before: "Freeing the space ",
+        after: " uses",
+      },
+      por: {
         before: "Freeing the space ",
         after: " uses",
       },
