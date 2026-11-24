@@ -23,6 +23,12 @@ export function app_shared_money_section_gifts_welcome() {
         "Magbigay ayon sa ipinasya mo sa iyong sariling puso, hindi nang may pag-aatubili at hindi dahil pinilit ka (2 Corinto 9:7).",
       ],
     },
+    spa: {
+      title: "Las ofrendas son bienvenidas y nunca hay presión para dar",
+      lines: [
+        "Da como lo hayas decidido en tu corazón, no de mala gana ni porque te presionaron (2 Corintios 9:7).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Gifts are welcome and there is never pressure to give",
@@ -31,6 +37,12 @@ export function app_shared_money_section_gifts_welcome() {
         ],
       },
       tgl: {
+        title: "Gifts are welcome and there is never pressure to give",
+        lines: [
+          "Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
+        ],
+      },
+      spa: {
         title: "Gifts are welcome and there is never pressure to give",
         lines: [
           "Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
