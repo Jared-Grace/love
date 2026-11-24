@@ -1,12 +1,13 @@
-import { reply_stretches_gather } from "./reply_stretches_gather.mjs";
-import { reply_words_side_of } from "./reply_words_side_of.mjs";
-import { reply_word_kind_of } from "./reply_word_kind_of.mjs";
 import { reply_message_words_placed } from "./reply_message_words_placed.mjs";
 import { reply_pairs_unparsable } from "./reply_pairs_unparsable.mjs";
+import { reply_word_kind_of } from "./reply_word_kind_of.mjs";
+import { reply_words_side_of } from "./reply_words_side_of.mjs";
+import { list_get } from "./list_get.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
+import { reply_stretches_gather } from "./reply_stretches_gather.mjs";
 export function reply_non_english_stretches(message, lookup) {
   "The stretches of a message written in some other language, each with where it starts and ends among the characters the reply rules read, and the words it holds.";
   "Every word is one of four kinds: a dictionary word, a name, a number, or a word no dictionary holds. Each side of a dictionary word either joins - its neighbour is a dictionary word or a number, and the two are not a pair recorded as not joining up - or fails, or has no neighbour at all. The word is foreign when no side joins and at least one side fails. So in with entry lo energy both entry and lo stay English, while in abhi entry lo main khud all three are foreign.";
@@ -15,8 +16,8 @@ export function reply_non_english_stretches(message, lookup) {
   "A stretch is a run of foreign words and names together, and it needs at least one word that is not a name: names may sit inside another language, but my name is Jared is English. Numbers are never foreign, because no dictionary lists 2000 and every language writes it.";
   "Every word of a link counts as a word no dictionary holds, whatever it spells: in https://j4.oui8889.com/s/..., com and s are dictionary words and j4 is a number, and read as words they kept the link out of the stretch beside it. A link is an address, so a rule that reads one - such as the TikTok link - is still cheaper than skipping it.";
   let words = reply_message_words_placed(message);
-  let pairs2 = reply_pairs_unparsable();
-  let unparsable = new Set(pairs2);
+  let pairs = reply_pairs_unparsable();
+  let unparsable = new Set(pairs);
   function kind_of(word) {
     let r = reply_word_kind_of(word, lookup);
     return r;
@@ -30,23 +31,12 @@ export function reply_non_english_stretches(message, lookup) {
     return kind;
   }
   let kinds = words.map(word_kind);
-  function kind_pairs_is(kind) {
-    let pairs = equal(kind, "dictionary") || equal(kind, "number");
-    return pairs;
-  }
   function side_of(left, right) {
-    let r2 = reply_words_side_of(
-      left,
-      right,
-      words,
-      kinds,
-      kind_pairs_is,
-      unparsable,
-    );
+    let r2 = reply_words_side_of(left, right, words, kinds, unparsable);
     return r2;
   }
   function foreign_is(i) {
-    let kind = kinds[i];
+    let kind = list_get(kinds, i);
     if (equal(kind, "unknown")) {
       return true;
     }
