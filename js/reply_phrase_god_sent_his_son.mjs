@@ -1,3 +1,4 @@
+import { reply_choice_optional } from "./reply_choice_optional.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_words } from "./reply_words.mjs";
@@ -8,17 +9,14 @@ import { reply_phrase_his_son } from "./reply_phrase_his_son.mjs";
 export function reply_phrase_god_sent_his_son() {
   "God sent his son into the world, in the words of 1 John 4:9. Bibles say it in either order: God sent his son, or his son God sent.";
   let r2 = reply_words("because that");
-  let item = reply_choice([r2, "because", "that", "when"]);
-  let opener = reply_optional(item);
+  let opener = reply_choice_optional([r2, "because", "that", "when"]);
   let v = reply_word_god();
   let god = reply_choice([v, "he"]);
-  let item2 = reply_choice(["hath", "has"]);
-  let hath = reply_optional(item2);
+  let hath = reply_choice_optional(["hath", "has"]);
   let fn = reply_sequence([god, hath, "sent"]);
   let fn2 = reply_sequence([hath, god, "sent"]);
   let god_sent = reply_choice([fn, fn2]);
-  let item3 = reply_choice(["begotten", "born"]);
-  let begotten = reply_optional(item3);
+  let begotten = reply_choice_optional(["begotten", "born"]);
   let fn3 = reply_choice(["only", "onely"]);
   let only = reply_sequence([fn3, begotten]);
   let r3 = reply_words("one and only");
