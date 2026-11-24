@@ -11,9 +11,11 @@ export function app_shared_bible_verses_question_text(book_name, chapter_name) {
     eng: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
     urd: "آپ {book} کی کتاب کے باب {chapter} سے کون سی آیت چننا چاہتے ہیں؟",
     tgl: "Anong talata mula sa kabanata {chapter} ng aklat ng {book} ang gusto mong piliin?",
+    spa: "¿Qué versículo del capítulo {chapter} del libro de {book} quieres elegir?",
     translated_from: {
       urd: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
       tgl: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
+      spa: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
     },
   };
   let text = app_shared_text_reader_language_filled(texts, {
