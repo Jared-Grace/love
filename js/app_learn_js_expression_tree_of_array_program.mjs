@@ -1,7 +1,7 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_last } from "./list_last.mjs";
@@ -18,8 +18,7 @@ export function app_learn_js_expression_tree_of_array_program(code) {
   ("A last line that writes something out is read for what it writes out, so the twin's own programs are read as they stand.");
   let program = js_parse(code);
   let body = property_get(program, "body");
-  let head = list_first(body);
-  let declarations = property_get(head, "declarations");
+  let declarations = list_first_property(body, "declarations");
   let declarator = list_single(declarations);
   let id = property_get(declarator, "id");
   let name = property_get(id, "name");
