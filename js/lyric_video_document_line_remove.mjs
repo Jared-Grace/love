@@ -1,4 +1,4 @@
-import { not } from "./not.mjs";
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { lyric_video_document_name_found } from "./lyric_video_document_name_found.mjs";
@@ -37,8 +37,7 @@ export async function lyric_video_document_line_remove(name, index_said) {
     return missing;
   }
   function lambda(one_line, i) {
-    let b = equal(i, index);
-    let n = not(b);
+    let n = equal_not(i, index);
     return n;
   }
   let kept = lines.filter(lambda);
