@@ -8,10 +8,12 @@ export function app_shared_bible_languages_text() {
     urd: " زبانیں منتخب کریں",
     tgl: " Pumili ng mga wika",
     spa: " Elegir idiomas",
+    por: " Escolher idiomas",
     translated_from: {
       urd: " Choose languages",
       tgl: " Choose languages",
       spa: " Choose languages",
+      por: " Choose languages",
     },
   };
   let label = app_shared_text_reader_language(texts);
