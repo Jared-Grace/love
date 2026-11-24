@@ -7,10 +7,12 @@ export function app_shared_close_texts() {
     urd: "بند کریں",
     tgl: "Isara",
     spa: "Cerrar",
+    por: "Fechar",
     translated_from: {
       urd: "Close",
       tgl: "Close",
       spa: "Close",
+      por: "Close",
     },
   };
   return r;
