@@ -6,10 +6,12 @@ export function app_shared_languages_prompt_text() {
     urd: "آپ بائبل کی آیات کا ترجمہ کن زبان یا زبانوں میں چاہتے ہیں؟",
     tgl: "Sa anong wika o mga wika mo gustong maisalin ang mga talata ng Biblia?",
     spa: "¿A qué idioma o idiomas quieres que se traduzcan los versículos de la Biblia?",
+    por: "Para qual idioma ou idiomas você quer que os versículos da Bíblia sejam traduzidos?",
     translated_from: {
       urd: "What language or languages you want the Bible verses to be translated into?",
       tgl: "What language or languages you want the Bible verses to be translated into?",
       spa: "What language or languages you want the Bible verses to be translated into?",
+      por: "What language or languages you want the Bible verses to be translated into?",
     },
   };
   let text = app_shared_text_reader_language(texts);
