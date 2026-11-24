@@ -1,4 +1,4 @@
-import { app_message_send_label } from "./app_message_send_label.mjs";
+import { app_message_send_button } from "./app_message_send_button.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_shared_font_size_refresh } from "./app_shared_font_size_refresh.mjs";
@@ -62,7 +62,7 @@ export async function app_message(context) {
   app_shared_input_style(textarea);
   html_focus(textarea);
   let div_checks = html_div(div);
-  let button_send = app_message_send_label(div, on_send);
+  let button_send = app_message_send_button(div, on_send);
   let v = html_check_empty_not();
   app_karate_screen_input_validate(div, div_checks, [textarea], button_send, [
     v,
