@@ -36,8 +36,8 @@ export function app_learn_js_lesson_string_count_uppercase() {
     ];
     let taken = list_shuffle_take(sayings, 3);
     let both = list_concat(shorts, taken);
-    let shuffled = list_shuffle(both);
-    return shuffled;
+    list_shuffle(both);
+    return both;
   }
   function program_with(saying, method, condition, logged) {
     let lines = [
