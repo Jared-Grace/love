@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
@@ -17,7 +18,6 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { list_size } from "./list_size.mjs";
-import { subtract } from "./subtract.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -94,8 +94,7 @@ export function app_learn_js_lesson_array_length() {
   function decoys(question, answer) {
     "the last index, and the first and the last item; each once, never the answer";
     let items5 = items_of(question);
-    let size2 = list_size(items5);
-    let index = subtract(size2, 1);
+    let index = list_size_subtract(items5, 1);
     let first2 = list_first(items5);
     let last = list_last(items5);
     let index_written = json_to(index);
