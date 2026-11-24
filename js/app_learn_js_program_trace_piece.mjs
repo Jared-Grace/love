@@ -1,3 +1,4 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { property_list_first } from "./property_list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -5,7 +6,6 @@ import { equal } from "./equal.mjs";
 import { list_all } from "./list_all.mjs";
 import { not } from "./not.mjs";
 import { js_value_name_built_in_is } from "./js_value_name_built_in_is.mjs";
-import { list_map } from "./list_map.mjs";
 import { js_value_names } from "./js_value_names.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
@@ -69,8 +69,7 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
       return value;
     }
     if (equal(part_type, "ArrayExpression")) {
-      let elements2 = property_get(part, "elements");
-      let items = list_map(elements2, written_value);
+      let items = property_list_map(part, "elements", written_value);
       return items;
     }
     let built_in = js_value_names();
