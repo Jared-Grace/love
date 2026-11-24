@@ -12,14 +12,16 @@ import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { app_bible_record_take_sent_or_null } from "./app_bible_record_take_sent_or_null.mjs";
+import { app_bible_record_take_kept_or_null } from "./app_bible_record_take_kept_or_null.mjs";
 import { null_is } from "./null_is.mjs";
+import { app_bible_record_take_sent_or_null } from "./app_bible_record_take_sent_or_null.mjs";
 import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { app_bible_record_take_keep } from "./app_bible_record_take_keep.mjs";
 import { app_bible_record_native_open } from "./app_bible_record_native_open.mjs";
 import { html_camera_microphone_stream } from "./html_camera_microphone_stream.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
@@ -31,6 +33,7 @@ import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_b
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
+import { app_bible_record_take_kept_delete } from "./app_bible_record_take_kept_delete.mjs";
 import { app_bible_record_download_name } from "./app_bible_record_download_name.mjs";
 import { app_bible_record_native_download } from "./app_bible_record_native_download.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
@@ -89,17 +92,21 @@ export function app_bible_record_inline(
   ("A PREVIEW COMES FIRST (asked for by the human 2026-11-23): the camera opens on its own button and shows the very frame that will be recorded - picture, fit and text band - so the face and the light are set right before a take starts, rather than discovered on playback.");
   let camera_button = app_shared_button_wide(
     buttons,
-    "Show camera",
+    "📷 Show camera",
     camera_show,
   );
   let record_button = app_shared_button_wide(buttons, "", record);
-  let stop_button = app_shared_button_wide(buttons, "Stop recording", finish);
+  let stop_button = app_shared_button_wide(
+    buttons,
+    "⏹️ Stop recording",
+    finish,
+  );
   let send_button = app_shared_button_wide(buttons, "", send);
   ("NO PLAY BACK BUTTON, AND IN THE APP NO RECORD OR STOP (human 2026-11-24: already covered elsewhere?): a take is shown in a video with its own play control, so a second way to play it was one button too many; and the Android app records on its own camera screen, which has Record and Stop of its own, so here they could only ever be faded.");
   ("DOWNLOAD SAVES THE TAKE CUT DOWN TO THE READING (human 2026-11-24): the near-silent stretch before the first word and after the last is taken off, so the video is just the reading. Only the Android app can cut a video, so the button is there only inside it; the take kept in storage is left whole.");
   let download_button = app_shared_button_wide(
     buttons,
-    "Download video (just the reading)",
+    "⬇️ Download video",
     download,
   );
   ("DELETE TAKES TWO TAPS (human 2026-11-24: a delete video button): the first only asks, on the button itself, and the second deletes - the take on the page and the one kept in storage both, so coming back to the passage finds nothing. Asked on the button rather than in a pop-up, because a pop-up inside the Android app may never appear.");
@@ -124,23 +131,34 @@ export function app_bible_record_inline(
     app_shared_button_disabled_set(delete_button, disabled2);
     html_text_set(
       delete_button,
-      delete_armed ? "Tap again to delete this video" : "Delete video",
+      delete_armed ? "⚠️ Tap again to delete this video" : "🗑️ Delete video",
     );
-    html_text_set(record_button, have ? "Record again" : "Record this passage");
-    html_text_set(send_button, sent ? "Sent" : "Send this recording");
+    html_text_set(
+      record_button,
+      have ? "🔴 Record again" : "🔴 Record this passage",
+    );
+    html_text_set(send_button, sent ? "✅ Sent" : "📤 Send this recording");
   }
   refresh();
   ("A TAKE ALREADY SENT IS SHOWN AGAIN (human 2026-11-23: a sent take was gone on coming back to its passage): it is looked for in storage, and shown ready to play back and marked Sent. A take recorded meanwhile wins, since it is newer than anything sent.");
+  ("A TAKE NOT SENT YET COMES BACK TOO (human 2026-11-24: restarting the app made the video disappear): each finished take is kept on the phone until it is sent or deleted, and is looked for first, since it is newer than anything sent for the passage.");
   async function sent_show() {
-    let found = await app_bible_record_take_sent_or_null(
+    let kept = await app_bible_record_take_kept_or_null(
       chapter_code,
       verse_numbers,
     );
+    let found = kept;
+    if (null_is(found)) {
+      found = await app_bible_record_take_sent_or_null(
+        chapter_code,
+        verse_numbers,
+      );
+    }
     if (null_is(found) || null_not_is(blob) || camera_on) {
       return;
     }
     blob = found;
-    sent = true;
+    sent = null_is(kept);
     html_media_source_file_set(playback, blob);
     html_display_block(playback);
     refresh();
@@ -173,6 +191,7 @@ export function app_bible_record_inline(
         html_media_source_file_set(playback, blob);
         html_display_block(playback);
         refresh();
+        app_bible_record_take_keep(chapter_code, verse_numbers, blob);
       }
       function native_open() {
         app_bible_record_native_open(reference, text, native_done);
@@ -281,6 +300,7 @@ export function app_bible_record_inline(
     html_media_source_file_set(playback, blob);
     html_display_block(playback);
     refresh();
+    await app_bible_record_take_keep(chapter_code, verse_numbers, blob);
   }
   async function take_delete() {
     if (not(delete_armed)) {
@@ -291,6 +311,7 @@ export function app_bible_record_inline(
     delete_armed = false;
     await firebase_auth_ensure(sign_in);
     await app_bible_record_take_delete(chapter_code, verse_numbers);
+    await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
     blob = null;
     sent = false;
     playback_element.pause();
@@ -307,5 +328,6 @@ export function app_bible_record_inline(
     await firebase_upload_blob_browser(path, blob);
     sent = true;
     refresh();
+    await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
   }
 }
