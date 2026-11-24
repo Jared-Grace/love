@@ -1,13 +1,18 @@
-import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
-import { html_div_text } from "./html_div_text.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { app_learn_js_span_text_highlight_color } from "./app_learn_js_span_text_highlight_color.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_alphabet_lower } from "./list_alphabet_lower.mjs";
 import { html_text_characters_numbered } from "./html_text_characters_numbered.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
 import { list_alphabet_upper } from "./list_alphabet_upper.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
@@ -19,18 +24,32 @@ import { app_learn_js_lesson_symbols_counting } from "./app_learn_js_lesson_symb
 import { app_learn_js_symbols_separated_on_question_numbered_fifth } from "./app_learn_js_symbols_separated_on_question_numbered_fifth.mjs";
 export function app_learn_js_lesson_symbols_letters() {
   function lambda(root, context) {
+    "2026-11-24, at the human's asking: uppercase wears purple and lowercase green, the word and the letters alike, so a learner sees which is which. Not blue, which the numbers wear. Not picked: red, which reads as wrong, and orange, the weakest of the pointing colours.";
+    let upper = app_learn_js_highlight_color_fourth();
+    let lower = app_learn_js_highlight_color_second();
+    function line(parent, texts, colors) {
+      let div3 = html_div(parent);
+      for (let i = 0; less_than(i, texts.length); i++) {
+        let color = colors[i];
+        if (equal(color, null)) {
+          html_span_text(div3, texts[i]);
+        } else {
+          app_learn_js_span_text_highlight_color(div3, texts[i], color);
+        }
+      }
+    }
     let container3 = app_learn_js_container_light_blue(root);
-    html_div_cycle_bold(container3, [
-      "The letter A can be written as ",
-      "A",
-      " or ",
-      "a",
-    ]);
-    html_div_cycle_bold(container3, ["", "A", " is uppercase"]);
-    html_div_cycle_bold(container3, ["", "a", " is lowercase"]);
-    html_div_text(
+    line(
       container3,
-      "Every letter has an uppercase and a lowercase version",
+      ["The letter A can be written as ", "A", " or ", "a"],
+      [null, upper, null, lower],
+    );
+    line(container3, ["A", " is ", "uppercase"], [upper, null, upper]);
+    line(container3, ["a", " is ", "lowercase"], [lower, null, lower]);
+    line(
+      container3,
+      ["Every letter has an ", "uppercase", " and a ", "lowercase", " version"],
+      [null, upper, null, lower, null],
     );
     let c = app_learn_js_container_light_blue(root);
     let div = html_div(c);
@@ -38,20 +57,22 @@ export function app_learn_js_lesson_symbols_letters() {
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
     html_text_characters_numbered(div2, alphabet_lower);
-    html_div_cycle_bold(c, [
-      "Those 26 letters are written in ",
-      "lowercase",
-      ".",
-    ]);
+    html_font_color_set(div2, lower);
+    line(
+      c,
+      ["Those 26 letters are written in ", "lowercase", "."],
+      [null, lower, null],
+    );
     let container = app_learn_js_container_light_blue(root);
-    html_div_cycle_bold(container, [
-      "Here are the 26 English letters written in ",
-      "uppercase",
-      ":",
-    ]);
+    line(
+      container,
+      ["Here are the 26 English letters written in ", "uppercase", ":"],
+      [null, upper, null],
+    );
     let div5 = html_div(container);
     let alphabet_upper = list_alphabet_upper();
     html_text_characters_numbered(div5, alphabet_upper);
+    html_font_color_set(div5, upper);
     let container2 = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       container2,
@@ -59,17 +80,31 @@ export function app_learn_js_lesson_symbols_letters() {
       app_learn_js_lesson_symbols_digits,
       ["numbers are examples of symbols"],
     );
-    html_div_text(
+    line(
       container2,
-      "Also, both uppercase and lowercase letters are examples of symbols",
+      [
+        "Also, both ",
+        "uppercase",
+        " and ",
+        "lowercase",
+        " letters are examples of symbols",
+      ],
+      [null, upper, null, lower, null],
     );
     html_div_text(
       container2,
       "When we write computer programs, we use symbols, including letters and numbers",
     );
-    html_div_text(
+    line(
       container2,
-      "For a computer, lowercase letters may be considered different than uppercase letters",
+      [
+        "For a computer, ",
+        "lowercase",
+        " letters may be considered different than ",
+        "uppercase",
+        " letters",
+      ],
+      [null, lower, null, upper, null],
     );
   }
   function lambda2(word) {
