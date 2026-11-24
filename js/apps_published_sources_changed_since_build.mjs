@@ -1,10 +1,10 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_published_names } from "./apps_published_names.mjs";
 import { folder_repo_love_public } from "./folder_repo_love_public.mjs";
 import { webpack_watch_app_deps_get } from "./webpack_watch_app_deps_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { path_join } from "./path_join.mjs";
@@ -31,8 +31,7 @@ export async function apps_published_sources_changed_since_build() {
       list_add(unrecorded, a_name);
       continue;
     }
-    let deps = property_get(ad, "deps");
-    let paths = list_map(deps, function_name_to_path_relative);
+    let paths = property_list_map(ad, "deps", function_name_to_path_relative);
     let r2 = file_name_js(a_name);
     let bundle = path_join([folder, r2]);
     let built = await git_here_run_text([
