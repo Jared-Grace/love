@@ -107,18 +107,24 @@ export function app_learn_js_lesson_array_for_run_last() {
       [
         "when the left side of ",
         "||",
-        " is true, the right side is never solved",
+        " is ",
+        "true",
+        ", the right side is never solved",
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "On the last item, ",
       last,
-      " is true, so ",
+      " is ",
+      "true",
+      ", so ",
       "a[i + 1]",
       ", which is past the end, is never read. On every other item, ",
       "a[i] !== a[i + 1]",
-      " is true when the next item is different. So the ",
+      " is ",
+      "true",
+      " when the next item is different. So the ",
       "if",
       " finds the last item of each run:",
     ]);

@@ -78,7 +78,9 @@ export function app_learn_js_lesson_array_for_count_any_case() {
       [
         "",
         "x === y",
-        " after both are made lowercase is true for ",
+        " after both are made lowercase is ",
+        "true",
+        " for ",
         '"God"',
         " and ",
         '"god"',

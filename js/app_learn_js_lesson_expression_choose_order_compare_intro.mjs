@@ -7,6 +7,9 @@ export function app_learn_js_lesson_expression_choose_order_compare_intro(
   ("the one sentence that says what is different about this lesson, in a card of its own");
   ("It names the one thing that changed and nothing else. The learner already chooses a part and then chooses what it comes to - they did it on a line of numbers on the screen before this one - so the whole of what this screen has to add is that the parts are comparisons now, and every value they can come to is true or false.");
   app_learn_js_div_cycle_code(parent, [
-    "Now the parts you choose are comparisons, so every value is true or false",
+    "Now the parts you choose are comparisons, so every value is ",
+    "true",
+    " or ",
+    "false",
   ]);
 }

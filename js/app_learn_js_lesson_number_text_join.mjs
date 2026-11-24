@@ -137,7 +137,8 @@ export function app_learn_js_lesson_number_text_join() {
     "A number joined to a string",
     'n + " is a number"',
   );
-  let lesson = app_learn_js_lesson_code_logged({steps: true,
+  let lesson = app_learn_js_lesson_code_logged({
+    steps: true,
     above,
     name_id,
     batch_get: batch,

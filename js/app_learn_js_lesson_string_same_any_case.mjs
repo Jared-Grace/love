@@ -80,7 +80,9 @@ export function app_learn_js_lesson_string_same_any_case() {
     app_learn_js_div_cycle_code(box_two, [
       "",
       '"God" === "god"',
-      " is false, since an uppercase letter is a different letter. Made lowercase first, both are ",
+      " is ",
+      "false",
+      ", since an uppercase letter is a different letter. Made lowercase first, both are ",
       '"god"',
       ", so they are the same:",
     ]);

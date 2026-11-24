@@ -85,7 +85,15 @@ export function app_learn_js_lesson_string_no_uppercase() {
       box_three,
       context,
       app_learn_js_lesson_string_no_lowercase,
-      ["", "s === big", " is true when ", "s", " has no lowercase letters"],
+      [
+        "",
+        "s === big",
+        " is ",
+        "true",
+        " when ",
+        "s",
+        " has no lowercase letters",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     html_div_text(box_two, "Uppercasing and lowercasing only change letters");
@@ -104,7 +112,9 @@ export function app_learn_js_lesson_string_no_uppercase() {
       "s",
       ", and ",
       "s === low",
-      " is true:",
+      " is ",
+      "true",
+      ":",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);

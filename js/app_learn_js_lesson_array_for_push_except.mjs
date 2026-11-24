@@ -91,7 +91,7 @@ export function app_learn_js_lesson_array_for_push_except() {
       box_one,
       context,
       app_learn_js_lesson_expression_not_equal,
-      ["", "!==", " is true when the two sides are different"],
+      ["", "!==", " is ", "true", " when the two sides are different"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [

@@ -66,7 +66,15 @@ export function app_learn_js_lesson_statement_name_not() {
       box_remember,
       context,
       app_learn_js_lesson_expression_not,
-      ["we can get the opposite (", symbol, ") of true or false:"],
+      [
+        "we can get the opposite (",
+        symbol,
+        ") of ",
+        "true",
+        " or ",
+        "false",
+        ":",
+      ],
     );
     let logged_value = js_code_console_log_statement(value_asked);
     app_learn_js_code_lines_writes_out(
@@ -78,7 +86,11 @@ export function app_learn_js_lesson_statement_name_not() {
     app_learn_js_div_cycle_code(box_name, [
       "Suppose we give a name (",
       name,
-      ") to a true or false value (",
+      ") to a ",
+      "true",
+      " or ",
+      "false",
+      " value (",
       value_true,
       "):",
     ]);
@@ -87,7 +99,11 @@ export function app_learn_js_lesson_statement_name_not() {
     app_learn_js_div_cycle_code(box_name, [
       "We can use ",
       symbol,
-      " before a true or false value (like ",
+      " before a ",
+      "true",
+      " or ",
+      "false",
+      " value (like ",
       value_asked,
       ")",
     ]);
@@ -101,7 +117,8 @@ export function app_learn_js_lesson_statement_name_not() {
     let lines_name = list_concat([held], answer_lines);
     app_learn_js_code_lines_writes_out(box_name, lines_name, value_false);
   }
-  let lesson = app_learn_js_lesson_code_logged({steps: true,
+  let lesson = app_learn_js_lesson_code_logged({
+    steps: true,
     above,
     name_id,
     batch_get: batch,

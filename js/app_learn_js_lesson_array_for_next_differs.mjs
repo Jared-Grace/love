@@ -104,20 +104,28 @@ export function app_learn_js_lesson_array_for_next_differs() {
       box_one,
       context,
       app_learn_js_lesson_array_for_count_doubled,
-      ["", "a[i] === a[i + 1]", " is true when the next item is the same"],
+      [
+        "",
+        "a[i] === a[i + 1]",
+        " is ",
+        "true",
+        " when the next item is the same",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_two,
       context,
       app_learn_js_lesson_expression_not_equal,
-      ["", "!==", " is true when the two sides are different"],
+      ["", "!==", " is ", "true", " when the two sides are different"],
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
       "",
       differs,
-      " is true when the next item is different, so each pair of next items that are different is written out:",
+      " is ",
+      "true",
+      " when the next item is different, so each pair of next items that are different is written out:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);

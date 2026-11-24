@@ -83,7 +83,9 @@ export function app_learn_js_lesson_string_alternating() {
     app_learn_js_div_cycle_code(box_two, [
       "A word that already alternates is not changed, so ",
       "s === out",
-      " is true only when ",
+      " is ",
+      "true",
+      " only when ",
       "s",
       " already alternates, starting with uppercase:",
     ]);

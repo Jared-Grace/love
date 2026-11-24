@@ -59,7 +59,9 @@ export function app_learn_js_lesson_string_is_lowercase() {
       [
         "",
         "c !== c.toLowerCase()",
-        " is true only when ",
+        " is ",
+        "true",
+        " only when ",
         "c",
         " is an uppercase letter",
       ],
@@ -68,7 +70,9 @@ export function app_learn_js_lesson_string_is_lowercase() {
     app_learn_js_div_cycle_code(box_two, [
       "In the same way, only a lowercase letter changes when it is uppercased, so ",
       "c !== big",
-      " is true only when ",
+      " is ",
+      "true",
+      " only when ",
       "c",
       " is a lowercase letter:",
     ]);

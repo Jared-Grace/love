@@ -112,14 +112,16 @@ export function app_learn_js_lesson_string_vowel_any_case() {
       box_one,
       context,
       app_learn_js_lesson_string_vowel,
-      ["", old_call, " is true only when ", "c", " is a vowel"],
+      ["", old_call, " is ", "true", " only when ", "c", " is a vowel"],
     );
     app_learn_js_div_cycle_code(box_one, [
       "But ",
       '"aeiou"',
       " has only lowercase vowels, so the uppercase ",
       "E",
-      " gives false:",
+      " gives ",
+      "false",
+      ":",
     ]);
     example_with(box_one, "E", old_call);
     let box_lower = app_learn_js_container_light_blue(root);

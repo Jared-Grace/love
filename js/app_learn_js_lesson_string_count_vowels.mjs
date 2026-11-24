@@ -76,7 +76,7 @@ export function app_learn_js_lesson_string_count_vowels() {
       box_one,
       context,
       app_learn_js_lesson_string_vowel,
-      ["", right_condition, " is true only when ", "c", " is a vowel"],
+      ["", right_condition, " is ", "true", " only when ", "c", " is a vowel"],
     );
     let box_counting = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(

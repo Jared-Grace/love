@@ -77,7 +77,9 @@ export function app_learn_js_lesson_string_starts_capital() {
       "big",
       " will be that same uppercase letter, and then ",
       "f === big",
-      " will be true:",
+      " will be ",
+      "true",
+      ":",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);

@@ -102,7 +102,9 @@ export function app_learn_js_lesson_string_no_lowercase() {
       "s",
       ", and ",
       "s === big",
-      " is true:",
+      " is ",
+      "true",
+      ":",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);

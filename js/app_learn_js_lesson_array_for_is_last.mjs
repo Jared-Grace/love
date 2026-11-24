@@ -100,7 +100,9 @@ export function app_learn_js_lesson_array_for_is_last() {
     app_learn_js_div_cycle_code(box_three, [
       "",
       last,
-      " is true only on the last run of the loop, so only the last item is written out:",
+      " is ",
+      "true",
+      " only on the last run of the loop, so only the last item is written out:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);

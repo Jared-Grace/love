@@ -112,7 +112,9 @@ export function app_learn_js_lesson_array_for_each_run() {
       [
         "",
         "i === a.length - 1 || a[i] !== a[i + 1]",
-        " is true on the last item of each run",
+        " is ",
+        "true",
+        " on the last item of each run",
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);

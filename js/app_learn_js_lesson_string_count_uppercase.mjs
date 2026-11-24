@@ -77,7 +77,15 @@ export function app_learn_js_lesson_string_count_uppercase() {
       box_one,
       context,
       app_learn_js_lesson_string_is_uppercase,
-      ["", "c !== low", " is true only when ", "c", " is an uppercase letter"],
+      [
+        "",
+        "c !== low",
+        " is ",
+        "true",
+        " only when ",
+        "c",
+        " is an uppercase letter",
+      ],
     );
     let box_counting = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(

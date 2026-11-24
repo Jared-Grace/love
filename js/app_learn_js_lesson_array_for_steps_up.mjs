@@ -108,7 +108,9 @@ export function app_learn_js_lesson_array_for_steps_up() {
     app_learn_js_div_cycle_code(box_three, [
       "",
       right_condition,
-      " is true when the next number is bigger, a step up. Counting it for every pair gives how many steps up there are:",
+      " is ",
+      "true",
+      " when the next number is bigger, a step up. Counting it for every pair gives how many steps up there are:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);

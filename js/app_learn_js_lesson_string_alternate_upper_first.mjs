@@ -89,7 +89,11 @@ export function app_learn_js_lesson_string_alternate_upper_first() {
       [
         "",
         "i % 2 === 0",
-        " is true at the even indexes 0, 2, 4, and false at the odd ones",
+        " is ",
+        "true",
+        " at the even indexes 0, 2, 4, and ",
+        "false",
+        " at the odd ones",
       ],
     );
     let box_adding = app_learn_js_container_light_blue(root);

@@ -83,7 +83,8 @@ export function app_learn_js_lesson_if_else_in_if_else() {
         "if",
         " are reached only when that ",
         "if",
-        " is true",
+        " is ",
+        "true",
       ],
     );
     let box_one = app_learn_js_container_light_blue(root);
