@@ -1,4 +1,3 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -6,6 +5,7 @@ import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -18,11 +18,12 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_for_is_last() {
   arguments_assert(arguments, 0);
-  ("the last item found inside a loop: for (let i = 0; i < a.length; i++) { if (i === a.length - 1) { console.log(a[i]); } } writes out 9 for [3, 7, 9]");
+  ('the last item found inside a loop: for (let i = 0; i < a.length; i++) { if (i === a.length - 1) { console.log("last: " + a[i]); } } writes out last: 9 for [3, 7, 9]');
   ("2026-11-25, at the human's asking, before Last of each run: i === a.length - 1 met alone first. Last index taught a.length - 1, and Every third item taught an if on i inside the loop; this puts the two together. Nothing in it is new.");
   ("The arrays hold different numbers 1 to 9, 3 to 5 numbers long. An array is kept only when every wrong program writes out something other than the answer, so no item equals its own index.");
   ("The wrong programs are: console.log(i) (the last index, not the item), i === 0 (the first item), i === a.length - 2 (the one before the last) and i === a.length (no index is a.length, so nothing is written out; offered only in the backwards quiz, since nothing is not an answer to pick).");
   ("The writing is a first draft by Claude 2026-11-25.");
+  ('2026-11-25, at the human\'s asking: every program writes "last: " before what it writes out, so the output says what was found. Not picked: writing out every item and labelling only the last, an if with an else, which is a second idea in a lesson meant to hold one');
   let example_input = [3, 7, 9];
   let pool = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let last = "i === a.length - 1";
@@ -33,7 +34,7 @@ export function app_learn_js_lesson_array_for_is_last() {
       "let a = " + array + ";",
       "for (let i = 0; i < a.length; i++) {",
       "  if (" + condition + ") {",
-      "    console.log(" + logged + ");",
+      '    console.log("last: " + ' + logged + ");",
       "  }",
       "}",
     ];

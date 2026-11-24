@@ -1,11 +1,11 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { modulo } from "./modulo.mjs";
 import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 export function app_learn_js_lesson_prose_true_code_ast_split(ast) {
   arguments_assert(arguments, 1);
@@ -41,8 +41,13 @@ export function app_learn_js_lesson_prose_true_code_ast_split(ast) {
           e && equal(e.type, "Literal") && equal(typeof e.value, "string");
         return text_is;
       }
-      let all_text = elements.every(lambda);
-      if (not(all_text)) {
+      ('a part written as a name, as differs in ["", differs, " is true"], is kept as it stands: its place alone says whether it is plain or code, so the written parts round it are still split');
+      function lambda2(e2) {
+        let kept = e2 && not_equal(e2.type, "SpreadElement");
+        return kept;
+      }
+      let spread_none = elements.every(lambda2);
+      if (not(spread_none)) {
         continue;
       }
       let rebuilt = [];
@@ -51,7 +56,7 @@ export function app_learn_js_lesson_prose_true_code_ast_split(ast) {
         let e = elements[i];
         let left = modulo(i, 2);
         let plain = equal(left, 0);
-        if (not(plain) || not(word.test(e.value))) {
+        if (not(plain) || not(lambda(e)) || not(word.test(e.value))) {
           rebuilt.push(e);
           continue;
         }
