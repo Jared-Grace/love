@@ -7,10 +7,12 @@ export function app_shared_bible_verse_next_text_get() {
     urd: "اگلی آیت",
     tgl: "Susunod na talata",
     spa: "Versículo siguiente",
+    por: "Próximo versículo",
     translated_from: {
       urd: "Next verse",
       tgl: "Next verse",
       spa: "Next verse",
+      por: "Next verse",
     },
   };
   let v = app_shared_text_reader_language(texts);
