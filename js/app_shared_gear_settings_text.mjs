@@ -8,10 +8,12 @@ export function app_shared_gear_settings_text() {
     urd: " ترتیبات",
     tgl: " Mga setting",
     spa: " Ajustes",
+    por: " Configurações",
     translated_from: {
       urd: " Settings",
       tgl: " Settings",
       spa: " Settings",
+      por: " Settings",
     },
   };
   let label = app_shared_text_reader_language(texts);
