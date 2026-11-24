@@ -422,6 +422,7 @@ import { app_learn_js_lesson_array_last_index_of } from "./app_learn_js_lesson_a
 import { app_learn_js_lesson_array_for_break } from "./app_learn_js_lesson_array_for_break.mjs";
 import { app_learn_js_lesson_array_for_count } from "./app_learn_js_lesson_array_for_count.mjs";
 import { app_learn_js_lesson_array_for_total } from "./app_learn_js_lesson_array_for_total.mjs";
+import { app_learn_js_lesson_array_for_product } from "./app_learn_js_lesson_array_for_product.mjs";
 import { app_learn_js_lesson_array_for_total_each } from "./app_learn_js_lesson_array_for_total_each.mjs";
 import { app_learn_js_lesson_array_for_push_total } from "./app_learn_js_lesson_array_for_push_total.mjs";
 import { app_learn_js_lesson_array_for_set_total } from "./app_learn_js_lesson_array_for_set_total.mjs";
@@ -1010,6 +1011,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_break,
     app_learn_js_lesson_array_for_count,
     app_learn_js_lesson_array_for_total,
+    app_learn_js_lesson_array_for_product,
     app_learn_js_lesson_array_for_total_each,
     app_learn_js_lesson_array_for_push_total,
     app_learn_js_lesson_array_for_set_total,
