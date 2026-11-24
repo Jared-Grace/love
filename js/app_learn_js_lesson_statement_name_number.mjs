@@ -1,10 +1,9 @@
+import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_console_log_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { app_learn_js_lesson_statement_name_value_name } from "./app_learn_js_lesson_statement_name_value_name.mjs";
-import { app_learn_js_string_code } from "./app_learn_js_string_code.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_lesson_statement_name_number_title_name_id } from "./app_learn_js_lesson_statement_name_number_title_name_id.mjs";
@@ -28,8 +27,7 @@ export function app_learn_js_lesson_statement_name_number() {
     let held = list_first(lines);
     let logged = list_second(lines);
     let name = app_learn_js_lesson_statement_name_value_name();
-    let word = app_learn_js_string_code(name);
-    let logged_word = js_code_console_log_statement(word);
+    let logged_word = app_learn_js_word_console_log_statement(name);
     let programs = [[held, logged_word], [held], [logged, held]];
     let found = list_map(programs, list_join_newline);
     return found;
@@ -39,7 +37,8 @@ export function app_learn_js_lesson_statement_name_number() {
     app_learn_js_lesson_statement_name_number_batch,
     eval_console_log_to_list,
   );
-  let lesson = app_learn_js_lesson_code_logged({steps: true,
+  let lesson = app_learn_js_lesson_code_logged({
+    steps: true,
     above: app_learn_js_lesson_statement_name_number_above,
     name_id,
     batch_get: batch,
