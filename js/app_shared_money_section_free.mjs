@@ -28,6 +28,14 @@ export function app_shared_money_section_free() {
         "Kung wala kang perang maibibigay, magagamit mo pa rin ang lahat.",
       ],
     },
+    spa: {
+      title: "Todo es gratis, y siempre lo será",
+      lines: [
+        "Nada requiere pago.",
+        "Nunca se te obligará a pagar para usar nada.",
+        "Si no tienes dinero para dar, igual tienes acceso a todo.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Everything is free, and everything always will be",
@@ -38,6 +46,14 @@ export function app_shared_money_section_free() {
         ],
       },
       tgl: {
+        title: "Everything is free, and everything always will be",
+        lines: [
+          "Nothing requires payment.",
+          "You will never be forced to pay to use anything.",
+          "If you have no money to give, you still have access to everything.",
+        ],
+      },
+      spa: {
         title: "Everything is free, and everything always will be",
         lines: [
           "Nothing requires payment.",
