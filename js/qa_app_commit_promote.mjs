@@ -1,3 +1,4 @@
+import { file_name_app_page_is } from "./file_name_app_page_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_name_search } from "./app_shared_name_search.mjs";
 import { app_shared_frozen_assert } from "./app_shared_frozen_assert.mjs";
@@ -6,9 +7,7 @@ import { qa_build_folder } from "./qa_build_folder.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { folder_web_latest_absolute } from "./folder_web_latest_absolute.mjs";
 import { qa_app_promote_page_keep_is } from "./qa_app_promote_page_keep_is.mjs";
-import { file_name_html } from "./file_name_html.mjs";
 import { and } from "./and.mjs";
-import { equal } from "./equal.mjs";
 import { folder_web_latest_absolute_join } from "./folder_web_latest_absolute_join.mjs";
 import { file_hash } from "./file_hash.mjs";
 import { property_set } from "./property_set.mjs";
@@ -39,9 +38,8 @@ export async function qa_app_commit_promote(search, commit) {
     hashes,
     to_folder,
   );
-  let page_name = file_name_html(app_name);
   for (let file_name of file_names) {
-    let right = equal(file_name, page_name);
+    let right = file_name_app_page_is(file_name, app_name);
     let kept_page = and(page_keep, right);
     if (kept_page) {
       let page_path = folder_web_latest_absolute_join(file_name);
