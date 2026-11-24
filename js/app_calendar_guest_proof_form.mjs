@@ -1,5 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_input_text } from "./html_input_text.mjs";
@@ -8,10 +10,8 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { storage_local_get } from "./storage_local_get.mjs";
 import { app_calendar } from "./app_calendar.mjs";
 import { html_value_set } from "./html_value_set.mjs";
-import { equal } from "./equal.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
@@ -32,18 +32,25 @@ export async function app_calendar_guest_proof_form(
   on_key,
   on_started,
   proven_vias,
+  via_fixed,
 ) {
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 8);
+  ("via_fixed is the app this code is for, when the guest is already proven on an app and so has chosen already - asking to meet on the other one, or changing the number or link of this one; null asks which. With it set there is no choice to make, and the button says which code it gets and that a time comes after (human, 2026-11-24: \"Then there doesn't need to be a choice which to meet? or if they haven't confirmed anything then they need choice?\").");
   ("proven_vias lists the apps this guest is already proven on, whatsapp and/or messenger. The field for one of those is not asked again when the guest picks the other app: it is known and stays proven (human, 2026-11-24: \"if choose meet facebook messenger then they shouldn't be prompted to provide their whatsapp because that's already confirmed?\").");
   ("The first thing a new guest sees on a host's link: how to reach them - WhatsApp or Messenger, their name, the number or profile link - and a Get my code button. No time is picked here; the code they get is sent to the host from that number or profile, and only once the host has seen it arrive can they pick a time.");
   ('★ PROVE FIRST, THEN BOOK (human, 2026-11-20: "100% knowing their FB url/wa# so they don\'t book, enter something wrong, expect me to show up"). Many guests do not read English well, so the words are short and the screen asks for one thing: the code.');
   ("key is the guest's session key, or null; a first code answers a new key, handed to on_key. on_started is called once the code is made, to draw the page again.");
   ("What the guest typed last time on this device fills the form again, so asking again asks for nothing twice.");
+  let b4 = equal(via_fixed, null);
   let intro = html_div_text(
     card,
-    host.messenger
-      ? "Before you pick a time, send me a code from your WhatsApp or Facebook Messenger. Then I know I can reach you."
-      : "Before you pick a time, send me a code from your WhatsApp. Then I know I can reach you.",
+    not(b4)
+      ? "Before you pick a time, send me a code from your " +
+          (equal(via_fixed, "messenger") ? "Facebook Messenger" : "WhatsApp") +
+          ". Then I know I can reach you."
+      : host.messenger
+        ? "Before you pick a time, send me a code from your WhatsApp or Facebook Messenger. Then I know I can reach you."
+        : "Before you pick a time, send me a code from your WhatsApp. Then I know I can reach you.",
   );
   html_style_assign(intro, {
     "font-weight": "bold",
@@ -78,6 +85,10 @@ export async function app_calendar_guest_proof_form(
       via = last.via;
     }
   }
+  let b5 = equal(via_fixed, null);
+  if (not(b5)) {
+    via = via_fixed;
+  }
   function field_label_set(label, words, value) {
     let need = equal(via, null)
       ? ""
@@ -103,6 +114,10 @@ export async function app_calendar_guest_proof_form(
       html_component_element_get(profile_box).style.display = "none";
       return;
     }
+    let b6 = equal(via_fixed, null);
+    if (not(b6)) {
+      return;
+    }
     ('MARKED THE SHARED WAY (human, 2026-11-21: "DRY with buttons that are like radio buttons?"): the host\'s invite card asks the same question, so both draw it with one row.');
     let choices = [
       {
@@ -126,6 +141,20 @@ export async function app_calendar_guest_proof_form(
     via = value;
     problems_recheck();
     via_draw();
+    let text2 = code_text();
+    html_text_content_set(code_button, text2);
+  }
+  function code_text() {
+    'The button names the code it gets and that the time is picked only after the host confirms it, so pressing it is not read as booking (human, 2026-11-24: "should say \\"get my Messenger code and wait for confirmation before scheduling\\"").';
+    if (equal(via, null)) {
+      let r7 = "Get my code";
+      return r7;
+    }
+    let r6 =
+      "Get my " +
+      (equal(via, "messenger") ? "Messenger" : "WhatsApp") +
+      " code and wait for confirmation before scheduling";
+    return r6;
   }
   via_draw();
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -283,5 +312,6 @@ export async function app_calendar_guest_proof_form(
     }
     await on_started();
   }
-  let code_button = app_shared_button_green(card, "Get my code", code_get);
+  let text3 = code_text();
+  let code_button = app_shared_button_green(card, text3, code_get);
 }
