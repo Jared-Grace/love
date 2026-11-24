@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
@@ -17,8 +18,7 @@ export function app_learn_js_program_trace_splice(
   arguments_assert(arguments, 4);
   ("an a.splice(i, 1); or a.splice(i, 0, x); or a.splice(i, 1, x); line run: one item taken out at index i, one put in there, or one put in place of the one there, added to actions, and the name given the new array in values");
   ("2026-11-22, at the human's asking, for the splice lessons: taking one item out is a pop at an index, so it is a pop step, method splice and index saying where; putting one in is a push at an index, a push step the same way; putting one in place of the one there is a push step that also says replaces, since only that item changes. The index is a number or a name, read without a step of its own, as a[i] = x; reads it. The array is copied rather than changed, so a value handed out earlier still says what it said then. Not picked: an assign step for the last, which would choose Assign a value for a function called, where every other function called is chosen as Solve an expression");
-  let callee = property_get(expression, "callee");
-  let object = property_get(callee, "object");
+  let object = property_path_get_2(expression, "callee", "object");
   let name = property_get(object, "name");
   property_exists_assert(values, name);
   let args = property_get(expression, "arguments");
