@@ -1,5 +1,5 @@
+import { html_code_regenerated } from "./html_code_regenerated.mjs";
 import { file_read } from "./file_read.mjs";
-import { html_code } from "./html_code.mjs";
 import { html_code_is } from "./html_code_is.mjs";
 import { html_code_parse } from "./html_code_parse.mjs";
 import { html_regenerate_frozen_is } from "./html_regenerate_frozen_is.mjs";
@@ -53,7 +53,7 @@ export async function html_regenerate_stable_page(file_path) {
     return refused;
   }
   let name = property_get(parts, "name");
-  let code = html_code(name, body);
+  let code = html_code_regenerated(file_path, name, body);
   let parts_again = html_code_parse(code);
   let name_again = property_get(parts_again, "name");
   let body_again = property_get(parts_again, "body");
