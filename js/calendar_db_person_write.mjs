@@ -21,11 +21,12 @@ export async function calendar_db_person_write(
     };
     return r;
   }
+  ("An empty name keeps the name already stored: guests are no longer asked for one, so a host who books on another host's link must not have their own name wiped by it.");
   let v = String(name).trim();
   await db
     .prepare(
       `INSERT INTO people (uid, name, whatsapp, timezone, created_at) VALUES (?1, ?2, ?3, ?4, ?5)
-ON CONFLICT (uid) DO UPDATE SET name = excluded.name, whatsapp = excluded.whatsapp, timezone = excluded.timezone`,
+ON CONFLICT (uid) DO UPDATE SET name = CASE WHEN excluded.name = '' THEN people.name ELSE excluded.name END, whatsapp = excluded.whatsapp, timezone = excluded.timezone`,
     )
     .bind(uid, v, whatsapp, timezone, now_iso)
     .run();

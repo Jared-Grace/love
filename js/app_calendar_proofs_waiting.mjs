@@ -3,6 +3,7 @@ import { equal } from "./equal.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_container_centered } from "./app_shared_container_centered.mjs";
+import { calendar_person_label } from "./calendar_person_label.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
@@ -33,9 +34,14 @@ export function app_calendar_proofs_waiting(box, proofs, key, on_confirmed) {
     let card = app_shared_container_centered(box);
     let messenger = equal(proof.via, "messenger");
     let app_name = messenger ? "Messenger" : "WhatsApp";
+    let who = calendar_person_label(
+      proof.name,
+      proof.whatsapp,
+      proof.profile_given,
+    );
     html_div_text_content(
       card,
-      proof.name + " - code " + proof.code + " on " + app_name,
+      who + " - code " + proof.code + " on " + app_name,
     );
     let status = html_div_text(card, "");
     let sender = null;
@@ -90,11 +96,11 @@ export function app_calendar_proofs_waiting(box, proofs, key, on_confirmed) {
         html_text_content_set(status, text);
         return;
       }
-      app_shared_toast("✅ Confirmed " + proof.name);
+      app_shared_toast("✅ Confirmed " + who);
       let reply =
         "Thank you, I got your code. Now open your link again and pick a time.";
       let reply_card = app_shared_container_centered(box);
-      html_div_text(reply_card, "Send " + proof.name + " this:");
+      html_div_text(reply_card, "Send " + who + " this:");
       html_div_text_content(reply_card, reply);
       async function reply_copy() {
         await clipboard_copy_browser(reply);

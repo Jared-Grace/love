@@ -194,7 +194,8 @@ export async function calendar_api_handle(
     }
     let guest_uid = equal(uid, null) ? outside.uid_new() : uid;
     let slug3 = String(body.host);
-    let name2 = String(body.name);
+    ('A guest\'s name is never stored, even from a page built before the form stopped asking for one (human, 2026-11-24: "goal is collect less info to have less PIN or PII").');
+    let name2 = "";
     let whatsapp2 = String(body.whatsapp);
     let timezone2 = String(body.timezone);
     let via2 = String(body.via);

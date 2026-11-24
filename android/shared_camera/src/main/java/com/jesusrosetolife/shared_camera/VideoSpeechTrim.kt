@@ -34,6 +34,10 @@ const val SPEECH_PAD_MS = 300L
 // How many windows in a row must be over the line to count as speaking: 4 x 50 ms = 200 ms,
 // longer than a tap or a click, shorter than a spoken syllable held through.
 const val SPEECH_RUN_WINDOWS = 4
+// How many times louder than the room's hum a window must be to count as speaking: 2 is 6 dB,
+// which put the line near -35 dB on a take whose hum was -41 dB and whose quietest word ends
+// were near -32 dB.
+const val SPEECH_OVER_ROOM = 2.0
 // A recording whose loudest window is under this level holds no voice to find, and is kept
 // whole rather than cut down to a cough.
 const val SPEECH_LOUDEST_FLOOR = 0.01
@@ -128,7 +132,14 @@ fun video_speech_span_or_null(file: File): SpeechSpan? {
     if (loudest < SPEECH_LOUDEST_FLOOR) {
         return null
     }
-    val line = loudest * SPEECH_SHARE_OF_LOUDEST
+    // THE ROOM'S OWN HUM SETS A FLOOR TOO (human 2026-11-24: Psalm 2:1 kept 2.6 s of nothing at
+    // its end). Measured on that take: voice peaked near -19 dB and the room hummed near -41 dB,
+    // while a share of the loudest alone put the line at -45 dB - under the hum, so the hum
+    // counted as speaking to the very end. The room's level is read as the quietest fifth of the
+    // windows, and speaking must be SPEECH_OVER_ROOM times over it as well.
+    val heard = levels.filter { it > 0.0 }.sorted()
+    val room = if (heard.isEmpty()) 0.0 else heard[heard.size / 5]
+    val line = maxOf(loudest * SPEECH_SHARE_OF_LOUDEST, room * SPEECH_OVER_ROOM)
     // Only sound that LASTS counts as speaking (human 2026-11-24: the first verse kept a little
     // non-talking at its end, waiting for the next verse). A tap on Stop, a breath or a rustle
     // after the reading is over the line for a window or two; a spoken word stays over it
