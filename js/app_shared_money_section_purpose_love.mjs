@@ -31,6 +31,13 @@ export function app_shared_money_section_purpose_love() {
         "La palabra de Dios se nos ha dado gratuitamente. Así que gratuitamente te la damos (Mateo 10:8).",
       ],
     },
+    por: {
+      title: "Nosso propósito é o amor, não o lucro",
+      lines: [
+        "Nosso propósito é compartilhar a palavra de Deus.",
+        "A palavra de Deus nos foi dada de graça. Por isso, de graça a damos a você (Mateus 10:8).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Our purpose is love, not profit",
@@ -47,6 +54,13 @@ export function app_shared_money_section_purpose_love() {
         ],
       },
       spa: {
+        title: "Our purpose is love, not profit",
+        lines: [
+          "Our purpose is sharing the word of God.",
+          "The word of God has been freely given to us. So we freely give to you (Matthew 10:8).",
+        ],
+      },
+      por: {
         title: "Our purpose is love, not profit",
         lines: [
           "Our purpose is sharing the word of God.",
