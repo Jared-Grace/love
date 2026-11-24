@@ -1,7 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { not } from "./not.mjs";
 import { calendar_messenger_name_read } from "./calendar_messenger_name_read.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { multiply } from "./multiply.mjs";
@@ -13,9 +15,27 @@ export async function calendar_db_host_rules_save(
   max_guest_typed,
   notice_typed,
   days_ahead_typed,
+  meeting_typed,
+  block_typed,
   now_iso,
 ) {
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 10);
+  ('meeting_typed is the meeting length, 25, 30 or 55 minutes; block_typed is how often a meeting can start, every 30 or 60 minutes; the meeting must fit before the next can start, so meetings never overlap. Anything else is refused with reason minutes - so a page from before these were Rules, sending none, cannot save (human, 2026-11-24: "should these be in rules?", "should be able to pick 55 minutes").');
+  let v = String(meeting_typed);
+  let meeting_minutes = Number(v);
+  let v2 = String(block_typed);
+  let block_minutes = Number(v2);
+  let minutes_fit =
+    list_includes([25, 30, 55], meeting_minutes) &&
+    list_includes([30, 60], block_minutes) &&
+    less_than_equal(meeting_minutes, block_minutes);
+  if (not(minutes_fit)) {
+    let r9 = {
+      ok: false,
+      reason: "minutes",
+    };
+    return r9;
+  }
   ('notice_typed is how many hours ahead the soonest bookable hour starts, 1 to 168 (a week); days_ahead_typed is how many days ahead a guest may book, 1 to 60. Neither may be blank - there is no "unlimited" notice or reach - and the notice must end before the reach does, or no hour could ever be offered. Reasons: notice, days_ahead, window.');
   ('A save stamps rules_saved_at with now_iso, so the host page can tell rules never saved from rules saved as the starting values, which leave the same row (human, 2026-11-22: "Rules should also be configured? and initially be unconfigured?").');
   ("Saves a host's booking rules as they typed them; answers {ok, reason}. messenger_typed is their Messenger name or link, blank for WhatsApp only. max_typed is the most meetings they take in one day, blank for no limit. max_guest_typed is the most upcoming meetings one guest may hold with them, a weekly one counting once, blank for no limit. Reasons: messenger, max and max_guest (1 to 24), no_host (save the booking link first).");
@@ -93,7 +113,7 @@ export async function calendar_db_host_rules_save(
   }
   let written = await db
     .prepare(
-      "UPDATE hosts SET messenger = ?1, max_per_day = ?2, max_per_guest = ?4, rules_saved_at = ?5, notice_hours = ?6, days_ahead = ?7 WHERE uid = ?3",
+      "UPDATE hosts SET messenger = ?1, max_per_day = ?2, max_per_guest = ?4, rules_saved_at = ?5, notice_hours = ?6, days_ahead = ?7, meeting_minutes = ?8, block_minutes = ?9 WHERE uid = ?3",
     )
     .bind(
       messenger,
@@ -103,6 +123,8 @@ export async function calendar_db_host_rules_save(
       now_iso,
       notice_hours,
       days_ahead,
+      meeting_minutes,
+      block_minutes,
     )
     .run();
   if (equal(written.meta.changes, 0)) {

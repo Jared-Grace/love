@@ -399,6 +399,8 @@ export async function calendar_api_handle(
     let max_guest_typed = String(body.max_guest);
     let notice_typed = String(body.notice);
     let days_ahead_typed = String(body.days_ahead);
+    let meeting_typed = String(body.meeting_minutes);
+    let block_typed = String(body.block_minutes);
     saved = await calendar_db_host_rules_save(
       db,
       uid,
@@ -407,6 +409,8 @@ export async function calendar_api_handle(
       max_guest_typed,
       notice_typed,
       days_ahead_typed,
+      meeting_typed,
+      block_typed,
       now_iso,
     );
   }

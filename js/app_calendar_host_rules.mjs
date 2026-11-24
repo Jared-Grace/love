@@ -8,6 +8,7 @@ import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { equal } from "./equal.mjs";
+import { app_calendar_host_minutes } from "./app_calendar_host_minutes.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
@@ -90,6 +91,7 @@ export function app_calendar_host_rules(area, key, settings) {
     );
   }
   let host = settings.host;
+  let minutes = app_calendar_host_minutes(area, host);
   if (host) {
     html_value_set(max, saved_rules.max);
     html_value_set(max_guest, saved_rules.max_guest);
@@ -114,6 +116,8 @@ export function app_calendar_host_rules(area, key, settings) {
         max_guest: max_guest_text,
         notice: notice_text,
         days_ahead: days_ahead_text,
+        meeting_minutes: minutes.meeting_minutes,
+        block_minutes: minutes.block_minutes,
       },
       key,
     );
@@ -138,6 +142,8 @@ export function app_calendar_host_rules(area, key, settings) {
       window:
         "The soonest booking must come before the furthest one. Use fewer hours or more days.",
       no_host: "Save your booking link name in About you first.",
+      minutes:
+        "Pick a meeting length that fits before the next meeting can start.",
     };
     let told = property_get_or(
       words,

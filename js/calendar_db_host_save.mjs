@@ -1,6 +1,7 @@
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { not } from "./not.mjs";
+import { not_equal } from "./not_equal.mjs";
 export async function calendar_db_host_save(
   db,
   uid,
@@ -10,7 +11,10 @@ export async function calendar_db_host_save(
   now_iso,
 ) {
   arguments_assert(arguments, 6);
-  ("Turns bookings on for uid, or changes their booking link and meeting lengths; answers {ok, reason}. uid must already be a person. The link is slug, written like_this: lowercase letters, digits and underscores.");
+  ("The meeting lengths are written only when the host is first made: after that they are Rules, saved by ",
+    fn_name("calendar_db_host_rules_save"),
+    ', so saving About you never puts back lengths the host chose on Rules (human, 2026-11-24: "should these be in rules?").');
+  ("Turns bookings on for uid, or changes their booking link; answers {ok, reason}. uid must already be a person. The link is slug, written like_this: lowercase letters, digits and underscores.");
   ("A link another host already has is answered slug_taken rather than thrown, since a person choosing one will often pick a taken name.");
   let b = /^[a-z0-9_]{2,40}$/.test(slug);
   if (not(b)) {
@@ -35,7 +39,7 @@ export async function calendar_db_host_save(
     await db
       .prepare(
         `INSERT INTO hosts (uid, slug, block_minutes, meeting_minutes, created_at) VALUES (?1, ?2, ?3, ?4, ?5)
-ON CONFLICT (uid) DO UPDATE SET slug = excluded.slug, block_minutes = excluded.block_minutes, meeting_minutes = excluded.meeting_minutes`,
+ON CONFLICT (uid) DO UPDATE SET slug = excluded.slug`,
       )
       .bind(uid, slug, block_minutes, meeting_minutes, now_iso)
       .run();
