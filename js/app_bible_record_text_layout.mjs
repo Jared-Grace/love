@@ -2,10 +2,9 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not_equal } from "./not_equal.mjs";
+import { app_bible_record_text_lines } from "./app_bible_record_text_lines.mjs";
 import { less_than } from "./less_than.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { math_max } from "./math_max.mjs";
 export function app_bible_record_text_layout(ctx, width, height, text, below) {
   "$plain ctx width height text below";
@@ -18,25 +17,7 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
   let size = divide(width, 16);
   let lines = [];
   function wrap() {
-    ctx.font = size + "px sans-serif";
-    let words = text.split(" ");
-    lines = [];
-    let line = "";
-    for (let word of words) {
-      let tried = equal(line, "") ? word : line + " " + word;
-      if (
-        greater_than(ctx.measureText(tried).width, room) &&
-        not_equal(line, "")
-      ) {
-        lines.push(line);
-        line = word;
-      } else {
-        line = tried;
-      }
-    }
-    if (not_equal(line, "")) {
-      lines.push(line);
-    }
+    lines = app_bible_record_text_lines(ctx, text, size, room);
   }
   wrap();
   let under = subtract(height, below);
