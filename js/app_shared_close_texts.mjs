@@ -6,9 +6,11 @@ export function app_shared_close_texts() {
     eng: "Close",
     urd: "بند کریں",
     tgl: "Isara",
+    spa: "Cerrar",
     translated_from: {
       urd: "Close",
       tgl: "Close",
+      spa: "Close",
     },
   };
   return r;
