@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_first } from "./list_first.mjs";
-import { json_to } from "./json_to.mjs";
 import { list_last } from "./list_last.mjs";
+import { json_to } from "./json_to.mjs";
 import { app_learn_js_words_loop_program } from "./app_learn_js_words_loop_program.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -15,20 +15,20 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_for_count_find_capital() {
   arguments_assert(arguments, 0);
-  ('how many times a word is in a sentence when the word looked for has a capital too: let find = "God"; let f = find.toLowerCase(); then the counting loop with if (low === f); writes out 2 for "God is love and love is of god"');
+  ('how many times a word is in a sentence when the word looked for has a capital too: let find = "GOD"; let f = find.toLowerCase(); then the counting loop with if (low === f); writes out 2 for "God is love and love is of god"');
   ("2026-11-23, at the human's asking: after Count a word, any capitals. Each word is made small, so a find with a capital would never match; it is made small too, once, before the loop.");
-  ("The wrong programs are: if (low === find) (find keeps its capital, so nothing matches and it writes out 0), if (w === find) (only the word written just as find is) and console.log(a.length) (how many words in all).");
+  ("The wrong programs are: if (low === find) (find keeps its capitals, so nothing matches and it writes out 0), if (w === f) (only the word already written small) and console.log(a.length) (how many words in all).");
   ("Not picked: making find small inside the loop, which gives the same answer but does the same work again for every word.");
   ("The writing is a first draft by Claude 2026-11-23.");
-  let example_input = ["God is love and love is of god", "God"];
+  let example_input = ["God is love and love is of god", "GOD"];
   function inputs_get() {
-    "five sayings each with a word written with a capital, shuffled";
+    "five sayings each with a word written in capitals, shuffled";
     let pairs = [
-      ["God is love and love is of god", "God"],
-      ["Love is patient love is kind", "Love"],
-      ["Holy holy holy is the Lord", "Holy"],
-      ["the Lord is my shepherd I trust the lord", "Lord"],
-      ["Peace I leave with you my peace I give", "Peace"],
+      ["God is love and love is of god", "GOD"],
+      ["Love is patient love is kind", "LOVE"],
+      ["Holy holy holy is the Lord", "HOLY"],
+      ["the Lord is my shepherd I trust the lord", "LORD"],
+      ["Peace I leave with you my peace I give", "PEACE"],
     ];
     let shuffled = list_shuffle_take(pairs, 5);
     return shuffled;
@@ -61,7 +61,7 @@ export function app_learn_js_lesson_array_for_count_find_capital() {
   }
   function wrong_programs_of(pair3) {
     let v = program_with(pair3, "low === find", "count");
-    let v2 = program_with(pair3, "w === find", "count");
+    let v2 = program_with(pair3, "w === f", "count");
     let v3 = program_with(pair3, "low === f", "a.length");
     let programs = [v, v2, v3];
     return programs;
@@ -87,7 +87,7 @@ export function app_learn_js_lesson_array_for_count_find_capital() {
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "With ",
-      'find = "God"',
+      'find = "GOD"',
       ", no small word is ever the same as it. So ",
       "find",
       " is made small too, once, before the loop:",
