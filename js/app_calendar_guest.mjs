@@ -61,11 +61,21 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   ('The length stands out on its own line, as big as a heading (human: "What about making the 25 minutes stand out more visually?").');
   app_shared_heading(card, host.meeting_minutes + " minutes (or less)");
+  function app_where_text() {
+    'Both apps are named only while both are still a choice; a guest who has proved one is told just that one (human, 2026-11-24: "should it always say that or just what theyve configured/confirmed?").';
+    let proved = free.body.proof;
+    if (proved) {
+      let r4 = equal(proved.via, "messenger")
+        ? "On Messenger."
+        : "On WhatsApp.";
+      return r4;
+    }
+    let r5 = host.messenger ? "On WhatsApp or Messenger." : "On WhatsApp.";
+    return r5;
+  }
   let zone_line = html_div_text_content(
     card,
-    (host.messenger ? "On WhatsApp or Messenger." : "On WhatsApp.") +
-      " Times are in your time zone: " +
-      zone,
+    app_where_text() + " Times are in your time zone: " + zone,
   );
   app_shared_text_deemphasized(zone_line);
   ('A guest already holding the most meetings this host allows sees no hours, only how to free one: their meetings are drawn above, each with a Cancel, and a cancel draws this screen again (human: "so that you only see existing meeting, and you can cancel to schedule a new one").');
