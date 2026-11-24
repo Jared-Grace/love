@@ -1,4 +1,4 @@
-import { not } from "./not.mjs";
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_messenger_name_read } from "./calendar_messenger_name_read.mjs";
 import { equal } from "./equal.mjs";
@@ -9,7 +9,6 @@ export function calendar_messenger_name_usable(saved) {
   if (equal(name, null)) {
     return false;
   }
-  let b = equal(name, "");
-  let n = not(b);
+  let n = equal_not(name, "");
   return n;
 }
