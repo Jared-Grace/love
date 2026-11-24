@@ -6,9 +6,11 @@ export function app_shared_bible_verse_next_text_get() {
     eng: "Next verse",
     urd: "اگلی آیت",
     tgl: "Susunod na talata",
+    spa: "Versículo siguiente",
     translated_from: {
       urd: "Next verse",
       tgl: "Next verse",
+      spa: "Next verse",
     },
   };
   let v = app_shared_text_reader_language(texts);
