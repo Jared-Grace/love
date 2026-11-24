@@ -1,4 +1,4 @@
-import { round } from "./round.mjs";
+import { divide_round } from "./divide_round.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
@@ -94,8 +94,7 @@ export function qa_gate_skip_compare(inputs, said_rows, timings) {
     }
   }
   let top = divide(saved_ms, pairs);
-  let n = divide(top, 6000);
-  let top2 = round(n);
+  let top2 = divide_round(top, 6000);
   let minutes_saved_per_run = equal(pairs, 0) ? 0 : divide(top2, 10);
   function lambda2(h) {
     let eq = equal(h.kind, "verdict");
