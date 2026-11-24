@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -25,8 +26,6 @@ import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -119,8 +118,7 @@ export function app_learn_js_lesson_array_pop() {
     let name = name_of(answer);
     let items = items_of(answer);
     function unused(word) {
-      let b = list_includes(items, word);
-      let free = not(b);
+      let free = list_includes_not(items, word);
       return free;
     }
     let list4 = fruits_of_the_spirit();
