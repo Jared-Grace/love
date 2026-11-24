@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { json_to } from "./json_to.mjs";
@@ -48,8 +49,7 @@ export function app_learn_js_lesson_array_empty_for_push() {
   let index_name = "i";
   function program_of(name, start) {
     let head = js_code_let_statement(name, "[]");
-    let right = json_to(start);
-    let started = js_code_let_statement(index_name, right);
+    let started = js_code_let_json_statement(index_name, start);
     let object = add(start, count);
     let end = json_to(object);
     let condition = js_code_binary_spaced_nb(index_name, "<", end);
