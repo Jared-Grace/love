@@ -8,9 +8,11 @@ export function app_shared_loading_wait_text() {
     eng: "One moment, please",
     urd: "ایک لمحہ، براہِ کرم",
     tgl: "Sandali lang po",
+    spa: "Un momento, por favor",
     translated_from: {
       urd: "One moment, please",
       tgl: "One moment, please",
+      spa: "One moment, please",
     },
   };
   let text = app_shared_text_reader_language(texts);
