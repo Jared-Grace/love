@@ -19,12 +19,20 @@ export function app_shared_bible_chapters_question_text(book_name) {
       before: "Anong kabanata ng aklat ng ",
       after: " ang gusto mong piliin?",
     },
+    spa: {
+      before: "¿Qué capítulo del libro de ",
+      after: " quieres elegir?",
+    },
     translated_from: {
       urd: {
         before: "Which chapter from the book of ",
         after: " do you want to choose?",
       },
       tgl: {
+        before: "Which chapter from the book of ",
+        after: " do you want to choose?",
+      },
+      spa: {
         before: "Which chapter from the book of ",
         after: " do you want to choose?",
       },
