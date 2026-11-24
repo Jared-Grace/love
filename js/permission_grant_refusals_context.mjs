@@ -1,3 +1,4 @@
+import { property_list_includes } from "./property_list_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -38,8 +39,11 @@ export async function permission_grant_refusals_context(unaliased, context) {
         " is itself on the list of what only a person may run, because what it changes, or lets a new function change, is beyond what git can hand back - so a person has to see each use",
     );
   }
-  let unfenced_reachers = property_get(context, "unfenced_reachers");
-  let unfenced = list_includes(unfenced_reachers, unaliased);
+  let unfenced = property_list_includes(
+    context,
+    "unfenced_reachers",
+    unaliased,
+  );
   if (unfenced) {
     list_add(
       refusals,
