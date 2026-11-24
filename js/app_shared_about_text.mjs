@@ -8,10 +8,12 @@ export function app_shared_about_text() {
     urd: " تعارف",
     tgl: " Tungkol dito",
     spa: " Acerca de",
+    por: " Sobre",
     translated_from: {
       urd: " About",
       tgl: " About",
       spa: " About",
+      por: " About",
     },
   };
   let label = app_shared_text_reader_language(texts);
