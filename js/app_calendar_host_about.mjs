@@ -8,6 +8,9 @@ import { html_value_set } from "./html_value_set.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { less_than } from "./less_than.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -82,7 +85,8 @@ export function app_calendar_host_about(area, key, settings) {
   }
   function minutes_draw() {
     html_clear(meeting_area);
-    let choices = minutes_choices([25, 30]);
+    ('55 minutes is a choice too (human, 2026-11-24: "should be able to pick 55 minutes"). A start every 30 minutes is offered only for a meeting that fits in it.');
+    let choices = minutes_choices([25, 30, 55]);
     app_shared_choice_row(
       meeting_area,
       "Meeting length",
@@ -91,7 +95,12 @@ export function app_calendar_host_about(area, key, settings) {
       meeting_pick,
     );
     html_clear(block_area);
-    let choices2 = minutes_choices([30, 60]);
+    function fits(b) {
+      let r9 = less_than_equal(meeting_minutes, b);
+      return r9;
+    }
+    let filtered = list_filter([30, 60], fits);
+    let choices2 = minutes_choices(filtered);
     app_shared_choice_row(
       block_area,
       "A meeting can start every",
@@ -102,6 +111,9 @@ export function app_calendar_host_about(area, key, settings) {
   }
   function meeting_pick(m) {
     meeting_minutes = m;
+    if (less_than(block_minutes, m)) {
+      block_minutes = 60;
+    }
     minutes_draw();
   }
   function block_pick(m) {
