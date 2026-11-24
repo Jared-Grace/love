@@ -7,6 +7,7 @@ import { storage_local_set } from "./storage_local_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_calendar_guest } from "./app_calendar_guest.mjs";
+import { app_calendar_share_link_draw } from "./app_calendar_share_link_draw.mjs";
 import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
 import { each } from "./each.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -46,6 +47,10 @@ export async function app_calendar(context) {
     if (slug) {
       html_clear(guest_area);
       await app_calendar_guest(guest_area, slug, guest_key, lambda2, booked);
+      ('The share link sits under the booking screen whenever this guest has a link of their own, so it is there on every later visit and not only just after a booking (human, 2026-11-24: "book a meeting.... But no share link?").');
+      if (guest_key) {
+        app_calendar_share_link_draw(guest_area, slug);
+      }
     }
   }
   let show_meetings = async function lambda() {
