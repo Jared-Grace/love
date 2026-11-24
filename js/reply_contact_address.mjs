@@ -20,10 +20,8 @@ export function reply_contact_address() {
   let cities = reply_cities();
   let area = reply_cantonment();
   let o_area = reply_optional(area);
-  let town = reply_sequence([cities, o_area]);
-  let o_town = reply_optional(town);
-  let address = reply_sequence([street, roads, o_town]);
-  let o_address = reply_optional(address);
+  let o_town = reply_sequence_optional([cities, o_area]);
+  let o_address = reply_sequence_optional([street, roads, o_town]);
   let contact = reply_sequence([o_contact, phone, o_address]);
   return contact;
 }
