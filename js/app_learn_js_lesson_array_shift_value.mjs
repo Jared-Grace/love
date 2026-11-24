@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -20,7 +21,6 @@ import { list_first } from "./list_first.mjs";
 import { text_between } from "./text_between.mjs";
 import { json_from } from "./json_from.mjs";
 import { list_last } from "./list_last.mjs";
-import { subtract } from "./subtract.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -95,8 +95,7 @@ export function app_learn_js_lesson_array_shift_value() {
     let items3 = items_of(question);
     let last = list_last(items3);
     let second = list_get(items3, 1);
-    let count = list_size(items3);
-    let left = subtract(count, 1);
+    let left = list_size_subtract(items3, 1);
     let json = json_to(left);
     let candidates = [last, second, json];
     let found = list_without(candidates, answer);
