@@ -1,3 +1,4 @@
+import { json_equal_not } from "./json_equal_not.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -28,8 +29,6 @@ import { list_first } from "./list_first.mjs";
 import { text_between } from "./text_between.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { json_equal } from "./json_equal.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -158,8 +157,7 @@ export function app_learn_js_lesson_array_empty_for_push_step_two() {
     let out = eval_console_log_lines(answer);
     function differs(program) {
       let other = eval_console_log_lines(program);
-      let same = json_equal(other, out);
-      let n = not(same);
+      let n = json_equal_not(other, out);
       return n;
     }
     let kept = list_filter(programs, differs);
