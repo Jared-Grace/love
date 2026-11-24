@@ -1,3 +1,4 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { bible_usfm_versions_english_public_domain } from "./bible_usfm_versions_english_public_domain.mjs";
@@ -10,8 +11,6 @@ import { usfm_chapters_verses } from "./usfm_chapters_verses.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { text_split_space } from "./text_split_space.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -54,8 +53,7 @@ export async function reply_bible_verse_wordings(chapter_code, verse_number) {
       return null;
     }
     let words = text_split_space(verse.text);
-    let read = list_map(words, word_read);
-    let kept = list_filter(read, text_empty_not_is);
+    let kept = list_map_filter(words, word_read, text_empty_not_is);
     let spaced = list_join_space(kept);
     return spaced;
   }
