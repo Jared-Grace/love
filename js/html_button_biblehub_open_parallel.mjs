@@ -13,10 +13,12 @@ export function html_button_biblehub_open_parallel(
     urd: "متوازی تراجم",
     tgl: "Magkaagapay",
     spa: "Paralelo",
+    por: "Paralelo",
     translated_from: {
       urd: "Parallel",
       tgl: "Parallel",
       spa: "Parallel",
+      por: "Parallel",
     },
   };
   let text = app_shared_text_reader_language(texts);
