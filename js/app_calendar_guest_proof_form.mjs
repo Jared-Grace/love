@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { equal } from "./equal.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_input_text } from "./html_input_text.mjs";
@@ -119,19 +119,20 @@ export async function app_calendar_guest_proof_form(
       return;
     }
     ('MARKED THE SHARED WAY (human, 2026-11-21: "DRY with buttons that are like radio buttons?"): the host\'s invite card asks the same question, so both draw it with one row.');
+    ("CONFIRMING, NOT YET CHOOSING A MEETING (human, 2026-11-24: \"they shouldn't choose how to meet yet they're just confirming\"): this row picks only which app the code is sent from, so it is asked that way. Read as words, not as dropping the row: the code still has to come from one app. The other reading - no row at all, both fields asked, a code per field filled - was not built.");
     let choices = [
       {
         key: "whatsapp",
-        text: "WhatsApp meeting",
+        text: "WhatsApp",
       },
       {
         key: "messenger",
-        text: "Facebook Messenger meeting",
+        text: "Facebook Messenger",
       },
     ];
     app_shared_choice_row(
       via_area,
-      "How do you want to meet?",
+      "Send your code from:",
       choices,
       via,
       choice_pick,
