@@ -1,7 +1,7 @@
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_sayings_short } from "./app_learn_js_sayings_short.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { less_than } from "./less_than.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -80,7 +80,9 @@ export function app_learn_js_lesson_string_no_lowercase() {
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
-    html_div_text(box_two, "Spaces do not change");
+    ("2026-11-24, the human's wording, made plural and plainer: uppercasing and lowercasing only change letters, and spaces and other symbols stay the same. True of every string these lessons use. Not said: that every letter changes, which Chinese, Arabic and Hebrew letters do not, and the few symbols that do change, circled letters and Roman numerals, never appear here.");
+    html_div_text(box_two, "Uppercasing and lowercasing only change letters");
+    html_div_text(box_two, "Spaces and other symbols stay the same");
     app_learn_js_div_cycle_code(box_two, [
       "So if ",
       "s",
