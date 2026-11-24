@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
@@ -44,12 +45,9 @@ export function app_learn_js_lesson_bin_step() {
     let codes = list_map(input.items, json_to);
     let right = js_code_array(codes);
     let code2 = js_code_let_statement("a", right);
-    let right2 = json_to(input.goal);
-    let code3 = js_code_let_statement("goal", right2);
-    let right3 = json_to(input.low);
-    let code4 = js_code_let_statement("low", right3);
-    let right4 = json_to(input.high);
-    let code5 = js_code_let_statement("high", right4);
+    let code3 = js_code_let_json_statement("goal", input.goal);
+    let code4 = js_code_let_json_statement("low", input.low);
+    let code5 = js_code_let_json_statement("high", input.high);
     let code6 = js_code_let_statement("found", "false");
     let code7 = js_code_let_statement("sum", "low + high");
     let code8 = js_code_let_statement("middle", "Math.floor(sum / 2)");
