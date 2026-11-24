@@ -1,10 +1,14 @@
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { app_learn_js_sayings_short } from "./app_learn_js_sayings_short.mjs";
+import { text_upper_to } from "./text_upper_to.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_string_upper } from "./app_learn_js_lesson_string_upper.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -13,23 +17,27 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_string_no_lowercase() {
   arguments_assert(arguments, 0);
-  ('whether a string has no lowercase letters: let s = "HI, GOD!"; let big = s.toUpperCase(); console.log(s === big); writes out true, and false for "Hi, GOD!"');
+  ('whether a string has no lowercase letters: let s = "JESUS WEPT"; let big = s.toUpperCase(); console.log(s === big); writes out true, and false for "Jesus wept"');
   ("2026-11-24, at the human's asking: after Keep the uppercase words. Named no lowercase rather than all uppercase, the human's correction, because a string may hold symbols that are not letters, which toUpperCase leaves alone; so a string of no letters at all, such as 123!, rightly answers true. Not picked: All uppercase?, which 123! would make a false claim.");
-  ("Half the sayings are written all in uppercase and half are not, so true and false both come up.");
+  ("The sayings are the shared Bible sayings of Every letter uppercase, at the human's asking, three of the five made all uppercase, so true and false both come up. They hold no commas or other symbols, so the writing says spaces do not change.");
   ("The wrong programs are: console.log(s !== big) (the opposite), big made with toLowerCase (true only when there is no uppercase letter) and console.log(s.length === big.length) (always true, the letters change but not how many there are).");
   ("The writing is a first draft by Claude 2026-11-24.");
-  let example_input = "HI, GOD!";
+  let example_input = "JESUS WEPT";
   function inputs_get() {
-    "six sayings, three with no lowercase letters, shuffled";
-    let sayings = [
-      "HI, GOD!",
-      "Hi, GOD!",
-      "AMEN",
-      "Amen",
-      "JESUS WEPT.",
-      "Jesus wept.",
-    ];
-    let shuffled = list_shuffle_take(sayings, 6);
+    "the five shared sayings, three of them made all uppercase, shuffled";
+    let list = app_learn_js_sayings_short();
+    let sayings = list_shuffle_take(list, 5);
+    let made = [];
+    for (let i = 0; less_than(i, sayings.length); i++) {
+      let saying5 = sayings[i];
+      if (less_than(i, 3)) {
+        let u = text_upper_to(saying5);
+        made.push(u);
+      } else {
+        made.push(saying5);
+      }
+    }
+    let shuffled = list_shuffle_take(made, 5);
     return shuffled;
   }
   function program_with(saying, method, logged) {
@@ -72,13 +80,7 @@ export function app_learn_js_lesson_string_no_lowercase() {
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
-    app_learn_js_div_cycle_code(box_two, [
-      "Symbols that are not letters, like ",
-      ",",
-      " and ",
-      "!",
-      ", do not change",
-    ]);
+    html_div_text(box_two, "Spaces do not change");
     app_learn_js_div_cycle_code(box_two, [
       "So if ",
       "s",

@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_learn_js_sayings_short } from "./app_learn_js_sayings_short.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -22,13 +23,7 @@ export function app_learn_js_lesson_string_upper() {
   let example_input = "Jesus wept";
   function inputs_get() {
     "five sayings, shuffled";
-    let sayings = [
-      "Jesus wept",
-      "God is love",
-      "Rejoice in the Lord",
-      "Be still",
-      "Christ is risen",
-    ];
+    let sayings = app_learn_js_sayings_short();
     let shuffled = list_shuffle_take(sayings, 5);
     return shuffled;
   }
