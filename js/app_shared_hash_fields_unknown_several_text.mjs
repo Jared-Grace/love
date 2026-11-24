@@ -7,10 +7,12 @@ export function app_shared_hash_fields_unknown_several_text() {
     urd: "یہ لنک ایسی چیزیں مانگتا ہے جو ہمارے پاس نہیں ہیں",
     tgl: "Humihingi ang link na ito ng mga bagay na wala sa amin",
     spa: "Este enlace pide cosas que no tenemos",
+    por: "Este link pede coisas que não temos",
     translated_from: {
       urd: "This link asks for things we do not have",
       tgl: "This link asks for things we do not have",
       spa: "This link asks for things we do not have",
+      por: "This link asks for things we do not have",
     },
   };
   let text = app_shared_text_reader_language(texts);
