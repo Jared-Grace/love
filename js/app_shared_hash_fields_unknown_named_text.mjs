@@ -22,6 +22,10 @@ export function app_shared_hash_fields_unknown_named_text(name) {
       before: "Este enlace pide un dato (",
       after: ") que no tenemos",
     },
+    por: {
+      before: "Este link pede um dado (",
+      after: ") que não temos",
+    },
     translated_from: {
       urd: {
         before: "This link asks for a ",
@@ -32,6 +36,10 @@ export function app_shared_hash_fields_unknown_named_text(name) {
         after: " we do not have",
       },
       spa: {
+        before: "This link asks for a ",
+        after: " we do not have",
+      },
+      por: {
         before: "This link asks for a ",
         after: " we do not have",
       },
