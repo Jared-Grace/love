@@ -283,7 +283,9 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   );
   app_shared_button_uncolored(
     who_field,
-    equal(proof.via, "messenger") ? "Change my Facebook" : "Change my number",
+    equal(proof.via, "messenger")
+      ? "Change my Facebook"
+      : "Change my WhatsApp number",
     form_show,
   );
   let weekly_row = app_shared_field(card);
