@@ -7,10 +7,12 @@ export function app_shared_bible_offline_text() {
     urd: " آف لائن کے لیے ڈاؤن لوڈ کریں",
     tgl: " I-download para magamit nang offline",
     spa: " Descargar para usar sin conexión",
+    por: " Baixar para usar sem internet",
     translated_from: {
       urd: " Download for offline",
       tgl: " Download for offline",
       spa: " Download for offline",
+      por: " Download for offline",
     },
   };
   let label = app_shared_text_reader_language(texts);
