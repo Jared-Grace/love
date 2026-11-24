@@ -1,3 +1,4 @@
+import { integer_even_is } from "./integer_even_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -458,8 +459,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
       }
       if (even_and_odd) {
         function item_even(item3) {
-          let left9 = modulo(item3, 2);
-          let even = equal(left9, 0);
+          let even = integer_even_is(item3);
           return even;
         }
         function item_odd(item4) {
