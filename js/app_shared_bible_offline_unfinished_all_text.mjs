@@ -18,12 +18,20 @@ export function app_shared_bible_offline_unfinished_all_text(names) {
       after:
         ". Gusto mo bang suriin ang iyong koneksyon at subukan muli ang mga ito?",
     },
+    spa: {
+      before: "Estos no terminaron: ",
+      after: ". ¿Quieres revisar tu conexión e intentarlo de nuevo?",
+    },
     translated_from: {
       urd: {
         before: "These did not finish: ",
         after: ". Would you like to check your connection and try them again?",
       },
       tgl: {
+        before: "These did not finish: ",
+        after: ". Would you like to check your connection and try them again?",
+      },
+      spa: {
         before: "These did not finish: ",
         after: ". Would you like to check your connection and try them again?",
       },
