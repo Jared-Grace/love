@@ -1,3 +1,4 @@
+import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { divide } from "./divide.mjs";
@@ -8,8 +9,6 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
-import { js_keyword_while } from "./js_keyword_while.mjs";
-import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -61,8 +60,7 @@ export function app_learn_js_lesson_while_product() {
       name,
     );
     let counted = js_code_assign_operator_statement(name, plus, 1);
-    let keyword = js_keyword_while();
-    let while_lines = js_code_keyword_block_lines_multiple(keyword, condition, [
+    let while_lines = js_code_while_lines_multiple(condition, [
       multiplied,
       counted,
     ]);
