@@ -17,8 +17,7 @@ export function apps_pages_language(a_name) {
     let r = [];
     return r;
   }
-  let pages_get = property_get(table, a_name);
-  let own = pages_get();
+  let own = property_get(table, a_name);
   function lambda(page) {
     let code = property_get(page, "code");
     let name = text_combine_multiple([a_name, "_", code]);
