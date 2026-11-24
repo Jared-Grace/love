@@ -8,9 +8,13 @@ export function html_error_notice_message_texts() {
     eng: "Sorry — this didn't finish loading.",
     urd: "معذرت — یہ پوری طرح کھل نہیں سکا۔",
     tgl: "Paumanhin — hindi ito natapos mag-load.",
+    spa: "Lo sentimos — esto no terminó de cargar.",
+    por: "Desculpe — isto não terminou de carregar.",
     translated_from: {
       urd: "Sorry — this didn't finish loading.",
       tgl: "Sorry — this didn't finish loading.",
+      spa: "Sorry — this didn't finish loading.",
+      por: "Sorry — this didn't finish loading.",
     },
   };
   return r;

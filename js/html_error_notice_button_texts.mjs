@@ -7,9 +7,13 @@ export function html_error_notice_button_texts() {
     eng: "Try again",
     urd: "دوبارہ کوشش کریں",
     tgl: "Subukang muli",
+    spa: "Intentar de nuevo",
+    por: "Tentar de novo",
     translated_from: {
       urd: "Try again",
       tgl: "Try again",
+      spa: "Try again",
+      por: "Try again",
     },
   };
   return r;
