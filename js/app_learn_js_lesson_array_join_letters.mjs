@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
@@ -35,8 +36,11 @@ export function app_learn_js_lesson_array_join_letters() {
       return letters;
     }
     let word_inputs = list_map([2, 3, 2], words_sized);
-    let picked = list_shuffle_take(["joy", "love", "peace", "faith"], 3);
-    let letter_inputs = list_map(picked, letters_of);
+    let letter_inputs = list_shuffle_take_map(
+      ["joy", "love", "peace", "faith"],
+      3,
+      letters_of,
+    );
     let inputs = list_concat(word_inputs, letter_inputs);
     let shuffled = list_shuffle_take(inputs, 6);
     return shuffled;
