@@ -18,7 +18,7 @@ export function app_shared_names() {
     g_bless: "Prayer Game",
     music: "Music",
     supper: "Lord's Supper",
-    supper_tl: "Lord's Supper in Tagalog",
+    supper_tgl: "Lord's Supper in Tagalog",
     pray_auto: "Auto Pray",
     learn_js: "Code",
     replace: "Replace",
