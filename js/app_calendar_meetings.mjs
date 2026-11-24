@@ -3,8 +3,8 @@ import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_calendar_proofs_waiting } from "./app_calendar_proofs_waiting.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { app_calendar_proofs_waiting } from "./app_calendar_proofs_waiting.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
 import { html_centered } from "./html_centered.mjs";
@@ -20,6 +20,7 @@ import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
+import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { app_shared_button_red } from "./app_shared_button_red.mjs";
 export async function app_calendar_meetings(box, key, on_change, empty_shown) {
   arguments_assert(arguments, 4);
@@ -198,6 +199,14 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
       await app_calendar_meetings(box, key, on_change, empty_shown);
       await on_change();
     }
-    app_shared_button_red(card, "Cancel my meeting", lambda2);
+    ('Cancel asks first, in a box over the page (human, 2026-11-24: "cancel meeting button should confirm dialog"): a cancel frees the time for anyone, so a slip of the finger could lose it.');
+    function cancel_ask() {
+      app_shared_confirm_over_red(
+        "Cancel this meeting? Its time is then open for anyone to book.",
+        "Yes, cancel the meeting",
+        lambda2,
+      );
+    }
+    app_shared_button_red(card, "Cancel my meeting", cancel_ask);
   }
 }

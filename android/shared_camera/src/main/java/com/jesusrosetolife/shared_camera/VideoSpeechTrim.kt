@@ -7,6 +7,8 @@ import android.media.MediaFormat
 import android.net.Uri
 import androidx.media3.common.MediaItem
 import androidx.media3.transformer.Composition
+import androidx.media3.transformer.EditedMediaItem
+import androidx.media3.transformer.EditedMediaItemSequence
 import androidx.media3.transformer.ExportException
 import androidx.media3.transformer.ExportResult
 import androidx.media3.transformer.Transformer
@@ -132,13 +134,23 @@ fun video_speech_span_or_null(file: File): SpeechSpan? {
     return SpeechSpan(start_ms, end_ms)
 }
 
-/** Writes the part of input between span's ends to output as MP4. Must be called on the main thread. */
-fun video_trim(activity: Activity, input: File, output: File, span: SpeechSpan, done: (String?) -> Unit) {
-    val clipping = MediaItem.ClippingConfiguration.Builder()
-        .setStartPositionMs(span.start_ms)
-        .setEndPositionMs(span.end_ms)
-        .build()
-    val item = MediaItem.Builder().setUri(Uri.fromFile(input)).setClippingConfiguration(clipping).build()
+/**
+ * Writes the inputs one after another to output as one MP4, each cut to its span when it has
+ * one and kept whole when it has none (null). Must be called on the main thread.
+ */
+fun video_trim_join(activity: Activity, inputs: List<File>, spans: List<SpeechSpan?>, output: File, done: (String?) -> Unit) {
+    val items = inputs.zip(spans).map { (input, span) ->
+        val builder = MediaItem.Builder().setUri(Uri.fromFile(input))
+        if (span != null) {
+            val clipping = MediaItem.ClippingConfiguration.Builder()
+                .setStartPositionMs(span.start_ms)
+                .setEndPositionMs(span.end_ms)
+                .build()
+            builder.setClippingConfiguration(clipping)
+        }
+        EditedMediaItem.Builder(builder.build()).build()
+    }
+    val composition = Composition.Builder(listOf(EditedMediaItemSequence(items))).build()
     val transformer = Transformer.Builder(activity)
         .addListener(object : Transformer.Listener {
             override fun onCompleted(composition: Composition, result: ExportResult) {
@@ -151,29 +163,27 @@ fun video_trim(activity: Activity, input: File, output: File, span: SpeechSpan, 
         })
         .build()
     output.delete()
-    transformer.start(item, output.absolutePath)
+    transformer.start(composition, output.absolutePath)
 }
 
 /**
- * Saves a copy of input holding only the speaking to the phone's Downloads, named name, and
- * hands done what to tell the person. A recording with no voice to find is saved whole, and
- * says so, rather than refused.
+ * Saves one video to the phone's Downloads, named name: the inputs in order, each cut down to
+ * its speaking (human 2026-11-24: a chapter's takes joined, each trimmed by its sound), and
+ * hands done what to tell the person. A take with no voice to find is kept whole rather than
+ * refused.
  */
-fun video_speech_trim_save(activity: Activity, input: File, name: String, done: (String) -> Unit) {
+fun video_speech_trim_join_save(activity: Activity, inputs: List<File>, name: String, done: (String) -> Unit) {
     thread {
-        val span = try {
-            video_speech_span_or_null(input)
-        } catch (e: Exception) {
-            null
+        val spans = inputs.map { input ->
+            try {
+                video_speech_span_or_null(input)
+            } catch (e: Exception) {
+                null
+            }
         }
         activity.runOnUiThread {
-            if (span == null) {
-                file_save_to_downloads(activity, input, name, "video/mp4")
-                done("Saved to Downloads, whole - no voice was found to trim to: $name")
-                return@runOnUiThread
-            }
             val trimmed = File(activity.cacheDir, "trimmed.mp4")
-            video_trim(activity, input, trimmed, span) { error ->
+            video_trim_join(activity, inputs, spans, trimmed) { error ->
                 if (error != null) {
                     done("Not saved: $error")
                 } else {
