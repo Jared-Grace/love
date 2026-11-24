@@ -7,9 +7,11 @@ export function app_shared_bible_offline_try_again_text() {
     eng: " Try again",
     urd: " دوبارہ کوشش کریں",
     tgl: " Subukang muli",
+    spa: " Intentar de nuevo",
     translated_from: {
       urd: " Try again",
       tgl: " Try again",
+      spa: " Try again",
     },
   };
   let label = app_shared_text_reader_language(texts);
