@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -11,8 +12,6 @@ import { app_learn_js_label_code_question } from "./app_learn_js_label_code_ques
 import { text_split } from "./text_split.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_get } from "./list_get.mjs";
-import { subtract } from "./subtract.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_without } from "./list_without.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
@@ -57,8 +56,7 @@ export function app_learn_js_lesson_expression_remainder_subtract() {
     let terms = text_split(chain, " - ");
     let number = list_first(terms);
     let divisor = list_get(terms, 1);
-    let left = list_size(terms);
-    let count = subtract(left, 1);
+    let count = list_size_subtract(terms, 1);
     let parts = [number, divisor, count];
     return parts;
   }
