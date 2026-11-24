@@ -1,9 +1,9 @@
+import { reply_words_side_of } from "./reply_words_side_of.mjs";
 import { reply_word_kind_of } from "./reply_word_kind_of.mjs";
 import { reply_message_words_placed } from "./reply_message_words_placed.mjs";
 import { reply_pairs_unparsable } from "./reply_pairs_unparsable.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -39,28 +39,15 @@ export function reply_non_english_stretches(message, lookup) {
     return pairs;
   }
   function side_of(left, right) {
-    if (less_than(left, 0) || greater_than_equal(right, words.length)) {
-      let none = "none";
-      return none;
-    }
-    let word_left = list_get(words, left);
-    let word_right = list_get(words, right);
-    let kind_left = list_get(kinds, left);
-    let kind_right = list_get(kinds, right);
-    if (word_right.cut_before) {
-      let none2 = "none";
-      return none2;
-    }
-    let name_beside = equal(kind_left, "name") || equal(kind_right, "name");
-    if (name_beside) {
-      let none3 = "none";
-      return none3;
-    }
-    let both_pair = kind_pairs_is(kind_left) && kind_pairs_is(kind_right);
-    let pair = word_left.word + " " + word_right.word;
-    let joins = both_pair && not(unparsable.has(pair));
-    let side = joins ? "joins" : "fails";
-    return side;
+    let r2 = reply_words_side_of(
+      left,
+      right,
+      words,
+      kinds,
+      kind_pairs_is,
+      unparsable,
+    );
+    return r2;
   }
   function foreign_is(i) {
     let kind = kinds[i];
