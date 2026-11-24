@@ -1,4 +1,4 @@
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_wrap_invoke } from "./reply_wrap_invoke.mjs";
 import { property_get } from "./property_get.mjs";
@@ -12,8 +12,7 @@ export function reply_on_said_output_add(fn_a, output) {
     let read = await reply_wrap_invoke(fn_a, possibilities);
     for (let possibility of read) {
       let matches = property_get(possibility, "matches");
-      let outputs = property_get(possibility, "outputs");
-      let said = list_empty_not_is(outputs);
+      let said = property_list_empty_not_is(possibility, "outputs");
       if (matches && said) {
         reply_on_match_output_add(possibility, output);
       }
