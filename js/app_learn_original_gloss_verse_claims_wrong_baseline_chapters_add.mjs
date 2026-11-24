@@ -1,12 +1,11 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { app_learn_original_gloss_verse_claims_wrong_names } from "./app_learn_original_gloss_verse_claims_wrong_names.mjs";
 import { app_learn_original_gloss_verse_claims_wrong_baseline_path } from "./app_learn_original_gloss_verse_claims_wrong_baseline_path.mjs";
 import { baseline_known_read } from "./baseline_known_read.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { baseline_known_add } from "./baseline_known_add.mjs";
-import { not } from "./not.mjs";
 export async function app_learn_original_gloss_verse_claims_wrong_baseline_chapters_add(
   chapter_codes,
 ) {
@@ -28,8 +27,7 @@ export async function app_learn_original_gloss_verse_claims_wrong_baseline_chapt
     return false;
   }
   function unrecorded_is(name) {
-    let recorded = list_includes(known, name);
-    let n = not(recorded);
+    let n = list_includes_not(known, name);
     return n;
   }
   let named = list_filter(offending, chapter_named_is);
