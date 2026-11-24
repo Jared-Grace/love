@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { property_list_map } from "./property_list_map.mjs";
 import { property_list_first } from "./property_list_first.mjs";
@@ -135,8 +136,7 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     equal(property_get(property_get(piece, "property"), "name"), "length");
   if (length_is) {
     ("2026-11-11, so a for loop can run while i < a.length: a.length is read as one name holding the array's size, one press, as the expression lessons read it. Not picked: reading a first and then its length, the order JavaScript reads it in, which writes the whole array into the line in place of the name the lesson is about");
-    let object3 = property_get(piece, "object");
-    let array_name2 = property_get(object3, "name");
+    let array_name2 = property_path_get_2(piece, "object", "name");
     let items3 = property_get(values_held, array_name2);
     let length_code = js_code_length(array_name2);
     ("2026-11-13, so a loop can run over a string's letters while i < s.length: a string's length is read the same way, as one name holding how many letters it has");
@@ -302,8 +302,7 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     equal(property_get(property_get(piece, "object"), "type"), "Identifier")
   ) {
     ("2026-11-10, at the human's asking, so the array lessons can be stepped through: a[i] reads its index first - a name looked up as any name is - then the item at it, in one evaluate, as the expression lessons solve it. The array's name is kept as written, as those lessons keep it, so a[2] is one press");
-    let object2 = property_get(piece, "object");
-    let array_name = property_get(object2, "name");
+    let array_name = property_path_get_2(piece, "object", "name");
     let items2 = property_get(values_held, array_name);
     let piece5 = property_get(piece, "property");
     let index = app_learn_js_program_trace_piece(state, piece5, true);
