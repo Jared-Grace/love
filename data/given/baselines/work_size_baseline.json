@@ -1,7 +1,11 @@
 {
  "known": [
   "app_replace_rule_set",
+  "app_shared_message_reply_asks",
+  "app_shared_message_reply_choices",
+  "bible_glyph_chapter_fetch_found",
   "bible_glyph_chapter_rosetta_lines_fetched_known",
-  "bible_glyph_chapter_fetch_found"
+  "reply_bible_1jn_3_23",
+  "reply_bible_1jn_4_7"
  ]
 }
