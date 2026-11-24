@@ -44,7 +44,7 @@ export async function app_shared_bible_home_generic_lambda$a(
   let book_name = property_get(r, "book_name");
   let chapter_code = property_get(r, "chapter_code");
   ("The row under the verse reads: copy, share, in pictures, the three ways out to biblehub, whole chapter - the order the human asked for. What is done with this verse comes first, then where else it can be seen, then leaving it for the chapter.");
-  app_shared_bible_home_copy_button(
+  app_shared_bible_home_copy_button({
     bottom,
     verse_number,
     chapter_code,
@@ -52,7 +52,7 @@ export async function app_shared_bible_home_generic_lambda$a(
     p_verse,
     lines_copy_extra,
     verse_numbers_chosen,
-  );
+  });
   app_shared_bible_home_share_button(
     hash,
     book_name,
