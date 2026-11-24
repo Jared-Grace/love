@@ -22,6 +22,10 @@ export function app_shared_hash_fields_unknown_number_text(name) {
       before: "El dato ",
       after: " de este enlace no es un número",
     },
+    por: {
+      before: "O dado ",
+      after: " deste link não é um número",
+    },
     translated_from: {
       urd: {
         before: "The ",
@@ -32,6 +36,10 @@ export function app_shared_hash_fields_unknown_number_text(name) {
         after: " in this link is not a number",
       },
       spa: {
+        before: "The ",
+        after: " in this link is not a number",
+      },
+      por: {
         before: "The ",
         after: " in this link is not a number",
       },
