@@ -134,7 +134,9 @@ export function app_learn_js_lesson_array_for_run_so_far() {
     app_learn_js_div_cycle_code(box_three, [
       "When the next number is different, ",
       "run = 1;",
-      " starts counting again. So ",
+      " resets the ",
+      "run",
+      " counter to 1. So ",
       "run",
       " is how many times in a row the number has come up so far:",
     ]);

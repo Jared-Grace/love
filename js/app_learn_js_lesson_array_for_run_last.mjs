@@ -119,12 +119,12 @@ export function app_learn_js_lesson_array_for_run_last() {
       [
         "If ",
         "i",
-        " is the last index, then ",
-        "a[i + 1]",
-        " is past the last item",
+        " is the last index, then index ",
+        "i + 1",
+        " is after the last item",
       ],
-      ["Then ", "i + 1", " is too far of an index"],
-      ["But on the last item, ", last, " is ", "true"],
+      ["And ", "a[i + 1]", " is not a valid item"],
+      ["In the code below, on the last item, ", last, " is ", "true"],
       ["So then the ", "||", " stops early"],
       [
         "And then for the last item ",
