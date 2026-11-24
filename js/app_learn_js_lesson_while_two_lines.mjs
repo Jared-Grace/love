@@ -207,7 +207,7 @@ export function app_learn_js_lesson_while_two_lines() {
     app_learn_js_div_cycle_code(box_two, [
       "Lines inside the ",
       r2,
-      " run from top to bottom, every run:",
+      " run from top to bottom, every time:",
     ]);
     let lines5 = program_lines(1, 3, joy);
     let written = turns_text([1, 2], joy);
@@ -227,7 +227,7 @@ export function app_learn_js_lesson_while_two_lines() {
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Two lines each run",
+    "Two lines each time",
     '{ console.log("joy"); ... }',
   );
   let lesson = app_learn_js_lesson_code_logged({

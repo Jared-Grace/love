@@ -39,9 +39,9 @@ export function app_learn_js_lesson_while_if() {
       "while",
       " is asked again each time, so it can be ",
       "true",
-      " on some runs and ",
+      " some times and ",
       "false",
-      " on others:",
+      " other times:",
     ]);
     example(box_two, program_write);
     walk(box_two);

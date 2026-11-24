@@ -151,7 +151,7 @@ export function app_learn_js_lesson_for_fizz_buzz_ifs() {
       "else",
       ". The two ",
       "if",
-      " statements are one after the other, so each one asks on its own, every run.",
+      " statements are one after the other, so each one asks on its own, every time.",
     ]);
     app_learn_js_div_cycle_code(box_three, [
       "",

@@ -1,5 +1,3 @@
-import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -7,6 +5,7 @@ import { app_learn_js_word_console_log_statement } from "./app_learn_js_word_con
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_update_statement } from "./js_code_update_statement.mjs";
+import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { object_multiply } from "./object_multiply.mjs";
@@ -18,6 +17,7 @@ import { list_get } from "./list_get.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_multiply } from "./list_multiply.mjs";
+import { equal } from "./equal.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -145,7 +145,7 @@ export function app_learn_js_lesson_while_start_end() {
       box_one,
       context,
       app_learn_js_lesson_while_repeat_word,
-      ["a ", "while", " can write out the same word each run."],
+      ["a ", "while", " can write out the same word each time."],
     );
     let box_two = app_learn_js_container_light_blue(root);
     let r2 = app_learn_js_braces_dots();

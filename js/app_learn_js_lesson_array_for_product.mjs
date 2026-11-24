@@ -50,7 +50,7 @@ export function app_learn_js_lesson_array_for_product() {
       "0",
       " is ",
       "0",
-      ". Each run, ",
+      ". Each time, ",
       "product *= a[i];",
       " multiplies ",
       "product",

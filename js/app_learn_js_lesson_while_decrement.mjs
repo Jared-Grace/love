@@ -22,7 +22,7 @@ export function app_learn_js_lesson_while_decrement() {
       "while",
       ", it takes one away each time, and a ",
       "console.log",
-      " shows every run:",
+      " shows it each time:",
     ],
   });
   return lesson;

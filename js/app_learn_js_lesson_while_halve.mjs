@@ -98,7 +98,7 @@ export function app_learn_js_lesson_while_halve() {
       name,
       " each time, with ",
       "/=",
-      ", so it takes away less each run:",
+      ", so it takes away less each time:",
     ]);
     let halve_lines = program_lines(16, 3, 2);
     app_learn_js_code_lines_writes_out(box_two, halve_lines, "2");

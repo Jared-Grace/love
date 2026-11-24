@@ -35,7 +35,7 @@ export function app_learn_js_lesson_array_for_smallest() {
       "small",
       " starts as ",
       "10",
-      ", which is bigger than every number in the array. Each run, if ",
+      ", which is bigger than every number in the array. Each time, if ",
       "a[i]",
       " is smaller than ",
       "small",

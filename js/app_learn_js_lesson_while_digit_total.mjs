@@ -72,7 +72,7 @@ export function app_learn_js_lesson_while_digit_total() {
         "while",
         " adds to ",
         "total",
-        " each run",
+        " each time",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);

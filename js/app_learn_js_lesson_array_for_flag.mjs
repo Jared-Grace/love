@@ -49,7 +49,7 @@ export function app_learn_js_lesson_array_for_flag() {
     app_learn_js_div_cycle_code(box_three, [
       "",
       "on",
-      " is made before the loop, so each run sees what the run before left in it. It starts ",
+      " is made before the loop, so each time, it still holds what the time before left in it. It starts ",
       "true",
       ", so the first item is written out, the second is not, and they take turns:",
     ]);

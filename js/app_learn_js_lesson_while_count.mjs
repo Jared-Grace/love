@@ -46,7 +46,7 @@ export function app_learn_js_lesson_while_count() {
     walk(box_two);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Counting the runs",
+    "Counting the loops",
     "count += 1;",
   );
   let lesson = app_learn_js_lesson_count_generic(

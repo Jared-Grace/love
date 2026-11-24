@@ -69,7 +69,7 @@ export function app_learn_js_lesson_array_for_push_total() {
       [
         "",
         "console.log(total);",
-        " inside the loop wrote out the total so far, every run",
+        " inside the loop wrote out the total so far, every time",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);

@@ -49,7 +49,7 @@ export function app_learn_js_lesson_array_for_total() {
       "total",
       " starts as ",
       "0",
-      ". Each run, ",
+      ". Each time, ",
       "total += a[i];",
       " adds the item to ",
       "total",

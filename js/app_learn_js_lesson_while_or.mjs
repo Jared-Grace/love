@@ -1,6 +1,3 @@
-import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
-import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
-import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
@@ -9,6 +6,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_update_statement } from "./js_code_update_statement.mjs";
+import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -16,6 +14,7 @@ import { less_than } from "./less_than.mjs";
 import { add } from "./add.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
@@ -28,6 +27,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
@@ -218,6 +218,7 @@ export function app_learn_js_lesson_while_or() {
   function said_false(root, a5, b5) {
     "a < 5 || b < 5 is false, because both sides are false, so the { ... } is skipped";
     let condition4 = asked(a5, b5);
+    let r = app_learn_js_braces_dots();
     app_learn_js_div_cycle_code(root, [
       "",
       condition4,
@@ -226,7 +227,7 @@ export function app_learn_js_lesson_while_or() {
       ", because both sides are ",
       "false",
       ", so the ",
-      app_learn_js_braces_dots(),
+      r,
       " is skipped, and the code continues after it",
     ]);
   }
@@ -279,7 +280,7 @@ export function app_learn_js_lesson_while_or() {
       combined,
       " for ",
       name_b,
-      ", after one run",
+      ", after one time through the loop",
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(

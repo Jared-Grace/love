@@ -85,7 +85,7 @@ export function app_learn_js_lesson_for_prime() {
         "count += 1;",
         " inside an ",
         "if",
-        " counts only the runs the ",
+        " counts only the times the ",
         "if",
         " lets through",
       ],

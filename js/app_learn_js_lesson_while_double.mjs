@@ -75,7 +75,7 @@ export function app_learn_js_lesson_while_double() {
       name,
       " each time, with ",
       "*=",
-      ", so it adds more each run:",
+      ", so it adds more each time:",
     ]);
     let double_lines = program_lines(3, 20, 2);
     app_learn_js_code_lines_writes_out(box_two, double_lines, "24");

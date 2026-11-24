@@ -38,7 +38,7 @@ export function app_learn_js_lesson_array_for_find() {
         "if",
         " inside a ",
         "for",
-        " decides which runs write something out",
+        " decides when something is written out",
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);

@@ -23,7 +23,7 @@ export function app_learn_js_lesson_while_increment() {
       "while",
       ", it adds one each time, and a ",
       "console.log",
-      " shows every run:",
+      " shows it each time:",
     ],
   });
   return lesson;

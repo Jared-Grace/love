@@ -23,21 +23,21 @@ export function app_learn_js_lesson_while_repeat_word() {
       box_one,
       context,
       app_learn_js_lesson_while_increment,
-      ["", "n++", " inside a ", "while", " adds one to ", name, " each run."],
+      ["", "n++", " inside a ", "while", " adds one to ", name, " each time."],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "A ",
       "while",
-      " can write out the same word each run, and ",
+      " can write out the same word each time, and ",
       name,
-      " only counts the runs:",
+      " only counts how many times:",
     ]);
     example(box_two, program_write);
     walk(box_two);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "The same word each run",
+    "The same word each time",
     '{ console.log("joy"); n++; }',
   );
   let lesson = app_learn_js_lesson_repeat_word_up_generic(

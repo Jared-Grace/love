@@ -1,14 +1,14 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { json_to } from "./json_to.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_if_else_lines } from "./js_code_if_else_lines.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_if_else } from "./app_learn_js_lesson_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_learn_js_lesson_for_if_greater_options } from "./app_learn_js_lesson_for_if_greater_options.mjs";
+import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_learn_js_lesson_for_if_generic } from "./app_learn_js_lesson_for_if_generic.mjs";
 export function app_learn_js_lesson_for_if_else() {
   arguments_assert(arguments, 0);
@@ -47,7 +47,7 @@ export function app_learn_js_lesson_for_if_else() {
   }
   function walk_end(state2) {
     let end = [
-      "Every run wrote out one line: the ",
+      "Each time, it wrote out one line: the ",
       "if",
       "'s or the ",
       "else",

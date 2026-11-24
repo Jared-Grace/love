@@ -87,7 +87,7 @@ export function app_learn_js_lesson_array_for_total_each() {
       "console.log(total);",
       " is inside the loop, right after ",
       "total += a[i];",
-      ". So every run writes out the total so far:",
+      ". So each time, it writes out the total so far:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);

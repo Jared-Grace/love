@@ -1,18 +1,18 @@
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { equal } from "./equal.mjs";
 import { js_code_if_else_if_lines_multiple } from "./js_code_if_else_if_lines_multiple.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
-import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { js_code_for_start_condition_update_lines } from "./js_code_for_start_condition_update_lines.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { less_than } from "./less_than.mjs";
 import { app_learn_js_second_items } from "./app_learn_js_second_items.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -102,7 +102,7 @@ export function app_learn_js_lesson_array_second_loop() {
       box_two,
       context,
       app_learn_js_lesson_array_for,
-      ["", "a[i]", " is each item in turn, one run of the loop each"],
+      ["", "a[i]", " is each item in turn, one each time through the loop"],
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [

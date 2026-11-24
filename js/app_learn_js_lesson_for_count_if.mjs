@@ -10,10 +10,10 @@ import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_
 import { app_learn_js_lesson_for_if } from "./app_learn_js_lesson_for_if.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
-import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_learn_js_lesson_for_if_greater_options } from "./app_learn_js_lesson_for_if_greater_options.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_learn_js_lesson_for_if_generic } from "./app_learn_js_lesson_for_if_generic.mjs";
 export function app_learn_js_lesson_for_count_if() {
   arguments_assert(arguments, 0);
@@ -51,7 +51,7 @@ export function app_learn_js_lesson_for_count_if() {
       count_name,
       " is ",
       json2,
-      ": it counted only the runs where the ",
+      ": it counted only the times when the ",
       "if",
       " was ",
       "true",
@@ -65,7 +65,7 @@ export function app_learn_js_lesson_for_count_if() {
       box_one,
       context,
       app_learn_js_lesson_for_if,
-      ["an ", "if", " inside a ", "for", " is asked again every run."],
+      ["an ", "if", " inside a ", "for", " is asked again every time."],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
@@ -73,7 +73,7 @@ export function app_learn_js_lesson_for_count_if() {
       counted,
       " inside the ",
       "if",
-      ", and it counts only the runs where the ",
+      ", and it counts only the times when the ",
       "if",
       " is ",
       "true",
@@ -83,7 +83,7 @@ export function app_learn_js_lesson_for_count_if() {
     walk(box_two);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Counting only some runs",
+    "Counting only some loops",
     "if (...) { count += 1; }",
   );
   let to = app_learn_js_lesson_for_if_greater_options();

@@ -41,7 +41,7 @@ export function app_learn_js_lesson_array_for_found() {
         "for",
         ", as ",
         "let on = true;",
-        ", keeps its value from one run to the next",
+        ", keeps its value from one time to the next",
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);

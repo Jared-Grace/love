@@ -35,7 +35,7 @@ export function app_learn_js_lesson_array_for_biggest() {
       "big",
       " starts as ",
       "0",
-      ". Each run, if ",
+      ". Each time, if ",
       "a[i]",
       " is bigger than ",
       "big",
