@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { calendar_send_url } from "./calendar_send_url.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-export async function calendar_db_proof_read(db, slug, uid) {
+export async function calendar_db_guest_proofs_read(db, slug, uid) {
   arguments_assert(arguments, 3);
   ("Where the guest uid stands with the host at slug, once per app: a list, newest asked first, each {via, whatsapp, profile_given, code, send_url, proven}; empty when they have never asked to prove who they are. The guest's page picks the app the guest chose, and shows either the code still to send or the times to pick.");
   ('A list because a guest may be proven on WhatsApp and on Messenger both (human, 2026-11-24: "it should allow multiple communications as confirmed").');

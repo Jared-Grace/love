@@ -9,7 +9,7 @@ import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
 import { calendar_messenger_name_usable } from "./calendar_messenger_name_usable.mjs";
 import { calendar_host_window } from "./calendar_host_window.mjs";
 import { calendar_db_guest_limit_read } from "./calendar_db_guest_limit_read.mjs";
-import { calendar_db_proof_read } from "./calendar_db_proof_read.mjs";
+import { calendar_db_guest_proofs_read } from "./calendar_db_guest_proofs_read.mjs";
 import { not } from "./not.mjs";
 import { calendar_db_proof_start } from "./calendar_db_proof_start.mjs";
 import { calendar_db_session_create } from "./calendar_db_session_create.mjs";
@@ -159,7 +159,7 @@ export async function calendar_api_handle(
     ("guest_proofs is every app the guest has asked to be proven on, newest first, since they may be proven on both; proof is the newest of them, for a page loaded before guest_proofs existed.");
     let guest_proofs = equal(uid, null)
       ? []
-      : await calendar_db_proof_read(db, slug2, uid);
+      : await calendar_db_guest_proofs_read(db, slug2, uid);
     let proof = equal(guest_proofs.length, 0) ? null : guest_proofs[0];
     let r5 = reply(200, {
       ok: true,
