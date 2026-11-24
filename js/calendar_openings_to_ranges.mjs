@@ -1,8 +1,7 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get_or } from "./list_get_or.mjs";
-import { divide } from "./divide.mjs";
-import { floor } from "./floor.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
@@ -13,8 +12,7 @@ export function calendar_openings_to_ranges(openings, dates) {
   let ranges = [];
   for (let opening of openings) {
     let day = list_get_or(dates, opening.weekday, undefined);
-    let p = divide(opening.start_minute, 30);
-    let start = floor(p);
+    let start = divide_floor(opening.start_minute, 30);
     let left = divide_ceil(opening.end_minute, 30);
     let end = subtract(left, 1);
     if (equal(day, undefined) || less_than(end, start)) {
