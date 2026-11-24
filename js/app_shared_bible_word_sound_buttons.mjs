@@ -4,7 +4,9 @@ import { english_word_sound_url } from "./english_word_sound_url.mjs";
 import { english_word_sound_slow_url } from "./english_word_sound_slow_url.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_sound_url_play } from "./html_sound_url_play.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
+import { text_combine } from "./text_combine.mjs";
 export function app_shared_bible_word_sound_buttons(parent, word) {
   "$plain word";
   "Two buttons on a tapped English word's card: one says the word, the other says it slowly.";
@@ -26,7 +28,14 @@ export function app_shared_bible_word_sound_buttons(parent, word) {
     let url = slow_get(word);
     await html_sound_url_play(url);
   }
-  ("Each button is its picture alone, the speaker and the turtle the explained words already use, because this card is shown to readers of every language and a picture needs no translating.");
-  app_shared_button(parent, "🔊", say);
-  app_shared_button(parent, "🐢", say_slowly);
+  ("EACH BUTTON SAYS WHAT IT DOES beside its picture (human 2026-11-24: some text besides the emojis - play audio pronouncing \"God\", slowly), worded like the card's Open button under it, which already names the word in curly quotes. REJECTED: the picture alone, so no reader needs it translated - the card's other buttons were already in English words, and the speaker and turtle alone left a reader guessing.");
+  let quoted = text_combine_multiple(["“", word, "”"]);
+  let text = text_combine("🔊 Play audio pronouncing ", quoted);
+  app_shared_button(parent, text, say);
+  let text2 = text_combine_multiple([
+    "🐢 Play audio pronouncing ",
+    quoted,
+    " slowly",
+  ]);
+  app_shared_button(parent, text2, say_slowly);
 }
