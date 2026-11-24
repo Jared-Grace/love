@@ -11,6 +11,8 @@ export function app_learn_eng_store_tagalog() {
     title: "Matuto ng Ingles",
     download: app_learn_eng_gloss_tagalog_generate_download,
     chapters_uploaded: app_learn_eng_gloss_tagalog_chapters_uploaded,
+    description:
+      "Basahin ang isang talata ng Bibliya sa Tagalog at pagkatapos sa Ingles na ipinaliliwanag sa Tagalog ang bawat salitang Ingles.",
   };
   return r;
 }

@@ -11,6 +11,8 @@ export function app_learn_eng_store_urdu() {
     title: "انگریزی سیکھیں",
     download: app_learn_eng_gloss_urdu_generate_download,
     chapters_uploaded: app_learn_eng_gloss_urdu_chapters_uploaded,
+    description:
+      "بائبل کی ایک آیت پہلے اردو میں اور پھر انگریزی میں پڑھیں، انگریزی کے ہر لفظ کی وضاحت اردو میں۔",
   };
   return r;
 }

@@ -11,6 +11,8 @@ export function app_learn_eng_store_spanish() {
     title: "Aprende inglés",
     download: app_learn_eng_gloss_spanish_generate_download,
     chapters_uploaded: app_learn_eng_gloss_spanish_chapters_uploaded,
+    description:
+      "Lee un versículo de la Biblia en español y luego en inglés con cada palabra en inglés explicada en español.",
   };
   return r;
 }
