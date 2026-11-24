@@ -5,9 +5,11 @@ export function app_shared_all_apps_button_text() {
     eng: " All apps",
     urd: " تمام ایپس",
     tgl: " Lahat ng app",
+    spa: " Todas las aplicaciones",
     translated_from: {
       urd: " All apps",
       tgl: " All apps",
+      spa: " All apps",
     },
   };
   let label = app_shared_text_reader_language(texts);
