@@ -5,9 +5,11 @@ export function app_shared_language_prompt_one_text() {
     eng: "Which language do you want the Bible verses to be translated into?",
     urd: "آپ بائبل کی آیات کا ترجمہ کس زبان میں چاہتے ہیں؟",
     tgl: "Sa anong wika mo gustong maisalin ang mga talata ng Biblia?",
+    spa: "¿A qué idioma quieres que se traduzcan los versículos de la Biblia?",
     translated_from: {
       urd: "Which language do you want the Bible verses to be translated into?",
       tgl: "Which language do you want the Bible verses to be translated into?",
+      spa: "Which language do you want the Bible verses to be translated into?",
     },
   };
   let text = app_shared_text_reader_language(texts);
