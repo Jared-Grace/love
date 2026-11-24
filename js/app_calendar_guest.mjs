@@ -16,9 +16,9 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { app_calendar_guest_proof_form } from "./app_calendar_guest_proof_form.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_calendar_guest_proof_form } from "./app_calendar_guest_proof_form.mjs";
 import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -109,7 +109,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     }
     app_shared_button_green(
       box,
-      "Meet on " + app_label(other.via) + " now - no code needed",
+      "Schedule " + app_label(other.via) + " meeting now - no code needed",
       back,
     );
   }
@@ -165,6 +165,12 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     }
     let list2 = list_filter(guest_proofs, proof_is_proven);
     let proven_vias = list_map(list2, proof_via);
+    ("A guest proven on some app has already chosen which app this code is for - the other one, or the same one with a new number - so the form asks no choice; a guest proven on nothing still picks.");
+    let chosen_before = storage_local_get(app_calendar, "guest_details");
+    let via_fixed =
+      greater_than(proven_vias.length, 0) && chosen_before && chosen_before.via
+        ? chosen_before.via
+        : null;
     await app_calendar_guest_proof_form(
       step,
       slug,
@@ -173,6 +179,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       key_keep,
       redraw,
       proven_vias,
+      via_fixed,
     );
     let chosen_now = storage_local_get(app_calendar, "guest_details");
     back_draw(step, chosen_now ? chosen_now.via : null);
