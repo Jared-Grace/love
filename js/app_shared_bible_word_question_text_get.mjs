@@ -11,10 +11,12 @@ export function app_shared_bible_word_question_text_get(word) {
     urd: 'بائبل میں لفظ "{word}" کا کیا مطلب ہے؟',
     tgl: 'Ano ang ibig sabihin ng salitang "{word}" sa Biblia?',
     spa: '¿Qué significa la palabra "{word}" en la Biblia?',
+    por: 'O que a palavra "{word}" significa na Bíblia?',
     translated_from: {
       urd: 'What does the word "{word}" mean in the Bible?',
       tgl: 'What does the word "{word}" mean in the Bible?',
       spa: 'What does the word "{word}" mean in the Bible?',
+      por: 'What does the word "{word}" mean in the Bible?',
     },
   };
   let v = app_shared_text_reader_language_filled(texts, {
