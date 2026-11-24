@@ -12,9 +12,11 @@ export function html_button_biblehub_open_commentary(
     eng: "Commentary",
     urd: "تفسیر",
     tgl: "Komentaryo",
+    spa: "Comentario",
     translated_from: {
       urd: "Commentary",
       tgl: "Commentary",
+      spa: "Commentary",
     },
   };
   let text = app_shared_text_reader_language(texts);
