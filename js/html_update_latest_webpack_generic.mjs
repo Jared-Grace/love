@@ -11,16 +11,16 @@ export async function html_update_latest_webpack_generic(
   cache_bust,
 ) {
   let r = await app_shared_name_search_info(search);
-  let f_path_latest = property_get(r, path);
+  let file_path = property_get(r, path);
   let a_name = property_get(r, "a_name");
   let version_query = "";
   if (cache_bust) {
     let right = date_now_milliseconds();
     version_query = text_combine("?v=", right);
   }
-  let c = html_code_script_src_js_version_any_route(a_name, version_query);
+  let body = html_code_script_src_js_version_any_route(a_name, version_query);
   log(html_update_latest_webpack_generic.name, {
-    f_path_latest,
+    f_path_latest: file_path,
   });
-  await html_overwrite(a_name, f_path_latest, c);
+  await html_overwrite(a_name, file_path, body);
 }
