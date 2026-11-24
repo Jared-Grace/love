@@ -5,9 +5,11 @@ export function app_shared_bible_licences_intro_text() {
     eng: "Every Bible here was given away by the people who made it. Some asked to be named in return. Here they are, with the terms each one was given on",
     urd: "یہاں کی ہر بائبل اُسے بنانے والوں نے مفت دی۔ کچھ نے بدلے میں اپنا نام لکھے جانے کی درخواست کی۔ یہ وہ لوگ ہیں، اور ساتھ وہ شرائط جن پر ہر ایک دی گئی",
     tgl: "Bawat Biblia rito ay ipinamigay ng mga gumawa nito. May ilang humiling na banggitin ang kanilang pangalan bilang kapalit. Narito sila, kasama ang mga tuntunin kung saan ibinigay ang bawat isa",
+    spa: "Cada Biblia aquí fue regalada por las personas que la hicieron. Algunas pidieron ser nombradas a cambio. Aquí están, con los términos con que se dio cada una",
     translated_from: {
       urd: "Every Bible here was given away by the people who made it. Some asked to be named in return. Here they are, with the terms each one was given on",
       tgl: "Every Bible here was given away by the people who made it. Some asked to be named in return. Here they are, with the terms each one was given on",
+      spa: "Every Bible here was given away by the people who made it. Some asked to be named in return. Here they are, with the terms each one was given on",
     },
   };
   let text = app_shared_text_reader_language(texts);
