@@ -90,7 +90,7 @@ export function app_supper_passages_count_gate_run() {
   ("The count is turned into the word a sentence would have used by the one function in the repo that crosses that gap, rather than by a list of words kept here. A second list of the same words was written for this gate before the first one was found, which is the ordinary way a near-duplicate arrives: the words to search for were the words the new one would be called by rather than the words the old one already was.");
   let word = text_number_spelled(authored);
   let descriptions = app_shared_descriptions();
-  let cards = ["supper", "supper_tl"];
+  let cards = ["supper", "supper_tgl"];
   let wrong = [];
   for (let card of cards) {
     let sentence = property_get(descriptions, card);

@@ -37,7 +37,7 @@ export function apps_all_main_fns() {
     "app_reply_local",
     "app_sandbox",
     "app_supper",
-    "app_supper_tl",
+    "app_supper_tgl",
     "app_verses",
   ];
 }

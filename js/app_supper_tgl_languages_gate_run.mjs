@@ -2,7 +2,7 @@ import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { app_shared_description } from "./app_shared_description.mjs";
-import { app_supper_tl_languages_chosen } from "./app_supper_tl_languages_chosen.mjs";
+import { app_supper_tgl_languages_chosen } from "./app_supper_tgl_languages_chosen.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { list_size } from "./list_size.mjs";
@@ -32,9 +32,9 @@ export async function app_supper_tgl_languages_gate_run() {
   "THE FOLDERS ARE CHECKED AGAINST WHAT THE REPO ACTUALLY OFFERS, so that a page cannot go on promising a language whose translation has been dropped - the page would open, and the side that should hold Tagalog would simply be empty.";
   arguments_assert(arguments, 0);
   let wrong = [];
-  let s = app_shared_description("supper_tl");
+  let s = app_shared_description("supper_tgl");
   let said = text_lower_to(s);
-  let chosen = app_supper_tl_languages_chosen();
+  let chosen = app_supper_tgl_languages_chosen();
   let b = list_size_equal(chosen, 2);
   if (not(b)) {
     wrong.push(
@@ -161,7 +161,7 @@ export async function app_supper_tgl_languages_gate_run() {
     wrong,
   });
   let r = {
-    app_name: "supper_tl",
+    app_name: "supper_tgl",
     languages: list_size(chosen),
     folders_offered: list_size(offered),
     doors: list_size(doors),
