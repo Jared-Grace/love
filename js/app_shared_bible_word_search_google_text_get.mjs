@@ -6,10 +6,12 @@ export function app_shared_bible_word_search_google_text_get() {
     urd: "🔍 گوگل پر تلاش کریں",
     tgl: "🔍 Maghanap sa Google",
     spa: "🔍 Buscar en Google",
+    por: "🔍 Pesquisar no Google",
     translated_from: {
       urd: "🔍 Search Google",
       tgl: "🔍 Search Google",
       spa: "🔍 Search Google",
+      por: "🔍 Search Google",
     },
   };
   let v = app_shared_text_reader_language(texts);
