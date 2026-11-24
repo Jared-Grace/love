@@ -36,8 +36,8 @@ export function reply_bible_book() {
     },
   ];
   let books = ebible_books_engbsb();
-  function book_read(book) {
-    let lowered = text_lower_to(book.text);
+  function book_read(book_each) {
+    let lowered = text_lower_to(book_each.text);
     let words = text_split_space(lowered);
     let number = list_first(words);
     let ordinal = list_find_property_get_or(

@@ -16,8 +16,8 @@ export async function english_words_lookup() {
     let system = await function_import_relative(
       fn_name("english_words_system_lookup"),
     );
-    let lookup = await system();
-    return lookup;
+    let system_lookup = await system();
+    return system_lookup;
   }
   let path = web_assets_english_words_path();
   let url = web_assets_url(path);
