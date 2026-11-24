@@ -18,12 +18,20 @@ export function app_shared_hash_fields_unknown_number_text(name) {
       before: "Hindi numero ang ",
       after: " sa link na ito",
     },
+    spa: {
+      before: "El dato ",
+      after: " de este enlace no es un número",
+    },
     translated_from: {
       urd: {
         before: "The ",
         after: " in this link is not a number",
       },
       tgl: {
+        before: "The ",
+        after: " in this link is not a number",
+      },
+      spa: {
         before: "The ",
         after: " in this link is not a number",
       },
