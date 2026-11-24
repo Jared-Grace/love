@@ -1,3 +1,4 @@
+import { app_shared_bible_language_hash_current_ensure } from "./app_shared_bible_language_hash_current_ensure.mjs";
 import { object_merge_match } from "./object_merge_match.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_initialize } from "./app_shared_initialize.mjs";
@@ -14,5 +15,6 @@ export function app_shared_bible_initialize_before(
   });
   let root = property_get(context, "root");
   html_margin_0(root);
+  app_shared_bible_language_hash_current_ensure();
   app_shared_initialize(context, app_fn, screens);
 }
