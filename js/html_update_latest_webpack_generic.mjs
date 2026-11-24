@@ -1,3 +1,4 @@
+import { html_pages_language_overwrite } from "./html_pages_language_overwrite.mjs";
 import { app_shared_name_search_info } from "./app_shared_name_search_info.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -23,4 +24,5 @@ export async function html_update_latest_webpack_generic(
     f_path_latest: file_path,
   });
   await html_overwrite(a_name, file_path, body);
+  await html_pages_language_overwrite(a_name, file_path, body);
 }
