@@ -6,10 +6,12 @@ export function app_shared_bible_word_ask_ai_text_get() {
     urd: "کسی AI سے پوچھیں:",
     tgl: "Magtanong sa isang AI:",
     spa: "Pregunta a una IA:",
+    por: "Pergunte a uma IA:",
     translated_from: {
       urd: "Ask an AI:",
       tgl: "Ask an AI:",
       spa: "Ask an AI:",
+      por: "Ask an AI:",
     },
   };
   let v = app_shared_text_reader_language(texts);
