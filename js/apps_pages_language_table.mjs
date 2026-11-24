@@ -23,6 +23,12 @@ export function apps_pages_language_table() {
         description:
           "Lee un versículo de la Biblia en español y luego en inglés con cada palabra en inglés explicada en español.",
       },
+      {
+        code: "por",
+        title: "Aprenda inglês",
+        description:
+          "Leia um versículo da Bíblia em português e depois em inglês, com cada palavra em inglês explicada em português.",
+      },
     ],
   };
   return r;
