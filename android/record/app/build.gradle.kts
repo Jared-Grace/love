@@ -1,3 +1,6 @@
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
 plugins {
     id("com.android.application")
 }
@@ -15,8 +18,7 @@ android {
         // The version is the moment the app was built (human 2026-11-24: show the version, so
         // the person can tell whether they need to update): a time reads as newer or older at a
         // glance, and no one has to remember to raise a number by hand.
-        versionName = java.time.LocalDateTime.now()
-            .format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))
+        versionName = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
