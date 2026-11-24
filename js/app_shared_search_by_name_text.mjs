@@ -7,10 +7,12 @@ export function app_shared_search_by_name_text() {
     urd: "نام سے تلاش کریں",
     tgl: "Maghanap ayon sa pangalan",
     spa: "Buscar por nombre",
+    por: "Pesquisar por nome",
     translated_from: {
       urd: "Search by name",
       tgl: "Search by name",
       spa: "Search by name",
+      por: "Search by name",
     },
   };
   let text = app_shared_text_reader_language(texts);
