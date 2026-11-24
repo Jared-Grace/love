@@ -19,6 +19,11 @@ export function app_shared_bible_offline_unfinished_text(name) {
         "Hindi natapos ang pag-download na iyon. Gusto mo bang suriin ang iyong koneksyon at subukan muli ang ",
       after: "?",
     },
+    spa: {
+      before:
+        "Esa descarga no terminó. ¿Quieres revisar tu conexión e intentar ",
+      after: " de nuevo?",
+    },
     translated_from: {
       urd: {
         before:
@@ -26,6 +31,11 @@ export function app_shared_bible_offline_unfinished_text(name) {
         after: " again?",
       },
       tgl: {
+        before:
+          "That download did not finish. Would you like to check your connection and try ",
+        after: " again?",
+      },
+      spa: {
         before:
           "That download did not finish. Would you like to check your connection and try ",
         after: " again?",
