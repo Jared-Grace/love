@@ -9,7 +9,7 @@ export function app_learn_eng_stores() {
   let urdu = app_learn_eng_store_urdu();
   let tagalog = app_learn_eng_store_tagalog();
   let spanish = app_learn_eng_store_spanish();
-  let r2 = app_learn_eng_store_portuguese();
-  let r = [urdu, tagalog, spanish, r2];
+  let portuguese = app_learn_eng_store_portuguese();
+  let r = [urdu, tagalog, spanish, portuguese];
   return r;
 }
