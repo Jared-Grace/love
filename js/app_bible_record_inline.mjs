@@ -50,6 +50,7 @@ import { app_bible_record_native_download } from "./app_bible_record_native_down
 import { app_bible_record_native_download_multiple } from "./app_bible_record_native_download_multiple.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
 import { firebase_upload_blob_browser_quiet } from "./firebase_upload_blob_browser_quiet.mjs";
+import { app_bible_record_take_sent_keep } from "./app_bible_record_take_sent_keep.mjs";
 export function app_bible_record_inline(
   parent,
   chapter_code,
@@ -440,6 +441,8 @@ export function app_bible_record_inline(
     }
     await busy(send_button, "⏳ Sending the video...", work);
     changed();
+    ("The sent take stays on the phone as sent, so coming back plays it at once (human 2026-11-24).");
+    await app_bible_record_take_sent_keep(chapter_code, verse_numbers, blob);
     await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
   }
 }
