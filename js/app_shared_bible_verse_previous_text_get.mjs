@@ -7,9 +7,11 @@ export function app_shared_bible_verse_previous_text_get() {
     eng: "Previous verse",
     urd: "پچھلی آیت",
     tgl: "Nakaraang talata",
+    spa: "Versículo anterior",
     translated_from: {
       urd: "Previous verse",
       tgl: "Previous verse",
+      spa: "Previous verse",
     },
   };
   let v = app_shared_text_reader_language(texts);
