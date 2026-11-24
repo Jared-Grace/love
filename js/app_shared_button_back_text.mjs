@@ -8,10 +8,12 @@ export function app_shared_button_back_text() {
     urd: " واپس",
     tgl: " Bumalik",
     spa: " Atrás",
+    por: " Voltar",
     translated_from: {
       urd: " Back",
       tgl: " Back",
       spa: " Back",
+      por: " Back",
     },
   };
   let label = app_shared_text_reader_language(texts);
