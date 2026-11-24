@@ -409,8 +409,12 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           calendar_time_range_local_text(
             booked.body.start_utc,
             host.meeting_minutes,
-          ),
+          ) +
+          " (" +
+          host.meeting_minutes +
+          " minutes)",
       );
+      ('The length is said beside the times, not left to be worked out from them (human, 2026-11-24: "booked should say meeting length").');
       html_style_assign(booked_line, {
         "font-size": "1.3em",
         "font-weight": "bold",
