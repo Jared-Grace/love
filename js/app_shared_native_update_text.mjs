@@ -7,9 +7,11 @@ export function app_shared_native_update_text() {
     eng: " Update app",
     urd: " ایپ اپ ڈیٹ کریں",
     tgl: " I-update ang app",
+    spa: " Actualizar la aplicación",
     translated_from: {
       urd: " Update app",
       tgl: " Update app",
+      spa: " Update app",
     },
   };
   let label = app_shared_text_reader_language(texts);
