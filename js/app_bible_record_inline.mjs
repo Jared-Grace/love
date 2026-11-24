@@ -94,6 +94,8 @@ export function app_bible_record_inline(
     margin: "0 auto",
   });
   html_display_none(playback);
+  ("HOW MANY PASSAGES OF THE CHAPTER HAVE A VIDEO is said right under the video, in the page, scrolling away with it (human 2026-11-24: x of x passages have a video for Psalm 1, underneath the video and not fixed). It is the same count the chapter download is offered by, so a count that is wrong can be seen rather than guessed at. REJECTED: the top bar, where it stood first - it stays on screen while the reader scrolls, and it was away from the video it counts.");
+  let count_line = html_p_text(parent, "");
   let buttons = html_div(parent);
   let problem = html_p_text(parent, "");
   ("SIGNING IN GETS A PLACE OF ITS OWN: the sign-in empties the place it is shown in, both before and after, so shown where the buttons are it took them away for good (human 2026-11-23: after sending, the buttons were gone until another passage was opened).");
@@ -173,6 +175,16 @@ export function app_bible_record_inline(
           text3,
         ]);
     html_text_set(chapter_button, chapter_label);
+    let v = String(left);
+    let v2 = String(right);
+    let text6 = text_combine_multiple([
+      v,
+      " of ",
+      v2,
+      " passages have a video for ",
+      chapter_reference,
+    ]);
+    html_text_set(count_line, text6);
     if (app_bible_record_native_is()) {
       if (several) {
         html_display_block(chapter_button);

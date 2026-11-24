@@ -110,7 +110,7 @@ export function calendar_db_tables() {
         "created_at TEXT NOT NULL",
         "confirmed_at TEXT",
       ],
-      rules: ["PRIMARY KEY (host_uid, guest_uid)"],
+      rules: ["PRIMARY KEY (host_uid, guest_uid, via)"],
     },
   ];
   return r;

@@ -22,7 +22,8 @@ export async function calendar_db_proof_start(
   arguments_assert(arguments, 10);
   ("A guest asks to prove who they are to the host at slug, before any time can be booked: writes who they are under uid, and answers {ok, reason, code, send_url, proven}. send_url opens WhatsApp (or Messenger) to the host with the code typed. Reasons: no_host, messenger, profile, whatsapp, timezone.");
   ('★ PROVE FIRST, THEN BOOK (human, 2026-11-20: "100% knowing their FB url/wa# so they don\'t book, enter something wrong, expect me to show up"). Many guests do not read English well, so a booking that is only a request until a code arrives can be read as a meeting. Here nothing is booked until the host has seen the code arrive from the number or profile given; after that, every time picked is booked at once.');
-  ("★ ONE PROOF PER GUEST AND HOST, KEPT. Asking again with the same number (or the same profile link) keeps the proof as it is - proven stays proven, a waiting one keeps its code, so a code already sent still matches. A different number or link starts a new proof with a new code, because the host has proven only the one they saw.");
+  ('★ ONE PROOF PER GUEST, HOST AND APP (human, 2026-11-24: "it should allow multiple communications as confirmed"). A guest proven on WhatsApp who asks to meet on Messenger keeps WhatsApp proven while the Messenger code waits, so they can still book on WhatsApp at once.');
+  ("★ EACH PROOF KEPT. Asking again with the same number (or the same profile link) keeps the proof as it is - proven stays proven, a waiting one keeps its code, so a code already sent still matches. A different number or link starts a new proof with a new code, because the host has proven only the one they saw.");
   ("A Messenger guest gives no number and keeps any number already given, as when booking; profile_given is the link they typed, and profile_url is the one the host confirms from, which may differ.");
   function refused(reason) {
     let r = {
@@ -83,9 +84,9 @@ export async function calendar_db_proof_start(
   let digits = String(number).replace(/[^0-9]/g, "");
   let old = await db
     .prepare(
-      "SELECT via, whatsapp, profile_given, code, confirmed_at FROM proofs WHERE host_uid = ?1 AND guest_uid = ?2",
+      "SELECT via, whatsapp, profile_given, code, confirmed_at FROM proofs WHERE host_uid = ?1 AND guest_uid = ?2 AND via = ?3",
     )
-    .bind(host.uid, uid)
+    .bind(host.uid, uid, via_kept)
     .first();
   let b = equal(old, null);
   let same =
@@ -100,9 +101,9 @@ export async function calendar_db_proof_start(
     if (not(proven)) {
       await db
         .prepare(
-          "UPDATE proofs SET created_at = ?1 WHERE host_uid = ?2 AND guest_uid = ?3",
+          "UPDATE proofs SET created_at = ?1 WHERE host_uid = ?2 AND guest_uid = ?3 AND via = ?4",
         )
-        .bind(now_iso, host.uid, uid)
+        .bind(now_iso, host.uid, uid, via_kept)
         .run();
     }
   } else {
@@ -110,7 +111,7 @@ export async function calendar_db_proof_start(
       .prepare(
         `INSERT INTO proofs (host_uid, guest_uid, via, whatsapp, profile_given, profile_url, code, created_at, confirmed_at)
 VALUES (?1, ?2, ?3, ?4, ?5, NULL, ?6, ?7, NULL)
-ON CONFLICT (host_uid, guest_uid) DO UPDATE SET via = excluded.via, whatsapp = excluded.whatsapp, profile_given = excluded.profile_given, profile_url = NULL, code = excluded.code, created_at = excluded.created_at, confirmed_at = NULL`,
+ON CONFLICT (host_uid, guest_uid, via) DO UPDATE SET whatsapp = excluded.whatsapp, profile_given = excluded.profile_given, profile_url = NULL, code = excluded.code, created_at = excluded.created_at, confirmed_at = NULL`,
       )
       .bind(host.uid, uid, via_kept, number, profile_given, code, now_iso)
       .run();

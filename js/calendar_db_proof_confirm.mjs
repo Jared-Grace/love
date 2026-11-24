@@ -63,9 +63,9 @@ export async function calendar_db_proof_confirm(
   for (let proof of matching) {
     let written = await db
       .prepare(
-        "UPDATE proofs SET confirmed_at = ?1, profile_url = ?2 WHERE host_uid = ?3 AND guest_uid = ?4 AND confirmed_at IS NULL",
+        "UPDATE proofs SET confirmed_at = ?1, profile_url = ?2 WHERE host_uid = ?3 AND guest_uid = ?4 AND via = ?5 AND confirmed_at IS NULL",
       )
-      .bind(now_iso, profile_url, host_uid, proof.guest_uid)
+      .bind(now_iso, profile_url, host_uid, proof.guest_uid, via_kept)
       .run();
     confirmed += written.meta.changes;
   }
