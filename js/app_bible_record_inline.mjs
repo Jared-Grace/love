@@ -180,7 +180,7 @@ export function app_bible_record_inline(
     if (app_bible_record_native_is()) {
       camera_on = false;
       refresh();
-      function native_done(taken, error) {
+      async function native_done(taken, error) {
         if (text_empty_not_is(error)) {
           let text2 = text_combine("Not recorded: ", error);
           html_text_set(problem, text2);
@@ -191,7 +191,7 @@ export function app_bible_record_inline(
         html_media_source_file_set(playback, blob);
         html_display_block(playback);
         refresh();
-        app_bible_record_take_keep(chapter_code, verse_numbers, blob);
+        await app_bible_record_take_keep(chapter_code, verse_numbers, blob);
       }
       function native_open() {
         app_bible_record_native_open(reference, text, native_done);
