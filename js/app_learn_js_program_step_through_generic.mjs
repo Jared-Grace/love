@@ -342,8 +342,7 @@ export function app_learn_js_program_step_through_generic(
     let drawn = list_get(row_spans, line_index);
     let from = property_get(piece, "from");
     for (let item of drawn) {
-      let object5 = property_get(item, "piece");
-      let left = property_get(object5, "from");
+      let left = property_path_get_2(item, "piece", "from");
       if (equal(left, from)) {
         let span = property_get(item, "span");
         return span;
@@ -1403,8 +1402,7 @@ export function app_learn_js_program_step_through_generic(
         part4 = "item";
         let index4 = property_get(action, "index");
         item_from = app_learn_js_array_code_item_from(value2, index4);
-        let object6 = property_get(state, "held_before");
-        let held_before_list = property_get(object6, name2);
+        let held_before_list = property_path_get_2(state, "held_before", name2);
         let old_array = list_last(held_before_list);
         let value13 = list_get(old_array, index4);
         old_item = js_value_code(value13);
@@ -1440,8 +1438,7 @@ export function app_learn_js_program_step_through_generic(
       ("2026-11-13, at the human's asking, for Adding to an array: the note above the line that declared the array is written again holding the longer array, the items already there staying in place and unfaded, and a copy of what is inside .push( ) goes up into the end of it. Not picked: fading the whole old array and sending a new one, as an assign does, which would say the whole array was replaced when only one item arrived");
       let name5 = property_get(action, "name");
       let after = property_get(action, "after");
-      let held5 = property_get(state, "held");
-      let array_before = property_get(held5, name5);
+      let array_before = property_path_get_2(state, "held", name5);
       held_value_set(name5, after);
       let note_line3 = property_path_get_2(state, "declared", name5);
       let value11 = property_get(action, "value");
@@ -1504,8 +1501,7 @@ export function app_learn_js_program_step_through_generic(
       ("2026-11-13, at the human's asking, for Taking an item off: the last item in the note above the line that declared the array fades out, the items before it staying in place, and the note is then written holding the shorter array - the opposite of a push. A pop standing inside a line, as console.log(a.pop()) does, then sends a copy of the item from the note into the line in place of a.pop(), since that is what it gives back. Not picked: fading the whole array and writing a new one, as an assign does, which would say the whole array was replaced when only one item went");
       let name6 = property_get(action, "name");
       let after2 = property_get(action, "after");
-      let held4 = property_get(state, "held");
-      let item4 = property_get(held4, name6);
+      let item4 = property_path_get_2(state, "held", name6);
       held_value_set(name6, after2);
       let note_line4 = property_path_get_2(state, "declared", name6);
       let value15 = property_get(action, "value");
@@ -1743,8 +1739,7 @@ export function app_learn_js_program_step_through_generic(
         " solve to?",
       ]);
       ("the wrong values offered are the array's other items and the whole array, the two mistakes most likely: taking the wrong end, or reading the array itself");
-      let held5 = property_get(state, "held");
-      let items = property_get(held5, given_name);
+      let items = property_path_get_2(state, "held", given_name);
       let given_decoys = [items];
       ("2026-11-23, for the toUpperCase lessons: a string function's wrong values are the string as it was, the mistake of thinking nothing happened, and, where it differs, the string with only its first letter changed, the mistake of thinking only one letter does");
       let given_list = items;
