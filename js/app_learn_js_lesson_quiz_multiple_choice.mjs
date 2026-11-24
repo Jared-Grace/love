@@ -1,3 +1,5 @@
+import { html_style_padding } from "./html_style_padding.mjs";
+import { html_border_radius } from "./html_border_radius.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_next_get } from "./app_learn_js_lesson_quiz_multiple_choice_next_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -8,7 +10,6 @@ import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.m
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_shared_color_red_pale } from "./app_shared_color_red_pale.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_scroll_nearest } from "./html_scroll_nearest.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_each_button } from "./app_learn_js_lesson_quiz_multiple_choice_each_button.mjs";
 import { list_map } from "./list_map.mjs";
@@ -63,14 +64,14 @@ export function app_learn_js_lesson_quiz_multiple_choice(
     if (said) {
       let fill = app_shared_color_red_pale();
       html_style_background_color_set(note, fill);
-      html_style_set(note, "padding", "0.3em 0.5em");
-      html_style_set(note, "border-radius", "0.5em");
+      html_style_padding(note, "0.3em 0.5em");
+      html_border_radius(note, "0.5em");
       ("2026-11-12, at the human's asking: the page glides only as far as it takes for the reminder to be in view, not centred, so on a short screen the learner sees why without hunting for it. Not awaited: nothing after it waits on the glide");
       await html_scroll_nearest(note);
       return;
     }
-    html_style_set(note, "background-color", "");
-    html_style_set(note, "padding", "");
+    html_style_background_color_set(note, "");
+    html_style_padding(note, "");
   }
   let r2 = app_learn_js_lesson_quiz_multiple_choice_each_button({
     r,
