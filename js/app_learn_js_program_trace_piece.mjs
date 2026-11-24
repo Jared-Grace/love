@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -317,8 +318,7 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     let callee_includes = property_get(piece, "callee");
     let piece_held = property_get(callee_includes, "object");
     let held = app_learn_js_program_trace_piece(state, piece_held, true);
-    let list2 = property_get(piece, "arguments");
-    let piece_part = list_first(list2);
+    let piece_part = property_list_first(piece, "arguments");
     let part = app_learn_js_program_trace_piece(state, piece_part, true);
     ("2026-11-14, at the human's asking: a.indexOf(\"joy\") is read the same way, so the mark is the dot and the action's own name");
     let object4 = property_get(callee_includes, "property");
