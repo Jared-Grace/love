@@ -18,10 +18,10 @@ import { html_div } from "./html_div.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { app_calendar_guest_proof_form } from "./app_calendar_guest_proof_form.mjs";
 import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { app_shared_unavailable_box } from "./app_shared_unavailable_box.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
@@ -35,8 +35,8 @@ import { html_loading } from "./html_loading.mjs";
 import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
 import { calendar_guest_link } from "./calendar_guest_link.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
-import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
-import { app_shared_toast } from "./app_shared_toast.mjs";
+import { app_calendar_link_copy_button } from "./app_calendar_link_copy_button.mjs";
+import { calendar_host_link } from "./calendar_host_link.mjs";
 export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   arguments_assert(arguments, 5);
   ("on_booked(draw) runs once a booking is written; draw(box) draws what was booked and the guest's link into box. The page draws it at its top and goes back to its home screen, the guest's meetings with the hours under them (human, 2026-11-24: \"when booked meeting should take back to home screen that says your meetings but the info should be at the top\").");
@@ -541,11 +541,19 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       let link = calendar_guest_link(slug, key);
       let link_line = html_div(done);
       html_a_href_text_new_tab(link_line, link, link);
-      async function link_copy() {
-        await clipboard_copy_browser(link);
-        app_shared_toast("✅ Copied link");
-      }
-      app_shared_button_uncolored(done, "Copy link", link_copy);
+      app_calendar_link_copy_button(done, link);
+      ('A SHARE LINK FOR SOMEONE ELSE (human, 2026-11-24: "should the have a link to share for someone else to schedule meeting?"): the link above signs in as this guest, so a guest who forwards it hands over their own meetings. The host\'s public link books as nobody, so it is the one to pass on. Worded from the human\'s draft, with "your link" made "the link above" so it cannot be read as the link right under it.');
+      let share_intro = html_div_text(
+        done,
+        "Want to send this to someone else? Don't send them the link above - it is only for you. Send them this link, so they can book their own meeting:",
+      );
+      html_style_assign(share_intro, {
+        "margin-top": "1.5em",
+      });
+      let share_link = calendar_host_link(slug);
+      let share_line = html_div(done);
+      html_a_href_text_new_tab(share_line, share_link, share_link);
+      app_calendar_link_copy_button(done, share_link);
     }
     await on_booked(draw_done);
   }
