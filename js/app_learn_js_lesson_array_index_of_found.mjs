@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -55,8 +56,7 @@ export function app_learn_js_lesson_array_index_of_found() {
     let extra = list_shuffle_take(places, 1);
     let all_places = list_concat(places, extra);
     let count = list_size(all_places);
-    let shuffled = list_shuffle_take(all_places, count);
-    let arrays = list_map(shuffled, items_at);
+    let arrays = list_shuffle_take_map(all_places, count, items_at);
     return arrays;
   }
   function batch_get() {
