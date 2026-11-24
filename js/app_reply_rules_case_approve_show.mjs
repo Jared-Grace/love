@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
@@ -6,7 +7,6 @@ import { app_reply_rules_file_card } from "./app_reply_rules_file_card.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_reply_rules_case_show } from "./app_reply_rules_case_show.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { equal } from "./equal.mjs";
 import { app_reply_rules_case_reworded_show } from "./app_reply_rules_case_reworded_show.mjs";
 import { app_reply_rules_approve_button } from "./app_reply_rules_approve_button.mjs";
 export function app_reply_rules_case_approve_show(root, one, approvals) {
@@ -31,8 +31,7 @@ export function app_reply_rules_case_approve_show(root, one, approvals) {
   app_reply_rules_case_show(holder, one);
   ("A test approved before in other words shows those words against these, so a rewording is read as what moved rather than read again whole.");
   let approved = property_get_or_null(approvals, name);
-  let b = equal(approved, null);
-  let reworded = not(b);
+  let reworded = equal_not(approved, null);
   if (reworded) {
     app_reply_rules_case_reworded_show(holder, approved, lines);
   }
