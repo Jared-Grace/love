@@ -1,7 +1,7 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_string_build_program } from "./app_learn_js_string_build_program.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -47,8 +47,7 @@ export function app_learn_js_lesson_string_build_generic(
   }
   function batch_get() {
     "four programs, each over a different word";
-    let chosen = list_shuffle_take(words, 4);
-    let codes = list_map(chosen, program_of);
+    let codes = list_shuffle_take_map(words, 4, program_of);
     return codes;
   }
   let batch = app_learn_js_batch_question_answer_fns(
