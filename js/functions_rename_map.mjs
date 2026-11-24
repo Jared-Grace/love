@@ -25,6 +25,7 @@ import { permission_settings_allow_rename_report } from "./permission_settings_a
 import { memory_fn_references_rename_report } from "./memory_fn_references_rename_report.mjs";
 import { storage_local_key_owner_renamed_record } from "./storage_local_key_owner_renamed_record.mjs";
 import { folders_function_named_rename } from "./folders_function_named_rename.mjs";
+import { functions_renamed_callers_left_assert } from "./functions_renamed_callers_left_assert.mjs";
 export async function functions_rename_map(renames) {
   "Renames a whole map of functions at once, old name to new, and hands back the map with every old name resolved through its alias. A single rename is this with one entry.";
   "Each sweep runs once for the whole map rather than once per name. Asked one name at a time, every rename parsed the example corpus, read every data file, folded the identifier index again after its own writes, read the whole repo's source for fetches, and rewrote a calling file once for each name it called - measured 2026-11-08 at 17 seconds a name with no callers at all, which a prefix migration of two thousand names pays two thousand times.";
@@ -93,5 +94,7 @@ export async function functions_rename_map(renames) {
     ("a store on this disk is reachable, so it is moved rather than reported - the sentence a browser key gets is only a sentence because nothing here can reach that disk");
     await folders_function_named_rename(before, after);
   }
+  ("Asked last, once everything else has moved, so a refusal here can never itself leave a rename half done - it only says one already is.");
+  await functions_renamed_callers_left_assert(unaliased);
   return unaliased;
 }
