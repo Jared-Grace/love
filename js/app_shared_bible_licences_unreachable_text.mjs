@@ -7,10 +7,12 @@ export function app_shared_bible_licences_unreachable_text() {
     urd: "دینے والوں کی فہرست ابھی نہیں لائی جا سکی۔ اس کے لیے انٹرنیٹ چاہیے، اور جب انٹرنیٹ واپس آئے گا تو یہ یہاں ہوگی",
     tgl: "Hindi makuha ang mga pagkilala sa ngayon. Kailangan nila ang internet, at narito sila kapag bumalik na ito",
     spa: "No se pudieron obtener los créditos ahora. Necesitan internet, y estarán aquí cuando vuelva",
+    por: "Não foi possível buscar os créditos agora. Eles precisam de internet, e estarão aqui quando ela voltar",
     translated_from: {
       urd: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
       tgl: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
       spa: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
+      por: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
     },
   };
   let text = app_shared_text_reader_language(texts);
