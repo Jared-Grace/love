@@ -5,9 +5,11 @@ export function app_shared_bible_passage_next_text_get() {
     eng: "Next passage",
     urd: "اگلا حصہ",
     tgl: "Susunod na bahagi",
+    spa: "Pasaje siguiente",
     translated_from: {
       urd: "Next passage",
       tgl: "Next passage",
+      spa: "Next passage",
     },
   };
   let v = app_shared_text_reader_language(texts);
