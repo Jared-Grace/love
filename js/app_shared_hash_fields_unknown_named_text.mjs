@@ -18,12 +18,20 @@ export function app_shared_hash_fields_unknown_named_text(name) {
       before: "Humihingi ang link na ito ng ",
       after: " na wala sa amin",
     },
+    spa: {
+      before: "Este enlace pide un dato (",
+      after: ") que no tenemos",
+    },
     translated_from: {
       urd: {
         before: "This link asks for a ",
         after: " we do not have",
       },
       tgl: {
+        before: "This link asks for a ",
+        after: " we do not have",
+      },
+      spa: {
         before: "This link asks for a ",
         after: " we do not have",
       },
