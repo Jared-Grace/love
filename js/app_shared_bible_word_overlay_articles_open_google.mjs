@@ -9,7 +9,7 @@ import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
 import { app_shared_bible_word_google_question_text_get } from "./app_shared_bible_word_google_question_text_get.mjs";
 import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
-export function app_shared_bible_word_overlay_articles_open_google(
+export function app_shared_bible_word_overlay_articles_open_google({
   word,
   language_code,
   strong_url,
@@ -17,8 +17,8 @@ export function app_shared_bible_word_overlay_articles_open_google(
   known,
   reference,
   verse_text,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let r = app_shared_bible_word_overlay_articles_open_offer_draw(
     word,
     language_code,

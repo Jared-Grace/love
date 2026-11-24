@@ -69,7 +69,7 @@ export async function app_shared_bible_word_overlay_articles_open({
       verse_number,
     );
   }
-  let r = app_shared_bible_word_overlay_articles_open_google(
+  let r = app_shared_bible_word_overlay_articles_open_google({
     word,
     language_code,
     strong_url,
@@ -77,7 +77,7 @@ export async function app_shared_bible_word_overlay_articles_open({
     known,
     reference,
     verse_text,
-  );
+  });
   let google = property_get(r, "google");
   let recent_names = property_get(r, "recent_names");
   let choices = property_get(r, "choices");
