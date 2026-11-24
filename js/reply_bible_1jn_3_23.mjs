@@ -1,3 +1,4 @@
+import { reply_sequence_optional } from "./reply_sequence_optional.mjs";
 import { reply_choice_optional } from "./reply_choice_optional.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_words } from "./reply_words.mjs";
@@ -35,8 +36,7 @@ export function reply_bible_1jn_3_23() {
   let r7 = reply_phrase_that_we();
   let believe_group = reply_sequence([r7, believe, in_name]);
   let fn7 = reply_optional("that");
-  let item2 = reply_sequence([fn7, "we"]);
-  let we = reply_optional(item2);
+  let we = reply_sequence_optional([fn7, "we"]);
   let item3 = reply_word_may_should();
   let fn8 = reply_optional(item3);
   let r8 = reply_phrase_love_for_one_another();
