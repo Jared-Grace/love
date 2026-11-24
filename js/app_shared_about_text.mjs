@@ -7,9 +7,11 @@ export function app_shared_about_text() {
     eng: " About",
     urd: " تعارف",
     tgl: " Tungkol dito",
+    spa: " Acerca de",
     translated_from: {
       urd: " About",
       tgl: " About",
+      spa: " About",
     },
   };
   let label = app_shared_text_reader_language(texts);
