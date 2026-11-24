@@ -1,3 +1,4 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,7 +7,6 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { reply_bible_run_citation_after } from "./reply_bible_run_citation_after.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { not } from "./not.mjs";
 import { prayer_end } from "./prayer_end.mjs";
@@ -32,8 +32,7 @@ export function reply_bible_runs_line(runs) {
     list_add(pieces, item);
     previous = run;
     if (quote) {
-      let list2 = property_get(run, "verses");
-      let list = list_map_property(list2, "text");
+      let list = property_list_map_property(run, "verses", "text");
       list_add(pieces, " ");
       let item2 = list_join_space(list);
       list_add(pieces, item2);
