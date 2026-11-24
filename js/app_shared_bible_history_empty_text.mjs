@@ -7,10 +7,12 @@ export function app_shared_bible_history_empty_text() {
     urd: "ابھی کچھ نہیں۔ آپ جو بھی پڑھ رہے ہوں وہ یہاں یاد رکھا جاتا ہے، تاکہ کوئی ٹیب بند ہو جائے تو آپ واپس آ سکیں۔",
     tgl: "Wala pa. Anumang binabasa mo ay naaalala rito, para mabalikan mo ito kung magsara ang isang tab.",
     spa: "Nada todavía. Lo que estés leyendo se recuerda aquí, para que puedas volver a ello si se cierra una pestaña.",
+    por: "Nada ainda. O que você estiver lendo fica guardado aqui, para que você possa voltar se uma aba fechar.",
     translated_from: {
       urd: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
       tgl: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
       spa: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
+      por: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
     },
   };
   let text = app_shared_text_reader_language(texts);
