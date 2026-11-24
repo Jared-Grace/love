@@ -1,10 +1,10 @@
+import { list_last_property } from "./list_last_property.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_last } from "./list_last.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { equal } from "./equal.mjs";
@@ -29,8 +29,7 @@ export function app_learn_js_expression_tree_of_array_program(code) {
     return value;
   }
   let items = list_map(elements, element_value);
-  let last = list_last(body);
-  let expression = property_get(last, "expression");
+  let expression = list_last_property(body, "expression");
   let callee = property_get_or(expression, "callee", null);
   let called = null_not_is(callee);
   if (called && equal(js_unparse(callee), "console.log")) {
