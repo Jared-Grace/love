@@ -1,7 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { list_without } from "./list_without.mjs";
@@ -22,7 +22,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_for_run_so_far() {
   arguments_assert(arguments, 0);
-  ("how many times in a row the number so far has come up: let run = 1; console.log(run); then for (let i = 0; i < a.length - 1; i++) { if (a[i + 1] === a[i]) { run++; } else { run = 1; } console.log(run); } writes out 1, 2, 1, 2 and 3 for [1, 1, 2, 2, 2]");
+  ("how many times in a row the number so far has come up: let run = 1; console.log(run); then for (let i = 0; i < a.length - 1; i++) { if (a[i] === a[i + 1]) { run++; } else { run = 1; } console.log(run); } writes out 1, 2, 1, 2 and 3 for [1, 1, 2, 2, 2]");
   ("2026-11-24, at the human's asking (run so far, agreed in the plan of that day, leading to the longest run). The pair test and the count of Doubled words counted, and the else of Evens and odds; the one new fact is that the else starts the count again, run = 1, so the count is of the numbers in a row rather than of the whole array. The plan wrote a[i] === a[i - 1] from i = 1; the loop that stops one early and reads a[i + 1] gives the same numbers and is the shape every neighbour lesson here already uses, so the first number's 1 is written out before the loop.");
   ("The arrays hold 1, 2 and 3, each next number the same as the one before half the time. Every array has a number repeated and, after it, a number that changes, so leaving out the else, or starting again at 0, always writes out something else. Sizes 3, 4 and 5, so the step-by-step quiz has short loops to draw.");
   ("The wrong programs are: no else (the count never starts again), run = 0 in the else (forgetting the number that changed is itself one in a row) and let run = 0 (every count one short).");
@@ -71,7 +71,7 @@ export function app_learn_js_lesson_array_for_run_so_far() {
       "let run = " + start + ";",
       "console.log(run);",
       "for (let i = 0; i < a.length - 1; i++) {",
-      "  if (a[i + 1] === a[i]) {",
+      "  if (a[i] === a[i + 1]) {",
       "    run++;",
     ];
     let bottom = ["  }", "  console.log(run);", "}"];
