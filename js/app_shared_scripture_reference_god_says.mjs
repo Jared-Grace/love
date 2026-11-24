@@ -17,12 +17,20 @@ export function app_shared_scripture_reference_god_says(reference) {
       before: "Sinasabi ng Diyos sa ",
       after: "",
     },
+    spa: {
+      before: "Dios dice en ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: "God says in ",
         after: "",
       },
       tgl: {
+        before: "God says in ",
+        after: "",
+      },
+      spa: {
         before: "God says in ",
         after: "",
       },
