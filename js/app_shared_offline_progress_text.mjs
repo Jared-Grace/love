@@ -15,10 +15,12 @@ export function app_shared_offline_progress_text(name, done, total) {
     urd: "{name} کو محفوظ کیا جا رہا ہے: {total} میں سے {done} ابواب",
     tgl: "Sine-save ang {name}: {done} sa {total} kabanata",
     spa: "Guardando {name}: {done} de {total} capítulos",
+    por: "Guardando {name}: {done} de {total} capítulos",
     translated_from: {
       urd: "Saving {name}: {done} of {total} chapters",
       tgl: "Saving {name}: {done} of {total} chapters",
       spa: "Saving {name}: {done} of {total} chapters",
+      por: "Saving {name}: {done} of {total} chapters",
     },
   };
   let fills = {
