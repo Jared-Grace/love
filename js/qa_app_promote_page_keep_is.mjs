@@ -1,3 +1,5 @@
+import { file_name_app_page_is } from "./file_name_app_page_is.mjs";
+import { folder_app_pages_standing } from "./folder_app_pages_standing.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_name_html } from "./file_name_html.mjs";
 import { path_join } from "./path_join.mjs";
@@ -20,13 +22,13 @@ export async function qa_app_promote_page_keep_is(app_name, hashes, folder) {
   arguments_assert(arguments, 3);
   let page_name = file_name_html(app_name);
   let page_path = path_join([folder, page_name]);
-  let page_standing = await file_exists(page_path);
+  let page_standing = await folder_app_pages_standing(folder, app_name);
   if (not(page_standing)) {
     return false;
   }
   let file_names = properties_get(hashes);
   for (let file_name of file_names) {
-    let this_page = equal(file_name, page_name);
+    let this_page = file_name_app_page_is(file_name2, app_name2);
     if (this_page) {
       continue;
     }
