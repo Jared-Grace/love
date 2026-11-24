@@ -4,9 +4,9 @@ import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_string_no_lowercase } from "./app_learn_js_lesson_string_no_lowercase.mjs";
-import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_lesson_string_lower } from "./app_learn_js_lesson_string_lower.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -15,9 +15,9 @@ import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_l
 export function app_learn_js_lesson_string_is_uppercase() {
   arguments_assert(arguments, 0);
   ('whether one character is an uppercase letter: let c = "J"; let low = c.toLowerCase(); console.log(c !== low); writes out true, and false for "j", "!" and a space');
-  ("2026-11-24, at the human's asking: after No uppercase?, one character at a time, before the lessons that count. No lowercase? asks s === s.toUpperCase(), which is true of ! too, so asking it of one character does not say whether it is an uppercase letter; the test turns round: an uppercase letter is one that toLowerCase changes.");
+  ("2026-11-24, at the human's asking: one character at a time. Then, asked next, moved before No lowercase?, because one character is simpler than a whole string; so it no longer leans on No lowercase? and says the two lines about symbols itself. The test is the one that turns round: an uppercase letter is one that toLowerCase changes, since c === c.toUpperCase() is true of ! too.");
   ("The characters are letters of the shared Bible sayings, three uppercase and three lowercase, with ! and a space, so the symbol trap comes up.");
-  ("The wrong programs are: console.log(c === low) (the opposite), the No lowercase? test, toUpperCase with c === low (true of ! and the space too), and console.log(c.length === low.length) (always true).");
+  ("The wrong programs are: console.log(c === low) (the opposite), toUpperCase with c === low (true of ! and the space too), and console.log(c.length === low.length) (always true).");
   ("The writing is a first draft by Claude 2026-11-24.");
   let example_input = "J";
   function inputs_get() {
@@ -51,30 +51,29 @@ export function app_learn_js_lesson_string_is_uppercase() {
     return r;
   }
   function above(root, context) {
-    "the No lowercase? test remembered, then why one character needs the test turned round";
+    "what toLowerCase does remembered, then which characters it changes";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_string_no_lowercase,
+      app_learn_js_lesson_string_lower,
       [
         "",
-        "s === s.toUpperCase()",
-        " is true when ",
+        "s.toLowerCase()",
+        " changes every uppercase letter in ",
         "s",
-        " has no lowercase letters",
+        " to lowercase",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
+    ("2026-11-24, the human's wording, made plural and plainer: uppercasing and lowercasing only change letters, and spaces and other symbols stay the same. True of every string these lessons use. Not said: that every letter changes, which Chinese, Arabic and Hebrew letters do not, and the few symbols that do change, circled letters and Roman numerals, never appear here.");
+    html_div_text(box_two, "Uppercasing and lowercasing only change letters");
+    html_div_text(box_two, "Spaces and other symbols stay the same");
     app_learn_js_div_cycle_code(box_two, [
-      "But ",
+      "A lowercase letter, or a symbol like ",
       '"!"',
-      " has no lowercase letters too, and it is not an uppercase letter",
+      ", stays the same when it is lowercased",
     ]);
-    html_div_text(
-      box_two,
-      "A symbol like ! has no uppercase or lowercase version, so lowercasing it changes nothing",
-    );
     app_learn_js_div_cycle_code(box_two, [
       "Only an uppercase letter changes when it is lowercased, so ",
       "c !== low",

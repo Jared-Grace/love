@@ -8,7 +8,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_string_upper } from "./app_learn_js_lesson_string_upper.mjs";
-import { html_div_text } from "./html_div_text.mjs";
+import { app_learn_js_lesson_string_is_uppercase } from "./app_learn_js_lesson_string_is_uppercase.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -79,10 +79,15 @@ export function app_learn_js_lesson_string_no_lowercase() {
         " to uppercase",
       ],
     );
+    let box_symbols = app_learn_js_container_light_blue(root);
+    ("2026-11-24: the two lines about symbols moved to Uppercase letter?, which now comes first, and are remembered from there.");
+    app_learn_js_remember_from_lesson(
+      box_symbols,
+      context,
+      app_learn_js_lesson_string_is_uppercase,
+      ["spaces and other symbols stay the same when uppercased or lowercased"],
+    );
     let box_two = app_learn_js_container_light_blue(root);
-    ("2026-11-24, the human's wording, made plural and plainer: uppercasing and lowercasing only change letters, and spaces and other symbols stay the same. True of every string these lessons use. Not said: that every letter changes, which Chinese, Arabic and Hebrew letters do not, and the few symbols that do change, circled letters and Roman numerals, never appear here.");
-    html_div_text(box_two, "Uppercasing and lowercasing only change letters");
-    html_div_text(box_two, "Spaces and other symbols stay the same");
     app_learn_js_div_cycle_code(box_two, [
       "So if ",
       "s",
