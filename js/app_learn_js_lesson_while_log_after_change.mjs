@@ -1,3 +1,4 @@
+import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -6,8 +7,6 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { js_keyword_while } from "./js_keyword_while.mjs";
-import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
@@ -59,8 +58,7 @@ export function app_learn_js_lesson_while_log_after_change() {
     let condition = js_code_binary_spaced_nb(name, less, bound);
     let changed = js_code_assign_operator_statement(name, plus, added);
     let logged = js_code_console_log_statement(name);
-    let keyword = js_keyword_while();
-    let while_lines = js_code_keyword_block_lines_multiple(keyword, condition, [
+    let while_lines = js_code_while_lines_multiple(condition, [
       changed,
       logged,
     ]);
