@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -36,8 +37,7 @@ export function app_learn_js_program_trace_assign(
     ) &&
     equal(operator2, "=");
   if (item_set) {
-    let object = property_get(target, "object");
-    let array_name = property_get(object, "name");
+    let array_name = property_path_get_2(target, "object", "name");
     property_exists_assert(values, array_name);
     let object2 = property_get(target, "property");
     let index = app_learn_js_program_trace_value(object2, [], code, values);
