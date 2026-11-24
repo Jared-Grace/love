@@ -1868,6 +1868,36 @@ def is_safe_crontab_list(words):
     return words == ["crontab", "-l"]
 
 
+def git_writes_or_runs(words):
+    """True iff a git command carries a flag that writes a file or runs a
+    program, whatever its subcommand. The allowed readers (diff, log, show)
+    take `--output=FILE`, which writes the diff there instead of printing
+    it, and `git grep -O<program>` / `--open-files-in-pager` runs a program
+    of the caller's choosing - all four were measured auto-approving. Git
+    accepts a long option shortened to any unique prefix (`--outp`), so a
+    prefix counts; `--output-indicator-new` and the like are not prefixes of
+    `--output` and stay readers. Only words before `--` are options. A false
+    positive costs one prompt."""
+    subcommand = None
+    for w in words[1:]:
+        if w == "--":
+            return False
+        if w.startswith("--"):
+            name = w.split("=", 1)[0]
+            if len(name) >= 4 and "--output".startswith(name):
+                return True
+            if len(name) >= 4 and "--open-files-in-pager".startswith(name):
+                return True
+            continue
+        if w.startswith("-") and len(w) > 1:
+            if subcommand == "grep" and "O" in w[1:]:
+                return True
+            continue
+        if subcommand is None:
+            subcommand = w
+    return False
+
+
 def is_writing_read_verb(words):
     """True iff this is one of the read-only verbs in permissions.allow being
     asked to WRITE a file - `sort -o FILE`, `ffprobe -o FILE`, or `uniq INPUT
@@ -1887,6 +1917,8 @@ def is_writing_read_verb(words):
     is_dangerous_find already accepts for `find . -name -delete`."""
     verb = words[0]
     if verb == "sort" and sort_writes_output(words):
+        return True
+    if verb == "git" and git_writes_or_runs(words):
         return True
     flags = WRITING_FLAGS_BY_VERB.get(verb)
     if flags:

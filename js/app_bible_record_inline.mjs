@@ -9,18 +9,18 @@ import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
 import { each } from "./each.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_size } from "./list_size.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_map_property } from "./list_map_property.mjs";
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
+import { ebible_verse_numbers_runs_text } from "./ebible_verse_numbers_runs_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { ebible_verse_numbers_runs_text } from "./ebible_verse_numbers_runs_text.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { not } from "./not.mjs";
@@ -40,6 +40,7 @@ import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
 import { html_canvas_draw_contain_top } from "./html_canvas_draw_contain_top.mjs";
 import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_below.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
+import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
 import { app_bible_record_take_kept_delete } from "./app_bible_record_take_kept_delete.mjs";
@@ -139,9 +140,12 @@ export function app_bible_record_inline(
     let taken = list_filter(entries, lambda);
     return taken;
   }
-  ("DELETE TAKES TWO TAPS (human 2026-11-24: a delete video button): the first only asks, on the button itself, and the second deletes - the take on the page and the one kept in storage both, so coming back to the passage finds nothing. Asked on the button rather than in a pop-up, because a pop-up inside the Android app may never appear.");
-  let delete_armed = false;
-  let delete_button = app_shared_button_wide(buttons, "", take_delete);
+  ("DELETE ASKS FIRST, in the box every app here draws over the page before something that cannot be taken back (human 2026-11-24: a dialog to confirm, and DRY), then deletes the take on the page, the one kept on the phone and the one sent to storage, so coming back to the passage finds nothing. REJECTED: the browser's own confirm - inside the Android app it may never appear; two taps on the button (what this replaced) - a second way of asking that no other app shares.");
+  let delete_button = app_shared_button_wide(
+    buttons,
+    "🗑️ Delete video",
+    take_delete,
+  );
   if (app_bible_record_native_is()) {
     each([record_button, stop_button], html_display_none);
   } else {
@@ -196,10 +200,6 @@ export function app_bible_record_inline(
     app_shared_button_disabled_set(download_button, disabled2);
     app_shared_button_disabled_set(delete_button, disabled2);
     html_text_set(
-      delete_button,
-      delete_armed ? "⚠️ Tap again to delete this video" : "🗑️ Delete video",
-    );
-    html_text_set(
       record_button,
       have ? "🔴 Record again" : "🔴 Record this passage",
     );
@@ -235,7 +235,6 @@ export function app_bible_record_inline(
       return;
     }
     camera_on = true;
-    delete_armed = false;
     playback_element.pause();
     html_display_none(playback);
     changed();
@@ -368,13 +367,14 @@ export function app_bible_record_inline(
     changed();
     await app_bible_record_take_keep(chapter_code, verse_numbers, blob);
   }
-  async function take_delete() {
-    if (not(delete_armed)) {
-      delete_armed = true;
-      changed();
-      return;
-    }
-    delete_armed = false;
+  function take_delete() {
+    app_shared_confirm_over_red(
+      "Delete this video? It cannot be brought back.",
+      "🗑️ Delete video",
+      take_delete_confirmed,
+    );
+  }
+  async function take_delete_confirmed() {
     await firebase_auth_ensure(sign_in);
     await app_bible_record_take_delete(chapter_code, verse_numbers);
     await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
