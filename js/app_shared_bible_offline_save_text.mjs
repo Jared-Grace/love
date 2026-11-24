@@ -17,12 +17,20 @@ export function app_shared_bible_offline_save_text(name) {
       before: " I-save ang ",
       after: "",
     },
+    spa: {
+      before: " Guardar ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: " Save ",
         after: "",
       },
       tgl: {
+        before: " Save ",
+        after: "",
+      },
+      spa: {
         before: " Save ",
         after: "",
       },
