@@ -7,6 +7,7 @@ export function app_shared_text_reader_language_pickers() {
     fn_name("app_shared_text_reader_language"),
     fn_name("app_shared_text_reader_language_around"),
     fn_name("app_shared_text_reader_language_filled"),
+    fn_name("app_shared_text_reader_language_copy"),
   ];
   return pickers;
 }
