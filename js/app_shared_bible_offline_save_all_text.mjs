@@ -18,12 +18,20 @@ export function app_shared_bible_offline_save_all_text(size) {
       before: " I-save ang lahat ng ",
       after: "",
     },
+    spa: {
+      before: " Guardar los ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: " Save all ",
         after: " of them",
       },
       tgl: {
+        before: " Save all ",
+        after: " of them",
+      },
+      spa: {
         before: " Save all ",
         after: " of them",
       },
