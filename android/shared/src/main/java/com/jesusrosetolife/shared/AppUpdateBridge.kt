@@ -19,4 +19,9 @@ class AppUpdateBridge(private val activity: Activity, private val folder: String
     fun update() {
         activity.runOnUiThread { app_update_download_and_install(activity, folder, title) }
     }
+
+    // The installed version, so the page can show it beside Update app (human 2026-11-24).
+    @JavascriptInterface
+    fun version(): String =
+        activity.packageManager.getPackageInfo(activity.packageName, 0).versionName ?: ""
 }
