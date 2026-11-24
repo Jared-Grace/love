@@ -20,6 +20,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_calendar_guest_proof_form } from "./app_calendar_guest_proof_form.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
 import { app_shared_unavailable_box } from "./app_shared_unavailable_box.mjs";
@@ -27,7 +28,6 @@ import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
@@ -182,6 +182,15 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     );
     let chosen_now = storage_local_get(app_calendar, "guest_details");
     back_draw(step, chosen_now ? chosen_now.via : null);
+    ('A guest who opened the form from a screen they already had - changing a number, asking for the other app, or while a code waits - can leave it unchanged (human, 2026-11-25: "if change wa# should be able to go back or cancel"). Cancel puts back the app that screen was on and draws it again; a first-time guest has nothing to go back to and sees no Cancel.');
+    if (equal(proof, null)) {
+      return;
+    }
+    async function cancel() {
+      via_choose(proof.via);
+      await redraw();
+    }
+    app_shared_button_uncolored(step, "Cancel", cancel);
   }
   function proof_is_proven(p) {
     let r10 = p.proven;
