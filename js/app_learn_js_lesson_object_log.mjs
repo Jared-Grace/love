@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_object_people_renamed } from "./app_learn_js_object_people_renamed.mjs";
@@ -16,7 +17,6 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { list_find } from "./list_find.mjs";
-import { equal } from "./equal.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -95,8 +95,7 @@ export function app_learn_js_lesson_object_log() {
   function set_of(code) {
     "whether the program sets the new name: three lines, not two";
     let list2 = text_split_newline(code);
-    let left = list_size(list2);
-    let s = equal(left, 3);
+    let s = list_size_equal(list2, 3);
     return s;
   }
   function decoys(question, answer) {
