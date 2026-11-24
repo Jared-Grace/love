@@ -3,6 +3,7 @@ import { app_shared_field } from "./app_shared_field.mjs";
 import { list_map } from "./list_map.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { calendar_meeting_minutes_choices } from "./calendar_meeting_minutes_choices.mjs";
 import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { less_than } from "./less_than.mjs";
@@ -33,7 +34,8 @@ export function app_calendar_host_minutes(area, host) {
   }
   function minutes_draw() {
     html_clear(meeting_area);
-    let choices = minutes_choices([25, 30, 55]);
+    let r4 = calendar_meeting_minutes_choices();
+    let choices = minutes_choices(r4);
     app_shared_choice_row(
       meeting_area,
       "Meeting length",

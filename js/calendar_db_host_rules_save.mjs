@@ -1,5 +1,7 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { calendar_meeting_minutes_choices } from "./calendar_meeting_minutes_choices.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { not } from "./not.mjs";
 import { calendar_messenger_name_read } from "./calendar_messenger_name_read.mjs";
@@ -20,13 +22,16 @@ export async function calendar_db_host_rules_save(
   now_iso,
 ) {
   arguments_assert(arguments, 10);
-  ('meeting_typed is the meeting length, 25, 30 or 55 minutes; block_typed is how often a meeting can start, every 30 or 60 minutes; the meeting must fit before the next can start, so meetings never overlap. Anything else is refused with reason minutes - so a page from before these were Rules, sending none, cannot save (human, 2026-11-24: "should these be in rules?", "should be able to pick 55 minutes").');
+  ("meeting_typed is the meeting length, one of ",
+    fn_name("calendar_meeting_minutes_choices"),
+    '; block_typed is how often a meeting can start, every 30 or 60 minutes; the meeting must fit before the next can start, so meetings never overlap. Anything else is refused with reason minutes - so a page from before these were Rules, sending none, cannot save (human, 2026-11-24: "should these be in rules?", "should be able to pick 55 minutes").');
   let v = String(meeting_typed);
   let meeting_minutes = Number(v);
   let v2 = String(block_typed);
   let block_minutes = Number(v2);
+  let list = calendar_meeting_minutes_choices();
   let minutes_fit =
-    list_includes([25, 30, 55], meeting_minutes) &&
+    list_includes(list, meeting_minutes) &&
     list_includes([30, 60], block_minutes) &&
     less_than_equal(meeting_minutes, block_minutes);
   if (not(minutes_fit)) {
