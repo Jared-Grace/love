@@ -38,6 +38,8 @@ export async function app_calendar(context) {
   let booked_area = html_div(root);
   let meetings_area = html_div(root);
   let guest_area = html_div(root);
+  ('The share link has an area of its own: the booking screen redraws itself - a confirmed code, a switch of app - by clearing guest_area, which took a share box drawn inside it away (human, 2026-11-24: "opened new tab looks same page but share missing at bottom").');
+  let share_area = html_div(root);
   let host_area = html_div(root);
   function lambda2(k) {
     guest_key = k;
@@ -48,8 +50,9 @@ export async function app_calendar(context) {
       html_clear(guest_area);
       await app_calendar_guest(guest_area, slug, guest_key, lambda2, booked);
       ('The share link sits under the booking screen whenever this guest has a link of their own, so it is there on every later visit and not only just after a booking (human, 2026-11-24: "book a meeting.... But no share link?").');
+      html_clear(share_area);
       if (guest_key) {
-        app_calendar_share_link_draw(guest_area, slug);
+        app_calendar_share_link_draw(share_area, slug);
       }
     }
   }
