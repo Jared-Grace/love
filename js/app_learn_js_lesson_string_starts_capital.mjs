@@ -61,13 +61,23 @@ export function app_learn_js_lesson_string_starts_capital() {
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
-      "If ",
+      "",
+      "toUpperCase",
+      " changes lowercase letters to uppercase",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "If a string is already uppercase, then ",
+      "toUpperCase",
+      " doesn't change anything",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "So if ",
       "f",
-      " was a capital already, ",
+      " was uppercase already, then ",
       "big",
-      " is the same letter, so ",
+      " will be that same uppercase letter, and then ",
       "f === big",
-      " is true:",
+      " will be true:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
