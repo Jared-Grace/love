@@ -9,10 +9,12 @@ export function app_g_word_unglossed_text() {
     urd: "اس لفظ کے بارے میں ابھی تک کچھ نہیں لکھا گیا۔",
     tgl: "Wala pang nakasulat para sa salitang ito.",
     spa: "Todavía no hay nada escrito para esta palabra.",
+    por: "Ainda não há nada escrito para esta palavra.",
     translated_from: {
       urd: "There is nothing written for this word yet.",
       tgl: "There is nothing written for this word yet.",
       spa: "There is nothing written for this word yet.",
+      por: "There is nothing written for this word yet.",
     },
   };
   let text = app_shared_text_reader_language(texts);
