@@ -13,10 +13,12 @@ export function html_button_biblehub_open_interlinear(
     urd: "لفظ بہ لفظ",
     tgl: "Interlinear",
     spa: "Interlineal",
+    por: "Interlinear",
     translated_from: {
       urd: "Interlinear",
       tgl: "Interlinear",
       spa: "Interlinear",
+      por: "Interlinear",
     },
   };
   let text = app_shared_text_reader_language(texts);
