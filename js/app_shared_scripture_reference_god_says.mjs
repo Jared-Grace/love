@@ -21,6 +21,10 @@ export function app_shared_scripture_reference_god_says(reference) {
       before: "Dios dice en ",
       after: "",
     },
+    por: {
+      before: "Deus diz em ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: "God says in ",
@@ -31,6 +35,10 @@ export function app_shared_scripture_reference_god_says(reference) {
         after: "",
       },
       spa: {
+        before: "God says in ",
+        after: "",
+      },
+      por: {
         before: "God says in ",
         after: "",
       },
