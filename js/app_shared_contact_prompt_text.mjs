@@ -10,10 +10,12 @@ export function app_shared_contact_prompt_text() {
     urd: "کیا آپ اسے بنانے والے کو کچھ بتانا چاہیں گے؟",
     tgl: "Mayroon ka bang gustong sabihin sa developer?",
     spa: "¿Hay algo que te gustaría decirle al desarrollador?",
+    por: "Há algo que você gostaria de dizer ao desenvolvedor?",
     translated_from: {
       urd: "Is there anything you would like to tell the developer?",
       tgl: "Is there anything you would like to tell the developer?",
       spa: "Is there anything you would like to tell the developer?",
+      por: "Is there anything you would like to tell the developer?",
     },
   };
   let text = app_shared_text_reader_language(texts);
