@@ -1,4 +1,3 @@
-import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_element } from "./html_element.mjs";
@@ -8,6 +7,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
+import { each } from "./each.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
@@ -29,9 +29,10 @@ import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
 import { html_canvas_draw_contain_top } from "./html_canvas_draw_contain_top.mjs";
 import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_below.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
+import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
+import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
 import { app_bible_record_download_name } from "./app_bible_record_download_name.mjs";
 import { app_bible_record_native_download } from "./app_bible_record_native_download.mjs";
-import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
 import { firebase_upload_blob_browser } from "./firebase_upload_blob_browser.mjs";
 export function app_bible_record_inline(
@@ -101,6 +102,9 @@ export function app_bible_record_inline(
     "Download video (just the reading)",
     download,
   );
+  ("DELETE TAKES TWO TAPS (human 2026-11-24: a delete video button): the first only asks, on the button itself, and the second deletes - the take on the page and the one kept in storage both, so coming back to the passage finds nothing. Asked on the button rather than in a pop-up, because a pop-up inside the Android app may never appear.");
+  let delete_armed = false;
+  let delete_button = app_shared_button_wide(buttons, "", take_delete);
   if (app_bible_record_native_is()) {
     each([record_button, stop_button], html_display_none);
   } else {
@@ -117,6 +121,11 @@ export function app_bible_record_inline(
     app_shared_button_disabled_set(send_button, not(ready) || sent);
     let disabled2 = not(ready);
     app_shared_button_disabled_set(download_button, disabled2);
+    app_shared_button_disabled_set(delete_button, disabled2);
+    html_text_set(
+      delete_button,
+      delete_armed ? "Tap again to delete this video" : "Delete video",
+    );
     html_text_set(record_button, have ? "Record again" : "Record this passage");
     html_text_set(send_button, sent ? "Sent" : "Send this recording");
   }
@@ -142,6 +151,7 @@ export function app_bible_record_inline(
       return;
     }
     camera_on = true;
+    delete_armed = false;
     playback_element.pause();
     html_display_none(playback);
     refresh();
@@ -270,6 +280,21 @@ export function app_bible_record_inline(
     html_display_none(canvas);
     html_media_source_file_set(playback, blob);
     html_display_block(playback);
+    refresh();
+  }
+  async function take_delete() {
+    if (not(delete_armed)) {
+      delete_armed = true;
+      refresh();
+      return;
+    }
+    delete_armed = false;
+    await firebase_auth_ensure(sign_in);
+    await app_bible_record_take_delete(chapter_code, verse_numbers);
+    blob = null;
+    sent = false;
+    playback_element.pause();
+    html_display_none(playback);
     refresh();
   }
   async function download() {

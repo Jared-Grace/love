@@ -1,3 +1,5 @@
+import { deleteObject, getStorage, ref } from "firebase/storage";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { firebase_app_initialize } from "./firebase_app_initialize.mjs";
 export async function firebase_delete_browser_if_exists(path) {
@@ -11,7 +13,7 @@ export async function firebase_delete_browser_if_exists(path) {
     await deleteObject(file_ref);
     return true;
   } catch (e) {
-    if (e.code === "storage/object-not-found") {
+    if (equal(e.code, "storage/object-not-found")) {
       return false;
     }
     throw e;
