@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -16,7 +17,6 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { json_from } from "./json_from.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_shift_value } from "./app_learn_js_lesson_array_shift_value.mjs";
@@ -103,8 +103,7 @@ export function app_learn_js_lesson_array_shift_push() {
   function decoys(question, answer) {
     "what each wrong program writes out; never the answer";
     let list2 = wrong_kept(question);
-    let outputs = list_map(list2, eval_console_log_lines);
-    let once = list_unique(outputs);
+    let once = list_map_unique(list2, eval_console_log_lines);
     return once;
   }
   function backwards_decoys(question2, answer2) {
