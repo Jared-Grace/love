@@ -4,8 +4,8 @@ import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while_halve } from "./app_learn_js_lesson_while_halve.mjs";
-import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_count_generic } from "./app_learn_js_lesson_count_generic.mjs";
 export function app_learn_js_lesson_while_count() {
@@ -34,7 +34,13 @@ export function app_learn_js_lesson_while_count() {
       count_name,
       " goes up by 1 each time, so it counts how many times the ",
       r,
-      " runs:",
+      " runs",
+    ]);
+    ("2026-11-25, at the human's asking: the word counter, which programmers use all the time, taught here where a name first counts up, so later lessons may use it");
+    app_learn_js_div_cycle_code(box_two, [
+      "A name that counts up like ",
+      count_name,
+      " is called a counter:",
     ]);
     example(box_two, program_write);
     walk(box_two);
