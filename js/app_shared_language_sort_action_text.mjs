@@ -13,9 +13,11 @@ export function app_shared_language_sort_action_text(mode) {
       eng: "Sort by most speakers",
       urd: "سب سے زیادہ بولنے والوں کے مطابق ترتیب دیں",
       tgl: "Ayusin ayon sa pinakamaraming nagsasalita",
+      spa: "Ordenar por más hablantes",
       translated_from: {
         urd: "Sort by most speakers",
         tgl: "Sort by most speakers",
+        spa: "Sort by most speakers",
       },
     };
     let s = app_shared_text_reader_language(spoken);
@@ -25,9 +27,11 @@ export function app_shared_language_sort_action_text(mode) {
     eng: "Sort A to Z",
     urd: "حروفِ تہجی کے مطابق ترتیب دیں",
     tgl: "Ayusin mula A hanggang Z",
+    spa: "Ordenar de la A a la Z",
     translated_from: {
       urd: "Sort A to Z",
       tgl: "Sort A to Z",
+      spa: "Sort A to Z",
     },
   };
   let a = app_shared_text_reader_language(alphabetical);
