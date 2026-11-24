@@ -7,9 +7,11 @@ export function app_g_prayer_waiting_text() {
     eng: "Waiting on the Lord...",
     urd: "خداوند کا انتظار...",
     tgl: "Naghihintay sa Panginoon...",
+    spa: "Esperando en el Señor...",
     translated_from: {
       urd: "Waiting on the Lord...",
       tgl: "Waiting on the Lord...",
+      spa: "Waiting on the Lord...",
     },
   };
   let text = app_shared_text_reader_language(texts);
