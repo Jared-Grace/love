@@ -31,6 +31,15 @@ export function app_shared_money_section_never_used_for() {
         "Kung higit ang dumating kaysa sa kailangan ng gawain, hihinto kami sa pagtanggap ng mga kaloob, o palalawakin namin kung sino ang binabayaran sa mga taong tumutulong. Hindi namin itinatago ang sobra, at hindi namin ipinapadala ang iyong pera sa lugar na hindi mo pinili.",
       ],
     },
+    spa: {
+      title: "Para qué nunca se usa una ofrenda",
+      lines: [
+        "Nunca para ganancia.",
+        "La Escritura dice que no seamos codiciosos del dinero (1 Timoteo 3:3), así que nuestro propósito no es enriquecernos. Hoy hay demasiadas personas con hambre y en necesidad urgente como para guardar ganancias para nosotros.",
+        "Tampoco es nuestro propósito recibir tu ofrenda y darla a otro propósito en tu nombre.",
+        "Si llega más de lo que la obra necesita, dejamos de recibir ofrendas, o ampliamos a quién se le paga entre las personas que contribuyen. No nos quedamos con la diferencia, y no enviamos tu dinero a un lugar que tú no elegiste.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "What a gift is never used for",
@@ -42,6 +51,15 @@ export function app_shared_money_section_never_used_for() {
         ],
       },
       tgl: {
+        title: "What a gift is never used for",
+        lines: [
+          "Never profit.",
+          "Scripture says not to be greedy for money (1 Timothy 3:3), so our purpose is not to make ourselves rich. There are too many people hungry and in urgent need today for us to store up profit for ourselves.",
+          "It is also not our purpose to receive your gift and give it away for some other purpose on your behalf.",
+          "If more comes in than the work needs, we stop receiving gifts, or we widen who is paid among the people contributing. We do not keep the difference, and we do not send your money somewhere you did not choose.",
+        ],
+      },
+      spa: {
         title: "What a gift is never used for",
         lines: [
           "Never profit.",
