@@ -12,6 +12,7 @@ export function reply_words_side_of(
   kind_pairs_is,
   unparsable,
 ) {
+  "How the words at two places beside each other stand together: none when either place is off the end, a cut falls between them, or either is a name; joins when both read as English and the pair is not one known to be unreadable; otherwise fails.";
   arguments_assert(arguments, 6);
   if (less_than(left, 0) || greater_than_equal(right, words.length)) {
     let none = "none";

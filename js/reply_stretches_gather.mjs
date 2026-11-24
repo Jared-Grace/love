@@ -7,6 +7,7 @@ import { list_last } from "./list_last.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 export function reply_stretches_gather(kinds, words, foreign_is) {
+  "The stretches of foreign words in a message, gathered from the kind of each word: a run of words that are foreign or names, kept only when it holds at least one word that is not a name, with where it starts and ends and the words it holds.";
   arguments_assert(arguments, 3);
   let stretches = [];
   let run = [];
