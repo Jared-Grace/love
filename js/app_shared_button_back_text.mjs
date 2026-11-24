@@ -7,9 +7,11 @@ export function app_shared_button_back_text() {
     eng: " Back",
     urd: " واپس",
     tgl: " Bumalik",
+    spa: " Atrás",
     translated_from: {
       urd: " Back",
       tgl: " Back",
+      spa: " Back",
     },
   };
   let label = app_shared_text_reader_language(texts);
