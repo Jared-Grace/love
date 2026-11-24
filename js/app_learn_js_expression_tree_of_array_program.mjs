@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -20,10 +21,8 @@ export function app_learn_js_expression_tree_of_array_program(code) {
   let body = property_get(program, "body");
   let declarations = list_first_property(body, "declarations");
   let declarator = list_single(declarations);
-  let id = property_get(declarator, "id");
-  let name = property_get(id, "name");
-  let init = property_get(declarator, "init");
-  let elements = property_get(init, "elements");
+  let name = property_path_get_2(declarator, "id", "name");
+  let elements = property_path_get_2(declarator, "init", "elements");
   function element_value(element) {
     let value = property_get(element, "value");
     return value;
