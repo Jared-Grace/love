@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
@@ -29,8 +30,7 @@ export function app_learn_js_bin_search_program(input, way) {
   let codes = list_map(items, json_to);
   let right = js_code_array(codes);
   let code2 = js_code_let_statement("a", right);
-  let right2 = json_to(input.goal);
-  let code3 = js_code_let_statement("goal", right2);
+  let code3 = js_code_let_json_statement("goal", input.goal);
   let code4 = js_code_let_statement("low", "0");
   let code5 = js_code_let_statement("high", "a.length - 1");
   let found_first = equal(way, "start_true") ? "true" : "false";
