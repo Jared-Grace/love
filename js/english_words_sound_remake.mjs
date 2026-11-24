@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
-import { app_learn_en_gloss_urdu_words_sound } from "./app_learn_en_gloss_urdu_words_sound.mjs";
-import { app_learn_en_gloss_urdu_words_sound_slow } from "./app_learn_en_gloss_urdu_words_sound_slow.mjs";
+import { app_learn_eng_gloss_urdu_words_sound } from "./app_learn_eng_gloss_urdu_words_sound.mjs";
+import { app_learn_eng_gloss_urdu_words_sound_slow } from "./app_learn_eng_gloss_urdu_words_sound_slow.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { gloss_word_sound_voices } from "./gloss_word_sound_voices.mjs";
 import { gloss_word_sound_path } from "./gloss_word_sound_path.mjs";
@@ -27,8 +27,8 @@ export async function english_words_sound_remake(words) {
   "The words arrive as one comma-joined word, as every list does on a command line.";
   arguments_assert(arguments, 1);
   let asked = text_split_comma(words);
-  let sound_fn = app_learn_en_gloss_urdu_words_sound;
-  let slow_fn = app_learn_en_gloss_urdu_words_sound_slow;
+  let sound_fn = app_learn_eng_gloss_urdu_words_sound;
+  let slow_fn = app_learn_eng_gloss_urdu_words_sound_slow;
   let folder = local_function_folder(sound_fn);
   let folder_slow = local_function_folder(slow_fn);
   let voices = gloss_word_sound_voices();

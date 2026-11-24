@@ -85,7 +85,7 @@ export function app_index_emojis() {
       emoji: emoji_globe_americas(),
     },
     {
-      app_fn: fn_name("app_learn_en"),
+      app_fn: fn_name("app_learn_eng"),
       emoji: emoji_globe_americas(),
     },
     {

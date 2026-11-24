@@ -33,12 +33,12 @@ export async function app_index_gloss_coverage() {
         language: null,
       },
       {
-        app_fn: fn_name("app_learn_en"),
+        app_fn: fn_name("app_learn_eng"),
         namespace_fn: gloss_upload_namespace_en_learn_bible_urdu,
         language: "Urdu",
       },
       {
-        app_fn: fn_name("app_learn_en"),
+        app_fn: fn_name("app_learn_eng"),
         namespace_fn: gloss_upload_namespace_en_learn_bible_tagalog,
         language: "Tagalog",
       },

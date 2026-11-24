@@ -55,7 +55,7 @@ export function app_index_main_fns(about_opened) {
       category: languages,
     },
     {
-      app_fn: fn_name("app_learn_en"),
+      app_fn: fn_name("app_learn_eng"),
       text: "Allows learning English by reading the Bible, with every word explained in Urdu or Tagalog",
       category: languages,
     },

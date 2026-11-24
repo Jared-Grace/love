@@ -365,8 +365,8 @@ import { app_learn_original_gloss_placeholders_gate_run } from "./app_learn_orig
 import { app_learn_ceb_gloss_misaligned_gate_run } from "./app_learn_ceb_gloss_misaligned_gate_run.mjs";
 import { app_learn_ceb_gloss_roots_shallower_gate_run } from "./app_learn_ceb_gloss_roots_shallower_gate_run.mjs";
 import { app_learn_ceb_gloss_affix_letters_apart_gate_run } from "./app_learn_ceb_gloss_affix_letters_apart_gate_run.mjs";
-import { app_learn_en_gloss_urdu_misaligned_gate_run } from "./app_learn_en_gloss_urdu_misaligned_gate_run.mjs";
-import { app_learn_en_gloss_urdu_unpublished_gate_run } from "./app_learn_en_gloss_urdu_unpublished_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_misaligned_gate_run } from "./app_learn_eng_gloss_urdu_misaligned_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_unpublished_gate_run } from "./app_learn_eng_gloss_urdu_unpublished_gate_run.mjs";
 import { gloss_write_root_files_gate_run } from "./gloss_write_root_files_gate_run.mjs";
 import { text_edit_distance_gate_run } from "./text_edit_distance_gate_run.mjs";
 import { cors_gate_run } from "./cors_gate_run.mjs";
@@ -513,7 +513,7 @@ import { app_learn_ceb_gloss_affix_kinds_wrong_gate_run } from "./app_learn_ceb_
 import { psalms_song_file_chapter_take_cases_gate_run } from "./psalms_song_file_chapter_take_cases_gate_run.mjs";
 import { lyric_video_document_times_spread_is_cases_gate_run } from "./lyric_video_document_times_spread_is_cases_gate_run.mjs";
 import { lyric_video_document_times_hand_is_cases_gate_run } from "./lyric_video_document_times_hand_is_cases_gate_run.mjs";
-import { app_learn_en_gloss_urdu_words_sound_keys_gate_run } from "./app_learn_en_gloss_urdu_words_sound_keys_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_words_sound_keys_gate_run } from "./app_learn_eng_gloss_urdu_words_sound_keys_gate_run.mjs";
 import { lyric_video_hearings_match_rate_gate_run } from "./lyric_video_hearings_match_rate_gate_run.mjs";
 import { lyric_video_hand_times_gate_run } from "./lyric_video_hand_times_gate_run.mjs";
 import { text_word_plain_canonical_cases_gate_run } from "./text_word_plain_canonical_cases_gate_run.mjs";
@@ -528,8 +528,8 @@ import { gloss_root_named_word_spelled_in_gate_run } from "./gloss_root_named_wo
 import { gloss_root_named_reversed_gate_run } from "./gloss_root_named_reversed_gate_run.mjs";
 import { gloss_classes_backing_elsewhere_gate_run } from "./gloss_classes_backing_elsewhere_gate_run.mjs";
 import { binisaya_words_known_get_folded_gate_run } from "./binisaya_words_known_get_folded_gate_run.mjs";
-import { app_learn_en_gloss_urdu_glosses_empty_gate_run } from "./app_learn_en_gloss_urdu_glosses_empty_gate_run.mjs";
-import { app_learn_en_gloss_urdu_spelling_claim_gate_run } from "./app_learn_en_gloss_urdu_spelling_claim_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_glosses_empty_gate_run } from "./app_learn_eng_gloss_urdu_glosses_empty_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_spelling_claim_gate_run } from "./app_learn_eng_gloss_urdu_spelling_claim_gate_run.mjs";
 import { gloss_root_unwalked_cause_gate_run } from "./gloss_root_unwalked_cause_gate_run.mjs";
 import { gloss_classes_word_claims_apart_gate_run } from "./gloss_classes_word_claims_apart_gate_run.mjs";
 import { gloss_classes_claimed_unvouched_gate_run } from "./gloss_classes_claimed_unvouched_gate_run.mjs";
@@ -595,13 +595,13 @@ import { functions_calls_walk_unwaited_gate_run } from "./functions_calls_walk_u
 import { app_learn_js_highlight_color_gate_run } from "./app_learn_js_highlight_color_gate_run.mjs";
 import { app_learn_js_color_tone_gate_run } from "./app_learn_js_color_tone_gate_run.mjs";
 import { git_history_purge_case_blind_gate_run } from "./git_history_purge_case_blind_gate_run.mjs";
-import { app_learn_en_gloss_urdu_published_unfinished_gate_run } from "./app_learn_en_gloss_urdu_published_unfinished_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_published_unfinished_gate_run } from "./app_learn_eng_gloss_urdu_published_unfinished_gate_run.mjs";
 import { purge_words_live_gate_run } from "./purge_words_live_gate_run.mjs";
 import { app_learn_ceb_gloss_published_unfinished_gate_run } from "./app_learn_ceb_gloss_published_unfinished_gate_run.mjs";
 import { app_learn_original_gloss_published_unfinished_gate_run } from "./app_learn_original_gloss_published_unfinished_gate_run.mjs";
 import { firebase_sending_tests_none_gate_run } from "./firebase_sending_tests_none_gate_run.mjs";
 import { gloss_stores_verse_order_gate_run } from "./gloss_stores_verse_order_gate_run.mjs";
-import { app_learn_en_gloss_urdu_verse_claims_wrong_gate_run } from "./app_learn_en_gloss_urdu_verse_claims_wrong_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_verse_claims_wrong_gate_run } from "./app_learn_eng_gloss_urdu_verse_claims_wrong_gate_run.mjs";
 import { gloss_explain_verse_numbers_cases_gate_run } from "./gloss_explain_verse_numbers_cases_gate_run.mjs";
 import { gloss_explain_verse_number_words_cases_gate_run } from "./gloss_explain_verse_number_words_cases_gate_run.mjs";
 import { path_outward_cases_gate_run } from "./path_outward_cases_gate_run.mjs";
@@ -637,17 +637,17 @@ import { giveaway_psalms_rows_uploaded_defects_cases_gate_run } from "./giveaway
 import { giveaway_psalms_songs_rows_verses_unsung_cases_gate_run } from "./giveaway_psalms_songs_rows_verses_unsung_cases_gate_run.mjs";
 import { giveaway_psalms_pictures_passed_over_gate_run } from "./giveaway_psalms_pictures_passed_over_gate_run.mjs";
 import { lyric_video_recording_video_notes_gate_run } from "./lyric_video_recording_video_notes_gate_run.mjs";
-import { app_learn_en_gloss_misaligned_gate_run } from "./app_learn_en_gloss_misaligned_gate_run.mjs";
-import { app_learn_en_gloss_glosses_empty_gate_run } from "./app_learn_en_gloss_glosses_empty_gate_run.mjs";
-import { app_learn_en_gloss_urdu_occurrence_claim_gate_run } from "./app_learn_en_gloss_urdu_occurrence_claim_gate_run.mjs";
-import { app_learn_en_gloss_urdu_occurrence_claim_rule_gate_run } from "./app_learn_en_gloss_urdu_occurrence_claim_rule_gate_run.mjs";
+import { app_learn_eng_gloss_misaligned_gate_run } from "./app_learn_eng_gloss_misaligned_gate_run.mjs";
+import { app_learn_eng_gloss_glosses_empty_gate_run } from "./app_learn_eng_gloss_glosses_empty_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_occurrence_claim_gate_run } from "./app_learn_eng_gloss_urdu_occurrence_claim_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_occurrence_claim_rule_gate_run } from "./app_learn_eng_gloss_urdu_occurrence_claim_rule_gate_run.mjs";
 import { giveaway_psalms_boxes_whole_gate_run } from "./giveaway_psalms_boxes_whole_gate_run.mjs";
 import { app_learn_js_quiz_lines_order_indent_gate_run } from "./app_learn_js_quiz_lines_order_indent_gate_run.mjs";
 import { app_learn_js_program_step_presses_gate_run } from "./app_learn_js_program_step_presses_gate_run.mjs";
 import { bible_glyph_chapters_note_glyph_gate_run } from "./bible_glyph_chapters_note_glyph_gate_run.mjs";
 import { functions_outside_direct_gate_run } from "./functions_outside_direct_gate_run.mjs";
-import { app_learn_en_gloss_urdu_bible_quotes_absent_gate_run } from "./app_learn_en_gloss_urdu_bible_quotes_absent_gate_run.mjs";
-import { app_learn_en_stores_fields_gate_run } from "./app_learn_en_stores_fields_gate_run.mjs";
+import { app_learn_eng_gloss_urdu_bible_quotes_absent_gate_run } from "./app_learn_eng_gloss_urdu_bible_quotes_absent_gate_run.mjs";
+import { app_learn_eng_stores_fields_gate_run } from "./app_learn_eng_stores_fields_gate_run.mjs";
 import { files_root_gate_run } from "./files_root_gate_run.mjs";
 import { app_index_cards_unserved_gate_run } from "./app_index_cards_unserved_gate_run.mjs";
 import { bible_glyph_chapters_marks_sibling_misplaced_gate_run } from "./bible_glyph_chapters_marks_sibling_misplaced_gate_run.mjs";
@@ -1023,8 +1023,8 @@ export function qa_gates() {
     app_learn_ceb_gloss_misaligned_gate_run,
     app_learn_ceb_gloss_roots_shallower_gate_run,
     app_learn_ceb_gloss_affix_letters_apart_gate_run,
-    app_learn_en_gloss_urdu_misaligned_gate_run,
-    app_learn_en_gloss_urdu_unpublished_gate_run,
+    app_learn_eng_gloss_urdu_misaligned_gate_run,
+    app_learn_eng_gloss_urdu_unpublished_gate_run,
     gloss_write_root_files_gate_run,
     text_edit_distance_gate_run,
     cors_gate_run,
@@ -1171,7 +1171,7 @@ export function qa_gates() {
     psalms_song_file_chapter_take_cases_gate_run,
     lyric_video_document_times_spread_is_cases_gate_run,
     lyric_video_document_times_hand_is_cases_gate_run,
-    app_learn_en_gloss_urdu_words_sound_keys_gate_run,
+    app_learn_eng_gloss_urdu_words_sound_keys_gate_run,
     lyric_video_hearings_match_rate_gate_run,
     lyric_video_hand_times_gate_run,
     text_word_plain_canonical_cases_gate_run,
@@ -1186,8 +1186,8 @@ export function qa_gates() {
     gloss_root_named_reversed_gate_run,
     gloss_classes_backing_elsewhere_gate_run,
     binisaya_words_known_get_folded_gate_run,
-    app_learn_en_gloss_urdu_glosses_empty_gate_run,
-    app_learn_en_gloss_urdu_spelling_claim_gate_run,
+    app_learn_eng_gloss_urdu_glosses_empty_gate_run,
+    app_learn_eng_gloss_urdu_spelling_claim_gate_run,
     gloss_root_unwalked_cause_gate_run,
     gloss_classes_word_claims_apart_gate_run,
     gloss_classes_claimed_unvouched_gate_run,
@@ -1253,13 +1253,13 @@ export function qa_gates() {
     app_learn_js_highlight_color_gate_run,
     app_learn_js_color_tone_gate_run,
     git_history_purge_case_blind_gate_run,
-    app_learn_en_gloss_urdu_published_unfinished_gate_run,
+    app_learn_eng_gloss_urdu_published_unfinished_gate_run,
     purge_words_live_gate_run,
     app_learn_ceb_gloss_published_unfinished_gate_run,
     app_learn_original_gloss_published_unfinished_gate_run,
     firebase_sending_tests_none_gate_run,
     gloss_stores_verse_order_gate_run,
-    app_learn_en_gloss_urdu_verse_claims_wrong_gate_run,
+    app_learn_eng_gloss_urdu_verse_claims_wrong_gate_run,
     gloss_explain_verse_numbers_cases_gate_run,
     gloss_explain_verse_number_words_cases_gate_run,
     path_outward_cases_gate_run,
@@ -1295,17 +1295,17 @@ export function qa_gates() {
     giveaway_psalms_songs_rows_verses_unsung_cases_gate_run,
     giveaway_psalms_pictures_passed_over_gate_run,
     lyric_video_recording_video_notes_gate_run,
-    app_learn_en_gloss_misaligned_gate_run,
-    app_learn_en_gloss_glosses_empty_gate_run,
-    app_learn_en_gloss_urdu_occurrence_claim_gate_run,
-    app_learn_en_gloss_urdu_occurrence_claim_rule_gate_run,
+    app_learn_eng_gloss_misaligned_gate_run,
+    app_learn_eng_gloss_glosses_empty_gate_run,
+    app_learn_eng_gloss_urdu_occurrence_claim_gate_run,
+    app_learn_eng_gloss_urdu_occurrence_claim_rule_gate_run,
     giveaway_psalms_boxes_whole_gate_run,
     app_learn_js_quiz_lines_order_indent_gate_run,
     app_learn_js_program_step_presses_gate_run,
     bible_glyph_chapters_note_glyph_gate_run,
     functions_outside_direct_gate_run,
-    app_learn_en_gloss_urdu_bible_quotes_absent_gate_run,
-    app_learn_en_stores_fields_gate_run,
+    app_learn_eng_gloss_urdu_bible_quotes_absent_gate_run,
+    app_learn_eng_stores_fields_gate_run,
     files_root_gate_run,
     app_index_cards_unserved_gate_run,
     bible_glyph_chapters_marks_sibling_misplaced_gate_run,

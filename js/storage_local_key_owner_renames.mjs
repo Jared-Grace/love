@@ -59,15 +59,23 @@ export function storage_local_key_owner_renames() {
     },
     {
       before: text_frozen("app_en_learn_bible_language_code_save"),
-      after: fn_name("app_learn_en_language_code_save"),
+      after: fn_name("app_learn_eng_language_code_save"),
     },
     {
       before: text_frozen("app_en_learn_bible"),
-      after: fn_name("app_learn_en"),
+      after: fn_name("app_learn_eng"),
     },
     {
       before: text_frozen("app_code"),
       after: fn_name("app_learn_js"),
+    },
+    {
+      before: text_frozen("app_learn_en_language_code_save"),
+      after: fn_name("app_learn_eng_language_code_save"),
+    },
+    {
+      before: text_frozen("app_learn_en"),
+      after: fn_name("app_learn_eng"),
     },
   ];
   return r;

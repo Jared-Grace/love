@@ -71,32 +71,32 @@
    ]
   },
   {
-   "name": "app_learn_en_gloss_urdu_explains_prefix_stale",
+   "name": "app_learn_eng_gloss_urdu_explains_prefix_stale",
    "keys": [
     "word"
    ]
   },
   {
-   "name": "app_learn_en_gloss_urdu_settled_wording_set",
+   "name": "app_learn_eng_gloss_urdu_settled_wording_set",
    "keys": [
     "table_name"
    ]
   },
   {
-   "name": "app_learn_en_gloss_urdu_spelling_claim_gate_run",
+   "name": "app_learn_eng_gloss_urdu_spelling_claim_gate_run",
    "keys": [
     "name"
    ]
   },
   {
-   "name": "app_learn_en_gloss_urdu_spelling_claims_wrong",
+   "name": "app_learn_eng_gloss_urdu_spelling_claims_wrong",
    "keys": [
     "spelled",
     "word"
    ]
   },
   {
-   "name": "app_learn_en_gloss_urdu_verse_claims_spanned",
+   "name": "app_learn_eng_gloss_urdu_verse_claims_spanned",
    "keys": [
     "chapter_code"
    ]
