@@ -22,7 +22,7 @@ export function apps_all_main_fns() {
     "app_index",
     "app_karate",
     "app_learn_ceb",
-    "app_learn_en",
+    "app_learn_eng",
     "app_learn_js",
     "app_learn_original",
     "app_message",

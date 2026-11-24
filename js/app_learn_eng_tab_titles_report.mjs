@@ -16,7 +16,7 @@ export async function app_learn_eng_tab_titles_report() {
   "Needs the local server running and the app's local build fresh; a title that never arrives may mean either is missing rather than that the code is wrong.";
   arguments_assert(arguments, 0);
   let stores = app_learn_eng_stores();
-  let left = app_shared_url_dev_local_named("learn_en");
+  let left = app_shared_url_dev_local_named("learn_eng");
   let key = app_shared_bible_language_hash_key();
   let property_name = language_code_key();
   let r = [];

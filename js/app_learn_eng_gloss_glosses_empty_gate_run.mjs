@@ -9,7 +9,7 @@ export async function app_learn_eng_gloss_glosses_empty_gate_run() {
   arguments_assert(arguments, 0);
   async function store_check(store) {
     let fn = property_get(store, "generate");
-    let r2 = await gloss_glosses_empty_gate_generic(fn, "learn_en");
+    let r2 = await gloss_glosses_empty_gate_generic(fn, "learn_eng");
     return r2;
   }
   let authored = app_learn_eng_gloss_authored();

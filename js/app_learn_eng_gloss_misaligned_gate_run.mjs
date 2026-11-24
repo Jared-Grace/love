@@ -13,7 +13,7 @@ export async function app_learn_eng_gloss_misaligned_gate_run() {
     let fn = property_get(store, "generate");
     let r2 = await gloss_words_misaligned_gate_generic(
       fn,
-      "learn_en",
+      "learn_eng",
       words_read,
       mend,
     );
