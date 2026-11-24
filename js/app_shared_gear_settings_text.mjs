@@ -7,9 +7,11 @@ export function app_shared_gear_settings_text() {
     eng: " Settings",
     urd: " ترتیبات",
     tgl: " Mga setting",
+    spa: " Ajustes",
     translated_from: {
       urd: " Settings",
       tgl: " Settings",
+      spa: " Settings",
     },
   };
   let label = app_shared_text_reader_language(texts);
