@@ -1,11 +1,10 @@
-import { subtract } from "./subtract.mjs";
+import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_message_reply_proposals_shown_saved_path } from "./app_message_reply_proposals_shown_saved_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { app_message_reply_proposals_shown_hash } from "./app_message_reply_proposals_shown_hash.mjs";
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { equal } from "./equal.mjs";
 import { function_run_fresh_args } from "./function_run_fresh_args.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -26,8 +25,7 @@ export async function app_message_reply_proposals_shown_warm_auto() {
       if (await file_exists(p)) {
         let saved = await file_read_json(p);
         let hash = await app_message_reply_proposals_shown_hash();
-        let left = date_now_milliseconds();
-        let age = subtract(left, saved.when);
+        let age = date_milliseconds_since(saved.when);
         if (equal(saved.hash, hash) && less_than(age, 60000)) {
           return;
         }
