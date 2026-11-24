@@ -7,9 +7,11 @@ export function app_shared_bible_languages_text() {
     eng: " Choose languages",
     urd: " زبانیں منتخب کریں",
     tgl: " Pumili ng mga wika",
+    spa: " Elegir idiomas",
     translated_from: {
       urd: " Choose languages",
       tgl: " Choose languages",
+      spa: " Choose languages",
     },
   };
   let label = app_shared_text_reader_language(texts);
