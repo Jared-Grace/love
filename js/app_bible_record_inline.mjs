@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_element } from "./html_element.mjs";
@@ -6,6 +7,7 @@ import { html_display_none } from "./html_display_none.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
+import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
@@ -16,7 +18,6 @@ import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_bible_record_native_open } from "./app_bible_record_native_open.mjs";
@@ -28,6 +29,8 @@ import { html_canvas_draw_cover } from "./html_canvas_draw_cover.mjs";
 import { html_canvas_draw_contain_top } from "./html_canvas_draw_contain_top.mjs";
 import { app_bible_record_text_draw_below } from "./app_bible_record_text_draw_below.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
+import { app_bible_record_download_name } from "./app_bible_record_download_name.mjs";
+import { app_bible_record_native_download } from "./app_bible_record_native_download.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
 import { firebase_upload_blob_browser } from "./firebase_upload_blob_browser.mjs";
@@ -38,8 +41,8 @@ export function app_bible_record_inline(
   project_ensure,
 ) {
   "$plain chapter_code";
-  "The recorder for one passage, drawn right under it rather than on a screen of its own (asked for by the human 2026-11-22): the camera picture appears in place, and five buttons sit beneath - show camera, record, stop, play back, send.";
-  "A BUTTON THAT CANNOT BE PRESSED NOW IS FADED, NOT TAKEN AWAY, using the one disabled look every app here shares, so the five never move and a finger already over Stop finds it where it was. Show camera is faded while the camera is on; Record is faded until the camera is on, and while recording; Stop is faded unless recording; Play back and Send are faded until there is a take and nothing is recording.";
+  "The recorder for one passage, drawn right under it rather than on a screen of its own (asked for by the human 2026-11-22): the camera picture appears in place, and buttons sit beneath - show camera, record, stop, send; the take plays from its own video.";
+  "A BUTTON THAT CANNOT BE PRESSED NOW IS FADED, NOT TAKEN AWAY, using the one disabled look every app here shares, so the buttons never move and a finger already over Stop finds it where it was. Show camera is faded while the camera is on; Record is faded until the camera is on, and while recording; Stop is faded unless recording; Send is faded until there is a take and nothing is recording.";
   "RECORDING AGAIN REPLACES THE TAKE: the old one is thrown away the moment a new one starts, so there is only ever one take per passage to play back or send, and the button says Record again once there is one.";
   "Recording can only start once the preview is showing, so the video does not open on black frames from before the camera woke. Stopping turns the camera and microphone off, so the phone's recording light goes off with it.";
   "What is recorded is the canvas, not the camera: each frame is the camera's picture with the passage drawn over it, so the saved video carries the words exactly as they were shown. The microphone's sound is added to it.";
@@ -90,8 +93,19 @@ export function app_bible_record_inline(
   );
   let record_button = app_shared_button_wide(buttons, "", record);
   let stop_button = app_shared_button_wide(buttons, "Stop recording", finish);
-  let play_button = app_shared_button_wide(buttons, "Play back", play);
   let send_button = app_shared_button_wide(buttons, "", send);
+  ("NO PLAY BACK BUTTON, AND IN THE APP NO RECORD OR STOP (human 2026-11-24: already covered elsewhere?): a take is shown in a video with its own play control, so a second way to play it was one button too many; and the Android app records on its own camera screen, which has Record and Stop of its own, so here they could only ever be faded.");
+  ("DOWNLOAD SAVES THE TAKE CUT DOWN TO THE READING (human 2026-11-24): the near-silent stretch before the first word and after the last is taken off, so the video is just the reading. Only the Android app can cut a video, so the button is there only inside it; the take kept in storage is left whole.");
+  let download_button = app_shared_button_wide(
+    buttons,
+    "Download video (just the reading)",
+    download,
+  );
+  if (app_bible_record_native_is()) {
+    each([record_button, stop_button], html_display_none);
+  } else {
+    html_display_none(download_button);
+  }
   function refresh() {
     let recording = null_not_is(stop);
     let have = null_not_is(blob);
@@ -100,9 +114,9 @@ export function app_bible_record_inline(
     app_shared_button_disabled_set(record_button, not(camera_on) || recording);
     let disabled = not(recording);
     app_shared_button_disabled_set(stop_button, disabled);
-    let disabled2 = not(ready);
-    app_shared_button_disabled_set(play_button, disabled2);
     app_shared_button_disabled_set(send_button, not(ready) || sent);
+    let disabled2 = not(ready);
+    app_shared_button_disabled_set(download_button, disabled2);
     html_text_set(record_button, have ? "Record again" : "Record this passage");
     html_text_set(send_button, sent ? "Sent" : "Send this recording");
   }
@@ -255,11 +269,12 @@ export function app_bible_record_inline(
     }
     html_display_none(canvas);
     html_media_source_file_set(playback, blob);
+    html_display_block(playback);
     refresh();
   }
-  function play() {
-    html_display_block(playback);
-    playback_element.play();
+  async function download() {
+    let name = app_bible_record_download_name(chapter_code, verse_numbers);
+    await app_bible_record_native_download(blob, name);
   }
   async function send() {
     await firebase_auth_ensure(sign_in);
