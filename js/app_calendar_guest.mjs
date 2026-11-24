@@ -17,6 +17,8 @@ import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_calendar_guest_proof_form } from "./app_calendar_guest_proof_form.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -161,6 +163,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       below.style.display = "none";
       below = below.nextElementSibling;
     }
+    let list2 = list_filter(guest_proofs, proof_is_proven);
+    let proven_vias = list_map(list2, proof_via);
     await app_calendar_guest_proof_form(
       step,
       slug,
@@ -168,9 +172,18 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       key,
       key_keep,
       redraw,
+      proven_vias,
     );
     let chosen_now = storage_local_get(app_calendar, "guest_details");
     back_draw(step, chosen_now ? chosen_now.via : null);
+  }
+  function proof_is_proven(p) {
+    let r10 = p.proven;
+    return r10;
+  }
+  function proof_via(p) {
+    let r11 = p.via;
+    return r11;
   }
   async function switch_to(v) {
     'A guest proven on one app asks to meet on the other: proven there too, they meet there at once; otherwise the form asks for a code from it first, and the app already proven stays one press away (human, 2026-11-24: "a button to schedule a fb meeting but it explains they will need to confirm first").';

@@ -12,6 +12,7 @@ import { equal } from "./equal.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
@@ -30,8 +31,10 @@ export async function app_calendar_guest_proof_form(
   key,
   on_key,
   on_started,
+  proven_vias,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 7);
+  ("proven_vias lists the apps this guest is already proven on, whatsapp and/or messenger. The field for one of those is not asked again when the guest picks the other app: it is known and stays proven (human, 2026-11-24: \"if choose meet facebook messenger then they shouldn't be prompted to provide their whatsapp because that's already confirmed?\").");
   ("The first thing a new guest sees on a host's link: how to reach them - WhatsApp or Messenger, their name, the number or profile link - and a Get my code button. No time is picked here; the code they get is sent to the host from that number or profile, and only once the host has seen it arrive can they pick a time.");
   ('★ PROVE FIRST, THEN BOOK (human, 2026-11-20: "100% knowing their FB url/wa# so they don\'t book, enter something wrong, expect me to show up"). Many guests do not read English well, so the words are short and the screen asks for one thing: the code.');
   ("key is the guest's session key, or null; a first code answers a new key, handed to on_key. on_started is called once the code is made, to draw the page again.");
@@ -87,6 +90,14 @@ export async function app_calendar_guest_proof_form(
     html_clear(via_area);
     field_label_set(number_label, "Your WhatsApp number", "whatsapp");
     field_label_set(profile_label, "Your Facebook profile link", "messenger");
+    function shown_unless_proven(box, value) {
+      let b3 = equal(via, value);
+      let known =
+        not(b3) && not(equal(via, null)) && list_includes(proven_vias, value);
+      html_component_element_get(box).style.display = known ? "none" : "";
+    }
+    shown_unless_proven(number_box, "whatsapp");
+    shown_unless_proven(profile_box, "messenger");
     if (not(host.messenger)) {
       html_text_content_set(number_label, "Your WhatsApp number");
       html_component_element_get(profile_box).style.display = "none";
