@@ -1,8 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_identifiers_referenced_nodes } from "./js_identifiers_referenced_nodes.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 export function js_code_identifier_rename_text(code, name_from, name_to) {
@@ -12,8 +12,7 @@ export function js_code_identifier_rename_text(code, name_from, name_to) {
   let ast = js_parse(code);
   let nodes = js_identifiers_referenced_nodes(ast);
   function named(node) {
-    let name = property_get(node, "name");
-    let same = equal(name, name_from);
+    let same = property_equals(node, "name", name_from);
     return same;
   }
   let found = list_filter(nodes, named);
