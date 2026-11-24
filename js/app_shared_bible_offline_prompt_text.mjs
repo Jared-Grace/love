@@ -6,10 +6,12 @@ export function app_shared_bible_offline_prompt_text() {
     urd: "آپ اس آلے پر کون سی زبانیں رکھنا چاہتے ہیں؟",
     tgl: "Aling mga wika ang gusto mong itago sa device na ito?",
     spa: "¿Qué idiomas quieres guardar en este dispositivo?",
+    por: "Quais idiomas você quer guardar neste dispositivo?",
     translated_from: {
       urd: "Which languages do you want to keep on this device?",
       tgl: "Which languages do you want to keep on this device?",
       spa: "Which languages do you want to keep on this device?",
+      por: "Which languages do you want to keep on this device?",
     },
   };
   let text = app_shared_text_reader_language(texts);
