@@ -14,6 +14,8 @@ import { html_text_set } from "./html_text_set.mjs";
 import { app_shared_native_update_is } from "./app_shared_native_update_is.mjs";
 import { app_shared_native_update_text } from "./app_shared_native_update_text.mjs";
 import { app_shared_native_update } from "./app_shared_native_update.mjs";
+import { html_p_text } from "./html_p_text.mjs";
+import { app_shared_native_version } from "./app_shared_native_version.mjs";
 export function app_shared_bible_settings_render({
   container,
   open_history,
@@ -56,5 +58,9 @@ export function app_shared_bible_settings_render({
   if (app_shared_native_update_is()) {
     let update_text = app_shared_native_update_text();
     app_shared_button_wide(container, update_text, app_shared_native_update);
+    ("THE INSTALLED VERSION IS SAID UNDER IT (human 2026-11-24: show the version, and be told which to update to, to know whether to update or not).");
+    let right = app_shared_native_version();
+    let text = text_combine("Installed version: ", right);
+    html_p_text(container, text);
   }
 }
