@@ -422,8 +422,7 @@ export function app_learn_js_program_step_through_generic(
     "where the end of a line's piece stands in the line as it reads now; the last piece's end is found from the end of the line, since a piece written the long way grows and what follows it does not";
     let pieces = list_get(row_pieces, line_index);
     let to = list_get_property(pieces, k, "to");
-    let left18 = list_size(pieces);
-    let b3 = subtract(left18, 1);
+    let b3 = list_size_subtract(pieces, 1);
     if (less_than(k, b3)) {
       let r4 = position_now(line_index, to);
       return r4;
