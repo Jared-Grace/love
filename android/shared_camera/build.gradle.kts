@@ -27,4 +27,6 @@ dependencies {
     api("androidx.camera:camera-video:$camerax")
     api("androidx.camera:camera-view:$camerax")
     api("androidx.camera:camera-effects:$camerax")
+    // Cuts a recording down to its speaking (VideoSpeechTrim.kt).
+    api("androidx.media3:media3-transformer:1.5.1")
 }

@@ -28,6 +28,9 @@ import com.jesusrosetolife.shared.app_update_bridge_add
 import com.jesusrosetolife.shared.web_url_remember
 import com.jesusrosetolife.shared.web_url_remembered_or_start
 import com.jesusrosetolife.shared_camera.CameraRecorder
+import com.jesusrosetolife.shared_camera.video_speech_trim_save
+import android.util.Base64
+import android.widget.Toast
 import org.json.JSONObject
 import java.io.File
 
@@ -128,7 +131,34 @@ class MainActivity : AppCompatActivity() {
                 camera_open()
             }
         }
+
+        // Download: the page hands over a take in base64 pieces (a page cannot hand the app a
+        // file any other way), then the app saves a copy cut down to the speaking to Downloads
+        // (human 2026-11-24). Each piece decodes on its own, so pieces never split a letter group.
+        @JavascriptInterface
+        fun download_begin(name: String) {
+            download_name = name
+            download_file.delete()
+        }
+
+        @JavascriptInterface
+        fun download_piece(base64: String) {
+            download_file.appendBytes(Base64.decode(base64, Base64.DEFAULT))
+        }
+
+        @JavascriptInterface
+        fun download_end() {
+            runOnUiThread {
+                Toast.makeText(this@MainActivity, "Trimming to the reading...", Toast.LENGTH_SHORT).show()
+                video_speech_trim_save(this@MainActivity, download_file, download_name) { said ->
+                    Toast.makeText(this@MainActivity, said, Toast.LENGTH_LONG).show()
+                }
+            }
+        }
     }
+
+    private var download_name = "reading.mp4"
+    private val download_file: File get() = File(cacheDir, "download_input")
 
     private fun permissions_missing(): List<String> =
         listOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
