@@ -1,12 +1,13 @@
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { calendar_db_named_execute_json } from "./calendar_db_named_execute_json.mjs";
 import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { calendar_db_tables } from "./calendar_db_tables.mjs";
+import { list_map } from "./list_map.mjs";
 import { sql_column_name } from "./sql_column_name.mjs";
-import { sql_statements_join } from "./sql_statements_join.mjs";
 import { sql_table_create } from "./sql_table_create.mjs";
+import { sql_statements_join } from "./sql_statements_join.mjs";
 import { calendar_db_indexes } from "./calendar_db_indexes.mjs";
 import { calendar_db_named_execute } from "./calendar_db_named_execute.mjs";
 export async function calendar_db_named_proofs_via_key(database_name) {
@@ -48,7 +49,7 @@ export async function calendar_db_named_proofs_via_key(database_name) {
     return r4;
   }
   let table = calendar_db_tables().find(is_proofs);
-  let columns = table.columns.map(sql_column_name).join(", ");
+  let columns = list_map(table.columns, sql_column_name).join(", ");
   let r22 = sql_table_create(table);
   let sql = sql_statements_join([
     "DROP INDEX IF EXISTS proofs_code",
