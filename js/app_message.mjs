@@ -1,3 +1,4 @@
+import { app_message_send_label } from "./app_message_send_label.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_shared_font_size_refresh } from "./app_shared_font_size_refresh.mjs";
@@ -15,9 +16,6 @@ import { app_shared_textarea_reader_direction } from "./app_shared_textarea_read
 import { html_placeholder } from "./html_placeholder.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_focus } from "./html_focus.mjs";
-import { emoji_email } from "./emoji_email.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_check_empty_not } from "./html_check_empty_not.mjs";
 import { app_karate_screen_input_validate } from "./app_karate_screen_input_validate.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -64,9 +62,7 @@ export async function app_message(context) {
   app_shared_input_style(textarea);
   html_focus(textarea);
   let div_checks = html_div(div);
-  let left = emoji_email();
-  let text = text_combine(left, " Send");
-  let button_send = app_shared_button_green(div, text, on_send);
+  let button_send = app_message_send_label(div, on_send);
   let v = html_check_empty_not();
   app_karate_screen_input_validate(div, div_checks, [textarea], button_send, [
     v,
