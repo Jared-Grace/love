@@ -8,10 +8,12 @@ export function html_button_share_text() {
     urd: " شیئر کریں",
     tgl: " Ibahagi",
     spa: " Compartir",
+    por: " Compartilhar",
     translated_from: {
       urd: " Share",
       tgl: " Share",
       spa: " Share",
+      por: " Share",
     },
   };
   let label = app_shared_text_reader_language(texts);
