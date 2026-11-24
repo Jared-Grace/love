@@ -27,6 +27,12 @@ export function app_shared_money_section_used_for() {
         "Las ofrendas van a las personas que hacen la obra: su salario y el sustento de sus propias familias. La Escritura dice que un hombre debe proveer para su familia (1 Timoteo 5:8).",
       ],
     },
+    por: {
+      title: "Para que uma oferta é usada?",
+      lines: [
+        "As ofertas vão para as pessoas que fazem a obra: o salário delas e o sustento de suas próprias famílias. A Escritura diz que um homem deve prover para sua família (1 Timóteo 5:8).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "What is a gift used for?",
@@ -41,6 +47,12 @@ export function app_shared_money_section_used_for() {
         ],
       },
       spa: {
+        title: "What is a gift used for?",
+        lines: [
+          "Gifts go to the people doing the work - their wages, and providing for their own households. Scripture says a man must provide for his household (1 Timothy 5:8).",
+        ],
+      },
+      por: {
         title: "What is a gift used for?",
         lines: [
           "Gifts go to the people doing the work - their wages, and providing for their own households. Scripture says a man must provide for his household (1 Timothy 5:8).",
