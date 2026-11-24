@@ -1,3 +1,4 @@
+import { reply_choice_optional } from "./reply_choice_optional.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_words } from "./reply_words.mjs";
 import { reply_word_command } from "./reply_word_command.mjs";
@@ -58,8 +59,7 @@ export function reply_bible_1jn_3_23() {
   let fn18 = reply_optional(fn10);
   let commanded = reply_sequence([fn18, "commanded", fn15]);
   let said = reply_sequence(["said", to_us]);
-  let item4 = reply_choice(["even", "just"]);
-  let fn16 = reply_optional(item4);
+  let fn16 = reply_choice_optional(["even", "just"]);
   let r11 = reply_word_he();
   let fn17 = reply_choice([gave_command, commanded, said]);
   let as_group = reply_sequence([fn16, "as", r11, fn17]);
