@@ -545,6 +545,7 @@ import { app_learn_js_lesson_string_alternate_once } from "./app_learn_js_lesson
 import { app_learn_js_lesson_string_alternate_lower_first } from "./app_learn_js_lesson_string_alternate_lower_first.mjs";
 import { app_learn_js_lesson_string_alternating } from "./app_learn_js_lesson_string_alternating.mjs";
 import { app_learn_js_lesson_string_vowel } from "./app_learn_js_lesson_string_vowel.mjs";
+import { app_learn_js_lesson_string_count_vowels } from "./app_learn_js_lesson_string_count_vowels.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
 import { app_learn_js_lesson_if_take_away_nine } from "./app_learn_js_lesson_if_take_away_nine.mjs";
 import { app_learn_js_lesson_array_for_luhn_nine } from "./app_learn_js_lesson_array_for_luhn_nine.mjs";
@@ -1136,6 +1137,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_string_alternate_lower_first,
     app_learn_js_lesson_string_alternating,
     app_learn_js_lesson_string_vowel,
+    app_learn_js_lesson_string_count_vowels,
     app_learn_js_lesson_array_for_luhn_double,
     app_learn_js_lesson_if_take_away_nine,
     app_learn_js_lesson_array_for_luhn_nine,

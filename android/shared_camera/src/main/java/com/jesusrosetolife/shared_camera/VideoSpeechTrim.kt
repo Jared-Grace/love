@@ -201,13 +201,25 @@ fun video_trim_join(activity: Activity, inputs: List<File>, spans: List<SpeechSp
  */
 fun video_speech_trim_join_save(activity: Activity, inputs: List<File>, name: String, done: (String) -> Unit) {
     thread {
-        val spans = inputs.map { input ->
+        // WHAT WAS KEPT OF EACH VIDEO IS SAID WITH THE SAVE (human 2026-11-24: the first passage
+        // still ran long after its last word, though these same steps run over that take on the
+        // laptop cut it at 6.65 s of 9): a cut that was never worked out, failed, or was worked
+        // out and not applied all look the same in the saved video, so each one is named.
+        val said_each = ArrayList<String>()
+        val spans = inputs.mapIndexed { i, input ->
             try {
-                video_speech_span_or_null(input)
+                val span = video_speech_span_or_null(input)
+                said_each.add(
+                    if (span == null) "${i + 1}: whole (no voice found)"
+                    else "${i + 1}: %.1f-%.1f s".format(span.start_ms / 1000.0, span.end_ms / 1000.0),
+                )
+                span
             } catch (e: Exception) {
+                said_each.add("${i + 1}: whole (${e.javaClass.simpleName}: ${e.message})")
                 null
             }
         }
+        val kept = said_each.joinToString("; ")
         activity.runOnUiThread {
             val trimmed = File(activity.cacheDir, "trimmed.mp4")
             video_trim_join(activity, inputs, spans, trimmed) { error ->
@@ -215,7 +227,7 @@ fun video_speech_trim_join_save(activity: Activity, inputs: List<File>, name: St
                     done("Not saved: $error")
                 } else {
                     file_save_to_downloads(activity, trimmed, name, "video/mp4")
-                    done("Saved to Downloads: $name")
+                    done("Saved to Downloads: $name - kept $kept")
                 }
             }
         }

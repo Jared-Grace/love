@@ -755,6 +755,7 @@ export function app_learn_js_lesson_ids_short() {
         text_frozen("alternate_lower"),
       app_learn_js_lesson_string_alternating: text_frozen("alternating"),
       app_learn_js_lesson_string_vowel: text_frozen("vowel"),
+      app_learn_js_lesson_string_count_vowels: text_frozen("count_vowels"),
       app_learn_js_lesson_array_for_product: text_frozen("product"),
       app_learn_js_lesson_array_split_space: text_frozen("split_space"),
       app_learn_js_lesson_array_for_even_odd: text_frozen("even_odd"),
