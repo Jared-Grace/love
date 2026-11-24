@@ -1,3 +1,4 @@
+import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_chapters_whole_count } from "./bible_chapters_whole_count.mjs";
@@ -7,8 +8,6 @@ import { text_from_number } from "./text_from_number.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -50,8 +49,7 @@ export async function app_index_gloss_coverage_show(cards) {
     let module = await import("./app_index_gloss_coverage.mjs");
     let fn = property_get(module, "app_index_gloss_coverage");
     let coverage = await fn();
-    let app_fns_all = list_map_property(coverage, "app_fn");
-    let app_fns = list_unique(app_fns_all);
+    let app_fns = list_map_property_unique(coverage, "app_fn");
     function card_counts_shown(app_fn) {
       let rows = list_filter_property(coverage, "app_fn", app_fn);
       function row_counted(row) {
