@@ -1,3 +1,4 @@
+import { divide_ceil } from "./divide_ceil.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { json_to } from "./json_to.mjs";
@@ -24,8 +25,6 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_between } from "./text_between.mjs";
-import { divide } from "./divide.mjs";
-import { ceil } from "./ceil.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { json_equal } from "./json_equal.mjs";
@@ -132,8 +131,7 @@ export function app_learn_js_lesson_array_empty_for_push_step_two() {
     let left4 = Number(answer);
     let before_last = subtract(left4, 2);
     let top = subtract(end, start);
-    let p = divide(top, 2);
-    let count = ceil(p);
+    let count = divide_ceil(top, 2);
     let json = json_to(end);
     let object = subtract(end, 1);
     let json2 = json_to(object);
