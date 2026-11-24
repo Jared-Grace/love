@@ -9,10 +9,12 @@ export function app_shared_font_size_larger_text() {
     urd: " لکھائی بڑی کریں",
     tgl: " Palakihin ang titik",
     spa: " Letra más grande",
+    por: " Letra maior",
     translated_from: {
       urd: " Font size larger",
       tgl: " Font size larger",
       spa: " Font size larger",
+      por: " Font size larger",
     },
   };
   let label = app_shared_text_reader_language(texts);
