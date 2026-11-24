@@ -1879,7 +1879,9 @@ def git_writes_or_runs(words):
     `--output` and stay readers. Only words before `--` are options. A false
     positive costs one prompt."""
     subcommand = None
-    for w in words[1:]:
+    for index, w in enumerate(words[1:], start=1):
+        if words[index - 1] in ("-C", "-c") and subcommand is None:
+            continue
         if w == "--":
             return False
         if w.startswith("--"):
