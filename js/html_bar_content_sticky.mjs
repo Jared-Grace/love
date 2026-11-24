@@ -1,8 +1,8 @@
-import { html_viewport_readout_when_asked } from "./html_viewport_readout_when_asked.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
+import { html_viewport_height_visible_inside_body } from "./html_viewport_height_visible_inside_body.mjs";
 import { html_sticky_top } from "./html_sticky_top.mjs";
+import { html_viewport_readout_when_asked } from "./html_viewport_readout_when_asked.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { html_foot_tail_attribute_name } from "./html_foot_tail_attribute_name.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
@@ -16,7 +16,7 @@ export function html_bar_content_sticky(root) {
   html_style_assign(shell, {
     display: "flex",
     "flex-direction": "column",
-    "min-height": html_viewport_height_visible(),
+    "min-height": html_viewport_height_visible_inside_body(),
     "box-sizing": "border-box",
   });
   let bar = html_div(shell);
