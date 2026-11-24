@@ -2,6 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_screen_asking_set } from "./app_shared_screen_asking_set.mjs";
 import { app_shared_screen_later } from "./app_shared_screen_later.mjs";
 import { app_shared_confirm_choices } from "./app_shared_confirm_choices.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 export function app_shared_confirm_generic({
   parent,
   context,
@@ -17,12 +19,15 @@ export function app_shared_confirm_generic({
   arguments_assert(arguments, 1);
   app_shared_screen_asking_set(context);
   let on_back = app_shared_screen_later(context, screen_back);
+  let text_back = app_shared_button_back_text();
   app_shared_confirm_choices(
     parent,
     question,
     button_confirm,
     text_confirm,
     on_confirm,
+    app_shared_button,
+    text_back,
     on_back,
   );
 }

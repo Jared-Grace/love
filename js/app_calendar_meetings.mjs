@@ -204,6 +204,7 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
       app_shared_confirm_over_red(
         "Cancel this meeting? Its time is then open for anyone to book.",
         "Yes, cancel the meeting",
+        "Keep my meeting",
         lambda2,
       );
     }
