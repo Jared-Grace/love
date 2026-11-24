@@ -1,3 +1,4 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -8,8 +9,6 @@ import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { divide } from "./divide.mjs";
-import { floor } from "./floor.mjs";
 import { app_learn_js_bin_items } from "./app_learn_js_bin_items.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -74,8 +73,7 @@ export function app_learn_js_lesson_bin_look_side() {
     "seven items in order, and the goal inside low to high on the side asked for, never the middle item";
     let low = window[0];
     let high = window[1];
-    let p = divide(low + high, 2);
-    let middle = floor(p);
+    let middle = divide_floor(low + high, 2);
     let items = app_learn_js_bin_items();
     let at_all = [];
     for (let k = low; less_than_equal(k, high); k++) {
