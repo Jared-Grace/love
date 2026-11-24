@@ -1,12 +1,11 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { ebible_language_codes } from "./ebible_language_codes.mjs";
 import { ebible_language_codes_iso_639_3_renamed } from "./ebible_language_codes_iso_639_3_renamed.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { ebible_language_code_apart_maximum } from "./ebible_language_code_apart_maximum.mjs";
 import { texts_nearest } from "./texts_nearest.mjs";
-import { list_map } from "./list_map.mjs";
 import { ebible_language_code_current } from "./ebible_language_code_current.mjs";
-import { list_unique } from "./list_unique.mjs";
 export function ebible_language_code_suggestions(code) {
   "The real language codes closest in spelling to one a link named and this repo does not have - what to offer somebody whose link will not open.";
   "It may come back empty, and an empty answer is an answer: nothing here is spelled anything like what the link says, so there is nothing honest to offer and the page should say so rather than name its least unlike language.";
@@ -17,7 +16,6 @@ export function ebible_language_code_suggestions(code) {
   let spellings = list_concat(codes, b);
   let apart_maximum = ebible_language_code_apart_maximum();
   let nearest = texts_nearest(spellings, code, apart_maximum);
-  let current = list_map(nearest, ebible_language_code_current);
-  let suggestions = list_unique(current);
+  let suggestions = list_map_unique(nearest, ebible_language_code_current);
   return suggestions;
 }
