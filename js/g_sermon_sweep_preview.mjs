@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -29,8 +30,7 @@ export async function g_sermon_sweep_preview() {
   let listed = html_div(root);
   let shown = await app_shared_api_named(fn_name("g_sermon_sweep_review"), []);
   function waiting_is(one) {
-    let decision = property_get(one, "decision");
-    let eq = equal(decision, null);
+    let eq = property_equals(one, "decision", null);
     return eq;
   }
   let waiting = shown.filter(waiting_is);
