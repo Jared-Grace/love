@@ -27,6 +27,14 @@ export function app_shared_money_section_why_receive() {
         "Ang mga kaloob na kusang ibinigay, hindi kailanman hiningi nang sapilitan, ay maaaring tumustos sa mga lingkod ng Diyos.",
       ],
     },
+    spa: {
+      title: "Entonces, ¿por qué recibir algo?",
+      lines: [
+        "No le pongas bozal al buey mientras trilla el grano (Deuteronomio 25:4, y Pablo lo repite sobre los obreros en 1 Timoteo 5:18).",
+        "Al buey se le alimenta para que siga produciendo para otros.",
+        "Las ofrendas dadas libremente, nunca exigidas, pueden sostener a los ministros de Dios.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Then why receive anything at all?",
@@ -37,6 +45,14 @@ export function app_shared_money_section_why_receive() {
         ],
       },
       tgl: {
+        title: "Then why receive anything at all?",
+        lines: [
+          "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
+          "The ox is fed so it can keep producing for others.",
+          "Freely given gifts, never demanded ones, can provide for ministers of God.",
+        ],
+      },
+      spa: {
         title: "Then why receive anything at all?",
         lines: [
           "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
