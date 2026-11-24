@@ -8,9 +8,11 @@ export function app_shared_bible_history_text() {
     eng: " Where you were reading (history)",
     urd: " آپ کہاں پڑھ رہے تھے (تاریخچہ)",
     tgl: " Kung saan ka nagbabasa (kasaysayan)",
+    spa: " Dónde estabas leyendo (historial)",
     translated_from: {
       urd: " Where you were reading (history)",
       tgl: " Where you were reading (history)",
+      spa: " Where you were reading (history)",
     },
   };
   let label = app_shared_text_reader_language(texts);
