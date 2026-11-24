@@ -8,9 +8,11 @@ export function app_shared_bible_verse_words_none_text() {
     eng: "This Bible has no words for this verse.",
     urd: "اِس بائبل میں اِس آیت کے لیے کوئی الفاظ نہیں ہیں۔",
     tgl: "Walang salita ang Bibliang ito para sa talatang ito.",
+    spa: "Esta Biblia no tiene palabras para este versículo.",
     translated_from: {
       urd: "This Bible has no words for this verse.",
       tgl: "This Bible has no words for this verse.",
+      spa: "This Bible has no words for this verse.",
     },
   };
   let text = app_shared_text_reader_language(texts);
