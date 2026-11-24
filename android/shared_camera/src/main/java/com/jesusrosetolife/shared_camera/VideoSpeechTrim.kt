@@ -31,6 +31,9 @@ const val SPEECH_SHARE_OF_LOUDEST = 0.05
 // Kept either side of the speaking, so the first word's start and the last word's end are not
 // clipped by a window that measured just under the line.
 const val SPEECH_PAD_MS = 300L
+// How many windows in a row must be over the line to count as speaking: 4 x 50 ms = 200 ms,
+// longer than a tap or a click, shorter than a spoken syllable held through.
+const val SPEECH_RUN_WINDOWS = 4
 // A recording whose loudest window is under this level holds no voice to find, and is kept
 // whole rather than cut down to a cough.
 const val SPEECH_LOUDEST_FLOOR = 0.01
@@ -126,8 +129,21 @@ fun video_speech_span_or_null(file: File): SpeechSpan? {
         return null
     }
     val line = loudest * SPEECH_SHARE_OF_LOUDEST
-    val first = levels.indexOfFirst { it >= line }
-    val last = levels.indexOfLast { it >= line }
+    // Only sound that LASTS counts as speaking (human 2026-11-24: the first verse kept a little
+    // non-talking at its end, waiting for the next verse). A tap on Stop, a breath or a rustle
+    // after the reading is over the line for a window or two; a spoken word stays over it
+    // longer. So a window counts only when it starts or ends a run of SPEECH_RUN_WINDOWS
+    // windows over the line. REJECTED: raising the line - it would clip a quiet first or last
+    // word as well as the noise.
+    val loud = levels.map { it >= line }
+    fun run_at(start: Int): Boolean {
+        if (start < 0 || start + SPEECH_RUN_WINDOWS > loud.size) {
+            return false
+        }
+        return (start until start + SPEECH_RUN_WINDOWS).all { loud[it] }
+    }
+    val first = loud.indices.firstOrNull { run_at(it) } ?: levels.indexOfFirst { it >= line }
+    val last =loud.indices.lastOrNull { run_at(it - SPEECH_RUN_WINDOWS + 1) } ?: levels.indexOfLast { it >= line }
     val total_ms = levels.size * SPEECH_WINDOW_MS
     val start_ms = maxOf(0L, first * SPEECH_WINDOW_MS - SPEECH_PAD_MS)
     val end_ms = minOf(total_ms, (last + 1) * SPEECH_WINDOW_MS + SPEECH_PAD_MS)
