@@ -35,6 +35,7 @@ import { app_shared_description_baseline_rename } from "./app_shared_description
 import { app_shared_dev_stamp_path } from "./app_shared_dev_stamp_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_delete } from "./file_delete.mjs";
+import { app_shared_renames_redirects_unready_write } from "./app_shared_renames_redirects_unready_write.mjs";
 export async function app_shared_rename_rest(a_name_before, a_name_after) {
   "$plain a_name_before";
   "$plain a_name_after";
@@ -140,12 +141,15 @@ export async function app_shared_rename_rest(a_name_before, a_name_after) {
   if (stamped) {
     await file_delete(stamp_path);
   }
+  ("The new address works from the moment the rename lands, sent back to the old page until the new one is promoted. Left to be run by hand, it was not: the front page offered a card to /learn_eng with nothing behind it, and the gate that refuses such a card then refused promoting the very app that would fill it.");
+  let redirects_waiting = await app_shared_renames_redirects_unready_write();
   let r = {
     renamed,
     keys_moved,
     lists_moved,
     description_moved,
     literals_left,
+    redirects_waiting,
   };
   return r;
 }
