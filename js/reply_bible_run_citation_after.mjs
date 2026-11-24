@@ -1,3 +1,4 @@
+import { ebible_book_code_label } from "./ebible_book_code_label.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -6,8 +7,6 @@ import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_last } from "./list_last.mjs";
-import { ebible_books_engbsb } from "./ebible_books_engbsb.mjs";
-import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 export function reply_bible_run_citation_after(previous, run) {
@@ -22,8 +21,7 @@ export function reply_bible_run_citation_after(previous, run) {
   if (greater_than(a, 1)) {
     numbers = `${numbers}-${list_last(verses).verse_number}`;
   }
-  let books = ebible_books_engbsb();
-  let book_name = ebible_book_code_to_name(books, book_code);
+  let book_name = ebible_book_code_label(book_code);
   let whole = `${book_name} ${chapter_name}:${numbers}`;
   if (null_is(previous)) {
     return whole;
