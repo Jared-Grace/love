@@ -29,6 +29,12 @@ export function app_shared_money_section_gifts_welcome() {
         "Da como lo hayas decidido en tu corazón, no de mala gana ni porque te presionaron (2 Corintios 9:7).",
       ],
     },
+    por: {
+      title: "Ofertas são bem-vindas e nunca há pressão para dar",
+      lines: [
+        "Dê conforme decidiu em seu coração, não com tristeza nem porque foi pressionado (2 Coríntios 9:7).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Gifts are welcome and there is never pressure to give",
@@ -43,6 +49,12 @@ export function app_shared_money_section_gifts_welcome() {
         ],
       },
       spa: {
+        title: "Gifts are welcome and there is never pressure to give",
+        lines: [
+          "Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
+        ],
+      },
+      por: {
         title: "Gifts are welcome and there is never pressure to give",
         lines: [
           "Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
