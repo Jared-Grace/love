@@ -748,6 +748,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_string_is_lowercase: text_frozen("is_lowercase"),
       app_learn_js_lesson_string_count_uppercase: text_frozen("count_upper"),
       app_learn_js_lesson_string_count_lowercase: text_frozen("count_lower"),
+      app_learn_js_lesson_string_alternate_once: text_frozen("alternate_once"),
       app_learn_js_lesson_string_alternate_upper_first:
         text_frozen("alternate_upper"),
       app_learn_js_lesson_string_alternate_lower_first:
