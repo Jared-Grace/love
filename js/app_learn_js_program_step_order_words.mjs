@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
@@ -367,8 +368,7 @@ export function app_learn_js_program_step_order_words(
     return null;
   }
   if (less_than(at, k)) {
-    let object = list_get(actions, at);
-    let value6 = property_get(object, "kind");
+    let value6 = list_get_property(actions, at, "kind");
     let r2 = {
       reason: "done_already",
       words: sign_done(value6),
