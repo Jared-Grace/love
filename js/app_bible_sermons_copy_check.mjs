@@ -1,3 +1,4 @@
+import { text_includes_not } from "./text_includes_not.mjs";
 import { app_shared_dev_build } from "./app_shared_dev_build.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { playwright_url_buttons_press_copied } from "./playwright_url_buttons_press_copied.mjs";
@@ -40,8 +41,7 @@ export async function app_bible_sermons_copy_check() {
   check(i, "the link to verse 4 did not turn into 1-4");
   let sw = text_starts_with(bible, reference + "\n");
   check(sw, "Copy does not open with the reference");
-  let b = text_includes(sermon, reference);
-  let n = not(b);
+  let n = text_includes_not(sermon, reference);
   check(n, "Copy sermon carries the reference");
   let ne = text_empty_not_is(sermon);
   check(ne, "Copy sermon copied nothing");
