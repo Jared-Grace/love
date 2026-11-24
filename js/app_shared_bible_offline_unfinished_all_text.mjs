@@ -22,6 +22,10 @@ export function app_shared_bible_offline_unfinished_all_text(names) {
       before: "Estos no terminaron: ",
       after: ". ¿Quieres revisar tu conexión e intentarlo de nuevo?",
     },
+    por: {
+      before: "Estes não terminaram: ",
+      after: ". Quer verificar sua conexão e tentar de novo?",
+    },
     translated_from: {
       urd: {
         before: "These did not finish: ",
@@ -32,6 +36,10 @@ export function app_shared_bible_offline_unfinished_all_text(names) {
         after: ". Would you like to check your connection and try them again?",
       },
       spa: {
+        before: "These did not finish: ",
+        after: ". Would you like to check your connection and try them again?",
+      },
+      por: {
         before: "These did not finish: ",
         after: ". Would you like to check your connection and try them again?",
       },
