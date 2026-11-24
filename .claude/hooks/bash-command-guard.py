@@ -1890,9 +1890,17 @@ def git_writes_or_runs(words):
                 return True
             if len(name) >= 4 and "--open-files-in-pager".startswith(name):
                 return True
+            # ls-remote runs the program it is told is the far end's
+            # upload-pack - on a local path, right here (measured).
+            if len(name) >= 4 and "--upload-pack".startswith(name):
+                return True
+            if subcommand == "ls-remote" and len(name) >= 4 and "--exec".startswith(name):
+                return True
             continue
         if w.startswith("-") and len(w) > 1:
             if subcommand == "grep" and "O" in w[1:]:
+                return True
+            if subcommand == "ls-remote" and "u" in w[1:]:
                 return True
             continue
         if subcommand is None:
@@ -1922,6 +1930,11 @@ def is_writing_read_verb(words):
         return True
     if verb == "git" and git_writes_or_runs(words):
         return True
+    # `node --check FILE` only parses, but node runs every `-r`/`--import`
+    # preload before checking (measured), so any further flag may run code.
+    if verb == "node" and len(words) > 1 and words[1] in ("--check", "-c"):
+        if any(w.startswith("-") for w in words[2:]):
+            return True
     flags = WRITING_FLAGS_BY_VERB.get(verb)
     if flags:
         for w in words[1:]:
