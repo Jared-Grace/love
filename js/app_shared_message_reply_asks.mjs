@@ -1,3 +1,4 @@
+import { reply_choice_optional } from "./reply_choice_optional.mjs";
 import { reply_appeal_details } from "./reply_appeal_details.mjs";
 import { reply_appeal_help_needed } from "./reply_appeal_help_needed.mjs";
 import { reply_appeal_more } from "./reply_appeal_more.mjs";
@@ -67,8 +68,7 @@ export function app_shared_message_reply_asks() {
   let will_noted = reply_on_match_prayer(items_told, will_done);
   let lead_provider = reply_prayer_lead_provider();
   let items = reply_on_match_prayer(will_noted, lead_provider);
-  let me_or_us = reply_choice(["me", "us"]);
-  let o_me_or_us = reply_optional(me_or_us);
+  let o_me_or_us = reply_choice_optional(["me", "us"]);
   let please_help = reply_sequence(["please", "help", o_me_or_us]);
   let help_needed = reply_appeal_help_needed();
   let help = reply_choice([please_help, help_needed]);
