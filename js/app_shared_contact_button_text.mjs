@@ -6,10 +6,12 @@ export function app_shared_contact_button_text() {
     urd: " ڈویلپر سے رابطہ کریں",
     tgl: " Makipag-ugnayan sa developer",
     spa: " Contactar al desarrollador",
+    por: " Falar com o desenvolvedor",
     translated_from: {
       urd: " Contact the developer",
       tgl: " Contact the developer",
       spa: " Contact the developer",
+      por: " Contact the developer",
     },
   };
   let label = app_shared_text_reader_language(texts);
