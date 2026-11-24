@@ -45,11 +45,14 @@ import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
 import { app_bible_record_take_kept_delete } from "./app_bible_record_take_kept_delete.mjs";
+import { app_bible_record_drafts_upload } from "./app_bible_record_drafts_upload.mjs";
 import { app_bible_record_download_name } from "./app_bible_record_download_name.mjs";
 import { app_bible_record_native_download } from "./app_bible_record_native_download.mjs";
 import { app_bible_record_native_download_multiple } from "./app_bible_record_native_download_multiple.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
 import { firebase_upload_blob_browser_quiet } from "./firebase_upload_blob_browser_quiet.mjs";
+import { app_bible_record_draft_path_of } from "./app_bible_record_draft_path_of.mjs";
+import { firebase_delete_browser_if_exists } from "./firebase_delete_browser_if_exists.mjs";
 import { app_bible_record_take_sent_keep } from "./app_bible_record_take_sent_keep.mjs";
 export function app_bible_record_inline(
   parent,
@@ -125,6 +128,8 @@ export function app_bible_record_inline(
   let download_button = app_shared_button_wide(buttons, "", download);
   ("A SECOND DOWNLOAD JOINS THE CHAPTER (human 2026-11-24): when more than one passage of the chapter has a take, a second button saves them as one video, in verse order, each cut down to its reading - named by the verses it holds, or as the complete chapter once every passage has one. Every recorder in the chapter shares one list of takes, and each redraws its buttons whenever any take changes.");
   let chapter_button = app_shared_button_wide(buttons, "", chapter_download);
+  ("BACK UP SENDS EVERY UNSENT TAKE OF THE CHAPTER TO STORAGE AS A DRAFT (human 2026-11-25: syncing, so the videos can be seen): each take is backed up on its own when it finishes, but only while signed in and online, so this catches the rest. A draft is not sent - Send stays the approval, since a sent take becomes a video posted with nobody looking again.");
+  let backup_button = app_shared_button_wide(buttons, "", backup);
   let entries = property_get(chapter, "entries");
   let refreshes = property_get(chapter, "refreshes");
   ("THE CHAPTER'S NAME NEVER BREAKS ACROSS TWO LINES (human 2026-11-24: book{nbsp}chapter): its spaces are the kind a line may not end on, so Psalm and 2 stay together on the count and the download buttons. Made so here, where it is only shown, and not where the name is worked out, which other pages read too.");
@@ -189,6 +194,16 @@ export function app_bible_record_inline(
       chapter_reference,
     ]);
     html_text_set(count_line, text6);
+    let text7 = text_combine(
+      "🔄 Back up unsent videos for ",
+      chapter_reference,
+    );
+    html_text_set(backup_button, text7);
+    if (greater_than(left, 0)) {
+      html_display_block(backup_button);
+    } else {
+      html_display_none(backup_button);
+    }
     if (app_bible_record_native_is()) {
       if (several) {
         html_display_block(chapter_button);
@@ -414,6 +429,24 @@ export function app_bible_record_inline(
       refresh();
     }
   }
+  async function backup() {
+    await firebase_auth_ensure(sign_in);
+    let counts = null;
+    async function work() {
+      let passages = list_map_property(entries, "verse_numbers");
+      counts = await app_bible_record_drafts_upload(chapter_code, passages);
+    }
+    await busy(backup_button, "⏳ Backing up the videos...", work);
+    let backed_up = property_get(counts, "backed_up");
+    let failed = property_get(counts, "failed");
+    let v3 = String(backed_up);
+    let said = text_combine_multiple(["✅ ", v3, " backed up"]);
+    if (greater_than(failed, 0)) {
+      let v4 = String(failed);
+      said = text_combine_multiple([said, ", ", v4, " failed - try again"]);
+    }
+    html_text_set(backup_button, said);
+  }
   async function download() {
     async function work() {
       let name = app_bible_record_download_name(chapter_code, verse_numbers);
@@ -438,6 +471,9 @@ export function app_bible_record_inline(
       let path = app_bible_record_clip_path(chapter_code, verse_numbers, blob);
       await firebase_upload_blob_browser_quiet(path, blob);
       sent = true;
+      ("Once sent, its draft backup is not needed.");
+      let draft = app_bible_record_draft_path_of(path);
+      await firebase_delete_browser_if_exists(draft);
     }
     await busy(send_button, "⏳ Sending the video...", work);
     changed();
