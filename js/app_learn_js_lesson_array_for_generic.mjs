@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -251,8 +252,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
   function head_line(items) {
     if (not_equal(words, null)) {
       let word = list_join_empty(items);
-      let word_json = json_to(word);
-      let line_word = js_code_let_statement(name, word_json);
+      let line_word = js_code_let_json_statement(name, word);
       return line_word;
     }
     if (pushed) {
@@ -358,8 +358,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
       let also_name = property_get(way, "keep_also_name");
       if (not_equal(also_name, null)) {
         let also_start = property_get(way, "keep_also_start");
-        let also_json = json_to(also_start);
-        let also_line = js_code_let_statement(also_name, also_json);
+        let also_line = js_code_let_json_statement(also_name, also_start);
         found_lets = [found_line, also_line];
       }
       let found_lines = list_concat(found_lets, lines7);
@@ -377,8 +376,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
       return lines;
     }
     let flag_name = "on";
-    let flag_json = json_to(flag_start2);
-    let flag_line = js_code_let_statement(flag_name, flag_json);
+    let flag_line = js_code_let_json_statement(flag_name, flag_start2);
     let flipped = flag_name + " = !" + flag_name + ";";
     let flip2 = property_get(way, "flip");
     let inside_flag = js_code_if_lines(flag_name, logged_way);
