@@ -21,6 +21,10 @@ export function app_shared_bible_offline_starting_named_text(name) {
       before: "Iniciando la descarga de ",
       after: "",
     },
+    por: {
+      before: "Iniciando o download de ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: "Starting the download of ",
@@ -31,6 +35,10 @@ export function app_shared_bible_offline_starting_named_text(name) {
         after: "",
       },
       spa: {
+        before: "Starting the download of ",
+        after: "",
+      },
+      por: {
         before: "Starting the download of ",
         after: "",
       },
