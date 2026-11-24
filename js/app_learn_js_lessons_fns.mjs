@@ -541,6 +541,7 @@ import { app_learn_js_lesson_string_no_uppercase } from "./app_learn_js_lesson_s
 import { app_learn_js_lesson_string_count_uppercase } from "./app_learn_js_lesson_string_count_uppercase.mjs";
 import { app_learn_js_lesson_string_count_lowercase } from "./app_learn_js_lesson_string_count_lowercase.mjs";
 import { app_learn_js_lesson_string_alternate_upper_first } from "./app_learn_js_lesson_string_alternate_upper_first.mjs";
+import { app_learn_js_lesson_string_alternate_once } from "./app_learn_js_lesson_string_alternate_once.mjs";
 import { app_learn_js_lesson_string_alternate_lower_first } from "./app_learn_js_lesson_string_alternate_lower_first.mjs";
 import { app_learn_js_lesson_string_alternating } from "./app_learn_js_lesson_string_alternating.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
@@ -1130,6 +1131,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_string_count_uppercase,
     app_learn_js_lesson_string_count_lowercase,
     app_learn_js_lesson_string_alternate_upper_first,
+    app_learn_js_lesson_string_alternate_once,
     app_learn_js_lesson_string_alternate_lower_first,
     app_learn_js_lesson_string_alternating,
     app_learn_js_lesson_array_for_luhn_double,
