@@ -1,10 +1,9 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_reasons } from "./bible_glyph_reasons.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { add } from "./add.mjs";
 import { bible_glyph_chapter_glyph_names } from "./bible_glyph_chapter_glyph_names.mjs";
-import { not } from "./not.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_add } from "./list_add.mjs";
 export function bible_glyph_reasons_unwritten() {
@@ -19,8 +18,7 @@ export function bible_glyph_reasons_unwritten() {
     walked = add(walked, 1);
     let names = bible_glyph_chapter_glyph_names(chapter.chapter_code);
     for (let name of names) {
-      let b = property_exists(reasons, name);
-      let unwritten = not(b);
+      let unwritten = property_exists_not(reasons, name);
       if (unwritten) {
         if (list_includes_not(found, name)) {
           list_add(found, name);
