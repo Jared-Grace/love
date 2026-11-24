@@ -1,8 +1,8 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { json_to } from "./json_to.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
@@ -35,8 +35,7 @@ export function app_learn_js_lesson_while_collatz() {
   let counted = list_concat(step, ["count += 1;"]);
   function program_with(n, start, condition, log) {
     "let n = n; let count = start; while (condition) { the halve-or-triple step; count += 1; } console.log(log);";
-    let right = json_to(n);
-    let head = js_code_let_statement("n", right);
+    let head = js_code_let_json_statement("n", n);
     let count_line = js_code_let_statement("count", start);
     let loop = js_code_while_lines_multiple(condition, counted);
     let log_line = js_code_console_log_statement(log);
