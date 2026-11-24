@@ -535,6 +535,8 @@ import { app_learn_js_lesson_array_for_count_capitals } from "./app_learn_js_les
 import { app_learn_js_lesson_array_for_keep_capitals } from "./app_learn_js_lesson_array_for_keep_capitals.mjs";
 import { app_learn_js_lesson_string_no_lowercase } from "./app_learn_js_lesson_string_no_lowercase.mjs";
 import { app_learn_js_lesson_string_no_uppercase } from "./app_learn_js_lesson_string_no_uppercase.mjs";
+import { app_learn_js_lesson_string_is_uppercase } from "./app_learn_js_lesson_string_is_uppercase.mjs";
+import { app_learn_js_lesson_string_is_lowercase } from "./app_learn_js_lesson_string_is_lowercase.mjs";
 import { app_learn_js_lesson_array_for_luhn_double } from "./app_learn_js_lesson_array_for_luhn_double.mjs";
 import { app_learn_js_lesson_if_take_away_nine } from "./app_learn_js_lesson_if_take_away_nine.mjs";
 import { app_learn_js_lesson_array_for_luhn_nine } from "./app_learn_js_lesson_array_for_luhn_nine.mjs";
@@ -1116,6 +1118,8 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_keep_capitals,
     app_learn_js_lesson_string_no_lowercase,
     app_learn_js_lesson_string_no_uppercase,
+    app_learn_js_lesson_string_is_uppercase,
+    app_learn_js_lesson_string_is_lowercase,
     app_learn_js_lesson_array_for_luhn_double,
     app_learn_js_lesson_if_take_away_nine,
     app_learn_js_lesson_array_for_luhn_nine,
