@@ -1,6 +1,6 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { json_to } from "./json_to.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -37,8 +37,7 @@ export function app_learn_js_lesson_string_includes_e() {
     return call;
   }
   function program(word) {
-    let json2 = json_to(word);
-    let head = js_code_let_statement(name, json2);
+    let head = js_code_let_json_statement(name, word);
     let call2 = call_code();
     let line = js_code_console_log_statement(call2);
     let code = list_join_newline([head, line]);
