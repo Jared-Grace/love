@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { json_to } from "./json_to.mjs";
 import { text_hash } from "./text_hash.mjs";
@@ -7,8 +8,6 @@ import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { function_run_fresh_args } from "./function_run_fresh_args.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { file_delete } from "./file_delete.mjs";
-import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function reply_proposal_trial_wrong(
   code_hash,
@@ -37,8 +36,7 @@ export async function reply_proposal_trial_wrong(
   ("The file is named after what it holds, so two changes tried at once never write one file, and it is taken away after, so a file per version of the code does not pile up.");
   await file_delete(path);
   function wrong_is(one) {
-    let ok = property_get(one, "ok");
-    let n = not(ok);
+    let n = property_not(one, "ok");
     return n;
   }
   let wrong = list_filter(results, wrong_is);
