@@ -1,3 +1,4 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_bible_sermons_chapters } from "./app_bible_sermons_chapters.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -7,7 +8,6 @@ import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { app_bible_sermons_written_book_codes } from "./app_bible_sermons_written_book_codes.mjs";
 import { g_sermon_write_download } from "./g_sermon_write_download.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { g_sermon_generate_download } from "./g_sermon_generate_download.mjs";
 import { g_openai_split_property } from "./g_openai_split_property.mjs";
@@ -35,8 +35,7 @@ export async function app_bible_sermons_download(chapter_code) {
     let passages_written = property_get(value, "passages");
     function lambda(passage) {
       let verse_numbers = property_get(passage, "verse_numbers");
-      let lines_written = property_get(passage, "lines");
-      let lines = list_map_property(lines_written, "text");
+      let lines = property_list_map_property(passage, "lines", "text");
       let r = {
         verse_numbers,
         lines,
