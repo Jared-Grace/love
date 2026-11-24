@@ -40,6 +40,15 @@ export function app_shared_money_section_never_used_for() {
         "Si llega más de lo que la obra necesita, dejamos de recibir ofrendas, o ampliamos a quién se le paga entre las personas que contribuyen. No nos quedamos con la diferencia, y no enviamos tu dinero a un lugar que tú no elegiste.",
       ],
     },
+    por: {
+      title: "Para que uma oferta nunca é usada",
+      lines: [
+        "Nunca para lucro.",
+        "A Escritura diz para não sermos gananciosos por dinheiro (1 Timóteo 3:3), então nosso propósito não é ficar ricos. Há gente demais com fome e em necessidade urgente hoje para guardarmos lucro para nós mesmos.",
+        "Também não é nosso propósito receber sua oferta e repassá-la para outro propósito em seu nome.",
+        "Se chegar mais do que a obra precisa, paramos de receber ofertas, ou ampliamos quem é pago entre as pessoas que contribuem. Não ficamos com a diferença, e não enviamos seu dinheiro para um lugar que você não escolheu.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "What a gift is never used for",
@@ -60,6 +69,15 @@ export function app_shared_money_section_never_used_for() {
         ],
       },
       spa: {
+        title: "What a gift is never used for",
+        lines: [
+          "Never profit.",
+          "Scripture says not to be greedy for money (1 Timothy 3:3), so our purpose is not to make ourselves rich. There are too many people hungry and in urgent need today for us to store up profit for ourselves.",
+          "It is also not our purpose to receive your gift and give it away for some other purpose on your behalf.",
+          "If more comes in than the work needs, we stop receiving gifts, or we widen who is paid among the people contributing. We do not keep the difference, and we do not send your money somewhere you did not choose.",
+        ],
+      },
+      por: {
         title: "What a gift is never used for",
         lines: [
           "Never profit.",
