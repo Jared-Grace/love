@@ -1,3 +1,4 @@
+import { list_to_indices } from "./list_to_indices.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -21,7 +22,6 @@ import { list_first } from "./list_first.mjs";
 import { json_from } from "./json_from.mjs";
 import { list_copy_reverse } from "./list_copy_reverse.mjs";
 import { list_take_less_1 } from "./list_take_less_1.mjs";
-import { range } from "./range.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -109,8 +109,7 @@ export function app_learn_js_lesson_array_for_reverse() {
     let backwards = list_copy_reverse(items4);
     let early = list_take_less_1(backwards);
     let early_text = list_join_newline(early);
-    let count2 = list_size(items4);
-    let indexes = range(count2);
+    let indexes = list_to_indices(items4);
     let indexes_back = list_copy_reverse(indexes);
     let indexes_text = list_join_newline(indexes_back);
     let candidates = [forwards_text, early_text, indexes_text];
