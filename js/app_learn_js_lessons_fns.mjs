@@ -524,6 +524,7 @@ import { app_learn_js_lesson_array_for_word_average } from "./app_learn_js_lesso
 import { app_learn_js_lesson_array_for_reverse_each } from "./app_learn_js_lesson_array_for_reverse_each.mjs";
 import { app_learn_js_lesson_array_for_doubled_word } from "./app_learn_js_lesson_array_for_doubled_word.mjs";
 import { app_learn_js_lesson_array_for_count_doubled } from "./app_learn_js_lesson_array_for_count_doubled.mjs";
+import { app_learn_js_lesson_array_for_run_so_far } from "./app_learn_js_lesson_array_for_run_so_far.mjs";
 import { app_learn_js_lesson_array_for_range } from "./app_learn_js_lesson_array_for_range.mjs";
 import { app_learn_js_lesson_string_upper } from "./app_learn_js_lesson_string_upper.mjs";
 import { app_learn_js_lesson_string_capital_first } from "./app_learn_js_lesson_string_capital_first.mjs";
@@ -1120,6 +1121,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_reverse_each,
     app_learn_js_lesson_array_for_doubled_word,
     app_learn_js_lesson_array_for_count_doubled,
+    app_learn_js_lesson_array_for_run_so_far,
     app_learn_js_lesson_array_for_range,
     app_learn_js_lesson_string_upper,
     app_learn_js_lesson_string_capital_first,
