@@ -7,10 +7,12 @@ export function app_shared_bible_offline_starting_all_text() {
     urd: "ڈاؤن لوڈ شروع ہو رہے ہیں",
     tgl: "Sinisimulan ang mga pag-download",
     spa: "Iniciando las descargas",
+    por: "Iniciando os downloads",
     translated_from: {
       urd: "Starting the downloads",
       tgl: "Starting the downloads",
       spa: "Starting the downloads",
+      por: "Starting the downloads",
     },
   };
   let text = app_shared_text_reader_language(texts);
