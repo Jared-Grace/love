@@ -8,9 +8,11 @@ export function app_shared_device_report_text() {
     eng: " Upload device info",
     urd: " ڈیوائس کی معلومات اپ لوڈ کریں",
     tgl: " I-upload ang impormasyon ng device",
+    spa: " Enviar información del dispositivo",
     translated_from: {
       urd: " Upload device info",
       tgl: " Upload device info",
+      spa: " Upload device info",
     },
   };
   let label = app_shared_text_reader_language(texts);
