@@ -1,3 +1,4 @@
+import { list_find_item_property } from "./list_find_item_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_sweep_path } from "./g_sermon_sweep_path.mjs";
 import { file_exists } from "./file_exists.mjs";
@@ -7,7 +8,6 @@ import { property_get } from "./property_get.mjs";
 import { g_sermon_generate_chapter_passages_get } from "./g_sermon_generate_chapter_passages_get.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { equal } from "./equal.mjs";
-import { list_find } from "./list_find.mjs";
 import { g_sermon_lines_file_path } from "./g_sermon_lines_file_path.mjs";
 import { list_map } from "./list_map.mjs";
 import { diff_lines_aligned_entries } from "./diff_lines_aligned_entries.mjs";
@@ -40,8 +40,7 @@ export async function g_sermon_sweep_review() {
       let r = equal(left, key);
       return r;
     }
-    let passage = list_find(chapters[chapter_code], key_is);
-    let text = property_get(passage, "text");
+    let text = list_find_item_property(chapters[chapter_code], key_is, "text");
     return text;
   }
   let shown = [];
