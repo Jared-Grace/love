@@ -155,7 +155,7 @@ export function app_learn_js_lesson_string_vowel_any_case() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Vowel, any case?",
-    right_call,
+    "c.toLowerCase()",
   );
   let lesson = app_learn_js_lesson_code_logged({
     above,

@@ -128,7 +128,7 @@ export function app_learn_js_lesson_string_count_vowels_any_case() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Uppercase vowels too",
-    right_condition,
+    "c.toLowerCase()",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
