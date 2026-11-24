@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -5,14 +6,12 @@ import { not } from "./not.mjs";
 export function app_learn_js_program_trace_method_is(expression, method) {
   arguments_assert(arguments, 2);
   ("whether an expression is a call of the named method on a plain name, as a.push(x) is a call of push and a.pop() of pop");
-  let left = property_get(expression, "type");
-  let b = equal(left, "CallExpression");
+  let b = property_equals(expression, "type", "CallExpression");
   if (not(b)) {
     return false;
   }
   let callee = property_get(expression, "callee");
-  let left2 = property_get(callee, "type");
-  let b2 = equal(left2, "MemberExpression");
+  let b2 = property_equals(callee, "type", "MemberExpression");
   if (not(b2)) {
     return false;
   }
