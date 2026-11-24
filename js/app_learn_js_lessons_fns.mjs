@@ -429,6 +429,7 @@ import { app_learn_js_lesson_array_for_set_total } from "./app_learn_js_lesson_a
 import { app_learn_js_lesson_array_for_biggest } from "./app_learn_js_lesson_array_for_biggest.mjs";
 import { app_learn_js_lesson_array_for_smallest } from "./app_learn_js_lesson_array_for_smallest.mjs";
 import { app_learn_js_lesson_array_for_small_at } from "./app_learn_js_lesson_array_for_small_at.mjs";
+import { app_learn_js_lesson_array_for_big_at } from "./app_learn_js_lesson_array_for_big_at.mjs";
 import { app_learn_js_lesson_array_for_biggest_minus_smallest } from "./app_learn_js_lesson_array_for_biggest_minus_smallest.mjs";
 import { app_learn_js_lesson_array_second_two_loops } from "./app_learn_js_lesson_array_second_two_loops.mjs";
 import { app_learn_js_lesson_second_moves } from "./app_learn_js_lesson_second_moves.mjs";
@@ -445,6 +446,8 @@ import { app_learn_js_lesson_array_for_start_first } from "./app_learn_js_lesson
 import { app_learn_js_lesson_array_for_in_order } from "./app_learn_js_lesson_array_for_in_order.mjs";
 import { app_learn_js_lesson_array_for_swap_if_bigger } from "./app_learn_js_lesson_array_for_swap_if_bigger.mjs";
 import { app_learn_js_lesson_array_for_differences } from "./app_learn_js_lesson_array_for_differences.mjs";
+import { app_learn_js_lesson_array_for_steps_up } from "./app_learn_js_lesson_array_for_steps_up.mjs";
+import { app_learn_js_lesson_array_for_biggest_step_up } from "./app_learn_js_lesson_array_for_biggest_step_up.mjs";
 import { app_learn_js_lesson_string_letter } from "./app_learn_js_lesson_string_letter.mjs";
 import { app_learn_js_lesson_string_for } from "./app_learn_js_lesson_string_for.mjs";
 import { app_learn_js_lesson_string_index_e } from "./app_learn_js_lesson_string_index_e.mjs";
@@ -1027,6 +1030,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_biggest,
     app_learn_js_lesson_array_for_smallest,
     app_learn_js_lesson_array_for_small_at,
+    app_learn_js_lesson_array_for_big_at,
     app_learn_js_lesson_array_for_biggest_minus_smallest,
     app_learn_js_lesson_array_second_two_loops,
     app_learn_js_lesson_second_moves,
@@ -1043,6 +1047,8 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_in_order,
     app_learn_js_lesson_array_for_swap_if_bigger,
     app_learn_js_lesson_array_for_differences,
+    app_learn_js_lesson_array_for_steps_up,
+    app_learn_js_lesson_array_for_biggest_step_up,
     app_learn_js_lesson_string_letter,
     app_learn_js_lesson_string_for,
     app_learn_js_lesson_string_index_e,
