@@ -1,14 +1,13 @@
-import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { html_div } from "./html_div.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_span_text_highlight_color } from "./app_learn_js_span_text_highlight_color.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_alphabet_lower } from "./list_alphabet_lower.mjs";
-import { html_text_characters_numbered } from "./html_text_characters_numbered.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_text_characters_numbered_color } from "./html_text_characters_numbered_color.mjs";
 import { list_alphabet_upper } from "./list_alphabet_upper.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
@@ -56,8 +55,7 @@ export function app_learn_js_lesson_symbols_letters() {
     html_span_text(div, "In English, there are 26 letters in the alphabet: ");
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
-    html_text_characters_numbered(div2, alphabet_lower);
-    html_font_color_set(div2, lower);
+    html_text_characters_numbered_color(div2, alphabet_lower, lower);
     line(
       c,
       ["Those 26 letters are written in ", "lowercase", "."],
@@ -71,8 +69,7 @@ export function app_learn_js_lesson_symbols_letters() {
     );
     let div5 = html_div(container);
     let alphabet_upper = list_alphabet_upper();
-    html_text_characters_numbered(div5, alphabet_upper);
-    html_font_color_set(div5, upper);
+    html_text_characters_numbered_color(div5, alphabet_upper, upper);
     let container2 = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       container2,
