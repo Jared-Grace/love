@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
@@ -119,8 +120,7 @@ export function app_learn_js_lesson_array_push() {
     "the length before the push, one more than the answer, and the pushed word";
     let r4 = parts_of(question);
     let added = property_get(r4, "added");
-    let items = property_get(r4, "items");
-    let before = list_size(items);
+    let before = property_list_size(r4, "items");
     let after = add(before, 1);
     let twice = add(after, 1);
     let json = json_to(before);
