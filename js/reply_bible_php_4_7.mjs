@@ -1,3 +1,4 @@
+import { reply_choice_optional } from "./reply_choice_optional.mjs";
 import { reply_word_god } from "./reply_word_god.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
@@ -25,8 +26,7 @@ export function reply_bible_php_4_7() {
   let all = reply_choice(["all", "every"]);
   let understanding = reply_word_u_v("understanding");
   let knowing = reply_choice([understanding, "knowledge"]);
-  let will = reply_choice(["shall", "will"]);
-  let will_optional = reply_optional(will);
+  let will_optional = reply_choice_optional(["shall", "will"]);
   let preserve = reply_word_u_v("preserve");
   let guard = reply_choice(["guard", "keep", preserve]);
   let hearts = reply_choice(["hearts", "heartes"]);
