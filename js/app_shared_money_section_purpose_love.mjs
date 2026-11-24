@@ -24,6 +24,13 @@ export function app_shared_money_section_purpose_love() {
         "Ang salita ng Diyos ay ibinigay sa amin nang walang bayad. Kaya ibinibigay namin ito sa iyo nang walang bayad (Mateo 10:8).",
       ],
     },
+    spa: {
+      title: "Nuestro propósito es el amor, no la ganancia",
+      lines: [
+        "Nuestro propósito es compartir la palabra de Dios.",
+        "La palabra de Dios se nos ha dado gratuitamente. Así que gratuitamente te la damos (Mateo 10:8).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Our purpose is love, not profit",
@@ -33,6 +40,13 @@ export function app_shared_money_section_purpose_love() {
         ],
       },
       tgl: {
+        title: "Our purpose is love, not profit",
+        lines: [
+          "Our purpose is sharing the word of God.",
+          "The word of God has been freely given to us. So we freely give to you (Matthew 10:8).",
+        ],
+      },
+      spa: {
         title: "Our purpose is love, not profit",
         lines: [
           "Our purpose is sharing the word of God.",
