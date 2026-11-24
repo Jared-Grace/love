@@ -24,6 +24,10 @@ export function app_shared_button_back_to_text(destination) {
       before: " Volver a ",
       after: "",
     },
+    por: {
+      before: " Voltar para ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: " Back to ",
@@ -34,6 +38,10 @@ export function app_shared_button_back_to_text(destination) {
         after: "",
       },
       spa: {
+        before: " Back to ",
+        after: "",
+      },
+      por: {
         before: " Back to ",
         after: "",
       },
