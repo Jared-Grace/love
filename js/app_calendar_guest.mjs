@@ -7,6 +7,11 @@ import { html_div_text } from "./html_div_text.mjs";
 import { calendar_host_window } from "./calendar_host_window.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { storage_local_get } from "./storage_local_get.mjs";
+import { app_calendar } from "./app_calendar.mjs";
+import { storage_local_set } from "./storage_local_set.mjs";
+import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
@@ -25,13 +30,11 @@ import { html_input_type } from "./html_input_type.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_loading } from "./html_loading.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
 import { calendar_guest_link } from "./calendar_guest_link.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   arguments_assert(arguments, 5);
   ("on_booked(draw) runs once a booking is written; draw(box) draws what was booked and the guest's link into box. The page draws it at its top and goes back to its home screen, the guest's meetings with the hours under them (human, 2026-11-24: \"when booked meeting should take back to home screen that says your meetings but the info should be at the top\").");
@@ -61,9 +64,56 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   ('The length stands out on its own line, as big as a heading (human: "What about making the 25 minutes stand out more visually?").');
   app_shared_heading(card, host.meeting_minutes + " minutes (or less)");
+  ('★ A GUEST MAY BE PROVEN ON BOTH APPS (human, 2026-11-24: "it should allow multiple communications as confirmed"). The page meets on the app they chose last on this device, when they have asked to be proven on it; otherwise on the one they asked for last. A server from before the list existed answers only proof, the newest.');
+  let guest_proofs = property_get_or(
+    free.body,
+    "guest_proofs",
+    free.body.proof ? [free.body.proof] : [],
+  );
+  let details = storage_local_get(app_calendar, "guest_details");
+  function via_is_chosen(p) {
+    let r6 = Boolean(details) && equal(p.via, details.via);
+    return r6;
+  }
+  let proof = guest_proofs.find(via_is_chosen) || guest_proofs[0] || null;
+  function via_choose(v) {
+    let kept = storage_local_get(app_calendar, "guest_details") || {
+      name: "",
+      whatsapp: "",
+      profile: "",
+    };
+    storage_local_set(app_calendar, "guest_details", {
+      ...kept,
+      via: v,
+    });
+  }
+  function app_label(v) {
+    let r7 = equal(v, "messenger") ? "Facebook Messenger" : "WhatsApp";
+    return r7;
+  }
+  function back_draw(box, via_now) {
+    'While a guest waits on a code for one app, the other - if already proven - is one press away, so a guest who wants a meeting now is not held up (human, 2026-11-24: "if they want meeting immediately then there\'s a button for whatsapp instead (that goes back) and works the other way around too").';
+    function other_proven(p) {
+      let r8 = p.proven && not(equal(p.via, via_now));
+      return r8;
+    }
+    let other = guest_proofs.find(other_proven);
+    if (not(other)) {
+      return;
+    }
+    async function back() {
+      via_choose(other.via);
+      await redraw();
+    }
+    app_shared_button_green(
+      box,
+      "Meet on " + app_label(other.via) + " now - no code needed",
+      back,
+    );
+  }
   function app_where_text() {
     'Both apps are named only while both are still a choice; a guest who has proved one is told just that one (human, 2026-11-24: "should it always say that or just what theyve configured/confirmed?").';
-    let proved = free.body.proof;
+    let proved = proof;
     if (proved) {
       let r4 = equal(proved.via, "messenger")
         ? "On Messenger."
@@ -102,7 +152,6 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     key = k;
     on_key(k);
   }
-  let proof = free.body.proof;
   let step = html_div(card);
   async function form_show() {
     html_clear(step);
@@ -120,6 +169,21 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       key_keep,
       redraw,
     );
+    let chosen_now = storage_local_get(app_calendar, "guest_details");
+    back_draw(step, chosen_now ? chosen_now.via : null);
+  }
+  async function switch_to(v) {
+    'A guest proven on one app asks to meet on the other: proven there too, they meet there at once; otherwise the form asks for a code from it first, and the app already proven stays one press away (human, 2026-11-24: "a button to schedule a fb meeting but it explains they will need to confirm first").';
+    via_choose(v);
+    function is_v(p) {
+      let r9 = equal(p.via, v);
+      return r9;
+    }
+    if (guest_proofs.find(is_v)) {
+      await redraw();
+      return;
+    }
+    await form_show();
   }
   if (equal(proof, null)) {
     await form_show();
@@ -127,6 +191,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   }
   if (not(proof.proven)) {
     app_calendar_guest_proof_waiting(step, slug, key, proof, form_show, redraw);
+    back_draw(step, proof.via);
     return;
   }
   let slots = free.body.slots;
@@ -288,6 +353,17 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       : "Change my WhatsApp number",
     form_show,
   );
+  if (host.messenger) {
+    let via_other = equal(proof.via, "messenger") ? "whatsapp" : "messenger";
+    async function switch_other() {
+      await switch_to(via_other);
+    }
+    app_shared_button_uncolored(
+      who_field,
+      "Meet on " + app_label(via_other) + " instead",
+      switch_other,
+    );
+  }
   let weekly_row = app_shared_field(card);
   let weekly = html_input_type(weekly_row, "checkbox");
   let weekly_element = html_component_element_get(weekly);
@@ -372,6 +448,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       day: chosen.day,
       start_minute: chosen.start_minute,
       weekly: weekly_element.checked,
+      via: proof.via,
     };
     let booked = await html_loading(book_send);
     html_text_content_set(status, "");

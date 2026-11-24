@@ -14,6 +14,7 @@ import { not } from "./not.mjs";
 import { calendar_db_proof_start } from "./calendar_db_proof_start.mjs";
 import { calendar_db_session_create } from "./calendar_db_session_create.mjs";
 import { calendar_db_proven_book } from "./calendar_db_proven_book.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { owner_email } from "./owner_email.mjs";
 import { calendar_db_upcoming } from "./calendar_db_upcoming.mjs";
 import { calendar_db_proofs_waiting } from "./calendar_db_proofs_waiting.mjs";
@@ -155,15 +156,18 @@ export async function calendar_api_handle(
           now_iso,
         );
     ("proof says where a guest who sends their key stands: null (never asked), waiting for their code, or proven.");
-    let proof = equal(uid, null)
-      ? null
+    ("guest_proofs is every app the guest has asked to be proven on, newest first, since they may be proven on both; proof is the newest of them, for a page loaded before guest_proofs existed.");
+    let guest_proofs = equal(uid, null)
+      ? []
       : await calendar_db_proof_read(db, slug2, uid);
+    let proof = equal(guest_proofs.length, 0) ? null : guest_proofs[0];
     let r5 = reply(200, {
       ok: true,
       host,
       slots: free.slots,
       guest,
       proof,
+      guest_proofs,
     });
     return r5;
   }
@@ -247,6 +251,7 @@ export async function calendar_api_handle(
       now_iso,
       id5,
       outside.soon_minutes,
+      list_includes(["whatsapp", "messenger"], body.via) ? body.via : null,
     );
     let r_booked = reply(booked.ok ? 200 : 409, booked);
     return r_booked;
