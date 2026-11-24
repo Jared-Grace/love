@@ -1,5 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -21,7 +23,9 @@ export function app_learn_js_lesson_string_count_uppercase() {
   ("The writing is a first draft by Claude 2026-11-24.");
   let example_input = "Andrew brought Simon to Jesus";
   function inputs_get() {
-    "five of six sayings, shuffled";
+    "three strings of up to three characters, then three of six sayings, shuffled together";
+    "2026-11-24, at the human's asking: the short strings are there for the step-by-step quiz and the guided example, which draw only the questions whose loops run 1, 2 or 3 times. GoD counts 2, Joy 1, and Lo! 1 with the symbol trap";
+    let shorts = ["GoD", "Joy", "Lo!"];
     let sayings = [
       "Jesus said to Peter follow me",
       "Mary and Martha welcomed Jesus",
@@ -30,7 +34,9 @@ export function app_learn_js_lesson_string_count_uppercase() {
       "Andrew brought Simon to Jesus",
       "Holy, holy, holy is the LORD",
     ];
-    let shuffled = list_shuffle_take(sayings, 5);
+    let taken = list_shuffle_take(sayings, 3);
+    let both = list_concat(shorts, taken);
+    let shuffled = list_shuffle(both);
     return shuffled;
   }
   function program_with(saying, method, condition, logged) {
