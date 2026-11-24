@@ -1927,7 +1927,7 @@
    ]
   },
   {
-   "name": "reply_typo_ends",
+   "name": "reply_typo_moves",
    "keys": [
     "node.wi",
     "node.ti",
