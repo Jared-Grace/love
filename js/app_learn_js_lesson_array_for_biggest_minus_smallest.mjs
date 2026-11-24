@@ -90,7 +90,9 @@ export function app_learn_js_lesson_array_for_biggest_minus_smallest() {
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
-      "One loop can keep both: the two ifs go one after the other. After the loop, ",
+      "One loop can keep both the smallest and biggest numbers: put one ",
+      "if",
+      " after the other. After the loop, ",
       right_logged,
       " is how far apart the biggest and smallest numbers are:",
     ]);
