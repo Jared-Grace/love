@@ -1,9 +1,8 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_bin_search_program } from "./app_learn_js_bin_search_program.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { divide } from "./divide.mjs";
-import { floor } from "./floor.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_learn_js_bin_items } from "./app_learn_js_bin_items.mjs";
@@ -32,8 +31,7 @@ export function app_learn_js_lesson_bin_unsorted() {
     let low = 0;
     let high = subtract(items.length, 1);
     while (less_than_equal(low, high)) {
-      let p = divide(low + high, 2);
-      let middle = floor(p);
+      let middle = divide_floor(low + high, 2);
       if (equal(items[middle], goal)) {
         return true;
       }
