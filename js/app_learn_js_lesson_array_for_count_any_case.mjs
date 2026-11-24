@@ -19,7 +19,8 @@ export function app_learn_js_lesson_array_for_count_any_case() {
   ("2026-11-23, at the human's asking: the word looked for is a name, find, so the if reads as asking whether it is the word looked for, and the next lesson can make find small too.");
   ("2026-11-23, at the human's asking: after Same word, any capitals. The Count a word loop, with each word made small before it is compared. One loop, nothing inside another.");
   ("Each saying has the word once with a capital and once or more without, so counting with w === alone gives a smaller number than the right program.");
-  ("The wrong programs are: if (w === find) (the capitals still count, so the word with a capital is missed), console.log(a.length) (how many words in all) and console.log(low === find) (only whether the last word is it).");
+  ("The wrong programs are: if (w === find) (the capitals still count, so the word with a capital is missed), console.log(a.length) (how many words in all) and console.log(count > 0) (only whether the word is there at all, not how many times).");
+  ("console.log(low === find) after the loop was the third wrong program once, meant to say whether the last word is it - but low is made inside the loop and is gone after it, so that program stops with an error instead of writing anything.");
   ("The writing is a first draft by Claude 2026-11-23.");
   let example_input = ["God is love and love is of god", "god"];
   function inputs_get() {
@@ -59,7 +60,7 @@ export function app_learn_js_lesson_array_for_count_any_case() {
   function wrong_programs_of(pair3) {
     let v = program_with(pair3, "w", "count");
     let v2 = program_with(pair3, "low", "a.length");
-    let v3 = program_with(pair3, "low", "low === find");
+    let v3 = program_with(pair3, "low", "count > 0");
     let programs = [v, v2, v3];
     return programs;
   }
