@@ -2800,7 +2800,16 @@ def is_safe_xargs_sandboxed_node_script(words):
     front of the script path (a node flag, the read path, the script itself)
     or inside a longer word is refused, since there the input would decide
     what runs rather than what the script reads. Every other xargs flag stays
-    unread, as before."""
+    unread, as before.
+
+    Bare `xargs` with no flag at all is the same case more simply: it puts
+    every input word at the END of the command, which is after the script
+    path, so the input only ever lands among the script's arguments."""
+    if words[:1] == ["xargs"] and len(words) > 1 and not words[1].startswith("-"):
+        rest = words[1:]
+        if any("{}" in w for w in rest):
+            return False
+        return is_safe_sandboxed_node_script(rest)
     for prefix in XARGS_PLACE_FLAGS:
         if words[: len(prefix)] == prefix:
             rest = words[len(prefix):]

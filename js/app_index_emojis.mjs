@@ -93,7 +93,7 @@ export function app_index_emojis() {
       emoji: text_combine_multiple([v, v2]),
     },
     {
-      app_fn: fn_name("app_supper_tl"),
+      app_fn: fn_name("app_supper_tgl"),
       emoji: text_combine_multiple([v3, v4]),
     },
     {

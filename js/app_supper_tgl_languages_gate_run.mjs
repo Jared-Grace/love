@@ -25,7 +25,7 @@ import { json_equal } from "./json_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_imports } from "./function_imports.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-export async function app_supper_tl_languages_gate_run() {
+export async function app_supper_tgl_languages_gate_run() {
   "Checks the half of the Tagalog Lord's Supper card that nothing else checks: in Tagalog with English beside it. How many passages there are is already guarded next door, but which languages the page opens in, and which of the two comes first, was only ever written inside the page.";
   "IT NEEDS NO BIBLE AND NO NETWORK, WHICH IS THE WHOLE REASON IT CAN BE A GATE. Which languages a page opens in is a decision written down, so it can be read on a machine with nothing switched on. What it cannot check is that the two translations really say what they should; it checks that the page asks for the two it promises, in the order it promises them.";
   "THE CARD IS CHECKED AGAINST THE PAGE IN BOTH DIRECTIONS, because this promise is an order and an order can be broken from either end. The card naming Tagalog first while the page lays English out first would read as a mistranslation to somebody who came for the Tagalog, and nothing in either half alone would look wrong.";
@@ -134,8 +134,8 @@ export async function app_supper_tl_languages_gate_run() {
   ("Reading the two languages back correctly proves nothing if the page has stopped asking, and the one word the folders are read by has to be the word they are written under.");
   let doors = [
     {
-      page: fn_name("app_supper_tl"),
-      door: fn_name("app_supper_tl_languages_chosen"),
+      page: fn_name("app_supper_tgl"),
+      door: fn_name("app_supper_tgl_languages_chosen"),
     },
     {
       page: fn_name("app_supper_folders_get"),
@@ -154,7 +154,7 @@ export async function app_supper_tl_languages_gate_run() {
   list_empty_is_assert_json(wrong, {
     hint:
       "The Tagalog Lord's Supper page no longer opens in the two languages its card promises a stranger, or no longer opens in them in that order. The two, and the order, are in " +
-      fn_name("app_supper_tl_languages_chosen") +
+      fn_name("app_supper_tgl_languages_chosen") +
       "; how many passages there are is guarded separately by " +
       fn_name("app_supper_passages_count_gate_run") +
       ".",
