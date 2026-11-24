@@ -6,10 +6,12 @@ export function app_shared_languages_selected_text() {
     urd: "چنی ہوئی زبانیں:",
     tgl: "Mga napiling wika:",
     spa: "Idiomas elegidos:",
+    por: "Idiomas escolhidos:",
     translated_from: {
       urd: "Selected languages:",
       tgl: "Selected languages:",
       spa: "Selected languages:",
+      por: "Selected languages:",
     },
   };
   let v = app_shared_text_reader_language(texts);
