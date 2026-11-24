@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { app_shared_bible_word_overlay_articles_open_google } from "./app_shared_bible_word_overlay_articles_open_google.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -68,16 +69,18 @@ export async function app_shared_bible_word_overlay_articles_open({
       verse_number,
     );
   }
-  let { choices, recent_names, google } =
-    app_shared_bible_word_overlay_articles_open_google(
-      word,
-      language_code,
-      strong_url,
-      offers,
-      known,
-      reference,
-      verse_text,
-    );
+  let r = app_shared_bible_word_overlay_articles_open_google(
+    word,
+    language_code,
+    strong_url,
+    offers,
+    known,
+    reference,
+    verse_text,
+  );
+  let google = property_get(r, "google");
+  let recent_names = property_get(r, "recent_names");
+  let choices = property_get(r, "choices");
   let text = app_shared_bible_word_search_google_text_get();
   app_shared_button(choices, text, google);
   app_shared_bible_word_ask_llms_draw(choices, word, recent_names);

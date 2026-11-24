@@ -43,9 +43,10 @@ export function app_shared_bible_word_overlay_articles_open_google(
     );
     window_open_url_prefix_query("https://www.google.com/search?q=", question);
   }
-  return {
+  let r2 = {
     choices,
     recent_names,
     google,
   };
+  return r2;
 }
