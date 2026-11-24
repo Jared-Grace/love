@@ -48,7 +48,7 @@ import { app_bible_record_download_name } from "./app_bible_record_download_name
 import { app_bible_record_native_download } from "./app_bible_record_native_download.mjs";
 import { app_bible_record_native_download_multiple } from "./app_bible_record_native_download_multiple.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
-import { firebase_upload_blob_browser } from "./firebase_upload_blob_browser.mjs";
+import { firebase_upload_blob_browser_quiet } from "./firebase_upload_blob_browser_quiet.mjs";
 export function app_bible_record_inline(
   parent,
   chapter_code,
@@ -398,11 +398,10 @@ export function app_bible_record_inline(
     changed();
   }
   ("A DOWNLOAD SAYS IT IS WORKING ON ITS OWN BUTTON (human 2026-11-24: a chapter took a while with nothing shown - a loading screen, or a toast so the reader can carry on): the button reads that the video is being got ready and is faded off until the video has been handed to the app, which then says on its own when it is trimming and when it is saved. The rest of the page stays usable meanwhile. REJECTED: a loading screen over the page - it would stop the reader doing anything else for the whole wait.");
-  async function busy(button, work) {
-    html_text_set(
-      button,
-      "⏳ Getting the video ready - this can take a minute...",
-    );
+  ("SENDING SAYS SO THE SAME WAY (human 2026-11-24: should sending just disable the button like the chapter download, or keep the loading screen?): the Send button reads that it is sending and is faded until the video is up, and the page stays usable. REJECTED: the loading screen the upload drew over the whole page - the one way of waiting that stopped the reader doing anything else, beside two buttons that already waited on their own face.");
+  let ready_words = "⏳ Getting the video ready - this can take a minute...";
+  async function busy(button, words, work) {
+    html_text_set(button, words);
     app_shared_button_disabled_set(button, true);
     try {
       await work();
@@ -416,7 +415,7 @@ export function app_bible_record_inline(
       let name = app_bible_record_download_name(chapter_code, verse_numbers);
       await app_bible_record_native_download(blob, name);
     }
-    await busy(download_button, work);
+    await busy(download_button, ready_words, work);
   }
   async function chapter_download() {
     async function work() {
@@ -427,13 +426,16 @@ export function app_bible_record_inline(
       let name = app_bible_record_download_name(chapter_code, verses_taken);
       await app_bible_record_native_download_multiple(blobs, name);
     }
-    await busy(chapter_button, work);
+    await busy(chapter_button, ready_words, work);
   }
   async function send() {
     await firebase_auth_ensure(sign_in);
-    let path = app_bible_record_clip_path(chapter_code, verse_numbers, blob);
-    await firebase_upload_blob_browser(path, blob);
-    sent = true;
+    async function work() {
+      let path = app_bible_record_clip_path(chapter_code, verse_numbers, blob);
+      await firebase_upload_blob_browser_quiet(path, blob);
+      sent = true;
+    }
+    await busy(send_button, "⏳ Sending the video...", work);
     changed();
     await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
   }
