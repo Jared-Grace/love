@@ -20,7 +20,7 @@ export function app_shared_taglines() {
     g_bless: "walk a street and pray a blessing over everyone you see",
     music: "the words of the songs, and the Scripture behind them",
     supper: "nine passages, one at a time, in the languages you choose",
-    supper_tl: "nine passages, one at a time, with English beside them",
+    supper_tgl: "nine passages, one at a time, with English beside them",
     pray_auto: "leave it open and it prays over every verse of the Bible",
     learn_js: "learn to program one step at a time",
     replace: "turn one row of symbols into another",
