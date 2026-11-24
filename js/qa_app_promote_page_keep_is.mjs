@@ -1,7 +1,6 @@
 import { file_name_app_page_is } from "./file_name_app_page_is.mjs";
 import { folder_app_pages_standing } from "./folder_app_pages_standing.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { file_name_html } from "./file_name_html.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { not } from "./not.mjs";
@@ -20,15 +19,13 @@ export async function qa_app_promote_page_keep_is(app_name, hashes, folder) {
   "★ THE PAGE HAS TO STILL BE THERE TO BE KEPT. Every other piece matching says nothing about the page, and a folder whose scripts are all present with its page missing would be told to keep a page that is not there - taking the app off the internet on the next sending, with every link anybody was given going dead. So its standing is asked outright, and a missing one is a reason to write rather than a reason to keep.";
   "★ A PIECE THIS BUILD NO LONGER MAKES IS NOT LOOKED FOR. What is compared is what was just built, so a script that has stopped being made cannot make this answer false by its absence. It is cleared away afterwards by the sweep that removes what an app no longer sends for, and a page that never named it does not stop being right when it goes.";
   arguments_assert(arguments, 3);
-  let page_name = file_name_html(app_name);
-  let page_path = path_join([folder, page_name]);
   let page_standing = await folder_app_pages_standing(folder, app_name);
   if (not(page_standing)) {
     return false;
   }
   let file_names = properties_get(hashes);
   for (let file_name of file_names) {
-    let this_page = file_name_app_page_is(file_name2, app_name2);
+    let this_page = file_name_app_page_is(file_name, app_name);
     if (this_page) {
       continue;
     }
