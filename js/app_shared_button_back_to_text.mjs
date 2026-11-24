@@ -20,12 +20,20 @@ export function app_shared_button_back_to_text(destination) {
       before: " Bumalik sa ",
       after: "",
     },
+    spa: {
+      before: " Volver a ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: " Back to ",
         after: "",
       },
       tgl: {
+        before: " Back to ",
+        after: "",
+      },
+      spa: {
         before: " Back to ",
         after: "",
       },
