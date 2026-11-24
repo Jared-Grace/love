@@ -1,10 +1,10 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_program_step_trace } from "./app_learn_js_program_step_trace.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_map } from "./list_map.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -24,8 +24,7 @@ export function app_learn_js_items_loop_runs_short(items) {
       let r = equal(alternate, "loop") && equal(condition, true);
       return r;
     }
-    let ran = list_filter(trace, run_is);
-    let size = list_size(ran);
+    let size = list_filter_size(trace, run_is);
     return size;
   }
   let counts = list_map(items, runs);
