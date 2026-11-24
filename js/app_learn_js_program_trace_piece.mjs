@@ -1,17 +1,15 @@
-import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { property_list_size } from "./property_list_size.mjs";
-import { property_list_map } from "./property_list_map.mjs";
-import { property_list_first } from "./property_list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { list_all } from "./list_all.mjs";
 import { not } from "./not.mjs";
 import { js_value_name_built_in_is } from "./js_value_name_built_in_is.mjs";
+import { property_list_map } from "./property_list_map.mjs";
 import { js_value_names } from "./js_value_names.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { app_learn_js_program_trace_piece_named } from "./app_learn_js_program_trace_piece_named.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_code_length } from "./js_code_length.mjs";
 import { text_is } from "./text_is.mjs";
 import { text_size } from "./text_size.mjs";
@@ -24,6 +22,7 @@ import { app_learn_js_program_trace_record } from "./app_learn_js_program_trace_
 import { app_learn_js_program_trace_reverse } from "./app_learn_js_program_trace_reverse.mjs";
 import { app_learn_js_program_trace_case } from "./app_learn_js_program_trace_case.mjs";
 import { app_learn_js_operators_called } from "./app_learn_js_operators_called.mjs";
+import { property_list_size } from "./property_list_size.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_learn_js_operators_called_two } from "./app_learn_js_operators_called_two.mjs";
 import { app_learn_js_operators_method } from "./app_learn_js_operators_method.mjs";
@@ -35,8 +34,12 @@ import { list_second } from "./list_second.mjs";
 import { app_learn_js_operator_method_two_symbol } from "./app_learn_js_operator_method_two_symbol.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_program_trace_piece_solved } from "./app_learn_js_program_trace_piece_solved.mjs";
+import { app_learn_js_line_pieces_text } from "./app_learn_js_line_pieces_text.mjs";
+import { app_learn_js_expression_name } from "./app_learn_js_expression_name.mjs";
+import { app_learn_js_expression_stops_early_marked } from "./app_learn_js_expression_stops_early_marked.mjs";
 import { app_learn_js_expression_node_index } from "./app_learn_js_expression_node_index.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
+import { property_list_first } from "./property_list_first.mjs";
 import { error } from "./error.mjs";
 export function app_learn_js_program_trace_piece(state, piece, side) {
   arguments_assert(arguments, 3);
@@ -293,9 +296,31 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     let left = app_learn_js_program_trace_piece(state, piece2, true);
     let piece3 = property_get(piece, "right");
     let operator = property_get(piece, "operator");
-    ("2026-10-17, at the human's asking: both sides of an && or an || are read, as both sides of every other operator are - the beginner's rule the lessons teach. Nothing this can trace changes a name or can fail on being read, so reading a side JavaScript would skip never changes the answer; a name not declared yet, on a side JavaScript skips, is the one line it could not trace, and no lesson draws one. Not picked: skipping the right side once the left settles it, as JavaScript does, built earlier the same day and kept for the lesson on stopping early");
-    let right = app_learn_js_program_trace_piece(state, piece3, true);
-    expression = app_learn_js_expression_node(left, operator, right);
+    ("2026-11-25, at the human's asking: an && or an || in a program stops early, as JavaScript does - once its left side decides the answer, its right side is never read. The lesson on stopping early comes before every program stepped through, and Last of each run reads a[i + 1] only when i is not the last index, which reading both sides would read past the end. Not picked, the rule of 2026-10-17: reading both sides, the beginner's rule, which was safe only while no lesson drew a right side that cannot be read");
+    let logical_is = equal(type, "LogicalExpression");
+    let anding = equal(operator, "&&");
+    let settled = logical_is && (anding ? not(left) : not(not(left)));
+    if (settled) {
+      let pieces_now = property_get(state, "pieces");
+      let from5 = property_get(piece3, "start");
+      let to5 = property_get(piece3, "end");
+      let right_text = app_learn_js_line_pieces_text(
+        code,
+        pieces_now,
+        from5,
+        to5,
+      );
+      let right_unread = app_learn_js_expression_name(right_text, null);
+      let node_early = app_learn_js_expression_node(
+        left,
+        operator,
+        right_unread,
+      );
+      expression = app_learn_js_expression_stops_early_marked(node_early);
+    } else {
+      let right = app_learn_js_program_trace_piece(state, piece3, true);
+      expression = app_learn_js_expression_node(left, operator, right);
+    }
   } else if (
     equal(type, "MemberExpression") &&
     property_get(piece, "computed") &&
