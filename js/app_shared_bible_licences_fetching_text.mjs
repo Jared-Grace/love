@@ -7,10 +7,12 @@ export function app_shared_bible_licences_fetching_text() {
     urd: "دینے والوں کی فہرست لائی جا رہی ہے",
     tgl: "Kinukuha ang mga pagkilala",
     spa: "Buscando los créditos",
+    por: "Buscando os créditos",
     translated_from: {
       urd: "Fetching the credits",
       tgl: "Fetching the credits",
       spa: "Fetching the credits",
+      por: "Fetching the credits",
     },
   };
   let text = app_shared_text_reader_language(texts);
