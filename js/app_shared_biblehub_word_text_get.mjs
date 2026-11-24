@@ -5,9 +5,11 @@ export function app_shared_biblehub_word_text_get() {
     eng: "Open word in BibleHub",
     urd: "BibleHub پر لفظ کھولیں",
     tgl: "Buksan ang salita sa BibleHub",
+    spa: "Abrir la palabra en BibleHub",
     translated_from: {
       urd: "Open word in BibleHub",
       tgl: "Open word in BibleHub",
+      spa: "Open word in BibleHub",
     },
   };
   let v = app_shared_text_reader_language(texts);
