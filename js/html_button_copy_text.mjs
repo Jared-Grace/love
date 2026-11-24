@@ -5,9 +5,11 @@ export function html_button_copy_text() {
     eng: " Copy",
     urd: " کاپی کریں",
     tgl: " Kopyahin",
+    spa: " Copiar",
     translated_from: {
       urd: " Copy",
       tgl: " Copy",
+      spa: " Copy",
     },
   };
   let c = app_shared_text_reader_language_copy(texts);
