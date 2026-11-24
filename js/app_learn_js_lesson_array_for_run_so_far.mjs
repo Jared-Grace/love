@@ -14,6 +14,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_count_doubled } from "./app_learn_js_lesson_array_for_count_doubled.mjs";
 import { app_learn_js_lesson_array_for_even_odd } from "./app_learn_js_lesson_array_for_even_odd.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -117,6 +118,19 @@ export function app_learn_js_lesson_array_for_run_so_far() {
       ["", "else", " runs when the if does not"],
     );
     let box_three = app_learn_js_container_light_blue(root);
+    ("2026-11-25, the human's own wording: what a run is, said here where a run is first met, rather than in Last of each run, which first used the word");
+    html_div_text(
+      box_three,
+      "A run is one or more items in a row that are the same item",
+    );
+    app_learn_js_div_cycle_code(box_three, [
+      "For example for ",
+      "[1, 1, 1, 3, 3]",
+      " there are two runs: ",
+      "1, 1, 1",
+      " and ",
+      "3, 3",
+    ]);
     app_learn_js_div_cycle_code(box_three, [
       "When the next number is different, ",
       "run = 1;",

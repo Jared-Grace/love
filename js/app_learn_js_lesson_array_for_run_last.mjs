@@ -1,6 +1,3 @@
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -8,9 +5,12 @@ import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { boolean_random } from "./boolean_random.mjs";
+import { less_than } from "./less_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_without } from "./list_without.mjs";
+import { boolean_random } from "./boolean_random.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_index_past_end } from "./app_learn_js_lesson_array_index_past_end.mjs";
@@ -113,21 +113,42 @@ export function app_learn_js_lesson_array_for_run_last() {
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);
-    app_learn_js_div_cycle_code(box_three, [
-      "On the last item, ",
-      last,
-      " is ",
-      "true",
-      ", so ",
-      "a[i + 1]",
-      ", which is past the end, is never read. On every other item, ",
-      "a[i] !== a[i + 1]",
-      " is ",
-      "true",
-      " when the next item is different. So the ",
-      "if",
-      " finds the last item of each run:",
-    ]);
+    ("2026-11-25, the human's own wording, one thought to a line: why a[i + 1] is past the end, then the || stopping early, then the right side on the other items. What a run is was moved to Run so far, where a run is first met");
+    let differs = "a[i] !== a[i + 1]";
+    let lines_said = [
+      [
+        "If ",
+        "i",
+        " is the last index, then ",
+        "a[i + 1]",
+        " is past the last item",
+      ],
+      ["Then ", "i + 1", " is too far of an index"],
+      ["But on the last item, ", last, " is ", "true"],
+      ["So then the ", "||", " stops early"],
+      [
+        "And then for the last item ",
+        differs,
+        " (to the right of the ",
+        "||",
+        ") is never read",
+      ],
+      [
+        "For items that are before the last item, ",
+        differs,
+        " is ",
+        "true",
+        " when the next item (",
+        "a[i + 1]",
+        ") is different from the current item (",
+        "a[i]",
+        ")",
+      ],
+      ["So this ", "if", " finds the last item of each run:"],
+    ];
+    for (let said of lines_said) {
+      app_learn_js_div_cycle_code(box_three, said);
+    }
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
     let value = eval_console_log_lines(code3);

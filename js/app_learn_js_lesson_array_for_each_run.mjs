@@ -1,6 +1,3 @@
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -8,9 +5,12 @@ import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { boolean_random } from "./boolean_random.mjs";
+import { less_than } from "./less_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_without } from "./list_without.mjs";
+import { boolean_random } from "./boolean_random.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_run_so_far } from "./app_learn_js_lesson_array_for_run_so_far.mjs";
@@ -22,13 +22,14 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_for_each_run() {
   arguments_assert(arguments, 0);
-  ('each run written out once, with its item and its length: let run = 1; for (let i = 0; i < a.length; i++) { if (i === a.length - 1 || a[i] !== a[i + 1]) { console.log(a[i] + ": " + run); run = 1; } else { run++; } } writes out 1: 2 and 2: 3 for [1, 1, 2, 2, 2]');
+  ('each run written out once, with its item and its length: let run = 1; for (let i = 0; i < a.length; i++) { if (i === a.length - 1 || a[i] !== a[i + 1]) { console.log(a[i] + ": " + run); run = 1; } else { run++; } } writes out x: 2 and y: 3 for ["x", "x", "y", "y", "y"]');
   ("2026-11-25, at the human's asking, whose own draft looped from 1 comparing a[i] with a[i - 1]. That draft wrote out nothing for a run of one, so the run's end is tested first instead, with the guard of Last of each run, and run counts up in the else as Run so far did. A colon sits between the item and its length so 1: 2 cannot be read as one number or as a sum.");
-  ("The arrays hold numbers 1 to 3, 4 to 6 long, each next the same as the one before half the time. An array is kept only when every wrong program writes out something other than the answer.");
+  ("The arrays hold the letters x, y and z, 4 to 6 long, each next the same as the one before half the time. An array is kept only when every wrong program writes out something other than the answer.");
   ("The wrong programs are: no run = 1; after the log (each length goes on counting from the run before), let run = 0 (every length one short) and the loop stopping one early with i < a.length - 1 (the last run is never written out).");
   ("The writing is a first draft by Claude 2026-11-25.");
-  let example_input = [1, 1, 2, 2, 2];
-  let values = [1, 2, 3];
+  ("2026-11-25, at the human's asking: the items are letters, so in what is written out the letter is the item and the number is how long its run is, read at a glance - x: 2 rather than 1: 2. The letters are x, y and z, never a or i, which are names in the program. Not picked: numbers, the first draft, where an item and a count look alike");
+  let example_input = ["x", "x", "y", "y", "y"];
+  let values = ["x", "y", "z"];
   let logged = 'a[i] + ": " + run';
   function program_with(items, start, bound, reset) {
     let codes = list_map(items, json_to);
@@ -75,7 +76,7 @@ export function app_learn_js_lesson_array_for_each_run() {
     return n;
   }
   function array_of(size) {
-    "numbers 1 to 3, each next the same as the one before half the time, tried again until every wrong program writes out something else";
+    "letters x, y and z, each next the same as the one before half the time, tried again until every wrong program writes out something else";
     while (true) {
       let r2 = list_random_item(values);
       let items = [r2];
