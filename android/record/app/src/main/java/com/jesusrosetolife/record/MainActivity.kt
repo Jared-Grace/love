@@ -226,10 +226,12 @@ class MainActivity : AppCompatActivity() {
         val line_height = o.getDouble("line_height").toFloat() * k
         val band = o.getDouble("band").toFloat() * k
         val lines = o.getJSONArray("lines")
-        val top = h - band
+        // The words sit along the top (human 2026-11-24: can the words be above, not below?):
+        // that is where the camera is, so a reader's eyes stay near the lens while reading.
+        val top = 0f
         val shade = Paint()
         shade.color = Color.argb(140, 0, 0, 0)
-        canvas.drawRect(0f, top, w, h, shade)
+        canvas.drawRect(0f, top, w, top + band, shade)
         val paint = Paint(Paint.ANTI_ALIAS_FLAG)
         paint.color = Color.WHITE
         paint.textSize = reference_size
