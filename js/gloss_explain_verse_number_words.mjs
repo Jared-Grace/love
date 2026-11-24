@@ -7,6 +7,7 @@ import { text_apostrophe_quoted_runs } from "./text_apostrophe_quoted_runs.mjs";
 import { gloss_explain_clause_claim_word_or_null } from "./gloss_explain_clause_claim_word_or_null.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { gloss_explain_clause_mention_only_is } from "./gloss_explain_clause_mention_only_is.mjs";
+import { gloss_explain_clause_original_word_is_urdu } from "./gloss_explain_clause_original_word_is_urdu.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
@@ -44,6 +45,14 @@ export function gloss_explain_verse_number_words(explain, verse_numbers) {
     if (guessed) {
       let mention = gloss_explain_clause_mention_only_is(clause, verse_numbers);
       if (mention) {
+        return;
+      }
+      let original = gloss_explain_clause_original_word_is_urdu(
+        explain,
+        clause,
+        verse_numbers,
+      );
+      if (original) {
         return;
       }
     }

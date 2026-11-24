@@ -88,6 +88,19 @@ export function gloss_explain_verse_number_words_cases() {
       why: "the third of that trio: a quoted word is an explicit claim and keeps its verse whatever verb stands beside it, because the verb is only asked where the subject was being guessed",
     },
     {
+      explain:
+        "اَصل میں 'اَبھی نہیں' ہے؛ وُہی لفظ جو آیت ۳ میں چراغ کے لِیٔے آیا۔",
+      verses: ["3", "7"],
+      about: "",
+      why: "★ a sentence that has turned to the original and then says the same word came in verse three is about the Hebrew word, which the English verse cannot be asked about; first Samuel three said this truly and stood accused",
+    },
+    {
+      explain: "وُہی لفظ جو آیت ۳ میں چراغ کے لِیٔے آیا۔",
+      verses: ["3", "7"],
+      about: "3:own",
+      why: "the control for the case above: the same word with no turn to the original is still a claim about the word being explained, and must still be checked",
+    },
+    {
       explain: "The same root as the one in verse eight.",
       verses: ["7", "8", "9"],
       about: "8:own",
