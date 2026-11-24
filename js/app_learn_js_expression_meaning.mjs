@@ -1,7 +1,6 @@
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_is } from "./list_is.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join } from "./list_join.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
 import { not } from "./not.mjs";
@@ -21,8 +20,11 @@ export function app_learn_js_expression_meaning(item) {
   ("No spaces anywhere, for the same reason: how a line is spaced is how it is spelled, not what it means, and a check that failed on a space would go red on a day nothing was wrong.");
   ('2026-11-22: an array means its items, each by what it means, between square brackets with only a comma between them, as ["love","joy"] - spelled as the line reader below spells one, with no spaces');
   if (list_is(item)) {
-    let item_meanings = list_map(item, app_learn_js_expression_meaning);
-    let items_joined = list_join(item_meanings, ",");
+    let items_joined = list_map_join_separator(
+      item,
+      app_learn_js_expression_meaning,
+      ",",
+    );
     let array_meaning = text_combine_multiple(["[", items_joined, "]"]);
     return array_meaning;
   }
