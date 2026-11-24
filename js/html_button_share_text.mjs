@@ -7,9 +7,11 @@ export function html_button_share_text() {
     eng: " Share",
     urd: " شیئر کریں",
     tgl: " Ibahagi",
+    spa: " Compartir",
     translated_from: {
       urd: " Share",
       tgl: " Share",
+      spa: " Share",
     },
   };
   let label = app_shared_text_reader_language(texts);
