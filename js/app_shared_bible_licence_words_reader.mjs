@@ -20,10 +20,12 @@ export function app_shared_bible_licence_words_reader(licence) {
       urd: "شرائط پڑھی نہیں گئیں",
       tgl: "Hindi nabasa ang mga tuntunin",
       spa: "No se pudieron leer los términos",
+      por: "Não foi possível ler os termos",
       translated_from: {
         urd: "Terms not read",
         tgl: "Terms not read",
         spa: "Terms not read",
+        por: "Terms not read",
       },
     };
     let said = app_shared_text_reader_language(texts);
