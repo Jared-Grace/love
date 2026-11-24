@@ -24,6 +24,11 @@ export function app_shared_bible_offline_unfinished_text(name) {
         "Esa descarga no terminó. ¿Quieres revisar tu conexión e intentar ",
       after: " de nuevo?",
     },
+    por: {
+      before:
+        "Esse download não terminou. Quer verificar sua conexão e tentar ",
+      after: " de novo?",
+    },
     translated_from: {
       urd: {
         before:
@@ -36,6 +41,11 @@ export function app_shared_bible_offline_unfinished_text(name) {
         after: " again?",
       },
       spa: {
+        before:
+          "That download did not finish. Would you like to check your connection and try ",
+        after: " again?",
+      },
+      por: {
         before:
           "That download did not finish. Would you like to check your connection and try ",
         after: " again?",
