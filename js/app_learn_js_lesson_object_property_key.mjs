@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_object_people } from "./app_learn_js_object_people.mjs";
 import { list_first } from "./list_first.mjs";
@@ -47,8 +48,7 @@ export function app_learn_js_lesson_object_property_key() {
   function program_with(person, key, read) {
     let right = app_learn_js_object_code(person, keys);
     let code2 = js_code_let_statement(name, right);
-    let right2 = json_to(key);
-    let code3 = js_code_let_statement(key_name, right2);
+    let code3 = js_code_let_json_statement(key_name, key);
     let statement = js_code_console_log_statement(read);
     let code = list_join_newline([code2, code3, statement]);
     return code;
