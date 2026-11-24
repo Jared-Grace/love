@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -26,8 +27,6 @@ import { json_from } from "./json_from.mjs";
 import { add } from "./add.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -127,8 +126,7 @@ export function app_learn_js_lesson_array_empty_push() {
     let name = name_of(answer);
     let added = added_of(answer);
     function unused(word) {
-      let used = list_includes(added, word);
-      let free = not(used);
+      let free = list_includes_not(added, word);
       return free;
     }
     let words = fruits_of_the_spirit();
