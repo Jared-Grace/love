@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -53,8 +54,7 @@ export function app_learn_js_lesson_array_empty_for_push_step_two() {
   let update_one = index_name + "++;";
   function program_of(name, start, end, update) {
     let head = js_code_let_statement(name, "[]");
-    let right = json_to(start);
-    let started = js_code_let_statement(index_name, right);
+    let started = js_code_let_json_statement(index_name, start);
     let right2 = json_to(end);
     let condition = js_code_binary_spaced_nb(index_name, "<", right2);
     let call = js_code_called(name + ".push", index_name);
