@@ -1,3 +1,4 @@
+import { property_equals_json } from "./property_equals_json.mjs";
 import { app_shared_text_reader_language_held_change } from "./app_shared_text_reader_language_held_change.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
@@ -8,7 +9,6 @@ import { not } from "./not.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { json_equal } from "./json_equal.mjs";
 import { list_find_or_null } from "./list_find_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_shared_text_reader_language_from_record_or_null } from "./app_shared_text_reader_language_from_record_or_null.mjs";
@@ -46,8 +46,7 @@ export async function app_shared_text_reader_language_translation_write(
     }
     let words = property_get(saying, en);
     function lambda$pair(pair) {
-      let left = property_get(pair, "en");
-      let same = json_equal(left, words);
+      let same = property_equals_json(pair, "en", words);
       return same;
     }
     let pair = list_find_or_null(pairs, lambda$pair);
