@@ -805,6 +805,8 @@
     { "command": "for c in A; do echo $c done; done", "decision": "allow", "why": "done as an argument prints the word and closes nothing - bash reads a keyword only as the first word of a command" },
     { "command": "if true; then echo then fi; fi", "decision": "allow", "why": "a branch word used as text does not make the word after it a keyword either" },
     { "command": "for c in A; do echo $c done; rm x; done", "decision": "silent", "why": "reading done correctly must not hide what the loop really runs" },
+    { "command": "cd /home/j/a/repos/love; for p in ROM 2CO; do unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/a/repos/love --allow-fs-read=/home/j/a/user/storage scripts/temp/es_word_find.mjs '^trespass' $p; done", "decision": "allow", "why": "a caret in a regex argument means nothing to a non-interactive shell; it only reaches the script" },
+    { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/a/repos/love scripts/temp/x.mjs 'a;b'", "decision": "silent", "why": "letting in a caret must not let in other shell punctuation" },
     { "command": "pstree -p 2014077 2>/dev/null | head", "decision": "allow", "why": "pstree prints the process table ps already reads, as a tree, and no flag of it writes" },
     { "command": "pstree -H 5", "decision": "ask", "why": "a flag taking a value is not among the display flags let in" },
     { "command": "pstree -p 1 2", "decision": "ask", "why": "at most one process number" },
