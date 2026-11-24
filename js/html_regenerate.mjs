@@ -1,9 +1,9 @@
+import { html_code_regenerated } from "./html_code_regenerated.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
 import { file_read } from "./file_read.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
-import { html_code } from "./html_code.mjs";
 import { html_code_is } from "./html_code_is.mjs";
 import { html_code_parse } from "./html_code_parse.mjs";
 import { property_get } from "./property_get.mjs";
@@ -43,7 +43,7 @@ export async function html_regenerate(file_path) {
     ]),
     file_path,
   });
-  let code = html_code(name, body);
+  let code = html_code_regenerated(file_path, name, body);
   await file_overwrite(file_path, code);
   return file_path;
 }
