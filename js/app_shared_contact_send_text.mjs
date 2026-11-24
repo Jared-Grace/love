@@ -8,9 +8,11 @@ export function app_shared_contact_send_text() {
     eng: " Send",
     urd: " بھیجیں",
     tgl: " Ipadala",
+    spa: " Enviar",
     translated_from: {
       urd: " Send",
       tgl: " Send",
+      spa: " Send",
     },
   };
   let text = app_shared_text_reader_language(texts);
