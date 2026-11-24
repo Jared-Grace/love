@@ -1,3 +1,4 @@
+import { app_learn_eng_pages_language_table_fresh_assert } from "./app_learn_eng_pages_language_table_fresh_assert.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_eng_stores_fields_missing } from "./app_learn_eng_stores_fields_missing.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -9,4 +10,5 @@ export function app_learn_eng_stores_fields_gate_run() {
   list_empty_is_assert_json(missing, {
     hint: "these languages lack fields the others have - add each named field to that language's own function (app_learn_en_store_<language>)",
   });
+  app_learn_eng_pages_language_table_fresh_assert();
 }
