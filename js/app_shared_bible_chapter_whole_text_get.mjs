@@ -8,9 +8,11 @@ export function app_shared_bible_chapter_whole_text_get() {
     eng: "Whole chapter",
     urd: "پورا باب",
     tgl: "Buong kabanata",
+    spa: "Capítulo completo",
     translated_from: {
       urd: "Whole chapter",
       tgl: "Whole chapter",
+      spa: "Whole chapter",
     },
   };
   let label = app_shared_text_reader_language(texts);
