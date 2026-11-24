@@ -23,9 +23,11 @@ export function app_shared_bible_testament_name_reading(name) {
       eng: "New Testament",
       urd: "نیا عہد نامہ",
       tgl: "Bagong Tipan",
+      spa: "Nuevo Testamento",
       translated_from: {
         urd: "New Testament",
         tgl: "New Testament",
+        spa: "New Testament",
       },
     };
     let r2 = app_shared_text_reader_language(texts);
