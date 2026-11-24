@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -28,9 +29,7 @@ import { text_includes } from "./text_includes.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -155,8 +154,7 @@ export function app_learn_js_lesson_array_push_last() {
     let items3 = property_get(r5, "items");
     function unused(word) {
       let list = list_concat(items3, [added2]);
-      let used = list_includes(list, word);
-      let n = not(used);
+      let n = list_includes_not(list, word);
       return n;
     }
     let list2 = fruits_of_the_spirit();
