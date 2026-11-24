@@ -1,3 +1,4 @@
+import { list_single_property } from "./list_single_property.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
@@ -9,8 +10,6 @@ import { app_shared_verses_order_prompt_text } from "./app_shared_verses_order_p
 import { html_subset_ordered_selected } from "./html_subset_ordered_selected.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { app_shared_languages_selected_text } from "./app_shared_languages_selected_text.mjs";
-import { list_single } from "./list_single.mjs";
-import { property_get } from "./property_get.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 export function html_subset_ordered_choose({
   parent,
@@ -51,8 +50,7 @@ export function html_subset_ordered_choose({
       let selected_card = card(container);
       let selected_label = app_shared_languages_selected_text();
       html_div_text_bold(selected_card, selected_label);
-      let only = list_single(chosen);
-      let name = property_get(only, name_property);
+      let name = list_single_property(chosen, name_property);
       html_div_text(selected_card, name);
     }
   }
