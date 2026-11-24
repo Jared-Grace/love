@@ -5,9 +5,11 @@ export function app_shared_languages_selected_text() {
     eng: "Selected languages:",
     urd: "چنی ہوئی زبانیں:",
     tgl: "Mga napiling wika:",
+    spa: "Idiomas elegidos:",
     translated_from: {
       urd: "Selected languages:",
       tgl: "Selected languages:",
+      spa: "Selected languages:",
     },
   };
   let v = app_shared_text_reader_language(texts);
