@@ -1,9 +1,9 @@
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_proposals_waiting } from "./reply_proposals_waiting.mjs";
 import { app_message_reply_cases_checked } from "./app_message_reply_cases_checked.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_squash } from "./list_squash.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_message_reply_records_by_keys } from "./app_message_reply_records_by_keys.mjs";
 import { reply_case_real_or_null } from "./reply_case_real_or_null.mjs";
@@ -32,8 +32,7 @@ export async function app_message_reply_proposals_shown() {
     let from = property_get(one, "from");
     return from;
   }
-  let lists = list_map(proposals, proposal_cases);
-  let a = list_squash(lists);
+  let a = list_map_then_squash(proposals, proposal_cases);
   let shown_cases = list_concat(a, checked);
   let keys = list_map(shown_cases, from_read);
   let by_key = await app_message_reply_records_by_keys(keys);
