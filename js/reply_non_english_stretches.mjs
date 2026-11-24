@@ -1,16 +1,12 @@
+import { reply_stretches_gather } from "./reply_stretches_gather.mjs";
 import { reply_words_side_of } from "./reply_words_side_of.mjs";
 import { reply_word_kind_of } from "./reply_word_kind_of.mjs";
 import { reply_message_words_placed } from "./reply_message_words_placed.mjs";
 import { reply_pairs_unparsable } from "./reply_pairs_unparsable.mjs";
 import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { list_get } from "./list_get.mjs";
 import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { subtract } from "./subtract.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_last } from "./list_last.mjs";
 export function reply_non_english_stretches(message, lookup) {
   "The stretches of a message written in some other language, each with where it starts and ends among the characters the reply rules read, and the words it holds.";
   "Every word is one of four kinds: a dictionary word, a name, a number, or a word no dictionary holds. Each side of a dictionary word either joins - its neighbour is a dictionary word or a number, and the two are not a pair recorded as not joining up - or fails, or has no neighbour at all. The word is foreign when no side joins and at least one side fails. So in with entry lo energy both entry and lo stay English, while in abhi entry lo main khud all three are foreign.";
@@ -66,40 +62,6 @@ export function reply_non_english_stretches(message, lookup) {
     let foreign = not(any_joins) && any_fails;
     return foreign;
   }
-  let stretches = [];
-  let run = [];
-  function name_not_is(i) {
-    let neq = not_equal(kinds[i], "name");
-    return neq;
-  }
-  function word_at(i) {
-    let word = words[i].word;
-    return word;
-  }
-  function run_close() {
-    let has_foreign = run.some(name_not_is);
-    if (greater_than(run.length, 0) && has_foreign) {
-      let index = list_first(run);
-      let first = list_get(words, index);
-      let index2 = list_last(run);
-      let last = list_get(words, index2);
-      let held = run.map(word_at);
-      stretches.push({
-        start: first.start,
-        end: last.end,
-        words: held,
-      });
-    }
-    run = [];
-  }
-  for (let i = 0; less_than(i, words.length); i++) {
-    let joins_run = foreign_is(i) || equal(kinds[i], "name");
-    if (joins_run) {
-      run.push(i);
-    } else {
-      run_close();
-    }
-  }
-  run_close();
+  let stretches = reply_stretches_gather(kinds, words, foreign_is);
   return stretches;
 }
