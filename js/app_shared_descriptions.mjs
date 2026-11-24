@@ -39,7 +39,7 @@ export function app_shared_descriptions() {
       "Leave this page open and it prays over every verse of the Bible in turn, asking that all creation would hear, believe, obey, enjoy and proclaim the word of God.",
     supper:
       "The nine passages of the Bible about the Lord's Supper, in the languages you choose, one passage at a time. For reading together before you take the bread and the cup.",
-    supper_tl:
+    supper_tgl:
       "The nine passages of the Bible about the Lord's Supper in Tagalog with English beside it, one passage at a time. For reading together before you take the bread and the cup.",
     music:
       "The words of the sung songs, line by line, with what each line means and the passages of Scripture it rests on written out underneath.",
