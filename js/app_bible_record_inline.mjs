@@ -45,7 +45,7 @@ import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
 import { app_bible_record_take_kept_delete } from "./app_bible_record_take_kept_delete.mjs";
-import { app_bible_record_drafts_upload } from "./app_bible_record_drafts_upload.mjs";
+import { app_bible_record_drafts_upload_all } from "./app_bible_record_drafts_upload_all.mjs";
 import { app_bible_record_download_name } from "./app_bible_record_download_name.mjs";
 import { app_bible_record_native_download } from "./app_bible_record_native_download.mjs";
 import { app_bible_record_native_download_multiple } from "./app_bible_record_native_download_multiple.mjs";
@@ -128,7 +128,7 @@ export function app_bible_record_inline(
   let download_button = app_shared_button_wide(buttons, "", download);
   ("A SECOND DOWNLOAD JOINS THE CHAPTER (human 2026-11-24): when more than one passage of the chapter has a take, a second button saves them as one video, in verse order, each cut down to its reading - named by the verses it holds, or as the complete chapter once every passage has one. Every recorder in the chapter shares one list of takes, and each redraws its buttons whenever any take changes.");
   let chapter_button = app_shared_button_wide(buttons, "", chapter_download);
-  ("BACK UP SENDS EVERY UNSENT TAKE OF THE CHAPTER TO STORAGE AS A DRAFT (human 2026-11-25: syncing, so the videos can be seen): each take is backed up on its own when it finishes, but only while signed in and online, so this catches the rest. A draft is not sent - Send stays the approval, since a sent take becomes a video posted with nobody looking again.");
+  ("BACK UP SENDS EVERY UNSENT TAKE ON THE PHONE TO STORAGE AS A DRAFT - every chapter and project, not only this one (human 2026-11-25: syncing, so the videos can be seen; a sync button for all videos, not just the current chapter). It is always shown, since takes elsewhere may wait even when this chapter has none: each take is backed up on its own when it finishes, but only while signed in and online, so this catches the rest. A draft is not sent - Send stays the approval, since a sent take becomes a video posted with nobody looking again.");
   let backup_button = app_shared_button_wide(buttons, "", backup);
   let entries = property_get(chapter, "entries");
   let refreshes = property_get(chapter, "refreshes");
@@ -194,16 +194,7 @@ export function app_bible_record_inline(
       chapter_reference,
     ]);
     html_text_set(count_line, text6);
-    let text7 = text_combine(
-      "🔄 Back up unsent videos for ",
-      chapter_reference,
-    );
-    html_text_set(backup_button, text7);
-    if (greater_than(left, 0)) {
-      html_display_block(backup_button);
-    } else {
-      html_display_none(backup_button);
-    }
+    html_text_set(backup_button, "🔄 Back up all unsent videos");
     if (app_bible_record_native_is()) {
       if (several) {
         html_display_block(chapter_button);
@@ -433,8 +424,7 @@ export function app_bible_record_inline(
     await firebase_auth_ensure(sign_in);
     let counts = null;
     async function work() {
-      let passages = list_map_property(entries, "verse_numbers");
-      counts = await app_bible_record_drafts_upload(chapter_code, passages);
+      counts = await app_bible_record_drafts_upload_all();
     }
     await busy(backup_button, "⏳ Backing up the videos...", work);
     let backed_up = property_get(counts, "backed_up");

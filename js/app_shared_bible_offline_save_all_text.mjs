@@ -22,6 +22,10 @@ export function app_shared_bible_offline_save_all_text(size) {
       before: " Guardar los ",
       after: "",
     },
+    por: {
+      before: " Guardar todos os ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: " Save all ",
@@ -32,6 +36,10 @@ export function app_shared_bible_offline_save_all_text(size) {
         after: " of them",
       },
       spa: {
+        before: " Save all ",
+        after: " of them",
+      },
+      por: {
         before: " Save all ",
         after: " of them",
       },
