@@ -1,22 +1,22 @@
-import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
-import { app_learn_js_symbols_separated_on_question_numbered_fifth } from "./app_learn_js_symbols_separated_on_question_numbered_fifth.mjs";
-import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
-import { app_learn_js_lesson_symbols_letters_batch_get } from "./app_learn_js_lesson_symbols_letters_batch_get.mjs";
-import { identity } from "./identity.mjs";
-import { boolean_random } from "./boolean_random.mjs";
-import { text_transform } from "./text_transform.mjs";
-import { list_alphabet_upper } from "./list_alphabet_upper.mjs";
-import { html_div_text } from "./html_div_text.mjs";
-import { html_text_characters_numbered } from "./html_text_characters_numbered.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
+import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { list_alphabet_lower } from "./list_alphabet_lower.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_learn_js_lesson_symbols_counting } from "./app_learn_js_lesson_symbols_counting.mjs";
-import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
+import { html_text_characters_numbered } from "./html_text_characters_numbered.mjs";
+import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
+import { list_alphabet_upper } from "./list_alphabet_upper.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
+import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
+import { boolean_random } from "./boolean_random.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
+import { identity } from "./identity.mjs";
+import { text_transform } from "./text_transform.mjs";
+import { app_learn_js_lesson_symbols_letters_batch_get } from "./app_learn_js_lesson_symbols_letters_batch_get.mjs";
+import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
+import { app_learn_js_lesson_symbols_counting } from "./app_learn_js_lesson_symbols_counting.mjs";
+import { app_learn_js_symbols_separated_on_question_numbered_fifth } from "./app_learn_js_symbols_separated_on_question_numbered_fifth.mjs";
 export function app_learn_js_lesson_symbols_letters() {
   function lambda(root, context) {
     let c = app_learn_js_container_light_blue(root);
@@ -39,6 +39,19 @@ export function app_learn_js_lesson_symbols_letters() {
     let div5 = html_div(container);
     let alphabet_upper = list_alphabet_upper();
     html_text_characters_numbered(div5, alphabet_upper);
+    let container3 = app_learn_js_container_light_blue(root);
+    html_div_cycle_bold(container3, [
+      "The letter A can be written as ",
+      "A",
+      " or ",
+      "a",
+    ]);
+    html_div_cycle_bold(container3, ["", "A", " is uppercase"]);
+    html_div_cycle_bold(container3, ["", "a", " is lowercase"]);
+    html_div_text(
+      container3,
+      "Every letter has an uppercase and a lowercase version",
+    );
     let container2 = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       container2,

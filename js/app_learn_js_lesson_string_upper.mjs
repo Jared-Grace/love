@@ -5,6 +5,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_string_includes_e } from "./app_learn_js_lesson_string_includes_e.mjs";
+import { app_learn_js_lesson_symbols_letters } from "./app_learn_js_lesson_symbols_letters.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -62,6 +63,18 @@ export function app_learn_js_lesson_string_upper() {
       context,
       app_learn_js_lesson_string_includes_e,
       ["", 's.includes("e")', " is a function called on the string ", "s"],
+    );
+    let box_letters = app_learn_js_container_light_blue(root);
+    app_learn_js_remember_from_lesson(
+      box_letters,
+      context,
+      app_learn_js_lesson_symbols_letters,
+      [
+        "every letter has an uppercase and a lowercase version, like ",
+        "A",
+        " and ",
+        "a",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
