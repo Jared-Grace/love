@@ -652,6 +652,7 @@ import { files_root_gate_run } from "./files_root_gate_run.mjs";
 import { app_index_cards_unserved_gate_run } from "./app_index_cards_unserved_gate_run.mjs";
 import { bible_glyph_chapters_marks_sibling_misplaced_gate_run } from "./bible_glyph_chapters_marks_sibling_misplaced_gate_run.mjs";
 import { ebible_language_codes_iso_639_3_renamed_gate_run } from "./ebible_language_codes_iso_639_3_renamed_gate_run.mjs";
+import { ebible_language_codes_iso_639_1_gate_run } from "./ebible_language_codes_iso_639_1_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -1309,6 +1310,7 @@ export function qa_gates() {
     app_index_cards_unserved_gate_run,
     bible_glyph_chapters_marks_sibling_misplaced_gate_run,
     ebible_language_codes_iso_639_3_renamed_gate_run,
+    ebible_language_codes_iso_639_1_gate_run,
   ];
   return gates;
 }
