@@ -117,7 +117,9 @@ export function app_learn_js_lesson_array_for_run_last() {
     let differs = "a[i] !== a[i + 1]";
     let lines_said = [
       [
-        "If ",
+        "For an array ",
+        "a",
+        ", if ",
         "i",
         " is the last index, then index ",
         "i + 1",
