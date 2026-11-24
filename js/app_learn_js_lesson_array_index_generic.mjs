@@ -1,3 +1,4 @@
+import { range_map } from "./range_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
@@ -59,8 +60,7 @@ export function app_learn_js_lesson_array_index_generic(options) {
   function step_kept() {
     return true;
   }
-  let list = range(index_steps);
-  let steps_all = list_map(list, step_kept);
+  let steps_all = range_map(index_steps, step_kept);
   function head_line(items) {
     let codes = list_map(items, json_to);
     let array = js_code_array(codes);
