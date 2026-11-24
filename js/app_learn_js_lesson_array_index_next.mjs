@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -45,8 +46,7 @@ export function app_learn_js_lesson_array_index_next() {
     let codes = list_map(items, json_to);
     let array = js_code_array(codes);
     let head = js_code_let_statement(name, array);
-    let right = json_to(index);
-    let index_line = js_code_let_statement("i", right);
+    let index_line = js_code_let_json_statement("i", index);
     let log_line = js_code_console_log_statement(name + "[" + read + "]");
     let lines = [head, index_line, log_line];
     let code = list_join_newline(lines);
