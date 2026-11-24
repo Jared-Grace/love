@@ -444,6 +444,7 @@ import { app_learn_js_lesson_array_for_pair_push } from "./app_learn_js_lesson_a
 import { app_learn_js_lesson_array_for_start_first } from "./app_learn_js_lesson_array_for_start_first.mjs";
 import { app_learn_js_lesson_array_for_in_order } from "./app_learn_js_lesson_array_for_in_order.mjs";
 import { app_learn_js_lesson_array_for_swap_if_bigger } from "./app_learn_js_lesson_array_for_swap_if_bigger.mjs";
+import { app_learn_js_lesson_array_for_differences } from "./app_learn_js_lesson_array_for_differences.mjs";
 import { app_learn_js_lesson_string_letter } from "./app_learn_js_lesson_string_letter.mjs";
 import { app_learn_js_lesson_string_for } from "./app_learn_js_lesson_string_for.mjs";
 import { app_learn_js_lesson_string_index_e } from "./app_learn_js_lesson_string_index_e.mjs";
@@ -1039,6 +1040,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_start_first,
     app_learn_js_lesson_array_for_in_order,
     app_learn_js_lesson_array_for_swap_if_bigger,
+    app_learn_js_lesson_array_for_differences,
     app_learn_js_lesson_string_letter,
     app_learn_js_lesson_string_for,
     app_learn_js_lesson_string_index_e,
