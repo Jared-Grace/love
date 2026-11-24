@@ -1,4 +1,4 @@
-import { abs } from "./abs.mjs";
+import { numbers_apart } from "./numbers_apart.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
@@ -101,8 +101,7 @@ export async function bible_glyph_chapter_draft_ot(chapter_code) {
   }
   function phrase_joined(x, y) {
     let first = less_than(x.k, y.k) ? x : y;
-    let n3 = subtract(x.k, y.k);
-    let left4 = abs(n3);
+    let left4 = numbers_apart(x.k, y.k);
     let r = equal(left4, 1) && first.joined;
     return r;
   }
