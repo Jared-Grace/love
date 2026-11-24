@@ -421,8 +421,7 @@ export function app_learn_js_program_step_through_generic(
   function piece_to_now(line_index, k) {
     "where the end of a line's piece stands in the line as it reads now; the last piece's end is found from the end of the line, since a piece written the long way grows and what follows it does not";
     let pieces = list_get(row_pieces, line_index);
-    let piece = list_get(pieces, k);
-    let to = property_get(piece, "to");
+    let to = list_get_property(pieces, k, "to");
     let left18 = list_size(pieces);
     let b3 = subtract(left18, 1);
     if (less_than(k, b3)) {
@@ -447,8 +446,7 @@ export function app_learn_js_program_step_through_generic(
     let pieces = list_get(row_pieces, line_index);
     let lit_from = property_get(state, "lit_from");
     for (let k = 0; less_than(k, list_size(pieces)); k++) {
-      let piece = list_get(pieces, k);
-      let left22 = property_get(piece, "from");
+      let left22 = list_get_property(pieces, k, "from");
       if (equal(left22, lit_from)) {
         let r5 = {
           from_now: position_now(line_index, lit_from),
@@ -898,8 +896,7 @@ export function app_learn_js_program_step_through_generic(
     let pieces_now = list_get(row_pieces, line_now);
     let from_now = property_get(piece_now, "from");
     for (let k = 0; less_than(k, list_size(pieces_now)); k++) {
-      let piece_k = list_get(pieces_now, k);
-      let from_k = property_get(piece_k, "from");
+      let from_k = list_get_property(pieces_now, k, "from");
       if (equal(from_k, from_now)) {
         let text_now = list_get(shown, line_now);
         let at = position_now(line_now, from_now);
