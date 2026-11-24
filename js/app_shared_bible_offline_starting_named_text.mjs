@@ -17,12 +17,20 @@ export function app_shared_bible_offline_starting_named_text(name) {
       before: "Sinisimulan ang pag-download ng ",
       after: "",
     },
+    spa: {
+      before: "Iniciando la descarga de ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: "Starting the download of ",
         after: "",
       },
       tgl: {
+        before: "Starting the download of ",
+        after: "",
+      },
+      spa: {
         before: "Starting the download of ",
         after: "",
       },
