@@ -19,9 +19,11 @@ export function app_shared_bible_licence_words_reader(licence) {
       eng: "Terms not read",
       urd: "شرائط پڑھی نہیں گئیں",
       tgl: "Hindi nabasa ang mga tuntunin",
+      spa: "No se pudieron leer los términos",
       translated_from: {
         urd: "Terms not read",
         tgl: "Terms not read",
+        spa: "Terms not read",
       },
     };
     let said = app_shared_text_reader_language(texts);
