@@ -414,9 +414,11 @@ SAFE_TEMP_SCRIPT_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
 # inner command and collapsed it to SUBSTITUTION_PLACEHOLDER (\x00): running
 # that command is already trusted, and the text it prints is only argv here.
 # A comma is let in too: a comma-joined list is how this repo passes a set,
-# and with braces refused a comma means nothing to the shell.
+# and with braces refused a comma means nothing to the shell. A caret is let
+# in for the regex a search script takes (`'^trespass'`): bash gives it a
+# meaning only as interactive history at the start of a line, never here.
 SAFE_TEMP_SCRIPT_ARG_RE = re.compile(
-    r"^(?:[A-Za-z0-9_.,/\x00-]|\$[A-Za-z_][A-Za-z0-9_]*|\$\{[A-Za-z_][A-Za-z0-9_]*\})+$"
+    r"^(?:[A-Za-z0-9_.,/^\x00-]|\$[A-Za-z_][A-Za-z0-9_]*|\$\{[A-Za-z_][A-Za-z0-9_]*\})+$"
 )
 SCRIPTS_TEMP_PREFIX = "scripts/temp/"
 # The same throwaway directory spelled from the root, so a redirect target
