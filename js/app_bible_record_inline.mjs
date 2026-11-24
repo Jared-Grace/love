@@ -397,17 +397,37 @@ export function app_bible_record_inline(
     html_display_none(playback);
     changed();
   }
+  ("A DOWNLOAD SAYS IT IS WORKING ON ITS OWN BUTTON (human 2026-11-24: a chapter took a while with nothing shown - a loading screen, or a toast so the reader can carry on): the button reads that the video is being got ready and is faded off until the video has been handed to the app, which then says on its own when it is trimming and when it is saved. The rest of the page stays usable meanwhile. REJECTED: a loading screen over the page - it would stop the reader doing anything else for the whole wait.");
+  async function busy(button, work) {
+    html_text_set(
+      button,
+      "⏳ Getting the video ready - this can take a minute...",
+    );
+    app_shared_button_disabled_set(button, true);
+    try {
+      await work();
+    } finally {
+      app_shared_button_disabled_set(button, false);
+      refresh();
+    }
+  }
   async function download() {
-    let name = app_bible_record_download_name(chapter_code, verse_numbers);
-    await app_bible_record_native_download(blob, name);
+    async function work() {
+      let name = app_bible_record_download_name(chapter_code, verse_numbers);
+      await app_bible_record_native_download(blob, name);
+    }
+    await busy(download_button, work);
   }
   async function chapter_download() {
-    let taken = entries_taken();
-    let blobs = list_map_property(taken, "blob");
-    let lists2 = list_map_property(taken, "verse_numbers");
-    let verses_taken = list_concat_multiple(lists2);
-    let name = app_bible_record_download_name(chapter_code, verses_taken);
-    await app_bible_record_native_download_multiple(blobs, name);
+    async function work() {
+      let taken = entries_taken();
+      let blobs = list_map_property(taken, "blob");
+      let lists2 = list_map_property(taken, "verse_numbers");
+      let verses_taken = list_concat_multiple(lists2);
+      let name = app_bible_record_download_name(chapter_code, verses_taken);
+      await app_bible_record_native_download_multiple(blobs, name);
+    }
+    await busy(chapter_button, work);
   }
   async function send() {
     await firebase_auth_ensure(sign_in);
