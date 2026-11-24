@@ -6,10 +6,12 @@ export function app_shared_bible_word_sites_recent_text_get() {
     urd: "حالیہ:",
     tgl: "Kamakailan:",
     spa: "Recientes:",
+    por: "Recentes:",
     translated_from: {
       urd: "Recent:",
       tgl: "Recent:",
       spa: "Recent:",
+      por: "Recent:",
     },
   };
   let v = app_shared_text_reader_language(texts);
