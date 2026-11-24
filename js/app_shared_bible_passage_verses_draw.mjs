@@ -41,12 +41,12 @@ export function app_shared_bible_passage_verses_draw(
   }
   let languages = list_map(languages_available, with_code);
   ("THE NUMBER COLUMN IS AS WIDE AS THIS PASSAGE'S LONGEST NUMBER AND NO WIDER (asked for by the human 2026-11-22: the numbers had a lot of space either side). The chapter reader's gutter is sized for a three-digit number inside a button with a border, and here the number is plain text, so borrowing it left a wide empty margin. Every row of one passage gets the same width, so 9 and 10 still line up; the number sits against the end of its column, next to the words it numbers.");
-  function digits(verse_number) {
+  function verse_number_digits(verse_number) {
     let shown = text_to(verse_number);
     let r = text_size(shown);
     return r;
   }
-  let list = list_map(verse_numbers, digits);
+  let list = list_map(verse_numbers, verse_number_digits);
   let widest = list_max(list);
   let left = text_combine(widest, "ch");
   function draw_verse(verse_number) {
