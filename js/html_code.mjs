@@ -1,90 +1,13 @@
+import { html_code_page } from "./html_code_page.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_code_indent } from "./html_code_indent.mjs";
 import { app_shared_title } from "./app_shared_title.mjs";
-import { html_code_element } from "./html_code_element.mjs";
-import { app_shared_icon_emoji } from "./app_shared_icon_emoji.mjs";
-import { html_code_favicon_emoji } from "./html_code_favicon_emoji.mjs";
-import { apps_pwa_is } from "./apps_pwa_is.mjs";
-import { html_code_manifest_link } from "./html_code_manifest_link.mjs";
-import { apps_service_worker_is } from "./apps_service_worker_is.mjs";
-import { html_code_service_worker_register } from "./html_code_service_worker_register.mjs";
-import { html_code_meta_charset } from "./html_code_meta_charset.mjs";
-import { html_code_meta_viewport } from "./html_code_meta_viewport.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { app_shared_description } from "./app_shared_description.mjs";
-import { app_shared_card_image_url } from "./app_shared_card_image_url.mjs";
-import { html_code_head_social_items } from "./html_code_head_social_items.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { html_code_children } from "./html_code_children.mjs";
-import { html_code_loading_splash } from "./html_code_loading_splash.mjs";
-import { html_code_error_banner } from "./html_code_error_banner.mjs";
-import { app_shared_language_code_app } from "./app_shared_language_code_app.mjs";
-import { html_code_error_notice } from "./html_code_error_notice.mjs";
-import { html_code_recorder_include } from "./html_code_recorder_include.mjs";
-import { text_empty } from "./text_empty.mjs";
-import { html_code_attributes_html } from "./html_code_attributes_html.mjs";
-import { html_code_doctype } from "./html_code_doctype.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function html_code(name, body) {
   "$plain name";
   "$plain body";
   arguments_assert(arguments, 2);
-  let attributes_none = {};
-  let indent = html_code_indent();
   let title_text = app_shared_title(name);
-  let title = html_code_element("title", attributes_none, title_text);
-  let emoji = app_shared_icon_emoji(name);
-  let favicon = html_code_favicon_emoji(emoji);
-  ("offering to install and keeping a copy on disk are two separate opt-ins, asked separately. an app that only wants a return visit to open at once registers the worker and never shows an install banner; an app that wants installing gets both, because a home-screen copy with no cached files would open to a blank page the first time it is opened offline");
-  let pwa = apps_pwa_is(name);
-  let manifest_link = null;
-  if (pwa) {
-    manifest_link = html_code_manifest_link(name);
-  }
-  let registers = apps_service_worker_is(name);
-  let service_worker = html_code_service_worker_register(registers);
-  let r2 = html_code_meta_charset();
-  let r3 = html_code_meta_viewport();
-  let head_items = list_filter_null_not_is([
-    r2,
-    r3,
-    favicon,
-    title,
-    manifest_link,
-  ]);
   let description = app_shared_description(name);
-  let image_url = app_shared_card_image_url(name);
-  let social_items = html_code_head_social_items(
-    title_text,
-    description,
-    image_url,
-  );
-  list_add_multiple(head_items, social_items);
-  let head_children = html_code_children(head_items, indent);
-  let head = html_code_element("head", attributes_none, head_children);
-  let splash = html_code_loading_splash();
-  let banner = html_code_error_banner();
-  ("the notice is the one piece of writing on the page that cannot ask the app what language its reader reads, because it is wanted exactly when the app never started. So it is told here, while the page is being built, out of the one place that says which language each app speaks.");
-  let language_code = app_shared_language_code_app(name);
-  let notice = html_code_error_notice(language_code);
-  ("the banner and the notice both stand BEFORE the app's own script on purpose - a handler installed by code that never got to run catches nothing, and a boot that dies is exactly when they are wanted");
-  ("they are two answers to the same moment, told apart by who is looking. the banner is the dev path only and shows the error, the file and the line, which is what the person FIXING it needs; the notice ships everywhere and says only that it did not load, with a way to try again, because a white screen tells a person neither what happened nor what to do and looks exactly like a page that is still coming");
-  let recorder = html_code_recorder_include();
-  let body_items = list_filter_null_not_is([
-    splash,
-    banner,
-    notice,
-    recorder,
-    body,
-    service_worker,
-  ]);
-  let body_children = html_code_children(body_items, indent);
-  let body_element = html_code_element("body", attributes_none, body_children);
-  let indent2 = text_empty();
-  let html_children = html_code_children([head, body_element], indent2);
-  let attributes_html = html_code_attributes_html(name);
-  let html = html_code_element("html", attributes_html, html_children);
-  let doctype = html_code_doctype();
-  let r = text_combine_multiple([doctype, "\n", html]);
+  let r = html_code_page(title_text, name, description, body);
   return r;
 }
