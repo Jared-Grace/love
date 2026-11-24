@@ -6,9 +6,11 @@ export function g_prayer_prompt() {
     eng: "What would you like to pray to God?",
     urd: "آپ خدا سے کیا دعا کرنا چاہیں گے؟",
     tgl: "Ano ang gusto mong ipanalangin sa Diyos?",
+    spa: "¿Qué te gustaría orar a Dios?",
     translated_from: {
       urd: "What would you like to pray to God?",
       tgl: "What would you like to pray to God?",
+      spa: "What would you like to pray to God?",
     },
   };
   let v = app_shared_text_reader_language(texts);
