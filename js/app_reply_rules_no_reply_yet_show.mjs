@@ -1,4 +1,4 @@
-import { greater_than } from "./greater_than.mjs";
+import { property_greater_than } from "./property_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
@@ -12,8 +12,7 @@ export function app_reply_rules_no_reply_yet_show(root, rows) {
   ("Says how many messages have no reply chosen yet, and draws only the ones that now need something: somebody really said it, or a rule has started answering it.");
   ("★ A LISTED MESSAGE NOBODY HAS SAID ASKS NOTHING OF ANYBODY, SO IT IS COUNTED AND NOT DRAWN. Reading it today could only produce a reply nobody needs yet.");
   function said_is(row) {
-    let said = property_get(row, "said");
-    let r = greater_than(said, 0);
+    let r = property_greater_than(row, "said", 0);
     return r;
   }
   let count_said = list_filter_size(rows, said_is);
