@@ -5,9 +5,11 @@ export function app_shared_bible_passage_previous_text_get() {
     eng: "Previous passage",
     urd: "پچھلا حصہ",
     tgl: "Nakaraang bahagi",
+    spa: "Pasaje anterior",
     translated_from: {
       urd: "Previous passage",
       tgl: "Previous passage",
+      spa: "Previous passage",
     },
   };
   let v = app_shared_text_reader_language(texts);
