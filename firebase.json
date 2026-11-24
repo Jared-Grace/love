@@ -168,6 +168,16 @@
         "source": "/learn_js",
         "destination": "/code",
         "type": 302
+      },
+      {
+        "source": "/supper_tgl",
+        "destination": "/supper_tl",
+        "type": 302
+      },
+      {
+        "source": "/learn_eng",
+        "destination": "/learn_en",
+        "type": 302
       }
     ],
     "headers": [
