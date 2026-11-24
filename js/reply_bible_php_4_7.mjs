@@ -1,3 +1,4 @@
+import { reply_sequence_optional } from "./reply_sequence_optional.mjs";
 import { reply_choice_optional } from "./reply_choice_optional.mjs";
 import { reply_word_god } from "./reply_word_god.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
@@ -36,8 +37,7 @@ export function reply_bible_php_4_7() {
   let through = reply_choice(["in", "through", "by"]);
   ("★ THE SAME NAME PIECE EVERY OTHER RULE USES. It allows Christ alone, so the verse can also be read as ending after Christ with Jesus left to the rule for his name. Both readings cost nothing, and the reading in fewer replies wins the tie, so the verse gets one reply. Measured 2026-11-11.");
   let named = reply_phrase_jesus();
-  let in_jesus = reply_sequence([through, named]);
-  let ending = reply_optional(in_jesus);
+  let ending = reply_sequence_optional([through, named]);
   let read = reply_sequence([
     peace,
     which,
