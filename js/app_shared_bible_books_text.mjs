@@ -6,9 +6,11 @@ export function app_shared_bible_books_text() {
     eng: "Books",
     urd: "کتابیں",
     tgl: "Mga aklat",
+    spa: "Libros",
     translated_from: {
       urd: "Books",
       tgl: "Books",
+      spa: "Books",
     },
   };
   let text = app_shared_text_reader_language(texts);
