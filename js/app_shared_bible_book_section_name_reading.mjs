@@ -117,10 +117,12 @@ export function app_shared_bible_book_section_name_reading(name) {
       urd: "دوسری کتابیں",
       tgl: "Iba pang aklat",
       spa: "Sin categoría",
+      por: "Sem categoria",
       translated_from: {
         urd: "Uncategorized",
         tgl: "Uncategorized",
         spa: "Uncategorized",
+        por: "Uncategorized",
       },
     };
     let r11 = app_shared_text_reader_language(texts);
