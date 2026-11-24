@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { property_list_map } from "./property_list_map.mjs";
 import { property_list_first } from "./property_list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -217,8 +218,7 @@ export function app_learn_js_program_trace_piece(state, piece, side) {
     let to3 = property_get(callee, "end");
     let callee_code = text_slice(code, from3, to3);
     let called_names = app_learn_js_operators_called();
-    let list = property_get(piece, "arguments");
-    let handed_count = list_size(list);
+    let handed_count = property_list_size(piece, "arguments");
     let one =
       list_includes(called_names, callee_code) && equal(handed_count, 1);
     let called_two_names = app_learn_js_operators_called_two();
