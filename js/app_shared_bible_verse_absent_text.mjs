@@ -7,9 +7,11 @@ export function app_shared_bible_verse_absent_text() {
     eng: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
     urd: "جو بائبل آپ پڑھ رہے ہیں اُس نے یہاں کوئی الفاظ نہیں دیے۔ ہو سکتا ہے اُس بائبل میں یہ آیت نہ ہو، یا الفاظ ابھی پہنچے نہ ہوں۔ کیا کسی اور بائبل میں یہ آیت ہو گی؟",
     tgl: "Walang ibinigay na salita rito ang Bibliang binabasa mo. Maaaring wala sa Bibliang iyon ang talatang ito, o maaaring hindi pa dumating ang mga salita. Mayroon kayang ibang Biblia na may talatang ito?",
+    spa: "La Biblia que estás leyendo no dio palabras aquí. Puede que esa Biblia no tenga este versículo, o que las palabras no hayan llegado. ¿Tendrá otra Biblia este versículo?",
     translated_from: {
       urd: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
       tgl: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
+      spa: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
     },
   };
   let text = app_shared_text_reader_language(texts);
