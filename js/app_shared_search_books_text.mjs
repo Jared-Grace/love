@@ -7,10 +7,12 @@ export function app_shared_search_books_text() {
     urd: "کتابیں تلاش کریں",
     tgl: "Maghanap ng mga aklat",
     spa: "Buscar libros",
+    por: "Pesquisar livros",
     translated_from: {
       urd: "Search books",
       tgl: "Search books",
       spa: "Search books",
+      por: "Search books",
     },
   };
   let text = app_shared_text_reader_language(texts);
