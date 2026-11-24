@@ -1,10 +1,10 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_index_main_fns } from "./app_index_main_fns.mjs";
 import { firebase_json_path } from "./firebase_json_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { folder_public_absolute } from "./folder_public_absolute.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { app_shared_name_prefix_without } from "./app_shared_name_prefix_without.mjs";
@@ -25,8 +25,7 @@ export async function app_index_cards_unserved() {
   let path = firebase_json_path();
   let config = await file_read_json(path);
   let hosting = property_get(config, "hosting");
-  let redirects = property_get(hosting, "redirects");
-  let sources = list_map_property(redirects, "source");
+  let sources = property_list_map_property(hosting, "redirects", "source");
   let folder = folder_public_absolute();
   let unserved = [];
   for (let entry of entries) {
