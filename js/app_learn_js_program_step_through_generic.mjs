@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_program_step_trace } from "./app_learn_js_program_step_trace.mjs";
@@ -256,8 +257,7 @@ export function app_learn_js_program_step_through_generic(
     let pieces_of_line = list_get(row_pieces, entry_line);
     let entry_from = property_get(entry_piece, "from");
     function lambda(other) {
-      let left10 = property_get(other, "from");
-      let eq = equal(left10, entry_from);
+      let eq = property_equals(other, "from", entry_from);
       return eq;
     }
     let already = pieces_of_line.some(lambda);
@@ -437,8 +437,7 @@ export function app_learn_js_program_step_through_generic(
   }
   function lit_piece_now(line_index) {
     "where the piece standing coloured on this line stands now, or null when no piece on it is coloured";
-    let lit_line = property_get(state, "lit_line");
-    let b10 = equal(lit_line, line_index);
+    let b10 = property_equals(state, "lit_line", line_index);
     if (not(b10)) {
       return null;
     }
@@ -809,8 +808,7 @@ export function app_learn_js_program_step_through_generic(
       }
       async function blue_later() {
         await sleep_success_color();
-        let left9 = property_get(state, "index");
-        let b2 = equal(left9, index);
+        let b2 = property_equals(state, "index", index);
         if (not(b2)) {
           return;
         }
