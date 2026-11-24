@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
@@ -53,8 +54,7 @@ export function app_learn_js_lesson_array_for_luhn_whole() {
     "the Luhn loop from the shared writer without its last line, then the adding loop and check written out";
     let code = app_learn_js_luhn_program(items, start_back, 2, body);
     let lines = text_split_newline(code);
-    let left = list_size(lines);
-    let difference = subtract(left, 1);
+    let difference = list_size_subtract(lines, 1);
     let kept = lines.slice(0, difference);
     let start = js_code_let_statement("total", "0");
     let loop = js_code_for_start_condition_update_lines(
