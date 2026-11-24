@@ -71,29 +71,31 @@ export function app_calendar_host_about(area, key, settings) {
   let block_area = app_shared_field(area);
   function minutes_choices(list) {
     function choice(m) {
-      let r7 = {
+      let r = {
         key: m,
         text: m + " minutes",
       };
-      return r7;
+      return r;
     }
     let r8 = list_map(list, choice);
     return r8;
   }
   function minutes_draw() {
     html_clear(meeting_area);
+    let choices = minutes_choices([25, 30]);
     app_shared_choice_row(
       meeting_area,
       "Meeting length",
-      minutes_choices([25, 30]),
+      choices,
       meeting_minutes,
       meeting_pick,
     );
     html_clear(block_area);
+    let choices2 = minutes_choices([30, 60]);
     app_shared_choice_row(
       block_area,
       "A meeting can start every",
-      minutes_choices([30, 60]),
+      choices2,
       block_minutes,
       block_pick,
     );
