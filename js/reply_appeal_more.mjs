@@ -1,7 +1,7 @@
+import { reply_sequence_optional } from "./reply_sequence_optional.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
-import { reply_optional } from "./reply_optional.mjs";
 import { text_may_the_lord_exclamation } from "./text_may_the_lord_exclamation.mjs";
 import { reply_on_match_prayer } from "./reply_on_match_prayer.mjs";
 import { reply_prayer_abundance_of_prayer } from "./reply_prayer_abundance_of_prayer.mjs";
@@ -10,8 +10,7 @@ export function reply_appeal_more() {
   ("One more line told in an appeal for help that asks for no money by itself: how bad things are, which is prayed for, or to keep them in mind, which is answered like a request for prayer.");
   ("★ IT NEVER STANDS ALONE. Told on its own, how hot it is or that somebody cannot work is not an appeal, so it only counts beside one of the needs the appeal is about.");
   let you = reply_choice(["u", "you"]);
-  let know = reply_sequence([you, "know"]);
-  let o_know = reply_optional(know);
+  let o_know = reply_sequence_optional([you, "know"]);
   let heat = reply_sequence([
     o_know,
     "many",
