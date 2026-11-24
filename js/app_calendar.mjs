@@ -50,10 +50,15 @@ export async function app_calendar(context) {
   }
   let show_meetings = async function lambda() {
     if (guest_key) {
-      await app_calendar_meetings(meetings_area, guest_key, guest_show, false);
+      await app_calendar_meetings(meetings_area, guest_key, changed, false);
     }
   };
   await guest_show();
+  async function changed() {
+    'A change to the meetings - a cancel - takes the "Booked" box off the top too, since it may name the meeting just cancelled (human, 2026-11-24: "if book meeting and cancel then \\"Booked\\" at the top should go away?").';
+    html_clear(booked_area);
+    await guest_show();
+  }
   async function booked(draw) {
     'A booking goes back to the home screen - what was booked and the guest\'s link on top, then their meetings, then the hours - and scrolls to the top so the booked line is the first thing seen (human, 2026-11-24: "when booked meeting should take back to home screen that says your meetings but the info should be at the top").';
     html_clear(booked_area);
