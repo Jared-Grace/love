@@ -1,3 +1,4 @@
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { equal } from "./equal.mjs";
@@ -6,8 +7,6 @@ import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join } from "./list_join.mjs";
 import { not } from "./not.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { app_learn_js_operators_method } from "./app_learn_js_operators_method.mjs";
@@ -65,11 +64,11 @@ export function app_learn_js_expression_parsed_meaning(node) {
   }
   if (equal(type, "ArrayExpression")) {
     let elements = property_get(node, "elements");
-    let element_meanings = list_map(
+    let elements_joined = list_map_join_separator(
       elements,
       app_learn_js_expression_parsed_meaning,
+      ",",
     );
-    let elements_joined = list_join(element_meanings, ",");
     let array_meaning = text_combine_multiple(["[", elements_joined, "]"]);
     return array_meaning;
   }
