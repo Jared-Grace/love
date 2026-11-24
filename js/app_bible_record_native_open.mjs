@@ -1,10 +1,11 @@
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
-import { json_to } from "./json_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_bible_record_text_layout } from "./app_bible_record_text_layout.mjs";
+import { multiply } from "./multiply.mjs";
+import { app_bible_record_text_layout_band } from "./app_bible_record_text_layout_band.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { json_to } from "./json_to.mjs";
 export function app_bible_record_native_open(reference, text, done) {
   "$plain reference text done";
   "Hands the recording to the Android app this page is running inside (android/record), which opens the camera upright and whole - something a phone's browser would not do (human 2026-11-23: no way to make the phone camera vertical and large?). The page still lays out the words, with the same layout the canvas uses, and the app only paints the lines it is given, so there is one layout, written once, here.";
@@ -16,7 +17,9 @@ export function app_bible_record_native_open(reference, text, done) {
   let size = app_bible_record_frame_size();
   let width = property_get(size, "width");
   let height = property_get(size, "height");
-  let layout = app_bible_record_text_layout(ctx, width, height, text, height);
+  ("THE WORDS FILL A FIXED BAND, 40% OF THE HEIGHT, ACROSS THE TOP (human 2026-11-24: the overlay always the same size, its letters adjusting to fit): every take then looks alike, whatever the passage's length.");
+  let band = multiply(height, 0.4);
+  let layout = app_bible_record_text_layout_band(ctx, width, text, band);
   let message = {
     reference,
     width,
