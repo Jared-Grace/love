@@ -8,9 +8,11 @@ export function app_shared_bible_books_question_text() {
     eng: "What book of the Bible do you want to choose?",
     urd: "آپ بائبل کی کون سی کتاب چننا چاہتے ہیں؟",
     tgl: "Anong aklat ng Biblia ang gusto mong piliin?",
+    spa: "¿Qué libro de la Biblia quieres elegir?",
     translated_from: {
       urd: "What book of the Bible do you want to choose?",
       tgl: "What book of the Bible do you want to choose?",
+      spa: "What book of the Bible do you want to choose?",
     },
   };
   let text = app_shared_text_reader_language(texts);
