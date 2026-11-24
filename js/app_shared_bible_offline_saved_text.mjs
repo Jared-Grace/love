@@ -19,12 +19,20 @@ export function app_shared_bible_offline_saved_text(name) {
       before: " Naka-save ang ",
       after: " sa device na ito",
     },
+    spa: {
+      before: " ",
+      after: " está guardado en este dispositivo",
+    },
     translated_from: {
       urd: {
         before: " ",
         after: " is saved on this device",
       },
       tgl: {
+        before: " ",
+        after: " is saved on this device",
+      },
+      spa: {
         before: " ",
         after: " is saved on this device",
       },
