@@ -7,10 +7,12 @@ export function app_shared_bible_books_text() {
     urd: "کتابیں",
     tgl: "Mga aklat",
     spa: "Libros",
+    por: "Livros",
     translated_from: {
       urd: "Books",
       tgl: "Books",
       spa: "Books",
+      por: "Books",
     },
   };
   let text = app_shared_text_reader_language(texts);
