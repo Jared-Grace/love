@@ -1,6 +1,6 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { json_to } from "./json_to.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_index } from "./js_code_index.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -41,8 +41,7 @@ export function app_learn_js_lesson_string_letter() {
   ("A builder of its own rather than a string mode in the array index lessons' builder: that one serves ten lessons and is about arrays throughout, a name a, a head of items, i++ steps; a string lesson shares none of those but the index");
   let name = "s";
   function head_line(word) {
-    let json = json_to(word);
-    let line = js_code_let_statement(name, json);
+    let line = js_code_let_json_statement(name, word);
     return line;
   }
   function index_line(index) {
