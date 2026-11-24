@@ -8,10 +8,12 @@ export function app_shared_native_update_text() {
     urd: " ایپ اپ ڈیٹ کریں",
     tgl: " I-update ang app",
     spa: " Actualizar la aplicación",
+    por: " Atualizar o aplicativo",
     translated_from: {
       urd: " Update app",
       tgl: " Update app",
       spa: " Update app",
+      por: " Update app",
     },
   };
   let label = app_shared_text_reader_language(texts);
