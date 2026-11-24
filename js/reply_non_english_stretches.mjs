@@ -1,3 +1,4 @@
+import { reply_word_kind_of } from "./reply_word_kind_of.mjs";
 import { reply_message_words_placed } from "./reply_message_words_placed.mjs";
 import { reply_pairs_unparsable } from "./reply_pairs_unparsable.mjs";
 import { equal } from "./equal.mjs";
@@ -21,25 +22,13 @@ export function reply_non_english_stretches(message, lookup) {
   let pairs2 = reply_pairs_unparsable();
   let unparsable = new Set(pairs2);
   function kind_of(word) {
-    if (/[0-9]/.test(word)) {
-      let number = "number";
-      return number;
-    }
-    if (lookup.words.has(word)) {
-      let dictionary = "dictionary";
-      return dictionary;
-    }
-    if (lookup.names.has(word)) {
-      let name = "name";
-      return name;
-    }
-    let unknown = "unknown";
-    return unknown;
+    let r = reply_word_kind_of(word, lookup);
+    return r;
   }
   function word_kind(placed) {
     if (placed.link) {
-      let unknown2 = "unknown";
-      return unknown2;
+      let unknown = "unknown";
+      return unknown;
     }
     let kind = kind_of(placed.word);
     return kind;
