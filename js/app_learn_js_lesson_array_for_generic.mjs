@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -580,8 +581,7 @@ export function app_learn_js_lesson_array_for_generic(options) {
         function smallest_misplaced(items4) {
           let least = list_min(items4);
           let least_at = list_index_of(items4, least);
-          let left11 = list_size(items4);
-          let last_at = subtract(left11, 1);
+          let last_at = list_size_subtract(items4, 1);
           let misplaced =
             equal(least_at, 0) ||
             equal(least_at, last_at) ||
