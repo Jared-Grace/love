@@ -8,9 +8,11 @@ export function app_shared_font_size_larger_text() {
     eng: " Font size larger",
     urd: " لکھائی بڑی کریں",
     tgl: " Palakihin ang titik",
+    spa: " Letra más grande",
     translated_from: {
       urd: " Font size larger",
       tgl: " Font size larger",
+      spa: " Font size larger",
     },
   };
   let label = app_shared_text_reader_language(texts);
