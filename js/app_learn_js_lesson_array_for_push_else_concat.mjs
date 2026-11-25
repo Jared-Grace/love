@@ -22,7 +22,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_for_push_else_concat() {
   arguments_assert(arguments, 0);
-  ('moving every copy of one letter to the end: let move = "x"; one for loop pushing a[i] to keep if it is not move, else to moved, then console.log(keep.concat(moved))');
+  ('moving every copy of one letter to the end: let move = "x"; one for loop pushing a[i] to moved if it is move, else to keep, then console.log(keep.concat(moved))');
   ("2026-11-25, at the human's asking, after Concat. Not picked, as the human chose: two for loops one after another, the first pushing what is not move and the second what is, put after Leave one value out - it checks every letter twice with two opposite tests, and two loops filling one array is already taught by Two arrays into a new one. Splitting into two arrays with if and else is taught by Evens and odds; the new fact here is joining the two with concat, so the letters that matched come last and the others keep their order.");
   ("The letter moved is held in move rather than written in each test, at the human's asking, and is a letter rather than 0, so it is not mistaken for an index. Each input is five or six letters from b c d f g h k m, one of them moved, appearing one to three times, the others different; it is drawn again until moving changes it.");
   ("The wrong programs are: moved.concat(keep) (the matching letters first), writing out keep alone, and the two pushes swapped. None has a loop that can run forever. The other wrong answer offered is a as it was.");
@@ -41,10 +41,10 @@ export function app_learn_js_lesson_array_for_push_else_concat() {
       "let keep = [];",
       "let moved = [];",
       "for (let i = 0; i < a.length; i++) {",
-      "  if (a[i] !== move) {",
-      "    " + keep_to + ".push(a[i]);",
-      "  } else {",
+      "  if (a[i] === move) {",
       "    " + moved_to + ".push(a[i]);",
+      "  } else {",
+      "    " + keep_to + ".push(a[i]);",
       "  }",
       "}",
       "console.log(" + logged + ");",
