@@ -7,11 +7,13 @@ export function html_button_copy_text() {
     tgl: " Kopyahin",
     spa: " Copiar",
     por: " Copiar",
+    ind: " Salin",
     translated_from: {
       urd: " Copy",
       tgl: " Copy",
       spa: " Copy",
       por: " Copy",
+      ind: " Copy",
     },
   };
   let c = app_shared_text_reader_language_copy(texts);
