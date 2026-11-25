@@ -6,6 +6,7 @@ import { html_flex_column_center } from "./html_flex_column_center.mjs";
 import { html_display_set } from "./html_display_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_span_text_smaller } from "./html_span_text_smaller.mjs";
+import { app_shared_color_character_number } from "./app_shared_color_character_number.mjs";
 import { noop } from "./noop.mjs";
 import { html_cycle } from "./html_cycle.mjs";
 export function html_text_characters_numbered_color(parent, text, color) {
@@ -21,7 +22,8 @@ export function html_text_characters_numbered_color(parent, text, color) {
       html_font_color_set(span, color);
       let words = i();
       let s = html_span_text_smaller(span, words);
-      html_font_color_set(s, "rgb(0, 110, 221)");
+      let color2 = app_shared_color_character_number();
+      html_font_color_set(s, color2);
     },
     noop,
   ];

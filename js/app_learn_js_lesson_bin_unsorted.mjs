@@ -1,9 +1,10 @@
-import { divide_floor } from "./divide_floor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_bin_search_program } from "./app_learn_js_bin_search_program.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
+import { divide_floor } from "./divide_floor.mjs";
 import { equal } from "./equal.mjs";
+import { list_get } from "./list_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_learn_js_bin_items } from "./app_learn_js_bin_items.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -32,10 +33,12 @@ export function app_learn_js_lesson_bin_unsorted() {
     let high = subtract(items.length, 1);
     while (less_than_equal(low, high)) {
       let middle = divide_floor(low + high, 2);
-      if (equal(items[middle], goal)) {
+      let left = list_get(items, middle);
+      if (equal(left, goal)) {
         return true;
       }
-      if (less_than(items[middle], goal)) {
+      let a = list_get(items, middle);
+      if (less_than(a, goal)) {
         low = middle + 1;
       } else {
         high = subtract(middle, 1);

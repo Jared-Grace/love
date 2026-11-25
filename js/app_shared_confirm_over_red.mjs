@@ -64,14 +64,14 @@ export function app_shared_confirm_over_red(
     return b;
   }
   let button_back = wide(app_shared_button_green);
-  app_shared_confirm_choices(
-    box,
+  app_shared_confirm_choices({
+    parent: box,
     question,
     button_confirm,
     text_confirm,
-    yes,
+    on_confirm: yes,
     button_back,
     text_back,
-    close,
-  );
+    on_back: close,
+  });
 }

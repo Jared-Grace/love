@@ -20,14 +20,14 @@ export function app_shared_confirm_generic({
   app_shared_screen_asking_set(context);
   let on_back = app_shared_screen_later(context, screen_back);
   let text_back = app_shared_button_back_text();
-  app_shared_confirm_choices(
+  app_shared_confirm_choices({
     parent,
     question,
     button_confirm,
     text_confirm,
     on_confirm,
-    app_shared_button,
+    button_back: app_shared_button,
     text_back,
     on_back,
-  );
+  });
 }
