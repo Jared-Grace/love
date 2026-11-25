@@ -1,5 +1,3 @@
-import { app_shared_bible_verses_shown_hash_key } from "./app_shared_bible_verses_shown_hash_key.mjs";
-import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_next_wrap } from "./list_next_wrap.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,8 +5,7 @@ import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
-import { hash_to_url } from "./hash_to_url.mjs";
-import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { app_next_url_from_hash } from "./app_next_url_from_hash.mjs";
 export function app_next_url_onward(hash, list, run) {
   "The link to what comes after the verses just shown, written as this page's own address with the reading moved on.";
   "Everything else about the link is kept - which languages, how many verses - because somebody following it is the same reader carrying on, and only where they are has changed.";
@@ -24,10 +21,6 @@ export function app_next_url_onward(hash, list, run) {
   let property_name3 = app_shared_bible_chapter_hash_key();
   property_set(hash, property_name3, chapter_code);
   ("How far this passage had been extended is deliberately not carried on. Everything else about the link is kept because it is the same reader carrying on, but pressing for more is about the passage being read now, not about the reader - so the passage after it starts at the size they chose for a message, the way every other one does. Carried on, one press for more would have made every message from then on longer, and nothing on the screen would have said why.");
-  let property_name4 = app_shared_bible_verses_shown_hash_key();
-  property_delete_if_exists(hash, property_name4);
-  let h = hash_to_url(hash);
-  let url = html_url_without_hash();
-  url += h;
+  let url = app_next_url_from_hash(hash);
   return url;
 }
