@@ -276,7 +276,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       return;
     }
     ("A time is picked in steps: first a day of the week or, when the open hours reach into more than one month, a month; then a date; then a time. Each step has a Back button to the one before.");
-    ("Rejected: month only (a guest free only on Saturdays must open every date to find them); weekday only (a guest planning a set week thinks in dates); a first screen asking which way to browse (one more press for everyone).");
+    ("Rejected: month only (a guest free only on Saturdays must open every date to find them); weekday only (a guest planning a set week thinks in dates).");
     ("A weekday, month or date with no open hour - closed, or fully booked - shows as text saying it is unavailable, never as a button (human: \"Instead of a button, text should say 'x is unavailable'\").");
     let now_iso = new Date().toISOString();
     let months = calendar_slots_by_month(
@@ -315,17 +315,40 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
         "font-weight": big ? "bold" : "",
       });
     }
+    ('No scroll box: each screen holds one short list, and a box scrolling inside the page hid where one choice ended and the next began (human, 2026-11-25: "container below with scroll but it includes pick month - this isn\'t correct?").');
     let list = html_div(pick_field);
-    let element = html_component_element_get(list);
-    element.style.maxHeight = "40vh";
-    element.style.overflowY = "auto";
-    function first_show() {
+    function screen_start(words, back) {
       chosen = null;
       final_set(false);
       html_clear(list);
-      chosen_line_set("Pick a day of the week:", false);
-      back_button(list);
+      chosen_line_set(words, false);
+      if (equal(back, null)) {
+        back_button(list);
+      } else {
+        app_shared_button_uncolored(list, "← Back", back);
+      }
       html_div(list);
+    }
+    function first_show() {
+      'WEEKDAY OR MONTH IS ITS OWN SCREEN (human, 2026-11-25: "should it be two buttons: I want to choose a day of the week / I want to choose a month?"), overriding the earlier rejection of "a first screen asking which way to browse": one choice per screen now outranks one press saved. With the open hours inside one month there is no month to pick, so the weekdays come at once.';
+      let b5 = greater_than(months.length, 1);
+      if (not(b5)) {
+        weekdays_show();
+        return;
+      }
+      screen_start("How do you want to pick a day?", null);
+      app_shared_button_uncolored(
+        list,
+        "Choose a day of the week",
+        weekdays_show,
+      );
+      app_shared_button_uncolored(list, "Choose a month", months_show);
+    }
+    function weekdays_show() {
+      screen_start(
+        "Pick a day of the week:",
+        greater_than(months.length, 1) ? first_show : null,
+      );
       for (let weekday of weekdays) {
         let b = days_open(weekday.days);
         if (not(b)) {
@@ -345,6 +368,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           days_show({
             label: weekday.label + "s",
             days: weekday.days,
+            back: weekdays_show,
           });
         }
         ("Weekday buttons are as wide as their word and sit side by side (human: thin, not wide), so all seven fit in a line or two.");
@@ -358,30 +382,27 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           "margin-right": "0.3em",
         });
       }
-      if (greater_than(months.length, 1)) {
-        html_div_text(list, "Or pick a month:");
-        for (let month of months) {
-          let b2 = days_open(month.days);
-          if (not(b2)) {
-            unavailable_show(month.label + " is", "");
-            continue;
-          }
-          function month_pick() {
-            days_show({
-              label: "in " + month.label,
-              days: month.days,
-            });
-          }
-          app_shared_button_uncolored(list, month.label, month_pick);
+    }
+    function months_show() {
+      screen_start("Pick a month:", first_show);
+      for (let month of months) {
+        let b2 = days_open(month.days);
+        if (not(b2)) {
+          unavailable_show(month.label + " is", "");
+          continue;
         }
+        function month_pick() {
+          days_show({
+            label: "in " + month.label,
+            days: month.days,
+            back: months_show,
+          });
+        }
+        app_shared_button_uncolored(list, month.label, month_pick);
       }
     }
     function days_show(group) {
-      chosen = null;
-      final_set(false);
-      html_clear(list);
-      chosen_line_set("Pick a date - " + group.label + ":", false);
-      app_shared_button_uncolored(list, "← Back", first_show);
+      screen_start("Pick a date - " + group.label + ":", group.back);
       for (let day of group.days) {
         if (equal(day.times.length, 0)) {
           unavailable_show(day.label + " is", "");
@@ -394,14 +415,10 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       }
     }
     function times_show(group, day) {
-      chosen = null;
-      final_set(false);
-      html_clear(list);
-      chosen_line_set("Pick a time on " + day.label + ":", false);
       function day_back() {
         days_show(group);
       }
-      app_shared_button_uncolored(list, "← Back", day_back);
+      screen_start("Pick a time on " + day.label + ":", day_back);
       for (let time of day.times) {
         function time_pick() {
           chosen = time.slot;
