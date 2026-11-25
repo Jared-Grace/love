@@ -33,6 +33,12 @@ export function app_shared_money_section_used_for() {
         "As ofertas vão para as pessoas que fazem a obra: o salário delas e o sustento de suas próprias famílias. A Escritura diz que um homem deve prover para sua família (1 Timóteo 5:8).",
       ],
     },
+    ind: {
+      title: "Untuk apa persembahan dipakai?",
+      lines: [
+        "Persembahan diberikan kepada orang-orang yang mengerjakan pekerjaan ini: upah mereka, dan nafkah bagi keluarga mereka sendiri. Firman Tuhan berkata seorang laki-laki harus memelihara keluarganya (1 Timotius 5:8).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "What is a gift used for?",
@@ -53,6 +59,12 @@ export function app_shared_money_section_used_for() {
         ],
       },
       por: {
+        title: "What is a gift used for?",
+        lines: [
+          "Gifts go to the people doing the work - their wages, and providing for their own households. Scripture says a man must provide for his household (1 Timothy 5:8).",
+        ],
+      },
+      ind: {
         title: "What is a gift used for?",
         lines: [
           "Gifts go to the people doing the work - their wages, and providing for their own households. Scripture says a man must provide for his household (1 Timothy 5:8).",
