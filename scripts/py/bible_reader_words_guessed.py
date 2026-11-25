@@ -29,7 +29,12 @@ def guessed(g2p, word):
     _, tokens = g2p(word)
     sounds = []
     for tk in tokens:
-        rating = tk._.rating
+        # The reader files the rating of a word it answered whole on the token
+        # itself, and only the rating of a word it took apart under "_" - so
+        # reading "_" alone calls every whole word unrated, which is a guess.
+        rating = getattr(tk, "rating", None)
+        if rating is None:
+            rating = tk._.rating
         if rating is None or rating <= GUESS_RATING_MAX:
             sounds.append(tk.phonemes or "")
     return " ".join(sounds) if sounds else None

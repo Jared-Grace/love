@@ -1,6 +1,3 @@
-import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
-import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
-import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -9,6 +6,7 @@ import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_update_statement } from "./js_code_update_statement.mjs";
+import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -17,6 +15,7 @@ import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
@@ -29,6 +28,7 @@ import { list_unique } from "./list_unique.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_while_runs_max } from "./app_learn_js_while_runs_max.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while } from "./app_learn_js_lesson_while.mjs";
@@ -198,19 +198,21 @@ export function app_learn_js_lesson_while_two_meet() {
   }
   function said_false(root, a5, b5) {
     let condition3 = js_code_binary_spaced_nb(a5, less, b5);
+    let r = app_learn_js_braces_dots();
     app_learn_js_div_cycle_code(root, [
       "",
       condition3,
       " is ",
       "false",
       ", so the ",
-      app_learn_js_braces_dots(),
+      r,
       " is skipped, and the code continues after it",
     ]);
   }
   function above(root, context) {
     "While remembered, then a while changing two names, landing together, and then passing each other";
     let box_one = app_learn_js_container_light_blue(root);
+    let r2 = app_learn_js_braces_dots();
     app_learn_js_remember_from_lesson(
       box_one,
       context,
@@ -219,7 +221,7 @@ export function app_learn_js_lesson_while_two_meet() {
         "a ",
         "while",
         " runs its ",
-        app_learn_js_braces_dots(),
+        r2,
         " again and again, while what it asks is ",
         "true",
         ".",
@@ -251,6 +253,58 @@ export function app_learn_js_lesson_while_two_meet() {
     app_learn_js_code_lines_writes_out(box_three, lines4, value2);
     said(box_three, 3, 4);
     said_false(box_three, 4, 3);
+    ("2026-11-25, at the human's asking, after a learner asked for a shortcut: the midpoint rule the human gave, with why it holds. It gives the same answer as stepping on every program the lesson draws, including the ones that never run, which is why the rule opens with asking a < b first.");
+    let box_four = app_learn_js_container_light_blue(root);
+    let lines_said = [
+      ["A shortcut, and why it works:"],
+      [
+        "Each time, ",
+        name_a,
+        " goes up 1 and ",
+        name_b,
+        " goes down 1, so ",
+        "a + b",
+        " stays the same",
+      ],
+      ["So the midpoint, ", "(a + b) / 2", ", stays the same too"],
+      ["And each time, they get 2 closer"],
+      [
+        "The ",
+        "while",
+        " stops once ",
+        "a < b",
+        " is ",
+        "false",
+        ": when they are equal, or when they have just crossed, 1 apart",
+      ],
+      ["So:"],
+      ["If ", "a < b", " is ", "false", " at the start, nothing changes"],
+      [
+        "Otherwise, if the midpoint is a whole number, both end on it: ",
+        "(1 + 7) / 2",
+        " is ",
+        "4",
+        "",
+      ],
+      [
+        "If it ends in .5, they cross it: ",
+        "(3 + 4) / 2",
+        " is ",
+        "3.5",
+        ", so ",
+        name_a,
+        " ends at ",
+        "4",
+        " and ",
+        name_b,
+        " at ",
+        "3",
+        "",
+      ],
+    ];
+    for (let line of lines_said) {
+      app_learn_js_div_cycle_code(box_four, line);
+    }
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Two numbers meeting",
