@@ -42,7 +42,9 @@ import java.io.File
 class MainActivity : AppCompatActivity() {
     companion object {
         const val DEV_HOST = "omnibook5ml.local"
-        const val START_URL = "https://omnibook5ml.local:8443/dev/bible_record.html"
+        // The owner's build (debug) opens the development page; the store build (release)
+        // opens the public site (app/build.gradle.kts).
+        val START_URL: String = BuildConfig.START_URL
         const val TAKE = "take.mp4"
         const val PERMISSIONS_ASKED = 1
     }
@@ -61,10 +63,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val root = FrameLayout(this)
-        web = WebShell.create(this, DEV_HOST) { name -> if (name == TAKE && take.exists()) take else null }
+        web = WebShell.create(this, DEV_HOST, START_URL) { name -> if (name == TAKE && take.exists()) take else null }
         web.addJavascriptInterface(Bridge(), "love_record_native")
-        // Update app is offered by the page, in its Settings (human 2026-11-23).
-        app_update_bridge_add(this, web, "record", "Record Bible by ChristArose")
+        if (BuildConfig.STORE) {
+            // The store build keeps every take on the phone (human 2026-11-25: no send or
+            // sync); the page sees love_record_local and hides Send and Back up. It never
+            // updates itself either - the store does that.
+            web.addJavascriptInterface(Any(), "love_record_local")
+        } else {
+            // Update app is offered by the page, in its Settings (human 2026-11-23).
+            app_update_bridge_add(this, web, "record", "Record Bible by ChristArose")
+        }
         root.addView(web, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
 
         camera_layer = FrameLayout(this)
