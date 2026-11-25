@@ -799,9 +799,8 @@ export function app_learn_js_lesson_ids_short() {
         text_frozen("swap_if_bigger"),
       app_learn_js_lesson_array_for_differences: text_frozen("array_diffs"),
       app_learn_js_lesson_array_for_steps_up: text_frozen("array_steps_up"),
-      app_learn_js_lesson_array_for_biggest_step_up: text_frozen(
-        "array_biggest_step_up",
-      ),
+      app_learn_js_lesson_array_for_biggest_step_up:
+        text_frozen("biggest_step_up"),
       app_learn_js_lesson_array_for_big_at: text_frozen("array_big_at"),
       app_learn_js_lesson_array_swap_name: text_frozen("array_swap_name"),
       app_learn_js_lesson_object_property_keys_for:

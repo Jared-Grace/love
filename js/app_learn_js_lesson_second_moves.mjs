@@ -1,7 +1,8 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { equal } from "./equal.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
+import { property_get } from "./property_get.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -32,7 +33,8 @@ export function app_learn_js_lesson_second_moves() {
       less: ["second = big;", "big = n;"],
     };
     let condition = equal(way, "less") ? "n < big" : "n > big";
-    let if_lines = js_code_if_lines_multiple(condition, bodies[way]);
+    let statements = property_get(bodies, way);
+    let if_lines = js_code_if_lines_multiple(condition, statements);
     let statement = js_code_console_log_statement("big");
     let statement2 = js_code_console_log_statement("second");
     let logs = [statement, statement2];

@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function app_learn_js_code_array_while_smaller(
   input,
@@ -36,7 +37,7 @@ export function app_learn_js_code_array_while_smaller(
     b: "j",
   };
   for (let name of leftovers) {
-    let index = index_of[name];
+    let index = property_get(index_of, name);
     lines.push("while (" + index + " < " + name + ".length) {");
     lines.push("  console.log(" + name + "[" + index + "]);");
     lines.push("  " + index + "++;");

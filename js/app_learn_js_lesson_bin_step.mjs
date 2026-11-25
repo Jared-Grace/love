@@ -1,10 +1,9 @@
-import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
-import { divide_floor } from "./divide_floor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { equal } from "./equal.mjs";
 import { js_code_if_else_if_with_else_lines_multiple } from "./js_code_if_else_if_with_else_lines_multiple.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
@@ -13,11 +12,13 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { js_code_if_else_if_lines_multiple } from "./js_code_if_else_if_lines_multiple.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { divide_floor } from "./divide_floor.mjs";
 import { app_learn_js_bin_items } from "./app_learn_js_bin_items.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_get } from "./list_get.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_else_if_else } from "./app_learn_js_lesson_else_if_else.mjs";
@@ -101,7 +102,7 @@ export function app_learn_js_lesson_bin_step() {
     let at = list_shuffle_take(at_all, 1)[0];
     let input = {
       items,
-      goal: items[at],
+      goal: list_get(items, at),
       low,
       high,
     };

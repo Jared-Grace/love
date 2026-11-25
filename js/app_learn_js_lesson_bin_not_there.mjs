@@ -4,6 +4,7 @@ import { app_learn_js_bin_items } from "./app_learn_js_bin_items.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { not } from "./not.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_get } from "./list_get.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_bin_search } from "./app_learn_js_lesson_bin_search.mjs";
@@ -45,7 +46,7 @@ export function app_learn_js_lesson_bin_not_there() {
     let items = app_learn_js_bin_items();
     let input = {
       items,
-      goal: items[index],
+      goal: list_get(items, index),
     };
     return input;
   }

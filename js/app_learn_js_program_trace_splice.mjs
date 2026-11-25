@@ -1,5 +1,5 @@
-import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
 import { list_size } from "./list_size.mjs";
@@ -43,7 +43,7 @@ export function app_learn_js_program_trace_splice(
   let before = property_get(values, name);
   let after = before.slice();
   if (equal(size, 2) && equal(count, 1)) {
-    let value = before[index];
+    let value = list_get(before, index);
     after.splice(index, 1);
     list_add(actions, {
       kind: "pop",

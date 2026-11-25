@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
+import { property_get } from "./property_get.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -76,7 +77,7 @@ export function app_learn_js_lesson_object_property() {
   function object_code(person) {
     "the object written the way a person writes one, each property name bare: { name: \"Mary\", town: \"Nazareth\" }";
     function written(key) {
-      let value = person[key];
+      let value = property_get(person, key);
       let line = key + ": " + json_to(value);
       return line;
     }
@@ -135,7 +136,8 @@ export function app_learn_js_lesson_object_property() {
     let person = person_of(question);
     let key = key_of(question);
     let other = equal(key, "name") ? "town" : "name";
-    let candidates = [person[other], key, other];
+    let value2 = property_get(person, other);
+    let candidates = [value2, key, other];
     let found = list_without(candidates, answer);
     let once = list_unique(found);
     return once;
