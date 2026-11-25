@@ -31,13 +31,12 @@ export async function playwright_url_text_tap_twice_requests(url, text) {
       return true;
     }
     let first_found = await page.evaluate(tap, text);
-    await page.waitForTimeout(500);
-    await page.waitForLoadState("networkidle");
+    ("A FIXED WAIT, because a page that has once gone quiet counts as quiet for good: asking again whether the network is idle answers at once, while the first tap's downloads are still on their way, and the second tap then races them.");
+    await page.waitForTimeout(5000);
     let first = asked.slice();
     asked.length = 0;
     await page.evaluate(tap, text);
-    await page.waitForTimeout(500);
-    await page.waitForLoadState("networkidle");
+    await page.waitForTimeout(5000);
     let second = asked.slice();
     r = {
       found: first_found,
