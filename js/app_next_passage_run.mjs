@@ -9,6 +9,7 @@ export async function app_next_passage_run(
   list,
   asked,
 ) {
+  "The verses this page shows: the run asked for, carried on or cut back to where a sentence of the first chosen language ends.";
   arguments_assert(arguments, 4);
   let reach = app_shared_bible_passage_reach_maximum();
   let first = list_first(bible_folders);

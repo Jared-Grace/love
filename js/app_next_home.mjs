@@ -1,3 +1,4 @@
+import { app_next_passage_run } from "./app_next_passage_run.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_reading_column } from "./app_shared_reading_column.mjs";
 import { app_shared_bible_chapter_hash_get_or_default } from "./app_shared_bible_chapter_hash_get_or_default.mjs";
@@ -17,10 +18,6 @@ import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field
 import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { ebible_index_flat_verses_run } from "./ebible_index_flat_verses_run.mjs";
-import { app_shared_bible_passage_reach_maximum } from "./app_shared_bible_passage_reach_maximum.mjs";
-import { list_first } from "./list_first.mjs";
-import { ebible_index_flat_passage_run_most } from "./ebible_index_flat_passage_run_most.mjs";
-import { ebible_index_flat_passage_run } from "./ebible_index_flat_passage_run.mjs";
 import { property_get } from "./property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { app_next_verse_block } from "./app_next_verse_block.mjs";
@@ -77,17 +74,12 @@ export async function app_next_home(context) {
   ("A count of verses is a count of the places a bible was divided, and a bible was not divided where its sentences end - so a run cut to a length lands mid-thought about half the time, and somebody copying it out gets half a sentence with nothing saying the rest exists. So the reader's number is the most a message holds: the run is cut back to the last sentence that ends inside it, and carried past the number only when one sentence is longer than the whole count.");
   ("Pressing for more is different - it asks for one verse past what is on the screen, so that run is carried on to the end of the sentence that verse starts rather than cut back to where it already stood.");
   ("Only the first language's sentences are asked. Waiting on every language a reader chose carried a passage far past the number they pressed, because the languages disagree about where a sentence ends a third of the time; the first one is the one they read first.");
-  let reach = app_shared_bible_passage_reach_maximum();
-  let first = list_first(bible_folders);
-  let folders_first = [first];
-  let run = extended_none
-    ? await ebible_index_flat_passage_run_most(
-        list,
-        asked,
-        folders_first,
-        reach,
-      )
-    : await ebible_index_flat_passage_run(list, asked, folders_first, reach);
+  let run = await app_next_passage_run(
+    bible_folders,
+    extended_none,
+    list,
+    asked,
+  );
   async function lambda(verse) {
     let chapter_code3 = property_get(verse, "chapter_code");
     let property_name5 = verse_number_key();
