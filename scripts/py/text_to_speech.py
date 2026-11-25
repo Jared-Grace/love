@@ -548,10 +548,41 @@ def said_alone_spelling(g2p, word):
         return word
     if not guessed_is(g2p, word):
         return word
+    if "-" in word:
+        return said_alone_joined_spelling(g2p, word)
     capital = word[:1].upper() + word[1:]
     if guessed_is(g2p, capital):
         return word
     return capital
+
+
+def said_alone_joined_spelling(g2p, word):
+    """The spelling a lone joined name is read from: its parts, each as it is known.
+
+    ★ THE READER HAS NO ENTRY FOR A JOINED NAME AND SOUNDS THE WHOLE OF IT OUT,
+    EVEN WHEN EVERY PART HAS ONE.  "kiriath-jearim" is guessed as one long
+    word, while "Kiriath" and "Jearim" are each written down.  Measured
+    2026-11-25: 273 of the BSB's guessed button words were joined.
+
+    Each part is read with its capital when only the capital is known, and as
+    written when it is known as written.  The parts are then joined by a space,
+    which the reader answers part by part.  If any part has no entry either way,
+    the word is read exactly as before - the point is to read from what is
+    written down, never to trade one guess for another.
+    """
+    parts = word.split("-")
+    said = []
+    for part in parts:
+        if not any(c.isalpha() for c in part):
+            return word
+        capital = part[:1].upper() + part[1:]
+        if not guessed_is(g2p, capital):
+            said.append(capital)
+        elif not guessed_is(g2p, part):
+            said.append(part)
+        else:
+            return word
+    return " ".join(said)
 
 
 def line_samples(g2p, kokoro, text, speed, citation, voice):

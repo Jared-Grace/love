@@ -10,7 +10,10 @@ Three lists come back:
 
 - guessed: the word in small letters gets no answer.  Each says whether the
   spelling with a capital first letter has one (`capital_known`), which is the
-  set a change to speak names capitalised would mend.
+  set a change to speak names capitalised would mend.  `said_alone` is the
+  spelling the word recorder now reads the word from, so a word whose
+  `said_alone` differs from it is one the recorder mends - joined names among
+  them, read part by part.
 - shared: the word in small letters IS answered, the capitalised spelling is
   answered too, the two answers sound different, and the bible writes the
   capitalised spelling somewhere.  Those are the pairs like Job and job, where
@@ -25,7 +28,7 @@ Prints one JSON line.  It reads only.
 import json
 import sys
 
-from text_to_speech import g2p_ready
+from text_to_speech import g2p_ready, said_alone_spelling
 
 GUESS_RATING_MAX = 2
 
@@ -72,6 +75,7 @@ def main(args_path):
                     "says": low_says,
                     "capital_known": not cap_guessed,
                     "capital_says": cap_says,
+                    "said_alone": said_alone_spelling(g2p, word),
                 }
             )
         elif not cap_guessed and cap_says != low_says and capital in written:
