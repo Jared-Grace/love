@@ -10,8 +10,9 @@ import { facebook_messenger_messages } from "./facebook_messenger_messages.mjs";
 export async function facebook_messenger_next_passage_send_generic(
   thread_url,
   ready,
+  copied,
 ) {
-  "Once a day: when ready says yes to the messages of the conversation at thread_url, sends the next passage - the words its next-passage link's page copies - and answers what it did. Otherwise it sends nothing, so a person answers it.";
+  "Once a day: when ready says yes to the messages of the conversation at thread_url, sends the next passage - the words copied answers for the conversation's last passage link - and answers what it did. Otherwise it sends nothing, so a person answers it.";
   ("What covers the message box comes back as dialog, and nothing is typed - see ",
     fn_name("facebook_messenger_box_type_send"),
     ".");
@@ -42,6 +43,7 @@ export async function facebook_messenger_next_passage_send_generic(
     let r = await facebook_messenger_next_passage_plan_text_generic(
       before,
       ready,
+      copied,
     );
     if (!r.send) {
       return r;

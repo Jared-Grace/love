@@ -1,5 +1,6 @@
 import { facebook_messenger_next_passage_send_generic } from "./facebook_messenger_next_passage_send_generic.mjs";
 import { messenger_replies_amen_or_none_is } from "./messenger_replies_amen_or_none_is.mjs";
+import { next_passage_copied } from "./next_passage_copied.mjs";
 export async function facebook_messenger_next_passage_send_amen_or_unanswered(
   thread_url,
 ) {
@@ -8,6 +9,7 @@ export async function facebook_messenger_next_passage_send_amen_or_unanswered(
   let r = await facebook_messenger_next_passage_send_generic(
     thread_url,
     messenger_replies_amen_or_none_is,
+    next_passage_copied,
   );
   return r;
 }

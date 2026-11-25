@@ -2,6 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { facebook_messenger_thread_read } from "./facebook_messenger_thread_read.mjs";
 import { facebook_messenger_next_passage_plan_text_generic } from "./facebook_messenger_next_passage_plan_text_generic.mjs";
 import { messenger_replies_amen_or_none_is } from "./messenger_replies_amen_or_none_is.mjs";
+import { next_passage_copied } from "./next_passage_copied.mjs";
 export async function facebook_messenger_next_passage_plan(thread_url) {
   "$plain thread_url";
   ("What a daily ",
@@ -11,6 +12,7 @@ export async function facebook_messenger_next_passage_plan(thread_url) {
   let r = await facebook_messenger_next_passage_plan_text_generic(
     read.text,
     messenger_replies_amen_or_none_is,
+    next_passage_copied,
   );
   return r;
 }
