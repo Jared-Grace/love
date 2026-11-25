@@ -3,20 +3,14 @@ import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { list_without } from "./list_without.mjs";
-import { boolean_random } from "./boolean_random.mjs";
+import { app_learn_js_array_runs_inputs } from "./app_learn_js_array_runs_inputs.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_count_doubled } from "./app_learn_js_lesson_array_for_count_doubled.mjs";
 import { app_learn_js_lesson_expression_not_equal } from "./app_learn_js_lesson_expression_not_equal.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
+import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
@@ -67,34 +61,12 @@ export function app_learn_js_lesson_array_for_next_differs() {
     let r = [];
     return r;
   }
-  function every_wrong_differs(items5) {
-    let code4 = program_of(items5);
-    let answer = eval_console_log_lines(code4);
-    let list = wrong_programs_of(items5);
-    let outputs = list_map(list, eval_console_log_lines);
-    let same = list_includes(outputs, answer);
-    let n = not(same);
-    return n;
-  }
-  function array_of(size) {
-    "numbers 1 to 3, each next the same as the one before half the time, tried again until every wrong program writes out something else";
-    while (true) {
-      let r2 = list_random_item(values);
-      let items = [r2];
-      while (less_than(items.length, size)) {
-        let before = items[subtract(items.length, 1)];
-        let list2 = list_without(values, before);
-        let next = boolean_random() ? before : list_random_item(list2);
-        items.push(next);
-      }
-      if (every_wrong_differs(items)) {
-        return items;
-      }
-    }
-  }
   function inputs_get() {
-    let sizes = [4, 5, 4, 5, 6, 6];
-    let arrays = list_map(sizes, array_of);
+    let arrays = app_learn_js_array_runs_inputs(
+      values,
+      program_of,
+      wrong_programs_of,
+    );
     return arrays;
   }
   function above(root, context) {
