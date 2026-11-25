@@ -1,13 +1,18 @@
-import { fn_name } from "./fn_name.mjs";
-import { less_than } from "./less_than.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { less_than } from "./less_than.mjs";
 import { calendar_meeting_next_utc } from "./calendar_meeting_next_utc.mjs";
 import { list_map } from "./list_map.mjs";
 export function calendar_slots_weekly_clashes(slots, meetings, timezone) {
   arguments_assert(arguments, 3);
-  ("Each open slot with weekly_clashes added: the meetings already booked at the same weekday and minute on a later day, soonest first, each {start_utc, weekly}. These are exactly the meetings that make the server refuse this slot every week (",
+  (text_combine_multiple([
+    "Each open slot with weekly_clashes added: the meetings already booked at the same weekday and minute on a later day, soonest first, each {day, start_utc, weekly} - day is the host's day, which ",
+    fn_name("calendar_weekly_series_plan"),
+    " works in. These are exactly the meetings an every-week booking has to step around, skipping a single one's week or stopping at a repeating one (",
+  ]),
     fn_name("calendar_db_book"),
     ': weekly, same weekday and start minute, day on or after), so the page can shut the every-week choice before a guest presses Book, and say which dates are in the way (human, 2026-11-25: "if others have scheduled meetings at this time in the future, then the future meetings that are not available should be listed").');
   ("weekly is true for a meeting that itself repeats - from its day on, every week is taken - and false for a single one, which takes only its own date.");
@@ -39,6 +44,7 @@ export function calendar_slots_weekly_clashes(slots, meetings, timezone) {
         s.start_utc,
       );
       let r3 = {
+        day: m.day,
         start_utc: at,
         weekly: equal(m.weekly, 1),
       };

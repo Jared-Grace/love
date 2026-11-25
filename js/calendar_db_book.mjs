@@ -1,9 +1,12 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { calendar_db_host_free } from "./calendar_db_host_free.mjs";
 import { equal } from "./equal.mjs";
+import { calendar_weekly_series_plan } from "./calendar_weekly_series_plan.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { not } from "./not.mjs";
-import { not_equal } from "./not_equal.mjs";
+import { list_map } from "./list_map.mjs";
+import { calendar_db_book_row } from "./calendar_db_book_row.mjs";
 export async function calendar_db_book(
   db,
   slug,
@@ -50,56 +53,85 @@ export async function calendar_db_book(
     };
     return r3;
   }
-  let weekly_number = weekly ? 1 : 0;
-  let weekday = new Date(day + "T00:00:00Z").getUTCDay();
-  let written = null;
-  try {
-    written = await db
-      .prepare(
-        `INSERT INTO meetings (id, host_uid, guest_uid, host_timezone, day, weekday, start_minute, weekly, created_at)
-SELECT ?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9
-WHERE NOT EXISTS (
-  SELECT 1 FROM meetings
-  WHERE host_uid = ?2 AND cancelled_at IS NULL AND start_minute = ?7
-    AND (day = ?5
-      OR (weekly = 1 AND weekday = ?6 AND day <= ?5)
-      OR (?8 = 1 AND weekday = ?6 AND day >= ?5)))
-  AND (?10 IS NULL OR (
-    SELECT COUNT(*) FROM meetings
-    WHERE host_uid = ?2 AND cancelled_at IS NULL
-      AND (day = ?5 OR (weekly = 1 AND weekday = ?6 AND day <= ?5))) < ?10)`,
-      )
-      .bind(
-        id,
-        host_uid,
-        guest_uid,
-        host_row.timezone,
-        day,
-        weekday,
-        start_minute,
-        weekly_number,
-        now_iso,
-        equal(chosen.soon, true) ? null : host_row.max_per_day,
-      )
-      .run();
-  } catch (e) {
-    let b = String(e.message).includes("UNIQUE");
-    if (not(b)) {
-      throw e;
+  ('★ AN EVERY-WEEK BOOKING STEPS AROUND THE WEEKS ALREADY TAKEN (human, 2026-11-25: "These mondays will be scheduled: ... And then every week beginning on ..."): it is written as a one-time meeting for each free week before the last taken one, then a repeating meeting from the week after, by the same plan the page drew (',
+    fn_name("calendar_weekly_series_plan"),
+    "). A repeating meeting already there from a later week still answers taken.");
+  ("The pieces are written one by one, each by the same guarded statement; if any is refused - someone took a week in between - the pieces already written are deleted and the whole answers taken, so nobody is left holding half of what they chose. The first piece keeps id and the host's max_per_day check; the others take id with -2, -3 and so on.");
+  let rows = [
+    {
+      day,
+      weekly: weekly ? 1 : 0,
+    },
+  ];
+  if (weekly) {
+    let clashes = property_get_or(chosen, "weekly_clashes", []);
+    let plan = calendar_weekly_series_plan(day, clashes);
+    if (not(plan.open)) {
+      let r_shut = {
+        ok: false,
+        reason: "taken",
+        start_utc: null,
+        ids: [],
+      };
+      return r_shut;
     }
+    function single_row(d) {
+      let r_single = {
+        day: d,
+        weekly: 0,
+      };
+      return r_single;
+    }
+    rows = [
+      ...list_map(plan.singles, single_row),
+      {
+        day: plan.weekly_from,
+        weekly: 1,
+      },
+    ];
   }
-  if (equal(written, null) || not_equal(written.meta.changes, 1)) {
-    let r4 = {
-      ok: false,
-      reason: "taken",
-      start_utc: null,
-    };
-    return r4;
+  let ids = [];
+  for (let row of rows) {
+    let row_id = equal(ids.length, 0) ? id : id + "-" + (ids.length + 1);
+    let row_max =
+      equal(ids.length, 0) && not(equal(chosen.soon, true))
+        ? host_row.max_per_day
+        : null;
+    let landed = await calendar_db_book_row(
+      db,
+      row_id,
+      host_uid,
+      guest_uid,
+      host_row.timezone,
+      row.day,
+      start_minute,
+      row.weekly,
+      now_iso,
+      row_max,
+    );
+    if (not(landed)) {
+      for (let written_id of ids) {
+        await db
+          .prepare("DELETE FROM meetings WHERE id = ?1")
+          .bind(written_id)
+          .run();
+      }
+      let r4 = {
+        ok: false,
+        reason: "taken",
+        start_utc: null,
+        ids: [],
+      };
+      return r4;
+    }
+    ids.push(row_id);
   }
+  ("ids lists every row written, so a caller stamping how the meeting is held stamps each piece.");
   let r5 = {
     ok: true,
     reason: null,
     start_utc: chosen.start_utc,
+    ids,
   };
   return r5;
 }

@@ -13,6 +13,9 @@ import { app_shared_style_control_font_size } from "./app_shared_style_control_f
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { not } from "./not.mjs";
+import { app_shared_color_red_dark } from "./app_shared_color_red_dark.mjs";
 import { html_checked_set } from "./html_checked_set.mjs";
 import { app_shared_choice_card_chosen_color } from "./app_shared_choice_card_chosen_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -58,6 +61,17 @@ export function app_shared_choice_cards(parent, choices, chosen, on_choose) {
     }
     let text2 = property_get(choice, "details");
     html_div_text(label, text2);
+    ('A card may add unavailable: a line, under the sentence, for what this choice cannot give, drawn in dark red after a cross so it reads apart from what it does give (human, 2026-11-25: "I am not available to meet on these Mondays at ... (and different color or style so it\'s clear unavailable)"). Empty or left out draws nothing.');
+    let unavailable = property_get_or(choice, "unavailable", "");
+    let b = equal(unavailable, "");
+    if (not(b)) {
+      let unavailable_line = html_div_text(label, "❌ " + unavailable);
+      html_style_assign(unavailable_line, {
+        color: app_shared_color_red_dark(),
+        "font-weight": "bold",
+        "margin-top": "0.4em",
+      });
+    }
     html_checked_set(box, on);
     if (on) {
       let background = app_shared_choice_card_chosen_color();
