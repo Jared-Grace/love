@@ -1,4 +1,3 @@
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_label_of_code } from "./app_learn_js_label_of_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -9,6 +8,8 @@ import { property_get_or } from "./property_get_or.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { app_learn_js_forwards_wrong_say } from "./app_learn_js_forwards_wrong_say.mjs";
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
 import { app_learn_js_forwards_wrong_say_programs } from "./app_learn_js_forwards_wrong_say_programs.mjs";
 import { app_learn_js_button_value_lines } from "./app_learn_js_button_value_lines.mjs";
 import { app_learn_js_style_normal_text } from "./app_learn_js_style_normal_text.mjs";
@@ -80,18 +81,23 @@ export function app_learn_js_lesson_code_generic(params) {
   ("the buttons of the forwards quiz carry values rather than code, and they are told to keep the lines their value was written on - a program with two lines that write out has an answer of two lines, and a button that folded them together would offer something the card above never showed. For a value standing on one line, which is every value in the app so far, it draws exactly what a button left alone drew.");
   ("2026-11-25, at the human's choosing: a lesson with wrong programs for its backwards quiz also names, when nothing else speaks, the lines where the wrong program behind a wrong pick differs");
   let decoys_of_code = property_get_or(params, "backwards_decoys", null);
-  function forwards_wrong_say(question, answer, choice) {
-    if (equal(decoys_of_code, null)) {
-      let said = app_learn_js_forwards_wrong_say(question, answer, choice);
-      return said;
-    }
-    let said2 = app_learn_js_forwards_wrong_say_programs(
-      decoys_of_code,
+  ("the plain reminder is handed over as itself when there are no wrong programs, rather than called from a wrapper, so the reminders it asks in turn stay readable as taking the shape the quiz demands");
+  let forwards_wrong_say = app_learn_js_forwards_wrong_say;
+  let b = equal(decoys_of_code, null);
+  if (not(b)) {
+    forwards_wrong_say = function forwards_wrong_say_programs(
       question,
       answer,
       choice,
-    );
-    return said2;
+    ) {
+      let said = app_learn_js_forwards_wrong_say_programs(
+        decoys_of_code,
+        question,
+        answer,
+        choice,
+      );
+      return said;
+    };
   }
   let forwards = {
     question_label: forwards_question_label,
