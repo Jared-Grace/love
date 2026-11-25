@@ -8,11 +8,13 @@ export function app_g_ask_what_to_say_text() {
     tgl: "Ano ang gusto mong sabihin?",
     spa: "¿Qué te gustaría decir?",
     por: "O que você gostaria de dizer?",
+    ind: "Apa yang ingin kamu katakan?",
     translated_from: {
       urd: "What would you like to say?",
       tgl: "What would you like to say?",
       spa: "What would you like to say?",
       por: "What would you like to say?",
+      ind: "What would you like to say?",
     },
   };
   let text = app_shared_text_reader_language(texts);
