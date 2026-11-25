@@ -11,24 +11,25 @@ import { property_get_or } from "./property_get_or.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
 import { app_calendar } from "./app_calendar.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { app_shared_button_green } from "./app_shared_button_green.mjs";
+import { app_calendar_share_link_draw } from "./app_calendar_share_link_draw.mjs";
+import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { app_calendar_guest_proof_form } from "./app_calendar_guest_proof_form.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
-import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { app_shared_unavailable_box } from "./app_shared_unavailable_box.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
@@ -94,25 +95,13 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     let r7 = equal(v, "messenger") ? "Facebook Messenger" : "WhatsApp";
     return r7;
   }
-  function back_draw(box, via_now) {
-    'While a guest waits on a code for one app, the other - if already proven - is one press away, so a guest who wants a meeting now is not held up (human, 2026-11-24: "if they want meeting immediately then there\'s a button for whatsapp instead (that goes back) and works the other way around too").';
-    function other_proven(p) {
-      let r8 = p.proven && not(equal(p.via, via_now));
-      return r8;
+  function proof_for(v) {
+    function is_v(p) {
+      let r9 = equal(p.via, v);
+      return r9;
     }
-    let other = guest_proofs.find(other_proven);
-    if (not(other)) {
-      return;
-    }
-    async function back() {
-      via_choose(other.via);
-      await redraw();
-    }
-    app_shared_button_green(
-      box,
-      "Schedule " + app_label(other.via) + " meeting now - no code needed",
-      back,
-    );
+    let r8 = guest_proofs.find(is_v) || null;
+    return r8;
   }
   function app_where_text() {
     'Both apps are named only while both are still a choice; a guest who has proved one is told just that one (human, 2026-11-24: "should it always say that or just what theyve configured/confirmed?").';
@@ -155,44 +144,109 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     key = k;
     on_key(k);
   }
+  ('★ ONE CHOICE AT A TIME (human, 2026-11-25: "the screen would clear and you would have one choice at a time"): step holds one screen - which app, then the code form or the times - and each press clears it and draws the next, with ← Back to the one before. First comes which app, each saying whether booking is open now or a code comes first (human: "whatsapp (book now) / Messenger (need to confirm before booking)"). A host without Messenger has one app, so that screen is skipped.');
   let step = html_div(card);
-  async function form_show() {
+  function back_button(box) {
+    app_shared_button_uncolored(box, "← Back", apps_show);
+  }
+  function apps_show() {
     html_clear(step);
-    ("Asked from the proven screen, the times below the form are hidden: a new number needs a new code before any time can be booked.");
-    let below = html_component_element_get(step).nextElementSibling;
-    while (below) {
-      below.style.display = "none";
-      below = below.nextElementSibling;
+    ('THE MAIN CHOICES ARE ACTIONS (human, 2026-11-25: "Book meeting on WhatsApp / Confirm your Messenger / Change your WA# / Share this website with someone else ... would be the main choices"): each app says what can be done on it now - book, send the code already asked for, or confirm first - then a change for each app already confirmed, then sharing. Host sign in stays its own section under the card.');
+    let vias = host.messenger ? ["whatsapp", "messenger"] : ["whatsapp"];
+    for (let v of vias) {
+      let p = proof_for(v);
+      let label = app_label(v);
+      let words =
+        p && p.proven
+          ? "Book a meeting on " + label
+          : p
+            ? "Send your " + label + " code"
+            : "Confirm your " + label;
+      async function pick() {
+        await app_show(v);
+      }
+      if (p && p.proven) {
+        app_shared_button_green(step, words, pick);
+      } else {
+        app_shared_button_uncolored(step, words, pick);
+      }
     }
+    for (let v of vias) {
+      let p = proof_for(v);
+      if (not(p && p.proven)) {
+        continue;
+      }
+      async function change() {
+        await form_show(v);
+      }
+      app_shared_button_uncolored(
+        step,
+        equal(v, "messenger")
+          ? "Change your Facebook profile"
+          : "Change your WhatsApp number",
+        change,
+      );
+    }
+    function share_show() {
+      html_clear(step);
+      app_calendar_share_link_draw(step, slug);
+      back_button(step);
+    }
+    app_shared_button_uncolored(
+      step,
+      "Share this page with someone else",
+      share_show,
+    );
+  }
+  async function app_show(v) {
+    via_choose(v);
+    let p = proof_for(v);
+    if (equal(p, null)) {
+      await form_show(v);
+      return;
+    }
+    if (not(p.proven)) {
+      waiting_show(p);
+      return;
+    }
+    proof = p;
+    times_start();
+  }
+  ("After a code is asked for or confirmed the page is drawn again from the server; it opens on the app the guest was on, not back on the app choice, so nothing is asked twice.");
+  async function redraw_on(v) {
+    storage_local_set(app_calendar, "guest_resume", v);
+    await redraw();
+  }
+  function waiting_show(p) {
+    html_clear(step);
+    async function change() {
+      await form_show(p.via);
+    }
+    async function check() {
+      await redraw_on(p.via);
+    }
+    app_calendar_guest_proof_waiting(step, slug, key, p, change, check);
+    back_button(step);
+  }
+  async function form_show(v) {
+    html_clear(step);
     let list2 = list_filter(guest_proofs, proof_is_proven);
     let proven_vias = list_map(list2, proof_via);
-    ("A guest proven on some app has already chosen which app this code is for - the other one, or the same one with a new number - so the form asks no choice; a guest proven on nothing still picks.");
-    let chosen_before = storage_local_get(app_calendar, "guest_details");
-    let via_fixed =
-      greater_than(proven_vias.length, 0) && chosen_before && chosen_before.via
-        ? chosen_before.via
-        : null;
+    async function started() {
+      await redraw_on(v);
+    }
     await app_calendar_guest_proof_form(
       step,
       slug,
       host,
       key,
       key_keep,
-      redraw,
+      started,
       proven_vias,
-      via_fixed,
+      v,
     );
-    let chosen_now = storage_local_get(app_calendar, "guest_details");
-    back_draw(step, chosen_now ? chosen_now.via : null);
-    ('A guest who opened the form from a screen they already had - changing a number, asking for the other app, or while a code waits - can leave it unchanged (human, 2026-11-25: "if change wa# should be able to go back or cancel"). Cancel puts back the app that screen was on and draws it again; a first-time guest has nothing to go back to and sees no Cancel.');
-    if (equal(proof, null)) {
-      return;
-    }
-    async function cancel() {
-      via_choose(proof.via);
-      await redraw();
-    }
-    app_shared_button_uncolored(step, "Cancel", cancel);
+    ('A guest can leave the form unchanged (human, 2026-11-25: "if change wa# should be able to go back or cancel").');
+    back_button(step);
   }
   function proof_is_proven(p) {
     let r10 = p.proven;
@@ -202,358 +256,346 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     let r11 = p.via;
     return r11;
   }
-  async function switch_to(v) {
-    'A guest proven on one app asks to meet on the other: proven there too, they meet there at once; otherwise the form asks for a code from it first, and the app already proven stays one press away (human, 2026-11-24: "a button to schedule a fb meeting but it explains they will need to confirm first").';
-    via_choose(v);
-    function is_v(p) {
-      let r9 = equal(p.via, v);
-      return r9;
-    }
-    if (guest_proofs.find(is_v)) {
-      await redraw();
+  let resume = storage_local_get(app_calendar, "guest_resume");
+  storage_local_set(app_calendar, "guest_resume", null);
+  if (resume) {
+    await app_show(resume);
+    return;
+  }
+  apps_show();
+  return;
+  function times_start() {
+    html_clear(step);
+    let slots = free.body.slots;
+    if (equal(slots.length, 0)) {
+      html_div_text(
+        step,
+        "No open hours in the next " + booking_window.days_ahead + " days.",
+      );
+      back_button(step);
       return;
     }
-    await form_show();
-  }
-  if (equal(proof, null)) {
-    await form_show();
-    return;
-  }
-  if (not(proof.proven)) {
-    app_calendar_guest_proof_waiting(step, slug, key, proof, form_show, redraw);
-    back_draw(step, proof.via);
-    return;
-  }
-  let slots = free.body.slots;
-  if (equal(slots.length, 0)) {
-    html_div_text(
-      card,
-      "No open hours in the next " + booking_window.days_ahead + " days.",
+    ("A time is picked in steps: first a day of the week or, when the open hours reach into more than one month, a month; then a date; then a time. Each step has a Back button to the one before.");
+    ("Rejected: month only (a guest free only on Saturdays must open every date to find them); weekday only (a guest planning a set week thinks in dates); a first screen asking which way to browse (one more press for everyone).");
+    ("A weekday, month or date with no open hour - closed, or fully booked - shows as text saying it is unavailable, never as a button (human: \"Instead of a button, text should say 'x is unavailable'\").");
+    let now_iso = new Date().toISOString();
+    let months = calendar_slots_by_month(
+      slots,
+      now_iso,
+      booking_window.notice_hours,
+      booking_window.days_ahead,
     );
-    return;
-  }
-  ("A time is picked in steps: first a day of the week or, when the open hours reach into more than one month, a month; then a date; then a time. Each step has a Back button to the one before.");
-  ("Rejected: month only (a guest free only on Saturdays must open every date to find them); weekday only (a guest planning a set week thinks in dates); a first screen asking which way to browse (one more press for everyone).");
-  ("A weekday, month or date with no open hour - closed, or fully booked - shows as text saying it is unavailable, never as a button (human: \"Instead of a button, text should say 'x is unavailable'\").");
-  let now_iso = new Date().toISOString();
-  let months = calendar_slots_by_month(
-    slots,
-    now_iso,
-    booking_window.notice_hours,
-    booking_window.days_ahead,
-  );
-  function days_open(days) {
-    function lambda(d) {
-      let g = greater_than(d.times.length, 0);
-      return g;
+    function days_open(days) {
+      function lambda(d) {
+        let g = greater_than(d.times.length, 0);
+        return g;
+      }
+      let r = days.some(lambda);
+      return r;
     }
-    let r = days.some(lambda);
-    return r;
-  }
-  function unavailable_show(words, tail) {
-    let line = app_shared_unavailable_box(list, words + " unavailable" + tail);
-    return line;
-  }
-  let weekdays = calendar_days_by_weekday(months);
-  let chosen = null;
-  ("marked is the problem now ringed in red, or null. It is declared here, above every button, because a press can land while the spam check below is still loading, and a name declared after that wait does not exist yet - picking an app then threw and drew nothing.");
-  let marked = null;
-  ('The prompt and its buttons sit in one field, spaced off from what follows like the host\'s fields (human: "Pick a day of the week and its buttons should look like a group").');
-  let pick_field = app_shared_field(card);
-  let chosen_line = html_div_text(pick_field, "");
-  ('The picked date and time stand out larger than the prompts before it (human: "choosen date/time should be larger font").');
-  function chosen_line_set(words, big) {
-    html_text_content_set(chosen_line, words);
-    html_style_assign(chosen_line, {
-      "font-size": big ? "1.3em" : "",
-      "font-weight": big ? "bold" : "",
-    });
-  }
-  let list = html_div(pick_field);
-  let element = html_component_element_get(list);
-  element.style.maxHeight = "40vh";
-  element.style.overflowY = "auto";
-  function first_show() {
-    chosen = null;
-    html_clear(list);
-    chosen_line_set("Pick a day of the week:", false);
-    for (let weekday of weekdays) {
-      let b = days_open(weekday.days);
-      if (not(b)) {
-        ('"right now" because a weekday comes again: it is only full or closed inside the next two weeks.');
-        let closed_line = unavailable_show(
-          weekday.label + "s are",
-          " right now",
+    function unavailable_show(words, tail) {
+      let line = app_shared_unavailable_box(
+        list,
+        words + " unavailable" + tail,
+      );
+      return line;
+    }
+    let weekdays = calendar_days_by_weekday(months);
+    let chosen = null;
+    ("marked is the problem now ringed in red, or null. It is declared here, above every button, because a press can land while the spam check below is still loading, and a name declared after that wait does not exist yet - picking an app then threw and drew nothing.");
+    let marked = null;
+    ('The prompt and its buttons sit in one field, spaced off from what follows like the host\'s fields (human: "Pick a day of the week and its buttons should look like a group").');
+    let pick_field = app_shared_field(step);
+    let chosen_line = html_div_text(pick_field, "");
+    ('The picked date and time stand out larger than the prompts before it (human: "choosen date/time should be larger font").');
+    function chosen_line_set(words, big) {
+      html_text_content_set(chosen_line, words);
+      html_style_assign(chosen_line, {
+        "font-size": big ? "1.3em" : "",
+        "font-weight": big ? "bold" : "",
+      });
+    }
+    let list = html_div(pick_field);
+    let element = html_component_element_get(list);
+    element.style.maxHeight = "40vh";
+    element.style.overflowY = "auto";
+    function first_show() {
+      chosen = null;
+      final_set(false);
+      html_clear(list);
+      chosen_line_set("Pick a day of the week:", false);
+      back_button(list);
+      html_div(list);
+      for (let weekday of weekdays) {
+        let b = days_open(weekday.days);
+        if (not(b)) {
+          ('"right now" because a weekday comes again: it is only full or closed inside the next two weeks.');
+          let closed_line = unavailable_show(
+            weekday.label + "s are",
+            " right now",
+          );
+          html_style_assign(closed_line, {
+            display: "inline-block",
+            width: "auto",
+            "margin-right": "0.3em",
+          });
+          continue;
+        }
+        function weekday_pick() {
+          days_show({
+            label: weekday.label + "s",
+            days: weekday.days,
+          });
+        }
+        ("Weekday buttons are as wide as their word and sit side by side (human: thin, not wide), so all seven fit in a line or two.");
+        let weekday_button = app_shared_button_uncolored(
+          list,
+          weekday.label,
+          weekday_pick,
         );
-        html_style_assign(closed_line, {
-          display: "inline-block",
+        html_style_assign(weekday_button, {
           width: "auto",
           "margin-right": "0.3em",
         });
-        continue;
       }
-      function weekday_pick() {
-        days_show({
-          label: weekday.label + "s",
-          days: weekday.days,
-        });
+      if (greater_than(months.length, 1)) {
+        html_div_text(list, "Or pick a month:");
+        for (let month of months) {
+          let b2 = days_open(month.days);
+          if (not(b2)) {
+            unavailable_show(month.label + " is", "");
+            continue;
+          }
+          function month_pick() {
+            days_show({
+              label: "in " + month.label,
+              days: month.days,
+            });
+          }
+          app_shared_button_uncolored(list, month.label, month_pick);
+        }
       }
-      ("Weekday buttons are as wide as their word and sit side by side (human: thin, not wide), so all seven fit in a line or two.");
-      let weekday_button = app_shared_button_uncolored(
-        list,
-        weekday.label,
-        weekday_pick,
-      );
-      html_style_assign(weekday_button, {
-        width: "auto",
-        "margin-right": "0.3em",
-      });
     }
-    if (greater_than(months.length, 1)) {
-      html_div_text(list, "Or pick a month:");
-      for (let month of months) {
-        let b2 = days_open(month.days);
-        if (not(b2)) {
-          unavailable_show(month.label + " is", "");
+    function days_show(group) {
+      chosen = null;
+      final_set(false);
+      html_clear(list);
+      chosen_line_set("Pick a date - " + group.label + ":", false);
+      app_shared_button_uncolored(list, "← Back", first_show);
+      for (let day of group.days) {
+        if (equal(day.times.length, 0)) {
+          unavailable_show(day.label + " is", "");
           continue;
         }
-        function month_pick() {
-          days_show({
-            label: "in " + month.label,
-            days: month.days,
-          });
-        }
-        app_shared_button_uncolored(list, month.label, month_pick);
-      }
-    }
-  }
-  function days_show(group) {
-    chosen = null;
-    html_clear(list);
-    chosen_line_set("Pick a date - " + group.label + ":", false);
-    app_shared_button_uncolored(list, "← Back", first_show);
-    for (let day of group.days) {
-      if (equal(day.times.length, 0)) {
-        unavailable_show(day.label + " is", "");
-        continue;
-      }
-      function day_pick() {
-        times_show(group, day);
-      }
-      app_shared_button_uncolored(list, day.label, day_pick);
-    }
-  }
-  function times_show(group, day) {
-    chosen = null;
-    html_clear(list);
-    chosen_line_set("Pick a time on " + day.label + ":", false);
-    function day_back() {
-      days_show(group);
-    }
-    app_shared_button_uncolored(list, "← Back", day_back);
-    for (let time of day.times) {
-      function time_pick() {
-        chosen = time.slot;
-        problems_recheck();
-        html_clear(list);
-        chosen_line_set("Chosen: " + day.label + ", " + time.label, true);
-        function time_back() {
+        function day_pick() {
           times_show(group, day);
         }
-        app_shared_button_uncolored(list, "← Change time", time_back);
+        app_shared_button_uncolored(list, day.label, day_pick);
       }
-      app_shared_button_uncolored(list, time.label, time_pick);
     }
-  }
-  first_show();
-  ("The proven guest is told where the meeting will be, in the number or link the host proved, so a wrong one is seen before booking; changing it means a new code.");
-  let app_name = equal(proof.via, "messenger") ? "Messenger" : "WhatsApp";
-  let who_field = app_shared_field(card);
-  html_div_text(
-    who_field,
-    "✅ " +
-      (equal(proof.via, "messenger")
-        ? "We meet on Facebook Messenger"
-        : "We meet on WhatsApp: " + proof.whatsapp),
-  );
-  app_shared_button_uncolored(
-    who_field,
-    equal(proof.via, "messenger")
-      ? "Change my Facebook"
-      : "Change my WhatsApp number",
-    form_show,
-  );
-  if (host.messenger) {
-    let via_other = equal(proof.via, "messenger") ? "whatsapp" : "messenger";
-    async function switch_other() {
-      await switch_to(via_other);
+    function times_show(group, day) {
+      chosen = null;
+      final_set(false);
+      html_clear(list);
+      chosen_line_set("Pick a time on " + day.label + ":", false);
+      function day_back() {
+        days_show(group);
+      }
+      app_shared_button_uncolored(list, "← Back", day_back);
+      for (let time of day.times) {
+        function time_pick() {
+          chosen = time.slot;
+          problems_recheck();
+          html_clear(list);
+          chosen_line_set("Chosen: " + day.label + ", " + time.label, true);
+          function time_back() {
+            times_show(group, day);
+          }
+          app_shared_button_uncolored(list, "← Change time", time_back);
+          final_set(true);
+        }
+        app_shared_button_uncolored(list, time.label, time_pick);
+      }
     }
-    app_shared_button_uncolored(
+    ("The last screen - where the meeting will be, repeat weekly, and Book - shows only once a time is picked, so each screen asks one thing.");
+    let final_area = html_div(step);
+    function final_set(shown) {
+      html_component_element_get(final_area).style.display = shown
+        ? ""
+        : "none";
+    }
+    ("The proven guest is told where the meeting will be, in the number or link the host proved, so a wrong one is seen before booking; changing it is on the first screen, and means a new code.");
+    let app_name = equal(proof.via, "messenger") ? "Messenger" : "WhatsApp";
+    let who_field = app_shared_field(final_area);
+    html_div_text(
       who_field,
-      "Meet on " + app_label(via_other) + " instead",
-      switch_other,
+      "✅ " +
+        (equal(proof.via, "messenger")
+          ? "We meet on Facebook Messenger"
+          : "We meet on WhatsApp: " + proof.whatsapp),
     );
-  }
-  let weekly_row = app_shared_field(card);
-  let weekly = html_input_type(weekly_row, "checkbox");
-  let weekly_element = html_component_element_get(weekly);
-  let weekly_label = html_div_text(
-    weekly_row,
-    "Repeat every week at this time",
-  );
-  html_component_element_get(weekly_label).style.display = "inline";
-  ("No spam check here: only a guest the host has proven can book, and the server refuses everyone else.");
-  let status = html_div_text(card, "");
-  ('A press of Book with something missing scrolls to the part that needs it and rings it in red, says what is missing in red, and gives Book a thick red edge; all of it comes off as soon as that part is filled in (human: "should it scroll up to the offending field and circle it in red until satsifies check?").');
-  ("Rejected: a red box around the whole form (it says something is wrong without saying where); greying Book until the form is complete (a guest pressing a grey button learns nothing about why).");
-  function form_problem() {
-    if (equal(chosen, null)) {
-      let r2 = {
-        field: pick_field,
-        words: "Pick a time first.",
-      };
-      return r2;
-    }
-    return null;
-  }
-  function problem_show(problem) {
-    problem_clear();
-    marked = problem;
-    app_shared_problem_mark(problem.field, true);
-    html_text_content_set(status, problem.words);
-    html_style_assign(status, {
-      color: app_shared_color_red(),
-    });
-    html_style_assign(book_button, {
-      border: "4px solid " + app_shared_color_red(),
-    });
-    html_component_element_get(problem.field).scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
-  }
-  function problem_clear() {
-    if (equal(marked, null)) {
-      return;
-    }
-    app_shared_problem_mark(marked.field, false);
-    marked = null;
-    html_text_content_set(status, "");
-    html_style_assign(status, {
-      color: "",
-    });
-    html_style_assign(book_button, {
-      border: "",
-    });
-  }
-  function problems_recheck() {
-    if (equal(marked, null)) {
-      return;
-    }
-    let problem = form_problem();
-    if (equal(problem, null) || not(equal(problem.words, marked.words))) {
-      problem_clear();
-    }
-  }
-  async function lambda2() {
-    let problem = form_problem();
-    let b3 = equal(problem, null);
-    if (not(b3)) {
-      problem_show(problem);
-      return;
-    }
-    problem_clear();
-    html_text_content_set(status, "Booking...");
-    html_style_assign(status, {
-      color: "",
-    });
-    ('The shared loading cover sits over the page while the booking goes through (human: "maybe while booking show loading?"), so a second press can\'t send it twice.');
-    async function book_send() {
-      let r = await calendar_api_call("POST", "book", book_body, key);
-      return r;
-    }
-    let book_body = {
-      host: slug,
-      timezone: zone,
-      day: chosen.day,
-      start_minute: chosen.start_minute,
-      weekly: weekly_element.checked,
-      via: proof.via,
-    };
-    let booked = await html_loading(book_send);
-    html_text_content_set(status, "");
-    if (not(booked.body.ok)) {
-      let words = {
-        unproven:
-          "I have not seen your code yet. Open this page again to send it.",
-        taken: "Someone just booked that time. Pick another.",
-        not_open: "That time is no longer open. Pick another.",
-        limit:
-          "You already have the most upcoming meetings this host allows. To book another time, cancel one first.",
-        rate: "Too many tries. Wait a minute and try again.",
-        network: "No connection. Try again.",
-      };
-      let text = property_get_or(
-        words,
-        booked.body.reason,
-        "Could not book. Try again.",
-      );
-      ("A refusal that names a part of the form rings that part the same way; the rest are said in red with nothing ringed.");
-      let fields = {
-        taken: pick_field,
-        not_open: pick_field,
-      };
-      let field = property_get_or(fields, booked.body.reason, null);
-      let b4 = equal(field, null);
-      if (not(b4)) {
-        problem_show({
-          field,
-          words: text,
-        });
-        return;
+    let weekly_row = app_shared_field(final_area);
+    let weekly = html_input_type(weekly_row, "checkbox");
+    let weekly_element = html_component_element_get(weekly);
+    let weekly_label = html_div_text(
+      weekly_row,
+      "Repeat every week at this time",
+    );
+    html_component_element_get(weekly_label).style.display = "inline";
+    ("No spam check here: only a guest the host has proven can book, and the server refuses everyone else.");
+    let status = html_div_text(final_area, "");
+    ('A press of Book with something missing scrolls to the part that needs it and rings it in red, says what is missing in red, and gives Book a thick red edge; all of it comes off as soon as that part is filled in (human: "should it scroll up to the offending field and circle it in red until satsifies check?").');
+    ("Rejected: a red box around the whole form (it says something is wrong without saying where); greying Book until the form is complete (a guest pressing a grey button learns nothing about why).");
+    function form_problem() {
+      if (equal(chosen, null)) {
+        let r2 = {
+          field: pick_field,
+          words: "Pick a time first.",
+        };
+        return r2;
       }
-      html_text_content_set(status, text);
+      return null;
+    }
+    function problem_show(problem) {
+      problem_clear();
+      marked = problem;
+      app_shared_problem_mark(problem.field, true);
+      html_text_content_set(status, problem.words);
       html_style_assign(status, {
         color: app_shared_color_red(),
       });
-      return;
-    }
-    let weekly_chosen = weekly_element.checked;
-    function draw_done(box) {
-      let done = app_shared_container(box);
-      ("The guest was proven before booking, so the meeting is final the moment it is written, and the page says so plainly: booked.");
-      let booked_line = html_div_text_content(
-        done,
-        "✅ Booked: " +
-          calendar_time_range_local_text(
-            booked.body.start_utc,
-            host.meeting_minutes,
-          ) +
-          " (" +
-          host.meeting_minutes +
-          " minutes)",
-      );
-      ('The length is said beside the times, not left to be worked out from them (human, 2026-11-24: "booked should say meeting length").');
-      html_style_assign(booked_line, {
-        "font-size": "1.3em",
-        "font-weight": "bold",
+      html_style_assign(book_button, {
+        border: "4px solid " + app_shared_color_red(),
       });
-      html_div_text(
-        done,
-        "I will meet you on " +
-          app_name +
-          (weekly_chosen ? " at this time every week." : " at this time."),
-      );
-      html_div_text(
-        done,
-        "To change or cancel this meeting, or to book another, use this link. Please save it:",
-      );
-      let link = calendar_guest_link(slug, key);
-      let link_line = html_div(done);
-      html_a_href_text_new_tab(link_line, link, link);
-      app_calendar_link_copy_button(done, link);
+      html_component_element_get(problem.field).scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
     }
-    await on_booked(draw_done);
+    function problem_clear() {
+      if (equal(marked, null)) {
+        return;
+      }
+      app_shared_problem_mark(marked.field, false);
+      marked = null;
+      html_text_content_set(status, "");
+      html_style_assign(status, {
+        color: "",
+      });
+      html_style_assign(book_button, {
+        border: "",
+      });
+    }
+    function problems_recheck() {
+      if (equal(marked, null)) {
+        return;
+      }
+      let problem = form_problem();
+      if (equal(problem, null) || not(equal(problem.words, marked.words))) {
+        problem_clear();
+      }
+    }
+    async function lambda2() {
+      let problem = form_problem();
+      let b3 = equal(problem, null);
+      if (not(b3)) {
+        problem_show(problem);
+        return;
+      }
+      problem_clear();
+      html_text_content_set(status, "Booking...");
+      html_style_assign(status, {
+        color: "",
+      });
+      ('The shared loading cover sits over the page while the booking goes through (human: "maybe while booking show loading?"), so a second press can\'t send it twice.');
+      async function book_send() {
+        let r = await calendar_api_call("POST", "book", book_body, key);
+        return r;
+      }
+      let book_body = {
+        host: slug,
+        timezone: zone,
+        day: chosen.day,
+        start_minute: chosen.start_minute,
+        weekly: weekly_element.checked,
+        via: proof.via,
+      };
+      let booked = await html_loading(book_send);
+      html_text_content_set(status, "");
+      if (not(booked.body.ok)) {
+        let words = {
+          unproven:
+            "I have not seen your code yet. Open this page again to send it.",
+          taken: "Someone just booked that time. Pick another.",
+          not_open: "That time is no longer open. Pick another.",
+          limit:
+            "You already have the most upcoming meetings this host allows. To book another time, cancel one first.",
+          rate: "Too many tries. Wait a minute and try again.",
+          network: "No connection. Try again.",
+        };
+        let text = property_get_or(
+          words,
+          booked.body.reason,
+          "Could not book. Try again.",
+        );
+        ("A refusal that names a part of the form rings that part the same way; the rest are said in red with nothing ringed.");
+        let fields = {
+          taken: pick_field,
+          not_open: pick_field,
+        };
+        let field = property_get_or(fields, booked.body.reason, null);
+        let b4 = equal(field, null);
+        if (not(b4)) {
+          problem_show({
+            field,
+            words: text,
+          });
+          return;
+        }
+        html_text_content_set(status, text);
+        html_style_assign(status, {
+          color: app_shared_color_red(),
+        });
+        return;
+      }
+      let weekly_chosen = weekly_element.checked;
+      function draw_done(box) {
+        let done = app_shared_container(box);
+        ("The guest was proven before booking, so the meeting is final the moment it is written, and the page says so plainly: booked.");
+        let booked_line = html_div_text_content(
+          done,
+          "✅ Booked: " +
+            calendar_time_range_local_text(
+              booked.body.start_utc,
+              host.meeting_minutes,
+            ) +
+            " (" +
+            host.meeting_minutes +
+            " minutes)",
+        );
+        ('The length is said beside the times, not left to be worked out from them (human, 2026-11-24: "booked should say meeting length").');
+        html_style_assign(booked_line, {
+          "font-size": "1.3em",
+          "font-weight": "bold",
+        });
+        html_div_text(
+          done,
+          "I will meet you on " +
+            app_name +
+            (weekly_chosen ? " at this time every week." : " at this time."),
+        );
+        html_div_text(
+          done,
+          "To change or cancel this meeting, or to book another, use this link. Please save it:",
+        );
+        let link = calendar_guest_link(slug, key);
+        let link_line = html_div(done);
+        html_a_href_text_new_tab(link_line, link, link);
+        app_calendar_link_copy_button(done, link);
+      }
+      await on_booked(draw_done);
+    }
+    let book_button = app_shared_button_green(final_area, "Book", lambda2);
+    first_show();
   }
-  let book_button = app_shared_button_green(card, "Book", lambda2);
 }

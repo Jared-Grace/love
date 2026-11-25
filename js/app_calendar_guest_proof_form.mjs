@@ -99,8 +99,11 @@ export async function app_calendar_guest_proof_form(
     field_label_set(profile_label, "Your Facebook profile link", "messenger");
     function shown_unless_proven(box, value) {
       let b3 = equal(via, value);
+      ('With the app already picked on the screen before, the other app\'s box is not asked at all - it would only be optional, and optional personal data is still personal data (human, 2026-11-24: "goal is collect less info").');
       let known =
-        not(b3) && not(equal(via, null)) && list_includes(proven_vias, value);
+        not(b3) &&
+        not(equal(via, null)) &&
+        (list_includes(proven_vias, value) || not(equal(via_fixed, null)));
       html_component_element_get(box).style.display = known ? "none" : "";
     }
     shown_unless_proven(number_box, "whatsapp");

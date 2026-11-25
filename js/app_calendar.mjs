@@ -7,7 +7,6 @@ import { storage_local_set } from "./storage_local_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_calendar_guest } from "./app_calendar_guest.mjs";
-import { app_calendar_share_link_draw } from "./app_calendar_share_link_draw.mjs";
 import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
 import { each } from "./each.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -38,8 +37,7 @@ export async function app_calendar(context) {
   let booked_area = html_div(root);
   let meetings_area = html_div(root);
   let guest_area = html_div(root);
-  ('The share link has an area of its own: the booking screen redraws itself - a confirmed code, a switch of app - by clearing guest_area, which took a share box drawn inside it away (human, 2026-11-24: "opened new tab looks same page but share missing at bottom").');
-  let share_area = html_div(root);
+  ('Sharing is one of the booking card\'s main choices, not a card of its own under it (human, 2026-11-25: "Share this website with someone else ... would be the main choices"), so the page has no share area.');
   let host_area = html_div(root);
   function lambda2(k) {
     guest_key = k;
@@ -49,11 +47,6 @@ export async function app_calendar(context) {
     if (slug) {
       html_clear(guest_area);
       await app_calendar_guest(guest_area, slug, guest_key, lambda2, booked);
-      ('The share link sits under the booking screen whenever this guest has a link of their own, so it is there on every later visit and not only just after a booking (human, 2026-11-24: "book a meeting.... But no share link?").');
-      html_clear(share_area);
-      if (guest_key) {
-        app_calendar_share_link_draw(share_area, slug);
-      }
     }
   }
   let show_meetings = async function lambda() {
@@ -78,11 +71,7 @@ export async function app_calendar(context) {
   await show_meetings();
   let host_open = async function lambda3() {
     "Signing in as host clears the booking screen and the guest's meetings above (human: the button \"doesn't remove top\"), so the host page stands alone.";
-    'The guest\'s share link goes too (human, 2026-11-25: "host sign in has link for someone else at the top"): it is for a guest passing a host on, and the host page has its own link to share.';
-    each(
-      [host_area, guest_area, share_area, meetings_area, booked_area],
-      html_clear,
-    );
+    each([host_area, guest_area, meetings_area, booked_area], html_clear);
     ('2026-11-15: a line says it is loading while the host\'s settings and the sign-in are fetched; the page sat blank white meanwhile (human: "host sign in just blank white for a while - maybe should show loading?"). The host screen clears it once its settings arrive.');
     html_div_text(host_area, "Loading...");
     if (host_key) {
