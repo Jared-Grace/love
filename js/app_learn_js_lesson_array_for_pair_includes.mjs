@@ -106,6 +106,17 @@ export function app_learn_js_lesson_array_for_pair_includes() {
         "a",
         "",
       ],
+      [
+        "However, there is no ",
+        "5",
+        " here: ",
+        "10 - 5",
+        " is ",
+        "5",
+        ", so a ",
+        "5",
+        " would find itself",
+      ],
     ];
     for (let said of lines_said) {
       app_learn_js_div_cycle_code(box_three, said);
@@ -131,17 +142,6 @@ export function app_learn_js_lesson_array_for_pair_includes() {
         " are written out and ",
         "break;",
         " stops the loop",
-      ],
-      [
-        "There is no ",
-        "5",
-        " here: ",
-        "10 - 5",
-        " is ",
-        "5",
-        ", so a ",
-        "5",
-        " would find itself",
       ],
     ];
     for (let said2 of lines_said2) {
