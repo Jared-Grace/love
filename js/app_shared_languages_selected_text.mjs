@@ -7,11 +7,13 @@ export function app_shared_languages_selected_text() {
     tgl: "Mga napiling wika:",
     spa: "Idiomas elegidos:",
     por: "Idiomas escolhidos:",
+    ind: "Bahasa yang dipilih:",
     translated_from: {
       urd: "Selected languages:",
       tgl: "Selected languages:",
       spa: "Selected languages:",
       por: "Selected languages:",
+      ind: "Selected languages:",
     },
   };
   let v = app_shared_text_reader_language(texts);
