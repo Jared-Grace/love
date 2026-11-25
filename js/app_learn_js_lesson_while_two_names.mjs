@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while } from "./app_learn_js_lesson_while.mjs";
-import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_two_names_while_lines } from "./js_code_two_names_while_lines.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
@@ -45,6 +45,38 @@ export function app_learn_js_lesson_while_two_names() {
     ]);
     example(box_two, js_code_two_names_while_lines);
     walk(box_two);
+    ("2026-11-25, at the human's asking, after a learner asked for a shortcut on Two numbers meeting, next: the runs counted without stepping, with why. It gives the same answer as stepping on all eight programs the lesson draws, including the two that never run, which is why the rule opens with asking a < 4 first.");
+    let box_three = app_learn_js_container_light_blue(root);
+    let lines_said = [
+      [
+        "A shortcut: if ",
+        "a < 4",
+        " is ",
+        "true",
+        " at the start, ",
+        name_b,
+        " ends at ",
+        "b - (4 - a)",
+        "",
+      ],
+      ["Why it works:"],
+      ["Each time, ", name_a, " goes up 1, so it stops exactly on ", "4", ""],
+      ["So the ", r, " runs ", "4 - a", " times"],
+      ["And ", name_b, " goes down 1 each of those times"],
+      ["Here, ", "9 - (4 - 1)", " is ", "6", ""],
+      [
+        "If ",
+        "a < 4",
+        " is ",
+        "false",
+        " at the start, it runs no times, and ",
+        name_b,
+        " stays as it is",
+      ],
+    ];
+    for (let line of lines_said) {
+      app_learn_js_div_cycle_code(box_three, line);
+    }
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Two names in a while",
