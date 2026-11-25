@@ -157,11 +157,18 @@ export async function app_calendar_guest_proof_form(
     return r6;
   }
   function intro_set() {
-    'MESSENGER, IN THE HOST\'S OWN WORDS (human, 2026-11-25: "First provide a link to your profile. Then I will confirm the link works. After you wait for confirmation, then if God wills you can schedule a meeting."). Set again whenever the app changes, since the words fit Messenger only. WhatsApp keeps its words; the same three steps said for a number were not written, as nobody asked.';
+    'MESSENGER, IN THE HOST\'S OWN WORDS (human, 2026-11-25: "First provide a link to your profile. Then I will confirm the link works. After you wait for confirmation, then if God wills you can schedule a meeting."). Set again whenever the app changes. WhatsApp says the same three steps for a number, so both apps read alike (human, 2026-11-25, chose "matching WhatsApp words"). With no app picked yet, the older words stay, as they name both apps.';
     if (equal(via, "messenger")) {
       html_text_content_set(
         intro,
         "First provide a link to your profile. Then I will confirm the link works. After you wait for confirmation, then if God wills you can schedule a meeting.",
+      );
+      return;
+    }
+    if (equal(via, "whatsapp")) {
+      html_text_content_set(
+        intro,
+        "First provide your WhatsApp number. Then I will confirm the number works. After you wait for confirmation, then if God wills you can schedule a meeting.",
       );
       return;
     }
