@@ -12,11 +12,13 @@ export function app_shared_bible_word_ask_llm_text_get(llm_name) {
     tgl: "🤖 Magtanong kay {name}",
     spa: "🤖 Preguntar a {name}",
     por: "🤖 Perguntar ao {name}",
+    ind: "🤖 Tanya {name}",
     translated_from: {
       urd: "🤖 Ask {name}",
       tgl: "🤖 Ask {name}",
       spa: "🤖 Ask {name}",
       por: "🤖 Ask {name}",
+      ind: "🤖 Ask {name}",
     },
   };
   let v = app_shared_text_reader_language_filled(texts, {
