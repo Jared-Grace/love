@@ -118,11 +118,13 @@ export function app_shared_bible_book_section_name_reading(name) {
       tgl: "Iba pang aklat",
       spa: "Sin categoría",
       por: "Sem categoria",
+      ind: "Tanpa kategori",
       translated_from: {
         urd: "Uncategorized",
         tgl: "Uncategorized",
         spa: "Uncategorized",
         por: "Uncategorized",
+        ind: "Uncategorized",
       },
     };
     let r11 = app_shared_text_reader_language(texts);
