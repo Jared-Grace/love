@@ -1,13 +1,16 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_1 } from "./range_1.mjs";
-import { list_sort_number } from "./list_sort_number.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_take } from "./list_take.mjs";
+import { list_sort_number } from "./list_sort_number.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { text_split_newline } from "./text_split_newline.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -15,7 +18,6 @@ import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_
 import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
 import { app_learn_js_lesson_for_if_else } from "./app_learn_js_lesson_for_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
@@ -23,7 +25,7 @@ export function app_learn_js_lesson_array_while_smaller_first() {
   arguments_assert(arguments, 0);
   ("two arrays in order, smallest first, walked together: let i = 0; let j = 0; while (i < a.length && j < b.length) { if (a[i] < b[j]) { console.log(a[i]); i++; } else { console.log(b[j]); j++; } } writes out 1, 2, 3, 4, 7 for a = [1, 4, 7] and b = [2, 3, 9]");
   ("2026-11-25, at the human's asking, the second of three steps towards merging two sorted arrays, after In order inside a? and before the merge itself. The one new fact is that the if chooses which index moves: each time exactly one of i and j goes up. What is left of the other array once one runs out is not written out; writing it out is the merge's leftover loops, the next step.");
-  ("The inputs are a and b, three numbers each, six different numbers from 1 to 12 between them, each array sorted. An input is drawn again until at least one wrong program writes out something else.");
+  ("The inputs are a and b, two numbers each, four different numbers from 1 to 12 between them, each array sorted. Two, at the human's asking 2026-11-25, so the step-by-step walkthrough, which is drawn from the same inputs, stays short. An input is drawn again until both i and j move - so both the if and the else run - and at least one wrong program writes out something else.");
   ("The wrong programs are: > for < (the larger first), each branch moving the other index (i++ and j++ swapped), and the else moving i (j never moves).");
   ("The writing is a first draft by Claude 2026-11-25.");
   let example_input = [
@@ -70,17 +72,26 @@ export function app_learn_js_lesson_array_while_smaller_first() {
     return r;
   }
   function input_drawn(n) {
-    "six different numbers from 1 to 12, three to a and three to b, each sorted; drawn again until some wrong program writes out something else";
+    "four different numbers from 1 to 12, two to a and two to b, each sorted; drawn again until both i and j move and some wrong program writes out something else";
     while (true) {
       let list2 = range_1(12);
-      let numbers = list_shuffle_take(list2, 6);
-      let list3 = list_take(numbers, 3);
+      let numbers = list_shuffle_take(list2, 4);
+      let list3 = list_take(numbers, 2);
       let v4 = list_sort_number(list3);
-      let list4 = numbers.slice(3);
+      let list4 = numbers.slice(2);
       let v5 = list_sort_number(list4);
       let input5 = [v4, v5];
       let code4 = program_of(input5);
       let answer = eval_console_log_lines(code4);
+      ("i has moved exactly when a[0] was written out, and j exactly when b[0] was");
+      let written = text_split_newline(answer);
+      let item = json_to(v4[0]);
+      let i_moved = list_includes(written, item);
+      let item2 = json_to(v5[0]);
+      let j_moved = list_includes(written, item2);
+      if (not(i_moved) || not(j_moved)) {
+        continue;
+      }
       let list = wrong_programs_of(input5);
       let outputs = list_map(list, eval_console_log_lines);
       function lambda(out) {
