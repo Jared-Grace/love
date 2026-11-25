@@ -28,6 +28,10 @@ export function app_shared_button_back_to_text(destination) {
       before: " Voltar para ",
       after: "",
     },
+    ind: {
+      before: " Kembali ke ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: " Back to ",
@@ -42,6 +46,10 @@ export function app_shared_button_back_to_text(destination) {
         after: "",
       },
       por: {
+        before: " Back to ",
+        after: "",
+      },
+      ind: {
         before: " Back to ",
         after: "",
       },
