@@ -9,11 +9,13 @@ export function app_shared_money_text() {
     tgl: " Ano ang nangyayari sa pera rito",
     spa: " Qué pasa con el dinero aquí",
     por: " O que acontece com o dinheiro aqui",
+    ind: " Apa yang terjadi dengan uang di sini",
     translated_from: {
       urd: " What happens with money here",
       tgl: " What happens with money here",
       spa: " What happens with money here",
       por: " What happens with money here",
+      ind: " What happens with money here",
     },
   };
   let label = app_shared_text_reader_language(texts);
