@@ -1,6 +1,6 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -89,9 +89,23 @@ export function app_learn_js_lesson_array_for_pair_includes() {
     );
     let box_three = app_learn_js_container_light_blue(root);
     let lines_said = [
-      ["We look for two numbers in ", "a", " that add up to ", "10", ""],
-      ["The number that goes with ", "a[i]", " is ", "10 - a[i]", ""],
-      ["So for each ", "a[i]", ", ask if it is in ", "a", ":"],
+      ["We look for two numbers in array ", "a", " that add up to ", "10", ""],
+      ["", "a[i] + (10 - a[i])", " is ", "10 - a[i] + a[i]", ""],
+      ["", "- a[i]", " and ", "+ a[i]", " cancel out to ", "0", ""],
+      ["So ", "10 - a[i] + a[i]", " is ", "10", ""],
+      ["And ", "a[i] + (10 - a[i])", " is ", "10", ""],
+      ["So ", "a[i]", " and ", "10 - a[i]", " add up to ", "10", ""],
+      [
+        "So if ",
+        "a[i]",
+        " is a number in ",
+        "a",
+        ", we check if ",
+        "10 - a[i]",
+        " is also in ",
+        "a",
+        "",
+      ],
     ];
     for (let said of lines_said) {
       app_learn_js_div_cycle_code(box_three, said);
