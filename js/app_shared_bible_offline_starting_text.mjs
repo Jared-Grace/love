@@ -7,11 +7,13 @@ export function app_shared_bible_offline_starting_text() {
     tgl: "Sinisimulan ang pag-download",
     spa: "Iniciando la descarga",
     por: "Iniciando o download",
+    ind: "Memulai unduhan",
     translated_from: {
       urd: "Starting the download",
       tgl: "Starting the download",
       spa: "Starting the download",
       por: "Starting the download",
+      ind: "Starting the download",
     },
   };
   let text = app_shared_text_reader_language(texts);
