@@ -132,30 +132,60 @@ export function app_learn_js_lesson_expression_where_meet() {
       "a",
       " and ",
       "b",
-      ". Here it is a whole number, so rounding up or down changes nothing:",
+      "",
+    ]);
+    ("Later the same day, at the human's asking: each example works its numbers out first, then says what that means for rounding, before the code.");
+    app_learn_js_div_cycle_code(box_two, [
+      "For ",
+      "1",
+      " and ",
+      "7",
+      ", ",
+      "1 + 7",
+      " is ",
+      "8",
+      " and ",
+      "8 / 2",
+      " is ",
+      "4",
+      "",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "Here ",
+      "4",
+      " is a whole number, so rounding up or down changes nothing:",
     ]);
     let lines3 = program_lines(1, 7, "Math.ceil", "Math.floor");
     let value = written([4, 4]);
     app_learn_js_code_lines_writes_out(box_two, lines3, value);
-    app_learn_js_div_cycle_code(box_two, ["", "(1 + 7) / 2", " is ", "4", ""]);
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
-      "Here it ends in .5, so rounding up and rounding down give two numbers:",
+      "For ",
+      "3",
+      " and ",
+      "4",
+      ", ",
+      "3 + 4",
+      " is ",
+      "7",
+      " and ",
+      "7 / 2",
+      " is ",
+      "3.5",
+      "",
+    ]);
+    app_learn_js_div_cycle_code(box_three, [
+      "Here ",
+      "3.5",
+      " ends in .5, so rounding up gives ",
+      "4",
+      " and rounding down gives ",
+      "3",
+      ":",
     ]);
     let lines4 = program_lines(3, 4, "Math.ceil", "Math.floor");
     let value2 = written([4, 3]);
     app_learn_js_code_lines_writes_out(box_three, lines4, value2);
-    app_learn_js_div_cycle_code(box_three, [
-      "",
-      "(3 + 4) / 2",
-      " is ",
-      "3.5",
-      ", which rounds up to ",
-      "4",
-      " and down to ",
-      "3",
-      "",
-    ]);
     app_learn_js_div_cycle_code(box_three, [
       "The next lesson uses this to find where two numbers meet, without stepping through a loop",
     ]);

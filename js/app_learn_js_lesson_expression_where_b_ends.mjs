@@ -1,7 +1,5 @@
-import { subtract } from "./subtract.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { not } from "./not.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
@@ -9,6 +7,8 @@ import { list_map } from "./list_map.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
@@ -109,21 +109,50 @@ export function app_learn_js_lesson_expression_where_b_ends() {
       ["what is inside ", "( )", " is worked out first"],
     );
     let box_two = app_learn_js_container_light_blue(root);
+    ("Later the same day, at the human's asking, since the lesson never said what the number is for: it says first what it is for, then works the numbers out before the code.");
     app_learn_js_div_cycle_code(box_two, [
-      "This works out ",
-      "4 - a",
-      " first, then takes that away from ",
+      "Say ",
+      "a",
+      " goes up 1 at a time until it is ",
+      "4",
+      ", and each time ",
       "b",
+      " goes down 1. This works out where ",
+      "b",
+      " ends",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "",
+      "4 - a",
+      " is how many times ",
+      "a",
+      " goes up, so ",
+      "b",
+      " goes down that many times",
+    ]);
+    app_learn_js_div_cycle_code(box_two, [
+      "For ",
+      "a",
+      " at ",
+      "1",
+      " and ",
+      "b",
+      " at ",
+      "9",
+      ", ",
+      "4 - 1",
+      " is ",
+      "3",
+      " and ",
+      "9 - 3",
+      " is ",
+      "6",
       ":",
     ]);
     let lines3 = program_lines(1, 9, 4, true);
     app_learn_js_code_lines_writes_out(box_two, lines3, "6");
-    app_learn_js_div_cycle_code(box_two, ["", "4 - 1", " is ", "3", ""]);
-    app_learn_js_div_cycle_code(box_two, ["", "9 - 3", " is ", "6", ""]);
     app_learn_js_div_cycle_code(box_two, [
-      "The next lesson uses this to find where ",
-      "b",
-      " ends, without stepping through a loop",
+      "The next lesson does this with a loop",
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(

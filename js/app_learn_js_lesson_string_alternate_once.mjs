@@ -32,7 +32,7 @@ export function app_learn_js_lesson_string_alternate_once() {
   }
   let upper = "letter = c.toUpperCase();";
   let lower = "letter = c.toLowerCase();";
-  let add = "out = out + letter;";
+  let add_line = "out = out + letter;";
   function program_with(word, inside) {
     let top = [
       "let s = " + json_to(word) + ";",
@@ -59,7 +59,7 @@ export function app_learn_js_lesson_string_alternate_once() {
   }
   function program_of(word2) {
     let a2 = branches(upper, lower);
-    let inside = list_concat(a2, ["  " + add]);
+    let inside = list_concat(a2, ["  " + add_line]);
     let code2 = program_with(word2, inside);
     return code2;
   }
@@ -67,17 +67,17 @@ export function app_learn_js_lesson_string_alternate_once() {
     let inside_if = [
       "  if (i % 2 === 0) {",
       "    " + upper,
-      "    " + add,
+      "    " + add_line,
       "  } else {",
       "    " + lower,
       "  }",
     ];
     let v = program_with(word3, inside_if);
     let b = branches(upper, lower);
-    let above_if = list_concat(["  " + add], b);
+    let above_if = list_concat(["  " + add_line], b);
     let v2 = program_with(word3, above_if);
     let a3 = branches(lower, upper);
-    let swapped = list_concat(a3, ["  " + add]);
+    let swapped = list_concat(a3, ["  " + add_line]);
     let v3 = program_with(word3, swapped);
     let programs = [v, v2, v3];
     return programs;
