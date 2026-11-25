@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
@@ -94,11 +95,12 @@ export async function calendar_db_waiting_book(
     return r;
   }
   let code = calendar_confirm_code(id);
+  let json = json_to(booked.ids);
   await db
     .prepare(
-      "UPDATE meetings SET code = ?1, via = ?3, profile_url = ?4 WHERE id = ?2",
+      "UPDATE meetings SET code = ?1, via = ?3, profile_url = ?4 WHERE id IN (SELECT value FROM json_each(?2))",
     )
-    .bind(code, id, via, profile_url)
+    .bind(code, json, via, profile_url)
     .run();
   let send_url = calendar_send_url(via, host.whatsapp, host.messenger, code);
   let left = multiply(24, 60);

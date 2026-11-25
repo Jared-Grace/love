@@ -1,3 +1,6 @@
+import { divide } from "./divide.mjs";
+import { subtract } from "./subtract.mjs";
+import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
@@ -35,6 +38,7 @@ import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_button_back_arrow } from "./app_shared_button_back_arrow.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
+import { calendar_weekly_series_plan } from "./calendar_weekly_series_plan.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_loading } from "./html_loading.mjs";
@@ -532,7 +536,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       html_clear(weekly_row);
       app_shared_field_title(weekly_row, "How often");
       let clashes = property_get_or(chosen, "weekly_clashes", []);
-      ('Every week is shut when anything is booked at this time on a later week - the server refuses it then - and its sentence names what is in the way: a meeting that itself repeats takes every week from its date, a single one takes its date (human: "this should not be selectable if someone else has already booked every week at this time starting at a future week").');
+      ('Every week was first shut when anything was booked at this time on a later week; now only a meeting that itself repeats shuts it (see the plan below). The sentence still names what is in the way: a meeting that itself repeats takes every week from its date, a single one takes its date (human: "this should not be selectable if someone else has already booked every week at this time starting at a future week").');
       function clash_text(c) {
         let when = new Date(c.start_utc).toLocaleDateString(undefined, {
           weekday: "short",
@@ -542,12 +546,63 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
         let r11 = c.weekly ? "every week from " + when : when;
         return r11;
       }
-      let shut = greater_than(clashes.length, 0);
-      let every_details = shut
-        ? "Not available - this time is already booked " +
-          list_map(clashes, clash_text).join(", ") +
-          "."
-        : "The same time every week, until you cancel.";
+      ('The taken weeks are skipped, not the card shut (human, 2026-11-25: "These mondays will be scheduled: ... And then every week beginning on ..."), by the plan the server books from. With nothing taken the card says only what it gives (human: "or if it\'s open, then don\'t need to explain"); the weeks it cannot give go on a line of their own in dark red (human: "I am not available to meet on these Mondays at ... (and different color or style so it\'s clear unavailable)").');
+      let plan = calendar_weekly_series_plan(chosen.day, clashes);
+      ("A host day is drawn as the guest's own date by moving the chosen meeting's moment on by whole days; across a clock change that is an hour off, which moves the date only for a meeting within an hour of midnight.");
+      function week_text(d) {
+        let left2 = Date.parse(d);
+        let right = Date.parse(chosen.day);
+        let top = subtract(left2, right);
+        let days = divide(top, 86400000);
+        let at = new Date(
+          Date.parse(chosen.start_utc) + multiply(days, 86400000),
+        );
+        let r12 = at.toLocaleDateString(undefined, {
+          month: "short",
+          day: "numeric",
+        });
+        return r12;
+      }
+      function weekly_clash(c) {
+        let r13 = c.weekly;
+        return r13;
+      }
+      let weekday_plural = day.weekday + "s";
+      let every_details = "The same time every week, until you cancel.";
+      let unavailable = "";
+      if (not(plan.open)) {
+        let theirs = clashes.find(weekly_clash);
+        every_details = "Not available.";
+        unavailable =
+          "I am not available to meet every " +
+          day.weekday +
+          " at " +
+          time.label +
+          " from " +
+          clash_text({
+            start_utc: theirs.start_utc,
+            weekly: false,
+          }) +
+          ".";
+      } else if (greater_than(plan.taken.length, 0)) {
+        every_details =
+          "These " +
+          weekday_plural +
+          " will be scheduled: " +
+          list_map(plan.singles, week_text).join(", ") +
+          ". And then every week beginning on " +
+          week_text(plan.weekly_from) +
+          ".";
+        unavailable =
+          "I am not available to meet on these " +
+          weekday_plural +
+          " at " +
+          time.label +
+          ": " +
+          list_map(plan.taken, week_text).join(", ") +
+          ".";
+      }
+      let shut = not(plan.open);
       let cards = [
         {
           key: "once",
@@ -597,6 +652,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
             },
           ],
           details: every_details,
+          unavailable,
           disabled: shut,
         },
       ];

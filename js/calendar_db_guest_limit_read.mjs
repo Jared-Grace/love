@@ -1,9 +1,11 @@
-import { greater_than_equal } from "./greater_than_equal.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { calendar_meeting_next_utc } from "./calendar_meeting_next_utc.mjs";
+import { list_map } from "./list_map.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 export async function calendar_db_guest_limit_read(
   db,
   slug,
@@ -46,7 +48,16 @@ WHERE h.slug = ?1 AND m.cancelled_at IS NULL`,
     let r = not_equal(left2, null);
     return r;
   }
-  let held = held_read.results.filter(same_guest).filter(upcoming).length;
+  ("★ ONE WEEKDAY AND MINUTE COUNTS AS ONE. An every-week booking that steps around taken weeks is written as several rows on the same weekday and minute (",
+    fn_name("calendar_db_book"),
+    '), and it is still one weekly meeting (human: "a weekly meeting counts as 1"). So rows are counted by their weekday and minute. Two single meetings a guest booked on two Mondays at the same hour then count as one too - the same hold as one weekly meeting. Rejected: a series number on each row, a new column for what the weekday and minute already say.');
+  function hold_key(m) {
+    let r3 = m.weekday + ":" + m.start_minute;
+    return r3;
+  }
+  let held_rows = held_read.results.filter(same_guest).filter(upcoming);
+  let mapped = list_map(held_rows, hold_key);
+  let held = new Set(mapped).size;
   let full = not_equal(limit, null) && greater_than_equal(held, limit);
   let r2 = {
     held,

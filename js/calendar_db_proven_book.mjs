@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { calendar_db_guest_book } from "./calendar_db_guest_book.mjs";
@@ -55,11 +56,12 @@ ORDER BY pr.confirmed_at DESC`,
   if (not(booked.ok)) {
     return booked;
   }
+  let json = json_to(booked.ids);
   await db
     .prepare(
-      "UPDATE meetings SET confirmed_at = ?1, via = ?2, profile_url = ?3 WHERE id = ?4",
+      "UPDATE meetings SET confirmed_at = ?1, via = ?2, profile_url = ?3 WHERE id IN (SELECT value FROM json_each(?4))",
     )
-    .bind(now_iso, proof.via, proof.profile_url, id)
+    .bind(now_iso, proof.via, proof.profile_url, json)
     .run();
   return booked;
 }
