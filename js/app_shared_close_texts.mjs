@@ -8,11 +8,13 @@ export function app_shared_close_texts() {
     tgl: "Isara",
     spa: "Cerrar",
     por: "Fechar",
+    ind: "Tutup",
     translated_from: {
       urd: "Close",
       tgl: "Close",
       spa: "Close",
       por: "Close",
+      ind: "Close",
     },
   };
   return r;
