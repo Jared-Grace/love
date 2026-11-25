@@ -742,6 +742,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_while_smaller_first:
         text_frozen("smaller_first"),
       app_learn_js_lesson_array_while_merge: text_frozen("merge"),
+      app_learn_js_lesson_else_if_compare_three: text_frozen("compare_three"),
       app_learn_js_lesson_array_while_compare_each: text_frozen("compare_each"),
       app_learn_js_lesson_array_while_in_both_order:
         text_frozen("in_both_order"),

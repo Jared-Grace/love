@@ -478,6 +478,7 @@ import { app_learn_js_lesson_array_for_all_in_b } from "./app_learn_js_lesson_ar
 import { app_learn_js_lesson_array_for_in_order_inside } from "./app_learn_js_lesson_array_for_in_order_inside.mjs";
 import { app_learn_js_lesson_array_while_smaller_first } from "./app_learn_js_lesson_array_while_smaller_first.mjs";
 import { app_learn_js_lesson_array_while_merge } from "./app_learn_js_lesson_array_while_merge.mjs";
+import { app_learn_js_lesson_else_if_compare_three } from "./app_learn_js_lesson_else_if_compare_three.mjs";
 import { app_learn_js_lesson_array_while_compare_each } from "./app_learn_js_lesson_array_while_compare_each.mjs";
 import { app_learn_js_lesson_array_while_in_both_order } from "./app_learn_js_lesson_array_while_in_both_order.mjs";
 import { app_learn_js_lesson_array_concat } from "./app_learn_js_lesson_array_concat.mjs";
@@ -1094,6 +1095,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_in_order_inside,
     app_learn_js_lesson_array_while_smaller_first,
     app_learn_js_lesson_array_while_merge,
+    app_learn_js_lesson_else_if_compare_three,
     app_learn_js_lesson_array_while_compare_each,
     app_learn_js_lesson_array_while_in_both_order,
     app_learn_js_lesson_array_concat,
