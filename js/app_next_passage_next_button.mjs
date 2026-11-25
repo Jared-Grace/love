@@ -6,7 +6,7 @@ import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
 import { html_hash_set_object } from "./html_hash_set_object.mjs";
 import { app_shared_refresh } from "./app_shared_refresh.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-export function app_next_big_next_button(parent, context, hash_onward) {
+export function app_next_passage_next_button(parent, context, hash_onward) {
   "The way on to the next passage in the large form, where the copied link points back at this passage rather than onward. The page moves on where it stands, keeping the big word, so the next passage is big too and ready to copy.";
   arguments_assert(arguments, 3);
   let row = html_div(parent);

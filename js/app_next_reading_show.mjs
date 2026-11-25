@@ -9,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { each } from "./each.mjs";
 import { app_next_urls_show } from "./app_next_urls_show.mjs";
-import { app_next_big_next_button } from "./app_next_big_next_button.mjs";
+import { app_next_passage_next_button } from "./app_next_passage_next_button.mjs";
 import { app_next_ways_onward } from "./app_next_ways_onward.mjs";
 import { app_next_count_choose } from "./app_next_count_choose.mjs";
 import { html_centered } from "./html_centered.mjs";
@@ -57,7 +57,7 @@ export function app_next_reading_show({
   ("Both links stand in the card with the reading, because one of them is copied with it. Each says what it leads to, so a reader can see which link each button carries.");
   app_next_urls_show(card, url_here, url_onward);
   ("The way on to the next passage, first under the card, for somebody walking through a book on this page rather than through messages.");
-  app_next_big_next_button(content, context, hash_onward);
+  app_next_passage_next_button(content, context, hash_onward);
   app_next_ways_onward(context, content, run);
   ("How much to send stands last, under the reading and under the ways on from it, because it is the one thing here that is not about this passage. Somebody who opened this link came to copy what is in the card; they set the size once, when it turns out to be wrong for who they are writing to, and then never again for the rest of a book.");
   app_next_count_choose(content, count);
