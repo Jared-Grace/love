@@ -9,11 +9,13 @@ export function app_g_pray_tap_self_text() {
     tgl: "Para manalangin, i-tap o i-click ang iyong sarili (Ikaw ang may puting liwanag)",
     spa: "Para orar, toca o haz clic en ti mismo (brillas de blanco)",
     por: "Para orar, toque ou clique em você mesmo (você brilha em branco)",
+    ind: "Untuk berdoa, ketuk atau klik dirimu sendiri (kamu bercahaya putih)",
     translated_from: {
       urd: "To pray, tap or click on yourself (You glow with white)",
       tgl: "To pray, tap or click on yourself (You glow with white)",
       spa: "To pray, tap or click on yourself (You glow with white)",
       por: "To pray, tap or click on yourself (You glow with white)",
+      ind: "To pray, tap or click on yourself (You glow with white)",
     },
   };
   let text = app_shared_text_reader_language(texts);
