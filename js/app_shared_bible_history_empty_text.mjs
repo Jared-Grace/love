@@ -8,11 +8,13 @@ export function app_shared_bible_history_empty_text() {
     tgl: "Wala pa. Anumang binabasa mo ay naaalala rito, para mabalikan mo ito kung magsara ang isang tab.",
     spa: "Nada todavía. Lo que estés leyendo se recuerda aquí, para que puedas volver a ello si se cierra una pestaña.",
     por: "Nada ainda. O que você estiver lendo fica guardado aqui, para que você possa voltar se uma aba fechar.",
+    ind: "Belum ada. Apa pun yang kamu baca diingat di sini, jadi kamu bisa kembali ke sana jika sebuah tab tertutup.",
     translated_from: {
       urd: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
       tgl: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
       spa: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
       por: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
+      ind: "Nothing yet. Whatever you are reading is remembered here, so you can come back to it if a tab closes.",
     },
   };
   let text = app_shared_text_reader_language(texts);
