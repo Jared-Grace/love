@@ -10,11 +10,13 @@ export function app_shared_bible_books_question_text() {
     tgl: "Anong aklat ng Biblia ang gusto mong piliin?",
     spa: "¿Qué libro de la Biblia quieres elegir?",
     por: "Qual livro da Bíblia você quer escolher?",
+    ind: "Kitab Alkitab mana yang ingin kamu pilih?",
     translated_from: {
       urd: "What book of the Bible do you want to choose?",
       tgl: "What book of the Bible do you want to choose?",
       spa: "What book of the Bible do you want to choose?",
       por: "What book of the Bible do you want to choose?",
+      ind: "What book of the Bible do you want to choose?",
     },
   };
   let text = app_shared_text_reader_language(texts);
