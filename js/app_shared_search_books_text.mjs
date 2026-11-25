@@ -8,11 +8,13 @@ export function app_shared_search_books_text() {
     tgl: "Maghanap ng mga aklat",
     spa: "Buscar libros",
     por: "Pesquisar livros",
+    ind: "Cari kitab",
     translated_from: {
       urd: "Search books",
       tgl: "Search books",
       spa: "Search books",
       por: "Search books",
+      ind: "Search books",
     },
   };
   let text = app_shared_text_reader_language(texts);
