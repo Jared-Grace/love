@@ -1,9 +1,11 @@
-import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
-import { download_cache_get } from "./download_cache_get.mjs";
 import { download_cache_key } from "./download_cache_key.mjs";
-import { download_cache_put } from "./download_cache_put.mjs";
-import { firebase_storage_download_json_decompress } from "./firebase_storage_download_json_decompress.mjs";
+import { download_cache_get } from "./download_cache_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { firebase_storage_download_json_decompress } from "./firebase_storage_download_json_decompress.mjs";
+import { download_cache_put } from "./download_cache_put.mjs";
+import { global_function_property_exists } from "./global_function_property_exists.mjs";
+import { global_function_property_set } from "./global_function_property_set.mjs";
+import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 export async function firebase_storage_download_json_decompress_cache(
   project_url,
   destination,
@@ -21,7 +23,20 @@ export async function firebase_storage_download_json_decompress_cache(
     await download_cache_put(key, fetched);
     return fetched;
   }
+  ("THE REFRESH IS ASKED FOR ONCE PER VISIT, not once per ask: its whole purpose is the next visit, which one refresh already serves. Asking every time downloaded the same file again behind the reader at every tap of a bible word.");
+  let refreshed = global_function_property_exists(
+    firebase_storage_download_json_decompress_cache,
+    key,
+  );
+  global_function_property_set(
+    firebase_storage_download_json_decompress_cache,
+    key,
+    true,
+  );
   if (held) {
+    if (refreshed) {
+      return cached;
+    }
     ("nothing waits on this: the reader has their copy, and being offline must read as success rather than as an error nobody asked for");
     promise_later_catch_ignore(fetch_and_save);
     return cached;

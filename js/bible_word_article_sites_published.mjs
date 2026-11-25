@@ -1,10 +1,9 @@
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
-import { web_assets_url } from "./web_assets_url.mjs";
 import { bible_word_article_sites_path } from "./bible_word_article_sites_path.mjs";
-import { http_json_browser_quiet } from "./http_json_browser_quiet.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
+import { web_assets_url } from "./web_assets_url.mjs";
+import { http_json_browser_quiet_memoized_on_success } from "./http_json_browser_quiet_memoized_on_success.mjs";
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
 export async function bible_word_article_sites_published() {
   "The sites a tapped bible word can be opened on, as the published list names them, each with its name, its table of names and the whole address of one of its articles given the file.";
   "THE LIST IS FETCHED, NOT BUILT IN, so a site added later reaches readers when the list is uploaded, without the app being rebuilt and deployed. A site this app was built knowing keeps its table of names; a site it does not know has an empty table, and its articles still come through the list of citations, which carries each one's title.";
@@ -12,11 +11,12 @@ export async function bible_word_article_sites_published() {
   let known = bible_word_article_sites();
   let path = bible_word_article_sites_path();
   let url = web_assets_url(path);
-  async function list_fetch() {
-    let fetched = await http_json_browser_quiet(url);
-    return fetched;
-  }
-  let rows = await catch_null_async(list_fetch);
+  ("ONE FETCH PER VISIT: every tap reads the same list.");
+  let rows = await http_json_browser_quiet_memoized_on_success(
+    bible_word_article_sites_published,
+    url,
+    url,
+  );
   let b = Array.isArray(rows);
   if (not(b)) {
     return known;
