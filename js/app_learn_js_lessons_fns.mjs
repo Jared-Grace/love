@@ -473,6 +473,8 @@ import { app_learn_js_lesson_array_for_push_both } from "./app_learn_js_lesson_a
 import { app_learn_js_lesson_array_for_in_both } from "./app_learn_js_lesson_array_for_in_both.mjs";
 import { app_learn_js_lesson_array_for_in_a_not_b } from "./app_learn_js_lesson_array_for_in_a_not_b.mjs";
 import { app_learn_js_lesson_array_for_in_either } from "./app_learn_js_lesson_array_for_in_either.mjs";
+import { app_learn_js_lesson_array_for_in_one_only } from "./app_learn_js_lesson_array_for_in_one_only.mjs";
+import { app_learn_js_lesson_array_for_all_in_b } from "./app_learn_js_lesson_array_for_all_in_b.mjs";
 import { app_learn_js_lesson_array_concat } from "./app_learn_js_lesson_array_concat.mjs";
 import { app_learn_js_lesson_array_for_push_from } from "./app_learn_js_lesson_array_for_push_from.mjs";
 import { app_learn_js_lesson_array_for_push_first } from "./app_learn_js_lesson_array_for_push_first.mjs";
@@ -536,6 +538,7 @@ import { app_learn_js_lesson_array_for_is_last } from "./app_learn_js_lesson_arr
 import { app_learn_js_lesson_array_for_next_differs } from "./app_learn_js_lesson_array_for_next_differs.mjs";
 import { app_learn_js_lesson_array_for_run_last } from "./app_learn_js_lesson_array_for_run_last.mjs";
 import { app_learn_js_lesson_array_for_each_run } from "./app_learn_js_lesson_array_for_each_run.mjs";
+import { app_learn_js_lesson_array_for_runs_into_one } from "./app_learn_js_lesson_array_for_runs_into_one.mjs";
 import { app_learn_js_lesson_array_for_range } from "./app_learn_js_lesson_array_for_range.mjs";
 import { app_learn_js_lesson_string_upper } from "./app_learn_js_lesson_string_upper.mjs";
 import { app_learn_js_lesson_string_capital_first } from "./app_learn_js_lesson_string_capital_first.mjs";
@@ -1081,6 +1084,8 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_in_both,
     app_learn_js_lesson_array_for_in_a_not_b,
     app_learn_js_lesson_array_for_in_either,
+    app_learn_js_lesson_array_for_in_one_only,
+    app_learn_js_lesson_array_for_all_in_b,
     app_learn_js_lesson_array_concat,
     app_learn_js_lesson_array_for_push_from,
     app_learn_js_lesson_array_for_push_first,
@@ -1144,6 +1149,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_next_differs,
     app_learn_js_lesson_array_for_run_last,
     app_learn_js_lesson_array_for_each_run,
+    app_learn_js_lesson_array_for_runs_into_one,
     app_learn_js_lesson_array_for_range,
     app_learn_js_lesson_string_upper,
     app_learn_js_lesson_string_capital_first,
