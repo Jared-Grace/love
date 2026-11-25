@@ -704,6 +704,9 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_while_reverse: text_frozen("reverse_two"),
       app_learn_js_lesson_array_while_same_both_ways:
         text_frozen("same_both_ways"),
+      app_learn_js_lesson_array_while_true_find: text_frozen("true_find"),
+      app_learn_js_lesson_array_pair_sum_step: text_frozen("pair_step"),
+      app_learn_js_lesson_array_while_pair_sum: text_frozen("pair_sum"),
       app_learn_js_lesson_array_reverse_call: text_frozen("reverse_call"),
       app_learn_js_lesson_array_slice_minus: text_frozen("slice_minus"),
       app_learn_js_lesson_array_for_letters: text_frozen("for_letters"),
