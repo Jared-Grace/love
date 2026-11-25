@@ -9,11 +9,13 @@ export function app_shared_about_text() {
     tgl: " Tungkol dito",
     spa: " Acerca de",
     por: " Sobre",
+    ind: " Tentang",
     translated_from: {
       urd: " About",
       tgl: " About",
       spa: " About",
       por: " About",
+      ind: " About",
     },
   };
   let label = app_shared_text_reader_language(texts);
