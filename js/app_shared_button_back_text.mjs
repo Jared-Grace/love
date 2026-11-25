@@ -9,11 +9,13 @@ export function app_shared_button_back_text() {
     tgl: " Bumalik",
     spa: " Atrás",
     por: " Voltar",
+    ind: " Kembali",
     translated_from: {
       urd: " Back",
       tgl: " Back",
       spa: " Back",
       por: " Back",
+      ind: " Back",
     },
   };
   let label = app_shared_text_reader_language(texts);
