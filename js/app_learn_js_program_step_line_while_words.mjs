@@ -4,6 +4,7 @@ import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
+import { text_trim } from "./text_trim.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_learn_js_program_step_loop_keyword } from "./app_learn_js_program_step_loop_keyword.mjs";
@@ -27,6 +28,22 @@ export function app_learn_js_program_step_line_while_words(
   let index2 = subtract(index, 1);
   let previous = list_get(trace, index2);
   let previous_line = property_get(previous, "line");
+  let message = list_get(lines, previous_line);
+  let previous_text = text_trim(message);
+  if (equal(previous_text, "break;")) {
+    ("2026-11-25: the presses gate found the Loop until break lessons pressing the line after break; - the rest of the loop - with no reason. break; leaves the loop at once, so nothing more inside it runs");
+    let r0 = {
+      reason: "break_ran",
+      words: [
+        "",
+        "break;",
+        " just ran, so the computer leaves the loop at once and goes on below its ",
+        "}",
+        "",
+      ],
+    };
+    return r0;
+  }
   let alternate = property_get_or(entry, "alternate", null);
   if (equal(alternate, "loop") && less_than(due, previous_line)) {
     let keyword = app_learn_js_program_step_loop_keyword(lines, due);
