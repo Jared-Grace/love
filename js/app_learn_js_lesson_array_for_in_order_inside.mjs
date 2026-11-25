@@ -1,18 +1,18 @@
-import { less_than } from "./less_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_code_array } from "./js_code_array.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
+import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_count } from "./app_learn_js_lesson_array_for_count.mjs";
-import { app_learn_js_lesson_array_index_past_end } from "./app_learn_js_lesson_array_index_past_end.mjs";
+import { app_learn_js_lesson_expression_choose_order_stop_early_and } from "./app_learn_js_lesson_expression_choose_order_stop_early_and.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -21,7 +21,8 @@ import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_l
 export function app_learn_js_lesson_array_for_in_order_inside() {
   arguments_assert(arguments, 0);
   ("whether the items of b are in a, in the same order: let j = 0; for (let i = 0; i < a.length; i++) { if (a[i] === b[j]) { j++; } } console.log(j === b.length); writes out true for a = ['x', 'y', 'z', 'y'] and b = ['x', 'z']");
-  ("2026-11-25, at the human's asking, the first of three steps towards merging two sorted arrays (then Smaller first, then the merge itself). The one new fact is a second index, j, that moves on its own: i moves every time, j only when it finds what it looks for. Once j is past the end of b, b[j] reads undefined, which no item equals, so nothing more is counted.");
+  ("2026-11-25, at the human's asking, the first of three steps towards merging two sorted arrays (then Smaller first, then the merge itself). The one new fact is a second index, j, that moves on its own: i moves every time, j only when it finds what it looks for.");
+  ("j < b.length && guards the end of b: once every item of b is found, the && stops early and b[j], which would read past the end, is never read. In JavaScript it would read undefined, which no item equals, so the answer is the same without it - but the step-by-step quiz refuses to read past the end, and the guard says what is meant.");
   ("The inputs are letters x, y and z: a four or five long, b two long, the answer true for half of them. An input is drawn again until at least one wrong program writes out the other answer.");
   ("The wrong programs are: j++ with no if (j counts every item of a), b[i] for b[j] (a must start with b) and b[0] for b[j] (counts how many times the first item of b is in a).");
   ("The writing is a first draft by Claude 2026-11-25.");
@@ -37,7 +38,7 @@ export function app_learn_js_lesson_array_for_in_order_inside() {
     let codes2 = list_map(input[1], json_to);
     let b = js_code_array(codes2);
     let body = inside
-      ? ["  if (a[i] === " + asked + ") {", "    j++;", "  }"]
+      ? ["  if (j < b.length && a[i] === " + asked + ") {", "    j++;", "  }"]
       : ["  j++;"];
     let lines = [
       "let a = " + a + ";",
@@ -105,7 +106,7 @@ export function app_learn_js_lesson_array_for_in_order_inside() {
     return shuffled;
   }
   function above(root, context) {
-    "counting inside an if and past the end remembered, then a second index that counts and reads";
+    "counting inside an if and && stopping early remembered, then a second index that counts and reads";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
@@ -117,8 +118,14 @@ export function app_learn_js_lesson_array_for_in_order_inside() {
     app_learn_js_remember_from_lesson(
       box_two,
       context,
-      app_learn_js_lesson_array_index_past_end,
-      ["an index past the end of an array reads ", "undefined"],
+      app_learn_js_lesson_expression_choose_order_stop_early_and,
+      [
+        "when the left side of ",
+        "&&",
+        " is ",
+        "false",
+        ", the right side is never solved",
+      ],
     );
     let box_three = app_learn_js_container_light_blue(root);
     ("one thought to a line");
@@ -140,6 +147,19 @@ export function app_learn_js_lesson_array_for_in_order_inside() {
         " is the item of ",
         "b",
         " we are looking for",
+      ],
+      [
+        "Once every item of ",
+        "b",
+        " is found, ",
+        "j < b.length",
+        " is ",
+        "false",
+        ", so the ",
+        "&&",
+        " stops early and ",
+        "b[j]",
+        " is never read past the end",
       ],
       [
         "If ",
@@ -168,7 +188,7 @@ export function app_learn_js_lesson_array_for_in_order_inside() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "In order inside a?",
-    "if (a[i] === b[j])",
+    "a[i] === b[j]",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
