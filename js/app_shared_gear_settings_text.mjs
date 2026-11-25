@@ -9,11 +9,13 @@ export function app_shared_gear_settings_text() {
     tgl: " Mga setting",
     spa: " Ajustes",
     por: " Configurações",
+    ind: " Pengaturan",
     translated_from: {
       urd: " Settings",
       tgl: " Settings",
       spa: " Settings",
       por: " Settings",
+      ind: " Settings",
     },
   };
   let label = app_shared_text_reader_language(texts);
