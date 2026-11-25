@@ -438,6 +438,7 @@ import { app_learn_js_lesson_array_second_loop } from "./app_learn_js_lesson_arr
 import { app_learn_js_lesson_array_for_average } from "./app_learn_js_lesson_array_for_average.mjs";
 import { app_learn_js_lesson_array_for_above_average } from "./app_learn_js_lesson_array_for_above_average.mjs";
 import { app_learn_js_lesson_array_for_total_over } from "./app_learn_js_lesson_array_for_total_over.mjs";
+import { app_learn_js_lesson_array_for_limit } from "./app_learn_js_lesson_array_for_limit.mjs";
 import { app_learn_js_lesson_array_for_total_even } from "./app_learn_js_lesson_array_for_total_even.mjs";
 import { app_learn_js_lesson_array_for_push_double } from "./app_learn_js_lesson_array_for_push_double.mjs";
 import { app_learn_js_lesson_array_for_pair } from "./app_learn_js_lesson_array_for_pair.mjs";
@@ -476,6 +477,7 @@ import { app_learn_js_lesson_array_for_in_either } from "./app_learn_js_lesson_a
 import { app_learn_js_lesson_array_for_in_one_only } from "./app_learn_js_lesson_array_for_in_one_only.mjs";
 import { app_learn_js_lesson_array_for_all_in_b } from "./app_learn_js_lesson_array_for_all_in_b.mjs";
 import { app_learn_js_lesson_array_for_in_order_inside } from "./app_learn_js_lesson_array_for_in_order_inside.mjs";
+import { app_learn_js_lesson_array_while_walk } from "./app_learn_js_lesson_array_while_walk.mjs";
 import { app_learn_js_lesson_array_while_both_move } from "./app_learn_js_lesson_array_while_both_move.mjs";
 import { app_learn_js_lesson_array_while_smaller_first } from "./app_learn_js_lesson_array_while_smaller_first.mjs";
 import { app_learn_js_lesson_array_while_merge } from "./app_learn_js_lesson_array_while_merge.mjs";
@@ -1056,6 +1058,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_average,
     app_learn_js_lesson_array_for_above_average,
     app_learn_js_lesson_array_for_total_over,
+    app_learn_js_lesson_array_for_limit,
     app_learn_js_lesson_array_for_total_even,
     app_learn_js_lesson_array_for_push_double,
     app_learn_js_lesson_array_for_pair,
@@ -1094,6 +1097,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_in_one_only,
     app_learn_js_lesson_array_for_all_in_b,
     app_learn_js_lesson_array_for_in_order_inside,
+    app_learn_js_lesson_array_while_walk,
     app_learn_js_lesson_array_while_both_move,
     app_learn_js_lesson_array_while_smaller_first,
     app_learn_js_lesson_array_while_merge,
