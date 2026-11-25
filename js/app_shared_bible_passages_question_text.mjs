@@ -15,11 +15,13 @@ export function app_shared_bible_passages_question_text(
     tgl: "Anong bahagi mula sa kabanata {chapter} ng aklat ng {book} ang gusto mong piliin?",
     spa: "¿Qué pasaje del capítulo {chapter} del libro de {book} quieres elegir?",
     por: "Qual passagem do capítulo {chapter} do livro de {book} você quer escolher?",
+    ind: "Perikop mana dari pasal {chapter} kitab {book} yang ingin kamu pilih?",
     translated_from: {
       urd: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
       tgl: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
       spa: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
       por: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
+      ind: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
     },
   };
   let text = app_shared_text_reader_language_filled(texts, {
