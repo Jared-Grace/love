@@ -17,6 +17,7 @@ import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_calendar_share_link_draw } from "./app_calendar_share_link_draw.mjs";
@@ -31,7 +32,6 @@ import { app_shared_unavailable_box } from "./app_shared_unavailable_box.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_button_back_arrow } from "./app_shared_button_back_arrow.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
@@ -158,6 +158,19 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   function apps_show() {
     html_clear(step);
     ('THE MAIN CHOICES ARE ACTIONS (human, 2026-11-25: "Book meeting on WhatsApp / Confirm your Messenger / Change your WA# / Share this website with someone else ... would be the main choices"): each app says what can be done on it now - book, send the code already asked for, or confirm first - then a change for each app already confirmed, then sharing. Host sign in stays its own section under the card.');
+    ('A host with no open time says so at the top of the first screen (human, 2026-11-25: "on the main page, it should say if completely booked/no dates available"), so nobody presses Book only to learn it there. Confirming an app still works: the guest is ready when times open.');
+    if (equal(free.body.slots.length, 0)) {
+      let none_line = html_div_text(
+        step,
+        "No times are open in the next " +
+          booking_window.days_ahead +
+          " days - all booked or closed. Please check back later.",
+      );
+      html_style_assign(none_line, {
+        "font-weight": "bold",
+        "margin-bottom": "0.6em",
+      });
+    }
     let vias = host.messenger ? ["whatsapp", "messenger"] : ["whatsapp"];
     ('BOTH APPS CONFIRMED ⇒ ONE BOOK BUTTON (human, 2026-11-25: "if both are confirmed then it has book meeting button and then they choose which later?"); which app is then its own screen. With one app confirmed, its Book button names it and that screen is skipped.');
     let proven_vias = vias.filter(via_proven);

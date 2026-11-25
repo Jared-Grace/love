@@ -9,7 +9,9 @@ export function html_error_notice_button_texts() {
     tgl: "Subukang muli",
     spa: "Intentar de nuevo",
     por: "Tentar de novo",
+    ind: "Coba lagi",
     translated_from: {
+      ind: "Try again",
       urd: "Try again",
       tgl: "Try again",
       spa: "Try again",

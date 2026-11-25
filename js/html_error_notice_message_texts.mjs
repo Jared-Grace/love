@@ -10,7 +10,9 @@ export function html_error_notice_message_texts() {
     tgl: "Paumanhin — hindi ito natapos mag-load.",
     spa: "Lo sentimos — esto no terminó de cargar.",
     por: "Desculpe — isto não terminou de carregar.",
+    ind: "Maaf — halaman ini belum selesai dimuat.",
     translated_from: {
+      ind: "Sorry — this didn't finish loading.",
       urd: "Sorry — this didn't finish loading.",
       tgl: "Sorry — this didn't finish loading.",
       spa: "Sorry — this didn't finish loading.",
