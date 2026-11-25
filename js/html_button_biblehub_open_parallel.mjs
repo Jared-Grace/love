@@ -14,11 +14,13 @@ export function html_button_biblehub_open_parallel(
     tgl: "Magkaagapay",
     spa: "Paralelo",
     por: "Paralelo",
+    ind: "Paralel",
     translated_from: {
       urd: "Parallel",
       tgl: "Parallel",
       spa: "Parallel",
       por: "Parallel",
+      ind: "Parallel",
     },
   };
   let text = app_shared_text_reader_language(texts);
