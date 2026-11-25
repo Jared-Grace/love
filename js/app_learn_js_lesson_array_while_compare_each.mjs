@@ -7,7 +7,7 @@ import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_while_smaller_first } from "./app_learn_js_lesson_array_while_smaller_first.mjs";
-import { app_learn_js_lesson_else_if } from "./app_learn_js_lesson_else_if.mjs";
+import { app_learn_js_lesson_else_if_compare_three } from "./app_learn_js_lesson_else_if_compare_three.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -70,7 +70,8 @@ export function app_learn_js_lesson_array_while_compare_each() {
     return shuffled;
   }
   function above(root, context) {
-    "Smaller first and else if remembered, then the three ways a[i] and b[j] can compare";
+    "Smaller first and Same, smaller or bigger remembered, then that if inside the while";
+    "2026-11-25, at the human's asking: Same, smaller or bigger now comes straight before, with the three branches on their own, so this lesson remembers it rather than else if, and adds only the while. The title says bigger, as that lesson's does.";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
@@ -90,13 +91,17 @@ export function app_learn_js_lesson_array_while_compare_each() {
     app_learn_js_remember_from_lesson(
       box_two,
       context,
-      app_learn_js_lesson_else_if,
+      app_learn_js_lesson_else_if_compare_three,
       [
-        "",
-        "else if",
-        " asks its test only when the test before it was ",
-        "false",
-        "",
+        "an ",
+        "if",
+        " can have one branch for each of the three: ",
+        "a === b",
+        ", ",
+        "a < b",
+        ", and an ",
+        "else",
+        " for bigger",
       ],
     );
     let box_three = app_learn_js_container_light_blue(root);
@@ -104,20 +109,15 @@ export function app_learn_js_lesson_array_while_compare_each() {
     let lines_said = [
       ["", "a", " and ", "b", " are each in order, smallest first"],
       [
-        "Each time round, ",
+        "Here that ",
+        "if",
+        " goes inside the ",
+        "while",
+        ", comparing ",
         "a[i]",
-        " and ",
+        " with ",
         "b[j]",
-        " are the same, or one of them is smaller",
-      ],
-      [
-        "Each branch writes out the two it compared, with ",
-        "===",
-        ", ",
-        "<",
-        " or ",
-        ">",
-        " between them",
+        "",
       ],
       ["When they are the same, both ", "i", " and ", "j", " move"],
       ["Otherwise only the index of the smaller one moves"],
@@ -144,7 +144,7 @@ export function app_learn_js_lesson_array_while_compare_each() {
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Same, smaller or larger",
+    "Same, smaller or bigger",
     "else if (a[i] < b[j])",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
