@@ -24,8 +24,8 @@ export function app_learn_eng_gloss_authored() {
     upload_path: app_learn_eng_gloss_spanish_generate_upload_path,
     chapters_uploaded: app_learn_eng_gloss_spanish_chapters_uploaded,
   };
-  let r2 = app_learn_eng_gloss_authored_portuguese();
-  let r3 = app_learn_eng_gloss_authored_indonesian();
-  let r = [tagalog, spanish, r2, r3];
+  let portuguese = app_learn_eng_gloss_authored_portuguese();
+  let indonesian = app_learn_eng_gloss_authored_indonesian();
+  let r = [tagalog, spanish, portuguese, indonesian];
   return r;
 }
