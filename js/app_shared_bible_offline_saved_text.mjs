@@ -27,6 +27,10 @@ export function app_shared_bible_offline_saved_text(name) {
       before: " ",
       after: " está guardado neste dispositivo",
     },
+    ind: {
+      before: " ",
+      after: " sudah disimpan di perangkat ini",
+    },
     translated_from: {
       urd: {
         before: " ",
@@ -41,6 +45,10 @@ export function app_shared_bible_offline_saved_text(name) {
         after: " is saved on this device",
       },
       por: {
+        before: " ",
+        after: " is saved on this device",
+      },
+      ind: {
         before: " ",
         after: " is saved on this device",
       },
