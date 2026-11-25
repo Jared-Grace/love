@@ -3,12 +3,11 @@ import { property_get } from "./property_get.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { html_checked_set } from "./html_checked_set.mjs";
 import { each } from "./each.mjs";
+import { app_shared_choice_card_chosen_color } from "./app_shared_choice_card_chosen_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { sleep_0 } from "./sleep_0.mjs";
 import { html_checkboxes_validate } from "./html_checkboxes_validate.mjs";
-import { app_shared_button_background_invalid } from "./app_shared_button_background_invalid.mjs";
-import { html_rgba_to_rgb } from "./html_rgba_to_rgb.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_shared_choice_card_ring } from "./app_shared_choice_card_ring.mjs";
 export async function html_checkboxes_on_click(
   checkboxes,
   checkbox,
@@ -24,18 +23,10 @@ export async function html_checkboxes_on_click(
   }
   each(checkboxes, lambda2);
   html_checked_set(checkbox, true);
-  let selected = "#5ffb84ff";
+  let selected = app_shared_choice_card_chosen_color();
   html_style_background_color_set(container, selected);
   await sleep_0();
   let valid = valid_get(checkboxes);
   html_checkboxes_validate(valid, checkboxes, bn);
-  let ci = app_shared_button_background_invalid();
-  let c = valid ? "#4ad66bff" : ci;
-  let taken = html_rgba_to_rgb(c);
-  let style_value = text_combine_multiple([
-    "inset 0 0 0 .15em ",
-    taken,
-    ", inset 0 0 0 .3em white",
-  ]);
-  html_box_shadow_set(container, style_value);
+  app_shared_choice_card_ring(container, valid);
 }

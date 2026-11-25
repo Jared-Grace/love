@@ -5,6 +5,7 @@ import { subtract } from "./subtract.mjs";
 import { calendar_openings_free } from "./calendar_openings_free.mjs";
 import { calendar_slots_day_limit } from "./calendar_slots_day_limit.mjs";
 import { calendar_soon_slots } from "./calendar_soon_slots.mjs";
+import { calendar_slots_weekly_clashes } from "./calendar_slots_weekly_clashes.mjs";
 export async function calendar_db_host_free(
   db,
   slug,
@@ -71,9 +72,14 @@ export async function calendar_db_host_free(
     hours_grace,
     meetings_read.results,
   );
+  let slots2 = soon.concat(slots);
   let r2 = {
     host,
-    slots: soon.concat(slots),
+    slots: calendar_slots_weekly_clashes(
+      slots2,
+      meetings_read.results,
+      host.timezone,
+    ),
   };
   return r2;
 }

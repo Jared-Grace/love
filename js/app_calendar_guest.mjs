@@ -15,8 +15,8 @@ import { html_div_text_content } from "./html_div_text_content.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_calendar_share_link_draw } from "./app_calendar_share_link_draw.mjs";
 import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
@@ -30,10 +30,11 @@ import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { app_shared_button_back_arrow } from "./app_shared_button_back_arrow.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { html_input_type } from "./html_input_type.mjs";
+import { app_shared_field_title } from "./app_shared_field_title.mjs";
+import { app_shared_choice_cards } from "./app_shared_choice_cards.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_loading } from "./html_loading.mjs";
@@ -429,6 +430,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       for (let time of day.times) {
         function time_pick() {
           chosen = time.slot;
+          weekly_chosen = false;
           problems_recheck();
           html_clear(list);
           chosen_line_set("Chosen: " + day.label + ", " + time.label, true);
@@ -438,6 +440,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           let left = app_shared_button_back_arrow();
           let text4 = text_combine(left, " Change time");
           app_shared_button_uncolored(list, text4, time_back);
+          repeat_draw(day, time);
           final_set(true);
         }
         app_shared_button_uncolored(list, time.label, time_pick);
@@ -450,24 +453,87 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
         ? ""
         : "none";
     }
-    ("The proven guest is told where the meeting will be, in the number or link the host proved, so a wrong one is seen before booking; changing it is on the first screen, and means a new code.");
-    let app_name = equal(proof.via, "messenger") ? "Messenger" : "WhatsApp";
+    ('★ THE LAST SCREEN ASKS TWO THINGS AS BIG CHOICE CARDS, the karate app\'s radio cards (human, 2026-11-25: "radio button for whatsapp ... or radio button for every week: Meet ... only / Meet every week Monday at ..."): which app to meet on, and once or every week.');
+    ("Rejected: a tick box for every week (human named it first, then offered the pair); the pair says both answers in full, so the reader sees exactly what each one books.");
+    ("The proven guest is told where the meeting will be, in the number or link the host proved, so a wrong one is seen before booking; changing it is on the first screen, and means a new code. Every app this host meets on that the guest has proven is a card; the other app, unproven, is left to the first screen, where confirming it lives.");
     let who_field = app_shared_field(final_area);
-    html_div_text(
-      who_field,
-      "✅ " +
-        (equal(proof.via, "messenger")
-          ? "We meet on Facebook Messenger"
-          : "We meet on WhatsApp: " + proof.whatsapp),
-    );
+    function who_draw() {
+      html_clear(who_field);
+      app_shared_field_title(who_field, "Meet on");
+      let vias = host.messenger ? ["whatsapp", "messenger"] : ["whatsapp"];
+      function proven_card(v) {
+        let p = proof_for(v);
+        let ok = Boolean(p) && Boolean(p.proven);
+        return ok;
+      }
+      function card_of(v) {
+        let p = proof_for(v);
+        let r10 = {
+          key: v,
+          title: app_label(v),
+          details: equal(v, "messenger") ? p.profile_given : p.whatsapp,
+          disabled: false,
+        };
+        return r10;
+      }
+      let list3 = vias.filter(proven_card);
+      let cards = list_map(list3, card_of);
+      function who_choose(v) {
+        via_choose(v);
+        proof = proof_for(v);
+        who_draw();
+      }
+      app_shared_choice_cards(who_field, cards, proof.via, who_choose);
+    }
+    who_draw();
+    ("weekly_chosen is false until the reader picks the every-week card; picking a new time puts it back to once, since the every-week card may be shut at the new time.");
+    let weekly_chosen = false;
     let weekly_row = app_shared_field(final_area);
-    let weekly = html_input_type(weekly_row, "checkbox");
-    let weekly_element = html_component_element_get(weekly);
-    let weekly_label = html_div_text(
-      weekly_row,
-      "Repeat every week at this time",
-    );
-    html_component_element_get(weekly_label).style.display = "inline";
+    function repeat_draw(day, time) {
+      html_clear(weekly_row);
+      app_shared_field_title(weekly_row, "How often");
+      let clashes = property_get_or(chosen, "weekly_clashes", []);
+      ('Every week is shut when anything is booked at this time on a later week - the server refuses it then - and its sentence names what is in the way: a meeting that itself repeats takes every week from its date, a single one takes its date (human: "this should not be selectable if someone else has already booked every week at this time starting at a future week").');
+      function clash_text(c) {
+        let when = new Date(c.start_utc).toLocaleDateString(undefined, {
+          weekday: "short",
+          month: "short",
+          day: "numeric",
+        });
+        let r11 = c.weekly ? "every week from " + when : when;
+        return r11;
+      }
+      let shut = greater_than(clashes.length, 0);
+      let every_details = shut
+        ? "Not available - this time is already booked " +
+          list_map(clashes, clash_text).join(", ") +
+          "."
+        : "The same time every week, until you cancel.";
+      let cards = [
+        {
+          key: "once",
+          title: "Meet " + day.label + " at " + time.label + " only",
+          details: "Just this one meeting.",
+          disabled: false,
+        },
+        {
+          key: "weekly",
+          title: "Meet every " + day.weekday + " at " + time.label,
+          details: every_details,
+          disabled: shut,
+        },
+      ];
+      function repeat_choose(k) {
+        weekly_chosen = equal(k, "weekly");
+        repeat_draw(day, time);
+      }
+      app_shared_choice_cards(
+        weekly_row,
+        cards,
+        weekly_chosen ? "weekly" : "once",
+        repeat_choose,
+      );
+    }
     ("No spam check here: only a guest the host has proven can book, and the server refuses everyone else.");
     let status = html_div_text(final_area, "");
     ('A press of Book with something missing scrolls to the part that needs it and rings it in red, says what is missing in red, and gives Book a thick red edge; all of it comes off as soon as that part is filled in (human: "should it scroll up to the offending field and circle it in red until satsifies check?").');
@@ -543,7 +609,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
         timezone: zone,
         day: chosen.day,
         start_minute: chosen.start_minute,
-        weekly: weekly_element.checked,
+        weekly: weekly_chosen,
         via: proof.via,
       };
       let booked = await html_loading(book_send);
@@ -584,7 +650,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
         });
         return;
       }
-      let weekly_chosen = weekly_element.checked;
+      let app_name = equal(proof.via, "messenger") ? "Messenger" : "WhatsApp";
+      let weekly_booked = weekly_chosen;
       function draw_done(box) {
         let done = app_shared_container(box);
         ("The guest was proven before booking, so the meeting is final the moment it is written, and the page says so plainly: booked.");
@@ -608,7 +675,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           done,
           "I will meet you on " +
             app_name +
-            (weekly_chosen ? " at this time every week." : " at this time."),
+            (weekly_booked ? " at this time every week." : " at this time."),
         );
         html_div_text(
           done,
