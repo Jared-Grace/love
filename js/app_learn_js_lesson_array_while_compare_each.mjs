@@ -144,7 +144,7 @@ export function app_learn_js_lesson_array_while_compare_each() {
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Same, smaller or bigger",
+    "Compare each pair, with a while",
     "else if (a[i] < b[j])",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
