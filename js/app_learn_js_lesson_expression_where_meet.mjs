@@ -1,7 +1,3 @@
-import { ceil } from "./ceil.mjs";
-import { floor } from "./floor.mjs";
-import { divide } from "./divide.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
@@ -11,6 +7,10 @@ import { list_get } from "./list_get.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
+import { divide } from "./divide.mjs";
+import { ceil } from "./ceil.mjs";
+import { floor } from "./floor.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -29,12 +29,14 @@ export function app_learn_js_lesson_expression_where_meet() {
   ("Reading forwards, the wrong answers are the two lines the other way round, both rounded up, both rounded down, where a and b start, and one further apart each way; each once and never the answer.");
   ("Reading backwards, the wrong program has Math.ceil and Math.floor the other way round, or, where that writes out the same, b one bigger.");
   ("The writing is a first draft by Claude 2026-11-25.");
+  ("Later the same day, at the human's asking: halfway is given the name mid, so no line is too wide for a phone and the name says what the number is.");
   function program_lines(a, b, first, second) {
     let lines = [
       `let a = ${a};`,
       `let b = ${b};`,
-      `console.log(${first}((a + b) / 2));`,
-      `console.log(${second}((a + b) / 2));`,
+      `let mid = (a + b) / 2;`,
+      `console.log(${first}(mid));`,
+      `console.log(${second}(mid));`,
     ];
     return lines;
   }
@@ -125,7 +127,7 @@ export function app_learn_js_lesson_expression_where_meet() {
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "",
-      "(a + b) / 2",
+      "mid",
       " is halfway between ",
       "a",
       " and ",
@@ -160,7 +162,7 @@ export function app_learn_js_lesson_expression_where_meet() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Where they meet",
-    "Math.ceil((a + b) / 2)",
+    "let mid = (a + b) / 2",
   );
   let lesson = app_learn_js_lesson_code_logged({
     above,

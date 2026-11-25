@@ -1,4 +1,3 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
@@ -6,6 +5,7 @@ import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -102,7 +102,15 @@ export function app_learn_js_lesson_array_for_steps_up() {
       box_two,
       context,
       app_learn_js_lesson_array_for_count,
-      ["", "count++;", " inside an ", "if", " counts the times it runs"],
+      [
+        "",
+        "count++;",
+        " inside an ",
+        "if",
+        " counts the times its test is ",
+        "true",
+        "",
+      ],
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [

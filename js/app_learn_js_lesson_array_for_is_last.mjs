@@ -102,7 +102,7 @@ export function app_learn_js_lesson_array_for_is_last() {
       last,
       " is ",
       "true",
-      " only on the last run of the loop, so only the last item is written out:",
+      " only the final time the loop goes round, so only the last item is written out:",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);

@@ -1,3 +1,7 @@
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { catch_null } from "./catch_null.mjs";
@@ -19,7 +23,7 @@ export function app_learn_js_wrong_programs_wrong_say(
       return out;
     }
     let out = catch_null(output_get);
-    if (out === choice) {
+    if (equal(out, choice)) {
       found = program;
       break;
     }
@@ -31,38 +35,47 @@ export function app_learn_js_wrong_programs_wrong_say(
   let wrong_lines = text_split_newline(found);
   let start = 0;
   while (
-    start < right_lines.length &&
-    start < wrong_lines.length &&
-    right_lines[start] === wrong_lines[start]
+    less_than(start, right_lines.length) &&
+    less_than(start, wrong_lines.length) &&
+    equal(right_lines[start], wrong_lines[start])
   ) {
     start++;
   }
   let end_right = right_lines.length;
   let end_wrong = wrong_lines.length;
   while (
-    end_right > start &&
-    end_wrong > start &&
-    right_lines[end_right - 1] === wrong_lines[end_wrong - 1]
+    greater_than(end_right, start) &&
+    greater_than(end_wrong, start) &&
+    equal(
+      right_lines[subtract(end_right, 1)],
+      wrong_lines[subtract(end_wrong, 1)],
+    )
   ) {
     end_right--;
     end_wrong--;
   }
   function joined(lines) {
-    let trimmed = lines.map((line) => line.trim());
+    function lambda(line) {
+      let r = line.trim();
+      return r;
+    }
+    let trimmed = lines.map(lambda);
     let text = trimmed.join(" ");
     return text;
   }
-  let right_part = joined(right_lines.slice(start, end_right));
-  let wrong_part = joined(wrong_lines.slice(start, end_wrong));
+  let v = right_lines.slice(start, end_right);
+  let right_part = joined(v);
+  let v2 = wrong_lines.slice(start, end_wrong);
+  let wrong_part = joined(v2);
   let words = "Remember: that is what it writes out ";
-  if (right_part === "" && wrong_part === "") {
+  if (equal(right_part, "") && equal(wrong_part, "")) {
     return null;
   }
-  if (right_part === "") {
+  if (equal(right_part, "")) {
     let added = [words + "with ", wrong_part, " added"];
     return added;
   }
-  if (wrong_part === "") {
+  if (equal(wrong_part, "")) {
     let without = [words + "without ", right_part, ""];
     return without;
   }

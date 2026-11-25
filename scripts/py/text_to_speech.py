@@ -500,6 +500,60 @@ def said_alone_phonemes(word, phonemes, voice):
     return phonemes
 
 
+GUESS_RATING_MAX = 2
+
+
+def token_rating(tk):
+    """How sure the reader was of one word: 3 and up was looked up, below was guessed.
+
+    The reader files the rating of a word it answered whole on the token
+    itself, and only the rating of a word it took apart under "_" - so reading
+    "_" alone calls every whole word unrated, which reads as a guess.
+    """
+    rating = getattr(tk, "rating", None)
+    if rating is None:
+        rating = tk._.rating
+    return rating
+
+
+def guessed_is(g2p, text):
+    """Whether the reader sounded out any word of this text from its spelling."""
+    _, tokens = g2p(text)
+    for tk in tokens:
+        if not any(c.isalpha() for c in tk.text):
+            continue
+        rating = token_rating(tk)
+        if rating is None or rating <= GUESS_RATING_MAX:
+            return True
+    return False
+
+
+def said_alone_spelling(g2p, word):
+    """The spelling a lone word is read from: with its capital, when only that one is known.
+
+    ★ A BUTTON'S WORD ARRIVES IN SMALL LETTERS AND THE BIBLE NAMES ARE FILED
+    UNDER THEIR CAPITAL ONLY.  The word list the buttons are recorded from is
+    lowercased, so "abidan" missed the name written down for "Abidan" and was
+    sounded out - AB-ih-dan where the entry says uh-BY-dan.  Measured
+    2026-11-25 over the BSB's button words: 3,052 of 14,747 were guessed, and
+    2,395 of those had an entry under the capital.
+
+    Only a word the reader cannot answer in small letters is lifted, which is
+    what keeps the ordinary word of a pair: "job" is answered as the word, so it
+    stays the word and never becomes the man.  The capital is used only when it
+    turns a guess into an answer, so a word with no entry either way is read
+    exactly as before.
+    """
+    if word != word.lower() or not any(c.isalpha() for c in word):
+        return word
+    if not guessed_is(g2p, word):
+        return word
+    capital = word[:1].upper() + word[1:]
+    if guessed_is(g2p, capital):
+        return word
+    return capital
+
+
 def line_samples(g2p, kokoro, text, speed, citation, voice):
     """Speaks one line, returning the samples and the rate.
 
@@ -530,6 +584,8 @@ def line_samples(g2p, kokoro, text, speed, citation, voice):
     parts = []
     rate = 24000
     for run in pieces_of(text):
+        if citation:
+            run = said_alone_spelling(g2p, run)
         phonemes, _ = g2p(run)
         if citation:
             phonemes = said_alone_phonemes(run, phonemes, voice)
