@@ -1,12 +1,13 @@
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_sort_number } from "./list_sort_number.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
 import { range_1 } from "./range_1.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_sort_number } from "./list_sort_number.mjs";
+import { list_get } from "./list_get.mjs";
+import { subtract } from "./subtract.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -85,7 +86,7 @@ export function app_learn_js_lesson_array_pair_sum_step() {
         i: picked[0],
         j: picked[1],
       };
-      let sum2 = items2[input5.i] + items2[input5.j];
+      let sum2 = list_get(items2, input5.i) + list_get(items2, input5.j);
       let a = subtract(input5.j, input5.i);
       let apart = greater_than_equal(a, 2);
       if (apart && equal(kind_of(sum2), kind)) {

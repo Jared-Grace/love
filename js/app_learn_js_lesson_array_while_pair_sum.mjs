@@ -1,11 +1,11 @@
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_sort_number } from "./list_sort_number.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { less_than } from "./less_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { range_1 } from "./range_1.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_sort_number } from "./list_sort_number.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_lesson_array_while_pair_sum() {
   ("2026-11-25, at the human's asking, in the shape the human gave: while (true), the sum worked out once each time round, and the three ordering branches. Loop until break and Too small or too big come just before it, so the one new thing is the step inside the loop.");
   ("Why it never misses a pair: when sum is too small, a[i] is too small even with the biggest number left, so no pair holds it and i can move on; too big is the same for a[j]. So it stops at the outermost pair adding up to 10.");
   ("Each input is five or six different numbers from 1 to 9 in order, holding at least one pair that adds up to 10, because without one i and j pass each other and the loop never stops; the lesson says so.");
-  ("The wrong programs are: writing out i and j in place of a[i] and a[j], and writing out sum. Both have the right loop, so both stop. Wrong loops - the moves swapped, or j starting one early - are left out on purpose: they can walk off the array and never stop. The other wrong answers offered are any other pair adding up to 10, and the found pair written out the other way round.");
+  ("The wrong program is writing out i and j in place of a[i] and a[j]; it has the right loop, so it stops. Writing out sum after the loop is left out: sum is made inside the loop, so outside it there is no sum and the program cannot run. Wrong loops - the moves swapped, or j starting one early - are left out on purpose: they can walk off the array and never stop. The other wrong answers offered are any other pair adding up to 10, and the found pair written out the other way round.");
   ("The writing is a first draft by Claude 2026-11-25.");
   function program_with(items, logged) {
     "the array, i and j at the ends, the loop that breaks at a sum of 10, then logged written out";
@@ -54,8 +54,7 @@ export function app_learn_js_lesson_array_while_pair_sum() {
   }
   function wrong_programs_of(items3) {
     let v = program_with(items3, ["i", "j"]);
-    let v2 = program_with(items3, ["sum"]);
-    let programs = [v, v2];
+    let programs = [v];
     return programs;
   }
   function pairs_of(items4) {

@@ -1,21 +1,22 @@
-import { ceil } from "./ceil.mjs";
-import { divide } from "./divide.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { modulo } from "./modulo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { divide } from "./divide.mjs";
+import { ceil } from "./ceil.mjs";
 import { range_1 } from "./range_1.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { subtract } from "./subtract.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { list_set } from "./list_set.mjs";
+import { modulo } from "./modulo.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_while_reverse } from "./app_learn_js_lesson_array_while_reverse.mjs";
 import { app_learn_js_lesson_array_for_found } from "./app_learn_js_lesson_array_for_found.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_while_same_both_ways() {
@@ -80,7 +81,7 @@ export function app_learn_js_lesson_array_while_same_both_ways() {
     if (greater_than_equal(place, 0)) {
       let left = subtract(count2, 1);
       let other = items6[subtract(left, place)];
-      items6[place] = modulo(other, 9) + 1;
+      list_set(items6, place, modulo(other, 9) + 1);
     }
     return items6;
   }
