@@ -92,7 +92,7 @@ export function app_learn_js_lesson_array_for_pair_includes() {
       ["We look for two numbers in array ", "a", " that add up to ", "10", ""],
       ["", "a[i] + (10 - a[i])", " is ", "10 - a[i] + a[i]", ""],
       ["", "- a[i]", " and ", "+ a[i]", " cancel out to ", "0", ""],
-      ["So ", "10 - a[i] + a[i]", " is ", "10", ""],
+      ["So ", "10 - a[i] + a[i]", " is ", "10 - 0", " which is ", "10", ""],
       ["And ", "a[i] + (10 - a[i])", " is ", "10", ""],
       ["So ", "a[i]", " and ", "10 - a[i]", " add up to ", "10", ""],
       [
