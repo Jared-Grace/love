@@ -9,11 +9,13 @@ export function app_shared_bible_languages_text() {
     tgl: " Pumili ng mga wika",
     spa: " Elegir idiomas",
     por: " Escolher idiomas",
+    ind: " Pilih bahasa",
     translated_from: {
       urd: " Choose languages",
       tgl: " Choose languages",
       spa: " Choose languages",
       por: " Choose languages",
+      ind: " Choose languages",
     },
   };
   let label = app_shared_text_reader_language(texts);
