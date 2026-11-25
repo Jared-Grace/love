@@ -6,6 +6,7 @@ import { js_code_two_names_while_b_first_lines } from "./js_code_two_names_while
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_two_names_for_lines } from "./js_code_two_names_for_lines.mjs";
 import { app_learn_js_lesson_expression_where_b_ends } from "./app_learn_js_lesson_expression_where_b_ends.mjs";
+import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_two_names_generic } from "./app_learn_js_lesson_two_names_generic.mjs";
 export function app_learn_js_lesson_for_two_names() {
@@ -52,6 +53,7 @@ export function app_learn_js_lesson_for_two_names() {
         "",
       ],
     );
+    let r = app_learn_js_braces_dots();
     let lines_said = [
       [
         "A shortcut: if ",
@@ -81,7 +83,9 @@ export function app_learn_js_lesson_for_two_names() {
         "a < 4",
         " is ",
         "false",
-        " at the start, it runs no times, and ",
+        " at the start, the lines inside ",
+        r,
+        " run no times, and ",
         "b",
         " stays as it is",
       ],
