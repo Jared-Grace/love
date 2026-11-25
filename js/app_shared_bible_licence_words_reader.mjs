@@ -21,11 +21,13 @@ export function app_shared_bible_licence_words_reader(licence) {
       tgl: "Hindi nabasa ang mga tuntunin",
       spa: "No se pudieron leer los términos",
       por: "Não foi possível ler os termos",
+      ind: "Ketentuan tidak dapat dibaca",
       translated_from: {
         urd: "Terms not read",
         tgl: "Terms not read",
         spa: "Terms not read",
         por: "Terms not read",
+        ind: "Terms not read",
       },
     };
     let said = app_shared_text_reader_language(texts);
