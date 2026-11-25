@@ -1,9 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
+import { bible_glyph_meanings_plain } from "./bible_glyph_meanings_plain.mjs";
 import { ebible_testament_old_name } from "./ebible_testament_old_name.mjs";
 import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { bible_glyph_joined_key } from "./bible_glyph_joined_key.mjs";
@@ -21,7 +23,11 @@ export function bible_glyph_testament_meanings(testament_name) {
   ("The Old Testament also carries the small joined Hebrew words, which have no Strong's number and so no root; they say the word they stand for and are keyed apart, by ",
     fn_name("bible_glyph_joined_key"),
     ", BECAUSE ONE PICTURE CAN MEAN TWO THINGS BY WHERE IT STANDS: the plus standing alone is the word also, and the plus joined to a word is and. Only the place in the group tells them apart, so the one who knows the place asks for the joined meaning.");
+  ("A ROOT'S MEANING IS SHOWN IN PLAIN WORDS where ",
+    fn_name("bible_glyph_meanings_plain"),
+    " has them, because this table is asked only by the card a reader taps, while the root tables keep their own words for the code that draws.");
   let roots = bible_glyph_roots_testament_table(testament_name);
+  let plain = bible_glyph_meanings_plain();
   let old_name = ebible_testament_old_name();
   let meanings = {};
   for (let root of roots) {
@@ -31,7 +37,7 @@ export function bible_glyph_testament_meanings(testament_name) {
       }
       property_set(meanings, word.glyph, {
         root: root.root,
-        gloss: root.gloss,
+        gloss: property_get_or_null(plain, root.gloss) ?? root.gloss,
       });
     }
   }
