@@ -10,11 +10,13 @@ export function app_shared_verses_order_prompt_text() {
     tgl: "Sa anong pagkakasunod-sunod mo gusto ang mga talata?",
     spa: "¿En qué orden quieres los versículos?",
     por: "Em que ordem você quer os versículos?",
+    ind: "Dalam urutan apa kamu ingin ayat-ayatnya?",
     translated_from: {
       urd: "What order do you want the verses in?",
       tgl: "What order do you want the verses in?",
       spa: "What order do you want the verses in?",
       por: "What order do you want the verses in?",
+      ind: "What order do you want the verses in?",
     },
   };
   let text = app_shared_text_reader_language(texts);
