@@ -7,11 +7,13 @@ export function app_shared_bible_sermon_copy_text() {
     tgl: " Kopyahin ang sermon",
     spa: " Copiar sermón",
     por: " Copiar sermão",
+    ind: " Salin khotbah",
     translated_from: {
       urd: " Copy sermon",
       tgl: " Copy sermon",
       spa: " Copy sermon",
       por: " Copy sermon",
+      ind: " Copy sermon",
     },
   };
   let c = app_shared_text_reader_language_copy(texts);
