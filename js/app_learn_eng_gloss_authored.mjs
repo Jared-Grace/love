@@ -1,3 +1,4 @@
+import { app_learn_eng_gloss_authored_french } from "./app_learn_eng_gloss_authored_french.mjs";
 import { app_learn_eng_gloss_authored_indonesian } from "./app_learn_eng_gloss_authored_indonesian.mjs";
 import { app_learn_eng_gloss_authored_portuguese } from "./app_learn_eng_gloss_authored_portuguese.mjs";
 import { ebible_language_tagalog } from "./ebible_language_tagalog.mjs";
@@ -26,6 +27,7 @@ export function app_learn_eng_gloss_authored() {
   };
   let portuguese = app_learn_eng_gloss_authored_portuguese();
   let indonesian = app_learn_eng_gloss_authored_indonesian();
-  let r = [tagalog, spanish, portuguese, indonesian];
+  let french = app_learn_eng_gloss_authored_french();
+  let r = [tagalog, spanish, portuguese, indonesian, french];
   return r;
 }
