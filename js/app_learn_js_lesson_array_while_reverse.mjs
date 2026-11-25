@@ -1,16 +1,16 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_1 } from "./range_1.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_while_two_meet } from "./app_learn_js_lesson_while_two_meet.mjs";
+import { app_learn_js_lesson_array_while_two_indexes } from "./app_learn_js_lesson_array_while_two_indexes.mjs";
 import { app_learn_js_lesson_array_reverse_mirror } from "./app_learn_js_lesson_array_reverse_mirror.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_while_reverse() {
@@ -70,16 +70,24 @@ export function app_learn_js_lesson_array_while_reverse() {
     return shuffled;
   }
   function above(root, context) {
-    "Two numbers meeting and Turn round by mirror remembered, then the two indexes";
+    "Two indexes meeting and Turn round by mirror remembered, then the swap at each pair";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_while_two_meet,
+      app_learn_js_lesson_array_while_two_indexes,
       [
         "",
-        "while (a < b) { a++; b--; }",
-        " moves two numbers towards each other until they meet",
+        "while (i < j)",
+        ", with ",
+        "i++;",
+        " and ",
+        "j--;",
+        ", pairs each index ",
+        "i",
+        " with its mirror ",
+        "j",
+        ", every pair once",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
@@ -93,9 +101,8 @@ export function app_learn_js_lesson_array_while_reverse() {
     );
     let box_three = app_learn_js_container_light_blue(root);
     let lines_said = [
-      ["Here ", "i", " starts at the first index and ", "j", " at the last"],
       [
-        "Each time, ",
+        "Here, each time, ",
         "a[i]",
         " and ",
         "a[j]",
