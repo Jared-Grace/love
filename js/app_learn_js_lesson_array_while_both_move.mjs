@@ -1,6 +1,6 @@
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { multiply } from "./multiply.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_1 } from "./range_1.mjs";
 import { list_map } from "./list_map.mjs";
@@ -112,7 +112,7 @@ export function app_learn_js_lesson_array_while_both_move() {
       [
         "The ",
         "while",
-        " stops as soon as either array runs out, so it stops at the shorter one",
+        " stops as soon as either array runs out, so it stops at the shorter array",
       ],
     ];
     for (let said of lines_said) {
