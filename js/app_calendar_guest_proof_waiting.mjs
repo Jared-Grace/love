@@ -6,9 +6,9 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_color_yellow_tint } from "./app_shared_color_yellow_tint.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { window_open } from "./window_open.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
+import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { calendar_guest_link } from "./calendar_guest_link.mjs";
@@ -38,7 +38,14 @@ export function app_calendar_guest_proof_waiting(
     "font-weight": "bold",
     "text-align": "center",
   });
-  html_div_text(card, "1. Send me this code on " + app_name + ":");
+  let messenger = equal(proof.via, "messenger");
+  ('MESSENGER: COPY FIRST, THEN SEND (human, 2026-11-25: "For FB messenger confirmation first should be copy code then 2 should be send code to messenger"). A Messenger link opens the chat empty - it cannot carry the code typed in, as WhatsApp\'s can - so the guest copies it before opening the chat, to paste there. WhatsApp keeps one send step, its code already typed.');
+  html_div_text(
+    card,
+    messenger
+      ? "1. Copy this code:"
+      : "1. Send me this code on " + app_name + ":",
+  );
   let code_line = html_div_text_content(card, proof.code);
   html_style_assign(code_line, {
     "font-size": "1.6em",
@@ -49,19 +56,29 @@ export function app_calendar_guest_proof_waiting(
   function send_open() {
     window_open(proof.send_url);
   }
-  app_shared_button_green(card, "Send code on " + app_name, send_open);
   async function code_copy() {
     await clipboard_copy_browser(proof.code);
     app_shared_toast("✅ Copied code");
   }
-  app_shared_button_uncolored(card, "Copy code", code_copy);
-  let sent_from = equal(proof.via, "messenger")
+  if (messenger) {
+    app_shared_button_green(card, "Copy code", code_copy);
+    html_div_text(card, "2. Send the code to me on Messenger:");
+    app_shared_button_green(card, "Send code on Messenger", send_open);
+  } else {
+    app_shared_button_green(card, "Send code on " + app_name, send_open);
+    app_shared_button_uncolored(card, "Copy code", code_copy);
+  }
+  let sent_from = messenger
     ? "Send it from your Facebook: " + proof.profile_given
     : "Send it from this WhatsApp number: " + proof.whatsapp;
   let from_line = html_div_text(card, sent_from);
   app_shared_text_deemphasized(from_line);
-  html_div_text(card, "2. I will message you back on " + app_name + ".");
-  html_div_text(card, "3. Then open this page again and pick a time.");
+  let step = messenger ? 3 : 2;
+  html_div_text(card, step + ". I will message you back on " + app_name + ".");
+  html_div_text(
+    card,
+    step + 1 + ". Then open this page again and pick a time.",
+  );
   app_shared_button_uncolored(
     card,
     "I got your message - pick a time",

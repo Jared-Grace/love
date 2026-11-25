@@ -48,7 +48,8 @@ export function app_learn_js_lesson_array_while_true_find() {
     return programs;
   }
   function wrong_outputs_of(items4) {
-    let r = [String(items4.length)];
+    let v3 = String(items4.length);
+    let r = [v3];
     return r;
   }
   function input_drawn(places) {

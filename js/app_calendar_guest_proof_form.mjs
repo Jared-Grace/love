@@ -17,6 +17,7 @@ import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
 import { html_value_get } from "./html_value_get.mjs";
+import { calendar_profile_url_read } from "./calendar_profile_url_read.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
@@ -181,6 +182,18 @@ export async function app_calendar_guest_proof_form(
         words: "Paste the link to your Facebook profile.",
       };
       return r4;
+    }
+    ("The link is checked here by the server's own rule, so a guest learns before sending that facebook.com alone, a feed or a post is not their profile.");
+    if (
+      equal(via, "messenger") &&
+      equal(calendar_profile_url_read(html_value_get(profile)), null)
+    ) {
+      let r5 = {
+        field: profile_box,
+        words:
+          "That is not a link to a profile. On Facebook, open your own profile and copy its link.",
+      };
+      return r5;
     }
     return null;
   }

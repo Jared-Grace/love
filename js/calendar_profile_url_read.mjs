@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { url_host } from "./url_host.mjs";
@@ -17,7 +18,9 @@ export function calendar_profile_url_read(typed) {
   if (not(ok)) {
     return null;
   }
-  ("And only a link to one person: a profile or a chat, never facebook.com alone, a feed or a post (see the shapes in calendar_profile_path_ok).");
+  ("And only a link to one person: a profile or a chat, never facebook.com alone, a feed or a post (see the shapes in ",
+    fn_name("calendar_profile_path_ok"),
+    ").");
   let one_person = calendar_profile_path_ok(full);
   if (not(one_person)) {
     return null;
