@@ -25,6 +25,10 @@ export function app_shared_bible_offline_save_text(name) {
       before: " Guardar ",
       after: "",
     },
+    ind: {
+      before: " Simpan ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: " Save ",
@@ -39,6 +43,10 @@ export function app_shared_bible_offline_save_text(name) {
         after: "",
       },
       por: {
+        before: " Save ",
+        after: "",
+      },
+      ind: {
         before: " Save ",
         after: "",
       },
