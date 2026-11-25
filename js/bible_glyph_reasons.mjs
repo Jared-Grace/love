@@ -10,13 +10,13 @@ export function bible_glyph_reasons() {
     proper_name:
       "A name tag. It marks a word as a name, of a person or a place, rather than the ordinary word it is spelled from.",
     doing:
-      "A play button. Something is set going: it turns a picture into a verb, the doing of that thing.",
+      "A play button. It sets something going: it turns a picture into an action word, doing that thing.",
     thing:
-      "A small blue diamond. It turns a picture into a thing or an idea: the thing itself, not the doing of it.",
+      "A small blue diamond. It turns a picture into a naming word: the thing or idea itself, not doing it.",
     milky_way:
-      "The Milky Way, a sky full of stars. It means create: in the beginning God created the heavens and the earth, and no person makes a sky. When the Hebrew word means create, the Bible only ever says it of God.",
+      "The Milky Way, a sky full of stars. It means create: in the beginning God created the heavens and the earth, and no person makes a sky. The Bible uses the Hebrew word for create only about God.",
     describing:
-      "A small orange diamond, next to the blue one. It turns a picture into a describing word: what kind something is.",
+      "A small orange diamond. It turns a picture into a describing word: what kind something is.",
     person:
       "A standing person. A human being, or the one who is or does the picture beside it.",
     up_arrow:
@@ -38,11 +38,11 @@ export function bible_glyph_reasons() {
     fire: "Fire: burning, and an offering made by fire.",
     crown: "A crown: a king, his reign, his kingdom, a lord or master.",
     manner:
-      "A wavy line. It turns a picture into a word of manner: how something is done.",
+      "A wavy line. It turns a picture into a word that tells how something is done.",
     away: "An arrow going away: turning aside, removing, going away.",
     crowd: "Two people standing together: a crowd, a group, gathering.",
     tray_out:
-      "An out-tray: from, out of, coming out. The same box as the in-tray with the arrow reversed, so the pair teaches itself.",
+      "An out-tray, the box on a desk where papers going out are put: from, out of, coming out.",
     city: "City buildings: a city or town.",
     safety_pin:
       "A safety pin holds two things together: with, beside, together.",
@@ -50,12 +50,12 @@ export function bible_glyph_reasons() {
     round_pushpin:
       "A pin pushed in to hold a spot: to stand, to stay put, to set in place.",
     tray_in:
-      "An in-tray: into, in, gathering in. The same box as the out-tray with the arrow reversed.",
+      "An in-tray, the box on a desk where papers coming in are put: into, in, gathering in.",
     heart_red: "A red heart: love, and the heart's will and desire.",
     eyes: "Two eyes looking: to see, to look.",
     scales: "Balance scales weigh things fairly: justice, judgment, a ruling.",
     equals:
-      "An equals sign: both sides the same, so a fixed standard, the proper measure, the way a thing is laid down to be.",
+      "An equals sign: both sides the same. So it means the right measure, the way a thing should be.",
     thumbs_up:
       "A thumb up: good, pleasing, well done. Its mirror, the thumb down, is bad.",
     coin: "A coin: a price, a payment, a wage, a reward, paying in full.",
@@ -86,7 +86,7 @@ export function bible_glyph_reasons() {
     locked: "A lock: shut, closed, sealed, kept back.",
     eye: "One eye: the eye, seeing, looking at.",
     money_bag:
-      "A bag of money: riches, wealth, and the weight of what is heavy. In Hebrew glory is a word for weight.",
+      "A bag of money: riches, wealth, and being heavy. In Hebrew, the word for glory also means heavy.",
     fist: "A fist striking: to strike, to beat, to kill.",
     raised_fist: "A raised fist: strength, might, an army, courage.",
     herb: "A green plant: grass, herbs, plants that grow.",
@@ -116,7 +116,7 @@ export function bible_glyph_reasons() {
     lightbulb: "A lightbulb turning on: to know, to understand.",
     wheat: "Wheat: grain, a harvest, a sheaf.",
     ear: "An ear: to hear, to listen.",
-    top: "The top arrow: great, greatest, highest. God is the Most High (Psalm 91:1).",
+    top: "An arrow marked top: great, greatest, highest. God is the Most High (Psalm 91:1).",
     road: "A road: a way, a path, a journey.",
     wind: "Wind blowing: wind, breath, and spirit, which are one word in Hebrew and in Greek (John 3:8).",
     father: "A man: a father, and the forefather of a family.",
@@ -124,7 +124,7 @@ export function bible_glyph_reasons() {
     clock: "A clock: time, a season, when.",
     turn_back:
       "An arrow turning back: to return, to turn back, to repent, to restore.",
-    link: "A chain link joins two things: to be, joining one thing to what it is.",
+    link: "A chain link joins two things: to be, as in the sky is blue. It joins a thing to what it is.",
     field: "A tractor: a field, farmland, the open country.",
     kneeling: "A person kneeling: a servant, serving, bowing the knee.",
     one: "The number one: one, alone, together as one. The LORD our God, the LORD is one (Deuteronomy 6:4).",
@@ -135,12 +135,12 @@ export function bible_glyph_reasons() {
     sheep:
       "A sheep: sheep, a flock, a shepherd. The LORD is my shepherd (Psalm 23:1).",
     scissors: "Scissors: cutting, cutting off.",
-    back: "The back arrow: back, behind, and pointing back to what was just said.",
+    back: "An arrow marked back: back, behind, and pointing back to what was just said.",
     flexed_biceps: "A strong arm: strength, power, prevailing.",
     rescue:
       "A rescue ring thrown to someone drowning: to save, to help, to rescue.",
     door: "A door: a doorway, an entrance.",
-    ring: "A ring: the signet ring a seal was made with, a circle.",
+    ring: "A ring: a circle, and the ring a person pressed into wax to seal a letter.",
     arrow_both_ways:
       "An arrow pointing both ways: back and forth, exchange, one another.",
     stone: "A stone: a stone, a stone tablet, a heap of stones.",
@@ -155,7 +155,7 @@ export function bible_glyph_reasons() {
       "A shield: protection, a stronghold. The LORD is my shield (Psalm 28:7).",
     around: "Arrows going round: around, all around, surrounding.",
     king: "A king: a king, his reign, his kingdom.",
-    flashlight: "A flashlight shines on what is near: this, these, thus.",
+    flashlight: "A flashlight shines on what is near: this, these, so.",
     family: "A family: a people, a clan, a nation as one family.",
     skull: "A skull: death, dying, a dead body.",
     white_circle: "A white circle: white.",
@@ -172,7 +172,7 @@ export function bible_glyph_reasons() {
     earth: "The globe: the earth, the land.",
     clamp:
       "A clamp squeezes: narrow, distress, pressing. Egypt in Hebrew sounds like the narrow places.",
-    end_arrow: "The end arrow: the end, finishing, complete.",
+    end_arrow: "An arrow marked end: the end, finishing, complete.",
     bird: "A bird: a bird, flying.",
     palm_down:
       "A hand palm down setting something down: to put, to set, to place.",
@@ -192,7 +192,7 @@ export function bible_glyph_reasons() {
     bread: "Bread: bread, food.",
     castle: "A castle: a royal court, a stronghold, high and safe.",
     japanese_castle:
-      "A tall fortified keep: a citadel, the strong tower of a palace. The plain castle already means the kingdom, so the keep stands for the fortified building itself.",
+      "A tall castle tower: a fortress, the strong tower of a palace.",
     sword: "A sword: the sword, killing, war.",
     man_beard: "A man with a beard: a man, a husband.",
     lots: "Dice: casting lots, and the share the lot gives.",
@@ -232,7 +232,7 @@ export function bible_glyph_reasons() {
     telescope:
       "A telescope looks far off: there, over there. With a guard, it is keeping watch.",
     son: "A boy: a son, a child. Many names begin with it, like Benjamin, son of the right hand (Genesis 35:18).",
-    star: "A glowing star: glory, honor. The root means heavy: glory is weight, what matters most. The whole earth is full of His glory (Isaiah 6:3).",
+    star: "A glowing star: glory, honor. In Hebrew, the word for glory also means heavy: what weighs the most. The whole earth is full of His glory (Isaiah 6:3).",
     red_circle:
       "A red circle: red, scarlet, crimson. With a fruit, it is the pomegranate.",
     nose: "A nose: the nose, the nostrils. With fire, it is anger, because in Hebrew anger burns in the nostrils. Slow to anger is, word for word, long of nostrils (Exodus 34:6).",
@@ -250,10 +250,10 @@ export function bible_glyph_reasons() {
     lying_face:
       "A lying face with a growing nose: a lie, false, to deny. With a trap, it is deceit.",
     ruler:
-      "A ruler measures straight: righteous, just, right. Amos was shown a plumb line (Amos 7:7-8): being righteous is being straight when held against God's line.",
+      "A ruler measures straight: righteous, just, right. Amos saw the Lord hold a builder's line against a wall to see if it was straight (Amos 7:7-8). Being righteous is being straight by God's measure.",
     loudly_crying: "A face crying loudly: weeping, to weep.",
     triangular_ruler:
-      "A set square: to measure, and the cubit, the length of a forearm.",
+      "A triangle ruler: to measure, and the cubit, the length from the elbow to the fingertips.",
     battery: "A full battery: full, fullness, to fill.",
     brown_square:
       "A brown square: earth, the ground. Adam was formed from the dust of the ground, adamah (Genesis 2:7).",
@@ -283,7 +283,7 @@ export function bible_glyph_reasons() {
     heart_organ:
       "The heart inside the body: the heart as the inner person, where thinking and choosing happen. With an in-tray, it is the inner parts.",
     voice:
-      "A head speaking: a word, to speak, and the matter or cause spoken about.",
+      "A head speaking: a word, to speak, and the thing being talked about.",
     heart_eyes:
       "A face with heart eyes: to desire, to delight in, to covet, and something desirable.",
     crossed_swords: "Crossed swords: war, battle, strife. Midian means strife.",
@@ -317,7 +317,7 @@ export function bible_glyph_reasons() {
     hourglass:
       "An hourglass: a long time, of old, forever. With crossed fingers, it is to wait and to hope.",
     teacher:
-      "A teacher: instruction, discipline, correction, and the Preacher who teaches.",
+      "A teacher: instruction, discipline, correction, and the Preacher, the teacher who speaks in Ecclesiastes.",
     bow: "A bow and arrow: sin. The Hebrew word first means to miss the mark, like an arrow that falls short. For all have sinned and fall short of the glory of God (Romans 3:23).",
     gold: "A gold medal: gold, fine gold.",
     lion: "A lion: a lion, a lion's cub.",
@@ -368,20 +368,20 @@ export function bible_glyph_reasons() {
     witness: "A hand raised to speak: a witness, testimony, to testify.",
     fish: "A fish: a fish, a fisherman, and Dagon the fish god.",
     alembic:
-      "An alembic: the vessel a refiner heats to melt, blend and purify, so it draws refining, as in Zarephath, whose name means refinement, and blending together.",
+      "A glass pot heated to melt and clean metal: to refine, to make pure, and to blend together. Zarephath means a place of refining.",
     goat: "A goat: a goat, a young goat, a male goat.",
     bucket: "A bucket: to draw water, and a dry measure like an ephah.",
     t_shirt:
       "A shirt: clothing. With scissors, it is tearing, as clothes were torn in grief.",
     hand_with_fingers_splayed:
-      "An open hand with fingers spread: the palm, a span, letting go.",
+      "An open hand with fingers spread: the palm, a span (the width of a spread hand), letting go.",
     next_track: "The skip-forward button: after, later, last, the other one.",
     woozy_face: "A woozy face: drunk, drunkenness.",
     cup: "A cup: a cup, and giving drink.",
     yarn: "Yarn: wool, fleece.",
     fishing_pole:
       "A fishing pole draws something up out of the water. Moses means drawn out, because Pharaoh's daughter said, I drew him out of the water (Exodus 2:10).",
-    me: "A person with no face, the picture every screen uses for whoever is looking at it: I, me, my.",
+    me: "A person with no face, like the picture an app shows for your own account: I, me, my.",
     traffic_light:
       "A traffic light: if. What comes next only goes when the condition is met, as a car only goes on green.",
     you: "A finger pointing straight out of the picture at the reader: you.",
@@ -405,8 +405,7 @@ export function bible_glyph_reasons() {
     year: "A calendar: a year.",
     silver:
       "A silver spoon: silver, and the money made of it, since silver was weighed out to pay.",
-    shuffle:
-      "The shuffle arrows, two paths crossing where one is to be taken: or.",
+    shuffle: "Two crossing arrows, two ways to choose between: or.",
     megaphone:
       "A megaphone calls a message out loud for all to hear: a prophet, who speaks out the word God gave him.",
     watch: "A watch on the wrist shows the time it is right now: now.",
@@ -415,7 +414,7 @@ export function bible_glyph_reasons() {
     covenant:
       "A rainbow: a covenant, a binding promise. God set His bow in the cloud as the sign of His covenant with the earth (Genesis 9:13).",
     person_gesturing_ok:
-      "A person with arms joined over the head: the head, and the one at the head.",
+      "A person with arms joined over the head: the head, and the leader, the one at the head.",
     magnet:
       "A magnet draws things to itself: near, to draw near, to bring an offering near.",
     angel:
@@ -426,7 +425,7 @@ export function bible_glyph_reasons() {
     night: "A city at night: night.",
     morning: "The sun rising: morning.",
     microphone:
-      "A studio microphone puts a statement on the record: a declaration, as in declares the LORD, and speaking boldly.",
+      "A microphone for saying something important out loud: to declare, as in declares the LORD, and to speak boldly.",
     pleading:
       "A pleading face, the asking look that softens a request: please, I pray.",
     bowing: "A person bowing low at the waist: to bow down, to worship.",
@@ -446,7 +445,7 @@ export function bible_glyph_reasons() {
       "A face laughing to tears: laughter. Isaac means he laughs, so Sarah's laugh and her son's name wear one picture (Genesis 21:6).",
     camp: "A tent pitched out in the open: a camp.",
     radio_button:
-      "A radio button, a dot in the middle of a ring: the midst, the middle, among, between.",
+      "A dot in the middle of a ring: the midst, the middle, among, between.",
     hands_praying: "Hands folded in prayer: to pray, prayer.",
     bridge:
       "A bridge, the crossing itself: to cross over, to pass over, and the far side, beyond.",
@@ -470,7 +469,7 @@ export function bible_glyph_reasons() {
     raised_back_of_hand:
       "A raised hand: to swear an oath, sworn with the hand lifted. Abram said, I have raised my hand to the LORD (Genesis 14:22).",
     foreigner:
-      "A customs desk, where a person from another land shows who they are: a foreigner, a stranger.",
+      "A desk at the border, where a person from another land shows who they are: a foreigner, a stranger.",
     information:
       "The information sign, which means here is the explanation: for, because. For God so loved the world (John 3:16).",
     learner: "A graduation cap: a learner, a disciple, one who is taught.",
@@ -573,7 +572,7 @@ export function bible_glyph_reasons() {
     milk: "A glass of milk: milk.",
     boxing_glove: "A boxing glove: violence, fighting, a quarrel.",
     worm: "A worm: a worm. In Hebrew the same word is scarlet, the red dye made from a worm.",
-    dna: "The strand that passes life from parents to children: a generation, one's kin.",
+    dna: "DNA, which parents pass on to their children: a generation, one's family.",
     astonished: "An astonished face: to marvel, to be amazed.",
     mechanical_arm:
       "A strong metal arm: strength, might, the arm, and hard or stiff.",
@@ -645,7 +644,7 @@ export function bible_glyph_reasons() {
     ribbon:
       "A ribbon, a beautiful thing tied on: glory, beauty, a sash, a band tied around.",
     clapper_board:
-      "A clapper board, the snap that starts a scene: to begin. In Hebrew, a deed, a thing done.",
+      "A clapper board, snapped shut when filming begins: to begin. In Hebrew, a deed, a thing done.",
     trumpet: "A trumpet: a trumpet, the ram's horn blown, to blow.",
     well: "A tap of water to drink: a well, dug down to water.",
     see_no_evil_monkey:
@@ -655,8 +654,7 @@ export function bible_glyph_reasons() {
     detective:
       "A detective looking closely: to search out, and foreign, a stranger not known.",
     white_flower: "A white flower: a lily.",
-    person_gesturing_no:
-      "A person crossing their arms, no: to refuse, far be it.",
+    person_gesturing_no: "A person crossing their arms, no: to refuse, never!",
     x_ray: "An x-ray of the bones: the body, the rib, the side.",
     calf: "A young bison stands in for a calf: a calf.",
     eight: "The number eight: eight, eighth. With zero, it is eighty.",
@@ -824,7 +822,7 @@ export function bible_glyph_reasons() {
       "A nest with eggs: a nest, a brood, and to cherish, to keep warm.",
     fountain: "A fountain: a spring, a source of water, to gush forth.",
     bear: "A bear: a bear.",
-    identification_card: "An identity card: one's own.",
+    identification_card: "An ID card, which shows who a person is: one's own.",
     sandal: "A sandal: a sandal, a sandal strap.",
     performing_arts:
       "The masks of the stage, a face put on: a hypocrite, deceit, to disguise, to betray.",
@@ -873,7 +871,7 @@ export function bible_glyph_reasons() {
     disappointed_face:
       "A disappointed face: sad, disgrace, to despair, to lose heart.",
     couch_and_lamp: "A couch to rest on: a couch, rest, to be at ease.",
-    soon: "The soon arrow: about to, going to. With no, not yet.",
+    soon: "An arrow marked soon: about to, going to. With no, not yet.",
     airplane_arrival:
       "A plane coming in to land: to come, to arrive, to reach.",
     man_dancing: "A man dancing: a dance, to dance, to skip about.",
@@ -946,7 +944,7 @@ export function bible_glyph_reasons() {
     water_buffalo:
       "A water buffalo: the wild ox, and Behemoth, the great beast of the water.",
     leftwards_hand:
-      "A hand held out to one side: on the one hand, indeed. The Greek word sets down one side of a thought and leaves room for the other side to follow.",
+      "A hand held out to one side: on the one hand, indeed. It gives one side of a thought, with the other side still to come.",
     place_of_worship:
       "A place of worship: the service given to God in worship, and to serve Him that way.",
     repeat_button:
