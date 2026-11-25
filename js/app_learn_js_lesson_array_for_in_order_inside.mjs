@@ -135,7 +135,11 @@ export function app_learn_js_lesson_array_for_in_order_inside() {
         "b",
         " are in ",
         "a",
-        " and that they are in the same order",
+        " and that they are in the same order in ",
+        "a",
+        " as they are in ",
+        "b",
+        "",
       ],
       [
         "However ",
