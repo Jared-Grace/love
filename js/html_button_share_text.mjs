@@ -9,11 +9,13 @@ export function html_button_share_text() {
     tgl: " Ibahagi",
     spa: " Compartir",
     por: " Compartilhar",
+    ind: " Bagikan",
     translated_from: {
       urd: " Share",
       tgl: " Share",
       spa: " Share",
       por: " Share",
+      ind: " Share",
     },
   };
   let label = app_shared_text_reader_language(texts);
