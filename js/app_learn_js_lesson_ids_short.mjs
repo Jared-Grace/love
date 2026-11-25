@@ -737,6 +737,8 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_in_either: text_frozen("in_either"),
       app_learn_js_lesson_array_for_in_one_only: text_frozen("in_one_only"),
       app_learn_js_lesson_array_for_all_in_b: text_frozen("all_in_b"),
+      app_learn_js_lesson_array_for_in_order_inside:
+        text_frozen("in_order_inside"),
       app_learn_js_lesson_array_for_runs_into_one: text_frozen("runs_into_one"),
       app_learn_js_lesson_array_for_range: text_frozen("range"),
       app_learn_js_lesson_string_upper: text_frozen("upper"),
