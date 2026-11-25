@@ -7,11 +7,13 @@ export function app_shared_bible_word_sites_others_text_get() {
     tgl: "Iba pa:",
     spa: "Otros:",
     por: "Outros:",
+    ind: "Lainnya:",
     translated_from: {
       urd: "Others:",
       tgl: "Others:",
       spa: "Others:",
       por: "Others:",
+      ind: "Others:",
     },
   };
   let v = app_shared_text_reader_language(texts);
