@@ -116,14 +116,14 @@ export function app_learn_js_lesson_array_for_all_in_b() {
     app_learn_js_div_cycle_code(box_three, ["", "all", " starts ", "true"]);
     ("2026-11-25, the human's own wording, one thought to a line");
     app_learn_js_div_cycle_code(box_three, [
-      "but if there is one item in ",
+      "But if there is one item in ",
       "a",
       " that ",
       "b",
       " does not have,",
     ]);
     app_learn_js_div_cycle_code(box_three, [
-      "then the ",
+      "Then the ",
       "if",
       " sets ",
       "all",
