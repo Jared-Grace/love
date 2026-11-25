@@ -8,11 +8,13 @@ export function app_shared_bible_books_text() {
     tgl: "Mga aklat",
     spa: "Libros",
     por: "Livros",
+    ind: "Kitab",
     translated_from: {
       urd: "Books",
       tgl: "Books",
       spa: "Books",
       por: "Books",
+      ind: "Books",
     },
   };
   let text = app_shared_text_reader_language(texts);
