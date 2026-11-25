@@ -11,9 +11,7 @@ import { app_shared_toast } from "./app_shared_toast.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { calendar_guest_link } from "./calendar_guest_link.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
+import { app_calendar_private_link_draw } from "./app_calendar_private_link_draw.mjs";
 export function app_calendar_guest_proof_waiting(
   card,
   slug,
@@ -86,14 +84,7 @@ export function app_calendar_guest_proof_waiting(
     on_check,
   );
   html_div_text(card, "Your private link to this page. Please save it:");
-  let link = calendar_guest_link(slug, key);
-  let link_line = html_div(card);
-  html_a_href_text_new_tab(link_line, link, link);
-  async function link_copy() {
-    await clipboard_copy_browser(link);
-    app_shared_toast("✅ Copied link");
-  }
-  app_shared_button_uncolored(card, "Copy link", link_copy);
+  app_calendar_private_link_draw(card, slug, key);
   let wrong = equal(proof.via, "messenger")
     ? "Wrong profile link? Change it"
     : "Wrong number? Change it";

@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { modulo } from "./modulo.mjs";
 import { multiply } from "./multiply.mjs";
@@ -147,22 +148,36 @@ export async function calendar_e2e_guest_walk(url) {
         async function lambda_code() {
           await form_fill(page, via, contact);
           ("15 seconds, because a phone's browser on a slow answer drew the code screen after 5 had passed, and the walk read a page that was right as a failure.");
-          await code_press_until(page, "No meeting yet", 15000);
+          await code_press_until(page, "First confirm your", 15000);
         }
         await step_run(flow, "get code", lambda_code);
         async function lambda_screen() {
           let shown = await page.innerText("body");
           let code = shown.match(/PRAY-[A-Z0-9]{4}/);
           flow.code = code ? code[0] : null;
-          let wanted = [
-            "⚠️ No meeting yet. You cannot pick a time yet.",
-            "1. Send me this code on " + app_name,
-            "Send code on " + app_name,
-            "Copy code",
-            "2. I will message you back on " + app_name,
-            "3. Then open this page again and pick a time.",
-            "Copy link",
-          ];
+          ("The code screen's words as ",
+            fn_name("app_calendar_guest_proof_waiting"),
+            " draws them: Messenger copies the code first and sends second, so its steps run to 4; WhatsApp sends with the code typed in.");
+          let wanted = equal(via, "messenger")
+            ? [
+                "⚠️ First confirm your Messenger. Then you can pick a time.",
+                "1. Copy this code:",
+                "Copy code",
+                "2. Send the code to me on Messenger:",
+                "Send code on Messenger",
+                "3. I will message you back on Messenger.",
+                "4. Then open this page again and pick a time.",
+                "Copy my private link",
+              ]
+            : [
+                "⚠️ First confirm your WhatsApp. Then you can pick a time.",
+                "1. Send me this code on WhatsApp",
+                "Send code on WhatsApp",
+                "Copy code",
+                "2. I will message you back on WhatsApp",
+                "3. Then open this page again and pick a time.",
+                "Copy my private link",
+              ];
           for (let words of wanted) {
             let b2 = shown.includes(words);
             if (not(b2)) {
@@ -201,7 +216,7 @@ export async function calendar_e2e_guest_walk(url) {
           "The private link differs from the booking page only after the #, and going to such a link never reloads the page - so it is reloaded.";
           await page.goto(link);
           await page.reload();
-          await page.getByText("No meeting yet").waitFor({
+          await page.getByText("First confirm your").waitFor({
             timeout: 30000,
           });
           let shown = await page.innerText("body");
