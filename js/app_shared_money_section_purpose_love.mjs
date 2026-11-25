@@ -38,6 +38,13 @@ export function app_shared_money_section_purpose_love() {
         "A palavra de Deus nos foi dada de graça. Por isso, de graça a damos a você (Mateus 10:8).",
       ],
     },
+    ind: {
+      title: "Tujuan kami adalah kasih, bukan keuntungan",
+      lines: [
+        "Tujuan kami adalah membagikan firman Allah.",
+        "Firman Allah telah diberikan kepada kami dengan cuma-cuma. Karena itu kami memberikannya kepadamu dengan cuma-cuma (Matius 10:8).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Our purpose is love, not profit",
@@ -61,6 +68,13 @@ export function app_shared_money_section_purpose_love() {
         ],
       },
       por: {
+        title: "Our purpose is love, not profit",
+        lines: [
+          "Our purpose is sharing the word of God.",
+          "The word of God has been freely given to us. So we freely give to you (Matthew 10:8).",
+        ],
+      },
+      ind: {
         title: "Our purpose is love, not profit",
         lines: [
           "Our purpose is sharing the word of God.",
