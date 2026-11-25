@@ -65,6 +65,15 @@ export function app_learn_js_lesson_while_two_names() {
       ["And ", name_b, " goes down 1 each of those times"],
       ["Here, ", "9 - (4 - 1)", " is ", "6", ""],
       [
+        "With another number in place of ",
+        "4",
+        ", use that number: for ",
+        "a < 3",
+        ", it is ",
+        "b - (3 - a)",
+        "",
+      ],
+      [
         "If ",
         "a < 4",
         " is ",
