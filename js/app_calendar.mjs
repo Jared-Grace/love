@@ -17,9 +17,9 @@ import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { firebase_sign_out } from "./firebase_sign_out.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 export async function app_calendar(context) {
   "the /calendar page. A guest opening a host's link (#host=<name>) sees that host's open hours and books one without signing in; a guest who has booked on this device, or opens their private link (#key=), sees their meetings. A host signs in at the bottom and sees their hours, their booking link and who is waiting for a code.";
@@ -78,7 +78,11 @@ export async function app_calendar(context) {
   await show_meetings();
   let host_open = async function lambda3() {
     "Signing in as host clears the booking screen and the guest's meetings above (human: the button \"doesn't remove top\"), so the host page stands alone.";
-    each([host_area, guest_area, meetings_area, booked_area], html_clear);
+    'The guest\'s share link goes too (human, 2026-11-25: "host sign in has link for someone else at the top"): it is for a guest passing a host on, and the host page has its own link to share.';
+    each(
+      [host_area, guest_area, share_area, meetings_area, booked_area],
+      html_clear,
+    );
     ('2026-11-15: a line says it is loading while the host\'s settings and the sign-in are fetched; the page sat blank white meanwhile (human: "host sign in just blank white for a while - maybe should show loading?"). The host screen clears it once its settings arrive.');
     html_div_text(host_area, "Loading...");
     if (host_key) {
@@ -122,12 +126,13 @@ export async function app_calendar(context) {
     storage_local_set(app_calendar, "host_key", null);
     await firebase_sign_out();
     html_clear(host_area);
-    app_shared_button_uncolored(host_area, "Host sign in", host_open);
+    ('Signing out draws the guest page again - booking screen, share link, meetings - as a fresh load would, since signing in had cleared it (human, 2026-11-25: "signing out of host just has the link for someone else at the top, but not the other content to book meeting").');
+    await guest_show();
+    await show_meetings();
+    guest_rest_draw();
     app_shared_toast("Signed out.");
   }
-  if (host_key && not(slug)) {
-    await host_open();
-  } else {
+  function guest_rest_draw() {
     if (not(slug) && not(guest_key)) {
       let hint = html_div_text(
         guest_area,
@@ -136,6 +141,11 @@ export async function app_calendar(context) {
       app_shared_text_deemphasized(hint);
     }
     app_shared_button_uncolored(host_area, "Host sign in", host_open);
+  }
+  if (host_key && not(slug)) {
+    await host_open();
+  } else {
+    guest_rest_draw();
   }
   app_shared_footer(root);
 }
