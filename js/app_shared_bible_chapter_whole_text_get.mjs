@@ -10,11 +10,13 @@ export function app_shared_bible_chapter_whole_text_get() {
     tgl: "Buong kabanata",
     spa: "Capítulo completo",
     por: "Capítulo inteiro",
+    ind: "Seluruh pasal",
     translated_from: {
       urd: "Whole chapter",
       tgl: "Whole chapter",
       spa: "Whole chapter",
       por: "Whole chapter",
+      ind: "Whole chapter",
     },
   };
   let label = app_shared_text_reader_language(texts);
