@@ -26,6 +26,10 @@ export function app_shared_hash_fields_unknown_named_text(name) {
       before: "Este link pede um dado (",
       after: ") que não temos",
     },
+    ind: {
+      before: "Tautan ini meminta data (",
+      after: ") yang tidak kami miliki",
+    },
     translated_from: {
       urd: {
         before: "This link asks for a ",
@@ -40,6 +44,10 @@ export function app_shared_hash_fields_unknown_named_text(name) {
         after: " we do not have",
       },
       por: {
+        before: "This link asks for a ",
+        after: " we do not have",
+      },
+      ind: {
         before: "This link asks for a ",
         after: " we do not have",
       },
