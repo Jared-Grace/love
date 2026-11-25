@@ -5,13 +5,14 @@ import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { calendar_host_window } from "./calendar_host_window.mjs";
-import { html_div_text_content } from "./html_div_text_content.mjs";
+import { app_shared_heading_big } from "./app_shared_heading_big.mjs";
 import { app_shared_heading } from "./app_shared_heading.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
 import { app_calendar } from "./app_calendar.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
+import { html_div_text_content } from "./html_div_text_content.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
@@ -61,7 +62,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   }
   let host = free.body.host;
   let booking_window = calendar_host_window(host);
-  html_div_text_content(card, "Book a meeting with " + host.name);
+  ('The card\'s name is its biggest line, above the meeting length (human, 2026-11-25: "top main card has book a meeting be more prominent").');
+  app_shared_heading_big(card, "Book a meeting with " + host.name);
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   ('The length stands out on its own line, as big as a heading (human: "What about making the 25 minutes stand out more visually?").');
   app_shared_heading(card, host.meeting_minutes + " minutes (or less)");
