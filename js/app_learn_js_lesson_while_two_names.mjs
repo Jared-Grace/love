@@ -5,6 +5,7 @@ import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_
 import { app_learn_js_lesson_while } from "./app_learn_js_lesson_while.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { js_code_two_names_while_lines } from "./js_code_two_names_while_lines.mjs";
+import { app_learn_js_lesson_expression_where_b_ends } from "./app_learn_js_lesson_expression_where_b_ends.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_two_names_generic } from "./app_learn_js_lesson_two_names_generic.mjs";
 export function app_learn_js_lesson_while_two_names() {
@@ -46,17 +47,31 @@ export function app_learn_js_lesson_while_two_names() {
     example(box_two, js_code_two_names_while_lines);
     walk(box_two);
     ("2026-11-25, at the human's asking, after a learner asked for a shortcut on Two numbers meeting, next: the runs counted without stepping, with why. It gives the same answer as stepping on all eight programs the lesson draws, including the two that never run, which is why the rule opens with asking a < 4 first.");
+    ("Later the same day, at the human's asking: the shortcut became its own lesson just before, with code that works it out, so this box recalls it.");
     let box_three = app_learn_js_container_light_blue(root);
+    app_learn_js_remember_from_lesson(
+      box_three,
+      context,
+      app_learn_js_lesson_expression_where_b_ends,
+      [
+        "",
+        "console.log(b - (4 - a));",
+        " works out a number from ",
+        name_a,
+        " and ",
+        name_b,
+      ],
+    );
     let lines_said = [
       [
         "A shortcut: if ",
         "a < 4",
         " is ",
         "true",
-        " at the start, ",
-        name_b,
-        " ends at ",
-        "b - (4 - a)",
+        " at the start, this ",
+        "while",
+        " writes out the same as ",
+        "console.log(b - (4 - a));",
         "",
       ],
       ["Why it works:"],
