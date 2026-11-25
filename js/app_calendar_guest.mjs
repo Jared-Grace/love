@@ -16,6 +16,7 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_calendar_share_link_draw } from "./app_calendar_share_link_draw.mjs";
 import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
@@ -29,6 +30,8 @@ import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_shared_button_back_arrow } from "./app_shared_button_back_arrow.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
@@ -147,7 +150,9 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   ('★ ONE CHOICE AT A TIME (human, 2026-11-25: "the screen would clear and you would have one choice at a time"): step holds one screen - which app, then the code form or the times - and each press clears it and draws the next, with ← Back to the one before. First comes which app, each saying whether booking is open now or a code comes first (human: "whatsapp (book now) / Messenger (need to confirm before booking)"). A host without Messenger has one app, so that screen is skipped.');
   let step = html_div(card);
   function back_button(box) {
-    app_shared_button_uncolored(box, "← Back", apps_show);
+    'Back wears the words and arrow every app\'s way out wears (human, 2026-11-25: "can Back button be DRY with other back buttons? same emoji?"), kept in the calendar\'s plain button dress so it sits like the buttons beside it.';
+    let text2 = app_shared_button_back_text();
+    app_shared_button_uncolored(box, text2, apps_show);
   }
   function apps_show() {
     html_clear(step);
@@ -325,7 +330,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       if (equal(back, null)) {
         back_button(list);
       } else {
-        app_shared_button_uncolored(list, "← Back", back);
+        let text3 = app_shared_button_back_text();
+        app_shared_button_uncolored(list, text3, back);
       }
       html_div(list);
     }
@@ -336,7 +342,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
         weekdays_show();
         return;
       }
-      screen_start("How do you want to pick a day?", null);
+      ('Worded by the human (2026-11-25: "What day do you want to meet?").');
+      screen_start("What day do you want to meet?", null);
       app_shared_button_uncolored(
         list,
         "Choose a day of the week",
@@ -428,7 +435,9 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           function time_back() {
             times_show(group, day);
           }
-          app_shared_button_uncolored(list, "← Change time", time_back);
+          let left = app_shared_button_back_arrow();
+          let text4 = text_combine(left, " Change time");
+          app_shared_button_uncolored(list, text4, time_back);
           final_set(true);
         }
         app_shared_button_uncolored(list, time.label, time_pick);
