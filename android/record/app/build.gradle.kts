@@ -29,6 +29,22 @@ android {
     buildFeatures {
         buildConfig = true
     }
+    // The upload key: one for every app here (human 2026-11-25), kept outside the repo. Its
+    // file and password are read from ~/.gradle/gradle.properties (made by
+    // gitignore/android_upload_key.sh), so no secret is in git. Without them the store build
+    // is left unsigned rather than failing.
+    val upload_store_file = providers.gradleProperty("love_upload_store_file").orNull
+    val upload_password = providers.gradleProperty("love_upload_password").orNull
+    signingConfigs {
+        if (upload_store_file != null && upload_password != null) {
+            create("upload") {
+                storeFile = file(upload_store_file)
+                storePassword = upload_password
+                keyAlias = "upload"
+                keyPassword = upload_password
+            }
+        }
+    }
     // Two builds of one app (human 2026-11-25: a Record Bible app for the app store). debug is
     // the owner's: it opens the development page, sends and backs up takes, and updates itself.
     // release is the store's: it opens the public site, keeps every take on the phone alone,
@@ -41,6 +57,7 @@ android {
         getByName("release") {
             buildConfigField("String", "START_URL", "\"https://christarose.org/bible_record.html\"")
             buildConfigField("boolean", "STORE", "true")
+            signingConfig = signingConfigs.findByName("upload")
         }
     }
 }
