@@ -12,14 +12,17 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { app_shared_container_centered } from "./app_shared_container_centered.mjs";
 import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
 import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { calendar_person_label } from "./calendar_person_label.mjs";
-import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
+import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { app_shared_button_red } from "./app_shared_button_red.mjs";
@@ -65,8 +68,20 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
           meeting.meeting_minutes,
         )
       : calendar_time_local_text(meeting.next_utc);
-    let repeat = meeting.weekly ? " (every week)" : "";
-    html_div_text_content(card, when + repeat);
+    ('The date and time are bold, so a list of meetings reads by when (human, 2026-11-25: "Your meetings should have bold for date and time"), and so is every week, inside its brackets (human: "\'Every week\' should be bold in (every week)").');
+    let when_line = html_div(card);
+    let when_part = html_span_text(when_line, when);
+    html_style_assign(when_part, {
+      "font-weight": "bold",
+    });
+    if (meeting.weekly) {
+      html_span_text(when_line, " (");
+      let every_part = html_span_text(when_line, "every week");
+      html_style_assign(every_part, {
+        "font-weight": "bold",
+      });
+      html_span_text(when_line, ")");
+    }
     let other = meeting.other;
     let with_whom = meeting.hosting ? "Booked by " : "With ";
     html_div_text_content(
@@ -79,10 +94,11 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
     let messenger = equal(meeting.via, "messenger");
     let app_name = messenger ? "Messenger" : "WhatsApp";
     if (meeting.waiting) {
-      html_text_content_set(
-        status,
-        "Waiting for code " + meeting.code + " on " + app_name,
-      );
+      html_span_text(status, "Waiting for code " + meeting.code + " on ");
+      let app_waiting = html_span_text(status, app_name);
+      html_style_assign(app_waiting, {
+        "font-weight": "bold",
+      });
       if (meeting.hosting && messenger) {
         ("The guest typed their own profile link when booking; it is shown to open and filled in below, so the host confirms as it is when the code came from that profile, or pastes the real sender's link when it did not.");
         if (meeting.profile_url) {
@@ -171,7 +187,12 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
         );
       }
     } else {
-      html_text_content_set(status, "Confirmed on " + app_name);
+      ('The app is bold, so where the meeting happens reads at a glance (human, 2026-11-25: "And WhatsApp should be bold"). A later error replaces the whole line, bold part included.');
+      html_span_text(status, "Confirmed on ");
+      let app_part = html_span_text(status, app_name);
+      html_style_assign(app_part, {
+        "font-weight": "bold",
+      });
       if (meeting.hosting && messenger && meeting.profile_url) {
         html_a_href_text_new_tab(
           card,
