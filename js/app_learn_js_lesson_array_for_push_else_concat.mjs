@@ -1,14 +1,14 @@
-import { floor } from "./floor.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
-import { multiply } from "./multiply.mjs";
-import { subtract } from "./subtract.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
+import { multiply } from "./multiply.mjs";
+import { floor } from "./floor.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -128,7 +128,7 @@ export function app_learn_js_lesson_array_for_push_else_concat() {
     );
     let box_three = app_learn_js_container_light_blue(root);
     let lines_said = [
-      ["To move every ", "move", " to the end, push it to ", "moved", ""],
+      ["Push every letter that is ", "move", " to ", "moved", ""],
       ["Push every other letter to ", "keep", ""],
       ["Then ", "keep.concat(moved)", " puts them last:"],
     ];
