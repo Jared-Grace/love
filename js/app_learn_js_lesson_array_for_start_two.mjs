@@ -38,7 +38,9 @@ export function app_learn_js_lesson_array_for_start_two() {
     app_learn_js_div_cycle_code(box_three, [
       "The loop asks ",
       "i < a.length",
-      " before it runs even once. With only ",
+      " before the lines inside ",
+      "{ }",
+      " run even once. With only ",
       "2",
       " items, that is ",
       "2 < 2",

@@ -43,7 +43,7 @@ export function app_learn_js_lesson_array_for_flag() {
       "on = !on",
       " flips ",
       "on",
-      " each time it runs",
+      " each time the loop goes round",
     ]);
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
