@@ -1,6 +1,6 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_array } from "./js_code_array.mjs";
+import { equal } from "./equal.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_array_pair_sized } from "./app_learn_js_array_pair_sized.mjs";
@@ -113,22 +113,23 @@ export function app_learn_js_lesson_array_for_all_in_b() {
       " is in ",
       "b",
     ]);
+    app_learn_js_div_cycle_code(box_three, ["", "all", " starts ", "true"]);
+    ("2026-11-25, the human's own wording, one thought to a line");
     app_learn_js_div_cycle_code(box_three, [
-      "",
-      "all",
-      " starts ",
-      "true",
-      ", and the ",
-      "if",
-      " only ever sets it to ",
-      "false",
+      "but if there is one item in ",
+      "a",
+      " that ",
+      "b",
+      " does not have,",
     ]);
     app_learn_js_div_cycle_code(box_three, [
-      "One item that ",
-      "b",
-      " does not have is enough to make ",
+      "then the ",
+      "if",
+      " sets ",
       "all",
-      " false:",
+      " to ",
+      "false",
+      ":",
     ]);
     let code3 = program_of(example_input);
     let lines2 = text_split_newline(code3);
