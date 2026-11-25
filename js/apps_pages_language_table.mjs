@@ -29,6 +29,12 @@ export function apps_pages_language_table() {
         description:
           "Leia um versículo da Bíblia em português e depois em inglês, com cada palavra em inglês explicada em português.",
       },
+      {
+        code: "ind",
+        title: "Belajar bahasa Inggris",
+        description:
+          "Baca satu ayat Alkitab dalam bahasa Indonesia, lalu dalam bahasa Inggris, dengan setiap kata bahasa Inggris dijelaskan dalam bahasa Indonesia.",
+      },
     ],
   };
   return r;
