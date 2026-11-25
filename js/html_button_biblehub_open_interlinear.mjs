@@ -14,11 +14,13 @@ export function html_button_biblehub_open_interlinear(
     tgl: "Interlinear",
     spa: "Interlineal",
     por: "Interlinear",
+    ind: "Interlinear",
     translated_from: {
       urd: "Interlinear",
       tgl: "Interlinear",
       spa: "Interlinear",
       por: "Interlinear",
+      ind: "Interlinear",
     },
   };
   let text = app_shared_text_reader_language(texts);
