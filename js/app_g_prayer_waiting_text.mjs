@@ -9,11 +9,13 @@ export function app_g_prayer_waiting_text() {
     tgl: "Naghihintay sa Panginoon...",
     spa: "Esperando en el Señor...",
     por: "Esperando no Senhor...",
+    ind: "Menantikan Tuhan...",
     translated_from: {
       urd: "Waiting on the Lord...",
       tgl: "Waiting on the Lord...",
       spa: "Waiting on the Lord...",
       por: "Waiting on the Lord...",
+      ind: "Waiting on the Lord...",
     },
   };
   let text = app_shared_text_reader_language(texts);
