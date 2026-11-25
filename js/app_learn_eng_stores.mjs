@@ -1,3 +1,4 @@
+import { app_learn_eng_store_indonesian } from "./app_learn_eng_store_indonesian.mjs";
 import { app_learn_eng_store_portuguese } from "./app_learn_eng_store_portuguese.mjs";
 import { app_learn_eng_store_urdu } from "./app_learn_eng_store_urdu.mjs";
 import { app_learn_eng_store_tagalog } from "./app_learn_eng_store_tagalog.mjs";
@@ -10,6 +11,7 @@ export function app_learn_eng_stores() {
   let tagalog = app_learn_eng_store_tagalog();
   let spanish = app_learn_eng_store_spanish();
   let portuguese = app_learn_eng_store_portuguese();
-  let r = [urdu, tagalog, spanish, portuguese];
+  let indonesian = app_learn_eng_store_indonesian();
+  let r = [urdu, tagalog, spanish, portuguese, indonesian];
   return r;
 }
