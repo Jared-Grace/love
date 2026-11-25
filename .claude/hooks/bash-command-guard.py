@@ -1884,6 +1884,12 @@ def git_writes_or_runs(words):
             continue
         if w == "--":
             return False
+        # A word that opens with a variable or a `$(...)` is spelled at run
+        # time, so it may arrive as `--output=FILE`; before `--` git would
+        # read it as an option. A loop over literal words is expanded before
+        # this check, so only a list nobody can read here lands on this.
+        if w.startswith("$") or w.startswith(SUBSTITUTION_PLACEHOLDER):
+            return True
         if w.startswith("--"):
             name = w.split("=", 1)[0]
             if len(name) >= 4 and "--output".startswith(name):
