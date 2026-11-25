@@ -1,6 +1,3 @@
-import { divide } from "./divide.mjs";
-import { subtract } from "./subtract.mjs";
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
@@ -39,13 +36,13 @@ import { app_shared_button_back_arrow } from "./app_shared_button_back_arrow.mjs
 import { text_combine } from "./text_combine.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { calendar_weekly_series_plan } from "./calendar_weekly_series_plan.mjs";
+import { subtract } from "./subtract.mjs";
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
-import { calendar_guest_link } from "./calendar_guest_link.mjs";
-import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
-import { app_calendar_link_copy_button } from "./app_calendar_link_copy_button.mjs";
 export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   arguments_assert(arguments, 5);
   ("on_booked(draw) runs once a booking is written; draw(box) draws what was booked and the guest's link into box. The page draws it at its top and goes back to its home screen, the guest's meetings with the hours under them (human, 2026-11-24: \"when booked meeting should take back to home screen that says your meetings but the info should be at the top\").");
@@ -188,12 +185,13 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
         continue;
       }
       let label = app_label(v);
-      let words =
-        p && p.proven
-          ? "Book a meeting on " + label
-          : p
-            ? "Send your " + label + " code"
-            : "Confirm your " + label;
+      ('MESSENGER NAMES WHAT IS CONFIRMED (human, 2026-11-25: "Confirm your Facebook profile to meet on Messenger" ... "instead of \\"Send your FB MSG code\\""): before the guest is proven, code sent or not, the button says it is the profile being checked and what for. WhatsApp keeps its words.');
+      let unproven_words = equal(v, "messenger")
+        ? "Confirm your Facebook profile to meet on Messenger"
+        : p
+          ? "Send your " + label + " code"
+          : "Confirm your " + label;
+      let words = p && p.proven ? "Book a meeting on " + label : unproven_words;
       async function pick() {
         await app_show(v);
       }
@@ -814,10 +812,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           done,
           "To change or cancel this meeting, or to book another, use this link. Please save it:",
         );
-        let link = calendar_guest_link(slug, key);
-        let link_line = html_div(done);
-        html_a_href_text_new_tab(link_line, link, link);
-        app_calendar_link_copy_button(done, link);
+        app_calendar_private_link_draw(done, slug, key);
       }
       await on_booked(draw_done);
     }
