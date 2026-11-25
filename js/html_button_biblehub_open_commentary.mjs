@@ -14,11 +14,13 @@ export function html_button_biblehub_open_commentary(
     tgl: "Komentaryo",
     spa: "Comentario",
     por: "Comentário",
+    ind: "Tafsiran",
     translated_from: {
       urd: "Commentary",
       tgl: "Commentary",
       spa: "Commentary",
       por: "Commentary",
+      ind: "Commentary",
     },
   };
   let text = app_shared_text_reader_language(texts);
