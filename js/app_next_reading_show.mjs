@@ -3,14 +3,16 @@ import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_spaced_small } from "./app_shared_spaced_small.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_next_copy_button_counted } from "./app_next_copy_button_counted.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { each } from "./each.mjs";
 import { app_next_url_onward_link } from "./app_next_url_onward_link.mjs";
 import { app_next_copy_button } from "./app_next_copy_button.mjs";
+import { app_next_big_next_button } from "./app_next_big_next_button.mjs";
 import { app_next_ways_onward } from "./app_next_ways_onward.mjs";
 import { app_next_count_choose } from "./app_next_count_choose.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
 export function app_next_reading_show({
@@ -22,6 +24,8 @@ export function app_next_reading_show({
   run,
   count,
   languages_chosen,
+  big,
+  hash_onward,
 }) {
   "Everything this page puts on the screen once it knows what it is showing: the reading in its card, the way to carry it away, the link on to what comes next, and the ways onward under it.";
   "$plain reading_text";
@@ -36,10 +40,15 @@ export function app_next_reading_show({
   ("The same copying stands first inside the card as well, so somebody who opens the page reaches it without scrolling past a long passage to find it. The two buttons bracket the card: what either one copies is everything between them. The first one says how many verses it copies, because the number a reader chose is the most a message holds rather than the exact amount.");
   let size = list_size(run);
   app_next_copy_button_counted(card, reading_text, size);
+  ("The verses stand in a piece of their own inside the card, so the large form can draw them big without drawing the buttons beside them big too.");
+  let reading = html_div(card);
+  if (big) {
+    html_style_font_size(reading, "1.75em");
+  }
   function block_show(block) {
     let reference = property_get(block, "reference");
     let entries = property_get(block, "entries");
-    app_shared_bible_verse_block(card, reference, entries);
+    app_shared_bible_verse_block(reading, reference, entries);
   }
   each(blocks, block_show);
   ("The link stands in the card with the reading because it is copied with the reading, and the card is drawn to be exactly what the copying takes. Somebody who pastes this into a message is sending both: the passage to read, and the way back here for the passage after it. Outside the card it read as something belonging to the page rather than to the message, which is the opposite of what it is for.");
@@ -47,6 +56,10 @@ export function app_next_reading_show({
   ("The copying the page does for itself is the one a browser is allowed to refuse, so the same copying stands at the foot of the card as something to press. The page lets that refusal pass without a word, which is right for the page and late for the reader - this is how they find out in time.");
   ("Last inside the card, under everything it takes, so what it copies is everything above it and nothing below.");
   app_next_copy_button(card, reading_text);
+  ("The large form copies a link back to this passage, so the way on to the next one is a button here instead, first under the card.");
+  if (big) {
+    app_next_big_next_button(content, context, hash_onward);
+  }
   app_next_ways_onward(context, content, run);
   ("How much to send stands last, under the reading and under the ways on from it, because it is the one thing here that is not about this passage. Somebody who opened this link came to copy what is in the card; they set the size once, when it turns out to be wrong for who they are writing to, and then never again for the rest of a book.");
   app_next_count_choose(content, count);

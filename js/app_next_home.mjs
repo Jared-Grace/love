@@ -27,6 +27,8 @@ import { app_next_verse_block } from "./app_next_verse_block.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { lists_combine } from "./lists_combine.mjs";
+import { app_next_big_is } from "./app_next_big_is.mjs";
+import { app_next_url_here } from "./app_next_url_here.mjs";
 import { app_next_url_onward } from "./app_next_url_onward.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
@@ -104,7 +106,11 @@ export async function app_next_home(context) {
   let blocks = await list_map_unordered_async(run, lambda);
   let lines_each = list_map_property(blocks, "lines");
   let mapped = lists_combine(lines_each);
-  let url = app_next_url_onward(hash, list, run);
+  ("A link carrying the big word asks for the large form, which copies a link back to this same passage rather than on to the next one - the way on is a button on the page instead. The link here is written before the link onward, because writing the onward one moves the hash on.");
+  let big = app_next_big_is(hash);
+  let url_here = app_next_url_here(hash);
+  let url_onward = app_next_url_onward(hash, list, run);
+  let url = big ? url_here : url_onward;
   ("The link is copied along with the reading, because carrying it is the whole point of this page. Somebody sending scripture a passage at a time pastes what they copied into a message and sends it; days later they open that message again, press the link sitting at the bottom of it, and are handed the passage that comes after the one they sent, ready to paste in turn. The link is what makes the message its own bookmark - drop it from the copy and the next day there is nothing to press, and they are back to finding their place by hand.");
   list_add(mapped, url);
   let reading_text = list_join_newline_2(mapped);
@@ -120,6 +126,8 @@ export async function app_next_home(context) {
     run,
     count,
     languages_chosen,
+    big,
+    hash_onward: hash,
   });
   await clipboard_copy_try(reading_text);
 }
