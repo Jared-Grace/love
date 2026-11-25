@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { not } from "./not.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_input_text } from "./html_input_text.mjs";
@@ -43,16 +43,14 @@ export async function app_calendar_guest_proof_form(
   ("key is the guest's session key, or null; a first code answers a new key, handed to on_key. on_started is called once the code is made, to draw the page again.");
   ("What the guest typed last time on this device fills the form again, so asking again asks for nothing twice.");
   let b4 = equal(via_fixed, null);
-  let intro = html_div_text(
-    card,
-    not(b4)
-      ? "Before you pick a time, send me a code from your " +
-          (equal(via_fixed, "messenger") ? "Facebook Messenger" : "WhatsApp") +
-          ". Then I know I can reach you."
-      : host.messenger
-        ? "Before you pick a time, send me a code from your WhatsApp or Facebook Messenger. Then I know I can reach you."
-        : "Before you pick a time, send me a code from your WhatsApp. Then I know I can reach you.",
-  );
+  let intro_first = not(b4)
+    ? "Before you pick a time, send me a code from your " +
+      (equal(via_fixed, "messenger") ? "Facebook Messenger" : "WhatsApp") +
+      ". Then I know I can reach you."
+    : host.messenger
+      ? "Before you pick a time, send me a code from your WhatsApp or Facebook Messenger. Then I know I can reach you."
+      : "Before you pick a time, send me a code from your WhatsApp. Then I know I can reach you.";
+  let intro = html_div_text(card, intro_first);
   html_style_assign(intro, {
     "font-weight": "bold",
   });
@@ -141,6 +139,7 @@ export async function app_calendar_guest_proof_form(
   function choice_pick(value) {
     via = value;
     problems_recheck();
+    intro_set();
     via_draw();
     let text2 = code_text();
     html_text_content_set(code_button, text2);
@@ -157,6 +156,18 @@ export async function app_calendar_guest_proof_form(
       " code and wait for confirmation before scheduling";
     return r6;
   }
+  function intro_set() {
+    'MESSENGER, IN THE HOST\'S OWN WORDS (human, 2026-11-25: "First provide a link to your profile. Then I will confirm the link works. After you wait for confirmation, then if God wills you can schedule a meeting."). Set again whenever the app changes, since the words fit Messenger only. WhatsApp keeps its words; the same three steps said for a number were not written, as nobody asked.';
+    if (equal(via, "messenger")) {
+      html_text_content_set(
+        intro,
+        "First provide a link to your profile. Then I will confirm the link works. After you wait for confirmation, then if God wills you can schedule a meeting.",
+      );
+      return;
+    }
+    html_text_content_set(intro, intro_first);
+  }
+  intro_set();
   via_draw();
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   let check = await calendar_turnstile_widget(card);

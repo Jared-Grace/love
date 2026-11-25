@@ -24,12 +24,13 @@ export function app_calendar_guest_proof_waiting(
 ) {
   arguments_assert(arguments, 6);
   ("What a guest sees after Get my code, until the host has seen the code arrive: a plain warning that there is no meeting yet, the code, a big button that opens WhatsApp (or Messenger) with it typed, and what happens next.");
-  ('★ NOTHING HERE MAY READ AS BOOKED. Many guests do not read English well (human, 2026-11-20: "if they think I booked, meeting will happen then there\'s a potential issue"), so the warning stacks signals - an icon, a coloured box, bold words - and says the one thing: no meeting yet.');
+  ('★ NOTHING HERE MAY READ AS BOOKED. Many guests do not read English well (human, 2026-11-20: "if they think I booked, meeting will happen then there\'s a potential issue"), so the warning stacks signals - an icon, a coloured box, bold words - and says the one thing: confirm first, the time comes after.');
+  ('IT NAMES THE STEP, NOT A MISSING MEETING (human, 2026-11-25: "it shouldn\'t say no meeting yet? when confirming fb?"): this screen confirms the app; no meeting was asked for, so "no meeting yet" answered a question nobody had. Said the same for WhatsApp, which is the same step. Not built: dropping the box altogether, which would lose the guard above.');
   ("on_check draws the page again from the server - pressed after the host's message arrives, it shows the times. on_change shows the form again, for a guest who typed the wrong number.");
   let app_name = equal(proof.via, "messenger") ? "Messenger" : "WhatsApp";
   let warning = html_div_text(
     card,
-    "⚠️ No meeting yet. You cannot pick a time yet.",
+    "⚠️ First confirm your " + app_name + ". Then you can pick a time.",
   );
   app_shared_style_control(warning);
   html_style_assign(warning, {
