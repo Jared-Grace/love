@@ -8,13 +8,14 @@ import { html_font_size_1em } from "./html_font_size_1em.mjs";
 import { html_element } from "./html_element.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_span_text } from "./html_span_text.mjs";
-import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_span } from "./html_span.mjs";
 import { app_shared_style_control_font_size } from "./app_shared_style_control_font_size.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_checked_set } from "./html_checked_set.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_choice_card_chosen_color } from "./app_shared_choice_card_chosen_color.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_choice_card_ring } from "./app_shared_choice_card_ring.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_on_click } from "./html_on_click.mjs";
@@ -24,7 +25,7 @@ export function app_shared_choice_cards(parent, choices, chosen, on_choose) {
   ("$plain choices");
   ("$plain chosen");
   ("$plain on_choose");
-  ("Big choice cards stacked one under another, one per choice - each an object with a key, a title, the sentence under it (details), and disabled - acting as radio buttons: the one whose key is chosen is ticked, green and ringed; pressing another hands on_choose its key. The caller draws them again with the new key.");
+  ("Big choice cards stacked one under another, one per choice - each an object with a key, a title (a list of {text, bold} parts), the sentence under it (details), and disabled - acting as radio buttons: the one whose key is chosen is ticked, green and ringed; pressing another hands on_choose its key. The caller draws them again with the new key.");
   ("Dressed as the karate app's device question (human, 2026-11-25: \"in karate app there's some kind of ui for like radio buttons but better looking - can you use something like that (DRY)\"): the same scaled-up tick box, the same green, the same ring.");
   ("The whole card takes the tap, not the little box inside it - a box is a hard thing to hit with a thumb.");
   ("A disabled card is drawn faded and takes no tap, with its sentence saying why, so a reader sees the choice exists and why it is shut rather than wondering where it went.");
@@ -42,10 +43,19 @@ export function app_shared_choice_cards(parent, choices, chosen, on_choose) {
       transform: "scale(2)",
       margin: "1em",
     });
-    let text = property_get(choice, "title");
-    let title = html_span_text(label, text);
+    ('The title is a list of parts, each {text, bold}, so the words that decide - a date, a time, how often - stand out in bold inside the sentence (human, 2026-11-25: "can the date and time and frequence be bold?").');
+    let title = html_span(label);
     let value = app_shared_style_control_font_size();
     html_style_font_size(title, value);
+    for (let part of property_get(choice, "title")) {
+      let text = property_get(part, "text");
+      let piece = html_span_text(title, text);
+      if (property_get(part, "bold")) {
+        html_style_assign(piece, {
+          "font-weight": "bold",
+        });
+      }
+    }
     let text2 = property_get(choice, "details");
     html_div_text(label, text2);
     html_checked_set(box, on);

@@ -17,14 +17,16 @@ import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_calendar_share_link_draw } from "./app_calendar_share_link_draw.mjs";
+import { app_shared_field_title } from "./app_shared_field_title.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_shared_choice_cards } from "./app_shared_choice_cards.mjs";
 import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
 import { app_calendar_guest_proof_form } from "./app_calendar_guest_proof_form.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { app_shared_unavailable_box } from "./app_shared_unavailable_box.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
@@ -33,8 +35,6 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_button_back_arrow } from "./app_shared_button_back_arrow.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { app_shared_field_title } from "./app_shared_field_title.mjs";
-import { app_shared_choice_cards } from "./app_shared_choice_cards.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_loading } from "./html_loading.mjs";
@@ -159,8 +159,17 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     html_clear(step);
     ('THE MAIN CHOICES ARE ACTIONS (human, 2026-11-25: "Book meeting on WhatsApp / Confirm your Messenger / Change your WA# / Share this website with someone else ... would be the main choices"): each app says what can be done on it now - book, send the code already asked for, or confirm first - then a change for each app already confirmed, then sharing. Host sign in stays its own section under the card.');
     let vias = host.messenger ? ["whatsapp", "messenger"] : ["whatsapp"];
+    ('BOTH APPS CONFIRMED ⇒ ONE BOOK BUTTON (human, 2026-11-25: "if both are confirmed then it has book meeting button and then they choose which later?"); which app is then its own screen. With one app confirmed, its Book button names it and that screen is skipped.');
+    let proven_vias = vias.filter(via_proven);
+    let both = greater_than(proven_vias.length, 1);
+    if (both) {
+      app_shared_button_green(step, "Book a meeting", meet_on_show);
+    }
     for (let v of vias) {
       let p = proof_for(v);
+      if (both && p && p.proven) {
+        continue;
+      }
       let label = app_label(v);
       let words =
         p && p.proven
@@ -204,7 +213,45 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       share_show,
     );
   }
+  function via_proven(v) {
+    let p = proof_for(v);
+    let r12 = Boolean(p) && Boolean(p.proven);
+    return r12;
+  }
+  ("times_back is where Back on the first day screen goes: the app screen when the guest came through it, else the main choices.");
+  let times_back = apps_show;
+  function meet_on_show() {
+    html_clear(step);
+    app_shared_field_title(step, "Which app do you want to meet on?");
+    back_button(step);
+    function card_of(v) {
+      let p = proof_for(v);
+      let r10 = {
+        key: v,
+        title: [
+          {
+            text: app_label(v),
+            bold: true,
+          },
+        ],
+        details: equal(v, "messenger") ? p.profile_given : p.whatsapp,
+        disabled: false,
+      };
+      return r10;
+    }
+    let vias = host.messenger ? ["whatsapp", "messenger"] : ["whatsapp"];
+    let list3 = vias.filter(via_proven);
+    let cards = list_map(list3, card_of);
+    function meet_on_choose(v) {
+      via_choose(v);
+      proof = proof_for(v);
+      times_back = meet_on_show;
+      times_start();
+    }
+    app_shared_choice_cards(step, cards, null, meet_on_choose);
+  }
   async function app_show(v) {
+    times_back = apps_show;
     via_choose(v);
     let p = proof_for(v);
     if (equal(p, null)) {
@@ -329,7 +376,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       html_clear(list);
       chosen_line_set(words, false);
       if (equal(back, null)) {
-        back_button(list);
+        let text5 = app_shared_button_back_text();
+        app_shared_button_uncolored(list, text5, times_back);
       } else {
         let text3 = app_shared_button_back_text();
         app_shared_button_uncolored(list, text3, back);
@@ -453,39 +501,17 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
         ? ""
         : "none";
     }
-    ('★ THE LAST SCREEN ASKS TWO THINGS AS BIG CHOICE CARDS, the karate app\'s radio cards (human, 2026-11-25: "radio button for whatsapp ... or radio button for every week: Meet ... only / Meet every week Monday at ..."): which app to meet on, and once or every week.');
+    ('★ HOW OFTEN IS ASKED AS BIG CHOICE CARDS, the karate app\'s radio cards (human, 2026-11-25: "radio button for every week: Meet ... only / Meet every week Monday at ..."). Which app to meet on is its own screen before the days, and only when both apps are confirmed (human: "should wa/msg be its own screen as choice?").');
     ("Rejected: a tick box for every week (human named it first, then offered the pair); the pair says both answers in full, so the reader sees exactly what each one books.");
-    ("The proven guest is told where the meeting will be, in the number or link the host proved, so a wrong one is seen before booking; changing it is on the first screen, and means a new code. Every app this host meets on that the guest has proven is a card; the other app, unproven, is left to the first screen, where confirming it lives.");
+    ("The proven guest is told where the meeting will be, in the number or link the host proved, so a wrong one is seen before booking; changing it is on the first screen, and means a new code.");
     let who_field = app_shared_field(final_area);
-    function who_draw() {
-      html_clear(who_field);
-      app_shared_field_title(who_field, "Meet on");
-      let vias = host.messenger ? ["whatsapp", "messenger"] : ["whatsapp"];
-      function proven_card(v) {
-        let p = proof_for(v);
-        let ok = Boolean(p) && Boolean(p.proven);
-        return ok;
-      }
-      function card_of(v) {
-        let p = proof_for(v);
-        let r10 = {
-          key: v,
-          title: app_label(v),
-          details: equal(v, "messenger") ? p.profile_given : p.whatsapp,
-          disabled: false,
-        };
-        return r10;
-      }
-      let list3 = vias.filter(proven_card);
-      let cards = list_map(list3, card_of);
-      function who_choose(v) {
-        via_choose(v);
-        proof = proof_for(v);
-        who_draw();
-      }
-      app_shared_choice_cards(who_field, cards, proof.via, who_choose);
-    }
-    who_draw();
+    html_div_text(
+      who_field,
+      "✅ " +
+        (equal(proof.via, "messenger")
+          ? "We meet on Facebook Messenger"
+          : "We meet on WhatsApp: " + proof.whatsapp),
+    );
     ("weekly_chosen is false until the reader picks the every-week card; picking a new time puts it back to once, since the every-week card may be shut at the new time.");
     let weekly_chosen = false;
     let weekly_row = app_shared_field(final_area);
@@ -512,13 +538,51 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       let cards = [
         {
           key: "once",
-          title: "Meet " + day.label + " at " + time.label + " only",
+          title: [
+            {
+              text: "Meet ",
+              bold: false,
+            },
+            {
+              text: day.label,
+              bold: true,
+            },
+            {
+              text: " at ",
+              bold: false,
+            },
+            {
+              text: time.label,
+              bold: true,
+            },
+            {
+              text: " only",
+              bold: true,
+            },
+          ],
           details: "Just this one meeting.",
           disabled: false,
         },
         {
           key: "weekly",
-          title: "Meet every " + day.weekday + " at " + time.label,
+          title: [
+            {
+              text: "Meet ",
+              bold: false,
+            },
+            {
+              text: "every " + day.weekday,
+              bold: true,
+            },
+            {
+              text: " at ",
+              bold: false,
+            },
+            {
+              text: time.label,
+              bold: true,
+            },
+          ],
           details: every_details,
           disabled: shut,
         },

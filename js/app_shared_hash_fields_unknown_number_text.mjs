@@ -26,6 +26,10 @@ export function app_shared_hash_fields_unknown_number_text(name) {
       before: "O dado ",
       after: " deste link não é um número",
     },
+    ind: {
+      before: "Data ",
+      after: " dalam tautan ini bukan angka",
+    },
     translated_from: {
       urd: {
         before: "The ",
@@ -40,6 +44,10 @@ export function app_shared_hash_fields_unknown_number_text(name) {
         after: " in this link is not a number",
       },
       por: {
+        before: "The ",
+        after: " in this link is not a number",
+      },
+      ind: {
         before: "The ",
         after: " in this link is not a number",
       },
