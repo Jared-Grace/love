@@ -102,6 +102,7 @@ export function permission_rules_other() {
     "Bash(paste:*)",
     "Bash(fold:*)",
     "Bash(id:*)",
+    "Bash(fc-list:*)",
     "Bash(rev:*)",
     "Bash(basename:*)",
     "Bash(md5sum:*)",
