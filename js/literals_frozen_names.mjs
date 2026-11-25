@@ -38,7 +38,6 @@ export function literals_frozen_names() {
   "Twice now this list has been called complete and been added to afterwards, so what the entries above said about completeness being re-earned rather than reached holds a third time. What is its own is how quietly this one would fail: the address is built once per word tapped, so retyping the word breaks nothing that anybody would see - every sound button simply stops making a sound, on a page that goes on looking entirely well.";
   "The word standing before a review in a code app link. It escaped the moment the first such link was saved or sent: the page reads this word back to decide which checkpoint to open, so retyping it would leave every saved review link opening on the first review instead - which is the exact failure the field was added to end, wearing the same face.";
   "The two words standing before the rule set and the goal in a replace app link. They escaped the moment the first link to an exercise was saved or sent: the page reads them back to decide which rule set and which goal to open, so retyping either would leave every saved exercise link opening on the home screen - quietly, since a link that names nothing the page looks for is not an error, just a front door.";
-  let spelled = fn_name("gloss_upload_namespace_en_learn_bible_indonesian");
   let names = [
     fn_name("app_a_app_selected_key"),
     fn_name("app_a_function_name_selected_key"),
@@ -98,7 +97,7 @@ export function literals_frozen_names() {
     fn_name("gloss_upload_namespace_en_learn_bible_tagalog"),
     fn_name("gloss_upload_namespace_en_learn_bible_spanish"),
     fn_name("gloss_upload_namespace_en_learn_bible_portuguese"),
-    spelled,
+    fn_name("gloss_upload_namespace_en_learn_bible_indonesian"),
   ];
   return names;
 }
