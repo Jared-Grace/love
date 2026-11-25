@@ -338,8 +338,10 @@ import { app_learn_js_lesson_for_count } from "./app_learn_js_lesson_for_count.m
 import { app_learn_js_lesson_for_after_change } from "./app_learn_js_lesson_for_after_change.mjs";
 import { app_learn_js_lesson_for_log_double } from "./app_learn_js_lesson_for_log_double.mjs";
 import { app_learn_js_lesson_for_down_to } from "./app_learn_js_lesson_for_down_to.mjs";
+import { app_learn_js_lesson_expression_where_b_ends } from "./app_learn_js_lesson_expression_where_b_ends.mjs";
 import { app_learn_js_lesson_while_two_names } from "./app_learn_js_lesson_while_two_names.mjs";
 import { app_learn_js_lesson_for_two_names } from "./app_learn_js_lesson_for_two_names.mjs";
+import { app_learn_js_lesson_expression_where_meet } from "./app_learn_js_lesson_expression_where_meet.mjs";
 import { app_learn_js_lesson_while_two_meet } from "./app_learn_js_lesson_while_two_meet.mjs";
 import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
 import { app_learn_js_lesson_while_if } from "./app_learn_js_lesson_while_if.mjs";
@@ -959,8 +961,10 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_for_after_change,
     app_learn_js_lesson_for_log_double,
     app_learn_js_lesson_for_down_to,
+    app_learn_js_lesson_expression_where_b_ends,
     app_learn_js_lesson_while_two_names,
     app_learn_js_lesson_for_two_names,
+    app_learn_js_lesson_expression_where_meet,
     app_learn_js_lesson_while_two_meet,
     app_learn_js_lesson_while_and,
     app_learn_js_lesson_while_if,

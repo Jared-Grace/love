@@ -501,6 +501,8 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_while_repeat_word_down:
         text_frozen("while_word_down"),
       app_learn_js_lesson_while_two_lines: text_frozen("while_two_lines"),
+      app_learn_js_lesson_expression_where_b_ends: text_frozen("where_b_ends"),
+      app_learn_js_lesson_expression_where_meet: text_frozen("where_meet"),
       app_learn_js_lesson_while_two_names: text_frozen("while_two_names"),
       app_learn_js_lesson_while_two_meet: text_frozen("while_two_meet"),
       app_learn_js_lesson_while_product: text_frozen("while_product"),
