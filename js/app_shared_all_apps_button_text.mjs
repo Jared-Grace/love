@@ -7,11 +7,13 @@ export function app_shared_all_apps_button_text() {
     tgl: " Lahat ng app",
     spa: " Todas las aplicaciones",
     por: " Todos os aplicativos",
+    ind: " Semua aplikasi",
     translated_from: {
       urd: " All apps",
       tgl: " All apps",
       spa: " All apps",
       por: " All apps",
+      ind: " All apps",
     },
   };
   let label = app_shared_text_reader_language(texts);
