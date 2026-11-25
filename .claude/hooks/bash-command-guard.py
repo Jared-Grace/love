@@ -2394,6 +2394,35 @@ def is_safe_scripts_temp_rm(words):
     return all(is_safe_scripts_temp_path(p) for p in paths)
 
 
+SCRIPTS_TEMP_CP_SAFE_FLAG_CHARS = set("vfn")
+
+
+def is_safe_scripts_temp_cp(words):
+    """Exact-shape exception for `cp` where EVERY path - sources and
+    destination alike - passes is_safe_scripts_temp_path. Both ends are
+    held for the reason is_safe_claude_temp_cp gives: a loose source would
+    stage any file on the machine into a folder the sandbox then reads. With
+    both ends inside scripts/temp the copy reads a file the agent could
+    already read and writes one the Write tool could already write, so it
+    adds no reach. No -r/-R (the path check allows files only) and no long
+    options (`-t`, `--parents` move the destination outside what is checked).
+    Same symlink residual as is_safe_claude_temp_cp: planting one needs `ln`,
+    which prompts on its own."""
+    if not words or words[0] != "cp":
+        return False
+    paths = []
+    for word in words[1:]:
+        if word.startswith("-"):
+            flag_chars = word[1:]
+            if not flag_chars or any(c not in SCRIPTS_TEMP_CP_SAFE_FLAG_CHARS for c in flag_chars):
+                return False
+            continue
+        paths.append(word)
+    if len(paths) < 2:
+        return False
+    return all(is_safe_scripts_temp_path(p) for p in paths)
+
+
 GIT_RM_TMP_BASENAME_RE = re.compile(r"^(?:_tmp_|claude_tmp_)[A-Za-z0-9_.-]+$")
 
 
@@ -3102,6 +3131,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_gloss_write_mv(words)
             and not is_safe_claude_temp_mv(words)
             and not is_safe_claude_temp_cp(words)
+            and not is_safe_scripts_temp_cp(words)
             and not is_safe_verify_html_rm(words)
             and not is_safe_scripts_temp_rm(words)
             and not is_safe_git_rm_tmp(words)
