@@ -9,11 +9,13 @@ export function app_shared_native_update_text() {
     tgl: " I-update ang app",
     spa: " Actualizar la aplicación",
     por: " Atualizar o aplicativo",
+    ind: " Perbarui aplikasi",
     translated_from: {
       urd: " Update app",
       tgl: " Update app",
       spa: " Update app",
       por: " Update app",
+      ind: " Update app",
     },
   };
   let label = app_shared_text_reader_language(texts);
