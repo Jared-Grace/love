@@ -6,7 +6,7 @@ import { range_1 } from "./range_1.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_array_for_pair } from "./app_learn_js_lesson_array_for_pair.mjs";
+import { app_learn_js_lesson_array_while_walk } from "./app_learn_js_lesson_array_while_walk.mjs";
 import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -80,13 +80,22 @@ export function app_learn_js_lesson_array_while_both_move() {
     return shuffled;
   }
   function above(root, context) {
-    "Two arrays side by side and while with && remembered, then i and j both moving";
+    "Every item, with a while and while with && remembered, then i and j both moving";
+    "2026-11-25, at the human's asking: Every item, with a while now comes just before, so it is remembered in place of Two arrays side by side, and the lines say j is the new, second index.";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_array_for_pair,
-      ["", "a[i] + b[i]", " adds the items at the same place in two arrays"],
+      app_learn_js_lesson_array_while_walk,
+      [
+        "",
+        "while (i < a.length)",
+        " walks every item of ",
+        "a",
+        ", with ",
+        "i++;",
+        " at the end of its body",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
@@ -106,8 +115,14 @@ export function app_learn_js_lesson_array_while_both_move() {
     let box_three = app_learn_js_container_light_blue(root);
     ("one thought to a line");
     let lines_said = [
-      ["", "i", " is where we are in ", "a", ""],
-      ["", "j", " is where we are in ", "b", ""],
+      ["As before, ", "i", " is where we are in ", "a", ""],
+      [
+        "Now there is a second array, ",
+        "b",
+        ", and ",
+        "j",
+        " is where we are in it",
+      ],
       ["Each time round, both ", "i", " and ", "j", " move"],
       [
         "The ",

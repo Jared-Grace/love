@@ -14,7 +14,7 @@ import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_while_and } from "./app_learn_js_lesson_while_and.mjs";
+import { app_learn_js_lesson_array_while_both_move } from "./app_learn_js_lesson_array_while_both_move.mjs";
 import { app_learn_js_lesson_for_if_else } from "./app_learn_js_lesson_for_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -96,20 +96,25 @@ export function app_learn_js_lesson_array_while_smaller_first() {
     return inputs;
   }
   function above(root, context) {
-    "a while asking && and an else inside a loop remembered, then two indexes where the if chooses which moves";
+    "Stop at the shorter array and an else inside a loop remembered, then the if choosing which index moves";
+    "2026-11-25, at the human's asking: Stop at the shorter array now comes just before, so it is remembered in place of While with &&, and its lines saying what i and j are were dropped here, leaving only the if as new.";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_while_and,
+      app_learn_js_lesson_array_while_both_move,
       [
-        "a ",
-        "while",
-        " asking ",
-        "&&",
-        " keeps going only while both sides are ",
-        "true",
         "",
+        "i < a.length && j < b.length",
+        " walks ",
+        "a",
+        " with ",
+        "i",
+        " and ",
+        "b",
+        " with ",
+        "j",
+        ", stopping at the shorter array",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
@@ -123,8 +128,7 @@ export function app_learn_js_lesson_array_while_smaller_first() {
     ("one thought to a line");
     let lines_said = [
       ["", "a", " and ", "b", " are both in order, smallest first"],
-      ["", "i", " is where we are in ", "a", ""],
-      ["", "j", " is where we are in ", "b", ""],
+      ["Now ", "i", " and ", "j", " do not both move each time"],
       [
         "Each time, the ",
         "if",
