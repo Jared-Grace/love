@@ -35,6 +35,13 @@ export function app_shared_money_section_gifts_welcome() {
         "Dê conforme decidiu em seu coração, não com tristeza nem porque foi pressionado (2 Coríntios 9:7).",
       ],
     },
+    ind: {
+      title:
+        "Persembahan diterima dengan senang hati, dan tidak pernah ada paksaan untuk memberi",
+      lines: [
+        "Berilah menurut kerelaan hatimu sendiri, jangan dengan sedih hati atau karena paksaan (2 Korintus 9:7).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Gifts are welcome and there is never pressure to give",
@@ -55,6 +62,12 @@ export function app_shared_money_section_gifts_welcome() {
         ],
       },
       por: {
+        title: "Gifts are welcome and there is never pressure to give",
+        lines: [
+          "Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
+        ],
+      },
+      ind: {
         title: "Gifts are welcome and there is never pressure to give",
         lines: [
           "Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
