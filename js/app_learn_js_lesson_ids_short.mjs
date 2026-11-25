@@ -671,6 +671,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_push_all: text_frozen("push_all"),
       app_learn_js_lesson_array_for_push_both: text_frozen("push_both"),
       app_learn_js_lesson_array_concat: text_frozen("concat"),
+      app_learn_js_lesson_array_for_push_else_concat: text_frozen("move_end"),
       app_learn_js_lesson_array_for_push_from: text_frozen("push_from"),
       app_learn_js_lesson_array_for_push_first: text_frozen("first_items"),
       app_learn_js_lesson_array_for_push_except: text_frozen("all_but_one"),

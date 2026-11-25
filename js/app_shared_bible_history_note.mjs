@@ -2,7 +2,12 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_session_id } from "./app_shared_bible_session_id.mjs";
 import { app_shared_bible_history_get } from "./app_shared_bible_history_get.mjs";
 import { app_shared_bible_session_id_key } from "./app_shared_bible_session_id_key.mjs";
-import { list_filter_property_not } from "./list_filter_property_not.mjs";
+import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
+import { property_equals } from "./property_equals.mjs";
+import { property_get } from "./property_get.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { app_shared_bible_mode_get } from "./app_shared_bible_mode_get.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
 import { property_set } from "./property_set.mjs";
@@ -24,7 +29,18 @@ export function app_shared_bible_history_note(
   let session = app_shared_bible_session_id(context);
   let kept = app_shared_bible_history_get(context);
   let property_name = app_shared_bible_session_id_key();
-  let others = list_filter_property_not(kept, property_name, session);
+  ("2026-11-25, at the human's asking: one line per tab per book, not per tab. They went back from Isaiah to Ezra, and the next move in Ezra wrote over the tab's one line, so Isaiah was gone from the list. Moving within a book still updates that book's line; opening another book adds a line. Not picked: the furthest chapter reached, since Bible order is not reading order; a line per chapter, which fills the list with every chapter stepped through.");
+  let book_code = ebible_chapter_code_to_book(chapter_code);
+  function other_is(line) {
+    let session_same = property_equals(line, property_name, session);
+    let line_chapter_code = property_get(line, "chapter_code");
+    let line_book_code = ebible_chapter_code_to_book(line_chapter_code);
+    let book_same = equal(line_book_code, book_code);
+    let same = session_same && book_same;
+    let n = not(same);
+    return n;
+  }
+  let others = list_filter(kept, other_is);
   ("Which of the two readers was open is written down with the passage, because a passage on its own is not enough to put somebody back where they were. The two readers do not read a picked passage the same way: the whole-chapter one takes several verses at once, and the single-verse one takes exactly one. Handed several, it looked for a verse called five-to-nine, found none, and printed the failure over the chapter the reader had asked for.");
   let mode = app_shared_bible_mode_get();
   ("The day is written down with the reading, because the list this line joins is a list of places one has been and the useful question about such a list is when. It is taken at the moment the line is written rather than worked out later, which is the only moment it is known - a line carries no other trace of when it was made, and the reading it points at is as old as the passage rather than as old as the visit.");

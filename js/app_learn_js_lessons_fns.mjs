@@ -488,6 +488,7 @@ import { app_learn_js_lesson_else_if_compare_three } from "./app_learn_js_lesson
 import { app_learn_js_lesson_array_while_compare_each } from "./app_learn_js_lesson_array_while_compare_each.mjs";
 import { app_learn_js_lesson_array_while_in_both_order } from "./app_learn_js_lesson_array_while_in_both_order.mjs";
 import { app_learn_js_lesson_array_concat } from "./app_learn_js_lesson_array_concat.mjs";
+import { app_learn_js_lesson_array_for_push_else_concat } from "./app_learn_js_lesson_array_for_push_else_concat.mjs";
 import { app_learn_js_lesson_array_for_push_from } from "./app_learn_js_lesson_array_for_push_from.mjs";
 import { app_learn_js_lesson_array_for_push_first } from "./app_learn_js_lesson_array_for_push_first.mjs";
 import { app_learn_js_lesson_array_for_push_except } from "./app_learn_js_lesson_array_for_push_except.mjs";
@@ -1120,6 +1121,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_while_compare_each,
     app_learn_js_lesson_array_while_in_both_order,
     app_learn_js_lesson_array_concat,
+    app_learn_js_lesson_array_for_push_else_concat,
     app_learn_js_lesson_array_for_push_from,
     app_learn_js_lesson_array_for_push_first,
     app_learn_js_lesson_array_for_push_except,
