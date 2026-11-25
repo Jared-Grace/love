@@ -681,6 +681,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_join_between: text_frozen("join_between"),
       app_learn_js_lesson_array_join: text_frozen("join"),
       app_learn_js_lesson_array_for_split: text_frozen("split_loop"),
+      app_learn_js_lesson_array_for_split_any: text_frozen("split_any"),
       app_learn_js_lesson_array_split: text_frozen("split"),
       app_learn_js_lesson_array_for_split_separator: text_frozen("split_sep"),
       app_learn_js_lesson_array_slice_separator: text_frozen("sep_here"),
