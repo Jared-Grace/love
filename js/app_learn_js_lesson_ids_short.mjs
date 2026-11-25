@@ -804,6 +804,8 @@ export function app_learn_js_lesson_ids_short() {
         text_frozen("prop_bracket_set"),
       app_learn_js_lesson_object_log: text_frozen("object_log"),
       app_learn_js_lesson_array_for_swap: text_frozen("array_for_swap"),
+      app_learn_js_lesson_array_for_shift_first_last:
+        text_frozen("first_to_end"),
       app_learn_js_lesson_array_for_swap_if_bigger:
         text_frozen("swap_if_bigger"),
       app_learn_js_lesson_array_for_differences: text_frozen("array_diffs"),
