@@ -1,7 +1,8 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { url_host } from "./url_host.mjs";
+import { not } from "./not.mjs";
+import { calendar_profile_path_ok } from "./calendar_profile_path_ok.mjs";
 export function calendar_profile_url_read(typed) {
   arguments_assert(arguments, 1);
   ("A guest's Facebook or Messenger profile link as the host pasted it when confirming, checked and written back as an https link; null when it is not a link to Facebook or Messenger.");
@@ -14,6 +15,11 @@ export function calendar_profile_url_read(typed) {
   let host = url_host(full).toLowerCase();
   let ok = /(^|\.)(facebook\.com|messenger\.com|fb\.com|m\.me)$/.test(host);
   if (not(ok)) {
+    return null;
+  }
+  ("And only a link to one person: a profile or a chat, never facebook.com alone, a feed or a post (see the shapes in calendar_profile_path_ok).");
+  let one_person = calendar_profile_path_ok(full);
+  if (not(one_person)) {
     return null;
   }
   return full;
