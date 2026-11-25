@@ -8,11 +8,13 @@ export function app_shared_search_by_name_text() {
     tgl: "Maghanap ayon sa pangalan",
     spa: "Buscar por nombre",
     por: "Pesquisar por nome",
+    ind: "Cari menurut nama",
     translated_from: {
       urd: "Search by name",
       tgl: "Search by name",
       spa: "Search by name",
       por: "Search by name",
+      ind: "Search by name",
     },
   };
   let text = app_shared_text_reader_language(texts);
