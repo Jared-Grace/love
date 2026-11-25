@@ -43,6 +43,14 @@ export function app_shared_money_section_why_receive() {
         "Ofertas dadas livremente, nunca exigidas, podem sustentar os ministros de Deus.",
       ],
     },
+    ind: {
+      title: "Lalu mengapa menerima apa pun?",
+      lines: [
+        "Jangan memberangus mulut lembu yang sedang mengirik (Ulangan 25:4, dan Paulus mengatakannya lagi tentang para pekerja dalam 1 Timotius 5:18).",
+        "Lembu itu diberi makan agar dapat terus menghasilkan bagi orang lain.",
+        "Persembahan yang diberikan dengan sukarela, tidak pernah dituntut, dapat memenuhi kebutuhan para pelayan Allah.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Then why receive anything at all?",
@@ -69,6 +77,14 @@ export function app_shared_money_section_why_receive() {
         ],
       },
       por: {
+        title: "Then why receive anything at all?",
+        lines: [
+          "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
+          "The ox is fed so it can keep producing for others.",
+          "Freely given gifts, never demanded ones, can provide for ministers of God.",
+        ],
+      },
+      ind: {
         title: "Then why receive anything at all?",
         lines: [
           "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
