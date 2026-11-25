@@ -139,7 +139,7 @@ export function app_learn_js_lesson_array_while_both_move() {
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Stop at the shorter one",
+    "Stop at the shorter array",
     "i < a.length && j < b.length",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
