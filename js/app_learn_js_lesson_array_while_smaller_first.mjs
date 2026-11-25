@@ -1,16 +1,15 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map } from "./list_map.mjs";
-import { json_to } from "./json_to.mjs";
-import { js_code_array } from "./js_code_array.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
+import { app_learn_js_code_array_while_smaller } from "./app_learn_js_code_array_while_smaller.mjs";
 import { range_1 } from "./range_1.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_sort_number } from "./list_sort_number.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
+import { json_to } from "./json_to.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
+import { list_map } from "./list_map.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -33,27 +32,14 @@ export function app_learn_js_lesson_array_while_smaller_first() {
     [2, 3, 9],
   ];
   function program_with(input, compare, move_if, move_else) {
-    "let a, let b, let i = 0, let j = 0; a while asking both are inside, an if compare writing out a[i] and moving move_if, else writing out b[j] and moving move_else";
-    let codes = list_map(input[0], json_to);
-    let a = js_code_array(codes);
-    let codes2 = list_map(input[1], json_to);
-    let b = js_code_array(codes2);
-    let lines = [
-      "let a = " + a + ";",
-      "let b = " + b + ";",
-      "let i = 0;",
-      "let j = 0;",
-      "while (i < a.length && j < b.length) {",
-      "  if (a[i] " + compare + " b[j]) {",
-      "    console.log(a[i]);",
-      "    " + move_if + "++;",
-      "  } else {",
-      "    console.log(b[j]);",
-      "    " + move_else + "++;",
-      "  }",
-      "}",
-    ];
-    let code = list_join_newline(lines);
+    "no leftover loops: what is left once one array runs out is not written out";
+    let code = app_learn_js_code_array_while_smaller(
+      input,
+      compare,
+      move_if,
+      move_else,
+      [],
+    );
     return code;
   }
   function program_of(input2) {
@@ -169,9 +155,9 @@ export function app_learn_js_lesson_array_while_smaller_first() {
       app_learn_js_div_cycle_code(box_three, said);
     }
     let code3 = program_of(example_input);
-    let lines2 = text_split_newline(code3);
+    let lines = text_split_newline(code3);
     let value = eval_console_log_lines(code3);
-    app_learn_js_code_lines_writes_out(box_three, lines2, value);
+    app_learn_js_code_lines_writes_out(box_three, lines, value);
     app_learn_js_div_cycle_code(box_three, [
       "",
       "9",
