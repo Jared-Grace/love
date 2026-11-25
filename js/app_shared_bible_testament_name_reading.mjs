@@ -25,11 +25,13 @@ export function app_shared_bible_testament_name_reading(name) {
       tgl: "Bagong Tipan",
       spa: "Nuevo Testamento",
       por: "Novo Testamento",
+      ind: "Perjanjian Baru",
       translated_from: {
         urd: "New Testament",
         tgl: "New Testament",
         spa: "New Testament",
         por: "New Testament",
+        ind: "New Testament",
       },
     };
     let r2 = app_shared_text_reader_language(texts);
