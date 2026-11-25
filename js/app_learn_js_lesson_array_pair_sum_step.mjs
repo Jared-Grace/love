@@ -1,3 +1,7 @@
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_sort_number } from "./list_sort_number.mjs";
@@ -57,27 +61,34 @@ export function app_learn_js_lesson_array_pair_sum_step() {
     return r;
   }
   function kind_of(sum) {
-    if (sum === 10) {
-      return "same";
+    if (equal(sum, 10)) {
+      let r2 = "same";
+      return r2;
     }
-    if (sum < 10) {
-      return "small";
+    if (less_than(sum, 10)) {
+      let r3 = "small";
+      return r3;
     }
-    return "big";
+    let r4 = "big";
+    return r4;
   }
   function input_drawn(kind) {
     "five different numbers in order and two indexes, j at least two past i so a move never lands i on j, whose sum is of kind";
     while (true) {
-      let items2 = list_sort_number(list_shuffle_take(range_1(9), 5));
-      let picked = list_sort_number(list_shuffle_take([0, 1, 2, 3, 4], 2));
+      let list = range_1(9);
+      let list2 = list_shuffle_take(list, 5);
+      let items2 = list_sort_number(list2);
+      let list3 = list_shuffle_take([0, 1, 2, 3, 4], 2);
+      let picked = list_sort_number(list3);
       let input5 = {
         items: items2,
         i: picked[0],
         j: picked[1],
       };
       let sum2 = items2[input5.i] + items2[input5.j];
-      let apart = input5.j - input5.i >= 2;
-      if (apart && kind_of(sum2) === kind) {
+      let a = subtract(input5.j, input5.i);
+      let apart = greater_than_equal(a, 2);
+      if (apart && equal(kind_of(sum2), kind)) {
         return input5;
       }
     }
