@@ -7,11 +7,13 @@ export function app_shared_bible_passage_next_text_get() {
     tgl: "Susunod na bahagi",
     spa: "Pasaje siguiente",
     por: "Próxima passagem",
+    ind: "Perikop berikutnya",
     translated_from: {
       urd: "Next passage",
       tgl: "Next passage",
       spa: "Next passage",
       por: "Next passage",
+      ind: "Next passage",
     },
   };
   let v = app_shared_text_reader_language(texts);
