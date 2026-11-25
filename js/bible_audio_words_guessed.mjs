@@ -9,7 +9,8 @@ export async function bible_audio_words_guessed(bible_folder) {
   "★ IT ASKS THE RECORDINGS RATHER THAN THE WORD LIST, BECAUSE A WORD ON ITS OWN IS NOT HOW A RECORDING MET IT. The list cuts a joined place name into pieces, so its pieces look like guesses even where the reading met the whole name written down. Read inside the line, a word is judged exactly as the voice judged it.";
   "Each guessed word comes back with the first piece it was guessed in, so the answer to whether the guess sounds right is one file away.";
   arguments_assert(arguments, 1);
-  let root = path_join([bible_audio_root_folder(), bible_folder]);
+  let f = bible_audio_root_folder();
+  let root = path_join([f, bible_folder]);
   let args = {
     root,
   };
