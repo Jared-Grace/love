@@ -10,11 +10,13 @@ export function app_shared_font_size_smaller_text() {
     tgl: " Paliitin ang titik",
     spa: " Letra más pequeña",
     por: " Letra menor",
+    ind: " Huruf lebih kecil",
     translated_from: {
       urd: " Font size smaller",
       tgl: " Font size smaller",
       spa: " Font size smaller",
       por: " Font size smaller",
+      ind: " Font size smaller",
     },
   };
   let label = app_shared_text_reader_language(texts);
