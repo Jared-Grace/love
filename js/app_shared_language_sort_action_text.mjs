@@ -15,11 +15,13 @@ export function app_shared_language_sort_action_text(mode) {
       tgl: "Ayusin ayon sa pinakamaraming nagsasalita",
       spa: "Ordenar por más hablantes",
       por: "Ordenar por mais falantes",
+      ind: "Urutkan menurut penutur terbanyak",
       translated_from: {
         urd: "Sort by most speakers",
         tgl: "Sort by most speakers",
         spa: "Sort by most speakers",
         por: "Sort by most speakers",
+        ind: "Sort by most speakers",
       },
     };
     let s = app_shared_text_reader_language(spoken);
@@ -31,11 +33,13 @@ export function app_shared_language_sort_action_text(mode) {
     tgl: "Ayusin mula A hanggang Z",
     spa: "Ordenar de la A a la Z",
     por: "Ordenar de A a Z",
+    ind: "Urutkan A sampai Z",
     translated_from: {
       urd: "Sort A to Z",
       tgl: "Sort A to Z",
       spa: "Sort A to Z",
       por: "Sort A to Z",
+      ind: "Sort A to Z",
     },
   };
   let a = app_shared_text_reader_language(alphabetical);
