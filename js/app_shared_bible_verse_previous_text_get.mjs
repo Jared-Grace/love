@@ -9,11 +9,13 @@ export function app_shared_bible_verse_previous_text_get() {
     tgl: "Nakaraang talata",
     spa: "Versículo anterior",
     por: "Versículo anterior",
+    ind: "Ayat sebelumnya",
     translated_from: {
       urd: "Previous verse",
       tgl: "Previous verse",
       spa: "Previous verse",
       por: "Previous verse",
+      ind: "Previous verse",
     },
   };
   let v = app_shared_text_reader_language(texts);
