@@ -49,6 +49,15 @@ export function app_shared_money_section_never_used_for() {
         "Se chegar mais do que a obra precisa, paramos de receber ofertas, ou ampliamos quem é pago entre as pessoas que contribuem. Não ficamos com a diferença, e não enviamos seu dinheiro para um lugar que você não escolheu.",
       ],
     },
+    ind: {
+      title: "Untuk apa persembahan tidak pernah dipakai",
+      lines: [
+        "Tidak pernah untuk keuntungan.",
+        "Firman Tuhan berkata jangan menjadi hamba uang (1 Timotius 3:3), jadi tujuan kami bukan memperkaya diri. Terlalu banyak orang yang lapar dan sangat membutuhkan saat ini sehingga kami tidak boleh menimbun keuntungan bagi diri sendiri.",
+        "Tujuan kami juga bukan menerima persembahanmu lalu memberikannya untuk tujuan lain atas namamu.",
+        "Jika yang masuk lebih banyak daripada yang dibutuhkan pekerjaan ini, kami berhenti menerima persembahan, atau kami menambah orang yang dibayar di antara mereka yang ikut bekerja. Kami tidak menyimpan kelebihannya, dan kami tidak mengirim uangmu ke tempat yang tidak kamu pilih.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "What a gift is never used for",
@@ -78,6 +87,15 @@ export function app_shared_money_section_never_used_for() {
         ],
       },
       por: {
+        title: "What a gift is never used for",
+        lines: [
+          "Never profit.",
+          "Scripture says not to be greedy for money (1 Timothy 3:3), so our purpose is not to make ourselves rich. There are too many people hungry and in urgent need today for us to store up profit for ourselves.",
+          "It is also not our purpose to receive your gift and give it away for some other purpose on your behalf.",
+          "If more comes in than the work needs, we stop receiving gifts, or we widen who is paid among the people contributing. We do not keep the difference, and we do not send your money somewhere you did not choose.",
+        ],
+      },
+      ind: {
         title: "What a gift is never used for",
         lines: [
           "Never profit.",
