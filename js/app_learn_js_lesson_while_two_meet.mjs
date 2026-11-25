@@ -33,6 +33,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_while } from "./app_learn_js_lesson_while.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
+import { app_learn_js_lesson_expression_where_meet } from "./app_learn_js_lesson_expression_where_meet.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -255,49 +256,35 @@ export function app_learn_js_lesson_while_two_meet() {
     said_false(box_three, 4, 3);
     ("2026-11-25, at the human's asking, after a learner asked for a shortcut: the midpoint rule the human gave, with why it holds. It gives the same answer as stepping on every program the lesson draws, including the ones that never run, which is why the rule opens with asking a < b first.");
     let box_four = app_learn_js_container_light_blue(root);
-    ("Later the same day, at the human's asking: the formula first, then why it works.");
+    ("Later the same day, at the human's asking: the shortcut became its own lesson just before, with code that works it out by rounding up and down, so this box recalls it, and the .5 rule is said by the rounding.");
+    app_learn_js_remember_from_lesson(
+      box_four,
+      context,
+      app_learn_js_lesson_expression_where_meet,
+      [
+        "",
+        "Math.ceil((a + b) / 2)",
+        " and ",
+        "Math.floor((a + b) / 2)",
+        " round halfway between ",
+        name_a,
+        " and ",
+        name_b,
+        " up and down",
+      ],
+    );
     let lines_said = [
       [
         "A shortcut: if ",
         "a < b",
         " is ",
         "true",
-        " at the start, work out ",
-        "(a + b) / 2",
-        "",
-      ],
-      [
-        "If it is a whole number, ",
-        name_a,
-        " and ",
-        name_b,
-        " both end on it: ",
-        "(1 + 7) / 2",
-        " is ",
-        "4",
-        "",
-      ],
-      [
-        "If it ends in .5, ",
-        name_a,
-        " ends at ",
-        "(a + b) / 2 + 0.5",
-        " and ",
-        name_b,
-        " at ",
-        "(a + b) / 2 - 0.5",
-        ": ",
-        "(3 + 4) / 2",
-        " is ",
-        "3.5",
-        ", so ",
-        name_a,
-        " ends at ",
-        "4",
-        " and ",
-        name_b,
-        " at ",
-        "3",
+        " at the start, this ",
+        "while",
+        " writes out the same as ",
+        "console.log(Math.ceil((a + b) / 2));",
+        " then ",
+        "console.log(Math.floor((a + b) / 2));",
         "",
       ],
       ["If ", "a < b", " is ", "false", " at the start, nothing changes"],
@@ -321,6 +308,16 @@ export function app_learn_js_lesson_while_two_meet() {
         " is ",
         "false",
         ": when they are equal, or when they have just crossed, 1 apart",
+      ],
+      [
+        "Equal, they are both on the midpoint, a whole number, so rounding changes nothing",
+      ],
+      [
+        "Crossed, the midpoint ends in .5, with ",
+        name_a,
+        " just above it and ",
+        name_b,
+        " just below: rounded up and rounded down",
       ],
     ];
     for (let line of lines_said) {
