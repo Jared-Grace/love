@@ -12,8 +12,9 @@ import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
+import { app_bible_record_local_is } from "./app_bible_record_local_is.mjs";
 import { each } from "./each.mjs";
+import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
@@ -151,6 +152,10 @@ export function app_bible_record_inline(
     let taken = list_filter(entries, lambda);
     return taken;
   }
+  ("THE STORE BUILD HAS NO SEND AND NO BACK UP (human 2026-11-25: an app store app that stores only on the device - no send or sync): its takes stay on the phone, and Download is how they leave it.");
+  if (app_bible_record_local_is()) {
+    each([send_button, backup_button], html_display_none);
+  }
   ("DELETE ASKS FIRST, in the box every app here draws over the page before something that cannot be taken back (human 2026-11-24: a dialog to confirm, and DRY), then deletes the take on the page, the one kept on the phone and the one sent to storage, so coming back to the passage finds nothing. REJECTED: the browser's own confirm - inside the Android app it may never appear; two taps on the button (what this replaced) - a second way of asking that no other app shares.");
   let delete_button = app_shared_button_wide(
     buttons,
@@ -236,7 +241,7 @@ export function app_bible_record_inline(
       verse_numbers,
     );
     let found = kept;
-    if (null_is(found)) {
+    if (null_is(found) && not(app_bible_record_local_is())) {
       found = await app_bible_record_take_sent_or_null(
         chapter_code,
         verse_numbers,
@@ -398,8 +403,12 @@ export function app_bible_record_inline(
     );
   }
   async function take_delete_confirmed() {
-    await firebase_auth_ensure(sign_in);
-    await app_bible_record_take_delete(chapter_code, verse_numbers);
+    "the store build sent nothing, so there is nothing in storage to delete and nobody to sign in";
+    let b = app_bible_record_local_is();
+    if (not(b)) {
+      await firebase_auth_ensure(sign_in);
+      await app_bible_record_take_delete(chapter_code, verse_numbers);
+    }
     await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
     blob = null;
     sent = false;
