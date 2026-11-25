@@ -1,3 +1,4 @@
+import { null_is } from "./null_is.mjs";
 import { bible_word_article_citations_path } from "./bible_word_article_citations_path.mjs";
 import { web_assets_url } from "./web_assets_url.mjs";
 import { http_json_browser_quiet_memoized_on_success } from "./http_json_browser_quiet_memoized_on_success.mjs";
@@ -15,6 +16,11 @@ export async function bible_word_article_cited_at(
   "NOT REACHING THE LIST MUST NOT COST THE READER THE CARD: the articles matched by spelling, the search and the question are all still there, so a failed fetch only means fewer offers.";
   "IT ASKS ONCE AND QUIETLY, because the ordinary fetch tries three times at eight seconds each with a loading mark over the page, and a reader offline would wait that long for a card that does not need this list.";
   "ONE CHAPTER IS FETCHED, not the whole Bible, so a tap downloads only what its own chapter needs.";
+  "A WORD WHOSE CHAPTER IS NOT KNOWN HAS NO LIST TO ASK FOR: asking anyway fetched a file named null, which does not exist, and the failure is never kept, so every tap asked again.";
+  if (null_is(chapter_code)) {
+    let none = [];
+    return none;
+  }
   let asset_path = bible_word_article_citations_path(chapter_code);
   let url = web_assets_url(asset_path);
   ("ONE FETCH PER CHAPTER PER VISIT: every word of a chapter reads the same list, so tapping words one after another must not ask for it again.");
