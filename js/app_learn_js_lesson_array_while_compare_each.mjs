@@ -1,11 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map } from "./list_map.mjs";
-import { json_to } from "./json_to.mjs";
-import { js_code_array } from "./js_code_array.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
+import { app_learn_js_code_array_while_three_ways } from "./app_learn_js_code_array_while_three_ways.mjs";
 import { range_1 } from "./range_1.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_sort_number } from "./list_sort_number.mjs";
+import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_while_smaller_first } from "./app_learn_js_lesson_array_while_smaller_first.mjs";
@@ -29,38 +27,14 @@ export function app_learn_js_lesson_array_while_compare_each() {
     [2, 4, 9],
   ];
   function program_with(input, move_same, move_less, move_greater) {
-    "let a, let b, let i = 0, let j = 0; a while asking both are inside, writing out a[i] and b[j] with ===, < or > between them, then moving the indexes named for that branch";
-    let codes = list_map(input[0], json_to);
-    let a = js_code_array(codes);
-    let codes2 = list_map(input[1], json_to);
-    let b = js_code_array(codes2);
-    function moves(names) {
-      function line(name) {
-        let s = "    " + name + "++;";
-        return s;
-      }
-      let r = list_map(names, line);
-      return r;
-    }
-    let lines = [
-      "let a = " + a + ";",
-      "let b = " + b + ";",
-      "let i = 0;",
-      "let j = 0;",
-      "while (i < a.length && j < b.length) {",
-      "  if (a[i] === b[j]) {",
-      '    console.log(a[i] + " === " + b[j]);',
-      ...moves(move_same),
-      "  } else if (a[i] < b[j]) {",
-      '    console.log(a[i] + " < " + b[j]);',
-      ...moves(move_less),
-      "  } else {",
-      '    console.log(a[i] + " > " + b[j]);',
-      ...moves(move_greater),
-      "  }",
-      "}",
-    ];
-    let code = list_join_newline(lines);
+    "every branch writing out a[i] and b[j] with its sign between them";
+    let code = app_learn_js_code_array_while_three_ways(
+      input,
+      true,
+      move_same,
+      move_less,
+      move_greater,
+    );
     return code;
   }
   function program_of(input2) {
@@ -75,8 +49,8 @@ export function app_learn_js_lesson_array_while_compare_each() {
     return programs;
   }
   function wrong_outputs_of(input4) {
-    let r2 = [];
-    return r2;
+    let r = [];
+    return r;
   }
   function input_drawn(match_last) {
     "three different numbers from 1 to 6, x < y < z. Match last: a = [x, z] and b = [y, z], or the other way round, writing out < and > then ===. Match first: a = [x, y] and b = [x, z], or the other way round, writing out === then one more";
@@ -152,9 +126,9 @@ export function app_learn_js_lesson_array_while_compare_each() {
       app_learn_js_div_cycle_code(box_three, said);
     }
     let code4 = program_of(example_input);
-    let lines2 = text_split_newline(code4);
+    let lines = text_split_newline(code4);
     let value = eval_console_log_lines(code4);
-    app_learn_js_code_lines_writes_out(box_three, lines2, value);
+    app_learn_js_code_lines_writes_out(box_three, lines, value);
     app_learn_js_div_cycle_code(box_three, [
       "After ",
       "6 < 9",
