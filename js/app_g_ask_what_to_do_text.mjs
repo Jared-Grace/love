@@ -9,11 +9,13 @@ export function app_g_ask_what_to_do_text() {
     tgl: "Ano ang gusto mong gawin?",
     spa: "¿Qué te gustaría hacer?",
     por: "O que você gostaria de fazer?",
+    ind: "Apa yang ingin kamu lakukan?",
     translated_from: {
       urd: "What would you like to do?",
       tgl: "What would you like to do?",
       spa: "What would you like to do?",
       por: "What would you like to do?",
+      ind: "What would you like to do?",
     },
   };
   let text = app_shared_text_reader_language(texts);
