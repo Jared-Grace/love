@@ -27,6 +27,10 @@ export function app_shared_bible_chapters_question_text(book_name) {
       before: "Qual capítulo do livro de ",
       after: " você quer escolher?",
     },
+    ind: {
+      before: "Pasal mana dari kitab ",
+      after: " yang ingin kamu pilih?",
+    },
     translated_from: {
       urd: {
         before: "Which chapter from the book of ",
@@ -41,6 +45,10 @@ export function app_shared_bible_chapters_question_text(book_name) {
         after: " do you want to choose?",
       },
       por: {
+        before: "Which chapter from the book of ",
+        after: " do you want to choose?",
+      },
+      ind: {
         before: "Which chapter from the book of ",
         after: " do you want to choose?",
       },
