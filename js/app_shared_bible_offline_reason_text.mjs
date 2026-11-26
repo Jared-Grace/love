@@ -8,12 +8,14 @@ export function app_shared_bible_offline_reason_text() {
     spa: "Un idioma guardado se abre sin internet, y se abre más rápido",
     por: "Um idioma guardado abre sem internet, e abre mais rápido",
     ind: "Bahasa yang disimpan bisa dibuka tanpa internet, dan terbuka lebih cepat",
+    fra: "Une langue enregistrée s'ouvre sans internet, et elle s'ouvre plus vite",
     translated_from: {
       urd: "A saved language opens with no internet, and it opens faster",
       tgl: "A saved language opens with no internet, and it opens faster",
       spa: "A saved language opens with no internet, and it opens faster",
       por: "A saved language opens with no internet, and it opens faster",
       ind: "A saved language opens with no internet, and it opens faster",
+      fra: "A saved language opens with no internet, and it opens faster",
     },
   };
   let text = app_shared_text_reader_language(texts);
