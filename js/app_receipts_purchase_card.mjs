@@ -29,6 +29,8 @@ import { app_shared_photos_draw } from "./app_shared_photos_draw.mjs";
 import { app_receipts_purchase_photo_add } from "./app_receipts_purchase_photo_add.mjs";
 import { app_shared_button_wide_camera } from "./app_shared_button_wide_camera.mjs";
 import { emoji_camera } from "./emoji_camera.mjs";
+import { app_receipts_purchase_photos_name_start } from "./app_receipts_purchase_photos_name_start.mjs";
+import { app_shared_photos_download_button } from "./app_shared_photos_download_button.mjs";
 import { app_receipts_color_choose } from "./app_receipts_color_choose.mjs";
 export function app_receipts_purchase_card(parent, purchase, on_saved) {
   "$plain parent";
@@ -149,9 +151,11 @@ export function app_receipts_purchase_card(parent, purchase, on_saved) {
   payment_show();
   writing_box("Description", "description");
   let file_show = app_shared_photos_draw(card, purchase);
+  let download_draw = null;
   async function on_photo(file) {
     file_show(file);
     await app_receipts_purchase_photo_add(purchase, file);
+    download_draw();
     on_saved();
   }
   app_shared_button_wide_camera(
@@ -159,6 +163,9 @@ export function app_receipts_purchase_card(parent, purchase, on_saved) {
     emoji_camera() + " Add a photo",
     on_photo,
   );
+  ("Under it, a button saving the photos to the phone, which shows once there is one and counts them when there are more.");
+  let name_start = app_receipts_purchase_photos_name_start(purchase);
+  download_draw = app_shared_photos_download_button(card, purchase, name_start);
   ("Below the photos is room for the person reviewing the purchase: notes of their own, and a colour to mark it with, such as one meaning it has been looked at.");
   writing_box("Notes", "notes");
   let color = property_get_or(purchase, "color", "blue");

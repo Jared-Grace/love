@@ -48,11 +48,9 @@ export function app_shared_photo_screen(picture_set) {
   async function on_download() {
     await app_shared_picture_download(picture);
   }
-  app_shared_button_wide(
-    screen,
-    text_combine_multiple([emoji_arrow_down(), " Download"]),
-    on_download,
-  );
+  let e = emoji_arrow_down();
+  let text = text_combine_multiple([e, " Download"]);
+  app_shared_button_wide(screen, text, on_download);
   history.pushState(null, "");
   window.addEventListener("popstate", close, {
     once: true,
