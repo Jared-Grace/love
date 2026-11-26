@@ -42,6 +42,6 @@ export async function app_bible_record_inline_path_sent_show(
   property_set(held, "sent", value);
   html_media_source_file_set(playback, found);
   html_display_block(playback);
-  let blob4 = property_get(held, "blob");
-  app_bible_record_inline_path_changed(entry, blob4, refreshes);
+  let blob = property_get(held, "blob");
+  app_bible_record_inline_path_changed(entry, blob, refreshes);
 }
