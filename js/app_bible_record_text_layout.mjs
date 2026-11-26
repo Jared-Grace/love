@@ -1,3 +1,4 @@
+import { app_bible_record_text_layout_widest } from "./app_bible_record_text_layout_widest.mjs";
 import { app_bible_record_text_layout_first_room } from "./app_bible_record_text_layout_first_room.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { multiply } from "./multiply.mjs";
@@ -25,19 +26,22 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
   function tall() {
     let left = multiply(size, 0.7);
     let left2 = multiply(lines.length, size);
-    let r3 =
+    let r =
       margin +
       multiply(left, 1.4) +
       multiply(left2, 1.25) +
       multiply(margin, 0.5);
-    return r3;
+    return r;
   }
   while (less_than(size, divide(width, 8))) {
     let before = size;
     size = multiply(size, 1.1);
     wrap();
     let a = tall();
-    if (greater_than(a, under) || greater_than(widest(), room)) {
+    if (
+      greater_than(a, under) ||
+      greater_than(app_bible_record_text_layout_widest(ctx, lines), room)
+    ) {
       size = before;
       wrap();
       break;
@@ -56,21 +60,12 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
     wrap();
   }
   ("EVERY WORD ALWAYS FITS (asked for by the human 2026-11-22). If the room under the picture and the reading floor above could not hold it, the passage may take the whole frame and the letters keep shrinking with no floor until it is all inside - a word cut off the video is worse than small letters, because the recording is of reading the whole passage aloud. Width is checked too: a single word wider than a line cannot be wrapped, only shrunk.");
-  function widest() {
-    function lambda(line) {
-      let r2 = ctx.measureText(line).width;
-      return r2;
-    }
-    let widths = lines.map(lambda);
-    let width_most = Math.max(...widths);
-    return width_most;
-  }
   while (
     greater_than(
       multiply(multiply(lines.length, size), 1.25),
       multiply(height, 0.85),
     ) ||
-    greater_than(widest(), room)
+    greater_than(app_bible_record_text_layout_widest(ctx, lines), room)
   ) {
     size = multiply(size, 0.9);
     wrap();
