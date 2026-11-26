@@ -13,8 +13,8 @@ import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 export function app_shared_photos_draw(parent, photos_holder) {
   "$plain parent";
-  "$plain purchase";
-  "A purchase's photos as small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own.";
+  "$plain photos_holder";
+  "The photos of whatever holds them - a receipt's purchase, or a folder in the photo organizer - as small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own. Each photo holds either the picture kept on this phone, under file, or the address it is stored at, under url.";
   "A photo taken on this phone is shown from the picture kept here; one taken on another phone is shown from where it is stored, so it needs the internet the first time.";
   "Hands back the function that puts one more picture, kept on this phone, at the end of the row, so a photo just taken shows at once.";
   arguments_assert(arguments, 2);
