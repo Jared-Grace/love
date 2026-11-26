@@ -29,6 +29,10 @@ export function app_shared_scripture_reference_god_says(reference) {
       before: "Allah berfirman dalam ",
       after: "",
     },
+    fra: {
+      before: "Dieu dit dans ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: "God says in ",
@@ -47,6 +51,10 @@ export function app_shared_scripture_reference_god_says(reference) {
         after: "",
       },
       ind: {
+        before: "God says in ",
+        after: "",
+      },
+      fra: {
         before: "God says in ",
         after: "",
       },
