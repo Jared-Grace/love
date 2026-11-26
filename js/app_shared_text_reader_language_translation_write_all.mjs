@@ -1,9 +1,8 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { app_shared_text_reader_language_absent } from "./app_shared_text_reader_language_absent.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_map } from "./list_map.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { app_shared_text_reader_language_translation_write } from "./app_shared_text_reader_language_translation_write.mjs";
 export async function app_shared_text_reader_language_translation_write_all(
@@ -22,8 +21,7 @@ export async function app_shared_text_reader_language_translation_write_all(
     let f_name = property_get(item, "f_name");
     return f_name;
   }
-  let list = list_map(absent, lambda$f_name);
-  let names = list_unique(list);
+  let names = list_map_unique(absent, lambda$f_name);
   for (let f_name of names) {
     let args = [f_name, language_code, translations_path];
     await function_call_commit(
