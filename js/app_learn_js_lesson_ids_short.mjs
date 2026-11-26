@@ -664,6 +664,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_set_all: text_frozen("set_all"),
       app_learn_js_lesson_object_property: text_frozen("object_property"),
       app_learn_js_lesson_array_for_push_if_e: text_frozen("push_if_e"),
+      app_learn_js_lesson_array_for_at_each: text_frozen("at_each"),
       app_learn_js_lesson_object_property_set: text_frozen("prop_set"),
       app_learn_js_lesson_array_log: text_frozen("array_log"),
       app_learn_js_lesson_array_shift_push: text_frozen("shift_push"),

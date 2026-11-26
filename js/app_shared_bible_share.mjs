@@ -1,17 +1,18 @@
-import { text_replace } from "./text_replace.mjs";
-import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
-import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { list_copy } from "./list_copy.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
+import { integer_to_try } from "./integer_to_try.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_join } from "./list_join.mjs";
-import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
-import { integer_to_try } from "./integer_to_try.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
+import { not } from "./not.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_replace } from "./text_replace.mjs";
+import { list_join } from "./list_join.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
+import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
+import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { window_share } from "./window_share.mjs";
+import { app_shared_toast } from "./app_shared_toast.mjs";
 export async function app_shared_bible_share(
   book_name,
   chapter_name,
@@ -51,5 +52,9 @@ export async function app_shared_bible_share(
     "=",
     languages,
   ]);
-  await window_share(url);
+  let done = await window_share(url);
+  if (equal(done, "copied")) {
+    ("a copy has nothing of its own to show, so it is said - otherwise the press looks as if it did nothing");
+    app_shared_toast("Link copied");
+  }
 }

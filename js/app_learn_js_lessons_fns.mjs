@@ -467,6 +467,7 @@ import { app_learn_js_lesson_string_palindrome_half } from "./app_learn_js_lesso
 import { app_learn_js_lesson_array_for_includes_e } from "./app_learn_js_lesson_array_for_includes_e.mjs";
 import { app_learn_js_lesson_array_for_count_e } from "./app_learn_js_lesson_array_for_count_e.mjs";
 import { app_learn_js_lesson_array_for_push_if_e } from "./app_learn_js_lesson_array_for_push_if_e.mjs";
+import { app_learn_js_lesson_array_for_at_each } from "./app_learn_js_lesson_array_for_at_each.mjs";
 import { app_learn_js_lesson_array_for_push_if_not } from "./app_learn_js_lesson_array_for_push_if_not.mjs";
 import { app_learn_js_lesson_array_for_unique } from "./app_learn_js_lesson_array_for_unique.mjs";
 import { app_learn_js_lesson_array_for_seen_twice } from "./app_learn_js_lesson_array_for_seen_twice.mjs";
@@ -1106,6 +1107,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_includes_e,
     app_learn_js_lesson_array_for_count_e,
     app_learn_js_lesson_array_for_push_if_e,
+    app_learn_js_lesson_array_for_at_each,
     app_learn_js_lesson_array_for_push_if_not,
     app_learn_js_lesson_array_for_unique,
     app_learn_js_lesson_array_for_seen_twice,
