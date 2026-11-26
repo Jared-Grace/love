@@ -8,12 +8,14 @@ export function app_shared_bible_sermon_copy_text() {
     spa: " Copiar sermón",
     por: " Copiar sermão",
     ind: " Salin khotbah",
+    fra: " Copier le sermon",
     translated_from: {
       urd: " Copy sermon",
       tgl: " Copy sermon",
       spa: " Copy sermon",
       por: " Copy sermon",
       ind: " Copy sermon",
+      fra: " Copy sermon",
     },
   };
   let c = app_shared_text_reader_language_copy(texts);
