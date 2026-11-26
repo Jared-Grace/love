@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { multiply } from "./multiply.mjs";
@@ -68,8 +69,7 @@ export function app_learn_js_lesson_array_while_both_move() {
     let list = range_1(9);
     let a = list_shuffle_take(list, a_longer ? long : short);
     let list2 = range_1(9);
-    let list3 = list_shuffle_take(list2, a_longer ? short : long);
-    let b = list_map(list3, times_ten);
+    let b = list_shuffle_take_map(list2, a_longer ? short : long, times_ten);
     let input5 = [a, b];
     return input5;
   }
