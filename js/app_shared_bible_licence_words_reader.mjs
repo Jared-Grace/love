@@ -22,12 +22,14 @@ export function app_shared_bible_licence_words_reader(licence) {
       spa: "No se pudieron leer los términos",
       por: "Não foi possível ler os termos",
       ind: "Ketentuan tidak dapat dibaca",
+      fra: "Conditions non lues",
       translated_from: {
         urd: "Terms not read",
         tgl: "Terms not read",
         spa: "Terms not read",
         por: "Terms not read",
         ind: "Terms not read",
+        fra: "Terms not read",
       },
     };
     let said = app_shared_text_reader_language(texts);
