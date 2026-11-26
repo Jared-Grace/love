@@ -1,5 +1,5 @@
+import { divide_round } from "./divide_round.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { round } from "./round.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -17,8 +17,7 @@ export async function audio_window_levels(path_audio, window_ms) {
   let rate = 48000;
   let right = Number.parseFloat(window_ms);
   let top = multiply(rate, right);
-  let n = divide(top, 1000);
-  let samples = round(n);
+  let samples = divide_round(top, 1000);
   let key = "lavfi.astats.Overall.RMS_level";
   let v = String(rate);
   let v2 = String(samples);
