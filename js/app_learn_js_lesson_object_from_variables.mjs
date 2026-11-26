@@ -1,3 +1,5 @@
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -56,8 +58,9 @@ export function app_learn_js_lesson_object_from_variables() {
     let drawn = list_shuffle_take(people, 4);
     let asked = ["name", "name", "town", "town"];
     let codes = [];
-    for (let i = 0; i < drawn.length; i++) {
-      codes.push(program_of(drawn[i], asked[i]));
+    for (let i = 0; less_than(i, drawn.length); i++) {
+      let v = program_of(drawn[i], asked[i]);
+      codes.push(v);
     }
     list_shuffle(codes);
     return codes;
@@ -75,13 +78,14 @@ export function app_learn_js_lesson_object_from_variables() {
   function key_of(code) {
     "the property the last line asks for";
     let found = code.match(/console\.log\(p\.(\w+)\);/);
-    return found[1];
+    let r = found[1];
+    return r;
   }
   function decoys(question, answer) {
     "the other value, the variable's letter, and the property name; never the answer";
     let person = person_of(question);
     let key = key_of(question);
-    let is_name = key === "name";
+    let is_name = equal(key, "name");
     let other_value = is_name ? person[1] : person[0];
     let letter = is_name ? "n" : "t";
     let candidates = [other_value, letter, key];
@@ -93,12 +97,11 @@ export function app_learn_js_lesson_object_from_variables() {
     "letters quoted, n and t swapped, the other property; kept only when they write out something else";
     let person = person_of(answer);
     let key = key_of(answer);
-    let other = key === "name" ? "town" : "name";
-    let programs = [
-      program_with(person, '{ name: "n", town: "t" }', key),
-      program_with(person, "{ name: t, town: n }", key),
-      program_with(person, right_object, other),
-    ];
+    let other = equal(key, "name") ? "town" : "name";
+    let v2 = program_with(person, '{ name: "n", town: "t" }', key);
+    let v3 = program_with(person, "{ name: t, town: n }", key);
+    let v4 = program_with(person, right_object, other);
+    let programs = [v2, v3, v4];
     let out_answer = eval_console_log_lines(answer);
     function differs(code) {
       let out = eval_console_log_lines(code);
