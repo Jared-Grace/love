@@ -1,3 +1,4 @@
+import { app_bible_record_inline_path_camera_show_native_done } from "./app_bible_record_inline_path_camera_show_native_done.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -5,12 +6,9 @@ import { html_display_none } from "./html_display_none.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { html_display_block } from "./html_display_block.mjs";
-import { app_bible_record_take_keep } from "./app_bible_record_take_keep.mjs";
 import { app_bible_record_native_open } from "./app_bible_record_native_open.mjs";
 import { html_camera_microphone_stream } from "./html_camera_microphone_stream.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
@@ -51,19 +49,18 @@ export async function app_bible_record_inline_path_camera_show(
     let blob6 = property_get(held, "blob");
     app_bible_record_inline_path_changed(entry, blob6, refreshes);
     async function native_done(taken, why) {
-      if (text_empty_not_is(why)) {
-        let text2 = text_combine("Not recorded: ", why);
-        html_text_set(problem, text2);
-        return;
-      }
-      property_set(held, "blob", taken);
-      property_set(held, "sent", false);
-      html_media_source_file_set(playback, taken);
-      html_display_block(playback);
-      let blob7 = property_get(held, "blob");
-      app_bible_record_inline_path_changed(entry, blob7, refreshes);
-      let taken2 = property_get(held, "blob");
-      await app_bible_record_take_keep(chapter_code, verse_numbers, taken2);
+      let r = await app_bible_record_inline_path_camera_show_native_done(
+        taken,
+        why,
+        problem,
+        held,
+        playback,
+        entry,
+        refreshes,
+        chapter_code,
+        verse_numbers,
+      );
+      return r;
     }
     function native_open() {
       app_bible_record_native_open(reference, text, native_done);
