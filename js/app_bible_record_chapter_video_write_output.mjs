@@ -14,6 +14,7 @@ export async function app_bible_record_chapter_video_write_output(
   chapter_code,
   by_passage,
 ) {
+  "Plans the joined chapter video without making it: for each passage's take, in verse order, finds where the speaking starts and ends, and hands back the inputs and the filter parts that cut each take to its speaking and join them, the list of what was kept from each, and where the video will be written.";
   arguments_assert(arguments, 4);
   if (equal(passages.length, 0)) {
     throw new Error(
