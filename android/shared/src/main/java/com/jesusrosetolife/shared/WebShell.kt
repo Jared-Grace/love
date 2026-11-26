@@ -4,7 +4,10 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Message
+import android.webkit.WebChromeClient
 import android.widget.Toast
 import android.net.http.SslError
 import android.webkit.SslErrorHandler
@@ -42,12 +45,7 @@ object WebShell {
             // inside the app it replaced the page, with no address bar to see where it went.
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
                 if (page_own_is(request.url, start_url)) return false
-                val intent = Intent(Intent.ACTION_VIEW, request.url)
-                try {
-                    activity.startActivity(intent)
-                } catch (e: ActivityNotFoundException) {
-                    Toast.makeText(activity, "No app on this phone opens ${request.url}", Toast.LENGTH_LONG).show()
-                }
+                browser_open(activity, request.url)
                 return true
             }
 
@@ -65,6 +63,48 @@ object WebShell {
                 return WebResourceResponse(type, null, 200, "OK", mapOf("Cache-Control" to "no-store"), FileInputStream(file))
             }
         }
+        // A link that opens a new tab - window.open, or target="_blank" - goes to the phone's
+        // browser too (human 2026-11-26: choosing a link outside the app should open the
+        // browser). Left alone, a WebView silently drops window.open, so those buttons did
+        // nothing at all. The new window is a throwaway view that is never shown: the first
+        // address it is sent to is handed on, to the app's own page if it is that, else the browser.
+        web.settings.javaScriptCanOpenWindowsAutomatically = true
+        web.settings.setSupportMultipleWindows(true)
+        web.webChromeClient = object : WebChromeClient() {
+            override fun onCreateWindow(view: WebView, dialog: Boolean, user_gesture: Boolean, result: Message): Boolean {
+                val catcher = WebView(activity)
+                catcher.webViewClient = object : WebViewClient() {
+                    var handed = false
+                    fun hand_on(url: Uri) {
+                        if (handed) return
+                        handed = true
+                        catcher.stopLoading()
+                        if (page_own_is(url, start_url)) web.loadUrl(url.toString()) else browser_open(activity, url)
+                        catcher.post { catcher.destroy() }
+                    }
+                    override fun shouldOverrideUrlLoading(v: WebView, request: WebResourceRequest): Boolean {
+                        hand_on(request.url)
+                        return true
+                    }
+                    override fun onPageStarted(v: WebView, url: String, favicon: Bitmap?) {
+                        if (url != "about:blank") hand_on(Uri.parse(url))
+                    }
+                }
+                val transport = result.obj as WebView.WebViewTransport
+                transport.webView = catcher
+                result.sendToTarget()
+                return true
+            }
+        }
         return web
+    }
+
+    // Opens an address in whatever app on the phone opens it - the browser, for a web page.
+    fun browser_open(activity: Activity, url: Uri) {
+        try {
+            activity.startActivity(Intent(Intent.ACTION_VIEW, url))
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(activity, "No app on this phone opens $url", Toast.LENGTH_LONG).show()
+        }
     }
 }
