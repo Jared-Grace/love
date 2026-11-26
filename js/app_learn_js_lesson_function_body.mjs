@@ -122,11 +122,13 @@ export function app_learn_js_lesson_function_body() {
         "console.log(...)",
       ],
     );
-    html_div_text(box, "Here is the complete program:");
+    ("2026-11-26: the complete program stands in a box of its own, because the card showing a program and what it writes out narrows the space between the lines of the box it is put in, which ran the paragraphs above together");
+    let box_program = app_learn_js_container_light_blue(root);
+    html_div_text(box_program, "Here is the complete program:");
     let code = program_of("Greetings!");
     let lines = text_split_newline(code);
     let value = eval_console_log_lines(code);
-    app_learn_js_code_lines_writes_out(box, lines, value);
+    app_learn_js_code_lines_writes_out(box_program, lines, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Call it to run it",
