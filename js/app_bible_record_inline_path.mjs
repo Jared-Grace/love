@@ -1,3 +1,4 @@
+import { app_bible_record_inline_path_download } from "./app_bible_record_inline_path_download.mjs";
 import { app_bible_record_inline_path_entries_taken } from "./app_bible_record_inline_path_entries_taken.mjs";
 import { app_bible_record_inline_path_backup } from "./app_bible_record_inline_path_backup.mjs";
 import { app_bible_record_inline_path_busy } from "./app_bible_record_inline_path_busy.mjs";
@@ -45,7 +46,6 @@ import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
 import { app_bible_record_take_kept_delete } from "./app_bible_record_take_kept_delete.mjs";
 import { app_bible_record_download_name } from "./app_bible_record_download_name.mjs";
-import { app_bible_record_native_download } from "./app_bible_record_native_download.mjs";
 import { app_bible_record_native_download_multiple } from "./app_bible_record_native_download_multiple.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
 import { firebase_upload_blob_browser_quiet } from "./firebase_upload_blob_browser_quiet.mjs";
@@ -382,11 +382,15 @@ export function app_bible_record_inline_path(
     return r;
   }
   async function download() {
-    async function work() {
-      let name = app_bible_record_download_name(chapter_code, verse_numbers);
-      await app_bible_record_native_download(blob, name);
-    }
-    await busy(download_button, ready_words, work);
+    let r2 = await app_bible_record_inline_path_download(
+      chapter_code,
+      verse_numbers,
+      blob,
+      busy,
+      download_button,
+      ready_words,
+    );
+    return r2;
   }
   async function chapter_download() {
     async function work() {
