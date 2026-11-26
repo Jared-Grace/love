@@ -1,3 +1,4 @@
+import { app_bible_record_inline_path_take_delete_confirmed } from "./app_bible_record_inline_path_take_delete_confirmed.mjs";
 import { app_bible_record_inline_path_sent_show } from "./app_bible_record_inline_path_sent_show.mjs";
 import { app_bible_record_inline_path_start } from "./app_bible_record_inline_path_start.mjs";
 import { app_bible_record_inline_path_send } from "./app_bible_record_inline_path_send.mjs";
@@ -14,12 +15,7 @@ import { html_display_none } from "./html_display_none.mjs";
 import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
 import { app_bible_record_inline_path_refresh } from "./app_bible_record_inline_path_refresh.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
-import { not } from "./not.mjs";
-import { property_set } from "./property_set.mjs";
 import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
-import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
-import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
-import { app_bible_record_take_kept_delete } from "./app_bible_record_take_kept_delete.mjs";
 import { app_bible_record_inline_path_busy } from "./app_bible_record_inline_path_busy.mjs";
 import { app_bible_record_inline_path_backup } from "./app_bible_record_inline_path_backup.mjs";
 import { app_bible_record_inline_path_download } from "./app_bible_record_inline_path_download.mjs";
@@ -177,19 +173,17 @@ export async function app_bible_record_inline_path(
     );
   }
   async function take_delete_confirmed() {
-    "the store build sent nothing, so there is nothing in storage to delete and nobody to sign in";
-    let b = app_bible_record_local_is();
-    if (not(b)) {
-      await firebase_auth_ensure(sign_in);
-      await app_bible_record_take_delete(chapter_code, verse_numbers);
-    }
-    await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
-    property_set(held, "blob", null);
-    property_set(held, "sent", false);
-    playback_element.pause();
-    html_display_none(playback);
-    let blob11 = property_get(held, "blob");
-    app_bible_record_inline_path_changed(entry, blob11, refreshes);
+    let r9 = await app_bible_record_inline_path_take_delete_confirmed(
+      sign_in,
+      chapter_code,
+      verse_numbers,
+      held,
+      playback_element,
+      playback,
+      entry,
+      refreshes,
+    );
+    return r9;
   }
   ("A DOWNLOAD SAYS IT IS WORKING ON ITS OWN BUTTON (human 2026-11-24: a chapter took a while with nothing shown - a loading screen, or a toast so the reader can carry on): the button reads that the video is being got ready and is faded off until the video has been handed to the app, which then says on its own when it is trimming and when it is saved. The rest of the page stays usable meanwhile. REJECTED: a loading screen over the page - it would stop the reader doing anything else for the whole wait.");
   ("SENDING SAYS SO THE SAME WAY (human 2026-11-24: should sending just disable the button like the chapter download, or keep the loading screen?): the Send button reads that it is sending and is faded until the video is up, and the page stays usable. REJECTED: the loading screen the upload drew over the whole page - the one way of waiting that stopped the reader doing anything else, beside two buttons that already waited on their own face.");
