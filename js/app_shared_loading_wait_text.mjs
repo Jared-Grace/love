@@ -11,12 +11,14 @@ export function app_shared_loading_wait_text() {
     spa: "Un momento, por favor",
     por: "Um momento, por favor",
     ind: "Tunggu sebentar",
+    fra: "Un instant, s'il vous plaît",
     translated_from: {
       urd: "One moment, please",
       tgl: "One moment, please",
       spa: "One moment, please",
       por: "One moment, please",
       ind: "One moment, please",
+      fra: "One moment, please",
     },
   };
   let text = app_shared_text_reader_language(texts);
