@@ -8,12 +8,14 @@ export function app_shared_bible_passage_previous_text_get() {
     spa: "Pasaje anterior",
     por: "Passagem anterior",
     ind: "Perikop sebelumnya",
+    fra: "Passage précédent",
     translated_from: {
       urd: "Previous passage",
       tgl: "Previous passage",
       spa: "Previous passage",
       por: "Previous passage",
       ind: "Previous passage",
+      fra: "Previous passage",
     },
   };
   let v = app_shared_text_reader_language(texts);
