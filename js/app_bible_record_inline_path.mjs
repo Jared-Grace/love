@@ -1,3 +1,4 @@
+import { app_bible_record_inline_path_busy } from "./app_bible_record_inline_path_busy.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { property_get } from "./property_get.mjs";
@@ -380,16 +381,7 @@ export function app_bible_record_inline_path(
   ("A DOWNLOAD SAYS IT IS WORKING ON ITS OWN BUTTON (human 2026-11-24: a chapter took a while with nothing shown - a loading screen, or a toast so the reader can carry on): the button reads that the video is being got ready and is faded off until the video has been handed to the app, which then says on its own when it is trimming and when it is saved. The rest of the page stays usable meanwhile. REJECTED: a loading screen over the page - it would stop the reader doing anything else for the whole wait.");
   ("SENDING SAYS SO THE SAME WAY (human 2026-11-24: should sending just disable the button like the chapter download, or keep the loading screen?): the Send button reads that it is sending and is faded until the video is up, and the page stays usable. REJECTED: the loading screen the upload drew over the whole page - the one way of waiting that stopped the reader doing anything else, beside two buttons that already waited on their own face.");
   let ready_words = "⏳ Getting the video ready - this can take a minute...";
-  async function busy(button, words, work) {
-    html_text_set(button, words);
-    app_shared_button_disabled_set(button, true);
-    try {
-      await work();
-    } finally {
-      app_shared_button_disabled_set(button, false);
-      refresh();
-    }
-  }
+  let busy = app_bible_record_inline_path_busy(refresh);
   async function backup() {
     await firebase_auth_ensure(sign_in);
     let counts = null;
