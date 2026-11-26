@@ -6,7 +6,7 @@ import { html_display_none } from "./html_display_none.mjs";
 import { app_bible_record_inline_path_camera_show } from "./app_bible_record_inline_path_camera_show.mjs";
 import { app_bible_record_inline_path_start } from "./app_bible_record_inline_path_start.mjs";
 import { app_bible_record_inline_path_finish } from "./app_bible_record_inline_path_finish.mjs";
-export function app_bible_record_inline_path_camera(
+export function app_bible_record_inline_path_camera({
   buttons,
   held,
   playback_element,
@@ -20,9 +20,9 @@ export function app_bible_record_inline_path_camera(
   camera_element,
   canvas,
   canvas_element,
-) {
+}) {
   "The recorder's camera buttons - show camera, record, stop - each wired to its step, and handed back so the redraw can fade them. held is the record every piece of the recorder shares, so a press of Stop here is seen by the camera loop while it waits.";
-  arguments_assert(arguments, 13);
+  arguments_assert(arguments, 1);
   ("A PREVIEW COMES FIRST (asked for by the human 2026-11-23): the camera opens on its own button and shows the very frame that will be recorded - picture, fit and text band - so the face and the light are set right before a take starts, rather than discovered on playback.");
   let camera_button = app_shared_button_wide(
     buttons,

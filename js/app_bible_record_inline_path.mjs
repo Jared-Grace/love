@@ -38,7 +38,7 @@ export function app_bible_record_inline_path({
   };
   let entries = property_get(chapter, "entries");
   let refreshes = property_get(chapter, "refreshes");
-  let camera_buttons = app_bible_record_inline_path_camera(
+  let camera_buttons = app_bible_record_inline_path_camera({
     buttons,
     held,
     playback_element,
@@ -52,7 +52,7 @@ export function app_bible_record_inline_path({
     camera_element,
     canvas,
     canvas_element,
-  );
+  });
   let camera_button = property_get(camera_buttons, "camera_button");
   let record_button = property_get(camera_buttons, "record_button");
   let stop_button = property_get(camera_buttons, "stop_button");
