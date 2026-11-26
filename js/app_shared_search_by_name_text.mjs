@@ -9,12 +9,14 @@ export function app_shared_search_by_name_text() {
     spa: "Buscar por nombre",
     por: "Pesquisar por nome",
     ind: "Cari menurut nama",
+    fra: "Rechercher par nom",
     translated_from: {
       urd: "Search by name",
       tgl: "Search by name",
       spa: "Search by name",
       por: "Search by name",
       ind: "Search by name",
+      fra: "Search by name",
     },
   };
   let text = app_shared_text_reader_language(texts);
