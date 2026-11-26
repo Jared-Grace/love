@@ -2,6 +2,13 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_program_trace } from "./app_learn_js_program_trace.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_program_step_actions_solve_whole } from "./app_learn_js_program_step_actions_solve_whole.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { less_than } from "./less_than.mjs";
+import { list_unique } from "./list_unique.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_difference } from "./list_difference.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -9,11 +16,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { list_index_of_last } from "./list_index_of_last.mjs";
 import { list_skip } from "./list_skip.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_difference } from "./list_difference.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
 export function app_learn_js_program_step_trace(code) {
   arguments_assert(arguments, 1);
@@ -33,6 +36,27 @@ export function app_learn_js_program_step_trace(code) {
     );
     let line = property_get(traced_entry, "line");
     let actions = grouped;
+    ("2026-11-26, at the human's asking: a function called again puts back its whole body in one step, on the function's own line, as a while run again puts back its block - every line between the function's line and its } that had something solved into it");
+    let enter_end = property_get_or(traced_entry, "end_line", null);
+    if (null_not_is(enter_end)) {
+      function body_changed_is(changed_line) {
+        let inside =
+          less_than(line, changed_line) && less_than(changed_line, enter_end);
+        return inside;
+      }
+      let list = list_filter(changed, body_changed_is);
+      let body_lines = list_unique(list);
+      if (list_empty_not_is(body_lines)) {
+        changed = list_difference(changed, body_lines);
+        actions = [
+          {
+            kind: "reset",
+            lines: body_lines,
+          },
+          ...grouped,
+        ];
+      }
+    }
     ("2026-11-04: the code after a for's second ; shares the for's line, and runs while what the condition came to still stands there, so it does not put the line back; only the for's condition does, as it comes round, and it looks back to when it last ran");
     let update_is =
       property_exists(traced_entry, "piece") &&

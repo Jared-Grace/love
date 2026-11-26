@@ -11,6 +11,8 @@ import { app_learn_js_program_step_entry_start_is } from "./app_learn_js_program
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_learn_js_program_step_loop_keyword } from "./app_learn_js_program_step_loop_keyword.mjs";
@@ -55,6 +57,46 @@ export function app_learn_js_program_step_guide_line_next(lines, trace, index) {
   }
   let index2 = subtract(index, 1);
   let before = list_get(trace, index2);
+  ("2026-11-26, for the function lessons: a call goes to the function's own line, a function's body done goes back to after the call, and a function declared is gone past, its body not run");
+  if (property_exists(entry_due, "enter")) {
+    let entered = property_get(entry_due, "enter");
+    let r40 = [
+      [
+        "",
+        entered + "()",
+        " calls ",
+        entered,
+        ", so the computer goes to the line declaring ",
+        entered,
+      ],
+      choose,
+    ];
+    return r40;
+  }
+  if (property_exists(entry_due, "after_call")) {
+    let returned = property_get(entry_due, "after_call");
+    let r41 = [
+      [
+        "The body of ",
+        returned,
+        " is done, so the computer goes back to just after where it was called",
+      ],
+      choose,
+    ];
+    return r41;
+  }
+  let list = property_get(before, "actions");
+  let before_kinds = list_map_property(list, "kind");
+  if (list_includes(before_kinds, "define")) {
+    let r42 = [
+      [
+        "Declaring a function does not run its body, so the computer goes on below its ",
+        "}",
+      ],
+      choose,
+    ];
+    return r42;
+  }
   if (property_get_or(before, "break", false)) {
     ("2026-11-14, at the human's asking, for the break lesson: after a break, the loop is over, so the next line is the one below the loop's }, not the next one down nor the loop's own line");
     let r20 = [
