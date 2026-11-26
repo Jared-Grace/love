@@ -1,3 +1,4 @@
+import { divide_ceil } from "./divide_ceil.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
@@ -8,7 +9,6 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { divide } from "./divide.mjs";
-import { ceil } from "./ceil.mjs";
 import { floor } from "./floor.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_without } from "./list_without.mjs";
@@ -79,8 +79,7 @@ export function app_learn_js_lesson_expression_where_meet() {
     let numbers = text_integers(question);
     let a2 = list_get(numbers, 0);
     let b2 = list_get(numbers, 1);
-    let p = divide(a2 + b2, 2);
-    let up = ceil(p);
+    let up = divide_ceil(a2 + b2, 2);
     let p2 = divide(a2 + b2, 2);
     let down = floor(p2);
     let difference = subtract(down, 1);
