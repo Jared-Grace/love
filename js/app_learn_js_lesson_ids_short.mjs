@@ -747,6 +747,10 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_in_both: text_frozen("in_both"),
       app_learn_js_lesson_array_for_in_a_not_b: text_frozen("in_a_not_b"),
       app_learn_js_lesson_array_for_missing: text_frozen("missing"),
+      app_learn_js_lesson_array_for_biggest_so_far:
+        text_frozen("biggest_so_far"),
+      app_learn_js_lesson_array_for_seen_twice: text_frozen("seen_twice"),
+      app_learn_js_lesson_array_for_all_same: text_frozen("all_same"),
       app_learn_js_lesson_array_for_rises: text_frozen("rises"),
       app_learn_js_lesson_array_for_biggest_rise: text_frozen("biggest_rise"),
       app_learn_js_lesson_array_for_in_either: text_frozen("in_either"),
