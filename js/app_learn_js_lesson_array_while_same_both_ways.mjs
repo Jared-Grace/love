@@ -1,7 +1,6 @@
+import { divide_ceil } from "./divide_ceil.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { divide } from "./divide.mjs";
-import { ceil } from "./ceil.mjs";
 import { range_1 } from "./range_1.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { subtract } from "./subtract.mjs";
@@ -64,8 +63,7 @@ export function app_learn_js_lesson_array_while_same_both_ways() {
   }
   function mirrored(count) {
     "count numbers that read the same both ways";
-    let p = divide(count, 2);
-    let half = ceil(p);
+    let half = divide_ceil(count, 2);
     let list = range_1(9);
     let front = list_shuffle_take(list, half);
     let difference = subtract(count, half);
