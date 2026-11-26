@@ -14,12 +14,14 @@ export function app_shared_bible_verses_question_text(book_name, chapter_name) {
     spa: "¿Qué versículo del capítulo {chapter} del libro de {book} quieres elegir?",
     por: "Qual versículo do capítulo {chapter} do livro de {book} você quer escolher?",
     ind: "Ayat mana dari pasal {chapter} kitab {book} yang ingin kamu pilih?",
+    fra: "Quel verset du chapitre {chapter} du livre de {book} voulez-vous choisir ?",
     translated_from: {
       urd: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
       tgl: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
       spa: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
       por: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
       ind: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
+      fra: "Which verse from chapter {chapter} of the book of {book} do you want to choose?",
     },
   };
   let text = app_shared_text_reader_language_filled(texts, {
