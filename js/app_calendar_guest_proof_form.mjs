@@ -15,6 +15,7 @@ import { html_clear } from "./html_clear.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
+import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { calendar_profile_url_read } from "./calendar_profile_url_read.mjs";
@@ -141,8 +142,7 @@ export async function app_calendar_guest_proof_form(
     problems_recheck();
     intro_set();
     via_draw();
-    let text2 = code_text();
-    html_text_content_set(code_button, text2);
+    button_refresh();
   }
   function code_text() {
     'The button names the code it gets and that the time is picked only after the host confirms it, so pressing it is not read as booking (human, 2026-11-24: "should say \\"get my Messenger code and wait for confirmation before scheduling\\"").';
@@ -178,7 +178,23 @@ export async function app_calendar_guest_proof_form(
   intro_set();
   via_draw();
   let zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  let check = await calendar_turnstile_widget(card);
+  ('THE BUTTON WAITS FOR THE CHECK (human, 2026-11-26: "while cloudflare is verifying ... should the green button be disabled" ... "Waiting for Cloudflare check..."): faded and naming what it waits for, so a press before the check passes is not met by a small line under it. Named after Cloudflare, whose name the box above shows. code_button is null until drawn, below the check, since the check may answer before then.');
+  let check_ready = false;
+  let code_button = null;
+  function button_refresh() {
+    if (equal(code_button, null)) {
+      return;
+    }
+    let words = check_ready ? code_text() : "Waiting for Cloudflare check…";
+    html_text_content_set(code_button, words);
+    let disabled = not(check_ready);
+    app_shared_button_disabled_set(code_button, disabled);
+  }
+  function check_ready_set(ready) {
+    check_ready = ready;
+    button_refresh();
+  }
+  let check = await calendar_turnstile_widget(card, check_ready_set);
   let status = html_div_text(card, "");
   function form_problem() {
     if (equal(via, null)) {
@@ -334,6 +350,7 @@ export async function app_calendar_guest_proof_form(
     }
     await on_started();
   }
-  let text3 = code_text();
-  let code_button = app_shared_button_green(card, text3, code_get);
+  let text2 = code_text();
+  code_button = app_shared_button_green(card, text2, code_get);
+  button_refresh();
 }

@@ -11,7 +11,7 @@ import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { html_src_set } from "./html_src_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
-export function app_shared_photos_draw(parent, purchase) {
+export function app_shared_photos_draw(parent, photos_holder) {
   "$plain parent";
   "$plain purchase";
   "A purchase's photos as small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own.";
@@ -46,7 +46,7 @@ export function app_shared_photos_draw(parent, purchase) {
     }
     thumbnail_add(picture_set);
   }
-  for (let photo of property_get(purchase, "photos")) {
+  for (let photo of property_get(photos_holder, "photos")) {
     if (property_exists(photo, "file")) {
       let value = property_get(photo, "file");
       file_show(value);
