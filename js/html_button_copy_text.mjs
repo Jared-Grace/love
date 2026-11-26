@@ -8,12 +8,14 @@ export function html_button_copy_text() {
     spa: " Copiar",
     por: " Copiar",
     ind: " Salin",
+    fra: " Copier",
     translated_from: {
       urd: " Copy",
       tgl: " Copy",
       spa: " Copy",
       por: " Copy",
       ind: " Copy",
+      fra: " Copy",
     },
   };
   let c = app_shared_text_reader_language_copy(texts);
