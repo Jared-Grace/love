@@ -12,6 +12,7 @@ export async function app_bible_record(context) {
   ("no chapter list is named, so every chapter of the Bible is offered - a recording needs a passage, not a sermon (asked for by the human 2026-11-22)");
   let key_passages = app_shared_bible_passages_download_key();
   property_set(context, key_passages, app_bible_record_passages_download);
+  ("BUILT OUT OF THE SERMONS APP ON PURPOSE: it opens where that app opens and records the passages that app preaches, so it asks that app for both rather than keeping a second copy that would drift from what the sermons show.");
   await app_bible_sermons_start();
   await app_shared_bible_initialize(
     context,

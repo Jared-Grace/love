@@ -111,6 +111,10 @@ export function app_bible_record_inline_path(
     each([download_button, chapter_button], html_display_none);
   }
   function refresh() {
+    let stop2 = property_get(held, "stop");
+    let blob2 = property_get(held, "blob");
+    let camera_on2 = property_get(held, "camera_on");
+    let sent2 = property_get(held, "sent");
     let r3 = app_bible_record_inline_path_refresh(
       entries,
       chapter_reference,
@@ -119,23 +123,20 @@ export function app_bible_record_inline_path(
       backup_button,
       verse_numbers,
       download_button,
-      property_get(held, "stop"),
-      property_get(held, "blob"),
+      stop2,
+      blob2,
       camera_button,
-      property_get(held, "camera_on"),
+      camera_on2,
       record_button,
       stop_button,
       send_button,
-      property_get(held, "sent"),
+      sent2,
       delete_button,
     );
     return r3;
   }
-  app_bible_record_inline_path_changed(
-    entry,
-    property_get(held, "blob"),
-    refreshes,
-  );
+  let blob3 = property_get(held, "blob");
+  app_bible_record_inline_path_changed(entry, blob3, refreshes);
   ("A TAKE ALREADY SENT IS SHOWN AGAIN (human 2026-11-23: a sent take was gone on coming back to its passage): it is looked for in storage, and shown ready to play back and marked Sent. A take recorded meanwhile wins, since it is newer than anything sent.");
   ("A TAKE NOT SENT YET COMES BACK TOO (human 2026-11-24: restarting the app made the video disappear): each finished take is kept on the phone until it is sent or deleted, and is looked for first, since it is newer than anything sent for the passage.");
   async function sent_show() {
@@ -158,14 +159,12 @@ export function app_bible_record_inline_path(
       return;
     }
     property_set(held, "blob", found);
-    property_set(held, "sent", null_is(kept));
+    let value = null_is(kept);
+    property_set(held, "sent", value);
     html_media_source_file_set(playback, found);
     html_display_block(playback);
-    app_bible_record_inline_path_changed(
-      entry,
-      property_get(held, "blob"),
-      refreshes,
-    );
+    let blob4 = property_get(held, "blob");
+    app_bible_record_inline_path_changed(entry, blob4, refreshes);
   }
   sent_show();
   async function camera_show() {
@@ -175,22 +174,16 @@ export function app_bible_record_inline_path(
     property_set(held, "camera_on", true);
     playback_element.pause();
     html_display_none(playback);
-    app_bible_record_inline_path_changed(
-      entry,
-      property_get(held, "blob"),
-      refreshes,
-    );
+    let blob5 = property_get(held, "blob");
+    app_bible_record_inline_path_changed(entry, blob5, refreshes);
     let passage = await app_bible_record_passage(chapter_code, verse_numbers);
     let reference = property_get(passage, "reference");
     let text = property_get(passage, "text");
     ("INSIDE THE ANDROID APP, THE APP FILMS (human 2026-11-23): a phone's browser only gave a wide, zoomed picture, and the app (android/record) opens the camera upright and whole. The app shows its own camera screen with these same words over it; this page gets the take back and plays and sends it as it would its own. A project is chosen first, because a take sent without one has nowhere to go.");
     if (app_bible_record_native_is()) {
       property_set(held, "camera_on", false);
-      app_bible_record_inline_path_changed(
-        entry,
-        property_get(held, "blob"),
-        refreshes,
-      );
+      let blob6 = property_get(held, "blob");
+      app_bible_record_inline_path_changed(entry, blob6, refreshes);
       async function native_done(taken, why) {
         if (text_empty_not_is(why)) {
           let text2 = text_combine("Not recorded: ", why);
@@ -201,16 +194,10 @@ export function app_bible_record_inline_path(
         property_set(held, "sent", false);
         html_media_source_file_set(playback, taken);
         html_display_block(playback);
-        app_bible_record_inline_path_changed(
-          entry,
-          property_get(held, "blob"),
-          refreshes,
-        );
-        await app_bible_record_take_keep(
-          chapter_code,
-          verse_numbers,
-          property_get(held, "blob"),
-        );
+        let blob7 = property_get(held, "blob");
+        app_bible_record_inline_path_changed(entry, blob7, refreshes);
+        let taken2 = property_get(held, "blob");
+        await app_bible_record_take_keep(chapter_code, verse_numbers, taken2);
       }
       function native_open() {
         app_bible_record_native_open(reference, text, native_done);
@@ -221,16 +208,14 @@ export function app_bible_record_inline_path(
     ("A CAMERA THAT WILL NOT OPEN SAYS WHY, under the buttons, and Show camera comes back so it can be tried again (human 2026-11-23: the camera isn't working on computer - and nothing on the page said why). The usual reasons are all outside this page - an address that is not https, permission refused, no camera, or another program holding it - so the browser's own words are shown as they are.");
     html_text_set(problem, "");
     try {
-      property_set(held, "stream", await html_camera_microphone_stream());
+      let value2 = await html_camera_microphone_stream();
+      property_set(held, "stream", value2);
     } catch (e) {
       property_set(held, "camera_on", false);
       let said = text_combine("The camera did not open: ", e.message);
       html_text_set(problem, said);
-      app_bible_record_inline_path_changed(
-        entry,
-        property_get(held, "blob"),
-        refreshes,
-      );
+      let blob8 = property_get(held, "blob");
+      app_bible_record_inline_path_changed(entry, blob8, refreshes);
       return;
     }
     camera_element.srcObject = property_get(held, "stream");
@@ -296,10 +281,8 @@ export function app_bible_record_inline_path(
     project_ensure(start);
   }
   function start() {
-    if (
-      not(property_get(held, "camera_on")) ||
-      null_not_is(property_get(held, "stop"))
-    ) {
+    let b2 = property_get(held, "camera_on");
+    if (not(b2) || null_not_is(property_get(held, "stop"))) {
       return;
     }
     property_set(held, "blob", null);
@@ -308,12 +291,10 @@ export function app_bible_record_inline_path(
     for (let track of property_get(held, "stream").getAudioTracks()) {
       canvas_stream.addTrack(track);
     }
-    property_set(held, "stop", html_media_recorder_start(canvas_stream));
-    app_bible_record_inline_path_changed(
-      entry,
-      property_get(held, "blob"),
-      refreshes,
-    );
+    let value3 = html_media_recorder_start(canvas_stream);
+    property_set(held, "stop", value3);
+    let blob9 = property_get(held, "blob");
+    app_bible_record_inline_path_changed(entry, blob9, refreshes);
   }
   async function finish() {
     let stopping = property_get(held, "stop");
@@ -321,24 +302,20 @@ export function app_bible_record_inline_path(
       return;
     }
     property_set(held, "stop", null);
-    property_set(held, "blob", await stopping());
+    let value4 = await stopping();
+    property_set(held, "blob", value4);
     property_set(held, "camera_on", false);
     for (let track of property_get(held, "stream").getTracks()) {
       track.stop();
     }
     html_display_none(canvas);
-    html_media_source_file_set(playback, property_get(held, "blob"));
+    let file = property_get(held, "blob");
+    html_media_source_file_set(playback, file);
     html_display_block(playback);
-    app_bible_record_inline_path_changed(
-      entry,
-      property_get(held, "blob"),
-      refreshes,
-    );
-    await app_bible_record_take_keep(
-      chapter_code,
-      verse_numbers,
-      property_get(held, "blob"),
-    );
+    let blob10 = property_get(held, "blob");
+    app_bible_record_inline_path_changed(entry, blob10, refreshes);
+    let taken3 = property_get(held, "blob");
+    await app_bible_record_take_keep(chapter_code, verse_numbers, taken3);
   }
   function take_delete() {
     app_shared_confirm_over_red(
@@ -360,11 +337,8 @@ export function app_bible_record_inline_path(
     property_set(held, "sent", false);
     playback_element.pause();
     html_display_none(playback);
-    app_bible_record_inline_path_changed(
-      entry,
-      property_get(held, "blob"),
-      refreshes,
-    );
+    let blob11 = property_get(held, "blob");
+    app_bible_record_inline_path_changed(entry, blob11, refreshes);
   }
   ("A DOWNLOAD SAYS IT IS WORKING ON ITS OWN BUTTON (human 2026-11-24: a chapter took a while with nothing shown - a loading screen, or a toast so the reader can carry on): the button reads that the video is being got ready and is faded off until the video has been handed to the app, which then says on its own when it is trimming and when it is saved. The rest of the page stays usable meanwhile. REJECTED: a loading screen over the page - it would stop the reader doing anything else for the whole wait.");
   ("SENDING SAYS SO THE SAME WAY (human 2026-11-24: should sending just disable the button like the chapter download, or keep the loading screen?): the Send button reads that it is sending and is faded until the video is up, and the page stays usable. REJECTED: the loading screen the upload drew over the whole page - the one way of waiting that stopped the reader doing anything else, beside two buttons that already waited on their own face.");
@@ -379,10 +353,11 @@ export function app_bible_record_inline_path(
     return r;
   }
   async function download() {
+    let blob12 = property_get(held, "blob");
     let r2 = await app_bible_record_inline_path_download(
       chapter_code,
       verse_numbers,
-      property_get(held, "blob"),
+      blob12,
       busy,
       download_button,
       ready_words,
@@ -402,32 +377,25 @@ export function app_bible_record_inline_path(
   async function send() {
     await firebase_auth_ensure(sign_in);
     async function work() {
+      let blob13 = property_get(held, "blob");
       let path = app_bible_record_clip_path(
         chapter_code,
         verse_numbers,
-        property_get(held, "blob"),
+        blob13,
       );
-      await firebase_upload_blob_browser_quiet(
-        path,
-        property_get(held, "blob"),
-      );
+      let blob14 = property_get(held, "blob");
+      await firebase_upload_blob_browser_quiet(path, blob14);
       property_set(held, "sent", true);
       ("Once sent, its draft backup is not needed.");
       let draft = app_bible_record_draft_path_of(path);
       await firebase_delete_browser_if_exists(draft);
     }
     await busy(send_button, "⏳ Sending the video...", work);
-    app_bible_record_inline_path_changed(
-      entry,
-      property_get(held, "blob"),
-      refreshes,
-    );
+    let blob15 = property_get(held, "blob");
+    app_bible_record_inline_path_changed(entry, blob15, refreshes);
     ("The sent take stays on the phone as sent, so coming back plays it at once (human 2026-11-24).");
-    await app_bible_record_take_sent_keep(
-      chapter_code,
-      verse_numbers,
-      property_get(held, "blob"),
-    );
+    let taken4 = property_get(held, "blob");
+    await app_bible_record_take_sent_keep(chapter_code, verse_numbers, taken4);
     await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
   }
 }

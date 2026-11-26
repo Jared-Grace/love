@@ -1,6 +1,8 @@
 {
  "known": [
   "app_app -> app_index_generic",
+  "app_bible_record -> app_bible_sermons_start",
+  "app_bible_record_passages_download -> app_bible_sermons_download",
   "app_calendar_contact -> app_a_button_wide",
   "app_calendar_contact -> app_calendar_paste_convert",
   "app_calendar_home -> app_a_button_wide",

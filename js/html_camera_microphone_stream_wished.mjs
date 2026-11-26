@@ -1,5 +1,9 @@
-export async function html_camera_microphone_stream_wished() {
-  let stream = await navigator.mediaDevices.getUserMedia({
+import { arguments_assert } from "./arguments_assert.mjs";
+export async function html_camera_microphone_stream_wished(devices) {
+  "$plain devices";
+  "The camera asked for with the upright size wished for, from the devices the caller has already made sure the browser gave - so this never reaches for them itself, where on a page that is not secure they are simply absent.";
+  arguments_assert(arguments, 1);
+  let stream = await devices.getUserMedia({
     video: {
       facingMode: "user",
       width: {

@@ -1,6 +1,6 @@
-import { html_camera_microphone_stream_wished } from "./html_camera_microphone_stream_wished.mjs";
 import { not } from "./not.mjs";
 import { error } from "./error.mjs";
+import { html_camera_microphone_stream_wished } from "./html_camera_microphone_stream_wished.mjs";
 import { sleep } from "./sleep.mjs";
 export async function html_camera_microphone_stream() {
   "The front camera and the microphone together, as one live stream, asked of the browser - which asks the person first. Front, because the one recording is the one being filmed, reading.";
@@ -13,7 +13,7 @@ export async function html_camera_microphone_stream() {
   }
   ("A CAMERA THAT REFUSES THE WISHES IS ASKED AGAIN WITH NONE (human 2026-11-23: Starting videoinput failed). Some phones fail outright rather than ignore a size they cannot give, or fail once while the camera is still waking or being let go; so after a short pause the front camera is asked for plainly, and only that failing is reported.");
   try {
-    let wished = await html_camera_microphone_stream_wished();
+    let wished = await html_camera_microphone_stream_wished(devices);
     return wished;
   } catch (e) {
     await sleep(500);
