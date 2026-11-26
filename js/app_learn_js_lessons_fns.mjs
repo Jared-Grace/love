@@ -614,6 +614,7 @@ import { app_learn_js_lesson_while_digit_total } from "./app_learn_js_lesson_whi
 import { app_learn_js_lesson_while_collatz } from "./app_learn_js_lesson_while_collatz.mjs";
 import { app_learn_js_lesson_object_property } from "./app_learn_js_lesson_object_property.mjs";
 import { app_learn_js_lesson_object_property_set } from "./app_learn_js_lesson_object_property_set.mjs";
+import { app_learn_js_lesson_object_two_names } from "./app_learn_js_lesson_object_two_names.mjs";
 import { app_learn_js_lesson_object_log } from "./app_learn_js_lesson_object_log.mjs";
 import { app_learn_js_lesson_object_property_bracket } from "./app_learn_js_lesson_object_property_bracket.mjs";
 import { app_learn_js_lesson_object_property_key } from "./app_learn_js_lesson_object_property_key.mjs";
@@ -1266,6 +1267,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_while_collatz,
     app_learn_js_lesson_object_property,
     app_learn_js_lesson_object_property_set,
+    app_learn_js_lesson_object_two_names,
     app_learn_js_lesson_object_log,
     app_learn_js_lesson_object_property_bracket,
     app_learn_js_lesson_object_property_key,
