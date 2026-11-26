@@ -15,12 +15,14 @@ export function html_button_biblehub_open_parallel(
     spa: "Paralelo",
     por: "Paralelo",
     ind: "Paralel",
+    fra: "Parallèle",
     translated_from: {
       urd: "Parallel",
       tgl: "Parallel",
       spa: "Parallel",
       por: "Parallel",
       ind: "Parallel",
+      fra: "Parallel",
     },
   };
   let text = app_shared_text_reader_language(texts);
