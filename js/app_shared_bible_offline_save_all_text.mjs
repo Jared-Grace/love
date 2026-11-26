@@ -30,6 +30,10 @@ export function app_shared_bible_offline_save_all_text(size) {
       before: " Simpan semua (",
       after: ")",
     },
+    fra: {
+      before: " Tout enregistrer (",
+      after: ")",
+    },
     translated_from: {
       urd: {
         before: " Save all ",
@@ -48,6 +52,10 @@ export function app_shared_bible_offline_save_all_text(size) {
         after: " of them",
       },
       ind: {
+        before: " Save all ",
+        after: " of them",
+      },
+      fra: {
         before: " Save all ",
         after: " of them",
       },
