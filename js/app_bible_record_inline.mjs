@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_element } from "./html_element.mjs";
@@ -169,8 +170,7 @@ export function app_bible_record_inline(
   }
   function refresh() {
     let taken = entries_taken();
-    let a = list_size(taken);
-    let several = greater_than(a, 1);
+    let several = list_size_greater_than(taken, 1);
     let left = list_size(taken);
     let right = list_size(entries);
     let complete = equal(left, right);
