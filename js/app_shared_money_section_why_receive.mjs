@@ -51,6 +51,14 @@ export function app_shared_money_section_why_receive() {
         "Persembahan yang diberikan dengan sukarela, tidak pernah dituntut, dapat memenuhi kebutuhan para pelayan Allah.",
       ],
     },
+    fra: {
+      title: "Alors pourquoi recevoir quoi que ce soit ?",
+      lines: [
+        "Tu n'emmuselleras pas le bœuf quand il foule le grain (Deutéronome 25.4, et Paul le redit au sujet des ouvriers en 1 Timothée 5.18).",
+        "Le bœuf est nourri pour qu'il continue à produire pour les autres.",
+        "Des dons faits librement, jamais exigés, peuvent pourvoir aux besoins des serviteurs de Dieu.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Then why receive anything at all?",
@@ -85,6 +93,14 @@ export function app_shared_money_section_why_receive() {
         ],
       },
       ind: {
+        title: "Then why receive anything at all?",
+        lines: [
+          "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
+          "The ox is fed so it can keep producing for others.",
+          "Freely given gifts, never demanded ones, can provide for ministers of God.",
+        ],
+      },
+      fra: {
         title: "Then why receive anything at all?",
         lines: [
           "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
