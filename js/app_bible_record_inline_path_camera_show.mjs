@@ -1,10 +1,9 @@
+import { app_bible_record_inline_path_camera_show_passage } from "./app_bible_record_inline_path_camera_show_passage.mjs";
 import { app_bible_record_inline_path_camera_show_native_done } from "./app_bible_record_inline_path_camera_show_native_done.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { html_display_none } from "./html_display_none.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
-import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
 import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -35,19 +34,22 @@ export async function app_bible_record_inline_path_camera_show(
   if (property_get(held, "camera_on")) {
     return;
   }
-  property_set(held, "camera_on", true);
-  playback_element.pause();
-  html_display_none(playback);
-  let blob = property_get(held, "blob");
-  app_bible_record_inline_path_changed(entry, blob, refreshes);
-  let passage = await app_bible_record_passage(chapter_code, verse_numbers);
+  let passage = await app_bible_record_inline_path_camera_show_passage(
+    held,
+    playback_element,
+    playback,
+    entry,
+    refreshes,
+    chapter_code,
+    verse_numbers,
+  );
   let reference = property_get(passage, "reference");
   let text = property_get(passage, "text");
   ("INSIDE THE ANDROID APP, THE APP FILMS (human 2026-11-23): a phone's browser only gave a wide, zoomed picture, and the app (android/record) opens the camera upright and whole. The app shows its own camera screen with these same words over it; this page gets the take back and plays and sends it as it would its own. A project is chosen first, because a take sent without one has nowhere to go.");
   if (app_bible_record_native_is()) {
     property_set(held, "camera_on", false);
-    let blob6 = property_get(held, "blob");
-    app_bible_record_inline_path_changed(entry, blob6, refreshes);
+    let blob = property_get(held, "blob");
+    app_bible_record_inline_path_changed(entry, blob, refreshes);
     async function native_done(taken, why) {
       let r = await app_bible_record_inline_path_camera_show_native_done(
         taken,
