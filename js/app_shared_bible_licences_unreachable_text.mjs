@@ -9,12 +9,14 @@ export function app_shared_bible_licences_unreachable_text() {
     spa: "No se pudieron obtener los créditos ahora. Necesitan internet, y estarán aquí cuando vuelva",
     por: "Não foi possível buscar os créditos agora. Eles precisam de internet, e estarão aqui quando ela voltar",
     ind: "Daftar pemberi tidak dapat diambil sekarang. Daftar ini membutuhkan internet, dan akan muncul di sini saat internet kembali",
+    fra: "Les remerciements n'ont pas pu être chargés pour le moment. Ils ont besoin d'internet, et ils apparaîtront ici quand il sera revenu",
     translated_from: {
       urd: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
       tgl: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
       spa: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
       por: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
       ind: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
+      fra: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
     },
   };
   let text = app_shared_text_reader_language(texts);
