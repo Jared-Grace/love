@@ -34,6 +34,11 @@ export function app_shared_bible_offline_unfinished_text(name) {
         "Unduhan itu belum selesai. Maukah kamu memeriksa koneksimu dan mencoba ",
       after: " lagi?",
     },
+    fra: {
+      before:
+        "Ce téléchargement n'a pas fini. Voulez-vous vérifier votre connexion et réessayer ",
+      after: " ?",
+    },
     translated_from: {
       urd: {
         before:
@@ -56,6 +61,11 @@ export function app_shared_bible_offline_unfinished_text(name) {
         after: " again?",
       },
       ind: {
+        before:
+          "That download did not finish. Would you like to check your connection and try ",
+        after: " again?",
+      },
+      fra: {
         before:
           "That download did not finish. Would you like to check your connection and try ",
         after: " again?",
