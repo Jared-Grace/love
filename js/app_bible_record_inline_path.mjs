@@ -1,3 +1,4 @@
+import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
 import { app_bible_record_inline_path_download } from "./app_bible_record_inline_path_download.mjs";
 import { app_bible_record_inline_path_entries_taken } from "./app_bible_record_inline_path_entries_taken.mjs";
 import { app_bible_record_inline_path_backup } from "./app_bible_record_inline_path_backup.mjs";
@@ -7,7 +8,6 @@ import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_reference_unbroken } from "./bible_reference_unbroken.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_set } from "./property_set.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_bible_record_local_is } from "./app_bible_record_local_is.mjs";
 import { each } from "./each.mjs";
@@ -100,12 +100,6 @@ export function app_bible_record_inline_path(
   let t = property_get(chapter, "reference");
   let chapter_reference = bible_reference_unbroken(t);
   list_add(refreshes, refresh);
-  function changed() {
-    property_set(entry, "blob", blob);
-    for (let each_refresh of refreshes) {
-      each_refresh();
-    }
-  }
   ("THE STORE BUILD HAS NO SEND AND NO BACK UP (human 2026-11-25: an app store app that stores only on the device - no send or sync): its takes stay on the phone, and Download is how they leave it.");
   if (app_bible_record_local_is()) {
     each([send_button, backup_button], html_display_none);
@@ -185,7 +179,7 @@ export function app_bible_record_inline_path(
     );
     html_text_set(send_button, sent ? "✅ Sent" : "📤 Send this recording");
   }
-  changed();
+  app_bible_record_inline_path_changed(entry, blob, refreshes);
   ("A TAKE ALREADY SENT IS SHOWN AGAIN (human 2026-11-23: a sent take was gone on coming back to its passage): it is looked for in storage, and shown ready to play back and marked Sent. A take recorded meanwhile wins, since it is newer than anything sent.");
   ("A TAKE NOT SENT YET COMES BACK TOO (human 2026-11-24: restarting the app made the video disappear): each finished take is kept on the phone until it is sent or deleted, and is looked for first, since it is newer than anything sent for the passage.");
   async function sent_show() {
@@ -207,7 +201,7 @@ export function app_bible_record_inline_path(
     sent = null_is(kept);
     html_media_source_file_set(playback, blob);
     html_display_block(playback);
-    changed();
+    app_bible_record_inline_path_changed(entry, blob, refreshes);
   }
   sent_show();
   async function camera_show() {
@@ -217,14 +211,14 @@ export function app_bible_record_inline_path(
     camera_on = true;
     playback_element.pause();
     html_display_none(playback);
-    changed();
+    app_bible_record_inline_path_changed(entry, blob, refreshes);
     let passage = await app_bible_record_passage(chapter_code, verse_numbers);
     let reference = property_get(passage, "reference");
     let text = property_get(passage, "text");
     ("INSIDE THE ANDROID APP, THE APP FILMS (human 2026-11-23): a phone's browser only gave a wide, zoomed picture, and the app (android/record) opens the camera upright and whole. The app shows its own camera screen with these same words over it; this page gets the take back and plays and sends it as it would its own. A project is chosen first, because a take sent without one has nowhere to go.");
     if (app_bible_record_native_is()) {
       camera_on = false;
-      changed();
+      app_bible_record_inline_path_changed(entry, blob, refreshes);
       async function native_done(taken, why) {
         if (text_empty_not_is(why)) {
           let text2 = text_combine("Not recorded: ", why);
@@ -235,7 +229,7 @@ export function app_bible_record_inline_path(
         sent = false;
         html_media_source_file_set(playback, blob);
         html_display_block(playback);
-        changed();
+        app_bible_record_inline_path_changed(entry, blob, refreshes);
         await app_bible_record_take_keep(chapter_code, verse_numbers, blob);
       }
       function native_open() {
@@ -252,7 +246,7 @@ export function app_bible_record_inline_path(
       camera_on = false;
       let said = text_combine("The camera did not open: ", e.message);
       html_text_set(problem, said);
-      changed();
+      app_bible_record_inline_path_changed(entry, blob, refreshes);
       return;
     }
     camera_element.srcObject = stream;
@@ -328,7 +322,7 @@ export function app_bible_record_inline_path(
       canvas_stream.addTrack(track);
     }
     stop = html_media_recorder_start(canvas_stream);
-    changed();
+    app_bible_record_inline_path_changed(entry, blob, refreshes);
   }
   async function finish() {
     if (null_is(stop)) {
@@ -344,7 +338,7 @@ export function app_bible_record_inline_path(
     html_display_none(canvas);
     html_media_source_file_set(playback, blob);
     html_display_block(playback);
-    changed();
+    app_bible_record_inline_path_changed(entry, blob, refreshes);
     await app_bible_record_take_keep(chapter_code, verse_numbers, blob);
   }
   function take_delete() {
@@ -367,7 +361,7 @@ export function app_bible_record_inline_path(
     sent = false;
     playback_element.pause();
     html_display_none(playback);
-    changed();
+    app_bible_record_inline_path_changed(entry, blob, refreshes);
   }
   ("A DOWNLOAD SAYS IT IS WORKING ON ITS OWN BUTTON (human 2026-11-24: a chapter took a while with nothing shown - a loading screen, or a toast so the reader can carry on): the button reads that the video is being got ready and is faded off until the video has been handed to the app, which then says on its own when it is trimming and when it is saved. The rest of the page stays usable meanwhile. REJECTED: a loading screen over the page - it would stop the reader doing anything else for the whole wait.");
   ("SENDING SAYS SO THE SAME WAY (human 2026-11-24: should sending just disable the button like the chapter download, or keep the loading screen?): the Send button reads that it is sending and is faded until the video is up, and the page stays usable. REJECTED: the loading screen the upload drew over the whole page - the one way of waiting that stopped the reader doing anything else, beside two buttons that already waited on their own face.");
@@ -414,7 +408,7 @@ export function app_bible_record_inline_path(
       await firebase_delete_browser_if_exists(draft);
     }
     await busy(send_button, "⏳ Sending the video...", work);
-    changed();
+    app_bible_record_inline_path_changed(entry, blob, refreshes);
     ("The sent take stays on the phone as sent, so coming back plays it at once (human 2026-11-24).");
     await app_bible_record_take_sent_keep(chapter_code, verse_numbers, blob);
     await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
