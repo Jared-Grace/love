@@ -10,12 +10,14 @@ export function app_shared_bible_offline_try_again_text() {
     spa: " Intentar de nuevo",
     por: " Tentar de novo",
     ind: " Coba lagi",
+    fra: " Réessayer",
     translated_from: {
       urd: " Try again",
       tgl: " Try again",
       spa: " Try again",
       por: " Try again",
       ind: " Try again",
+      fra: " Try again",
     },
   };
   let label = app_shared_text_reader_language(texts);
