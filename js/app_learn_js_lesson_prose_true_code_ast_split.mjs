@@ -1,10 +1,10 @@
+import { integer_even_is } from "./integer_even_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
-import { modulo } from "./modulo.mjs";
 import { subtract } from "./subtract.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 export function app_learn_js_lesson_prose_true_code_ast_split(ast) {
@@ -54,8 +54,7 @@ export function app_learn_js_lesson_prose_true_code_ast_split(ast) {
       let changed = false;
       for (let i = 0; less_than(i, elements.length); i++) {
         let e = elements[i];
-        let left = modulo(i, 2);
-        let plain = equal(left, 0);
+        let plain = integer_even_is(i);
         if (not(plain) || not(lambda(e)) || not(word.test(e.value))) {
           rebuilt.push(e);
           continue;
