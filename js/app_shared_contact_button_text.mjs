@@ -8,12 +8,14 @@ export function app_shared_contact_button_text() {
     spa: " Contactar al desarrollador",
     por: " Falar com o desenvolvedor",
     ind: " Hubungi pengembang",
+    fra: " Contacter le développeur",
     translated_from: {
       urd: " Contact the developer",
       tgl: " Contact the developer",
       spa: " Contact the developer",
       por: " Contact the developer",
       ind: " Contact the developer",
+      fra: " Contact the developer",
     },
   };
   let label = app_shared_text_reader_language(texts);
