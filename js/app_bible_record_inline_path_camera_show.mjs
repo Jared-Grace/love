@@ -31,7 +31,7 @@ export async function app_bible_record_inline_path_camera_show({
   if (property_get(held, "camera_on")) {
     return;
   }
-  let passage = await app_bible_record_inline_path_camera_show_passage(
+  let passage = await app_bible_record_inline_path_camera_show_passage({
     held,
     playback_element,
     playback,
@@ -39,7 +39,7 @@ export async function app_bible_record_inline_path_camera_show({
     refreshes,
     chapter_code,
     verse_numbers,
-  );
+  });
   let reference = property_get(passage, "reference");
   let text = property_get(passage, "text");
   ("INSIDE THE ANDROID APP, THE APP FILMS (human 2026-11-23): a phone's browser only gave a wide, zoomed picture, and the app (android/record) opens the camera upright and whole. The app shows its own camera screen with these same words over it; this page gets the take back and plays and sends it as it would its own. A project is chosen first, because a take sent without one has nowhere to go.");

@@ -4,7 +4,7 @@ import { html_display_none } from "./html_display_none.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
 import { app_bible_record_passage } from "./app_bible_record_passage.mjs";
-export async function app_bible_record_inline_path_camera_show_passage(
+export async function app_bible_record_inline_path_camera_show_passage({
   held,
   playback_element,
   playback,
@@ -12,8 +12,8 @@ export async function app_bible_record_inline_path_camera_show_passage(
   refreshes,
   chapter_code,
   verse_numbers,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   property_set(held, "camera_on", true);
   playback_element.pause();
   html_display_none(playback);
