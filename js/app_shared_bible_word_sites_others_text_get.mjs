@@ -8,12 +8,14 @@ export function app_shared_bible_word_sites_others_text_get() {
     spa: "Otros:",
     por: "Outros:",
     ind: "Lainnya:",
+    fra: "Autres :",
     translated_from: {
       urd: "Others:",
       tgl: "Others:",
       spa: "Others:",
       por: "Others:",
       ind: "Others:",
+      fra: "Others:",
     },
   };
   let v = app_shared_text_reader_language(texts);
