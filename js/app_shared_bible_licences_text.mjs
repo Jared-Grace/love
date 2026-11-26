@@ -10,12 +10,14 @@ export function app_shared_bible_licences_text() {
     spa: " Las Biblias de aquí y quién las dio",
     por: " As Bíblias daqui e quem as deu",
     ind: " Alkitab di sini, dan siapa yang memberikannya",
+    fra: " Les Bibles ici, et qui les a données",
     translated_from: {
       urd: " The Bibles here, and who gave them",
       tgl: " The Bibles here, and who gave them",
       spa: " The Bibles here, and who gave them",
       por: " The Bibles here, and who gave them",
       ind: " The Bibles here, and who gave them",
+      fra: " The Bibles here, and who gave them",
     },
   };
   let label = app_shared_text_reader_language(texts);
