@@ -18,6 +18,7 @@ export function app_bible_record_home_verses(
   chapter_code,
   project_label,
 ) {
+  "Draws a recorder under every passage shown, all sharing one chapter record - the chapter's name, one entry per passage, and each recorder's redraw - so a take made under one passage relabels the chapter buttons under all of them. Passages of the chapter not shown here still have their saved takes looked up, so the chapter count and the chapter download know about them too.";
   arguments_assert(arguments, 6);
   let drawn = [];
   for (let item of passages) {

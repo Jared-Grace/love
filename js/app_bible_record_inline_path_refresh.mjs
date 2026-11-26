@@ -33,6 +33,7 @@ export function app_bible_record_inline_path_refresh({
   sent,
   delete_button,
 }) {
+  "Redraws one passage's recorder from what it holds now: the count of passages with a video, the labels on the download buttons, and which buttons are faded - from whether the camera is on, a take is recording, a take exists, and it was sent. Run whenever any take in the chapter changes, so every recorder in it agrees.";
   arguments_assert(arguments, 1);
   let taken = app_bible_record_inline_path_entries_taken(entries);
   let several = list_size_greater_than(taken, 1);

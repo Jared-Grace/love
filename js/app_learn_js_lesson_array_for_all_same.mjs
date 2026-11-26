@@ -1,3 +1,8 @@
+import { floor } from "./floor.mjs";
+import { equal } from "./equal.mjs";
+import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
@@ -45,31 +50,48 @@ export function app_learn_js_lesson_array_for_all_same() {
     return programs;
   }
   function wrong_outputs_of(items4) {
-    let all = items4.every((x) => x === items4[0]);
-    let outputs = [String(!all)];
+    function lambda(x) {
+      let eq = equal(x, items4[0]);
+      return eq;
+    }
+    let all = items4.every(lambda);
+    let n = not(all);
+    let v4 = String(n);
+    let outputs = [v4];
     return outputs;
   }
   function digit() {
-    let d = 1 + Math.floor(Math.random() * 9);
+    let left = Math.random();
+    let p = multiply(left, 9);
+    let d = 1 + floor(p);
     return d;
   }
   function other_than(d2) {
     let o = digit();
-    while (o === d2) {
+    while (equal(o, d2)) {
       o = digit();
     }
     return o;
   }
   function input_drawn(kind) {
     "four or five of one number, then none, the last, or a middle one changed";
-    let count = 4 + Math.floor(Math.random() * 2);
+    let left2 = Math.random();
+    let p2 = multiply(left2, 2);
+    let count = 4 + floor(p2);
     let d3 = digit();
-    let items5 = list_map(new Array(count).fill(0), () => d3);
-    if (kind === "last") {
-      items5[count - 1] = other_than(d3);
+    function lambda2() {
+      return d3;
     }
-    if (kind === "middle") {
-      let at = 1 + Math.floor(Math.random() * (count - 2));
+    let list = new Array(count).fill(0);
+    let items5 = list_map(list, lambda2);
+    if (equal(kind, "last")) {
+      items5[subtract(count, 1)] = other_than(d3);
+    }
+    if (equal(kind, "middle")) {
+      let left3 = Math.random();
+      let right = subtract(count, 2);
+      let p3 = multiply(left3, right);
+      let at = 1 + floor(p3);
       items5[at] = other_than(d3);
     }
     return items5;
