@@ -42,6 +42,13 @@ export function app_shared_money_section_gifts_welcome() {
         "Berilah menurut kerelaan hatimu sendiri, jangan dengan sedih hati atau karena paksaan (2 Korintus 9:7).",
       ],
     },
+    fra: {
+      title:
+        "Les dons sont les bienvenus, et il n'y a jamais de pression pour donner",
+      lines: [
+        "Donnez comme vous l'avez décidé dans votre cœur, sans regret et sans contrainte (2 Corinthiens 9.7).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Gifts are welcome and there is never pressure to give",
@@ -68,6 +75,12 @@ export function app_shared_money_section_gifts_welcome() {
         ],
       },
       ind: {
+        title: "Gifts are welcome and there is never pressure to give",
+        lines: [
+          "Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
+        ],
+      },
+      fra: {
         title: "Gifts are welcome and there is never pressure to give",
         lines: [
           "Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
