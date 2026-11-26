@@ -5,9 +5,7 @@ import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
 import { app_bible_record_take_kept_delete } from "./app_bible_record_take_kept_delete.mjs";
 import { property_set } from "./property_set.mjs";
-import { html_display_none } from "./html_display_none.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
+import { app_bible_record_inline_path_playback_hide } from "./app_bible_record_inline_path_playback_hide.mjs";
 export async function app_bible_record_inline_path_take_delete_confirmed({
   sign_in,
   chapter_code,
@@ -28,8 +26,11 @@ export async function app_bible_record_inline_path_take_delete_confirmed({
   await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
   property_set(held, "blob", null);
   property_set(held, "sent", false);
-  playback_element.pause();
-  html_display_none(playback);
-  let blob = property_get(held, "blob");
-  app_bible_record_inline_path_changed(entry, blob, refreshes);
+  app_bible_record_inline_path_playback_hide(
+    held,
+    playback_element,
+    playback,
+    entry,
+    refreshes,
+  );
 }

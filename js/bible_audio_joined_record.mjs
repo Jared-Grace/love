@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_joined_chapters } from "./bible_audio_joined_chapters.mjs";
 import { property_get } from "./property_get.mjs";
@@ -21,7 +22,9 @@ export async function bible_audio_joined_record(bible_folder) {
   arguments_assert(arguments, 1);
   let reported = await bible_audio_joined_chapters(bible_folder);
   let chapters = property_get(reported, "chapters");
-  let since = await file_modified_ms("./scripts/py/text_to_speech.py");
+  let since = await file_modified_ms(
+    text_combine_multiple(["./scripts/py/", fn_name("text_to_speech"), ".py"]),
+  );
   async function due_is(chapter) {
     let chapter_code = property_get(chapter, "chapter_code");
     let lines = property_get(chapter, "lines");
