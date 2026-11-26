@@ -28,6 +28,10 @@ export function app_shared_bible_offline_freeing_text(name) {
       before: "Mengosongkan ruang yang dipakai ",
       after: "",
     },
+    fra: {
+      before: "Libération de l'espace utilisé par ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: "Freeing the space ",
@@ -46,6 +50,10 @@ export function app_shared_bible_offline_freeing_text(name) {
         after: " uses",
       },
       ind: {
+        before: "Freeing the space ",
+        after: " uses",
+      },
+      fra: {
         before: "Freeing the space ",
         after: " uses",
       },
