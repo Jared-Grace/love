@@ -26,12 +26,14 @@ export function app_shared_bible_testament_name_reading(name) {
       spa: "Nuevo Testamento",
       por: "Novo Testamento",
       ind: "Perjanjian Baru",
+      fra: "Nouveau Testament",
       translated_from: {
         urd: "New Testament",
         tgl: "New Testament",
         spa: "New Testament",
         por: "New Testament",
         ind: "New Testament",
+        fra: "New Testament",
       },
     };
     let r2 = app_shared_text_reader_language(texts);
