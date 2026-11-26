@@ -32,6 +32,10 @@ export function app_shared_button_back_to_text(destination) {
       before: " Kembali ke ",
       after: "",
     },
+    fra: {
+      before: " Retour à ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: " Back to ",
@@ -50,6 +54,10 @@ export function app_shared_button_back_to_text(destination) {
         after: "",
       },
       ind: {
+        before: " Back to ",
+        after: "",
+      },
+      fra: {
         before: " Back to ",
         after: "",
       },
