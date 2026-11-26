@@ -9,12 +9,14 @@ export function app_shared_close_texts() {
     spa: "Cerrar",
     por: "Fechar",
     ind: "Tutup",
+    fra: "Fermer",
     translated_from: {
       urd: "Close",
       tgl: "Close",
       spa: "Close",
       por: "Close",
       ind: "Close",
+      fra: "Close",
     },
   };
   return r;
