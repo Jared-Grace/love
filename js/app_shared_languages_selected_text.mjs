@@ -8,12 +8,14 @@ export function app_shared_languages_selected_text() {
     spa: "Idiomas elegidos:",
     por: "Idiomas escolhidos:",
     ind: "Bahasa yang dipilih:",
+    fra: "Langues choisies :",
     translated_from: {
       urd: "Selected languages:",
       tgl: "Selected languages:",
       spa: "Selected languages:",
       por: "Selected languages:",
       ind: "Selected languages:",
+      fra: "Selected languages:",
     },
   };
   let v = app_shared_text_reader_language(texts);
