@@ -9,12 +9,14 @@ export function app_shared_bible_offline_text() {
     spa: " Descargar para usar sin conexión",
     por: " Baixar para usar sem internet",
     ind: " Unduh untuk dipakai tanpa internet",
+    fra: " Télécharger pour lire sans internet",
     translated_from: {
       urd: " Download for offline",
       tgl: " Download for offline",
       spa: " Download for offline",
       por: " Download for offline",
       ind: " Download for offline",
+      fra: " Download for offline",
     },
   };
   let label = app_shared_text_reader_language(texts);
