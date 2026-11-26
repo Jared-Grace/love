@@ -7,7 +7,7 @@ import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_p_text } from "./html_p_text.mjs";
-export function app_bible_record_inline(
+export async function app_bible_record_inline(
   parent,
   chapter_code,
   verse_numbers,
@@ -46,7 +46,7 @@ export function app_bible_record_inline(
   let problem = html_p_text(parent, "");
   ("SIGNING IN GETS A PLACE OF ITS OWN: the sign-in empties the place it is shown in, both before and after, so shown where the buttons are it took them away for good (human 2026-11-23: after sending, the buttons were gone until another passage was opened).");
   let sign_in = html_div(parent);
-  app_bible_record_inline_path(
+  await app_bible_record_inline_path(
     buttons,
     chapter,
     entry,

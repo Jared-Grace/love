@@ -1,3 +1,4 @@
+import { app_bible_record_inline_path_sent_show } from "./app_bible_record_inline_path_sent_show.mjs";
 import { app_bible_record_inline_path_start } from "./app_bible_record_inline_path_start.mjs";
 import { app_bible_record_inline_path_send } from "./app_bible_record_inline_path_send.mjs";
 import { app_bible_record_inline_path_finish } from "./app_bible_record_inline_path_finish.mjs";
@@ -13,14 +14,8 @@ import { html_display_none } from "./html_display_none.mjs";
 import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
 import { app_bible_record_inline_path_refresh } from "./app_bible_record_inline_path_refresh.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
-import { app_bible_record_take_kept_or_null } from "./app_bible_record_take_kept_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
-import { app_bible_record_take_sent_or_null } from "./app_bible_record_take_sent_or_null.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { property_set } from "./property_set.mjs";
-import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
-import { html_display_block } from "./html_display_block.mjs";
 import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
@@ -29,7 +24,7 @@ import { app_bible_record_inline_path_busy } from "./app_bible_record_inline_pat
 import { app_bible_record_inline_path_backup } from "./app_bible_record_inline_path_backup.mjs";
 import { app_bible_record_inline_path_download } from "./app_bible_record_inline_path_download.mjs";
 import { app_bible_record_inline_path_chapter_download } from "./app_bible_record_inline_path_chapter_download.mjs";
-export function app_bible_record_inline_path(
+export async function app_bible_record_inline_path(
   buttons,
   chapter,
   entry,
@@ -124,34 +119,14 @@ export function app_bible_record_inline_path(
   app_bible_record_inline_path_changed(entry, blob3, refreshes);
   ("A TAKE ALREADY SENT IS SHOWN AGAIN (human 2026-11-23: a sent take was gone on coming back to its passage): it is looked for in storage, and shown ready to play back and marked Sent. A take recorded meanwhile wins, since it is newer than anything sent.");
   ("A TAKE NOT SENT YET COMES BACK TOO (human 2026-11-24: restarting the app made the video disappear): each finished take is kept on the phone until it is sent or deleted, and is looked for first, since it is newer than anything sent for the passage.");
-  async function sent_show() {
-    let kept = await app_bible_record_take_kept_or_null(
-      chapter_code,
-      verse_numbers,
-    );
-    let found = kept;
-    if (null_is(found) && not(app_bible_record_local_is())) {
-      found = await app_bible_record_take_sent_or_null(
-        chapter_code,
-        verse_numbers,
-      );
-    }
-    if (
-      null_is(found) ||
-      null_not_is(property_get(held, "blob")) ||
-      property_get(held, "camera_on")
-    ) {
-      return;
-    }
-    property_set(held, "blob", found);
-    let value = null_is(kept);
-    property_set(held, "sent", value);
-    html_media_source_file_set(playback, found);
-    html_display_block(playback);
-    let blob4 = property_get(held, "blob");
-    app_bible_record_inline_path_changed(entry, blob4, refreshes);
-  }
-  sent_show();
+  await app_bible_record_inline_path_sent_show(
+    chapter_code,
+    verse_numbers,
+    held,
+    playback,
+    entry,
+    refreshes,
+  );
   async function camera_show() {
     let r5 = await app_bible_record_inline_path_camera_show(
       held,
