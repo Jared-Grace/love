@@ -1,26 +1,17 @@
-import { app_bible_record_inline_path_take_delete_confirmed } from "./app_bible_record_inline_path_take_delete_confirmed.mjs";
-import { app_bible_record_inline_path_sent_show } from "./app_bible_record_inline_path_sent_show.mjs";
-import { app_bible_record_inline_path_start } from "./app_bible_record_inline_path_start.mjs";
-import { app_bible_record_inline_path_send } from "./app_bible_record_inline_path_send.mjs";
-import { app_bible_record_inline_path_finish } from "./app_bible_record_inline_path_finish.mjs";
-import { app_bible_record_inline_path_camera_show } from "./app_bible_record_inline_path_camera_show.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_bible_record_inline_path_camera } from "./app_bible_record_inline_path_camera.mjs";
+import { app_bible_record_inline_path_transfer } from "./app_bible_record_inline_path_transfer.mjs";
 import { bible_reference_unbroken } from "./bible_reference_unbroken.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_bible_record_local_is } from "./app_bible_record_local_is.mjs";
-import { each } from "./each.mjs";
-import { html_display_none } from "./html_display_none.mjs";
-import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_bible_record_inline_path_refresh } from "./app_bible_record_inline_path_refresh.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
+import { app_bible_record_inline_path_sent_show } from "./app_bible_record_inline_path_sent_show.mjs";
+import { promise_start_unawait } from "./promise_start_unawait.mjs";
 import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
-import { app_bible_record_inline_path_busy } from "./app_bible_record_inline_path_busy.mjs";
-import { app_bible_record_inline_path_backup } from "./app_bible_record_inline_path_backup.mjs";
-import { app_bible_record_inline_path_download } from "./app_bible_record_inline_path_download.mjs";
-import { app_bible_record_inline_path_chapter_download } from "./app_bible_record_inline_path_chapter_download.mjs";
-export async function app_bible_record_inline_path(
+import { app_bible_record_inline_path_take_delete_confirmed } from "./app_bible_record_inline_path_take_delete_confirmed.mjs";
+export function app_bible_record_inline_path(
   buttons,
   chapter,
   entry,
@@ -45,47 +36,51 @@ export async function app_bible_record_inline_path(
     blob: null,
     sent: false,
   };
-  ("A PREVIEW COMES FIRST (asked for by the human 2026-11-23): the camera opens on its own button and shows the very frame that will be recorded - picture, fit and text band - so the face and the light are set right before a take starts, rather than discovered on playback.");
-  let camera_button = app_shared_button_wide(
-    buttons,
-    "📷 Show camera",
-    camera_show,
-  );
-  let record_button = app_shared_button_wide(buttons, "", record);
-  let stop_button = app_shared_button_wide(
-    buttons,
-    "⏹️ Stop recording",
-    finish,
-  );
-  let send_button = app_shared_button_wide(buttons, "", send);
-  ("NO PLAY BACK BUTTON, AND IN THE APP NO RECORD OR STOP (human 2026-11-24: already covered elsewhere?): a take is shown in a video with its own play control, so a second way to play it was one button too many; and the Android app records on its own camera screen, which has Record and Stop of its own, so here they could only ever be faded.");
-  ("DOWNLOAD SAVES THE TAKE CUT DOWN TO THE READING (human 2026-11-24): the near-silent stretch before the first word and after the last is taken off, so the video is just the reading. Only the Android app can cut a video, so the button is there only inside it; the take kept in storage is left whole.");
-  let download_button = app_shared_button_wide(buttons, "", download);
-  ("A SECOND DOWNLOAD JOINS THE CHAPTER (human 2026-11-24): when more than one passage of the chapter has a take, a second button saves them as one video, in verse order, each cut down to its reading - named by the verses it holds, or as the complete chapter once every passage has one. Every recorder in the chapter shares one list of takes, and each redraws its buttons whenever any take changes.");
-  let chapter_button = app_shared_button_wide(buttons, "", chapter_download);
-  ("BACK UP SENDS EVERY UNSENT TAKE ON THE PHONE TO STORAGE AS A DRAFT - every chapter and project, not only this one (human 2026-11-25: syncing, so the videos can be seen; a sync button for all videos, not just the current chapter). It is always shown, since takes elsewhere may wait even when this chapter has none: each take is backed up on its own when it finishes, but only while signed in and online, so this catches the rest. A draft is not sent - Send stays the approval, since a sent take becomes a video posted with nobody looking again.");
-  let backup_button = app_shared_button_wide(buttons, "", backup);
   let entries = property_get(chapter, "entries");
   let refreshes = property_get(chapter, "refreshes");
+  let camera_buttons = app_bible_record_inline_path_camera(
+    buttons,
+    held,
+    playback_element,
+    playback,
+    entry,
+    refreshes,
+    chapter_code,
+    verse_numbers,
+    problem,
+    project_ensure,
+    camera_element,
+    canvas,
+    canvas_element,
+  );
+  let camera_button = property_get(camera_buttons, "camera_button");
+  let record_button = property_get(camera_buttons, "record_button");
+  let stop_button = property_get(camera_buttons, "stop_button");
+  let transfer_buttons = app_bible_record_inline_path_transfer(
+    buttons,
+    held,
+    sign_in,
+    chapter_code,
+    verse_numbers,
+    entries,
+    entry,
+    refreshes,
+    refresh,
+  );
+  let send_button = property_get(transfer_buttons, "send_button");
+  let download_button = property_get(transfer_buttons, "download_button");
+  let chapter_button = property_get(transfer_buttons, "chapter_button");
+  let backup_button = property_get(transfer_buttons, "backup_button");
   ("THE CHAPTER'S NAME NEVER BREAKS ACROSS TWO LINES (human 2026-11-24: book{nbsp}chapter): its spaces are the kind a line may not end on, so Psalm and 2 stay together on the count and the download buttons. Made so here, where it is only shown, and not where the name is worked out, which other pages read too.");
   let t = property_get(chapter, "reference");
   let chapter_reference = bible_reference_unbroken(t);
   list_add(refreshes, refresh);
-  ("THE STORE BUILD HAS NO SEND AND NO BACK UP (human 2026-11-25: an app store app that stores only on the device - no send or sync): its takes stay on the phone, and Download is how they leave it.");
-  if (app_bible_record_local_is()) {
-    each([send_button, backup_button], html_display_none);
-  }
   ("DELETE ASKS FIRST, in the box every app here draws over the page before something that cannot be taken back (human 2026-11-24: a dialog to confirm, and DRY), then deletes the take on the page, the one kept on the phone and the one sent to storage, so coming back to the passage finds nothing. REJECTED: the browser's own confirm - inside the Android app it may never appear; two taps on the button (what this replaced) - a second way of asking that no other app shares.");
   let delete_button = app_shared_button_wide(
     buttons,
     "🗑️ Delete video",
     take_delete,
   );
-  if (app_bible_record_native_is()) {
-    each([record_button, stop_button], html_display_none);
-  } else {
-    each([download_button, chapter_button], html_display_none);
-  }
   function refresh() {
     let stop2 = property_get(held, "stop");
     let blob2 = property_get(held, "blob");
@@ -115,55 +110,18 @@ export async function app_bible_record_inline_path(
   app_bible_record_inline_path_changed(entry, blob3, refreshes);
   ("A TAKE ALREADY SENT IS SHOWN AGAIN (human 2026-11-23: a sent take was gone on coming back to its passage): it is looked for in storage, and shown ready to play back and marked Sent. A take recorded meanwhile wins, since it is newer than anything sent.");
   ("A TAKE NOT SENT YET COMES BACK TOO (human 2026-11-24: restarting the app made the video disappear): each finished take is kept on the phone until it is sent or deleted, and is looked for first, since it is newer than anything sent for the passage.");
-  await app_bible_record_inline_path_sent_show(
-    chapter_code,
-    verse_numbers,
-    held,
-    playback,
-    entry,
-    refreshes,
-  );
-  async function camera_show() {
-    let r5 = await app_bible_record_inline_path_camera_show(
+  ("THE LOOK FOR A TAKE ALREADY MADE IS NOT WAITED FOR: it asks storage, and every passage on the page asks at once, so the passages are all drawn straight away and each fills in its take when the answer comes. Waiting here would draw them one at a time, each behind a lookup.");
+  async function sent_show() {
+    await app_bible_record_inline_path_sent_show(
+      chapter_code,
+      verse_numbers,
       held,
-      playback_element,
       playback,
       entry,
       refreshes,
-      chapter_code,
-      verse_numbers,
-      problem,
-      project_ensure,
-      camera_element,
-      canvas,
-      canvas_element,
     );
-    return r5;
   }
-  function record() {
-    project_ensure(start);
-  }
-  function start() {
-    let r8 = app_bible_record_inline_path_start(
-      held,
-      canvas_element,
-      entry,
-      refreshes,
-    );
-    return r8;
-  }
-  async function finish() {
-    let r6 = await app_bible_record_inline_path_finish(
-      held,
-      canvas,
-      playback,
-      entry,
-      refreshes,
-      chapter_code,
-      verse_numbers,
-    );
-    return r6;
-  }
+  promise_start_unawait(sent_show);
   function take_delete() {
     app_shared_confirm_over_red(
       "Delete this video? It cannot be brought back.",
@@ -184,52 +142,5 @@ export async function app_bible_record_inline_path(
       refreshes,
     );
     return r9;
-  }
-  ("A DOWNLOAD SAYS IT IS WORKING ON ITS OWN BUTTON (human 2026-11-24: a chapter took a while with nothing shown - a loading screen, or a toast so the reader can carry on): the button reads that the video is being got ready and is faded off until the video has been handed to the app, which then says on its own when it is trimming and when it is saved. The rest of the page stays usable meanwhile. REJECTED: a loading screen over the page - it would stop the reader doing anything else for the whole wait.");
-  ("SENDING SAYS SO THE SAME WAY (human 2026-11-24: should sending just disable the button like the chapter download, or keep the loading screen?): the Send button reads that it is sending and is faded until the video is up, and the page stays usable. REJECTED: the loading screen the upload drew over the whole page - the one way of waiting that stopped the reader doing anything else, beside two buttons that already waited on their own face.");
-  let ready_words = "⏳ Getting the video ready - this can take a minute...";
-  let busy = app_bible_record_inline_path_busy(refresh);
-  async function backup() {
-    let r = await app_bible_record_inline_path_backup(
-      sign_in,
-      busy,
-      backup_button,
-    );
-    return r;
-  }
-  async function download() {
-    let blob12 = property_get(held, "blob");
-    let r2 = await app_bible_record_inline_path_download(
-      chapter_code,
-      verse_numbers,
-      blob12,
-      busy,
-      download_button,
-      ready_words,
-    );
-    return r2;
-  }
-  async function chapter_download() {
-    let r4 = await app_bible_record_inline_path_chapter_download(
-      entries,
-      chapter_code,
-      busy,
-      chapter_button,
-      ready_words,
-    );
-    return r4;
-  }
-  async function send() {
-    let r7 = await app_bible_record_inline_path_send(
-      sign_in,
-      held,
-      chapter_code,
-      verse_numbers,
-      busy,
-      send_button,
-      entry,
-      refreshes,
-    );
-    return r7;
   }
 }
