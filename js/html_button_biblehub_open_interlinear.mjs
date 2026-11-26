@@ -15,12 +15,14 @@ export function html_button_biblehub_open_interlinear(
     spa: "Interlineal",
     por: "Interlinear",
     ind: "Interlinear",
+    fra: "Interlinéaire",
     translated_from: {
       urd: "Interlinear",
       tgl: "Interlinear",
       spa: "Interlinear",
       por: "Interlinear",
       ind: "Interlinear",
+      fra: "Interlinear",
     },
   };
   let text = app_shared_text_reader_language(texts);
