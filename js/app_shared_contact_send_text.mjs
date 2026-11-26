@@ -11,12 +11,14 @@ export function app_shared_contact_send_text() {
     spa: " Enviar",
     por: " Enviar",
     ind: " Kirim",
+    fra: " Envoyer",
     translated_from: {
       urd: " Send",
       tgl: " Send",
       spa: " Send",
       por: " Send",
       ind: " Send",
+      fra: " Send",
     },
   };
   let text = app_shared_text_reader_language(texts);
