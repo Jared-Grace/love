@@ -5,15 +5,19 @@ import { object_is } from "./object_is.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_is } from "./list_is.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { list_all } from "./list_all.mjs";
+import { list_join } from "./list_join.mjs";
 export function js_value_console_text(value) {
   arguments_assert(arguments, 1);
   ('a value as the learn_js lessons show it written out: text alone as itself, an array as its items in brackets, a text item in double quotes - console.log(["love", 4]) shows ["love", 4]');
   ("2026-11-15, for the lesson writing out a whole array: String writes an array as love,joy, which no console shows. Picked: the form a learner would type to make the same array, so what is written out reads back as the code that made it. Not picked: Chrome's (2) ['love', 'joy'] (a count and single quotes the lessons never use) and Node's [ 'love', 'joy' ] (single quotes, padded brackets).");
   ("2026-11-15, for the lesson writing out a whole object (human's idea: console.log(counts), not only counts.joy): an object is written as a learner types one, { joy: 3 }, property names bare, and an empty one as {} - both as Node writes them, save its single quotes. String wrote [object Object].");
   ("Everything else is String, as before, so nothing but an array or an object changes.");
+  ('2026-11-26, at the human\'s asking: an array whose every item is written as 20 characters or more is written one item to a line - [a,\\nb,\\nc] - so an array of objects reads down the page rather than wrapping mid-object. 20 keeps a short array such as ["love", "joy"] on one line. Not picked: Node\'s rule (break once the whole is long, items indented), since the lessons show the form a learner would type.');
   function item_text(item) {
     let t = text_is(item) ? json_to(item) : js_value_console_text(item);
     return t;
@@ -36,7 +40,14 @@ export function js_value_console_text(value) {
   }
   if (list_is(value)) {
     let list = list_map(value, item_text);
-    let inside = list_join_comma_space(list);
+    function long(t) {
+      let l = greater_than_equal(t.length, 20);
+      return l;
+    }
+    let one_per_line = list_all(list, long);
+    let inside = one_per_line
+      ? list_join(list, ",\n")
+      : list_join_comma_space(list);
     let r = "[" + inside + "]";
     return r;
   }
