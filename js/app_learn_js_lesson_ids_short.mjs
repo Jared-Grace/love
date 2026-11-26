@@ -846,6 +846,8 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_array_for_push_double: text_frozen("array_doubled"),
       app_learn_js_lesson_array_for_pair: text_frozen("array_pair"),
       app_learn_js_lesson_array_for_pair_push: text_frozen("array_pair_push"),
+      app_learn_js_lesson_array_for_count_right: text_frozen("count_right"),
+      app_learn_js_lesson_array_for_count_between: text_frozen("count_between"),
       app_learn_js_lesson_array_for_start_first:
         text_frozen("array_first_item"),
       app_learn_js_lesson_array_for_total_even: text_frozen("array_total_even"),

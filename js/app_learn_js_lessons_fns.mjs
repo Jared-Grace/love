@@ -443,9 +443,11 @@ import { app_learn_js_lesson_array_for_above_average } from "./app_learn_js_less
 import { app_learn_js_lesson_array_for_total_over } from "./app_learn_js_lesson_array_for_total_over.mjs";
 import { app_learn_js_lesson_array_for_limit } from "./app_learn_js_lesson_array_for_limit.mjs";
 import { app_learn_js_lesson_array_for_total_even } from "./app_learn_js_lesson_array_for_total_even.mjs";
+import { app_learn_js_lesson_array_for_count_between } from "./app_learn_js_lesson_array_for_count_between.mjs";
 import { app_learn_js_lesson_array_for_push_double } from "./app_learn_js_lesson_array_for_push_double.mjs";
 import { app_learn_js_lesson_array_for_pair } from "./app_learn_js_lesson_array_for_pair.mjs";
 import { app_learn_js_lesson_array_for_pair_push } from "./app_learn_js_lesson_array_for_pair_push.mjs";
+import { app_learn_js_lesson_array_for_count_right } from "./app_learn_js_lesson_array_for_count_right.mjs";
 import { app_learn_js_lesson_array_for_start_first } from "./app_learn_js_lesson_array_for_start_first.mjs";
 import { app_learn_js_lesson_array_for_all_same } from "./app_learn_js_lesson_array_for_all_same.mjs";
 import { app_learn_js_lesson_array_for_in_order } from "./app_learn_js_lesson_array_for_in_order.mjs";
@@ -1083,9 +1085,11 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_total_over,
     app_learn_js_lesson_array_for_limit,
     app_learn_js_lesson_array_for_total_even,
+    app_learn_js_lesson_array_for_count_between,
     app_learn_js_lesson_array_for_push_double,
     app_learn_js_lesson_array_for_pair,
     app_learn_js_lesson_array_for_pair_push,
+    app_learn_js_lesson_array_for_count_right,
     app_learn_js_lesson_array_for_start_first,
     app_learn_js_lesson_array_for_all_same,
     app_learn_js_lesson_array_for_in_order,
