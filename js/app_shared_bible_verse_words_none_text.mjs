@@ -11,12 +11,14 @@ export function app_shared_bible_verse_words_none_text() {
     spa: "Esta Biblia no tiene palabras para este versículo.",
     por: "Esta Bíblia não tem palavras para este versículo.",
     ind: "Alkitab ini tidak memuat kata-kata untuk ayat ini.",
+    fra: "Cette Bible n'a pas de mots pour ce verset.",
     translated_from: {
       urd: "This Bible has no words for this verse.",
       tgl: "This Bible has no words for this verse.",
       spa: "This Bible has no words for this verse.",
       por: "This Bible has no words for this verse.",
       ind: "This Bible has no words for this verse.",
+      fra: "This Bible has no words for this verse.",
     },
   };
   let text = app_shared_text_reader_language(texts);
