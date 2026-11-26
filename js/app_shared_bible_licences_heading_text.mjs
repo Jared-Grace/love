@@ -8,12 +8,14 @@ export function app_shared_bible_licences_heading_text() {
     spa: "Las Biblias de esta aplicación y quién las dio",
     por: "As Bíblias deste aplicativo e quem as deu",
     ind: "Alkitab di aplikasi ini, dan siapa yang memberikannya",
+    fra: "Les Bibles de cette application, et qui les a données",
     translated_from: {
       urd: "The Bibles in this app, and who gave them",
       tgl: "The Bibles in this app, and who gave them",
       spa: "The Bibles in this app, and who gave them",
       por: "The Bibles in this app, and who gave them",
       ind: "The Bibles in this app, and who gave them",
+      fra: "The Bibles in this app, and who gave them",
     },
   };
   let text = app_shared_text_reader_language(texts);
