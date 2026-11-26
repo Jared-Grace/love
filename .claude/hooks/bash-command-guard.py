@@ -5951,6 +5951,10 @@ def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
     # Sending it back approves nothing: the redirect is judged on its own.
     if plain[0] == "tee":
         return True
+    # python under `unshare --net` can still write; the read-only bwrap form
+    # is its rewording. Sending it back approves nothing.
+    if plain[0] == "unshare" and any("python" in w for w in plain):
+        return True
     return plain[0] == "sed" or script_file_note(words, command) != ""
 
 

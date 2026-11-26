@@ -14,7 +14,8 @@ cannot disagree with the recorder about which pieces moved.
 ★ A CHAPTER RECORDED AGAIN STILL COUNTS, because the line beside its sound keeps
 the hyphen on purpose.  Run it once, before recording, and hand the answer on.
 
-Takes the path of a JSON file holding {"root": <folder of chapter folders>}.
+Takes the path of a JSON file holding {"root": <folder of chapter folders>,
+"words": [<joined words>]}; an empty or missing list means every joined word.
 Prints one JSON line.  It reads only.
 """
 
@@ -29,6 +30,9 @@ def main(args_path):
     with open(args_path, encoding="utf-8") as fh:
         args = json.load(fh)
     root = args["root"]
+    # Named words narrow the answer to the pieces holding one of them, so a
+    # mend to a few names need not speak again what was mended before.
+    only = set(args.get("words") or [])
     g2p = g2p_ready()
     chapters = []
     words = {}
@@ -46,11 +50,14 @@ def main(args_path):
                 said = said_run(g2p, run)
                 if said == run:
                     continue
-                piece_changed = True
                 for match in JOINED_WORD.finditer(run):
                     word = match.group(0)
-                    if word not in said:
-                        words[word] = words.get(word, 0) + 1
+                    if word in said:
+                        continue
+                    if only and word not in only:
+                        continue
+                    piece_changed = True
+                    words[word] = words.get(word, 0) + 1
             if piece_changed:
                 changed.append(int(name[:-4]))
         if changed:

@@ -840,6 +840,7 @@
     { "command": "bwrap --ro-bind /usr /usr --unshare-all -- /bin/sh x", "decision": "silent", "why": "only a python may run inside" },
     { "command": "bwrap --ro-bind /usr /usr --unshare-all -- /usr/bin/python3 -c \"import os\"", "decision": "silent", "why": "a quoted program is not a plain word" },
     { "command": "bwrap --ro-bind /usr /usr --unshare-all --chdir /home/j/a/repos/lovex -- /usr/bin/python3 x.py", "decision": "silent", "why": "--chdir outside this repo, by a prefix that only looks inside" },
+    { "command": "cd /home/j/a/repos/love/scripts/py && unshare --net --map-root-user -- /home/j/a/user/venv_speech/bin/python ../temp/joined_rest_check.py 2>&1 | grep -av Warning | tail -12", "decision": "deny", "reason_includes": "bwrap instead", "why": "unshare --net leaves python free to write; sent back with the read-only bwrap form, so the human is not asked" },
     { "command": "command -v bwrap firejail landlock 2>&1; head -3 x.py", "decision": "allow", "why": "command -v only prints where each name resolves" },
     { "command": "command rm x", "decision": "ask", "why": "command without -v RUNS its arguments" },
     { "command": "command -p rm x", "decision": "ask", "why": "-p runs too" },
