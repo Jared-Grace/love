@@ -11,12 +11,14 @@ export function app_shared_font_size_smaller_text() {
     spa: " Letra más pequeña",
     por: " Letra menor",
     ind: " Huruf lebih kecil",
+    fra: " Texte plus petit",
     translated_from: {
       urd: " Font size smaller",
       tgl: " Font size smaller",
       spa: " Font size smaller",
       por: " Font size smaller",
       ind: " Font size smaller",
+      fra: " Font size smaller",
     },
   };
   let label = app_shared_text_reader_language(texts);
