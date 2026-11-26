@@ -7,9 +7,7 @@ import { app_bible_record_take_sent_or_null } from "./app_bible_record_take_sent
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
-import { html_display_block } from "./html_display_block.mjs";
-import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
+import { app_bible_record_inline_path_take_show } from "./app_bible_record_inline_path_take_show.mjs";
 export async function app_bible_record_inline_path_sent_show(
   chapter_code,
   verse_numbers,
@@ -40,8 +38,5 @@ export async function app_bible_record_inline_path_sent_show(
   property_set(held, "blob", found);
   let value = null_is(kept);
   property_set(held, "sent", value);
-  html_media_source_file_set(playback, found);
-  html_display_block(playback);
-  let blob = property_get(held, "blob");
-  app_bible_record_inline_path_changed(entry, blob, refreshes);
+  app_bible_record_inline_path_take_show(held, playback, entry, refreshes);
 }

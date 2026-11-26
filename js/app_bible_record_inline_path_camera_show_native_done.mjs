@@ -3,10 +3,8 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { property_set } from "./property_set.mjs";
-import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
-import { html_display_block } from "./html_display_block.mjs";
+import { app_bible_record_inline_path_take_show } from "./app_bible_record_inline_path_take_show.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
 import { app_bible_record_take_keep } from "./app_bible_record_take_keep.mjs";
 export async function app_bible_record_inline_path_camera_show_native_done({
   taken,
@@ -27,10 +25,7 @@ export async function app_bible_record_inline_path_camera_show_native_done({
   }
   property_set(held, "blob", taken);
   property_set(held, "sent", false);
-  html_media_source_file_set(playback, taken);
-  html_display_block(playback);
-  let blob = property_get(held, "blob");
-  app_bible_record_inline_path_changed(entry, blob, refreshes);
+  app_bible_record_inline_path_take_show(held, playback, entry, refreshes);
   let taken2 = property_get(held, "blob");
   await app_bible_record_take_keep(chapter_code, verse_numbers, taken2);
 }

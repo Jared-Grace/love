@@ -3,9 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_display_none } from "./html_display_none.mjs";
-import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
-import { html_display_block } from "./html_display_block.mjs";
-import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
+import { app_bible_record_inline_path_take_show } from "./app_bible_record_inline_path_take_show.mjs";
 import { app_bible_record_take_keep } from "./app_bible_record_take_keep.mjs";
 export async function app_bible_record_inline_path_finish({
   held,
@@ -29,11 +27,7 @@ export async function app_bible_record_inline_path_finish({
     track.stop();
   }
   html_display_none(canvas);
-  let file = property_get(held, "blob");
-  html_media_source_file_set(playback, file);
-  html_display_block(playback);
-  let blob = property_get(held, "blob");
-  app_bible_record_inline_path_changed(entry, blob, refreshes);
+  app_bible_record_inline_path_take_show(held, playback, entry, refreshes);
   let taken = property_get(held, "blob");
   await app_bible_record_take_keep(chapter_code, verse_numbers, taken);
 }
