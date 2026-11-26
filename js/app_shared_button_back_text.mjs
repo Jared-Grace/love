@@ -10,12 +10,14 @@ export function app_shared_button_back_text() {
     spa: " Atrás",
     por: " Voltar",
     ind: " Kembali",
+    fra: " Retour",
     translated_from: {
       urd: " Back",
       tgl: " Back",
       spa: " Back",
       por: " Back",
       ind: " Back",
+      fra: " Back",
     },
   };
   let label = app_shared_text_reader_language(texts);
