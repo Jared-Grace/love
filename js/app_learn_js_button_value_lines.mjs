@@ -14,7 +14,9 @@ export function app_learn_js_button_value_lines(button, value) {
   ("A wrap is still allowed, so a long answer folds inside the button rather than pushing the page sideways on a phone.");
   html_style_white_space(button, "pre-wrap");
   ("2026-11-26, at the human's asking: a value of several lines has its lines lined up on the left, and the block they make together centred on the button, so an array of objects reads down one edge as it does on the card above. A flex button wraps its text in one box only as wide as the longest line; centring that box and aligning the text left inside it does both. A value of one line keeps the button as it was.");
-  if (text_includes(text_to(value), newline())) {
+  let input = text_to(value);
+  let part = newline();
+  if (text_includes(input, part)) {
     html_style_set(button, "display", "flex");
     html_style_set(button, "justify-content", "center");
     html_style_set(button, "text-align", "left");
