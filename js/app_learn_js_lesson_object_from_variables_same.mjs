@@ -1,12 +1,12 @@
-import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { equal } from "./equal.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -133,7 +133,7 @@ export function app_learn_js_lesson_object_from_variables_same() {
     app_learn_js_code_lines_writes_out(box_two, lines2, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Same name for both",
+    "The same name twice",
     "{ name: name, town: town }",
   );
   let lesson = app_learn_js_lesson_code_logged({

@@ -74,8 +74,7 @@ export function app_receipts_purchase_card_view(parent, purchase) {
     html_style_white_space(shown, "pre-wrap");
   }
   writing_show("Description", "description");
-  let purchase2 = property_get(purchase, "photos");
-  app_shared_photos_draw(card, purchase2);
+  app_shared_photos_draw(card, purchase);
   writing_show("Notes", "notes");
   return usd_show;
 }
