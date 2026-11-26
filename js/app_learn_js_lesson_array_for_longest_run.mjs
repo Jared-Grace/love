@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
@@ -7,7 +8,6 @@ import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { list_without } from "./list_without.mjs";
@@ -80,8 +80,7 @@ export function app_learn_js_lesson_array_for_longest_run() {
     let programs3 = wrong_programs_of(items5);
     let firsts = [programs3[0], programs3[1]];
     let outputs = list_map(firsts, eval_console_log_lines);
-    let same = list_includes(outputs, answer);
-    let n = not(same);
+    let n = list_includes_not(outputs, answer);
     return n;
   }
   function array_of(size) {
