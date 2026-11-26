@@ -1,3 +1,4 @@
+import { app_bible_record_text_layout_first_room } from "./app_bible_record_text_layout_first_room.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -5,7 +6,6 @@ import { divide } from "./divide.mjs";
 import { app_bible_record_text_lines } from "./app_bible_record_text_lines.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { math_max } from "./math_max.mjs";
 export function app_bible_record_text_layout(ctx, width, height, text, below) {
   "$plain ctx width height text below";
   "How the passage's words will be laid out on a frame, worked out without drawing anything: the letter size, the lines they wrap into, and how tall the band holding them and the reference comes out. Kept apart from the drawing so the picture can be given exactly the room the words leave (human 2026-11-23: the words did not fill the space under the picture, and the picture was less than half the frame).";
@@ -36,17 +36,18 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
     let before = size;
     size = multiply(size, 1.1);
     wrap();
-    let a2 = tall();
-    if (greater_than(a2, under) || greater_than(widest(), room)) {
+    let a = tall();
+    if (greater_than(a, under) || greater_than(widest(), room)) {
       size = before;
       wrap();
       break;
     }
   }
-  let room_low = multiply(height, 0.45);
-  let right2 = multiply(margin, 3);
-  let a = subtract(under, right2);
-  let first_room = math_max(a, room_low);
+  let first_room = app_bible_record_text_layout_first_room(
+    height,
+    margin,
+    under,
+  );
   while (
     greater_than(multiply(multiply(lines.length, size), 1.25), first_room) &&
     greater_than(size, divide(width, 40))
