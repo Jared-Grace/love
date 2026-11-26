@@ -1,3 +1,4 @@
+import { app_bible_record_inline_path_finish } from "./app_bible_record_inline_path_finish.mjs";
 import { app_bible_record_inline_path_camera_show } from "./app_bible_record_inline_path_camera_show.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
@@ -18,7 +19,6 @@ import { null_not_is } from "./null_not_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { html_display_block } from "./html_display_block.mjs";
-import { app_bible_record_take_keep } from "./app_bible_record_take_keep.mjs";
 import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
 import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
@@ -193,25 +193,16 @@ export function app_bible_record_inline_path(
     app_bible_record_inline_path_changed(entry, blob9, refreshes);
   }
   async function finish() {
-    let stopping = property_get(held, "stop");
-    if (null_is(stopping)) {
-      return;
-    }
-    property_set(held, "stop", null);
-    let value4 = await stopping();
-    property_set(held, "blob", value4);
-    property_set(held, "camera_on", false);
-    for (let track of property_get(held, "stream").getTracks()) {
-      track.stop();
-    }
-    html_display_none(canvas);
-    let file = property_get(held, "blob");
-    html_media_source_file_set(playback, file);
-    html_display_block(playback);
-    let blob10 = property_get(held, "blob");
-    app_bible_record_inline_path_changed(entry, blob10, refreshes);
-    let taken = property_get(held, "blob");
-    await app_bible_record_take_keep(chapter_code, verse_numbers, taken);
+    let r6 = await app_bible_record_inline_path_finish(
+      held,
+      canvas,
+      playback,
+      entry,
+      refreshes,
+      chapter_code,
+      verse_numbers,
+    );
+    return r6;
   }
   function take_delete() {
     app_shared_confirm_over_red(
@@ -290,8 +281,8 @@ export function app_bible_record_inline_path(
     let blob15 = property_get(held, "blob");
     app_bible_record_inline_path_changed(entry, blob15, refreshes);
     ("The sent take stays on the phone as sent, so coming back plays it at once (human 2026-11-24).");
-    let taken4 = property_get(held, "blob");
-    await app_bible_record_take_sent_keep(chapter_code, verse_numbers, taken4);
+    let taken = property_get(held, "blob");
+    await app_bible_record_take_sent_keep(chapter_code, verse_numbers, taken);
     await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
   }
 }
