@@ -1,18 +1,18 @@
-import { math_min } from "./math_min.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
+import { math_min } from "./math_min.mjs";
 import { subtract } from "./subtract.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_1 } from "./range_1.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { not } from "./not.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_array_for_smallest } from "./app_learn_js_lesson_array_for_smallest.mjs";
-import { app_learn_js_lesson_array_for_push_total } from "./app_learn_js_lesson_array_for_push_total.mjs";
+import { app_learn_js_lesson_array_for_biggest_so_far } from "./app_learn_js_lesson_array_for_biggest_so_far.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -23,6 +23,7 @@ export function app_learn_js_lesson_array_for_rises() {
   arguments_assert(arguments, 0);
   ("every rise from the smallest so far: small keeps the smallest so far, let rise = a[i] - small; and rises.push(rise), then console.log(rises)");
   ("2026-11-26, at the human's asking, just before Biggest rise, so that lesson only adds best. Smallest number already keeps the smallest so far and Keep each total already pushes a running value each time round; the new fact is a value worked out from the smallest so far. A rise of 0 is where a new smallest was just found.");
+  ("2026-11-26, at the human's asking: the second box now reminds of Biggest so far, each time, just before this lesson, in place of Keep each total. That lesson already pushes a value kept from the so far loop each time round, which is the shape here.");
   ("Each input is five or six different numbers from 1 to 9, drawn again until a new smallest comes after the first number and some rise is above 0, so the wrong programs give other answers.");
   ("The wrong programs are: the rise worked out and pushed before the if (below 0 at each new smallest), small starting at 0 (the rise from 0, so each number itself), and a[i] - a[i - 1] (the change from the number before, not from the smallest so far). Each loops over a.length, so all stop. The other wrong answer offered is the rises with the first number's 0 put in front, as if the loop started at 0.");
   ("The writing is a first draft by Claude 2026-11-26.");
@@ -109,8 +110,14 @@ export function app_learn_js_lesson_array_for_rises() {
     app_learn_js_remember_from_lesson(
       box_two,
       context,
-      app_learn_js_lesson_array_for_push_total,
-      ["", "b.push(total);", " keeps each total"],
+      app_learn_js_lesson_array_for_biggest_so_far,
+      [
+        "",
+        "bigs.push(big);",
+        " after the ",
+        "if",
+        " pushes the biggest so far each time round",
+      ],
     );
     let box_three = app_learn_js_container_light_blue(root);
     let lines_said = [
