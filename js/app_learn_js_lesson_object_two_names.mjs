@@ -102,7 +102,7 @@ export function app_learn_js_lesson_object_two_names() {
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Two names for one object",
+    "One object, two names",
     "let q = p;",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs_stepping(
