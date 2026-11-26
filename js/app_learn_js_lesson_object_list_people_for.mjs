@@ -150,7 +150,7 @@ export function app_learn_js_lesson_object_list_people_for() {
       context,
       app_learn_js_lesson_object_count_words_for,
       [
-        "In a loop, ",
+        "in a loop, ",
         "let w = words[i];",
         " gives each item in turn the name ",
         "w",
