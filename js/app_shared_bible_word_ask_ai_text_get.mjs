@@ -8,12 +8,14 @@ export function app_shared_bible_word_ask_ai_text_get() {
     spa: "Pregunta a una IA:",
     por: "Pergunte a uma IA:",
     ind: "Tanya AI:",
+    fra: "Demander à une IA :",
     translated_from: {
       urd: "Ask an AI:",
       tgl: "Ask an AI:",
       spa: "Ask an AI:",
       por: "Ask an AI:",
       ind: "Ask an AI:",
+      fra: "Ask an AI:",
     },
   };
   let v = app_shared_text_reader_language(texts);
