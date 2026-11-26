@@ -10,12 +10,14 @@ export function html_button_share_text() {
     spa: " Compartir",
     por: " Compartilhar",
     ind: " Bagikan",
+    fra: " Partager",
     translated_from: {
       urd: " Share",
       tgl: " Share",
       spa: " Share",
       por: " Share",
       ind: " Share",
+      fra: " Share",
     },
   };
   let label = app_shared_text_reader_language(texts);
