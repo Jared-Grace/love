@@ -1,3 +1,4 @@
+import { app_bible_record_inline_path_entries_taken } from "./app_bible_record_inline_path_entries_taken.mjs";
 import { app_bible_record_inline_path_backup } from "./app_bible_record_inline_path_backup.mjs";
 import { app_bible_record_inline_path_busy } from "./app_bible_record_inline_path_busy.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -7,7 +8,6 @@ import { bible_reference_unbroken } from "./bible_reference_unbroken.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { app_bible_record_local_is } from "./app_bible_record_local_is.mjs";
 import { each } from "./each.mjs";
 import { html_display_none } from "./html_display_none.mjs";
@@ -106,15 +106,6 @@ export function app_bible_record_inline_path(
       each_refresh();
     }
   }
-  function entries_taken() {
-    function lambda(e) {
-      let value = property_get(e, "blob");
-      let nn = null_not_is(value);
-      return nn;
-    }
-    let taken = list_filter(entries, lambda);
-    return taken;
-  }
   ("THE STORE BUILD HAS NO SEND AND NO BACK UP (human 2026-11-25: an app store app that stores only on the device - no send or sync): its takes stay on the phone, and Download is how they leave it.");
   if (app_bible_record_local_is()) {
     each([send_button, backup_button], html_display_none);
@@ -131,7 +122,7 @@ export function app_bible_record_inline_path(
     each([download_button, chapter_button], html_display_none);
   }
   function refresh() {
-    let taken = entries_taken();
+    let taken = app_bible_record_inline_path_entries_taken(entries);
     let several = list_size_greater_than(taken, 1);
     let left = list_size(taken);
     let right = list_size(entries);
@@ -399,7 +390,7 @@ export function app_bible_record_inline_path(
   }
   async function chapter_download() {
     async function work() {
-      let taken = entries_taken();
+      let taken = app_bible_record_inline_path_entries_taken(entries);
       let blobs = list_map_property(taken, "blob");
       let lists2 = list_map_property(taken, "verse_numbers");
       let verses_taken = list_concat_multiple(lists2);
