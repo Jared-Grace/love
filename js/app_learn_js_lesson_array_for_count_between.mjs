@@ -1,4 +1,6 @@
-import { floor } from "./floor.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
+import { list_map } from "./list_map.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
@@ -6,23 +8,22 @@ import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { multiply } from "./multiply.mjs";
+import { floor } from "./floor.mjs";
 import { not } from "./not.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
-import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_in_between } from "./app_learn_js_lesson_expression_in_between.mjs";
 import { app_learn_js_lesson_array_for_count } from "./app_learn_js_lesson_array_for_count.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_lesson_code_logged_wrong_programs.mjs";
 export function app_learn_js_lesson_array_for_count_between() {
   arguments_assert(arguments, 0);
-  ("how many numbers are from 3 to 7: let count = 0; for (let i = 0; i < a.length; i++) { if (a[i] >= 3 && a[i] <= 7) { count++; } } console.log(count);");
+  ("how many numbers are from 3 to 7: let count = 0; for (let i = 0; i < a.length; i++) { if (3 <= a[i] && a[i] <= 7) { count++; } } console.log(count);");
+  ("2026-11-26, changed the same day: written 3 <= a[i] && a[i] <= 7 rather than a[i] >= 3, since In between teaches a < b && b < c with the middle repeated and the ends outside; only <= for < is new.");
   ("2026-11-26, at the human's asking, just after the counting and keeping lessons with an if. In between already joins two comparisons with &&, and How many joys? already counts; the new fact is the joined test inside a loop's if. Always 3 to 7, so the title can say it.");
   ("Each input is six numbers from 1 to 9, drawn again until 3 or 7 is among them, some are inside and some outside, and the wrong programs all give other answers.");
   ("The wrong programs are: || (every number is at least 3 or at most 7, so all are counted), > 3 && < 7 (3 and 7 left out), and >= 3 alone (the big ones counted too). The loop counts up to a.length, so all stop. The other wrong answer offered is how many are outside.");
@@ -42,11 +43,11 @@ export function app_learn_js_lesson_array_for_count_between() {
     let code = list_join_newline(lines);
     return code;
   }
-  let right_test = "a[i] >= 3 && a[i] <= 7";
+  let right_test = "3 <= a[i] && a[i] <= 7";
   let tests_wrong = [
-    "a[i] >= 3 || a[i] <= 7",
-    "a[i] > 3 && a[i] < 7",
-    "a[i] >= 3",
+    "3 <= a[i] || a[i] <= 7",
+    "3 < a[i] && a[i] < 7",
+    "3 <= a[i]",
   ];
   function program_of(items2) {
     let code2 = program_with(items2, right_test);
@@ -134,15 +135,15 @@ export function app_learn_js_lesson_array_for_count_between() {
       app_learn_js_lesson_expression_in_between,
       [
         "",
-        "x >= 3 && x <= 7",
+        "a < b && b < c",
         " is ",
         "true",
         " when ",
-        "x",
-        " is from ",
-        "3",
-        " to ",
-        "7",
+        "b",
+        " is between ",
+        "a",
+        " and ",
+        "c",
       ],
     );
     let box_two = app_learn_js_container_light_blue(root);
@@ -163,11 +164,15 @@ export function app_learn_js_lesson_array_for_count_between() {
     );
     let box_three = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_three, [
-      "Put the ",
-      "&&",
-      " test in the ",
-      "if",
-      ":",
+      "With ",
+      "<=",
+      " in place of ",
+      "<",
+      ", ",
+      "3",
+      " and ",
+      "7",
+      " count too:",
     ]);
     let code3 = program_of([2, 5, 8, 3, 7, 9]);
     let lines2 = text_split_newline(code3);
@@ -189,7 +194,7 @@ export function app_learn_js_lesson_array_for_count_between() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "How many are from 3 to 7?",
-    "if (a[i] >= 3 && a[i] <= 7)",
+    "if (3 <= a[i] && a[i] <= 7)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs({
     name_id,
