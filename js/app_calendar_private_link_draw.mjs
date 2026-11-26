@@ -8,7 +8,7 @@ import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 export function app_calendar_private_link_draw(parent, slug, key) {
   arguments_assert(arguments, 3);
   ("A guest's private link to their page with this host, drawn as the address itself and a button that copies it - after booking, and while a code waits.");
-  ('The button says whose link it copies (human, 2026-11-25: "After booking: Copy your private link not Copy link ... or my private"). "my" was chosen: the page\'s buttons speak as the guest pressing them (Get my code, Cancel my meeting), while its sentences speak as the host. Rejected: "Copy your private link", which would be the host talking on a button.');
+  ('The button says whose link it copies (human, 2026-11-25: "After booking: Copy your private link not Copy link ... or my private"). "your", so the page keeps one voice, the host speaking to the guest (human, 2026-11-26, asked "Should first/second person be consistent?" and chose "your"). Rejected: "my" on buttons, which mixed two speakers on one screen.');
   let link = calendar_guest_link(slug, key);
   let link_line = html_div(parent);
   html_a_href_text_new_tab(link_line, link, link);
@@ -16,5 +16,5 @@ export function app_calendar_private_link_draw(parent, slug, key) {
     await clipboard_copy_browser(link);
     app_shared_toast("✅ Copied your private link");
   }
-  app_shared_button_uncolored(parent, "Copy my private link", link_copy);
+  app_shared_button_uncolored(parent, "Copy your private link", link_copy);
 }

@@ -13,7 +13,7 @@ import { list_unique } from "./list_unique.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_object_list_properties_for } from "./app_learn_js_lesson_object_list_properties_for.mjs";
+import { app_learn_js_lesson_object_list_index } from "./app_learn_js_lesson_object_list_index.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
@@ -24,6 +24,7 @@ export function app_learn_js_lesson_object_list_people_for() {
   arguments_assert(arguments, 0);
   ('writing out a list of people: let people = [{ first: "Simon", last: "Peter" }, { first: "John", last: "Mark" }]; a for loop doing console.log(people[i].first + " " + people[i].last); writes out Simon Peter and John Mark');
   ("2026-11-16, at the human's asking - list of people {first,last}, use for to log first + ' ' + last: reading two properties of each object in a list, after Setting properties in a loop set them.");
+  ("2026-11-26, at the human's asking - moved before Setting properties in a loop, after One person of an array (people[1].first): reading comes before setting, and the people are written out in full, so the student sees what the array holds. It now reminds of people[1].first, not of items[i].");
   ("The names are people of the New Testament known by two names - Simon Peter, John Mark, Joseph Barnabas, Thomas Didymus, Joseph Justus - since Bible people rarely have a last name; the second name stands in as the last.");
   ("A set is four questions, each two or three people drawn and shuffled.");
   ("Reading forwards, the wrong answers are the names with no space, last name first, and first names only. Reading backwards, the wrong programs leave out the space, write last before first, and write first alone; each is kept only if it writes out something other than the answer.");
@@ -133,19 +134,19 @@ export function app_learn_js_lesson_object_list_people_for() {
     return kept;
   }
   function above(root, context) {
-    "setting properties in a loop remembered, then reading two of them in a loop";
+    "one person of an array remembered, then reading two properties of each in a loop";
     let box_one = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_object_list_properties_for,
-      ["", "items[i]", " is one object of the array at a time"],
+      app_learn_js_lesson_object_list_index,
+      ["", "people[1].first", " is the second person's first name"],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
-      "Here each object is a person. ",
+      "In a loop, ",
       "people[i].first",
-      " is that person's first name, and ",
+      " is each person's first name in turn, and ",
       "people[i].last",
       " the last:",
     ]);

@@ -147,11 +147,12 @@ export async function app_calendar_guest_proof_form(
   function code_text() {
     'The button names the code it gets and that the time is picked only after the host confirms it, so pressing it is not read as booking (human, 2026-11-24: "should say \\"get my Messenger code and wait for confirmation before scheduling\\"").';
     if (equal(via, null)) {
-      let r7 = "Get my code";
+      let r7 = "Get your code";
       return r7;
     }
+    ('ONE VOICE: "your" (human, 2026-11-26, asked "Should first/second person be consistent?" after "Your meetings" over "Cancel my meeting", and chose "your"): the page is the host speaking to the guest, buttons included.');
     let r6 =
-      "Get my " +
+      "Get your " +
       (equal(via, "messenger") ? "Messenger" : "WhatsApp") +
       " code and wait for confirmation before scheduling";
     return r6;

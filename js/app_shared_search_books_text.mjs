@@ -9,12 +9,14 @@ export function app_shared_search_books_text() {
     spa: "Buscar libros",
     por: "Pesquisar livros",
     ind: "Cari kitab",
+    fra: "Rechercher un livre",
     translated_from: {
       urd: "Search books",
       tgl: "Search books",
       spa: "Search books",
       por: "Search books",
       ind: "Search books",
+      fra: "Search books",
     },
   };
   let text = app_shared_text_reader_language(texts);

@@ -230,10 +230,11 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
       app_shared_confirm_over_red(
         "Cancel this meeting? Its time is then open for anyone to book.",
         "Yes, cancel the meeting",
-        "Keep my meeting",
+        "Keep your meeting",
         lambda2,
       );
     }
-    app_shared_button_red(card, "Cancel my meeting", cancel_ask);
+    ('ONE VOICE: "your" (human, 2026-11-26, chose it after asking "Should first/second person be consistent?" of "Your meetings" over "Cancel my meeting"): the page is the host speaking to the guest, buttons included.');
+    app_shared_button_red(card, "Cancel your meeting", cancel_ask);
   }
 }

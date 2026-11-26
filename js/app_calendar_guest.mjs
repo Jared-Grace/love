@@ -1,4 +1,3 @@
-import { app_calendar_private_link_draw } from "./app_calendar_private_link_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
@@ -44,6 +43,7 @@ import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
+import { app_calendar_private_link_draw } from "./app_calendar_private_link_draw.mjs";
 export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   arguments_assert(arguments, 5);
   ("on_booked(draw) runs once a booking is written; draw(box) draws what was booked and the guest's link into box. The page draws it at its top and goes back to its home screen, the guest's meetings with the hours under them (human, 2026-11-24: \"when booked meeting should take back to home screen that says your meetings but the info should be at the top\").");
@@ -803,9 +803,10 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           "font-size": "1.3em",
           "font-weight": "bold",
         });
+        ('IF GOD WILLS (human, 2026-11-26: "Booked... I will meet you / Can it say / If God wills I will meet you"), as the proof form already says "if God wills you can schedule a meeting".');
         html_div_text(
           done,
-          "I will meet you on " +
+          "If God wills, I will meet you on " +
             app_name +
             (weekly_booked ? " at this time every week." : " at this time."),
         );
