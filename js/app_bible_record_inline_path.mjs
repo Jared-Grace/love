@@ -86,7 +86,7 @@ export function app_bible_record_inline_path(
     let blob2 = property_get(held, "blob");
     let camera_on2 = property_get(held, "camera_on");
     let sent2 = property_get(held, "sent");
-    let r = app_bible_record_inline_path_refresh(
+    let r = app_bible_record_inline_path_refresh({
       entries,
       chapter_reference,
       chapter_button,
@@ -94,16 +94,16 @@ export function app_bible_record_inline_path(
       backup_button,
       verse_numbers,
       download_button,
-      stop2,
-      blob2,
+      stop: stop2,
+      blob: blob2,
       camera_button,
-      camera_on2,
+      camera_on: camera_on2,
       record_button,
       stop_button,
       send_button,
-      sent2,
+      sent: sent2,
       delete_button,
-    );
+    });
     return r;
   }
   let blob3 = property_get(held, "blob");

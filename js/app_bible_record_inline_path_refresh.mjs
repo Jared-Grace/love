@@ -15,7 +15,7 @@ import { html_display_none } from "./html_display_none.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
-export function app_bible_record_inline_path_refresh(
+export function app_bible_record_inline_path_refresh({
   entries,
   chapter_reference,
   chapter_button,
@@ -32,8 +32,8 @@ export function app_bible_record_inline_path_refresh(
   send_button,
   sent,
   delete_button,
-) {
-  arguments_assert(arguments, 16);
+}) {
+  arguments_assert(arguments, 1);
   let taken = app_bible_record_inline_path_entries_taken(entries);
   let several = list_size_greater_than(taken, 1);
   let left = list_size(taken);
