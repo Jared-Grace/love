@@ -58,6 +58,15 @@ export function app_shared_money_section_never_used_for() {
         "Jika yang masuk lebih banyak daripada yang dibutuhkan pekerjaan ini, kami berhenti menerima persembahan, atau kami menambah orang yang dibayar di antara mereka yang ikut bekerja. Kami tidak menyimpan kelebihannya, dan kami tidak mengirim uangmu ke tempat yang tidak kamu pilih.",
       ],
     },
+    fra: {
+      title: "Ce à quoi un don ne sert jamais",
+      lines: [
+        "Jamais au profit.",
+        "L'Écriture dit de ne pas être attaché à l'argent (1 Timothée 3.3), donc notre but n'est pas de nous enrichir. Il y a aujourd'hui trop de gens qui ont faim et sont dans un besoin urgent pour que nous amassions du profit pour nous-mêmes.",
+        "Notre but n'est pas non plus de recevoir votre don pour le donner à une autre cause en votre nom.",
+        "S'il arrive plus que ce dont le travail a besoin, nous arrêtons de recevoir des dons, ou nous payons davantage de personnes parmi celles qui contribuent. Nous ne gardons pas la différence, et nous n'envoyons pas votre argent là où vous ne l'avez pas choisi.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "What a gift is never used for",
@@ -96,6 +105,15 @@ export function app_shared_money_section_never_used_for() {
         ],
       },
       ind: {
+        title: "What a gift is never used for",
+        lines: [
+          "Never profit.",
+          "Scripture says not to be greedy for money (1 Timothy 3:3), so our purpose is not to make ourselves rich. There are too many people hungry and in urgent need today for us to store up profit for ourselves.",
+          "It is also not our purpose to receive your gift and give it away for some other purpose on your behalf.",
+          "If more comes in than the work needs, we stop receiving gifts, or we widen who is paid among the people contributing. We do not keep the difference, and we do not send your money somewhere you did not choose.",
+        ],
+      },
+      fra: {
         title: "What a gift is never used for",
         lines: [
           "Never profit.",
