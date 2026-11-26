@@ -58,7 +58,7 @@ android {
             buildConfigField("String", "UPDATE_FOLDER", "\"record\"")
         }
         getByName("release") {
-            buildConfigField("String", "START_URL", "\"https://christarose.org/bible_record.html\"")
+            buildConfigField("String", "START_URL", "\"https://christarose.org/bible_record\"")
             buildConfigField("boolean", "LOCAL", "true")
             buildConfigField("String", "UPDATE_FOLDER", "\"\"")
             signingConfig = signingConfigs.findByName("upload")

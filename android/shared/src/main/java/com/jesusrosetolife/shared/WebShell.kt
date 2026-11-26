@@ -27,10 +27,12 @@ object WebShell {
     const val NATIVE_PREFIX = "/__native/"
 
     // Whether an address is the app's own page (same host, same path) - the part after # or ?
-    // may differ, since that is only where on the page the reader is.
+    // may differ, since that is only where on the page the reader is. A trailing .html is
+    // ignored: the public site redirects a.html to a, and that redirect is still the app's page,
+    // not a link out to the browser.
     fun page_own_is(url: Uri, start_url: String): Boolean {
         val start = Uri.parse(start_url)
-        return url.host == start.host && url.path == start.path
+        return url.host == start.host && url.path?.removeSuffix(".html") == start.path?.removeSuffix(".html")
     }
 
     @SuppressLint("SetJavaScriptEnabled")
