@@ -5233,6 +5233,14 @@ def untrusted_piece(command, safe_verbs, safe_exact_commands, outer_vars=None):
             found = untrusted_piece(failed_inner[0], safe_verbs, safe_exact_commands, vars_here)
             if found is not None:
                 return found
+        # A loop body read with its variable unfilled (`wc -c <$f`) fails on
+        # a spelling the loop's own allow reads fine once the list word is put
+        # in, so read the written-out loop before giving up on naming a part.
+        unrolled = for_loop_unrolled_text(command)
+        if unrolled is not None and unrolled != command:
+            found = untrusted_piece(unrolled, safe_verbs, safe_exact_commands, vars_here)
+            if found is not None and found[0] is not None:
+                return found
         return (None, str(e))
     return untrusted_in_tokens(tokens, safe_verbs, safe_exact_commands)
 
