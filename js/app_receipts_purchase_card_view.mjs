@@ -19,7 +19,7 @@ import { equal } from "./equal.mjs";
 import { app_receipts_payment_emoji } from "./app_receipts_payment_emoji.mjs";
 import { app_shared_field_title } from "./app_shared_field_title.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
-import { app_receipts_photos_draw } from "./app_receipts_photos_draw.mjs";
+import { app_shared_photos_draw } from "./app_shared_photos_draw.mjs";
 export function app_receipts_purchase_card_view(parent, purchase) {
   "$plain parent";
   "$plain purchase";
@@ -74,7 +74,7 @@ export function app_receipts_purchase_card_view(parent, purchase) {
     html_style_white_space(shown, "pre-wrap");
   }
   writing_show("Description", "description");
-  app_receipts_photos_draw(card, purchase);
+  app_shared_photos_draw(card, purchase);
   writing_show("Notes", "notes");
   return usd_show;
 }

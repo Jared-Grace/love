@@ -25,7 +25,7 @@ import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_receipts_payment_get } from "./app_receipts_payment_get.mjs";
 import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
-import { app_receipts_photos_draw } from "./app_receipts_photos_draw.mjs";
+import { app_shared_photos_draw } from "./app_shared_photos_draw.mjs";
 import { app_receipts_purchase_photo_add } from "./app_receipts_purchase_photo_add.mjs";
 import { app_shared_button_wide_camera } from "./app_shared_button_wide_camera.mjs";
 import { emoji_camera } from "./emoji_camera.mjs";
@@ -148,7 +148,7 @@ export function app_receipts_purchase_card(parent, purchase, on_saved) {
   }
   payment_show();
   writing_box("Description", "description");
-  let file_show = app_receipts_photos_draw(card, purchase);
+  let file_show = app_shared_photos_draw(card, purchase);
   async function on_photo(file) {
     file_show(file);
     await app_receipts_purchase_photo_add(purchase, file);
