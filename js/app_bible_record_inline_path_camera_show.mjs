@@ -13,7 +13,7 @@ import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_frame_size } from "./app_bible_record_frame_size.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { app_bible_record_frame_draw } from "./app_bible_record_frame_draw.mjs";
-export async function app_bible_record_inline_path_camera_show(
+export async function app_bible_record_inline_path_camera_show({
   held,
   playback_element,
   playback,
@@ -26,8 +26,8 @@ export async function app_bible_record_inline_path_camera_show(
   camera_element,
   canvas,
   canvas_element,
-) {
-  arguments_assert(arguments, 12);
+}) {
+  arguments_assert(arguments, 1);
   if (property_get(held, "camera_on")) {
     return;
   }

@@ -40,7 +40,7 @@ export function app_bible_record_inline_path_camera({
     each([record_button, stop_button], html_display_none);
   }
   async function camera_show() {
-    await app_bible_record_inline_path_camera_show(
+    await app_bible_record_inline_path_camera_show({
       held,
       playback_element,
       playback,
@@ -53,7 +53,7 @@ export function app_bible_record_inline_path_camera({
       camera_element,
       canvas,
       canvas_element,
-    );
+    });
   }
   function record() {
     project_ensure(start);
