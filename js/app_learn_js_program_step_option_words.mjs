@@ -7,9 +7,11 @@ export function app_learn_js_program_step_option_words() {
     "");
   let r = {
     declare: "Declare a variable",
+    define: "Declare a function",
     evaluate: "Solve an expression",
     assign: "Assign a value",
     log: "Log a value to the console",
+    call_function: "Call a function",
     expand: "Write it the long way",
     reset: "Reset the block",
   };

@@ -86,6 +86,24 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   }
   let action = list_get(actions, k);
   let kind = property_get(action, "kind");
+  ("2026-11-26, for the function lessons: a function line declares the function, and a line calling one calls it");
+  if (equal(kind, "define")) {
+    let defined = property_get(action, "name");
+    let r40 = [
+      ["This line declares a function named ", defined],
+      ["Its body is not run now; only a call runs it"],
+      ["So choose: Declare a function"],
+    ];
+    return r40;
+  }
+  if (equal(kind, "call_function")) {
+    let called = property_get(action, "name");
+    let r41 = [
+      ["", called + "()", " calls the function named ", called],
+      ["So choose: Call a function"],
+    ];
+    return r41;
+  }
   ("2026-11-13: a pop just before gave back the item it took off, so what it stood in is solved, as an evaluate leaves it");
   let kind_before = null;
   if (greater_than(k, 0)) {

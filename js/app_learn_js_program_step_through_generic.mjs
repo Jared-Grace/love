@@ -1,5 +1,3 @@
-import { html_display_set } from "./html_display_set.mjs";
-import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_js_program_step_trace } from "./app_learn_js_program_step_trace.mjs";
@@ -25,6 +23,7 @@ import { text_size } from "./text_size.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_get } from "./list_get.mjs";
+import { property_equals } from "./property_equals.mjs";
 import { not } from "./not.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_initialize_list_add } from "./property_initialize_list_add.mjs";
@@ -38,6 +37,7 @@ import { app_learn_js_expression_chosen_background_color } from "./app_learn_js_
 import { app_learn_js_lesson_quiz_wrong_code_background_color } from "./app_learn_js_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -46,6 +46,8 @@ import { html_on_click } from "./html_on_click.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { list_set } from "./list_set.mjs";
 import { app_learn_js_line_pieces_text } from "./app_learn_js_line_pieces_text.mjs";
+import { list_get_property } from "./list_get_property.mjs";
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { subtract } from "./subtract.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -92,8 +94,6 @@ import { sleep_success_color } from "./sleep_success_color.mjs";
 import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-import { list_size_subtract } from "./list_size_subtract.mjs";
-import { list_get_property } from "./list_get_property.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
 import { list_copy } from "./list_copy.mjs";
@@ -105,6 +105,7 @@ import { each } from "./each.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_size_change_animate } from "./html_size_change_animate.mjs";
+import { html_display_set } from "./html_display_set.mjs";
 import { app_learn_js_line_pieces_add } from "./app_learn_js_line_pieces_add.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
@@ -121,7 +122,6 @@ import { html_remove } from "./html_remove.mjs";
 import { app_learn_js_program_step_operator_decoys } from "./app_learn_js_program_step_operator_decoys.mjs";
 import { app_learn_js_expression_value_choose_buttons_generic } from "./app_learn_js_expression_value_choose_buttons_generic.mjs";
 import { app_learn_js_program_step_string_call_is } from "./app_learn_js_program_step_string_call_is.mjs";
-import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_learn_js_array_code_item_from } from "./app_learn_js_array_code_item_from.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
@@ -177,11 +177,16 @@ export function app_learn_js_program_step_through_generic(
   let trace = app_learn_js_program_step_trace(code);
   let noun = app_learn_js_program_step_noun(trace);
   let resets = false;
+  ("2026-11-26: Declare a function and Call a function are offered only in a program that declares one, so every lesson before functions keeps the choices it had");
+  let functions_are = false;
   for (let trace_entry of trace) {
     for (let step_action of property_get(trace_entry, "actions")) {
       let left13 = property_get(step_action, "kind");
       if (equal(left13, "reset")) {
         resets = true;
+      }
+      if (equal(left13, "define")) {
+        functions_are = true;
       }
     }
   }
@@ -960,6 +965,10 @@ export function app_learn_js_program_step_through_generic(
     let next_question = equal(noun, "code")
       ? "What is the next code to run?"
       : "What is the next line of code to run?";
+    ("2026-11-26, at the human's asking: after Call a function, which function is called is asked, answered by pressing the line it is declared on");
+    if (not(done) && property_exists(entry_get(), "enter")) {
+      next_question = "What function is called? Press its line";
+    }
     app_learn_js_div_cycle_code(ask, [next_question]);
     property_set(state, "pressing", true);
     ("the line that runs next is marked as the way on, where being right is already decided, so a walk of the whole course can answer this question as it answers every other");
@@ -1106,6 +1115,10 @@ export function app_learn_js_program_step_through_generic(
   async function action_do(action, line_index) {
     "what the right answer to what this line does then does";
     let kind = property_get(action, "kind");
+    ("2026-11-26: declaring a function and calling one change nothing on the screen; where the computer goes after a call is the next line asked for");
+    if (equal(kind, "define") || equal(kind, "call_function")) {
+      return;
+    }
     if (equal(kind, "reset")) {
       ("2026-10-28, at the human's asking: a line run again is put back the way it is written, its names in place of the values solved into it the last time it ran");
       ("2026-10-29, at the human's asking: a while line run again puts back its whole block, every line the reset names");
@@ -1578,7 +1591,7 @@ export function app_learn_js_program_step_through_generic(
     ("the line that ran stays highlighted while the next line is asked for, at the human's asking 2026-10-14, so the learner can see where the computer is coming from; pressing the next line moves the highlight there");
     property_set(state, "index", property_get(state, "index") + 1);
   }
-  function actions_ask(k) {
+  async function actions_ask(k) {
     "the learner says what the line does next, until they say it is complete";
     let entry = entry_get();
     let line_index = property_get(entry, "line");
@@ -1590,6 +1603,19 @@ export function app_learn_js_program_step_through_generic(
           kind: "complete",
         };
     let kind = property_get(action, "kind");
+    ("2026-11-26: a function's own line, pressed as the function called, has nothing to do yet when the function takes no parameters, so the next line is asked for at once");
+    let enter_empty =
+      property_exists(entry, "enter") && equal(kind, "complete") && equal(k, 0);
+    if (enter_empty) {
+      await action_do(
+        {
+          kind: "complete",
+        },
+        line_index,
+      );
+      next_line_ask();
+      return;
+    }
     property_set(state, "asked", kind);
     html_clear(ask);
     rows_pieces_draw();
@@ -1616,6 +1642,15 @@ export function app_learn_js_program_step_through_generic(
         return r;
       }
       options = list_filter(options, reset_not_is);
+    }
+    if (not(functions_are)) {
+      function function_not_is(offered2) {
+        let left18 = list_get(offered2, 0);
+        let r40 =
+          equal_not(left18, "define") && equal_not(left18, "call_function");
+        return r40;
+      }
+      options = list_filter(options, function_not_is);
     }
     let call_is = app_learn_js_program_step_call_is(kind);
     function option_right_is(offered_kind) {
@@ -1676,6 +1711,17 @@ export function app_learn_js_program_step_through_generic(
       }
       await action_do(action, line_index);
       if (equal(kind, "complete")) {
+        next_line_ask();
+        return;
+      }
+      ("2026-11-26, at the human's asking: Call a function chosen rightly asks straight on which function is called, by pressing its line, so the line calling it is not said complete first");
+      if (equal(kind, "call_function")) {
+        await action_do(
+          {
+            kind: "complete",
+          },
+          line_index,
+        );
         next_line_ask();
         return;
       }

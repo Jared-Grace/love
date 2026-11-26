@@ -21,6 +21,8 @@ import { app_learn_js_program_step_call_code } from "./app_learn_js_program_step
 import { app_learn_js_program_step_call_words } from "./app_learn_js_program_step_call_words.mjs";
 import { app_learn_js_program_step_call_type } from "./app_learn_js_program_step_call_type.mjs";
 import { equal } from "./equal.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export function app_learn_js_program_step_clicks(code) {
   arguments_assert(arguments, 1);
@@ -154,6 +156,14 @@ export function app_learn_js_program_step_clicks(code) {
     }
     ("2026-10-23: the last line ends with the one press saying the program is complete, the shortcut the step-through offers there, rather than the two presses it stands for");
     entries_left = subtract(entries_left, 1);
+    ("2026-11-26: a line calling a function goes straight on to which function is called, and a function's own line with nothing to do goes straight on to the next line, so neither is said complete");
+    let kinds_here = list_map_property(actions, "kind");
+    let calls_here = list_includes(kinds_here, "call_function");
+    let enter_empty =
+      property_exists(traced_entry, "enter") && list_empty_is(actions);
+    if (calls_here || enter_empty) {
+      continue;
+    }
     if (equal(entries_left, 0)) {
       choose_add("This program is complete");
       continue;
