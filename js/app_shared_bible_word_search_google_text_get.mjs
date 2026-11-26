@@ -8,12 +8,14 @@ export function app_shared_bible_word_search_google_text_get() {
     spa: "🔍 Buscar en Google",
     por: "🔍 Pesquisar no Google",
     ind: "🔍 Cari di Google",
+    fra: "🔍 Rechercher sur Google",
     translated_from: {
       urd: "🔍 Search Google",
       tgl: "🔍 Search Google",
       spa: "🔍 Search Google",
       por: "🔍 Search Google",
       ind: "🔍 Search Google",
+      fra: "🔍 Search Google",
     },
   };
   let v = app_shared_text_reader_language(texts);
