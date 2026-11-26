@@ -2423,6 +2423,21 @@ def is_safe_scripts_temp_cp(words):
     return all(is_safe_scripts_temp_path(p) for p in paths)
 
 
+COMMAND_LOOKUP_NAME_RE = re.compile(r"^[A-Za-z0-9_.+-]+$")
+
+
+def is_safe_command_lookup(words):
+    """Exact-shape exception for the shell builtin `command` in its lookup
+    form only: `command -v NAME...` or `command -V NAME...`, which print
+    where each name resolves and run nothing. Any other form of `command`
+    RUNS its arguments (`command rm x` is `rm x` past any function), so the
+    flag must come first and be the only one, and every name must be a plain
+    word - no slash, no expansion."""
+    if len(words) < 3 or words[0] != "command" or words[1] not in ("-v", "-V"):
+        return False
+    return all(COMMAND_LOOKUP_NAME_RE.match(w) for w in words[2:])
+
+
 GIT_RM_TMP_BASENAME_RE = re.compile(r"^(?:_tmp_|claude_tmp_)[A-Za-z0-9_.-]+$")
 
 
@@ -3132,6 +3147,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_claude_temp_mv(words)
             and not is_safe_claude_temp_cp(words)
             and not is_safe_scripts_temp_cp(words)
+            and not is_safe_command_lookup(words)
             and not is_safe_verify_html_rm(words)
             and not is_safe_scripts_temp_rm(words)
             and not is_safe_git_rm_tmp(words)
