@@ -11,12 +11,14 @@ export function app_shared_bible_history_text() {
     spa: " Dónde estabas leyendo (historial)",
     por: " Onde você estava lendo (histórico)",
     ind: " Tempat kamu membaca (riwayat)",
+    fra: " Où vous lisiez (historique)",
     translated_from: {
       urd: " Where you were reading (history)",
       tgl: " Where you were reading (history)",
       spa: " Where you were reading (history)",
       por: " Where you were reading (history)",
       ind: " Where you were reading (history)",
+      fra: " Where you were reading (history)",
     },
   };
   let label = app_shared_text_reader_language(texts);
