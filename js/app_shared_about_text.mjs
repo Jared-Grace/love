@@ -10,12 +10,14 @@ export function app_shared_about_text() {
     spa: " Acerca de",
     por: " Sobre",
     ind: " Tentang",
+    fra: " À propos",
     translated_from: {
       urd: " About",
       tgl: " About",
       spa: " About",
       por: " About",
       ind: " About",
+      fra: " About",
     },
   };
   let label = app_shared_text_reader_language(texts);
