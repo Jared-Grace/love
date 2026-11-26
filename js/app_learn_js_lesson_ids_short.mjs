@@ -843,6 +843,11 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_object_shorthand: text_frozen("shorthand"),
       app_learn_js_lesson_object_push: text_frozen("push_object"),
       app_learn_js_lesson_object_rises: text_frozen("rise_objects"),
+      app_learn_js_lesson_object_list_find: text_frozen("find_by_town"),
+      app_learn_js_lesson_object_list_total: text_frozen("total_price"),
+      app_learn_js_lesson_object_list_cheapest: text_frozen("cheapest_item"),
+      app_learn_js_lesson_object_list_most_for_price:
+        text_frozen("most_for_price"),
       app_learn_js_lesson_object_has_own: text_frozen("object_has_own"),
       app_learn_js_lesson_object_has_own_set: text_frozen("has_own_set"),
       app_learn_js_lesson_array_for_smallest: text_frozen("array_smallest"),
