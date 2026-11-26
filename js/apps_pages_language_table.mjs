@@ -35,6 +35,12 @@ export function apps_pages_language_table() {
         description:
           "Baca satu ayat Alkitab dalam bahasa Indonesia, lalu dalam bahasa Inggris, dengan setiap kata bahasa Inggris dijelaskan dalam bahasa Indonesia.",
       },
+      {
+        code: "fra",
+        title: "Apprendre l'anglais",
+        description:
+          "Lisez un verset de la Bible en français, puis en anglais, avec chaque mot anglais expliqué en français.",
+      },
     ],
   };
   return r;
