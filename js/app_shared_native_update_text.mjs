@@ -10,12 +10,14 @@ export function app_shared_native_update_text() {
     spa: " Actualizar la aplicación",
     por: " Atualizar o aplicativo",
     ind: " Perbarui aplikasi",
+    fra: " Mettre à jour l'application",
     translated_from: {
       urd: " Update app",
       tgl: " Update app",
       spa: " Update app",
       por: " Update app",
       ind: " Update app",
+      fra: " Update app",
     },
   };
   let label = app_shared_text_reader_language(texts);
