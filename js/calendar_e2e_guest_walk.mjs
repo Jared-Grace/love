@@ -1,10 +1,10 @@
-import { fn_name } from "./fn_name.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { modulo } from "./modulo.mjs";
 import { multiply } from "./multiply.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 import { playwright_test_blank_device } from "./playwright_test_blank_device.mjs";
 export async function calendar_e2e_guest_walk(url) {
@@ -71,12 +71,11 @@ export async function calendar_e2e_guest_walk(url) {
     }
   }
   async function code_press_until(page, wanted, wait_ms) {
-    "The spam check takes a few seconds to pass after the page opens, and Get my code pressed before it only says to wait - so it is pressed again while that is all it says, and any other answer throws, leaving the page as it is for the caller to read.";
+    "The spam check takes a few seconds to pass after the page opens, and Get your code pressed before it only says to wait - so it is pressed again while that is all it says, and any other answer throws, leaving the page as it is for the caller to read.";
     for (let tries = 0; less_than(tries, 20); tries++) {
       await page
         .getByRole("button", {
-          name: "Get my code",
-          exact: true,
+          name: "Get your ",
         })
         .click({
           timeout: 10000,
@@ -167,7 +166,7 @@ export async function calendar_e2e_guest_walk(url) {
                 "Send code on Messenger",
                 "3. I will message you back on Messenger.",
                 "4. Then open this page again and pick a time.",
-                "Copy my private link",
+                "Copy your private link",
               ]
             : [
                 "⚠️ First confirm your WhatsApp. Then you can pick a time.",
@@ -176,7 +175,7 @@ export async function calendar_e2e_guest_walk(url) {
                 "Copy code",
                 "2. I will message you back on WhatsApp",
                 "3. Then open this page again and pick a time.",
-                "Copy my private link",
+                "Copy your private link",
               ];
           for (let words of wanted) {
             let b2 = shown.includes(words);
@@ -187,11 +186,7 @@ export async function calendar_e2e_guest_walk(url) {
           if (equal(code, null)) {
             failures.push(flow.via + ": code screen has no PRAY- code");
           }
-          for (let words of [
-            "Pick a day of the week",
-            "Booked",
-            "Get my code",
-          ]) {
+          for (let words of ["Pick a day of the week", "Booked", "Get your "]) {
             if (shown.includes(words)) {
               failures.push(
                 flow.via + ': code screen still shows "' + words + '"',
@@ -241,8 +236,7 @@ export async function calendar_e2e_guest_walk(url) {
             });
           await page
             .getByRole("button", {
-              name: "Get my code",
-              exact: true,
+              name: "Get your ",
             })
             .waitFor({
               timeout: 30000,
