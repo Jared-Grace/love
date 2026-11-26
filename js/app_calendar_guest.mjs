@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
@@ -154,6 +155,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   let step = html_div(card);
   function back_button(box) {
     'Back wears the words and arrow every app\'s way out wears (human, 2026-11-25: "can Back button be DRY with other back buttons? same emoji?"), kept in the calendar\'s plain button dress so it sits like the buttons beside it.';
+    'BACK IS AT THE TOP of every screen (human, 2026-11-26: "Back should be at the top of all step by step UI\'s for consistency?"), so it is found in one place whatever the screen holds. Callers draw it first.';
     let text2 = app_shared_button_back_text();
     app_shared_button_uncolored(box, text2, apps_show);
   }
@@ -187,11 +189,10 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       }
       let label = app_label(v);
       ('MESSENGER NAMES WHAT IS CONFIRMED (human, 2026-11-25: "Confirm your Facebook profile to meet on Messenger" ... "instead of \\"Send your FB MSG code\\""): before the guest is proven, code sent or not, the button says it is the profile being checked and what for. WhatsApp keeps its words.');
+      ('WHATSAPP NAMES THE NUMBER (human, 2026-11-26: "button should be Confirm your WhatsApp phone number"), code sent or not, as Messenger names the profile. Read as this first-screen button; the form\'s Get your code button was the other reading, and kept its words.');
       let unproven_words = equal(v, "messenger")
         ? "Confirm your Facebook profile to meet on Messenger"
-        : p
-          ? "Send your " + label + " code"
-          : "Confirm your " + label;
+        : "Confirm your WhatsApp phone number";
       let words = p && p.proven ? "Book a meeting on " + label : unproven_words;
       async function pick() {
         await app_show(v);
@@ -220,8 +221,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     }
     function share_show() {
       html_clear(step);
-      app_calendar_share_link_draw(step, slug);
       back_button(step);
+      app_calendar_share_link_draw(step, slug);
     }
     app_shared_button_uncolored(
       step,
@@ -238,8 +239,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   let times_back = apps_show;
   function meet_on_show() {
     html_clear(step);
-    app_shared_field_title(step, "Which app do you want to meet on?");
     back_button(step);
+    app_shared_field_title(step, "Which app do you want to meet on?");
     function card_of(v) {
       let p = proof_for(v);
       let r10 = {
@@ -317,6 +318,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     async function started() {
       await redraw_on(v);
     }
+    ('A guest can leave the form unchanged (human, 2026-11-25: "if change wa# should be able to go back or cancel").');
+    back_button(step);
     await app_calendar_guest_proof_form(
       step,
       slug,
@@ -327,8 +330,6 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       proven_vias,
       v,
     );
-    ('A guest can leave the form unchanged (human, 2026-11-25: "if change wa# should be able to go back or cancel").');
-    back_button(step);
   }
   function proof_is_proven(p) {
     let r10 = p.proven;
@@ -350,11 +351,11 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     html_clear(step);
     let slots = free.body.slots;
     if (equal(slots.length, 0)) {
+      back_button(step);
       html_div_text(
         step,
         "No open hours in the next " + booking_window.days_ahead + " days.",
       );
-      back_button(step);
       return;
     }
     ("A time is picked in steps: first a day of the week or, when the open hours reach into more than one month, a month; then a date; then a time. Each step has a Back button to the one before.");
@@ -388,6 +389,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     let marked = null;
     ('The prompt and its buttons sit in one field, spaced off from what follows like the host\'s fields (human: "Pick a day of the week and its buttons should look like a group").');
     let pick_field = app_shared_field(step);
+    ("back_box holds this screen's Back, above its prompt, as every screen has it at the top.");
+    let back_box = html_div(pick_field);
     let chosen_line = html_div_text(pick_field, "");
     ('The picked date and time stand out larger than the prompts before it (human: "choosen date/time should be larger font").');
     function chosen_line_set(words, big) {
@@ -402,16 +405,14 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     function screen_start(words, back) {
       chosen = null;
       final_set(false);
-      html_clear(list);
+      each([list, back_box], html_clear);
       chosen_line_set(words, false);
-      if (equal(back, null)) {
-        let text5 = app_shared_button_back_text();
-        app_shared_button_uncolored(list, text5, times_back);
-      } else {
-        let text3 = app_shared_button_back_text();
-        app_shared_button_uncolored(list, text3, back);
-      }
-      html_div(list);
+      let text5 = app_shared_button_back_text();
+      app_shared_button_uncolored(
+        back_box,
+        text5,
+        equal(back, null) ? times_back : back,
+      );
     }
     function first_show() {
       'WEEKDAY OR MONTH IS ITS OWN SCREEN (human, 2026-11-25: "should it be two buttons: I want to choose a day of the week / I want to choose a month?"), overriding the earlier rejection of "a first screen asking which way to browse": one choice per screen now outranks one press saved. With the open hours inside one month there is no month to pick, so the weekdays come at once.';
@@ -509,14 +510,14 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           chosen = time.slot;
           weekly_chosen = false;
           problems_recheck();
-          html_clear(list);
+          each([list, back_box], html_clear);
           chosen_line_set("Chosen: " + day.label + ", " + time.label, true);
           function time_back() {
             times_show(group, day);
           }
           let left = app_shared_button_back_arrow();
           let text4 = text_combine(left, " Change time");
-          app_shared_button_uncolored(list, text4, time_back);
+          app_shared_button_uncolored(back_box, text4, time_back);
           repeat_draw(day, time);
           final_set(true);
         }
