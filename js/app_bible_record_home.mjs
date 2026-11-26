@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
@@ -97,8 +98,7 @@ export async function app_bible_record_home(context) {
   }
   let drawn = [];
   for (let item of passages) {
-    let passage = property_get(item, "passage");
-    let value = property_get(passage, "verse_numbers");
+    let value = property_path_get_2(item, "passage", "verse_numbers");
     let item2 = entry_for(value);
     list_add(drawn, item2);
   }
