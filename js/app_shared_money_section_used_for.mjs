@@ -39,6 +39,12 @@ export function app_shared_money_section_used_for() {
         "Persembahan diberikan kepada orang-orang yang mengerjakan pekerjaan ini: upah mereka, dan nafkah bagi keluarga mereka sendiri. Firman Tuhan berkata seorang laki-laki harus memelihara keluarganya (1 Timotius 5:8).",
       ],
     },
+    fra: {
+      title: "À quoi sert un don ?",
+      lines: [
+        "Les dons vont aux personnes qui font le travail : leur salaire, et de quoi pourvoir aux besoins de leur propre famille. L'Écriture dit qu'un homme doit prendre soin de sa famille (1 Timothée 5.8).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "What is a gift used for?",
@@ -65,6 +71,12 @@ export function app_shared_money_section_used_for() {
         ],
       },
       ind: {
+        title: "What is a gift used for?",
+        lines: [
+          "Gifts go to the people doing the work - their wages, and providing for their own households. Scripture says a man must provide for his household (1 Timothy 5:8).",
+        ],
+      },
+      fra: {
         title: "What is a gift used for?",
         lines: [
           "Gifts go to the people doing the work - their wages, and providing for their own households. Scripture says a man must provide for his household (1 Timothy 5:8).",
