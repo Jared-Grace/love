@@ -9,12 +9,14 @@ export function app_shared_bible_offline_starting_all_text() {
     spa: "Iniciando las descargas",
     por: "Iniciando os downloads",
     ind: "Memulai unduhan",
+    fra: "Démarrage des téléchargements",
     translated_from: {
       urd: "Starting the downloads",
       tgl: "Starting the downloads",
       spa: "Starting the downloads",
       por: "Starting the downloads",
       ind: "Starting the downloads",
+      fra: "Starting the downloads",
     },
   };
   let text = app_shared_text_reader_language(texts);
