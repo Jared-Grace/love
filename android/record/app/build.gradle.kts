@@ -50,14 +50,27 @@ android {
     // release is the store's: it opens the public site, keeps every take on the phone alone,
     // and leaves updating to the store (src/release/AndroidManifest.xml drops the permission).
     buildTypes {
+        // LOCAL: takes stay on the phone (no Send, no Back up). UPDATE_FOLDER: the storage folder
+        // its Update app button downloads from, or "" for none.
         getByName("debug") {
             buildConfigField("String", "START_URL", "\"https://omnibook5ml.local:8443/dev/bible_record.html\"")
-            buildConfigField("boolean", "STORE", "false")
+            buildConfigField("boolean", "LOCAL", "false")
+            buildConfigField("String", "UPDATE_FOLDER", "\"record\"")
         }
         getByName("release") {
             buildConfigField("String", "START_URL", "\"https://christarose.org/bible_record.html\"")
-            buildConfigField("boolean", "STORE", "true")
+            buildConfigField("boolean", "LOCAL", "true")
+            buildConfigField("String", "UPDATE_FOLDER", "\"\"")
             signingConfig = signingConfigs.findByName("upload")
+        }
+        // A third build, handed out by link, outside the store (human 2026-11-26: a link someone
+        // could use to install it without the store, with an Update button that uses that link;
+        // no way to send, no login). The store's in every way but one: it updates itself, from
+        // its own storage folder, so it never fetches the owner's build.
+        create("shared") {
+            initWith(getByName("release"))
+            matchingFallbacks += listOf("release")
+            buildConfigField("String", "UPDATE_FOLDER", "\"record_shared\"")
         }
     }
 }
@@ -68,6 +81,12 @@ android {
 androidComponents {
     onVariants(selector().withBuildType("release")) { variant ->
         variant.applicationId.set("org.christarose.record")
+    }
+    // The linked build is an app of its own too. REJECTED: the store's id - the store re-signs
+    // its copy with Google's key, so a phone holding this one would have to uninstall it, and
+    // its takes with it, to install from the store.
+    onVariants(selector().withBuildType("shared")) { variant ->
+        variant.applicationId.set("org.christarose.record.shared")
     }
 }
 

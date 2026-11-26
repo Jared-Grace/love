@@ -65,14 +65,15 @@ class MainActivity : AppCompatActivity() {
         val root = FrameLayout(this)
         web = WebShell.create(this, DEV_HOST, START_URL) { name -> if (name == TAKE && take.exists()) take else null }
         web.addJavascriptInterface(Bridge(), "love_record_native")
-        if (BuildConfig.STORE) {
-            // The store build keeps every take on the phone (human 2026-11-25: no send or
-            // sync); the page sees love_record_local and hides Send and Back up. It never
-            // updates itself either - the store does that.
+        if (BuildConfig.LOCAL) {
+            // The public builds keep every take on the phone (human 2026-11-25: no send or
+            // sync); the page sees love_record_local and hides Send and Back up.
             web.addJavascriptInterface(Any(), "love_record_local")
-        } else {
-            // Update app is offered by the page, in its Settings (human 2026-11-23).
-            app_update_bridge_add(this, web, "record", "Record Bible by ChristArose")
+        }
+        if (BuildConfig.UPDATE_FOLDER != "") {
+            // Update app is offered by the page, in its Settings (human 2026-11-23). The store
+            // build has none - the store updates it.
+            app_update_bridge_add(this, web, BuildConfig.UPDATE_FOLDER, "Record Bible by ChristArose")
         }
         root.addView(web, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
 
