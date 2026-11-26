@@ -5694,6 +5694,20 @@ def untrusted_piece_hint(words, safe_verbs):
                 "file, or print the text again for the second one. A `>`/`>>` "
                 "into your scratchpad or scripts/temp/ runs unasked."
             )
+        if verb == "unshare" and any("python" in w for w in plain):
+            return (
+                "`unshare --net` takes the network away and nothing else, so "
+                "python inside it can still write any file. Run it read-only "
+                "with bwrap instead - this form runs unasked: `bwrap --ro-bind "
+                "/usr /usr --symlink usr/bin /bin --symlink usr/lib /lib "
+                "--symlink usr/lib64 /lib64 --ro-bind "
+                "/home/j/a/user/venv_speech /home/j/a/user/venv_speech "
+                "--ro-bind /home/j/a/repos/love /home/j/a/repos/love --proc "
+                "/proc --dev /dev --tmpfs /tmp --unshare-all --chdir "
+                "/home/j/a/repos/love/scripts/py -- "
+                "/home/j/a/user/venv_speech/bin/python ../temp/<name>.py "
+                "[arg ...]` (what it may mount: is_safe_bwrap_python)."
+            )
         if verb in ("mkdir", "rm", "mv"):
             return (
                 f"`{verb}` runs unasked only on WHOLE paths inside your "

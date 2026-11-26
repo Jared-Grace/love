@@ -567,8 +567,9 @@ def said_alone_joined_spelling(g2p, word):
     Each part is read with its capital when only the capital is known, and as
     written when it is known as written.  The parts are then joined by a space,
     which the reader answers part by part.  If any part has no entry either way,
-    the word is read exactly as before - the point is to read from what is
-    written down, never to trade one guess for another.
+    the name closed up into one word is tried, and failing that the word is
+    read exactly as before - the point is to read from what is written down,
+    never to trade one guess for another.
     """
     parts = word.split("-")
     said = []
@@ -581,8 +582,29 @@ def said_alone_joined_spelling(g2p, word):
         elif not guessed_is(g2p, part):
             said.append(part)
         else:
-            return word
+            return said_alone_closed_spelling(g2p, word)
     return " ".join(said)
+
+
+def said_alone_closed_spelling(g2p, word):
+    """A joined name written as one word, when the Bible list has it that way.
+
+    ★ A NAME WITH A PART NOBODY WROTE DOWN IS OFTEN WRITTEN DOWN WHOLE, WITHOUT
+    ITS HYPHEN.  Measured 2026-11-26: the twelve joined BSB names left guessed
+    after reading by parts - Ish-bosheth, Esh-baal, Ishbi-benob and the rest -
+    are every one in the Bible list closed up, as "Ishbosheth" and so on.
+
+    ★ IT IS ONLY THE FALLBACK, SO NO NAME ALREADY READ BY ITS PARTS CHANGES.
+    Those were recorded on 2026-11-26; putting this first would make every one
+    of them due again for a difference nobody has heard.
+
+    If the closed-up spelling has no entry either, the word is read as before.
+    """
+    parts = word.split("-")
+    closed = parts[0][:1].upper() + parts[0][1:] + "".join(p.lower() for p in parts[1:])
+    if guessed_is(g2p, closed):
+        return word
+    return closed
 
 
 JOINED_WORD = re.compile(r"[A-Za-z]+(?:-[A-Za-z]+)+")
