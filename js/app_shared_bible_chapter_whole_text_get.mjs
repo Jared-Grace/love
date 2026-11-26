@@ -11,12 +11,14 @@ export function app_shared_bible_chapter_whole_text_get() {
     spa: "Capítulo completo",
     por: "Capítulo inteiro",
     ind: "Seluruh pasal",
+    fra: "Chapitre entier",
     translated_from: {
       urd: "Whole chapter",
       tgl: "Whole chapter",
       spa: "Whole chapter",
       por: "Whole chapter",
       ind: "Whole chapter",
+      fra: "Whole chapter",
     },
   };
   let label = app_shared_text_reader_language(texts);
