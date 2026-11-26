@@ -1,7 +1,7 @@
+import { app_bible_record_inline_path_chapter_download } from "./app_bible_record_inline_path_chapter_download.mjs";
 import { app_bible_record_inline_path_refresh } from "./app_bible_record_inline_path_refresh.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
 import { app_bible_record_inline_path_download } from "./app_bible_record_inline_path_download.mjs";
-import { app_bible_record_inline_path_entries_taken } from "./app_bible_record_inline_path_entries_taken.mjs";
 import { app_bible_record_inline_path_backup } from "./app_bible_record_inline_path_backup.mjs";
 import { app_bible_record_inline_path_busy } from "./app_bible_record_inline_path_busy.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -14,8 +14,6 @@ import { app_bible_record_local_is } from "./app_bible_record_local_is.mjs";
 import { each } from "./each.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_display_block } from "./html_display_block.mjs";
@@ -40,8 +38,6 @@ import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
 import { app_bible_record_take_kept_delete } from "./app_bible_record_take_kept_delete.mjs";
-import { app_bible_record_download_name } from "./app_bible_record_download_name.mjs";
-import { app_bible_record_native_download_multiple } from "./app_bible_record_native_download_multiple.mjs";
 import { app_bible_record_clip_path } from "./app_bible_record_clip_path.mjs";
 import { firebase_upload_blob_browser_quiet } from "./firebase_upload_blob_browser_quiet.mjs";
 import { app_bible_record_draft_path_of } from "./app_bible_record_draft_path_of.mjs";
@@ -339,15 +335,14 @@ export function app_bible_record_inline_path(
     return r2;
   }
   async function chapter_download() {
-    async function work() {
-      let taken = app_bible_record_inline_path_entries_taken(entries);
-      let blobs = list_map_property(taken, "blob");
-      let lists = list_map_property(taken, "verse_numbers");
-      let verses_taken = list_concat_multiple(lists);
-      let name = app_bible_record_download_name(chapter_code, verses_taken);
-      await app_bible_record_native_download_multiple(blobs, name);
-    }
-    await busy(chapter_button, ready_words, work);
+    let r4 = await app_bible_record_inline_path_chapter_download(
+      entries,
+      chapter_code,
+      busy,
+      chapter_button,
+      ready_words,
+    );
+    return r4;
   }
   async function send() {
     await firebase_auth_ensure(sign_in);
