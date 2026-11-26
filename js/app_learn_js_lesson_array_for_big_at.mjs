@@ -1,11 +1,10 @@
-import { not } from "./not.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_array } from "./js_code_array.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
@@ -70,8 +69,7 @@ export function app_learn_js_lesson_array_for_big_at() {
     let answer = eval_console_log_lines(code4);
     let list = wrong_programs_of(items5);
     let outputs = list_map(list, eval_console_log_lines);
-    let same = list_includes(outputs, answer);
-    let n = not(same);
+    let n = list_includes_not(outputs, answer);
     return n;
   }
   function array_of(size) {
