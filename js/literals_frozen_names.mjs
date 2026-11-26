@@ -99,6 +99,7 @@ export function literals_frozen_names() {
     fn_name("gloss_upload_namespace_en_learn_bible_portuguese"),
     fn_name("gloss_upload_namespace_en_learn_bible_indonesian"),
     fn_name("gloss_upload_namespace_en_learn_bible_french"),
+    fn_name("app_bible_record_takes_indexeddb_name"),
   ];
   return names;
 }
