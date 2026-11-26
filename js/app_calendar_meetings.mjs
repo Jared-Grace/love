@@ -15,6 +15,7 @@ import { calendar_time_local_text } from "./calendar_time_local_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { calendar_person_label } from "./calendar_person_label.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
@@ -74,12 +75,26 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
     html_style_assign(when_part, {
       "font-weight": "bold",
     });
+    ('THE LENGTH IS SAID, BOLD (human, 2026-11-26: "Your meetings: should say 25 minutes in bold"), in brackets as the Booked line says it, and sharing them with every week: "(25 minutes, every week)". A server from before it sent the length sends none, and then only every week shows.');
+    let parts = [];
+    if (meeting.meeting_minutes) {
+      parts.push(meeting.meeting_minutes + " minutes");
+    }
     if (meeting.weekly) {
+      parts.push("every week");
+    }
+    if (greater_than(parts.length, 0)) {
       html_span_text(when_line, " (");
-      let every_part = html_span_text(when_line, "every week");
-      html_style_assign(every_part, {
-        "font-weight": "bold",
-      });
+      function part_draw(text, index) {
+        if (greater_than(index, 0)) {
+          html_span_text(when_line, ", ");
+        }
+        let bold_part = html_span_text(when_line, text);
+        html_style_assign(bold_part, {
+          "font-weight": "bold",
+        });
+      }
+      parts.forEach(part_draw);
       html_span_text(when_line, ")");
     }
     let other = meeting.other;
