@@ -11,7 +11,7 @@ import { app_bible_record_inline_path_sent_show } from "./app_bible_record_inlin
 import { promise_start_unawait } from "./promise_start_unawait.mjs";
 import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { app_bible_record_inline_path_take_delete_confirmed } from "./app_bible_record_inline_path_take_delete_confirmed.mjs";
-export function app_bible_record_inline_path(
+export function app_bible_record_inline_path({
   buttons,
   chapter,
   entry,
@@ -26,8 +26,8 @@ export function app_bible_record_inline_path(
   canvas,
   canvas_element,
   sign_in,
-) {
-  arguments_assert(arguments, 14);
+}) {
+  arguments_assert(arguments, 1);
   ("ONE RECORD HOLDS WHAT THE RECORDER'S PIECES SHARE - whether the camera is on, how to stop a take, the camera's stream, the take, and whether it was sent. Every piece reads and writes the same record at the moment it runs, exactly as when each was a name of its own here, so a piece can live in a file of its own and still see a press of Stop made while it waits.");
   let held = {
     camera_on: false,
