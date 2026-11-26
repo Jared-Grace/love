@@ -83,7 +83,6 @@ export function app_calendar_guest_proof_waiting(
     "I got your message - pick a time",
     on_check,
   );
-  html_div_text(card, "Your private link to this page. Please save it:");
   app_calendar_private_link_draw(card, slug, key);
   let wrong = equal(proof.via, "messenger")
     ? "Wrong profile link? Change it"

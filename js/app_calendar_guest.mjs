@@ -812,7 +812,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
         );
         html_div_text(
           done,
-          "To change or cancel this meeting, or to book another, use this link. Please save it:",
+          "To change or cancel this meeting, or to book another, use your private link.",
         );
         app_calendar_private_link_draw(done, slug, key);
       }
