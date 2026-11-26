@@ -29,6 +29,10 @@ export function app_shared_bible_offline_starting_named_text(name) {
       before: "Memulai unduhan ",
       after: "",
     },
+    fra: {
+      before: "Démarrage du téléchargement de ",
+      after: "",
+    },
     translated_from: {
       urd: {
         before: "Starting the download of ",
@@ -47,6 +51,10 @@ export function app_shared_bible_offline_starting_named_text(name) {
         after: "",
       },
       ind: {
+        before: "Starting the download of ",
+        after: "",
+      },
+      fra: {
         before: "Starting the download of ",
         after: "",
       },
