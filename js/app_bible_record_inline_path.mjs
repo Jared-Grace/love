@@ -86,7 +86,7 @@ export function app_bible_record_inline_path(
     let blob2 = property_get(held, "blob");
     let camera_on2 = property_get(held, "camera_on");
     let sent2 = property_get(held, "sent");
-    let r3 = app_bible_record_inline_path_refresh(
+    let r = app_bible_record_inline_path_refresh(
       entries,
       chapter_reference,
       chapter_button,
@@ -104,7 +104,7 @@ export function app_bible_record_inline_path(
       sent2,
       delete_button,
     );
-    return r3;
+    return r;
   }
   let blob3 = property_get(held, "blob");
   app_bible_record_inline_path_changed(entry, blob3, refreshes);

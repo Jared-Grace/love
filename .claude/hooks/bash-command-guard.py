@@ -2423,6 +2423,77 @@ def is_safe_scripts_temp_cp(words):
     return all(is_safe_scripts_temp_path(p) for p in paths)
 
 
+BWRAP_VENV_RE = re.compile(r"^/home/j/a/user/venv_[A-Za-z0-9_]+$")
+BWRAP_PYTHON_RE = re.compile(r"^(?:/home/j/a/user/venv_[A-Za-z0-9_]+/bin/python3?|/usr/bin/python3)$")
+BWRAP_SYMLINKS = {("usr/bin", "/bin"), ("usr/lib", "/lib"), ("usr/lib64", "/lib64")}
+BWRAP_FIXED_PAIRS = {("--proc", "/proc"), ("--dev", "/dev"), ("--tmpfs", "/tmp")}
+BWRAP_STORAGE_DIR = "/home/j/a/user/storage"
+
+
+def is_bwrap_read_mount(path):
+    return (
+        path in ("/usr", REPO_ROOT.rstrip("/"), BWRAP_STORAGE_DIR)
+        or bool(BWRAP_VENV_RE.match(path))
+    )
+
+
+def is_safe_bwrap_python(words):
+    """Python's counterpart to the sandboxed node template. Node has
+    `--permission` to refuse writes and child processes; Python has no such
+    switch, and `unshare --net` alone leaves it free to write any file. So
+    the sandbox is bwrap, held to a fixed vocabulary that can only build a
+    read-only, network-less world:
+      --ro-bind P P   P is /usr, this repo, a /home/j/a/user/venv_* folder,
+                      or the storage folder - never a writable --bind, and
+                      never the home folder, so secrets there stay unseen;
+      --symlink       only the merged-/usr links /bin /lib /lib64;
+      --proc /proc, --dev /dev, --tmpfs /tmp (scratch that dies with it);
+      --unshare-all   REQUIRED - it is what takes the network away;
+      --die-with-parent, --chdir DIR (DIR inside this repo).
+    After `--`: a venv python or /usr/bin/python3, then plain words only
+    (SAFE_TEMP_SCRIPT_ARG_RE - no quotes or spaces, so no `-c` program).
+    Whatever that python does, it can read only what was mounted and write
+    only the tmpfs, so the script itself needs no check."""
+    if not words or words[0] != "bwrap":
+        return False
+    i = 1
+    unshared = False
+    while i < len(words) and words[i] != "--":
+        flag = words[i]
+        if flag in ("--unshare-all", "--die-with-parent"):
+            unshared = unshared or flag == "--unshare-all"
+            i += 1
+            continue
+        if flag in ("--ro-bind", "--symlink"):
+            if i + 2 >= len(words):
+                return False
+            a, b = words[i + 1], words[i + 2]
+            if flag == "--ro-bind":
+                if a != b or os.path.normpath(a) != a or not is_bwrap_read_mount(a):
+                    return False
+            elif (a, b) not in BWRAP_SYMLINKS:
+                return False
+            i += 3
+            continue
+        if i + 1 >= len(words):
+            return False
+        value = words[i + 1]
+        if flag == "--chdir":
+            if os.path.normpath(value) != value or not (
+                value + "/"
+            ).startswith(REPO_ROOT.rstrip("/") + "/"):
+                return False
+        elif (flag, value) not in BWRAP_FIXED_PAIRS:
+            return False
+        i += 2
+    if not unshared or i >= len(words):
+        return False
+    rest = words[i + 1:]
+    if not rest or not BWRAP_PYTHON_RE.match(rest[0]):
+        return False
+    return all(SAFE_TEMP_SCRIPT_ARG_RE.match(w) for w in rest[1:])
+
+
 COMMAND_LOOKUP_NAME_RE = re.compile(r"^[A-Za-z0-9_.+-]+$")
 
 
@@ -3148,6 +3219,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_claude_temp_cp(words)
             and not is_safe_scripts_temp_cp(words)
             and not is_safe_command_lookup(words)
+            and not is_safe_bwrap_python(unwrapped)
             and not is_safe_verify_html_rm(words)
             and not is_safe_scripts_temp_rm(words)
             and not is_safe_git_rm_tmp(words)

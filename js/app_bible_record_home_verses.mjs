@@ -10,7 +10,7 @@ import { list_last_property } from "./list_last_property.mjs";
 import { app_bible_record_project } from "./app_bible_record_project.mjs";
 import { app_bible_record_project_choose } from "./app_bible_record_project_choose.mjs";
 import { app_bible_record_inline } from "./app_bible_record_inline.mjs";
-export async function app_bible_record_home_verses(
+export function app_bible_record_home_verses(
   passages,
   entry_for,
   reference,
@@ -67,7 +67,7 @@ export async function app_bible_record_home_verses(
       }
       app_bible_record_project_choose(chosen);
     }
-    await app_bible_record_inline(
+    app_bible_record_inline(
       p,
       chapter_code,
       verse_numbers,
