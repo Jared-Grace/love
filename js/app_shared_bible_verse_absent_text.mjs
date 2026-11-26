@@ -10,12 +10,14 @@ export function app_shared_bible_verse_absent_text() {
     spa: "La Biblia que estás leyendo no dio palabras aquí. Puede que esa Biblia no tenga este versículo, o que las palabras no hayan llegado. ¿Tendrá otra Biblia este versículo?",
     por: "A Bíblia que você está lendo não trouxe palavras aqui. Talvez essa Bíblia não tenha este versículo, ou as palavras não chegaram. Outra Bíblia teria este versículo?",
     ind: "Alkitab yang kamu baca tidak memberi kata-kata di sini. Mungkin Alkitab itu tidak memuat ayat ini, atau kata-katanya belum sampai. Apakah Alkitab lain memuat ayat ini?",
+    fra: "La Bible que vous lisez ne donne aucun mot ici. Elle ne contient peut-être pas ce verset, ou les mots ne sont pas encore arrivés. Une autre Bible aurait-elle ce verset ?",
     translated_from: {
       urd: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
       tgl: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
       spa: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
       por: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
       ind: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
+      fra: "The Bible you are reading gave no words here. That Bible may not carry this verse, or the words may not have arrived. Would another Bible have this verse?",
     },
   };
   let text = app_shared_text_reader_language(texts);
