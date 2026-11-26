@@ -30,6 +30,10 @@ export function app_shared_bible_offline_unfinished_all_text(names) {
       before: "Ini belum selesai: ",
       after: ". Maukah kamu memeriksa koneksimu dan mencobanya lagi?",
     },
+    fra: {
+      before: "Ceux-ci n'ont pas fini : ",
+      after: ". Voulez-vous vérifier votre connexion et réessayer ?",
+    },
     translated_from: {
       urd: {
         before: "These did not finish: ",
@@ -48,6 +52,10 @@ export function app_shared_bible_offline_unfinished_all_text(names) {
         after: ". Would you like to check your connection and try them again?",
       },
       ind: {
+        before: "These did not finish: ",
+        after: ". Would you like to check your connection and try them again?",
+      },
+      fra: {
         before: "These did not finish: ",
         after: ". Would you like to check your connection and try them again?",
       },
