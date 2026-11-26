@@ -14,6 +14,7 @@ import { list_filter } from "./list_filter.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
 import { app_learn_js_lesson_object_list_index } from "./app_learn_js_lesson_object_list_index.mjs";
+import { app_learn_js_lesson_object_count_words_for } from "./app_learn_js_lesson_object_count_words_for.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_output } from "./app_learn_js_div_cycle_output.mjs";
@@ -22,9 +23,10 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_object_list_people_for() {
   arguments_assert(arguments, 0);
-  ('writing out a list of people: let people = [{ first: "Simon", last: "Peter" }, { first: "John", last: "Mark" }]; a for loop doing console.log(people[i].first + " " + people[i].last); writes out Simon Peter and John Mark');
+  ('writing out a list of people: let people = [{ first: "Simon", last: "Peter" }, { first: "John", last: "Mark" }]; a for loop doing let p = people[i]; console.log(p.first + " " + p.last); writes out Simon Peter and John Mark');
   ("2026-11-16, at the human's asking - list of people {first,last}, use for to log first + ' ' + last: reading two properties of each object in a list, after Setting properties in a loop set them.");
   ("2026-11-26, at the human's asking - moved before Setting properties in a loop, after One person of an array (people[1].first): reading comes before setting, and the people are written out in full, so the student sees what the array holds. It now reminds of people[1].first, not of items[i].");
+  ("2026-11-26, at the human's asking - DRY: let p = people[i]; then p.first and p.last, so people[i] is written once, the way Counting words with a loop names words[i] as w. Reading only: Setting properties in a loop keeps items[i].n, since setting through a second name changes the object in the array too, which no lesson teaches yet.");
   ("The names are people of the New Testament known by two names - Simon Peter, John Mark, Joseph Barnabas, Thomas Didymus, Joseph Justus - since Bible people rarely have a last name; the second name stands in as the last.");
   ("A set is four questions, each two or three people drawn and shuffled.");
   ("Reading forwards, the wrong answers are the names with no space, last name first, and first names only. Reading backwards, the wrong programs leave out the space, write last before first, and write first alone; each is kept only if it writes out something other than the answer.");
@@ -38,7 +40,7 @@ export function app_learn_js_lesson_object_list_people_for() {
     ["Thomas", "Didymus"],
     ["Joseph", "Justus"],
   ];
-  let log_line = '  console.log(people[i].first + " " + people[i].last);';
+  let log_line = '  console.log(p.first + " " + p.last);';
   function program_with(drawn, line) {
     function object_line(person) {
       let codes = list_map(person, json_to);
@@ -48,7 +50,13 @@ export function app_learn_js_lesson_object_list_people_for() {
     let mapped = list_map(drawn, object_line);
     let lines = ["let people = ["]
       .concat(mapped)
-      .concat(["];", "for (let i = 0; i < people.length; i++) {", line, "}"]);
+      .concat([
+        "];",
+        "for (let i = 0; i < people.length; i++) {",
+        "  let p = people[i];",
+        line,
+        "}",
+      ]);
     let code = list_join_newline(lines);
     return code;
   }
@@ -114,15 +122,9 @@ export function app_learn_js_lesson_object_list_people_for() {
   function backwards_decoys(question, answer) {
     "no space, last before first, first alone; kept only when they write out something else";
     let drawn = drawn_of(answer);
-    let v1 = program_with(
-      drawn,
-      "  console.log(people[i].first + people[i].last);",
-    );
-    let v2 = program_with(
-      drawn,
-      '  console.log(people[i].last + " " + people[i].first);',
-    );
-    let v3 = program_with(drawn, "  console.log(people[i].first);");
+    let v1 = program_with(drawn, "  console.log(p.first + p.last);");
+    let v2 = program_with(drawn, '  console.log(p.last + " " + p.first);');
+    let v3 = program_with(drawn, "  console.log(p.first);");
     let programs = [v1, v2, v3];
     let out_answer = eval_console_log_lines(answer);
     function differs(code) {
@@ -142,12 +144,28 @@ export function app_learn_js_lesson_object_list_people_for() {
       app_learn_js_lesson_object_list_index,
       ["", "people[1].first", " is the second person's first name"],
     );
+    let box_words = app_learn_js_container_light_blue(root);
+    app_learn_js_remember_from_lesson(
+      box_words,
+      context,
+      app_learn_js_lesson_object_count_words_for,
+      [
+        "In a loop, ",
+        "let w = words[i];",
+        " gives each item in turn the name ",
+        "w",
+      ],
+    );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
-      "In a loop, ",
-      "people[i].first",
-      " is each person's first name in turn, and ",
-      "people[i].last",
+      "Here ",
+      "let p = people[i];",
+      " gives each person in turn the name ",
+      "p",
+      ", so ",
+      "p.first",
+      " is their first name and ",
+      "p.last",
       " the last:",
     ]);
     let code2 = program_of([
@@ -172,7 +190,7 @@ export function app_learn_js_lesson_object_list_people_for() {
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
     "Writing out an array of people",
-    "people[i].first",
+    "let p = people[i];",
   );
   let lesson = app_learn_js_lesson_code_logged({
     above,
