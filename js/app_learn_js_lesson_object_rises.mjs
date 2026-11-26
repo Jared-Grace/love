@@ -1,4 +1,3 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
@@ -6,10 +5,9 @@ import { math_min } from "./math_min.mjs";
 import { subtract } from "./subtract.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_1 } from "./range_1.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { not } from "./not.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -30,17 +28,18 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_learn_js_lesson_object_rises() {
   arguments_assert(arguments, 0);
-  ("each rise kept as an object: let item = a[i]; small keeps the smallest so far, let rise = item - small; and rises.push({ item, small, rise }); then console.log(rises[1].rise)");
+  ("each rise kept as an object: let item = a[i]; small keeps the smallest so far, let rise = item - small; and rises.push({ item, small, rise }); then console.log(rises)");
+  ("2026-11-26, at the human's asking: the whole of rises is written out, not one property of one object, since keeping all three numbers each time round is what the lesson is about, and Each rise writes out the whole of rises too. Each answer is about 95 characters, written on one line.");
   ("2026-11-26, at the human's asking - Each rise again, now that objects are taught: each time round pushes the number, the smallest so far and the rise together, so all three can be read back afterwards. Built after An object from variables, The same name twice, Writing the name once and Pushing an object, which teach each part.");
   ("let item = a[i]; names the number the way Counting words with a loop names words[i] as w, so the shorthand { item, small, rise } can be used; a[i] cannot be a shorthand property.");
-  ("Each input is four different numbers from 1 to 9, drawn again until a new smallest comes after the first number and some rise is above 0, as in Each rise, but four rather than five or six, since every pushed object holds three numbers. The question asks for small or rise of one of the three objects pushed.");
-  ("The wrong programs are: the rise worked out and pushed before the if (below 0 at each new smallest), small starting at 0 (each rise is then the number itself), the object of the time round before or after, and the other of small and rise. Each is kept only if it writes out something other than the answer.");
+  ("Each input is four different numbers from 1 to 9, drawn again until a new smallest comes after the first number and some rise is above 0, as in Each rise, but four rather than five or six, since every pushed object holds three numbers.");
+  ("The wrong programs are the three of Each rise - the rise worked out and pushed before the if (below 0 at each new smallest), small starting at 0 (each rise is then the number itself), and item - a[i - 1] (the change from the number before) - and the loop starting at 0, which pushes an object for the first number too. Each is kept only if it writes out something other than the answer.");
   ("No stepping: the tracer cannot yet read an object.");
   ("The writing is a first draft by Claude 2026-11-26.");
-  function program_with(items, small_start, rise_first, k, key) {
-    "the array, small and an empty rises, the loop pushing each object, then one property of one object written out";
+  function program_with(items, small_start, rise_first, i_start, rise_of) {
+    "the array, small and an empty rises, the loop pushing each object, then rises written out";
     let rise_lines = [
-      "  let rise = item - small;",
+      "  let rise = " + rise_of + ";",
       "  rises.push({ item, small, rise });",
     ];
     let if_lines = ["  if (item < small) {", "    small = item;", "  }"];
@@ -51,28 +50,25 @@ export function app_learn_js_lesson_object_rises() {
       "let a = [" + items.join(", ") + "];",
       "let small = " + small_start + ";",
       "let rises = [];",
-      "for (let i = 1; i < a.length; i++) {",
+      "for (let i = " + i_start + "; i < a.length; i++) {",
       "  let item = a[i];",
     ]
       .concat(body)
-      .concat(["}", "console.log(rises[" + k + "]." + key + ");"]);
+      .concat(["}", "console.log(rises);"]);
     let code = list_join_newline(lines);
     return code;
   }
   function program_of(input) {
-    let code = program_with(input.items, "a[0]", false, input.k, input.key);
+    let code = program_with(input.items, "a[0]", false, 1, rise_right);
     return code;
   }
+  let rise_right = "item - small";
   function wrong_programs_of(input) {
     let items = input.items;
-    let k = input.k;
-    let key = input.key;
-    let other_key = equal(key, "small") ? "rise" : "small";
-    let other_k = equal(k, 0) ? 1 : subtract(k, 1);
-    let v = program_with(items, "a[0]", true, k, key);
-    let v2 = program_with(items, "0", false, k, key);
-    let v3 = program_with(items, "a[0]", false, other_k, key);
-    let v4 = program_with(items, "a[0]", false, k, other_key);
+    let v = program_with(items, "a[0]", true, 1, rise_right);
+    let v2 = program_with(items, "0", false, 1, rise_right);
+    let v3 = program_with(items, "a[0]", false, 0, rise_right);
+    let v4 = program_with(items, "a[0]", false, 1, "item - a[i - 1]");
     let programs = [v, v2, v3, v4];
     return programs;
   }
@@ -105,18 +101,13 @@ export function app_learn_js_lesson_object_rises() {
     return items;
   }
   function inputs_get() {
-    "four inputs, two asking small and two asking rise, each of a random one of the three objects, shuffled";
-    let keys = ["small", "small", "rise", "rise"];
+    "four inputs, each four numbers";
     let inputs = [];
-    for (let i = 0; less_than(i, keys.length); i++) {
-      let k = list_shuffle_take([0, 1, 2], 1)[0];
+    for (let i = 0; less_than(i, 4); i++) {
       inputs.push({
         items: items_drawn(),
-        k,
-        key: keys[i],
       });
     }
-    list_shuffle(inputs);
     return inputs;
   }
   let input_by_code = new Map();
@@ -198,16 +189,14 @@ export function app_learn_js_lesson_object_rises() {
     ]);
     let code = program_of({
       items: [7, 2, 5, 1],
-      k: 1,
-      key: "rise",
     });
     let lines = text_split_newline(code);
     let value = eval_console_log_lines(code);
     app_learn_js_code_lines_writes_out(box_four, lines, value);
     let said = [
-      ["", "rises[0]", " is ", "{ item: 2, small: 2, rise: 0 }", ""],
-      ["", "rises[1]", " is ", "{ item: 5, small: 2, rise: 3 }", ""],
-      ["", "rises[2]", " is ", "{ item: 1, small: 1, rise: 0 }", ""],
+      ["", "2", " is a new smallest, so its rise is ", "0", ""],
+      ["", "5 - 2", " is ", "3", ""],
+      ["", "1", " is a new smallest, so its rise is ", "0", ""],
     ];
     for (let line of said) {
       app_learn_js_div_cycle_code(box_four, line);
