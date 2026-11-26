@@ -8,12 +8,14 @@ export function app_shared_bible_offline_prompt_text() {
     spa: "¿Qué idiomas quieres guardar en este dispositivo?",
     por: "Quais idiomas você quer guardar neste dispositivo?",
     ind: "Bahasa mana yang ingin kamu simpan di perangkat ini?",
+    fra: "Quelles langues voulez-vous garder sur cet appareil ?",
     translated_from: {
       urd: "Which languages do you want to keep on this device?",
       tgl: "Which languages do you want to keep on this device?",
       spa: "Which languages do you want to keep on this device?",
       por: "Which languages do you want to keep on this device?",
       ind: "Which languages do you want to keep on this device?",
+      fra: "Which languages do you want to keep on this device?",
     },
   };
   let text = app_shared_text_reader_language(texts);
