@@ -383,21 +383,7 @@ export function app_bible_record_inline_path(
   let ready_words = "⏳ Getting the video ready - this can take a minute...";
   let busy = app_bible_record_inline_path_busy(refresh);
   async function backup() {
-    await firebase_auth_ensure(sign_in);
-    let counts = null;
-    async function work() {
-      counts = await app_bible_record_drafts_upload_all();
-    }
-    await busy(backup_button, "⏳ Backing up the videos...", work);
-    let backed_up = property_get(counts, "backed_up");
-    let failed = property_get(counts, "failed");
-    let v3 = String(backed_up);
-    let said = text_combine_multiple(["✅ ", v3, " backed up"]);
-    if (greater_than(failed, 0)) {
-      let v4 = String(failed);
-      said = text_combine_multiple([said, ", ", v4, " failed - try again"]);
-    }
-    html_text_set(backup_button, said);
+    return app_bible_record_inline_path_backup(sign_in, busy, backup_button);
   }
   async function download() {
     async function work() {
@@ -433,4 +419,26 @@ export function app_bible_record_inline_path(
     await app_bible_record_take_sent_keep(chapter_code, verse_numbers, blob);
     await app_bible_record_take_kept_delete(chapter_code, verse_numbers);
   }
+}
+async function app_bible_record_inline_path_backup(
+  sign_in,
+  busy,
+  backup_button,
+) {
+  arguments_assert(arguments, 3);
+  await firebase_auth_ensure(sign_in);
+  let counts = null;
+  async function work() {
+    counts = await app_bible_record_drafts_upload_all();
+  }
+  await busy(backup_button, "⏳ Backing up the videos...", work);
+  let backed_up = property_get(counts, "backed_up");
+  let failed = property_get(counts, "failed");
+  let v3 = String(backed_up);
+  let said = text_combine_multiple(["✅ ", v3, " backed up"]);
+  if (greater_than(failed, 0)) {
+    let v4 = String(failed);
+    said = text_combine_multiple([said, ", ", v4, " failed - try again"]);
+  }
+  html_text_set(backup_button, said);
 }
