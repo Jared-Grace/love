@@ -14,8 +14,8 @@ export async function app_bible_record_passage(chapter_code, verse_numbers) {
   let verses = await ebible_verses_browser(bible_folder, chapter_code);
   let books = await ebible_version_books_browser(bible_folder);
   function inside(verse) {
-    let r = property_in_list(verse, "verse_number", verse_numbers);
-    return r;
+    let verse_kept = property_in_list(verse, "verse_number", verse_numbers);
+    return verse_kept;
   }
   let texts = list_filter_map_property(verses, inside, "text");
   let text = list_join_space(texts);

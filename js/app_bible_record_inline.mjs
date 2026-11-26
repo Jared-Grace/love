@@ -272,9 +272,9 @@ export function app_bible_record_inline(
     if (app_bible_record_native_is()) {
       camera_on = false;
       changed();
-      async function native_done(taken, error) {
-        if (text_empty_not_is(error)) {
-          let text2 = text_combine("Not recorded: ", error);
+      async function native_done(taken, why) {
+        if (text_empty_not_is(why)) {
+          let text2 = text_combine("Not recorded: ", why);
           html_text_set(problem, text2);
           return;
         }

@@ -30,9 +30,9 @@ export function app_bible_record_native_open(reference, text, done) {
     line_height: property_get(layout, "line_height"),
     band: property_get(layout, "band"),
   };
-  async function finished(error) {
-    if (text_empty_not_is(error)) {
-      done(null, error);
+  async function finished(why) {
+    if (text_empty_not_is(why)) {
+      done(null, why);
       return;
     }
     let response = await fetch(

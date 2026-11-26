@@ -17,12 +17,12 @@ export function app_bible_record_text_layout_band(ctx, width, text, band) {
   function tall() {
     let left = multiply(size, 0.7);
     let left2 = multiply(lines.length, size);
-    let r =
+    let width_most =
       margin +
       multiply(left, 1.4) +
       multiply(left2, 1.25) +
       multiply(margin, 0.5);
-    return r;
+    return width_most;
   }
   function widest() {
     function lambda(line) {

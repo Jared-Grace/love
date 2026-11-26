@@ -43,10 +43,10 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
       break;
     }
   }
-  let half = multiply(height, 0.45);
+  let room_low = multiply(height, 0.45);
   let right2 = multiply(margin, 3);
   let a = subtract(under, right2);
-  let first_room = math_max(a, half);
+  let first_room = math_max(a, room_low);
   while (
     greater_than(multiply(multiply(lines.length, size), 1.25), first_room) &&
     greater_than(size, divide(width, 40))
@@ -61,8 +61,8 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
       return r2;
     }
     let widths = lines.map(lambda);
-    let r = Math.max(...widths);
-    return r;
+    let width_most = Math.max(...widths);
+    return width_most;
   }
   while (
     greater_than(

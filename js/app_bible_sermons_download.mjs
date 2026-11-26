@@ -31,8 +31,8 @@ export async function app_bible_sermons_download(chapter_code) {
   let written = app_bible_sermons_written_book_codes();
   let written_is = list_includes(written, book_code);
   if (written_is) {
-    let value = await g_sermon_write_download(chapter_code);
-    let passages_written = property_get(value, "passages");
+    let value_written = await g_sermon_write_download(chapter_code);
+    let passages_written = property_get(value_written, "passages");
     function lambda(passage) {
       let verse_numbers = property_get(passage, "verse_numbers");
       let lines = property_list_map_property(passage, "lines", "text");
@@ -42,9 +42,9 @@ export async function app_bible_sermons_download(chapter_code) {
       };
       return r;
     }
-    let passages = list_map(passages_written, lambda);
+    let passages_shaped = list_map(passages_written, lambda);
     let r2 = {
-      passages,
+      passages: passages_shaped,
     };
     return r2;
   }
