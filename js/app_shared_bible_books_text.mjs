@@ -9,12 +9,14 @@ export function app_shared_bible_books_text() {
     spa: "Libros",
     por: "Livros",
     ind: "Kitab",
+    fra: "Livres",
     translated_from: {
       urd: "Books",
       tgl: "Books",
       spa: "Books",
       por: "Books",
       ind: "Books",
+      fra: "Books",
     },
   };
   let text = app_shared_text_reader_language(texts);
