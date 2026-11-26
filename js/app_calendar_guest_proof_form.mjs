@@ -348,6 +348,18 @@ export async function app_calendar_guest_proof_form(
     if (started.body.key) {
       on_key(started.body.key);
     }
+    ('THE SAME NUMBER IS SAID TO BE THE SAME (human, 2026-11-26: "choosing get confirmation code for wa# just moves to schedule a meeting using existing number ... UI should say \\"this is your current number; your current number is already confirmed\\""). The server keeps a proof asked for again with the same number or link, and answers proven - so a guest already proven on this app who is answered proven typed what they have. Read off the server\'s answer, not compared here, because the server is what decides two numbers are one (spaces, dashes, a country code). The form stays, the field ringed, so they type a different one or go Back.');
+    let already = started.body.proven && list_includes(proven_vias, via);
+    if (already) {
+      let messenger = equal(via, "messenger");
+      problem_show({
+        field: messenger ? profile_box : number_box,
+        words: messenger
+          ? "This is your current profile link. It is already confirmed. To change it, paste a different link."
+          : "This is your current number. It is already confirmed. To change it, type a different number.",
+      });
+      return;
+    }
     await on_started();
   }
   let text2 = code_text();

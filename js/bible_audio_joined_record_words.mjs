@@ -1,0 +1,76 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_split_comma } from "./text_split_comma.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { bible_audio_joined_chapters_words } from "./bible_audio_joined_chapters_words.mjs";
+import { property_get } from "./property_get.mjs";
+import { file_modified_ms } from "./file_modified_ms.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { bible_audio_folder } from "./bible_audio_folder.mjs";
+import { path_join } from "./path_join.mjs";
+import { path_modified_ms } from "./path_modified_ms.mjs";
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_size } from "./list_size.mjs";
+import { ebible_text_to_speech_chapters_lines } from "./ebible_text_to_speech_chapters_lines.mjs";
+export async function bible_audio_joined_record_words(
+  bible_folder,
+  words_comma,
+) {
+  "$plain bible_folder";
+  "$plain words_comma";
+  "Speaks again every piece of a bible holding one of these joined words where the reader now reads it from what is written down, and only those pieces, skipping a chapter whose named pieces were all spoken since the reader last changed; an empty list means every such joined word.";
+  "★ NAMING THE WORDS IS WHAT LETS A MEND TO A FEW NAMES SKIP THE PIECES MENDED BEFORE IT. The mend is a change to the speech engine's source, which makes every earlier piece look older than the engine; narrowed to the newly mended names, only their pieces are asked for.";
+  "★ ONLY THE PIECES HOLDING SUCH A NAME ARE SPOKEN, BECAUSE THE WHOLE CHAPTER TOOK FIVE MINUTES A CHAPTER. Measured 2026-11-26: four workers finished four of 288 chapters in twenty minutes, about a day for all of them, while the pieces that change are a few lines in each.";
+  "★ A CHAPTER WHOSE NAMED PIECES ARE ALL NEWER THAN THE SPEECH ENGINE'S SOURCE IS SKIPPED, SO A STOPPED RUN CARRIES ON RATHER THAN STARTING OVER. The finder still names a piece after it is spoken again, because the line beside the sound keeps its hyphen; the age of the sound is what says it is done. A later change to the engine makes every piece due again, which only ever redoes work and never skips it.";
+  "Nothing is removed first: the engine writes each named piece over the old one by its number.";
+  arguments_assert(arguments, 2);
+  let split = text_split_comma(words_comma);
+  let words = list_filter(split, text_empty_not_is);
+  let reported = await bible_audio_joined_chapters_words(bible_folder, words);
+  let chapters = property_get(reported, "chapters");
+  let file_path = text_combine_multiple([
+    "./scripts/py/",
+    fn_name("text_to_speech"),
+    ".py",
+  ]);
+  let since = await file_modified_ms(file_path);
+  async function due_is(chapter) {
+    let chapter_code = property_get(chapter, "chapter_code");
+    let lines = property_get(chapter, "lines");
+    let folder = bible_audio_folder(bible_folder, chapter_code);
+    for (let line of lines) {
+      let name = text_combine_multiple([line, ".mp3"]);
+      let piece = path_join([folder, name]);
+      let ms = await path_modified_ms(piece);
+      if (equal(ms, null) || less_than(ms, since)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  let due = [];
+  for (let chapter of chapters) {
+    if (await due_is(chapter)) {
+      list_add(due, chapter);
+    }
+  }
+  if (list_empty_is(due)) {
+    let nothing = {
+      chapters: list_size(chapters),
+      due: 0,
+      spoken: null,
+    };
+    return nothing;
+  }
+  let spoken = await ebible_text_to_speech_chapters_lines(bible_folder, due);
+  let done = {
+    chapters: list_size(chapters),
+    due: list_size(due),
+    spoken,
+  };
+  return done;
+}
