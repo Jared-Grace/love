@@ -12,12 +12,14 @@ export function app_shared_contact_prompt_text() {
     spa: "¿Hay algo que te gustaría decirle al desarrollador?",
     por: "Há algo que você gostaria de dizer ao desenvolvedor?",
     ind: "Adakah yang ingin kamu sampaikan kepada pengembang?",
+    fra: "Voulez-vous dire quelque chose au développeur ?",
     translated_from: {
       urd: "Is there anything you would like to tell the developer?",
       tgl: "Is there anything you would like to tell the developer?",
       spa: "Is there anything you would like to tell the developer?",
       por: "Is there anything you would like to tell the developer?",
       ind: "Is there anything you would like to tell the developer?",
+      fra: "Is there anything you would like to tell the developer?",
     },
   };
   let text = app_shared_text_reader_language(texts);
