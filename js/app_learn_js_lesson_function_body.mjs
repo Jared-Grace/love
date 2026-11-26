@@ -1,11 +1,17 @@
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { json_to } from "./json_to.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { html_div_cycle } from "./html_div_cycle.mjs";
+import { html_bold } from "./html_bold.mjs";
+import { noop } from "./noop.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { list_first } from "./list_first.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
+import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -55,23 +61,69 @@ export function app_learn_js_lesson_function_body() {
   }
   function above(root, context) {
     "what a function is, and that a call runs its body";
+    "2026-11-26: the words are the human's own, pasted in whole, with Functions and call in bold as they marked them";
     let box = app_learn_js_container_light_blue(root);
+    html_div_text(
+      box,
+      'When we write computer programs, we might think "I want that one part of that program I wrote before and I want to use that one part here as well."',
+    );
+    html_div_text(
+      box,
+      "In other words, we may want to reuse a part of a computer program in multiple places",
+    );
+    html_div_cycle(
+      box,
+      [html_bold, noop],
+      ["Functions", " allow us to do this"],
+    );
     app_learn_js_div_cycle_code(box, [
-      "",
-      "function greet() {",
-      " declares a function named ",
-      "greet",
-      ". The lines inside its ",
+      "How do we write a function that does ",
+      'console.log("Hello");',
+      " ?",
+    ]);
+    html_div_text(box, "Like this:");
+    let chip = html_div(box);
+    let code2 = program_with("Hello", 0);
+    app_learn_js_code_dark_lines_comments(chip, code2);
+    app_learn_js_div_cycle_code(box, [
+      "Whatever is in between the ",
       "{ }",
-      " are its body.",
+      " is what the function does each time the function is used",
     ]);
     app_learn_js_div_cycle_code(box, [
-      "The body does not run there. It runs when the function is called: ",
-      "greet();",
+      "We write ",
+      "greet()",
+      " kind of like ",
+      "log(...)",
+      " in ",
+      "console.log(...)",
       "",
     ]);
-    let word = list_first(words);
-    let code = program_of(word);
+    app_learn_js_div_cycle_code(box, [
+      "",
+      "greet",
+      " is an identifier that refers to the function, like ",
+      "i",
+      " refers to ",
+      "1",
+      " in ",
+      "let i = 1;",
+      "",
+    ]);
+    html_div_cycle(
+      box,
+      [noop, html_bold, noop, html_style_code_dark, noop, html_style_code_dark],
+      [
+        "To use or ",
+        "call",
+        " the function, we write ",
+        "greet()",
+        " just like we would write ",
+        "console.log(...)",
+      ],
+    );
+    html_div_text(box, "Here is the complete program:");
+    let code = program_of("Greetings!");
     let lines = text_split_newline(code);
     let value = eval_console_log_lines(code);
     app_learn_js_code_lines_writes_out(box, lines, value);
