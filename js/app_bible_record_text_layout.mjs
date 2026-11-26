@@ -1,3 +1,4 @@
+import { app_bible_record_text_layout_tall } from "./app_bible_record_text_layout_tall.mjs";
 import { app_bible_record_text_layout_widest } from "./app_bible_record_text_layout_widest.mjs";
 import { app_bible_record_text_layout_first_room } from "./app_bible_record_text_layout_first_room.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -23,21 +24,11 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
   wrap();
   let under = subtract(height, below);
   ("THE WORDS GROW TO FILL THE ROOM UNDER THE PICTURE (human 2026-11-23: text doesn't fill space below), a tenth at a time, and stop at the last size whose band still fits under it with every line inside the width - up to an eighth of the frame's width, past which a line holds too few words to read smoothly. A picture filling the whole frame leaves no room under it, so the first step already fails and the letters stay as they were.");
-  function tall() {
-    let left = multiply(size, 0.7);
-    let left2 = multiply(lines.length, size);
-    let r =
-      margin +
-      multiply(left, 1.4) +
-      multiply(left2, 1.25) +
-      multiply(margin, 0.5);
-    return r;
-  }
   while (less_than(size, divide(width, 8))) {
     let before = size;
     size = multiply(size, 1.1);
     wrap();
-    let a = tall();
+    let a = app_bible_record_text_layout_tall(size, lines, margin);
     if (
       greater_than(a, under) ||
       greater_than(app_bible_record_text_layout_widest(ctx, lines), room)
