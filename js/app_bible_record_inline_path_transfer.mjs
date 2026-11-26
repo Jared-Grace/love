@@ -68,7 +68,7 @@ export function app_bible_record_inline_path_transfer({
     );
   }
   async function send() {
-    await app_bible_record_inline_path_send(
+    await app_bible_record_inline_path_send({
       sign_in,
       held,
       chapter_code,
@@ -77,7 +77,7 @@ export function app_bible_record_inline_path_transfer({
       send_button,
       entry,
       refreshes,
-    );
+    });
   }
   let r = {
     send_button,

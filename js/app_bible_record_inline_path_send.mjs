@@ -9,7 +9,7 @@ import { firebase_delete_browser_if_exists } from "./firebase_delete_browser_if_
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
 import { app_bible_record_take_sent_keep } from "./app_bible_record_take_sent_keep.mjs";
 import { app_bible_record_take_kept_delete } from "./app_bible_record_take_kept_delete.mjs";
-export async function app_bible_record_inline_path_send(
+export async function app_bible_record_inline_path_send({
   sign_in,
   held,
   chapter_code,
@@ -18,8 +18,8 @@ export async function app_bible_record_inline_path_send(
   send_button,
   entry,
   refreshes,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   await firebase_auth_ensure(sign_in);
   async function work() {
     let blob = property_get(held, "blob");
