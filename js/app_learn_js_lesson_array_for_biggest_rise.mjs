@@ -1,16 +1,16 @@
-import { math_min } from "./math_min.mjs";
-import { math_max } from "./math_max.mjs";
-import { subtract } from "./subtract.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { subtract } from "./subtract.mjs";
+import { math_min } from "./math_min.mjs";
+import { math_max } from "./math_max.mjs";
 import { range_1 } from "./range_1.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { equal } from "./equal.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_remember_from_lesson } from "./app_learn_js_remember_from_lesson.mjs";
-import { app_learn_js_lesson_array_for_smallest } from "./app_learn_js_lesson_array_for_smallest.mjs";
-import { app_learn_js_lesson_array_for_temp } from "./app_learn_js_lesson_array_for_temp.mjs";
+import { app_learn_js_lesson_array_for_rises } from "./app_learn_js_lesson_array_for_rises.mjs";
+import { app_learn_js_lesson_array_for_biggest } from "./app_learn_js_lesson_array_for_biggest.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -20,7 +20,7 @@ import { app_learn_js_lesson_code_logged_wrong_programs } from "./app_learn_js_l
 export function app_learn_js_lesson_array_for_biggest_rise() {
   arguments_assert(arguments, 0);
   ("the biggest rise from a number to one after it: small is the smallest so far, let rise = a[i] - small; and best keeps the biggest rise, then console.log(best)");
-  ("2026-11-26, at the human's asking, after Which numbers are missing?. Smallest number already keeps the smallest so far and Working out in a loop already names a value worked out inside the loop; the new fact is keeping two running values in one loop, the second worked out from the first. The rise is named once, at the human's asking, rather than a[i] - small written twice.");
+  ("2026-11-26, at the human's asking, after Which numbers are missing?. Smallest number already keeps the smallest so far and Working out in a loop already names a value worked out inside the loop; the new fact is keeping two running values in one loop, the second worked out from the first. The rise is named once, at the human's asking, rather than a[i] - small written twice. Later the same day, at the human's asking, Each rise put just before it, pushing every rise into an array, so this lesson only adds best, kept the way Biggest number keeps big.");
   ("Each input is five or six different numbers from 1 to 9, in no order, drawn again until some number rises after a smaller one, so best is never 0.");
   ("The wrong programs are: small starting at 0 (the rise from 0, so the biggest number), the rise worked out as small - a[i] (never above 0, so 0), and best = a[i] in place of best = rise. Each loops over a.length, so all stop. The other wrong answer offered is the biggest minus the smallest, which ignores which comes first.");
   ("The writing is a first draft by Claude 2026-11-26.");
@@ -96,22 +96,26 @@ export function app_learn_js_lesson_array_for_biggest_rise() {
     app_learn_js_remember_from_lesson(
       box_one,
       context,
-      app_learn_js_lesson_array_for_smallest,
-      ["", "if (a[i] < small) { small = a[i]; }", " keeps the smallest so far"],
+      app_learn_js_lesson_array_for_rises,
+      [
+        "",
+        "let rise = a[i] - small;",
+        " is how far ",
+        "a[i]",
+        " is above the smallest so far",
+      ],
     );
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_remember_from_lesson(
       box_two,
       context,
-      app_learn_js_lesson_array_for_temp,
-      ["", "let temp = a[i] * 2;", " names a value worked out in the loop"],
+      app_learn_js_lesson_array_for_biggest,
+      ["", "if (a[i] > big) { big = a[i]; }", " keeps the biggest so far"],
     );
     let box_three = app_learn_js_container_light_blue(root);
     let lines_said = [
       ["We look for the biggest rise from a number to one after it", ""],
-      ["", "small", " is the smallest number so far", ""],
-      ["", "rise", " is how far ", "a[i]", " is above ", "small", ""],
-      ["", "best", " keeps the biggest ", "rise", ":"],
+      ["", "best", " keeps the biggest ", "rise", " so far:"],
     ];
     for (let said of lines_said) {
       app_learn_js_div_cycle_code(box_three, said);

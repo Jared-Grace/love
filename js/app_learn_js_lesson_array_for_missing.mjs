@@ -1,11 +1,11 @@
-import { floor } from "./floor.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { multiply } from "./multiply.mjs";
-import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { range_1 } from "./range_1.mjs";
+import { not } from "./not.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { multiply } from "./multiply.mjs";
+import { floor } from "./floor.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_map } from "./list_map.mjs";
@@ -133,7 +133,7 @@ export function app_learn_js_lesson_array_for_missing() {
       app_learn_js_div_cycle_code(box_three, said);
     }
     let example = {
-      items: [3, 1, 6, 2, 5],
+      items: [3, 1, 6, 5],
       top: 6,
     };
     let code3 = program_of(example);
@@ -141,14 +141,16 @@ export function app_learn_js_lesson_array_for_missing() {
     let value = eval_console_log_lines(code3);
     app_learn_js_code_lines_writes_out(box_three, lines2, value);
     app_learn_js_div_cycle_code(box_three, [
-      "Only ",
+      "",
+      "2",
+      " and ",
       "4",
-      " is not in ",
+      " are not in ",
       "a",
       ", so ",
       "missing",
       " is ",
-      "[4]",
+      "[2, 4]",
     ]);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
