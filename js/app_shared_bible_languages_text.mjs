@@ -10,12 +10,14 @@ export function app_shared_bible_languages_text() {
     spa: " Elegir idiomas",
     por: " Escolher idiomas",
     ind: " Pilih bahasa",
+    fra: " Choisir les langues",
     translated_from: {
       urd: " Choose languages",
       tgl: " Choose languages",
       spa: " Choose languages",
       por: " Choose languages",
       ind: " Choose languages",
+      fra: " Choose languages",
     },
   };
   let label = app_shared_text_reader_language(texts);
