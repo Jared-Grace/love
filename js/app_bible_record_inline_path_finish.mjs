@@ -7,7 +7,7 @@ import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
 import { app_bible_record_take_keep } from "./app_bible_record_take_keep.mjs";
-export async function app_bible_record_inline_path_finish(
+export async function app_bible_record_inline_path_finish({
   held,
   canvas,
   playback,
@@ -15,8 +15,8 @@ export async function app_bible_record_inline_path_finish(
   refreshes,
   chapter_code,
   verse_numbers,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let stopping = property_get(held, "stop");
   if (null_is(stopping)) {
     return;

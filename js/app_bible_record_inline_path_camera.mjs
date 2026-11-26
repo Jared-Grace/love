@@ -62,7 +62,7 @@ export function app_bible_record_inline_path_camera({
     app_bible_record_inline_path_start(held, canvas_element, entry, refreshes);
   }
   async function finish() {
-    await app_bible_record_inline_path_finish(
+    await app_bible_record_inline_path_finish({
       held,
       canvas,
       playback,
@@ -70,7 +70,7 @@ export function app_bible_record_inline_path_camera({
       refreshes,
       chapter_code,
       verse_numbers,
-    );
+    });
   }
   let r = {
     camera_button,
