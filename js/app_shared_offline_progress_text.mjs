@@ -17,12 +17,14 @@ export function app_shared_offline_progress_text(name, done, total) {
     spa: "Guardando {name}: {done} de {total} capítulos",
     por: "Guardando {name}: {done} de {total} capítulos",
     ind: "Menyimpan {name}: {done} dari {total} pasal",
+    fra: "Enregistrement de {name} : {done} chapitres sur {total}",
     translated_from: {
       urd: "Saving {name}: {done} of {total} chapters",
       tgl: "Saving {name}: {done} of {total} chapters",
       spa: "Saving {name}: {done} of {total} chapters",
       por: "Saving {name}: {done} of {total} chapters",
       ind: "Saving {name}: {done} of {total} chapters",
+      fra: "Saving {name}: {done} of {total} chapters",
     },
   };
   let fills = {
