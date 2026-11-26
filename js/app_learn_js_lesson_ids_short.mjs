@@ -839,6 +839,8 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_object_list_people_for: text_frozen("list_people"),
       app_learn_js_lesson_object_list_index: text_frozen("list_index"),
       app_learn_js_lesson_object_from_variables: text_frozen("from_vars"),
+      app_learn_js_lesson_object_from_variables_same: text_frozen("same_name"),
+      app_learn_js_lesson_object_shorthand: text_frozen("shorthand"),
       app_learn_js_lesson_object_has_own: text_frozen("object_has_own"),
       app_learn_js_lesson_object_has_own_set: text_frozen("has_own_set"),
       app_learn_js_lesson_array_for_smallest: text_frozen("array_smallest"),
