@@ -11,12 +11,14 @@ export function app_shared_contact_placeholder_text() {
     spa: "Por favor, escribe tu mensaje aquí",
     por: "Por favor, escreva sua mensagem aqui",
     ind: "Silakan tulis pesanmu di sini",
+    fra: "Veuillez écrire votre message ici",
     translated_from: {
       urd: "Please write your message here",
       tgl: "Please write your message here",
       spa: "Please write your message here",
       por: "Please write your message here",
       ind: "Please write your message here",
+      fra: "Please write your message here",
     },
   };
   let text = app_shared_text_reader_language(texts);
