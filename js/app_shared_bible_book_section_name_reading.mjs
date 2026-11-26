@@ -119,12 +119,14 @@ export function app_shared_bible_book_section_name_reading(name) {
       spa: "Sin categoría",
       por: "Sem categoria",
       ind: "Tanpa kategori",
+      fra: "Sans catégorie",
       translated_from: {
         urd: "Uncategorized",
         tgl: "Uncategorized",
         spa: "Uncategorized",
         por: "Uncategorized",
         ind: "Uncategorized",
+        fra: "Uncategorized",
       },
     };
     let r11 = app_shared_text_reader_language(texts);
