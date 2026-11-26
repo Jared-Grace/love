@@ -48,7 +48,7 @@ export async function app_bible_record_inline_path_camera_show({
     let blob = property_get(held, "blob");
     app_bible_record_inline_path_changed(entry, blob, refreshes);
     async function native_done(taken, why) {
-      let r = await app_bible_record_inline_path_camera_show_native_done(
+      let r = await app_bible_record_inline_path_camera_show_native_done({
         taken,
         why,
         problem,
@@ -58,7 +58,7 @@ export async function app_bible_record_inline_path_camera_show({
         refreshes,
         chapter_code,
         verse_numbers,
-      );
+      });
       return r;
     }
     function native_open() {

@@ -8,7 +8,7 @@ import { html_display_block } from "./html_display_block.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
 import { app_bible_record_take_keep } from "./app_bible_record_take_keep.mjs";
-export async function app_bible_record_inline_path_camera_show_native_done(
+export async function app_bible_record_inline_path_camera_show_native_done({
   taken,
   why,
   problem,
@@ -18,8 +18,8 @@ export async function app_bible_record_inline_path_camera_show_native_done(
   refreshes,
   chapter_code,
   verse_numbers,
-) {
-  arguments_assert(arguments, 9);
+}) {
+  arguments_assert(arguments, 1);
   if (text_empty_not_is(why)) {
     let text = text_combine("Not recorded: ", why);
     html_text_set(problem, text);
