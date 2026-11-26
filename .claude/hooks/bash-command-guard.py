@@ -5229,18 +5229,21 @@ def untrusted_piece(command, safe_verbs, safe_exact_commands, outer_vars=None):
     try:
         tokens = tokenize(command, subst_validator, vars_here)
     except Unsupported as e:
+        inner_found = None
         if failed_inner:
-            found = untrusted_piece(failed_inner[0], safe_verbs, safe_exact_commands, vars_here)
-            if found is not None:
-                return found
+            inner_found = untrusted_piece(failed_inner[0], safe_verbs, safe_exact_commands, vars_here)
+            if inner_found is not None and inner_found[0] is not None:
+                return inner_found
         # A loop body read with its variable unfilled (`wc -c <$f`) fails on
         # a spelling the loop's own allow reads fine once the list word is put
-        # in, so read the written-out loop before giving up on naming a part.
+        # in, so read the written-out loop before settling for "unreadable".
         unrolled = for_loop_unrolled_text(command)
         if unrolled is not None and unrolled != command:
             found = untrusted_piece(unrolled, safe_verbs, safe_exact_commands, vars_here)
             if found is not None and found[0] is not None:
                 return found
+        if inner_found is not None:
+            return inner_found
         return (None, str(e))
     return untrusted_in_tokens(tokens, safe_verbs, safe_exact_commands)
 
