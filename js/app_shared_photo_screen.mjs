@@ -1,16 +1,20 @@
-import { html_display_flex } from "./html_display_flex.mjs";
-import { html_style_padding } from "./html_style_padding.mjs";
-import { html_style_flex } from "./html_style_flex.mjs";
-import { html_width_full } from "./html_width_full.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_style_position_fixed } from "./html_style_position_fixed.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { html_display_flex } from "./html_display_flex.mjs";
+import { html_style_padding } from "./html_style_padding.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_shared_button_back } from "./app_shared_button_back.mjs";
 import { html_element } from "./html_element.mjs";
+import { html_style_flex } from "./html_style_flex.mjs";
+import { html_width_full } from "./html_width_full.mjs";
+import { app_shared_picture_download } from "./app_shared_picture_download.mjs";
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
 export function app_shared_photo_screen(picture_set) {
   "$plain picture_set";
   "Shows one photo on a screen of its own, as large as the window allows and never cropped, with a way back above it. picture_set is handed the empty picture and gives it its source, so a photo kept on this phone and one fetched from storage open the same way.";
@@ -40,6 +44,15 @@ export function app_shared_photo_screen(picture_set) {
   html_width_full(picture);
   html_style_set(picture, "object-fit", "contain");
   picture_set(picture);
+  ("Under the photo, a button saving it to the phone.");
+  async function on_download() {
+    await app_shared_picture_download(picture);
+  }
+  app_shared_button_wide(
+    screen,
+    text_combine_multiple([emoji_arrow_down(), " Download"]),
+    on_download,
+  );
   history.pushState(null, "");
   window.addEventListener("popstate", close, {
     once: true,
