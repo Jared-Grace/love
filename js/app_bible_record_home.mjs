@@ -1,3 +1,4 @@
+import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
 import { app_bible_record_passages_download } from "./app_bible_record_passages_download.mjs";
@@ -78,8 +79,7 @@ export async function app_bible_record_home(context) {
   function entry_for(verse_numbers) {
     let wanted = list_join_comma(verse_numbers);
     function same(e) {
-      let list2 = property_get(e, "verse_numbers");
-      let joined = list_join_comma(list2);
+      let joined = property_list_join_comma(e, "verse_numbers");
       let eq = equal(joined, wanted);
       return eq;
     }
