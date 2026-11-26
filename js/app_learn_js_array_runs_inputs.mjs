@@ -1,8 +1,7 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
@@ -24,8 +23,7 @@ export function app_learn_js_array_runs_inputs(
       return out;
     }
     let outputs = list_map(list, output_of);
-    let same = list_includes(outputs, answer);
-    let n = not(same);
+    let n = list_includes_not(outputs, answer);
     return n;
   }
   function array_of(size) {
