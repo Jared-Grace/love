@@ -131,7 +131,7 @@ export function app_bible_record_inline_path({
     );
   }
   async function take_delete_confirmed() {
-    let r9 = await app_bible_record_inline_path_take_delete_confirmed(
+    let r9 = await app_bible_record_inline_path_take_delete_confirmed({
       sign_in,
       chapter_code,
       verse_numbers,
@@ -140,7 +140,7 @@ export function app_bible_record_inline_path({
       playback,
       entry,
       refreshes,
-    );
+    });
     return r9;
   }
 }

@@ -8,7 +8,7 @@ import { property_set } from "./property_set.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_record_inline_path_changed } from "./app_bible_record_inline_path_changed.mjs";
-export async function app_bible_record_inline_path_take_delete_confirmed(
+export async function app_bible_record_inline_path_take_delete_confirmed({
   sign_in,
   chapter_code,
   verse_numbers,
@@ -17,8 +17,8 @@ export async function app_bible_record_inline_path_take_delete_confirmed(
   playback,
   entry,
   refreshes,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   ("the store build sent nothing, so there is nothing in storage to delete and nobody to sign in");
   let b = app_bible_record_local_is();
   if (not(b)) {
