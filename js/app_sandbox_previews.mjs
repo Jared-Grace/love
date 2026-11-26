@@ -1,3 +1,4 @@
+import { app_sandbox_previews_photo_organizer_load } from "./app_sandbox_previews_photo_organizer_load.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { property_get } from "./property_get.mjs";
@@ -96,6 +97,7 @@ export function app_sandbox_previews() {
     phone_photos: app_sandbox_previews_phone_photos_load,
     bible_offline_check: app_sandbox_previews_bible_offline_check_load,
     sermon_sweep: app_sandbox_previews_sermon_sweep_load,
+    photo_organizer: app_sandbox_previews_photo_organizer_load,
   };
   return previews;
 }
