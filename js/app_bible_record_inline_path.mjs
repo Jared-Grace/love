@@ -1,3 +1,4 @@
+import { app_bible_record_inline_path_start } from "./app_bible_record_inline_path_start.mjs";
 import { app_bible_record_inline_path_send } from "./app_bible_record_inline_path_send.mjs";
 import { app_bible_record_inline_path_finish } from "./app_bible_record_inline_path_finish.mjs";
 import { app_bible_record_inline_path_camera_show } from "./app_bible_record_inline_path_camera_show.mjs";
@@ -20,7 +21,6 @@ import { null_not_is } from "./null_not_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { html_display_block } from "./html_display_block.mjs";
-import { html_media_recorder_start } from "./html_media_recorder_start.mjs";
 import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_bible_record_take_delete } from "./app_bible_record_take_delete.mjs";
@@ -173,20 +173,13 @@ export function app_bible_record_inline_path(
     project_ensure(start);
   }
   function start() {
-    let b2 = property_get(held, "camera_on");
-    if (not(b2) || null_not_is(property_get(held, "stop"))) {
-      return;
-    }
-    property_set(held, "blob", null);
-    property_set(held, "sent", false);
-    let canvas_stream = canvas_element.captureStream(30);
-    for (let track of property_get(held, "stream").getAudioTracks()) {
-      canvas_stream.addTrack(track);
-    }
-    let value3 = html_media_recorder_start(canvas_stream);
-    property_set(held, "stop", value3);
-    let blob9 = property_get(held, "blob");
-    app_bible_record_inline_path_changed(entry, blob9, refreshes);
+    let r8 = app_bible_record_inline_path_start(
+      held,
+      canvas_element,
+      entry,
+      refreshes,
+    );
+    return r8;
   }
   async function finish() {
     let r6 = await app_bible_record_inline_path_finish(
