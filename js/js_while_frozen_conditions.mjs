@@ -1,15 +1,16 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_visit_types } from "./js_visit_types.mjs";
+import { property_get } from "./property_get.mjs";
 import { js_pure_read_names } from "./js_pure_read_names.mjs";
-import { js_assigned_names } from "./js_assigned_names.mjs";
+import { not } from "./not.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { js_escape_statements_is } from "./js_escape_statements_is.mjs";
-import { js_unparse } from "./js_unparse.mjs";
+import { js_statement_await_own_is } from "./js_statement_await_own_is.mjs";
+import { js_assigned_names } from "./js_assigned_names.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
+import { js_visit_types } from "./js_visit_types.mjs";
 export function js_while_frozen_conditions(ast) {
   arguments_assert(arguments, 1);
   ("The loops in this code that can never stop, because what they wait for is settled");
@@ -48,7 +49,13 @@ export function js_while_frozen_conditions(ast) {
     if (escapes) {
       return;
     }
-    let written = js_assigned_names(body);
+    ("A loop that waits hands the turn to other code each time round, and that code may write the name: a button pressed during the wait is the usual way such a loop is told to stop. So when the loop itself waits, a write anywhere in the code counts, not only one inside the loop.");
+    let waits = js_statement_await_own_is(body);
+    let where = body;
+    if (waits) {
+      where = ast;
+    }
+    let written = js_assigned_names(where);
     let changed = list_intersect(names, written);
     let stuck = list_empty_is(changed);
     if (not(stuck)) {

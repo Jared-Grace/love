@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { app_shared_color_black_dim } from "./app_shared_color_black_dim.mjs";
 import { app_shared_container_base } from "./app_shared_container_base.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -25,7 +26,7 @@ export function app_shared_confirm_over_red(
   html_style_assign(cover, {
     position: "fixed",
     inset: "0",
-    background: "rgba(0, 0, 0, 0.5)",
+    background: app_shared_color_black_dim(),
     "z-index": "1000",
     display: "flex",
     "align-items": "center",

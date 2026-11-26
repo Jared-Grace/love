@@ -80,6 +80,7 @@ export function functions_outside_direct_harmless() {
     fn_name("http_json_memoized_on_success"),
     fn_name("server_data_get"),
     fn_name("youtube_api_get"),
+    fn_name("app_bible_record_native_open"),
   ];
   return names;
 }

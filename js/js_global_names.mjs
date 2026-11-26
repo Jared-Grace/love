@@ -72,6 +72,7 @@ export function js_global_names() {
     "FormData",
     "Headers",
     "Image",
+    "MediaRecorder",
     "IntersectionObserver",
     "MutationObserver",
     "ResizeObserver",

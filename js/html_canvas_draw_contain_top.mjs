@@ -1,8 +1,8 @@
-import { math_min } from "./math_min.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
-import { subtract } from "./subtract.mjs";
+import { math_min } from "./math_min.mjs";
+import { html_canvas_drawn_centred_across } from "./html_canvas_drawn_centred_across.mjs";
+import { property_get } from "./property_get.mjs";
 export function html_canvas_draw_contain_top(
   ctx,
   source,
@@ -18,10 +18,15 @@ export function html_canvas_draw_contain_top(
   let scale_x = divide(width, source_width);
   let scale_y = divide(height, source_height);
   let scale = math_min(scale_x, scale_y);
-  let drawn_width = multiply(source_width, scale);
-  let drawn_height = multiply(source_height, scale);
-  let top = subtract(width, drawn_width);
-  let left = divide(top, 2);
+  let drawn = html_canvas_drawn_centred_across(
+    source_width,
+    source_height,
+    width,
+    scale,
+  );
+  let drawn_width = property_get(drawn, "drawn_width");
+  let drawn_height = property_get(drawn, "drawn_height");
+  let left = property_get(drawn, "left");
   ctx.drawImage(source, left, 0, drawn_width, drawn_height);
   return drawn_height;
 }

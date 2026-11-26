@@ -1,8 +1,9 @@
-import { math_min } from "./math_min.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_bible_record_text_layout } from "./app_bible_record_text_layout.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
+import { math_min } from "./math_min.mjs";
+import { app_shared_color_black_behind_words } from "./app_shared_color_black_behind_words.mjs";
 import { multiply } from "./multiply.mjs";
 export function app_bible_record_text_draw_below(
   ctx,
@@ -26,7 +27,7 @@ export function app_bible_record_text_draw_below(
   let band = property_get(layout, "band");
   let b = subtract(height, band);
   let top = math_min(below, b);
-  ctx.fillStyle = "rgba(0, 0, 0, 0.55)";
+  ctx.fillStyle = app_shared_color_black_behind_words();
   ctx.fillRect(0, top, width, band);
   ctx.fillStyle = "white";
   ctx.textBaseline = "top";
