@@ -87,7 +87,9 @@ export function app_learn_js_lesson_function_body() {
     app_learn_js_code_dark_lines_comments(chip, code2);
     app_learn_js_div_cycle_code(box, [
       "Whatever is in between the ",
-      "{ }",
+      "{",
+      " and ",
+      "}",
       " is what the function does each time the function is used",
     ]);
     app_learn_js_div_cycle_code(box, [
