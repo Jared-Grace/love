@@ -82,7 +82,7 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
     multiply(reference_size, 1.4) +
     multiply(lines.length, line_height) +
     multiply(margin, 0.5);
-  let r = {
+  let layout = {
     margin,
     size,
     lines,
@@ -90,5 +90,5 @@ export function app_bible_record_text_layout(ctx, width, height, text, below) {
     line_height,
     band,
   };
-  return r;
+  return layout;
 }
