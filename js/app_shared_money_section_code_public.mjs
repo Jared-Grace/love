@@ -46,6 +46,13 @@ export function app_shared_money_section_code_public() {
         "Paulus berkata kepada jemaat agar tidak saling membawa ke hadapan hakim-hakim dunia (1 Korintus 6:1-8). Kami tidak akan memakai hak cipta dari pemerintah untuk menuntut seorang saudara karena membagikan Alkitab. Jika ada yang perlu diselesaikan, itu diselesaikan di hadapan jemaat, bukan di hadapan pemerintah dunia.",
       ],
     },
+    fra: {
+      title: "Le code source est public",
+      lines: [
+        "Chacun peut prendre le code source et l'utiliser, y compris pour construire la même chose ailleurs. Le code source se trouve à https://github.com/Jared-Grace/love",
+        "Paul a dit à l'Église de ne pas se traîner les uns les autres devant des juges du monde (1 Corinthiens 6.1-8). Nous n'allons pas utiliser le droit d'auteur d'un gouvernement pour poursuivre un frère parce qu'il partage la Bible. S'il y a quelque chose à régler, cela se règle devant l'Église, et non devant un gouvernement du monde.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "The source code is public",
@@ -76,6 +83,13 @@ export function app_shared_money_section_code_public() {
         ],
       },
       ind: {
+        title: "The source code is public",
+        lines: [
+          "Anyone may take the source code and use it, including to build the same thing somewhere else. The source code is at https://github.com/Jared-Grace/love",
+          "Paul told the church not to drag one another before secular judges (1 Corinthians 6:1-8). We are not going to use a government's copyright to sue a brother for sharing the Bible. If there is something to settle, it is settled before the church, not a secular government.",
+        ],
+      },
+      fra: {
         title: "The source code is public",
         lines: [
           "Anyone may take the source code and use it, including to build the same thing somewhere else. The source code is at https://github.com/Jared-Grace/love",
