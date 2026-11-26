@@ -1,14 +1,15 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_rtl_is } from "./app_shared_rtl_is.mjs";
 import { html_direction_rtl_set } from "./html_direction_rtl_set.mjs";
+import { app_shared_bible_button_chapter_previous } from "./app_shared_bible_button_chapter_previous.mjs";
+import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
+import { app_shared_bible_books } from "./app_shared_bible_books.mjs";
 import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
 import { app_shared_bible_button_chapter_next } from "./app_shared_bible_button_chapter_next.mjs";
 import { app_shared_bible_verses } from "./app_shared_bible_verses.mjs";
 import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
 import { app_shared_bible_settings } from "./app_shared_bible_settings.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_bible_button_chapter_previous } from "./app_shared_bible_button_chapter_previous.mjs";
-import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
-import { app_shared_bible_books } from "./app_shared_bible_books.mjs";
+import { app_shared_bible_search_button } from "./app_shared_bible_search_button.mjs";
 export function app_shared_bible_home_bar_buttons(
   bar,
   context,
@@ -39,4 +40,6 @@ export function app_shared_bible_home_bar_buttons(
   );
   let text = app_shared_gear_settings_text();
   app_shared_screen_set_button(bar, context, app_shared_bible_settings, text);
+  ("2026-11-26, at the human's asking: the search stands after the gear here too, as it does over the chapter, so a reader on one verse can go looking for a word without first going back to the chapter");
+  app_shared_bible_search_button(bar);
 }
