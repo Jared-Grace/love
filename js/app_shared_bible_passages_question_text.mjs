@@ -16,12 +16,14 @@ export function app_shared_bible_passages_question_text(
     spa: "¿Qué pasaje del capítulo {chapter} del libro de {book} quieres elegir?",
     por: "Qual passagem do capítulo {chapter} do livro de {book} você quer escolher?",
     ind: "Perikop mana dari pasal {chapter} kitab {book} yang ingin kamu pilih?",
+    fra: "Quel passage du chapitre {chapter} du livre de {book} voulez-vous choisir ?",
     translated_from: {
       urd: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
       tgl: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
       spa: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
       por: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
       ind: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
+      fra: "Which passage from chapter {chapter} of the book of {book} do you want to choose?",
     },
   };
   let text = app_shared_text_reader_language_filled(texts, {
