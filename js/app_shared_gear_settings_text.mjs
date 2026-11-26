@@ -10,12 +10,14 @@ export function app_shared_gear_settings_text() {
     spa: " Ajustes",
     por: " Configurações",
     ind: " Pengaturan",
+    fra: " Paramètres",
     translated_from: {
       urd: " Settings",
       tgl: " Settings",
       spa: " Settings",
       por: " Settings",
       ind: " Settings",
+      fra: " Settings",
     },
   };
   let label = app_shared_text_reader_language(texts);
