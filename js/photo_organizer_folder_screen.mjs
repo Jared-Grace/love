@@ -1,13 +1,13 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { photo_organizer_folders } from "./photo_organizer_folders.mjs";
-import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { equal } from "./equal.mjs";
 import { html_hash_name_second_set } from "./html_hash_name_second_set.mjs";
+import { not } from "./not.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
@@ -17,8 +17,9 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_input_type_label } from "./app_shared_input_type_label.mjs";
-import { text_trim } from "./text_trim.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
+import { text_trim } from "./text_trim.mjs";
 import { uuid_browser } from "./uuid_browser.mjs";
 import { photo_organizer_folder_put } from "./photo_organizer_folder_put.mjs";
 import { app_shared_field_title } from "./app_shared_field_title.mjs";
@@ -86,6 +87,7 @@ export async function photo_organizer_folder_screen(root, key) {
     app_shared_button_wide(root, "📁 " + property_get(child, "name"), on_child);
   }
   let name_input = app_shared_input_type_label(root, "New folder name", "text");
+  html_attribute_set(name_input, "placeholder", "Trips, Family, Church...");
   async function on_new() {
     let message = html_value_get(name_input);
     let name = text_trim(message);
