@@ -11,12 +11,14 @@ export function app_shared_font_size_larger_text() {
     spa: " Letra más grande",
     por: " Letra maior",
     ind: " Huruf lebih besar",
+    fra: " Texte plus grand",
     translated_from: {
       urd: " Font size larger",
       tgl: " Font size larger",
       spa: " Font size larger",
       por: " Font size larger",
       ind: " Font size larger",
+      fra: " Font size larger",
     },
   };
   let label = app_shared_text_reader_language(texts);
