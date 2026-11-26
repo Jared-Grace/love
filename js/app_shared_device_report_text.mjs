@@ -11,12 +11,14 @@ export function app_shared_device_report_text() {
     spa: " Enviar información del dispositivo",
     por: " Enviar informações do dispositivo",
     ind: " Kirim info perangkat",
+    fra: " Envoyer les infos de l'appareil",
     translated_from: {
       urd: " Upload device info",
       tgl: " Upload device info",
       spa: " Upload device info",
       por: " Upload device info",
       ind: " Upload device info",
+      fra: " Upload device info",
     },
   };
   let label = app_shared_text_reader_language(texts);
