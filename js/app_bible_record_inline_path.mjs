@@ -56,7 +56,7 @@ export function app_bible_record_inline_path({
   let camera_button = property_get(camera_buttons, "camera_button");
   let record_button = property_get(camera_buttons, "record_button");
   let stop_button = property_get(camera_buttons, "stop_button");
-  let transfer_buttons = app_bible_record_inline_path_transfer(
+  let transfer_buttons = app_bible_record_inline_path_transfer({
     buttons,
     held,
     sign_in,
@@ -66,7 +66,7 @@ export function app_bible_record_inline_path({
     entry,
     refreshes,
     refresh,
-  );
+  });
   let send_button = property_get(transfer_buttons, "send_button");
   let download_button = property_get(transfer_buttons, "download_button");
   let chapter_button = property_get(transfer_buttons, "chapter_button");

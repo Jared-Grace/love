@@ -11,7 +11,7 @@ import { property_get } from "./property_get.mjs";
 import { app_bible_record_inline_path_download } from "./app_bible_record_inline_path_download.mjs";
 import { app_bible_record_inline_path_chapter_download } from "./app_bible_record_inline_path_chapter_download.mjs";
 import { app_bible_record_inline_path_send } from "./app_bible_record_inline_path_send.mjs";
-export function app_bible_record_inline_path_transfer(
+export function app_bible_record_inline_path_transfer({
   buttons,
   held,
   sign_in,
@@ -21,9 +21,9 @@ export function app_bible_record_inline_path_transfer(
   entry,
   refreshes,
   refresh,
-) {
+}) {
   "The recorder's buttons that take a take somewhere - send, download, download the chapter, back up - each wired to its step, and handed back so the redraw can label and fade them. refresh is the recorder's redraw, run when a button stops being busy.";
-  arguments_assert(arguments, 9);
+  arguments_assert(arguments, 1);
   let send_button = app_shared_button_wide(buttons, "", send);
   ("NO PLAY BACK BUTTON (human 2026-11-24: already covered elsewhere?): a take is shown in a video with its own play control, so a second way to play it was one button too many.");
   ("DOWNLOAD SAVES THE TAKE CUT DOWN TO THE READING (human 2026-11-24): the near-silent stretch before the first word and after the last is taken off, so the video is just the reading. Only the Android app can cut a video, so the button is there only inside it; the take kept in storage is left whole.");
