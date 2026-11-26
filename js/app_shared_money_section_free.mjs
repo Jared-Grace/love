@@ -52,6 +52,14 @@ export function app_shared_money_section_free() {
         "Jika kamu tidak punya uang untuk diberikan, kamu tetap bisa memakai semuanya.",
       ],
     },
+    fra: {
+      title: "Tout est gratuit, et tout le sera toujours",
+      lines: [
+        "Rien n'est payant.",
+        "Vous ne serez jamais obligé de payer pour utiliser quoi que ce soit.",
+        "Si vous n'avez pas d'argent à donner, vous avez quand même accès à tout.",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Everything is free, and everything always will be",
@@ -86,6 +94,14 @@ export function app_shared_money_section_free() {
         ],
       },
       ind: {
+        title: "Everything is free, and everything always will be",
+        lines: [
+          "Nothing requires payment.",
+          "You will never be forced to pay to use anything.",
+          "If you have no money to give, you still have access to everything.",
+        ],
+      },
+      fra: {
         title: "Everything is free, and everything always will be",
         lines: [
           "Nothing requires payment.",
