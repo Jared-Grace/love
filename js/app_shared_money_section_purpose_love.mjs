@@ -45,6 +45,13 @@ export function app_shared_money_section_purpose_love() {
         "Firman Allah telah diberikan kepada kami dengan cuma-cuma. Karena itu kami memberikannya kepadamu dengan cuma-cuma (Matius 10:8).",
       ],
     },
+    fra: {
+      title: "Notre but est l'amour, pas le profit",
+      lines: [
+        "Notre but est de partager la parole de Dieu.",
+        "La parole de Dieu nous a été donnée gratuitement. Alors nous vous la donnons gratuitement (Matthieu 10.8).",
+      ],
+    },
     translated_from: {
       urd: {
         title: "Our purpose is love, not profit",
@@ -75,6 +82,13 @@ export function app_shared_money_section_purpose_love() {
         ],
       },
       ind: {
+        title: "Our purpose is love, not profit",
+        lines: [
+          "Our purpose is sharing the word of God.",
+          "The word of God has been freely given to us. So we freely give to you (Matthew 10:8).",
+        ],
+      },
+      fra: {
         title: "Our purpose is love, not profit",
         lines: [
           "Our purpose is sharing the word of God.",
