@@ -11,7 +11,7 @@ recording judged it.
 Each piece's .txt beside its sound is what the voice was handed, so this
 cannot disagree with the recording about which words were in it.  The line is
 put through the same two steps the reading uses - straightened, then cut into
-runs - before the letters-to-sound step, because a run is the unit the reader
+runs, with its joined names read part by part - before the letters-to-sound step, because a run is the unit the reader
 sees and a word can read differently at the edge of one.
 
 Every guessed word is named with how often it was guessed and the first piece
@@ -25,7 +25,7 @@ import json
 import os
 import sys
 
-from text_to_speech import g2p_ready, pieces_of, said_text
+from text_to_speech import g2p_ready, pieces_of, said_run, said_text
 
 GUESS_RATING_MAX = 2
 
@@ -58,7 +58,7 @@ def main(args_path):
                 text = fh.read()
             pieces += 1
             for run in pieces_of(said_text(text)):
-                _, tokens = g2p(run)
+                _, tokens = g2p(said_run(g2p, run))
                 for tk in tokens:
                     rating = rating_of(tk)
                     if rating is not None and rating > GUESS_RATING_MAX:

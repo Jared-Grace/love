@@ -585,6 +585,37 @@ def said_alone_joined_spelling(g2p, word):
     return " ".join(said)
 
 
+JOINED_WORD = re.compile(r"[A-Za-z]+(?:-[A-Za-z]+)+")
+
+
+def said_run(g2p, run):
+    """One run of a chapter as the reader is handed it: each joined name it
+    can only guess, read part by part where every part is written down.
+
+    ★ A JOINED NAME IS GUESSED WHOLE INSIDE A CHAPTER JUST AS IT IS ON A BUTTON.
+    Measured 2026-11-25 over the recorded BSB: 290 joined words were guessed,
+    789 times, while their parts were mostly written down.  The button's own
+    rule for a joined word is used here, so a word reads the same in both.
+
+    ★ ONLY THE LETTERS HANDED TO THE READER CHANGE, NEVER THE LINE WRITTEN
+    BESIDE THE SOUND.  That line is compared against the translation to find
+    pieces that went stale, and against the page to time each verse; a space
+    where the page has a hyphen would count every such piece as changed.
+
+    A joined word the reader already answers is left as written, and so is one
+    with any part nobody has written down.
+    """
+
+    def joined_said(match):
+        word = match.group(0)
+        if not guessed_is(g2p, word):
+            return word
+        return said_alone_joined_spelling(g2p, word)
+
+    said = JOINED_WORD.sub(joined_said, run)
+    return said
+
+
 def line_samples(g2p, kokoro, text, speed, citation, voice):
     """Speaks one line, returning the samples and the rate.
 
@@ -617,6 +648,8 @@ def line_samples(g2p, kokoro, text, speed, citation, voice):
     for run in pieces_of(text):
         if citation:
             run = said_alone_spelling(g2p, run)
+        else:
+            run = said_run(g2p, run)
         phonemes, _ = g2p(run)
         if citation:
             phonemes = said_alone_phonemes(run, phonemes, voice)
