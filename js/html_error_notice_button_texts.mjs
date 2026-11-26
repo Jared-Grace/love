@@ -10,8 +10,10 @@ export function html_error_notice_button_texts() {
     spa: "Intentar de nuevo",
     por: "Tentar de novo",
     ind: "Coba lagi",
+    fra: "Réessayer",
     translated_from: {
       ind: "Try again",
+      fra: "Try again",
       urd: "Try again",
       tgl: "Try again",
       spa: "Try again",

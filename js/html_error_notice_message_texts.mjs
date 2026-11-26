@@ -11,8 +11,10 @@ export function html_error_notice_message_texts() {
     spa: "Lo sentimos — esto no terminó de cargar.",
     por: "Desculpe — isto não terminou de carregar.",
     ind: "Maaf — halaman ini belum selesai dimuat.",
+    fra: "Désolé — le chargement n'a pas abouti.",
     translated_from: {
       ind: "Sorry — this didn't finish loading.",
+      fra: "Sorry — this didn't finish loading.",
       urd: "Sorry — this didn't finish loading.",
       tgl: "Sorry — this didn't finish loading.",
       spa: "Sorry — this didn't finish loading.",
