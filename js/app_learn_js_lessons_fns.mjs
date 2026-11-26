@@ -476,6 +476,8 @@ import { app_learn_js_lesson_array_for_push_all } from "./app_learn_js_lesson_ar
 import { app_learn_js_lesson_array_for_push_both } from "./app_learn_js_lesson_array_for_push_both.mjs";
 import { app_learn_js_lesson_array_for_in_both } from "./app_learn_js_lesson_array_for_in_both.mjs";
 import { app_learn_js_lesson_array_for_in_a_not_b } from "./app_learn_js_lesson_array_for_in_a_not_b.mjs";
+import { app_learn_js_lesson_array_for_missing } from "./app_learn_js_lesson_array_for_missing.mjs";
+import { app_learn_js_lesson_array_for_biggest_rise } from "./app_learn_js_lesson_array_for_biggest_rise.mjs";
 import { app_learn_js_lesson_array_for_in_either } from "./app_learn_js_lesson_array_for_in_either.mjs";
 import { app_learn_js_lesson_array_for_in_one_only } from "./app_learn_js_lesson_array_for_in_one_only.mjs";
 import { app_learn_js_lesson_array_for_all_in_b } from "./app_learn_js_lesson_array_for_all_in_b.mjs";
@@ -1109,6 +1111,8 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_array_for_push_both,
     app_learn_js_lesson_array_for_in_both,
     app_learn_js_lesson_array_for_in_a_not_b,
+    app_learn_js_lesson_array_for_missing,
+    app_learn_js_lesson_array_for_biggest_rise,
     app_learn_js_lesson_array_for_in_either,
     app_learn_js_lesson_array_for_in_one_only,
     app_learn_js_lesson_array_for_all_in_b,
