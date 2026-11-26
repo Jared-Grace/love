@@ -628,8 +628,9 @@ import { app_learn_js_lesson_object_properties_add } from "./app_learn_js_lesson
 import { app_learn_js_lesson_object_has_own } from "./app_learn_js_lesson_object_has_own.mjs";
 import { app_learn_js_lesson_object_has_own_set } from "./app_learn_js_lesson_object_has_own_set.mjs";
 import { app_learn_js_lesson_object_count_words_empty } from "./app_learn_js_lesson_object_count_words_empty.mjs";
-import { app_learn_js_lesson_object_list_properties_for } from "./app_learn_js_lesson_object_list_properties_for.mjs";
+import { app_learn_js_lesson_object_list_index } from "./app_learn_js_lesson_object_list_index.mjs";
 import { app_learn_js_lesson_object_list_people_for } from "./app_learn_js_lesson_object_list_people_for.mjs";
+import { app_learn_js_lesson_object_list_properties_for } from "./app_learn_js_lesson_object_list_properties_for.mjs";
 export function app_learn_js_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
@@ -1270,8 +1271,9 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_object_has_own,
     app_learn_js_lesson_object_has_own_set,
     app_learn_js_lesson_object_count_words_empty,
-    app_learn_js_lesson_object_list_properties_for,
+    app_learn_js_lesson_object_list_index,
     app_learn_js_lesson_object_list_people_for,
+    app_learn_js_lesson_object_list_properties_for,
   ];
   return fns;
 }
