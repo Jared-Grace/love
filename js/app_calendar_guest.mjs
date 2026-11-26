@@ -292,10 +292,23 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       await form_show(p.via);
     }
     async function check() {
+      storage_local_set(app_calendar, "guest_resume_waiting", true);
       await redraw_on(p.via);
     }
-    app_calendar_guest_proof_waiting(step, slug, key, p, change, check);
-    back_button(step);
+    ("A guest who pressed I got your message before the host answered comes back to the waiting screen, not to the first step of sending the code again; every other way in starts at the first step. The page is drawn afresh in between, so this is kept on the device and read once.");
+    let left3 = storage_local_get(app_calendar, "guest_resume_waiting");
+    let start_waiting = equal(left3, true);
+    storage_local_set(app_calendar, "guest_resume_waiting", null);
+    app_calendar_guest_proof_waiting(
+      step,
+      slug,
+      key,
+      p,
+      change,
+      check,
+      apps_show,
+      start_waiting,
+    );
   }
   async function form_show(v) {
     html_clear(step);
