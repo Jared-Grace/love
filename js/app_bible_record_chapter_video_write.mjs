@@ -1,3 +1,4 @@
+import { app_bible_record_chapter_video_write_add } from "./app_bible_record_chapter_video_write_add.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -5,12 +6,9 @@ import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { divide } from "./divide.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_private_storage_path } from "./folder_private_storage_path.mjs";
 import { path_join } from "./path_join.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { folder_read } from "./folder_read.mjs";
 import { audio_window_levels } from "./audio_window_levels.mjs";
 import { video_speech_span_or_null } from "./video_speech_span_or_null.mjs";
 import { folder_private_path } from "./folder_private_path.mjs";
@@ -36,23 +34,8 @@ export async function app_bible_record_chapter_video_write(
   let folder = folder_private_storage_path(path2);
   let draft = path_join([folder, "draft"]);
   let by_passage = {};
-  async function add(from) {
-    let there = await file_exists(from);
-    if (not(there)) {
-      return;
-    }
-    let names = await folder_read(from);
-    for (let name of names) {
-      let dot = name.lastIndexOf(".");
-      if (less_than(dot, 1)) {
-        continue;
-      }
-      let passage = name.slice(0, dot);
-      by_passage[passage] = path_join([from, name]);
-    }
-  }
-  await add(folder);
-  await add(draft);
+  await app_bible_record_chapter_video_write_add(folder, by_passage);
+  await app_bible_record_chapter_video_write_add(draft, by_passage);
   function first_verse(passage) {
     let r = Number.parseInt(passage.split(",")[0], 10);
     return r;
