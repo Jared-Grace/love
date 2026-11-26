@@ -1,4 +1,4 @@
-import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { app_bible_record_home_verses } from "./app_bible_record_home_verses.mjs";
 import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
@@ -21,11 +21,6 @@ import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_bible_record_take_or_null } from "./app_bible_record_take_or_null.mjs";
-import { property_set } from "./property_set.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
-import { list_last_property } from "./list_last_property.mjs";
-import { app_bible_record_inline } from "./app_bible_record_inline.mjs";
 export async function app_bible_record_home(context) {
   "The chapter chooser the sermons app uses, with a recorder under each passage, in place rather than on a screen of its own, and, in the top bar, which project the recordings go into. Nothing is recorded until a project is chosen, so the first button asks for one and then opens the camera.";
   "Recording a passage again inside the same project replaces the earlier take, so the button stays under every passage whether or not it has been recorded.";
@@ -96,61 +91,12 @@ export async function app_bible_record_home(context) {
     let first = list_first(found);
     return first;
   }
-  let drawn = [];
-  for (let item of passages) {
-    let value = property_path_get_2(item, "passage", "verse_numbers");
-    let item2 = entry_for(value);
-    list_add(drawn, item2);
-  }
-  let chapter = {
+  app_bible_record_home_verses(
+    passages,
+    entry_for,
     reference,
     entries,
-    refreshes: [],
-  };
-  let list = property_get(chapter, "refreshes");
-  async function take_load(e) {
-    let verse_numbers2 = property_get(e, "verse_numbers");
-    let found = await app_bible_record_take_or_null(
-      chapter_code,
-      verse_numbers2,
-    );
-    if (null_is(found)) {
-      return;
-    }
-    property_set(e, "blob", found);
-    for (let each_refresh of list) {
-      each_refresh();
-    }
-  }
-  for (let e of entries) {
-    if (list_includes_not(drawn, e)) {
-      take_load(e);
-    }
-  }
-  for (let item of passages) {
-    let passage = property_get(item, "passage");
-    let verses = property_get(item, "verses");
-    let p = list_last_property(verses, "p");
-    let verse_numbers = property_get(passage, "verse_numbers");
-    let entry = entry_for(verse_numbers);
-    function project_ensure(then) {
-      function chosen() {
-        project_label();
-        then();
-      }
-      if (app_bible_record_project()) {
-        chosen();
-        return;
-      }
-      app_bible_record_project_choose(chosen);
-    }
-    app_bible_record_inline(
-      p,
-      chapter_code,
-      verse_numbers,
-      project_ensure,
-      chapter,
-      entry,
-    );
-  }
+    chapter_code,
+    project_label,
+  );
 }
