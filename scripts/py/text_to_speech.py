@@ -712,8 +712,18 @@ def job_spoken(job):
         level = job.get("compression_level", COMPRESSION_LEVEL)
         citation = job.get("citation", False)
         voice = job.get("voice", VOICE)
+        # ★ A JOB MAY NAME THE PIECES IT WANTS, AND THE REST ARE LEFT AS THEY
+        # ARE.  A change to how a few words are read touches a few lines of a
+        # chapter, and speaking the whole chapter again for them measured
+        # 2026-11-26 at five minutes a chapter.  Pieces are numbered by their
+        # line in the chapter, so a named piece lands exactly where it was.
+        only = job.get("lines")
         silent = 0
+        written = 0
         for i, line in enumerate(lines):
+            if only is not None and i not in only:
+                continue
+            written += 1
             samples, rate = line_samples(
                 engine["g2p"], engine["kokoro"], line, speed, citation, voice
             )
@@ -723,7 +733,12 @@ def job_spoken(job):
             write_mp3(out_dir / f"{i}.mp3", samples, rate, level)
             with open(out_dir / f"{i}.txt", "w", encoding="utf-8") as f:
                 f.write(line)
-        return {"lines": len(lines), "silent": silent, "folder": path_output}
+        return {
+            "lines": len(lines),
+            "written": written,
+            "silent": silent,
+            "folder": path_output,
+        }
     except Exception as e:
         return {"folder": path_output, "spoken": False, "error": repr(e)}
 
@@ -733,7 +748,7 @@ def jobs_of(data):
     if "jobs" in data:
         return list(data["jobs"])
     one = {"text": data["text"], "path_output": data["path_output"]}
-    for carried in ("speed", "compression_level", "citation", "voice"):
+    for carried in ("speed", "compression_level", "citation", "voice", "lines"):
         if carried in data:
             one[carried] = data[carried]
     return [one]
