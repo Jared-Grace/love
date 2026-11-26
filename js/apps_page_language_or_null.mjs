@@ -1,9 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_pages_language_table } from "./apps_pages_language_table.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { apps_pages_language } from "./apps_pages_language.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { list_find_or_null } from "./list_find_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 export function apps_page_language_or_null(page_name) {
@@ -16,8 +15,7 @@ export function apps_page_language_or_null(page_name) {
   for (let a_name of a_names) {
     let pages = apps_pages_language(a_name);
     function lambda(page) {
-      let name = property_get(page, "name");
-      let same = equal(name, page_name);
+      let same = property_equals(page, "name", page_name);
       return same;
     }
     let found = list_find_or_null(pages, lambda);
