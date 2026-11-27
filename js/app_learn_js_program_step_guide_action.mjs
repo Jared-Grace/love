@@ -98,6 +98,14 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
   }
   if (equal(kind, "call_function")) {
     let called = property_get(action, "name");
+    if (greater_than(k, start)) {
+      ("2026-11-27, at the human's asking, for a variable as the input: once the input in the call is solved, the function is called with the value it was solved to");
+      let r42 = [
+        ["The input is solved, so the function named ", called, " is called"],
+        ["So choose: Call a function"],
+      ];
+      return r42;
+    }
     let r41 = [
       ["", called + "()", " calls the function named ", called],
       ["So choose: Call a function"],
@@ -196,7 +204,7 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     let param_value = property_get(action, "value");
     let param_code = js_value_code(param_value);
     let r43 = [
-      ["", param_name, " is given the value written in the call: ", param_code],
+      ["", param_name, " is given the value from the call: ", param_code],
       ["So choose: Assign a value"],
     ];
     return r43;
@@ -476,6 +484,16 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
       solve,
     ]);
     return r16;
+  }
+  if (list_includes(kinds, "call_function")) {
+    ("2026-11-27, at the human's asking, for a variable as the input: a name written as the input in a call is solved before the function is called, so the function gets its value");
+    let call_text = list_last_property(actions, "text");
+    let r43 = [
+      ["This line calls a function: ", call_text],
+      ["The input is the name ", name, ", so it needs solving first"],
+      solve,
+    ];
+    return r43;
   }
   if (list_includes(kinds, "assign")) {
     let r8 = [
