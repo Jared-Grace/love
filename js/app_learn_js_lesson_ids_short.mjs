@@ -673,6 +673,7 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_function_between: text_frozen("function_between"),
       app_learn_js_lesson_function_two: text_frozen("function_two"),
       app_learn_js_lesson_function_outside: text_frozen("function_outside"),
+      app_learn_js_lesson_function_if: text_frozen("function_if"),
       app_learn_js_lesson_function_loop: text_frozen("function_loop"),
       app_learn_js_lesson_array_log: text_frozen("array_log"),
       app_learn_js_lesson_array_shift_push: text_frozen("shift_push"),

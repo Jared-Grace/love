@@ -647,6 +647,7 @@ import { app_learn_js_lesson_function_never } from "./app_learn_js_lesson_functi
 import { app_learn_js_lesson_function_between } from "./app_learn_js_lesson_function_between.mjs";
 import { app_learn_js_lesson_function_two } from "./app_learn_js_lesson_function_two.mjs";
 import { app_learn_js_lesson_function_outside } from "./app_learn_js_lesson_function_outside.mjs";
+import { app_learn_js_lesson_function_if } from "./app_learn_js_lesson_function_if.mjs";
 import { app_learn_js_lesson_function_loop } from "./app_learn_js_lesson_function_loop.mjs";
 export function app_learn_js_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
@@ -1307,6 +1308,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_function_between,
     app_learn_js_lesson_function_two,
     app_learn_js_lesson_function_outside,
+    app_learn_js_lesson_function_if,
     app_learn_js_lesson_function_loop,
   ];
   return fns;

@@ -104,7 +104,7 @@ export function app_calendar_guest_proof_waiting(
     app_shared_button_uncolored(screen, "Copy code again", code_copy);
     let sent_from = messenger
       ? "Send it from your Facebook: " + proof.profile_given
-      : "Send it from this WhatsApp number: " + proof.whatsapp;
+      : "Send it from the WhatsApp number you want me to reach you on.";
     let from_line = html_div_text(screen, sent_from);
     app_shared_text_deemphasized(from_line);
   }
@@ -125,10 +125,14 @@ export function app_calendar_guest_proof_waiting(
     );
     app_shared_button_uncolored(screen, "Show your code again", copy_show);
     app_calendar_private_link_draw(screen, slug, key);
-    let wrong = messenger
-      ? "Wrong profile link? Change it"
-      : "Wrong number? Change it";
-    app_shared_button_uncolored(screen, wrong, on_change);
+    ("Only Messenger has a link typed that can be wrong; a WhatsApp guest typed no number - the number the code came from is the one proven (human, 2026-11-27).");
+    if (messenger) {
+      app_shared_button_uncolored(
+        screen,
+        "Wrong profile link? Change it",
+        on_change,
+      );
+    }
   }
   let left = storage_local_get(app_calendar, sent_key);
   if (equal(left, proof.code)) {

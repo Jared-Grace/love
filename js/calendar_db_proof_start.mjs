@@ -4,7 +4,6 @@ import { not } from "./not.mjs";
 import { calendar_messenger_name_usable } from "./calendar_messenger_name_usable.mjs";
 import { calendar_profile_url_read } from "./calendar_profile_url_read.mjs";
 import { calendar_db_person_write } from "./calendar_db_person_write.mjs";
-import { calendar_db_person_save } from "./calendar_db_person_save.mjs";
 import { calendar_confirm_code } from "./calendar_confirm_code.mjs";
 import { calendar_send_url } from "./calendar_send_url.mjs";
 export async function calendar_db_proof_start(
@@ -12,18 +11,19 @@ export async function calendar_db_proof_start(
   uid,
   slug,
   name,
-  whatsapp,
   timezone,
   via,
   profile_typed,
   now_iso,
   id,
 ) {
-  arguments_assert(arguments, 10);
-  ("A guest asks to prove who they are to the host at slug, before any time can be booked: writes who they are under uid, and answers {ok, reason, code, send_url, proven}. send_url opens WhatsApp (or Messenger) to the host with the code typed. Reasons: no_host, messenger, profile, whatsapp, timezone.");
+  arguments_assert(arguments, 9);
+  ("A guest asks to prove who they are to the host at slug, before any time can be booked: writes who they are under uid, and answers {ok, reason, code, send_url, proven}. send_url opens WhatsApp (or Messenger) to the host with the code typed. Reasons: no_host, messenger, profile, timezone.");
+  ('★ NO NUMBER IS TYPED (human, 2026-11-27: "Do they need to enter their wa#? I receive their wa# with the code from whatever # they\'re logged into - otherwise, what if the number they send the code from is different than what they entered?"). The code is the proof, and the number it arrives from is the number proven: the host types that number on Confirm, and it is written then. So a WhatsApp proof starts with no number, and a guest keeps any number already proven until a new code is confirmed.');
+  ("For WhatsApp, a code still waiting is kept, so a code already sent still matches; asking while proven starts a new proof with a new code - that is how a guest changes number, sending the new code from the new phone.");
   ('★ PROVE FIRST, THEN BOOK (human, 2026-11-20: "100% knowing their FB url/wa# so they don\'t book, enter something wrong, expect me to show up"). Many guests do not read English well, so a booking that is only a request until a code arrives can be read as a meeting. Here nothing is booked until the host has seen the code arrive from the number or profile given; after that, every time picked is booked at once.');
   ('★ ONE PROOF PER GUEST, HOST AND APP (human, 2026-11-24: "it should allow multiple communications as confirmed"). A guest proven on WhatsApp who asks to meet on Messenger keeps WhatsApp proven while the Messenger code waits, so they can still book on WhatsApp at once.');
-  ("★ EACH PROOF KEPT. Asking again with the same number (or the same profile link) keeps the proof as it is - proven stays proven, a waiting one keeps its code, so a code already sent still matches. A different number or link starts a new proof with a new code, because the host has proven only the one they saw.");
+  ("★ EACH PROOF KEPT. On Messenger, asking again with the same profile link keeps the proof as it is - proven stays proven, a waiting one keeps its code, so a code already sent still matches. A different link starts a new proof with a new code, because the host has proven only the one they saw.");
   ("A Messenger guest gives no number and keeps any number already given, as when booking; profile_given is the link they typed, and profile_url is the one the host confirms from, which may differ.");
   function refused(reason) {
     let r = {
@@ -62,26 +62,19 @@ export async function calendar_db_proof_start(
     .prepare("SELECT whatsapp FROM people WHERE uid = ?1")
     .bind(uid)
     .first();
-  let saved = messenger
-    ? await calendar_db_person_write(
-        db,
-        uid,
-        name,
-        equal(before, null) ? "" : before.whatsapp,
-        timezone,
-        now_iso,
-      )
-    : await calendar_db_person_save(db, uid, name, whatsapp, timezone, now_iso);
+  let saved = await calendar_db_person_write(
+    db,
+    uid,
+    name,
+    equal(before, null) ? "" : before.whatsapp,
+    timezone,
+    now_iso,
+  );
   if (not(saved.ok)) {
     let r5 = refused(saved.reason);
     return r5;
   }
-  let person = await db
-    .prepare("SELECT whatsapp FROM people WHERE uid = ?1")
-    .bind(uid)
-    .first();
-  let number = messenger ? "" : person.whatsapp;
-  let digits = String(number).replace(/[^0-9]/g, "");
+  let number = "";
   let old = await db
     .prepare(
       "SELECT via, whatsapp, profile_given, code, confirmed_at FROM proofs WHERE host_uid = ?1 AND guest_uid = ?2 AND via = ?3",
@@ -92,8 +85,9 @@ export async function calendar_db_proof_start(
   let same =
     not(b) &&
     equal(old.via, via_kept) &&
-    equal(String(old.whatsapp).replace(/[^0-9]/g, ""), digits) &&
-    equal(old.profile_given, profile_given);
+    (messenger
+      ? equal(old.profile_given, profile_given)
+      : equal(old.confirmed_at, null));
   let code = same ? old.code : calendar_confirm_code(id);
   let proven = same && not(equal(old.confirmed_at, null));
   if (same) {
