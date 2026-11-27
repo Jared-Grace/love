@@ -101,8 +101,9 @@ import { app_learn_js_program_step_guide_line_next } from "./app_learn_js_progra
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { app_learn_js_quiz_choice_button_answer_generic } from "./app_learn_js_quiz_choice_button_answer_generic.mjs";
-import { each } from "./each.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
+import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
+import { each } from "./each.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { html_display_set } from "./html_display_set.mjs";
@@ -1032,6 +1033,24 @@ export function app_learn_js_program_step_through_generic(
     });
     property_set(holder, "button", complete);
   }
+  async function note_forget(line_index, names) {
+    "2026-11-27, for the inputs lessons: the note above line_index fades, its room closes, and names are no longer declared or held, as when a call ends and its parameters go";
+    let slot = list_get(slots, line_index);
+    let comment = list_get(comments, line_index);
+    let duration = app_shared_animation_duration();
+    await html_opacity_animate(comment, "0", duration);
+    function note_clear() {
+      html_clear(comment);
+    }
+    await html_height_change_animate(slot, comment, note_clear, duration);
+    list_set(noted, line_index, null);
+    let declared = property_get(state, "declared");
+    let held = property_get(state, "held");
+    for (let name of names) {
+      property_delete_if_exists(declared, name);
+      property_delete_if_exists(held, name);
+    }
+  }
   function note_value_source(name) {
     "the value in the note saying what name holds, drawn again showing and handed back so a copy of it can be sent down; null when name has no note";
     let declared3 = property_get(state, "declared");
@@ -1445,7 +1464,9 @@ export function app_learn_js_program_step_through_generic(
         new_item,
         item_from,
       );
-      await action_piece_send(line_index, action, hidden3, duration2);
+      ("2026-11-27, for the inputs lessons: a parameter's value is written in the call, so it goes up from the call line rather than from the function's own line");
+      let source_line = property_get_or(action, "from_line", line_index);
+      await action_piece_send(source_line, action, hidden3, duration2);
       return;
     }
     if (equal(kind, "push")) {
@@ -1587,6 +1608,16 @@ export function app_learn_js_program_step_through_generic(
       }
       await html_height_change_animate(logged, line, log_more, duration3);
       return;
+    }
+    ("2026-11-27, at the human's asking, for the inputs lessons: once the last line a call runs is complete, the call is done, and its parameters' note fades and its room closes, since outside the function the name holds nothing. Called again, the note is written again with the new value. Not picked: keeping the note until the next call changes it, which would say the name still holds a value after the call");
+    if (equal(kind, "complete")) {
+      let obj2 = entry_get();
+      let leaves = property_get_or(obj2, "leaves", []);
+      for (let leave of leaves) {
+        let leave_line = property_get(leave, "line");
+        let leave_names = property_get(leave, "names");
+        await note_forget(leave_line, leave_names);
+      }
     }
     ("the line that ran stays highlighted while the next line is asked for, at the human's asking 2026-10-14, so the learner can see where the computer is coming from; pressing the next line moves the highlight there");
     property_set(state, "index", property_get(state, "index") + 1);

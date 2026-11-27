@@ -179,6 +179,28 @@ export function app_learn_js_program_step_guide_action(lines, entry, k, noun) {
     ];
     return r22;
   }
+  ("2026-11-27, for the inputs lessons: a function's own line, pressed as the function called, declares its parameter and assigns it the value written in the call");
+  if (property_get_or(action, "param", false)) {
+    let param_name = property_get(action, "name");
+    if (equal(kind, "declare")) {
+      let r42 = [
+        [
+          "The function is called, so its parameter ",
+          param_name,
+          " is declared",
+        ],
+        ["First, choose: Declare a variable"],
+      ];
+      return r42;
+    }
+    let param_value = property_get(action, "value");
+    let param_code = js_value_code(param_value);
+    let r43 = [
+      ["", param_name, " is given the value written in the call: ", param_code],
+      ["So choose: Assign a value"],
+    ];
+    return r43;
+  }
   if (equal(kind, "declare")) {
     let name2 = property_get(action, "name");
     ("the human's words 2026-10-14, with let and = written as code. They replace the whole first sentence group, which also said the expression on the right is solved if needed. Not picked: keeping that clause, since the guide asking to evaluate says so at the step it happens");
