@@ -5651,6 +5651,14 @@ def untrusted_piece_hint(words, safe_verbs):
             "runs unasked, and head prints a `==> FILE <==` line before each "
             "file by itself."
         )
+    if xargs_git_read_is(plain):
+        return (
+            "`xargs` hands git a word read at run time, and a line opening "
+            "with `--output=FILE` would make git write that file. Run what "
+            "comes before the pipe as its own call, then the git command with "
+            "the hash written in (`git show 1a2b3c^:js/x.mjs`) - that runs "
+            "unasked."
+        )
     if plain[0] in COMMAND_BUILDING_VERBS:
         return (
             f"`{plain[0]}` runs a command it puts together at run time, so no "
@@ -5962,11 +5970,28 @@ def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
     # Sending it back approves nothing: the redirect is judged on its own.
     if plain[0] == "tee":
         return True
+    # xargs feeding git: the two-call rewording (look up, then the hash
+    # written in) runs unasked. Sending it back approves nothing.
+    if xargs_git_read_is(plain):
+        return True
     # python under `unshare --net` can still write; the read-only bwrap form
     # is its rewording. Sending it back approves nothing.
     if plain[0] == "unshare" and any("python" in w for w in plain):
         return True
     return plain[0] == "sed" or script_file_note(words, command) != ""
+
+
+XARGS_GIT_READ_SUBCOMMANDS = {"show", "log", "diff", "cat-file", "rev-parse", "blame"}
+
+
+def xargs_git_read_is(plain):
+    """True iff `plain` is `xargs ... git <read subcommand> ...`: one whose
+    two-call rewording (look the hash up, then write it in) runs unasked.
+    A writing subcommand (push, commit, ...) is left to the human."""
+    if not plain or plain[0] != "xargs" or "git" not in plain:
+        return False
+    at = plain.index("git")
+    return at + 1 < len(plain) and plain[at + 1] in XARGS_GIT_READ_SUBCOMMANDS
 
 
 REWORD_DENY_LEAD = (
