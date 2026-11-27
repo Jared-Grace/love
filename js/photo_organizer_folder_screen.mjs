@@ -18,6 +18,10 @@ import { html_style_gap } from "./html_style_gap.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
+import { photo_organizer_phone_send_plan } from "./photo_organizer_phone_send_plan.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { photo_organizer_phone_send } from "./photo_organizer_phone_send.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_input_type_label } from "./app_shared_input_type_label.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -94,6 +98,33 @@ export async function photo_organizer_folder_screen(root, key) {
       open(value2);
     }
     app_shared_button_wide(root, "📁 " + property_get(child, "name"), on_child);
+  }
+  ('The owner signed in on a phone still holding folders or photos from before the organizer was kept online (human, 2026-11-27: "I added photos and folders before the login") sees a button sending them up; once everything is online it is gone.');
+  if (editor) {
+    let plan = await photo_organizer_phone_send_plan(folders);
+    if (greater_than(plan.length, 0)) {
+      let count = 0;
+      for (let item of plan) {
+        count = count + property_get(item, "added").length;
+      }
+      async function on_send() {
+        async function send_plan() {
+          await photo_organizer_phone_send(plan);
+        }
+        await html_loading(send_plan);
+        await open(folder_key);
+      }
+      let v = String(plan.length);
+      let v2 = String(count);
+      let label = text_combine_multiple([
+        "📤 Put this phone's ",
+        v,
+        equal(plan.length, 1) ? " folder and " : " folders and ",
+        v2,
+        equal(count, 1) ? " photo online" : " photos online",
+      ]);
+      app_shared_button_wide(root, label, on_send);
+    }
   }
   if (editor) {
     let name_input = app_shared_input_type_label(
