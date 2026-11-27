@@ -1,4 +1,3 @@
-import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
@@ -33,6 +32,7 @@ import { app_shared_unavailable_box } from "./app_shared_unavailable_box.mjs";
 import { calendar_days_by_weekday } from "./calendar_days_by_weekday.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
+import { each } from "./each.mjs";
 import { app_shared_button_back_arrow } from "./app_shared_button_back_arrow.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
@@ -292,24 +292,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     async function change() {
       await form_show(p.via);
     }
-    async function check() {
-      storage_local_set(app_calendar, "guest_resume_waiting", true);
-      await redraw_on(p.via);
-    }
-    ("A guest who pressed I got your message before the host answered comes back to the waiting screen, not to the first step of sending the code again; every other way in starts at the first step. The page is drawn afresh in between, so this is kept on the device and read once.");
-    let left3 = storage_local_get(app_calendar, "guest_resume_waiting");
-    let start_waiting = equal(left3, true);
-    storage_local_set(app_calendar, "guest_resume_waiting", null);
-    app_calendar_guest_proof_waiting(
-      step,
-      slug,
-      key,
-      p,
-      change,
-      check,
-      apps_show,
-      start_waiting,
-    );
+    app_calendar_guest_proof_waiting(step, slug, key, p, change, apps_show);
   }
   async function form_show(v) {
     html_clear(step);

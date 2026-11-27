@@ -51,7 +51,13 @@ export async function app_calendar(context) {
   }
   let show_meetings = async function lambda() {
     if (guest_key) {
-      await app_calendar_meetings(meetings_area, guest_key, changed, false);
+      await app_calendar_meetings(
+        meetings_area,
+        guest_key,
+        null,
+        changed,
+        false,
+      );
     }
   };
   await guest_show();

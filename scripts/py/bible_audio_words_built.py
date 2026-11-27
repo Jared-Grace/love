@@ -24,101 +24,16 @@ It reads only.
 import json
 import sys
 
-from text_to_speech import g2p_ready, guessed_is
-
-SIBILANTS = "szʃʒʧʤ"
-VOWELS_LOOSE = "ɑæɐʌɛɜɚɔɒəiuʊoeaAIOWY"
-VOICELESS = "ptkfθ"
-LOOSE = {"T": "t", "ᵻ": "ə", "ᵊ": "ə", "ɪ": "ə", "ˈ": "", "ˌ": ""}
-
-
-def loose(phonemes):
-    """A sound with what a listener does not hear as the word taken out.
-
-    Stress moves when two words join, and the unstressed vowels the reader
-    writes three ways all sound like "uh" or "ih" in passing; a consonant
-    written twice where two words meet is said once.
-    """
-    plain = "".join(LOOSE.get(c, c) for c in phonemes)
-    said = []
-    for c in plain:
-        if said and said[-1] == c and c not in VOWELS_LOOSE:
-            continue
-        said.append(c)
-    return "".join(said)
-
-
-def known(g2p, word):
-    """The reader's sound for a word it looks up, or None when it would guess."""
-    if len(word) < 2 or guessed_is(g2p, word):
-        return None
-    phonemes, _ = g2p(word)
-    return phonemes.strip() or None
-
-
-def known_any(g2p, word):
-    for spelling in dict.fromkeys([word, word.lower(), word[:1].upper() + word[1:].lower()]):
-        said = known(g2p, spelling)
-        if said:
-            return spelling, said
-    return None
-
-
-def s_ending(base):
-    last = loose(base)[-1:]
-    if last in SIBILANTS:
-        return "ɪz"
-    if last in VOICELESS:
-        return "s"
-    return "z"
-
-
-def ed_ending(base):
-    last = loose(base)[-1:]
-    if last in "td":
-        return "ɪd"
-    if last in VOICELESS + "sʃʧ":
-        return "t"
-    return "d"
+from text_to_speech import builds_ending, g2p_ready, known_any, loose
 
 
 def builds(g2p, word):
-    """Every (known word, built sound) this word can be made from."""
-    found = []
-
-    def add(stem, ending_of, how):
-        hit = known_any(g2p, stem)
-        if hit:
-            spelling, said = hit
-            found.append({"from": spelling, "how": how, "built": said + ending_of(said)})
-
-    lower = word.lower()
-    if lower.endswith("'s"):
-        add(word[:-2], s_ending, "'s")
-    elif lower.endswith("s'"):
-        add(word[:-1], lambda b: "", "s'")
-    if lower.endswith("ied"):
-        add(word[:-3] + "y", lambda b: "d", "y+ed")
-    elif lower.endswith("ed"):
-        add(word[:-2], ed_ending, "ed")
-        add(word[:-1], ed_ending, "e+d")
-    if lower.endswith("ites"):
-        add(word[:-4], lambda b: "Its", "ites")
-    elif lower.endswith("ite"):
-        add(word[:-3], lambda b: "It", "ite")
-    if lower.endswith("est"):
-        add(word[:-3], lambda b: "ɪst", "est")
-        add(word[:-2], lambda b: "ɪst", "e+st")
-    if lower.endswith("er") and not lower.endswith("ier"):
-        add(word[:-2], lambda b: "əɹ", "er")
-        add(word[:-1], lambda b: "əɹ", "e+r")
-    if lower.endswith("ness"):
-        add(word[:-4], lambda b: "nəs", "ness")
-    if lower.endswith("s") and not lower.endswith("'s") and not lower.endswith("ss"):
-        add(word[:-1], s_ending, "s")
+    """Every (known word, built sound) this word can be made from: the reader's
+    own ending rule, then two known words run together where no ending fits."""
+    found = builds_ending(g2p, word)
     # A name is not two English words run together, so "Kittites" is never
     # "Kit" and "tites"; and a word an ending already explains is not split.
-    if "'" not in word and word == lower and not found:
+    if "'" not in word and word == word.lower() and not found:
         for cut in range(2, len(word) - 1):
             first = known_any(g2p, word[:cut])
             if not first or len(word[:cut]) < 3:

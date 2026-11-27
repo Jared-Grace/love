@@ -27,8 +27,15 @@ import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { app_shared_button_red } from "./app_shared_button_red.mjs";
-export async function app_calendar_meetings(box, key, on_change, empty_shown) {
-  arguments_assert(arguments, 4);
+export async function app_calendar_meetings(
+  box,
+  key,
+  link,
+  on_change,
+  empty_shown,
+) {
+  arguments_assert(arguments, 5);
+  ("link is the host's booking link, for the reply to a guest whose code arrived, or null on a guest's page, which has no codes to confirm.");
   ('empty_shown says whether an empty list still draws, as "Your meetings" over "None yet.". The host\'s page passes true, because no bookings is news to a host. The guest\'s page passes false and draws nothing, because the list sits at the top of the guest\'s page, and an empty heading there is the first thing a returning guest would see while telling them nothing.');
   ("on_change runs after a cancel, so whatever else the page shows can catch up - the guest's open hours above, where the freed time must show again (a cancel left a weekday saying it was unavailable until the page was reloaded).");
   ("Draws, inside box, every upcoming meeting the session key belongs to - the ones it booked and the ones it hosts - soonest first, and draws them again after any change.");
@@ -45,10 +52,10 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
   let meetings = answer.body.meetings;
   ("A host sees first the guests waiting for them to see a code arrive, since each is waiting on the host before they can pick a time. A guest's answer holds none.");
   async function redraw() {
-    await app_calendar_meetings(box, key, on_change, empty_shown);
+    await app_calendar_meetings(box, key, link, on_change, empty_shown);
   }
   let proofs = property_get_or(answer.body, "proofs", []);
-  app_calendar_proofs_waiting(box, proofs, key, redraw);
+  app_calendar_proofs_waiting(box, proofs, key, link, redraw);
   let empty = equal(meetings.length, 0);
   if (empty && not(empty_shown)) {
     return;
@@ -157,7 +164,7 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
             html_text_content_set(status, text);
             return;
           }
-          await app_calendar_meetings(box, key, on_change, empty_shown);
+          await app_calendar_meetings(box, key, link, on_change, empty_shown);
         }
         app_shared_button_green(card, "Confirm", profile_confirm);
       } else if (meeting.hosting) {
@@ -191,7 +198,7 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
             html_text_content_set(status, text2);
             return;
           }
-          await app_calendar_meetings(box, key, on_change, empty_shown);
+          await app_calendar_meetings(box, key, link, on_change, empty_shown);
         }
         app_shared_button_green(card, "Confirm", lambda);
       } else {
@@ -237,7 +244,7 @@ export async function app_calendar_meetings(box, key, on_change, empty_shown) {
         html_text_content_set(status, "Could not cancel. Try again.");
         return;
       }
-      await app_calendar_meetings(box, key, on_change, empty_shown);
+      await app_calendar_meetings(box, key, link, on_change, empty_shown);
       await on_change();
     }
     ('Cancel asks first, in a box over the page (human, 2026-11-24: "cancel meeting button should confirm dialog"): a cancel frees the time for anyone, so a slip of the finger could lose it.');

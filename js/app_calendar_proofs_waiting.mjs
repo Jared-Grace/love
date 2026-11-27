@@ -20,8 +20,15 @@ import { app_shared_toast } from "./app_shared_toast.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
-export function app_calendar_proofs_waiting(box, proofs, key, on_confirmed) {
-  arguments_assert(arguments, 4);
+export function app_calendar_proofs_waiting(
+  box,
+  proofs,
+  key,
+  link,
+  on_confirmed,
+) {
+  arguments_assert(arguments, 5);
+  ("link is the host's booking link, put in the reply so the guest can open it and pick a time (human, 2026-11-27: \"After receiving code, could I just send them the URL to schedule a meeting? and next time they refresh the url they'll have a choice to schedule a meeting?\"). It opens the guest's own page because their key stays on their device. null where no link is known; the reply then says to open the page again.");
   ("Draws, inside box, the guests waiting for the host to see their code arrive - each with the code, a place to say who it came from, and Confirm. Nothing is drawn when none wait.");
   ("★ THE HOST TYPES THE NUMBER THEY SEE, NEVER ONE FILLED IN. A WhatsApp proof is the number the code arrived from, so the box starts empty: filled with the number the guest typed, a Confirm would prove nothing. A Messenger sender has no number to type, so the link the guest gave is filled in to check against the profile that sent the code, or to be replaced by the real one.");
   ("Once confirmed, a short message to send the guest is shown with Copy and a link that opens the chat, because the guest is waiting to hear back before they can pick a time. on_confirmed then draws the host's lists again.");
@@ -97,8 +104,10 @@ export function app_calendar_proofs_waiting(box, proofs, key, on_confirmed) {
         return;
       }
       app_shared_toast("✅ Confirmed " + who);
-      let reply =
-        "Thank you, I got your code. Now open your link again and pick a time.";
+      let reply = link
+        ? "Thank you, I got your code. Now pick a time for our meeting here: " +
+          link
+        : "Thank you, I got your code. Now open the page again and pick a time for our meeting.";
       let reply_card = app_shared_container_centered(box);
       html_div_text(reply_card, "Send " + who + " this:");
       html_div_text_content(reply_card, reply);

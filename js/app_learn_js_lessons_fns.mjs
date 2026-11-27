@@ -642,6 +642,12 @@ import { app_learn_js_lesson_object_list_total } from "./app_learn_js_lesson_obj
 import { app_learn_js_lesson_object_list_cheapest } from "./app_learn_js_lesson_object_list_cheapest.mjs";
 import { app_learn_js_lesson_object_list_most_for_price } from "./app_learn_js_lesson_object_list_most_for_price.mjs";
 import { app_learn_js_lesson_function_body } from "./app_learn_js_lesson_function_body.mjs";
+import { app_learn_js_lesson_function_twice } from "./app_learn_js_lesson_function_twice.mjs";
+import { app_learn_js_lesson_function_never } from "./app_learn_js_lesson_function_never.mjs";
+import { app_learn_js_lesson_function_between } from "./app_learn_js_lesson_function_between.mjs";
+import { app_learn_js_lesson_function_two } from "./app_learn_js_lesson_function_two.mjs";
+import { app_learn_js_lesson_function_outside } from "./app_learn_js_lesson_function_outside.mjs";
+import { app_learn_js_lesson_function_loop } from "./app_learn_js_lesson_function_loop.mjs";
 export function app_learn_js_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
@@ -1296,6 +1302,12 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_object_list_cheapest,
     app_learn_js_lesson_object_list_most_for_price,
     app_learn_js_lesson_function_body,
+    app_learn_js_lesson_function_twice,
+    app_learn_js_lesson_function_never,
+    app_learn_js_lesson_function_between,
+    app_learn_js_lesson_function_two,
+    app_learn_js_lesson_function_outside,
+    app_learn_js_lesson_function_loop,
   ];
   return fns;
 }

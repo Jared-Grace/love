@@ -13,6 +13,7 @@ import { app_calendar_host_about } from "./app_calendar_host_about.mjs";
 import { app_calendar_host_hours } from "./app_calendar_host_hours.mjs";
 import { app_calendar_host_rules } from "./app_calendar_host_rules.mjs";
 import { app_calendar_host_share } from "./app_calendar_host_share.mjs";
+import { calendar_host_link } from "./calendar_host_link.mjs";
 import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_steps } from "./app_shared_steps.mjs";
@@ -171,7 +172,9 @@ export async function app_calendar_host(parent, key, signed_out) {
     "The host page draws its hours as openings, not as the times left free, so a cancel changes nothing else on it.";
   }
   async function meetings_draw(area) {
-    await app_calendar_meetings(area, key, cancelled, true);
+    let host_now = settings.host;
+    let link = host_now ? calendar_host_link(host_now.slug) : null;
+    await app_calendar_meetings(area, key, link, cancelled, true);
     ('Sign out sits at the foot of home (human, 2026-11-22: "Sign out"); signed_out is the page\'s, since the host key is kept by the page.');
     app_shared_button_uncolored(area, "Sign out", signed_out);
   }

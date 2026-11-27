@@ -607,10 +607,152 @@ def said_alone_closed_spelling(g2p, word):
     return closed
 
 
+SIBILANTS = "szʃʒʧʤ"
+VOICELESS = "ptkfθ"
+VOWELS_LOOSE = "ɑæɐʌɛɜɚɔɒəiuʊoeaAIOWY"
+LOOSE = {"T": "t", "ᵻ": "ə", "ᵊ": "ə", "ɪ": "ə", "ˈ": "", "ˌ": ""}
+
+
+def loose(phonemes):
+    """A sound with what a listener does not hear as the word taken out.
+
+    Stress moves when two words join, and the unstressed vowels the reader
+    writes three ways all sound like "uh" or "ih" in passing; a consonant
+    written twice where two words meet is said once.
+    """
+    plain = "".join(LOOSE.get(c, c) for c in phonemes)
+    said = []
+    for c in plain:
+        if said and said[-1] == c and c not in VOWELS_LOOSE:
+            continue
+        said.append(c)
+    return "".join(said)
+
+
+def known(g2p, word):
+    """The reader's sound for a word it looks up, or None when it would guess."""
+    if len(word) < 2 or guessed_is(g2p, word):
+        return None
+    phonemes, _ = g2p(word)
+    return phonemes.strip() or None
+
+
+def known_any(g2p, word):
+    """A known spelling of this word and its sound: as written, small, or capitalised."""
+    for spelling in dict.fromkeys([word, word.lower(), word[:1].upper() + word[1:].lower()]):
+        said = known(g2p, spelling)
+        if said:
+            return spelling, said
+    return None
+
+
+def s_ending(base):
+    last = loose(base)[-1:]
+    if last in SIBILANTS:
+        return "ɪz"
+    if last in VOICELESS:
+        return "s"
+    return "z"
+
+
+def ed_ending(base):
+    last = loose(base)[-1:]
+    if last in "td":
+        return "ɪd"
+    if last in VOICELESS + "sʃʧ":
+        return "t"
+    return "d"
+
+
+def builds_ending(g2p, word):
+    """Every sound this word can be built as: a known word plus an ending.
+
+    Each answer is {"from", "how", "built"}.  The endings are the ones whose
+    sound follows a fixed rule from the word they are added to - 's and s',
+    -ied from -y, -ed, -ites and -ite, -est, -er, -ness and a plural -s.
+    """
+    found = []
+
+    def add(stem, ending_of, how):
+        hit = known_any(g2p, stem)
+        if hit:
+            spelling, said = hit
+            found.append({"from": spelling, "how": how, "built": said + ending_of(said)})
+
+    lower = word.lower()
+    if lower.endswith("'s"):
+        add(word[:-2], s_ending, "'s")
+    elif lower.endswith("s'"):
+        add(word[:-1], lambda b: "", "s'")
+    if lower.endswith("ied"):
+        add(word[:-3] + "y", lambda b: "d", "y+ed")
+    elif lower.endswith("ed"):
+        add(word[:-2], ed_ending, "ed")
+        add(word[:-1], ed_ending, "e+d")
+    if lower.endswith("ites"):
+        add(word[:-4], lambda b: "Its", "ites")
+    elif lower.endswith("ite"):
+        add(word[:-3], lambda b: "It", "ite")
+    if lower.endswith("est"):
+        add(word[:-3], lambda b: "ɪst", "est")
+        add(word[:-2], lambda b: "ɪst", "e+st")
+    if lower.endswith("er") and not lower.endswith("ier"):
+        add(word[:-2], lambda b: "əɹ", "er")
+        add(word[:-1], lambda b: "əɹ", "e+r")
+    if lower.endswith("ness"):
+        add(word[:-4], lambda b: "nəs", "ness")
+    if lower.endswith("s") and not lower.endswith("'s") and not lower.endswith("ss"):
+        add(word[:-1], s_ending, "s")
+    unique = {}
+    for b in found:
+        unique.setdefault(loose(b["built"]), b)
+    return list(unique.values())
+
+
+WORD = re.compile(r"[A-Za-z]+(?:'[A-Za-z]*)?")
+
+
+def said_built_fill(g2p, run):
+    """Files a built sound for each word of this run the reader would guess.
+
+    ★ A GUESSED WORD THAT IS A KNOWN WORD PLUS AN ENDING IS SAID AS THAT WORD
+    PLUS THE ENDING.  Measured 2026-11-27 over the recorded BSB: of 419 guessed
+    words, 367 could be built this way and 35 of those were guessed differently
+    from what was built - "prophesied" as prophe-seed, "Jehoshaphat's" with no
+    "sh" although "Jehoshaphat" is written down, "Issacharites" with a "ch".
+
+    ★ ONLY WHEN EVERY WAY OF BUILDING IT AGREES.  "purest" is "pure" plus -est
+    or "pur" plus -est, and those differ; a word with two answers is left to
+    the reader, which is what it did before.  Two whole words run together are
+    never built here ("cannot" is not "can" and "not" said apart).
+
+    The sound is filed in the reader's own dictionary under the word as
+    written, the same way every other mended word is, so the line beside the
+    sound keeps its spelling and every later run meets the entry already
+    there.  A word the reader answers is never touched.
+    """
+    for match in WORD.finditer(run):
+        word = match.group(0)
+        if word in g2p.lexicon.golds or not guessed_is(g2p, word):
+            continue
+        made = builds_ending(g2p, word)
+        if len(made) != 1:
+            continue
+        g2p.lexicon.golds[word] = made[0]["built"]
+
+
 JOINED_WORD = re.compile(r"[A-Za-z]+(?:-[A-Za-z]+)+")
 
 
 def said_run(g2p, run):
+    """One run as the reader is handed it, with each guessed word that is a
+    known word plus an ending filed as built (see `said_built_fill`)."""
+    said = said_run_joined(g2p, run)
+    said_built_fill(g2p, said)
+    return said
+
+
+def said_run_joined(g2p, run):
     """One run of a chapter as the reader is handed it: each joined name it
     can only guess, read part by part where every part is written down.
 
@@ -670,6 +812,7 @@ def line_samples(g2p, kokoro, text, speed, citation, voice):
     for run in pieces_of(text):
         if citation:
             run = said_alone_spelling(g2p, run)
+            said_built_fill(g2p, run)
         else:
             run = said_run(g2p, run)
         phonemes, _ = g2p(run)
