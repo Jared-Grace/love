@@ -20,7 +20,7 @@ export function app_shared_photos_draw_buttons(
   "$plain photos_holder";
   "$plain buttons_add";
   "The photos of whatever holds them - a receipt's purchase, or a folder in the photo organizer - as small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own. Each photo holds either the picture kept on this phone, under file, or the address it is stored at, under url.";
-  "On that screen, under its download button, buttons_add is handed the screen, the way to close it, the small square the photo was opened from, and the photo's file or address, to draw whatever else only some apps let a photo have done to it, such as deleting it.";
+  "On that screen, under its download button, buttons_add is handed the screen, the way to close it, the large picture on it, and the photo's file or address, to draw whatever else only some apps let a photo have done to it, such as deleting it.";
   "A photo taken on this phone is shown from the picture kept here; one taken on another phone is shown from where it is stored, so it needs the internet the first time.";
   "Hands back the function that puts one more picture, kept on this phone, at the end of the row, so a photo just taken shows at once.";
   arguments_assert(arguments, 3);
@@ -35,8 +35,8 @@ export function app_shared_photos_draw_buttons(
     html_style_set(picture, "object-fit", "cover");
     html_border_radius(picture, "0.3em");
     picture_set(picture);
-    function screen_buttons_add(screen, close) {
-      buttons_add(screen, close, picture, source);
+    function screen_buttons_add(screen, close, shown) {
+      buttons_add(screen, close, shown, source);
     }
     function on_open() {
       app_shared_photo_screen_buttons(picture_set, screen_buttons_add);

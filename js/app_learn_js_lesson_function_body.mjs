@@ -11,7 +11,9 @@ import { noop } from "./noop.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
-import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
+import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -119,18 +121,15 @@ export function app_learn_js_lesson_function_body() {
       "greet",
       " is an identifier that refers to the function",
     ]);
-    html_div_cycle(
-      box,
-      [noop, html_bold, noop, html_style_code_dark, noop, html_style_code_dark],
-      [
-        "To use or ",
-        "call",
-        " the function, we write ",
-        "greet()",
-        " just like we would write ",
-        "console.log(...)",
-      ],
-    );
+    let call_line = html_div(box);
+    html_span_text(call_line, "To use or ");
+    app_learn_js_definition_term(call_line, "call");
+    app_learn_js_cycle_code(call_line, [
+      " the function, we write ",
+      "greet()",
+      " just like we would write ",
+      "console.log(...)",
+    ]);
     app_learn_js_div_cycle_code(box, [
       "So ",
       "function greet()",

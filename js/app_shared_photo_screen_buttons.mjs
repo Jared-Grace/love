@@ -19,7 +19,7 @@ export function app_shared_photo_screen_buttons(picture_set, buttons_add) {
   "$plain picture_set";
   "$plain buttons_add";
   "Shows one photo on a screen of its own, as large as the window allows and never cropped, with a way back above it and a button under it saving it to the phone. picture_set is handed the empty picture and gives it its source, so a photo kept on this phone and one fetched from storage open the same way.";
-  "Under the download, buttons_add is handed the screen and the way to close it, to draw whatever else this photo can have done to it - such as deleting it - where only some of the apps allow that.";
+  "Under the download, buttons_add is handed the screen, the way to close it, and the large picture, to draw whatever else this photo can have done to it - such as deleting it - where only some of the apps allow that.";
   "The screen lies over the one it was opened from instead of replacing it, so going back finds everything as it was left, scrolled to the same place, with nothing redrawn.";
   "Opening it is also a step in the browser's history, so the phone's own back gesture closes the photo rather than leaving the app.";
   arguments_assert(arguments, 2);
@@ -52,7 +52,7 @@ export function app_shared_photo_screen_buttons(picture_set, buttons_add) {
   let e = emoji_arrow_down();
   let text = text_combine_multiple([e, " Download"]);
   app_shared_button_wide(screen, text, on_download);
-  buttons_add(screen, on_back);
+  buttons_add(screen, on_back, picture);
   history.pushState(null, "");
   window.addEventListener("popstate", close, {
     once: true,
