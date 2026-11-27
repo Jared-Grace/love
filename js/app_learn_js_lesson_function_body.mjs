@@ -84,13 +84,17 @@ export function app_learn_js_lesson_function_body() {
     let chip = html_div(box);
     let code2 = program_with("Greetings!", 0);
     app_learn_js_code_dark_lines_comments(chip, code2);
-    app_learn_js_div_cycle_code(box, [
+    ("2026-11-27, at the human's asking for words still true once later lessons add to them: the braces hold the body, and a call runs it - never that the body is all a function does, since a parameter's default also runs on a call, and never that all of it runs, since an if or a return inside can skip some");
+    let body_line = html_div(box);
+    app_learn_js_cycle_code(body_line, [
       "Whatever is in between the ",
       "{",
       " and ",
       "}",
-      " is what the function does each time the function is used",
+      " is the function's ",
     ]);
+    app_learn_js_definition_term(body_line, "body");
+    html_div_text(box, "Each time the function is called, its body runs");
     app_learn_js_div_cycle_code(box, [
       "Inside ",
       "console.log(...)",
