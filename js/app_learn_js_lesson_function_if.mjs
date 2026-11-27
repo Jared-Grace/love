@@ -1,8 +1,8 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_function_declared_lines } from "./app_learn_js_function_declared_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -92,8 +92,8 @@ export function app_learn_js_lesson_function_if() {
     app_learn_js_code_lines_writes_out(box_program, lines, value);
   }
   let name_id = app_learn_js_lesson_statement_title_name_id(
-    "Called inside an if",
-    "if",
+    "Called inside",
+    "if (hour < 12)",
   );
   let lesson = app_learn_js_lesson_code_logged_wrong_programs_stepping(
     {
