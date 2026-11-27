@@ -69,7 +69,7 @@ export function app_calendar_proofs_waiting(
     } else {
       let hint2 = html_div_text(
         card,
-        "When the code arrives, type the number it came from:",
+        "When the code arrives, type the number it came from. That becomes their number:",
       );
       app_shared_text_deemphasized(hint2);
       sender = html_input_text(card, "+1 555 123 4567");
@@ -90,8 +90,7 @@ export function app_calendar_proofs_waiting(
       let sent = await calendar_api_call("POST", "confirm", confirm_body, key);
       if (not(sent.body.ok)) {
         let words = {
-          number:
-            "That is not the number they gave. Check it, or ask them to change it.",
+          number: "Type the number the code came from, like +1 555 123 4567.",
           profile: "Paste a Facebook or Messenger profile link.",
           no_code: "That code is not waiting any more.",
         };
