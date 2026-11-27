@@ -27,12 +27,25 @@ import sys
 from text_to_speech import g2p_ready, guessed_is
 
 SIBILANTS = "szʃʒʧʤ"
+VOWELS_LOOSE = "ɑæɐʌɛɜɚɔɒəiuʊoeaAIOWY"
 VOICELESS = "ptkfθ"
-LOOSE = {"T": "t", "ᵻ": "ɪ", "ᵊ": "ə", "ˈ": "", "ˌ": ""}
+LOOSE = {"T": "t", "ᵻ": "ə", "ᵊ": "ə", "ɪ": "ə", "ˈ": "", "ˌ": ""}
 
 
 def loose(phonemes):
-    return "".join(LOOSE.get(c, c) for c in phonemes)
+    """A sound with what a listener does not hear as the word taken out.
+
+    Stress moves when two words join, and the unstressed vowels the reader
+    writes three ways all sound like "uh" or "ih" in passing; a consonant
+    written twice where two words meet is said once.
+    """
+    plain = "".join(LOOSE.get(c, c) for c in phonemes)
+    said = []
+    for c in plain:
+        if said and said[-1] == c and c not in VOWELS_LOOSE:
+            continue
+        said.append(c)
+    return "".join(said)
 
 
 def known(g2p, word):
@@ -103,7 +116,9 @@ def builds(g2p, word):
         add(word[:-4], lambda b: "nəs", "ness")
     if lower.endswith("s") and not lower.endswith("'s") and not lower.endswith("ss"):
         add(word[:-1], s_ending, "s")
-    if "'" not in word:
+    # A name is not two English words run together, so "Kittites" is never
+    # "Kit" and "tites"; and a word an ending already explains is not split.
+    if "'" not in word and word == lower and not found:
         for cut in range(2, len(word) - 1):
             first = known_any(g2p, word[:cut])
             if not first or len(word[:cut]) < 3:
