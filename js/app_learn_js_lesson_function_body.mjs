@@ -62,20 +62,22 @@ export function app_learn_js_lesson_function_body() {
   function above(root, context) {
     "what a function is, and that a call runs its body";
     "2026-11-26: the words are the human's own, pasted in whole, with Functions and call in bold as they marked them";
-    let box = app_learn_js_container_light_blue(root);
+    "2026-11-27, at the human's asking: why functions exist stands in a box of its own, before how one is written";
+    let box_why = app_learn_js_container_light_blue(root);
     html_div_text(
-      box,
+      box_why,
       'When we write computer programs, we might think "I want that one part of that program I wrote before and I want to use that one part here as well."',
     );
     html_div_text(
-      box,
+      box_why,
       "In other words, we may want to reuse a part of a computer program in multiple places",
     );
     html_div_cycle(
-      box,
+      box_why,
       [html_bold, noop],
       ["Functions", " allow us to do this"],
     );
+    let box = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box, [
       "How do we write a function that does ",
       'console.log("Greetings!");',
