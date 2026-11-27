@@ -93,24 +93,29 @@ export function app_learn_js_lesson_function_body() {
       " is what the function does each time the function is used",
     ]);
     app_learn_js_div_cycle_code(box, [
+      "Inside ",
+      "console.log(...)",
+      " is ",
+      "log(...)",
+    ]);
+    app_learn_js_div_cycle_code(box, [
       "We write ",
       "greet()",
       " kind of like ",
       "log(...)",
-      " in ",
-      "console.log(...)",
-      "",
     ]);
     app_learn_js_div_cycle_code(box, [
-      "",
-      "greet",
-      " is an identifier that refers to the function, like ",
-      "i",
-      " refers to ",
-      "1",
-      " in ",
+      "In ",
       "let i = 1;",
-      "",
+      " ",
+      "i",
+      " is an identifier that refers to ",
+      "1",
+    ]);
+    app_learn_js_div_cycle_code(box, [
+      "In the same way ",
+      "greet",
+      " is an identifier that refers to the function",
     ]);
     html_div_cycle(
       box,
