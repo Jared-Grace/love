@@ -5,8 +5,12 @@ import { less_than } from "./less_than.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { html_div_text } from "./html_div_text.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
+import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -53,7 +57,17 @@ export function app_learn_js_lesson_function_twice() {
   function above(root, context) {
     "each call runs the body again";
     let box = app_learn_js_container_light_blue(root);
-    html_div_text(box, "Each time a function is called, its body runs again");
+    ("2026-11-27: the human's wording, with body in bold as they marked it");
+    let body_line = html_div(box);
+    html_span_text(body_line, "Each time a function is called, its ");
+    app_learn_js_definition_term(body_line, "body");
+    app_learn_js_cycle_code(body_line, [
+      " - whatever is between the ",
+      "{",
+      " and ",
+      "}",
+      " - runs again",
+    ]);
     app_learn_js_div_cycle_code(box, [
       "Here ",
       "greet();",
