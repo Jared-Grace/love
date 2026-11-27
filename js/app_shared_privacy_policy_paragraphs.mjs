@@ -14,6 +14,9 @@ export function app_shared_privacy_policy_paragraphs() {
       "What an app remembers - the passage you were reading, the settings you chose - is kept by your own browser on your own device. Clearing this website's storage in your browser erases it.",
     ],
     [
+      "Record Bible uses your camera and microphone, only while you record, and only after you allow it. Each recording is kept on your own device. In the Record Bible phone app it never leaves the phone unless you press Download, which saves it to the phone's Downloads folder. On this website, the Send and Back up buttons store a recording in Google storage; they ask you to sign in first, and are there for the person who runs this website.",
+    ],
+    [
       "Bible text and the other things an app needs are downloaded from Google storage as you read. Those files are the same for everybody, and they are only ever read.",
     ],
     [
