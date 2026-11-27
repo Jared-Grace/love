@@ -30,13 +30,13 @@ export function app_learn_js_lesson_function_two() {
   }
   function program_with(pair, calls) {
     "hello declared writing the pair's first word, bye declared writing its second, then the calls in the order given";
+    let item = list_get(pair, 0);
+    let v2 = log_line(item);
+    let item2 = list_get(pair, 1);
+    let v3 = log_line(item2);
     let lines = [
-      ...app_learn_js_function_declared_lines("hello", [
-        log_line(list_get(pair, 0)),
-      ]),
-      ...app_learn_js_function_declared_lines("bye", [
-        log_line(list_get(pair, 1)),
-      ]),
+      ...app_learn_js_function_declared_lines("hello", [v2]),
+      ...app_learn_js_function_declared_lines("bye", [v3]),
       ...calls,
     ];
     let code = list_join_newline(lines);
@@ -53,7 +53,8 @@ export function app_learn_js_lesson_function_two() {
   }
   function wrong_outputs_of(pair) {
     "the words in the order the functions are declared";
-    let outputs = [list_join_newline(pair)];
+    let joined = list_join_newline(pair);
+    let outputs = [joined];
     return outputs;
   }
   function inputs_get() {
