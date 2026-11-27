@@ -5,14 +5,11 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { html_div_cycle } from "./html_div_cycle.mjs";
-import { html_bold } from "./html_bold.mjs";
-import { noop } from "./noop.mjs";
-import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
+import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -74,11 +71,9 @@ export function app_learn_js_lesson_function_body() {
       box_why,
       "In other words, we may want to reuse a part of a computer program in multiple places",
     );
-    html_div_cycle(
-      box_why,
-      [html_bold, noop],
-      ["Functions", " allow us to do this"],
-    );
+    let allow_line = html_div(box_why);
+    app_learn_js_definition_term(allow_line, "Functions");
+    html_span_text(allow_line, " allow us to do this");
     let box = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box, [
       "How do we write a function that does ",
