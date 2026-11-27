@@ -1,14 +1,14 @@
-import { json_from } from "./json_from.mjs";
-import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { photo_organizer_storage_path } from "./photo_organizer_storage_path.mjs";
+import { json_from } from "./json_from.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { less_than } from "./less_than.mjs";
 import { folder_private_path } from "./folder_private_path.mjs";
 import { file_overwrite_buffer } from "./file_overwrite_buffer.mjs";
 export async function photo_organizer_download_all() {
@@ -38,6 +38,10 @@ export async function photo_organizer_download_all() {
     while (not(null_is(at))) {
       let part = property_get(at, "name").replace(/[\s\/\\]+/g, "_");
       parts.unshift(part);
+      ("A name begins with the date: once a folder named for a day, such as 2026_11_01_Doctor, is reached, the folders holding it - such as the insurer's - are left out (human, 2026-11-27). Without a dated folder above it, every folder is named.");
+      if (/^\d{4}_\d{2}_\d{2}/.test(part)) {
+        break;
+      }
       let key = property_get_or(at, "parent", "");
       at = property_get_or(by_key, key, null);
     }
