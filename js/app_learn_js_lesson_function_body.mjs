@@ -78,12 +78,12 @@ export function app_learn_js_lesson_function_body() {
     );
     app_learn_js_div_cycle_code(box, [
       "How do we write a function that does ",
-      'console.log("Hello");',
+      'console.log("Greetings!");',
       " ?",
     ]);
     html_div_text(box, "Like this:");
     let chip = html_div(box);
-    let code2 = program_with("Hello", 0);
+    let code2 = program_with("Greetings!", 0);
     app_learn_js_code_dark_lines_comments(chip, code2);
     app_learn_js_div_cycle_code(box, [
       "Whatever is in between the ",
