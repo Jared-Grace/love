@@ -1,3 +1,4 @@
+import { modulo } from "./modulo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -37,7 +38,9 @@ export function app_learn_js_lesson_function_input() {
   function wrong_programs_of(name) {
     "greet called with the next name in the list";
     let index = list_index_of(names, name);
-    let next = list_get(names, (index + 1) % list_size(names));
+    let right = list_size(names);
+    let index2 = modulo(index + 1, right);
+    let next = list_get(names, index2);
     let v = program_of(next);
     let programs = [v];
     return programs;
