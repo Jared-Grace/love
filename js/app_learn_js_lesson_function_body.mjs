@@ -131,10 +131,10 @@ export function app_learn_js_lesson_function_body() {
     );
     app_learn_js_div_cycle_code(box, [
       "So ",
-      "greet()",
+      "function greet()",
       " is used to declare the function and ",
       "greet()",
-      " is also used to call the function",
+      " is used to call the function",
     ]);
     ("2026-11-26: the complete program stands in a box of its own, because the card showing a program and what it writes out narrows the space between the lines of the box it is put in, which ran the paragraphs above together");
     let box_program = app_learn_js_container_light_blue(root);
