@@ -23,7 +23,8 @@ import { text_trim } from "./text_trim.mjs";
 import { uuid_browser } from "./uuid_browser.mjs";
 import { photo_organizer_folder_put } from "./photo_organizer_folder_put.mjs";
 import { app_shared_field_title } from "./app_shared_field_title.mjs";
-import { app_shared_photos_draw } from "./app_shared_photos_draw.mjs";
+import { photo_organizer_photo_delete_add } from "./photo_organizer_photo_delete_add.mjs";
+import { app_shared_photos_draw_buttons } from "./app_shared_photos_draw_buttons.mjs";
 import { file_name_random_browser } from "./file_name_random_browser.mjs";
 import { list_add } from "./list_add.mjs";
 import { html_input_file_accept_multiple } from "./html_input_file_accept_multiple.mjs";
@@ -107,7 +108,15 @@ export async function photo_organizer_folder_screen(root, key) {
   }
   app_shared_button_wide(root, "➕ New folder", on_new);
   app_shared_field_title(root, "Photos");
-  let file_show = app_shared_photos_draw(root, folder);
+  ("A photo opened from here can also be deleted.");
+  function photo_buttons_add(screen, close, thumbnail, source) {
+    photo_organizer_photo_delete_add(folder, screen, close, thumbnail, source);
+  }
+  let file_show = app_shared_photos_draw_buttons(
+    root,
+    folder,
+    photo_buttons_add,
+  );
   let photos = property_get(folder, "photos");
   async function on_files(files) {
     for (let file of files) {
