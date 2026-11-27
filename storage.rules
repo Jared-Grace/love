@@ -23,6 +23,11 @@ service firebase.storage {
       // the owner reads a sent take back, so the recorder can show it again on its passage; still nobody else
       allow read: if request.auth != null && request.auth.token.email == "christrosetolife@gmail.com";
     }
+    // photo_organizer: folders and photos anybody may look at without signing in; only the owner, signed in, may add, turn or delete
+    match /photo_organizer/{allPaths=**} {
+      allow read;
+      allow write: if request.auth != null && request.auth.token.email == "christrosetolife@gmail.com";
+    }
     match /bible/{allPaths=**} {
       allow read;
     }
