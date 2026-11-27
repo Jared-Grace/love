@@ -28,6 +28,8 @@ import { file_name_random_browser } from "./file_name_random_browser.mjs";
 import { list_add } from "./list_add.mjs";
 import { html_input_file_accept_multiple } from "./html_input_file_accept_multiple.mjs";
 import { app_shared_button_wide_input } from "./app_shared_button_wide_input.mjs";
+import { photo_organizer_folder_delete_screen } from "./photo_organizer_folder_delete_screen.mjs";
+import { app_shared_button_red } from "./app_shared_button_red.mjs";
 export async function photo_organizer_folder_screen(root, key) {
   "$plain root";
   "$plain key";
@@ -120,4 +122,12 @@ export async function photo_organizer_folder_screen(root, key) {
   }
   let picker = html_input_file_accept_multiple(root, "image/*", on_files);
   app_shared_button_wide_input(root, "🖼️ Add photos", picker);
+  ("Last, a red button to delete this folder, which asks first; the top folder has none, since every other folder sits inside it.");
+  let b = equal(folder_key, top_key);
+  if (not(b)) {
+    function on_delete() {
+      photo_organizer_folder_delete_screen(root, folders, folder, open);
+    }
+    app_shared_button_red(root, "🗑️ Delete folder", on_delete);
+  }
 }
