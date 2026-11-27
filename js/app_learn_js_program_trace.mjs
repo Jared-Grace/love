@@ -1,20 +1,27 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { list_size_assert } from "./list_size_assert.mjs";
-import { app_learn_js_program_trace_line } from "./app_learn_js_program_trace_line.mjs";
-import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_size_assert } from "./list_size_assert.mjs";
+import { less_than } from "./less_than.mjs";
+import { list_get } from "./list_get.mjs";
+import { error } from "./error.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
+import { app_learn_js_program_trace_line } from "./app_learn_js_program_trace_line.mjs";
+import { equal } from "./equal.mjs";
 import { null_is } from "./null_is.mjs";
 import { subtract } from "./subtract.mjs";
-import { list_size } from "./list_size.mjs";
-import { less_than } from "./less_than.mjs";
-import { error } from "./error.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_last } from "./list_last.mjs";
+import { property_initialize_list_add } from "./property_initialize_list_add.mjs";
+import { property_delete } from "./property_delete.mjs";
 import { app_learn_js_program_trace_for_start_split_or_null } from "./app_learn_js_program_trace_for_start_split_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_program_trace_statement } from "./app_learn_js_program_trace_statement.mjs";
@@ -22,7 +29,6 @@ import { app_learn_js_program_trace_statement_piece } from "./app_learn_js_progr
 import { text_slice } from "./text_slice.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_pop } from "./list_pop.mjs";
-import { list_get } from "./list_get.mjs";
 export function app_learn_js_program_trace(code) {
   arguments_assert(arguments, 1);
   ("every line of a program in the order the computer runs it, each with what running it does, in order: a name declared, an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
@@ -57,18 +63,70 @@ export function app_learn_js_program_trace(code) {
     if (not(b2)) {
       return null;
     }
-    let args = property_get(expression, "arguments");
-    list_size_assert(args, 0);
     let declared = property_get(functions, called_name);
     return declared;
+  }
+  function param_actions(called, call_node, call_line) {
+    "2026-11-27, at the human's asking, for the inputs lessons: the function's own line, pressed as the function called, declares each parameter and assigns it the value written in the call, as a let line declares and assigns, the note going above the function's line; the value goes up from the call line. Only a value written out is taken as an argument so far, and one parameter, since a line has room for one note; anything else stops";
+    let params = property_get(called, "params");
+    let args = property_path_get_2(call_node, "expression", "arguments");
+    let count = list_size(params);
+    list_size_assert(args, count);
+    let actions = [];
+    for (let k = 0; less_than(k, count); k++) {
+      let param = list_get(params, k);
+      let arg = list_get(args, k);
+      let param_type = property_get(param, "type");
+      let arg_type = property_get(arg, "type");
+      if (
+        not_equal(param_type, "Identifier") ||
+        not_equal(arg_type, "Literal")
+      ) {
+        error({
+          message:
+            "only a parameter given a value written out is followed so far",
+          code,
+        });
+      }
+      let param_name = property_get(param, "name");
+      let value = property_get(arg, "value");
+      property_set(values, param_name, value);
+      list_add_multiple(actions, [
+        {
+          kind: "declare",
+          name: param_name,
+          from: property_get(param, "start"),
+          to: property_get(param, "end"),
+          param: true,
+        },
+        {
+          kind: "assign",
+          name: param_name,
+          value,
+          from: property_get(arg, "start"),
+          to: property_get(arg, "end"),
+          long: null,
+          param: true,
+          from_line: call_line,
+        },
+      ]);
+    }
+    return actions;
   }
   function function_statement_run(node) {
     "a function line declared, or a function called and its body run; false for any other line";
     let type = property_get(node, "type");
     let line = app_learn_js_program_trace_line(node, code);
     if (equal(type, "FunctionDeclaration")) {
-      let args2 = property_get(node, "params");
-      list_size_assert(args2, 0);
+      let params2 = property_get(node, "params");
+      let params_size = list_size(params2);
+      if (less_than(1, params_size)) {
+        error({
+          message:
+            "a function with more than one parameter is not followed so far",
+          code,
+        });
+      }
       let declared_name = property_path_get_2(node, "id", "name");
       property_set(functions, declared_name, node);
       list_add(trace, {
@@ -104,14 +162,29 @@ export function app_learn_js_program_trace(code) {
       },
       code,
     );
-    list_add(trace, {
+    let entered_actions = param_actions(called, node, line);
+    let entered = {
       line: function_line,
-      actions: [],
+      actions: entered_actions,
       enter: called_name,
       end_line,
-    });
+    };
+    list_add(trace, entered);
     let body = property_path_get_2(called, "body", "body");
     statements_run(body);
+    ("2026-11-27: the parameters are names only while the call runs, so once the last line it runs is complete their note goes, and the name holds nothing outside the function");
+    let list = property_get(called, "params");
+    let param_names = list_map_property(list, "name");
+    if (list_empty_not_is(param_names)) {
+      let last_entry = list_last(trace);
+      property_initialize_list_add(last_entry, "leaves", {
+        line: function_line,
+        names: param_names,
+      });
+      for (let param_name2 of param_names) {
+        property_delete(values, param_name2);
+      }
+    }
     let after = list_size(trace);
     property_set(returns, after, called_name);
     return true;
