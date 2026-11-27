@@ -679,6 +679,9 @@ export function app_learn_js_lesson_ids_short() {
       app_learn_js_lesson_function_input_twice: text_frozen(
         "function_input_twice",
       ),
+      app_learn_js_lesson_function_input_variable: text_frozen(
+        "function_input_variable",
+      ),
       app_learn_js_lesson_array_log: text_frozen("array_log"),
       app_learn_js_lesson_array_shift_push: text_frozen("shift_push"),
       app_learn_js_lesson_array_pop_unshift: text_frozen("pop_unshift"),

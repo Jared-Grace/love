@@ -1,4 +1,3 @@
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
@@ -12,10 +11,13 @@ import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { error } from "./error.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_add } from "./list_add.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_learn_js_program_trace_line } from "./app_learn_js_program_trace_line.mjs";
 import { equal } from "./equal.mjs";
+import { list_add } from "./list_add.mjs";
 import { null_is } from "./null_is.mjs";
+import { app_learn_js_program_trace_value } from "./app_learn_js_program_trace_value.mjs";
+import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -26,7 +28,6 @@ import { app_learn_js_program_trace_for_start_split_or_null } from "./app_learn_
 import { null_not_is } from "./null_not_is.mjs";
 import { app_learn_js_program_trace_statement } from "./app_learn_js_program_trace_statement.mjs";
 import { app_learn_js_program_trace_statement_piece } from "./app_learn_js_program_trace_statement_piece.mjs";
-import { text_slice } from "./text_slice.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_pop } from "./list_pop.mjs";
 export function app_learn_js_program_trace(code) {
@@ -66,8 +67,8 @@ export function app_learn_js_program_trace(code) {
     let declared = property_get(functions, called_name);
     return declared;
   }
-  function param_actions(called, call_node, call_line) {
-    "2026-11-27, at the human's asking, for the inputs lessons: the function's own line, pressed as the function called, declares each parameter and assigns it the value written in the call, as a let line declares and assigns, the note going above the function's line; the value goes up from the call line. Only a value written out is taken as an argument so far, and one parameter, since a line has room for one note; anything else stops";
+  function param_actions(called, call_node, call_line, arg_values) {
+    "2026-11-27, at the human's asking, for the inputs lessons: the function's own line, pressed as the function called, declares each parameter and assigns it the value its input in the call was solved to, as a let line declares and assigns, the note going above the function's line; the value goes up from the call line, where it now stands solved. One parameter so far, since a line has room for one note; a parameter that is not a plain name stops";
     let params = property_get(called, "params");
     let args = property_path_get_2(call_node, "expression", "arguments");
     let count = list_size(params);
@@ -77,19 +78,14 @@ export function app_learn_js_program_trace(code) {
       let param = list_get(params, k);
       let arg = list_get(args, k);
       let param_type = property_get(param, "type");
-      let arg_type = property_get(arg, "type");
-      if (
-        not_equal(param_type, "Identifier") ||
-        not_equal(arg_type, "Literal")
-      ) {
+      if (not_equal(param_type, "Identifier")) {
         error({
-          message:
-            "only a parameter given a value written out is followed so far",
+          message: "only a parameter that is a plain name is followed so far",
           code,
         });
       }
       let param_name = property_get(param, "name");
-      let value = property_get(arg, "value");
+      let value = list_get(arg_values, k);
       property_set(values, param_name, value);
       list_add_multiple(actions, [
         {
@@ -145,14 +141,42 @@ export function app_learn_js_program_trace(code) {
       return false;
     }
     let called_name = property_path_get_2(called, "id", "name");
+    ("2026-11-27, at the human's asking, for a variable as the input: each input in the call is solved first, as anything solved in a line is, and then the function is called. text is the call as written, so the guide can name it");
+    let call_actions = [];
+    let call_expression = property_get(node, "expression");
+    let call_args = property_get(call_expression, "arguments");
+    let arg_values = [];
+    for (let arg2 of call_args) {
+      let arg2_type = property_get(arg2, "type");
+      if (
+        not_equal(arg2_type, "Literal") &&
+        not_equal(arg2_type, "Identifier")
+      ) {
+        error({
+          message:
+            "only an input that is a value written out or a name is followed so far",
+          code,
+        });
+      }
+      let arg_value = app_learn_js_program_trace_value(
+        arg2,
+        call_actions,
+        code,
+        values,
+      );
+      list_add(arg_values, arg_value);
+    }
+    let from2 = property_get(call_expression, "start");
+    let to2 = property_get(call_expression, "end");
+    let call_text = text_slice(code, from2, to2);
+    list_add(call_actions, {
+      kind: "call_function",
+      name: called_name,
+      text: call_text,
+    });
     list_add(trace, {
       line,
-      actions: [
-        {
-          kind: "call_function",
-          name: called_name,
-        },
-      ],
+      actions: call_actions,
     });
     let function_line = app_learn_js_program_trace_line(called, code);
     let left4 = property_get(called, "end");
@@ -162,7 +186,7 @@ export function app_learn_js_program_trace(code) {
       },
       code,
     );
-    let entered_actions = param_actions(called, node, line);
+    let entered_actions = param_actions(called, node, line, arg_values);
     let entered = {
       line: function_line,
       actions: entered_actions,
