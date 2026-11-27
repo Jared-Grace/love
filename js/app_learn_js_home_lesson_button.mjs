@@ -3,6 +3,9 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_shared_button_numbered_progress } from "./app_shared_button_numbered_progress.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { app_learn_js_lesson_number_shown } from "./app_learn_js_lesson_number_shown.mjs";
+import { add_1 } from "./add_1.mjs";
 import { app_learn_js_lesson_open_tab } from "./app_learn_js_lesson_open_tab.mjs";
 import { html_on_middle_click } from "./html_on_middle_click.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -44,6 +47,10 @@ export function app_learn_js_home_lesson_button(
     on_click,
   );
   let button = property_get(r, "button");
+  ("2026-11-27, at the human's asking: the gutter shows the lesson's number as every lesson number in this course is shown, skipping any holding 666; the shared row writes the plain count, so it is written over here");
+  let number_span = property_get(r, "number");
+  let number = add_1(index);
+  html_text_set(number_span, app_learn_js_lesson_number_shown(number) + ".");
   ("a middle click opens the lesson in a new tab and leaves this list where it is, at the human's request, 2026-10-11. Rejected: making the row a real link, which would also give copy-link and ctrl-click, but the row is the shared numbered button every app draws");
   function on_middle_click() {
     app_learn_js_lesson_open_tab(context, id);

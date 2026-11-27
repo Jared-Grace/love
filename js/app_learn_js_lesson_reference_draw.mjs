@@ -10,6 +10,7 @@ import { app_learn_js_lesson_current_id } from "./app_learn_js_lesson_current_id
 import { app_learn_js_lesson_index_by_id } from "./app_learn_js_lesson_index_by_id.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
+import { app_learn_js_lesson_number_shown } from "./app_learn_js_lesson_number_shown.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
 export function app_learn_js_lesson_reference_draw(parent, context, lesson_fn) {
@@ -48,7 +49,7 @@ export function app_learn_js_lesson_reference_draw(parent, context, lesson_fn) {
   let left = add_1(index_shown);
   let follows_is = equal(left, index_current);
   let previous_is = after_first_is && follows_is;
-  let label = number;
+  let label = app_learn_js_lesson_number_shown(number);
   if (previous_is) {
     label = "the previous lesson";
   } else {

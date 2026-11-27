@@ -23,8 +23,8 @@ export function app_learn_js_lesson_title_strip(root, context, lesson) {
   let lesson_index = app_learn_js_lesson_index_by_id(lesson_id);
   function title_paint(title) {
     "the lesson's own number leads the title, the same 1-based number and same trailing period the home list shows in its gutter, so a learner reading a lesson can say which one they are on without going back - and so can anyone they are asking about it. It sits INSIDE the muted title rather than beside the home button, because it is part of naming where you are rather than a second control";
-    let number_text =
-      app_learn_js_lesson_number_shown(add_1(lesson_index)) + ".";
+    let number = add_1(lesson_index);
+    let number_text = app_learn_js_lesson_number_shown(number) + ".";
     html_span_text(title, number_text);
     html_span_space(title);
     ("a finished lesson wears the check the home list gives its row, in the same place - after the number, before the title - so a learner who opens a lesson can see they already finished it without going back to the list, at the human's request");
