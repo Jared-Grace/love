@@ -412,6 +412,28 @@ def said_alone():
     return json.loads(SAID_ALONE_PATH.read_text(encoding="utf-8"))
 
 
+SAID_ALONE_BIBLE_PATH = (
+    Path(__file__).resolve().parents[2]
+    / "data/given/speech_pronunciations_alone_bible.json"
+)
+
+
+def said_alone_bible():
+    """How a word with two sayings is said on its own: as the bible says it most.
+
+    ★ WRITTEN BY A COMMAND, NEVER BY HAND.  `bible_audio_heteronyms_said_write`
+    lets the reader say every such word in its own verse and keeps the saying it
+    used most; a word said alone has no sentence to choose by, so the bible's
+    habit chooses.  Measured 2026-11-27, the guess without it said "sows" as
+    the pig and "content" as a table of contents.
+
+    A missing file is an empty one: the reader's own guess stands, as before.
+    """
+    if not SAID_ALONE_BIBLE_PATH.exists():
+        return {}
+    return json.loads(SAID_ALONE_BIBLE_PATH.read_text(encoding="utf-8"))
+
+
 def said_alone_voice_spelling(said, voice):
     """One entry from the said-alone file, for the voice about to speak it.
 
@@ -817,6 +839,7 @@ def line_samples(g2p, kokoro, text, speed, citation, voice):
             run = said_run(g2p, run)
         phonemes, _ = g2p(run)
         if citation:
+            phonemes = said_alone_bible().get(run.strip().lower(), phonemes)
             phonemes = said_alone_phonemes(run, phonemes, voice)
         samples, rate = kokoro.create(
             phonemes, voice=voice, speed=speed, is_phonemes=True
