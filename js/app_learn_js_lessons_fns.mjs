@@ -650,6 +650,7 @@ import { app_learn_js_lesson_function_outside } from "./app_learn_js_lesson_func
 import { app_learn_js_lesson_function_if } from "./app_learn_js_lesson_function_if.mjs";
 import { app_learn_js_lesson_function_loop } from "./app_learn_js_lesson_function_loop.mjs";
 import { app_learn_js_lesson_function_input } from "./app_learn_js_lesson_function_input.mjs";
+import { app_learn_js_lesson_function_input_twice } from "./app_learn_js_lesson_function_input_twice.mjs";
 export function app_learn_js_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
@@ -1312,6 +1313,7 @@ export function app_learn_js_lessons_fns() {
     app_learn_js_lesson_function_if,
     app_learn_js_lesson_function_loop,
     app_learn_js_lesson_function_input,
+    app_learn_js_lesson_function_input_twice,
   ];
   return fns;
 }
