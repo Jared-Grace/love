@@ -34,7 +34,7 @@ import { app_shared_photos_draw_buttons } from "./app_shared_photos_draw_buttons
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { file_name_random_browser } from "./file_name_random_browser.mjs";
 import { list_add } from "./list_add.mjs";
-import { photo_organizer_photo_upload } from "./photo_organizer_photo_upload.mjs";
+import { photo_organizer_photos_upload } from "./photo_organizer_photos_upload.mjs";
 import { html_input_file_accept_multiple } from "./html_input_file_accept_multiple.mjs";
 import { app_shared_button_wide_input } from "./app_shared_button_wide_input.mjs";
 import { photo_organizer_folder_delete_ask } from "./photo_organizer_folder_delete_ask.mjs";
@@ -201,11 +201,7 @@ export async function photo_organizer_folder_screen(root, key) {
     }
     ("Every picture is sent before the folder is kept naming them, so a send stopped partway never leaves the folder pointing at a picture that is not there.");
     async function send() {
-      for (let photo of added) {
-        let name2 = property_get(photo, "name");
-        let file2 = property_get(photo, "file");
-        await photo_organizer_photo_upload(name2, file2);
-      }
+      await photo_organizer_photos_upload(added);
       await photo_organizer_folder_put(folder);
     }
     await html_loading(send);
