@@ -215,6 +215,8 @@ export function app_learn_js_program_step_through_generic(
   let bases = [];
   ("the value each line's note says right now, null until there is a note; kept, so the value can fade out of the note before a new one arrives");
   let noted = [];
+  ("2026-11-27, at the human's asking, for two parameters: a line can declare more than one name, as function greet(name, town) does, so each line's note holds a row of its own for each name, in the order they were declared, and what each says is kept by line and by name. note_rows holds each line's rows, by name");
+  let note_rows = [];
   ("2026-11-22: every span a note is drawn in, so the program turning green can turn its notes a deep green too; a note redrawn leaves its old spans here, out of the page, where colouring them does nothing");
   let note_spans = [];
   function text_write(into, text) {
@@ -243,7 +245,8 @@ export function app_learn_js_program_step_through_generic(
     list_add(shown, line);
     list_add(replaced, []);
     list_add(bases, line);
-    list_add(noted, null);
+    list_add(noted, {});
+    list_add(note_rows, {});
     list_add(rows, row);
     list_add(starts, line_start);
     line_start = line_start + text_size(line) + 1;
@@ -491,6 +494,18 @@ export function app_learn_js_program_step_through_generic(
     span_text(row, text10);
     return piece;
   }
+  function note_row(line_index, name) {
+    "the row in the note above line_index saying what name holds, made empty at the end of the note the first time it is asked for";
+    let rows_by_name = list_get(note_rows, line_index);
+    let b27 = property_exists(rows_by_name, name);
+    if (not(b27)) {
+      let comment3 = list_get(comments, line_index);
+      let made = html_div(comment3);
+      property_set(rows_by_name, name, made);
+    }
+    let row2 = property_get(rows_by_name, name);
+    return row2;
+  }
   function comment_draw(
     line_index,
     name,
@@ -501,13 +516,14 @@ export function app_learn_js_program_step_through_generic(
   ) {
     "2026-11-14, for Setting an item: part item hides one item inside the array, last_text being that item as code and item_from where it starts in value_text; the other parts ignore item_from";
     "the note above a declared name saying what it holds, drawn as every other note in this app is; part is name, value or last (last_text being the last item as code, and empty for the other two), and the spans that part is drawn in are handed back hidden, for a copy to arrive into";
-    let comment = list_get(comments, line_index);
+    let comment = note_row(line_index, name);
     ("the name is marked as every note in this course marks one, at the human's asking 2026-10-14");
     let open = app_learn_js_note_name_mark_open();
     let marked = app_learn_js_note_name_mark(name);
     let before = "// ";
     let note = text_combine_multiple([before, marked, " value: ", value_text]);
-    list_set(noted, line_index, value_text);
+    let line_noted = list_get(noted, line_index);
+    property_set(line_noted, name, value_text);
     let name_from = text_size(before) + text_size(open);
     let size = text_size(note);
     let right3 = text_size(value_text);
@@ -1043,7 +1059,9 @@ export function app_learn_js_program_step_through_generic(
       html_clear(comment);
     }
     await html_height_change_animate(slot, comment, note_clear, duration);
-    list_set(noted, line_index, null);
+    list_set(noted, line_index, {});
+    list_set(note_rows, line_index, {});
+    html_style_opacity(comment, "1");
     let declared = property_get(state, "declared");
     let held = property_get(state, "held");
     for (let name of names) {
@@ -1059,7 +1077,8 @@ export function app_learn_js_program_step_through_generic(
       return null;
     }
     let note_line2 = property_get(declared3, name);
-    let value_text2 = list_get(noted, note_line2);
+    let object5 = list_get(noted, note_line2);
+    let value_text2 = property_get(object5, name);
     let spans = comment_draw(note_line2, name, value_text2, "value", "", 0);
     each(spans, html_visibility_visible);
     let first = list_first(spans);
@@ -1364,7 +1383,9 @@ export function app_learn_js_program_step_through_generic(
       let slot = list_get(slots, line_index);
       let comment2 = list_get(comments, line_index);
       let duration = app_shared_animation_duration();
-      html_style_opacity(comment2, "0");
+      ("2026-11-27, for two parameters: only the name's own row fades in, so a note already above the line stays as it is");
+      let row3 = note_row(line_index, name4);
+      html_style_opacity(row3, "0");
       ("2026-10-14, at the human's asking: the note comes in with its ( ) empty, and then a copy of the name on the line goes up into them");
       let box = {
         hidden: [],
@@ -1381,7 +1402,7 @@ export function app_learn_js_program_step_through_generic(
         property_set(box, "hidden", hidden2);
       }
       await html_height_change_animate(slot, comment2, note_write, duration);
-      await html_opacity_animate(comment2, "1", duration);
+      await html_opacity_animate(row3, "1", duration);
       let line_from2 = list_get(starts, line_index);
       let left3 = property_get(action, "from");
       let name_from = subtract(left3, line_from2);
@@ -1425,7 +1446,8 @@ export function app_learn_js_program_step_through_generic(
       ("2026-10-14, at the human's asking: the value the note said before fades out first, so it is seen going rather than vanishing as the new one sets off. Not picked: hiding it at once and pausing before the new one sets off, offered by the human as the other way; a fade is how this note already comes in, so it goes the same way");
       ("2026-10-15, at the human's asking: a name given a new value on a later line, as a = 5; does, has it written into the note above the line that declared it, the one note saying what that name holds, so the guide pointing there stays true. Not picked: a second note above the later line, which would leave the first one saying a value the name no longer holds");
       let note_line = property_path_get_2(state, "declared", name2);
-      let old = list_get(noted, note_line);
+      let object6 = list_get(noted, note_line);
+      let old = property_get(object6, name2);
       ("2026-11-14, at the human's asking, for Setting an item: a[1] = x; changes one item, so only that item fades and the new one goes up into its place, the rest of the array staying unfaded, as a push leaves the items already there. The items before it are the same before and after, so the item starts at the same place in both");
       let part4 = "value";
       let old_item = "";
