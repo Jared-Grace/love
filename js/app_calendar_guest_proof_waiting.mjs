@@ -1,13 +1,13 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_style_control } from "./app_shared_style_control.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_color_yellow_tint } from "./app_shared_color_yellow_tint.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
@@ -16,7 +16,6 @@ import { window_open } from "./window_open.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { app_calendar } from "./app_calendar.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { app_shared_heading } from "./app_shared_heading.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_calendar_private_link_draw } from "./app_calendar_private_link_draw.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
@@ -44,21 +43,22 @@ export function app_calendar_guest_proof_waiting(
   let app_name = messenger ? "Messenger" : "WhatsApp";
   let confirmed = messenger ? "Facebook profile" : "WhatsApp phone number";
   let screen = html_div(card);
-  function top_draw(go, first) {
-    html_clear(screen);
-    let text = app_shared_button_back_text();
-    app_shared_button_uncolored(screen, text, go);
-    let warning = html_div_text(
-      screen,
-      "⚠️ " + first + ". Then you can pick a time for our meeting.",
-    );
+  function warning_draw(words, size) {
+    let warning = html_div_text(screen, "⚠️ " + words);
     app_shared_style_control(warning);
     html_style_assign(warning, {
       "box-sizing": "border-box",
       "background-color": app_shared_color_yellow_tint(),
       "font-weight": "bold",
       "text-align": "center",
+      "font-size": size,
     });
+  }
+  function top_draw(go, first) {
+    html_clear(screen);
+    let text = app_shared_button_back_text();
+    app_shared_button_uncolored(screen, text, go);
+    warning_draw(first + ". Then you can pick a time for our meeting.", "");
   }
   function code_draw(size) {
     let code_line = html_div_text_content(screen, proof.code);
@@ -109,14 +109,15 @@ export function app_calendar_guest_proof_waiting(
     app_shared_text_deemphasized(from_line);
   }
   function waiting_show() {
-    top_draw(on_back, "Wait for my message");
-    let thanks = app_shared_heading(screen, "Thank you for sending the code!");
+    '★ WAIT IS THE MAIN THING ON THIS SCREEN (human, 2026-11-27: "Thank you for sending the code - smaller then under: Please wait until I reply to your message on WhatsApp that should be the main focus of the UI - that next step is wait"). The thanks is plain and small; the wait is the big yellow box, which also keeps the guard that nothing here reads as booked. The earlier "If God wills, I will reply on WhatsApp that I have received your code" line went, as the wait now says the same.';
+    html_clear(screen);
+    let text = app_shared_button_back_text();
+    app_shared_button_uncolored(screen, text, on_back);
+    let thanks = html_div_text(screen, "Thank you for sending the code!");
     html_centered(thanks);
-    html_div_text(
-      screen,
-      "If God wills, I will reply on " +
-        app_name +
-        " that I have received your code.",
+    warning_draw(
+      "Please wait until I reply to your message on " + app_name + ".",
+      "1.4em",
     );
     html_div_text(
       screen,
