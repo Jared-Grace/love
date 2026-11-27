@@ -68,7 +68,7 @@ export function app_learn_js_program_trace(code) {
     return declared;
   }
   function param_actions(called, call_node, call_line, arg_values) {
-    "2026-11-27, at the human's asking, for the inputs lessons: the function's own line, pressed as the function called, declares each parameter and assigns it the value its input in the call was solved to, as a let line declares and assigns, the note going above the function's line; the value goes up from the call line, where it now stands solved. One parameter so far, since a line has room for one note; a parameter that is not a plain name stops";
+    "2026-11-27, at the human's asking, for the inputs lessons: the function's own line, pressed as the function called, declares each parameter and assigns it the value its input in the call was solved to, as a let line declares and assigns, the note going above the function's line; the value goes up from the call line, where it now stands solved. Each parameter is declared and assigned in turn, its note a row of its own above the function's line; a parameter that is not a plain name stops";
     let params = property_get(called, "params");
     let args = property_path_get_2(call_node, "expression", "arguments");
     let count = list_size(params);
@@ -114,15 +114,6 @@ export function app_learn_js_program_trace(code) {
     let type = property_get(node, "type");
     let line = app_learn_js_program_trace_line(node, code);
     if (equal(type, "FunctionDeclaration")) {
-      let params2 = property_get(node, "params");
-      let params_size = list_size(params2);
-      if (less_than(1, params_size)) {
-        error({
-          message:
-            "a function with more than one parameter is not followed so far",
-          code,
-        });
-      }
       let declared_name = property_path_get_2(node, "id", "name");
       property_set(functions, declared_name, node);
       list_add(trace, {
