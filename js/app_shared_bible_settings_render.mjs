@@ -11,11 +11,14 @@ import { app_shared_device_report_send } from "./app_shared_device_report_send.m
 import { emoji_check } from "./emoji_check.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_text_set } from "./html_text_set.mjs";
+import { app_shared_bible_settings_sign_in_key } from "./app_shared_bible_settings_sign_in_key.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { app_shared_bible_settings_sign_in } from "./app_shared_bible_settings_sign_in.mjs";
 import { app_shared_native_update_is } from "./app_shared_native_update_is.mjs";
 import { app_shared_native_update_text } from "./app_shared_native_update_text.mjs";
 import { app_shared_native_update } from "./app_shared_native_update.mjs";
-import { html_p_text } from "./html_p_text.mjs";
 import { app_shared_native_version } from "./app_shared_native_version.mjs";
+import { html_p_text } from "./html_p_text.mjs";
 export function app_shared_bible_settings_render({
   container,
   open_history,
@@ -54,6 +57,12 @@ export function app_shared_bible_settings_render({
     html_text_set(report_button, sent_text);
   }
   report_button = app_shared_button_wide(container, report_text, report_send);
+  ("Sign in only in an app that wrote how to (human 2026-11-27: show Send and Back up only when signed in) - every other reader has nobody to sign in.");
+  let sign_in_key = app_shared_bible_settings_sign_in_key();
+  let sign_in = property_get_or_null(context, sign_in_key);
+  if (null_not_is(sign_in)) {
+    app_shared_bible_settings_sign_in(container, sign_in);
+  }
   ("Update app comes after everything else, and only inside one of our Android apps: a browser has nothing to update, so it is never offered there (human 2026-11-23: updating should not mean opening the camera first).");
   if (app_shared_native_update_is()) {
     let update_text = app_shared_native_update_text();

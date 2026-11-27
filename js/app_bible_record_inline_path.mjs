@@ -11,7 +11,7 @@ import { app_bible_record_inline_path_sent_show } from "./app_bible_record_inlin
 import { promise_start_unawait } from "./promise_start_unawait.mjs";
 import { app_shared_confirm_over_red } from "./app_shared_confirm_over_red.mjs";
 import { app_bible_record_inline_path_take_delete_confirmed } from "./app_bible_record_inline_path_take_delete_confirmed.mjs";
-export function app_bible_record_inline_path({
+export async function app_bible_record_inline_path({
   buttons,
   chapter,
   entry,
@@ -56,7 +56,7 @@ export function app_bible_record_inline_path({
   let camera_button = property_get(camera_buttons, "camera_button");
   let record_button = property_get(camera_buttons, "record_button");
   let stop_button = property_get(camera_buttons, "stop_button");
-  let transfer_buttons = app_bible_record_inline_path_transfer({
+  let transfer_buttons = await app_bible_record_inline_path_transfer({
     buttons,
     held,
     sign_in,

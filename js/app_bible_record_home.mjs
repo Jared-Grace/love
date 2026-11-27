@@ -29,7 +29,7 @@ export async function app_bible_record_home(context) {
   let entries = property_get(r2, "entries");
   let entry_for = property_get(r2, "entry_for");
   let project_label = property_get(r2, "project_label");
-  app_bible_record_home_verses(
+  await app_bible_record_home_verses(
     passages,
     entry_for,
     reference,

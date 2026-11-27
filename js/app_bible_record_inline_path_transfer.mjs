@@ -1,9 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { app_bible_record_local_is } from "./app_bible_record_local_is.mjs";
 import { each } from "./each.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { not } from "./not.mjs";
+import { app_bible_record_local_is } from "./app_bible_record_local_is.mjs";
+import { app_bible_record_signed_in_show } from "./app_bible_record_signed_in_show.mjs";
 import { app_bible_record_native_is } from "./app_bible_record_native_is.mjs";
 import { app_bible_record_inline_path_busy } from "./app_bible_record_inline_path_busy.mjs";
 import { app_bible_record_inline_path_backup } from "./app_bible_record_inline_path_backup.mjs";
@@ -11,7 +12,7 @@ import { property_get } from "./property_get.mjs";
 import { app_bible_record_inline_path_download } from "./app_bible_record_inline_path_download.mjs";
 import { app_bible_record_inline_path_chapter_download } from "./app_bible_record_inline_path_chapter_download.mjs";
 import { app_bible_record_inline_path_send } from "./app_bible_record_inline_path_send.mjs";
-export function app_bible_record_inline_path_transfer({
+export async function app_bible_record_inline_path_transfer({
   buttons,
   held,
   sign_in,
@@ -33,8 +34,12 @@ export function app_bible_record_inline_path_transfer({
   ("BACK UP SENDS EVERY UNSENT TAKE ON THE PHONE TO STORAGE AS A DRAFT - every chapter and project, not only this one (human 2026-11-25: syncing, so the videos can be seen; a sync button for all videos, not just the current chapter). It is always shown, since takes elsewhere may wait even when this chapter has none: each take is backed up on its own when it finishes, but only while signed in and online, so this catches the rest. A draft is not sent - Send stays the approval, since a sent take becomes a video posted with nobody looking again.");
   let backup_button = app_shared_button_wide(buttons, "", backup);
   ("THE STORE BUILD HAS NO SEND AND NO BACK UP (human 2026-11-25: an app store app that stores only on the device - no send or sync): its takes stay on the phone, and Download is how they leave it.");
-  if (app_bible_record_local_is()) {
-    each([send_button, backup_button], html_display_none);
+  ("AND ELSEWHERE THEY SHOW ONLY ONCE SOMEBODY IS SIGNED IN (human 2026-11-27: only show Send and Back up if logged in): a stranger has nowhere to send to. Signing in is in Settings.");
+  let sending = [send_button, backup_button];
+  each(sending, html_display_none);
+  let b2 = app_bible_record_local_is();
+  if (not(b2)) {
+    await app_bible_record_signed_in_show(sending);
   }
   let b = app_bible_record_native_is();
   if (not(b)) {
