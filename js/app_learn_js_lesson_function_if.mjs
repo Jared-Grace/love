@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_function_declared_lines } from "./app_learn_js_function_declared_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -54,10 +55,12 @@ export function app_learn_js_lesson_function_if() {
   function wrong_outputs_of(hour) {
     "both lines, as if greet ran anyway, and the other branch's line";
     let other = evening;
-    if (!less_than(hour, 12)) {
+    let b = less_than(hour, 12);
+    if (not(b)) {
       other = morning;
     }
-    let outputs = [list_join_newline([morning, evening]), other];
+    let joined = list_join_newline([morning, evening]);
+    let outputs = [joined, other];
     return outputs;
   }
   function inputs_get() {
