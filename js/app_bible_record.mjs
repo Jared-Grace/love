@@ -33,6 +33,7 @@ export async function app_bible_record(context) {
   );
   ("THE PHONE APPS KEEP THE BIBLES ON THE PHONE (human 2026-11-28), started only once the first screen is drawn so it never slows the page appearing, and not waited on, so reading and recording go on while it runs.");
   if (b) {
-    await app_bible_record_offline_auto();
+    ("STARTED BY A TIMER, NOT CALLED: a call would be given await by the auto pass, and the reader switch waits on this whole function under its loading cover, so the cover would stay up for a whole bible's download.");
+    setTimeout(app_bible_record_offline_auto, 0);
   }
 }
