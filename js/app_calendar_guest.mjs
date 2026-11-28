@@ -197,7 +197,9 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       async function pick() {
         await app_show(v);
       }
-      if (p && p.proven) {
+      ('NOTHING CONFIRMED ⇒ EVERY CONFIRM BUTTON GREEN (human, 2026-11-28: "what about if nothing is confirmed then make both confirm buttons green?"): confirming is then the only next step, whichever app. Once one app is confirmed, its Book button is the green one and the other app\'s Confirm goes plain, as booking is then the next step.');
+      let none_proven = equal(proven_vias.length, 0);
+      if ((p && p.proven) || none_proven) {
         app_shared_button_green(step, words, pick);
       } else {
         app_shared_button_uncolored(step, words, pick);
