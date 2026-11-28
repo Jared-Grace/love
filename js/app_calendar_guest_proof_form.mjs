@@ -11,12 +11,12 @@ import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
-import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
-import { app_shared_color_red } from "./app_shared_color_red.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
+import { app_shared_problem_show } from "./app_shared_problem_show.mjs";
+import { app_shared_problem_clear } from "./app_shared_problem_clear.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { app_shared_problem_words_set } from "./app_shared_problem_words_set.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export async function app_calendar_guest_proof_form(
@@ -164,32 +164,14 @@ export async function app_calendar_guest_proof_form(
   function problem_show(problem) {
     problem_clear();
     marked = problem;
-    app_shared_problem_mark(problem.field, true);
-    html_text_content_set(status, problem.words);
-    html_style_assign(status, {
-      color: app_shared_color_red(),
-    });
-    html_style_assign(code_button, {
-      border: "4px solid " + app_shared_color_red(),
-    });
-    html_component_element_get(problem.field).scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+    app_shared_problem_show(problem.field, problem.words, status, code_button);
   }
   function problem_clear() {
     if (equal(marked, null)) {
       return;
     }
-    app_shared_problem_mark(marked.field, false);
+    app_shared_problem_clear(marked.field, status, code_button);
     marked = null;
-    html_text_content_set(status, "");
-    html_style_assign(status, {
-      color: "",
-    });
-    html_style_assign(code_button, {
-      border: "",
-    });
   }
   function problems_recheck() {
     if (equal(marked, null)) {
@@ -240,10 +222,7 @@ export async function app_calendar_guest_proof_form(
         started.body.reason,
         "Could not get a code. Try again.",
       );
-      html_text_content_set(status, text);
-      html_style_assign(status, {
-        color: app_shared_color_red(),
-      });
+      app_shared_problem_words_set(status, text);
       return;
     }
     storage_local_set(app_calendar, "guest_details", {

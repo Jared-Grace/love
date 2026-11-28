@@ -39,9 +39,10 @@ import { calendar_weekly_series_plan } from "./calendar_weekly_series_plan.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
-import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
-import { app_shared_color_red } from "./app_shared_color_red.mjs";
+import { app_shared_problem_show } from "./app_shared_problem_show.mjs";
+import { app_shared_problem_clear } from "./app_shared_problem_clear.mjs";
 import { html_loading } from "./html_loading.mjs";
+import { app_shared_problem_words_set } from "./app_shared_problem_words_set.mjs";
 import { calendar_time_range_local_text } from "./calendar_time_range_local_text.mjs";
 import { app_calendar_private_link_draw } from "./app_calendar_private_link_draw.mjs";
 export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
@@ -667,32 +668,19 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     function problem_show(problem) {
       problem_clear();
       marked = problem;
-      app_shared_problem_mark(problem.field, true);
-      html_text_content_set(status, problem.words);
-      html_style_assign(status, {
-        color: app_shared_color_red(),
-      });
-      html_style_assign(book_button, {
-        border: "4px solid " + app_shared_color_red(),
-      });
-      html_component_element_get(problem.field).scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
+      app_shared_problem_show(
+        problem.field,
+        problem.words,
+        status,
+        book_button,
+      );
     }
     function problem_clear() {
       if (equal(marked, null)) {
         return;
       }
-      app_shared_problem_mark(marked.field, false);
+      app_shared_problem_clear(marked.field, status, book_button);
       marked = null;
-      html_text_content_set(status, "");
-      html_style_assign(status, {
-        color: "",
-      });
-      html_style_assign(book_button, {
-        border: "",
-      });
     }
     function problems_recheck() {
       if (equal(marked, null)) {
@@ -760,10 +748,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
           });
           return;
         }
-        html_text_content_set(status, text);
-        html_style_assign(status, {
-          color: app_shared_color_red(),
-        });
+        app_shared_problem_words_set(status, text);
         return;
       }
       let app_name = equal(proof.via, "messenger") ? "Messenger" : "WhatsApp";
