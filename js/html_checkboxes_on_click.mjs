@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { html_checked_set } from "./html_checked_set.mjs";
 import { each } from "./each.mjs";
-import { app_shared_choice_card_chosen_color } from "./app_shared_choice_card_chosen_color.mjs";
+import { app_shared_color_green_picked } from "./app_shared_color_green_picked.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { sleep_0 } from "./sleep_0.mjs";
 import { html_checkboxes_validate } from "./html_checkboxes_validate.mjs";
@@ -23,7 +23,7 @@ export async function html_checkboxes_on_click(
   }
   each(checkboxes, lambda2);
   html_checked_set(checkbox, true);
-  let selected = app_shared_choice_card_chosen_color();
+  let selected = app_shared_color_green_picked();
   html_style_background_color_set(container, selected);
   await sleep_0();
   let valid = valid_get(checkboxes);

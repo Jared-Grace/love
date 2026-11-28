@@ -17,7 +17,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { not } from "./not.mjs";
 import { app_shared_color_red_dark } from "./app_shared_color_red_dark.mjs";
 import { html_checked_set } from "./html_checked_set.mjs";
-import { app_shared_choice_card_chosen_color } from "./app_shared_choice_card_chosen_color.mjs";
+import { app_shared_color_green_picked } from "./app_shared_color_green_picked.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_choice_card_ring } from "./app_shared_choice_card_ring.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
@@ -74,7 +74,7 @@ export function app_shared_choice_cards(parent, choices, chosen, on_choose) {
     }
     html_checked_set(box, on);
     if (on) {
-      let background = app_shared_choice_card_chosen_color();
+      let background = app_shared_color_green_picked();
       html_style_background_color_set(container, background);
       app_shared_choice_card_ring(container, true);
     }
