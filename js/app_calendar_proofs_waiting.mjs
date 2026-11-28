@@ -115,10 +115,11 @@ export function app_calendar_proofs_waiting(
         sent.body.key && sent.body.slug
           ? calendar_guest_link(sent.body.slug, sent.body.key)
           : link;
+      ("THE REPLY'S WORDS ARE THE HOST'S (human, 2026-11-28: \"Thank you! I got your code. If you want, here's a link so you can schedule a meeting, if God wills: ...\"); with no link to give, the same words point back to the page.");
       let reply = own
-        ? "Thank you, I got your code. Now pick a time for our meeting here: " +
+        ? "Thank you! I got your code. If you want, here's a link so you can schedule a meeting, if God wills: " +
           own
-        : "Thank you, I got your code. Now open the page again and pick a time for our meeting.";
+        : "Thank you! I got your code. If you want, open the page again so you can schedule a meeting, if God wills.";
       html_clear(card);
       let reply_card = card;
       html_div_text(reply_card, "✅ Confirmed. Send " + who + " this:");
@@ -127,7 +128,12 @@ export function app_calendar_proofs_waiting(
         await clipboard_copy_browser(reply);
         app_shared_toast("✅ Copied");
       }
-      app_shared_button_uncolored(reply_card, "Copy", reply_copy);
+      ('THE BUTTON SAYS WHAT IT COPIES (human, 2026-11-28: "Copy should be Copy their private link?"): it copies the whole reply, the private link inside it, so it says both - the same words as the link for one person.');
+      app_shared_button_uncolored(
+        reply_card,
+        "Copy message with their private link",
+        reply_copy,
+      );
       let chat = calendar_chat_url(proof.via, typed, reply);
       function chat_open() {
         window_open(chat);

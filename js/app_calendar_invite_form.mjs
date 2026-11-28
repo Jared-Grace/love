@@ -123,7 +123,12 @@ export function app_calendar_invite_form(parent, key) {
       await clipboard_copy_browser(message);
       app_shared_toast("✅ Copied");
     }
-    app_shared_button_green(result, "Copy", message_copy);
+    ('THE BUTTON SAYS WHAT IT COPIES (human, 2026-11-28: "Copy should be Copy their private link?"): it copies the whole message, the private link inside it, so it says both.');
+    app_shared_button_green(
+      result,
+      "Copy message with their private link",
+      message_copy,
+    );
     let chat = calendar_chat_url(via, typed, message);
     ('A BUTTON, LIKE COPY BESIDE IT (human, 2026-11-21: "open the chat should be a button?").');
     function chat_open() {
