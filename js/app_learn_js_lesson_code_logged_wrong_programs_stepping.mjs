@@ -97,19 +97,27 @@ export function app_learn_js_lesson_code_logged_wrong_programs_stepping(
   ("2026-11-28, at the human's asking: a review rebuilds a question with a fresh copy of this lesson, which never made that program and so does not remember its input. So the review is handed the inputs of the programs it saves, and hands them back when it rebuilds - review 355 threw on a fizz buzz question before this");
   function inputs_saved(codes) {
     "for each of codes this lesson made, the code and the input it was made from";
-    let known = list_filter(codes, function known_is(code6) {
-      return input_by_code.has(code6);
-    });
-    let pairs = list_map(known, function pair_of(code7) {
-      return [code7, input_by_code.get(code7)];
-    });
+    function known_is(code6) {
+      let r = input_by_code.has(code6);
+      return r;
+    }
+    let known = list_filter(codes, known_is);
+    function pair_of(code7) {
+      let v = input_by_code.get(code7);
+      let r2 = [code7, v];
+      return r2;
+    }
+    let pairs = list_map(known, pair_of);
     return pairs;
   }
   function inputs_restore(pairs) {
     "remember again each code and the input it was made from, as inputs_saved handed them out";
-    each(pairs, function restore(pair) {
-      input_by_code.set(list_first(pair), list_second(pair));
-    });
+    function restore(pair) {
+      let first = list_first(pair);
+      let second = list_second(pair);
+      input_by_code.set(first, second);
+    }
+    each(pairs, restore);
   }
   lesson.inputs_saved = inputs_saved;
   lesson.inputs_restore = inputs_restore;
