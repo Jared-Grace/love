@@ -14,7 +14,10 @@ import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
+import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
@@ -93,7 +96,13 @@ export function app_calendar_proofs_waiting(
           sent.body.reason,
           "Could not confirm. Try again.",
         );
-        html_text_content_set(status, text);
+        ('THE ANSWER SHOWS WHERE CONFIRM WAS PRESSED (human, 2026-11-28: "clicked confirm in waiting for code - nothing changed? page just reloaded"): a refusal is red, with a toast, and a yes replaces this card with the reply, instead of a plain line above the box and a card added below every other one, off screen.');
+        html_text_content_set(status, "❌ " + text);
+        html_style_assign(status, {
+          color: app_shared_color_red(),
+          "font-weight": "bold",
+        });
+        app_shared_toast("❌ " + text);
         return;
       }
       app_shared_toast("✅ Confirmed " + who);
@@ -101,8 +110,9 @@ export function app_calendar_proofs_waiting(
         ? "Thank you, I got your code. Now pick a time for our meeting here: " +
           link
         : "Thank you, I got your code. Now open the page again and pick a time for our meeting.";
-      let reply_card = app_shared_container_centered(box);
-      html_div_text(reply_card, "Send " + who + " this:");
+      html_clear(card);
+      let reply_card = card;
+      html_div_text(reply_card, "✅ Confirmed. Send " + who + " this:");
       html_div_text_content(reply_card, reply);
       async function reply_copy() {
         await clipboard_copy_browser(reply);
@@ -110,7 +120,7 @@ export function app_calendar_proofs_waiting(
       }
       app_shared_button_uncolored(reply_card, "Copy", reply_copy);
       let chat = messenger
-        ? html_value_get(sender)
+        ? typed
         : "https://wa.me/" +
           String(typed).replace(/\D/g, "") +
           "?text=" +
