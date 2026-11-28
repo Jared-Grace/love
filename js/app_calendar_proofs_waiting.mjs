@@ -17,10 +17,12 @@ import { property_get_or } from "./property_get_or.mjs";
 import { app_shared_problem_words_set } from "./app_shared_problem_words_set.mjs";
 import { app_shared_problem_show } from "./app_shared_problem_show.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
+import { calendar_guest_link } from "./calendar_guest_link.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
-import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
+import { calendar_chat_url } from "./calendar_chat_url.mjs";
+import { window_open } from "./window_open.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export function app_calendar_proofs_waiting(
   box,
@@ -108,9 +110,14 @@ export function app_calendar_proofs_waiting(
         return;
       }
       app_shared_toast("✅ Confirmed " + who);
-      let reply = link
+      ('THE GUEST\'S OWN LINK, NOT THE PUBLIC ONE (human, 2026-11-28: "that link is the regular link, not the link that takes them to their page"): the answer carries a key for the guest just proven, so the link opens their own page on any phone; the public link stays only for an older server that sends no key.');
+      let own =
+        sent.body.key && sent.body.slug
+          ? calendar_guest_link(sent.body.slug, sent.body.key)
+          : link;
+      let reply = own
         ? "Thank you, I got your code. Now pick a time for our meeting here: " +
-          link
+          own
         : "Thank you, I got your code. Now open the page again and pick a time for our meeting.";
       html_clear(card);
       let reply_card = card;
@@ -121,13 +128,11 @@ export function app_calendar_proofs_waiting(
         app_shared_toast("✅ Copied");
       }
       app_shared_button_uncolored(reply_card, "Copy", reply_copy);
-      let chat = messenger
-        ? typed
-        : "https://wa.me/" +
-          String(typed).replace(/\D/g, "") +
-          "?text=" +
-          encodeURIComponent(reply);
-      html_a_href_text_new_tab(reply_card, chat, "Open the chat");
+      let chat = calendar_chat_url(proof.via, typed, reply);
+      function chat_open() {
+        window_open(chat);
+      }
+      app_shared_button_green(reply_card, "Open the chat", chat_open);
       app_shared_button_green(reply_card, "Done", on_confirmed);
     }
     let confirm_button = app_shared_button_green(

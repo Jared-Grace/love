@@ -24,6 +24,7 @@ import { html_div_text_content } from "./html_div_text_content.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
+import { calendar_chat_url } from "./calendar_chat_url.mjs";
 import { window_open } from "./window_open.mjs";
 export function app_calendar_invite_form(parent, key) {
   arguments_assert(arguments, 2);
@@ -123,12 +124,7 @@ export function app_calendar_invite_form(parent, key) {
       app_shared_toast("✅ Copied");
     }
     app_shared_button_green(result, "Copy", message_copy);
-    let chat = equal(via, "messenger")
-      ? (/^https?:\/\//i.test(typed) ? "" : "https://") + typed
-      : "https://wa.me/" +
-        typed.replace(/\D/g, "") +
-        "?text=" +
-        encodeURIComponent(message);
+    let chat = calendar_chat_url(via, typed, message);
     ('A BUTTON, LIKE COPY BESIDE IT (human, 2026-11-21: "open the chat should be a button?").');
     function chat_open() {
       window_open(chat);

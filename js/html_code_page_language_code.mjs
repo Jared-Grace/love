@@ -67,7 +67,7 @@ export function html_code_page_language_code(
   list_add_multiple(head_items, social_items);
   let head_children = html_code_children(head_items, indent);
   let head = html_code_element("head", attributes_none, head_children);
-  let splash = html_code_loading_splash();
+  let splash = html_code_loading_splash(language_code);
   let banner = html_code_error_banner();
   let notice = html_code_error_notice(language_code);
   ("the banner and the notice both stand BEFORE the app's own script on purpose - a handler installed by code that never got to run catches nothing, and a boot that dies is exactly when they are wanted");

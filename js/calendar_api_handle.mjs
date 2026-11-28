@@ -389,6 +389,27 @@ export async function calendar_api_handle(
       saved = await calendar_db_confirm(db, uid, code2, whatsapp4, now_iso);
     }
   }
+  if (equal(route, "confirm") && saved.ok && saved.guest_uid) {
+    ('★ THE REPLY CARRIES THE GUEST\'S OWN LINK (human, 2026-11-28: "it say meeting here: but that link is the regular link, not the link that takes them to their page"): a session is started for the guest just proven, as a link for one person does (see ',
+      fn_name("calendar_db_invite"),
+      "), and its key goes back to the host to paste into that same chat. The guest's uid itself never leaves the server.");
+    let host_row = await db
+      .prepare("SELECT slug FROM hosts WHERE uid = ?1")
+      .bind(uid)
+      .first();
+    let key_confirmed = await calendar_db_session_create(
+      db,
+      saved.guest_uid,
+      now_iso,
+    );
+    saved = {
+      ok: true,
+      reason: null,
+      confirmed: saved.confirmed,
+      slug: host_row ? host_row.slug : null,
+      key: key_confirmed,
+    };
+  }
   if (equal(route, "host_rules_save")) {
     let messenger_typed = String(body.messenger);
     let max_typed = String(body.max);

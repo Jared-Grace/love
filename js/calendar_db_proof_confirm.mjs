@@ -3,6 +3,7 @@ import { equal } from "./equal.mjs";
 import { calendar_confirm_code_read } from "./calendar_confirm_code_read.mjs";
 import { calendar_profile_url_read } from "./calendar_profile_url_read.mjs";
 import { not } from "./not.mjs";
+import { list_first } from "./list_first.mjs";
 export async function calendar_db_proof_confirm(
   db,
   host_uid,
@@ -12,7 +13,7 @@ export async function calendar_db_proof_confirm(
   now_iso,
 ) {
   arguments_assert(arguments, 6);
-  ("The host saw code arrive: proves every guest waiting on host_uid with that code, when sender matches; answers {ok, reason, confirmed}. via is whatsapp or messenger. On WhatsApp sender is the number the code came from, kept as the guest's number (reason number when it does not look like a phone number). On Messenger sender is the link to the profile that sent it, kept as the guest's profile_url (reason profile when it is not a Facebook or Messenger link). no_code: nothing waiting holds that code on that app.");
+  ("The host saw code arrive: proves every guest waiting on host_uid with that code, when sender matches; answers {ok, reason, confirmed, guest_uid}, guest_uid being the guest proven (null when refused), so the reply can carry their own link. via is whatsapp or messenger. On WhatsApp sender is the number the code came from, kept as the guest's number (reason number when it does not look like a phone number). On Messenger sender is the link to the profile that sent it, kept as the guest's profile_url (reason profile when it is not a Facebook or Messenger link). no_code: nothing waiting holds that code on that app.");
   ("★ A CODE PROVES ONLY TOGETHER WITH WHO SENT IT. The guest's page shows the code, so a code alone proves nothing; the number it came from (or the profile the host sees sending it) is the proof, and is what is written. The guest types no number (human, 2026-11-27: \"I receive their wa# with the code from whatever # they're logged into\"), so there is nothing to compare it with, and a code sent from another phone than the guest meant no longer fails.");
   let number = String(sender).trim();
   let messenger = equal(via, "messenger");
@@ -29,6 +30,7 @@ export async function calendar_db_proof_confirm(
       ok: false,
       reason: "no_code",
       confirmed: 0,
+      guest_uid: null,
     };
     return r;
   }
@@ -41,6 +43,7 @@ export async function calendar_db_proof_confirm(
         ok: false,
         reason: "profile",
         confirmed: 0,
+        guest_uid: null,
       };
       return r2;
     }
@@ -51,6 +54,7 @@ export async function calendar_db_proof_confirm(
         ok: false,
         reason: "number",
         confirmed: 0,
+        guest_uid: null,
       };
       return r4;
     }
@@ -83,6 +87,7 @@ export async function calendar_db_proof_confirm(
     ok: true,
     reason: null,
     confirmed,
+    guest_uid: list_first(matching).guest_uid,
   };
   return r5;
 }
