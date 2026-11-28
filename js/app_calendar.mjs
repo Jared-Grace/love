@@ -8,6 +8,7 @@ import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_calendar_guest } from "./app_calendar_guest.mjs";
 import { app_calendar_meetings } from "./app_calendar_meetings.mjs";
+import { function_one_at_a_time } from "./function_one_at_a_time.mjs";
 import { each } from "./each.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_calendar_host } from "./app_calendar_host.mjs";
@@ -75,7 +76,8 @@ export async function app_calendar(context) {
     window.scrollTo(0, 0);
   }
   await show_meetings();
-  let host_open = async function lambda3() {
+  ('ONE SIGN-IN OR SIGN-OUT AT A TIME (human, 2026-11-28: "just saw two host sign out (or maybe sign in) - not sure how"): each clears the host area, waits, then draws; a second tap during the wait drew a second copy, so it is ignored until the first is done.');
+  async function lambda3() {
     "Signing in as host clears the booking screen and the guest's meetings above (human: the button \"doesn't remove top\"), so the host page stands alone.";
     each([host_area, guest_area, meetings_area, booked_area], html_clear);
     ('2026-11-15: a line says it is loading while the host\'s settings and the sign-in are fetched; the page sat blank white meanwhile (human: "host sign in just blank white for a while - maybe should show loading?"). The host screen clears it once its settings arrive.');
@@ -114,8 +116,9 @@ export async function app_calendar(context) {
     host_key = login.body.key;
     storage_local_set(app_calendar, "host_key", host_key);
     await app_calendar_host(host_area, host_key, host_sign_out);
-  };
-  async function host_sign_out() {
+  }
+  let host_open = function_one_at_a_time(lambda3);
+  async function sign_out_run() {
     "Signing out forgets the host key in this browser and signs it out of the site's account, then shows the sign-in button again. The session itself stays valid on the server until sessions can be ended there.";
     host_key = null;
     storage_local_set(app_calendar, "host_key", null);
@@ -127,6 +130,7 @@ export async function app_calendar(context) {
     guest_rest_draw();
     app_shared_toast("Signed out.");
   }
+  let host_sign_out = function_one_at_a_time(sign_out_run);
   function guest_rest_draw() {
     if (not(slug) && not(guest_key)) {
       let hint = html_div_text(
