@@ -1,12 +1,12 @@
-import { property_get } from "./property_get.mjs";
-import { app_shared_bible_word_overlay_articles_open_google } from "./app_shared_bible_word_overlay_articles_open_google.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_article_offers_at_with_cited } from "./bible_word_article_offers_at_with_cited.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_shared_bible_verse_reference_reading } from "./app_shared_bible_verse_reference_reading.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
+import { app_shared_bible_word_overlay_articles_open_google } from "./app_shared_bible_word_overlay_articles_open_google.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_bible_word_ask_llms_draw } from "./app_shared_bible_word_ask_llms_draw.mjs";
 export async function app_shared_bible_word_overlay_articles_open({
   word,
@@ -77,6 +77,8 @@ export async function app_shared_bible_word_overlay_articles_open({
     known,
     reference,
     verse_text,
+    chapter_code,
+    verse_number,
   });
   let google = property_get(r, "google");
   let recent_names = property_get(r, "recent_names");

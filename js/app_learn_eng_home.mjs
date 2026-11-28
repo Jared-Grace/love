@@ -7,6 +7,7 @@ import { english_word_sound_slow_url } from "./english_word_sound_slow_url.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_gloss_bible_home_generic } from "./app_shared_gloss_bible_home_generic.mjs";
 import { app_learn_eng } from "./app_learn_eng.mjs";
+import { english_word_sound_verse_word } from "./english_word_sound_verse_word.mjs";
 export async function app_learn_eng_home(context) {
   "The reading screen for somebody learning English from the Bible: the verse in English, and under it each English word explained in the reader's own language.";
   "The explanations are about the English wording, so the words shown are the first of the passage's texts, which is the English one - that is what asking for the text rather than the original language means here.";
@@ -30,5 +31,6 @@ export async function app_learn_eng_home(context) {
     app_learn_eng,
     sound_url_get,
     slow_url_get,
+    english_word_sound_verse_word,
   );
 }

@@ -19,8 +19,10 @@ export function app_shared_bible_word_overlay_articles_open_offer_draw(
   word,
   language_code,
   strong_url,
+  chapter_code,
+  verse_number,
 ) {
-  arguments_assert(arguments, 3);
+  arguments_assert(arguments, 5);
   let overlay = app_shared_overlay_card_closable();
   let card = property_get(overlay, "body");
   let big = property_get(overlay, "title");
@@ -39,7 +41,12 @@ export function app_shared_bible_word_overlay_articles_open_offer_draw(
   });
   let right = ebible_language_en_code();
   if (equal(language_code, right)) {
-    app_shared_bible_word_sound_buttons(choices, word);
+    app_shared_bible_word_sound_buttons(
+      choices,
+      word,
+      chapter_code,
+      verse_number,
+    );
   }
   let b = null_is(strong_url);
   if (not(b)) {

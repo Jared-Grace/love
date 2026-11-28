@@ -1,5 +1,4 @@
-import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { gloss_passage_entries_pointers_filled } from "./gloss_passage_entries_pointers_filled.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
 import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
@@ -13,9 +12,12 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { each } from "./each.mjs";
 import { json_from_try } from "./json_from_try.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { gloss_passage_entries_pointers_filled } from "./gloss_passage_entries_pointers_filled.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_gloss_bible_generated_gloss_span } from "./app_shared_gloss_bible_generated_gloss_span.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
+import { gloss_bible_sound_get_placed } from "./gloss_bible_sound_get_placed.mjs";
 import { app_shared_gloss_bible_word_row } from "./app_shared_gloss_bible_word_row.mjs";
 import { app_shared_gloss_bible_copy_lines_write } from "./app_shared_gloss_bible_copy_lines_write.mjs";
 export async function app_shared_gloss_bible_home_generic(
@@ -25,10 +27,14 @@ export async function app_shared_gloss_bible_home_generic(
   app_fn,
   sound_url_get,
   slow_url_get,
+  sound_word_get,
 ) {
-  "The recordings arrive as a way of asking for one rather than as recordings, because which words have been recorded is a question only the app handing it in can answer, and a page whose words have none hands in nothing and shows no speakers.";
-  "The slower readings arrive the same way and separately, because a language can have ordinary recordings for a long while before it has slow ones, and the row has to be able to draw a speaker with no turtle beside it.";
-  arguments_assert(arguments, 6);
+  ("Which recording a word in this passage plays is asked of the app too, by sound_word_get, with the passage's chapter and verses: English has words said two ways - lives, read, bow - and the verse decides which; an app with one recording per word hands in ",
+    fn_name("gloss_bible_sound_word_same"),
+    ".");
+  ("The recordings arrive as a way of asking for one rather than as recordings, because which words have been recorded is a question only the app handing it in can answer, and a page whose words have none hands in nothing and shows no speakers.");
+  ("The slower readings arrive the same way and separately, because a language can have ordinary recordings for a long while before it has slow ones, and the row has to be able to draw a speaker with no turtle beside it.");
+  arguments_assert(arguments, 7);
   let generated = g_sermon_generate_book_generic_property();
   let v = await app_shared_bible_home_inner(context, download, app_fn);
   let passages = property_get(v, "passages");
@@ -71,13 +77,27 @@ export async function app_shared_gloss_bible_home_generic(
     each(explains, lambda2);
   }
   let word_property = app_shared_gloss_bible_generate_generic_word();
+  let chapter_code = property_get(passage, "chapter_code");
+  let verse_numbers = property_get(passage, "verse_numbers");
+  let sound_placed = gloss_bible_sound_get_placed(
+    sound_url_get,
+    sound_word_get,
+    chapter_code,
+    verse_numbers,
+  );
+  let slow_placed = gloss_bible_sound_get_placed(
+    slow_url_get,
+    sound_word_get,
+    chapter_code,
+    verse_numbers,
+  );
   function lambda(e) {
     let r = app_shared_gloss_bible_word_row(
       e,
       p,
       word_property,
-      sound_url_get,
-      slow_url_get,
+      sound_placed,
+      slow_placed,
     );
     return r;
   }

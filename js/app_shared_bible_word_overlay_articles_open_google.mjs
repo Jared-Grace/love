@@ -17,12 +17,16 @@ export function app_shared_bible_word_overlay_articles_open_google({
   known,
   reference,
   verse_text,
+  chapter_code,
+  verse_number,
 }) {
   arguments_assert(arguments, 1);
   let r = app_shared_bible_word_overlay_articles_open_offer_draw(
     word,
     language_code,
     strong_url,
+    chapter_code,
+    verse_number,
   );
   let offer_draw = property_get(r, "offer_draw");
   let choices = property_get(r, "choices");
