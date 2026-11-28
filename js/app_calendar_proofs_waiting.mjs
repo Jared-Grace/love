@@ -6,11 +6,9 @@ import { app_shared_container_centered } from "./app_shared_container_centered.m
 import { calendar_person_label } from "./calendar_person_label.mjs";
 import { html_div_text_content } from "./html_div_text_content.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
-import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
@@ -19,6 +17,7 @@ import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { html_a_href_text_new_tab } from "./html_a_href_text_new_tab.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export function app_calendar_proofs_waiting(
   box,
@@ -30,7 +29,7 @@ export function app_calendar_proofs_waiting(
   arguments_assert(arguments, 5);
   ("link is the host's booking link, put in the reply so the guest can open it and pick a time (human, 2026-11-27: \"After receiving code, could I just send them the URL to schedule a meeting? and next time they refresh the url they'll have a choice to schedule a meeting?\"). It opens the guest's own page because their key stays on their device. null where no link is known; the reply then says to open the page again.");
   ("Draws, inside box, the guests waiting for the host to see their code arrive - each with the code, a place to say who it came from, and Confirm. Nothing is drawn when none wait.");
-  ("★ THE HOST TYPES THE NUMBER THEY SEE, NEVER ONE FILLED IN. A WhatsApp proof is the number the code arrived from, so the box starts empty: filled with the number the guest typed, a Confirm would prove nothing. A Messenger sender has no number to type, so the link the guest gave is filled in to check against the profile that sent the code, or to be replaced by the real one.");
+  ("★ THE HOST TYPES THE NUMBER THEY SEE, NEVER ONE FILLED IN. A WhatsApp proof is the number the code arrived from, so the box starts empty: filled with the number the guest typed, a Confirm would prove nothing. A Messenger proof is the same with the profile link the code arrived from.");
   ("Once confirmed, a short message to send the guest is shown with Copy and a link that opens the chat, because the guest is waiting to hear back before they can pick a time. on_confirmed then draws the host's lists again.");
   if (equal(proofs.length, 0)) {
     return;
@@ -53,19 +52,14 @@ export function app_calendar_proofs_waiting(
     let status = html_div_text(card, "");
     let sender = null;
     if (messenger) {
-      html_a_href_text_new_tab(
-        card,
-        proof.profile_given,
-        "Open the profile they gave",
-      );
+      ('THE HOST PASTES THE PROFILE THEY SEE, as on WhatsApp the number (human, 2026-11-28, chose "Treat Messenger the same as WhatsApp"): the guest types no link, so the box starts empty and what is pasted becomes their profile.');
       let hint = html_div_text(
         card,
-        "When the code arrives, check the link below is the profile that sent it, then Confirm:",
+        "When the code arrives, open the sender's profile and paste its link. That becomes their profile:",
       );
       app_shared_text_deemphasized(hint);
       sender = html_input_text(card, "facebook.com/their.name");
       app_shared_input_style(sender);
-      html_value_set(sender, proof.profile_given);
     } else {
       let hint2 = html_div_text(
         card,

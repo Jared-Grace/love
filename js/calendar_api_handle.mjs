@@ -198,7 +198,6 @@ export async function calendar_api_handle(
     let name2 = "";
     let timezone2 = String(body.timezone);
     let via2 = String(body.via);
-    let profile_typed = String(body.profile);
     let id2 = outside.uid_new();
     let started = await calendar_db_proof_start(
       db,
@@ -207,7 +206,6 @@ export async function calendar_api_handle(
       name2,
       timezone2,
       via2,
-      profile_typed,
       now_iso,
       id2,
     );

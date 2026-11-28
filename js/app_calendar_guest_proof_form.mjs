@@ -4,27 +4,20 @@ import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_field } from "./app_shared_field.mjs";
-import { html_input_text } from "./html_input_text.mjs";
-import { app_shared_input_style } from "./app_shared_input_style.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
 import { app_calendar } from "./app_calendar.mjs";
-import { html_value_set } from "./html_value_set.mjs";
-import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_shared_choice_row } from "./app_shared_choice_row.mjs";
+import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
 import { calendar_turnstile_widget } from "./calendar_turnstile_widget.mjs";
-import { html_value_get } from "./html_value_get.mjs";
-import { calendar_profile_url_read } from "./calendar_profile_url_read.mjs";
 import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
+import { html_component_element_get } from "./html_component_element_get.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 export async function app_calendar_guest_proof_form(
   card,
@@ -33,16 +26,14 @@ export async function app_calendar_guest_proof_form(
   key,
   on_key,
   on_started,
-  proven_vias,
   via_fixed,
 ) {
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 7);
   ("via_fixed is the app this code is for, when the guest is already proven on an app and so has chosen already - asking to meet on the other one, or changing the number or link of this one; null asks which. With it set there is no choice to make, and the button says which code it gets and that a time comes after (human, 2026-11-24: \"Then there doesn't need to be a choice which to meet? or if they haven't confirmed anything then they need choice?\").");
-  ("proven_vias lists the apps this guest is already proven on, whatsapp and/or messenger. The field for one of those is not asked again when the guest picks the other app: it is known and stays proven (human, 2026-11-24: \"if choose meet facebook messenger then they shouldn't be prompted to provide their whatsapp because that's already confirmed?\").");
-  ("The first thing a new guest sees on a host's link: how to reach them - WhatsApp or Messenger, the number or profile link - and a Get my code button. No time is picked here; the code they get is sent to the host from that number or profile, and only once the host has seen it arrive can they pick a time.");
+  ("The first thing a new guest sees on a host's link: which app to send a code from, WhatsApp or Messenger, and a Get my code button. No time is picked here; the code they get is sent to the host from that app, and only once the host has seen it arrive can they pick a time.");
   ('★ PROVE FIRST, THEN BOOK (human, 2026-11-20: "100% knowing their FB url/wa# so they don\'t book, enter something wrong, expect me to show up"). Many guests do not read English well, so the words are short and the screen asks for one thing: the code.');
   ("key is the guest's session key, or null; a first code answers a new key, handed to on_key. on_started is called once the code is made, to draw the page again.");
-  ("What the guest typed last time on this device fills the form again, so asking again asks for nothing twice.");
+  ("The app the guest picked last time on this device is picked again.");
   let b4 = equal(via_fixed, null);
   let intro_first = not(b4)
     ? "Before you pick a time, send me a code from your " +
@@ -59,20 +50,11 @@ export async function app_calendar_guest_proof_form(
   let marked = null;
   let via_area = app_shared_field(card);
   ('NO NAME IS ASKED (human, 2026-11-24: "FB name could be to find the profile by name - goal is collect less info to have less PIN or PII"): the number or profile link already reaches the guest, and the app shows their name when the code arrives, so a name would be personal data stored for nothing. The host\'s lists show the contact instead.');
-  ('★ NO WHATSAPP NUMBER IS ASKED (human, 2026-11-27: "Do they need to enter their wa#? I receive their wa# with the code from whatever # they\'re logged into"): the number the code arrives from is the one proven, typed by the host on Confirm, so a typed number could only disagree with it. Messenger still asks for the profile link, which the host opens to check who sent the code.');
-  let profile_box = app_shared_field(card);
-  let profile_label = html_div_text(profile_box, "");
-  let profile = html_input_text(profile_box, "facebook.com/your.name");
-  app_shared_input_style(profile);
-  let profile_hint = html_div_text(
-    profile_box,
-    "On Facebook, open your profile, then copy the link from the address bar or from Share.",
-  );
-  app_shared_text_deemphasized(profile_hint);
+  ('★ NO WHATSAPP NUMBER IS ASKED (human, 2026-11-27: "Do they need to enter their wa#? I receive their wa# with the code from whatever # they\'re logged into"): the number the code arrives from is the one proven, typed by the host on Confirm, so a typed number could only disagree with it.');
+  ('★ NO PROFILE LINK IS ASKED EITHER (human, 2026-11-28, chose "Treat Messenger the same as WhatsApp" over keeping the typed link): the host pastes the profile the code came from on Confirm. So the form asks only which app, when there is a choice.');
   let via = host.messenger ? null : "whatsapp";
   let last = storage_local_get(app_calendar, "guest_details");
   if (last) {
-    html_value_set(profile, last.profile);
     if (host.messenger) {
       via = last.via;
     }
@@ -81,22 +63,8 @@ export async function app_calendar_guest_proof_form(
   if (not(b5)) {
     via = via_fixed;
   }
-  function field_label_set(label, words, value) {
-    let need = equal(via, null)
-      ? ""
-      : equal(via, value)
-        ? " (required)"
-        : " (optional)";
-    html_text_content_set(label, words + need);
-  }
   function via_draw() {
     html_clear(via_area);
-    field_label_set(profile_label, "Your Facebook profile link", "messenger");
-    ('The profile box shows only for a Messenger code: a WhatsApp code asks for nothing, and an optional link would be personal data asked for nothing (human, 2026-11-24: "goal is collect less info").');
-    let profile_shown = equal(via, "messenger");
-    html_component_element_get(profile_box).style.display = profile_shown
-      ? ""
-      : "none";
     if (not(host.messenger)) {
       return;
     }
@@ -149,7 +117,7 @@ export async function app_calendar_guest_proof_form(
     if (equal(via, "messenger")) {
       html_text_content_set(
         intro,
-        "First provide a link to your profile. Then I will confirm the link works. After you wait for confirmation, then if God wills you can schedule a meeting.",
+        "First send me a code from your Facebook Messenger. Then I will confirm I got it. After you wait for confirmation, then if God wills you can schedule a meeting.",
       );
       return;
     }
@@ -190,25 +158,6 @@ export async function app_calendar_guest_proof_form(
         words: "Pick WhatsApp or Messenger first.",
       };
       return r;
-    }
-    if (equal(via, "messenger") && equal(html_value_get(profile).trim(), "")) {
-      let r4 = {
-        field: profile_box,
-        words: "Paste the link to your Facebook profile.",
-      };
-      return r4;
-    }
-    ("The link is checked here by the server's own rule, so a guest learns before sending that facebook.com alone, a feed or a post is not their profile.");
-    if (
-      equal(via, "messenger") &&
-      equal(calendar_profile_url_read(html_value_get(profile)), null)
-    ) {
-      let r5 = {
-        field: profile_box,
-        words:
-          "That is not a link to a profile. On Facebook, open your own profile and copy its link.",
-      };
-      return r5;
     }
     return null;
   }
@@ -251,10 +200,6 @@ export async function app_calendar_guest_proof_form(
       problem_clear();
     }
   }
-  html_component_element_get(profile).addEventListener(
-    "input",
-    problems_recheck,
-  );
   async function code_get() {
     let problem = form_problem();
     let b = equal(problem, null);
@@ -272,7 +217,6 @@ export async function app_calendar_guest_proof_form(
       turnstile: token,
       host: slug,
       name: "",
-      profile: html_value_get(profile),
       timezone: zone,
       via,
     };
@@ -284,7 +228,6 @@ export async function app_calendar_guest_proof_form(
     check.reset();
     if (not(started.body.ok)) {
       let words = {
-        profile: "Paste the link to your Facebook profile.",
         messenger:
           "This host does not take Messenger calls now. Pick WhatsApp.",
         timezone: "Your time zone could not be read. Try another browser.",
@@ -297,18 +240,6 @@ export async function app_calendar_guest_proof_form(
         started.body.reason,
         "Could not get a code. Try again.",
       );
-      let fields = {
-        profile: profile_box,
-      };
-      let field = property_get_or(fields, started.body.reason, null);
-      let b2 = equal(field, null);
-      if (not(b2)) {
-        problem_show({
-          field,
-          words: text,
-        });
-        return;
-      }
       html_text_content_set(status, text);
       html_style_assign(status, {
         color: app_shared_color_red(),
@@ -316,23 +247,10 @@ export async function app_calendar_guest_proof_form(
       return;
     }
     storage_local_set(app_calendar, "guest_details", {
-      whatsapp: "",
-      profile: html_value_get(profile),
       via,
     });
     if (started.body.key) {
       on_key(started.body.key);
-    }
-    ('THE SAME NUMBER IS SAID TO BE THE SAME (human, 2026-11-26: "choosing get confirmation code for wa# just moves to schedule a meeting using existing number ... UI should say \\"this is your current number; your current number is already confirmed\\""). The server keeps a proof asked for again with the same number or link, and answers proven - so a guest already proven on this app who is answered proven typed what they have. Read off the server\'s answer, not compared here, because the server is what decides two numbers are one (spaces, dashes, a country code). The form stays, the field ringed, so they type a different one or go Back.');
-    ("Messenger only now: a WhatsApp guest types no number, and asking while proven starts a new code.");
-    let already = started.body.proven && list_includes(proven_vias, via);
-    if (already) {
-      problem_show({
-        field: profile_box,
-        words:
-          "This is your current profile link. It is already confirmed. To change it, paste a different link.",
-      });
-      return;
     }
     await on_started();
   }

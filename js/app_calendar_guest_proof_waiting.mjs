@@ -24,10 +24,9 @@ export function app_calendar_guest_proof_waiting(
   slug,
   key,
   proof,
-  on_change,
   on_back,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 5);
   ("What a guest sees after Get your code, until the host has seen the code arrive: a plain warning that the app is not confirmed yet, the code, a button that opens WhatsApp (or Messenger), and what happens next.");
   ('★ NOTHING HERE MAY READ AS BOOKED. Many guests do not read English well (human, 2026-11-20: "if they think I booked, meeting will happen then there\'s a potential issue"), so the warning stacks signals - an icon, a coloured box, bold words - and says the one thing: confirm first, the time comes after. It heads every screen below, under Back.');
   ('IT NAMES THE STEP, NOT A MISSING MEETING (human, 2026-11-25: "it shouldn\'t say no meeting yet? when confirming fb?"): this screen confirms the app; no meeting was asked for. Worded by the human (2026-11-26: "Then you can pick a time {for our meeting}", "First confirm your WhatsApp {phone number}"), naming what is confirmed as the first screen\'s button does.');
@@ -36,9 +35,10 @@ export function app_calendar_guest_proof_waiting(
   ('THE SEND BUTTON SAYS TO ME (human, 2026-11-26: "And what about \\"Send code to my WhatsApp\\"?"). Picked "Send code to me on WhatsApp": the page speaks as the host, but on a button "my WhatsApp" reads as the guest\'s own - the app the code is sent FROM - which is the reading most likely to mislead. Rejected: "Send code to my WhatsApp" (that misreading), "Send code on WhatsApp" (says where, not to whom).');
   ("Copying can fail without a word on some phones, so the copy screen moves on either way, and the send screen keeps the code in sight with a plain Copy code again.");
   ("A guest who already pressed Send for this code opens on the waiting screen; the code sent is kept on the device, so a new code starts again at copy.");
-  ("★ BACK IS AT THE TOP of every screen (human, 2026-11-26: \"Back should be at the top of all step by step UI's for consistency?\"). On the send screen it goes to the copy screen; elsewhere it leaves for the page's first screen (on_back). on_change shows the form again, for a guest who typed the wrong number.");
+  ("★ BACK IS AT THE TOP of every screen (human, 2026-11-26: \"Back should be at the top of all step by step UI's for consistency?\"). On the send screen it goes to the copy screen; elsewhere it leaves for the page's first screen (on_back). There is no Change button: the guest typed nothing that can be wrong, on either app (human, 2026-11-28).");
   ('★ WAITING HAS NO BUTTON TO PRESS ON (human, 2026-11-27: "I got your message... could that be confusing? because green says press, but really next step is wait?"). The next step is the host\'s, so the screen thanks and says to wait (worded by the human: "Thank you for sending the code! If God wills I will reply that I\'ve received your code"); the host\'s reply carries the page link, and the page opened again shows the times, the confirmation having arrived. Its yellow box says wait, not confirm: the guest has done their part.');
-  let sent_key = "guest_code_sent";
+  ('ONE "CODE SENT" PER APP (human, 2026-11-28: "send code for wa, then wa says wait, send code for msg, then msg says wait, but wa is now back to the beginning. Should they both remember that the code was sent? and say wait?"): one shared key let the second app\'s code overwrite the first\'s.');
+  let sent_key = "guest_code_sent_" + proof.via;
   let messenger = equal(proof.via, "messenger");
   let app_name = messenger ? "Messenger" : "WhatsApp";
   let confirmed = messenger ? "Facebook profile" : "WhatsApp phone number";
@@ -103,7 +103,7 @@ export function app_calendar_guest_proof_waiting(
     code_draw("1.2em");
     app_shared_button_uncolored(screen, "Copy code again", code_copy);
     let sent_from = messenger
-      ? "Send it from your Facebook: " + proof.profile_given
+      ? "Send it from the Facebook profile you want me to reach you on."
       : "Send it from the WhatsApp number you want me to reach you on.";
     let from_line = html_div_text(screen, sent_from);
     app_shared_text_deemphasized(from_line);
@@ -125,14 +125,6 @@ export function app_calendar_guest_proof_waiting(
     );
     app_shared_button_uncolored(screen, "Show your code again", copy_show);
     app_calendar_private_link_draw(screen, slug, key);
-    ("Only Messenger has a link typed that can be wrong; a WhatsApp guest typed no number - the number the code came from is the one proven (human, 2026-11-27).");
-    if (messenger) {
-      app_shared_button_uncolored(
-        screen,
-        "Wrong profile link? Change it",
-        on_change,
-      );
-    }
   }
   let left = storage_local_get(app_calendar, sent_key);
   if (equal(left, proof.code)) {

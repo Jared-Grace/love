@@ -25,7 +25,6 @@ import { app_shared_field_title } from "./app_shared_field_title.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_shared_choice_cards } from "./app_shared_choice_cards.mjs";
 import { app_calendar_guest_proof_waiting } from "./app_calendar_guest_proof_waiting.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { app_calendar_guest_proof_form } from "./app_calendar_guest_proof_form.mjs";
 import { calendar_slots_by_month } from "./calendar_slots_by_month.mjs";
 import { app_shared_unavailable_box } from "./app_shared_unavailable_box.mjs";
@@ -253,7 +252,7 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
             bold: true,
           },
         ],
-        details: equal(v, "messenger") ? p.profile_given : p.whatsapp,
+        details: equal(v, "messenger") ? p.profile_url : p.whatsapp,
         disabled: false,
       };
       return r10;
@@ -291,15 +290,10 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
   }
   function waiting_show(p) {
     html_clear(step);
-    async function change() {
-      await form_show(p.via);
-    }
-    app_calendar_guest_proof_waiting(step, slug, key, p, change, apps_show);
+    app_calendar_guest_proof_waiting(step, slug, key, p, apps_show);
   }
   async function form_show(v) {
     html_clear(step);
-    let list2 = list_filter(guest_proofs, proof_is_proven);
-    let proven_vias = list_map(list2, proof_via);
     async function started() {
       await redraw_on(v);
     }
@@ -312,17 +306,8 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       key,
       key_keep,
       started,
-      proven_vias,
       v,
     );
-  }
-  function proof_is_proven(p) {
-    let r10 = p.proven;
-    return r10;
-  }
-  function proof_via(p) {
-    let r11 = p.via;
-    return r11;
   }
   let resume = storage_local_get(app_calendar, "guest_resume");
   storage_local_set(app_calendar, "guest_resume", null);
