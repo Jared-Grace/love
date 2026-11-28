@@ -3,14 +3,15 @@ import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
-import { app_learn_js_review_items_by_id } from "./app_learn_js_review_items_by_id.mjs";
+import { app_learn_js_review_lesson_by_id } from "./app_learn_js_review_lesson_by_id.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
+import { app_learn_js_review_seed_inputs_missing_is } from "./app_learn_js_review_seed_inputs_missing_is.mjs";
 import { list_get } from "./list_get.mjs";
 export function app_learn_js_review_seeds_live(seeds, kind_is) {
   "the seeds of a saved review queue that this page can still rebuild - the ones naming a lesson it hands out, and a quiz kind that lesson still has";
@@ -30,10 +31,14 @@ export function app_learn_js_review_seeds_live(seeds, kind_is) {
   let by_name = list_filter(seeds, named_is);
   let wanted = list_map_property_unique(by_name, "lesson_id");
   let kinds_by_id = {};
+  let lessons_by_id = {};
   function kinds_read(lesson_id) {
-    let items = app_learn_js_review_items_by_id(lesson_id);
+    let lesson = app_learn_js_review_lesson_by_id(lesson_id);
+    let batch = property_get(lesson, "batch");
+    let items = batch();
     let kinds = list_first_property(items, "exercises");
     property_set(kinds_by_id, lesson_id, kinds);
+    property_set(lessons_by_id, lesson_id, lesson);
   }
   each(wanted, kinds_read);
   ("kind_is too, because which quizzes a checkpoint asks can change after a queue is saved: on 2026-11-02 the step-by-step milestone stopped asking the other quizzes of its lessons, and a queue saved before that would have gone on asking them.");
@@ -44,6 +49,12 @@ export function app_learn_js_review_seeds_live(seeds, kind_is) {
     let count = list_size(kinds);
     let within = less_than(kind_index, count);
     if (not(within)) {
+      return false;
+    }
+    ("a seed saved before seeds carried the inputs their lesson needs handed back would throw when rebuilt, so it is left out like a seed naming a lesson that is gone");
+    let lesson = property_get(lessons_by_id, lesson_id);
+    let missing = app_learn_js_review_seed_inputs_missing_is(lesson, seed);
+    if (missing) {
       return false;
     }
     let kind = list_get(kinds, kind_index);
