@@ -1,25 +1,26 @@
-import { property_set } from "./property_set.mjs";
 import { list_is_assert_json } from "./list_is_assert_json.mjs";
-import { list_all } from "./list_all.mjs";
+import { app_shared_style_control } from "./app_shared_style_control.mjs";
+import { app_shared_validate_border_color } from "./app_shared_validate_border_color.mjs";
+import { app_karate_style_control_border } from "./app_karate_style_control_border.mjs";
+import { html_element } from "./html_element.mjs";
+import { property_set } from "./property_set.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_margin_0 } from "./html_margin_0.mjs";
+import { html_on_input } from "./html_on_input.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_first } from "./list_first.mjs";
-import { html_focus } from "./html_focus.mjs";
+import { list_all } from "./list_all.mjs";
+import { true_is } from "./true_is.mjs";
 import { app_shared_validate_style_assign } from "./app_shared_validate_style_assign.mjs";
 import { each } from "./each.mjs";
-import { html_text_set } from "./html_text_set.mjs";
-import { not } from "./not.mjs";
+import { html_value_get } from "./html_value_get.mjs";
+import { text_trim } from "./text_trim.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { text_trim } from "./text_trim.mjs";
-import { html_value_get } from "./html_value_get.mjs";
-import { html_on_input } from "./html_on_input.mjs";
-import { html_margin_0 } from "./html_margin_0.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
-import { html_element } from "./html_element.mjs";
-import { app_karate_style_control_border } from "./app_karate_style_control_border.mjs";
-import { app_shared_validate_border_color } from "./app_shared_validate_border_color.mjs";
-import { app_shared_style_control } from "./app_shared_style_control.mjs";
-import { true_is } from "./true_is.mjs";
+import { not } from "./not.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { app_shared_problem_mark } from "./app_shared_problem_mark.mjs";
+import { list_first } from "./list_first.mjs";
+import { html_focus } from "./html_focus.mjs";
 export function app_karate_screen_input_validate(
   div,
   div_checks,
@@ -63,12 +64,15 @@ export function app_karate_screen_input_validate(
       let a = check(trimmed);
       if (not(a)) {
         let li = html_element(ul, "li");
-        html_text_set(li, text);
+        html_text_set(li, "❌ " + text);
         valid = false;
       }
     }
     each(checks, lambda);
     app_shared_validate_style_assign(valid, [div], input, null);
+    ('THE SAME RING AND ❌ AS THE OTHER APPS\' FORMS (human, 2026-11-28: "so at least have the border? - also karate app"): a box that still fails a check is ringed in the shared red, each complaint under it marked with the X.');
+    let marked = not(valid);
+    app_shared_problem_mark(input, marked);
     return valid;
   }
   let first = list_first(inputs);

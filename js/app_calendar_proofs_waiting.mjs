@@ -9,13 +9,13 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
+import { app_shared_problem_clear } from "./app_shared_problem_clear.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { calendar_api_call } from "./calendar_api_call.mjs";
 import { not } from "./not.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { html_text_content_set } from "./html_text_content_set.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { app_shared_color_red } from "./app_shared_color_red.mjs";
+import { app_shared_problem_words_set } from "./app_shared_problem_words_set.mjs";
+import { app_shared_problem_show } from "./app_shared_problem_show.mjs";
 import { app_shared_toast } from "./app_shared_toast.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
@@ -73,6 +73,7 @@ export function app_calendar_proofs_waiting(
       app_shared_input_style(sender);
     }
     async function proof_confirm() {
+      app_shared_problem_clear(sender, status, confirm_button);
       let typed = html_value_get(sender);
       let confirm_body = messenger
         ? {
@@ -97,11 +98,12 @@ export function app_calendar_proofs_waiting(
           "Could not confirm. Try again.",
         );
         ('THE ANSWER SHOWS WHERE CONFIRM WAS PRESSED (human, 2026-11-28: "clicked confirm in waiting for code - nothing changed? page just reloaded"): a refusal is red, with a toast, and a yes replaces this card with the reply, instead of a plain line above the box and a card added below every other one, off screen.');
-        html_text_content_set(status, "❌ " + text);
-        html_style_assign(status, {
-          color: app_shared_color_red(),
-          "font-weight": "bold",
-        });
+        ('THE BOX IS RINGED WHEN IT IS WHAT IS WRONG, the same ring and ❌ as every other form (human, 2026-11-28: "This should be DRY? so at least have the border?").');
+        if (equal(sent.body.reason, "no_code")) {
+          app_shared_problem_words_set(status, text);
+        } else {
+          app_shared_problem_show(sender, text, status, confirm_button);
+        }
         app_shared_toast("❌ " + text);
         return;
       }
@@ -128,6 +130,10 @@ export function app_calendar_proofs_waiting(
       html_a_href_text_new_tab(reply_card, chat, "Open the chat");
       app_shared_button_green(reply_card, "Done", on_confirmed);
     }
-    app_shared_button_green(card, "Confirm", proof_confirm);
+    let confirm_button = app_shared_button_green(
+      card,
+      "Confirm",
+      proof_confirm,
+    );
   }
 }

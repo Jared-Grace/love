@@ -3,6 +3,7 @@ import { gloss_passage_text_first } from "./gloss_passage_text_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
 import { each } from "./each.mjs";
 import { json_from_try } from "./json_from_try.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
@@ -30,7 +31,8 @@ export function app_shared_gloss_bible_home_passage_drawn(
   }
   function lambda5(t) {
     let div = html_div_text(p, t);
-    html_font_color_set(div, "#15803dff");
+    let color = app_shared_color_green_deep();
+    html_font_color_set(div, color);
   }
   each(texts, lambda5);
   let explains_json = property_get(passage, generated);
