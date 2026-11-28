@@ -90,7 +90,12 @@ export async function app_shared_bible_home_generic_lambda$a(
       verse_numbers,
     );
   } else {
-    app_shared_bible_home_verse_texts(text_languages, top);
+    app_shared_bible_home_verse_texts(
+      text_languages,
+      top,
+      chapter_code,
+      verse_number,
+    );
   }
   let p = html_p(content);
   await lambda$a({

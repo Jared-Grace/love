@@ -4,10 +4,11 @@ import { property_get } from "./property_get.mjs";
 import { bible_word_article_sites_recent } from "./bible_word_article_sites_recent.mjs";
 import { bible_word_article_offers_recent_split } from "./bible_word_article_offers_recent_split.mjs";
 import { app_shared_bible_word_offers_split_draw } from "./app_shared_bible_word_offers_split_draw.mjs";
+import { app_shared_bible_word_question_text_get } from "./app_shared_bible_word_question_text_get.mjs";
+import { app_shared_bible_word_google_question_text_get } from "./app_shared_bible_word_google_question_text_get.mjs";
 import { not } from "./not.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
-import { app_shared_bible_word_google_question_text_get } from "./app_shared_bible_word_google_question_text_get.mjs";
 import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
 export function app_shared_bible_word_overlay_articles_open_google({
   word,
@@ -34,23 +35,28 @@ export function app_shared_bible_word_overlay_articles_open_google({
   let recent_names = bible_word_article_sites_recent();
   let split = bible_word_article_offers_recent_split(offers, recent_names);
   app_shared_bible_word_offers_split_draw(split, offer_draw, choices);
+  ("ONE QUESTION FOR GOOGLE AND THE AIS: where the verse is known it names the verse and quotes it; where it is not, the AIs are asked what the word means in the Bible.");
+  let question = app_shared_bible_word_question_text_get(word);
+  if (known) {
+    question = app_shared_bible_word_google_question_text_get(
+      word,
+      reference,
+      verse_text,
+    );
+  }
   function google() {
     if (not(known)) {
       let search_term = text_combine(word, " (Bible)");
       window_open_google_define(search_term);
       return;
     }
-    let question = app_shared_bible_word_google_question_text_get(
-      word,
-      reference,
-      verse_text,
-    );
     window_open_url_prefix_query("https://www.google.com/search?q=", question);
   }
   let r2 = {
     choices,
     recent_names,
     google,
+    question,
   };
   return r2;
 }

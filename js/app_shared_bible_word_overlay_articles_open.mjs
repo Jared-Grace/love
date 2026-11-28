@@ -85,5 +85,6 @@ export async function app_shared_bible_word_overlay_articles_open({
   let choices = property_get(r, "choices");
   let text = app_shared_bible_word_search_google_text_get();
   app_shared_button(choices, text, google);
-  app_shared_bible_word_ask_llms_draw(choices, word, recent_names);
+  let question = property_get(r, "question");
+  app_shared_bible_word_ask_llms_draw(choices, question, recent_names);
 }

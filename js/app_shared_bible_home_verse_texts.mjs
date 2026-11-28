@@ -5,8 +5,14 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
-export function app_shared_bible_home_verse_texts(text_languages, top) {
-  arguments_assert(arguments, 2);
+export function app_shared_bible_home_verse_texts(
+  text_languages,
+  top,
+  chapter_code,
+  verse_number,
+) {
+  arguments_assert(arguments, 4);
+  ("THE CHAPTER AND VERSE GO WITH THE TEXT, as the chapter reader's do, so a tapped word's card can ask Google and the AIs what the word means in this verse, naming the verse and quoting it - asked for by the human 2026-11-28. Before, verse mode left them out and the card asked about the word alone.");
   let show_language_names = list_multiple_is(text_languages);
   function to_entry(item) {
     let name = "";
@@ -24,6 +30,8 @@ export function app_shared_bible_home_verse_texts(text_languages, top) {
     let entry = {
       name,
       text: text_l,
+      chapter_code,
+      verse_number,
       language_code,
     };
     return entry;
