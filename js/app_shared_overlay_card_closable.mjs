@@ -30,17 +30,28 @@ export function app_shared_overlay_card_closable() {
   let top = html_div(card);
   html_style_assign(top, {
     display: "grid",
-    "grid-template-columns": "1fr auto 1fr",
+    "grid-template-columns":
+      "minmax(max-content, 1fr) minmax(0, auto) minmax(max-content, 1fr)",
     "align-items": "start",
     gap: "0.5em",
   });
-  html_div(top);
+  ("THE X NEVER HANGS OVER THE CARD'S EDGE, reported by the human 2026-11-28 on the word merrymakers: with 1fr auto 1fr a title wider than the card squeezed both outer columns to nothing and the X was pushed past the edge. Each outer column is now at least as wide as what it holds, and the title takes only what is left, breaking a long word only when it cannot fit whole.");
+  ("THE LEFT COLUMN HOLDS AN INVISIBLE TWIN OF THE X, so both outer columns hold the same width at the least as well as at the most, and the title stays in the middle however narrow the card. Being invisible, it cannot be tapped or read aloud.");
+  let x = emoji_x_red();
+  let start = html_div(top);
+  html_style_assign(start, {
+    visibility: "hidden",
+  });
+  app_shared_button(start, x, close);
   let title = html_div(top);
+  html_style_assign(title, {
+    "min-width": "0",
+    "overflow-wrap": "anywhere",
+  });
   let end = html_div(top);
   html_style_assign(end, {
     "text-align": "end",
   });
-  let x = emoji_x_red();
   app_shared_button(end, x, close);
   let body = html_div(card);
   let text = app_shared_close_text();
