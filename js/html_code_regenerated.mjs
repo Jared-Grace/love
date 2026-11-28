@@ -3,8 +3,7 @@ import { path_name } from "./path_name.mjs";
 import { apps_page_language_or_null } from "./apps_page_language_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_code } from "./html_code.mjs";
-import { property_get } from "./property_get.mjs";
-import { html_code_page } from "./html_code_page.mjs";
+import { html_code_page_of_language } from "./html_code_page_of_language.mjs";
 export function html_code_regenerated(file_path, name, body) {
   "$plain file_path";
   "$plain name";
@@ -18,9 +17,6 @@ export function html_code_regenerated(file_path, name, body) {
     let code = html_code(name, body);
     return code;
   }
-  let title_text = property_get(page, "title");
-  let app = property_get(page, "app");
-  let description = property_get(page, "description");
-  let code_page = html_code_page(title_text, app, description, body);
+  let code_page = html_code_page_of_language(page, body);
   return code_page;
 }
