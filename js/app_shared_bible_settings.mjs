@@ -8,7 +8,7 @@ import { app_shared_bible_offline } from "./app_shared_bible_offline.mjs";
 import { app_shared_bible_licences } from "./app_shared_bible_licences.mjs";
 import { app_shared_bible_money } from "./app_shared_bible_money.mjs";
 import { app_shared_bible_settings_render } from "./app_shared_bible_settings_render.mjs";
-export function app_shared_bible_settings(context) {
+export async function app_shared_bible_settings(context) {
   "one gear on the reading bar opens this; language choice and keeping a bible on the device both live here so the bar stays about reading";
   async function lambda_back() {
     await app_shared_screen_set_home(context);
@@ -31,7 +31,7 @@ export function app_shared_bible_settings(context) {
     app_shared_bible_licences,
   );
   let open_money = app_shared_screen_later(context, app_shared_bible_money);
-  app_shared_bible_settings_render({
+  await app_shared_bible_settings_render({
     container: root,
     open_history,
     open_languages,

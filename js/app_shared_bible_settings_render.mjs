@@ -19,7 +19,7 @@ import { app_shared_native_update_text } from "./app_shared_native_update_text.m
 import { app_shared_native_update } from "./app_shared_native_update.mjs";
 import { app_shared_native_version } from "./app_shared_native_version.mjs";
 import { html_p_text } from "./html_p_text.mjs";
-export function app_shared_bible_settings_render({
+export async function app_shared_bible_settings_render({
   container,
   open_history,
   open_languages,
@@ -61,7 +61,7 @@ export function app_shared_bible_settings_render({
   let sign_in_key = app_shared_bible_settings_sign_in_key();
   let sign_in = property_get_or_null(context, sign_in_key);
   if (null_not_is(sign_in)) {
-    app_shared_bible_settings_sign_in(container, sign_in);
+    await app_shared_bible_settings_sign_in(container, sign_in);
   }
   ("Update app comes after everything else, and only inside one of our Android apps: a browser has nothing to update, so it is never offered there (human 2026-11-23: updating should not mean opening the camera first).");
   if (app_shared_native_update_is()) {
