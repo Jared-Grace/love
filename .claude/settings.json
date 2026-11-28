@@ -3001,6 +3001,7 @@
       "Bash(node scripts/ai.mjs bible_record_pictures_chapter_search:*)",
       "Bash(node scripts/ai.mjs app_shared_open_counts:*)",
       "Bash(node scripts/ai.mjs app_learn_eng_gloss_tagalog_chapters_uploaded:*)",
+      "Bash(node scripts/ai.mjs android_record_build_serve:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5864,7 +5865,8 @@
       "Bash(node scripts/aig.mjs english_word_sound_url:*)",
       "Bash(node scripts/aig.mjs bible_record_pictures_chapter_search:*)",
       "Bash(node scripts/aig.mjs app_shared_open_counts:*)",
-      "Bash(node scripts/aig.mjs app_learn_eng_gloss_tagalog_chapters_uploaded:*)"
+      "Bash(node scripts/aig.mjs app_learn_eng_gloss_tagalog_chapters_uploaded:*)",
+      "Bash(node scripts/aig.mjs android_record_build_serve:*)"
     ],
     "defaultMode": "acceptEdits"
   },

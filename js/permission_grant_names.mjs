@@ -2874,6 +2874,7 @@ export function permission_grant_names() {
     fn_name("bible_record_pictures_chapter_search"),
     fn_name("app_shared_open_counts"),
     fn_name("app_learn_eng_gloss_tagalog_chapters_uploaded"),
+    fn_name("android_record_build_serve"),
   ];
   return names;
 }
