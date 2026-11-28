@@ -9,6 +9,7 @@ import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { less_than } from "./less_than.mjs";
+import { jpeg_buffer_upright } from "./jpeg_buffer_upright.mjs";
 import { folder_private_path } from "./folder_private_path.mjs";
 import { file_overwrite_buffer } from "./file_overwrite_buffer.mjs";
 export async function photo_organizer_download_all() {
@@ -66,7 +67,9 @@ export async function photo_organizer_download_all() {
   async function download(job) {
     let name = property_get(job, "stored");
     let source = photo_organizer_storage_path("photos", name);
-    let [buffer] = await bucket.file(source).download();
+    let [stored_bytes] = await bucket.file(source).download();
+    ("A phone photo often keeps its pixels sideways with a note saying how to show them; sites such as a claims form ignore the note, so the copy written here is turned for real (human, 2026-11-28).");
+    let buffer = await jpeg_buffer_upright(stored_bytes);
     let f_path = folder_private_path(
       "photo_organizer/" + property_get(job, "file_name"),
     );
