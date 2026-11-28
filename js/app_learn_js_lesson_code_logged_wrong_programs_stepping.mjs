@@ -11,6 +11,9 @@ import { list_filter } from "./list_filter.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
+import { each } from "./each.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_second } from "./list_second.mjs";
 export function app_learn_js_lesson_code_logged_wrong_programs_stepping(
   params,
   steps,
@@ -91,5 +94,24 @@ export function app_learn_js_lesson_code_logged_wrong_programs_stepping(
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
+  ("2026-11-28, at the human's asking: a review rebuilds a question with a fresh copy of this lesson, which never made that program and so does not remember its input. So the review is handed the inputs of the programs it saves, and hands them back when it rebuilds - review 355 threw on a fizz buzz question before this");
+  function inputs_saved(codes) {
+    "for each of codes this lesson made, the code and the input it was made from";
+    let known = list_filter(codes, function known_is(code6) {
+      return input_by_code.has(code6);
+    });
+    let pairs = list_map(known, function pair_of(code7) {
+      return [code7, input_by_code.get(code7)];
+    });
+    return pairs;
+  }
+  function inputs_restore(pairs) {
+    "remember again each code and the input it was made from, as inputs_saved handed them out";
+    each(pairs, function restore(pair) {
+      input_by_code.set(list_first(pair), list_second(pair));
+    });
+  }
+  lesson.inputs_saved = inputs_saved;
+  lesson.inputs_restore = inputs_restore;
   return lesson;
 }
