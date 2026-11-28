@@ -25,16 +25,14 @@ export async function app_shared_gloss_bible_home_generic(
   download,
   text_use,
   app_fn,
-  sound_url_get,
-  slow_url_get,
-  sound_word_get,
+  { sound_url_get, slow_url_get, sound_word_get },
 ) {
   ("Which recording a word in this passage plays is asked of the app too, by sound_word_get, with the passage's chapter and verses: English has words said two ways - lives, read, bow - and the verse decides which; an app with one recording per word hands in ",
     fn_name("gloss_bible_sound_word_same"),
     ".");
   ("The recordings arrive as a way of asking for one rather than as recordings, because which words have been recorded is a question only the app handing it in can answer, and a page whose words have none hands in nothing and shows no speakers.");
   ("The slower readings arrive the same way and separately, because a language can have ordinary recordings for a long while before it has slow ones, and the row has to be able to draw a speaker with no turtle beside it.");
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 5);
   let generated = g_sermon_generate_book_generic_property();
   let v = await app_shared_bible_home_inner(context, download, app_fn);
   let passages = property_get(v, "passages");

@@ -29,8 +29,10 @@ export async function app_learn_eng_home(context) {
     download,
     true,
     app_learn_eng,
-    sound_url_get,
-    slow_url_get,
-    english_word_sound_verse_word,
+    {
+      sound_url_get,
+      slow_url_get,
+      sound_word_get: english_word_sound_verse_word,
+    },
   );
 }

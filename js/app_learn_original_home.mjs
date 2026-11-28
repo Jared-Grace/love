@@ -24,8 +24,10 @@ export async function app_learn_original_home(context) {
     download,
     false,
     app_learn_original,
-    sound_url_get,
-    slow_url_get,
-    gloss_bible_sound_word_same,
+    {
+      sound_url_get,
+      slow_url_get,
+      sound_word_get: gloss_bible_sound_word_same,
+    },
   );
 }
