@@ -32,6 +32,7 @@ import { app_shared_field_title } from "./app_shared_field_title.mjs";
 import { photo_organizer_photo_buttons_add } from "./photo_organizer_photo_buttons_add.mjs";
 import { app_shared_photos_draw_buttons } from "./app_shared_photos_draw_buttons.mjs";
 import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
+import { image_file_upright_browser } from "./image_file_upright_browser.mjs";
 import { file_name_random_browser } from "./file_name_random_browser.mjs";
 import { list_add } from "./list_add.mjs";
 import { photo_organizer_photos_upload } from "./photo_organizer_photos_upload.mjs";
@@ -189,7 +190,9 @@ export async function photo_organizer_folder_screen(root, key) {
   let photos = property_get(folder, "photos");
   async function on_files(files) {
     let added = [];
-    for (let file of files) {
+    for (let picked of files) {
+      ("A phone photo often keeps its pixels sideways with a note saying how to show them; it is turned for real before it is kept, so the file itself is upright and a site ignoring the note shows it right (human, 2026-11-28).");
+      let file = await image_file_upright_browser(picked);
       let name = file_name_random_browser(file);
       let photo = {
         name,
