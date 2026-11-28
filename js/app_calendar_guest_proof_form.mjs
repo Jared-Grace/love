@@ -24,11 +24,10 @@ export async function app_calendar_guest_proof_form(
   slug,
   host,
   key,
-  on_key,
-  on_started,
+  { on_key, on_started },
   via_fixed,
 ) {
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 6);
   ("via_fixed is the app this code is for, when the guest is already proven on an app and so has chosen already - asking to meet on the other one, or changing the number or link of this one; null asks which. With it set there is no choice to make, and the button says which code it gets and that a time comes after (human, 2026-11-24: \"Then there doesn't need to be a choice which to meet? or if they haven't confirmed anything then they need choice?\").");
   ("The first thing a new guest sees on a host's link: which app to send a code from, WhatsApp or Messenger, and a Get my code button. No time is picked here; the code they get is sent to the host from that app, and only once the host has seen it arrive can they pick a time.");
   ('★ PROVE FIRST, THEN BOOK (human, 2026-11-20: "100% knowing their FB url/wa# so they don\'t book, enter something wrong, expect me to show up"). Many guests do not read English well, so the words are short and the screen asks for one thing: the code.');

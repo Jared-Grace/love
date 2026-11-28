@@ -313,8 +313,10 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
       slug,
       host,
       key,
-      key_keep,
-      started,
+      {
+        on_key: key_keep,
+        on_started: started,
+      },
       v,
     );
   }
