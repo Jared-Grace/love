@@ -434,6 +434,28 @@ def said_alone_bible():
     return json.loads(SAID_ALONE_BIBLE_PATH.read_text(encoding="utf-8"))
 
 
+SAID_ALONE_BIBLE_OTHER_PATH = (
+    Path(__file__).resolve().parents[2]
+    / "data/given/speech_pronunciations_alone_bible_other.json"
+)
+
+
+def said_alone_bible_other():
+    """A word's other saying, recorded under its own name: "lives-2".
+
+    ★ WRITTEN BY A COMMAND, NEVER BY HAND - `bible_gloss_heteronyms_verses_write`
+    keeps, for each word some verse says the other way, the saying it used
+    there.  The button in that verse asks for "lives-2" instead of "lives", so
+    a verse about a person's life is not read as the verb.
+
+    The name is what gets recorded, so it is looked up whole and said from the
+    file; it is never handed to the reader, which would spell out the digit.
+    """
+    if not SAID_ALONE_BIBLE_OTHER_PATH.exists():
+        return {}
+    return json.loads(SAID_ALONE_BIBLE_OTHER_PATH.read_text(encoding="utf-8"))
+
+
 def said_alone_voice_spelling(said, voice):
     """One entry from the said-alone file, for the voice about to speak it.
 
@@ -829,6 +851,11 @@ def line_samples(g2p, kokoro, text, speed, citation, voice):
     what `citation` is for, and it is the caller's call for the same reason:
     a chapter is a sentence and wants the sentence form, a button is not.
     """
+    if citation:
+        other = said_alone_bible_other().get(text.strip().lower())
+        if other:
+            phonemes = said_alone_phonemes(text.strip(), other, voice)
+            return kokoro.create(phonemes, voice=voice, speed=speed, is_phonemes=True)
     parts = []
     rate = 24000
     for run in pieces_of(text):
