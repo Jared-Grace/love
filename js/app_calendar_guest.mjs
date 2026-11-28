@@ -182,7 +182,15 @@ export async function app_calendar_guest(parent, slug, key, on_key, on_booked) {
     if (both) {
       app_shared_button_green(step, "Book a meeting", meet_on_show);
     }
-    for (let v of vias) {
+    ('A CONFIRMED APP COMES FIRST (human, 2026-11-28: "if FB confirmed, then it should appear first before confirm WA#"): its Book button is the step the guest can take now, so it stands above a Confirm still to do.');
+    function via_unproven(v) {
+      let b6 = via_proven(v);
+      let unproven = not(b6);
+      return unproven;
+    }
+    let v2 = vias.filter(via_unproven);
+    let vias_ordered = proven_vias.concat(v2);
+    for (let v of vias_ordered) {
       let p = proof_for(v);
       if (both && p && p.proven) {
         continue;
