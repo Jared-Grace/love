@@ -1,20 +1,24 @@
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { multiply } from "./multiply.mjs";
+import { floor } from "./floor.mjs";
+import { modulo } from "./modulo.mjs";
+import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { less_than } from "./less_than.mjs";
 export function calendar_confirm_code(id) {
   arguments_assert(arguments, 1);
   ("The short code a guest sends the host from their own WhatsApp to prove the number they booked with is theirs, read off the meeting's random id, so nothing else has to be drawn or stored to make it: PRAY- and 4 letters or digits.");
-  ("The 32 signs leave out 0, O, 1 and I, which are misread when typed from a phone screen. 4 signs is about a million codes; two waiting meetings sharing one only matter if they also share the guest's number, since a code confirms only together with the number it came from.");
-  let signs = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+  ("The signs leave out 0, O, 1 and I, which are misread when typed from a phone screen.");
+  ('★ NO CODE SPELLS A WORD (human, 2026-11-28: "do the confirm code numbers exclude bad words or names? EVIL 3V1L DEVI DMON ... or all recognizable english?"): every vowel is left out - A, E, U and Y with I and O - and so are 3 and 4, which read as E and A. An English word needs a vowel, so none can be spelled, bad or good, and neither can a name.');
+  ("26 signs to the fourth is about 457 thousand codes; two waiting meetings sharing one only matter if they also share the guest's number, since a code confirms only together with the number it came from. A code is stored when it is made, so a code handed out under the old signs still confirms.");
+  let signs = "256789BCDFGHJKLMNPQRSTVWXZ";
   let hex = String(id)
     .replace(/[^0-9a-fA-F]/g, "")
-    .slice(0, 5);
-  let bits = parseInt(hex, 16);
+    .slice(0, 6);
+  let left = parseInt(hex, 16);
   let code = "PRAY-";
   for (let i = 0; less_than(i, 4); i++) {
-    let right = multiply(i, 5);
-    code += signs[(bits >> subtract(15, right)) & 31];
+    code += signs[modulo(left, signs.length)];
+    let p = divide(left, signs.length);
+    left = floor(p);
   }
   return code;
 }
