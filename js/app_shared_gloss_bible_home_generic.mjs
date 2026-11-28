@@ -1,4 +1,4 @@
-import { app_shared_gloss_bible_home_generic_slow_placed } from "./app_shared_gloss_bible_home_generic_slow_placed.mjs";
+import { app_shared_gloss_bible_home_passage_drawn } from "./app_shared_gloss_bible_home_passage_drawn.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
@@ -36,15 +36,17 @@ export async function app_shared_gloss_bible_home_generic(
   let prop = "p";
   let p = list_last_property(verses, prop);
   html_hr(p);
-  let r2 = app_shared_gloss_bible_home_generic_slow_placed(
+  let r2 = app_shared_gloss_bible_home_passage_drawn(
     text_use,
     passage,
     p,
     generated,
     v,
-    sound_url_get,
-    sound_word_get,
-    slow_url_get,
+    {
+      sound_url_get,
+      sound_word_get,
+      slow_url_get,
+    },
   );
   let slow_placed = property_get(r2, "slow_placed");
   let sound_placed = property_get(r2, "sound_placed");

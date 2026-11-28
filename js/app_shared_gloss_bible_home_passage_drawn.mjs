@@ -11,17 +11,15 @@ import { html_div } from "./html_div.mjs";
 import { app_shared_gloss_bible_generated_gloss_span } from "./app_shared_gloss_bible_generated_gloss_span.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { gloss_bible_sound_get_placed } from "./gloss_bible_sound_get_placed.mjs";
-export function app_shared_gloss_bible_home_generic_slow_placed(
+export function app_shared_gloss_bible_home_passage_drawn(
   text_use,
   passage,
   p,
   generated,
   v,
-  sound_url_get,
-  sound_word_get,
-  slow_url_get,
+  { sound_url_get, sound_word_get, slow_url_get },
 ) {
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 6);
   let texts = null;
   if (text_use) {
     ("A passage's wording in one bible arrives as a verse apiece, and the sentence shown to the reader is those verses joined by a space - the same joining the word rows underneath were cut by. Handing the list itself to a line of text instead let the language write the join, and the language writes a comma with no space after it, so a passage covering two verses showed the reader a comma glued to the last mark of the first one. A passage covering a single verse has a list of one and looks right, which is why it stood for a hundred chapters.");
