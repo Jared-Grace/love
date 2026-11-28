@@ -1,3 +1,4 @@
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { app_shared_color_black } from "./app_shared_color_black.mjs";
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
@@ -41,7 +42,7 @@ export async function lyric_video_pictures_tone_strengths_preview_write(
   let sheet_ctx = sheet.getContext("2d");
   sheet_ctx.fillStyle = app_shared_color_black();
   sheet_ctx.fillRect(0, 0, sheet.width, sheet.height);
-  sheet_ctx.fillStyle = "#ffffff";
+  sheet_ctx.fillStyle = app_shared_color_white();
   sheet_ctx.font = "28px sans-serif";
   sheet_ctx.textAlign = "center";
   sheet_ctx.textBaseline = "middle";
