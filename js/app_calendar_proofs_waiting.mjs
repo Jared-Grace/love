@@ -115,11 +115,11 @@ export function app_calendar_proofs_waiting(
         sent.body.key && sent.body.slug
           ? calendar_guest_link(sent.body.slug, sent.body.key)
           : link;
-      ("THE REPLY'S WORDS ARE THE HOST'S (human, 2026-11-28: \"Thank you! I got your code. If you want, here's a link so you can schedule a meeting, if God wills: ...\"); with no link to give, the same words point back to the page.");
+      ("THE REPLY'S WORDS ARE THE HOST'S (human, 2026-11-28: \"Thank you! I got your code. If you want, here's a link so you can schedule a meeting, if God wills: ...\"); \"If you want\" was then dropped (human, 2026-11-28: \"Maybe we can just say 'here's a link so you can schedule a meeting, if God wills' because that's presumably their goal\"); with no link to give, the same words point back to the page.");
       let reply = own
-        ? "Thank you! I got your code. If you want, here's a link so you can schedule a meeting, if God wills: " +
+        ? "Thank you! I got your code. Here's a link so you can schedule a meeting, if God wills: " +
           own
-        : "Thank you! I got your code. If you want, open the page again so you can schedule a meeting, if God wills.";
+        : "Thank you! I got your code. Open the page again so you can schedule a meeting, if God wills.";
       html_clear(card);
       let reply_card = card;
       html_div_text(reply_card, "✅ Confirmed. Send " + who + " this:");
