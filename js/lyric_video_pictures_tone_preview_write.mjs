@@ -1,3 +1,4 @@
+import { app_shared_color_black } from "./app_shared_color_black.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { multiply } from "./multiply.mjs";
@@ -37,7 +38,7 @@ export async function lyric_video_pictures_tone_preview_write(
   let p3 = multiply(cell_height, rows);
   let sheet = createCanvas(p2, p3);
   let sheet_ctx = sheet.getContext("2d");
-  sheet_ctx.fillStyle = "#000000";
+  sheet_ctx.fillStyle = app_shared_color_black();
   sheet_ctx.fillRect(0, 0, sheet.width, sheet.height);
   let measured = [];
   let repo = folder_repo_love();
